@@ -1,8 +1,8 @@
-# [_mistydew_'s blog](https://mistydew.github.io)
+# [_mistydew's blog_](https://mistydew.github.io)
 
 ## Todo
--[] translate the first blog
--[x] add Todo list function
+- [ ] translate the first blog
+- [x] add Todo list function
 
 ## Timeline
 * 2018.04.18 18:52 initialize jekyll blog template
