@@ -2,11 +2,10 @@
 
 ## Todo
 - [ ] translate the first blog
-- [x] add Todo list function
 
 ## Timeline
+* 2018.04.19 19:02 first blog, add embedded audio and Todo list function
 * 2018.04.18 18:52 initialize jekyll blog template
-* 2018.04.19 17:15 first blog and add embedded audio
 
 ## Find me on
 
