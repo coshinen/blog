@@ -8,4 +8,4 @@ This is the base Jekyll theme. I'm mistydew.
 
 You can find me at: 
 {% include icon-github.html username="mistydew" %} /
-[mistydew](https://mistydew.github.io)
+[mistydew](https://github.com/mistydew/mistydew.github.io)
