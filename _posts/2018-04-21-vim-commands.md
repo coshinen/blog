@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "Vi/Vim 常用命令"
-date:   2018-04-21 09:30:28 +0800
+title:  "Vi/Vim 基础命令"
+date:   2018-04-21 20:11:20 +0800
 categories: jekyll update
 ---
 You can contact me via e-mail: [mistydew@qq.com](https://en.mail.qq.com).
@@ -15,7 +15,7 @@ Vim(Vi IMproved) 是 Vi 文本编辑器的升级版，在 Linux 系统中作为 
 （横坐标对应时间即熟练度，纵坐标对应技能）
 
 ## 模式
-* 基本分为两大模式，**普通模式**和**插入模式**。
+* 基本分为两大模式，**普通（命令）模式**和**插入模式**。
 * 普通模式为默认模式用于修改文本，插入模式用于输入文本。
 * 普通模式下按`i`进入插入模式，插入模式下按`Esc`返回普通模式。
 * 普通模式下可以输入命令进行文本的修改。
