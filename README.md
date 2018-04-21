@@ -1,10 +1,11 @@
 # [_mistydew's blog_](https://mistydew.github.io)
 
 ## Todo
-- [ ] add cover to blog
 - [ ] translate the first blog
+- [x] add cover to blog
 
 ## Timeline
+* 2018.04.21 12:00 add images and reference
 * 2018.04.19 19:02 first blog, add embedded audio and Todo list function
 * 2018.04.18 18:52 initialize jekyll blog template
 
