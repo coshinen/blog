@@ -1,6 +1,7 @@
 # [_mistydew's blog_](https://mistydew.github.io)
 
 ## Todo
+- [ ] add cover to blog
 - [ ] translate the first blog
 
 ## Timeline
@@ -10,6 +11,6 @@
 ## Find me on
 
 * QQ: 1019110552
-* email: mistydew@qq.com
+* e-mail: mistydew@qq.com
 * weibo: [@mistydew](https://weibo.com/mistydew)
 * twitter: [@_mistydew_](https://twitter.com/_mistydew_)
