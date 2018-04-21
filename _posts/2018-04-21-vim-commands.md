@@ -134,6 +134,7 @@ Vim(Vi IMproved) 是 Vi 文本编辑器的升级版，在 Linux 系统中作为 
 ## 参考
 * [Vim (text editor) - Wikipedia](https://en.wikipedia.org/wiki/Vim_(text_editor))
 * [Vim - 维基百科，自由的百科全书](https://zh.wikipedia.org/wiki/Vim)
+* [Learning the vi Editor/Vim/Modes - Wikibooks](https://en.wikibooks.org/wiki/Learning_the_vi_Editor/Vim/Modes)
 * [...][md]
 
 Check out the [mistydew][md] for more info on who am I.
