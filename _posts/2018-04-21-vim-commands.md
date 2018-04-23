@@ -12,7 +12,7 @@ Vim(Vi IMproved) 是 Vi 文本编辑器的升级版，在 Linux 系统中作为 
 <br>
 ![images](/images/20180421/vi_emacs_learning_curves.jpg)
 <br>
-（横坐标对应时间即熟练度，纵坐标对应技能）
+（横坐标对应熟练度，纵坐标对应技能）
 
 ## 模式 modes
 * 基本分为两大模式，**普通（命令）模式**和**插入模式**。
