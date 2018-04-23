@@ -2,7 +2,7 @@
 
 ## Todo
 - [ ] find blog via title on google
-- [ ] translate the first blog
+- [x] translate the first blog
 
 ## Timeline
 * 2018.04.21 12:00 add images and reference
