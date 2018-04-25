@@ -1,8 +1,8 @@
 # [_mistydew's blog_](https://mistydew.github.io)
 
 ## Todo
+- [ ] add slogan
 - [ ] find blog via title on google
-- [x] translate the first blog
 
 ## Timeline
 * 2018.04.21 12:00 add images and reference
