@@ -9,7 +9,7 @@ You can contact me via e-mail: [mistydew@qq.com](https://en.mail.qq.com).
 Vim(Vi IMproved) 是 Vi 文本编辑器的升级版，在 Linux 系统中作为 “编辑器之神” 与 “神之编辑器” Emacs 并驾齐驱。
 
 下图展示了各自的学习曲线，其中不乏调侃之意。<br>
-![images](/images/20180421/vi_emacs_learning_curves.jpg)<br>
+![curves](/images/20180421/vi_emacs_learning_curves.jpg)<br>
 （横坐标对应熟练度，纵坐标对应技能）
 
 ## 模式 modes
