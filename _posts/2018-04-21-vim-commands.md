@@ -4,8 +4,6 @@ title:  "Vi/Vim 基础命令"
 date:   2018-04-21 20:11:20 +0800
 categories: jekyll update
 ---
-You can contact me via e-mail: [mistydew@qq.com](https://en.mail.qq.com).
-
 Vim(Vi IMproved) 是 Vi 文本编辑器的升级版，在 Linux 系统中作为 “编辑器之神” 与 “神之编辑器” Emacs 并驾齐驱。
 
 下图展示了各自的学习曲线，其中不乏调侃之意。<br>
@@ -97,8 +95,4 @@ Vim(Vi IMproved) 是 Vi 文本编辑器的升级版，在 Linux 系统中作为 
 * [Vim (text editor) - Wikipedia](https://en.wikipedia.org/wiki/Vim_(text_editor))
 * [Vim - 维基百科，自由的百科全书](https://zh.wikipedia.org/wiki/Vim)
 * [Learning the vi Editor/Vim/Modes - Wikibooks](https://en.wikibooks.org/wiki/Learning_the_vi_Editor/Vim/Modes)
-* [...][md]
-
-Check out the [mistydew][md] for more info on who am I.
-
-[md]: http://github.com/mistydew
+* [...](http://github.com/mistydew)
