@@ -1,13 +1,14 @@
 # [_mistydew's blog_](https://mistydew.github.io)
 
 ## Todo
+- [ ] add tag
 - [ ] add slogan
 - [ ] find blog via title on google
 
 ## Timeline
 * 2018.04.21 12:00 add images and reference
 * 2018.04.19 19:02 first blog, add embedded audio and Todo list function
-* 2018.04.18 18:52 initialize jekyll blog template
+* 2018.04.18 18:52 initialize jekyll blog template and start
 
 ## Find me on
 
