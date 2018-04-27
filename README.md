@@ -2,7 +2,7 @@
 
 ## Todo
 - [ ] transfer audio
-- [ ] add slogan
+- [ ] add slogan: Open-source is awesome!
 - [ ] add tag
 - [ ] find blog via title on google
 
