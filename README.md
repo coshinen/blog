@@ -1,8 +1,9 @@
 # [_mistydew's blog_](https://mistydew.github.io)
 
 ## Todo
-- [ ] add tag
+- [ ] transfer audio
 - [ ] add slogan
+- [ ] add tag
 - [ ] find blog via title on google
 
 ## Timeline
