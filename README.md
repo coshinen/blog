@@ -1,8 +1,9 @@
 # [_mistydew's blog_](https://mistydew.github.io)
 
 ## Todo
+- [ ] transfer audio
+- [ ] add slogan: Open-source is awesome!
 - [ ] add tag
-- [ ] add slogan
 - [ ] find blog via title on google
 
 ## Timeline
