@@ -37,7 +37,7 @@ Childhood and Adult(funny)
 **`sudo rm / -rf` 删除根目录先所有文件，使用 `sudo` 进行权限提升，`-f` 参数表示不显示任何信息。慎用！**
 
 > ## 安装软件
-`apt-get install vim` 安装 vim 软件到系统，一般默认装在 /usr/bin 目录下，所以要使用 root 用户进行安装，或使用 `sudo command` 进行权限提升。<br>
+`apt-get install vim` 安装 vim 软件到系统，一般默认装在 `/usr/bin` 目录下，所以要使用 root 用户进行安装，或在命令的前面加 `sudo` 进行权限提升。e.g. `sudo apt-get install vim`<br>
 `apt-get update` 从所有配置的源中下载包信息，用于安装软件时显示没有该软件的情况。<br>
 `apt-get upgrade` 从通过 sources.list 配置的源安装在系统上的所有包中安装可用的升级，即通过 update 的结果进行已安装软件的升级。
 
