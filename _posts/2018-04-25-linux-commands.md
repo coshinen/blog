@@ -40,6 +40,10 @@ Childhood and Adult(funny)
 `apt-get update` 从所有配置的源中下载包信息，用于安装软件时显示没有该软件的情况。<br>
 `apt-get upgrade` 从通过 sources.list 配置的源安装在系统上的所有包中安装可用的升级，即通过 update 的结果进行已安装软件的升级。
 
+> ### 查看磁盘
+`df -h` 查看当前磁盘各分区的使用情况，`-h` 参数同 `--human-readable` 表示以当前大小可表示的最大单位来显示信息，若不加该参数，默认为 KB。<br>
+`fdisk -l` 查看当前磁盘及其分区的详细信息。
+
 ## 参考
 * [Why Penguin is Linux logo? - LinuxScrew: Linux Blog](http://www.linuxscrew.com/2007/11/14/why-penguin-is-linux-logo)
 * [《Linus Torvalds自传》摘录 - 阮一峰的网络日志](http://www.ruanyifeng.com/blog/2012/09/linus_torvalds.html)
