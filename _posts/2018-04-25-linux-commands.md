@@ -41,7 +41,8 @@ Childhood and Adult(funny)
 `apt-get upgrade` 从通过 sources.list 配置的源安装在系统上的所有包中安装可用的升级，即通过 update 的结果进行已安装软件的升级。
 
 > ### 查看磁盘
-`df -h` 查看当前磁盘各分区的使用情况，`-h` 参数同 `--human-readable` 表示以当前大小可表示的最大单位来显示信息，若不加该参数，默认为 KB。<br>
+`du -sh` 查看当前所在目录下各文件的总大小，参数 `-s` 同 `--summarize` 表示总和，参数 `-h` 同 `--human-readable` 表示以当前大小可表示的最大单位来显示信息，若不加该参数，则单位默认为 KB。<br>
+`df -h` 查看当前磁盘各分区的使用情况，参数 `-h` 同 `--human-readable` 含义同上。<br>
 `fdisk -l` 查看当前磁盘及其分区的详细信息。
 
 ## 参考
