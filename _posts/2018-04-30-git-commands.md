@@ -13,14 +13,14 @@ Git 易于学习且拥有占用空间小和闪电般快速的性能。它远优�
 
 ## 安装（Ubuntu 16.04.4）
 > `$ sudo apt-get install git` 安装 git。<br>
-> `$ git config --global user.name "<Your Name>"` <Your Name> 替换为你的名字。<br>
-> `$ git config --global user.email "<Your Email>"` <Your Email> 替换为你的邮箱。<br>
+> `$ git config --global user.name "<username>"` 添加用户名到 git 配置文件 .git/config。<br>
+> `$ git config --global user.email "<useremail>"` 添加邮箱到 git 配置文件 .git/config。<br>
 > **注：若在 git command 过程中出现错误提示 `fatal: unable to auto-detect email address`，则重新执行以上两句配置命令。**
 
 ## 命令 commands
 > ### 本地仓库
 > `$ git init` 把当前所在目录初始化为 git 管理的仓库，执行该命令后，当前目录下会多出一个名为 .git 数据目录。<br>
-> **注：以下命令必须在某个 git 仓库中输入。**
+> **注：以下命令必须在某个 git 仓库中输入。**<br>
 > `$ git add <file>` 添加一个文件到暂存区。<br>
 > `$ git commit -m "<comments>"` 进行文件的提交，即为当前暂存区中的文件添加注释，用于记录文件相关的版本信息。<br>
 > `$ git status` 查看当前仓库和暂存区中文件的状态。<br>
