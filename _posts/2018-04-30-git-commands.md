@@ -34,7 +34,10 @@ Git 易于学习且拥有占用空间小和闪电般快速的性能。它远优�
 > `$ git commit --amend` 修改上一次提交的评论，同时按 `Ctrl` + `X` 保存，然后按 `Y` 确认，最后按 `Enter` 退出。
 
 > ### 远程仓库 GitHub
-> `$ git clone https://github.com/<username/organization>/<projectname>.git` 克隆 GitHub 上某用户或组织的项目到本地。
+> `$ git clone https://github.com/<username/organization>/<projectname>.git` 克隆 GitHub 上某用户或组织的项目到本地。<br>
+> `$ git push` 同步本地的项目到 GitHub 上。<br>
+> `$ git push origin HEAD --force` 强制同步本地的项目分支到 GitHub 上，用于 `$ git commit --amend` 之后。<br>
+> `$ git pull` 同步 GitHub 上的项目到本地。
 
 ## 参照
 * [Git](https://git-scm.com)
