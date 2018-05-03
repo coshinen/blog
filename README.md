@@ -4,10 +4,9 @@
 - [ ] add slogan: Open-source is awesome!
 - [ ] add tag
 - [ ] find blog via title on google
-- [x] add favicon
 
 ## Timeline
-* 2018.05.02 12:50 add favicon
+* 2018.05.02 12:50 add garnet crow favicon
 * 2018.04.27 00:30 remove directory audio
 * 2018.04.21 12:00 add images and reference to blog
 * 2018.04.19 19:02 first blog with embedded audio, add Todo list and Timeline
