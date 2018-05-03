@@ -6,6 +6,11 @@ categories: jekyll update
 ---
 ![parallel universe](https://raw.githubusercontent.com/mistydew/gc/master/images/cover/album/Album_08th_parallel_universe.jpg)
 
+<audio controls>
+  <source src="https://raw.githubusercontent.com/mistydew/gc2/master/Over%20Drive.mp3" type="audio/mpeg">
+您的浏览器不支持 audio 元素。
+</audio>
+
 ## Over Drive
 
 歌手：GARNET CROW<br>
