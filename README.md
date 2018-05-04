@@ -1,6 +1,7 @@
 # [_mistydew's blog_](https://mistydew.github.io)
 
 ## Todo
+- [ ] redo favicon
 - [ ] add slogan: Open-source is awesome!
 - [ ] add tag
 - [ ] find blog via title on google
