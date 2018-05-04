@@ -12,6 +12,7 @@ categories: jekyll update
 </audio>
 
 ## Over Drive
+> 凌空駕馭
 
 歌手：GARNET CROW<br>
 作詞：AZUKI 七<br>
@@ -24,14 +25,28 @@ categories: jekyll update
 サイレント・Kiss<br>
 夢に似た気配
 
+> 衹有風的聲音<br>
+> 包裹著全身<br>
+> Oh Silent Kiss Oh yeah<br>
+> 好像夢一樣的感覺
+
 胸がキュッとなること<br>
 君といた季節<br>
 スカイハイ・Blue<br>
 遠ざかる
 
+> 心中變得忐忑不安<br>
+> 和你在一起的季節<br>
+> Sky High Blue Oh yeah<br>
+> 漸行漸遠
+
 都合いい Happy End<br>
 さがしても癒せない<br>
 心が自由なら飛んでみせる
+
+> 美好的結局<br>
+> 即便尋找的到也無法治愈<br>
+> 心若自由定會飛翔
 
 上空 舞うもの達と Over Drive<br>
 どこまでも青い世界にいたい<br>
@@ -42,14 +57,32 @@ categories: jekyll update
 大切な期待に変えてゆける<br>
 raise up
 
+> 與凌空飛舞的它們 Over Drive<br>
+> 不管到哪裏都想留在藍色的世界<br>
+> 鳥兒像雪花紙屑般飛舞<br>
+> 真美啊<br>
+> 乘上風尾的不安<br>
+> 想著尚未知曉的前路<br>
+> 化爲珍貴的期待<br>
+> raise up
+
 波がキラめいたら<br>
 吸い込まれそうね<br>
 スターライト・Night<br>
 空高く
 
+> 波光粼粼<br>
+> 仿佛要被吸入其中<br>
+> Star light Night<br>
+> 晴空高遠
+
 近づいた last scene<br>
 まだ今つかめない<br>
 不確かな未来さえ心地よく
+
+> 已經接近了 last scene<br>
+> 現在依然無法抓住<br>
+> 縱使不確定的未來也甘之如飴
 
 上昇 恋は揺らいで Over Drive<br>
 目を見て無邪気に笑ってみせて<br>
@@ -59,6 +92,13 @@ raise up
 願う空は 果てしなくて<br>
 本当の君に出会う日を<br>
 待ってる
+
+> 上升 戀情搖擺不定 Over Drive<br>
+> 四目相對天真無邪的笑著<br>
+> 簡直就像風拂過心靈<br>
+> 想要離你更近些<br>
+> 向着無垠的天空祈禱著<br>
+> 我會等待與真正的你相遇的那一天
 
 上空 舞うもの達と Over Drive<br>
 どこまでも青い世界にいたい<br>
@@ -70,6 +110,16 @@ raise up
 raise up<br>
 本当の君に出会う日を<br>
 待ってる
+
+> 與凌空飛舞的它們 Over Drive<br>
+> 不管到哪裏都想留在藍色的世界<br>
+> 鳥兒像雪花紙屑般飛舞<br>
+> 真美啊<br>
+> 乘上風尾的不安<br>
+> 想著尚未知曉的前路<br>
+> 化爲珍貴的期待<br>
+> raise up<br>
+> 我會等待與真正的你相遇的那一天
 
 ## 感想
 仿佛勾起了回憶，M14 也算得上是個轉折點了。
