@@ -29,6 +29,9 @@ categories: jekyll update
 
 > `./bitcoind --help -help-debug` 获取以下详细帮助。
 {% highlight C++ %}
+Bitcoin Core Daemon version v0.12.1.0-61906ac
+比特币核心守护进程版本 v0.12.1.0-意味不明
+
 Usage:
 用法：
   bitcoind [options]                     Start Bitcoin Core Daemon
