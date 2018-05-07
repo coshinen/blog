@@ -33,4 +33,5 @@ categories: jekyll update
 ## 参照
 * [Running Bitcoin - Bitcoin Wiki](https://en.bitcoin.it/wiki/Running_Bitcoin)
 * [bitcoin.conf](https://github.com/mistydew/blockchain/blob/master/bitcoin.conf)
+* [精通比特币（第二版） \| 巴比特图书](http://book.8btc.com/masterbitcoin2cn)
 * [...](https://github.com/mistydew)
