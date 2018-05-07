@@ -44,7 +44,7 @@ Options:
        指定数据目录
 
 Chain selection options:
-链选择选项：
+链选择选项（默认主网）：
 
   -testnet
        Use the test chain
@@ -86,16 +86,16 @@ Chain selection options:
 > `$ bitcoin-cli help` 获取以下 RPC 命令。
 {% highlight C++ %}
 == Blockchain ==
-getbestblockhash
-getblock "hash" ( verbose )
-getblockchaininfo
-getblockcount
-getblockhash index
-getblockheader "hash" ( verbose )
-getchaintips
-getdifficulty
-getmempoolinfo
-getrawmempool ( verbose )
+getbestblockhash # 获取当前区块链最佳块的哈希值
+getblock "hash" ( verbose ) # 通过区块哈希获取对应区块的详细信息
+getblockchaininfo # 获取区块链的信息
+getblockcount # 获取当前区块主链上的总区块数
+getblockhash index # 通过区块索引（区块号）获取区块哈希
+getblockheader "hash" ( verbose ) # 通过区块哈希获取对应区块头信息
+getchaintips # 获取区块链尖的基本信息（高度、最佳块哈希、分叉长度、链状态）
+getdifficulty # 获取当前挖矿难度
+getmempoolinfo # 获取交易内存池信息
+getrawmempool ( verbose ) # 获取交易内存池中所有的交易索引
 gettxout "txid" n ( includemempool )
 gettxoutproof ["txid",...] ( blockhash )
 gettxoutsetinfo
@@ -103,33 +103,33 @@ verifychain ( checklevel numblocks )
 verifytxoutproof "proof"
 
 == Control ==
-getinfo
-help ( "command" )
-stop
+getinfo # 获取当前区块链的基本信息
+help ( "command" ) # 获取 RPC 命令帮助
+stop # 远程终止 bitcoind
 
 == Generating ==
-generate numblocks
-getgenerate
-setgenerate generate ( genproclimit )
+generate numblocks # regtest 回归测试网下立刻产生指定数目的块
+getgenerate # 获取当前的挖矿状态，true 表示开启，false 表示关闭
+setgenerate generate ( genproclimit ) # 设置挖矿状态和线程数，线程数默认为 1
 
 == Mining ==
 getblocktemplate ( "jsonrequestobject" )
-getmininginfo
-getnetworkhashps ( blocks height )
+getmininginfo # 获取当前的挖矿信息
+getnetworkhashps ( blocks height ) # 获取当前网络算力，或指定区块对应的当时的网络算力
 prioritisetransaction <txid> <priority delta> <fee delta>
 submitblock "hexdata" ( "jsonparametersobject" )
 
 == Network ==
-addnode "node" "add|remove|onetry"
-clearbanned
-disconnectnode "node" 
+addnode "node" "add|remove|onetry" # 添加指定节点，并执行相应操作（添加|移除|尝试一次），默认为 add
+clearbanned # 清空黑名单 banlist.dat
+disconnectnode "node" # 断开连接指定的节点
 getaddednodeinfo dns ( "node" )
-getconnectioncount
-getnettotals
-getnetworkinfo
-getpeerinfo
+getconnectioncount # 获取当前与该节点建立连接的数目
+getnettotals # 获取网络总流量
+getnetworkinfo # 获取网络信息
+getpeerinfo # 获取与该节点建立连接的对端的信息
 listbanned
-ping
+ping # ping 一下，并不会显示 pong，没有任何反应表示当前可以通讯
 setban "ip(/netmask)" "add|remove" (bantime) (absolute)
 
 == Rawtransactions ==
