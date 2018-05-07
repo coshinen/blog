@@ -30,18 +30,24 @@ categories: jekyll update
 > `./bitcoind --help -help-debug` 获取以下详细帮助。
 {% highlight C++ %}
 Usage:
+用法：
   bitcoind [options]                     Start Bitcoin Core Daemon
+  比特币核心【选项】                          启动比特币核心守护进程
 
 Options:
+选项：
 
   -?
        This help message
+       显示帮助信息并退出，使用 -h 或 -help 效果相同
 
   -version
        Print version and exit
+       打印版本信息并退出
 
   -alerts
        Receive and display P2P network alerts (default: 0)
+       接收并显示 P2P 网络警告（默认：0 表示关闭），包含版本升级等信息
 
   -alertnotify=<cmd>
        Execute command when a relevant alert is received or we see a really
@@ -62,35 +68,44 @@ Options:
 
   -conf=<file>
        Specify configuration file (default: bitcoin.conf)
+       指定配置文件（默认：~/.bitcoin/bitcoin.conf）
 
   -daemon
        Run in the background as a daemon and accept commands
+       作为一个守护进程在后台运行并接收命令
 
   -datadir=<dir>
        Specify data directory
+       指定数据目录
 
   -dbcache=<n>
        Set database cache size in megabytes (4 to 16384, default: 100)
+       设置数据库缓存大小兆字节（4MB 到 16GB，默认：100MB）
 
   -loadblock=<file>
        Imports blocks from external blk000??.dat file on startup
+       在启动时从外部 blk000?? 数据文件导入区块数据到内存
 
   -maxorphantx=<n>
        Keep at most <n> unconnectable transactions in memory (default: 100)
 
   -maxmempool=<n>
        Keep the transaction memory pool below <n> megabytes (default: 300)
+       保持交易内存池大小低于 <n> 兆字节（默认：300MB）
 
   -mempoolexpiry=<n>
        Do not keep transactions in the mempool longer than <n> hours (default:
        72)
+       不保持内存池中的交易超过 <n> 小时（默认：72h）
 
   -par=<n>
        Set the number of script verification threads (-1 to 16, 0 = auto, <0 =
        leave that many cores free, default: 0)
+       设置脚本验证线程数（-1 到 16，0 = 自动，<0 = 根据 CPU 核数，默认：0）
 
   -pid=<file>
        Specify pid file (default: bitcoind.pid)
+       指定 pid 进程号文件（默认：~/.bitcoin/bitcoind.pid），该文件用于保存当前运行的比特币核心进程号
 
   -prune=<n>
        Reduce storage requirements by pruning (deleting) old blocks. This mode
@@ -98,17 +113,24 @@ Options:
        setting requires re-downloading the entire blockchain. (default: 0 =
        disable pruning blocks, >550 = target size in MiB to use for block
        files)
+       通过修剪（删除）旧区块减少存储。该模式不兼容 -txindex 和 -rescan 选项。
+       警告：恢复该设置需要重新下载整个区块链。
+       （默认：0 = 禁止修剪区块，>550 = 适用于去快文件目标大小为 MiB）
 
   -reindex
        Rebuild block chain index from current blk000??.dat files on startup
+       在启动时从当前 blk000?? 数据文件重建区块链索引
 
   -sysperms
        Create new files with system default permissions, instead of umask 077
        (only effective with disabled wallet functionality)
+       使用系统默认权限创建新文件，代替掩码 077
+       （仅在禁止钱包功能才有效）
 
   -txindex
        Maintain a full transaction index, used by the getrawtransaction rpc
        call (default: 0)
+       维持一个全交易索引，用于 getrawtransaction rpc 调用（默认：0）
 
 Connection options:
 
