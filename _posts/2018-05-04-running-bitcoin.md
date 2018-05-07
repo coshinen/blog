@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "启动比特币核心 bitcoind"
-date:   2018-05-04 03:08:22 +0800
+date:   2018-05-04 13:08:22 +0800
 categories: jekyll update
 ---
 原始可用的比特币程序有两个版本；
@@ -27,7 +27,7 @@ categories: jekyll update
 ## 命令行参数
 以下命令是准确的来自于比特币核心版本 v0.12.1.
 
-> `./bitcoind --help -help-debug` 得到的。
+> `./bitcoind --help -help-debug` 获取以下详细帮助。
 {% highlight C++ %}
 Usage:
   bitcoind [options]                     Start Bitcoin Core Daemon
