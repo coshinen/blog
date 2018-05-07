@@ -32,7 +32,7 @@ categories: jekyll update
 Usage:
 用法：
   bitcoind [options]                     Start Bitcoin Core Daemon
-  比特币核心【选项】                          启动比特币核心守护进程
+  比特币核心【选项】                     启动比特币核心守护进程
 
 Options:
 选项：
@@ -105,7 +105,8 @@ Options:
 
   -pid=<file>
        Specify pid file (default: bitcoind.pid)
-       指定 pid 进程号文件（默认：~/.bitcoin/bitcoind.pid），该文件用于保存当前运行的比特币核心进程号
+       指定 pid 进程号文件（默认：~/.bitcoin/bitcoind.pid）
+       该文件用于保存当前运行的比特币核心进程号
 
   -prune=<n>
        Reduce storage requirements by pruning (deleting) old blocks. This mode
@@ -133,30 +134,39 @@ Options:
        维持一个全交易索引，用于 getrawtransaction rpc 调用（默认：0）
 
 Connection options:
+连接选项：
 
   -addnode=<ip>
        Add a node to connect to and attempt to keep the connection open
+       添加一个连接到指定 ip 并尝试保持该连接打开的节点
+       可以添加多个 ip，使用形式为 -addnode=<ip1> -addnode=<ip2>
 
   -banscore=<n>
        Threshold for disconnecting misbehaving peers (default: 100)
+       断开与行为不当对端的连接的阈值（默认：100）
 
   -bantime=<n>
        Number of seconds to keep misbehaving peers from reconnecting (default:
        86400)
+       从重新连接到保持与行为不当对端的连接的秒数（默认：24h）
 
   -bind=<addr>
        Bind to given address and always listen on it. Use [host]:port notation
        for IPv6
+       绑定到给定地址并一直监听它。IPv6 使用 [localhost]:post 形式
 
   -connect=<ip>
        Connect only to the specified node(s)
+       仅连接到指定的节点，与 -addnode 区别在于不作为一个节点，其他节点无法接入
 
   -discover
        Discover own IP addresses (default: 1 when listening and no -externalip
        or -proxy)
+       发现自己的 IP 地址（默认：当监听中且没有 -externalip 或 -proxy 选项时为 1）
 
   -dns
        Allow DNS lookups for -addnode, -seednode and -connect (default: 1)
+       允许 DNS 发现 -addnode，-seednode 和 -connect 选项指定的 IP 地址（默认：1 表示打开）
 
   -dnsseed
        Query for peer addresses via DNS lookup, if low on addresses (default: 1
@@ -167,9 +177,11 @@ Connection options:
 
   -forcednsseed
        Always query for peer addresses via DNS lookup (default: 0)
+       总是通过 DNS 查找查询对端地址（默认：0）
 
   -listen
        Accept connections from outside (default: 1 if no -proxy or -connect)
+       接受从外部接入的连接（默认：若没有 -proxy 或 -connect 选项则为 1）
 
   -listenonion
        Automatically create Tor hidden service (default: 1)
