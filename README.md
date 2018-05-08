@@ -1,6 +1,7 @@
 # [_mistydew's blog_](https://mistydew.github.io)
 
 ## Todo
+- [ ] add pagination and summary
 - [ ] The anatomy of bitcoin v0.12.1 source
 - [ ] add slogan: Open-source is awesome!
 - [ ] add tag
