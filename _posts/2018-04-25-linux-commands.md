@@ -46,6 +46,11 @@ Childhood and Adult(funny)
 `$ df -h` # 查看当前磁盘各分区的使用情况，参数 `-h` 同 `--human-readable` 含义同上。<br>
 `$ fdisk -l` # 查看当前磁盘及其分区的详细信息。注：若不显示任何信息，命令前需加 `sudo` 来提升权限。
 
+> ### 远程安全拷贝 secure copy
+`$ scp <file> username@ip:<dir>` # 复制本地文件 `<file>` 到远程主机 `username@ip` 的 `<dir>` 目录下。<br>
+`$ scp username@ip:<file> <dir>` # 复制远程主机 `username@ip` 下的文件 `<file>` 到本地 `<dir>` 目录下。<br>
+**注：`username` 和 `ip` 的顺序，且需要知道 `username` 对应的密码。**
+
 ## 参考
 * [Why Penguin is Linux logo? - LinuxScrew: Linux Blog](http://www.linuxscrew.com/2007/11/14/why-penguin-is-linux-logo)
 * [《Linus Torvalds自传》摘录 - 阮一峰的网络日志](http://www.ruanyifeng.com/blog/2012/09/linus_torvalds.html)
