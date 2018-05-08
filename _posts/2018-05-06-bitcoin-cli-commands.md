@@ -134,10 +134,10 @@ setban "ip(/netmask)" "add|remove" (bantime) (absolute) # 设置黑名单（默�
 
 == Rawtransactions ==
 createrawtransaction [{"txid":"id","vout":n},...] {"address":amount,"data":"hex",...} ( locktime )
-decoderawtransaction "hexstring"
+decoderawtransaction "hexstring" # 通过一笔交易的十六进制字符串获取其详细信息
 decodescript "hex"
 fundrawtransaction "hexstring" includeWatching
-getrawtransaction "txid" ( verbose )
+getrawtransaction "txid" ( verbose ) # 通过交易号获取元交易的十六进制字符串 hexstring，使用 getrawtransaction "txid" 1 可直接解码获取交易的详细信息
 sendrawtransaction "hexstring" ( allowhighfees )
 signrawtransaction "hexstring" ( [{"txid":"id","vout":n,"scriptPubKey":"hex","redeemScript":"hex"},...] ["privatekey1",...] sighashtype )
 
@@ -153,42 +153,45 @@ verifymessage "bitcoinaddress" "signature" "message"
 == Wallet ==
 abandontransaction "txid" # 标记钱包内的一笔交易为抛弃，适用于未上链和不在交易内存池中的交易，对以已冲突的和已抛弃的交易无效。
 addmultisigaddress nrequired ["key",...] ( "account" )
-backupwallet "destination"
-dumpprivkey "bitcoinaddress"
-dumpwallet "filename"
-encryptwallet "passphrase"
-getaccount "bitcoinaddress"
-getaccountaddress "account"
-getaddressesbyaccount "account"
-getbalance ( "account" minconf includeWatchonly )
-getnewaddress ( "account" )
-getrawchangeaddress
-getreceivedbyaccount "account" ( minconf )
-getreceivedbyaddress "bitcoinaddress" ( minconf )
-gettransaction "txid" ( includeWatchonly )
-getunconfirmedbalance
-getwalletinfo
+backupwallet "destination" # 备份钱包到指定文件（加密），默认存放在当前所在目录
+dumpprivkey "bitcoinaddress" # 导出指定 34bytes 公钥地址对应的 52bytes 私钥
+dumpwallet "filename" # 导出钱包到指定文件（明文），新建钱包会自动生成 101 个私钥公钥对，锁定钱包时无效
+encryptwallet "passphrase" # 使用明文密码加密钱包，只能设置一次，比特币服务会停止，重启以运行加密的钱包。密钥池已刷新（再次生成 101 个私钥公钥对），你需要重新备份
+getaccount "bitcoinaddress" # 获取公钥地址所属账户
+getaccountaddress "account" # 已过时，获取指定账户用于接收的比特币地址
+getaddressesbyaccount "account" # 获取指定账户下的所有公钥地址
+getbalance ( "account" minconf includeWatchonly ) # 获取钱包或指定账户（已过时）的可用余额
+getnewaddress ( "account" ) # 在指定账户下生成一个新地址，若不指定账户，默认为空账户 ""
+getrawchangeaddress # 获取元找零地址，用于元交易，非普通使用
+getreceivedbyaccount "account" ( minconf ) # 获取指定账户接收到的总金额，非可用余额
+getreceivedbyaddress "bitcoinaddress" ( minconf ) # 获取指定公钥地址接收到的总金额，非可用余额
+gettransaction "txid" ( includeWatchonly ) # 通过交易号获取交易信息
+getunconfirmedbalance # 获取未确认（需要 6 个区块确认）的余额
+getwalletinfo # 获取钱包基本信息
 importaddress "address" ( "label" rescan p2sh )
-importprivkey "bitcoinprivkey" ( "label" rescan )
+importprivkey "bitcoinprivkey" ( "label" rescan ) # 导入私钥到当前钱包默认空帐户 "" 中
 importpubkey "pubkey" ( "label" rescan )
-importwallet "filename"
-keypoolrefill ( newsize )
-listaccounts ( minconf includeWatchonly)
-listaddressgroupings
-listlockunspent
-listreceivedbyaccount ( minconf includeempty includeWatchonly)
-listreceivedbyaddress ( minconf includeempty includeWatchonly)
-listsinceblock ( "blockhash" target-confirmations includeWatchonly)
-listtransactions ( "account" count from includeWatchonly)
-listunspent ( minconf maxconf  ["address",...] )
-lockunspent unlock [{"txid":"txid","vout":n},...]
-move "fromaccount" "toaccount" amount ( minconf "comment" )
-sendfrom "fromaccount" "tobitcoinaddress" amount ( minconf "comment" "comment-to" )
-sendmany "fromaccount" {"address":amount,...} ( minconf "comment" ["address",...] )
-sendtoaddress "bitcoinaddress" amount ( "comment" "comment-to" subtractfeefromamount )
-setaccount "bitcoinaddress" "account"
+importwallet "filename" # 导入指定的钱包文件
+keypoolrefill ( newsize ) # 再填充钥匙池，新大小应大于当前大小，填充后的 "keypoolsize" = newsize + 1
+listaccounts ( minconf includeWatchonly) # 已过时，列出钱包中各账户及其可用余额
+listaddressgroupings # 列举有可用余额的地址及其所属账户。注：非所有地址
+listlockunspent # 列出所有锁定的未花费交易（包含交易号和输出号）
+listreceivedbyaccount ( minconf includeempty includeWatchonly) # 已过时，列出指定账户余额
+listreceivedbyaddress ( minconf includeempty includeWatchonly) # 列出所有接收到金额的公钥地址
+listsinceblock ( "blockhash" target-confirmations includeWatchonly) # 列出从指定块开始到现在钱包的所有交易（包括当前节点的挖矿奖励 coinbase 和所有普通交易）的信息以及最佳区块的哈希
+listtransactions ( "account" count from includeWatchonly) # 列出钱包的所有交易信息或指定账户的交易
+listunspent ( minconf maxconf  ["address",...] ) # 列出所有未花费交易的信息（包括交易号、输出号、公钥地址、公钥脚本、金额、确认数和可花费状态）
+lockunspent unlock [{"txid":"txid","vout":n},...] # 锁定一笔未花费的交易，unlock 表示状态为布尔型，false 表示锁定
+move "fromaccount" "toaccount" amount ( minconf "comment" ) # 账户间转移指定金额，可以移动超过本帐户的金额，出现负的账户金额，钱包总的可用余额不变
+sendfrom "fromaccount" "tobitcoinaddress" amount ( minconf "comment" "comment-to" ) # 从指定账户发送指定金额到指定公钥地址
+sendmany "fromaccount" {"address":amount,...} ( minconf "comment" ["address",...] ) # 从指定账户发送到多个公钥地址不同的金额
+sendtoaddress "bitcoinaddress" amount ( "comment" "comment-to" subtractfeefromamount ) # 发送指定金额到指定公钥地址
+setaccount "bitcoinaddress" "account" # 设置公钥地址为指定账户
 settxfee amount # 设置交易费
-signmessage "bitcoinaddress" "message"
+signmessage "bitcoinaddress" "message" # 创建一个 88bytes 的 base64 签名
+walletlock # 立刻锁定钱包，使 getinfo 获取的信息中 "unlocked_until" 字段置 0
+walletpassphrase "passphrase" timeout # 输入明文密码解锁钱包指定的时间，单位为 s
+walletpassphrasechange "oldpassphrase" "newpassphrase" # 修改钱包密码，不会导致比特币服务终止
 {% endhighlight %}
 
 ## 参照
