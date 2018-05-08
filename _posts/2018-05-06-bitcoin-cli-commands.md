@@ -33,7 +33,7 @@ Options:
 
   -?
        This help message
-       该程序的帮助信息，同 -h 或 -help
+       该程序的帮助信息，同 -h 或 -help 选项
 
   -conf=<file>
        Specify configuration file (default: bitcoin.conf)
@@ -96,10 +96,10 @@ getchaintips # 获取区块链尖的基本信息（高度、最佳块哈希、�
 getdifficulty # 获取当前挖矿难度
 getmempoolinfo # 获取交易内存池信息
 getrawmempool ( verbose ) # 获取交易内存池中所有的交易索引
-gettxout "txid" n ( includemempool )
+gettxout "txid" n ( includemempool ) # 根据交易内存池中的交易号获取指定输出号 n 的信息。适用范围：所有交易
 gettxoutproof ["txid",...] ( blockhash )
-gettxoutsetinfo
-verifychain ( checklevel numblocks )
+gettxoutsetinfo # 获取交易输出设置信息（高度、最佳块哈希、总交易数、总输出数、...、当前发行量）
+verifychain ( checklevel numblocks ) # 验证链（默认：检查等级为 3，区块数为 288），true 表示已验证，false 表示未验证
 verifytxoutproof "proof"
 
 == Control ==
@@ -113,24 +113,24 @@ getgenerate # 获取当前的挖矿状态，true 表示开启，false 表示关�
 setgenerate generate ( genproclimit ) # 设置挖矿状态和线程数，线程数默认为 1
 
 == Mining ==
-getblocktemplate ( "jsonrequestobject" )
+getblocktemplate ( "jsonrequestobject" ) # 获取区块模板（不包括随机数 nNonce）。前提：需要至少一条连接
 getmininginfo # 获取当前的挖矿信息
-getnetworkhashps ( blocks height ) # 获取当前网络算力，或指定区块对应的当时的网络算力
+getnetworkhashps ( blocks height ) # 获取区块链当前（或指定）高度的网络算力
 prioritisetransaction <txid> <priority delta> <fee delta>
 submitblock "hexdata" ( "jsonparametersobject" )
 
 == Network ==
-addnode "node" "add|remove|onetry" # 添加指定节点，并执行相应操作（添加|移除|尝试一次），默认为 add
-clearbanned # 清空黑名单 banlist.dat
-disconnectnode "node" # 断开连接指定的节点
+addnode "node" "add|remove|onetry" # 添加指定节点，并执行相应操作（添加|移除|尝试连接一次）。注：添加不会主动连接
+clearbanned # 清空黑名单
+disconnectnode "node" # 断开连接指定的节点 "ip:port"
 getaddednodeinfo dns ( "node" )
 getconnectioncount # 获取当前与该节点建立连接的数目
 getnettotals # 获取网络总流量
 getnetworkinfo # 获取网络信息
 getpeerinfo # 获取与该节点建立连接的对端的信息
-listbanned
-ping # ping 一下，并不会显示 pong，没有任何反应表示当前可以通讯
-setban "ip(/netmask)" "add|remove" (bantime) (absolute)
+listbanned # 列出黑名单
+ping # ping 一下，并不会显示 pong，没有任何反应表示当前 ping 的通
+setban "ip(/netmask)" "add|remove" (bantime) (absolute) # 设置黑名单（默认：屏蔽时间为 24h）
 
 == Rawtransactions ==
 createrawtransaction [{"txid":"id","vout":n},...] {"address":amount,"data":"hex",...} ( locktime )
@@ -151,7 +151,7 @@ validateaddress "bitcoinaddress"
 verifymessage "bitcoinaddress" "signature" "message"
 
 == Wallet ==
-abandontransaction "txid"
+abandontransaction "txid" # 标记钱包内的一笔交易为抛弃，适用于未上链和不在交易内存池中的交易，对以已冲突的和已抛弃的交易无效。
 addmultisigaddress nrequired ["key",...] ( "account" )
 backupwallet "destination"
 dumpprivkey "bitcoinaddress"
@@ -187,7 +187,7 @@ sendfrom "fromaccount" "tobitcoinaddress" amount ( minconf "comment" "comment-to
 sendmany "fromaccount" {"address":amount,...} ( minconf "comment" ["address",...] )
 sendtoaddress "bitcoinaddress" amount ( "comment" "comment-to" subtractfeefromamount )
 setaccount "bitcoinaddress" "account"
-settxfee amount
+settxfee amount # 设置交易费
 signmessage "bitcoinaddress" "message"
 {% endhighlight %}
 
