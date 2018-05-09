@@ -51,6 +51,9 @@ Childhood and Adult(funny)
 `$ scp username@ip:<file> <dir>` # 复制远程主机 `username@ip` 下的文件 `<file>` 到本地 `<dir>` 目录下。<br>
 **注：`username` 和 `ip` 的顺序，且需要知道 `username` 对应的密码。**
 
+> ### 统计时间 time
+`$ time <command>` # 统计执行给定命令 `<command>` 所花费的时间。
+
 ## 参考
 * [Why Penguin is Linux logo? - LinuxScrew: Linux Blog](http://www.linuxscrew.com/2007/11/14/why-penguin-is-linux-logo)
 * [《Linus Torvalds自传》摘录 - 阮一峰的网络日志](http://www.ruanyifeng.com/blog/2012/09/linus_torvalds.html)
