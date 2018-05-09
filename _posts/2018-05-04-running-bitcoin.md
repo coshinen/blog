@@ -35,7 +35,7 @@ Bitcoin Core Daemon version v0.12.1.0-61906ac
 Usage:
 用法：
   bitcoind [options]                     Start Bitcoin Core Daemon
-  比特币核心【选项】                     启动比特币核心守护进程
+  比特币核心 [选项]                      启动比特币核心守护进程
 
 Options:
 选项：
@@ -156,7 +156,7 @@ Connection options:
   -bind=<addr>
        Bind to given address and always listen on it. Use [host]:port notation
        for IPv6
-       绑定到给定地址并一直监听它。IPv6 使用 [localhost]:post 形式
+       绑定到给定地址并一直监听它。IPv6 使用“[本地主机]:端口”形式
 
   -connect=<ip>
        Connect only to the specified node(s)
@@ -174,9 +174,11 @@ Connection options:
   -dnsseed
        Query for peer addresses via DNS lookup, if low on addresses (default: 1
        unless -connect)
+       通过 DNS 发现查询对端地址，如果是子网地址（默认：1 除非使用 -connect 选项）
 
   -externalip=<ip>
        Specify your own public address
+       指定你自己的公共地址（外网 IP）
 
   -forcednsseed
        Always query for peer addresses via DNS lookup (default: 0)
@@ -188,22 +190,28 @@ Connection options:
 
   -listenonion
        Automatically create Tor hidden service (default: 1)
+       自动创建洋葱裸游隐藏服务（默认：1 表示开启）
 
   -maxconnections=<n>
        Maintain at most <n> connections to peers (default: 125)
+       最多维持的对端连接的个数 <n>（默认：125）
 
   -maxreceivebuffer=<n>
        Maximum per-connection receive buffer, <n>*1000 bytes (default: 5000)
+       每条连接接收缓存的上限，<n>*1000 字节（默认：5000）
 
   -maxsendbuffer=<n>
        Maximum per-connection send buffer, <n>*1000 bytes (default: 1000)
+       每条连接发送缓存的上限，<n>*1000 字节（默认：1000）
 
   -onion=<ip:port>
        Use separate SOCKS5 proxy to reach peers via Tor hidden services
        (default: -proxy)
+       通过洋葱路由隐藏服务用于分离 SOCKS5 代理来连接到对端（默认：-proxy 选项）
 
   -onlynet=<net>
        Only connect to nodes in network <net> (ipv4, ipv6 or onion)
+       仅连接到网络中的节点 <net>（ipv4，ipv6 或 洋葱路由）
 
   -permitbaremultisig
        Relay non-P2SH multisig (default: 1)
@@ -215,12 +223,15 @@ Connection options:
   -enforcenodebloom
        Enforce minimum protocol version to limit use of bloom filters (default:
        0)
+       强制执行最小协议版本来限制布鲁姆过滤器的使用（默认：0）
 
   -port=<port>
        Listen for connections on <port> (default: 8222 or testnet: 18222)
+       监听端口为 <port> 的连接（默认：8222 或测试网：18222）
 
   -proxy=<ip:port>
        Connect through SOCKS5 proxy
+       通过 SOCKS5 代理连接
 
   -proxyrandomize
        Randomize credentials for every proxy connection. This enables Tor
@@ -228,26 +239,34 @@ Connection options:
 
   -seednode=<ip>
        Connect to a node to retrieve peer addresses, and disconnect
+       连接到一个节点用于取回对端地址集，然后断开连接
 
   -timeout=<n>
        Specify connection timeout in milliseconds (minimum: 1, default: 5000)
+       指定连接超时的时间，单位为毫秒（最小：1ms，默认：5s）
 
   -torcontrol=<ip>:<port>
        Tor control port to use if onion listening enabled (default:
        127.0.0.1:9051)
+       如果洋葱监听开启，用于洋葱路由控制端口（默认：127.0.0.1：9051）
 
   -torpassword=<pass>
        Tor control port password (default: empty)
+       洋葱控制端口密码（默认：空）
 
   -whitebind=<addr>
        Bind to given address and whitelist peers connecting to it. Use
        [host]:port notation for IPv6
+       绑定到给定地址并允许白名单的对端连接过来。对于 IPv6 使用“[主机]:端口”格式
 
   -whitelist=<netmask>
        Whitelist peers connecting from the given netmask or IP address. Can be
        specified multiple times. Whitelisted peers cannot be DoS banned and
        their transactions are always relayed, even if they are already in the
        mempool, useful e.g. for a gateway
+       从给定掩码或 IP 地址连接的白名单对端。可以指定多次。白名单中的对端不会被
+       禁止使用 Dos 且它们的交易总会被中继，尽管这些交易已经在交易内存池中，
+       有用的例如一个网关
 
   -whitelistrelay
        Accept relayed transactions received from whitelisted peers even when
@@ -260,25 +279,32 @@ Connection options:
   -maxuploadtarget=<n>
        Tries to keep outbound traffic under the given target (in MiB per 24h),
        0 = no limit (default: 0)
+       尝试保持外部接入流量低于给定的目标值（单位：MB/d），0 = 无限制（默认：0）
 
 Wallet options:
+钱包选项：
 
   -disablewallet
        Do not load the wallet and disable wallet RPC calls
+       不加载钱包并禁用钱包 RPC 调用
 
   -keypool=<n>
        Set key pool size to <n> (default: 100)
+       设置钥匙池的大小为 <n>（默认：100）
 
   -fallbackfee=<amt>
        A fee rate (in BTC/kB) that will be used when fee estimation has
        insufficient data (default: 0.0002)
+       一个费用估算不足时使用的费率（单位：BTC/kB）（默认：0.0002）
 
   -mintxfee=<amt>
        Fees (in BTC/kB) smaller than this are considered zero fee for
        transaction creation (default: 0.00001)
+       费用（单位：BTC/kB）低于此值将被视为创建零交易费的交易（默认：0.00001）
 
   -paytxfee=<amt>
        Fee (in BTC/kB) to add to transactions you send (default: 0.00)
+       添加到你发送的交易的费用（单位：BTC/kB），即交易费（默认：0.00）
 
   -rescan
        Rescan the block chain for missing wallet transactions on startup
@@ -319,6 +345,7 @@ Wallet options:
        account owner and payment request information, 2 = drop tx meta data)
 
 Debugging/Testing options:
+调试/测试选项：
 
   -uacomment=<cmt>
        Append comment to the user agent string
@@ -432,16 +459,21 @@ Debugging/Testing options:
        Shrink debug.log file on client startup (default: 1 when no -debug)
 
 Chain selection options:
+链选择选项：（默认为主链）
 
   -testnet
        Use the test chain
+       使用测试链
 
   -regtest
        Enter regression test mode, which uses a special chain in which blocks
        can be solved instantly. This is intended for regression testing tools
        and app development.
+       进入回归测试模式，使用一个能够立刻生成块的特殊链。
+       适用于回归测试工具和应用程序开发。
 
 Node relay options:
+节点中继选项：
 
   -acceptnonstdtxn
        Relay and mine "non-standard" transactions (testnet/regtest only;
@@ -461,66 +493,88 @@ Node relay options:
        Enable transaction replacement in the memory pool (default: 1)
 
 Block creation options:
+区块创建选项：
 
   -blockminsize=<n>
        Set minimum block size in bytes (default: 0)
+       设置区块大小的下限，单位为字节（默认：0）
 
   -blockmaxsize=<n>
        Set maximum block size in bytes (default: 750000)
+       设置区块大小的上限，单位为字节（默认：750000B < 1MB）
 
   -blockprioritysize=<n>
        Set maximum size of high-priority/low-fee transactions in bytes
        (default: 0)
+       设置高优先级与低交易费比的交易大小的上限，单位为字节（默认：0）
 
   -blockversion=<n>
        Override block version to test forking scenarios
+       覆盖区块版本用于测试分叉场景
 
 RPC server options:
+RPC 服务选项：
 
   -server
        Accept command line and JSON-RPC commands
+       接受命令行和 JSON-RPC 命令
 
   -rest
        Accept public REST requests (default: 0)
+       接受公共 REST 请求（默认：0 表示关闭）
 
   -rpcbind=<addr>
        Bind to given address to listen for JSON-RPC connections. Use
        [host]:port notation for IPv6. This option can be specified multiple
        times (default: bind to all interfaces)
+       绑定给定地址用于监听 JSON-RPC 连接。对于 IPv6 使用“[主机]:端口”的形式。
+       该选项可以指定多次（默认：绑定所有接口）
 
   -rpccookiefile=<loc>
        Location of the auth cookie (default: data dir)
+       验证 cookie 文件的位置（默认：数据目录 "~/.bitcoin/.cookie"）
 
   -rpcuser=<user>
        Username for JSON-RPC connections
+       JSON-RPC 连接的用户名
 
   -rpcpassword=<pw>
        Password for JSON-RPC connections
+       JSON-RPC 连接的密码
 
   -rpcauth=<userpw>
        Username and hashed password for JSON-RPC connections. The field
        <userpw> comes in the format: <USERNAME>:<SALT>$<HASH>. A canonical
        python script is included in share/rpcuser. This option can be specified
        multiple times
+       JSON-RPC 连接的用户名和哈希过的密码。<userpw> 区域的格式：<用户名>:<盐值>$<哈希>。
+       share/rpcuser 中包含一个规范的 python 脚本。该选项可以指定多次
 
   -rpcport=<port>
        Listen for JSON-RPC connections on <port> (default: 8221 or testnet:
        18221)
+       监听的 JSON-RPC 连接的端口（默认：8221 或 测试网：18221）
 
   -rpcallowip=<ip>
        Allow JSON-RPC connections from specified source. Valid for <ip> are a
        single IP (e.g. 1.2.3.4), a network/netmask (e.g. 1.2.3.4/255.255.255.0)
        or a network/CIDR (e.g. 1.2.3.4/24). This option can be specified
        multiple times
+       允许地址源（ip）的 JSON-RPC 连接。有效的 <ip> 是一个单一 IP（例：1.2.3.4），
+       一个网络/掩码（例：1.2.3.4/255.255.255.0）或一个网络/CIDR（例：1.2.3.4/24）。
+       该选项可以指定多次
 
   -rpcthreads=<n>
        Set the number of threads to service RPC calls (default: 4)
+       设置用于 RPC 调用服务的线程数（默认：4）
 
   -rpcworkqueue=<n>
        Set the depth of the work queue to service RPC calls (default: 16)
+       设置用于 RPC 调用服务的工作队列深度（默认：16）
 
   -rpcservertimeout=<n>
        Timeout during HTTP requests (default: 30)
+       HTTP 请求的超时时间（默认：30s）
 {% endhighlight %}
 
 ## 比特币配置文件样例
