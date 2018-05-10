@@ -4,7 +4,8 @@ title:  "Git 基础命令"
 date:   2018-04-30 16:20:08 +0800
 categories: jekyll update
 ---
-传言：[GitHub](https://github.com) 是全球最大的同性交友网站！
+什么是 [GitHub](https://github.com)？不知道 Git 的请往下看，Hub 有中心、枢纽之意。<br>
+传言：[GitHub](https://github.com) 是全球最大的同性交友网站。
 
 官方简介：<br>
 ![git](/images/20180430/git.jpg)<br>
