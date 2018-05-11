@@ -22,15 +22,19 @@ categories: jekyll update
 使用 RPC 中的 `getnewaddress` 命令生成一个新的密钥（私钥、公钥对）。<br>
 为了安全考虑，只显示生成的公钥地址，私钥默认存入本地钱包数据库。例：
 
-> `$ ./bitcoin-cli getnewaddress`<br>
-> 12PbLWS4h3qSmQfdu4oEgXCYMGY4TVbL3N
+{% highlight shell %}
+$ ./bitcoin-cli getnewaddress
+12PbLWS4h3qSmQfdu4oEgXCYMGY4TVbL3N
+{% endhighlight %}
 
 然后使用 RPC 中的 `dumpprivkey` 命令导出公钥地址对应的私钥。<br>
 以 WIF(wallet import format) 钱包导入格式即 Base58 校验和编码进行导出。<br>
 **注：该命令只适用于本地钱包数据库中的私钥。**例：
 
-> `$ ./bitcoin-cli dumpprivkey 12PbLWS4h3qSmQfdu4oEgXCYMGY4TVbL3N`
-> KzCFcgtfrPA2uWmXn4zjVNaKYMEUHbh732XzZ4aZ737545DqZ3V4
+{% highlight shell %}
+$ ./bitcoin-cli dumpprivkey 12PbLWS4h3qSmQfdu4oEgXCYMGY4TVbL3N
+KzCFcgtfrPA2uWmXn4zjVNaKYMEUHbh732XzZ4aZ737545DqZ3V4
+{% endhighlight %}
 
 ## 私钥、公钥、地址之间的转换流程
 ![privpubkeyaddr](/images/20180507/privpubkeyaddr.png)<br>
@@ -38,9 +42,9 @@ categories: jekyll update
 
 ## 从私钥到公钥地址的详细步骤
 1.使用伪随机数生成器 PRNG 生成一个给定范围内的 256 位随机数作为私钥 PrivKey。<br>
-2.使用 OpenSSL 加密库中 secp256k1 标准的椭圆曲线相乘加密算法计算上一步生成私钥得到相应的公钥 PubKey。<br>
+2.使用 OpenSSL 加密库中 secp256k1 标准的椭圆曲线相乘加密算法计算上一步生成私钥 PrivKey 得到相应的公钥 PubKey。<br>
 ![pubkeytoaddress](/images/20180507/pubkeytoaddress.png)<br>
-3.使用 "Double Hash" 或 "Hash160" 运算得到公钥地址 PubKeyAddress，用户看到的是该地址经过 Base58Check 编码后得到地址 address。<br>
+3.使用 "Double Hash" 或 "Hash160" 运算上一步生成的公钥 PubKey 得到公钥地址 PubKeyAddress，用户看到的是该地址经过 Base58Check 编码后得到地址 address。<br>
 3.1."Hash160" 是先后经过了 SHA256 和 RIPEMD160 两步运算得到 160 位及 20 个字节的公钥地址，PubKeyAddress = RIPEMD160(SHA256(PubKey))。<br>
 3.2.最后经过 Base58 编码得到最后的地址，address = Base58Check(PubKeyAddress)。<br>
 ![base58check](/images/20180507/base58check.png)<br>
@@ -54,18 +58,22 @@ categories: jekyll update
 最后放上一张从公钥到地址转换的总流程图，就开始我们的源码之旅。<br>
 ![pubkeytoaddr](/images/20180507/pubkeytoaddr.png)
 
-> `$ cd bitcoin/src` # 进入比特币根目录下的 src 目录。<br>
-> `$ grep "getnewaddress" * -nir` # 搜索 RPC 命令 `getnewaddress` 所出现的文件及位置，`grep` 是 Linux 下的一个查找字符串命令，其他平台或 IDE 请自行忽略。<br>
-> rpcserver.cpp:344:    { "wallet",             "getnewaddress",          &getnewaddress,          true  },<br>
-> rpcserver.h:199:extern UniValue getnewaddress(const UniValue& params, bool fHelp); // in rpcwallet.cpp<br>
-> test/rpc_wallet_tests.cpp:174:     * 		getnewaddress<br>
-> test/rpc_wallet_tests.cpp:176:    BOOST_CHECK_NO_THROW(CallRPC("getnewaddress"));<br>
-> test/rpc_wallet_tests.cpp:177:    BOOST_CHECK_NO_THROW(CallRPC("getnewaddress getnewaddress_demoaccount"));<br>
-> wallet/wallet.h:439:    //! todo: add something to note what created it (user, getnewaddress, change)<br>
+{% highlight shell %}
+$ cd bitcoin/src # 进入比特币根目录下的 src 目录。
+$ grep "getnewaddress" * -nir # 搜索 RPC 命令 `getnewaddress` 所出现的文件及位置，`grep` 是 Linux 下的一个查找字符串命令，其他平台或 IDE 请自行忽略。
+rpcserver.cpp:344:    { "wallet",             "getnewaddress",          &getnewaddress,          true  },
+rpcserver.h:199:extern UniValue getnewaddress(const UniValue& params, bool fHelp); // in rpcwallet.cpp
+test/rpc_wallet_tests.cpp:174:     * 		getnewaddress
+test/rpc_wallet_tests.cpp:176:    BOOST_CHECK_NO_THROW(CallRPC("getnewaddress"));
+test/rpc_wallet_tests.cpp:177:    BOOST_CHECK_NO_THROW(CallRPC("getnewaddress getnewaddress_demoaccount"));
+Binary file wallet/rpcwallet.cpp matches
+wallet/wallet.h:439:    //! todo: add something to note what created it (user, getnewaddress, change)
+{% endhighlight %}
 
 从结果中我们可以看到出现该命令的文件名以及在该文件中出现的行号。<br>
-分别出现在“rpcserver.cpp”、“rpcserver.h”、“test/rpc_wallet_tests.cpp”、“wallet/wallet.h”这 4 个文件中。<br>
+分别出现在“rpcserver.cpp”、“rpcserver.h”、“test/rpc_wallet_tests.cpp”、“wallet/rpcwallet.cpp”、“wallet/wallet.h”这 5 个文件中。<br>
 打开“rpcserver.cpp”文件，找到该命令出现的位置。
+
 {% highlight C++ %}
 /**
  * Call Table
@@ -78,8 +86,84 @@ static const CRPCCommand vRPCCommands[] =
     /* Wallet */
                                        ...
     { "wallet",             "getnewaddress",          &getnewaddress,          true  },
+                                       ...
+#endif // ENABLE_WALLET
+};
 {% endhighlight %}
-vRPCCommands[]是一个类对象数组。
+
+vRPCCommands[] 是一个静态常量类对象数组，在“rpcserver.h”文件中找到类 CRPCCommand 的定义如下：
+
+{% highlight C++ %}
+typedef UniValue(*rpcfn_type)(const UniValue& params, bool fHelp); // 回调函数类型定义
+
+class CRPCCommand // 远程过程调用命令类
+{
+public:
+    std::string category; // 所属类别
+    std::string name; // 名称
+    rpcfn_type actor; // 对应的函数行为
+    bool okSafeMode; // 是否打开安全模式
+};
+{% endhighlight %}
+
+该类的 4 个成员变量对应注释的 4 个列名。<br>
+rpcfn_type 是一个函数标签为 UniValue(const UniValue&, bool) 的回调函数类型，
+形参 params 为 RPC 命令的参数，形参 fHelp 为显示该命令帮助的标志，对应[比特币核心客户端基础命令](https://mistydew.github.io/jekyll/update/2018/05/06/bitcoin-cli-commands.html)用法的第 3 条。
+
+{% highlight shell %}
+  bitcoin-cli [options] help <command>      Get help for a command # 获取一条命令的帮助信息（用法示例）
+{% endhighlight %}
+
+在“rpcserver.h”文件中找到 RPC 命令 `getnewaddress` 对应的函数的引用。
+
+{% highlight C++ %}
+extern UniValue getnewaddress(const UniValue& params, bool fHelp); // in rpcwallet.cpp
+{% endhighlight %}
+
+该函数定义在“wallet/rpcwllet.cpp”文件中。
+
+{% highlight C++ %}
+UniValue getnewaddress(const UniValue& params, bool fHelp) // 在指定账户下新建一个地址，若不指定账户，默认添加到""空账户下
+{
+    if (!EnsureWalletIsAvailable(fHelp)) // 确保钱包可用，即当前钱包已存在
+        return NullUniValue;
+
+    if (fHelp || params.size() > 1) // 参数个数为 0 或 1，即要么使用默认账户，要么指定账户
+        throw runtime_error( // 查看该命令的帮助或命令的参数个数错误均返回该命令的帮助
+            "getnewaddress ( \"account\" )\n"
+            "\nReturns a new Bitcoin address for receiving payments.\n"
+            "If 'account' is specified (DEPRECATED), it is added to the address book \n"
+            "so payments received with the address will be credited to 'account'.\n"
+            "\nArguments:\n"
+            "1. \"account\"        (string, optional) DEPRECATED. The account name for the address to be linked to. If not provided, the default account \"\" is used. It can also be set to the empty string \"\" to represent the default account. The account does not need to exist, it will be created if there is no account by the given name.\n"
+            "\nResult:\n"
+            "\"bitcoinaddress\"    (string) The new bitcoin address\n"
+            "\nExamples:\n"
+            + HelpExampleCli("getnewaddress", "")
+            + HelpExampleRpc("getnewaddress", "")
+        );
+
+    LOCK2(cs_main, pwalletMain->cs_wallet);
+
+    // Parse the account first so we don't generate a key if there's an error
+    string strAccount;
+    if (params.size() > 0) // 加参数的情况（账户）
+        strAccount = AccountFromValue(params[0]);
+
+    if (!pwalletMain->IsLocked())
+        pwalletMain->TopUpKeyPool();
+
+    // Generate a new key that is added to wallet
+    CPubKey newKey;
+    if (!pwalletMain->GetKeyFromPool(newKey)) // 获取一个公钥
+        throw JSONRPCError(RPC_WALLET_KEYPOOL_RAN_OUT, "Error: Keypool ran out, please call keypoolrefill first");
+    CKeyID keyID = newKey.GetID(); // 对 65 bytes 的公钥调用 hash160(即先 sha256, 再 ripemd160)
+
+    pwalletMain->SetAddressBook(keyID, strAccount, "receive");
+
+    return CBitcoinAddress(keyID).ToString(); // 160 位的公钥转化为公钥地址：Base58(1 + 20 + 4 bytes)
+}
+{% endhighlight %}
 
 ## 参照
 * [Technical background of version 1 Bitcoin addresses - Bitcoin Wiki](https://en.bitcoin.it/wiki/Technical_background_of_version_1_Bitcoin_addresses)
