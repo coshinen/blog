@@ -59,7 +59,7 @@ KzCFcgtfrPA2uWmXn4zjVNaKYMEUHbh732XzZ4aZ737545DqZ3V4
 ![pubkeytoaddr](/images/20180507/pubkeytoaddr.png)
 
 {% highlight shell %}
-$ cd bitcoin/src # 进入比特币根目录下的 src 目录。
+$ cd bitcoin/src # 进入比特币根目录下的 src 目录，之后未作特殊说明的均以该目录作为比特币源码的根目录。
 $ grep "getnewaddress" * -nir # 搜索 RPC 命令 `getnewaddress` 所出现的文件及位置，`grep` 是 Linux 下的一个查找字符串命令，其他平台或 IDE 请自行忽略。
 rpcserver.cpp:344:    { "wallet",             "getnewaddress",          &getnewaddress,          true  },
 rpcserver.h:199:extern UniValue getnewaddress(const UniValue& params, bool fHelp); // in rpcwallet.cpp
@@ -125,11 +125,11 @@ extern UniValue getnewaddress(const UniValue& params, bool fHelp); // in rpcwall
 {% highlight C++ %}
 UniValue getnewaddress(const UniValue& params, bool fHelp) // 在指定账户下新建一个地址，若不指定账户，默认添加到""空账户下
 {
-    if (!EnsureWalletIsAvailable(fHelp)) // 确保钱包可用，即当前钱包已存在
+    if (!EnsureWalletIsAvailable(fHelp)) // 1.确保钱包可用，即当前钱包已存在
         return NullUniValue;
 
     if (fHelp || params.size() > 1) // 参数个数为 0 或 1，即要么使用默认账户，要么指定账户
-        throw runtime_error( // 查看该命令的帮助或命令的参数个数错误均返回该命令的帮助
+        throw runtime_error( // 2.查看该命令的帮助或命令的参数个数错误均返回该命令的帮助
             "getnewaddress ( \"account\" )\n"
             "\nReturns a new Bitcoin address for receiving payments.\n"
             "If 'account' is specified (DEPRECATED), it is added to the address book \n"
@@ -143,18 +143,18 @@ UniValue getnewaddress(const UniValue& params, bool fHelp) // 在指定账户下
             + HelpExampleRpc("getnewaddress", "")
         );
 
-    LOCK2(cs_main, pwalletMain->cs_wallet);
+    LOCK2(cs_main, pwalletMain->cs_wallet); // 3.对钱包加锁
 
     // Parse the account first so we don't generate a key if there's an error
-    string strAccount;
-    if (params.size() > 0) // 加参数的情况（账户）
-        strAccount = AccountFromValue(params[0]);
+    string strAccount; // 用于保存账户名
+    if (params.size() > 0) // 有 1 个参数的情况
+        strAccount = AccountFromValue(params[0]); // 4.解析第一个参数并将其作为账户名
 
-    if (!pwalletMain->IsLocked())
-        pwalletMain->TopUpKeyPool();
+    if (!pwalletMain->IsLocked()) // 检查钱包是否上锁（被用户加密）
+        pwalletMain->TopUpKeyPool(); // 5.填充密钥池
 
     // Generate a new key that is added to wallet
-    CPubKey newKey;
+    CPubKey newKey; // 6.生成一个新密钥并添加到钱包，返回一个对应的比特币地址
     if (!pwalletMain->GetKeyFromPool(newKey)) // 获取一个公钥
         throw JSONRPCError(RPC_WALLET_KEYPOOL_RAN_OUT, "Error: Keypool ran out, please call keypoolrefill first");
     CKeyID keyID = newKey.GetID(); // 对 65 bytes 的公钥调用 hash160(即先 sha256, 再 ripemd160)
@@ -163,6 +163,81 @@ UniValue getnewaddress(const UniValue& params, bool fHelp) // 在指定账户下
 
     return CBitcoinAddress(keyID).ToString(); // 160 位的公钥转化为公钥地址：Base58(1 + 20 + 4 bytes)
 }
+{% endhighlight %}
+
+该函数的作用是在指定账户下生成一个新地址，若未指定账户，则默认保存在 "" 空账户下。<br>
+基本流程：<br>
+1.检查钱包是否可用（存在）。<br>
+2.命令帮助和命令参数个数的处理。<br>
+3.钱包加锁，涉及临界资源的操作，防止并发。<br>
+4.解析参数获取指定的帐户名。<br>
+5.填充密钥池，在此之前需判断钱包是否上锁。<br>
+6.生成一个新密钥并添加到钱包，同时得到对应的公钥地址并返回。<br>
+
+第一步，检查钱包是否可用（存在）。<br>
+进入 EnsureWalletIsAvailable() 函数，在“wallet/rpcwllet.cpp”文件中。
+
+{% highlight C++ %}
+bool EnsureWalletIsAvailable(bool avoidException) // 确保钱包当前可用
+{
+    if (!pwalletMain) // 钱包未创建成功
+    {
+        if (!avoidException)
+            throw JSONRPCError(RPC_METHOD_NOT_FOUND, "Method not found (disabled)");
+        else
+            return false;
+    }
+    return true; // 钱包已创建完成，返回 true
+}
+{% endhighlight %}
+
+pwalletMain 是钱包对象指针，指向一个钱包对象，其引用在“init.h”文件中。
+
+{% highlight C++ %}
+extern CWallet* pwalletMain; // 钱包对象指针
+{% endhighlight %}
+
+pwalletMain 在“init.cpp”文件中的 AppInit2() 函数的第 8 步加载钱包中进行初始化，这里不再赘述，详见。
+
+{% highlight C++ %}
+    // ********************************************************* Step 8: load wallet // 若启用钱包功能，则加载钱包
+                       ...
+            pwalletMain = new CWallet(strWalletFile); // 根据指定的钱包文件名创建并初始化钱包对象
+{% endhighlight %}
+
+第四步，解析参数获取指定的帐户名，只需满足帐户名不为 "*" 即可。<br>
+进入 AccountFromValue() 函数，在“wallet/rpcwllet.cpp”文件中。
+
+{% highlight C++ %}
+string AccountFromValue(const UniValue& value) // 从参数中获取账户名
+{
+    string strAccount = value.get_str(); // 把 UniValue 类型的参数转化为 std::string 类型
+    if (strAccount == "*") // 账户名不能为 "*"
+        throw JSONRPCError(RPC_WALLET_INVALID_ACCOUNT_NAME, "Invalid account name");
+    return strAccount; // 返回获取的账户名，可能为空
+}
+{% endhighlight %}
+
+第五步，填充密钥池，在此之前需判断钱包是否上锁。<br>
+进入 pwalletMain->IsLocked() 函数，在“wallet/crypter.h”文件的 CCryptoKeyStore 类中。
+
+{% highlight C++ %}
+class CCryptoKeyStore : public CBasicKeyStore
+{
+    ...
+    bool IsLocked() const
+    {
+        if (!IsCrypted())
+            return false;
+        bool result;
+        {
+            LOCK(cs_KeyStore);
+            result = vMasterKey.empty();
+        }
+        return result;
+    }
+    ...
+};
 {% endhighlight %}
 
 ## 参照
