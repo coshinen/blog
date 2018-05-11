@@ -17,8 +17,8 @@ categories: jekyll update
 最终，一个允许用户发送 RPC 命令到 bitcoind 的简单程序 bitcoin-cli 也包含在比特币核心内。
 
 ### 基础命令
-> `$ bitcoin-cli -h` 获取以下帮助信息。
-{% highlight C++ %}
+{% highlight shell %}
+$ bitcoin-cli -h # 获取以下帮助信息。
 Bitcoin Core RPC client version v0.12.1.0-f61a24e
 比特币核心 RPC 客户端版本 v0.12.1.0-意味不明
 
@@ -83,8 +83,8 @@ Chain selection options:
 {% endhighlight %}
 
 ### RPC 命令（需要 bitcoind）
-> `$ bitcoin-cli help` 获取以下 RPC 命令。
-{% highlight C++ %}
+{% highlight shell %}
+$ bitcoin-cli help # 获取以下 RPC 命令。
 == Blockchain ==
 getbestblockhash # 获取当前区块链最佳块的哈希值
 getblock "hash" ( verbose ) # 通过区块哈希获取对应区块的详细信息

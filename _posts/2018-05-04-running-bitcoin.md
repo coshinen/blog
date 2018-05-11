@@ -18,17 +18,21 @@ categories: jekyll update
 ## Linux 快速启动
 使用命令行客户端启动（从头开始）的最简单方式，自动同步区块并创建一个钱包，只要从包含你的 bitcoind 二进制程序的目录运行以下命令（不带参数）：
 
-> `./bitcoind`
+{% highlight shell %}
+./bitcoind
+{% endhighlight %}
 
 运行标准的图形化界面：
 
-> `./bitcoin-qt`
+{% highlight shell %}
+./bitcoin-qt
+{% endhighlight %}
 
 ## 命令行参数
 以下命令是准确的来自于比特币核心版本 v0.12.1.
 
-> `./bitcoind --help -help-debug` 获取以下详细帮助。
-{% highlight C++ %}
+{% highlight shell %}
+$ ./bitcoind --help -help-debug # 获取以下详细帮助。
 Bitcoin Core Daemon version v0.12.1.0-61906ac
 比特币核心守护进程版本 v0.12.1.0-意味不明
 
