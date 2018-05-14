@@ -48,6 +48,7 @@ $ git commit --amend # 修改上一次提交的评论，同时按 `Ctrl` + `X` �
 $ git clone https://github.com/<username/organization>/<projectname>.git # 克隆 GitHub 上某用户或组织的项目到本地。
 $ git push # 同步本地的项目到 GitHub 上。
 $ git push origin HEAD --force # 强制同步本地的项目分支到 GitHub 上，用于 `$ git commit --amend` 之后。
+$ git push origin master -f # 强制同步本地的项目分支到 GitHub 上，用于 `$ git reset --hard <version>` 修改远程仓库的错误提交。
 $ git pull # 同步 GitHub 上的项目到本地。
 {% endhighlight %}
 
