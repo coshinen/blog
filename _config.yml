@@ -17,3 +17,8 @@ github_username:  mistydew
 
 # Build settings
 markdown: kramdown
+
+# Gems
+gems: [jekyll-paginate]
+paginate: 10
+paginate_path: "/page/:num"
