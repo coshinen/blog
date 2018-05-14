@@ -222,14 +222,30 @@ string AccountFromValue(const UniValue& value) // 从参数中获取账户名
 进入 pwalletMain->IsLocked() 函数，在“wallet/crypter.h”文件的 CCryptoKeyStore 类中。
 
 {% highlight C++ %}
+typedef std::vector<unsigned char, secure_allocator<unsigned char> > CKeyingMaterial;
+...
 class CCryptoKeyStore : public CBasicKeyStore
 {
+private:
     ...
+    CKeyingMaterial vMasterKey; // 主密钥
+
+    //! if fUseCrypto is true, mapKeys must be empty
+    //! if fUseCrypto is false, vMasterKey must be empty
+    bool fUseCrypto; // 如果使用加密标志为 true，mapKeys 必须为空；如果为 false，vMasterKey 必须为空
+    ...
+public:
+    ...
+    bool IsCrypted() const
+    {
+        return fUseCrypto; // 返回当前钱包是否被用户加密的状态
+    }
+
     bool IsLocked() const
     {
-        if (!IsCrypted())
+        if (!IsCrypted()) // 当 fUseCrypto 为 false
             return false;
-        bool result;
+        bool result; // 当 fUseCrypto 为 true
         {
             LOCK(cs_KeyStore);
             result = vMasterKey.empty();
@@ -239,6 +255,89 @@ class CCryptoKeyStore : public CBasicKeyStore
     ...
 };
 {% endhighlight %}
+
+当 fUseCrypto 为 false 即用户没有加密钱包时，<br>
+进入 pwalletMain->TopUpKeyPool() 函数，定义在“wallet/wallet.h”文件的 CWallet 类中。
+
+{% highlight C++ %}
+/** 
+ * A CWallet is an extension of a keystore, which also maintains a set of transactions and balances,
+ * and provides the ability to create new transactions.
+ */ // CWallet 是密钥库的扩展，可以维持一组交易和余额，并提供创建新交易的能力。
+class CWallet : public CCryptoKeyStore, public CValidationInterface
+{
+    ...
+    bool TopUpKeyPool(unsigned int kpSize = 0);
+    ...
+};
+{% endhighlight %}
+
+实现在“wallet/wallet.cpp”文件中。
+
+{% highlight C++ %}
+bool CWallet::TopUpKeyPool(unsigned int kpSize)
+{
+    { // 这里是一个技巧，在函数返回前可提前析构创建的局部对象
+        LOCK(cs_wallet);
+
+        if (IsLocked()) // 再次检查钱包是否被锁
+            return false;
+
+        CWalletDB walletdb(strWalletFile); // 通过钱包文件名创建钱包数据库对象
+
+        // Top up key pool
+        unsigned int nTargetSize;
+        if (kpSize > 0) // 这里的 kpSize 默认为 0
+            nTargetSize = kpSize;
+        else // 所以走这里
+            nTargetSize = max(GetArg("-keypool", DEFAULT_KEYPOOL_SIZE), (int64_t) 0); // 钥匙池大小，默认 100
+
+        while (setKeyPool.size() < (nTargetSize + 1)) // 这里可以看出密钥池实际上最多有 nTargetSize + 1 个密钥，默认为 100 + 1 即 101 个
+        {
+            int64_t nEnd = 1;
+            if (!setKeyPool.empty()) // 若密钥池集合为空，则从索引为 1 的密钥开始填充
+                nEnd = *(--setKeyPool.end()) + 1; // 获取当前密钥池中密钥的最大数量（索引）并加 1
+            if (!walletdb.WritePool(nEnd, CKeyPool(GenerateNewKey()))) // 创建一个密钥对并把公钥写入钱包数据库文件中
+                throw runtime_error("TopUpKeyPool(): writing generated key failed");
+            setKeyPool.insert(nEnd); // 将新密钥的索引插入密钥池集合
+            LogPrintf("keypool added key %d, size=%u\n", nEnd, setKeyPool.size());
+        }
+    }
+    return true;
+}
+{% endhighlight %}
+
+接下来就开始生成新密钥了，进入 GenerateNewKey() 函数，同样属于 CWallet 类，实现在“wallet/wallet.cpp”文件中。
+
+{% highlight C++ %}
+CPubKey CWallet::GenerateNewKey()
+{
+    AssertLockHeld(cs_wallet); // mapKeyMetadata
+    bool fCompressed = CanSupportFeature(FEATURE_COMPRPUBKEY); // default to compressed public keys if we want 0.6.0 wallets
+
+    CKey secret; // 创建一个私钥
+    secret.MakeNewKey(fCompressed); // 随机生成一个数来初始化私钥，注意边界，下界为 1
+
+    // Compressed public keys were introduced in version 0.6.0
+    if (fCompressed) // 是否压缩公钥，0.6.0 版引入
+        SetMinVersion(FEATURE_COMPRPUBKEY);
+
+    CPubKey pubkey = secret.GetPubKey(); // 获取与私钥对应的公钥（椭圆曲线加密算法）
+    assert(secret.VerifyPubKey(pubkey)); // 验证私钥公钥对是否匹配
+
+    // Create new metadata // 创建新元数据/中继数据
+    int64_t nCreationTime = GetTime(); // 获取当前时间
+    mapKeyMetadata[pubkey.GetID()] = CKeyMetadata(nCreationTime);
+    if (!nTimeFirstKey || nCreationTime < nTimeFirstKey)
+        nTimeFirstKey = nCreationTime;
+
+    if (!AddKeyPubKey(secret, pubkey))
+        throw std::runtime_error("CWallet::GenerateNewKey(): AddKey failed");
+    return pubkey; // 返回对应的公钥
+}
+{% endhighlight %}
+
+该函数在规定范围内生成一个新的密钥，并通过椭圆曲线加密算法获取与之对应的公钥。
 
 ## 参照
 * [Technical background of version 1 Bitcoin addresses - Bitcoin Wiki](https://en.bitcoin.it/wiki/Technical_background_of_version_1_Bitcoin_addresses)
