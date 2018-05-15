@@ -307,7 +307,16 @@ bool CWallet::TopUpKeyPool(unsigned int kpSize)
 }
 {% endhighlight %}
 
-接下来就开始生成新密钥了，进入 GenerateNewKey() 函数，同样属于 CWallet 类，实现在“wallet/wallet.cpp”文件中。
+先获取密钥池的大小，默认为 100，定义在“wallet/wallet.h”文件中。
+
+{% highlight C++ %}
+static const unsigned int DEFAULT_KEYPOOL_SIZE = 100;
+{% endhighlight %}
+
+可以直接修改该值（硬编码），也可通过 `-keypool=<n>` 选项或配置文件来在[启动比特币核心服务 bitcoind](/jekyll/update/2018/05/04/running-bitcoin.html) 时修改该值（软编码）。
+
+接下来就开始不断生成新密钥并将与之对应的公钥加入密钥池，直至密钥池中密钥的数量达到指定大小 DEFAULT_KEYPOOL_SIZE + 1。<br>
+进入 GenerateNewKey() 函数，同样属于 CWallet 类，实现在“wallet/wallet.cpp”文件中。
 
 {% highlight C++ %}
 CPubKey CWallet::GenerateNewKey()
@@ -337,7 +346,59 @@ CPubKey CWallet::GenerateNewKey()
 }
 {% endhighlight %}
 
-该函数在规定范围内生成一个新的密钥，并通过椭圆曲线加密算法获取与之对应的公钥。
+该函数在规定范围内生成一个新的密钥，并通过椭圆曲线加密算法获取与之对应的公钥。<br>
+之后将返回的公钥转换为一个密钥池条目对象，与其索引一起写入钱包数据库的密钥池中。
+
+{% highlight C++ %}
+/** A key pool entry */
+class CKeyPool // 一个密钥池条目（保存公钥）
+{
+public:
+    int64_t nTime; // 时间
+    CPubKey vchPubKey; // 公钥
+
+    CKeyPool();
+    CKeyPool(const CPubKey& vchPubKeyIn);
+
+    ADD_SERIALIZE_METHODS;
+
+    template <typename Stream, typename Operation>
+    inline void SerializationOp(Stream& s, Operation ser_action, int nType, int nVersion) {
+        if (!(nType & SER_GETHASH))
+            READWRITE(nVersion);
+        READWRITE(nTime);
+        READWRITE(vchPubKey);
+    }
+};
+{% endhighlight %}
+
+然后进入 walletdb.WritePool() 函数，定义在“wallet/walletdb.h”文件的 CWalletDB 类中。
+
+{% highlight C++ %}
+/** Access to the wallet database (wallet.dat) */
+class CWalletDB : public CDB // 访问钱包数据库（wallet.dat）
+{
+public:
+    ...
+    bool WritePool(int64_t nPool, const CKeyPool& keypool);
+    ...
+};
+{% endhighlight %}
+
+实现在“wallet/walletdb.cpp”文件中。
+
+{% highlight C++ %}
+bool CWalletDB::WritePool(int64_t nPool, const CKeyPool& keypool)
+{
+    nWalletDBUpdated++; // 升级次数加 1
+    return Write(std::make_pair(std::string("pool"), nPool), keypool); // 打上 "pool" 标签并写入钱包数据库文件
+}
+{% endhighlight %}
+
+从这里可以看出所谓的“密钥池”并非一个对象，而是一个数据库中打了标签 "pool" 的条目。
+
+第六步，生成一个新密钥并添加到钱包，同时得到对应的公钥地址并返回。
+先从钱包中的密钥池获取一个公钥，进入 pwalletMain->GetKeyFromPool() 函数，实现在“wallet/wallet.cpp”文件中。
 
 ## 参照
 * [Technical background of version 1 Bitcoin addresses - Bitcoin Wiki](https://en.bitcoin.it/wiki/Technical_background_of_version_1_Bitcoin_addresses)
