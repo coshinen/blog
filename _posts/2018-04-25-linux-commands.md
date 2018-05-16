@@ -82,6 +82,13 @@ $ scp username@ip:<file> <dir> # 复制远程主机 `username@ip` 下的文件 <
 $ time <command> # 统计执行给定命令 <command> 所花费的时间。
 {% endhighlight %}
 
+### 搜索字符串 grep
+
+{% highlight shell %}
+$ grep <content> * -nri # 查询并显示当前所在目录下所有出现 <content> 字符串的文件及行号，`*` 表示当前目录下所有文件，`-n` 参数显示所在行号，`-r` 参数表示递归，`-i` 参数表示不区分大小写。<br>
+$ grep <content> <file> -n # 查询并显示指定文件 <file> 出现 <content> 字符串的行号。
+{% endhighlight %}
+
 ## 参考
 * [Why Penguin is Linux logo? - LinuxScrew: Linux Blog](http://www.linuxscrew.com/2007/11/14/why-penguin-is-linux-logo)
 * [《Linus Torvalds自传》摘录 - 阮一峰的网络日志](http://www.ruanyifeng.com/blog/2012/09/linus_torvalds.html)
