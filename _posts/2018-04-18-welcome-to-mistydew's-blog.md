@@ -7,7 +7,7 @@ categories: jekyll update
 You can contact me via e-mail: [mistydew@qq.com](https://en.mail.qq.com).
 
 The following is a example of highlight.
-{% highlight ruby %}
+{% highlight ruby linenos %}
 def print_hi(name)
   puts "Hi, #{name}"
 end
