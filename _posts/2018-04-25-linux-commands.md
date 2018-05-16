@@ -85,14 +85,14 @@ $ time <command> # 统计执行给定命令 <command> 所花费的时间。
 ### 查找文件 find
 
 {% highlight shell %}
-$ find . -name <filename> -type f # 以当前目录 `.` 为起始目录，查询并显示指定文件名 <filename> 的文件（相对）路径，`f` 表示文件类型普通文件。<br>
+$ find . -name <filename> -type f # 以当前目录 `.` 为起始目录，查询并显示指定文件名 <filename> 的文件（相对）路径，`f` 表示文件类型普通文件。
 $ find . -empty #  以当前目录 `.` 为起始目录，查询并显示所有大小为 0 的文件（相对）路径。
 {% endhighlight %}
 
 ### 搜索内容 grep
 
 {% highlight shell %}
-$ grep <content> * -nri # 查询并显示当前所在目录下所有出现 <content> 字符串的文件及行号，`*` 表示当前目录下所有文件，`-n` 参数显示所在行号，`-r` 参数表示递归，`-i` 参数表示不区分大小写。<br>
+$ grep <content> * -nri # 查询并显示当前所在目录下所有出现 <content> 字符串的文件及行号，`*` 表示当前目录下所有文件，`-n` 参数显示所在行号，`-r` 参数表示递归，`-i` 参数表示不区分大小写。
 $ grep <content> <file> -n # 查询并显示指定文件 <file> 出现 <content> 字符串的行号。
 {% endhighlight %}
 
