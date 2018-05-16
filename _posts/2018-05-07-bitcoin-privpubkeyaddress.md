@@ -175,7 +175,7 @@ UniValue getnewaddress(const UniValue& params, bool fHelp) // 在指定账户下
 6.生成一个新密钥并添加到钱包，同时得到对应的公钥地址并返回。<br>
 
 第一步，检查钱包是否可用（存在）。<br>
-进入 EnsureWalletIsAvailable() 函数，在“wallet/rpcwllet.cpp”文件中。
+调用 EnsureWalletIsAvailable(fHelp)，该函数实现在“wallet/rpcwllet.cpp”文件中。
 
 {% highlight C++ %}
 bool EnsureWalletIsAvailable(bool avoidException) // 确保钱包当前可用
@@ -197,7 +197,7 @@ pwalletMain 是钱包对象指针，指向一个钱包对象，其引用在“in
 extern CWallet* pwalletMain; // 钱包对象指针
 {% endhighlight %}
 
-pwalletMain 在“init.cpp”文件中的 AppInit2() 函数的第 8 步加载钱包中进行初始化，这里不再赘述，详见。
+pwalletMain 在“init.cpp”文件中的 AppInit2(...) 函数的第 8 步加载钱包中进行初始化，这里不再赘述，详见。
 
 {% highlight C++ %}
     // ********************************************************* Step 8: load wallet // 若启用钱包功能，则加载钱包
@@ -206,7 +206,7 @@ pwalletMain 在“init.cpp”文件中的 AppInit2() 函数的第 8 步加载钱
 {% endhighlight %}
 
 第四步，解析参数获取指定的帐户名，只需满足帐户名不为 "*" 即可。<br>
-进入 AccountFromValue() 函数，在“wallet/rpcwllet.cpp”文件中。
+调用 AccountFromValue(params[0])，该函数实现在“wallet/rpcwllet.cpp”文件中。
 
 {% highlight C++ %}
 string AccountFromValue(const UniValue& value) // 从参数中获取账户名
@@ -372,7 +372,7 @@ public:
 };
 {% endhighlight %}
 
-然后进入 walletdb.WritePool() 函数，定义在“wallet/walletdb.h”文件的 CWalletDB 类中。
+然后调用 walletdb.WritePool(nEnd, CKeyPool(GenerateNewKey()))，该函数定义在“wallet/walletdb.h”文件的 CWalletDB 类中。
 
 {% highlight C++ %}
 /** Access to the wallet database (wallet.dat) */
@@ -395,10 +395,184 @@ bool CWalletDB::WritePool(int64_t nPool, const CKeyPool& keypool)
 }
 {% endhighlight %}
 
-从这里可以看出所谓的“密钥池”并非一个对象，而是一个数据库中打了标签 "pool" 的条目。
+从这里可以看出所谓的“密钥池”并非一个对象，而是钱包数据库中一个打了标签 "pool" 的条目。
 
 第六步，生成一个新密钥并添加到钱包，同时得到对应的公钥地址并返回。
-先从钱包中的密钥池获取一个公钥，进入 pwalletMain->GetKeyFromPool() 函数，实现在“wallet/wallet.cpp”文件中。
+先从钱包中的密钥池获取一个公钥，调用 pwalletMain->GetKeyFromPool(newKey)，该函数定义在“wallet/wallet.h”文件的 CWallet 类中，实现在“wallet/wallet.cpp”文件中。
+
+{% highlight C++ %}
+bool CWallet::GetKeyFromPool(CPubKey& result)
+{
+    int64_t nIndex = 0;
+    CKeyPool keypool; // 密钥池条目
+    {
+        LOCK(cs_wallet);
+        ReserveKeyFromKeyPool(nIndex, keypool); // 从密钥池中预定一个密钥，若获取失败，nIndex 为 -1
+        if (nIndex == -1) // -1 表示当前 keypool 为空
+        {
+            if (IsLocked()) return false;
+            result = GenerateNewKey(); // 创建新的私钥，并用椭圆曲线加密生成对应的公钥
+            return true;
+        }
+        KeepKey(nIndex); // 从钱包数据库的密钥池中移除该索引对应的密钥
+        result = keypool.vchPubKey;
+    }
+    return true;
+}
+{% endhighlight %}
+
+从密钥池中取一个最早创建的密钥中的公钥，或密钥池为空，就生成一个新的私钥获取其对应的公钥。
+若从密钥池中取出一个密钥，则要移除密钥池中对应的密钥，调用 KeepKey(nIndex)，该函数实现在“wallet/wallet.cpp”文件中。
+
+{% highlight C++ %}
+void CWallet::KeepKey(int64_t nIndex)
+{
+    // Remove from key pool // 从密钥池移除指定索引的
+    if (fFileBacked) // 若钱包文件已备份
+    {
+        CWalletDB walletdb(strWalletFile); // 通过钱包文件名构造钱包数据库对象
+        walletdb.ErasePool(nIndex); // 根据索引擦除对应的密钥
+    }
+    LogPrintf("keypool keep %d\n", nIndex);
+}
+{% endhighlight %}
+
+进入 walletdb.ErasePool(nIndex) 函数，定义在“wallet/walletdb.h"文件的 CWalletDB 类中，实现在“wallet/walletdb.cpp”文件中。
+
+{% highlight C++ %}
+bool CWalletDB::ErasePool(int64_t nPool)
+{
+    nWalletDBUpdated++; // 升级次数加 1
+    return Erase(std::make_pair(std::string("pool"), nPool)); // 根据指定的索引移除钱包数据库中对应的密钥
+}
+{% endhighlight %}
+
+若密钥池为空，则生成一个新的密钥，获取其对应的公钥。<br>
+调用 ReserveKeyFromKeyPool(nIndex, keypool)，该函数实现在“wallet/wallet.cpp”文件中。
+
+{% highlight C++ %}
+void CWallet::ReserveKeyFromKeyPool(int64_t& nIndex, CKeyPool& keypool)
+{
+    nIndex = -1;
+    keypool.vchPubKey = CPubKey();
+    {
+        LOCK(cs_wallet); // 钱包上锁
+
+        if (!IsLocked()) // 若钱包未被加密
+            TopUpKeyPool(); // 再次填充密钥池
+
+        // Get the oldest key // 获取时间上最早的密钥
+        if(setKeyPool.empty()) // 若密钥池集合为空
+            return; // 直接返回
+
+        CWalletDB walletdb(strWalletFile); // 根据钱包文件构造钱包数据库对象
+
+        nIndex = *(setKeyPool.begin()); // 获取最先创建的密钥的索引，大于 0，最小为 1
+        setKeyPool.erase(setKeyPool.begin()); // 从密钥池集合中擦除该密钥的索引
+        if (!walletdb.ReadPool(nIndex, keypool)) // 根据密钥索引从钱包数据库中读取一个密钥池条目
+            throw runtime_error("ReserveKeyFromKeyPool(): read failed");
+        if (!HaveKey(keypool.vchPubKey.GetID())) // 通过获取的公钥 ID
+            throw runtime_error("ReserveKeyFromKeyPool(): unknown key in key pool");
+        assert(keypool.vchPubKey.IsValid()); // 检查公钥是否有效
+        LogPrintf("keypool reserve %d\n", nIndex);
+    }
+}
+{% endhighlight %}
+
+拿到公钥后，调用 GetID() 中的 Hash160(...) 函数获取该公钥对应 ID，160 位二进制，共 20 个字节。<br>
+进入 GetID() 函数，定义在“pubkey.h”文件中。
+
+{% highlight C++ %}
+/** An encapsulated public key. */
+/** A reference to a CKey: the Hash160 of its serialized public key */
+class CKeyID : public uint160 // 一个公钥的引用：其序列化的公钥的 Hash160，共 160 位二进制，20bytes
+{
+public:
+    CKeyID() : uint160() {}
+    CKeyID(const uint160& in) : uint160(in) {}
+};
+...
+class CPubKey // 一个封装的公钥
+{
+    ...
+    //! Get the KeyID of this public key (hash of its serialization)
+    CKeyID GetID() const // 获取公钥地址 ID，即公钥的 hash160，20个字节
+    {
+        return CKeyID(Hash160(vch, vch + size()));
+    }
+    ...
+};
+{% endhighlight %}
+
+Hash160(vch, vch + size()) 函数用来计算一个对象并输出其 160 位的哈希值。在“hash.h”文件中用模板实现。
+
+{% highlight C++ %}
+/** Compute the 160-bit hash an object. */
+template<typename T1> // 计算一个对象的 160 位哈希值
+inline uint160 Hash160(const T1 pbegin, const T1 pend)
+{
+    static unsigned char pblank[1] = {};
+    uint160 result;
+    CHash160().Write(pbegin == pend ? pblank : (const unsigned char*)&pbegin[0], (pend - pbegin) * sizeof(pbegin[0]))
+              .Finalize((unsigned char*)&result);
+    return result;
+}
+{% endhighlight %}
+
+得到公钥 ID 后，作为公钥的索引与指定的账户名和该地址的用途一起加入到地址簿中。<br>
+调用 pwalletMain->SetAddressBook(keyID, strAccount, "receive")，该函数实现在“wallet/wallet.cpp”文件中。
+
+{% highlight C++ %}
+bool CWallet::SetAddressBook(const CTxDestination& address, const string& strName, const string& strPurpose)
+{
+    bool fUpdated = false; // 标记钱包地址簿是否更新，指地址已存在更新其用途，新增地址不算
+    {
+        LOCK(cs_wallet); // mapAddressBook
+        std::map<CTxDestination, CAddressBookData>::iterator mi = mapAddressBook.find(address); // 首先在地址簿中查找该地址
+        fUpdated = mi != mapAddressBook.end(); // 查找到的话，升级标志置为 true
+        mapAddressBook[address].name = strName; // 账户名，若地址已存在，直接改变账户名，否则插入该地址
+        if (!strPurpose.empty()) /* update purpose only if requested */ // 用途非空
+            mapAddressBook[address].purpose = strPurpose; // 升级该已存在地址的用途
+    }
+    NotifyAddressBookChanged(this, address, strName, ::IsMine(*this, address) != ISMINE_NO,
+                             strPurpose, (fUpdated ? CT_UPDATED : CT_NEW) ); // 通知地址簿已改变
+    if (!fFileBacked) // 文件未备份
+        return false;
+    if (!strPurpose.empty() && !CWalletDB(strWalletFile).WritePurpose(CBitcoinAddress(address).ToString(), strPurpose)) // 用途非空时，写入钱包数据库该地址对应的用途
+        return false;
+    return CWalletDB(strWalletFile).WriteName(CBitcoinAddress(address).ToString(), strName); // 最后写入地址对应的账户名到钱包数据库
+}
+{% endhighlight %}
+
+最后一步就是把公钥索引通过 Base58 编码转换为比特币公钥地址。<br>
+进入 CBitcoinAddress(keyID).ToString() 函数，分两步，先构造一个比特币地址类临时对象，然后再转换为字符串形式。<br>
+CBitcoinAddress 类定义在“base58.h”文件中，该类相应的构造函数如下。
+
+{% highlight C++ %}
+/** base58-encoded Bitcoin addresses.
+ * Public-key-hash-addresses have version 0 (or 111 testnet).
+ * The data vector contains RIPEMD160(SHA256(pubkey)), where pubkey is the serialized public key.
+ * Script-hash-addresses have version 5 (or 196 testnet).
+ * The data vector contains RIPEMD160(SHA256(cscript)), where cscript is the serialized redemption script.
+ */
+class CBitcoinAddress : public CBase58Data {
+public:
+    ...
+    bool Set(const CTxDestination &dest);
+    ...
+    CBitcoinAddress(const CTxDestination &dest) { Set(dest); }
+    ...
+};
+{% endhighlight %}
+
+Set() 函数的实现在“base58.cpp”文件中。
+
+{% highlight C++ %}
+bool CBitcoinAddress::Set(const CTxDestination& dest)
+{
+    return boost::apply_visitor(CBitcoinAddressVisitor(this), dest);
+}
+{% endhighlight %}
 
 ## 参照
 * [Technical background of version 1 Bitcoin addresses - Bitcoin Wiki](https://en.bitcoin.it/wiki/Technical_background_of_version_1_Bitcoin_addresses)
