@@ -22,3 +22,10 @@ markdown: kramdown
 gems: [jekyll-paginate]
 paginate: 10
 paginate_path: "/page/:num"
+
+# Links
+links:
+    - title: "Category"
+      url: /category
+    - title: "About"
+      url: /about

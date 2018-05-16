@@ -2,7 +2,7 @@
 layout: post
 title:  "Over Drive 翻訳"
 date:   2018-05-02 20:10:12 +0800
-categories: jekyll update
+categories: GARNETCROW
 ---
 ![over drive](https://raw.githubusercontent.com/mistydew/gc/master/images/cover/single/Single_31th_Over_Drive.jpg)
 

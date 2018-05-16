@@ -2,7 +2,7 @@
 layout: post
 title:  "比特币核心客户端 RPC 命令"
 date:   2018-05-06 14:02:51 +0800
-categories: jekyll update
+categories: Blockchain
 ---
 ![bitcoin](/images/20180504/bitcoin.svg)
 

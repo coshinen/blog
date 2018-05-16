@@ -2,7 +2,7 @@
 layout: post
 title:  "编译比特币源码"
 date:   2018-05-03 18:57:36 +0800
-categories: jekyll update
+categories: Blockchain
 ---
 ![bitcoin](/images/20180504/bitcoin.svg)
 
