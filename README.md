@@ -9,8 +9,10 @@
 - [ ] add slogan: Open-source is awesome!
 - [ ] add tag
 - [ ] find blog via title on google
+- [x] add category
 
 ## Timeline
+* 2018.05.16 13:00 add category
 * 2018.05.14 18:46 add hone hone clock and pagination
 * 2018.05.02 12:50 add garnet crow favicon
 * 2018.04.27 00:30 remove directory audio
