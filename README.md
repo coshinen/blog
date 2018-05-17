@@ -1,12 +1,13 @@
 # [_mistydew's blog_](https://mistydew.github.io)
 
 ## Todo
+- [ ] add github count contributions
 - [ ] add "reply to" function
 - [ ] add hits, pageviews and visitors
 - [ ] add google analytics
 - [ ] add summary
 - [ ] The anatomy of bitcoin v0.12.1 source
-- [ ] add tag
+- [ ] add tag cloud
 - [ ] find blog via title on google
 - [x] add slogan on footer
 - [x] add category
