@@ -574,10 +574,100 @@ bool CBitcoinAddress::Set(const CTxDestination& dest)
 }
 {% endhighlight %}
 
+最后调用 CBitcoinAddress(keyID).ToString() 中的 ToString() 实现了 Base58Check Encoding 的功能。<br>
+定义在“base58.h”文件的 CBase58Data 类中。
+
+{% highlight C++ %}
+/**
+ * Base class for all base58-encoded data
+ */ // 所有 base58 编码数据的基类
+class CBase58Data // 包含一个版本号和一个编码
+{
+    ...
+    std::string ToString() const; // 为要编码的数据附加前缀，通过该值计算两次 sha256 后取 4 bytes 的前缀附加在该值后面，再进行 Base58 编码得到公钥地址
+    ...
+};
+{% endhighlight %}
+
+实现在“base58.cpp”文件中。
+
+{% highlight C++ %}
+std::string CBase58Data::ToString() const
+{
+    std::vector<unsigned char> vch = vchVersion;
+    vch.insert(vch.end(), vchData.begin(), vchData.end()); // 附加公钥地址前缀到前面
+    return EncodeBase58Check(vch); // 添加校验和的前 4 bytes 到末尾，并计算 Base58 得到地址
+}
+{% endhighlight %}
+
+附加 1 个字节的网络中定义的公钥地址前缀后，调用 EncodeBase58Check(vch)，计算并附加校验和的前 4 个字节到公钥后面，得到 25bytes 的数据。
+
+{% highlight C++ %}
+std::string EncodeBase58Check(const std::vector<unsigned char>& vchIn)
+{
+    // add 4-byte hash check to the end
+    std::vector<unsigned char> vch(vchIn);
+    uint256 hash = Hash(vch.begin(), vch.end()); // 2 次 sha256 计算校验和
+    vch.insert(vch.end(), (unsigned char*)&hash, (unsigned char*)&hash + 4); // 将校验和添加到末尾
+    return EncodeBase58(vch); // 计算 Base58 得到地址
+}
+{% endhighlight %}
+
+把得到的 25bytes 的数据，通过调用 EncodeBase58(vch) 进行 Base58 编码得到最终的比特币公钥地址。<br>
+该函数实现在“Base.cpp”文件中，通过函数重载，在 EncodeBase58(&vch[0], &vch[0] + vch.size()) 函数中实现 Base58 编码。
+
+{% highlight C++ %}
+/** All alphanumeric characters except for "0", "I", "O", and "l" */
+static const char* pszBase58 = "123456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz"; // 10 + 26 * 2 - 4 = 58
+...
+std::string EncodeBase58(const unsigned char* pbegin, const unsigned char* pend) // Base58 编码
+{
+    // Skip & count leading zeroes.
+    int zeroes = 0; // 1.跳过并统计开头 0 的个数，最多为 1 byte 的 0x00
+    while (pbegin != pend && *pbegin == 0) {
+        pbegin++;
+        zeroes++;
+    }
+    // Allocate enough space in big-endian base58 representation.
+    std::vector<unsigned char> b58((pend - pbegin) * 138 / 100 + 1); // log(256) / log(58), rounded up. // 2.为大端 base58 表示，开辟足够的空间（34 或 35 bytes），向上取整
+    // Process the bytes.
+    while (pbegin != pend) { // 3.256 进制转 58 进制
+        int carry = *pbegin;
+        // Apply "b58 = b58 * 256 + ch".
+        for (std::vector<unsigned char>::reverse_iterator it = b58.rbegin(); it != b58.rend(); it++) {
+            carry += 256 * (*it);
+            *it = carry % 58;
+            carry /= 58;
+        }
+        assert(carry == 0);
+        pbegin++;
+    }
+    // Skip leading zeroes in base58 result.
+    std::vector<unsigned char>::iterator it = b58.begin();
+    while (it != b58.end() && *it == 0) // 4.跳过开头的 0
+        it++;
+    // Translate the result into a string.
+    std::string str;
+    str.reserve(zeroes + (b58.end() - it)); // 1 + 33 or 0 + 34 = 34
+    str.assign(zeroes, '1'); // 5.在字符串前面的位置指派 zeroes 个字符 1
+    while (it != b58.end()) // 6.查 Base58 字符表转换结果为字符串
+        str += pszBase58[*(it++)]; // append *it then ++it
+    return str; // 前缀为 0x00 不参与 Base58 运算，地址长度固定为 34 bytes 且前缀位 '1'，其他不为 0x00 的前缀，均参与 Base58 运算，地址长度变换范围 33 - 35 bytes
+}
+
+std::string EncodeBase58(const std::vector<unsigned char>& vch)
+{
+    return EncodeBase58(&vch[0], &vch[0] + vch.size());
+}
+{% endhighlight %}
+
+至此，RPC 命令 `getnewaddress` 对应的源码剖析就结束了。
+
 ## 参照
 * [Technical background of version 1 Bitcoin addresses - Bitcoin Wiki](https://en.bitcoin.it/wiki/Technical_background_of_version_1_Bitcoin_addresses)
 * [List of address prefixes - Bitcoin Wiki](https://en.bitcoin.it/wiki/List_of_address_prefixes)
 * [Address - Bitcoin Wiki](https://en.bitcoin.it/wiki/Address)
+* [Base58 - Wikipedia](https://en.wikipedia.org/wiki/Base58)
 * [Base58Check encoding - Bitcoin Wiki](https://en.bitcoin.it/wiki/Base58Check_encoding)
 * [bitcoin/bitcoin/src/base58.cpp](https://github.com/bitcoin/bitcoin/blob/master/src/base58.cpp)
 * [精通比特币（第二版）第四章 密钥和地址 · 巴比特图书](http://book.8btc.com/books/6/masterbitcoin2cn/_book/ch04.html)
