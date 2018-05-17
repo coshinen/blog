@@ -6,12 +6,13 @@
 - [ ] add google analytics
 - [ ] add summary
 - [ ] The anatomy of bitcoin v0.12.1 source
-- [ ] add slogan: Open-source is awesome!
 - [ ] add tag
 - [ ] find blog via title on google
+- [x] add slogan on footer
 - [x] add category
 
 ## Timeline
+* 2018.05.17 12:40 add slogan on footer
 * 2018.05.16 13:00 add category
 * 2018.05.14 18:46 add hone hone clock and pagination
 * 2018.05.02 12:50 add garnet crow favicon
