@@ -9,10 +9,10 @@
 - [ ] The anatomy of bitcoin v0.12.1 source
 - [ ] add tag cloud
 - [ ] find blog via title on google
-- [x] add slogan on footer
-- [x] add category
+- [x] add 404 page: Tencent Charity
 
 ## Timeline
+* 2018.05.18 12:58 add 404 page
 * 2018.05.17 12:40 add slogan on footer
 * 2018.05.16 13:00 add category
 * 2018.05.14 18:46 add hone hone clock and pagination
