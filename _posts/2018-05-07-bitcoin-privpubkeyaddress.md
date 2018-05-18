@@ -108,7 +108,7 @@ public:
 
 该类的 4 个成员变量对应注释的 4 个列名。<br>
 rpcfn_type 是一个函数标签为 UniValue(const UniValue&, bool) 的回调函数类型，
-形参 params 为 RPC 命令的参数，形参 fHelp 为显示该命令帮助的标志，对应[比特币核心客户端基础命令](https://mistydew.github.io/jekyll/update/2018/05/06/bitcoin-cli-commands.html)用法的第 3 条。
+形参 params 为 RPC 命令的参数，形参 fHelp 为显示该命令帮助的标志，对应[比特币核心客户端基础命令](/2018/05/06/bitcoin-cli-commands)用法的第 3 条。
 
 {% highlight shell %}
   bitcoin-cli [options] help <command>      Get help for a command # 获取一条命令的帮助信息（用法示例）
@@ -313,7 +313,7 @@ bool CWallet::TopUpKeyPool(unsigned int kpSize)
 static const unsigned int DEFAULT_KEYPOOL_SIZE = 100;
 {% endhighlight %}
 
-可以直接修改该值（硬编码），也可通过 `-keypool=<n>` 选项或配置文件来在[启动比特币核心服务 bitcoind](/jekyll/update/2018/05/04/running-bitcoin.html) 时修改该值（软编码）。
+可以直接修改该值（硬编码），也可通过 `-keypool=<n>` 选项或配置文件来在[启动比特币核心服务 bitcoind](/2018/05/04/running-bitcoin) 时修改该值（软编码）。
 
 接下来就开始不断生成新密钥并将与之对应的公钥加入密钥池，直至密钥池中密钥的数量达到指定大小 DEFAULT_KEYPOOL_SIZE + 1。<br>
 进入 GenerateNewKey() 函数，同样属于 CWallet 类，实现在“wallet/wallet.cpp”文件中。
