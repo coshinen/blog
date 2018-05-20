@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "比特币“靓号”公钥地址"
+title:  "比特币“靓号”地址"
 date:   2018-05-16 18:56:51 +0800
 categories: Blockchain
 ---
