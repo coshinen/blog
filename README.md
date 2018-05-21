@@ -9,7 +9,6 @@
 - [ ] The anatomy of bitcoin v0.12.1 source
 - [ ] add tag cloud
 - [ ] find blog via title on google
-- [x] add 404 page: Tencent Charity
 
 ## Timeline
 * 2018.05.18 12:58 add 404 page
@@ -24,7 +23,7 @@
 
 ## Find me on
 
-* QQ: 1019110552
+* QQ: 101911****
 * e-mail: mistydew@qq.com
 * weibo: [@mistydew](https://weibo.com/mistydew)
 * twitter: [@_mistydew_](https://twitter.com/_mistydew_)
