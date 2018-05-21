@@ -9,7 +9,7 @@ categories: DETECTIVECONAN
 歌手：倉木麻衣<br>
 作詞：倉木麻衣<br>
 作曲：大野愛果<br>
-編曲：Cybersound<br>
+編曲：Cybersound
 
 もしも君に巡り逢えたら<br>
 二度と君の手を離さない<br>
