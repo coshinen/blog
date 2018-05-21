@@ -1,8 +1,8 @@
 ---
 layout: post
-title:  "One more time, One more chance 翻訳"
+title:  "One more time, One more chance"
 date:   2018-05-18 20:37:01 +0800
-categories: 秒速5センチメートル
+categories: 歌詞
 ---
 ## One more time, One more chance
 

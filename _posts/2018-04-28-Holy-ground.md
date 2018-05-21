@@ -1,8 +1,8 @@
 ---
 layout: post
-title:  "Holy ground 翻訳"
+title:  "Holy ground"
 date:   2018-04-28 20:02:04 +0800
-categories: GARNETCROW
+categories: GARNETCROW 歌詞
 ---
 ![sparkle](https://raw.githubusercontent.com/mistydew/gc/master/images/cover/album/Album_02nd_SPARKLE_~%E7%AD%8B%E6%9B%B8%E3%81%8D%E9%80%9A%E3%82%8A%E3%81%AE%E3%82%B9%E3%82%AB%E3%82%A4%E3%83%96%E3%83%AB%E3%83%BC~.jpg)
 

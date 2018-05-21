@@ -1,8 +1,8 @@
 ---
 layout: post
-title:  "Time after time～花舞う街で～ 翻訳"
+title:  "Time after time～花舞う街で～"
 date:   2018-05-15 20:03:03 +0800
-categories: DETECTIVECONAN
+categories: CONAN 歌詞
 ---
 ## Time after time～花舞う街で～
 
