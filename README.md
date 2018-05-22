@@ -12,10 +12,10 @@
 
 ## Timeline
 * 2018.05.22 13:27 add robots.txt: Allow Baiduspider and Googlebot
-* 2018.05.21 13:27 add archive
+* 2018.05.21 13:18 add archive
 * 2018.05.18 12:58 add 404 page
 * 2018.05.17 12:40 add slogan on footer
-* 2018.05.16 13:00 add category
+* 2018.05.16 13:00 add category and slogan
 * 2018.05.14 18:46 add hone hone clock and pagination
 * 2018.05.02 12:50 add garnet crow favicon
 * 2018.04.27 00:30 remove directory audio
