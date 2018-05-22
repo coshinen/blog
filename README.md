@@ -12,6 +12,7 @@
 
 ## Timeline
 * 2018.05.22 13:27 add robots.txt: Allow Baiduspider and Googlebot
+* 2018.05.21 13:27 add archive
 * 2018.05.18 12:58 add 404 page
 * 2018.05.17 12:40 add slogan on footer
 * 2018.05.16 13:00 add category
