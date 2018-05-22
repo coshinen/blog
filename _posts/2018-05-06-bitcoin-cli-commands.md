@@ -86,16 +86,16 @@ Chain selection options:
 {% highlight shell %}
 $ bitcoin-cli help # 获取以下 RPC 命令。
 == Blockchain ==
-getbestblockhash # 获取当前区块链最佳块的哈希值
-getblock "hash" ( verbose ) # 通过区块哈希获取对应区块的详细信息
+getbestblockhash # 获取当前最佳块的哈希值（16 进制表示）
+getblock "hash" ( verbose ) # 通过区块哈希获取对应区块的信息，verbose 为 true 或 false，默认为 true 获取详细信息，false 获取序列化的区块
 getblockchaininfo # 获取区块链的信息
-getblockcount # 获取当前区块主链上的总区块数
-getblockhash index # 通过区块索引（区块号）获取区块哈希
-getblockheader "hash" ( verbose ) # 通过区块哈希获取对应区块头信息
-getchaintips # 获取区块链尖的基本信息（高度、最佳块哈希、分叉长度、链状态）
-getdifficulty # 获取当前挖矿难度
+getblockcount # 获取当前区块总数（或链高度，不包括创世区块）
+getblockhash index # 通过区块号（区块链高度）获取对应区块哈希（16 进制表示）
+getblockheader "hash" ( verbose ) # 通过区块哈希获取对应区块头信息，verbose 为 true 或 false，默认为 true 获取详细信息，false 获取序列化的区块头
+getchaintips # 获取区块链尖信息（高度、最佳块哈希、分叉长度、链状态）
+getdifficulty # 获取当前挖矿难度（浮点数）
 getmempoolinfo # 获取交易内存池信息
-getrawmempool ( verbose ) # 获取交易内存池中所有的交易索引
+getrawmempool ( verbose ) # 获取交易内存池元信息（池中所有未打包交易的哈希），verbose 为 true 或 false，默认为 false 获取所有交易哈希，true 获取所有交易的详细信息
 gettxout "txid" n ( includemempool ) # 根据交易内存池中的交易号获取指定输出号 n 的信息。适用范围：所有交易
 gettxoutproof ["txid",...] ( blockhash )
 gettxoutsetinfo # 获取交易输出设置信息（高度、最佳块哈希、总交易数、总输出数、...、当前发行量）
