@@ -108,7 +108,7 @@ $ bitcoin-cli help # 获取以下 RPC 命令。
 
 == Control ==<br>
 [`getinfo`](/2018/05/23/bitcoin-rpc-command-getinfo) # 获取比特币核心信息<br>
-[`help ( "command" )`](/2018/05/23/bitcoin-rpc-command-help) # 获取 RPC 命令帮助<br>
+[`help ( "command" )`](/2018/05/23/bitcoin-rpc-command-help) # 获取所有 RPC 命令或指定命令的用法<br>
 [`stop`](/2018/05/23/bitcoin-rpc-command-stop) # 远程终止 bitcoind
 
 == Generating ==<br>
@@ -200,5 +200,6 @@ $ bitcoin-cli help # 获取以下 RPC 命令。
 ## 参照
 * [Bitcoin Core - Wikipedia](https://en.wikipedia.org/wiki/Bitcoin_Core)
 * [JSON-RPC - Wikipedia](https://en.wikipedia.org/wiki/JSON-RPC)
+* [Developer Documentation - Bitcoin](https://bitcoin.org/en/developer-documentation)
 * [精通比特币（第二版） \| 巴比特图书](http://book.8btc.com/masterbitcoin2cn)
 * [...](https://github.com/mistydew/blockchain)
