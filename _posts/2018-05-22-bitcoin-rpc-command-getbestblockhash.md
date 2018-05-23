@@ -10,8 +10,13 @@ categories: Blockchain
 比特币相关的解读目前均采用 [bitcoin v0.12.1](https://github.com/bitcoin/bitcoin/tree/v0.12.1)，此版本为官方内置挖矿算法的最后一版。<br>
 目前比特币的最新版本为 bitcoin v0.16.0，离区块链 1.0 落地还有些距离。
 
+## 提示说明
+
+{% highlight shell %}
+getblock getbestblockhash # 获取当前最佳块（即最新上链的一个区块，或称链尖区块）的哈希（16 进制形式）
+{% endhighlight %}
+
 ## 用法示例
-获取当前最佳块（即最新上链的一个区块，或称链尖区块）的哈希。
 
 {% highlight shell %}
 $ bitcoin-cli getbestblockhash

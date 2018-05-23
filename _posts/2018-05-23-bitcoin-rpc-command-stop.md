@@ -10,8 +10,13 @@ categories: Blockchain
 比特币相关的解读目前均采用 [bitcoin v0.12.1](https://github.com/bitcoin/bitcoin/tree/v0.12.1)，此版本为官方内置挖矿算法的最后一版。<br>
 目前比特币的最新版本为 bitcoin v0.16.0，离区块链 1.0 落地还有些距离。
 
+## 提示说明
+
+{% highlight shell %}
+getblock stop # 终止比特币核心服务 bitcoind
+{% endhighlight %}
+
 ## 用法示例
-用于终止比特币核心服务。
 
 {% highlight shell %}
 $ bitcoin-cli stop
