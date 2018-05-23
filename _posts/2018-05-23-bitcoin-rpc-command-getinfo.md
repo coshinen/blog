@@ -11,6 +11,7 @@ categories: Blockchain
 目前比特币的最新版本为 bitcoin v0.16.0，离区块链 1.0 落地还有些距离。
 
 ## 用法示例
+用于获取比特币核心信息：版本号、钱包、区块链、网络、挖矿、密钥池、交易费及错误等信息。
 
 {% highlight shell %}
 $ bitcoin-cli getinfo
@@ -37,7 +38,7 @@ $ bitcoin-cli getinfo
 `getinfo` 对应的函数在“rpcserver.h”文件中被引用。
 
 {% highlight C++ %}
-extern UniValue getinfo(const UniValue& params, bool fHelp); // 获取信息
+extern UniValue getinfo(const UniValue& params, bool fHelp); // 获取比特币核心信息
 {% endhighlight %}
 
 实现在“rpcmisc.cpp”文件中。
