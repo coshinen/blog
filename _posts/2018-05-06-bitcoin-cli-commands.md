@@ -90,11 +90,11 @@ $ bitcoin-cli help # 获取以下 RPC 命令。
 {% endhighlight %}
 
 == Blockchain ==<br>
-[`getbestblockhash`](/2018/05/22/bitcoin-rpc-command-getbestblockhash) # 获取当前最佳块的哈希值（16 进制表示）<br>
-[`getblock "hash" ( verbose )`](/2018/05/22/bitcoin-rpc-command-getblock) # 通过区块哈希获取对应区块的信息，verbose 为 true 或 false，默认为 true 获取详细信息，false 获取序列化的区块<br>
+[`getbestblockhash`](/2018/05/22/bitcoin-rpc-command-getbestblockhash) # 获取当前最佳块的哈希（16 进制形式）<br>
+[`getblock "hash" ( verbose )`](/2018/05/22/bitcoin-rpc-command-getblock) # 获取相应区块的信息<br>
 [`getblockchaininfo`](/2018/05/22/bitcoin-rpc-command-getblockchaininfo) # 获取区块链的信息<br>
 [`getblockcount`](/2018/05/22/bitcoin-rpc-command-getblockcount) # 获取当前区块总数（或链高度，不包括创世区块）<br>
-[`getblockhash index`](/2018/05/22/bitcoin-rpc-command-getblockhash) # 通过区块号（区块链高度）获取对应区块哈希（16 进制表示）<br>
+[`getblockhash index`](/2018/05/22/bitcoin-rpc-command-getblockhash) # 通过区块号（区块链高度）获取对应区块哈希（16 进制形式）<br>
 [`getblockheader "hash" ( verbose )`](/2018/05/22/bitcoin-rpc-command-getblockheader) # 通过区块哈希获取对应区块头信息，verbose 为 true 或 false，默认为 true 获取详细信息，false 获取序列化的区块头<br>
 [`getchaintips`](/2018/05/22/bitcoin-rpc-command-getchaintips) # 获取区块链尖信息（高度、最佳块哈希、分叉长度、链状态）<br>
 [`getdifficulty`](/2018/05/22/bitcoin-rpc-command-getdifficulty) # 获取当前挖矿难度（浮点数）<br>
@@ -108,8 +108,8 @@ $ bitcoin-cli help # 获取以下 RPC 命令。
 
 == Control ==<br>
 [`getinfo`](/2018/05/23/bitcoin-rpc-command-getinfo) # 获取比特币核心信息<br>
-[`help ( "command" )`](/2018/05/23/bitcoin-rpc-command-help) # 获取所有 RPC 命令或指定命令的用法<br>
-[`stop`](/2018/05/23/bitcoin-rpc-command-stop) # 远程终止 bitcoind
+[`help ( "command" )`](/2018/05/23/bitcoin-rpc-command-help) # 获取命令帮助信息<br>
+[`stop`](/2018/05/23/bitcoin-rpc-command-stop) # 远程终止比特币核心服务
 
 == Generating ==<br>
 `generate numblocks` # regtest 回归测试网下立刻产生指定数目的块<br>
