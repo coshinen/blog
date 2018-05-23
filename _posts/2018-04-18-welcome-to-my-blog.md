@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Welcome to mistydew's blog!"
+title:  "Welcome to my blog!"
 date:   2018-04-18 17:14:43 +0800
 categories: Profile
 ---
