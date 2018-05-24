@@ -13,7 +13,7 @@ categories: Blockchain
 ## 提示说明
 
 {% highlight shell %}
-help # 获取所有 RPC 命令名或指定命令的用法
+help ( "command" ) # 获取所有 RPC 命令名或指定命令的用法
 {% endhighlight %}
 
 ## 用法示例
