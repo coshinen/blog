@@ -86,8 +86,10 @@ Chain selection options:
 ### RPC 命令（需要 bitcoind）
 
 {% highlight shell %}
-$ bitcoin-cli help # 获取以下 RPC 命令。
+$ bitcoin-cli help # 获取以下 RPC 命令
 {% endhighlight %}
+
+**注：`()` 表示可以省略。**
 
 == Blockchain ==<br>
 [`getbestblockhash`](/2018/05/22/bitcoin-rpc-command-getbestblockhash) # 获取当前最佳块的哈希（16 进制形式）<br>
@@ -112,9 +114,9 @@ $ bitcoin-cli help # 获取以下 RPC 命令。
 [`stop`](/2018/05/23/bitcoin-rpc-command-stop) # 远程终止比特币核心服务
 
 == Generating ==<br>
-`generate numblocks` # regtest 回归测试网下立刻产生指定数目的块<br>
-`getgenerate` # 获取当前的挖矿状态，true 表示开启，false 表示关闭<br>
-`setgenerate generate ( genproclimit )` # 设置挖矿状态和线程数，线程数默认为 1
+[`generate numblocks`](/2018/05/24/bitcoin-rpc-command-generate) # 生成指定数目个区块<br>
+[`getgenerate`](/2018/05/24/bitcoin-rpc-command-getgenerate) # 获取当前的挖矿状态，true 表示开启，false 表示关闭<br>
+[`setgenerate generate ( genproclimit )`](/2018/05/24/bitcoin-rpc-command-setgenerate) # 设置挖矿状态和线程数，线程数默认为 1
 
 == Mining ==<br>
 `getblocktemplate ( "jsonrequestobject" )` # 获取区块模板（不包括随机数 nNonce）。前提：需要至少一条连接<br>
