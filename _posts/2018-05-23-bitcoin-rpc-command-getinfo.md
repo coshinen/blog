@@ -13,7 +13,7 @@ categories: Blockchain
 ## 提示说明
 
 {% highlight shell %}
-getblock getinfo # 获取比特币核心信息：版本号、钱包、区块链、网络、挖矿、密钥池、交易费及错误等信息
+getinfo # 获取比特币核心信息：版本号、钱包、区块链、网络、挖矿、密钥池、交易费及错误等信息
 {% endhighlight %}
 
 ## 用法示例

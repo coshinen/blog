@@ -13,7 +13,7 @@ categories: Blockchain
 ## 提示说明
 
 {% highlight shell %}
-getblock stop # 终止比特币核心服务 bitcoind
+stop # 终止比特币核心服务 bitcoind
 {% endhighlight %}
 
 ## 用法示例
