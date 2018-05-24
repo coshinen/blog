@@ -167,7 +167,7 @@ Examples:
 {% highlight C++ %}
 UniValue help(const UniValue& params, bool fHelp)
 {
-    if (fHelp || params.size() > 1) // 参数最多为 1 个（RPC 命令）
+    if (fHelp || params.size() > 1) // 1.参数最多为 1 个（RPC 命令）
         throw runtime_error( // 命令帮助反馈
             "help ( \"command\" )\n"
             "\nList all commands, or get help for a specified command.\n"
@@ -178,12 +178,17 @@ UniValue help(const UniValue& params, bool fHelp)
         );
 
     string strCommand;
-    if (params.size() > 0) // 若带有参数
+    if (params.size() > 0) // 2.若带有参数
         strCommand = params[0].get_str(); // 获取命令参数的字符串
 
-    return tableRPC.help(strCommand); // 传入命令（可能为空）并返回
+    return tableRPC.help(strCommand); // 3.传入命令（可能为空）并返回
 }
 {% endhighlight %}
+
+基本流程：<br>
+1.处理命令帮助和参数个数。<br>
+2.获取首个参数并转换为字符串。<br>
+3.把参数传入 tableRPC.help(strCommand)，这个是 `help` 命令的核心。
 
 这里我们可以看到传参的方式，可以指定某个 RPC 命令作为 `help` 参数，或不带参数。<br>
 调用 tableRPC.help(strCommand) 函数来完成 `help` 命令的主要功能。对象 tableRPC 定义在“rpcserver.cpp”文件最后面。

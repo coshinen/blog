@@ -30,16 +30,21 @@ Bitcoin server stopping
 UniValue stop(const UniValue& params, bool fHelp)
 {
     // Accept the deprecated and ignored 'detach' boolean argument
-    if (fHelp || params.size() > 1) // 参数最多为 1 个，这里已经过时，现无参数
+    if (fHelp || params.size() > 1) // 1.参数最多为 1 个，这里已经过时，现无参数
         throw runtime_error(
             "stop\n"
             "\nStop Bitcoin server.");
     // Event loop will exit after current HTTP requests have been handled, so
     // this reply will get back to the client. // 在当前 HTTP 请求被处理后时间循环才会退出
-    StartShutdown(); // 关闭比特币核心服务
-    return "Bitcoin server stopping"; // 返回停止信息
+    StartShutdown(); // 2.关闭比特币核心服务
+    return "Bitcoin server stopping"; // 3.返回停止信息
 }
 {% endhighlight %}
+
+基本流程：<br>
+1.处理命令帮助和参数个数。<br>
+2.关闭比特币核心服务。<br>
+3.完全关闭前返回客端相关信息。
 
 调用 StartShutdown() 函数关闭比特币核心服务，该函数定义在“init.h”文件中。
 

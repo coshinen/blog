@@ -35,7 +35,7 @@ extern UniValue getbestblockhash(const UniValue& params, bool fHelp); // 获取�
 {% highlight C++ %}
 UniValue getbestblockhash(const UniValue& params, bool fHelp)
 {
-    if (fHelp || params.size() != 0) // 该命令没有参数
+    if (fHelp || params.size() != 0) // 1.该命令没有参数
         throw runtime_error( // 命令帮助反馈
             "getbestblockhash\n"
             "\nReturns the hash of the best (tip) block in the longest block chain.\n"
@@ -47,9 +47,13 @@ UniValue getbestblockhash(const UniValue& params, bool fHelp)
         );
 
     LOCK(cs_main);
-    return chainActive.Tip()->GetBlockHash().GetHex(); // 返回激活链尖区块哈希的 16 进制
+    return chainActive.Tip()->GetBlockHash().GetHex(); // 2.返回激活链尖区块哈希的 16 进制
 }
 {% endhighlight %}
+
+基本流程：<br>
+1.处理命令帮助和参数个数。<br>
+2.获取链尖区块哈希，转换为 16 进制并返回。
 
 对象 chainActive 的引用在“main.h”文件中。
 
