@@ -116,7 +116,7 @@ $ bitcoin-cli help # 获取以下 RPC 命令
 == Generating ==<br>
 [`generate numblocks`](/2018/05/24/bitcoin-rpc-command-generate) # 生成指定数目个区块<br>
 [`getgenerate`](/2018/05/25/bitcoin-rpc-command-getgenerate) # 获取挖矿状态<br>
-[`setgenerate generate ( genproclimit )`](/2018/05/25/bitcoin-rpc-command-setgenerate) # 设置挖矿状态和线程数，线程数默认为 1
+[`setgenerate generate ( genproclimit )`](/2018/05/25/bitcoin-rpc-command-setgenerate) # 挖矿开关
 
 == Mining ==<br>
 `getblocktemplate ( "jsonrequestobject" )` # 获取区块模板（不包括随机数 nNonce）。前提：需要至少一条连接<br>
