@@ -55,6 +55,11 @@ UniValue getgenerate(const UniValue& params, bool fHelp)
 }
 {% endhighlight %}
 
+基本流程：<br>
+1.处理命令帮助和参数个数。<br>
+2.上锁。<br>
+3.获取启动选项 "-gen" 对应的值，转换为布尔型并返回。
+
 调用 GetBoolArg("-gen", DEFAULT_GENERATE) 函数获取挖矿状态，即挖矿选项 "-gen" 对应的值。<br>
 DEFAULT_GENERATE 定义在“miner.h”文件中。
 
