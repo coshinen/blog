@@ -120,8 +120,8 @@ $ bitcoin-cli help # 获取以下 RPC 命令
 
 == Mining ==<br>
 `getblocktemplate ( "jsonrequestobject" )` # 获取区块模板（不包括随机数 nNonce）。前提：需要至少一条连接<br>
-`getmininginfo` # 获取当前的挖矿信息<br>
-`getnetworkhashps ( blocks height )` # 获取区块链当前（或指定）高度的网络算力<br>
+[`getmininginfo`](/2018/05/25/bitcoin-rpc-command-getmininginfo) # 获取挖矿信息<br>
+[`getnetworkhashps ( blocks height )`](/2018/05/25/bitcoin-rpc-command-getnetworkhashps) # 获取全网算力<br>
 `prioritisetransaction <txid> <priority delta> <fee delta>`<br>
 `submitblock "hexdata" ( "jsonparametersobject" )`
 
