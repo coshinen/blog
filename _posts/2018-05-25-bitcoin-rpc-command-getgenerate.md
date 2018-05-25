@@ -67,7 +67,7 @@ DEFAULT_GENERATE 定义在“miner.h”文件中。
 static const bool DEFAULT_GENERATE = false; // 挖矿状态，默认关闭
 {% endhighlight %}
 
-该函数定义在“util.h”文件中。
+该函数声明在“util.h”文件中。
 
 {% highlight C++ %}
 /**

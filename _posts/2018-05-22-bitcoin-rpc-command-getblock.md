@@ -209,7 +209,7 @@ public:
 };
 {% endhighlight %}
 
-第六步，调用 ReadBlockFromDisk(block, pblockindex, Params().GetConsensus()) 函数从磁盘上的文件中读取区块数据到局部对象 block。该函数定义在“main.h”文件中。
+第六步，调用 ReadBlockFromDisk(block, pblockindex, Params().GetConsensus()) 函数从磁盘上的文件中读取区块数据到局部对象 block。该函数声明在“main.h”文件中。
 
 {% highlight C++ %}
 bool ReadBlockFromDisk(CBlock& block, const CDiskBlockPos& pos, const Consensus::Params& consensusParams);
@@ -255,7 +255,7 @@ bool ReadBlockFromDisk(CBlock& block, const CBlockIndex* pindex, const Consensus
 {% endhighlight %}
 
 把数据读到内存中的 block 对象后需验证该区块的哈希是否为指定区块的哈希。<br>
-调用 block.GetHash() 函数获取区块哈希，该函数定义在“block.h”文件的 CBlockHeader 类中。
+调用 block.GetHash() 函数获取区块哈希，该函数声明在“block.h”文件的 CBlockHeader 类中。
 
 {% highlight C++ %}
 /** Nodes collect new transactions into a block, hash them into a hash tree,
@@ -388,7 +388,7 @@ UniValue blockToJSON(const CBlock& block, const CBlockIndex* blockindex, bool tx
 }
 {% endhighlight %}
 
-函数 chainActive.Contains(blockindex) 和 chainActive.Next(blockindex) 均定义在“chain.h”文件的 CChain 类中。
+函数 chainActive.Contains(blockindex) 和 chainActive.Next(blockindex) 均声明在“chain.h”文件的 CChain 类中。
 
 {% highlight C++ %}
 /** An in-memory indexed chain of blocks. */

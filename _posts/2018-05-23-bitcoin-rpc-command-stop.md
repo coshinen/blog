@@ -46,7 +46,7 @@ UniValue stop(const UniValue& params, bool fHelp)
 2.关闭比特币核心服务。<br>
 3.完全关闭前返回客端相关信息。
 
-调用 StartShutdown() 函数关闭比特币核心服务，该函数定义在“init.h”文件中。
+调用 StartShutdown() 函数关闭比特币核心服务，该函数声明在“init.h”文件中。
 
 {% highlight C++ %}
 void StartShutdown(); // 关闭比特币核心服务

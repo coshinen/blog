@@ -123,7 +123,7 @@ UniValue generate(const UniValue& params, bool fHelp)
 
 第二步，首先调用 Params().MineBlocksOnDemand() 函数获取挖矿需求标志。
 该标志一般可以表示当前的网络，回归测试网下该标志为 true。<br>
-函数 Params() 定义在“chainparams.h”文件中。
+函数 Params() 声明在“chainparams.h”文件中。
 
 {% highlight C++ %}
 /**
@@ -144,7 +144,7 @@ const CChainParams &Params() { // 获取链参数，在 3.5.SelectParams() 初�
 }
 {% endhighlight %}
 
-然后调用 MineBlocksOnDemand() 函数返回挖矿需求标志。该函数定义在“chainparams.h”文件的 CChainParams 类中。
+然后调用 MineBlocksOnDemand() 函数返回挖矿需求标志。该函数声明在“chainparams.h”文件的 CChainParams 类中。
 
 {% highlight C++ %}
 /**
@@ -167,7 +167,7 @@ public:
 关于 fMineBlocksOnDemand 变量的初始化，详见[比特币核心服务启动过程]()。
 
 第四步，通过 GetMainSignals().ScriptForMining(coinbaseScript) 信号处理函数获取创币交易的脚本。
-函数 GetMainSignals() 定义在“validationinterface.h”文件中。
+函数 GetMainSignals() 声明在“validationinterface.h”文件中。
 
 {% highlight C++ %}
 CMainSignals& GetMainSignals();
@@ -196,7 +196,7 @@ struct CMainSignals { // 主信号类
 {% endhighlight %}
 
 信号 ScriptForMining 通过函数 RegisterValidationInterface(...) 进行注册。<br>
-该函数定义在“validationinterface.h”文件中。
+该函数声明在“validationinterface.h”文件中。
 
 {% highlight C++ %}
 /** Register a wallet to receive updates from core */
@@ -246,7 +246,7 @@ protected:
 };
 {% endhighlight %}
 
-其具体实现在该类的派生类 CWallet 中，该函数定义在“wallet.h”文件的 CWallet 类中。
+其具体实现在该类的派生类 CWallet 中，该函数声明在“wallet.h”文件的 CWallet 类中。
 
 {% highlight C++ %}
 ** 
@@ -408,7 +408,7 @@ public:
 };
 {% endhighlight %}
 
-函数 ToByteVector(pubkey) 和 OP_CHECKSIG 均定义在“script.h”文件中。
+函数模板 ToByteVector(pubkey) 和 OP_CHECKSIG 均定义在“script.h”文件中。
 
 {% highlight C++ %}
 template <typename T>
@@ -473,7 +473,7 @@ private:
 
 第八步，终于进入正题，开始生成区块了。<br>
 8.1.通过调用 CreateNewBlock(Params(), coinbaseScript->reserveScript) 函数把创建的创币脚本传入生成一个区块模板。
-该函数定义在“miner.h”文件中。
+该函数声明在“miner.h”文件中。
 
 {% highlight C++ %}
 struct CBlockTemplate // 区块模板类
