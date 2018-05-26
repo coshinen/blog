@@ -6,6 +6,11 @@ categories: CONAN 歌詞
 ---
 ![time_after_time~hanamaumachide~](/images/20180515/time_after_time~hanamaumachide~.jpg)
 
+<audio controls>
+  <source src="https://raw.githubusercontent.com/mistydew/dc/master/audio/Time%20after%20time%7E%E8%8A%B1%E8%88%9E%E3%81%86%E8%A1%97%E3%81%A7%7E.mp3" type="audio/mpeg">
+您的浏览器不支持 audio 元素。
+</audio>
+
 ## Time after time～花舞う街で～
 
 歌手：倉木麻衣<br>
