@@ -56,6 +56,7 @@ Time after time<br>
 ## 参照
 * [倉木麻衣 - Wikipedia](https://ja.wikipedia.org/wiki/倉木麻衣)
 * [倉木麻衣 - 维基百科，自由的百科全书](https://zh.wikipedia.org/wiki/倉木麻衣)
+* [倉木麻衣公式WEBサイト](http://www.mai-kuraki.com)
 * [倉木麻衣の歌詞一覧リスト](https://www.uta-net.com/artist/3126)
 * [倉木麻衣 の歌詞 歌手](http://www.kasi-time.com/subcat-uta-393-1.html)
 * [倉木麻衣の歌詞・音楽・情報 \| 歌詞検索UtaTen（うたてん）](https://utaten.com/artist/倉木麻衣)
