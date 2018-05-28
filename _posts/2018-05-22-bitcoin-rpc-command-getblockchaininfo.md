@@ -13,7 +13,7 @@ categories: Blockchain
 ## 提示说明
 
 {% highlight shell %}
-getblockchaininfo # 获取区块链信息：链名、区块数、区块头数、最佳块哈希、难度等
+getblockchaininfo # 获取当前区块链信息：链名、区块数、区块头数、最佳块哈希、难度等
 {% endhighlight %}
 
 结果：返回一个包含区块链进度相关变量状态信息的对象。<br>
@@ -217,7 +217,7 @@ UniValue getblockchaininfo(const UniValue& params, bool fHelp)
 1.处理命令帮助和参数个数。<br>
 2.构造一个目标类型的对象。<br>
 3.追加区块链相关信息到该对象。<br>
-4.返回结果。<br>
+4.返回结果。
 
 Thanks for your time.
 
