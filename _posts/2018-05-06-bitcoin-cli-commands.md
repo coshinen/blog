@@ -122,8 +122,8 @@ $ bitcoin-cli help # 获取以下 RPC 命令
 `getblocktemplate ( "jsonrequestobject" )` # 获取区块模板（不包括随机数 nNonce）。前提：需要至少一条连接<br>
 [`getmininginfo`](/2018/05/25/bitcoin-rpc-command-getmininginfo) # 获取挖矿信息<br>
 [`getnetworkhashps ( blocks height )`](/2018/05/25/bitcoin-rpc-command-getnetworkhashps) # 获取全网算力<br>
-[`prioritisetransaction <txid> <priority delta> <fee delta>`](/2018/05/28/bitcoin-rpc-command-prioritisetransaction)<br> # 改变交易优先级
-`submitblock "hexdata" ( "jsonparametersobject" )`
+[`prioritisetransaction <txid> <priority delta> <fee delta>`](/2018/05/28/bitcoin-rpc-command-prioritisetransaction) # 改变交易优先级<br>
+[`submitblock "hexdata" ( "jsonparametersobject" )`](/2018/05/28/bitcoin-rpc-command-submitblock) # 提交区块
 
 == Network ==<br>
 `addnode "node" "add|remove|onetry"` # 添加指定节点，并执行相应操作（添加|移除|尝试连接一次）。注：添加不会主动连接<br>
