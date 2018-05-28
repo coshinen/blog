@@ -13,8 +13,10 @@ categories: Blockchain
 ## 提示说明
 
 {% highlight shell %}
-getbestblockhash # 获取当前最佳块（即最新上链的一个区块，或称链尖区块）的哈希（16 进制形式）
+getbestblockhash # 获取最长区块链上最佳（链尖）区块的哈希
 {% endhighlight %}
+
+结果：返回区块哈希 16 进制编码形式的字符串。
 
 ## 用法示例
 

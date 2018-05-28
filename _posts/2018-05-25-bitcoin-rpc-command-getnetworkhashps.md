@@ -16,9 +16,11 @@ categories: Blockchain
 getnetworkhashps ( blocks height ) # 获取区块链当前（或指定）高度及块数的网络算力
 {% endhighlight %}
 
-`networkhashps` 网络算力，即每秒哈希的次数（链工作量 chainwork 之差 / 时间 time 之差）。<br>
-`blocks` 为区块的数量，默认为 120。<br>
-`height` 为区块链高度，默认为 -1 表示当前高度。
+参数：<br>
+1. `blocks` （整型，可选，默认为 120）区块的数量，或为 -1 表示从上一次变化的难度开始。<br>
+2. `height` （整型，可选，默认为 -1 表示当前高度）给定区块链高度用于评估当某个块被找到时的网络速度。
+
+结果：返回（数字）评估的每秒网络哈希的次数（链工作量 chainwork 之差 / 时间 time 之差）。
 
 ## 用法示例
 

@@ -13,11 +13,38 @@ categories: Blockchain
 ## 提示说明
 
 {% highlight shell %}
-getblock "hash" ( verbose ) # 通过指定的区块哈希（16 进制形式）获取相应区块的详细信息
+getblock "hash" ( verbose ) # 通过指定的区块哈希（16 进制形式）获取相应区块的信息
 {% endhighlight %}
 
-`"hash"` 为区块的哈希（16 进制形式）。<br>
-`verbose` 为布尔型，默认为 true 获取详细信息，false 获取序列化的区块。
+参数：<br>
+1. `"hash"` （字符串，必备）区块哈希（16 进制形式）。<br>
+2. `verbose` （布尔型，可选，默认为 true）true 获取区块信息的 json 格式对象，false 获取 16 进制编码的区块数据。
+
+结果（verbose 为 true）：<br>
+{% highlight shell %}
+{
+  "hash" : "hash",     (string) the block hash (same as provided)
+  "confirmations" : n,   (numeric) The number of confirmations, or -1 if the block is not on the main chain
+  "size" : n,            (numeric) The block size
+  "height" : n,          (numeric) The block height or index
+  "version" : n,         (numeric) The block version
+  "merkleroot" : "xxxx", (string) The merkle root
+  "tx" : [               (array of string) The transaction ids
+     "transactionid"     (string) The transaction id
+     ,...
+  ],
+  "time" : ttt,          (numeric) The block time in seconds since epoch (Jan 1 1970 GMT)
+  "mediantime" : ttt,    (numeric) The median block time in seconds since epoch (Jan 1 1970 GMT)
+  "nonce" : n,           (numeric) The nonce
+  "bits" : "1d00ffff", (string) The bits
+  "difficulty" : x.xxx,  (numeric) The difficulty
+  "chainwork" : "xxxx",  (string) Expected number of hashes required to produce the chain up to this block (in hex)
+  "previousblockhash" : "hash",  (string) The hash of the previous block
+  "nextblockhash" : "hash"       (string) The hash of the next block
+}
+{% endhighlight %}
+
+结果（verbose 为 false）：（字符串）一个序列化的字符串，区块信息的 16 进制编码形式。
 
 ## 用法示例
 用法一：通过指定的区块哈希（16 进制形式）获取相应区块的详细信息

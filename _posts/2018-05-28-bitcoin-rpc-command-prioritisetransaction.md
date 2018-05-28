@@ -16,9 +16,10 @@ categories: Blockchain
 prioritisetransaction <txid> <priority delta> <fee delta> # 改变交易内存池中一笔交易的优先级
 {% endhighlight %}
 
-`txid` （字符串，必备）交易 id（16 进制形式）。<br>
-`priority delta` （数字，浮点型，必备）增加或减少优先级。交易选择算法认为指定交易 `tx` 会有更高优先级。（交易优先级计算：coinage * value_in_satoshis / txsize）<br>
-`fee delta` （数字，整型，必备）增加（或减少，若为负值）该费用（单位：satoshis）。该费用实际上没有花费，仅仅是选择交易到一个区块的算法把该交易作为其将支付更高（或更低）的费用。
+参数：<br>
+1. `txid` （字符串，必备）交易 id（16 进制形式）。<br>
+2. `priority delta` （数字，浮点型，必备）增加或减少优先级。交易选择算法认为指定交易 `tx` 会有更高优先级。（交易优先级计算：coinage * value_in_satoshis / txsize）<br>
+3. `fee delta` （数字，整型，必备）增加（或减少，若为负值）该费用（单位：satoshis）。该费用实际上没有花费，仅仅是选择交易到一个区块的算法把该交易作为其将支付更高（或更低）的费用。
 
 结果：返回布尔型 true。
 

@@ -13,10 +13,10 @@ categories: Blockchain
 ## 提示说明
 
 {% highlight shell %}
-getgenerate # 获取比特币核心服务的挖矿状态
+getgenerate # 获取比特币核心服务的挖矿状态。默认为 false。服务器程序设置命令行参数 `-gen`（或配置文件 bitcoin.conf 中设置 `gen`），也可以使用 `setgenerate` 命令设置
 {% endhighlight %}
 
-返回值：true 表示开启，false 表示关闭。
+结果：（布尔型）true 表示服务器开启挖矿功能，false 表示关闭。
 
 ## 用法示例
 

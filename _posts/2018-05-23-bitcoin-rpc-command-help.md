@@ -13,8 +13,13 @@ categories: Blockchain
 ## 提示说明
 
 {% highlight shell %}
-help ( "command" ) # 获取所有 RPC 命令名或指定命令的用法
+help ( "command" ) # 列出所有 RPC 命令或指定命令的用法（帮助信息）
 {% endhighlight %}
+
+参数：<br>
+1. `command` （字符串，可选）想要获取帮助信息的命令。
+
+结果：返回帮助信息的字符串。
 
 ## 用法示例
 用法一：获取所有比特币核心 RPC 命令名。

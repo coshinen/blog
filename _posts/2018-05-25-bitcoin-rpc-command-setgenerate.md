@@ -13,11 +13,12 @@ categories: Blockchain
 ## 提示说明
 
 {% highlight shell %}
-setgenerate generate ( genproclimit ) # 设置挖矿状态和线程数
+setgenerate generate ( genproclimit ) # 设置挖矿状态和线程数，使用 `getgenerate` 查看当前设置
 {% endhighlight %}
 
-`generate` 为布尔型，默认为 false，true 表示开启，false 表示关闭。<br>
-`genproclimit` 为整型，默认为 1。<br>
+参数：<br>
+1. `generate` （布尔型，必备）默认为 false，true 表示开启，false 表示关闭。<br>
+2. `genproclimit` （整型，可选）设置挖矿开启时的线程数，默认为 1，-1 表示无限制（根据核数）。<br>
 **注：此方法不适用于 regtest 回归测试模式，在该模式下使用 RPC 命令 [`generate`](/2018/05/24/bitcoin-rpc-command-generate)。**
 
 ## 用法示例

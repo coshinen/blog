@@ -16,6 +16,22 @@ categories: Blockchain
 getmininginfo # 获取挖矿信息：区块数、当前块大小、当前块交易数、难度、错误、挖矿线程数、全网算力、交易内存池大小、链名、挖矿状态等信息
 {% endhighlight %}
 
+结果：返回一个包含挖矿相关信息的 json 格式的对象。<br>
+{% highlight shell %}
+{
+  "blocks": nnn,             (numeric) The current block
+  "currentblocksize": nnn,   (numeric) The last block size
+  "currentblocktx": nnn,     (numeric) The last block transaction
+  "difficulty": xxx.xxxxx    (numeric) The current difficulty
+  "errors": "..."          (string) Current errors
+  "generate": true|false     (boolean) If the generation is on or off (see getgenerate or setgenerate calls)
+  "genproclimit": n          (numeric) The processor limit for generation. -1 if no generation. (see getgenerate or setgenerate calls)
+  "pooledtx": n              (numeric) The size of the mem pool
+  "testnet": true|false      (boolean) If using testnet or not
+  "chain": "xxxx",         (string) current network name as defined in BIP70 (main, test, regtest)
+}
+{% endhighlight %}
+
 ## 用法示例
 
 {% highlight shell %}

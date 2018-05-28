@@ -13,11 +13,15 @@ categories: Blockchain
 ## 提示说明
 
 {% highlight shell %}
-generate numblocks # 立刻生成指定数目 numblocks 个区块（仅限回归测试网 regtest）
+generate numblocks # 立刻挖出区块（在 RPC 调用返回前）
 {% endhighlight %}
 
-成功会以数组的形式返回产生区块的哈希。
-失败返回错误信息。
+**注：此功能仅限回归测试网 regtest 使用。**
+
+参数：<br>
+1. `numblocks` （数字，必备）立刻生成区块的数量。
+
+结果：（数组形式）返回生成区块的哈希。
 
 ## 用法示例
 
