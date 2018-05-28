@@ -78,7 +78,7 @@ UniValue prioritisetransaction(const UniValue& params, bool fHelp) // 注：与�
 3.获取交易索引和指定交易费，创建相应对象。<br>
 4.改变交易内存池中交易的优先级。
 
-第四步，函数 mempool.PrioritiseTransaction(hash, params[0].get_str(), params[1].get_real(), nAmount) 定义在“txmempool.h”文件的 CTxMemPool 类中。
+第四步，函数 mempool.PrioritiseTransaction(hash, params[0].get_str(), params[1].get_real(), nAmount) 声明在“txmempool.h”文件的 CTxMemPool 类中。
 
 {% highlight C++ %}
 /**
