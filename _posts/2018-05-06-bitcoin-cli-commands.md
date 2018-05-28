@@ -126,7 +126,7 @@ $ bitcoin-cli help # 获取以下 RPC 命令
 [`submitblock "hexdata" ( "jsonparametersobject" )`](/2018/05/28/bitcoin-rpc-command-submitblock) # 提交区块
 
 == Network ==<br>
-`addnode "node" "add|remove|onetry"` # 添加指定节点，并执行相应操作（添加|移除|尝试连接一次）。注：添加不会主动连接<br>
+[`addnode "node" "add|remove|onetry"`](/2018/05/28/bitcoin-rpc-command-addnode) # 添加节点并执行操作<br>
 `clearbanned` # 清空黑名单<br>
 `disconnectnode "node"` # 断开连接指定的节点 "ip:port"<br>
 `getaddednodeinfo dns ( "node" )`<br>
