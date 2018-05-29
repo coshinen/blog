@@ -127,16 +127,16 @@ $ bitcoin-cli help # 获取以下 RPC 命令
 
 == Network ==<br>
 [`addnode "node" "add|remove|onetry"`](/2018/05/28/bitcoin-rpc-command-addnode) # 添加节点并执行操作<br>
-`clearbanned` # 清空黑名单<br>
+[`clearbanned`](/2018/05/29/bitcoin-rpc-command-listbanned) # 清空黑名单<br>
 `disconnectnode "node"` # 断开连接指定的节点 "ip:port"<br>
 `getaddednodeinfo dns ( "node" )`<br>
 `getconnectioncount` # 获取当前与该节点建立连接的数目<br>
 `getnettotals` # 获取网络总流量<br>
 `getnetworkinfo` # 获取网络信息<br>
 `getpeerinfo` # 获取与该节点建立连接的对端的信息<br>
-`listbanned` # 列出黑名单<br>
+[`listbanned`](/2018/05/29/bitcoin-rpc-command-listbanned) # 列出黑名单<br>
 `ping` # ping 一下，并不会显示 pong，没有任何反应表示当前 ping 的通<br>
-`setban "ip(/netmask)" "add|remove" (bantime) (absolute)` # 设置黑名单（默认：屏蔽时间为 24h）
+[`setban "ip(/netmask)" "add|remove" (bantime) (absolute)`](/2018/05/29/bitcoin-rpc-command-setban) # 设置黑名单
 
 == Rawtransactions ==<br>
 `createrawtransaction [{"txid":"id","vout":n},...] {"address":amount,"data":"hex",...} ( locktime )`<br>
