@@ -131,9 +131,9 @@ $ bitcoin-cli help # 获取以下 RPC 命令
 `disconnectnode "node"` # 断开连接指定的节点 "ip:port"<br>
 `getaddednodeinfo dns ( "node" )`<br>
 [`getconnectioncount`](/2018/05/29/bitcoin-rpc-command-getconnectioncount) # 获取当前的连接数目<br>
-[`getnettotals`](/2018/05/29/bitcoin-rpc-command-getnettotals) # 获取网络总流量<br>
-[`getnetworkinfo`](/2018/05/29/bitcoin-rpc-command-getnetworkinfo) # 获取网络信息<br>
-[`getpeerinfo`](/2018/05/29/bitcoin-rpc-command-getpeerinfo) # 获取该节点建立连接的对端的信息<br>
+[`getnettotals`](/2018/05/29/bitcoin-rpc-command-getnettotals) # 获取网络流量信息<br>
+[`getnetworkinfo`](/2018/05/29/bitcoin-rpc-command-getnetworkinfo) # 获取 P2P 网络信息<br>
+[`getpeerinfo`](/2018/05/29/bitcoin-rpc-command-getpeerinfo) # 获取连接对端的信息<br>
 [`listbanned`](/2018/05/29/bitcoin-rpc-command-listbanned) # 列出黑名单<br>
 [`ping`](/2018/05/29/bitcoin-rpc-command-ping) # ping 每个与之相连的节点<br>
 [`setban "ip(/netmask)" "add|remove" (bantime) (absolute)`](/2018/05/29/bitcoin-rpc-command-setban) # 设置黑名单
