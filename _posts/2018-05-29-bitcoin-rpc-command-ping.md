@@ -1,0 +1,100 @@
+---
+layout: post
+title:  "比特币 RPC 命令剖析 \"ping\""
+date:   2018-05-29 14:18:16 +0800
+categories: Blockchain
+---
+![bitcoin](/images/20180504/bitcoin.svg)
+
+## 读在前面
+比特币相关的解读目前均采用 [bitcoin v0.12.1](https://github.com/bitcoin/bitcoin/tree/v0.12.1)，此版本为官方内置挖矿算法的最后一版。<br>
+目前比特币的最新版本为 bitcoin v0.16.0，离区块链 1.0 落地还有些距离。
+
+## 提示说明
+
+{% highlight shell %}
+ping # 请求一个 ping 发送到其他全部节点，以衡量 ping 时间
+{% endhighlight %}
+
+[`getpeerinfo`](/2018/05/29/bitcoin-rpc-command-getpeerinfo) 提供的结果 `pingtime` 和 `pingwait` 字段是 10 进制的秒。<br>
+`ping` 命令和所有其他命令在队列中被处理，所以它测量处理积压，而不仅是网络 ping。
+
+结果：无返回值。<br>
+
+## 用法示例
+
+配合使用 RPC 命令 [`getpeerinfo`](/2018/05/29/bitcoin-rpc-command-getpeerinfo) 查看 ping 时间。
+
+{% highlight shell %}
+$ bitcoin-cli getpeerinfo | grep ping
+    "pingtime": 0.010807,
+    "minping": 0.008253,
+      "ping": 1184,
+      "ping": 1280,
+$ bitcoin-cli ping
+$ bitcoin-cli getpeerinfo | grep ping
+    "pingtime": 0.009958,
+    "minping": 0.008253,
+      "ping": 1216,
+      "ping": 1280,
+{% endhighlight %}
+
+## 源码剖析
+`ping` 对应的函数在“rpcserver.h”文件中被引用。
+
+{% highlight C++ %}
+extern UniValue ping(const UniValue& params, bool fHelp); // ping 命令在 getpeerinfo 结果的 pingtime 字段查看
+{% endhighlight %}
+
+实现在“rpcnet.cpp”文件中。
+
+{% highlight C++ %}
+UniValue ping(const UniValue& params, bool fHelp)
+{
+    if (fHelp || params.size() != 0) // 没有参数
+        throw runtime_error( // 命令帮助反馈
+            "ping\n"
+            "\nRequests that a ping be sent to all other nodes, to measure ping time.\n"
+            "Results provided in getpeerinfo, pingtime and pingwait fields are decimal seconds.\n"
+            "Ping command is handled in queue with all other commands, so it measures processing backlog, not just network ping.\n"
+            "\nExamples:\n"
+            + HelpExampleCli("ping", "")
+            + HelpExampleRpc("ping", "")
+        );
+
+    // Request that each node send a ping during next message processing pass
+    LOCK2(cs_main, cs_vNodes); // 请求在下一条消息处理完后每个节点发送一个 ping
+
+    BOOST_FOREACH(CNode* pNode, vNodes) { // 遍历已建立连接的每个节点
+        pNode->fPingQueued = true; // 设置其 ping 请求队列标志为 true
+    }
+
+    return NullUniValue;
+}
+{% endhighlight %}
+
+基本流程：<br>
+1.处理命令帮助和参数个数。<br>
+2.上锁。<br>
+3.遍历已建立连接的节点，把每个节点中的请求 ping 标志置为 true。
+
+第三步，数据成员 pNode->fPingQueued 定义在“net.h”文件的 CNode 类中。
+
+{% highlight C++ %}
+/** Information about a peer */
+class CNode // 关于同辈的信息
+{
+    ...
+    // Whether a ping is requested.
+    bool fPingQueued; // 是否请求一个 ping
+    ...
+};
+{% endhighlight %}
+
+Thanks for your time.
+
+## 参照
+* [Developer Documentation - Bitcoin](https://bitcoin.org/en/developer-documentation)
+* [Bitcoin Developer Reference - Bitcoin](https://bitcoin.org/en/developer-reference#ping)
+* [精通比特币（第二版） \| 巴比特图书](http://book.8btc.com/masterbitcoin2cn)
+* [...](https://github.com/mistydew/blockchain)
