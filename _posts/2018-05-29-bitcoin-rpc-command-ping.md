@@ -19,7 +19,7 @@ ping # 请求一个 ping 发送到其他全部节点，以衡量 ping 时间
 [`getpeerinfo`](/2018/05/29/bitcoin-rpc-command-getpeerinfo) 提供的结果 `pingtime` 和 `pingwait` 字段是 10 进制的秒。<br>
 `ping` 命令和所有其他命令在队列中被处理，所以它测量处理积压，而不仅是网络 ping。
 
-结果：无返回值。<br>
+结果：无返回值。
 
 ## 用法示例
 

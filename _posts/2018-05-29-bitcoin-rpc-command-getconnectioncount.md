@@ -16,7 +16,7 @@ categories: Blockchain
 getconnectioncount # 获取当前连到其他节点的连接数
 {% endhighlight %}
 
-结果：（整型）连接数。<br>
+结果：（整型）连接数。
 
 ## 用法示例
 
