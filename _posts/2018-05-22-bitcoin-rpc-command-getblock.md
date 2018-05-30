@@ -172,7 +172,7 @@ UniValue getblock(const UniValue& params, bool fHelp)
 4.检查指定的哈希是否在区块索引映射中。<br>
 5.检查区块数据状态。<br>
 6.从磁盘上的区块文件中读取区块数据。<br>
-7.若详细标志为 false，则序列胡区块数据，转换为 16 进制并返回。<br>
+7.若详细标志为 false，则序列化区块数据，转换为 16 进制并返回。<br>
 8.否则把区块信息打包为 JSON 格式并返回。
 
 对象 mapBlockIndex 在“main.h”文件中被引用。<br>
