@@ -99,9 +99,9 @@ $ bitcoin-cli help # 获取以下 RPC 命令
 [`getblockhash index`](/2018/05/22/bitcoin-rpc-command-getblockhash) # 获取指定区块哈希（16 进制形式）<br>
 [`getblockheader "hash" ( verbose )`](/2018/05/22/bitcoin-rpc-command-getblockheader) # 获取指定区块头信息<br>
 [`getchaintips`](/2018/05/22/bitcoin-rpc-command-getchaintips) # 获取区块链尖信息（高度、最佳块哈希、分叉长度、链状态）<br>
-[`getdifficulty`](/2018/05/22/bitcoin-rpc-command-getdifficulty) # 获取当前挖矿难度（浮点数）<br>
+[`getdifficulty`](/2018/05/22/bitcoin-rpc-command-getdifficulty) # 获取当前挖矿难度<br>
 [`getmempoolinfo`](/2018/05/22/bitcoin-rpc-command-getmempoolinfo) # 获取交易内存池信息<br>
-[`getrawmempool ( verbose )`](/2018/05/22/bitcoin-rpc-command-getrawmempool) # 获取交易内存池元信息（池中所有未打包交易的哈希），verbose 为 true 或 false，默认为 false 获取所有交易哈希，true 获取所有交易的详细信息<br>
+[`getrawmempool ( verbose )`](/2018/05/22/bitcoin-rpc-command-getrawmempool) # 获取交易内存池交易索引<br>
 [`gettxout "txid" n ( includemempool )`](/2018/05/23/bitcoin-rpc-command-gettxout) # 根据交易内存池中的交易号获取指定输出号 n 的信息。适用范围：所有交易<br>
 [`gettxoutproof ["txid",...] ( blockhash )`](/2018/05/23/bitcoin-rpc-command-gettxoutproof)<br>
 [`gettxoutsetinfo`](/2018/05/23/bitcoin-rpc-command-gettxoutsetinfo) # 获取交易输出设置信息（高度、最佳块哈希、总交易数、总输出数、...、当前发行量）<br>
