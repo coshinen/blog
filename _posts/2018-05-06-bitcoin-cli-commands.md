@@ -128,8 +128,8 @@ $ bitcoin-cli help # 获取以下 RPC 命令
 == Network ==<br>
 [`addnode "node" "add|remove|onetry"`](/2018/05/28/bitcoin-rpc-command-addnode) # 添加节点并执行操作<br>
 [`clearbanned`](/2018/05/29/bitcoin-rpc-command-listbanned) # 清空黑名单<br>
-`disconnectnode "node"` # 断开连接指定的节点 "ip:port"<br>
-`getaddednodeinfo dns ( "node" )`<br>
+[`disconnectnode "node"`](/2018/05/30/bitcoin-rpc-command-disconnectnode) # 断开与指定节点的连接<br>
+[`getaddednodeinfo dns ( "node" )`](/2018/05/30/bitcoin-rpc-command-getaddednodeinfo) # 获取添加节点的信息<br>
 [`getconnectioncount`](/2018/05/29/bitcoin-rpc-command-getconnectioncount) # 获取当前的连接数目<br>
 [`getnettotals`](/2018/05/29/bitcoin-rpc-command-getnettotals) # 获取网络流量信息<br>
 [`getnetworkinfo`](/2018/05/29/bitcoin-rpc-command-getnetworkinfo) # 获取 P2P 网络信息<br>
