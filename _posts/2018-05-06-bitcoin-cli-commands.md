@@ -195,9 +195,9 @@ $ bitcoin-cli help # 获取以下 RPC 命令
 `setaccount "bitcoinaddress" "account"` # 设置公钥地址为指定账户<br>
 `settxfee amount` # 设置交易费<br>
 `signmessage "bitcoinaddress" "message"` # 创建一个 88bytes 的 base64 签名<br>
-[`walletlock`](/2018/05/31/bitcoin-rpc-command-walletlock) # 锁定钱包，使 getinfo 获取的信息中 "unlocked_until" 字段置 0<br>
+[`walletlock`](/2018/05/31/bitcoin-rpc-command-walletlock) # 锁定钱包<br>
 [`walletpassphrase "passphrase" timeout`](/2018/05/31/bitcoin-rpc-command-walletpassphrase) # 解锁钱包数秒<br>
-[`walletpassphrasechange "oldpassphrase" "newpassphrase"`](/2018/05/31/bitcoin-rpc-command-walletpassphrasechange) # 修改钱包密码，不会导致比特币服务终止
+[`walletpassphrasechange "oldpassphrase" "newpassphrase"`](/2018/05/31/bitcoin-rpc-command-walletpassphrasechange) # 更改钱包密码
 
 ## 参照
 * [Bitcoin Core - Wikipedia](https://en.wikipedia.org/wiki/Bitcoin_Core)
