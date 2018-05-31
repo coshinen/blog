@@ -98,7 +98,7 @@ $ bitcoin-cli help # 获取以下 RPC 命令
 [`getblockcount`](/2018/05/22/bitcoin-rpc-command-getblockcount) # 获取当前区块总数<br>
 [`getblockhash index`](/2018/05/22/bitcoin-rpc-command-getblockhash) # 获取指定区块哈希（16 进制形式）<br>
 [`getblockheader "hash" ( verbose )`](/2018/05/22/bitcoin-rpc-command-getblockheader) # 获取指定区块头信息<br>
-[`getchaintips`](/2018/05/22/bitcoin-rpc-command-getchaintips) # 获取区块链尖信息（高度、最佳块哈希、分叉长度、链状态）<br>
+[`getchaintips`](/2018/05/22/bitcoin-rpc-command-getchaintips) # 获取区块链尖信息（激活主链、分叉链）<br>
 [`getdifficulty`](/2018/05/22/bitcoin-rpc-command-getdifficulty) # 获取当前挖矿难度<br>
 [`getmempoolinfo`](/2018/05/22/bitcoin-rpc-command-getmempoolinfo) # 获取交易内存池信息<br>
 [`getrawmempool ( verbose )`](/2018/05/22/bitcoin-rpc-command-getrawmempool) # 获取交易内存池交易索引<br>
@@ -157,7 +157,7 @@ $ bitcoin-cli help # 获取以下 RPC 命令
 `verifymessage "bitcoinaddress" "signature" "message"`
 
 == Wallet ==<br>
-`abandontransaction "txid"` # 标记钱包内的一笔交易为抛弃，适用于未上链和不在交易内存池中的交易，对以已冲突的和已抛弃的交易无效。<br>
+[`abandontransaction "txid"`](/2018/05/31/bitcoin-rpc-command-abandontransaction) # 标记钱包交易为已抛弃<br>
 `addmultisigaddress nrequired ["key",...] ( "account" )`<br>
 `backupwallet "destination"` # 备份钱包到指定文件（加密），默认存放在当前所在目录<br>
 `dumpprivkey "bitcoinaddress"` # 导出指定 34bytes 公钥地址对应的 52bytes 私钥<br>
