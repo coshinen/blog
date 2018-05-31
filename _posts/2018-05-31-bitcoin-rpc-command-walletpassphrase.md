@@ -88,9 +88,9 @@ UniValue walletpassphrase(const UniValue& params, bool fHelp)
 
     LOCK2(cs_main, pwalletMain->cs_wallet); // 钱包上锁
 
-    if (fHelp) // 意味不明
+    if (fHelp) // 钱包未加密时无法查看该命令帮助
         return true;
-    if (!pwalletMain->IsCrypted()) // 意味不明
+    if (!pwalletMain->IsCrypted()) // 钱包未加密时无法执行该命令
         throw JSONRPCError(RPC_WALLET_WRONG_ENC_STATE, "Error: running with an unencrypted wallet, but walletpassphrase was called.");
 
     // Note that the walletpassphrase is stored in params[0] which is not mlock()ed
