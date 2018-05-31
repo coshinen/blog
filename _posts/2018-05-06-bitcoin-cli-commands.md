@@ -162,7 +162,7 @@ $ bitcoin-cli help # 获取以下 RPC 命令
 `backupwallet "destination"` # 备份钱包到指定文件（加密），默认存放在当前所在目录<br>
 `dumpprivkey "bitcoinaddress"` # 导出指定 34bytes 公钥地址对应的 52bytes 私钥<br>
 `dumpwallet "filename"` # 导出钱包到指定文件（明文），新建钱包会自动生成 101 个私钥公钥对，锁定钱包时无效<br>
-`encryptwallet "passphrase"` # 使用明文密码加密钱包，只能设置一次，比特币服务会停止，重启以运行加密的钱包。密钥池已刷新（再次生成 101 个私钥公钥对），你需要重新备份<br>
+[`encryptwallet "passphrase"`](/2018/05/31/bitcoin-rpc-command-encryptwallet) # 加密钱包<br>
 `getaccount "bitcoinaddress"` # 获取公钥地址所属账户<br>
 `getaccountaddress "account"` # 已过时，获取指定账户用于接收的比特币地址<br>
 `getaddressesbyaccount "account"` # 获取指定账户下的所有公钥地址<br>
@@ -173,7 +173,7 @@ $ bitcoin-cli help # 获取以下 RPC 命令
 `getreceivedbyaddress "bitcoinaddress" ( minconf )` # 获取指定公钥地址接收到的总金额，非可用余额<br>
 `gettransaction "txid" ( includeWatchonly )` # 通过交易号获取交易信息<br>
 `getunconfirmedbalance` # 获取未确认（需要 6 个区块确认）的余额<br>
-`getwalletinfo` # 获取钱包基本信息<br>
+[`getwalletinfo`](/2018/05/31/bitcoin-rpc-command-getwalletinfo) # 获取钱包信息<br>
 `importaddress "address" ( "label" rescan p2sh )`<br>
 `importprivkey "bitcoinprivkey" ( "label" rescan )` # 导入私钥到当前钱包默认空帐户 "" 中<br>
 `importpubkey "pubkey" ( "label" rescan )`<br>
@@ -195,9 +195,9 @@ $ bitcoin-cli help # 获取以下 RPC 命令
 `setaccount "bitcoinaddress" "account"` # 设置公钥地址为指定账户<br>
 `settxfee amount` # 设置交易费<br>
 `signmessage "bitcoinaddress" "message"` # 创建一个 88bytes 的 base64 签名<br>
-`walletlock` # 立刻锁定钱包，使 getinfo 获取的信息中 "unlocked_until" 字段置 0<br>
-`walletpassphrase "passphrase" timeout` # 输入明文密码解锁钱包指定的时间，单位为 s<br>
-`walletpassphrasechange "oldpassphrase" "newpassphrase"` # 修改钱包密码，不会导致比特币服务终止
+[`walletlock`](/2018/05/31/bitcoin-rpc-command-walletlock) # 锁定钱包，使 getinfo 获取的信息中 "unlocked_until" 字段置 0<br>
+[`walletpassphrase "passphrase" timeout`](/2018/05/31/bitcoin-rpc-command-walletpassphrase) # 解锁钱包数秒<br>
+[`walletpassphrasechange "oldpassphrase" "newpassphrase"`](/2018/05/31/bitcoin-rpc-command-walletpassphrasechange) # 修改钱包密码，不会导致比特币服务终止
 
 ## 参照
 * [Bitcoin Core - Wikipedia](https://en.wikipedia.org/wiki/Bitcoin_Core)
