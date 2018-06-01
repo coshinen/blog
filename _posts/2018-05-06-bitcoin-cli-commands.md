@@ -159,9 +159,9 @@ $ bitcoin-cli help # 获取以下 RPC 命令
 == Wallet ==<br>
 [`abandontransaction "txid"`](/2018/05/31/bitcoin-rpc-command-abandontransaction) # 标记钱包交易为已抛弃<br>
 `addmultisigaddress nrequired ["key",...] ( "account" )`<br>
-`backupwallet "destination"` # 备份钱包到指定文件（加密），默认存放在当前所在目录<br>
+[`backupwallet "destination"`](/2018/06/01/bitcoin-rpc-command-backupwallet) # 备份钱包<br>
 `dumpprivkey "bitcoinaddress"` # 导出指定 34bytes 公钥地址对应的 52bytes 私钥<br>
-`dumpwallet "filename"` # 导出钱包到指定文件（明文），新建钱包会自动生成 101 个私钥公钥对，锁定钱包时无效<br>
+[`dumpwallet "filename"`](/2018/06/01/bitcoin-rpc-command-dumpwallet) # 导出钱包<br>
 [`encryptwallet "passphrase"`](/2018/05/31/bitcoin-rpc-command-encryptwallet) # 加密钱包<br>
 `getaccount "bitcoinaddress"` # 获取公钥地址所属账户<br>
 `getaccountaddress "account"` # 已过时，获取指定账户用于接收的比特币地址<br>
@@ -177,7 +177,7 @@ $ bitcoin-cli help # 获取以下 RPC 命令
 `importaddress "address" ( "label" rescan p2sh )`<br>
 `importprivkey "bitcoinprivkey" ( "label" rescan )` # 导入私钥到当前钱包默认空帐户 "" 中<br>
 `importpubkey "pubkey" ( "label" rescan )`<br>
-`importwallet "filename"` # 导入指定的钱包文件<br>
+[`importwallet "filename"`](/2018/06/01/bitcoin-rpc-command-importwallet) # 导入钱包<br>
 [`keypoolrefill ( newsize )`](/2018/06/01/bitcoin-rpc-command-keypoolrefill) # 再填充钥匙池<br>
 `listaccounts ( minconf includeWatchonly)` # 已过时，列出钱包中各账户及其可用余额<br>
 `listaddressgroupings` # 列举有可用余额的地址及其所属账户。注：非所有地址<br>
