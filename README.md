@@ -1,6 +1,7 @@
 # [_mistydew's blog_](https://mistydew.github.io)
 
 ## Todo
+- [ ] increase the display width
 - [ ] add github count contributions
 - [ ] add "reply to" function
 - [ ] add hits, pageviews and visitors
