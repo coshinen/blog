@@ -178,7 +178,7 @@ $ bitcoin-cli help # 获取以下 RPC 命令
 `importprivkey "bitcoinprivkey" ( "label" rescan )` # 导入私钥到当前钱包默认空帐户 "" 中<br>
 `importpubkey "pubkey" ( "label" rescan )`<br>
 `importwallet "filename"` # 导入指定的钱包文件<br>
-`keypoolrefill ( newsize )` # 再填充钥匙池，新大小应大于当前大小，填充后的 "keypoolsize" = newsize + 1<br>
+[`keypoolrefill ( newsize )`](/2018/06/01/bitcoin-rpc-command-keypoolrefill) # 再填充钥匙池<br>
 `listaccounts ( minconf includeWatchonly)` # 已过时，列出钱包中各账户及其可用余额<br>
 `listaddressgroupings` # 列举有可用余额的地址及其所属账户。注：非所有地址<br>
 `listlockunspent` # 列出所有锁定的未花费交易（包含交易号和输出号）<br>
