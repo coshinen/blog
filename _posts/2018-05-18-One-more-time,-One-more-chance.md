@@ -4,6 +4,12 @@ title:  "One more time, One more chance"
 date:   2018-05-18 20:37:01 +0800
 categories: 歌詞
 ---
+
+<audio controls>
+  <source src="https://raw.githubusercontent.com/mistydew/audio/master/One%20more%20time%2C%20One%20more%20chance.mp3" type="audio/mpeg">
+您的浏览器不支持 audio 元素。
+</audio>
+
 ## One more time, One more chance
 
 歌手：山崎まさよし<br>
