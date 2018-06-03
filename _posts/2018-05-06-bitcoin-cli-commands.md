@@ -193,7 +193,7 @@ $ bitcoin-cli help # 获取以下 RPC 命令
 `sendmany "fromaccount" {"address":amount,...} ( minconf "comment" ["address",...] )` # 从指定账户发送到多个公钥地址不同的金额<br>
 `sendtoaddress "bitcoinaddress" amount ( "comment" "comment-to" subtractfeefromamount )` # 发送指定金额到指定公钥地址<br>
 `setaccount "bitcoinaddress" "account"` # 设置公钥地址为指定账户<br>
-`settxfee amount` # 设置交易费<br>
+[`settxfee amount`](/2018/06/03/bitcoin-rpc-command-settxfee) # 设置交易费<br>
 `signmessage "bitcoinaddress" "message"` # 创建一个 88bytes 的 base64 签名<br>
 [`walletlock`](/2018/05/31/bitcoin-rpc-command-walletlock) # 锁定钱包<br>
 [`walletpassphrase "passphrase" timeout`](/2018/05/31/bitcoin-rpc-command-walletpassphrase) # 解锁钱包数秒<br>
