@@ -13,7 +13,7 @@ categories: Blockchain
 ## 提示说明
 
 {% highlight shell %}
-settxfee amount # 设置每 kB 的交易费。覆盖 paytxfee 参数
+settxfee amount # 设置每 kB 的交易费。覆盖 paytxfee 参数对应的值
 {% endhighlight %}
 
 参数：<br>
@@ -65,7 +65,7 @@ UniValue settxfee(const UniValue& params, bool fHelp)
     LOCK2(cs_main, pwalletMain->cs_wallet); // 钱包上锁
 
     // Amount
-    CAmount nAmount = AmountFromValue(params[0]); // 获取指定交易费
+    CAmount nAmount = AmountFromValue(params[0]); // 获取指定交易费，包含范围检查
 
     payTxFee = CFeeRate(nAmount, 1000); // 设置交易费
     return true; // 设置成功返回 true
@@ -117,7 +117,7 @@ static const CAmount MAX_MONEY = 21000000 * COIN; // 最大金额 2100 BTC
 inline bool MoneyRange(const CAmount& nValue) { return (nValue >= 0 && nValue <= MAX_MONEY); } // 金额范围检测
 {% endhighlight %}
 
-第五步，调用 CFeeRate 类的有参构造 CFeeRate(nAmount, 1000)，该类定义在“amount.h”文件中。
+第五步，调用 CFeeRate 类的有参构造函数 CFeeRate(nAmount, 1000)，该类定义在“amount.h”文件中。
 
 {% highlight C++ %}
 /** Type-safe wrapper class for fee rates
@@ -132,6 +132,18 @@ public:
     CFeeRate(const CAmount& nFeePaid, size_t nSize);
     ...
 };
+{% endhighlight %}
+
+该有参构造函数实现在“amount.cpp”文件中。
+
+{% highlight C++ %}
+CFeeRate::CFeeRate(const CAmount& nFeePaid, size_t nSize)
+{
+    if (nSize > 0)
+        nSatoshisPerK = nFeePaid*1000/nSize;
+    else
+        nSatoshisPerK = 0;
+}
 {% endhighlight %}
 
 Thanks for your time.
