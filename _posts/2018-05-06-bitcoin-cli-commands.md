@@ -172,7 +172,7 @@ $ bitcoin-cli help # 获取以下 RPC 命令
 `getreceivedbyaccount "account" ( minconf )` # 获取指定账户接收到的总金额，非可用余额<br>
 `getreceivedbyaddress "bitcoinaddress" ( minconf )` # 获取指定公钥地址接收到的总金额，非可用余额<br>
 `gettransaction "txid" ( includeWatchonly )` # 通过交易号获取交易信息<br>
-`getunconfirmedbalance` # 获取未确认（需要 6 个区块确认）的余额<br>
+[`getunconfirmedbalance`](/2018/06/04/bitcoin-rpc-command-getunconfirmedbalance) # 获取未确认的总金额<br>
 [`getwalletinfo`](/2018/05/31/bitcoin-rpc-command-getwalletinfo) # 获取钱包信息<br>
 `importaddress "address" ( "label" rescan p2sh )`<br>
 `importprivkey "bitcoinprivkey" ( "label" rescan )` # 导入私钥到当前钱包默认空帐户 "" 中<br>
