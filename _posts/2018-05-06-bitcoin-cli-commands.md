@@ -163,8 +163,8 @@ $ bitcoin-cli help # 获取以下 RPC 命令
 `dumpprivkey "bitcoinaddress"` # 导出指定 34bytes 公钥地址对应的 52bytes 私钥<br>
 [`dumpwallet "filename"`](/2018/06/01/bitcoin-rpc-command-dumpwallet) # 导出钱包<br>
 [`encryptwallet "passphrase"`](/2018/05/31/bitcoin-rpc-command-encryptwallet) # 加密钱包<br>
-`getaccount "bitcoinaddress"` # 获取公钥地址所属账户<br>
-`getaccountaddress "account"` # 已过时，获取指定账户用于接收的比特币地址<br>
+[`getaccount "bitcoinaddress"`](/2018/06/04/bitcoin-rpc-command-getaccount) # （已过时）获取地址所属账户<br>
+[`getaccountaddress "account"`](/2018/06/04/bitcoin-rpc-command-getaccountaddress) # （已过时）获取账户找零地址<br>
 `getaddressesbyaccount "account"` # 获取指定账户下的所有公钥地址<br>
 `getbalance ( "account" minconf includeWatchonly )` # 获取钱包或指定账户（已过时）的可用余额<br>
 `getnewaddress ( "account" )` # 在指定账户下生成一个新地址，若不指定账户，默认为空账户 ""<br>
