@@ -165,9 +165,9 @@ $ bitcoin-cli help # 获取以下 RPC 命令
 [`encryptwallet "passphrase"`](/2018/05/31/bitcoin-rpc-command-encryptwallet) # 加密钱包<br>
 [`getaccount "bitcoinaddress"`](/2018/06/04/bitcoin-rpc-command-getaccount) # （已过时）获取地址所属账户<br>
 [`getaccountaddress "account"`](/2018/06/04/bitcoin-rpc-command-getaccountaddress) # （已过时）获取账户找零地址<br>
-`getaddressesbyaccount "account"` # 获取指定账户下的所有公钥地址<br>
-`getbalance ( "account" minconf includeWatchonly )` # 获取钱包或指定账户（已过时）的可用余额<br>
-`getnewaddress ( "account" )` # 在指定账户下生成一个新地址，若不指定账户，默认为空账户 ""<br>
+[`getaddressesbyaccount "account"`](/2018/06/04/bitcoin-rpc-command-getaddressesbyaccount) # 获取账户下所有地址<br>
+[`getbalance ( "account" minconf includeWatchonly )`](/2018/06/04/bitcoin-rpc-command-getbalance) # 获取余额<br>
+[`getnewaddress ( "account" )`](/2018/06/04/bitcoin-rpc-command-getnewaddress) # 获取新地址<br>
 `getrawchangeaddress` # 获取元找零地址，用于元交易，非普通使用<br>
 `getreceivedbyaccount "account" ( minconf )` # 获取指定账户接收到的总金额，非可用余额<br>
 `getreceivedbyaddress "bitcoinaddress" ( minconf )` # 获取指定公钥地址接收到的总金额，非可用余额<br>
