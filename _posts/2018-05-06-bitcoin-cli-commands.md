@@ -183,8 +183,8 @@ $ bitcoin-cli help # 获取以下 RPC 命令
 `listaccounts ( minconf includeWatchonly)` # 已过时，列出钱包中各账户及其可用余额<br>
 `listaddressgroupings` # 列举有可用余额的地址及其所属账户。注：非所有地址<br>
 `listlockunspent` # 列出所有锁定的未花费交易（包含交易号和输出号）<br>
-`listreceivedbyaccount ( minconf includeempty includeWatchonly)` # 已过时，列出指定账户余额<br>
-`listreceivedbyaddress ( minconf includeempty includeWatchonly)` # 列出所有接收到金额的公钥地址<br>
+[`listreceivedbyaccount ( minconf includeempty includeWatchonly)`](/2018/06/05/bitcoin-rpc-command-listreceivedbyaccount) # （已过时）列出账户余额<br>
+[`listreceivedbyaddress ( minconf includeempty includeWatchonly)`](/2018/06/05/bitcoin-rpc-command-listreceivedbyaddress) # 列出接收地址余额<br>
 `listsinceblock ( "blockhash" target-confirmations includeWatchonly)` # 列出从指定块开始到现在钱包的所有交易（包括当前节点的挖矿奖励 coinbase 和所有普通交易）的信息以及最佳区块的哈希<br>
 `listtransactions ( "account" count from includeWatchonly)` # 列出钱包的所有交易信息或指定账户的交易<br>
 `listunspent ( minconf maxconf  ["address",...] )` # 列出所有未花费交易的信息（包括交易号、输出号、公钥地址、公钥脚本、金额、确认数和可花费状态）<br>
