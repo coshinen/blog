@@ -182,13 +182,13 @@ $ bitcoin-cli help # 获取以下 RPC 命令
 [`keypoolrefill ( newsize )`](/2018/06/01/bitcoin-rpc-command-keypoolrefill) # 再填充钥匙池<br>
 [`listaccounts ( minconf includeWatchonly)`](/2018/06/05/bitcoin-rpc-command-listaccounts) # （已过时）列出账户及其余额<br>
 [`listaddressgroupings`](/2018/06/05/bitcoin-rpc-command-listaddressgroupings) # 列出地址分组<br>
-`listlockunspent` # 列出所有锁定的未花费交易（包含交易号和输出号）<br>
+[`listlockunspent`](/2018/06/05/bitcoin-rpc-command-listlockunspent) # 列出所有锁定的未花费交易输出<br>
 [`listreceivedbyaccount ( minconf includeempty includeWatchonly)`](/2018/06/05/bitcoin-rpc-command-listreceivedbyaccount) # （已过时）列出账户余额<br>
 [`listreceivedbyaddress ( minconf includeempty includeWatchonly)`](/2018/06/05/bitcoin-rpc-command-listreceivedbyaddress) # 列出接收地址余额<br>
 `listsinceblock ( "blockhash" target-confirmations includeWatchonly)` # 列出从指定块开始到现在钱包的所有交易（包括当前节点的挖矿奖励 coinbase 和所有普通交易）的信息以及最佳区块的哈希<br>
 `listtransactions ( "account" count from includeWatchonly)` # 列出钱包的所有交易信息或指定账户的交易<br>
-`listunspent ( minconf maxconf  ["address",...] )` # 列出所有未花费交易的信息（包括交易号、输出号、公钥地址、公钥脚本、金额、确认数和可花费状态）<br>
-`lockunspent unlock [{"txid":"txid","vout":n},...]` # 锁定一笔未花费的交易，unlock 表示状态为布尔型，false 表示锁定<br>
+[`listunspent ( minconf maxconf  ["address",...] )`](/2018/06/05/bitcoin-rpc-command-listunspent) # 列出未花费交易输出<br>
+[`lockunspent unlock [{"txid":"txid","vout":n},...]`](/2018/06/05/bitcoin-rpc-command-lockunspent) # 加解锁为花费交易输出<br>
 `move "fromaccount" "toaccount" amount ( minconf "comment" )` # 账户间转移指定金额，可以移动超过本帐户的金额，出现负的账户金额，钱包总的可用余额不变<br>
 `sendfrom "fromaccount" "tobitcoinaddress" amount ( minconf "comment" "comment-to" )` # 从指定账户发送指定金额到指定公钥地址<br>
 `sendmany "fromaccount" {"address":amount,...} ( minconf "comment" ["address",...] )` # 从指定账户发送到多个公钥地址不同的金额<br>
