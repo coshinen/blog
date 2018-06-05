@@ -2,6 +2,7 @@
 layout: post
 title:  "启动比特币核心服务 bitcoind"
 date:   2018-05-04 13:08:22 +0800
+author: mistydew
 categories: Blockchain
 ---
 原始可用的比特币程序有两个版本；

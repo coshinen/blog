@@ -2,6 +2,7 @@
 layout: post
 title:  "比特币 RPC 命令剖析 \"walletpassphrasechange\""
 date:   2018-05-31 17:24:02 +0800
+author: mistydew
 categories: Blockchain
 ---
 ![bitcoin](/images/20180504/bitcoin.svg)

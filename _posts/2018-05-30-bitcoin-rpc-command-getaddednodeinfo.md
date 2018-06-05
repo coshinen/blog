@@ -2,6 +2,7 @@
 layout: post
 title:  "比特币 RPC 命令剖析 \"getaddednodeinfo\""
 date:   2018-05-30 08:51:03 +0800
+author: mistydew
 categories: Blockchain
 ---
 ![bitcoin](/images/20180504/bitcoin.svg)

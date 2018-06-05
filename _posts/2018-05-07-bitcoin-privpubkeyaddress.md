@@ -2,6 +2,7 @@
 layout: post
 title:  "比特币源码剖析 - 私钥、公钥、地址"
 date:   2018-05-07 20:22:21 +0800
+author: mistydew
 categories: Blockchain
 ---
 ![bitcoin](/images/20180504/bitcoin.svg)

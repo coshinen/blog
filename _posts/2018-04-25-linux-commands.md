@@ -2,6 +2,7 @@
 layout: post
 title:  "Linux 基础命令"
 date:   2018-04-25 18:58:02 +0800
+author: mistydew
 categories: Linux
 ---
 Linux mascot: crystal tux and tux(Torvalds linUX?)<br>

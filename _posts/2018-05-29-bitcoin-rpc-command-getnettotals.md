@@ -2,6 +2,7 @@
 layout: post
 title:  "比特币 RPC 命令剖析 \"getnettotals\""
 date:   2018-05-29 16:47:29 +0800
+author: mistydew
 categories: Blockchain
 ---
 ![bitcoin](/images/20180504/bitcoin.svg)

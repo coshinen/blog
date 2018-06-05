@@ -2,6 +2,7 @@
 layout: post
 title:  "比特币 RPC 命令剖析 \"getblockcount\""
 date:   2018-05-22 14:06:42 +0800
+author: mistydew
 categories: Blockchain
 ---
 ![bitcoin](/images/20180504/bitcoin.svg)

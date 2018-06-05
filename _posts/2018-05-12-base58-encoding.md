@@ -2,6 +2,7 @@
 layout: post
 title:  "Base58 编码"
 date:   2018-05-12 16:02:28 +0800
+author: mistydew
 categories: Blockchain
 ---
 ![bitcoin](/images/20180504/bitcoin.svg)

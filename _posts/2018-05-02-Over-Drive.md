@@ -2,6 +2,7 @@
 layout: post
 title:  "Over Drive"
 date:   2018-05-02 20:10:04 +0800
+author: mistydew
 categories: GARNETCROW 歌詞
 ---
 ![over drive](https://raw.githubusercontent.com/mistydew/gc/master/images/cover/single/Single_31th_Over_Drive.jpg)

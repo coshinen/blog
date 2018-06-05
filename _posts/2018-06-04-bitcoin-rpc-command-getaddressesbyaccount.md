@@ -2,6 +2,7 @@
 layout: post
 title:  "比特币 RPC 命令剖析 \"getaddressesbyaccount\""
 date:   2018-06-04 11:07:06 +0800
+author: mistydew
 categories: Blockchain
 ---
 ![bitcoin](/images/20180504/bitcoin.svg)

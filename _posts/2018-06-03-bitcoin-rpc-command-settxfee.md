@@ -2,6 +2,7 @@
 layout: post
 title:  "比特币 RPC 命令剖析 \"settxfee\""
 date:   2018-06-03 20:22:10 +0800
+author: mistydew
 categories: Blockchain
 ---
 ![bitcoin](/images/20180504/bitcoin.svg)

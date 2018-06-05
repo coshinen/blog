@@ -2,6 +2,7 @@
 layout: post
 title:  "比特币 RPC 命令剖析 \"addnode\""
 date:   2018-05-28 14:55:52 +0800
+author: mistydew
 categories: Blockchain
 ---
 ![bitcoin](/images/20180504/bitcoin.svg)

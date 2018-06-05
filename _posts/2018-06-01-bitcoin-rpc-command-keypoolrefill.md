@@ -2,6 +2,7 @@
 layout: post
 title:  "比特币 RPC 命令剖析 \"keypoolrefill\""
 date:   2018-06-01 08:59:50 +0800
+author: mistydew
 categories: Blockchain
 ---
 ![bitcoin](/images/20180504/bitcoin.svg)
