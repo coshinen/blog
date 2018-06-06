@@ -50,8 +50,89 @@ listsinceblock ( "blockhash" target-confirmations includeWatchonly ) # 获取从
 
 ## 用法示例
 
+用法一：列出从第 n 个区块开始的全部交易。
+
+{% highlight shell %}
+$ bitcoin-cli getblockhash 12345
+282e38ac441e1cba6b45e10e7bd135911671b25a2c7d26e37f70529301a62c59
+$ bitcoin-cli listsinceblock 282e38ac441e1cba6b45e10e7bd135911671b25a2c7d26e37f70529301a62c59
+{
+  "transactions": [
+    {
+      "account": "",
+      "address": "4UGyNU2HyC4NWqEbCFbWX2rpzvjWHMhqsZ",
+      "category": "send",
+      "amount": -1.00000000,
+      "vout": 1,
+      "fee": -0.00001702,
+      "confirmations": 11,
+      "instantlock": false,
+      "blockhash": "00002d88af0743d798c7976699ce208e2c4947995c4e2b578aa76a6081228d43",
+      "blockindex": 1,
+      "blocktime": 1528250135,
+      "txid": "c4a531e7f0c0b4cef74b8848e45b0216e213fa7dff3235a6750b1b53caa0bfe8",
+      "walletconflicts": [
+      ],
+      "time": 1528250106,
+      "timereceived": 1528250106,
+      "bip125-replaceable": "no",
+      "abandoned": false
+    }
+  ],
+  "lastblock": "00002e0c5b0a511f37c29d2532124a1050721c7d833b6f0c4af360c419e991ce"
+}
+{% endhighlight %}
+
+用法二：列出全部区块的交易。
+
 {% highlight shell %}
 $ bitcoin-cli listsinceblock
+{
+  "transactions": [
+    {
+      "account": "",
+      "address": "4UGyNU2HyC4NWqEbCFbWX2rpzvjWHMhqsZ",
+      "category": "send",
+      "amount": -1.00000000,
+      "vout": 1,
+      "fee": -0.00001702,
+      "confirmations": 11,
+      "instantlock": false,
+      "blockhash": "00002d88af0743d798c7976699ce208e2c4947995c4e2b578aa76a6081228d43",
+      "blockindex": 1,
+      "blocktime": 1528250135,
+      "txid": "c4a531e7f0c0b4cef74b8848e45b0216e213fa7dff3235a6750b1b53caa0bfe8",
+      "walletconflicts": [
+      ],
+      "time": 1528250106,
+      "timereceived": 1528250106,
+      "bip125-replaceable": "no",
+      "abandoned": false
+    }
+  ],
+  [
+    {
+      "account": "",
+      "address": "4UjTv8TKSsbpGEBVZqLTcx1MeA4G8JkCnk",
+      "category": "receive",
+      "amount": 0.10000000,
+      "label": "",
+      "vout": 0,
+      "confirmations": 35969,
+      "instantlock": false,
+      "blockhash": "000018a8100074b9639c79ab2cc2c74a9d1daa6945caef63bde24dd6a28d570d",
+      "blockindex": 40,
+      "blocktime": 1527038043,
+      "txid": "5d306125b2fbfc5855b1b7729ceac1b3010e0ddaa7b03f7abeb225f7b13677ff",
+      "walletconflicts": [
+      ],
+      "time": 1527038031,
+      "timereceived": 1527038031,
+      "bip125-replaceable": "no"
+    }
+  ],
+  "lastblock": "0000065d65f78c3fa4c5deb2363df3e0955e17eaf955f7e5c89a367d57561063"
+}
 {% endhighlight %}
 
 ## 源码剖析
