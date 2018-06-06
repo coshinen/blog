@@ -4,6 +4,7 @@ title:  "比特币核心客户端 RPC 命令"
 date:   2018-05-06 14:02:51 +0800
 author: mistydew
 categories: Blockchain
+stickie: true
 ---
 ![bitcoin](/images/20180504/bitcoin.svg)
 
@@ -185,8 +186,8 @@ $ bitcoin-cli help # 获取以下 RPC 命令
 [`listlockunspent`](/2018/06/05/bitcoin-rpc-command-listlockunspent) # 列出所有锁定的未花费交易输出<br>
 [`listreceivedbyaccount ( minconf includeempty includeWatchonly)`](/2018/06/05/bitcoin-rpc-command-listreceivedbyaccount) # （已过时）列出账户余额<br>
 [`listreceivedbyaddress ( minconf includeempty includeWatchonly)`](/2018/06/05/bitcoin-rpc-command-listreceivedbyaddress) # 列出接收地址余额<br>
-`listsinceblock ( "blockhash" target-confirmations includeWatchonly)` # 列出从指定块开始到现在钱包的所有交易（包括当前节点的挖矿奖励 coinbase 和所有普通交易）的信息以及最佳区块的哈希<br>
-`listtransactions ( "account" count from includeWatchonly)` # 列出钱包的所有交易信息或指定账户的交易<br>
+[`listsinceblock ( "blockhash" target-confirmations includeWatchonly)`](/2018/06/06/bitcoin-rpc-command-listsinceblock) # 列出指定区块开始区块上的全部交易<br>
+[`listtransactions ( "account" count from includeWatchonly)`](/2018/06/06/bitcoin-rpc-command-listtransactions) # 列出钱包交易信息<br>
 [`listunspent ( minconf maxconf  ["address",...] )`](/2018/06/05/bitcoin-rpc-command-listunspent) # 列出未花费交易输出<br>
 [`lockunspent unlock [{"txid":"txid","vout":n},...]`](/2018/06/05/bitcoin-rpc-command-lockunspent) # 加解锁为花费交易输出<br>
 `move "fromaccount" "toaccount" amount ( minconf "comment" )` # 账户间转移指定金额，可以移动超过本帐户的金额，出现负的账户金额，钱包总的可用余额不变<br>
