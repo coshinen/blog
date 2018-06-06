@@ -47,4 +47,6 @@ Watch-only 消费是最近更新的另一个功能。
 
 ## 参照
 * [How to use Watch-only Addresses](https://blog.blockchain.com/2016/05/31/how-to-use-watch-only-addresses)
+* [Watch-Only Address - Bitcoin Glossary](https://bitcoin.org/en/glossary/watch-only-address)
+* [Bitcoin Developer Reference - Bitcoin](https://bitcoin.org/en/developer-reference#importaddress)
 * [...](https://github.com/mistydew/blockchain)
