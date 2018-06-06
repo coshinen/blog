@@ -1,7 +1,6 @@
 # [_mistydew's blog_](https://mistydew.github.io)
 
 ## Todo
-- [ ] add sticky post feature
 - [ ] increase the display width
 - [ ] add github count contributions
 - [ ] add "reply to" function
@@ -9,8 +8,10 @@
 - [ ] The anatomy of bitcoin v0.12.1 source
 - [ ] add tag cloud
 - [ ] find blog via title on google
+- [x] add sticky post feature
 
 ## Timeline
+* 2018.06.06 12:02 add sticky post feature
 * 2018.06.04 18:41 add busuanzi analytics(Not google): hits, visitors and pageviews
 * 2018.05.22 13:27 add robots.txt: Allow Baiduspider and Googlebot
 * 2018.05.21 13:18 add archive
