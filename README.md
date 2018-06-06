@@ -1,6 +1,7 @@
 # [_mistydew's blog_](https://mistydew.github.io)
 
 ## Todo
+- [ ] add sticky post feature
 - [ ] increase the display width
 - [ ] add github count contributions
 - [ ] add "reply to" function
@@ -8,8 +9,6 @@
 - [ ] The anatomy of bitcoin v0.12.1 source
 - [ ] add tag cloud
 - [ ] find blog via title on google
-- [x] add hits, pageviews and visitors
-- [x] add busuanzi analytics, not google 
 
 ## Timeline
 * 2018.06.04 18:41 add busuanzi analytics(Not google): hits, visitors and pageviews
