@@ -162,7 +162,7 @@ $ bitcoin-cli help # 获取以下 RPC 命令
 [`abandontransaction "txid"`](/2018/05/31/bitcoin-rpc-command-abandontransaction) # 标记钱包交易为已抛弃<br>
 `addmultisigaddress nrequired ["key",...] ( "account" )`<br>
 [`backupwallet "destination"`](/2018/06/01/bitcoin-rpc-command-backupwallet) # 备份钱包<br>
-`dumpprivkey "bitcoinaddress"` # 导出指定 34bytes 公钥地址对应的 52bytes 私钥<br>
+[`dumpprivkey "bitcoinaddress"`](/2018/06/06/bitcoin-rpc-command-dumpprivkey) # 导出私钥<br>
 [`dumpwallet "filename"`](/2018/06/01/bitcoin-rpc-command-dumpwallet) # 导出钱包<br>
 [`encryptwallet "passphrase"`](/2018/05/31/bitcoin-rpc-command-encryptwallet) # 加密钱包<br>
 [`getaccount "bitcoinaddress"`](/2018/06/04/bitcoin-rpc-command-getaccount) # （已过时）获取地址所属账户<br>
@@ -177,7 +177,7 @@ $ bitcoin-cli help # 获取以下 RPC 命令
 [`getunconfirmedbalance`](/2018/06/04/bitcoin-rpc-command-getunconfirmedbalance) # 获取未确认的总金额<br>
 [`getwalletinfo`](/2018/05/31/bitcoin-rpc-command-getwalletinfo) # 获取钱包信息<br>
 `importaddress "address" ( "label" rescan p2sh )`<br>
-`importprivkey "bitcoinprivkey" ( "label" rescan )` # 导入私钥到当前钱包默认空帐户 "" 中<br>
+[`importprivkey "bitcoinprivkey" ( "label" rescan )`](/2018/06/06/bitcoin-rpc-command-importprivkey) # 导入私钥<br>
 `importpubkey "pubkey" ( "label" rescan )`<br>
 [`importwallet "filename"`](/2018/06/01/bitcoin-rpc-command-importwallet) # 导入钱包<br>
 [`keypoolrefill ( newsize )`](/2018/06/01/bitcoin-rpc-command-keypoolrefill) # 再填充钥匙池<br>
@@ -186,7 +186,7 @@ $ bitcoin-cli help # 获取以下 RPC 命令
 [`listlockunspent`](/2018/06/05/bitcoin-rpc-command-listlockunspent) # 列出所有锁定的未花费交易输出<br>
 [`listreceivedbyaccount ( minconf includeempty includeWatchonly)`](/2018/06/05/bitcoin-rpc-command-listreceivedbyaccount) # （已过时）列出账户余额<br>
 [`listreceivedbyaddress ( minconf includeempty includeWatchonly)`](/2018/06/05/bitcoin-rpc-command-listreceivedbyaddress) # 列出接收地址余额<br>
-[`listsinceblock ( "blockhash" target-confirmations includeWatchonly)`](/2018/06/06/bitcoin-rpc-command-listsinceblock) # 列出指定区块开始区块上的全部交易<br>
+[`listsinceblock ( "blockhash" target-confirmations includeWatchonly)`](/2018/06/06/bitcoin-rpc-command-listsinceblock) # 列从某区块开始的全部交易<br>
 [`listtransactions ( "account" count from includeWatchonly)`](/2018/06/06/bitcoin-rpc-command-listtransactions) # 列出钱包交易信息<br>
 [`listunspent ( minconf maxconf  ["address",...] )`](/2018/06/05/bitcoin-rpc-command-listunspent) # 列出未花费交易输出<br>
 [`lockunspent unlock [{"txid":"txid","vout":n},...]`](/2018/06/05/bitcoin-rpc-command-lockunspent) # 加解锁为花费交易输出<br>
