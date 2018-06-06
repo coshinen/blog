@@ -7,6 +7,20 @@ layout: default
   <h1 class="page-heading">Posts</h1>
 
   <ul class="post-list">
+<!-- This loops through the site posts for sticky -->
+    {% for post in site.posts %}
+      {% if post.stickie == true %}
+        <li>
+          <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }} [Sticky]</span>
+
+          <h2>
+            <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+          </h2>
+        </li>
+      {% endif %}
+    {% endfor %}
+  </ul>
+  <ul class="post-list">
 <!-- This loops through the paginated posts -->
     {% for post in paginator.posts %}
       <li>
