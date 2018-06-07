@@ -17,8 +17,6 @@ categories: Blockchain
 getreceivedbyaccount "account" ( minconf ) # （已过时）获取账户 <account> 下所有地址至少 [minconf] 个确认的交易接收到的总金额
 {% endhighlight %}
 
-**这是用于元交易的，非普通交易。**
-
 参数：<br>
 1. `account` （字符串，必备）选择的账户，可能是默认账户 `""`。<br>
 2. `minconf` （数字型，可选，默认为 1）只包含至少 `minconf` 次确认的交易。
