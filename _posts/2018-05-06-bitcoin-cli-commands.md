@@ -176,9 +176,9 @@ $ bitcoin-cli help # 获取以下 RPC 命令
 `gettransaction "txid" ( includeWatchonly )` # 通过交易号获取交易信息<br>
 [`getunconfirmedbalance`](/2018/06/04/bitcoin-rpc-command-getunconfirmedbalance) # 获取未确认的总金额<br>
 [`getwalletinfo`](/2018/05/31/bitcoin-rpc-command-getwalletinfo) # 获取钱包信息<br>
-`importaddress "address" ( "label" rescan p2sh )`<br>
+[`importaddress "address" ( "label" rescan p2sh )`](/2018/06/07/bitcoin-rpc-command-importaddress) # 导入地址或脚本<br>
 [`importprivkey "bitcoinprivkey" ( "label" rescan )`](/2018/06/06/bitcoin-rpc-command-importprivkey) # 导入私钥<br>
-`importpubkey "pubkey" ( "label" rescan )`<br>
+[`importpubkey "pubkey" ( "label" rescan )`](/2018/06/07/bitcoin-rpc-command-importpublickey) # 导入公钥<br>
 [`importwallet "filename"`](/2018/06/01/bitcoin-rpc-command-importwallet) # 导入钱包<br>
 [`keypoolrefill ( newsize )`](/2018/06/01/bitcoin-rpc-command-keypoolrefill) # 再填充钥匙池<br>
 [`listaccounts ( minconf includeWatchonly)`](/2018/06/05/bitcoin-rpc-command-listaccounts) # （已过时）列出账户及其余额<br>
