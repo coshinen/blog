@@ -170,10 +170,10 @@ $ bitcoin-cli help # 获取以下 RPC 命令
 [`getaddressesbyaccount "account"`](/2018/06/04/bitcoin-rpc-command-getaddressesbyaccount) # 获取账户下所有地址<br>
 [`getbalance ( "account" minconf includeWatchonly )`](/2018/06/04/bitcoin-rpc-command-getbalance) # 获取余额<br>
 [`getnewaddress ( "account" )`](/2018/06/04/bitcoin-rpc-command-getnewaddress) # 获取新地址<br>
-`getrawchangeaddress` # 获取元找零地址，用于元交易，非普通使用<br>
-`getreceivedbyaccount "account" ( minconf )` # 获取指定账户接收到的总金额，非可用余额<br>
-`getreceivedbyaddress "bitcoinaddress" ( minconf )` # 获取指定公钥地址接收到的总金额，非可用余额<br>
-`gettransaction "txid" ( includeWatchonly )` # 通过交易号获取交易信息<br>
+[`getrawchangeaddress`](/2018/06/07/bitcoin-rpc-command-getrawchangeaddress) # 获取元交易找零地址<br>
+[`getreceivedbyaccount "account" ( minconf )`](/2018/06/07/bitcoin-rpc-command-getreceivedbyaccount) # （已过时）获取指定账户接收到的金额<br>
+[`getreceivedbyaddress "bitcoinaddress" ( minconf )`](/2018/06/07/bitcoin-rpc-command-getreceivedbyaddress) # 获取指定地址接收到的金额<br>
+[`gettransaction "txid" ( includeWatchonly )`](/2018/06/07/bitcoin-rpc-command-gettransaction) # 获取交易信息<br>
 [`getunconfirmedbalance`](/2018/06/04/bitcoin-rpc-command-getunconfirmedbalance) # 获取未确认的总金额<br>
 [`getwalletinfo`](/2018/05/31/bitcoin-rpc-command-getwalletinfo) # 获取钱包信息<br>
 [`importaddress "address" ( "label" rescan p2sh )`](/2018/06/07/bitcoin-rpc-command-importaddress) # 导入地址或脚本<br>
