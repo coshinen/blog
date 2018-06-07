@@ -20,7 +20,7 @@ importprivkey "bitcoinprivkey" ( "label" rescan ) # 导入私钥（通过 `dumpp
 参数：<br>
 1. `bitcoinprivkey` （字符串，必备）私钥（见 [`dumpprivkey`](/2018/06/06/bitcoin-rpc-command-dumpprivkey)）。<br>
 2. `label` （字符串，可选，默认为 ""）一个可选的标签（账户名）。<br>
-3. `rescan` （字符串，可选，默认为 true）再扫描钱包交易。
+3. `rescan` （布尔型，可选，默认为 true）再扫描钱包交易。
 
 **注：如果 `rescan` 为 true，该调用可能需要几分钟来完成。**
 
