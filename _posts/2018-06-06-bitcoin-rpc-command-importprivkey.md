@@ -161,6 +161,8 @@ bool CBasicKeyStore::AddKeyPubKey(const CKey& key, const CPubKey &pubkey)
 该对象定义在“keystore.h”文件的 CBasicKeyStore 类中。
 
 {% highlight C++ %}
+typedef std::map<CKeyID, CKey> KeyMap; // 密钥索引和私钥的映射
+...
 /** Basic key store, that keeps keys in an address->secret map */
 class CBasicKeyStore : public CKeyStore // 基础密钥存储，以 address->secret 映射维持私钥
 {
