@@ -168,6 +168,50 @@ void ImportAddress(const CBitcoinAddress& address, const string& strLabel)
 }
 {% endhighlight %}
 
+第八步，调用 pwalletMain->ReacceptWalletTransactions() 函数把交易添加到内存池，该函数定义在“wallet/wallet.cpp”文件中。
+
+{% highlight C++ %}
+void CWallet::ReacceptWalletTransactions()
+{
+    // If transactions aren't being broadcasted, don't let them into local mempool either
+    if (!fBroadcastTransactions) // 如果交易未被广播，也不让它们进入本地交易内存池
+        return;
+    LOCK2(cs_main, cs_wallet); // 钱包上锁
+    std::map<int64_t, CWalletTx*> mapSorted; // 位置与钱包交易映射列表
+
+    // Sort pending wallet transactions based on their initial wallet insertion order // 基于它们初始的钱包交易顺序来排序挂起的钱包交易
+    BOOST_FOREACH(PAIRTYPE(const uint256, CWalletTx)& item, mapWallet) // 遍历钱包交易映射列表
+    {
+        const uint256& wtxid = item.first; // 获取交易索引
+        CWalletTx& wtx = item.second; // 获取钱包交易
+        assert(wtx.GetHash() == wtxid); // 验证交易与其索引是否一致
+
+        int nDepth = wtx.GetDepthInMainChain(); // 获取交易在主链中的深度
+
+        if (!wtx.IsCoinBase() && (nDepth == 0 && !wtx.isAbandoned())) { // 该交易不能是 coinbase 且 该交易深度为 0（表示该交易还未被接受）且该交易未被抛弃
+            mapSorted.insert(std::make_pair(wtx.nOrderPos, &wtx)); // 加入临时映射列表
+        }
+    }
+
+    // Try to add wallet transactions to memory pool // 尝试添加钱包交易到内存池
+    BOOST_FOREACH(PAIRTYPE(const int64_t, CWalletTx*)& item, mapSorted) // 遍历该列表
+    {
+        CWalletTx& wtx = *(item.second); // 获取钱包交易
+
+        LOCK(mempool.cs); // 内存池上锁
+        wtx.AcceptToMemoryPool(false); // 把交易放入内存池
+    }
+}
+...
+bool CMerkleTx::AcceptToMemoryPool(bool fLimitFree, bool fRejectAbsurdFee)
+{
+    CValidationState state;
+    return ::AcceptToMemoryPool(mempool, state, *this, fLimitFree, NULL, false, fRejectAbsurdFee); // 添加交易到内存池
+}
+{% endhighlight %}
+
+未完成。
+
 Thanks for your time.
 
 ## 参照
