@@ -3,15 +3,15 @@
 ## Todo
 - [ ] increase the display width
 - [ ] add github count contributions
-- [ ] add "reply to" function
+- [ ] add "reply to" function: disqus
 - [ ] add summary
 - [ ] The anatomy of bitcoin v0.12.1 source
 - [ ] add tag cloud
 - [ ] find blog via title on google
-- [x] add google analytics
+- [x] add google analytics and console
 
 ## Timeline
-* 2018.06.07 12:38 add google analytics
+* 2018.06.07 12:38 add google analytics and console
 * 2018.06.06 12:02 add sticky post feature
 * 2018.06.04 18:41 add busuanzi analytics: hits, visitors and pageviews
 * 2018.05.22 13:27 add robots.txt: Allow Baiduspider and Googlebot
