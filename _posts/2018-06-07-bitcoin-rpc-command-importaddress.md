@@ -34,11 +34,11 @@ importaddress "address" ( "label" rescan p2sh ) # 导入一个脚本（16 进制
 用法一：导入地址到钱包默认账户 `""` 中，且关闭再扫描。
 
 {% highlight shell %}
-$ bitcoin-cli getaddressesbyaccount "" false
+$ bitcoin-cli getaddressesbyaccount ""
 [
 ]
 $ bitcoin-cli importaddress 1HvgGctUMNkHPwvayRFfPePBjke477ZqsH
-$ bitcoin-cli getaddressesbyaccount "" false
+$ bitcoin-cli getaddressesbyaccount ""
 [
   "1HvgGctUMNkHPwvayRFfPePBjke477ZqsH"
 ]
