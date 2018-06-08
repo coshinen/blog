@@ -14,8 +14,10 @@ categories: Blockchain
 ## 提示说明
 
 {% highlight shell %}
-sendfrom "fromaccount" "tobitcoinaddress" amount ( minconf "comment" "comment-to" ) # 发送
+sendfrom "fromaccount" "tobitcoinaddress" amount ( minconf "comment" "comment-to" ) # （已过时）从一个账户发送金额到一个比特币地址
 {% endhighlight %}
+
+**使用 [`sendtoaddress`](/2018/06/08/bitcoin-rpc-command-sendtoaddress) 替代该命令。**
 
 参数：<br>
 1. `fromaccount` （字符串，必备）从该账户发送资金。可能为默认账户 `""`。<br>
