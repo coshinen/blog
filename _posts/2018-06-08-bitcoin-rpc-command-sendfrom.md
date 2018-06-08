@@ -106,7 +106,7 @@ UniValue sendfrom(const UniValue& params, bool fHelp)
     if (params.size() > 5 && !params[5].isNull() && !params[5].get_str().empty())
         wtx.mapValue["to"]      = params[5].get_str(); // 交易人或组织备注
 
-    EnsureWalletIsUnlocked(); // 确保当前钱包处于为加密状态
+    EnsureWalletIsUnlocked(); // 确保当前钱包处于为解密状态
 
     // Check funds // 检查资金
     CAmount nBalance = GetAccountBalance(strAccount, nMinDepth, ISMINE_SPENDABLE); // 获取指定账户余额
@@ -125,7 +125,7 @@ UniValue sendfrom(const UniValue& params, bool fHelp)
 3.钱包上锁。<br>
 4.获取相关参数：指定账户，目标地址，发送金额，最小确认数和交易备注。<br>
 5.创建钱包交易并初始化发送账户和交易备注。<br>
-6.确保当前钱包处于为加密状态。<br>
+6.确保当前钱包处于为解密状态。<br>
 7.检查余额是否充足。<br>
 8.发送金额到指定的地址。<br>
 9.获取交易哈希，转化为 16 进制并返回。
