@@ -1,5 +1,6 @@
 ---
 layout: page
 title: RSS
-permalink: /feed.xml
+permalink: /feed.html
+rss: true
 ---
