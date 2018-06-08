@@ -190,11 +190,11 @@ $ bitcoin-cli help # 获取以下 RPC 命令
 [`listtransactions ( "account" count from includeWatchonly)`](/2018/06/06/bitcoin-rpc-command-listtransactions) # 列出钱包交易信息<br>
 [`listunspent ( minconf maxconf  ["address",...] )`](/2018/06/05/bitcoin-rpc-command-listunspent) # 列出未花费交易输出<br>
 [`lockunspent unlock [{"txid":"txid","vout":n},...]`](/2018/06/05/bitcoin-rpc-command-lockunspent) # 加解锁为花费交易输出<br>
-`move "fromaccount" "toaccount" amount ( minconf "comment" )` # 账户间转移指定金额，可以移动超过本帐户的金额，出现负的账户金额，钱包总的可用余额不变<br>
-`sendfrom "fromaccount" "tobitcoinaddress" amount ( minconf "comment" "comment-to" )` # 从指定账户发送指定金额到指定公钥地址<br>
-`sendmany "fromaccount" {"address":amount,...} ( minconf "comment" ["address",...] )` # 从指定账户发送到多个公钥地址不同的金额<br>
-`sendtoaddress "bitcoinaddress" amount ( "comment" "comment-to" subtractfeefromamount )` # 发送指定金额到指定公钥地址<br>
-`setaccount "bitcoinaddress" "account"` # 设置公钥地址为指定账户<br>
+[`move "fromaccount" "toaccount" amount ( minconf "comment" )`](/2018/06/08/bitcoin-rpc-command-move) # 本地账户间转账<br>
+[`sendfrom "fromaccount" "tobitcoinaddress" amount ( minconf "comment" "comment-to" )`](/2018/06/08/bitcoin-rpc-command-sendfrom) # （已过时）从指定账户发送币<br>
+[`sendmany "fromaccount" {"address":amount,...} ( minconf "comment" ["address",...] )`](/2018/06/08/bitcoin-rpc-command-sendmany) # 发送币到多个地址<br>
+[`sendtoaddress "bitcoinaddress" amount ( "comment" "comment-to" subtractfeefromamount )`](/2018/06/08/bitcoin-rpc-command-sendtoaddress) # 发送币到指定地址<br>
+[`setaccount "bitcoinaddress" "account"`](/2018/06/08/bitcoin-rpc-command-setaccount) # （已过时）设置地址关联账户<br>
 [`settxfee amount`](/2018/06/03/bitcoin-rpc-command-settxfee) # 设置交易费<br>
 `signmessage "bitcoinaddress" "message"` # 创建一个 88bytes 的 base64 签名<br>
 [`walletlock`](/2018/05/31/bitcoin-rpc-command-walletlock) # 锁定钱包<br>
