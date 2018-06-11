@@ -81,7 +81,7 @@ $ bitcoin-cli gettxoutproof [\"5d306125b2fbfc5855b1b7729ceac1b3010e0ddaa7b03f7ab
 extern UniValue gettxoutproof(const UniValue& params, bool fHelp); // 获取交易输出证明
 {% endhighlight %}
 
-实现在“rpcblockchain.cpp”文件中。
+实现在“rpcrawtransaction.cpp”文件中。
 
 {% highlight C++ %}
 UniValue gettxoutproof(const UniValue& params, bool fHelp)
