@@ -1,14 +1,14 @@
 # [_mistydew's blog_](https://mistydew.github.io)
 
 ## Todo
-- [ ] modify RSS not page
 - [ ] increase the display width
 - [ ] add github count contributions
 - [ ] add "reply to" function: disqus
 - [ ] add summary
 - [ ] The anatomy of bitcoin v0.12.1 source
 - [ ] add tag cloud
-- [ ] find blog via title on google
+- [x] find blog via title on google
+- [x] modify RSS not page
 
 ## Timeline
 * 2018.06.07 12:38 add google analytics and console
