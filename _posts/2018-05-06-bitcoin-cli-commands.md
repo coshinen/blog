@@ -104,11 +104,11 @@ $ bitcoin-cli help # 获取以下 RPC 命令
 [`getdifficulty`](/2018/05/22/bitcoin-rpc-command-getdifficulty) # 获取当前挖矿难度<br>
 [`getmempoolinfo`](/2018/05/22/bitcoin-rpc-command-getmempoolinfo) # 获取交易内存池信息<br>
 [`getrawmempool ( verbose )`](/2018/05/22/bitcoin-rpc-command-getrawmempool) # 获取交易内存池交易索引<br>
-[`gettxout "txid" n ( includemempool )`](/2018/05/23/bitcoin-rpc-command-gettxout) # 根据交易内存池中的交易号获取指定输出号 n 的信息。适用范围：所有交易<br>
-[`gettxoutproof ["txid",...] ( blockhash )`](/2018/05/23/bitcoin-rpc-command-gettxoutproof)<br>
-[`gettxoutsetinfo`](/2018/05/23/bitcoin-rpc-command-gettxoutsetinfo) # 获取交易输出设置信息（高度、最佳块哈希、总交易数、总输出数、...、当前发行量）<br>
-[`verifychain ( checklevel numblocks )`](/2018/05/23/bitcoin-rpc-command-verifychain) # 验证链（默认：检查等级为 3，区块数为 288），true 表示已验证，false 表示未验证<br>
-[`verifytxoutproof "proof"`](/2018/05/23/bitcoin-rpc-command-verifytxoutproof)
+[`gettxout "txid" n ( includemempool )`](/2018/06/11/bitcoin-rpc-command-gettxout) # 获取交易输出细节<br>
+[`gettxoutproof ["txid",...] ( blockhash )`](/2018/06/11/bitcoin-rpc-command-gettxoutproof) # 获取交易证明<br>
+[`gettxoutsetinfo`](/2018/06/11/bitcoin-rpc-command-gettxoutsetinfo) # 获取交易输出集合信息<br>
+[`verifychain ( checklevel numblocks )`](/2018/06/11/bitcoin-rpc-command-verifychain) # 验证链<br>
+[`verifytxoutproof "proof"`](/2018/06/11/bitcoin-rpc-command-verifytxoutproof) # 验证交易证明
 
 == Control ==<br>
 [`getinfo`](/2018/05/23/bitcoin-rpc-command-getinfo) # 获取比特币核心信息<br>
