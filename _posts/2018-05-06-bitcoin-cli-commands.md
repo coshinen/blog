@@ -116,7 +116,7 @@ $ bitcoin-cli help # 获取以下 RPC 命令
 [`stop`](/2018/05/23/bitcoin-rpc-command-stop) # 远程终止比特币核心服务
 
 == Generating ==<br>
-[`generate numblocks`](/2018/05/24/bitcoin-rpc-command-generate) # 生成指定数目个区块<br>
+[`generate numblocks`](/2018/05/24/bitcoin-rpc-command-generate) # 生成区块<br>
 [`getgenerate`](/2018/05/25/bitcoin-rpc-command-getgenerate) # 获取挖矿状态<br>
 [`setgenerate generate ( genproclimit )`](/2018/05/25/bitcoin-rpc-command-setgenerate) # 挖矿开关
 
@@ -142,10 +142,10 @@ $ bitcoin-cli help # 获取以下 RPC 命令
 
 == Rawtransactions ==<br>
 `createrawtransaction [{"txid":"id","vout":n},...] {"address":amount,"data":"hex",...} ( locktime )`<br>
-`decoderawtransaction "hexstring"` # 通过一笔交易的十六进制字符串获取其详细信息<br>
+[`decoderawtransaction "hexstring"`](/2018/06/12/bitcoin-rpc-command-decoderawtransaction) # 解码原始交易<br>
 `decodescript "hex"`<br>
 `fundrawtransaction "hexstring" includeWatching`<br>
-`getrawtransaction "txid" ( verbose )` # 通过交易号获取元交易的十六进制字符串 hexstring，使用 getrawtransaction "txid" 1 可直接解码获取交易的详细信息<br>
+[`getrawtransaction "txid" ( verbose )`](/2018/06/12/bitcoin-rpc-command-getrawtransaction) # 获取原始交易（序列化、详细）信息<br>
 `sendrawtransaction "hexstring" ( allowhighfees )`<br>
 `signrawtransaction "hexstring" ( [{"txid":"id","vout":n,"scriptPubKey":"hex","redeemScript":"hex"},...] ["privatekey1",...] sighashtype )`
 
