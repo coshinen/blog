@@ -53,10 +53,11 @@ $ bitcoin-cli createrawtransaction "[{\"txid\":\"9db0a0580f5483c634bd549f1c2e4e6
 01000000016e913e3ec13124ad5cee842be5b381786f4e2e1c9f54bd34c683540f58a0b09d0000000000ffffffff0140420f00000000001976a914a282769e3b2aa722dbcb2c04219893a35520d02588ac00000000
 {% endhighlight %}
 
-方法二：暂无。
+方法二：指定 data 类型的输出，data value 来源暂无。
 
 {% highlight C++ %}
 $ bitcoin-cli createrawtransaction "[{\"txid\":\"9db0a0580f5483c634bd549f1c2e4e6f7881b3e52b84ee5cad2431c13e3e916e\",\"vout\":0}]" "{\"data\":\"00010203\"}"
+01000000016e913e3ec13124ad5cee842be5b381786f4e2e1c9f54bd34c683540f58a0b09d0000000000ffffffff010000000000000000066a040001020300000000
 {% endhighlight %}
 
 ## 源码剖析
