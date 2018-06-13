@@ -46,7 +46,8 @@ createrawtransaction [{"txid":"id","vout":n},...] {"address":amount,"data":"hex"
 
 ## 用法示例
 
-方法一：指定输入（交易索引和 UTXO 序号）和输出（地址和金额）创建一笔原始交易。
+方法一：指定输入（交易索引和 UTXO 序号）和输出（地址和金额）创建一笔原始交易。<br>
+**注：这里没有指定找零地址和金额，所以输入和输出的差会全部作为交易费。**
 
 {% highlight shell %}
 $ bitcoin-cli createrawtransaction "[{\"txid\":\"9db0a0580f5483c634bd549f1c2e4e6f7881b3e52b84ee5cad2431c13e3e916e\",\"vout\":0}]" "{\"1kX6dhUWqaEZjhvqVnyLTiMGjCm8R5sgLS\":0.01}"
