@@ -158,6 +158,12 @@ $ bitcoin-cli help # 获取以下 RPC 命令
 `validateaddress "bitcoinaddress"`<br>
 `verifymessage "bitcoinaddress" "signature" "message"`
 
+<font color="white">== Hidden ==</font>
+[<font color="white">`invalidateblock`</font>]() <font color="white"># 无效化区块</font><br>
+[<font color="white">`reconsiderblock`</font>]() <font color="white"># 再考虑区块</font><br>
+[<font color="white">`setmocktime`</font>]() <font color="white"># 设置 mocktime</font><br>
+[<font color="white">`resendwallettransactions`</font>]() <font color="white"># 再次发送钱包交易</font>
+
 == Wallet ==<br>
 [`abandontransaction "txid"`](/2018/05/31/bitcoin-rpc-command-abandontransaction) # 标记钱包交易为已抛弃<br>
 `addmultisigaddress nrequired ["key",...] ( "account" )`<br>
