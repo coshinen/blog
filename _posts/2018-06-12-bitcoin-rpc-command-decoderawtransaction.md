@@ -90,7 +90,7 @@ $ bitcoin-cli decoderawtransaction 01000000017708d09c30b24ee303ef9fbcf4990d160fc
         "reqSigs": 1,
         "type": "pubkeyhash",
         "addresses": [
-          "4U6P9NNcWpqPR3CPz7i59doBeBMwepy7yD"
+          "1k6P9NNcWpqPR3CPz7i59doBeBMwepy7yD"
         ]
       }
     }, 
@@ -104,7 +104,7 @@ $ bitcoin-cli decoderawtransaction 01000000017708d09c30b24ee303ef9fbcf4990d160fc
         "reqSigs": 1,
         "type": "pubkeyhash",
         "addresses": [
-          "4Ut52SrJRMausYSQnsfQBCiYcJKxUdNvBB"
+          "1kt52SrJRMausYSQnsfQBCiYcJKxUdNvBB"
         ]
       }
     }, 
@@ -118,7 +118,7 @@ $ bitcoin-cli decoderawtransaction 01000000017708d09c30b24ee303ef9fbcf4990d160fc
         "reqSigs": 1,
         "type": "pubkeyhash",
         "addresses": [
-          "4U7KYa17GZqhpeKEPjp6DMn11EdoGnyGeF"
+          "1k7KYa17GZqhpeKEPjp6DMn11EdoGnyGeF"
         ]
       }
     }
