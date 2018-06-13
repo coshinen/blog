@@ -22,7 +22,7 @@ createrawtransaction [{"txid":"id","vout":n},...] {"address":amount,"data":"hex"
 注：交易的输入没有签名，且该交易不会存储在钱包或传输到网络中。**
 
 参数：<br>
-1. `transactions` （字符串，必备）一个 JSON 对象 JSON 数组。<br>
+1.`transactions` （字符串，必备）一个 JSON 对象 JSON 数组。<br>
 {% highlight shell %}
      [
        {
@@ -32,7 +32,7 @@ createrawtransaction [{"txid":"id","vout":n},...] {"address":amount,"data":"hex"
        ,...
      ]
 {% endhighlight %}
-2. `outputs` （字符串，必备）一个输出的 JSON 对象。<br>
+2.`outputs` （字符串，必备）一个输出的 JSON 对象。<br>
 {% highlight shell %}
     {
       "address": x.xxx   (numeric or string, required) The key is the bitcoin address, the numeric value (can be string) is the BTC amount
@@ -40,7 +40,7 @@ createrawtransaction [{"txid":"id","vout":n},...] {"address":amount,"data":"hex"
       ...
     }
 {% endhighlight %}
-3. `locktime` （数字型，可选，默认为 0）原始锁定时间。非 0 值也可以激活输入的锁定时间。
+3.`locktime` （数字型，可选，默认为 0）原始锁定时间。非 0 值也可以激活输入的锁定时间。
 
 结果：（字符串）返回 16 进制交易索引字符串。
 
