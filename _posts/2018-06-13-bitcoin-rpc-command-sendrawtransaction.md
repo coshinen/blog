@@ -17,11 +17,11 @@ categories: Blockchain
 sendrawtransaction "hexstring" ( allowhighfees ) # 把（序列化的，16 进制编码的）原始交易提交到本地节点和网络
 {% endhighlight %}
 
-也可以查看 [`createrawtransaction`](/2018/06/13/bitcoin-rpc-command-createrawtransaction) 和 [`signrawtransaction`]() 调用。
+也可以查看 [`createrawtransaction`](/2018/06/13/bitcoin-rpc-command-createrawtransaction) 和 [`signrawtransaction`](/2018/06/13/bitcoin-rpc-command-signrawtransaction) 调用。
 
 参数：<br>
 1. `hexstring` （字符串，必备）原始交易的 16 进制字符串。<br>
-2. `allowhighfees` （布尔型，可选，默认为 false）允许高费用。
+2. `allowhighfees` （布尔型，可选，默认为 false）允许交易费超额。
 
 结果：（字符串）返回 16 进制交易索引字符串。
 
