@@ -141,13 +141,13 @@ $ bitcoin-cli help # 获取以下 RPC 命令
 [`setban "ip(/netmask)" "add|remove" (bantime) (absolute)`](/2018/05/29/bitcoin-rpc-command-setban) # 设置黑名单
 
 == Rawtransactions ==<br>
-`createrawtransaction [{"txid":"id","vout":n},...] {"address":amount,"data":"hex",...} ( locktime )`<br>
+[`createrawtransaction [{"txid":"id","vout":n},...] {"address":amount,"data":"hex",...} ( locktime )`](/2018/06/13/bitcoin-rpc-command-createrawtransaction) # 创建原始交易<br>
 [`decoderawtransaction "hexstring"`](/2018/06/12/bitcoin-rpc-command-decoderawtransaction) # 解码原始交易<br>
-`decodescript "hex"`<br>
-`fundrawtransaction "hexstring" includeWatching`<br>
+[`decodescript "hex"`](/2018/06/13/bitcoin-rpc-command-decodescript) # 解码脚本<br>
+[`fundrawtransaction "hexstring" includeWatching`](/2018/06/13/bitcoin-rpc-command-fundrawtransaction) # 资助原始交易<br>
 [`getrawtransaction "txid" ( verbose )`](/2018/06/12/bitcoin-rpc-command-getrawtransaction) # 获取原始交易（序列化、详细）信息<br>
-`sendrawtransaction "hexstring" ( allowhighfees )`<br>
-`signrawtransaction "hexstring" ( [{"txid":"id","vout":n,"scriptPubKey":"hex","redeemScript":"hex"},...] ["privatekey1",...] sighashtype )`
+[`sendrawtransaction "hexstring" ( allowhighfees )`](/2018/06/13/bitcoin-rpc-command-sendrawtransaction) # 发送原始交易<br>
+[`signrawtransaction "hexstring" ( [{"txid":"id","vout":n,"scriptPubKey":"hex","redeemScript":"hex"},...] ["privatekey1",...] sighashtype )`](/2018/06/13/bitcoin-rpc-command-signrawtransaction) # 签名原始交易
 
 == Util ==<br>
 `createmultisig nrequired ["key",...]`<br>
