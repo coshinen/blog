@@ -151,6 +151,79 @@ UniValue sendrawtransaction(const UniValue& params, bool fHelp)
 6.中继（发送）该交易。<br>
 7.获取交易哈希，转换为 16 进制并返回。
 
+第六步，调用 RelayTransaction(tx) 中继该交易，该函数声明在“net.h”文件中。
+
+{% highlight C++ %}
+class CTransaction;
+void RelayTransaction(const CTransaction& tx); // 转调下面重载函数
+void RelayTransaction(const CTransaction& tx, const CDataStream& ss); // 中继交易
+{% endhighlight %}
+
+定义在“net.cpp”文件中。
+
+{% highlight C++ %}
+void RelayTransaction(const CTransaction& tx)
+{
+    CDataStream ss(SER_NETWORK, PROTOCOL_VERSION);
+    ss.reserve(10000); // 预开辟 10000 个字节
+    ss << tx; // 导入交易
+    RelayTransaction(tx, ss); // 开始中继
+}
+
+void RelayTransaction(const CTransaction& tx, const CDataStream& ss)
+{
+    CInv inv(MSG_TX, tx.GetHash()); // 根据交易哈希创建 inv 对象
+    {
+        LOCK(cs_mapRelay);
+        // Expire old relay messages // 使旧的中继数据过期
+        while (!vRelayExpiration.empty() && vRelayExpiration.front().first < GetTime())
+        { // 中继到期队列非空 且 中继过期队列队头元素过期时间小于当前时间（表示已过期）
+            mapRelay.erase(vRelayExpiration.front().second); // 从中继数据映射列表中擦除中继过期队列的队头
+            vRelayExpiration.pop_front(); // 中继过期队列出队
+        }
+
+        // Save original serialized message so newer versions are preserved // 保存原始的序列化消息，以便保留新版本
+        mapRelay.insert(std::make_pair(inv, ss)); // 插入中继数据映射列表
+        vRelayExpiration.push_back(std::make_pair(GetTime() + 15 * 60, inv)); // 加上 15min 的过期时间，加入过期队列
+    }
+    LOCK(cs_vNodes); // 以建立连接的节点列表上锁
+    BOOST_FOREACH(CNode* pnode, vNodes) // 遍历当前已建立链接的节点列表
+    {
+        if(!pnode->fRelayTxes) // 若中继交易状态为 false
+            continue; // 跳过该节点
+        LOCK(pnode->cs_filter);
+        if (pnode->pfilter) // 布鲁姆过滤器
+        {
+            if (pnode->pfilter->IsRelevantAndUpdate(tx))
+                pnode->PushInventory(inv);
+        } else // 没有使用 bloom filter
+            pnode->PushInventory(inv); // 直接推送 inv 消息到该节点
+    }
+}
+{% endhighlight %}
+
+函数 pnode->PushInventory(inv) 定义在“net.h”文件的 CNode 类中。
+
+{% highlight C++ %}
+/** Information about a peer */
+class CNode // 关于对端节点的信息
+{
+    ...
+    std::vector<CInv> vInventoryToSend; // 发送库存列表
+    ...
+    void PushInventory(const CInv& inv)
+    {
+        {
+            LOCK(cs_inventory); // 库存上锁
+            if (inv.type == MSG_TX && filterInventoryKnown.contains(inv.hash)) // 若为交易类型 且 布鲁姆过滤器包含了该交易所在 inv 的哈希
+                return; // 啥也不做直接返回
+            vInventoryToSend.push_back(inv); // 否则加入发送库存列表
+        }
+    }
+    ...
+};
+{% endhighlight %}
+
 Thanks for your time.
 
 ## 参照
