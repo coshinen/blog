@@ -91,7 +91,7 @@ Chain selection options:
 $ bitcoin-cli help # 获取以下 RPC 命令
 {% endhighlight %}
 
-**注：`()` 表示可以省略。**
+**注：`()` 内的参数有默认值，可以省略。**
 
 == Blockchain ==<br>
 [`getbestblockhash`](/2018/05/22/bitcoin-rpc-command-getbestblockhash) # 获取当前最佳块哈希（16 进制形式）<br>
