@@ -1,6 +1,7 @@
 # [_mistydew's blog_](https://mistydew.github.io)
 
 ## Todo
+- [ ] modify delimiter between post title and site name in search results
 - [ ] increase the display width
 - [ ] add github count contributions
 - [ ] add "reply to" function: disqus
