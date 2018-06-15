@@ -150,13 +150,13 @@ $ bitcoin-cli help # 获取以下 RPC 命令
 [`signrawtransaction "hexstring" ( [{"txid":"id","vout":n,"scriptPubKey":"hex","redeemScript":"hex"},...] ["privatekey1",...] sighashtype )`](/2018/06/13/bitcoin-rpc-command-signrawtransaction) # 签名原始交易
 
 == Util ==<br>
-`createmultisig nrequired ["key",...]`<br>
-`estimatefee nblocks`<br>
-`estimatepriority nblocks`<br>
-`estimatesmartfee nblocks`<br>
-`estimatesmartpriority nblocks`<br>
-`validateaddress "bitcoinaddress"`<br>
-`verifymessage "bitcoinaddress" "signature" "message"`
+[`createmultisig nrequired ["key",...]`](/2018/06/15/bitcoin-rpc-command-createmultisig) # 创建多重签名<br>
+[`estimatefee nblocks`](/2018/06/15/bitcoin-rpc-command-estimatefee) # 预估交易费<br>
+[`estimatepriority nblocks`](/2018/06/15/bitcoin-rpc-command-estimatepriority) # 预估交易优先级<br>
+[`estimatesmartfee nblocks`](/2018/06/15/bitcoin-rpc-command-estimatesmartfee) # 智能估计交易费<br>
+[`estimatesmartpriority nblocks`](/2018/06/15/bitcoin-rpc-command-estimatesmartpriority) 智能估计交易优先级# <br>
+[`validateaddress "bitcoinaddress"`](/2018/06/15/bitcoin-rpc-command-validateaddress) # 验证地址<br>
+[`verifymessage "bitcoinaddress" "signature" "message"`](/2018/06/15/bitcoin-rpc-command-verifymessage) # 验证签名消息
 
 <font color="white">== Hidden ==</font>
 [<font color="white">invalidateblock</font>](/2018/06/14/bitcoin-rpc-command-invalidateblock) <font color="white"># 无效化区块</font><br>
@@ -166,7 +166,7 @@ $ bitcoin-cli help # 获取以下 RPC 命令
 
 == Wallet ==<br>
 [`abandontransaction "txid"`](/2018/05/31/bitcoin-rpc-command-abandontransaction) # 标记钱包交易为已抛弃<br>
-`addmultisigaddress nrequired ["key",...] ( "account" )`<br>
+[`addmultisigaddress nrequired ["key",...] ( "account" )`](/2018/06/15/bitcoin-rpc-command-addmultisigaddress) # 添加多签地址<br>
 [`backupwallet "destination"`](/2018/06/01/bitcoin-rpc-command-backupwallet) # 备份钱包<br>
 [`dumpprivkey "bitcoinaddress"`](/2018/06/06/bitcoin-rpc-command-dumpprivkey) # 导出私钥<br>
 [`dumpwallet "filename"`](/2018/06/01/bitcoin-rpc-command-dumpwallet) # 导出钱包<br>
@@ -202,7 +202,7 @@ $ bitcoin-cli help # 获取以下 RPC 命令
 [`sendtoaddress "bitcoinaddress" amount ( "comment" "comment-to" subtractfeefromamount )`](/2018/06/08/bitcoin-rpc-command-sendtoaddress) # 发送币到指定地址<br>
 [`setaccount "bitcoinaddress" "account"`](/2018/06/08/bitcoin-rpc-command-setaccount) # （已过时）设置地址关联账户<br>
 [`settxfee amount`](/2018/06/03/bitcoin-rpc-command-settxfee) # 设置交易费<br>
-`signmessage "bitcoinaddress" "message"` # 创建一个 88bytes 的 base64 签名<br>
+[`signmessage "bitcoinaddress" "message"`](/2018/06/15/bitcoin-rpc-command-signmessage) # 签名消息<br>
 [`walletlock`](/2018/05/31/bitcoin-rpc-command-walletlock) # 锁定钱包<br>
 [`walletpassphrase "passphrase" timeout`](/2018/05/31/bitcoin-rpc-command-walletpassphrase) # 解锁钱包数秒<br>
 [`walletpassphrasechange "oldpassphrase" "newpassphrase"`](/2018/05/31/bitcoin-rpc-command-walletpassphrasechange) # 更改钱包密码
