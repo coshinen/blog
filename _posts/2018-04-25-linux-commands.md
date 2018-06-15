@@ -97,13 +97,15 @@ $ grep <content> * -nri # 查询并显示当前所在目录下所有出现 <cont
 $ grep <content> <file> -n # 查询并显示指定文件 <file> 出现 <content> 字符串的行号。
 {% endhighlight %}
 
-### 更改文件所属用户 change owner
+### 更改文件所属用户（或组） change owner
 
 {% highlight shell %}
 $ chown <username> <file> # 改变文件 <file> 所属用户名 <username>。
+$ chown <username>:<group> <file> # 改变文件 <file> 所属用户名 <username> 或组 <group>。
 {% endhighlight %}
 
-**注：只有文件创建者和 root 用户才能使用此命令，且 `<username>` 必须是本机存在的用户名。**
+**注：只有文件创建者和 root 用户才能使用此命令，且 `<username>` 必须是本机存在的用户名。<br>
+本机用户名记录在 `/etc/passwd` 文件中。**
 
 ### 更改文件所属组 change group
 
@@ -111,7 +113,8 @@ $ chown <username> <file> # 改变文件 <file> 所属用户名 <username>。
 $ chgrp <group> <file> # 改变文件 <file> 所属组 <group>。
 {% endhighlight %}
 
-**注：只有文件创建者和 root 用户才能使用此命令，且 `<group>` 必须是本机存在的组。**
+**注：只有文件创建者和 root 用户才能使用此命令，且 `<group>` 必须是本机存在的组。<br>
+本机用户所属组记录在 `/etc/group` 文件中。**
 
 ## 参考
 * [Why Penguin is Linux logo? - LinuxScrew: Linux Blog](http://www.linuxscrew.com/2007/11/14/why-penguin-is-linux-logo)
