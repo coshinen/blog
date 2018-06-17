@@ -72,5 +72,5 @@ Never an honest word<br>
 But that was when I ruled the world
 
 ## 参照
-* [Coldplay - Viva La Vida | MetroLyrics](http://www.metrolyrics.com/viva-la-vida-lyrics-coldplay.html)
+* [Coldplay - Viva La Vida \| MetroLyrics](http://www.metrolyrics.com/viva-la-vida-lyrics-coldplay.html)
 * [...](https://github.com/mistydew)
