@@ -5,10 +5,10 @@ date:   2018-06-17 20:08:05 +0800
 author: mistydew
 categories: Coldplay 歌詞
 ---
-![]()
+![Viva La Vida](https://raw.githubusercontent.com/mistydew/audio/master/cover/Viva%20La%20Vida.jpg)
 
 <audio controls>
-  <source src="" type="audio/mpeg">
+  <source src="https://raw.githubusercontent.com/mistydew/audio/master/Viva%20La%20Vida.mp3" type="audio/mpeg">
 您的浏览器不支持 audio 元素。
 </audio>
 
@@ -70,6 +70,13 @@ For some reason I can't explain<br>
 I know Saint Peter won't call my name<br>
 Never an honest word<br>
 But that was when I ruled the world
+
+以下是 J.Fla 翻唱版。
+
+<audio controls>
+  <source src="https://raw.githubusercontent.com/mistydew/audio/master/Viva%20la%20Vida(cover%20by%20J.Fla).mp3" type="audio/mpeg">
+您的浏览器不支持 audio 元素。
+</audio>
 
 ## 参照
 * [Coldplay - Viva La Vida \| MetroLyrics](http://www.metrolyrics.com/viva-la-vida-lyrics-coldplay.html)
