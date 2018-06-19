@@ -121,7 +121,7 @@ $ bitcoin-cli help # 获取以下 RPC 命令
 [`setgenerate generate ( genproclimit )`](/2018/05/25/bitcoin-rpc-command-setgenerate) # 挖矿开关
 
 == Mining ==<br>
-`getblocktemplate ( "jsonrequestobject" )` # 获取区块模板（不包括随机数 nNonce）。前提：需要至少一条连接<br>
+[`getblocktemplate ( "jsonrequestobject" )`](2018/06/19/bitcoin-rpc-command-getblocktemplate) # 获取区块模板<br>
 [`getmininginfo`](/2018/05/25/bitcoin-rpc-command-getmininginfo) # 获取挖矿信息<br>
 [`getnetworkhashps ( blocks height )`](/2018/05/25/bitcoin-rpc-command-getnetworkhashps) # 获取全网算力<br>
 [`prioritisetransaction <txid> <priority delta> <fee delta>`](/2018/05/28/bitcoin-rpc-command-prioritisetransaction) # 改变交易优先级<br>
