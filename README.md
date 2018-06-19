@@ -8,9 +8,10 @@
 - [ ] add summary
 - [ ] The anatomy of bitcoin v0.12.1 source
 - [ ] add tag cloud
-- [x] add particle background feature
+- [x] post word statistics and the time of reading full
 
 ## Timeline
+* 2018.06.19 18:05 [new] post word statistics and the time of reading full
 * 2018.06.15 18:55 [new] particle background
 * 2018.06.07 12:38 [new] google analytics and console
 * 2018.06.06 12:02 [new] sticky post
