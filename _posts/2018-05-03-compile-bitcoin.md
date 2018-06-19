@@ -12,7 +12,7 @@ categories: Blockchain
 目前比特币的最新版本为 bitcoin v0.16.0，离区块链 1.0 落地还有些距离。
 
 ## 安装比特币源码（Ubuntu 16.04.4）
-使用 git 把 GitHub 上托管的比特币源码克隆到本地，关于 git 的安装和使用详见 [Git 基础命令](https://mistydew.github.io/jekyll/update/2018/04/30/git-commands.html)篇。
+使用 git 把 GitHub 上托管的比特币源码克隆到本地，关于 git 的安装和使用详见 [Git 基础命令](/2018/04/30/git-commands)篇。
 
 {% highlight shell %}
 $ git clone https://github.com/bitcoin/bitcoin.git # 克隆最新版的比特币源码到本地。

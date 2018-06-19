@@ -25,7 +25,7 @@ importaddress "address" ( "label" rescan p2sh ) # 导入一个脚本（16 进制
 3. `rescan` （布尔型，可选，默认为 true）再扫描钱包交易。<br>
 4. `p2sh` （布尔型，可选，默认为 true）添加 P2SH 版本的脚本。
 
-**注：如果 `rescan` 为 true，该调用可能需要几分钟来完成。如果你有完整的公钥，你应该使用 [`importpublickey`](/2018/06/07/bitcoin-rpc-command-importpublickey) 代替该命令。**
+**注：如果 `rescan` 为 true，该调用可能需要几分钟来完成。如果你有完整的公钥，你应该使用 [`importpubkey`](/2018/06/07/bitcoin-rpc-command-importpubkey) 代替该命令。**
 
 结果：无返回值。
 
