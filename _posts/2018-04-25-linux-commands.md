@@ -116,6 +116,35 @@ $ chgrp <group> <file> # 改变文件 <file> 所属组 <group>。
 **注：只有文件创建者和 root 用户才能使用此命令，且 `<group>` 必须是本机存在的组。<br>
 本机用户所属组记录在 `/etc/group` 文件中。**
 
+### 发信号到进程 kill
+
+{% highlight shell %}
+$ kill -l # 列出全部信号。
+ 1) SIGHUP	     2) SIGINT	     3) SIGQUIT	     4) SIGILL	     5) SIGTRAP
+ 6) SIGABRT	     7) SIGBUS	     8) SIGFPE	     9) SIGKILL	    10) SIGUSR1
+11) SIGSEGV	    12) SIGUSR2	    13) SIGPIPE	    14) SIGALRM	    15) SIGTERM
+16) SIGSTKFLT	17) SIGCHLD	    18) SIGCONT	    19) SIGSTOP	    20) SIGTSTP
+21) SIGTTIN	    22) SIGTTOU	    23) SIGURG	    24) SIGXCPU	    25) SIGXFSZ
+26) SIGVTALRM	27) SIGPROF	    28) SIGWINCH	29) SIGIO	    30) SIGPWR
+31) SIGSYS	    34) SIGRTMIN	35) SIGRTMIN+1	36) SIGRTMIN+2	37) SIGRTMIN+3
+38) SIGRTMIN+4	39) SIGRTMIN+5	40) SIGRTMIN+6	41) SIGRTMIN+7	42) SIGRTMIN+8
+43) SIGRTMIN+9	44) SIGRTMIN+10	45) SIGRTMIN+11	46) SIGRTMIN+12	47) SIGRTMIN+13
+48) SIGRTMIN+14	49) SIGRTMIN+15	50) SIGRTMAX-14	51) SIGRTMAX-13	52) SIGRTMAX-12
+53) SIGRTMAX-11	54) SIGRTMAX-10	55) SIGRTMAX-9	56) SIGRTMAX-8	57) SIGRTMAX-7
+58) SIGRTMAX-6	59) SIGRTMAX-5	60) SIGRTMAX-4	61) SIGRTMAX-3	62) SIGRTMAX-2
+63) SIGRTMAX-1	64) SIGRTMAX	
+$ kill -9 <pid> # 杀死指定 `<pid>` 的进程。
+$ kill -19 <pid> # 暂停指定进程 `<pid>`，和 `Ctrl+Z` 效果相同。
+{% endhighlight %}
+
+### 查看前后台任务 jobs
+
+{% highlight shell %}
+$ <ELF> & # 把程序 `<ELF>` 放后台运行。
+$ jobs # 可查看后台运行的程序，包含 `Ctrl+Z` 暂停的进程。
+$ fg n # 把 `jobs` 列出的序号为 `n` 的任务拉到前台运行。
+{% endhighlight %}
+
 ## 参考
 * [Why Penguin is Linux logo? - LinuxScrew: Linux Blog](http://www.linuxscrew.com/2007/11/14/why-penguin-is-linux-logo)
 * [《Linus Torvalds自传》摘录 - 阮一峰的网络日志](http://www.ruanyifeng.com/blog/2012/09/linus_torvalds.html)
