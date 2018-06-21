@@ -16,7 +16,7 @@ categories: Blockchain
 
 {% highlight shell %}
 $ git clone https://github.com/bitcoin/bitcoin.git # 克隆最新版的比特币源码到本地。
-$ cd bitcoin # 进入比特币源码根目录。
+$ cd bitcoin # 进入比特币项目根目录。
 $ git checkout v0.12.1 # 在当前分支上切换至 tag 为 v0.12.1 的版本，或省略来编译最新版。
 $ git status # 查看当前状态（这里会显示版本信息）。
 HEAD detached at v0.12.1
@@ -35,22 +35,22 @@ $ sudo make # 使用 Makefile 进行比特币源码的编译，编译完成会�
 $ sudo make install # 该项可选，作用为把编译好的比特币相关程序安装到系统默认可执行程序目录 `/usr/local/bin` 下。
 {% endhighlight %}
 
-### 依赖
+## 依赖
 
-#### 基础依赖
+### 基础依赖
 
 {% highlight shell %}
 $ sudo apt-get install build-essential libtool autotools-dev automake pkg-config libssl-dev libevent-dev bsdmainutils python3
 {% endhighlight %}
 
-#### Boost 库
+### Boost 库
 
 {% highlight shell %}
 $ sudo apt-get install libboost-system-dev libboost-filesystem-dev libboost-chrono-dev libboost-program-options-dev libboost-test-dev libboost-thread-dev
 $ sudo apt-get install libboost-all-dev
 {% endhighlight %}
 
-#### db4.8（仅限 Ubuntu）
+### db4.8（仅限 Ubuntu）
 
 {% highlight shell %}
 $ sudo apt-get install software-properties-common
@@ -59,19 +59,19 @@ $ sudo apt-get update
 $ sudo apt-get install libdb4.8-dev libdb4.8++-dev
 {% endhighlight %}
 
-#### upnp 库 miniupnpc
+### upnp 库 miniupnpc
 
 {% highlight shell %}
 $ sudo apt-get install libminiupnpc-dev
 {% endhighlight %}
 
-#### ZMQ（提供 ZMQ API 4.x）
+### ZMQ（提供 ZMQ API 4.x）
 
 {% highlight shell %}
 $ sudo apt-get install libzmq3-dev
 {% endhighlight %}
 
-#### GUI Qt 图形库
+### GUI Qt 图形库
 
 {% highlight shell %}
 $ sudo apt-get install libqt5gui5 libqt5core5a libqt5dbus5 qttools5-dev qttools5-dev-tools libprotobuf-dev protobuf-compiler # Qt 5
