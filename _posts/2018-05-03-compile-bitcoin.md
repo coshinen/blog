@@ -11,19 +11,21 @@ categories: Blockchain
 比特币相关的解读目前均采用 [bitcoin v0.12.1](https://github.com/bitcoin/bitcoin/tree/v0.12.1)，此版本为官方内置挖矿算法的最后一版。<br>
 目前比特币的最新版本为 bitcoin v0.16.0，离区块链 1.0 落地还有些距离。
 
-## 安装比特币源码（Ubuntu 16.04.4）
+## 下载比特币源码（Ubuntu 16.04.4）
 使用 git 把 GitHub 上托管的比特币源码克隆到本地，关于 git 的安装和使用详见 [Git 基础命令](/2018/04/30/git-commands)篇。
 
 {% highlight shell %}
 $ git clone https://github.com/bitcoin/bitcoin.git # 克隆最新版的比特币源码到本地。
-$ git checkout v0.12.1 # 在当前分支上切换至 tag 为 v0.12.1 的版本，或省略来编译最新版。
 $ cd bitcoin # 进入比特币源码根目录。
+$ git checkout v0.12.1 # 在当前分支上切换至 tag 为 v0.12.1 的版本，或省略来编译最新版。
+$ git status # 查看当前状态（这里会显示版本信息）。
+HEAD detached at v0.12.1
+nothing to commit, working directory clean
 {% endhighlight %}
 
-## 编译比特币源码（Ubuntu 16.04.4）
+## 构建（编译和安装）比特币源码（Ubuntu 16.04.4）
 参照 [doc/build-unix.md](https://github.com/bitcoin/bitcoin/blob/master/doc/build-unix.md) 来进行比特币源码的编译和安装。你也可以参照以下内容：
 
-### 构建（编译和安装）
 **在构建源码之前，应该先安装相关的依赖库。**
 
 {% highlight shell %}
