@@ -145,6 +145,12 @@ $ jobs # 可查看后台运行的程序，包含 `Ctrl+Z` 暂停的进程。
 $ fg n # 把 `jobs` 列出的序号为 `n` 的任务拉到前台运行。
 {% endhighlight %}
 
+### 查看打开文件的进程 list open file
+
+{% highlight shell %}
+$ lsof -i[:<port>] # 查看占用端口 `<port>` 的进程，注意 `sudo`。
+{% endhighlight %}
+
 ## 参考
 * [Why Penguin is Linux logo? - LinuxScrew: Linux Blog](http://www.linuxscrew.com/2007/11/14/why-penguin-is-linux-logo)
 * [《Linus Torvalds自传》摘录 - 阮一峰的网络日志](http://www.ruanyifeng.com/blog/2012/09/linus_torvalds.html)
