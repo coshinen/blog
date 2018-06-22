@@ -1,6 +1,7 @@
 # [_mistydew's blog_](https://mistydew.github.io)
 
 ## Todo
+- [ ] add asset footer refer to ruanyifeng
 - [ ] modify delimiter between post title and site name in search results
 - [ ] increase the display width
 - [ ] add github count contributions
@@ -8,7 +9,6 @@
 - [ ] add summary
 - [ ] The anatomy of bitcoin v0.12.1 source
 - [ ] add tag cloud
-- [x] post word statistics and the time of reading full
 
 ## Timeline
 * 2018.06.19 18:05 [new] post word statistics and the time of reading full
