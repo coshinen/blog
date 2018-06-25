@@ -20,25 +20,36 @@ getmempoolinfo # 获取交易内存池激活状态的细节
 结果：<br>
 {% highlight shell %}
 {
-  "size": xxxxx,               (numeric) Current tx count
-  "bytes": xxxxx,              (numeric) Sum of all tx sizes
-  "usage": xxxxx,              (numeric) Total memory usage for the mempool
-  "maxmempool": xxxxx,         (numeric) Maximum memory usage for the mempool
-  "mempoolminfee": xxxxx       (numeric) Minimum fee for tx to be accepted
+  "size": xxxxx,               （数字）当前的交易数
+  "bytes": xxxxx,              （数字）全部交易的总大小
+  "usage": xxxxx,              （数字）交易内存池的总内存用量
+  "maxmempool": xxxxx,         （数字）交易内存池的最大内存用量
+  "mempoolminfee": xxxxx       （数字）能接受的最小交易费
 }
 {% endhighlight %}
 
 ## 用法示例
 
+### 比特币核心客户端
+
+获取当前交易内存池信息。
+
 {% highlight shell %}
 $ bitcoin-cli getmempoolinfo
 {
-  "size": 0,
-  "bytes": 0,
-  "usage": 0,
+  "size": 2,
+  "bytes": 382,
+  "usage": 1792,
   "maxmempool": 300000000,
   "mempoolminfee": 0.00000000
 }
+{% endhighlight %}
+
+### cURL
+
+{% highlight shell %}
+$ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "getmempoolinfo", "params": [] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
+{"result":{"size":2,"bytes":382,"usage":1792,"maxmempool":300000000,"mempoolminfee":0.00000000},"error":null,"id":"curltest"}
 {% endhighlight %}
 
 ## 源码剖析

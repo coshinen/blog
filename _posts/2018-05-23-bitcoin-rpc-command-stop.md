@@ -19,9 +19,20 @@ stop # 终止比特币核心服务 bitcoind
 
 ## 用法示例
 
+### 比特币核心客户端
+
+关闭比特币核心服务，使其有序退出。
+
 {% highlight shell %}
 $ bitcoin-cli stop
 Bitcoin server stopping
+{% endhighlight %}
+
+### cURL
+
+{% highlight shell %}
+$ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "stop", "params": [] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
+{"result":"Bitcoin server stopping","error":null,"id":"curltest"}
 {% endhighlight %}
 
 ## 源码剖析

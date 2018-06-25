@@ -22,29 +22,40 @@ gettxoutsetinfo # 获取关于未花费交易输出集合的统计信息
 结果：<br>
 {% highlight shell %}
 {
-  "height":n,     (numeric) The current block height (index)
-  "bestblock": "hex",   (string) the best block hash hex
-  "transactions": n,      (numeric) The number of transactions
-  "txouts": n,            (numeric) The number of output transactions
-  "bytes_serialized": n,  (numeric) The serialized size
-  "hash_serialized": "hash",   (string) The serialized hash
-  "total_amount": x.xxx          (numeric) The total amount
+  "height":n,     （数字）当前的区块高度（索引）
+  "bestblock": "hex",   （字符串）最佳区块 16 进制哈希值
+  "transactions": n,      （数字）交易总数
+  "txouts": n,            （数字）交易输出总数
+  "bytes_serialized": n,  （数字）序列化后的大小
+  "hash_serialized": "hash",   （字符串）序列化的哈希
+  "total_amount": x.xxx          （数字）总金额
 }
 {% endhighlight %}
 
 ## 用法示例
 
+### 比特币核心客户端
+
+获取当前钱包内的交易输出集信息。
+
 {% highlight shell %}
 $ bitcoin-cli gettxoutsetinfo
 {
-  "height": 75783,
-  "bestblock": "0000761ee2941959c0d576af9e3e26b22a1ee96ec73223f2d0cf0f32796c0ad7",
-  "transactions": 76107,
-  "txouts": 76291,
-  "bytes_serialized": 0,
-  "hash_serialized": "817697834c7d0753b7bf4f3618d10de37a15e8805b4a830461f3b6a40dcfe320",
-  "total_amount": 6862930.00000000
+  "height": 25350,
+  "bestblock": "000000a350d458f968423e63621cc5d0b9cc43ebf2f01da8de702384c9bb7965",
+  "transactions": 25350,
+  "txouts": 25352,
+  "bytes_serialized": 1783248,
+  "hash_serialized": "3f4d4871a2afa2eb1602ab861dfe566520d2d120e26c02704cd71bdf2fa0159f",
+  "total_amount": 1267500.00000000
 }
+{% endhighlight %}
+
+### cURL
+
+{% highlight shell %}
+$ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "gettxoutsetinfo", "params": [] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
+{"result":{"height":25337,"bestblock":"0000011d9ae76ab49b2ad035a6c954b6799ea7775fb1d002544a9e004fd13a03","transactions":25337,"txouts":25339,"bytes_serialized":1782325,"hash_serialized":"488680b4d72b1954ec6d78872d27530f71d5e80421c59208894a786cc4e6b009","total_amount":1266850.00000000},"error":null,"id":"curltest"}
 {% endhighlight %}
 
 ## 源码剖析

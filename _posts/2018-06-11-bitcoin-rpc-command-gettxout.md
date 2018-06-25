@@ -19,68 +19,83 @@ gettxout "txid" n ( includemempool ) # 获取关于一笔未花费交易输出�
 
 参数：<br>
 1. `txid` （字符串，必备）交易索引。<br>
-2. `n` （数字型，必备）输出值（索引）。<br>
+2. `n` （数字，必备）输出序号（索引）。<br>
 3. `includemempool` （布尔型，可选）是否在交易内存池中。
 
 结果：<br>
 {% highlight shell %}
 {
-  "bestblock" : "hash",    (string) the block hash
-  "confirmations" : n,       (numeric) The number of confirmations
-  "value" : x.xxx,           (numeric) The transaction value in BTC
-  "scriptPubKey" : {         (json object)
-     "asm" : "code",       (string) 
-     "hex" : "hex",        (string) 
-     "reqSigs" : n,          (numeric) Number of required signatures
-     "type" : "pubkeyhash", (string) The type, eg pubkeyhash
-     "addresses" : [          (array of string) array of bitcoin addresses
-        "bitcoinaddress"     (string) bitcoin address
+  "bestblock" : "hash",    （字符串）区块哈希
+  "confirmations" : n,       （数字）确认数
+  "value" : x.xxx,           （数字）以 BTC 为单位的交易金额
+  "scriptPubKey" : {         （json 对象）
+     "asm" : "code",       （字符串）
+     "hex" : "hex",        （字符串）
+     "reqSigs" : n,          （数字）所需签名数
+     "type" : "pubkeyhash", （字符串）类型，例 "pubkeyhash"
+     "addresses" : [          （字符串数组）比特币地址数组
+        "bitcoinaddress"     （字符串）比特币地址
         ,...
      ]
   },
-  "version" : n,            (numeric) The version
-  "coinbase" : true|false   (boolean) Coinbase or not
+  "version" : n,            （数字）版本
+  "coinbase" : true|false   （布尔型）是创币交易或不是
 }
 {% endhighlight %}
 
 ## 用法示例
 
 先使用 [`listunspent`](/2018/06/05/bitcoin-rpc-command-listunspent) 命令列出未花费交易输出，
-再通过交易索引和交易输出索引获取该交易输出的详细信息。
+再通过交易索引和交易输出序号获取该交易输出的详细信息。
 
 {% highlight shell %}
 $ bitcoin-cli listunspent
 [
-  ...
   {
-    "txid": "5d306125b2fbfc5855b1b7729ceac1b3010e0ddaa7b03f7abeb225f7b13677ff",
+    "txid": "b797bafd7830774cec4d24d1e649cafb0aa7a67b9f1cc06954102a50b463fa0f",
+    "vout": 1,
+    "address": "17FGuwcea6vd7GLhBc16Xuwqfk7KFp5cZ3",
+    "scriptPubKey": "76a9144483dc8ad0a184355b70b2767a832266b4c2df0a88ac",
+    "amount": 48.99996160,
+    "confirmations": 18,
+    "spendable": true
+  }, 
+  {
+    "txid": "fb61a61c6cc7b37cd0afd2152a77fa894d82629971c77e11d00e9aed1cd03dfc",
     "vout": 0,
-    "address": "1kjTv8TKSsbpGEBVZqLTcx1MeA4G8JkCnk",
-    "account": "",
-    "scriptPubKey": "76a914a4d938a6461a0d6f24946b9bfcda0862a1db6f7488ac",
-    "amount": 0.10000000,
-    "confirmations": 48523,
-    "ps_rounds": -2,
-    "spendable": true,
-    "solvable": true
+    "address": "1NLvqp6kvunbmtWMWbzdn7puD91kTXwiYd",
+    "scriptPubKey": "76a914ea1f7d4b14deb291956a3d5adb503ff9772072fa88ac",
+    "amount": 48.99996160,
+    "confirmations": 16,
+    "spendable": true
   }
 ]
-$ bitcoin-cli gettxout 5d306125b2fbfc5855b1b7729ceac1b3010e0ddaa7b03f7abeb225f7b13677ff 0
+$ bitcoin-cli gettxout b797bafd7830774cec4d24d1e649cafb0aa7a67b9f1cc06954102a50b463fa0f 1
 {
-  "bestblock": "000057a00444aefd85a8c9207c2daf292c86cf3dac05158baa6079a1668e7981",
-  "confirmations": 48528,
-  "value": 0.10000000,
+  "bestblock": "0000005672bf2346408496c275427a6a8037566e001ed3639fa297ce86a10f09",
+  "confirmations": 43,
+  "value": 48.99996160,
   "scriptPubKey": {
-    "asm": "OP_DUP OP_HASH160 a4d938a6461a0d6f24946b9bfcda0862a1db6f74 OP_EQUALVERIFY OP_CHECKSIG",
-    "hex": "76a914a4d938a6461a0d6f24946b9bfcda0862a1db6f7488ac",
+    "asm": "OP_DUP OP_HASH160 4483dc8ad0a184355b70b2767a832266b4c2df0a OP_EQUALVERIFY OP_CHECKSIG",
+    "hex": "76a9144483dc8ad0a184355b70b2767a832266b4c2df0a88ac",
     "reqSigs": 1,
     "type": "pubkeyhash",
     "addresses": [
-      "1kjTv8TKSsbpGEBVZqLTcx1MeA4G8JkCnk"
+      "17FGuwcea6vd7GLhBc16Xuwqfk7KFp5cZ3"
     ]
   },
+  "version": 1,
   "coinbase": false
 }
+{% endhighlight %}
+
+### cURL
+
+使用 json rpc 调用。
+
+{% highlight shell %}
+$ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "gettxout", "params": ["txid", 1] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
+{"result":{"bestblock":"0000012fa5815cb19a6012d2a42aecd0e6d99df2462cb107d752d5637441b54e","confirmations":656,"value":48.99996160,"scriptPubKey":{"asm":"OP_DUP OP_HASH160 4483dc8ad0a184355b70b2767a832266b4c2df0a OP_EQUALVERIFY OP_CHECKSIG","hex":"76a9144483dc8ad0a184355b70b2767a832266b4c2df0a88ac","reqSigs":1,"type":"pubkeyhash","addresses":["17FGuwcea6vd7GLhBc16Xuwqfk7KFp5cZ3"]},"version":1,"coinbase":false},"error":null,"id":"curltest"}
 {% endhighlight %}
 
 ## 源码剖析

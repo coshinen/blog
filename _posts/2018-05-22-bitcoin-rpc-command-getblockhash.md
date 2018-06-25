@@ -14,19 +14,30 @@ categories: Blockchain
 ## 提示说明
 
 {% highlight shell %}
-getblockhash index # 获取在最佳区块连上指定索引的区块哈希
+getblockhash index # 获取在最佳区块链上指定索引的区块哈希
 {% endhighlight %}
 
 参数：<br>
 1. `index` （整型，必备）区块索引（最佳链高度）。
 
-结果：（字符串）区块哈希（16 进制）。
+结果：（字符串）区块哈希（16 进制形式）。
 
 ## 用法示例
+
+### 比特币核心客户端
+
+获取索引/高度为 0 的（创世区块）区块哈希。
 
 {% highlight shell %}
 $ bitcoin-cli getblockhash 0
 000000000019d6689c085ae165831e934ff763ae46a2a6c172b3f1b60a8ce26f
+{% endhighlight %}
+
+### cURL
+
+{% highlight shell %}
+$ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "getblockhash", "params": [0] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
+{"result":"000000000019d6689c085ae165831e934ff763ae46a2a6c172b3f1b60a8ce26f","error":null,"id":"curltest"}
 {% endhighlight %}
 
 ## 源码剖析

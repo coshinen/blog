@@ -14,32 +14,36 @@ categories: Blockchain
 ## 提示说明
 
 {% highlight shell %}
-getinfo # 获取比特币核心信息：版本号、钱包、区块链、网络、挖矿、密钥池、交易费及错误等信息
+getinfo # 获取比特币核心信息
 {% endhighlight %}
 
 结果：返回一个包含变量状态信息的对象。<br>
 {% highlight shell %}
 {
-  "version": xxxxx,           (numeric) the server version
-  "protocolversion": xxxxx,   (numeric) the protocol version
-  "walletversion": xxxxx,     (numeric) the wallet version
-  "balance": xxxxxxx,         (numeric) the total bitcoin balance of the wallet
-  "blocks": xxxxxx,           (numeric) the current number of blocks processed in the server
-  "timeoffset": xxxxx,        (numeric) the time offset
-  "connections": xxxxx,       (numeric) the number of connections
-  "proxy": "host:port",     (string, optional) the proxy used by the server
-  "difficulty": xxxxxx,       (numeric) the current difficulty
-  "testnet": true|false,      (boolean) if the server is using testnet or not
-  "keypoololdest": xxxxxx,    (numeric) the timestamp (seconds since GMT epoch) of the oldest pre-generated key in the key pool
-  "keypoolsize": xxxx,        (numeric) how many new keys are pre-generated
-  "unlocked_until": ttt,      (numeric) the timestamp in seconds since epoch (midnight Jan 1 1970 GMT) that the wallet is unlocked for transfers, or 0 if the wallet is locked
-  "paytxfee": x.xxxx,         (numeric) the transaction fee set in BTC/kB
-  "relayfee": x.xxxx,         (numeric) minimum relay fee for non-free transactions in BTC/kB
-  "errors": "..."           (string) any error messages
+  "version": xxxxx,           （数字）服务器版本
+  "protocolversion": xxxxx,   （数字）协议版本
+  "walletversion": xxxxx,     （数字）钱包版本
+  "balance": xxxxxxx,         （数字）比特币钱包总余额
+  "blocks": xxxxxx,           （数字）服务器上当前已处理的区块数
+  "timeoffset": xxxxx,        （数字）时间偏移
+  "connections": xxxxx,       （数字）连接数
+  "proxy": "host:port",     （字符串，可选）服务器使用的代理
+  "difficulty": xxxxxx,       （数字）当前的挖矿难度
+  "testnet": true|false,      （布尔型）服务器适用测试网或非测试网
+  "keypoololdest": xxxxxx,    （数字）密钥池中预先生成的最早的密钥时间戳（从格里尼治时间开始以秒为单位）
+  "keypoolsize": xxxx,        （数字）预生成新密钥的数量
+  "unlocked_until": ttt,      （数字）从格里尼治时间开始以秒为单位的钱包解锁结束的时间戳，用于转账，若为 0 表示钱包被锁定，若未出现该字段，说明此时钱包未加密上锁
+  "paytxfee": x.xxxx,         （数字）以 BTC/kB 为单位的交易费
+  "relayfee": x.xxxx,         （数字）对于不免费交易的最小中继费，以 BTC/kB 为单位
+  "errors": "..."           （字符串）任何错误信息
 }
 {% endhighlight %}
 
 ## 用法示例
+
+### 比特币核心客户端
+
+获取当前比特币核心服务器基本信息。
 
 {% highlight shell %}
 $ bitcoin-cli getinfo
@@ -47,19 +51,26 @@ $ bitcoin-cli getinfo
   "version": 120100,
   "protocolversion": 70012,
   "walletversion": 60000,
-  "balance": 0.00000000,
-  "blocks": 0,
+  "balance": 97.99992320,
+  "blocks": 25738,
   "timeoffset": 0,
-  "connections": 0,
+  "connections": 1,
   "proxy": "",
-  "difficulty": 1,
+  "difficulty": 0.001532956637923291,
   "testnet": false,
-  "keypoololdest": 1526979070,
+  "keypoololdest": 1529572814,
   "keypoolsize": 101,
   "paytxfee": 0.00000000,
   "relayfee": 0.00001000,
   "errors": ""
 }
+{% endhighlight %}
+
+### cURL
+
+{% highlight shell %}
+$ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "getinfo", "params": [] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
+{"result":{"version":120100,"protocolversion":70012,"walletversion":60000,"balance":97.99992320,"blocks":25759,"timeoffset":0,"connections":1,"proxy":"","difficulty":0.001532956637923291,"testnet":false,"keypoololdest":1529572814,"keypoolsize":101,"paytxfee":0.00000000,"relayfee":0.00001000,"errors":""},"error":null,"id":"curltest"}
 {% endhighlight %}
 
 ## 源码剖析

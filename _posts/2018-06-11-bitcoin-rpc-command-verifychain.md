@@ -30,6 +30,8 @@ verifychain ( checklevel numblocks ) # 验证区块链数据库
 
 ## 用法示例
 
+### 比特币核心客户端
+
 方法一：使用默认等级 3 和默认区块数 288 检查区块链。
 
 {% highlight shell %}
@@ -42,6 +44,13 @@ true
 {% highlight shell %}
 $ bitcoin-cli verifychain 4 0
 true
+{% endhighlight %}
+
+### cURL
+
+{% highlight shell %}
+$ curl --user myusername:userpassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "verifychain", "params": [] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
+{"result":true,"error":null,"id":"curltest"}
 {% endhighlight %}
 
 ## 源码剖析

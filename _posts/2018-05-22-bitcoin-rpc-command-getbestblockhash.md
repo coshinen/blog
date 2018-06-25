@@ -17,13 +17,24 @@ categories: Blockchain
 getbestblockhash # 获取最长区块链上最佳（链尖）区块的哈希
 {% endhighlight %}
 
-结果：返回区块哈希 16 进制编码形式的字符串。
+结果：（字符串）返回区块哈希 16 进制编码形式。
 
 ## 用法示例
+
+### 比特币核心客户端
+
+未 IBD(Initial Block Download) 时，查询最佳区块 - 创世区块的哈希值。
 
 {% highlight shell %}
 $ bitcoin-cli getbestblockhash
 0000000000019d6689c085ae165831e934ff763ae46a2a6c172b3f1b60a8ce26f
+{% endhighlight %}
+
+### cURL
+
+{% highlight shell %}
+$ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "getbestblockhash", "params": [] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
+{"result":"0000000000019d6689c085ae165831e934ff763ae46a2a6c172b3f1b60a8ce26f","error":null,"id":"curltest"}
 {% endhighlight %}
 
 ## 源码剖析

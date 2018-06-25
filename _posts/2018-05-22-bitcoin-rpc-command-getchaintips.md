@@ -14,23 +14,23 @@ categories: Blockchain
 ## 提示说明
 
 {% highlight shell %}
-getchaintips # 获取关于在区块树上全部已知的尖部的信息，包括主链和孤儿分支
+getchaintips # 获取关于区块树上全部已知的尖部的信息，包括主链和孤儿分支
 {% endhighlight %}
 
 结果：<br>
 {% highlight shell %}
 [
   {
-    "height": xxxx,         (numeric) height of the chain tip
-    "hash": "xxxx",         (string) block hash of the tip
-    "branchlen": 0          (numeric) zero for main chain
-    "status": "active"      (string) "active" for the main chain
+    "height": xxxx,         （数字）链尖高度
+    "hash": "xxxx",         （字符串）链尖区块哈希
+    "branchlen": 0          （数字）主链为 0
+    "status": "active"      （字符串）主链为 "active"
   },
   {
     "height": xxxx,
     "hash": "xxxx",
-    "branchlen": 1          (numeric) length of branch connecting the tip to the main chain
-    "status": "xxxx"        (string) status of the chain (active, valid-fork, valid-headers, headers-only, invalid)
+    "branchlen": 1          （数字）连接链尖到主链的分叉长度
+    "status": "xxxx"        （字符串）链状态 (active, valid-fork, valid-headers, headers-only, invalid)
   }
 ]
 {% endhighlight %}
@@ -44,16 +44,27 @@ getchaintips # 获取关于在区块树上全部已知的尖部的信息，包�
 
 ## 用法示例
 
+### 比特币核心客户端
+
+获取当前区块链尖部信息。
+
 {% highlight shell %}
 $ bitcoin-cli getchaintips
 [
   {
-    "height": 0,
-    "hash": "00000000b183b4db893e4dfc15bd22c5371080c13966e511751de4fe82c96384",
+    "height": 23940,
+    "hash": "0000023628d2d9d302f82e672381f40da80abe735cd24aa7784e5ac327f22446",
     "branchlen": 0,
     "status": "active"
   }
 ]
+{% endhighlight %}
+
+### cURL
+
+{% highlight shell %}
+$ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "getchaintips", "params": [] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
+{"result":[{"height":25160,"hash":"0000008475f1530ec67b79ea60e6c1808b55189ed6e7a78d89487b4191cca2ac","branchlen":0,"status":"active"}],"error":null,"id":"curltest"}
 {% endhighlight %}
 
 ## 源码剖析

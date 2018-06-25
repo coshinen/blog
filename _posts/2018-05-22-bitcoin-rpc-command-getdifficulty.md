@@ -14,16 +14,25 @@ categories: Blockchain
 ## 提示说明
 
 {% highlight shell %}
-getdifficulty # 获取作为最低难度（1）倍数的工作量证明难度
+getdifficulty # 获取作为最低难度 `1` 倍数的工作量证明难度
 {% endhighlight %}
 
-结果：（数字）作为最低难度（1）倍数的工作量证明难度。
+结果：（数字）返回作为最低难度 `1` 倍数的工作量证明难度。
 
 ## 用法示例
 
+### 比特币核心客户端
+
 {% highlight shell %}
 $ bitcoin-cli getdifficulty
-1
+0.001533333096242079
+{% endhighlight %}
+
+### cURL
+
+{% highlight shell %}
+$ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "getdifficulty", "params": [] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
+{"result":0.001532956637923291,"error":null,"id":"curltest"}
 {% endhighlight %}
 
 ## 源码剖析

@@ -14,7 +14,7 @@ categories: Blockchain
 ## 提示说明
 
 {% highlight shell %}
-getblock "hash" ( verbose ) # 通过指定的区块哈希（16 进制形式）获取相应区块的信息
+getblock "hash" ( verbose ) # 通过区块哈希（16 进制形式）获取指定区块信息
 {% endhighlight %}
 
 参数：<br>
@@ -24,65 +24,83 @@ getblock "hash" ( verbose ) # 通过指定的区块哈希（16 进制形式）�
 结果（verbose 为 true）：<br>
 {% highlight shell %}
 {
-  "hash" : "hash",     (string) the block hash (same as provided)
-  "confirmations" : n,   (numeric) The number of confirmations, or -1 if the block is not on the main chain
-  "size" : n,            (numeric) The block size
-  "height" : n,          (numeric) The block height or index
-  "version" : n,         (numeric) The block version
-  "merkleroot" : "xxxx", (string) The merkle root
-  "tx" : [               (array of string) The transaction ids
-     "transactionid"     (string) The transaction id
+  "hash" : "hash",     （字符串）区块哈希（和提供的一样）
+  "confirmations" : n,   （数字）确认数，若指定区块不在主链上则该值为 -1
+  "size" : n,            （数字）区块大小
+  "height" : n,          （数字）区块高度或区块索引
+  "version" : n,         （数字）区块版本
+  "merkleroot" : "xxxx", （字符串）默尔克数根哈希
+  "tx" : [               （字符串数组）交易索引集
+     "transactionid"     （字符串）交易索引
      ,...
   ],
-  "time" : ttt,          (numeric) The block time in seconds since epoch (Jan 1 1970 GMT)
-  "mediantime" : ttt,    (numeric) The median block time in seconds since epoch (Jan 1 1970 GMT)
-  "nonce" : n,           (numeric) The nonce
-  "bits" : "1d00ffff", (string) The bits
-  "difficulty" : x.xxx,  (numeric) The difficulty
-  "chainwork" : "xxxx",  (string) Expected number of hashes required to produce the chain up to this block (in hex)
-  "previousblockhash" : "hash",  (string) The hash of the previous block
-  "nextblockhash" : "hash"       (string) The hash of the next block
+  "time" : ttt,          （数字）从（格林尼治时间 1970-01-01 00:00:00）开始以秒为单位的区块时间
+  "mediantime" : ttt,    （数字）从（格林尼治时间 1970-01-01 00:00:00）开始以秒为单位的中间区块时间（意味不明）
+  "nonce" : n,           （数字）随机数
+  "bits" : "1d00ffff", （字符串）难度对应值（与难度呈反比）
+  "difficulty" : x.xxx,  （数字）难度
+  "chainwork" : "xxxx",  （字符串）预计产生该区块上链所需的哈希次数
+  "previousblockhash" : "hash",  （字符串）前一个区块的哈希
+  "nextblockhash" : "hash"       （字符串）下一个区块的哈希
 }
 {% endhighlight %}
 
-结果（verbose 为 false）：（字符串）一个序列化的字符串，区块信息的 16 进制编码形式。
+结果（verbose 为 false）：（字符串）一个序列化的字符串，区块信息的 16 进制编码的数据。
 
 ## 用法示例
-用法一：通过指定的区块哈希（16 进制形式）获取相应区块的详细信息
+
+### 比特币核心客户端
+
+用法一：获取最佳区块的详细信息。
 
 {% highlight shell %}
-$ bitcoin-cli getblock 00000000b183b4db893e4dfc15bd22c5371080c13966e511751de4fe82c96384
+$ bitcoin-cli getbestblockhash
+000000ee6688672afe26c714e89592d2926eb53dfd8642f0a7412a6c43973a53
+$ bitcoin-cli getblock 000000ee6688672afe26c714e89592d2926eb53dfd8642f0a7412a6c43973a53
 {
-  "hash": "00000000b183b4db893e4dfc15bd22c5371080c13966e511751de4fe82c96384",
+  "hash": "000000ee6688672afe26c714e89592d2926eb53dfd8642f0a7412a6c43973a53",
   "confirmations": 1,
-  "size": 299,
-  "height": 0,
-  "version": 1,
-  "merkleroot": "4f2a288c72bed9ea981a47997d751d7a20464a14b39fd156415ee4a59dd8908a",
+  "size": 181,
+  "height": 20034,
+  "version": 536870912,
+  "merkleroot": "eb4313dc4dcb57e94d7c46632456a61a64ed44dfc0a6eadc6357083cfa82a120",
   "tx": [
-    "4f2a288c72bed9ea981a47997d751d7a20464a14b39fd156415ee4a59dd8908a"
+    "eb4313dc4dcb57e94d7c46632456a61a64ed44dfc0a6eadc6357083cfa82a120"
   ],
-  "time": 1521496800,
-  "mediantime": 1521496800,
-  "nonce": 3304190909,
-  "bits": "1d00ffff",
-  "difficulty": 1,
-  "chainwork": "0000000000000000000000000000000000000000000000000000000100010001"
+  "time": 1529895963,
+  "mediantime": 1529895953,
+  "nonce": 1286380,
+  "bits": "1e028c2a",
+  "difficulty": 0.001533333096242079,
+  "chainwork": "00000000000000000000000000000000000000000000000000000009bb56ea79",
+  "previousblockhash": "000000280142d26678ec5ee733a8bd81325f2cff2a8e7b3beb714e999ffd2fa0",
+  "nextblockhash": "000000dce9599ed928a5bf2170629b790b9ebabf5592701bce8f3e783288c62f"
 }
 {% endhighlight %}
 
-用法二：同上。
+用法二：获取最佳区块的详细信息，显示指定 verbose 为 true。
 
 {% highlight shell %}
-$ bitcoin-cli getblock 00000000b183b4db893e4dfc15bd22c5371080c13966e511751de4fe82c96384 true
-结果同上
+$ bitcoin-cli getbestblockhash
+000000ee6688672afe26c714e89592d2926eb53dfd8642f0a7412a6c43973a53
+$ bitcoin-cli getblock 000000ee6688672afe26c714e89592d2926eb53dfd8642f0a7412a6c43973a53 true
+... # 结果同上
 {% endhighlight %}
 
-用法三：获取序列化的区块（用途未知）。
+用法三：设置 verbose 为 false，获取序列化的最佳区块数据（用途不明）。
 
 {% highlight shell %}
-$ bitcoin-cli getblock 00000000b183b4db893e4dfc15bd22c5371080c13966e511751de4fe82c96384 false
-0100000000000000000000000000000000000000000000000000000000000000000000008a90d89da5e45e4156d19fb3144a46207a1d757d99471a98ead9be728c282a4fe032b05affff001dbdf3f1c40101000000010000000000000000000000000000000000000000000000000000000000000000ffffffff5b04ffff001d01044c5246696e616e6369616c2054696d657320323031382f30332f32302046616365626f6f6b20646174612073746f726d207769706573206e6561726c7920243337626e206f6666206d61726b65742076616c7565ffffffff0100f2052a01000000434104678afdb0fe5548271967f1a67130b7105cd6a828e03909a67962e0ea1f61deb649f6bc3f4cef38c4f35504e51ec112de5c384df7ba0b8d578a4c702b6bf11d5fac00000000
+$ bitcoin-cli getbestblockhash
+000000ee6688672afe26c714e89592d2926eb53dfd8642f0a7412a6c43973a53
+$ bitcoin-cli getblock 000000ee6688672afe26c714e89592d2926eb53dfd8642f0a7412a6c43973a53 false
+00000020a02ffd9f994e71eb3b7b8e2aff2c5f3281bda833e75eec7866d242012800000020a182fa3c085763dceaa6c0df44ed641aa6562463467c4de957cb4ddc1343eb1b5c305b2a8c021eeca013000101000000010000000000000000000000000000000000000000000000000000000000000000ffffffff0502424e0101ffffffff0100f2052a0100000023210299727931231540202a3b33c956bf2af144330b731153a2fd9ba194e367ed6414ac00000000
+{% endhighlight %}
+
+### cURL
+
+{% highlight shell %}
+$ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "getblock", "params": ["000000ee6688672afe26c714e89592d2926eb53dfd8642f0a7412a6c43973a53"] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
+{"result":{"hash":"000000ee6688672afe26c714e89592d2926eb53dfd8642f0a7412a6c43973a53","confirmations":5038,"size":181,"height":20034,"version":536870912,"merkleroot":"eb4313dc4dcb57e94d7c46632456a61a64ed44dfc0a6eadc6357083cfa82a120","tx":["eb4313dc4dcb57e94d7c46632456a61a64ed44dfc0a6eadc6357083cfa82a120"],"time":1529895963,"mediantime":1529895953,"nonce":1286380,"bits":"1e028c2a","difficulty":0.001533333096242079,"chainwork":"00000000000000000000000000000000000000000000000000000009bb56ea79","previousblockhash":"000000280142d26678ec5ee733a8bd81325f2cff2a8e7b3beb714e999ffd2fa0","nextblockhash":"000000dce9599ed928a5bf2170629b790b9ebabf5592701bce8f3e783288c62f"},"error":null,"id":"curltest"}
 {% endhighlight %}
 
 ## 源码剖析

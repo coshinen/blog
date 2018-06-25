@@ -18,60 +18,71 @@ gettxoutproof ["txid",...] ( blockhash ) # 获取包含在一个区块上的交�
 {% endhighlight %}
 
 **注：默认情况下，此功能仅在有时可用。这是当在该交易的未花费交易输出上有一个未花费的输出时。
-为了使其一直工作，你需要维持一个交易索引，使用 -txindex 命令行选项或手动指定交易所包含在的区块（通过区块哈希）。**
+为了使其一直工作，你需要维持一个交易索引，使用 `-txindex` 命令行选项或手动指定包含该交易的区块（通过区块哈希）。**
 
 参数：<br>
 1. `txids` （字符串）一个用于过滤器的交易索引 json 数组。<br>
 {% highlight shell %}
     [
-      "txid"     (string) A transaction hash
+      "txid"     （字符串）一笔交易哈希
       ,...
     ]
 {% endhighlight %}
-2. `block hash` （字符串，可选）如果指定，在该哈希的区块上查询交易。
+2. `block hash` （字符串，可选）如果指定了，则在该哈希对应的区块上查询交易。
 
-结果：（字符串）返回元交易数据。一个序列化的字符串，16 进制编码的证明数据。
+结果：（字符串）返回原始交易数据。一个序列化的字符串，16 进制编码的证明。
 
 ## 用法示例
 
-用法一：直接通过交易索引获取该交易的验证。
+### 比特币核心客户端
+
+用法一：获取指定索引的交易验证。
 
 {% highlight shell %}
-$ bitcoin-cli gettxoutproof [\"5d306125b2fbfc5855b1b7729ceac1b3010e0ddaa7b03f7abeb225f7b13677ff\"]
-00000020833c129fd31f08097043e99c9c402d321b0c4adc7113c311eae61f3985040000a2de87bfe308217d7f081364e6226348d43826b37784c79f22b1efd9a29e97655bc0045b1212221e23850d006400000008422f3ac5676e74eb5897bf995da0ff25b4a17cb159c90291f0f806da6be926d5aaba707d3d33d66536b8ff50555224a4fa4fe6ed12223e48bfa907bc9cb1d746ff7736b1f725b2be7a3fb0a7da0d0e01b3c1ea9c72b7b15558fcfbb22561305d909a82f522c54603f5ee8a936c891f6310352bba789c2b74770c876561eb31b3cad1e95caaa026649a86e12f92d0a16e8614a8a0160ce19a96820906a0bf138940f37ed5368c71c23c086b2872c528462fdb8742446abe73272e22d157a5eacbdbcd89202b0090b2e14347c1aba39bd3588f853ce6c0be70e1a3baae7abba75ee96f4c02790982171633df9576a90701ad0f1bea6e526fd7f3d95571031503af02db03
+$ bitcoin-cli gettxoutproof [\"b797bafd7830774cec4d24d1e649cafb0aa7a67b9f1cc06954102a50b463fa0f\"]
+00000020a7bdefd4740678bd9e4b6c6c170dd6ebdfb4dabfb237e428bb4a70f3ae000000ea0a02f07f8f8d9e81792b0068341be05dc20a1d7488b0c34a64c6ed1de72d41b7a3305b538c021e7d5952000200000002ba9ac033f860746a4ab907f918192bf412965e414d84aca52d705131f3b47e570ffa63b4502a105469c01c9f7ba6a70afbca49e6d1244dec4c773078fdba97b70105
 {% endhighlight %}
 
-用法二：通过交易索引并指定其所在区块的哈希获取该交易的验证。
+用法二：通过指定交易所在的区块获取指定索引的交易验证。<br>
+先使用 [`gettransaction`](/2018/06/07/bitcoin-rpc-command-gettransaction) 获取指定交易所在的区块。
 
 {% highlight shell %}
-$ bitcoin-cli gettransaction 5d306125b2fbfc5855b1b7729ceac1b3010e0ddaa7b03f7abeb225f7b13677ff
+$ bitcoin-cli gettransaction b797bafd7830774cec4d24d1e649cafb0aa7a67b9f1cc06954102a50b463fa0f
 {
-  "amount": 0.10000000,
-  "confirmations": 49372,
-  "instantlock": false,
-  "blockhash": "000018a8100074b9639c79ab2cc2c74a9d1daa6945caef63bde24dd6a28d570d",
-  "blockindex": 40,
-  "blocktime": 1527038043,
-  "txid": "5d306125b2fbfc5855b1b7729ceac1b3010e0ddaa7b03f7abeb225f7b13677ff",
+  "amount": -1.00000000,
+  "fee": -0.00003840,
+  "confirmations": 383,
+  "blockhash": "000001a79bb8f78383723fdaab5c3cdf2a64431ea2edaadde5656bee9718b027",
+  "blockindex": 1,
+  "blocktime": 1529914295,
+  "txid": "b797bafd7830774cec4d24d1e649cafb0aa7a67b9f1cc06954102a50b463fa0f",
   "walletconflicts": [
   ],
-  "time": 1527038031,
-  "timereceived": 1527038031,
+  "time": 1529912960,
+  "timereceived": 1529912960,
   "bip125-replaceable": "no",
   "details": [
     {
       "account": "",
-      "address": "1kjTv8TKSsbpGEBVZqLTcx1MeA4G8JkCnk",
-      "category": "receive",
-      "amount": 0.10000000,
-      "label": "",
-      "vout": 0
+      "address": "1Q11qnWi8RqMgJy6DJ8FzrUEdbsFxq651Y",
+      "category": "send",
+      "amount": -1.00000000,
+      "vout": 0,
+      "fee": -0.00003840,
+      "abandoned": false
     }
   ],
-  "hex": "0100000001c5c4f0250d3d7f4ab94f5ff6d0762b4b11db88ff461fd00058c0fb475e63f30b000000004847304402202d7eeff6237b72a214320b2090e4133b6fa3103168e671561c3ce465003687e802201512be84feeb93213db0dacc20db78d1c02a68a6f9ae39a6c6db01736d31ad2901feffffff0280969800000000001976a914a4d938a6461a0d6f24946b9bfcda0862a1db6f7488acc0616a94000000001976a9149d349153b4c40b59744528559bf5379d84db17d288ace6600000"
+  "hex": "01000000010667e834b5ab662ee16594f94544eb4c19053c91c43fbf0d632d79b9049d435c0000000048473044022006d96053e65a45947d76afaec17c7dea2812a3b1e68392023e9608eaad63a0070220743d593a922b3a38b6a875888966ded6e3a90e1337029cec9e1540ab53e7acdb01feffffff0200e1f505000000001976a914fc4b985c0e6819f137f5c7dd2947fb0ba6eff1d988ac00021024010000001976a9144483dc8ad0a184355b70b2767a832266b4c2df0a88ac425f0000"
 }
-$ bitcoin-cli gettxoutproof [\"5d306125b2fbfc5855b1b7729ceac1b3010e0ddaa7b03f7abeb225f7b13677ff\"] 000018a8100074b9639c79ab2cc2c74a9d1daa6945caef63bde24dd6a28d570d
-00000020833c129fd31f08097043e99c9c402d321b0c4adc7113c311eae61f3985040000a2de87bfe308217d7f081364e6226348d43826b37784c79f22b1efd9a29e97655bc0045b1212221e23850d006400000008422f3ac5676e74eb5897bf995da0ff25b4a17cb159c90291f0f806da6be926d5aaba707d3d33d66536b8ff50555224a4fa4fe6ed12223e48bfa907bc9cb1d746ff7736b1f725b2be7a3fb0a7da0d0e01b3c1ea9c72b7b15558fcfbb22561305d909a82f522c54603f5ee8a936c891f6310352bba789c2b74770c876561eb31b3cad1e95caaa026649a86e12f92d0a16e8614a8a0160ce19a96820906a0bf138940f37ed5368c71c23c086b2872c528462fdb8742446abe73272e22d157a5eacbdbcd89202b0090b2e14347c1aba39bd3588f853ce6c0be70e1a3baae7abba75ee96f4c02790982171633df9576a90701ad0f1bea6e526fd7f3d95571031503af02db03
+$ bitcoin-cli gettxoutproof [\"b797bafd7830774cec4d24d1e649cafb0aa7a67b9f1cc06954102a50b463fa0f\"]
+00000020a7bdefd4740678bd9e4b6c6c170dd6ebdfb4dabfb237e428bb4a70f3ae000000ea0a02f07f8f8d9e81792b0068341be05dc20a1d7488b0c34a64c6ed1de72d41b7a3305b538c021e7d5952000200000002ba9ac033f860746a4ab907f918192bf412965e414d84aca52d705131f3b47e570ffa63b4502a105469c01c9f7ba6a70afbca49e6d1244dec4c773078fdba97b70105
+{% endhighlight %}
+
+### cURL
+
+{% highlight shell %}
+$ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "gettxoutproof", "params": [["b797bafd7830774cec4d24d1e649cafb0aa7a67b9f1cc06954102a50b463fa0f"]] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
+{"result":"00000020a7bdefd4740678bd9e4b6c6c170dd6ebdfb4dabfb237e428bb4a70f3ae000000ea0a02f07f8f8d9e81792b0068341be05dc20a1d7488b0c34a64c6ed1de72d41b7a3305b538c021e7d5952000200000002ba9ac033f860746a4ab907f918192bf412965e414d84aca52d705131f3b47e570ffa63b4502a105469c01c9f7ba6a70afbca49e6d1244dec4c773078fdba97b70105","error":null,"id":"curltest"}
 {% endhighlight %}
 
 ## 源码剖析

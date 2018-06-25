@@ -94,16 +94,16 @@ $ bitcoin-cli help # 获取以下 RPC 命令
 **注：`()` 内的参数有默认值，可以省略。**
 
 == Blockchain ==<br>
-[`getbestblockhash`](/2018/05/22/bitcoin-rpc-command-getbestblockhash) # 获取当前最佳块哈希（16 进制形式）<br>
+[`getbestblockhash`](/2018/05/22/bitcoin-rpc-command-getbestblockhash) # 获取最佳块哈希<br>
 [`getblock "hash" ( verbose )`](/2018/05/22/bitcoin-rpc-command-getblock) # 获取指定区块信息<br>
-[`getblockchaininfo`](/2018/05/22/bitcoin-rpc-command-getblockchaininfo) # 获取当前区块链信息<br>
-[`getblockcount`](/2018/05/22/bitcoin-rpc-command-getblockcount) # 获取当前区块总数<br>
-[`getblockhash index`](/2018/05/22/bitcoin-rpc-command-getblockhash) # 获取指定区块哈希（16 进制形式）<br>
+[`getblockchaininfo`](/2018/05/22/bitcoin-rpc-command-getblockchaininfo) # 获取区块链信息<br>
+[`getblockcount`](/2018/05/22/bitcoin-rpc-command-getblockcount) # 获取当前的区块数<br>
+[`getblockhash index`](/2018/05/22/bitcoin-rpc-command-getblockhash) # 获取指定区块哈希<br>
 [`getblockheader "hash" ( verbose )`](/2018/05/22/bitcoin-rpc-command-getblockheader) # 获取指定区块头信息<br>
-[`getchaintips`](/2018/05/22/bitcoin-rpc-command-getchaintips) # 获取区块链尖信息（激活主链、分叉链）<br>
+[`getchaintips`](/2018/05/22/bitcoin-rpc-command-getchaintips) # 获取区块链尖信息<br>
 [`getdifficulty`](/2018/05/22/bitcoin-rpc-command-getdifficulty) # 获取当前挖矿难度<br>
 [`getmempoolinfo`](/2018/05/22/bitcoin-rpc-command-getmempoolinfo) # 获取交易内存池信息<br>
-[`getrawmempool ( verbose )`](/2018/05/22/bitcoin-rpc-command-getrawmempool) # 获取交易内存池交易索引<br>
+[`getrawmempool ( verbose )`](/2018/05/22/bitcoin-rpc-command-getrawmempool) # 获取内存池原始交易<br>
 [`gettxout "txid" n ( includemempool )`](/2018/06/11/bitcoin-rpc-command-gettxout) # 获取交易输出细节<br>
 [`gettxoutproof ["txid",...] ( blockhash )`](/2018/06/11/bitcoin-rpc-command-gettxoutproof) # 获取交易证明<br>
 [`gettxoutsetinfo`](/2018/06/11/bitcoin-rpc-command-gettxoutsetinfo) # 获取交易输出集合信息<br>

@@ -14,16 +14,27 @@ categories: Blockchain
 ## 提示说明
 
 {% highlight shell %}
-getblockcount # 获取当前最长区块链的区块总数（不包括创世区块）
+getblockcount # 获取当前最长区块链的区块总数（不包含创世区块）
 {% endhighlight %}
 
-结果：（整型）当前区块总数。<br>
+结果：（数字）当前的区块数。<br>
 
 ## 用法示例
+
+### 比特币核心客户端
+
+获取当前最佳链区块总数。
 
 {% highlight shell %}
 $ bitcoin-cli getblockcount
 524783
+{% endhighlight %}
+
+### cURL
+
+{% highlight shell %}
+$ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "getblockcount", "params": [] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
+{"result":25109,"error":null,"id":"curltest"}
 {% endhighlight %}
 
 ## 源码剖析

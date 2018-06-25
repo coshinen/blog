@@ -14,7 +14,7 @@ categories: Blockchain
 ## 提示说明
 
 {% highlight shell %}
-help ( "command" ) # 列出所有 RPC 命令或指定命令的用法（帮助信息）
+help ( "command" ) # 列出所有（含 RPC）命令或指定命令的用法（帮助信息）
 {% endhighlight %}
 
 参数：<br>
@@ -23,6 +23,9 @@ help ( "command" ) # 列出所有 RPC 命令或指定命令的用法（帮助信
 结果：返回帮助信息的字符串。
 
 ## 用法示例
+
+### 比特币核心客户端
+
 用法一：获取所有比特币核心 RPC 命令名。
 
 {% highlight shell %}
@@ -165,6 +168,13 @@ Result:
 Examples:
 > bitcoin-cli getinfo 
 > curl --user myusername --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "getinfo", "params": [] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
+{% endhighlight %}
+
+### cURL
+
+{% highlight shell %}
+$ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "help", "params": [] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
+{"result":"== Blockchain ==\ngetbestblockhash\ngetblock \"hash\" ( verbose )\ngetblockchaininfo\ngetblockcount\ngetblockhash index\ngetblockheader \"hash\" ( verbose )\ngetchaintips\ngetdifficulty\ngetmempoolinfo\ngetrawmempool ( verbose )\ngettxout \"txid\" n ( includemempool )\ngettxoutproof [\"txid\",...] ( blockhash )\ngettxoutsetinfo\nverifychain ( checklevel numblocks )\nverifytxoutproof \"proof\"\n\n== Control ==\ngetinfo\nhelp ( \"command\" )\nstop\n\n== Generating ==\ngenerate numblocks\ngetgenerate\nsetgenerate generate ( genproclimit )\n\n== Mining ==\ngetblocktemplate ( \"jsonrequestobject\" )\ngetmininginfo\ngetnetworkhashps ( blocks height )\nprioritisetransaction <txid> <priority delta> <fee delta>\nsubmitblock \"hexdata\" ( \"jsonparametersobject\" )\n\n== Network ==\naddnode \"node\" \"add|remove|onetry\"\nclearbanned\ndisconnectnode \"node\" \ngetaddednodeinfo dns ( \"node\" )\ngetconnectioncount\ngetnettotals\ngetnetworkinfo\ngetpeerinfo\nlistbanned\nping\nsetban \"ip(/netmask)\" \"add|remove\" (bantime) (absolute)\n\n== Rawtransactions ==\ncreaterawtransaction [{\"txid\":\"id\",\"vout\":n},...] {\"address\":amount,\"data\":\"hex\",...} ( locktime )\ndecoderawtransaction \"hexstring\"\ndecodescript \"hex\"\nfundrawtransaction \"hexstring\" includeWatching\ngetrawtransaction \"txid\" ( verbose )\nsendrawtransaction \"hexstring\" ( allowhighfees )\nsignrawtransaction \"hexstring\" ( [{\"txid\":\"id\",\"vout\":n,\"scriptPubKey\":\"hex\",\"redeemScript\":\"hex\"},...] [\"privatekey1\",...] sighashtype )\n\n== Util ==\ncreatemultisig nrequired [\"key\",...]\nestimatefee nblocks\nestimatepriority nblocks\nestimatesmartfee nblocks\nestimatesmartpriority nblocks\nvalidateaddress \"bitcoinaddress\"\nverifymessage \"bitcoinaddress\" \"signature\" \"message\"\n\n== Wallet ==\nabandontransaction \"txid\"\naddmultisigaddress nrequired [\"key\",...] ( \"account\" )\nbackupwallet \"destination\"\ndumpprivkey \"bitcoinaddress\"\ndumpwallet \"filename\"\nencryptwallet \"passphrase\"\ngetaccount \"bitcoinaddress\"\ngetaccountaddress \"account\"\ngetaddressesbyaccount \"account\"\ngetbalance ( \"account\" minconf includeWatchonly )\ngetnewaddress ( \"account\" )\ngetrawchangeaddress\ngetreceivedbyaccount \"account\" ( minconf )\ngetreceivedbyaddress \"bitcoinaddress\" ( minconf )\ngettransaction \"txid\" ( includeWatchonly )\ngetunconfirmedbalance\ngetwalletinfo\nimportaddress \"address\" ( \"label\" rescan p2sh )\nimportprivkey \"bitcoinprivkey\" ( \"label\" rescan )\nimportpubkey \"pubkey\" ( \"label\" rescan )\nimportwallet \"filename\"\nkeypoolrefill ( newsize )\nlistaccounts ( minconf includeWatchonly)\nlistaddressgroupings\nlistlockunspent\nlistreceivedbyaccount ( minconf includeempty includeWatchonly)\nlistreceivedbyaddress ( minconf includeempty includeWatchonly)\nlistsinceblock ( \"blockhash\" target-confirmations includeWatchonly)\nlisttransactions ( \"account\" count from includeWatchonly)\nlistunspent ( minconf maxconf  [\"address\",...] )\nlockunspent unlock [{\"txid\":\"txid\",\"vout\":n},...]\nmove \"fromaccount\" \"toaccount\" amount ( minconf \"comment\" )\nsendfrom \"fromaccount\" \"tobitcoinaddress\" amount ( minconf \"comment\" \"comment-to\" )\nsendmany \"fromaccount\" {\"address\":amount,...} ( minconf \"comment\" [\"address\",...] )\nsendtoaddress \"bitcoinaddress\" amount ( \"comment\" \"comment-to\" subtractfeefromamount )\nsetaccount \"bitcoinaddress\" \"account\"\nsettxfee amount\nsignmessage \"bitcoinaddress\" \"message\"","error":null,"id":"curltest"}
 {% endhighlight %}
 
 ## 源码剖析

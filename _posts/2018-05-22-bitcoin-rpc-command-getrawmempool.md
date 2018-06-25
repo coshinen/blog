@@ -14,7 +14,7 @@ categories: Blockchain
 ## 提示说明
 
 {% highlight shell %}
-getrawmempool ( verbose ) # 获取交易内存池中所有交易索引作为一个交易索引字符串的 json 数组
+getrawmempool ( verbose ) # 获取内存池中所有交易索引作为一个交易索引字符串的 json 数组
 {% endhighlight %}
 
 参数：<br>
@@ -22,28 +22,28 @@ getrawmempool ( verbose ) # 获取交易内存池中所有交易索引作为一�
 
 结果：（verbose 为 false）<br>
 {% highlight shell %}
-[                     (json array of string)
-  "transactionid"     (string) The transaction id
+[                     （字符串 json 数组）
+  "transactionid"     （字符串）交易索引
   ,...
 ]
 {% endhighlight %}
 
 结果：（verbose 为 true）<br>
 {% highlight shell %}
-{                           (json object)
-  "transactionid" : {       (json object)
-    "size" : n,             (numeric) transaction size in bytes
-    "fee" : n,              (numeric) transaction fee in BTC
-    "modifiedfee" : n,      (numeric) transaction fee with fee deltas used for mining priority
-    "time" : n,             (numeric) local time transaction entered pool in seconds since 1 Jan 1970 GMT
-    "height" : n,           (numeric) block height when transaction entered pool
-    "startingpriority" : n, (numeric) priority when transaction entered pool
-    "currentpriority" : n,  (numeric) transaction priority now
-    "descendantcount" : n,  (numeric) number of in-mempool descendant transactions (including this one)
-    "descendantsize" : n,   (numeric) size of in-mempool descendants (including this one)
-    "descendantfees" : n,   (numeric) modified fees (see above) of in-mempool descendants (including this one)
-    "depends" : [           (array) unconfirmed transactions used as inputs for this transaction
-        "transactionid",    (string) parent transaction id
+{                           （json 对象）
+  "transactionid" : {       （json 对象）
+    "size" : n,             （数字）以字节为单位的交易大小
+    "fee" : n,              （数字）以 BTC 为单位的交易费
+    "modifiedfee" : n,      （数字）用于挖矿优先级的交易费增量
+    "time" : n,             （数字）交易进入内存池的本地时间（从格林尼治时间 1970-01-01 00:00:00 开始）
+    "height" : n,           （数字）交易进入内存池时的区块高度
+    "startingpriority" : n, （数字）交易进入内存池时的优先级
+    "currentpriority" : n,  （数字）现在的交易优先级
+    "descendantcount" : n,  （数字）内存池中该交易后代的数量（包含该交易）
+    "descendantsize" : n,   （数字）内存池中该交易后代的大小（包含该交易）
+    "descendantfees" : n,   （数字）内存池中该交易后代修改的交易费（见上，包含该交易）
+    "depends" : [           （数组）用作该交易输入的未确认的交易
+        "transactionid",    （字符串）父交易索引
        ... ]
   }, ...
 }
@@ -51,60 +51,66 @@ getrawmempool ( verbose ) # 获取交易内存池中所有交易索引作为一�
 
 ## 用法示例
 
-用法一：获取当前交易内存池中所有交易的索引。
+### 比特币核心客户端
+
+用法一：获取当前交易内存池中所有交易索引。
 
 {% highlight shell %}
 $ bitcoin-cli getrawmempool
 [
-  "7dded7989a681fc4dd9e9639386f9a2c661ec810f797bf5714d2849b4982421c", 
-  "27ca08a5fc8fb64f86f209b890197df4a54af6c1f82db41d208460aba3e78b3c"
+  "b797bafd7830774cec4d24d1e649cafb0aa7a67b9f1cc06954102a50b463fa0f", 
+  "fb61a61c6cc7b37cd0afd2152a77fa894d82629971c77e11d00e9aed1cd03dfc"
 ]
 {% endhighlight %}
 
-用法二：同上。
+用法二：设置 verbose 为 false，获取当前交易内存池中所有交易索引。
 
 {% highlight shell %}
 $ bitcoin-cli getrawmempool false
-[
-  "7dded7989a681fc4dd9e9639386f9a2c661ec810f797bf5714d2849b4982421c", 
-  "27ca08a5fc8fb64f86f209b890197df4a54af6c1f82db41d208460aba3e78b3c"
-]
+... # 结果同上
 {% endhighlight %}
 
-用法三：获取交易内存池中所有交易的详细信息。
+用法三：设置 verbose 为 true，获取交易内存池中所有交易的详细信息。
 
 {% highlight shell %}
 $ bitcoin-cli getrawmempool true
 {
-  "7dded7989a681fc4dd9e9639386f9a2c661ec810f797bf5714d2849b4982421c": {
-    "size": 225,
-    "fee": 0.00000225,
-    "modifiedfee": 0.00000225,
-    "time": 1527661668,
-    "height": 47021,
-    "startingpriority": 238522855692.9231,
-    "currentpriority": 238522855692.9231,
+  "b797bafd7830774cec4d24d1e649cafb0aa7a67b9f1cc06954102a50b463fa0f": {
+    "size": 191,
+    "fee": 0.00003840,
+    "modifiedfee": 0.00003840,
+    "time": 1529912960,
+    "height": 24386,
+    "startingpriority": 300384615384.6154,
+    "currentpriority": 301858974358.9743,
     "descendantcount": 1,
-    "descendantsize": 225,
-    "descendantfees": 225,
+    "descendantsize": 191,
+    "descendantfees": 3840,
     "depends": [
     ]
   },
-  "27ca08a5fc8fb64f86f209b890197df4a54af6c1f82db41d208460aba3e78b3c": {
-    "size": 225,
-    "fee": 0.00000225,
-    "modifiedfee": 0.00000225,
-    "time": 1527661666,
-    "height": 47021,
-    "startingpriority": 232559644302.4615,
-    "currentpriority": 232559644302.4615,
+  "fb61a61c6cc7b37cd0afd2152a77fa894d82629971c77e11d00e9aed1cd03dfc": {
+    "size": 191,
+    "fee": 0.00003840,
+    "modifiedfee": 0.00003840,
+    "time": 1529912966,
+    "height": 24386,
+    "startingpriority": 300448717948.718,
+    "currentpriority": 301923076923.0769,
     "descendantcount": 1,
-    "descendantsize": 225,
-    "descendantfees": 225,
+    "descendantsize": 191,
+    "descendantfees": 3840,
     "depends": [
     ]
   }
 }
+{% endhighlight %}
+
+### cURL
+
+{% highlight shell %}
+$ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "getrawmempool", "params": [false] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
+{"result":{"b797bafd7830774cec4d24d1e649cafb0aa7a67b9f1cc06954102a50b463fa0f", "fb61a61c6cc7b37cd0afd2152a77fa894d82629971c77e11d00e9aed1cd03dfc"},"error":null,"id":"curltest"}
 {% endhighlight %}
 
 ## 源码剖析
