@@ -19,14 +19,27 @@ setmocktime timestamp # 设置本地时间为给定时间戳（仅限回归测�
 {% endhighlight %}
 
 参数：<br>
-1. `timestamp` （整型，必备）Unix 从 1970-01-01 00:00:00 UTC 开始的以秒为单位的时间戳通过 0 返回到使用系统时间。
+1. `timestamp` （整型，必备）Unix 从格林尼治时间 1970-01-01 00:00:00 开始以秒为单位的时间戳，通过 0 返回到使用系统时间。
 
 结果：无返回值。
 
 ## 用法示例
 
+### 比特币核心客户端
+
+设置当前系统时间为核心服务器的 mock 时间。
+
 {% highlight shell %}
-$ bitcoin-cli setmocktime 1528946331
+$ date +%s
+1530005207
+$ bitcoin-cli -regtest setmocktime 1530005207
+{% endhighlight %}
+
+### cURL
+
+{% highlight shell %}
+$ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "setmocktime", "params": [1530005207] }' -H 'content-type: text/plain;' http://127.0.0.1:18332/
+{"result":null,"error":null,"id":"curltest"}
 {% endhighlight %}
 
 ## 源码剖析

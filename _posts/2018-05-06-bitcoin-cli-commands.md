@@ -154,7 +154,7 @@ $ bitcoin-cli help # 获取以下 RPC 命令
 [`estimatefee nblocks`](/2018/06/15/bitcoin-rpc-command-estimatefee) # 预估交易费<br>
 [`estimatepriority nblocks`](/2018/06/15/bitcoin-rpc-command-estimatepriority) # 预估交易优先级<br>
 [`estimatesmartfee nblocks`](/2018/06/15/bitcoin-rpc-command-estimatesmartfee) # 智能估计交易费<br>
-[`estimatesmartpriority nblocks`](/2018/06/15/bitcoin-rpc-command-estimatesmartpriority) 智能估计交易优先级# <br>
+[`estimatesmartpriority nblocks`](/2018/06/15/bitcoin-rpc-command-estimatesmartpriority) # 智能估计交易优先级<br>
 [`validateaddress "bitcoinaddress"`](/2018/06/15/bitcoin-rpc-command-validateaddress) # 验证地址<br>
 [`verifymessage "bitcoinaddress" "signature" "message"`](/2018/06/15/bitcoin-rpc-command-verifymessage) # 验证签名消息
 

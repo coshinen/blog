@@ -25,9 +25,35 @@ invalidateblock "hash" # 永久标记一个区块无效，就像该块违反了�
 
 ## 用法示例
 
+### 比特币核心服务程序
+
+获取当前最佳区块哈希，记录该区块高度 `32723` 和当前区块数 `32729` 和连接数 `1`，
+无效化该区块后，再次查看...
+
 {% highlight shell %}
 $ bitcoin-cli getbestblockhash
-$ bitcoin-cli invalidateblock 
+000000ea5bb666e0ab8e837691bbb2a0605c4a82281eecd858ad3ffce917df96
+$ bitocin-cli getblock 000000ea5bb666e0ab8e837691bbb2a0605c4a82281eecd858ad3ffce917df96 | grep height
+  "height": 32723,
+$ bitcoin-cli getblockcount
+32729
+$ bitcoin-cli getconnectioncount
+1
+$ bitcoin-cli invalidateblock 000000ea5bb666e0ab8e837691bbb2a0605c4a82281eecd858ad3ffce917df96
+$ bitcoin-cli getblockcount
+32722
+$ bitcoin-cli getconnectioncount
+0
+{% endhighlight %}
+
+此时区块数变为 `32722`，从高度 `32723` 开始的区块均被标记为无效，但不会影响与其相连的其他节点，
+之后全部连接也会自动断开。
+
+### cURL
+
+{% highlight shell %}
+$ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "invalidateblock", "params": ["000000ea5bb666e0ab8e837691bbb2a0605c4a82281eecd858ad3ffce917df96"] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
+{"result":null,"error":null,"id":"curltest"}
 {% endhighlight %}
 
 ## 源码剖析

@@ -15,10 +15,10 @@ hidden: true
 ## 提示说明
 
 {% highlight shell %}
-reconsiderblock "hash" # 移除指定区块及其后代的无效化状态，再次考虑它们为激活状态
+reconsiderblock "hash" # 移除指定区块及其后代的无效状态，再次考虑它们为激活状态
 {% endhighlight %}
 
-**该操作能够撤销 [`invalidateblock`](/2018/06/14/bitcoin-rpc-command-invalidateblock) 的效果。**
+**该操作能够撤销 [`invalidateblock`](/2018/06/14/bitcoin-rpc-command-invalidateblock) 的效果，但无法恢复连接。**
 
 参数：<br>
 1. `hash` （字符串，必备）用来再次考虑的区块哈希。
@@ -27,10 +27,24 @@ reconsiderblock "hash" # 移除指定区块及其后代的无效化状态，再�
 
 ## 用法示例
 
+### 比特币核心客户端
+
+参考 [`invalidateblock`](/2018/06/14/bitcoin-rpc-command-invalidateblock) 命令，
+再次考虑高度为 `32723` 的区块及其之后的区块。
+
 {% highlight shell %}
-$ bitcoin-cli getbestblockhash
-$ bitcoin-cli invalidateblock 
-$ bitcoin-cli reconsiderblock 
+$ bitcoin-cli reconsiderblock 000000ea5bb666e0ab8e837691bbb2a0605c4a82281eecd858ad3ffce917df96
+$ bitcoin-cli getblockcount
+32729
+$ bitcoin-cli getconnectioncount
+0
+{% endhighlight %}
+
+### cURL
+
+{% highlight shell %}
+$ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "reconsiderblock", "params": ["000000ea5bb666e0ab8e837691bbb2a0605c4a82281eecd858ad3ffce917df96"] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
+{"result":null,"error":null,"id":"curltest"}
 {% endhighlight %}
 
 ## 源码剖析

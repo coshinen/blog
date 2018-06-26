@@ -15,21 +15,58 @@ hidden: true
 ## 提示说明
 
 {% highlight shell %}
-resendwallettransactions # 立即重新广播未确认的钱包交易到全部对端
+resendwallettransactions # 立即重新广播未确认的（交易内存池中）钱包交易到全部对端
 {% endhighlight %}
 
-**仅用于测试；钱包代码周期性的自动重新广播。**
+**仅用于测试；钱包代码会周期性的自动重新广播交易。**
 
-结果：返回重新广播的交易索引的数组。
+结果：返回重新广播的交易索引的 json 数组。
 
 ## 用法示例
 
+### 比特币核心客户端
+
+在无连接的情况下，新建 2 笔交易，并确认它们进入内存池，<br>
+此时建立连接，连接建立后我们在对端节点查看该交易并未被广播，<br>
+回到该节点重新发送钱包交易，可在对端节点查看到交易以被广播。
+
 {% highlight shell %}
+$ bitcoin-cli getconnectioncount
+0
+$ bitcoin-cli getnewaddress
+1Pd97Ru8KYJCgovZzPNYi3VDkXmLQZbtKx
+$ bitcoin-cli sendtoaddress 1Pd97Ru8KYJCgovZzPNYi3VDkXmLQZbtKx 1
+6e54ab6ac385e19fa4eea08fa985db00512a7084c83a4419179240ce17ee1244
+$ bitcoin-cli sendtoaddress 1Pd97Ru8KYJCgovZzPNYi3VDkXmLQZbtKx 2
+58ae3bdc2d76457e3e536e7bac3238383b9f1e048feb86f5164aab39ceeac853
+$ bitcoin-cli getmempoolinfo
+{
+  "size": 2,
+  "bytes": 450,
+  "usage": 1856,
+  "maxmempool": 300000000,
+  "mempoolminfee": 0.00000000
+}
+$ bitcoin-cli getrawmempool
+[
+  "6e54ab6ac385e19fa4eea08fa985db00512a7084c83a4419179240ce17ee1244", 
+  "58ae3bdc2d76457e3e536e7bac3238383b9f1e048feb86f5164aab39ceeac853"
+]
+$ bitcoin-cli addnode 192.168.0.2 onetry
+$ bitcoin-cli getconnectioncount
+1
 $ bitcoin-cli resendwallettransactions
 [
-  "c99589e3bb8bb1acd4aea8cb035cf9f2a165e46db5044fc53682f1ae5926aa0e", 
-  "dd812b6757a9fcae4b48ffb9aae9d527a9c4645167317099e9288c796369f683"
+  "6e54ab6ac385e19fa4eea08fa985db00512a7084c83a4419179240ce17ee1244", 
+  "58ae3bdc2d76457e3e536e7bac3238383b9f1e048feb86f5164aab39ceeac853"
 ]
+{% endhighlight %}
+
+### cURL
+
+{% highlight shell %}
+$ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "resendwallettransactions", "params": [] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
+{"result":{"6e54ab6ac385e19fa4eea08fa985db00512a7084c83a4419179240ce17ee1244", "58ae3bdc2d76457e3e536e7bac3238383b9f1e048feb86f5164aab39ceeac853"},"error":null,"id":"curltest"}
 {% endhighlight %}
 
 ## 源码剖析
