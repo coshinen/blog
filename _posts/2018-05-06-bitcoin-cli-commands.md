@@ -121,9 +121,9 @@ $ bitcoin-cli help # 获取以下 RPC 命令
 [`setgenerate generate ( genproclimit )`](/2018/05/25/bitcoin-rpc-command-setgenerate) # 挖矿开关
 
 == Mining ==<br>
-[`getblocktemplate ( "jsonrequestobject" )`](2018/06/19/bitcoin-rpc-command-getblocktemplate) # 获取区块模板<br>
+[`getblocktemplate ( "jsonrequestobject" )`](/2018/06/19/bitcoin-rpc-command-getblocktemplate) # 获取区块模板<br>
 [`getmininginfo`](/2018/05/25/bitcoin-rpc-command-getmininginfo) # 获取挖矿信息<br>
-[`getnetworkhashps ( blocks height )`](/2018/05/25/bitcoin-rpc-command-getnetworkhashps) # 获取全网算力<br>
+[`getnetworkhashps ( blocks height )`](/2018/05/25/bitcoin-rpc-command-getnetworkhashps) # 获取网络算力<br>
 [`prioritisetransaction <txid> <priority delta> <fee delta>`](/2018/05/28/bitcoin-rpc-command-prioritisetransaction) # 改变交易优先级<br>
 [`submitblock "hexdata" ( "jsonparametersobject" )`](/2018/05/28/bitcoin-rpc-command-submitblock) # 提交区块
 
@@ -131,13 +131,13 @@ $ bitcoin-cli help # 获取以下 RPC 命令
 [`addnode "node" "add|remove|onetry"`](/2018/05/28/bitcoin-rpc-command-addnode) # 添加节点并执行操作<br>
 [`clearbanned`](/2018/05/29/bitcoin-rpc-command-listbanned) # 清空黑名单<br>
 [`disconnectnode "node"`](/2018/05/30/bitcoin-rpc-command-disconnectnode) # 断开与指定节点的连接<br>
-[`getaddednodeinfo dns ( "node" )`](/2018/05/30/bitcoin-rpc-command-getaddednodeinfo) # 获取添加节点的信息<br>
-[`getconnectioncount`](/2018/05/29/bitcoin-rpc-command-getconnectioncount) # 获取当前的连接数目<br>
-[`getnettotals`](/2018/05/29/bitcoin-rpc-command-getnettotals) # 获取网络流量信息<br>
-[`getnetworkinfo`](/2018/05/29/bitcoin-rpc-command-getnetworkinfo) # 获取 P2P 网络信息<br>
-[`getpeerinfo`](/2018/05/29/bitcoin-rpc-command-getpeerinfo) # 获取连接对端的信息<br>
+[`getaddednodeinfo dns ( "node" )`](/2018/05/30/bitcoin-rpc-command-getaddednodeinfo) # 获取添加的节点信息<br>
+[`getconnectioncount`](/2018/05/29/bitcoin-rpc-command-getconnectioncount) # 获取连接数<br>
+[`getnettotals`](/2018/05/29/bitcoin-rpc-command-getnettotals) # 获取网络总流量<br>
+[`getnetworkinfo`](/2018/05/29/bitcoin-rpc-command-getnetworkinfo) # 获取网络信息<br>
+[`getpeerinfo`](/2018/05/29/bitcoin-rpc-command-getpeerinfo) # 获取对端信息<br>
 [`listbanned`](/2018/05/29/bitcoin-rpc-command-listbanned) # 列出黑名单<br>
-[`ping`](/2018/05/29/bitcoin-rpc-command-ping) # ping 每个与之相连的节点<br>
+[`ping`](/2018/05/29/bitcoin-rpc-command-ping) # ping 连接的节点<br>
 [`setban "ip(/netmask)" "add|remove" (bantime) (absolute)`](/2018/05/29/bitcoin-rpc-command-setban) # 设置黑名单
 
 == Rawtransactions ==<br>

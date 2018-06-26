@@ -14,42 +14,53 @@ categories: Blockchain
 ## 提示说明
 
 {% highlight shell %}
-getmininginfo # 获取挖矿信息：区块数、当前块大小、当前块交易数、难度、错误、挖矿线程数、全网算力、交易内存池大小、链名、挖矿状态等信息
+getmininginfo # 获取挖矿信息
 {% endhighlight %}
 
-结果：返回一个包含挖矿相关信息的 json 格式的对象。<br>
+结果：返回一个包含挖矿相关信息的 json 对象。<br>
 {% highlight shell %}
 {
-  "blocks": nnn,             (numeric) The current block
-  "currentblocksize": nnn,   (numeric) The last block size
-  "currentblocktx": nnn,     (numeric) The last block transaction
-  "difficulty": xxx.xxxxx    (numeric) The current difficulty
-  "errors": "..."          (string) Current errors
-  "generate": true|false     (boolean) If the generation is on or off (see getgenerate or setgenerate calls)
-  "genproclimit": n          (numeric) The processor limit for generation. -1 if no generation. (see getgenerate or setgenerate calls)
-  "pooledtx": n              (numeric) The size of the mem pool
-  "testnet": true|false      (boolean) If using testnet or not
-  "chain": "xxxx",         (string) current network name as defined in BIP70 (main, test, regtest)
+  "blocks": nnn,             （数字）当前区块数
+  "currentblocksize": nnn,   （数字）最后一个区块的大小
+  "currentblocktx": nnn,     （数字）最后一个区块的交易数
+  "difficulty": xxx.xxxxx    （数字）当前的挖矿难度
+  "errors": "..."          （字符串）当前的错误
+  "generate": true|false     （布尔型）挖矿开启或关闭（查看 `getgenerate` 或 `setgenerate` 命令）
+  "genproclimit": n          （数字）挖矿线程数。如果未开启挖矿则为 -1。（查看 `getgenerate` 或 `setgenerate` 命令）
+  "pooledtx": n              （数字）交易内存池的大小
+  "testnet": true|false      （布尔型）使用了测试网或没有使用
+  "chain": "xxxx",         （字符串）BIP70 定义的当前的网络名（main, test, regtest）
 }
 {% endhighlight %}
 
 ## 用法示例
 
+### 比特币核心客户端
+
+获取当前比特币核心服务器 CPU 挖矿的信息。
+
 {% highlight shell %}
 $ bitcoin-cli getmininginfo
 {
-  "blocks": 0,
-  "currentblocksize": 0,
+  "blocks": 28404,
+  "currentblocksize": 1000,
   "currentblocktx": 0,
-  "difficulty": 1,
+  "difficulty": 0.001532956637923291,
   "errors": "",
-  "genproclimit": 2,
-  "networkhashps": 0,
+  "genproclimit": 1,
+  "networkhashps": 1284702.243902439,
   "pooledtx": 0,
   "testnet": false,
   "chain": "main",
-  "generate": false
+  "generate": true
 }
+{% endhighlight %}
+
+### cURL
+
+{% highlight shell %}
+$ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "getmininginfo", "params": [] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
+{"result":{"blocks":28420,"currentblocksize":1000,"currentblocktx":0,"difficulty":0.001532956637923291,"errors":"","genproclimit":1,"networkhashps":1383698.563922942,"pooledtx":0,"testnet":false,"chain":"main","generate":true},"error":null,"id":"curltest"}
 {% endhighlight %}
 
 ## 源码剖析

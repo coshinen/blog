@@ -25,9 +25,9 @@ getblocktemplate ( "jsonrequestobject" ) # 获取一个区块模板
 1. `jsonrequestobject` （字符串，可选）以下规范中的 json 对象。<br>
 {% highlight shell %}
      {
-       "mode":"template"    (string, optional) This must be set to "template" or omitted
-       "capabilities":[       (array, optional) A list of strings
-           "support"           (string) client side supported feature, 'longpoll', 'coinbasetxn', 'coinbasevalue', 'proposal', 'serverlist', 'workid'
+       "mode":"template"    （字符串，可选）该项必须设置 "template" 或省略
+       "capabilities":[       （数组，可选）字符串列表
+           "support"           （字符串）客户端支持的功能 'longpoll', 'coinbasetxn', 'coinbasevalue', 'proposal', 'serverlist', 'workid'
            ,...
          ]
      }
@@ -36,48 +36,84 @@ getblocktemplate ( "jsonrequestobject" ) # 获取一个区块模板
 结果：<br>
 {% highlight shell %}
 {
-  "version" : n,                    (numeric) The block version
-  "previousblockhash" : "xxxx",    (string) The hash of current highest block
-  "transactions" : [                (array) contents of non-coinbase transactions that should be included in the next block
+  "version" : n,                    （数字）区块版本
+  "previousblockhash" : "xxxx",    （字符串）当前最高区块哈希
+  "transactions" : [                （数组）应该包含在下一个区块的非创币交易的内容
       {
-         "data" : "xxxx",          (string) transaction data encoded in hexadecimal (byte-for-byte)
-         "hash" : "xxxx",          (string) hash/id encoded in little-endian hexadecimal
-         "depends" : [              (array) array of numbers 
-             n                        (numeric) transactions before this one (by 1-based index in 'transactions' list) that must be present in the final block if this one is
+         "data" : "xxxx",          （字符串）16 进制编码的交易数据
+         "hash" : "xxxx",          （字符串）小端模式 16 进制编码的交易哈希/索引
+         "depends" : [              （数组）数字的数组
+             n                        （数字）必须存在于最后一个区块（如果存在该区块）的交易的前面的交易
              ,...
          ],
-         "fee": n,                   (numeric) difference in value between transaction inputs and outputs (in Satoshis); for coinbase transactions, this is a negative Number of the total collected block fees (ie, not including the block subsidy); if key is not present, fee is unknown and clients MUST NOT assume there isn't one
-         "sigops" : n,               (numeric) total number of SigOps, as counted for purposes of block limits; if key is not present, sigop count is unknown and clients MUST NOT assume there aren't any
-         "required" : true|false     (boolean) if provided and true, this transaction must be in the final block
+         "fee": n,                   （数字）交易输入和输出间的差值（单位 Satoshis）； 对于创币交易，该值是收取总费用（即，不包含区块奖励）的负数；如果密钥不存在，交易费未知且客户端不能假设没有交易费
+         "sigops" : n,               （数字）签名操作总数，作为区块限制的目的；如果密钥不存在，签名操作数量未知且客户端不能假设没有任何签名
+         "required" : true|false     （布尔型）如果为 true，该交易必须在最后一个块中
       }
       ,...
   ],
-  "coinbaseaux" : {                  (json object) data that should be included in the coinbase's scriptSig content
-      "flags" : "flags"            (string) 
+  "coinbaseaux" : {                  （json 对象）应包含在创币交易的脚本签名内容中的数据
+      "flags" : "flags"            （字符串）
   },
-  "coinbasevalue" : n,               (numeric) maximum allowable input to coinbase transaction, including the generation award and transaction fees (in Satoshis)
-  "coinbasetxn" : { ... },           (json object) information for coinbase transaction
-  "target" : "xxxx",               (string) The hash target
-  "mintime" : xxx,                   (numeric) The minimum timestamp appropriate for next block time in seconds since epoch (Jan 1 1970 GMT)
-  "mutable" : [                      (array of string) list of ways the block template may be changed 
-     "value"                         (string) A way the block template may be changed, e.g. 'time', 'transactions', 'prevblock'
+  "coinbasevalue" : n,               （数字）允许输入到创币交易的最大值，包含挖矿奖励和交易费（单位 Satoshis）
+  "coinbasetxn" : { ... },           （json 对象）创币交易的信息
+  "target" : "xxxx",               （字符串）哈希目标值
+  "mintime" : xxx,                   （数字）从格林尼治时间 1970-01-01 00:00:00 开始以秒为单位的下一个区块时间的最小时间戳
+  "mutable" : [                      （字符串数组）区块模板可能变化的方式列表
+     "value"                         （字符串）区块模板可能被改变的一种方式，例 'time', 'transactions', 'prevblock'
      ,...
   ],
-  "noncerange" : "00000000ffffffff",   (string) A range of valid nonces
-  "sigoplimit" : n,                 (numeric) limit of sigops in blocks
-  "sizelimit" : n,                  (numeric) limit of block size
-  "curtime" : ttt,                  (numeric) current timestamp in seconds since epoch (Jan 1 1970 GMT)
-  "bits" : "xxx",                 (string) compressed target of next block
-  "height" : n                      (numeric) The height of the next block
+  "noncerange" : "00000000ffffffff",   （字符串）随机数的有效范围
+  "sigoplimit" : n,                 （数字）区块签名操作的限制
+  "sizelimit" : n,                  （数字）区块大小限制
+  "curtime" : ttt,                  （数字）从格林尼治时间 1970-01-01 00:00:00 起以秒为单位的当前的时间戳
+  "bits" : "xxx",                 （字符串）下一个区块的压缩目标
+  "height" : n                      （数字）下一个去跨的高度
 }
 {% endhighlight %}
 
 ## 用法示例
 
-该命令需要请求的节点至少建立一条连接。
+### 比特币核心客户端
+
+该命令需要被请求的节点至少建立一条连接。
 
 {% highlight shell %}
 $ bitcoin-cli getblocktemplate
+{
+  "capabilities": [
+    "proposal"
+  ],
+  "version": 536870912,
+  "previousblockhash": "00000809c1e06be7fd29f489ce3598631c0fd928d84739f994a18ea8c210630f",
+  "transactions": [
+  ],
+  "coinbaseaux": {
+    "flags": ""
+  },
+  "coinbasevalue": 5000000000,
+  "longpollid": "00000809c1e06be7fd29f489ce3598631c0fd928d84739f994a18ea8c210630f2169",
+  "target": "00000a314c000000000000000000000000000000000000000000000000000000",
+  "mintime": 1529979540,
+  "mutable": [
+    "time", 
+    "transactions", 
+    "prevblock"
+  ],
+  "noncerange": "00000000ffffffff",
+  "sigoplimit": 20000,
+  "sizelimit": 1000000,
+  "curtime": 1529979565,
+  "bits": "1e0a314c",
+  "height": 28217
+}
+{% endhighlight %}
+
+### cURL
+
+{% highlight shell %}
+$ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "getblocktemplate", "params": [] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
+{"result":{"capabilities":["proposal"],"version":536870912,"previousblockhash":"000001f1b79b87f65722af42df4d4e284146e868ba374eda95ef621f70f648a8","transactions":[],"coinbaseaux":{"flags":""},"coinbasevalue":5000000000,"longpollid":"000001f1b79b87f65722af42df4d4e284146e868ba374eda95ef621f70f648a82203","target":"0000028c53000000000000000000000000000000000000000000000000000000","mintime":1529979643,"mutable":["time","transactions","prevblock"],"noncerange":"00000000ffffffff","sigoplimit":20000,"sizelimit":1000000,"curtime":1529979682,"bits":"1e028c53","height":28251},"error":null,"id":"curltest"}
 {% endhighlight %}
 
 ## 源码剖析

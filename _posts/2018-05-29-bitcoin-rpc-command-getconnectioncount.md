@@ -21,9 +21,20 @@ getconnectioncount # 获取当前连到其他节点的连接数
 
 ## 用法示例
 
+### 比特币核心客户端
+
+获取该核心服务节点当前建立的连接数。
+
 {% highlight shell %}
 $ bitcoin-cli getconnectioncount
-8
+1
+{% endhighlight %}
+
+### cURL
+
+{% highlight shell %}
+$ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "getconnectioncount", "params": [] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
+{"result":1,"error":null,"id":"curltest"}
 {% endhighlight %}
 
 ## 源码剖析

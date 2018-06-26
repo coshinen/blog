@@ -14,7 +14,7 @@ categories: Blockchain
 ## 提示说明
 
 {% highlight shell %}
-addnode "node" "add|remove|onetry" # 尝试从添加节点列表中添加或移除一个节点，或尝试连接一个节点一次
+addnode "node" "add|remove|onetry" # 尝试从 `addnode` 列表中添加或移除一个节点，或尝试连接某节点一次
 {% endhighlight %}
 
 参数：<br>
@@ -25,7 +25,9 @@ addnode "node" "add|remove|onetry" # 尝试从添加节点列表中添加或移�
 
 ## 用法示例
 
-用法一：添加节点，由于无法查看节点列表，添加 2 次进行验证。
+### 比特币核心客户端
+
+用法一：添加节点，由于无法查看 `addnode` 节点列表，添加 2 次进行验证。
 
 {% highlight shell %}
 $ bitcoin-cli addnode "192.168.0.2:8333" "add"
@@ -35,7 +37,7 @@ error message:
 Error: Node already added
 {% endhighlight %}
 
-用法二：移除节点，由于无法查看节点列表，先添加 1 次，再移除 2 次进行验证。
+用法二：移除节点，由于无法查看 `addnode` 节点列表，先添加 1 次，再移除 2 次进行验证。
 
 {% highlight shell %}
 $ bitcoin-cli addnode "192.168.0.2:8333" "add"
@@ -50,6 +52,15 @@ Error: Node has not been added.
 
 {% highlight shell %}
 $ bitcoin-cli addnode "192.168.0.2:8333" "onetry"
+{% endhighlight %}
+
+**注：端口号可以省略，使用默认端口。**
+
+### cURL
+
+{% highlight shell %}
+$ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "addnode", "params": ["192.168.0.6:8333", "onetry"] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
+{"result":null,"error":null,"id":"curltest"}
 {% endhighlight %}
 
 ## 源码剖析

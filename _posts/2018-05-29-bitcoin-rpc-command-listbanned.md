@@ -14,23 +14,34 @@ categories: Blockchain
 ## 提示说明
 
 {% highlight shell %}
-listbanned # 列出所有禁止的 IP 或 子网
+listbanned # 列出所有禁止的 IP/子网
 {% endhighlight %}
 
 结果：以 JSON 数组的形式返回所有被禁止的 IP。
 
 ## 用法示例
 
+### 比特币核心客户端
+
+显示服务器黑名单（被禁止的 IP 合集）。
+
 {% highlight shell %}
 $ bitcoin-cli listbanned
 [
   {
     "address": "192.168.0.2/32",
-    "banned_until": 1527642100,
-    "ban_created": 1527555700,
+    "banned_until": 1530079566,
+    "ban_created": 1529993166,
     "ban_reason": "manually added"
   }
 ]
+{% endhighlight %}
+
+### cURL
+
+{% highlight shell %}
+$ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "listbanned", "params": [] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
+{"result":[{"address":"192.168.0.2/32","banned_until":1530079566,"ban_created":1529993166,"ban_reason":"manually added"}],"error":null,"id":"curltest"}
 {% endhighlight %}
 
 ## 源码剖析

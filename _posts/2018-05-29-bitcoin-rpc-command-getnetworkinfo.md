@@ -20,35 +20,39 @@ getnetworkinfo # 获取一个包含 P2P 网络各种状态信息的对象
 结果：<br>
 {% highlight shell %}
 {
-  "version": xxxxx,                      (numeric) the server version
-  "subversion": "/Satoshi:x.x.x/",     (string) the server subversion string
-  "protocolversion": xxxxx,              (numeric) the protocol version
-  "localservices": "xxxxxxxxxxxxxxxx", (string) the services we offer to the network
-  "timeoffset": xxxxx,                   (numeric) the time offset
-  "connections": xxxxx,                  (numeric) the number of connections
-  "networks": [                          (array) information per network
+  "version": xxxxx,                      （数字）服务器版本
+  "subversion": "/Satoshi:x.x.x/",     （字符串）服务器子版本字符串
+  "protocolversion": xxxxx,              （数字）协议版本
+  "localservices": "xxxxxxxxxxxxxxxx", （字符串）我们提供的网络服务
+  "timeoffset": xxxxx,                   （数字）时间偏移量
+  "connections": xxxxx,                  （数字）连接数
+  "networks": [                          （数字）每个网络的信息
   {
-    "name": "xxx",                     (string) network (ipv4, ipv6 or onion)
-    "limited": true|false,               (boolean) is the network limited using -onlynet?
-    "reachable": true|false,             (boolean) is the network reachable?
-    "proxy": "host:port"               (string) the proxy that is used for this network, or empty if none
+    "name": "xxx",                     （字符串）网络名（ipv4, ipv6 or onion）
+    "limited": true|false,               （布尔型）是否使用 -onlynet 限制网络？
+    "reachable": true|false,             （布尔型）网络是否可达？
+    "proxy": "host:port"               （字符串）使用该网络的代理，若没有则为空
   }
   ,...
   ],
-  "relayfee": x.xxxxxxxx,                (numeric) minimum relay fee for non-free transactions in BTC/kB
-  "localaddresses": [                    (array) list of local addresses
+  "relayfee": x.xxxxxxxx,                （数字）对于非免费交易的最小中继费，单位为 BTC/kB
+  "localaddresses": [                    （数组）本地地址列表
   {
-    "address": "xxxx",                 (string) network address
-    "port": xxx,                         (numeric) network port
-    "score": xxx                         (numeric) relative score
+    "address": "xxxx",                 （字符串）网络地址
+    "port": xxx,                         （数字）网络端口
+    "score": xxx                         （数字）相关分数
   }
   ,...
   ]
-  "warnings": "..."                    (string) any network warnings (such as alert messages) 
+  "warnings": "..."                    （字符串）任何网络警告（例如 alert 消息）
 }
 {% endhighlight %}
 
 ## 用法示例
+
+### 比特币核心客户端
+
+获取核心服务节点当前的网络信息。
 
 {% highlight shell %}
 $ bitcoin-cli getnetworkinfo
@@ -58,7 +62,7 @@ $ bitcoin-cli getnetworkinfo
   "protocolversion": 70012,
   "localservices": "0000000000000005",
   "timeoffset": 0,
-  "connections": 0,
+  "connections": 1,
   "networks": [
     {
       "name": "ipv4",
@@ -87,6 +91,13 @@ $ bitcoin-cli getnetworkinfo
   ],
   "warnings": ""
 }
+{% endhighlight %}
+
+### cURL
+
+{% highlight shell %}
+$ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "getnetworkinfo", "params": [] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
+{"result":{"version":120100,"subversion":"/Satoshi:0.12.1/","protocolversion":70012,"localservices":"0000000000000005","timeoffset":0,"connections":1,"networks":[{"name":"ipv4","limited":false,"reachable":false,"proxy":"","proxy_randomize_credentials":false},{"name":"ipv6","limited":false,"reachable":false,"proxy":"","proxy_randomize_credentials":false},{"name":"onion","limited":false,"reachable":false,"proxy":"","proxy_randomize_credentials":false}],"relayfee":0.00001000,"localaddresses":[],"warnings":""},"error":null,"id":"curltest"}
 {% endhighlight %}
 
 ## 源码剖析

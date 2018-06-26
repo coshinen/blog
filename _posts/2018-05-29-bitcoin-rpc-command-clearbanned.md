@@ -21,7 +21,9 @@ clearbanned # 清除所有禁止的 IP
 
 ## 用法示例
 
-配合使用 RPC 命令 [`listbanned`](/2018/05/29/bitcoin-rpc-command-listbanned) 查看黑名单。
+### 比特币核心客户端
+
+使用 RPC 命令 [`listbanned`](/2018/05/29/bitcoin-rpc-command-listbanned) 查看黑名单。
 
 {% highlight shell %}
 $ bitcoin-cli listbanned
@@ -37,6 +39,13 @@ $ bitcoin-cli clearbanned
 $ bitcoin-cli listbanned
 [
 ]
+{% endhighlight %}
+
+### cURL
+
+{% highlight shell %}
+$ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "clearbanned", "params": [] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
+{"result":null,"error":null,"id":"curltest"}
 {% endhighlight %}
 
 ## 源码剖析

@@ -17,18 +17,33 @@ categories: Blockchain
 prioritisetransaction <txid> <priority delta> <fee delta> # 改变交易内存池中一笔交易的优先级
 {% endhighlight %}
 
-参数：<br>
-1. `txid` （字符串，必备）交易 id（16 进制形式）。<br>
-2. `priority delta` （数字，浮点型，必备）增加或减少优先级。交易选择算法认为指定交易 `tx` 会有更高优先级。（交易优先级计算：coinage * value_in_satoshis / txsize）<br>
-3. `fee delta` （数字，整型，必备）增加（或减少，若为负值）该费用（单位：satoshis）。该费用实际上没有花费，仅仅是选择交易到一个区块的算法把该交易作为其将支付更高（或更低）的费用。
+**该优先级用于接收交易进入被挖的区块。**
 
-结果：返回布尔型 true。
+参数：<br>
+1. `txid` （字符串，必备）交易索引（16 进制形式）。<br>
+2. `priority delta` （数字，浮点型，必备）增加或减少优先级。交易选择算法认为指定交易 `tx` 会有更高优先级。（交易优先级计算：coinage * value_in_satoshis / txsize）<br>
+3. `fee delta` （数字，整型，必备）增加（或减少，若为负值）该费用（单位：satoshis）。该费用实际上没有花费，仅仅是选择交易进入一个区块的算法把该交易作为其将支付更高（或更低）的费用。
+
+结果：（布尔型）返回 true。
 
 ## 用法示例
 
+### 比特币核心客户端
+
 {% highlight shell %}
-$ bitcoin-cli prioritisetransaction ab8021f615021384fa4f5cf3c1a7f97d832a9fcc72d766e748b8c741332af201 0.0 10000
+$ bitcoin-cli getrawmempool
+[
+  "fb9bd2df3cef0abd9f444971dff097790b7bf146843a752cb48461418d3c7e67"
+]
+$ bitcoin-cli prioritisetransaction fb9bd2df3cef0abd9f444971dff097790b7bf146843a752cb48461418d3c7e67
 true
+{% endhighlight %}
+
+### cURL
+
+{% highlight shell %}
+$ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "prioritisetransaction", "params": ["fb9bd2df3cef0abd9f444971dff097790b7bf146843a752cb48461418d3c7e67", 0.0, 10000] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
+{"result":true,"error":null,"id":"curltest"}
 {% endhighlight %}
 
 ## 源码剖析

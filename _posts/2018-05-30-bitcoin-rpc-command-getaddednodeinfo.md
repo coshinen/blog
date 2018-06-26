@@ -25,12 +25,12 @@ getaddednodeinfo dns ( "node" ) # 获取关于给定或全部添加节点的信�
 {% highlight shell %}
 [
   {
-    "addednode" : "192.168.0.201",   (string) The node ip address
-    "connected" : true|false,          (boolean) If connected
+    "addednode" : "192.168.0.201",   （字符串）节点 ip 地址
+    "connected" : true|false,          （布尔型）是否已连接
     "addresses" : [
        {
-         "address" : "192.168.0.201:8333",  (string) The bitcoin server host and port
-         "connected" : "outbound"           (string) connection, inbound or outbound
+         "address" : "192.168.0.201:8333",  （字符串）比特币服务器主机和端口
+         "connected" : "outbound"           （字符串）3 种连接类型 connection, inbound or outbound
        }
        ,...
      ]
@@ -41,27 +41,43 @@ getaddednodeinfo dns ( "node" ) # 获取关于给定或全部添加节点的信�
 
 ## 用法示例
 
-用法一：获取所有添加节点的列表。
+### 比特币核心客户端
+
+用法一：获取所有添加的节点列表。
 
 {% highlight shell %}
+$ bitcoin-cli addnode 192.168.0.2 add
+$ bitcoin-cli addnode 192.168.0.6 add
 $ bitcoin-cli getaddednodeinfo false
 [
   {
-    "addednode": "192.168.0.6:8333"
+    "addednode": "192.168.0.2"
   }, 
   {
-    "addednode": "192.168.0.2"
+    "addednode": "192.168.0.6"
   }
 ]
 {% endhighlight %}
 
-用法二：获取所有添加节点的列表的连接信息。
+用法二：获取所有添加的节点列表的连接信息。
 
 {% highlight shell %}
+$ bitcoin-cli addnode 192.168.0.2 add
+$ bitcoin-cli addnode 192.168.0.6 add
 $ bitcoin-cli getaddednodeinfo true
 [
   {
-    "addednode": "192.168.0.6:8333",
+    "addednode": "192.168.0.2",
+    "connected": true,
+    "addresses": [
+      {
+        "address": "192.168.0.2:8333",
+        "connected": "outbound"
+      }
+    ]
+  }, 
+  {
+    "addednode": "192.168.0.6",
     "connected": false,
     "addresses": [
       {
@@ -69,21 +85,11 @@ $ bitcoin-cli getaddednodeinfo true
         "connected": "false"
       }
     ]
-  }, 
-  {
-    "addednode": "192.168.0.2",
-    "connected": false,
-    "addresses": [
-      {
-        "address": "192.168.0.2:8222",
-        "connected": "false"
-      }
-    ]
   }
 ]
 {% endhighlight %}
 
-用法三：获取指定添加节点的列表的信息。
+用法三：获取指定添加的节点的信息。
 
 {% highlight shell %}
 $ bitcoin-cli getaddednodeinfo false 192.168.0.2
@@ -94,22 +100,29 @@ $ bitcoin-cli getaddednodeinfo false 192.168.0.2
 ]
 {% endhighlight %}
 
-用法四：获取指定添加节点的列表的连接信息。
+用法四：获取指定添加的节点的连接信息。
 
 {% highlight shell %}
 $ bitcoin-cli getaddednodeinfo true 192.168.0.2
 [
   {
     "addednode": "192.168.0.2",
-    "connected": false,
+    "connected": true,
     "addresses": [
       {
-        "address": "192.168.0.2:8222",
-        "connected": "false"
+        "address": "192.168.0.2:8333",
+        "connected": "outbound"
       }
     ]
   }
 ]
+{% endhighlight %}
+
+### cURL
+
+{% highlight shell %}
+$ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "getaddednodeinfo", "params": [false] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
+{"result":[{"addednode":"192.168.0.2"},{"addednode":"192.168.0.6"}],"error":null,"id":"curltest"}
 {% endhighlight %}
 
 ## 源码剖析

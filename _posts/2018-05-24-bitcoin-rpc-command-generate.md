@@ -22,16 +22,27 @@ generate numblocks # 立刻挖出区块（在 RPC 调用返回前）
 参数：<br>
 1. `numblocks` （数字，必备）立刻生成区块的数量。
 
-结果：（数组形式）返回生成区块的哈希。
+结果：（数组）返回生成区块的哈希集。
 
 ## 用法示例
+
+### 比特币核心客户端
+
+在比特币核心服务回归测试模式下产生 2 个区块并上链。
 
 {% highlight shell %}
 $ bitcoin-cli -regtest generate 2
 [
-  "07fd8ddb47a2c6dce4036c162a77e96ebd2d4a92060eb5db3c2a5d42af99e809", 
-  "5bd8327376b3920ef95ba2a327f7edaadc792b59700d13b0de1c8f4e2c366ae7"
+  "2d14c7f08a52e24913b4f36b486d0171faed26f978d02656d88efdc0acf2a5f5", 
+  "4ad63ef738b9d5da85b21fe84853b1672209ffdfbe914896bb475b523efca628"
 ]
+{% endhighlight %}
+
+### cURL
+
+{% highlight shell %}
+$ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "generate", "params": [2] }' -H 'content-type: text/plain;' http://127.0.0.1:18332/
+{"result":["5f522cf0b746297737f3522e7830657e114f80b1f48504c11b2ebe942ffa8da0","4bcd4c044152135e7523a870ec198947d4d937bcba8857812c5ace77d725b517"],"error":null,"id":"curltest"}
 {% endhighlight %}
 
 ## 源码剖析

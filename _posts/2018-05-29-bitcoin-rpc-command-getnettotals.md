@@ -20,29 +20,33 @@ getnettotals # 获取关于网络流量的信息，包含流入字节，流出�
 结果：<br>
 {% highlight shell %}
 {
-  "totalbytesrecv": n,   (numeric) Total bytes received
-  "totalbytessent": n,   (numeric) Total bytes sent
-  "timemillis": t,       (numeric) Total cpu time
+  "totalbytesrecv": n,   （数字）接收的总字节
+  "totalbytessent": n,   （数字）发送的总字节
+  "timemillis": t,       （数字）总 CPU 时间
   "uploadtarget":
   {
-    "timeframe": n,                         (numeric) Length of the measuring timeframe in seconds
-    "target": n,                            (numeric) Target in bytes
-    "target_reached": true|false,           (boolean) True if target is reached
-    "serve_historical_blocks": true|false,  (boolean) True if serving historical blocks
-    "bytes_left_in_cycle": t,               (numeric) Bytes left in current time cycle
-    "time_left_in_cycle": t                 (numeric) Seconds left in current time cycle
+    "timeframe": n,                         （数字）测量时间范围的长度，以秒为单位
+    "target": n,                            （数字）目标字节数
+    "target_reached": true|false,           （布尔型）如果目标可达则为 true
+    "serve_historical_blocks": true|false,  （布尔型）如果服务历史的区块则为 true
+    "bytes_left_in_cycle": t,               （数字）当前时间周期剩下的字节
+    "time_left_in_cycle": t                 （数字）当前时间周期剩余的秒数
   }
 }
 {% endhighlight %}
 
 ## 用法示例
 
+### 比特币核心客户端
+
+获取当前网络总流量信息。
+
 {% highlight shell %}
 $ bitcoin-cli getnettotals
 {
-  "totalbytesrecv": 0,
-  "totalbytessent": 0,
-  "timemillis": 1527583954339,
+  "totalbytesrecv": 46172,
+  "totalbytessent": 10696,
+  "timemillis": 1529999588020,
   "uploadtarget": {
     "timeframe": 86400,
     "target": 0,
@@ -52,6 +56,13 @@ $ bitcoin-cli getnettotals
     "time_left_in_cycle": 0
   }
 }
+{% endhighlight %}
+
+### cURL
+
+{% highlight shell %}
+$ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "getnettotals", "params": [] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
+{"result":{"totalbytesrecv":46794,"totalbytessent":10818,"timemillis":1529999617779,"uploadtarget":{"timeframe":86400,"target":0,"target_reached":false,"serve_historical_blocks":true,"bytes_left_in_cycle":0,"time_left_in_cycle":0}},"error":null,"id":"curltest"}
 {% endhighlight %}
 
 ## 源码剖析

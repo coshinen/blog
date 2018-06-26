@@ -18,18 +18,52 @@ disconnectnode "node" # 立刻断开与指定节点的连接
 {% endhighlight %}
 
 参数：<br>
-1. `node` （字符串，必备）节点（见 [`getpeerinfo`](/2018/05/29/bitcoin-rpc-command-getpeerinfo) 得到的节点信息）。
+1. `node` （字符串，必备）节点（见 [`getpeerinfo`](/2018/05/29/bitcoin-rpc-command-getpeerinfo) 获取的节点信息）。
 
 结果：无返回值。
 
 ## 用法示例
 
+### 比特币核心客户端
+
+断开与指定节点的连接。
+
 {% highlight shell %}
 $ bitcoin-cli getconnectioncount
 1
+$ bitcoin-cli getaddednodeinfo true
+[
+  {
+    "addednode": "192.168.0.2",
+    "connected": true,
+    "addresses": [
+      {
+        "address": "192.168.0.2:8333",
+        "connected": "outbound"
+      }
+    ]
+  }, 
+  {
+    "addednode": "192.168.0.6",
+    "connected": false,
+    "addresses": [
+      {
+        "address": "192.168.0.6:8333",
+        "connected": "false"
+      }
+    ]
+  }
+]
 $ bitcoin-cli disconnectnode 192.168.0.2
 $ bitcoin-cli getconnectioncount
 0
+{% endhighlight %}
+
+### cURL
+
+{% highlight shell %}
+$ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "disconnectnode", "params": ["192.168.0.2:8333"] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
+{"result":null,"error":null,"id":"curltest"}
 {% endhighlight %}
 
 ## 源码剖析

@@ -14,16 +14,30 @@ categories: Blockchain
 ## 提示说明
 
 {% highlight shell %}
-getgenerate # 获取比特币核心服务的挖矿状态。默认为 false。服务器程序设置命令行参数 `-gen`（或配置文件 bitcoin.conf 中设置 `gen`），也可以使用 `setgenerate` 命令设置
+getgenerate # 获取比特币核心服务的挖矿状态
 {% endhighlight %}
 
-结果：（布尔型）true 表示服务器开启挖矿功能，false 表示关闭。
+默认为 false。
+服务器程序设置命令行参数 `-gen`（或配置文件 bitcoin.conf 中设置 `gen`），也可以使用 [`setgenerate`](/2018/05/25/bitcoin-rpc-command-setgenerate) 命令设置。
+
+结果：（布尔型）true 表示服务器开启 CPU 挖矿，false 表示关闭。
 
 ## 用法示例
+
+### 比特币核心客户端
+
+获取当前比特币核心服务器 CPU 挖矿状态。
 
 {% highlight shell %}
 $ bitcoin-cli getgenerate
 false
+{% endhighlight %}
+
+### cURL
+
+{% highlight shell %}
+$ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "getgenerate", "params": [] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
+{"result":false,"error":null,"id":"curltest"}
 {% endhighlight %}
 
 ## 源码剖析

@@ -14,36 +14,36 @@ categories: Blockchain
 ## 提示说明
 
 {% highlight shell %}
-getpeerinfo # 获取关于每个连接的网络节点的 json 数组对象的数据
+getpeerinfo # 获取关于每个连接的网络节点的数据的 json 数组对象
 {% endhighlight %}
 
 结果：<br>
 {% highlight shell %}
 [
   {
-    "id": n,                   (numeric) Peer index
-    "addr":"host:port",      (string) The ip address and port of the peer
-    "addrlocal":"ip:port",   (string) local address
-    "services":"xxxxxxxxxxxxxxxx",   (string) The services offered
-    "relaytxes":true|false,    (boolean) Whether peer has asked us to relay transactions to it
-    "lastsend": ttt,           (numeric) The time in seconds since epoch (Jan 1 1970 GMT) of the last send
-    "lastrecv": ttt,           (numeric) The time in seconds since epoch (Jan 1 1970 GMT) of the last receive
-    "bytessent": n,            (numeric) The total bytes sent
-    "bytesrecv": n,            (numeric) The total bytes received
-    "conntime": ttt,           (numeric) The connection time in seconds since epoch (Jan 1 1970 GMT)
-    "timeoffset": ttt,         (numeric) The time offset in seconds
-    "pingtime": n,             (numeric) ping time
-    "minping": n,              (numeric) minimum observed ping time
-    "pingwait": n,             (numeric) ping wait
-    "version": v,              (numeric) The peer version, such as 7001
-    "subver": "/Satoshi:0.8.5/",  (string) The string version
-    "inbound": true|false,     (boolean) Inbound (true) or Outbound (false)
-    "startingheight": n,       (numeric) The starting height (block) of the peer
-    "banscore": n,             (numeric) The ban score
-    "synced_headers": n,       (numeric) The last header we have in common with this peer
-    "synced_blocks": n,        (numeric) The last block we have in common with this peer
+    "id": n,                   （数字）对端索引
+    "addr":"host:port",      （字符串）对端的 ip 地址和端口号
+    "addrlocal":"ip:port",   （字符串）本地地址
+    "services":"xxxxxxxxxxxxxxxx",   （字符串）提供的服务
+    "relaytxes":true|false,    （布尔型）对端是否要求我们中继交易给它
+    "lastsend": ttt,           （数字）从格林尼治时间 1970-01-01 00:00:00 开始以秒为单位的最后发送时间
+    "lastrecv": ttt,           （数字）从格林尼治时间 1970-01-01 00:00:00 开始以秒为单位的最后接收时间
+    "bytessent": n,            （数字）发送的总字节
+    "bytesrecv": n,            （数字）接收的总字节
+    "conntime": ttt,           （数字）以秒为单位的连接时间（从格林尼治时间 1970-01-01 00:00:00 开始）
+    "timeoffset": ttt,         （数字）以秒为单位的时间偏移量
+    "pingtime": n,             （数字）ping 时间
+    "minping": n,              （数字）观测到的最短 ping 时间
+    "pingwait": n,             （数字）ping 等待时间
+    "version": v,              （数字）对端版本，例如 7001
+    "subver": "/Satoshi:0.8.5/",  （字符串）字符串版本
+    "inbound": true|false,     （布尔型）true 为连入，false 为连出
+    "startingheight": n,       （数字）对端起始的区块高度
+    "banscore": n,             （数字）禁止分数
+    "synced_headers": n,       （数字）我们与对端共同的最后一个区块头
+    "synced_blocks": n,        （数字）我们与对端共同的最后一个区块
     "inflight": [
-       n,                        (numeric) The heights of blocks we're currently asking from this peer
+       n,                        （数字）我们当前从对端请求的区块高度
        ...
     ]
   }
@@ -53,57 +53,46 @@ getpeerinfo # 获取关于每个连接的网络节点的 json 数组对象的数
 
 ## 用法示例
 
+### 比特币核心客户端
+
+获取连接的对端的信息。
+
 {% highlight shell %}
 $ bitcoin-cli getpeerinfo
 [
   {
-    "id": 9,
-    "addr": "183.60.231.84",
-    "addrlocal": "113.116.118.60:21312",
+    "id": 2,
+    "addr": "192.168.0.2",
+    "addrlocal": "192.168.0.6:61196",
     "services": "0000000000000005",
     "relaytxes": true,
-    "lastsend": 1527579016,
-    "lastrecv": 1527579016,
-    "bytessent": 2192,
-    "bytesrecv": 6214,
-    "conntime": 1527578935,
-    "timeoffset": -4,
-    "pingtime": 0.093315,
-    "minping": 0.093315,
-    "version": 70208,
-    "subver": "/Foru Core:0.12.2.3/",
+    "lastsend": 1529995706,
+    "lastrecv": 1529995706,
+    "bytessent": 468894,
+    "bytesrecv": 492077,
+    "conntime": 1529984676,
+    "timeoffset": -16,
+    "pingtime": 0.015573,
+    "minping": 0.00713,
+    "version": 70012,
+    "subver": "/Satoshi:0.12.1/",
     "inbound": false,
-    "startingheight": 42113,
+    "startingheight": 29256,
     "banscore": 0,
-    "synced_headers": 42128,
-    "synced_blocks": 42128,
+    "synced_headers": 31796,
+    "synced_blocks": 31796,
     "inflight": [
     ],
-    "whitelisted": false,
-    "bytessent_per_msg": {
-      "getaddr": 24,
-      "getdata": 976,
-      "getheaders": 925,
-      "headers": 25,
-      "ping": 32,
-      "pong": 32,
-      "sendheaders": 24,
-      "verack": 24,
-      "version": 130
-    },
-    "bytesrecv_per_msg": {
-      "addr": 55,
-      "block": 3296,
-      "getheaders": 925,
-      "headers": 1696,
-      "ping": 32,
-      "pong": 32,
-      "sendheaders": 24,
-      "verack": 24,
-      "version": 130
-    }
+    "whitelisted": false
   }
 ]
+{% endhighlight %}
+
+### cURL
+
+{% highlight shell %}
+$ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "getpeerinfo", "params": [] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
+{"result":[{"id":1,"addr":"192.168.0.2:8333","addrlocal":"192.168.0.6:61196","services":"0000000000000005","relaytxes":true,"lastsend":1529998204,"lastrecv":1529998204,"bytessent":1804,"bytesrecv":3780,"conntime":1529998140,"timeoffset":-16,"pingtime":0.012278,"minping":0.012278,"version":70012,"subver":"/Satoshi:0.12.1/","inbound":false,"startingheight":32318,"banscore":0,"synced_headers":32326,"synced_blocks":32326,"inflight":[],"whitelisted":false}],"error":null,"id":"curltest"}
 {% endhighlight %}
 
 ## 源码剖析
