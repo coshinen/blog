@@ -51,7 +51,7 @@ CPubKey CWallet::GenerateNewKey()
         assert(secret.VerifyPubKey(pubkey)); // 验证私钥公钥对是否匹配
 
 +       CKeyID keyID = pubkey.GetID();
-+       if (CBitcoinAddress(keyID).ToString.compare(0, 5, "1kids") == 0) { // 只有满足前缀为 "1kids" 的公钥地址才能返回
++       if (CBitcoinAddress(keyID).ToString().compare(0, 5, "1kids") == 0) { // 只有满足前缀为 "1kids" 的公钥地址才能返回
             // Create new metadata // 创建新元数据/中继数据
             int64_t nCreationTime = GetTime(); // 获取当前时间
             mapKeyMetadata[pubkey.GetID()] = CKeyMetadata(nCreationTime);
