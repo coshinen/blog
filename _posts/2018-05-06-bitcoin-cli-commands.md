@@ -13,10 +13,10 @@ stickie: true
 目前比特币的最新版本为 bitcoin v0.16.0，离区块链 1.0 落地还有些距离。
 
 ## bitcoin-cli 命令行参数
-带有 JSON-RPC 接口的基于命令行的守护进程 bitcoind 与 Bicoin Core 绑定在一起。
+带有 JSON-RPC 接口的基于命令行的守护进程 `bitcoind` 与 Bicoin Core 绑定在一起。
 它也提供访问公共测试网 testnet，一个全球的测试环境，使用一个使用无价值的“测试比特币”替代区块链模仿比特币主网。
 回归测试网 regtest 或回归测试模式 Regression Test Mode 创建了一个用作本地测试环境的私有区块链。
-最终，一个允许用户发送 RPC 命令到 bitcoind 的简单程序 bitcoin-cli 也包含在比特币核心内。
+最终，一个允许用户发送 RPC 命令到 `bitcoind` 的简单程序 `bitcoin-cli` 也包含在比特币核心内。
 
 ### 基础命令
 
@@ -145,18 +145,18 @@ $ bitcoin-cli help # 获取以下 RPC 命令
 [`decoderawtransaction "hexstring"`](/2018/06/12/bitcoin-rpc-command-decoderawtransaction) # 解码原始交易<br>
 [`decodescript "hex"`](/2018/06/13/bitcoin-rpc-command-decodescript) # 解码脚本<br>
 [`fundrawtransaction "hexstring" includeWatching`](/2018/06/13/bitcoin-rpc-command-fundrawtransaction) # 资助原始交易<br>
-[`getrawtransaction "txid" ( verbose )`](/2018/06/12/bitcoin-rpc-command-getrawtransaction) # 获取原始交易（序列化、详细）信息<br>
+[`getrawtransaction "txid" ( verbose )`](/2018/06/12/bitcoin-rpc-command-getrawtransaction) # 获取原始交易信息<br>
 [`sendrawtransaction "hexstring" ( allowhighfees )`](/2018/06/13/bitcoin-rpc-command-sendrawtransaction) # 发送原始交易<br>
 [`signrawtransaction "hexstring" ( [{"txid":"id","vout":n,"scriptPubKey":"hex","redeemScript":"hex"},...] ["privatekey1",...] sighashtype )`](/2018/06/13/bitcoin-rpc-command-signrawtransaction) # 签名原始交易
 
 == Util ==<br>
 [`createmultisig nrequired ["key",...]`](/2018/06/15/bitcoin-rpc-command-createmultisig) # 创建多重签名<br>
-[`estimatefee nblocks`](/2018/06/15/bitcoin-rpc-command-estimatefee) # 预估交易费<br>
-[`estimatepriority nblocks`](/2018/06/15/bitcoin-rpc-command-estimatepriority) # 预估交易优先级<br>
+[`estimatefee nblocks`](/2018/06/15/bitcoin-rpc-command-estimatefee) # 估算交易费<br>
+[`estimatepriority nblocks`](/2018/06/15/bitcoin-rpc-command-estimatepriority) # 估算交易优先级<br>
 [`estimatesmartfee nblocks`](/2018/06/15/bitcoin-rpc-command-estimatesmartfee) # 智能估计交易费<br>
 [`estimatesmartpriority nblocks`](/2018/06/15/bitcoin-rpc-command-estimatesmartpriority) # 智能估计交易优先级<br>
 [`validateaddress "bitcoinaddress"`](/2018/06/15/bitcoin-rpc-command-validateaddress) # 验证地址<br>
-[`verifymessage "bitcoinaddress" "signature" "message"`](/2018/06/15/bitcoin-rpc-command-verifymessage) # 验证签名消息
+[`verifymessage "bitcoinaddress" "signature" "message"`](/2018/06/15/bitcoin-rpc-command-verifymessage) # 验证消息
 
 <font color="white">== Hidden ==</font>
 [<font color="white">invalidateblock</font>](/2018/06/14/bitcoin-rpc-command-invalidateblock) <font color="white"># 无效化区块</font><br>

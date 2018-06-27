@@ -14,15 +14,15 @@ categories: Blockchain
 ## 提示说明
 
 {% highlight shell %}
-createmultisig urequired ["key",...] # 创建一个需要 m 个密钥和 n 个签名的多重签名地址
+createmultisig urequired ["key",...] # 创建一个需要 m 个密钥的 n 个签名的多重签名地址
 {% endhighlight %}
 
 参数：<br>
-1. `nrequired` （数字型，必备）n 个密钥或地址所需的签名数量。<br>
+1. `nrequired` （数字，必备）n 个密钥或地址所需的签名数量。<br>
 2. `keys` （字符串，必备）一个比特币地址或 16 进制编码的公钥的 json 数组。
 {% highlight shell %}
      [
-       "key"    (string) bitcoin address or hex-encoded public key
+       "key"    （字符串）比特币地址或 16 进制编码的公钥
        ,...
      ]
 {% endhighlight %}
@@ -30,19 +30,33 @@ createmultisig urequired ["key",...] # 创建一个需要 m 个密钥和 n 个�
 结果：返回一个带有地址和赎回脚本的 json 对象。<br>
 {% highlight shell %}
 {
-  "address":"multisigaddress",  (string) The value of the new multisig address.
-  "redeemScript":"script"       (string) The string value of the hex-encoded redemption script.
+  "address":"multisigaddress",  （字符串）新的多签地址值
+  "redeemScript":"script"       （字符串）16 进制编码的赎回脚本的字符串值
 }
 {% endhighlight %}
 
 ## 用法示例
 
+### 比特币核心客户端
+
+从 2 个地址创建一个需要 2 个签名的多签地址。
+
 {% highlight shell %}
-$ bitcoin-cli createmultisig 2 "[\"1GNq8MGU7NTtd1qiYvee2Bc6bQyrfHTES9\",\"1BdH8FeKrGz7KMkbYhjPgJV1bzptxjPJwh\"]"
+$ bitcoin-cli getnewaddress
+16vpmdSDaX3Nv9UMuk2vSecMrdstjjSP4R
+$ bitcoin-cli getnewaddress
+1KfU9yv17ZSqMiX96hMDjys2oU2EBMrT9n
+$ bitcoin-cli createmultisig 2 "[\"16vpmdSDaX3Nv9UMuk2vSecMrdstjjSP4R\",\"1KfU9yv17ZSqMiX96hMDjys2oU2EBMrT9n\"]"
 {
-  "address": "3LGzrdg5AKoAKYrS2i2tZrxoUXjvnBUPmE",
-  "redeemScript": "522103a5be07c66c52ce107bff266bb4f8a341b9ceec1feb1fd087add498212ed117db2103a745cde140acc04d88c2a858f5a44fe4a806446c60d1273e29161477267b7c7d52ae"
+  "address": "3B3ozHj9C7b9nXRypCWJg7s5AdDphUsqHA",
+  "redeemScript": "522103da146818f8f3edb975287c53a0de7bd9066153be0818ce1c8fa996e83cd76fca2103abe35a69e0a8eb5e0cb2468b37418e9b9c44d25310a4c3815e3347849c4094c952ae"
 }
+{% endhighlight %}
+
+### cURL
+
+{% highlight shell %}
+暂无
 {% endhighlight %}
 
 ## 源码剖析

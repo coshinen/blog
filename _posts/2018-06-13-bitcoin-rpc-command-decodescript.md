@@ -18,105 +18,73 @@ decodescript "hex" # 解码一个 16 进制编码的脚本
 {% endhighlight %}
 
 参数：<br>
-1. `hex` （字符串，必备）16 进制编码的脚本，可以为空串 `""`。
+1. `hex` （字符串，必备）16 进制编码的脚本，可以为空 `""`。
 
 结果：<br>
 {% highlight shell %}
 {
-  "asm":"asm",   (string) Script public key
-  "hex":"hex",   (string) hex encoded public key
-  "type":"type", (string) The output type
-  "reqSigs": n,    (numeric) The required signatures
-  "addresses": [   (json array of string)
-     "address"     (string) bitcoin address
+  "asm":"asm",   （字符串）脚本公钥
+  "hex":"hex",   （字符串）16 进制编码的公钥
+  "type":"type", （字符串）输出类型
+  "reqSigs": n,    （数字）必备的签名
+  "addresses": [   （字符串类型的 json 数组）
+     "address"     （字符串）比特币地址
      ,...
   ],
-  "p2sh","address" (string) script address
+  "p2sh","address" （字符串）脚本地址
 }
 {% endhighlight %}
 
 ## 用法示例
 
-方法一：解锁指定交易的最后一个输出的脚本。
+### 比特币核心客户端
+
+方法一：解锁指定原始交易的输出的脚本。
 
 {% highlight shell %}
-$ bitcoin-cli getrawtransaction 1903ac0fefc0bd63f15cef083c714d7a19f049e617dcc15ea2d655f81bf3d118
+$ bitcoin-cli getrawtransaction 684f6ed5b6e127ba76c07ef4c3fcc02a02c7e2ccef9ed0d2cc16c2896159c746 1
 {
-  "hex": "01000000017708d09c30b24ee303ef9fbcf4990d160fcf62a56d5218d4df0cef7c47321b15000000006b483045022100841737a0cd634af22659dd8d663e7219863f49c4e151ccafa75656a79061f15202201f895c8ad9c2e576bd6efb9785248498a3f05da14d47f7fbd85e3f2e3057008e012102ef09fb034dc26337de85e77c6b519bfeb2500f2cd69ca4c0c34e5425144ffaa0feffffff03be410f00000000001976a9149dd5d8f38714a8b07a4e702777d445d388805ebd88acfe831e00000000001976a914a679db3ef39fe34161431507cba8b579ba90281388acc0cf6a00000000001976a9149e0342205ce74dc6bb782d99b3269826e8d655b488acaa1a0100",
-  "txid": "1903ac0fefc0bd63f15cef083c714d7a19f049e617dcc15ea2d655f81bf3d118",
-  "size": 260,
+  "hex": "0100000001677e3c8d416184b42c753a8446f17b0b7997f0df7149449fbd0aef3cdfd29bfb000000006b4830450221009b29490f5e1709bc3cce16c6433a0b8895add5a9d3c2fa63da11da065105ad59022022d068337cd3b20be04513e539f0bbbb5319ed1b3a3a8ec6262a30a8bd393b3d012103583eb3acb7f0b9c431d97a4872a270f4e519fbca0ec519adf16764c663e36546ffffffff0140420f00000000001976a914e221b8a504199bec7c5fe8081edd011c3653118288ac00000000",
+  "txid": "684f6ed5b6e127ba76c07ef4c3fcc02a02c7e2ccef9ed0d2cc16c2896159c746",
+  "size": 192,
   "version": 1,
-  "locktime": 72362,
+  "locktime": 0,
   "vin": [
     {
-      "txid": "151b32477cef0cdfd418526da562cf0f160d99f4bc9fef03e34eb2309cd00877",
+      "txid": "fb9bd2df3cef0abd9f444971dff097790b7bf146843a752cb48461418d3c7e67",
       "vout": 0,
       "scriptSig": {
-        "asm": "3045022100841737a0cd634af22659dd8d663e7219863f49c4e151ccafa75656a79061f15202201f895c8ad9c2e576bd6efb9785248498a3f05da14d47f7fbd85e3f2e3057008e[ALL] 02ef09fb034dc26337de85e77c6b519bfeb2500f2cd69ca4c0c34e5425144ffaa0",
-        "hex": "483045022100841737a0cd634af22659dd8d663e7219863f49c4e151ccafa75656a79061f15202201f895c8ad9c2e576bd6efb9785248498a3f05da14d47f7fbd85e3f2e3057008e012102ef09fb034dc26337de85e77c6b519bfeb2500f2cd69ca4c0c34e5425144ffaa0"
+        "asm": "30450221009b29490f5e1709bc3cce16c6433a0b8895add5a9d3c2fa63da11da065105ad59022022d068337cd3b20be04513e539f0bbbb5319ed1b3a3a8ec6262a30a8bd393b3d[ALL] 03583eb3acb7f0b9c431d97a4872a270f4e519fbca0ec519adf16764c663e36546",
+        "hex": "4830450221009b29490f5e1709bc3cce16c6433a0b8895add5a9d3c2fa63da11da065105ad59022022d068337cd3b20be04513e539f0bbbb5319ed1b3a3a8ec6262a30a8bd393b3d012103583eb3acb7f0b9c431d97a4872a270f4e519fbca0ec519adf16764c663e36546"
       },
-      "sequence": 4294967294
+      "sequence": 4294967295
     }
   ],
   "vout": [
     {
-      "value": 0.00999870,
-      "valueSat": 999870,
+      "value": 0.01000000,
       "n": 0,
       "scriptPubKey": {
-        "asm": "OP_DUP OP_HASH160 9dd5d8f38714a8b07a4e702777d445d388805ebd OP_EQUALVERIFY OP_CHECKSIG",
-        "hex": "76a9149dd5d8f38714a8b07a4e702777d445d388805ebd88ac",
+        "asm": "OP_DUP OP_HASH160 e221b8a504199bec7c5fe8081edd011c36531182 OP_EQUALVERIFY OP_CHECKSIG",
+        "hex": "76a914e221b8a504199bec7c5fe8081edd011c3653118288ac",
         "reqSigs": 1,
         "type": "pubkeyhash",
         "addresses": [
-          "1k6P9NNcWpqPR3CPz7i59doBeBMwepy7yD"
-        ]
-      }
-    }, 
-    {
-      "value": 0.01999870,
-      "valueSat": 1999870,
-      "n": 1,
-      "scriptPubKey": {
-        "asm": "OP_DUP OP_HASH160 a679db3ef39fe34161431507cba8b579ba902813 OP_EQUALVERIFY OP_CHECKSIG",
-        "hex": "76a914a679db3ef39fe34161431507cba8b579ba90281388ac",
-        "reqSigs": 1,
-        "type": "pubkeyhash",
-        "addresses": [
-          "1kt52SrJRMausYSQnsfQBCiYcJKxUdNvBB"
-        ]
-      }
-    }, 
-    {
-      "value": 0.07000000,
-      "valueSat": 7000000,
-      "n": 2,
-      "scriptPubKey": {
-        "asm": "OP_DUP OP_HASH160 9e0342205ce74dc6bb782d99b3269826e8d655b4 OP_EQUALVERIFY OP_CHECKSIG",
-        "hex": "76a9149e0342205ce74dc6bb782d99b3269826e8d655b488ac",
-        "reqSigs": 1,
-        "type": "pubkeyhash",
-        "addresses": [
-          "1k7KYa17GZqhpeKEPjp6DMn11EdoGnyGeF"
+          "1Mcg7MDBD38sSScsX3USbsCnkcMbPnLyTV"
         ]
       }
     }
-  ],
-  "blockhash": "000059ac90cf7439ea8186e4f4d35f349fe878c4723cde7ff18c66a8e33f1b73",
-  "height": 72366,
-  "confirmations": 10249,
-  "time": 1528451744,
-  "blocktime": 1528451744
+  ]
 }
-$ bitcoin-cli decodescript 76a9149e0342205ce74dc6bb782d99b3269826e8d655b488ac
+$ bitcoin-cli decodescript 76a914e221b8a504199bec7c5fe8081edd011c3653118288ac
 {
-  "asm": "OP_DUP OP_HASH160 9e0342205ce74dc6bb782d99b3269826e8d655b4 OP_EQUALVERIFY OP_CHECKSIG",
+  "asm": "OP_DUP OP_HASH160 e221b8a504199bec7c5fe8081edd011c36531182 OP_EQUALVERIFY OP_CHECKSIG",
   "reqSigs": 1,
   "type": "pubkeyhash",
   "addresses": [
-    "1k7KYa17GZqhpeKEPjp6DMn11EdoGnyGeF"
+    "1Mcg7MDBD38sSScsX3USbsCnkcMbPnLyTV"
   ],
-  "p2sh": "7pDif9xH8YRFG1VjFGXym3cNkGG5HEKMBm"
+  "p2sh": "37HPRCgvC7gKoVr9zPma7vboRGikgzEoJG"
 }
 {% endhighlight %}
 
@@ -127,8 +95,15 @@ $ bitcoin-cli decodescript ""
 {
   "asm": "",
   "type": "nonstandard",
-  "p2sh": "7irmiCnz3YCgC9JNCLK8CAyNSQdDFWLMGM"
+  "p2sh": "3J98t1WpEZ73CNmQviecrnyiWrnqRhWNLy"
 }
+{% endhighlight %}
+
+### cURL
+
+{% highlight C++ %}
+$ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "decodescript", "params": ["76a914e221b8a504199bec7c5fe8081edd011c3653118288ac"] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
+{"result":{"asm":"OP_DUP OP_HASH160 e221b8a504199bec7c5fe8081edd011c36531182 OP_EQUALVERIFY OP_CHECKSIG","reqSigs":1,"type":"pubkeyhash","addresses":["1Mcg7MDBD38sSScsX3USbsCnkcMbPnLyTV"],"p2sh":"37HPRCgvC7gKoVr9zPma7vboRGikgzEoJG"},"error":null,"id":"curltest"}
 {% endhighlight %}
 
 ## 源码剖析

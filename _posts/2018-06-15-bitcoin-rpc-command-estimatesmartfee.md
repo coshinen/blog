@@ -14,19 +14,19 @@ categories: Blockchain
 ## 提示说明
 
 {% highlight shell %}
-estimatesmartfee nblocks # 估计交易在 nblocks 个区块开始确认的每千字节的大致交易费用，如果可能则返回估计有效的区块数
+estimatesmartfee nblocks # 估计交易在 `nblocks` 个区块开始确认的每千字节的大致费用，如果可能则返回估计有效的区块数
 {% endhighlight %}
 
 **警告：该接口不稳定且可能消失或改变！**
 
 参数：<br>
-1. `nblocks` （数字型）区块数量。
+1. `nblocks` （数字）区块数。
 
 结果：<br>
 {% highlight shell %}
 {
-  "feerate" : x.x,     (numeric) estimate fee-per-kilobyte (in BTC)
-  "blocks" : n         (numeric) block number where estimate was found
+  "feerate" : x.x,     （数字）估算每千字节的交易费（以 BTC 为单位）
+  "blocks" : n         （数字）估计被找到的区块数
 }
 {% endhighlight %}
 
@@ -35,12 +35,23 @@ estimatesmartfee nblocks # 估计交易在 nblocks 个区块开始确认的每�
 
 ## 用法示例
 
+### 比特币核心客户端
+
+估算交易经 6 个区块确认所需的每千字节的交易费，并获取估算时找到的区块数。
+
 {% highlight shell %}
 $ bitcoin-cli estimatesmartfee 6
 {
   "feerate": -1,
   "blocks": 25
 }
+{% endhighlight %}
+
+### cURL
+
+{% highlight shell %}
+$ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "estimatesmartfee", "params": [6] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
+{"result":{"feerate":-1,"blocks":25},"error":null,"id":"curltest"}
 {% endhighlight %}
 
 ## 源码剖析

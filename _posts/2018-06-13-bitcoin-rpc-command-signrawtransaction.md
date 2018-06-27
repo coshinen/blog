@@ -14,34 +14,34 @@ categories: Blockchain
 ## 提示说明
 
 {% highlight shell %}
-signrawtransaction "hexstring" ( [{"txid":"id","vout":n,"scriptPubKey":"hex","redeemScript":"hex"},...] ["privatekey1",...] sighashtype ) # 为（序列化的，16 进制编码的）原始交易的输入签名
+signrawtransaction "hexstring" ( [{"txid":"id","vout":n,"scriptPubKey":"hex","redeemScript":"hex"},...] ["privatekey1",...] sighashtype ) # 对（序列化的，16 进制编码的）原始交易的输入签名
 {% endhighlight %}
 
-**第二个可选的参数（可能为空）是该交易所依赖的前一笔交易输出数组，但它可能还没上链。<br>
-第三个可选的参数（可能为空）是一个 base58 编码的私钥数组，如果指定，它将是签名交易的唯一私钥。**
+**第二个可选的参数（可能为空）是该交易所依赖的前一笔交易输出数组，但该交易可能还没上链。<br>
+第三个可选的参数（可能为空）是一个 base58 编码的私钥数组，如果指定，它将是签名该交易的唯一私钥。**
 
 参数：<br>
-1.`hexstring` （字符串，必备）交易的额 16 进制字符串。<br>
+1.`hexstring` （字符串，必备）交易的 16 进制字符串。<br>
 2.`prevtxs` （字符串，可选）依赖的前一笔交易输出的 json 数组。<br>
 {% highlight shell %}
-     [               (json array of json objects, or 'null' if none provided)
+     [               （json 对象的 json 数组，若未提供则为空）
        {
-         "txid":"id",             (string, required) The transaction id
-         "vout":n,                  (numeric, required) The output number
-         "scriptPubKey": "hex",   (string, required) script key
-         "redeemScript": "hex"    (string, required for P2SH) redeem script
+         "txid":"id",             （字符串，必备）交易索引
+         "vout":n,                  （数字，必备）输出序号
+         "scriptPubKey": "hex",   （字符串，必备）脚本公钥
+         "redeemScript": "hex"    （字符串，对于 P2SH 必备）赎回脚本
        }
        ,...
     ]
 {% endhighlight %}
 3.`privatekeys` （字符串，可选）用于签名的 base58 编码的私钥组成的 json 数组。<br>
 {% highlight shell %}
-    [                  (json array of strings, or 'null' if none provided)
-      "privatekey"   (string) private key in base58-encoding
+    [                  （字符串 json 数组，若未提供则为空）
+      "privatekey"   （字符串）base58 编码的私钥
       ,...
     ]
 {% endhighlight %}
-4.`sighashtype` （字符串，可选，默认为 ALL）签名哈希类型。必须使以下之一：
+4.`sighashtype` （字符串，可选，默认为 ALL）签名哈希类型。必须是下列中的一个：
 {% highlight shell %}
        "ALL"
        "NONE"
@@ -54,15 +54,15 @@ signrawtransaction "hexstring" ( [{"txid":"id","vout":n,"scriptPubKey":"hex","re
 结果：<br>
 {% highlight shell %}
 {
-  "hex" : "value",           (string) The hex-encoded raw transaction with signature(s)
-  "complete" : true|false,   (boolean) If the transaction has a complete set of signatures
-  "errors" : [                 (json array of objects) Script verification errors (if there are any)
+  "hex" : "value",           （字符串）16 进制编码的带签名的原始交易
+  "complete" : true|false,   （布尔型）交易是否有一个完整的签名集
+  "errors" : [                 （json 对象数组）脚本验证错误（如果有）
     {
-      "txid" : "hash",           (string) The hash of the referenced, previous transaction
-      "vout" : n,                (numeric) The index of the output to spent and used as input
-      "scriptSig" : "hex",       (string) The hex-encoded signature script
-      "sequence" : n,            (numeric) Script sequence number
-      "error" : "text"           (string) Verification or signing error related to the input
+      "txid" : "hash",           （字符串）参照的前一笔交易的哈希
+      "vout" : n,                （数字）用于作为输入花费的输出索引/序号
+      "scriptSig" : "hex",       （字符串）16 进制编码的签名脚本
+      "sequence" : n,            （数字）脚本序列号
+      "error" : "text"           （字符串）关于输入的验证或签名错误
     }
     ,...
   ]
@@ -71,14 +71,26 @@ signrawtransaction "hexstring" ( [{"txid":"id","vout":n,"scriptPubKey":"hex","re
 
 ## 用法示例
 
+### 比特币核心客户端
+
+对已创建的原始交易进行签名。<br>
+原始交易的创建见 [`createrawtransaction`](/2018/06/13/bitcoin-rpc-command-createrawtransaction)。
+
 {% highlight shell %}
-$ bitcoin-cli createrawtransaction "[{\"txid\":\"9db0a0580f5483c634bd549f1c2e4e6f7881b3e52b84ee5cad2431c13e3e916e\",\"vout\":0}]" "{\"1kX6dhUWqaEZjhvqVnyLTiMGjCm8R5sgLS\":0.01}"
-01000000016e913e3ec13124ad5cee842be5b381786f4e2e1c9f54bd34c683540f58a0b09d0000000000ffffffff0140420f00000000001976a914a282769e3b2aa722dbcb2c04219893a35520d02588ac00000000
-$ bitcoin-cli signrawtransaction 01000000016e913e3ec13124ad5cee842be5b381786f4e2e1c9f54bd34c683540f58a0b09d0000000000ffffffff0140420f00000000001976a914a282769e3b2aa722dbcb2c04219893a35520d02588ac00000000
+$ bitcoin-cli createrawtransaction "[{\"txid\":\"fb9bd2df3cef0abd9f444971dff097790b7bf146843a752cb48461418d3c7e67\",\"vout\":0}]" "{\"1Mcg7MDBD38sSScsX3USbsCnkcMbPnLyTV\":0.01}"
+0100000001677e3c8d416184b42c753a8446f17b0b7997f0df7149449fbd0aef3cdfd29bfb0000000000ffffffff0140420f00000000001976a914e221b8a504199bec7c5fe8081edd011c3653118288ac00000000
+$ bitcoin-cli signrawtransaction 0100000001677e3c8d416184b42c753a8446f17b0b7997f0df7149449fbd0aef3cdfd29bfb0000000000ffffffff0140420f00000000001976a914e221b8a504199bec7c5fe8081edd011c3653118288ac00000000
 {
-  "hex": "01000000016e913e3ec13124ad5cee842be5b381786f4e2e1c9f54bd34c683540f58a0b09d000000006b483045022100b66be9e04de6b0846a4e3cd08f327789f1607980e851e8b6a8cfca4428697c0b022036fa51060ca8d6b275dbdb753c322a171abce50ca17321448574867e518ab6e0012102ef09fb034dc26337de85e77c6b519bfeb2500f2cd69ca4c0c34e5425144ffaa0ffffffff0140420f00000000001976a914a282769e3b2aa722dbcb2c04219893a35520d02588ac00000000",
+  "hex": "0100000001677e3c8d416184b42c753a8446f17b0b7997f0df7149449fbd0aef3cdfd29bfb000000006b4830450221009b29490f5e1709bc3cce16c6433a0b8895add5a9d3c2fa63da11da065105ad59022022d068337cd3b20be04513e539f0bbbb5319ed1b3a3a8ec6262a30a8bd393b3d012103583eb3acb7f0b9c431d97a4872a270f4e519fbca0ec519adf16764c663e36546ffffffff0140420f00000000001976a914e221b8a504199bec7c5fe8081edd011c3653118288ac00000000",
   "complete": true
 }
+{% endhighlight %}
+
+### cURL
+
+{% highlight shell %}
+$ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "signrawtransaction", "params": ["0100000001677e3c8d416184b42c753a8446f17b0b7997f0df7149449fbd0aef3cdfd29bfb0000000000ffffffff0140420f00000000001976a914e221b8a504199bec7c5fe8081edd011c3653118288ac00000000"] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
+{"result":{"hex":"0100000001677e3c8d416184b42c753a8446f17b0b7997f0df7149449fbd0aef3cdfd29bfb000000006b4830450221009b29490f5e1709bc3cce16c6433a0b8895add5a9d3c2fa63da11da065105ad59022022d068337cd3b20be04513e539f0bbbb5319ed1b3a3a8ec6262a30a8bd393b3d012103583eb3acb7f0b9c431d97a4872a270f4e519fbca0ec519adf16764c663e36546ffffffff0140420f00000000001976a914e221b8a504199bec7c5fe8081edd011c3653118288ac00000000","complete":true},"error":null,"id":"curltest"}
 {% endhighlight %}
 
 ## 源码剖析

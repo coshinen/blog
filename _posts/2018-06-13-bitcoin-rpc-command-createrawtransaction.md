@@ -14,7 +14,7 @@ categories: Blockchain
 ## 提示说明
 
 {% highlight shell %}
-createrawtransaction [{"txid":"id","vout":n},...] {"address":amount,"data":"hex",...} ( locktime ) # 基于输入和创建新的输出创建一笔交易
+createrawtransaction [{"txid":"id","vout":n},...] {"address":amount,"data":"hex",...} ( locktime ) # 基于输入和创建新的输出创建一笔交易花费
 {% endhighlight %}
 
 **输出可以是地址集或数据。<br>
@@ -22,43 +22,105 @@ createrawtransaction [{"txid":"id","vout":n},...] {"address":amount,"data":"hex"
 注：交易的输入没有签名，且该交易不会存储在钱包或传输到网络中。**
 
 参数：<br>
-1.`transactions` （字符串，必备）一个 JSON 对象 JSON 数组。<br>
+1.`transactions` （字符串，必备）一个 json 对象的 json 数组。<br>
 {% highlight shell %}
      [
        {
-         "txid":"id",    (string, required) The transaction id
-         "vout":n        (numeric, required) The output number
+         "txid":"id",    （字符串，必备）交易索引
+         "vout":n        （数字，必备）输出序号/索引
        }
        ,...
      ]
 {% endhighlight %}
-2.`outputs` （字符串，必备）一个输出的 JSON 对象。<br>
+2.`outputs` （字符串，必备）一个输出的 json 对象。<br>
 {% highlight shell %}
     {
-      "address": x.xxx   (numeric or string, required) The key is the bitcoin address, the numeric value (can be string) is the BTC amount
-      "data": "hex",     (string, required) The key is "data", the value is hex encoded data
+      "address": x.xxx   （数字或字符串，必备）比特币地址，以 BTC 为单位的数字类型（可以是字符串）金额
+      "data": "hex",     （字符串，必备）“数据”，该值是 16 进制编码的数据
       ...
     }
 {% endhighlight %}
-3.`locktime` （数字型，可选，默认为 0）原始锁定时间。非 0 值也可以激活输入的锁定时间。
+3.`locktime` （数字，可选，默认为 0）原始锁定时间。非 0 值也可以激活输入的锁定时间。
 
-结果：（字符串）返回 16 进制交易索引字符串。
+结果：（字符串）返回 16 进制编码的交易索引字符串。
 
 ## 用法示例
 
+### 比特币核心客户端
+
 方法一：指定输入（交易索引和 UTXO 序号）和输出（地址和金额）创建一笔原始交易。<br>
-**注：这里没有指定找零地址和金额，所以输入和输出的差会全部作为交易费。**
+这里的输入即一笔未花费的输出所在的交易索引和输出序号，通过 [`listunspent`](/2018/06/05/bitcoin-rpc-command-listunspent) 获取 UTXO。<br>
+创建原始交易完成后，通过 [`decoderawtransaction`](/2018/06/12/bitcoin-rpc-command-decoderawtransaction) 解码获取该原始交易的详细信息。
 
 {% highlight shell %}
-$ bitcoin-cli createrawtransaction "[{\"txid\":\"9db0a0580f5483c634bd549f1c2e4e6f7881b3e52b84ee5cad2431c13e3e916e\",\"vout\":0}]" "{\"1kX6dhUWqaEZjhvqVnyLTiMGjCm8R5sgLS\":0.01}"
-01000000016e913e3ec13124ad5cee842be5b381786f4e2e1c9f54bd34c683540f58a0b09d0000000000ffffffff0140420f00000000001976a914a282769e3b2aa722dbcb2c04219893a35520d02588ac00000000
+$ bitcoin-cli listunspent
+[
+  ...
+  {
+    "txid": "fb9bd2df3cef0abd9f444971dff097790b7bf146843a752cb48461418d3c7e67",
+    "vout": 0,
+    "address": "1NQcq6VbVu5qRFaKe1YvNPx43Ye22WBYM7",
+    "account": "",
+    "scriptPubKey": "76a914ead21e07ca90f1d1d8a29440a68f070cdd2c8e1588ac",
+    "amount": 1.00000000,
+    "confirmations": 3660,
+    "spendable": true
+  }, 
+  ...
+]
+$ bitcoin-cli getnewaddress
+1Mcg7MDBD38sSScsX3USbsCnkcMbPnLyTV
+$ bitcoin-cli createrawtransaction "[{\"txid\":\"fb9bd2df3cef0abd9f444971dff097790b7bf146843a752cb48461418d3c7e67\",\"vout\":0}]" "{\"1Mcg7MDBD38sSScsX3USbsCnkcMbPnLyTV\":0.01}"
+0100000001677e3c8d416184b42c753a8446f17b0b7997f0df7149449fbd0aef3cdfd29bfb0000000000ffffffff0140420f00000000001976a914e221b8a504199bec7c5fe8081edd011c3653118288ac00000000
+$ bitcoin-cli decoderawtransaction 0100000001677e3c8d416184b42c753a8446f17b0b7997f0df7149449fbd0aef3cdfd29bfb0000000000ffffffff0140420f00000000001976a914e221b8a504199bec7c5fe8081edd011c3653118288ac00000000
+{
+  "txid": "6d5ea131dd69b0a04950cfd95b94412c3f3c70ec57f8558d9986946a37b3958e",
+  "size": 85,
+  "version": 1,
+  "locktime": 0,
+  "vin": [
+    {
+      "txid": "fb9bd2df3cef0abd9f444971dff097790b7bf146843a752cb48461418d3c7e67",
+      "vout": 0,
+      "scriptSig": {
+        "asm": "",
+        "hex": ""
+      },
+      "sequence": 4294967295
+    }
+  ],
+  "vout": [
+    {
+      "value": 0.01000000,
+      "n": 0,
+      "scriptPubKey": {
+        "asm": "OP_DUP OP_HASH160 e221b8a504199bec7c5fe8081edd011c36531182 OP_EQUALVERIFY OP_CHECKSIG",
+        "hex": "76a914e221b8a504199bec7c5fe8081edd011c3653118288ac",
+        "reqSigs": 1,
+        "type": "pubkeyhash",
+        "addresses": [
+          "1Mcg7MDBD38sSScsX3USbsCnkcMbPnLyTV"
+        ]
+      }
+    }
+  ]
+}
 {% endhighlight %}
 
-方法二：指定 data 类型的输出，data value 来源暂无。
+**注：这里没有指定找零地址和金额，所以输入和输出之差会全部作为交易费。<br>
+使用 [`fundrawtransaction`](/2018/06/13/bitcoin-rpc-command-fundrawtransaction) 增加找零输出。**
+
+方法二：指定 data 类型的输出，data value 来源暂无，这里使用官方用例 "00010203"。
 
 {% highlight C++ %}
-$ bitcoin-cli createrawtransaction "[{\"txid\":\"9db0a0580f5483c634bd549f1c2e4e6f7881b3e52b84ee5cad2431c13e3e916e\",\"vout\":0}]" "{\"data\":\"00010203\"}"
+$ bitcoin-cli createrawtransaction "[{\"txid\":\"fb9bd2df3cef0abd9f444971dff097790b7bf146843a752cb48461418d3c7e67\",\"vout\":0}]" "{\"data\":\"00010203\"}"
 01000000016e913e3ec13124ad5cee842be5b381786f4e2e1c9f54bd34c683540f58a0b09d0000000000ffffffff010000000000000000066a040001020300000000
+{% endhighlight %}
+
+### cURL
+
+{% highlight C++ %}
+暂无
 {% endhighlight %}
 
 ## 源码剖析

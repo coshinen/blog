@@ -23,51 +23,218 @@ sendrawtransaction "hexstring" ( allowhighfees ) # 把（序列化的，16 进�
 1. `hexstring` （字符串，必备）原始交易的 16 进制字符串。<br>
 2. `allowhighfees` （布尔型，可选，默认为 false）允许交易费超额。
 
-结果：（字符串）返回 16 进制交易索引字符串。
+结果：（字符串）返回 16 进制编码的交易。
 
 ## 用法示例
 
+### 比特币核心客户端
+
+构造一笔交易并发送流程：<br>
+1. 使用 [`createrawtransaction`](/2018/06/13/bitcoin-rpc-command-createrawtransaction) 创建一笔原始交易，注意找零。<br>
+2. 若创建原始交易时为指定找零，使用 [`fundrawtransaction`](/2018/06/13/bitcoin-rpc-command-fundrawtransaction) 增加找零输出。<br>
+3. 使用 [`signrawtransaction`](/2018/06/13/bitcoin-rpc-command-signrawtransaction) 对创建的原始交易进行签名。<br>
+4. 使用该命令提交完成签名的原始交易（放入本地节点的内存池并进行交易广播）。<br>
+5. 使用 [`getrawtransaction`](/2018/06/12/bitcoin-rpc-command-getrawtransaction) 查看提交到内存池中的原始交易，
+或使用 [`gettransaction`](/2018/06/07/bitcoin-rpc-command-gettransaction) 查看。
+
 {% highlight shell %}
-$ bitcoin-cli createrawtransaction "[{\"txid\":\"9db0a0580f5483c634bd549f1c2e4e6f7881b3e52b84ee5cad2431c13e3e916e\",\"vout\":0}]" "{\"1kX6dhUWqaEZjhvqVnyLTiMGjCm8R5sgLS\":0.01}"
-01000000016e913e3ec13124ad5cee842be5b381786f4e2e1c9f54bd34c683540f58a0b09d0000000000ffffffff0140420f00000000001976a914a282769e3b2aa722dbcb2c04219893a35520d02588ac00000000
-$ bitcoin-cli signrawtransaction 01000000016e913e3ec13124ad5cee842be5b381786f4e2e1c9f54bd34c683540f58a0b09d0000000000ffffffff0140420f00000000001976a914a282769e3b2aa722dbcb2c04219893a35520d02588ac00000000
+$ bitcoin-cli createrawtransaction "[{\"txid\":\"fb9bd2df3cef0abd9f444971dff097790b7bf146843a752cb48461418d3c7e67\",\"vout\":0}]" "{\"1Mcg7MDBD38sSScsX3USbsCnkcMbPnLyTV\":0.01}"
+0100000001677e3c8d416184b42c753a8446f17b0b7997f0df7149449fbd0aef3cdfd29bfb0000000000ffffffff0140420f00000000001976a914e221b8a504199bec7c5fe8081edd011c3653118288ac00000000
+$ bitcoin-cli decoderawtransaction 0100000001677e3c8d416184b42c753a8446f17b0b7997f0df7149449fbd0aef3cdfd29bfb0000000000ffffffff0140420f00000000001976a914e221b8a504199bec7c5fe8081edd011c3653118288ac00000000
 {
-  "hex": "01000000016e913e3ec13124ad5cee842be5b381786f4e2e1c9f54bd34c683540f58a0b09d000000006b483045022100b66be9e04de6b0846a4e3cd08f327789f1607980e851e8b6a8cfca4428697c0b022036fa51060ca8d6b275dbdb753c322a171abce50ca17321448574867e518ab6e0012102ef09fb034dc26337de85e77c6b519bfeb2500f2cd69ca4c0c34e5425144ffaa0ffffffff0140420f00000000001976a914a282769e3b2aa722dbcb2c04219893a35520d02588ac00000000",
-  "complete": true
-}
-$ bitcoin-cli sendrawtransaction 01000000016e913e3ec13124ad5cee842be5b381786f4e2e1c9f54bd34c683540f58a0b09d000000006b483045022100b66be9e04de6b0846a4e3cd08f327789f1607980e851e8b6a8cfca4428697c0b022036fa51060ca8d6b275dbdb753c322a171abce50ca17321448574867e518ab6e0012102ef09fb034dc26337de85e77c6b519bfeb2500f2cd69ca4c0c34e5425144ffaa0ffffffff0140420f00000000001976a914a282769e3b2aa722dbcb2c04219893a35520d02588ac00000000 true
-dd9dff9d384040a86157d4b77f1593349f7af64e48200b675b806931d398238d
-$ bitcoin-cli gettransaction dd9dff9d384040a86157d4b77f1593349f7af64e48200b675b806931d398238d
-{
-  "amount": -0.01000000,
-  "fee": -0.09000000,
-  "confirmations": 23,
-  "instantlock": false,
-  "blockhash": "00004da226953d28c7fabbf792b6131ac2cd6cc08b24cf73ae1e21ef6464b44a",
-  "blockindex": 1,
-  "blocktime": 1528860704,
-  "txid": "dd9dff9d384040a86157d4b77f1593349f7af64e48200b675b806931d398238d",
-  "walletconflicts": [
-  ],
-  "time": 1528860702,
-  "timereceived": 1528860702,
-  "bip125-replaceable": "no",
-  "details": [
+  "txid": "6d5ea131dd69b0a04950cfd95b94412c3f3c70ec57f8558d9986946a37b3958e",
+  "size": 85,
+  "version": 1,
+  "locktime": 0,
+  "vin": [
     {
-      "account": "",
-      "address": "1kX6dhUWqaEZjhvqVnyLTiMGjCm8R5sgLS",
-      "category": "send",
-      "amount": -0.01000000,
+      "txid": "fb9bd2df3cef0abd9f444971dff097790b7bf146843a752cb48461418d3c7e67",
       "vout": 0,
-      "fee": -0.09000000,
-      "abandoned": false
+      "scriptSig": {
+        "asm": "",
+        "hex": ""
+      },
+      "sequence": 4294967295
     }
   ],
-  "hex": "01000000016e913e3ec13124ad5cee842be5b381786f4e2e1c9f54bd34c683540f58a0b09d000000006b483045022100b66be9e04de6b0846a4e3cd08f327789f1607980e851e8b6a8cfca4428697c0b022036fa51060ca8d6b275dbdb753c322a171abce50ca17321448574867e518ab6e0012102ef09fb034dc26337de85e77c6b519bfeb2500f2cd69ca4c0c34e5425144ffaa0ffffffff0140420f00000000001976a914a282769e3b2aa722dbcb2c04219893a35520d02588ac00000000"
+  "vout": [
+    {
+      "value": 0.01000000,
+      "n": 0,
+      "scriptPubKey": {
+        "asm": "OP_DUP OP_HASH160 e221b8a504199bec7c5fe8081edd011c36531182 OP_EQUALVERIFY OP_CHECKSIG",
+        "hex": "76a914e221b8a504199bec7c5fe8081edd011c3653118288ac",
+        "reqSigs": 1,
+        "type": "pubkeyhash",
+        "addresses": [
+          "1Mcg7MDBD38sSScsX3USbsCnkcMbPnLyTV"
+        ]
+      }
+    }
+  ]
+}
+$ bitcoin-cli fundrawtransaction 0100000001677e3c8d416184b42c753a8446f17b0b7997f0df7149449fbd0aef3cdfd29bfb0000000000ffffffff0140420f00000000001976a914e221b8a504199bec7c5fe8081edd011c3653118288ac00000000
+{
+  "hex": "0100000001677e3c8d416184b42c753a8446f17b0b7997f0df7149449fbd0aef3cdfd29bfb0000000000ffffffff02188de605000000001976a91441068d02c7c981b7a7ac4f4c2f28b480a76a66c188ac40420f00000000001976a914e221b8a504199bec7c5fe8081edd011c3653118288ac00000000",
+  "changepos": 0,
+  "fee": 0.00004520
+}
+$ bitcoin-cli decoderawtransaction 0100000001677e3c8d416184b42c753a8446f17b0b7997f0df7149449fbd0aef3cdfd29bfb0000000000ffffffff02188de605000000001976a91441068d02c7c981b7a7ac4f4c2f28b480a76a66c188ac40420f00000000001976a914e221b8a504199bec7c5fe8081edd011c3653118288ac00000000
+{
+  "txid": "485299c36c68d8e231219ff195d3bf5e4ed3c91f7fbe427bd8d2930da81bc771",
+  "size": 119,
+  "version": 1,
+  "locktime": 0,
+  "vin": [
+    {
+      "txid": "fb9bd2df3cef0abd9f444971dff097790b7bf146843a752cb48461418d3c7e67",
+      "vout": 0,
+      "scriptSig": {
+        "asm": "",
+        "hex": ""
+      },
+      "sequence": 4294967295
+    }
+  ],
+  "vout": [
+    {
+      "value": 0.98995480,
+      "n": 0,
+      "scriptPubKey": {
+        "asm": "OP_DUP OP_HASH160 41068d02c7c981b7a7ac4f4c2f28b480a76a66c1 OP_EQUALVERIFY OP_CHECKSIG",
+        "hex": "76a91441068d02c7c981b7a7ac4f4c2f28b480a76a66c188ac",
+        "reqSigs": 1,
+        "type": "pubkeyhash",
+        "addresses": [
+          "16vpmdSDaX3Nv9UMuk2vSecMrdstjjSP4R"
+        ]
+      }
+    }, 
+    {
+      "value": 0.01000000,
+      "n": 1,
+      "scriptPubKey": {
+        "asm": "OP_DUP OP_HASH160 e221b8a504199bec7c5fe8081edd011c36531182 OP_EQUALVERIFY OP_CHECKSIG",
+        "hex": "76a914e221b8a504199bec7c5fe8081edd011c3653118288ac",
+        "reqSigs": 1,
+        "type": "pubkeyhash",
+        "addresses": [
+          "1Mcg7MDBD38sSScsX3USbsCnkcMbPnLyTV"
+        ]
+      }
+    }
+  ]
+}
+$ bitcoin-cli signrawtransaction 0100000001677e3c8d416184b42c753a8446f17b0b7997f0df7149449fbd0aef3cdfd29bfb0000000000ffffffff02188de605000000001976a91441068d02c7c981b7a7ac4f4c2f28b480a76a66c188ac40420f00000000001976a914e221b8a504199bec7c5fe8081edd011c3653118288ac00000000
+{
+  "hex": "0100000001677e3c8d416184b42c753a8446f17b0b7997f0df7149449fbd0aef3cdfd29bfb000000006b483045022100ff991e45fc4f055734d27613a539372c83ca1ff409c34ea2afe586589660a2d2022042f9fc2709e976195c73ee76d8e7a5b78eca054d0f3d25074df5490241bd4c38012103583eb3acb7f0b9c431d97a4872a270f4e519fbca0ec519adf16764c663e36546ffffffff02188de605000000001976a91441068d02c7c981b7a7ac4f4c2f28b480a76a66c188ac40420f00000000001976a914e221b8a504199bec7c5fe8081edd011c3653118288ac00000000",
+  "complete": true
+}
+$ bitcoin-cli decoderawtransaction 0100000001677e3c8d416184b42c753a8446f17b0b7997f0df7149449fbd0aef3cdfd29bfb000000006b483045022100ff991e45fc4f055734d27613a539372c83ca1ff409c34ea2afe586589660a2d2022042f9fc2709e976195c73ee76d8e7a5b78eca054d0f3d25074df5490241bd4c38012103583eb3acb7f0b9c431d97a4872a270f4e519fbca0ec519adf16764c663e36546ffffffff02188de605000000001976a91441068d02c7c981b7a7ac4f4c2f28b480a76a66c188ac40420f00000000001976a914e221b8a504199bec7c5fe8081edd011c3653118288ac00000000
+{
+  "txid": "ff35b0890a598fefa147c846ee6d9acc7cda5d94f77c92c9cb0a58d775fcfaf4",
+  "size": 191,
+  "version": 1,
+  "locktime": 0,
+  "vin": [
+    {
+      "txid": "fb9bd2df3cef0abd9f444971dff097790b7bf146843a752cb48461418d3c7e67",
+      "vout": 0,
+      "scriptSig": {
+        "asm": "3045022100ff991e45fc4f055734d27613a539372c83ca1ff409c34ea2afe586589660a2d2022042f9fc2709e976195c73ee76d8e7a5b78eca054d0f3d25074df5490241bd4c38[ALL] 03583eb3acb7f0b9c431d97a4872a270f4e519fbca0ec519adf16764c663e36546",
+        "hex": "483045022100ff991e45fc4f055734d27613a539372c83ca1ff409c34ea2afe586589660a2d2022042f9fc2709e976195c73ee76d8e7a5b78eca054d0f3d25074df5490241bd4c38012103583eb3acb7f0b9c431d97a4872a270f4e519fbca0ec519adf16764c663e36546"
+      },
+      "sequence": 4294967295
+    }
+  ],
+  "vout": [
+    {
+      "value": 0.98995480,
+      "n": 0,
+      "scriptPubKey": {
+        "asm": "OP_DUP OP_HASH160 41068d02c7c981b7a7ac4f4c2f28b480a76a66c1 OP_EQUALVERIFY OP_CHECKSIG",
+        "hex": "76a91441068d02c7c981b7a7ac4f4c2f28b480a76a66c188ac",
+        "reqSigs": 1,
+        "type": "pubkeyhash",
+        "addresses": [
+          "16vpmdSDaX3Nv9UMuk2vSecMrdstjjSP4R"
+        ]
+      }
+    }, 
+    {
+      "value": 0.01000000,
+      "n": 1,
+      "scriptPubKey": {
+        "asm": "OP_DUP OP_HASH160 e221b8a504199bec7c5fe8081edd011c36531182 OP_EQUALVERIFY OP_CHECKSIG",
+        "hex": "76a914e221b8a504199bec7c5fe8081edd011c3653118288ac",
+        "reqSigs": 1,
+        "type": "pubkeyhash",
+        "addresses": [
+          "1Mcg7MDBD38sSScsX3USbsCnkcMbPnLyTV"
+        ]
+      }
+    }
+  ]
+}
+$ bitcoin-cli sendrawtransaction 0100000001677e3c8d416184b42c753a8446f17b0b7997f0df7149449fbd0aef3cdfd29bfb000000006b483045022100ff991e45fc4f055734d27613a539372c83ca1ff409c34ea2afe586589660a2d2022042f9fc2709e976195c73ee76d8e7a5b78eca054d0f3d25074df5490241bd4c38012103583eb3acb7f0b9c431d97a4872a270f4e519fbca0ec519adf16764c663e36546ffffffff02188de605000000001976a91441068d02c7c981b7a7ac4f4c2f28b480a76a66c188ac40420f00000000001976a914e221b8a504199bec7c5fe8081edd011c3653118288ac00000000
+684f6ed5b6e127ba76c07ef4c3fcc02a02c7e2ccef9ed0d2cc16c2896159c746
+$ bitcoin-cli getrawtransaction 684f6ed5b6e127ba76c07ef4c3fcc02a02c7e2ccef9ed0d2cc16c2896159c746 1
+{
+  "hex": "0100000001677e3c8d416184b42c753a8446f17b0b7997f0df7149449fbd0aef3cdfd29bfb000000006b4830450221009b29490f5e1709bc3cce16c6433a0b8895add5a9d3c2fa63da11da065105ad59022022d068337cd3b20be04513e539f0bbbb5319ed1b3a3a8ec6262a30a8bd393b3d012103583eb3acb7f0b9c431d97a4872a270f4e519fbca0ec519adf16764c663e36546ffffffff0140420f00000000001976a914e221b8a504199bec7c5fe8081edd011c3653118288ac00000000",
+  "txid": "684f6ed5b6e127ba76c07ef4c3fcc02a02c7e2ccef9ed0d2cc16c2896159c746",
+  "size": 191,
+  "version": 1,
+  "locktime": 0,
+  "vin": [
+    {
+      "txid": "fb9bd2df3cef0abd9f444971dff097790b7bf146843a752cb48461418d3c7e67",
+      "vout": 0,
+      "scriptSig": {
+        "asm": "30450221009b29490f5e1709bc3cce16c6433a0b8895add5a9d3c2fa63da11da065105ad59022022d068337cd3b20be04513e539f0bbbb5319ed1b3a3a8ec6262a30a8bd393b3d[ALL] 03583eb3acb7f0b9c431d97a4872a270f4e519fbca0ec519adf16764c663e36546",
+        "hex": "4830450221009b29490f5e1709bc3cce16c6433a0b8895add5a9d3c2fa63da11da065105ad59022022d068337cd3b20be04513e539f0bbbb5319ed1b3a3a8ec6262a30a8bd393b3d012103583eb3acb7f0b9c431d97a4872a270f4e519fbca0ec519adf16764c663e36546"
+      },
+      "sequence": 4294967295
+    }
+  ],
+  "vout": [
+    {
+      "value": 0.98995480,
+      "n": 0,
+      "scriptPubKey": {
+        "asm": "OP_DUP OP_HASH160 41068d02c7c981b7a7ac4f4c2f28b480a76a66c1 OP_EQUALVERIFY OP_CHECKSIG",
+        "hex": "76a91441068d02c7c981b7a7ac4f4c2f28b480a76a66c188ac",
+        "reqSigs": 1,
+        "type": "pubkeyhash",
+        "addresses": [
+          "16vpmdSDaX3Nv9UMuk2vSecMrdstjjSP4R"
+        ]
+      }
+    },
+    {
+      "value": 0.01000000,
+      "n": 1,
+      "scriptPubKey": {
+        "asm": "OP_DUP OP_HASH160 e221b8a504199bec7c5fe8081edd011c36531182 OP_EQUALVERIFY OP_CHECKSIG",
+        "hex": "76a914e221b8a504199bec7c5fe8081edd011c3653118288ac",
+        "reqSigs": 1,
+        "type": "pubkeyhash",
+        "addresses": [
+          "1Mcg7MDBD38sSScsX3USbsCnkcMbPnLyTV"
+        ]
+      }
+    }
+  ]
 }
 {% endhighlight %}
 
 **注：这里因交易未设置找零地址而导致交易费过高，所以要设置允许交易费超额。**
+
+### cURL
+
+{% highlight shell %}
+$ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "sendrawtransaction", "params": ["0100000001677e3c8d416184b42c753a8446f17b0b7997f0df7149449fbd0aef3cdfd29bfb000000006b4830450221009b29490f5e1709bc3cce16c6433a0b8895add5a9d3c2fa63da11da065105ad59022022d068337cd3b20be04513e539f0bbbb5319ed1b3a3a8ec6262a30a8bd393b3d012103583eb3acb7f0b9c431d97a4872a270f4e519fbca0ec519adf16764c663e36546ffffffff0140420f00000000001976a914e221b8a504199bec7c5fe8081edd011c3653118288ac00000000", true] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
+{"result":"684f6ed5b6e127ba76c07ef4c3fcc02a02c7e2ccef9ed0d2cc16c2896159c746","error":null,"id":"curltest"}
+{% endhighlight %}
 
 ## 源码剖析
 `sendrawtransaction` 对应的函数在“rpcserver.h”文件中被引用。

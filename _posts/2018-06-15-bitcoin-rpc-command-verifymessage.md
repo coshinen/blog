@@ -14,28 +14,45 @@ categories: Blockchain
 ## 提示说明
 
 {% highlight shell %}
-verifymessage "bitcoinaddress" "signature" "message" # 验证一个签名消息
+verifymessage "bitcoinaddress" "signature" "message" # 验证一个签过名的消息
 {% endhighlight %}
 
 参数：<br>
 1. `bitcoinaddress` （字符串，必备）用于签名的比特币地址。<br>
 2. `signature` （字符串，必备）通过签名者提供的 base64 编码的签名（见 [`signmessage`](/2018/06/15/bitcoin-rpc-command-signmessage)）。<br>
-3. `message` （字符串，必备）签名的消息。
+3. `message` （字符串，必备）签过名的消息。
 
-结果：（布尔型）如果签名验证通过返回 true，反之返回 false。
+结果：（布尔型）返回 true 表示签名验证通过，反之不通过。
 
 ## 用法示例
 
-若钱包加密了，需要先进行解密，这里解密了 60 秒。
+### 比特币核心客户端
+
+若钱包已加密，需要先进行解密，这里解密了 60 秒。
 
 {% highlight shell %}
-$ bitcoin-cli walletpassphrase "123" 60
-$ bitcoin-cli getinfo | grep unlocked_until
-  "unlocked_until": 1529029751,
-$ bitcoin-cli signmessage 1DMEoWsZoJJmaaGfhxRsE9yQmxdn6xSGfE "testmessage"
-HxJt9iDtsz2ij11IWnRWsunW0vdQ2pgrqbQb90FPYBGhAnNTLX3P2ezd4n3lyzCabevroEp4KzAODoyIGLOregQ
-$ bitcoin-cli verifymessage 1DMEoWsZoJJmaaGfhxRsE9yQmxdn6xSGfE HxJt9iDtsz2ij11IWnRWsunW0vdQ2pgrqbQb90FPYBGhAnNTLX3P2ezd4n3lyzCabevroEp4KzAODoyIGLOregQ "testmessage"
+$ bitcoin-cli walletpassphrase "passphrase" 60
+{% endhighlight %}
+
+若钱包未加密，可忽略此步，直接进行消息验证。<br>
+使用 [`signmessage`](/2018/06/15/bitcoin-rpc-command-signmessage) 签名一个消息。
+
+{% highlight shell %}
+$ bitcoin-cli getnewaddress
+1EseaaKaGH9HtQunHy46G6FTZCkvU68uqu
+$ bitcoin-cli signmessage 1EseaaKaGH9HtQunHy46G6FTZCkvU68uqu "testmessage"
+H/v9J/pOJ3zU7tuW2DUcQUphFpCpHzFbSLA62kac2BoIKJEgVOGjwOT+KtwbTJWSwGVCuoQ2ytTGQRdOYYzenvA=
+$ bitcoin-cli verifymessage 1EseaaKaGH9HtQunHy46G6FTZCkvU68uqu H/v9J/pOJ3zU7tuW2DUcQUphFpCpHzFbSLA62kac2BoIKJEgVOGjwOT+KtwbTJWSwGVCuoQ2ytTGQRdOYYzenvA= "testmessage"
 true
+$ bitcoin-cli verifymessage 1EseaaKaGH9HtQunHy46G6FTZCkvU68uqu H/v9J/pOJ3zU7tuW2DUcQUphFpCpHzFbSLA62kac2BoIKJEgVOGjwOT+KtwbTJWSwGVCuoQ2ytTGQRdOYYzenvA= "message"
+false
+{% endhighlight %}
+
+### cURL
+
+{% highlight shell %}
+$ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "verifymessage", "params": ["1EseaaKaGH9HtQunHy46G6FTZCkvU68uqu", "H/v9J/pOJ3zU7tuW2DUcQUphFpCpHzFbSLA62kac2BoIKJEgVOGjwOT+KtwbTJWSwGVCuoQ2ytTGQRdOYYzenvA=", "testmessage"] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
+{"result":true,"error":null,"id":"curltest"}
 {% endhighlight %}
 
 ## 源码剖析

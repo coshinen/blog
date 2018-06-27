@@ -17,13 +17,13 @@ categories: Blockchain
 getrawtransaction "txid" ( verbose ) # 获取原始交易信息
 {% endhighlight %}
 
-**注：默认情况，此功能只在有时有效。
-这是当交易在交易内存池或在此交易的未花费交易输出中有一个未花费输出时。
+**注：默认情况，此功能只在某些情况下有效。
+这是当交易在交易内存池或在此交易的未花费交易输出集中有一个未花费输出时。
 为了使其总是有效，你需要使用 `-txindex` 命令行选项来维护一个交易索引。**
 
 参数：<br>
 1. `txid` （字符串，必备）交易索引。<br>
-2. `verbose` （数字型，可选，默认为 0）如果为 0，返回一个交易 `txid` 序列化的 16 进制编码数据的字符串，
+2. `verbose` （数字型，可选，默认为 0）如果为 0，返回一个交易 `txid` 序列化的 16 进制编码的交易索引数据的字符串，
 否则返回一个关于交易 `txid` 信息的 json 对象。
 
 结果：（如果 verbose 未设置或设置为 0）<br>
@@ -32,134 +32,109 @@ getrawtransaction "txid" ( verbose ) # 获取原始交易信息
 结果：（如果 verbose 大于 0）<br>
 {% highlight shell %}
 {
-  "hex" : "data",       (string) The serialized, hex-encoded data for 'txid'
-  "txid" : "id",        (string) The transaction id (same as provided)
-  "size" : n,             (numeric) The transaction size
-  "version" : n,          (numeric) The version
-  "locktime" : ttt,       (numeric) The lock time
-  "vin" : [               (array of json objects)
+  "hex" : "data",       （字符串）序列化的 16 进制编码的交易 'txid' 数据
+  "txid" : "id",        （字符串）交易索引（和提供的一样）
+  "size" : n,             （数字）交易大小
+  "version" : n,          （数字）版本
+  "locktime" : ttt,       （锁定时间）
+  "vin" : [               （json 对象数组）
      {
-       "txid": "id",    (string) The transaction id
-       "vout": n,         (numeric) 
-       "scriptSig": {     (json object) The script
-         "asm": "asm",  (string) asm
-         "hex": "hex"   (string) hex
+       "txid": "id",    （字符串）交易索引
+       "vout": n,         （数字）
+       "scriptSig": {     （json 对象）脚本
+         "asm": "asm",  （字符串）脚本公钥
+         "hex": "hex"   （字符串）16 进制公钥
        },
-       "sequence": n      (numeric) The script sequence number
+       "sequence": n      （数字）脚本序列号
      }
      ,...
   ],
-  "vout" : [              (array of json objects)
+  "vout" : [              （json 对象数组）
      {
-       "value" : x.xxx,            (numeric) The value in BTC
-       "n" : n,                    (numeric) index
-       "scriptPubKey" : {          (json object)
-         "asm" : "asm",          (string) the asm
-         "hex" : "hex",          (string) the hex
-         "reqSigs" : n,            (numeric) The required sigs
-         "type" : "pubkeyhash",  (string) The type, eg 'pubkeyhash'
-         "addresses" : [           (json array of string)
-           "bitcoinaddress"        (string) bitcoin address
+       "value" : x.xxx,            （数字）以 BTC 为单位的金额
+       "n" : n,                    （数字）索引/序号
+       "scriptPubKey" : {          （json 对象）
+         "asm" : "asm",          （字符串）脚本公钥
+         "hex" : "hex",          （字符串）16 进制公钥
+         "reqSigs" : n,            （数字）必备的签名
+         "type" : "pubkeyhash",  （字符串）类型，例 'pubkeyhash'
+         "addresses" : [           （json 字符串数组）
+           "bitcoinaddress"        （字符串）比特币地址
            ,...
          ]
        }
      }
      ,...
   ],
-  "blockhash" : "hash",   (string) the block hash
-  "confirmations" : n,      (numeric) The confirmations
-  "time" : ttt,             (numeric) The transaction time in seconds since epoch (Jan 1 1970 GMT)
-  "blocktime" : ttt         (numeric) The block time in seconds since epoch (Jan 1 1970 GMT)
+  "blockhash" : "hash",   （字符串）区块哈希
+  "confirmations" : n,      （数字）确认数(numeric) The confirmations
+  "time" : ttt,             （数字）从格林尼治时间 1970-01-01 00:00:00 开始以秒为单位的交易时间
+  "blocktime" : ttt         （数字）从格林尼治时间 1970-01-01 00:00:00 开始以秒为单位的区块创建时间
 }
 {% endhighlight %}
 
 ## 用法示例
 
-用法一：使用默认 verbose 值，获取指定交易索引的序列化交易数据。
+用法一：获取指定原始交易的序列化数据。
 
 {% highlight shell %}
-$ bitcoin-cli getrawtransaction 1903ac0fefc0bd63f15cef083c714d7a19f049e617dcc15ea2d655f81bf3d118
-01000000017708d09c30b24ee303ef9fbcf4990d160fcf62a56d5218d4df0cef7c47321b15000000006b483045022100841737a0cd634af22659dd8d663e7219863f49c4e151ccafa75656a79061f15202201f895c8ad9c2e576bd6efb9785248498a3f05da14d47f7fbd85e3f2e3057008e012102ef09fb034dc26337de85e77c6b519bfeb2500f2cd69ca4c0c34e5425144ffaa0feffffff03be410f00000000001976a9149dd5d8f38714a8b07a4e702777d445d388805ebd88acfe831e00000000001976a914a679db3ef39fe34161431507cba8b579ba90281388acc0cf6a00000000001976a9149e0342205ce74dc6bb782d99b3269826e8d655b488acaa1a0100
+$ bitcoin-cli getrawtransaction 684f6ed5b6e127ba76c07ef4c3fcc02a02c7e2ccef9ed0d2cc16c2896159c746
+0100000001677e3c8d416184b42c753a8446f17b0b7997f0df7149449fbd0aef3cdfd29bfb000000006b4830450221009b29490f5e1709bc3cce16c6433a0b8895add5a9d3c2fa63da11da065105ad59022022d068337cd3b20be04513e539f0bbbb5319ed1b3a3a8ec6262a30a8bd393b3d012103583eb3acb7f0b9c431d97a4872a270f4e519fbca0ec519adf16764c663e36546ffffffff0140420f00000000001976a914e221b8a504199bec7c5fe8081edd011c3653118288ac00000000
 {% endhighlight %}
 
-用法二：verbose 为 0，效果同上。
+用法二：设置 verbose 为 0，获取指定原始交易的序列化数据，效果同上。
 
 {% highlight shell %}
-$ bitcoin-cli getrawtransaction 1903ac0fefc0bd63f15cef083c714d7a19f049e617dcc15ea2d655f81bf3d118 0
-01000000017708d09c30b24ee303ef9fbcf4990d160fcf62a56d5218d4df0cef7c47321b15000000006b483045022100841737a0cd634af22659dd8d663e7219863f49c4e151ccafa75656a79061f15202201f895c8ad9c2e576bd6efb9785248498a3f05da14d47f7fbd85e3f2e3057008e012102ef09fb034dc26337de85e77c6b519bfeb2500f2cd69ca4c0c34e5425144ffaa0feffffff03be410f00000000001976a9149dd5d8f38714a8b07a4e702777d445d388805ebd88acfe831e00000000001976a914a679db3ef39fe34161431507cba8b579ba90281388acc0cf6a00000000001976a9149e0342205ce74dc6bb782d99b3269826e8d655b488acaa1a0100
+$ bitcoin-cli getrawtransaction 684f6ed5b6e127ba76c07ef4c3fcc02a02c7e2ccef9ed0d2cc16c2896159c746
+0100000001677e3c8d416184b42c753a8446f17b0b7997f0df7149449fbd0aef3cdfd29bfb000000006b4830450221009b29490f5e1709bc3cce16c6433a0b8895add5a9d3c2fa63da11da065105ad59022022d068337cd3b20be04513e539f0bbbb5319ed1b3a3a8ec6262a30a8bd393b3d012103583eb3acb7f0b9c431d97a4872a270f4e519fbca0ec519adf16764c663e36546ffffffff0140420f00000000001976a914e221b8a504199bec7c5fe8081edd011c3653118288ac00000000
 {% endhighlight %}
 
-用法三：verbose 置为 1，获取指定索引的交易的相关信息。
+用法三：设置 verbose 为 1，获取指定索引的原始交易信息。
 
 {% highlight shell %}
-$ bitcoin-cli getrawtransaction 1903ac0fefc0bd63f15cef083c714d7a19f049e617dcc15ea2d655f81bf3d118 1
+$ bitcoin-cli getrawtransaction 684f6ed5b6e127ba76c07ef4c3fcc02a02c7e2ccef9ed0d2cc16c2896159c746 1
 {
-  "hex": "01000000017708d09c30b24ee303ef9fbcf4990d160fcf62a56d5218d4df0cef7c47321b15000000006b483045022100841737a0cd634af22659dd8d663e7219863f49c4e151ccafa75656a79061f15202201f895c8ad9c2e576bd6efb9785248498a3f05da14d47f7fbd85e3f2e3057008e012102ef09fb034dc26337de85e77c6b519bfeb2500f2cd69ca4c0c34e5425144ffaa0feffffff03be410f00000000001976a9149dd5d8f38714a8b07a4e702777d445d388805ebd88acfe831e00000000001976a914a679db3ef39fe34161431507cba8b579ba90281388acc0cf6a00000000001976a9149e0342205ce74dc6bb782d99b3269826e8d655b488acaa1a0100",
-  "txid": "1903ac0fefc0bd63f15cef083c714d7a19f049e617dcc15ea2d655f81bf3d118",
-  "size": 260,
+  "hex": "0100000001677e3c8d416184b42c753a8446f17b0b7997f0df7149449fbd0aef3cdfd29bfb000000006b4830450221009b29490f5e1709bc3cce16c6433a0b8895add5a9d3c2fa63da11da065105ad59022022d068337cd3b20be04513e539f0bbbb5319ed1b3a3a8ec6262a30a8bd393b3d012103583eb3acb7f0b9c431d97a4872a270f4e519fbca0ec519adf16764c663e36546ffffffff0140420f00000000001976a914e221b8a504199bec7c5fe8081edd011c3653118288ac00000000",
+  "txid": "684f6ed5b6e127ba76c07ef4c3fcc02a02c7e2ccef9ed0d2cc16c2896159c746",
+  "size": 192,
   "version": 1,
-  "locktime": 72362,
+  "locktime": 0,
   "vin": [
     {
-      "txid": "151b32477cef0cdfd418526da562cf0f160d99f4bc9fef03e34eb2309cd00877",
+      "txid": "fb9bd2df3cef0abd9f444971dff097790b7bf146843a752cb48461418d3c7e67",
       "vout": 0,
       "scriptSig": {
-        "asm": "3045022100841737a0cd634af22659dd8d663e7219863f49c4e151ccafa75656a79061f15202201f895c8ad9c2e576bd6efb9785248498a3f05da14d47f7fbd85e3f2e3057008e[ALL] 02ef09fb034dc26337de85e77c6b519bfeb2500f2cd69ca4c0c34e5425144ffaa0",
-        "hex": "483045022100841737a0cd634af22659dd8d663e7219863f49c4e151ccafa75656a79061f15202201f895c8ad9c2e576bd6efb9785248498a3f05da14d47f7fbd85e3f2e3057008e012102ef09fb034dc26337de85e77c6b519bfeb2500f2cd69ca4c0c34e5425144ffaa0"
+        "asm": "30450221009b29490f5e1709bc3cce16c6433a0b8895add5a9d3c2fa63da11da065105ad59022022d068337cd3b20be04513e539f0bbbb5319ed1b3a3a8ec6262a30a8bd393b3d[ALL] 03583eb3acb7f0b9c431d97a4872a270f4e519fbca0ec519adf16764c663e36546",
+        "hex": "4830450221009b29490f5e1709bc3cce16c6433a0b8895add5a9d3c2fa63da11da065105ad59022022d068337cd3b20be04513e539f0bbbb5319ed1b3a3a8ec6262a30a8bd393b3d012103583eb3acb7f0b9c431d97a4872a270f4e519fbca0ec519adf16764c663e36546"
       },
-      "sequence": 4294967294
+      "sequence": 4294967295
     }
   ],
   "vout": [
     {
-      "value": 0.00999870,
-      "valueSat": 999870,
+      "value": 0.01000000,
       "n": 0,
       "scriptPubKey": {
-        "asm": "OP_DUP OP_HASH160 9dd5d8f38714a8b07a4e702777d445d388805ebd OP_EQUALVERIFY OP_CHECKSIG",
-        "hex": "76a9149dd5d8f38714a8b07a4e702777d445d388805ebd88ac",
+        "asm": "OP_DUP OP_HASH160 e221b8a504199bec7c5fe8081edd011c36531182 OP_EQUALVERIFY OP_CHECKSIG",
+        "hex": "76a914e221b8a504199bec7c5fe8081edd011c3653118288ac",
         "reqSigs": 1,
         "type": "pubkeyhash",
         "addresses": [
-          "1k6P9NNcWpqPR3CPz7i59doBeBMwepy7yD"
-        ]
-      }
-    }, 
-    {
-      "value": 0.01999870,
-      "valueSat": 1999870,
-      "n": 1,
-      "scriptPubKey": {
-        "asm": "OP_DUP OP_HASH160 a679db3ef39fe34161431507cba8b579ba902813 OP_EQUALVERIFY OP_CHECKSIG",
-        "hex": "76a914a679db3ef39fe34161431507cba8b579ba90281388ac",
-        "reqSigs": 1,
-        "type": "pubkeyhash",
-        "addresses": [
-          "1kt52SrJRMausYSQnsfQBCiYcJKxUdNvBB"
-        ]
-      }
-    }, 
-    {
-      "value": 0.07000000,
-      "valueSat": 7000000,
-      "n": 2,
-      "scriptPubKey": {
-        "asm": "OP_DUP OP_HASH160 9e0342205ce74dc6bb782d99b3269826e8d655b4 OP_EQUALVERIFY OP_CHECKSIG",
-        "hex": "76a9149e0342205ce74dc6bb782d99b3269826e8d655b488ac",
-        "reqSigs": 1,
-        "type": "pubkeyhash",
-        "addresses": [
-          "1k7KYa17GZqhpeKEPjp6DMn11EdoGnyGeF"
+          "1Mcg7MDBD38sSScsX3USbsCnkcMbPnLyTV"
         ]
       }
     }
-  ],
-  "blockhash": "000059ac90cf7439ea8186e4f4d35f349fe878c4723cde7ff18c66a8e33f1b73",
-  "height": 72366,
-  "confirmations": 6065,
-  "time": 1528451744,
-  "blocktime": 1528451744
+  ]
 }
+{% endhighlight %}
+
+**注：该交易还未上链，所以没有区块信息。**
+
+### cURL
+
+{% highlight shell %}
+$ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "getrawtransaction", "params": ["684f6ed5b6e127ba76c07ef4c3fcc02a02c7e2ccef9ed0d2cc16c2896159c746", 1] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
+{"result":{"hex":"0100000001677e3c8d416184b42c753a8446f17b0b7997f0df7149449fbd0aef3cdfd29bfb000000006b4830450221009b29490f5e1709bc3cce16c6433a0b8895add5a9d3c2fa63da11da065105ad59022022d068337cd3b20be04513e539f0bbbb5319ed1b3a3a8ec6262a30a8bd393b3d012103583eb3acb7f0b9c431d97a4872a270f4e519fbca0ec519adf16764c663e36546ffffffff0140420f00000000001976a914e221b8a504199bec7c5fe8081edd011c3653118288ac00000000","txid":"684f6ed5b6e127ba76c07ef4c3fcc02a02c7e2ccef9ed0d2cc16c2896159c746","size":192,"version":1,"locktime":0,"vin":[{"txid":"fb9bd2df3cef0abd9f444971dff097790b7bf146843a752cb48461418d3c7e67","vout":0,"scriptSig":{"asm":"30450221009b29490f5e1709bc3cce16c6433a0b8895add5a9d3c2fa63da11da065105ad59022022d068337cd3b20be04513e539f0bbbb5319ed1b3a3a8ec6262a30a8bd393b3d[ALL] 03583eb3acb7f0b9c431d97a4872a270f4e519fbca0ec519adf16764c663e36546","hex":"4830450221009b29490f5e1709bc3cce16c6433a0b8895add5a9d3c2fa63da11da065105ad59022022d068337cd3b20be04513e539f0bbbb5319ed1b3a3a8ec6262a30a8bd393b3d012103583eb3acb7f0b9c431d97a4872a270f4e519fbca0ec519adf16764c663e36546"},"sequence":4294967295}],"vout":[{"value":0.01000000,"n":0,"scriptPubKey":{"asm":"OP_DUP OP_HASH160 e221b8a504199bec7c5fe8081edd011c36531182 OP_EQUALVERIFY OP_CHECKSIG","hex":"76a914e221b8a504199bec7c5fe8081edd011c3653118288ac","reqSigs":1,"type":"pubkeyhash","addresses":["1Mcg7MDBD38sSScsX3USbsCnkcMbPnLyTV"]}}]},"error":null,"id":"curltest"}
 {% endhighlight %}
 
 ## 源码剖析

@@ -14,14 +14,14 @@ categories: Blockchain
 ## 提示说明
 
 {% highlight shell %}
-fundrawtransaction "hexstring" includeWatching # 把输入添加到交易中，直到它有足够的金额满足其输出
+fundrawtransaction "hexstring" includeWatching # 把输入添加到交易中，直到它有足够的满足其输出的金额
 {% endhighlight %}
 
-**此操作不会修改现存的输入，并且会添加一个找零输出到输出列表。<br>
-注：因为输入/输出已被添加，所以签名后的输入可能需要在完成后重签。<br>
+**此操作不会修改现存的输入，并且会添加一个找零输出到输出集中。<br>
+注：因为输入/输出已被添加，所以签名后的输入可能需要在完成此操作后重签。<br>
 使用 [`signrawtransaction`](/2018/06/13/bitcoin-rpc-command-signrawtransaction) 已添加的输入将不会被签名。<br>
-注意所有现存的输入在钱包中必须有它们前一个输出交易。<br>
-注意所选的全部输入必须是标准格式，且在钱包中的 P2SH 脚本必须使用 [`importaddress`](/2018/06/07/bitcoin-rpc-command-importaddress) 和 [`addmultisigaddress`]()（用来计算交易费）。<br>
+注意全部现存的输入必须在钱包中有它们前一笔输出交易。<br>
+注意所选的全部输入必须是标准格式，且在钱包中的 P2SH 脚本必须使用 [`importaddress`](/2018/06/07/bitcoin-rpc-command-importaddress) 和 [`addmultisigaddress`](/2018/06/15/bitcoin-rpc-command-addmultisigaddress)（用来计算交易费）。<br>
 watch-only 目前只支持 P2PKH，多签，和 P2SH 版本。**
 
 参数：<br>
@@ -31,23 +31,28 @@ watch-only 目前只支持 P2PKH，多签，和 P2SH 版本。**
 结果：<br>
 {% highlight shell %}
 {
-  "hex":       "value", (string)  The resulting raw transaction (hex-encoded string)
-  "fee":       n,         (numeric) Fee the resulting transaction pays
-  "changepos": n          (numeric) The position of the added change output, or -1
+  "hex":       "value", （字符串）产生的原始交易（16 进制编码的字符串）
+  "fee":       n,         （数字）由此产生的交易费
+  "changepos": n          （数字）添加的找零输出的位置，或为 -1
 }
 "hex"             
 {% endhighlight %}
 
 ## 用法示例
 
-为创建的空输入的原始交易资助足够的输入以供输出。
+### 比特币核心客户端
+
+先创建一笔没有输入的交易，<br>
+添加充足的未签名的输入用以满足输出金额，<br>
+签名交易，<br>
+发送交易。<br>
 
 {% highlight shell %}
-$ bitcoin-cli createrawtransaction "[]" "{\"4UX6dhUWqaEZjhvqVnyLTiMGjCm8R5sgLS\":0.01}"
-01000000000140420f00000000001976a914a282769e3b2aa722dbcb2c04219893a35520d02588ac00000000
-$ bitcoin-cli decoderawtransaction 01000000000140420f00000000001976a914a282769e3b2aa722dbcb2c04219893a35520d02588ac00000000
+$ bitcoin-cli createrawtransaction "[]" "{\"1Mcg7MDBD38sSScsX3USbsCnkcMbPnLyTV\":0.01}"
+01000000000140420f00000000001976a914e221b8a504199bec7c5fe8081edd011c3653118288ac00000000
+$ bitcoin-cli decoderawtransaction 01000000000140420f00000000001976a914e221b8a504199bec7c5fe8081edd011c3653118288ac00000000
 {
-  "txid": "70104bdc326608f5c7a49f5692b06456579a8486f77be73ab9003a096f3a3d6f",
+  "txid": "b88e6b7777cbcca8f316fde34ab27917f62734c127a218887f032884751a7a94",
   "size": 44,
   "version": 1,
   "locktime": 0,
@@ -56,109 +61,134 @@ $ bitcoin-cli decoderawtransaction 01000000000140420f00000000001976a914a282769e3
   "vout": [
     {
       "value": 0.01000000,
-      "valueSat": 1000000,
       "n": 0,
       "scriptPubKey": {
-        "asm": "OP_DUP OP_HASH160 a282769e3b2aa722dbcb2c04219893a35520d025 OP_EQUALVERIFY OP_CHECKSIG",
-        "hex": "76a914a282769e3b2aa722dbcb2c04219893a35520d02588ac",
+        "asm": "OP_DUP OP_HASH160 e221b8a504199bec7c5fe8081edd011c36531182 OP_EQUALVERIFY OP_CHECKSIG",
+        "hex": "76a914e221b8a504199bec7c5fe8081edd011c3653118288ac",
         "reqSigs": 1,
         "type": "pubkeyhash",
         "addresses": [
-          "1kX6dhUWqaEZjhvqVnyLTiMGjCm8R5sgLS"
+          "1Mcg7MDBD38sSScsX3USbsCnkcMbPnLyTV"
         ]
       }
     }
   ]
 }
-$ bitcoin-cli fundrawtransaction 01000000000140420f00000000001976a914a282769e3b2aa722dbcb2c04219893a35520d02588ac00000000
+$ bitcoin-cli fundrawtransaction 01000000000140420f00000000001976a914e221b8a504199bec7c5fe8081edd011c3653118288ac00000000
 {
-  "hex": "010000000118d1f31bf855d6a25ec1dc17e649f0197a4d713c08ef5cf163bdc0ef0fac03190200000000feffffff0240420f00000000001976a914a282769e3b2aa722dbcb2c04219893a35520d02588ac9e8c5b00000000001976a914a2ca1135287d06f6dbcd4c700a82ede041b6c4b988ac00000000",
-  "changepos": 1,
-  "fee": 0.00000226
+  "hex": "01000000014412ee17ce40921719443ac884702a5100db85a98fa0eea49fe185c36aab546e0100000000feffffff02188de605000000001976a91441068d02c7c981b7a7ac4f4c2f28b480a76a66c188ac40420f00000000001976a914e221b8a504199bec7c5fe8081edd011c3653118288ac00000000",
+  "changepos": 0,
+  "fee": 0.00004520
 }
-$ bitcoin-cli signrawtransaction 010000000118d1f31bf855d6a25ec1dc17e649f0197a4d713c08ef5cf163bdc0ef0fac03190200000000feffffff0240420f00000000001976a914a282769e3b2aa722dbcb2c04219893a35520d02588ac9e8c5b00000000001976a914a2ca1135287d06f6dbcd4c700a82ede041b6c4b988ac00000000
+$ bitcoin-cli decoderawtransaction 01000000014412ee17ce40921719443ac884702a5100db85a98fa0eea49fe185c36aab546e0100000000feffffff02188de605000000001976a91441068d02c7c981b7a7ac4f4c2f28b480a76a66c188ac40420f00000000001976a914e221b8a504199bec7c5fe8081edd011c3653118288ac00000000
 {
-  "hex": "010000000118d1f31bf855d6a25ec1dc17e649f0197a4d713c08ef5cf163bdc0ef0fac0319020000006a47304402207468bc1c9aba305bb8ce23024e6fe5e1f37b2931a217015effd931075bb3994302206762c49704903e9acee02242cfb006c02af77df375bd3bbfc56983db4e9673b60121025f2308ae80205003bec46daa936c72bd148e0e8b02b33254c45badef54c339d1feffffff0240420f00000000001976a914a282769e3b2aa722dbcb2c04219893a35520d02588ac9e8c5b00000000001976a914a2ca1135287d06f6dbcd4c700a82ede041b6c4b988ac00000000",
-  "complete": true
-}
-$ bitcoin-cli sendrawtransaction 010000000118d1f31bf855d6a25ec1dc17e649f0197a4d713c08ef5cf163bdc0ef0fac0319020000006a47304402207468bc1c9aba305bb8ce23024e6fe5e1f37b2931a217015effd931075bb3994302206762c49704903e9acee02242cfb006c02af77df375bd3bbfc56983db4e9673b60121025f2308ae80205003bec46daa936c72bd148e0e8b02b33254c45badef54c339d1feffffff0240420f00000000001976a914a282769e3b2aa722dbcb2c04219893a35520d02588ac9e8c5b00000000001976a914a2ca1135287d06f6dbcd4c700a82ede041b6c4b988ac00000000
-d0c669f9a496e46af4d3e637e00e085f1408acf0e56b9be170e30446bbf35150
-$ bitcoin-cli gettransaction d0c669f9a496e46af4d3e637e00e085f1408acf0e56b9be170e30446bbf35150
-{
-  "amount": -0.01000000,
-  "fee": -0.00000226,
-  "confirmations": 3,
-  "instantlock": false,
-  "blockhash": "00004a97486c75563dbdc2de4c0109b427f4daf89980a593c34a99e8ef24c549",
-  "blockindex": 1,
-  "blocktime": 1528869804,
-  "txid": "d0c669f9a496e46af4d3e637e00e085f1408acf0e56b9be170e30446bbf35150",
-  "walletconflicts": [
-  ],
-  "time": 1528869792,
-  "timereceived": 1528869792,
-  "bip125-replaceable": "no",
-  "details": [
-    {
-      "account": "",
-      "address": "1kX6dhUWqaEZjhvqVnyLTiMGjCm8R5sgLS",
-      "category": "send",
-      "amount": -0.01000000,
-      "vout": 0,
-      "fee": -0.00000226,
-      "abandoned": false
-    }
-  ],
-  "hex": "010000000118d1f31bf855d6a25ec1dc17e649f0197a4d713c08ef5cf163bdc0ef0fac0319020000006a47304402207468bc1c9aba305bb8ce23024e6fe5e1f37b2931a217015effd931075bb3994302206762c49704903e9acee02242cfb006c02af77df375bd3bbfc56983db4e9673b60121025f2308ae80205003bec46daa936c72bd148e0e8b02b33254c45badef54c339d1feffffff0240420f00000000001976a914a282769e3b2aa722dbcb2c04219893a35520d02588ac9e8c5b00000000001976a914a2ca1135287d06f6dbcd4c700a82ede041b6c4b988ac00000000"
-}
-$ bitcoin-cli decoderawtransaction 010000000118d1f31bf855d6a25ec1dc17e649f0197a4d713c08ef5cf163bdc0ef0fac0319020000006a47304402207468bc1c9aba305bb8ce23024e6fe5e1f37b2931a217015effd931075bb3994302206762c49704903e9acee02242cfb006c02af77df375bd3bbfc56983db4e9673b60121025f2308ae80205003bec46daa936c72bd148e0e8b02b33254c45badef54c339d1feffffff0240420f00000000001976a914a282769e3b2aa722dbcb2c04219893a35520d02588ac9e8c5b00000000001976a914a2ca1135287d06f6dbcd4c700a82ede041b6c4b988ac00000000
-{
-  "txid": "d0c669f9a496e46af4d3e637e00e085f1408acf0e56b9be170e30446bbf35150",
-  "size": 225,
+  "txid": "17b65e7c94c81e71e03e763051c85e94dc74f44f385b61bb0c60391717ee5cdb",
+  "size": 119,
   "version": 1,
   "locktime": 0,
   "vin": [
     {
-      "txid": "1903ac0fefc0bd63f15cef083c714d7a19f049e617dcc15ea2d655f81bf3d118",
-      "vout": 2,
+      "txid": "6e54ab6ac385e19fa4eea08fa985db00512a7084c83a4419179240ce17ee1244",
+      "vout": 1,
       "scriptSig": {
-        "asm": "304402207468bc1c9aba305bb8ce23024e6fe5e1f37b2931a217015effd931075bb3994302206762c49704903e9acee02242cfb006c02af77df375bd3bbfc56983db4e9673b6[ALL] 025f2308ae80205003bec46daa936c72bd148e0e8b02b33254c45badef54c339d1",
-        "hex": "47304402207468bc1c9aba305bb8ce23024e6fe5e1f37b2931a217015effd931075bb3994302206762c49704903e9acee02242cfb006c02af77df375bd3bbfc56983db4e9673b60121025f2308ae80205003bec46daa936c72bd148e0e8b02b33254c45badef54c339d1"
+        "asm": "",
+        "hex": ""
       },
       "sequence": 4294967294
     }
   ],
   "vout": [
     {
-      "value": 0.01000000,
-      "valueSat": 1000000,
+      "value": 0.98995480,
       "n": 0,
       "scriptPubKey": {
-        "asm": "OP_DUP OP_HASH160 a282769e3b2aa722dbcb2c04219893a35520d025 OP_EQUALVERIFY OP_CHECKSIG",
-        "hex": "76a914a282769e3b2aa722dbcb2c04219893a35520d02588ac",
+        "asm": "OP_DUP OP_HASH160 41068d02c7c981b7a7ac4f4c2f28b480a76a66c1 OP_EQUALVERIFY OP_CHECKSIG",
+        "hex": "76a91441068d02c7c981b7a7ac4f4c2f28b480a76a66c188ac",
         "reqSigs": 1,
         "type": "pubkeyhash",
         "addresses": [
-          "1kX6dhUWqaEZjhvqVnyLTiMGjCm8R5sgLS"
+          "16vpmdSDaX3Nv9UMuk2vSecMrdstjjSP4R"
         ]
       }
     }, 
     {
-      "value": 0.05999774,
-      "valueSat": 5999774,
+      "value": 0.01000000,
       "n": 1,
       "scriptPubKey": {
-        "asm": "OP_DUP OP_HASH160 a2ca1135287d06f6dbcd4c700a82ede041b6c4b9 OP_EQUALVERIFY OP_CHECKSIG",
-        "hex": "76a914a2ca1135287d06f6dbcd4c700a82ede041b6c4b988ac",
+        "asm": "OP_DUP OP_HASH160 e221b8a504199bec7c5fe8081edd011c36531182 OP_EQUALVERIFY OP_CHECKSIG",
+        "hex": "76a914e221b8a504199bec7c5fe8081edd011c3653118288ac",
         "reqSigs": 1,
         "type": "pubkeyhash",
         "addresses": [
-          "1kYaQpexBapKmBrGku9e7FEZcZbyrC3xej"
+          "1Mcg7MDBD38sSScsX3USbsCnkcMbPnLyTV"
         ]
       }
     }
   ]
 }
+$ bitcoin-cli signrawtransaction 01000000014412ee17ce40921719443ac884702a5100db85a98fa0eea49fe185c36aab546e0100000000feffffff02188de605000000001976a91441068d02c7c981b7a7ac4f4c2f28b480a76a66c188ac40420f00000000001976a914e221b8a504199bec7c5fe8081edd011c3653118288ac00000000
+{
+  "hex": "01000000014412ee17ce40921719443ac884702a5100db85a98fa0eea49fe185c36aab546e010000006b483045022100c49f5b0ff43f2b35266c6944b042bbaef667c3504c556a915636930d857465e1022041421645d9fb25b154c5356508d08f69054a57cfd0f9f9a60975855de62167430121029add8d65b91a60990c1ca7e45d8239631511a217cd23521054727c63ff1ff7c0feffffff02188de605000000001976a91441068d02c7c981b7a7ac4f4c2f28b480a76a66c188ac40420f00000000001976a914e221b8a504199bec7c5fe8081edd011c3653118288ac00000000",
+  "complete": true
+}
+$ bitcoin-cli sendrawtransaction 01000000014412ee17ce40921719443ac884702a5100db85a98fa0eea49fe185c36aab546e010000006b483045022100c49f5b0ff43f2b35266c6944b042bbaef667c3504c556a915636930d857465e1022041421645d9fb25b154c5356508d08f69054a57cfd0f9f9a60975855de62167430121029add8d65b91a60990c1ca7e45d8239631511a217cd23521054727c63ff1ff7c0feffffff02188de605000000001976a91441068d02c7c981b7a7ac4f4c2f28b480a76a66c188ac40420f00000000001976a914e221b8a504199bec7c5fe8081edd011c3653118288ac00000000
+cd92e2a951d5624355fff82288d28cd4d213a711f7ddb10fcdd22bc6fa16801f
+$ bitcoin-cli getrawtransaction cd92e2a951d5624355fff82288d28cd4d213a711f7ddb10fcdd22bc6fa16801f 1
+{
+  "hex": "01000000014412ee17ce40921719443ac884702a5100db85a98fa0eea49fe185c36aab546e010000006b483045022100c49f5b0ff43f2b35266c6944b042bbaef667c3504c556a915636930d857465e1022041421645d9fb25b154c5356508d08f69054a57cfd0f9f9a60975855de62167430121029add8d65b91a60990c1ca7e45d8239631511a217cd23521054727c63ff1ff7c0feffffff02188de605000000001976a91441068d02c7c981b7a7ac4f4c2f28b480a76a66c188ac40420f00000000001976a914e221b8a504199bec7c5fe8081edd011c3653118288ac00000000",
+  "txid": "cd92e2a951d5624355fff82288d28cd4d213a711f7ddb10fcdd22bc6fa16801f",
+  "size": 226,
+  "version": 1,
+  "locktime": 0,
+  "vin": [
+    {
+      "txid": "6e54ab6ac385e19fa4eea08fa985db00512a7084c83a4419179240ce17ee1244",
+      "vout": 1,
+      "scriptSig": {
+        "asm": "3045022100c49f5b0ff43f2b35266c6944b042bbaef667c3504c556a915636930d857465e1022041421645d9fb25b154c5356508d08f69054a57cfd0f9f9a60975855de6216743[ALL] 029add8d65b91a60990c1ca7e45d8239631511a217cd23521054727c63ff1ff7c0",
+        "hex": "483045022100c49f5b0ff43f2b35266c6944b042bbaef667c3504c556a915636930d857465e1022041421645d9fb25b154c5356508d08f69054a57cfd0f9f9a60975855de62167430121029add8d65b91a60990c1ca7e45d8239631511a217cd23521054727c63ff1ff7c0"
+      },
+      "sequence": 4294967294
+    }
+  ],
+  "vout": [
+    {
+      "value": 0.98995480,
+      "n": 0,
+      "scriptPubKey": {
+        "asm": "OP_DUP OP_HASH160 41068d02c7c981b7a7ac4f4c2f28b480a76a66c1 OP_EQUALVERIFY OP_CHECKSIG",
+        "hex": "76a91441068d02c7c981b7a7ac4f4c2f28b480a76a66c188ac",
+        "reqSigs": 1,
+        "type": "pubkeyhash",
+        "addresses": [
+          "16vpmdSDaX3Nv9UMuk2vSecMrdstjjSP4R"
+        ]
+      }
+    }, 
+    {
+      "value": 0.01000000,
+      "n": 1,
+      "scriptPubKey": {
+        "asm": "OP_DUP OP_HASH160 e221b8a504199bec7c5fe8081edd011c36531182 OP_EQUALVERIFY OP_CHECKSIG",
+        "hex": "76a914e221b8a504199bec7c5fe8081edd011c3653118288ac",
+        "reqSigs": 1,
+        "type": "pubkeyhash",
+        "addresses": [
+          "1Mcg7MDBD38sSScsX3USbsCnkcMbPnLyTV"
+        ]
+      }
+    }
+  ]
+}
+{% endhighlight %}
+
+这里可以看到签名前后交易大小的变化，从 `119` 到 `226` 增加了 107 个字节。
+
+### cURL
+
+{% highlight shell %}
+$ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "fundrawtransaction", "params": ["01000000000140420f00000000001976a914e221b8a504199bec7c5fe8081edd011c3653118288ac00000000"] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
+{"result":{"hex":"010000000153c8eace39ab4a16f586eb8f041e9f3b383832ac7b6e533e7e45762ddc3bae580100000000feffffff0240420f00000000001976a914e221b8a504199bec7c5fe8081edd011c3653118288ac186edc0b000000001976a91441068d02c7c981b7a7ac4f4c2f28b480a76a66c188ac00000000","changepos":1,"fee":0.00004520},"error":null,"id":"curltest"}
 {% endhighlight %}
 
 ## 源码剖析

@@ -14,20 +14,31 @@ categories: Blockchain
 ## 提示说明
 
 {% highlight shell %}
-estimatepriority nblocks # 估计一笔 0 交易费的交易在 nblocks 个区块开始确认的大致优先级
+estimatepriority nblocks # 估算一笔 0 交易费的交易在 `nblocks` 个区块开始确认的大致优先级
 {% endhighlight %}
 
 参数：<br>
-1. `nblocks` （数字型）区块数量。
+1. `nblocks` （数字）区块数。
 
-结果：（数字型）返回预估的优先级。<br>
+结果：（数字）返回预估的交易优先级。<br>
 如果没有足够的交易和区块用来估算则会返回一个负值，-1 表示交易优先级为 0。
 
 ## 用法示例
 
+### 比特币核心客户端
+
+估算交易经 6 个区块确认所需的优先级。
+
 {% highlight shell %}
 $ bitcoin-cli estimatepriority 6
 -1
+{% endhighlight %}
+
+### cURL
+
+{% highlight shell %}
+$ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "estimatepriority", "params": [6] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
+{"result":-1,"error":null,"id":"curltest"}
 {% endhighlight %}
 
 ## 源码剖析
