@@ -14,22 +14,26 @@ categories: Blockchain
 ## 提示说明
 
 {% highlight shell %}
-importpubkey "pubkey" ( "label" rescan ) # 导入一个公钥（16 进制）
+importpubkey "pubkey" ( "label" rescan ) # 导入一个公钥（16 进制）用来监视
 {% endhighlight %}
 
 最终导入的还是公钥对应的地址。<br>
-如果该公钥在你的钱包，它将被监视，且不能用来花费。
+该公钥好像在你的钱包，但不能用于花费。
 
 参数：<br>
 1. `pubkey` （字符串，必备）16 进制的公钥。<br>
 2. `label` （字符串，可选，默认为 ""）一个可选的标签（账户名）。<br>
 3. `rescan` （布尔型，可选，默认为 true）再扫描钱包交易。
 
-**注：如果 `rescan` 为 true，该调用可能需要几分钟来完成。**
+**注：如果 `rescan` 为 true，该调用可能需要数分钟来完成。**
 
 结果：无返回值。
 
 ## 用法示例
+
+### 比特币核心客户端
+
+暂无。
 
 用法一：导入公钥到钱包并使用再扫描。
 
@@ -41,6 +45,13 @@ $ bitcoin-cli importpubkey "mypubkey"
 
 {% highlight shell %}
 $ bitcoin-cli importpubkey "mypubkey" "testing" false
+{% endhighlight %}
+
+### cURL
+
+{% highlight shell %}
+$ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "importpubkey", "params": ["mypubkey", "testing", flase] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
+暂无。
 {% endhighlight %}
 
 ## 源码剖析

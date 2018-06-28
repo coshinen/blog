@@ -227,7 +227,7 @@ $ bitcoin-cli getrawtransaction 684f6ed5b6e127ba76c07ef4c3fcc02a02c7e2ccef9ed0d2
 }
 {% endhighlight %}
 
-**注：这里因交易未设置找零地址而导致交易费过高，所以要设置允许交易费超额。**
+**注：若未设置找零输出，则会导致交易费过高，所以要设置允许交易费超额。**
 
 ### cURL
 

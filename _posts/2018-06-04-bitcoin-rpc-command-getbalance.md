@@ -14,41 +14,50 @@ categories: Blockchain
 ## 提示说明
 
 {% highlight shell %}
-getbalance ( "account" minconf includeWatchonly ) # 获取余额
+getbalance ( "account" minconf includeWatchonly ) # 获取钱包余额
 {% endhighlight %}
 
 如果未指定账户，返回服务器钱包总可用余额。<br>
 如果指定了账户（已过时），返回账户的余额。<br>
-**注：默认账户 `""` 与没有参数不同。服务器钱包总余额可能与默认账户 `""` 不同。**
+**注：默认账户 `""` 与没有参数不同。服务器钱包总余额可能与默认账户 `""` 余额不同。**
 
 参数：<br>
-1. `account` （字符串，可选，已过时）选择的账户，或 `*` 表示整个钱包。它可能使用默认账户 `""`。<br>
-2. `minconf` （数字性，可选，默认为 1）。只包含至少确认 `minconf` 次的交易。<br>
-3. `includeWatchonly` （布尔型，可选，默认为 false）包含在 watchonly 地址中的余额（参阅 [`importaddress`]()）。
+1. `account` （字符串，可选，已过时）选择的账户，或 `*` 表示整个钱包。可能是默认账户 `""`。<br>
+2. `minconf` （数字，可选，默认为 1）。只包含至少确认 `minconf` 次的交易。<br>
+3. `includeWatchonly` （布尔型，可选，默认为 false）也包括包含在 watchonly 地址中的余额（参阅 [`importaddress`](/2018/06/07/bitcoin-rpc-command-importaddress)）。
 
-结果：（数字型）该账户接收到 BTC 的总金额。
+结果：（数字）返回该账户收到的 BTC 的总金额。
 
 ## 用法示例
 
-用法一：获取当前整个钱包的可用余额。
+### 比特币核心客户端
+
+用法一：获取当前整个钱包的余额。
 
 {% highlight shell %}
 $ bitcoin-cli getbalance
 0.00000000
 {% endhighlight %}
 
-用法二：获取当前整个钱包的可用余额，结果同上。
+用法二：获取当前整个钱包的余额，结果同上。
 
 {% highlight shell %}
 $ bitcoin-cli getbalance * 1 true
 0.00000000
 {% endhighlight %}
 
-用法三：获取当前整个钱包至少确认 6 次交易的可用余额。
+用法三：获取当前整个钱包至少确认 6 次交易的余额。
 
 {% highlight shell %}
-$ bitcoin-cli getbalance "*" 6
+$ bitcoin-cli getbalance * 6
 0.00000000
+{% endhighlight %}
+
+### cURL
+
+{% highlight shell %}
+$ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "getbalance", "params": [] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
+{"result":0.00000000,"error":null,"id":"curltest"}
 {% endhighlight %}
 
 ## 源码剖析

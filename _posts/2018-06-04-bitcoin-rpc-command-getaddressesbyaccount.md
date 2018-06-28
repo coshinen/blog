@@ -20,24 +20,34 @@ getaddressesbyaccount "account" # （已过时）获取指定账户的地址列�
 参数：<br>
 1. `account` （字符串，必备）账户名。
 
-结果：（json 字符串数组）：
+结果：
 {% highlight shell %}
-[                     (json array of string)
-  "bitcoinaddress"  (string) a bitcoin address associated with the given account
+[                     （json 字符串数组）
+  "bitcoinaddress"  （字符串）一个关联给定账户的比特币地址
   ,...
 ]
 {% endhighlight %}
 
 ## 用法示例
 
-获取默认账户 "" 下的所有地址。
+### 比特币核心客户端
+
+获取账户 "tabby" 下的所有地址。
 
 {% highlight shell %}
-$ bitcoin-cli getaddressesbyaccount ""
+$ bitcoin-cli getaddressesbyaccount "tabby"
 [
   "1N7xDfRbkVwa2Co8q1KbDCVEr9rg8VWsfW", 
-  "1QKe82sDGtbBRp1ymRqG5XXFzJCfjUmpsi"
+  "1QKe82sDGtbBRp1ymRqG5XXFzJCfjUmpsi",
+  ...
 ]
+{% endhighlight %}
+
+### cURL
+
+{% highlight shell %}
+$ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "getaddressesbyaccount", "params": ["tabby"] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
+{"result":["1N7xDfRbkVwa2Co8q1KbDCVEr9rg8VWsfW","1QKe82sDGtbBRp1ymRqG5XXFzJCfjUmpsi"],"error":null,"id":"curltest"}
 {% endhighlight %}
 
 ## 源码剖析

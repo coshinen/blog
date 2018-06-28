@@ -14,9 +14,10 @@ categories: Blockchain
 ## 提示说明
 
 {% highlight shell %}
-encryptwallet "passphrase" # 使用 `passphrase` 加密钱包。用于第一次加密
+encryptwallet "passphrase" # 使用 `passphrase` 加密钱包
 {% endhighlight %}
 
+用于第一次加密。<br>
 在此之后，任何与私钥相关的调用，例如发送或签名，需要在调用前设置密钥解密。<br>
 使用 [`walletpassphrase`](/2018/05/31/bitcoin-rpc-command-walletpassphrase) 解密钱包，或使用 [`walletlock`](/2018/05/31/bitcoin-rpc-command-walletlock) 锁定钱包。<br>
 如果钱包已经加密，使用 [`walletpassphrasechange`](/2018/05/31/bitcoin-rpc-command-walletpassphrasechange) 更改密码。<br>
@@ -29,9 +30,20 @@ encryptwallet "passphrase" # 使用 `passphrase` 加密钱包。用于第一次�
 
 ## 用法示例
 
+### 比特币核心客户端
+
+使用密码 `mypasswd` 加密钱包。
+
 {% highlight shell %}
-$ bitcoin-cli encryptwallet 123
+$ bitcoin-cli encryptwallet mypasswd
 wallet encrypted; Bitcoin server stopping, restart to run with encrypted wallet. The keypool has been flushed, you need to make a new backup.
+{% endhighlight %}
+
+### cURL
+
+{% highlight shell %}
+$ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "encryptwallet", "params": ["mypasswd"] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
+{"result":"wallet encrypted; Bitcoin server stopping, restart to run with encrypted wallet. The keypool has been flushed, you need to make a new backup.","error":null,"id":"curltest"}
 {% endhighlight %}
 
 ## 源码剖析

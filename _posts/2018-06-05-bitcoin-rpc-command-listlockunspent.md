@@ -14,17 +14,17 @@ categories: Blockchain
 ## 提示说明
 
 {% highlight shell %}
-listlockunspent # 获取不能花费（锁定的）交易输出列表
+listlockunspent # 获取暂时不能花费（锁定的）交易输出列表
 {% endhighlight %}
 
-见 [`lockunspent`](/2018/06/05/bitcoin-rpc-command-lockunspent) 调用，加解锁交易输出。
+查看 [`lockunspent`](/2018/06/05/bitcoin-rpc-command-lockunspent) 加解锁未花费的交易输出。
 
 结果：<br>
 {% highlight shell %}
 [
   {
-    "txid" : "transactionid",     (string) The transaction id locked
-    "vout" : n                      (numeric) The vout value
+    "txid" : "transactionid",     （字符串）锁定的交易索引
+    "vout" : n                      （数字）输出序号
   }
   ,...
 ]
@@ -32,32 +32,42 @@ listlockunspent # 获取不能花费（锁定的）交易输出列表
 
 ## 用法示例
 
+### 比特币核心客户端
+
+1. 使用 [`listunspent`](/2018/06/05/bitcoin-rpc-command-listunspent) 获取一笔未花费的交易输出。<br>
+2. 使用 [`lockunspent`](/2018/06/05/bitcoin-rpc-command-lockunspent) 锁定该为花费交易输出。<br>
+3. 使用该命令查看锁定的未花费交易输出列表。
+
 {% highlight shell %}
 $ bitcoin-cli listunspent
 [
-  {
-    "txid": "cf9f8c8bac02b3012ab99864a2294b88cc6105fdefcd16bbe8f7d1531fc895fe",
-    "vout": 0,
-    "address": "1kjTv8TKSsbpGEBVZqLTcx1MeA4G8JkCnk",
-    "account": "",
-    "scriptPubKey": "76a914a4d938a6461a0d6f24946b9bfcda0862a1db6f7488ac",
-    "amount": 0.10000000,
-    "confirmations": 34533,
-    "ps_rounds": -2,
-    "spendable": true,
-    "solvable": true
-  }, 
   ...
+  {
+    "txid": "8d71b6c01c1a3710e1d7d2cfd7aeb827a0e0150579a9840b9ba51bf7a13d8aff",
+    "vout": 0,
+    "address": "1Z99Lsij11ajDEhipZbnifdFkBu8fC1Hb",
+    "scriptPubKey": "21023d2f5ddafe8a161867bb9a9162aa5c84b0882af4bfca1fa89f4811b651761f10ac",
+    "amount": 50.00000000,
+    "confirmations": 6631,
+    "spendable": true
+  }
 ]
-$ bitcoin-cli lockunspent false "[{\"txid\":\"cf9f8c8bac02b3012ab99864a2294b88cc6105fdefcd16bbe8f7d1531fc895fe\",\"vout\":0}]"
+$ bitcoin-cli lockunspent false "[{\"txid\":\"8d71b6c01c1a3710e1d7d2cfd7aeb827a0e0150579a9840b9ba51bf7a13d8aff\",\"vout\":0}]"
 true
 $ bitcoin-cli listlockunspent
 [
   {
-    "txid": "cf9f8c8bac02b3012ab99864a2294b88cc6105fdefcd16bbe8f7d1531fc895fe",
+    "txid": "8d71b6c01c1a3710e1d7d2cfd7aeb827a0e0150579a9840b9ba51bf7a13d8aff",
     "vout": 0
   }
 ]
+{% endhighlight %}
+
+### cURL
+
+{% highlight shell %}
+$ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "listlockunspent", "params": [] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
+{"result":[{"txid":"8d71b6c01c1a3710e1d7d2cfd7aeb827a0e0150579a9840b9ba51bf7a13d8aff","vout":0}],"error":null,"id":"curltest"}
 {% endhighlight %}
 
 ## 源码剖析

@@ -18,19 +18,29 @@ getaccount "bitcoinaddress" # （已过时）获取指定地址关联的账户
 {% endhighlight %}
 
 参数：<br>
-1. `bitcoinaddress` （字符串，必备）比特币地址所属的账户。
+1. `bitcoinaddress` （字符串，必备）用于查询所属账户的比特币地址。
 
-结果：（字符串）地址所属的账户名。
+结果：（字符串）返回地址所属的账户名。
 
 ## 用法示例
 
-通过 [`getnewaddress`](/2018/06/04/bitcoin-rpc-command-getnewaddress) 命令结果中的 `paytxfee` 字段查看当前交易费。
+### 比特币核心客户端
+
+使用 [`getnewaddress`](/2018/06/04/bitcoin-rpc-command-getnewaddress) 在指定账户下创建一个地址，
+根据该地址查询账户。
 
 {% highlight shell %}
-$ bitcoin-cli getnewaddress "account1"
+$ bitcoin-cli getnewaddress "myaccount"
 13CagJ3iVhG1LPSQFD8Yh3TgR4y5zRnbUS
 $ bitcoin-cli 13CagJ3iVhG1LPSQFD8Yh3TgR4y5zRnbUS
-account1
+myaccount
+{% endhighlight %}
+
+### cURL
+
+{% highlight shell %}
+$ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "getaccount", "params": ["13CagJ3iVhG1LPSQFD8Yh3TgR4y5zRnbUS"] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
+{"result":"myaccount","error":null,"id":"curltest"}
 {% endhighlight %}
 
 ## 源码剖析

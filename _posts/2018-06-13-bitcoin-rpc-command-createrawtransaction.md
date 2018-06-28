@@ -120,7 +120,7 @@ $ bitcoin-cli createrawtransaction "[{\"txid\":\"fb9bd2df3cef0abd9f444971dff0977
 ### cURL
 
 {% highlight C++ %}
-暂无
+暂无。
 {% endhighlight %}
 
 ## 源码剖析

@@ -14,40 +14,59 @@ categories: Blockchain
 ## 提示说明
 
 {% highlight shell %}
-importaddress "address" ( "label" rescan p2sh ) # 导入一个脚本（16 进制）或地址
+importaddress "address" ( "label" rescan p2sh ) # 导入一个脚本（16 进制）或地址用于监视
 {% endhighlight %}
 
-如果该地址在你的钱包，它将被监视，且不能用来花费。
+该地址好像在你的钱包，但不能用来花费。
 
 参数：<br>
-1. `script` （字符串，必备）16 进制的脚本（或地址）。<br>
+1. `script` （字符串，必备）16 进制编码的脚本（或地址）。<br>
 2. `label` （字符串，可选，默认为 ""）一个可选的标签（账户名）。<br>
 3. `rescan` （布尔型，可选，默认为 true）再扫描钱包交易。<br>
 4. `p2sh` （布尔型，可选，默认为 true）添加 P2SH 版本的脚本。
 
-**注：如果 `rescan` 为 true，该调用可能需要几分钟来完成。如果你有完整的公钥，你应该使用 [`importpubkey`](/2018/06/07/bitcoin-rpc-command-importpubkey) 代替该命令。**
+**注：如果 `rescan` 为 true，该调用可能需要数分钟来完成。
+如果你有完整的公钥，你应该使用 [`importpubkey`](/2018/06/07/bitcoin-rpc-command-importpubkey) 代替该命令。**
 
 结果：无返回值。
 
 ## 用法示例
 
-用法一：导入地址到钱包默认账户 `""` 中，且关闭再扫描。
+### 比特币核心客户端
+
+用法一：导入一个脚本并进行再扫描。
 
 {% highlight shell %}
 $ bitcoin-cli getaddressesbyaccount ""
 [
+  ...
 ]
 $ bitcoin-cli importaddress 1HvgGctUMNkHPwvayRFfPePBjke477ZqsH
 $ bitcoin-cli getaddressesbyaccount ""
+[
+  ...
+  "1HvgGctUMNkHPwvayRFfPePBjke477ZqsH"
+]
+{% endhighlight %}
+
+用法二：导入地址到钱包账户 `"testing"` 中，并关闭再扫描。
+
+{% highlight shell %}
+$ bitcoin-cli getaddressesbyaccount "testing"
+[
+]
+$ bitcoin-cli importaddress 1HvgGctUMNkHPwvayRFfPePBjke477ZqsH
+$ bitcoin-cli getaddressesbyaccount "testing"
 [
   "1HvgGctUMNkHPwvayRFfPePBjke477ZqsH"
 ]
 {% endhighlight %}
 
-用法二：导入一个脚本并进行再扫描。
+### cURL
 
 {% highlight shell %}
-$ bitcoin-cli importaddress <myscript>
+$ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "importaddress", "params": ["1HvgGctUMNkHPwvayRFfPePBjke477ZqsH", "testing", false] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
+{"result":null,"error":null,"id":"curltest"}
 {% endhighlight %}
 
 ## 源码剖析

@@ -22,9 +22,9 @@ listaddressgroupings # 列出作为输入公开使用的公共所有权或过去
 [
   [
     [
-      "bitcoinaddress",     (string) The bitcoin address
-      amount,                 (numeric) The amount in BTC
-      "account"             (string, optional) The account (DEPRECATED)
+      "bitcoinaddress",     （字符串）比特币地址
+      amount,                 （数字）以 BTC 为单位的金额
+      "account"             （字符串，可选，已过时）账户
     ]
     ,...
   ]
@@ -34,17 +34,28 @@ listaddressgroupings # 列出作为输入公开使用的公共所有权或过去
 
 ## 用法示例
 
+### 比特币核心客户端
+
+获取核心服务器上钱包中地址分组（地址，余额，账户），包含找零地址。
+
 {% highlight shell %}
 $ bitcoin-cli listaddressgroupings
 [
   [
     [
       "1kjTv8TKSsbpGEBVZqLTcx1MeA4G8JkCnk", 
-      51.10000000, 
+      300.00000000, 
       ""
     ]
   ]
 ]
+{% endhighlight %}
+
+### cURL
+
+{% highlight shell %}
+$ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "listaddressgroupings", "params": [] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
+{"result":[[["1kjTv8TKSsbpGEBVZqLTcx1MeA4G8JkCnk", 300.00000000, ""]]],"error":null,"id":"curltest"}
 {% endhighlight %}
 
 ## 源码剖析

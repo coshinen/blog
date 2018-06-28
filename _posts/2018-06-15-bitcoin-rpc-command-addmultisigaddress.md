@@ -14,30 +14,42 @@ categories: Blockchain
 ## 提示说明
 
 {% highlight shell %}
-addmultisigaddress urequired ["key",...] ( "account" ) # 签间一个需要 nrequired 个签名的多重签名地址到钱包
+addmultisigaddress urequired ["key",...] ( "account" ) # 添加一个需要 `nrequired` 个签名的多重签名地址到钱包
 {% endhighlight %}
 
-**注：每个密钥都是一个比特币地址或 16 进制编码公钥。<br>
+**每个密钥都是一个比特币地址或 16 进制编码公钥。<br>
 如果指定了账户（已过时），则分配地址到该账户。**
 
 参数：<br>
-1.`nrequired` （数字型，必备）n 个密钥或地址所需的签名数量。<br>
-2.`keys` （字符串，必备）一个比特币地址或 16 进制编码的公钥的 json 数组。
+1.`nrequired` （数字，必备）n 个密钥或地址所需的签名数量。<br>
+2.`keysobject` （字符串，必备）一个比特币地址或 16 进制编码公钥的 json 数组。
 {% highlight shell %}
      [
-       "key"    (string) bitcoin address or hex-encoded public key
+       "key"    （字符串）比特币地址或 16 进制编码的公钥
        ,...
      ]
 {% endhighlight %}
-3.`account` （字符串，可选，已过时）分配地址到一个账户。
+3.`account` （字符串，可选，已过时）分配地址到该账户。
 
-结果：（字符串）一个关联密钥的比特币地址（base58 编码的脚本索引）。<br>
+结果：（字符串）返回一个关联密钥的比特币地址（base58 编码的脚本索引）。<br>
 
 ## 用法示例
 
+### 比特币核心客户端
+
 {% highlight shell %}
-$ bitcoin-cli addmultisigaddress 2 "[\"1GNq8MGU7NTtd1qiYvee2Bc6bQyrfHTES9\",\"1BdH8FeKrGz7KMkbYhjPgJV1bzptxjPJwh\"]"
-3LGzrdg5AKoAKYrS2i2tZrxoUXjvnBUPmE
+$ bitcoin-cli getnewaddress
+1Ge7nrPf46ynNkzASjFxAtxim5qRJG3CVB
+$ bitcoin-cli getnewaddress
+1GdZoU57JSNfPzRcecLw182zPEE4DNwSL1
+$ bitcoin-cli addmultisigaddress 2 "[\"1Ge7nrPf46ynNkzASjFxAtxim5qRJG3CVB\",\"1GdZoU57JSNfPzRcecLw182zPEE4DNwSL1\"]"
+36cQfr8uciR5svcX5Ge3H3XuWiXTrbtAGQ
+{% endhighlight %}
+
+### cURL
+
+{% highlight shell %}
+暂无。
 {% endhighlight %}
 
 ## 源码剖析

@@ -14,16 +14,27 @@ categories: Blockchain
 ## 提示说明
 
 {% highlight shell %}
-getunconfirmedbalance # 获取服务器钱包未确认的（挖矿所得）总余额
+getunconfirmedbalance # 获取服务器钱包未确认的（未打包交易/内存池中交易）总余额
 {% endhighlight %}
 
 结果：返回服务器钱包未确认的总余额。
 
 ## 用法示例
 
+### 比特币核心客户端
+
+获取服务器钱包未确认的余额。
+
 {% highlight shell %}
 $ bitcoin-cli getunconfirmedbalance
 0.00000000
+{% endhighlight %}
+
+### cURL
+
+{% highlight shell %}
+$ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "getunconfirmedbalance", "params": [] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
+{"result":0.00000000,"error":null,"id":"curltest"}
 {% endhighlight %}
 
 ## 源码剖析

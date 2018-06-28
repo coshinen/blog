@@ -18,53 +18,63 @@ lockunspent unlock [{"txid":"txid","vout":n},...] # 临时加锁（unlock=false�
 {% endhighlight %}
 
 更新不可花费的临时输出列表。<br>
-一个锁定的交易输出，当花费比特币时，将不会被自动币筛选选择。<br>
-该所只存储在内存中。节点以零锁定的输出开始，当一个节点停止或崩溃时，锁定的输出列表总回被清空（借助进程出口）。<br>
-也可以查看 [`listunspent`](/2018/06/05/bitcoin-rpc-command-listunspent) 调用。
+一个锁定的交易输出，当花费比特币时，将不会被自动筛选币选中。<br>
+该锁只存储在内存中。节点启动时零个锁定的输出，且当一个节点停止或崩溃时，锁定的输出列表总会被清空。<br>
+也可以查看 [`listunspent`](/2018/06/05/bitcoin-rpc-command-listunspent)。
 
 参数：<br>
 1. `unlock` （布尔型，必备）指定交易是否解锁（true）或上锁（false）。<br>
-2. `transactions` （字符串，可选，默认不写为全部交易输出）一个 json 数组类型对象。每个对象的交易索引（字符串）和交易输出号（数字）。<br>
+2. `transactions` （字符串，可选，默认为全部交易输出）一个 json 对象数组。每个对象的交易索引（字符串）和交易输出序号（数字）。<br>
 {% highlight shell %}
-     [           (json array of json objects)
+     [           （json 对象的 json 数组）
        {
-         "txid":"id",    (string) The transaction id
-         "vout": n         (numeric) The output number
+         "txid":"id",    （字符串）交易索引
+         "vout": n         （数字）输出序号
        }
        ,...
      ]
 {% endhighlight %}
 
-结果：（布尔型）命令是否执行成功。
+结果：（布尔型）返回 true 表示成功，false 表示失败。
 
 ## 用法示例
+
+### 比特币核心客户端
+
+1. 使用 [`listunspent`](/2018/06/05/bitcoin-rpc-command-listunspent) 获取未花费的交易输出列表。<br>
+2. 使用该命令对其中一个未花费的交易输出加临时锁。<br>
+3. 使用 [`listlockunspent`](/2018/06/05/bitcoin-rpc-command-listlockunspent) 查看未花费交易输出的临时锁定列表。
 
 {% highlight shell %}
 $ bitcoin-cli listunspent
 [
-  {
-    "txid": "cf9f8c8bac02b3012ab99864a2294b88cc6105fdefcd16bbe8f7d1531fc895fe",
-    "vout": 0,
-    "address": "1kjTv8TKSsbpGEBVZqLTcx1MeA4G8JkCnk",
-    "account": "",
-    "scriptPubKey": "76a914a4d938a6461a0d6f24946b9bfcda0862a1db6f7488ac",
-    "amount": 0.10000000,
-    "confirmations": 34533,
-    "ps_rounds": -2,
-    "spendable": true,
-    "solvable": true
-  }, 
   ...
+  {
+    "txid": "8d71b6c01c1a3710e1d7d2cfd7aeb827a0e0150579a9840b9ba51bf7a13d8aff",
+    "vout": 0,
+    "address": "1Z99Lsij11ajDEhipZbnifdFkBu8fC1Hb",
+    "scriptPubKey": "21023d2f5ddafe8a161867bb9a9162aa5c84b0882af4bfca1fa89f4811b651761f10ac",
+    "amount": 50.00000000,
+    "confirmations": 6631,
+    "spendable": true
+  }
 ]
-$ bitcoin-cli lockunspent false "[{\"txid\":\"cf9f8c8bac02b3012ab99864a2294b88cc6105fdefcd16bbe8f7d1531fc895fe\",\"vout\":0}]"
+$ bitcoin-cli lockunspent false "[{\"txid\":\"8d71b6c01c1a3710e1d7d2cfd7aeb827a0e0150579a9840b9ba51bf7a13d8aff\",\"vout\":0}]"
 true
 $ bitcoin-cli listlockunspent
 [
   {
-    "txid": "cf9f8c8bac02b3012ab99864a2294b88cc6105fdefcd16bbe8f7d1531fc895fe",
+    "txid": "8d71b6c01c1a3710e1d7d2cfd7aeb827a0e0150579a9840b9ba51bf7a13d8aff",
     "vout": 0
   }
 ]
+{% endhighlight %}
+
+### cURL
+
+{% highlight shell %}
+$ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "lockunspent", "params": [false, "[{\"txid\":\"8d71b6c01c1a3710e1d7d2cfd7aeb827a0e0150579a9840b9ba51bf7a13d8aff\",\"vout\":0}]"] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
+暂无。
 {% endhighlight %}
 
 ## 源码剖析

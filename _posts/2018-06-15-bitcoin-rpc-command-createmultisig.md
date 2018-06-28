@@ -56,7 +56,7 @@ $ bitcoin-cli createmultisig 2 "[\"16vpmdSDaX3Nv9UMuk2vSecMrdstjjSP4R\",\"1KfU9y
 ### cURL
 
 {% highlight shell %}
-暂无
+暂无。
 {% endhighlight %}
 
 ## 源码剖析

@@ -14,125 +14,110 @@ categories: Blockchain
 ## 提示说明
 
 {% highlight shell %}
-listsinceblock ( "blockhash" target-confirmations includeWatchonly ) # 获取从区块 `blockhash` 开始到最佳区块上的全部交易，或如果该参数省略则获取全部区块交易
+listsinceblock ( "blockhash" target-confirmations includeWatchonly ) # 获取从区块 `blockhash` 开始到最佳区块上的全部交易，如果该参数省略则获取全部区块交易
 {% endhighlight %}
 
 参数：<br>
 1. `blockhash` （字符串，可选）列出从该区块哈希开始的全部交易。<br>
 2. `target-confirmations` （数字型，可选）所需的确认数，必须大于等于 1。<br>
-3. `includeWatchonly` （布尔型，可选，默认为 false）包含到 watchonly 地址集的交易（见 [`importaddress`]()）。
+3. `includeWatchonly` （布尔型，可选，默认为 false）包含到 watchonly 地址的交易（见 [`importaddress`](/2018/06/07/bitcoin-rpc-command-importaddress)）。
 
 结果：<br>
 {% highlight shell %}
 {
   "transactions": [
-    "account":"accountname",       (string) DEPRECATED. The account name associated with the transaction. Will be "" for the default account.
-    "address":"bitcoinaddress",    (string) The bitcoin address of the transaction. Not present for move transactions (category = move).
-    "category":"send|receive",     (string) The transaction category. 'send' has negative amounts, 'receive' has positive amounts.
-    "amount": x.xxx,          (numeric) The amount in BTC. This is negative for the 'send' category, and for the 'move' category for moves 
-                                          outbound. It is positive for the 'receive' category, and for the 'move' category for inbound funds.
-    "vout" : n,               (numeric) the vout value
-    "fee": x.xxx,             (numeric) The amount of the fee in BTC. This is negative and only available for the 'send' category of transactions.
-    "confirmations": n,       (numeric) The number of confirmations for the transaction. Available for 'send' and 'receive' category of transactions.
-    "blockhash": "hashvalue",     (string) The block hash containing the transaction. Available for 'send' and 'receive' category of transactions.
-    "blockindex": n,          (numeric) The block index containing the transaction. Available for 'send' and 'receive' category of transactions.
-    "blocktime": xxx,         (numeric) The block time in seconds since epoch (1 Jan 1970 GMT).
-    "txid": "transactionid",  (string) The transaction id. Available for 'send' and 'receive' category of transactions.
-    "time": xxx,              (numeric) The transaction time in seconds since epoch (Jan 1 1970 GMT).
-    "timereceived": xxx,      (numeric) The time received in seconds since epoch (Jan 1 1970 GMT). Available for 'send' and 'receive' category of transactions.
-    "comment": "...",       (string) If a comment is associated with the transaction.
-    "label" : "label"       (string) A comment for the address/transaction, if any
-    "to": "...",            (string) If a comment to is associated with the transaction.
+    "account":"accountname",       （字符串，已过时）交易关联的帐户名。默认账户为 ""。
+    "address":"bitcoinaddress",    （字符串）交易的比特币地址。对于 'move' 交易（类别为 'move'）不存在。
+    "category":"send|receive",     （字符串）交易类别。'send' 是负值，'receive' 是正值。
+    "amount": x.xxx,          （数字）以 BTC 为单位的金额。对于 'send' 类型为负值，且对于 'move' 类型为移出。
+                                          对于 'receive' 类型为正值，且对于 'move' 类型为移入资金。
+    "vout" : n,               （数字）输出序号
+    "fee": x.xxx,             （数字）以 BTC 为单位的交易费。只对于 'send' 类型交易是负值。
+    "confirmations": n,       （数字）交易的确认数。适用于 'send' 和 'receive' 类型的交易。
+    "blockhash": "hashvalue",     （字符串）包含该交易的区块哈希。适用于 'send' 和 'receive' 类型的交易。
+    "blockindex": n,          （数字）包含该交易的区块索引。适用于 'send' 和 'receive' 类型的交易。
+    "blocktime": xxx,         （数字）从格林尼治时间（1970-01-01 00:00:00）开始以秒为单位的区块时间。
+    "txid": "transactionid",  （字符串）交易索引。适用于 'send' 和 'receive' 类型的交易。
+    "time": xxx,              （数字）从格林尼治时间（1970-01-01 00:00:00）开始以秒为单位的交易时间。
+    "timereceived": xxx,      （数字）从格林尼治时间（1970-01-01 00:00:00）开始以秒为单位的交易接收时间。
+    "comment": "...",       （字符串）交易相关的备注。
+    "label" : "label"       （字符串）地址/交易的备注，如果有的话
+    "to": "...",            （字符串）交易目的地相关的备注。
   ],
-  "lastblock": "lastblockhash"     (string) The hash of the last block
+  "lastblock": "lastblockhash"     （字符串）最新的区块哈希
 }
 {% endhighlight %}
 
 ## 用法示例
 
-用法一：列出从第 n 个区块开始的全部交易。
+### 比特币核心客户端
 
-{% highlight shell %}
-$ bitcoin-cli getblockhash 12345
-282e38ac441e1cba6b45e10e7bd135911671b25a2c7d26e37f70529301a62c59
-$ bitcoin-cli listsinceblock 282e38ac441e1cba6b45e10e7bd135911671b25a2c7d26e37f70529301a62c59
-{
-  "transactions": [
-    {
-      "account": "",
-      "address": "4UGyNU2HyC4NWqEbCFbWX2rpzvjWHMhqsZ",
-      "category": "send",
-      "amount": -1.00000000,
-      "vout": 1,
-      "fee": -0.00001702,
-      "confirmations": 11,
-      "instantlock": false,
-      "blockhash": "00002d88af0743d798c7976699ce208e2c4947995c4e2b578aa76a6081228d43",
-      "blockindex": 1,
-      "blocktime": 1528250135,
-      "txid": "c4a531e7f0c0b4cef74b8848e45b0216e213fa7dff3235a6750b1b53caa0bfe8",
-      "walletconflicts": [
-      ],
-      "time": 1528250106,
-      "timereceived": 1528250106,
-      "bip125-replaceable": "no",
-      "abandoned": false
-    }
-  ],
-  "lastblock": "00002e0c5b0a511f37c29d2532124a1050721c7d833b6f0c4af360c419e991ce"
-}
-{% endhighlight %}
-
-用法二：列出全部区块的交易。
+用法一：列出全部区块的交易。
 
 {% highlight shell %}
 $ bitcoin-cli listsinceblock
 {
   "transactions": [
+    ...
     {
       "account": "",
-      "address": "4UGyNU2HyC4NWqEbCFbWX2rpzvjWHMhqsZ",
-      "category": "send",
-      "amount": -1.00000000,
-      "vout": 1,
-      "fee": -0.00001702,
-      "confirmations": 11,
-      "instantlock": false,
-      "blockhash": "00002d88af0743d798c7976699ce208e2c4947995c4e2b578aa76a6081228d43",
-      "blockindex": 1,
-      "blocktime": 1528250135,
-      "txid": "c4a531e7f0c0b4cef74b8848e45b0216e213fa7dff3235a6750b1b53caa0bfe8",
-      "walletconflicts": [
-      ],
-      "time": 1528250106,
-      "timereceived": 1528250106,
-      "bip125-replaceable": "no",
-      "abandoned": false
-    }
-  ],
-  [
-    {
-      "account": "",
-      "address": "4UjTv8TKSsbpGEBVZqLTcx1MeA4G8JkCnk",
-      "category": "receive",
-      "amount": 0.10000000,
-      "label": "",
+      "address": "1Z99Lsij11ajDEhipZbnifdFkBu8fC1Hb",
+      "category": "generate",
+      "amount": 50.00000000,
       "vout": 0,
-      "confirmations": 35969,
-      "instantlock": false,
-      "blockhash": "000018a8100074b9639c79ab2cc2c74a9d1daa6945caef63bde24dd6a28d570d",
-      "blockindex": 40,
-      "blocktime": 1527038043,
-      "txid": "5d306125b2fbfc5855b1b7729ceac1b3010e0ddaa7b03f7abeb225f7b13677ff",
+      "confirmations": 7049,
+      "generated": true,
+      "blockhash": "0000008bfc52e5e1b4ba7790ee64fca1d3b2aecec0e422b6b66ba42cb136a318",
+      "blockindex": 0,
+      "blocktime": 1529993986,
+      "txid": "64cccab86b0dc3ce37c7fffab2c30ab227add4542c19486aa85eca1a9e02d3ff",
       "walletconflicts": [
       ],
-      "time": 1527038031,
-      "timereceived": 1527038031,
+      "time": 1529993986,
+      "timereceived": 1529993986,
       "bip125-replaceable": "no"
     }
   ],
-  "lastblock": "0000065d65f78c3fa4c5deb2363df3e0955e17eaf955f7e5c89a367d57561063"
+  "lastblock": "00000071df37848cb6d23425da28d400d0c0b9cd0725b629a0891a14be272083"
 }
+{% endhighlight %}
+
+用法二：列出从当前最佳区块开始的全部交易。
+
+{% highlight shell %}
+$ bitcoin-cli getblockcount
+38565
+$ bitcoin-cli getblockhash 38565
+0000014c2436b10caba31a8ab61b78b91a3f877d1e00f9995f0c6f77a08d4516
+$ bitcoin-cli listsinceblock 0000014c2436b10caba31a8ab61b78b91a3f877d1e00f9995f0c6f77a08d4516 6
+{
+  "transactions": [
+    ...
+    {
+      "account": "",
+      "address": "1Z99Lsij11ajDEhipZbnifdFkBu8fC1Hb",
+      "category": "orphan",
+      "amount": 50.00000000,
+      "vout": 0,
+      "confirmations": 0,
+      "generated": true,
+      "trusted": false,
+      "txid": "18955cbce8c776fb6132c0c3a4770965bc5530d896a95c0128920630aa084dfa",
+      "walletconflicts": [
+      ],
+      "time": 1529979442,
+      "timereceived": 1529979442,
+      "bip125-replaceable": "unknown"
+    }
+  ],
+  "lastblock": "00000125b002c17dea5a3b2139f0277827a84809e17379c10a7c987282144012"
+}
+{% endhighlight %}
+
+### cURL
+
+{% highlight shell %}
+{"result":{"transactions":[{"account":"","address":"1Z99Lsij11ajDEhipZbnifdFkBu8fC1Hb","category":"orphan","amount":50.00000000,"vout":0,"confirmations":0,"generated":true,"trusted":false,"txid":"18955cbce8c776fb6132c0c3a4770965bc5530d896a95c0128920630aa084dfa","walletconflicts":[],"time":1529979442,"timereceived":1529979442,"bip125-replaceable":"unknown"}],"lastblock":"000000796192bdbec7c9d6c540dbbc04a9d8cd24ea6d77c96723f9a093450a70"},"error":null,"id":"curltest"}
 {% endhighlight %}
 
 ## 源码剖析

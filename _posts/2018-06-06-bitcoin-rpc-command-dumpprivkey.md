@@ -17,22 +17,32 @@ categories: Blockchain
 dumpprivkey "bitcoinaddress" # 导出 `bitcoinaddress` 对应的私钥
 {% endhighlight %}
 
-命令 [`importprivkey`]() 可以使用该输出作为输入。
+RPC 命令 [`importprivkey`]() 可以使用该输出作为输入。
 
 参数：<br>
 1. `bitcoinaddress` （字符串，必备）私钥对应的比特币地址。
 
-结果：（字符串）私钥。
+结果：（字符串）返回私钥。
 
 ## 用法示例
 
-使用 [`getnewaddress`](/2018/06/04/bitcoin-rpc-command-getnewaddress) 命令获取一个新比特币地址，然后以该地址为输入，导出其对应的私钥。
+### 比特币核心客户端
+
+使用 [`getnewaddress`](/2018/06/04/bitcoin-rpc-command-getnewaddress) 命令获取一个比特币地址，
+然后以该地址为输入，导出其对应的私钥。
 
 {% highlight shell %}
 $ bitcoin-cli getnewaddress
-1HvgGctUMNkHPwvayRFfPePBjke477ZqsH
-$ bitcoin-cli dumpprivkey 1HvgGctUMNkHPwvayRFfPePBjke477ZqsH
-L4fh51n2P8MpNP8hgNc9kLhS2e525GLNu4NGcWNphiLMRpE8rDGH
+13m7dqxmjCxTgVTnRHNywcgqp7SCFUtV7X
+$ bitcoin-cli dumpprivkey 13m7dqxmjCxTgVTnRHNywcgqp7SCFUtV7X
+L26dH1T4tfSbmYax7jdGMNPanrLtSvMtKnwrPjyLcD1prmsKBTts
+{% endhighlight %}
+
+### cURL
+
+{% highlight shell %}
+$ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "dumpprivkey", "params": ["13m7dqxmjCxTgVTnRHNywcgqp7SCFUtV7X"] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
+{"result":"L26dH1T4tfSbmYax7jdGMNPanrLtSvMtKnwrPjyLcD1prmsKBTts","error":null,"id":"curltest"}
 {% endhighlight %}
 
 ## 源码剖析

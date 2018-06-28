@@ -14,7 +14,7 @@ categories: Blockchain
 ## 提示说明
 
 {% highlight shell %}
-dumpwallet "filename" # 已可读的方式导出全部钱包密钥到指定文件 `filename`
+dumpwallet "filename" # 以可读的方式导出全部钱包密钥到指定文件 `filename`
 {% endhighlight %}
 
 参数：<br>
@@ -24,12 +24,22 @@ dumpwallet "filename" # 已可读的方式导出全部钱包密钥到指定文�
 
 ## 用法示例
 
-导出到指定文件，默认保存在当前用户家目录下。
+### 比特币核心客户端
+
+导出到指定文件，默认保存在用户首次使用该命令的工作目录下。<br>
+这里在家目录 `~` 下使用该命令。
 
 {% highlight shell %}
 $ bitcoin-cli backupwallet wallet.txt
 $ ls ~
 ... wallet.txt ...
+{% endhighlight %}
+
+### cURL
+
+{% highlight shell %}
+$ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "dumpwallet", "params": ["./wallet.txt"] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
+{"result":null,"error":null,"id":"curltest"}
 {% endhighlight %}
 
 ## 源码剖析

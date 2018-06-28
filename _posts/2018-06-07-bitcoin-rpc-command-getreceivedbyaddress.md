@@ -19,13 +19,15 @@ getreceivedbyaddress "bitcoinaddress" ( minconf ) # 获取给定比特币地址�
 
 参数：<br>
 1. `bitcoinaddress` （字符串，必备）交易的比特币地址。<br>
-2. `minconf` （数字型，可选，默认为 1）只包含至少 `minconf` 次确认的交易。
+2. `minconf` （数字，可选，默认为 1）只包含至少 `minconf` 次确认的交易。
 
-结果：（数字型）该地址接收到的 BTC 总数。
+结果：（数字）该地址接收到的 BTC 总数。
 
 ## 用法示例
 
-用法一：获取指定地址下接收的至少确认 1 次的金额。
+### 比特币核心客户端
+
+用法一：获取指定地址下接收的至少 1 次确认的金额。
 
 {% highlight shell %}
 $ bitcoin-cli getreceivedbyaccount "1D1ZrZNe3JUo7ZycKEYQQiQAWd9y54F4XZ"
@@ -39,11 +41,18 @@ $ bitcoin-cli getreceivedbyaccount "1D1ZrZNe3JUo7ZycKEYQQiQAWd9y54F4XZ" 0
 0
 {% endhighlight %}
 
-用法三：获取指定地址下接收的至少确认 6 次的金额，非常安全。
+用法三：获取指定地址下接收的至少 6 次确认的金额，非常安全。
 
 {% highlight shell %}
-$ bitcoin-cli getreceivedbyaccount "1D1ZrZNe3JUo7ZycKEYQQiQAWd9y54F4XZ" 0
+$ bitcoin-cli getreceivedbyaccount "1D1ZrZNe3JUo7ZycKEYQQiQAWd9y54F4XZ" 6
 0
+{% endhighlight %}
+
+### cURL
+
+{% highlight shell %}
+$ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "getreceivedbyaddress", "params": ["1D1ZrZNe3JUo7ZycKEYQQiQAWd9y54F4XZ", 6] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
+{"result":0,"error":null,"id":"curltest"}
 {% endhighlight %}
 
 ## 源码剖析

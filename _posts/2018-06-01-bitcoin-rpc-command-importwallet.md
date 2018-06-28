@@ -14,21 +14,37 @@ categories: Blockchain
 ## 提示说明
 
 {% highlight shell %}
-importwallet "filename" # 从一个钱包导出文件（见 `dumpwallet`）导入密钥
+importwallet "filename" # 从一个导出的钱包文件（见 `dumpwallet`）导入密钥
 {% endhighlight %}
 
 参数：<br>
-1. `filename` （字符串，必备）文件名。
+1. `filename` （字符串，必备）钱包文件（使用 [`dumpwallet`](/2018/06/01/bitcoin-rpc-command-dumpwallet) 导出的）。
 
 结果：无返回值。
 
 ## 用法示例
+
+### 比特币核心客户端
+
+导入 [`dumpwallet`](/2018/06/01/bitcoin-rpc-command-dumpwallet) 导出的钱包文件。<br>
+这里在家目录 `~` 下使用该命令。
 
 {% highlight shell %}
 $ bitcoin-cli dumpwallet wallet.txt
 $ ls ~
 ... wallet.txt ...
 $ bitcoin-cli importwallet ~/wallet.txt
+$ bitcoin-cli dumpwallet newwallet.txt
+$ vim newwallet.txt
+{% endhighlight %}
+
+导入后再次导出钱包文件查看导入的密钥。
+
+### cURL
+
+{% highlight shell %}
+$ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "importwallet", "params": ["wallet.txt"] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
+{"result":null,"error":null,"id":"curltest"}
 {% endhighlight %}
 
 ## 源码剖析

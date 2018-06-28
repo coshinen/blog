@@ -18,19 +18,19 @@ listreceivedbyaccount ( minconf includeempty includeWatchonly ) # （已过时�
 {% endhighlight %}
 
 参数：<br>
-1. `minconf` （数字型，可选，默认为 1）在包含付款前的最低确认数。<br>
+1. `minconf` （数字，可选，默认为 1）在被包含到付款前的最小确认数。<br>
 2. `includeempty` （布尔型，可选，默认为 false）是否包括还未收到任何付款的账户。<br>
-3. `includeWatchonly` （布尔型，可选，默认为 false）是否包含 watchonly 地址（见 [`importaddress`]()）。
+3. `includeWatchonly` （布尔型，可选，默认为 false）是否包含 watchonly 地址（见 [`importaddress`](/2018/06/07/bitcoin-rpc-command-importaddress)）。
 
 结果：<br>
 {% highlight shell %}
 [
   {
-    "involvesWatchonly" : true,   (bool) Only returned if imported addresses were involved in transaction
-    "account" : "accountname",  (string) The account name of the receiving account
-    "amount" : x.xxx,             (numeric) The total amount received by addresses with this account
-    "confirmations" : n,          (numeric) The number of confirmations of the most recent transaction included
-    "label" : "label"           (string) A comment for the address/transaction, if any
+    "involvesWatchonly" : true,   （布尔型）若导入的地址包含在交易中，只返回该项
+    "account" : "accountname",  （字符串）接收账户的帐户名
+    "amount" : x.xxx,             （数字）该账户下地址接收的总金额
+    "confirmations" : n,          （数字）包含最近交易的确认数
+    "label" : "label"           （字符串）地址/交易的备注，如果有的话
   }
   ,...
 ]
@@ -38,35 +38,54 @@ listreceivedbyaccount ( minconf includeempty includeWatchonly ) # （已过时�
 
 ## 用法示例
 
-用法一：列出钱包全部有余额的账户信息。
+### 比特币核心客户端
+
+用法一：列出钱包全部有接收到付款的账户信息。
 
 {% highlight shell %}
 $ bitcoin-cli listreceivedbyaccount
 [
   {
     "account": "",
-    "amount": 51.10000000,
-    "confirmations": 12315
+    "amount": 105.00987800,
+    "confirmations": 5511
+  }, 
+  {
+    "account": "account",
+    "amount": 100.00000000,
+    "confirmations": 3981
   }
 ]
 {% endhighlight %}
 
-用法二：列出钱包全部的账户信息（包含未收到付款的账户）。
+用法二：列出最小 6 个确认，且包含未收到付款的帐户信息。
 
 {% highlight shell %}
-$ bitcoin-cli listreceivedbyaccount 1 true
+$ bitcoin-cli listreceivedbyaccount 6 true
 [
   {
     "account": "",
-    "amount": 51.10000000,
-    "confirmations": 12315
-  },
+    "amount": 105.00987800,
+    "confirmations": 5517
+  }, 
   {
-    "account": "acc1",
+    "account": "account",
+    "amount": 100.00000000,
+    "confirmations": 3987
+  }, 
+  {
+    "account": "testing",
     "amount": 0.00000000,
     "confirmations": 0
   }
 ]
+{% endhighlight %}
+
+### cURL
+
+{% highlight shell %}
+$ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "listreceivedbyaccount", "params": [6, true, true] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
+{"result":[{"account":"","amount":105.00987800,"confirmations":5561},{"account":"account","amount":100.00000000,"confirmations":4031},{"account":"testing","amount":0.00000000,"confirmations":0}],"error":null,"id":"curltest"}
 {% endhighlight %}
 
 ## 源码剖析

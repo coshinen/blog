@@ -14,7 +14,7 @@ categories: Blockchain
 ## 提示说明
 
 {% highlight shell %}
-backupwallet "destination" # 安全复制 `wallet.dat` 到 `destination`，它可以是一个目录或一个文件名路径
+backupwallet "destination" # 安全复制 `wallet.dat` 到目标 `destination`，它可以是一个目录或一个文件名
 {% endhighlight %}
 
 参数：<br>
@@ -24,7 +24,10 @@ backupwallet "destination" # 安全复制 `wallet.dat` 到 `destination`，它�
 
 ## 用法示例
 
-用法一：备份为指定文件名，默认保存在当前用户家目录下。
+### 比特币核心客户端
+
+用法一：备份为指定文件名，默认保存在用户首次使用该命令的工作目录下。<br>
+这里在家目录 `~` 下使用该命令。
 
 {% highlight shell %}
 $ bitcoin-cli backupwallet backup.dat
@@ -48,6 +51,13 @@ backup.dat bitcoind.pid blocks chainstate database db.log debug.log wallet.dat
 $ bitcoin-cli backupwallet ~
 $ ls ~
 ... wallet.dat ...
+{% endhighlight %}
+
+### cURL
+
+{% highlight shell %}
+$ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "backupwallet", "params": ["~/.bitcoin/backup.dat"] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
+{"result":null,"error":null,"id":"curltest"}
 {% endhighlight %}
 
 ## 源码剖析

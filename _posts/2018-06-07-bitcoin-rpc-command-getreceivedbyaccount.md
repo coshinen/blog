@@ -14,36 +14,45 @@ categories: Blockchain
 ## 提示说明
 
 {% highlight shell %}
-getreceivedbyaccount "account" ( minconf ) # （已过时）获取账户 <account> 下所有地址至少 [minconf] 个确认的交易接收到的总金额
+getreceivedbyaccount "account" ( minconf ) # （已过时）获取账户 `account` 下所有地址至少 `minconf` 个确认的交易接收到的总金额
 {% endhighlight %}
 
 参数：<br>
-1. `account` （字符串，必备）选择的账户，可能是默认账户 `""`。<br>
-2. `minconf` （数字型，可选，默认为 1）只包含至少 `minconf` 次确认的交易。
+1. `account` （字符串，必备）选择的账户，默认账户使用 `""`。<br>
+2. `minconf` （数字，可选，默认为 1）只包含至少 `minconf` 次确认的交易。
 
-结果：（数字型）该账户接收到的 BTC 总数。
+结果：（数字）返回该账户接收到的 BTC 总数。
 
 ## 用法示例
 
-用法一：获取默认账户下接收的至少确认 1 次的金额。
+### 比特币核心客户端
+
+用法一：获取默认账户下接收的至少 1 次确认的金额。
 
 {% highlight shell %}
 $ bitcoin-cli getreceivedbyaccount ""
-0
+105.009878
 {% endhighlight %}
 
 用法二：获取指定账户下接收的包含未确认的金额。
 
 {% highlight shell %}
-$ bitcoin-cli getreceivedbyaccount "acc1" 0
+$ bitcoin-cli getreceivedbyaccount "tabby" 0
 0
 {% endhighlight %}
 
-用法三：获取指定账户下接收的至少确认 6 次的金额，非常安全。
+用法三：获取指定账户下接收的至少 6 次确认的金额，非常安全。
 
 {% highlight shell %}
-$ bitcoin-cli getreceivedbyaccount "acc1" 6
+$ bitcoin-cli getreceivedbyaccount "tabby" 6
 0
+{% endhighlight %}
+
+### cURL
+
+{% highlight shell %}
+$ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "getreceivedbyaccount", "params": ["", 6] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
+{"result":105.009878,"error":null,"id":"curltest"}
 {% endhighlight %}
 
 ## 源码剖析

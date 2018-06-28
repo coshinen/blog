@@ -18,25 +18,56 @@ listaccounts ( minconf includeWatchonly ) # （已过时）列出以账户名为
 {% endhighlight %}
 
 参数：<br>
-1. `minconf` （数字型，可选，默认为 1）只包含至少有 `minconf` 确认数的交易。<br>
-2. `includeWatchonly` （布尔型，可选，默认为 false）包含在 watchonly 地址上的余额（见 [`importaddress`]()）。
+1. `minconf` （数字，可选，默认为 1）只包含至少有 `minconf` 次确认的交易。<br>
+2. `includeWatchonly` （布尔型，可选，默认为 false）包含在 watchonly 地址上的余额（见 [`importaddress`](/2018/06/07/bitcoin-rpc-command-importaddress)）。
 
 结果：<br>
 {% highlight shell %}
-{                      (json object where keys are account names, and values are numeric balances
-  "account": x.xxx,  (numeric) The property name is the account name, and the value is the total balance for the account.
+{                      （键为账户名，值为数字型余额的 json 对象）
+  "account": x.xxx,  （数字）属性名为账户名，值为该账户的总余额。
   ...
 }
 {% endhighlight %}
 
 ## 用法示例
 
+### 比特币核心客户端
+
+用法一：列出服务器钱包中所有账户即其至少 1 次确认的余额。
+
 {% highlight shell %}
 $ bitcoin-cli listaccounts
 {
-  "": 0.00000000,
-  "acc1": 0.00000000
+  "": 200.00000000,
+  "tabby": 100.00000000
 }
+{% endhighlight %}
+
+用法二：列出服务器钱包中所有账户即其包含未确认的余额的余额。
+
+{% highlight shell %}
+$ bitcoin-cli listaccounts 0
+{
+  "": 200.00000000,
+  "tabby": 100.00000000
+}
+{% endhighlight %}
+
+用法三：列出服务器钱包中所有账户即其至少 6 次确认的余额。
+
+{% highlight shell %}
+$ bitcoin-cli listaccounts 6
+{
+  "": 200.00000000,
+  "tabby": 100.00000000
+}
+{% endhighlight %}
+
+### cURL
+
+{% highlight shell %}
+$ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "listaccounts", "params": [6] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
+{"result":{"":200.00000000,"tabby":100.00000000},"error":null,"id":"curltest"}
 {% endhighlight %}
 
 ## 源码剖析

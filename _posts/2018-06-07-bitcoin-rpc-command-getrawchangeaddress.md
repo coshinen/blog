@@ -17,15 +17,26 @@ categories: Blockchain
 getrawchangeaddress # 获取一个新的用于接收找零的比特币地址
 {% endhighlight %}
 
-**这是用于元交易的，非普通交易。**
+**这是用于原始交易，而非普通交易。**
 
-结果：（字符串）地址。
+结果：（字符串）返回地址。
 
 ## 用法示例
+
+### 比特币核心客户端
+
+获取一个新的用于原始交易的找零地址。
 
 {% highlight shell %}
 $ bitcoin-cli getrawchangeaddress
 16h8G5hCrbHKU6ihp3RaBNP4uctzac1S6k
+{% endhighlight %}
+
+### cURL
+
+{% highlight shell %}
+$ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "getrawchangeaddress", "params": [] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
+{"result":"1UtBfdBGyzJjWPe7VYCASooGdkUAVosRg","error":null,"id":"curltest"}
 {% endhighlight %}
 
 ## 源码剖析

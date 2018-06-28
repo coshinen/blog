@@ -24,70 +24,104 @@ gettransaction "txid" ( includeWatchonly ) # 获取关于钱包内交易 `txid` 
 结果：<br>
 {% highlight shell %}
 {
-  "amount" : x.xxx,        (numeric) The transaction amount in BTC
-  "confirmations" : n,     (numeric) The number of confirmations
-  "blockhash" : "hash",  (string) The block hash
-  "blockindex" : xx,       (numeric) The block index
-  "blocktime" : ttt,       (numeric) The time in seconds since epoch (1 Jan 1970 GMT)
-  "txid" : "transactionid",   (string) The transaction id.
-  "time" : ttt,            (numeric) The transaction time in seconds since epoch (1 Jan 1970 GMT)
-  "timereceived" : ttt,    (numeric) The time received in seconds since epoch (1 Jan 1970 GMT)
-  "bip125-replaceable": "yes|no|unknown"  (string) Whether this transaction could be replaced due to BIP125 (replace-by-fee);
-                                                   may be unknown for unconfirmed transactions not in the mempool
+  "amount" : x.xxx,        （数字）以 BTC 为单位的交易金额
+  "confirmations" : n,     （数字）确认数
+  "blockhash" : "hash",  （字符串）区块哈希
+  "blockindex" : xx,       （数字）区块索引
+  "blocktime" : ttt,       （数字）从格林尼治时间 1970-01-01 00:00:00 开始以秒为单位的区块创建时间
+  "txid" : "transactionid",   （字符串）交易索引
+  "time" : ttt,            （数字）从格林尼治时间（1970-01-01 00:00:00）开始以秒为单位的交易时间
+  "timereceived" : ttt,    （数字）从格林尼治时间（1970-01-01 00:00:00）开始以秒为单位的接收交易时间
+  "bip125-replaceable": "yes|no|unknown"  （字符串）该交易是否因 BIP125 （替换交易费）被替换；
+                                                   不在内存池中未确认的交易可能是未知
   "details" : [
     {
-      "account" : "accountname",  (string) DEPRECATED. The account name involved in the transaction, can be "" for the default account.
-      "address" : "bitcoinaddress",   (string) The bitcoin address involved in the transaction
-      "category" : "send|receive",    (string) The category, either 'send' or 'receive'
-      "amount" : x.xxx,                 (numeric) The amount in BTC
-      "label" : "label",              (string) A comment for the address/transaction, if any
-      "vout" : n,                       (numeric) the vout value
+      "account" : "accountname",  （字符串，已过时）包含在交易中的账户名，对于默认账户可以为 `""`
+      "address" : "bitcoinaddress",   （字符串）包含在交易中的比特币地址
+      "category" : "send|receive",    （字符串）类别，'send' 或 'receive'
+      "amount" : x.xxx,                 （数字）以 BTC 为单位的金额
+      "label" : "label",              （字符串）地址/交易的评论，如果有的话
+      "vout" : n,                       （数字）输出序号
     }
     ,...
   ],
-  "hex" : "data"         (string) Raw data for transaction
+  "hex" : "data"         （字符串）交易原始数据
 }
 {% endhighlight %}
 
 ## 用法示例
 
-用法一：获取指定交易的详细信息。
+### 比特币核心客户端
+
+用法一：获取指定交易的详细信息。<br>
+先使用 [`listtransactions`](/2018/06/06/bitcoin-rpc-command-listtransactions) 获取钱包交易。
 
 {% highlight shell %}
-$ bitcoin-cli gettransaction c4a531e7f0c0b4cef74b8848e45b0216e213fa7dff3235a6750b1b53caa0bfe8
+$ bitcoin-cli listtransactions
+[
+  ...
+  {
+    "account": "",
+    "address": "1PQyGCTohHc7y3MvKjLWk7NZQGyL9Wd6je",
+    "category": "send",
+    "amount": -100.00000000,
+    "vout": 1,
+    "fee": -0.00009080,
+    "confirmations": 961,
+    "blockhash": "0000037a1b06a77e7fc0c8812e6e3200b137b4415fb8bcd1c603aa3dbc9c62b1",
+    "blockindex": 1,
+    "blocktime": 1530158339,
+    "txid": "705493d021973fd635c9e24880de70c4b002ba3cbd066783d23bce316fe00a29",
+    "walletconflicts": [
+    ],
+    "time": 1530158343,
+    "timereceived": 1530158343,
+    "bip125-replaceable": "no",
+    "abandoned": false
+  }
+]
+$ bitcoin-cli gettransaction 705493d021973fd635c9e24880de70c4b002ba3cbd066783d23bce316fe00a29
 {
-  "amount": -1.00000000,
-  "fee": -0.00001702,
-  "confirmations": 9379,
-  "instantlock": false,
-  "blockhash": "00002d88af0743d798c7976699ce208e2c4947995c4e2b578aa76a6081228d43",
+  "amount": -100.00000000,
+  "fee": -0.00009080,
+  "confirmations": 1046,
+  "blockhash": "0000037a1b06a77e7fc0c8812e6e3200b137b4415fb8bcd1c603aa3dbc9c62b1",
   "blockindex": 1,
-  "blocktime": 1528250135,
-  "txid": "c4a531e7f0c0b4cef74b8848e45b0216e213fa7dff3235a6750b1b53caa0bfe8",
+  "blocktime": 1530158339,
+  "txid": "705493d021973fd635c9e24880de70c4b002ba3cbd066783d23bce316fe00a29",
   "walletconflicts": [
   ],
-  "time": 1528250106,
-  "timereceived": 1528250106,
+  "time": 1530158343,
+  "timereceived": 1530158343,
   "bip125-replaceable": "no",
   "details": [
     {
       "account": "",
-      "address": "1kGyNU2HyC4NWqEbCFbWX2rpzvjWHMhqsZ",
+      "address": "1PQyGCTohHc7y3MvKjLWk7NZQGyL9Wd6je",
       "category": "send",
-      "amount": -1.00000000,
+      "amount": -100.00000000,
       "vout": 1,
-      "fee": -0.00001702,
+      "fee": -0.00009080,
       "abandoned": false
     }
   ],
-  "hex": "010000000bb5542b850da29c18eaf4fd1cfe7b3cfb6e0576fda2d0e1b65f890dded6edd806000000006b483045022100bf70d703ca5cb3a3ba448027749576594e1c903d456a7a32e2f3c41a0833ec4802204c6852975494cf1c0fc27b037be85b298ab9212540883f217a5f17ba94053fd0012102ef09fb034dc26337de85e77c6b519bfeb2500f2cd69ca4c0c34e5425144ffaa0feffffffd6b7e5e543ff5e6bcee5683d6b24011f55decbe6661d10b81677bf8baa3b1a52000000006a47304402201782061b9bdf8a4318c3e89506d698b084ce4d594b107fd0f4243f062caec672022067dd38f16bf67ec8856be1f2b55bb0d71605767e94006882a4c0883ee378bb58012102ef09fb034dc26337de85e77c6b519bfeb2500f2cd69ca4c0c34e5425144ffaa0feffffff0517347f6f66f10b07fae1f85043b61cf05cc2b680e4167a54c3aecb4d1df957000000006a47304402204ba70355a91c51c9dbb04b4e426df85c241e97f915915573404b4d046083543d02202e3fd3dc38d5c794e199d6b380791a9429102beaf3c047135649db2b2f071810012102ef09fb034dc26337de85e77c6b519bfeb2500f2cd69ca4c0c34e5425144ffaa0feffffff4a82e13178d62bb2bb6002e547d484aefcaaacc86d97094dc6b549f3a37e505b000000006b4830450221008fa92d273d58bb795e543c24e8a91b40574c1f38f7185c95fbaab6969a2ab09c02207be76315d738c7ec0ac28abaf7ab17ece9f88d784a339a0dbe0f191a3feb0552012102ef09fb034dc26337de85e77c6b519bfeb2500f2cd69ca4c0c34e5425144ffaa0feffffff553ac8e5af49a04b473d80806d2e8d08512e474a5812204851884866002caa74000000006b483045022100fdfc8ed8438ed4de8f319151166203c82cbe4e6cd408f99cfc2d07250e44a50b022011197855e8cfc72e10c4e9984303dda48354f109b7becb83081dc7496109eaa5012102ef09fb034dc26337de85e77c6b519bfeb2500f2cd69ca4c0c34e5425144ffaa0fefffffff0c54223b243c014105481121097e70fdfc1cd6d059a67fbaa3d70e43b001b94000000006a473044022016fa1810a3c2ec68c7e7d0af14dc7cad27f57ba28105bf09e7605f6d5db2d3fb02207674ca72e5fbf490e78c2ccf88545c68bb64d7154d8478855ccdf033d0021e7c012102ef09fb034dc26337de85e77c6b519bfeb2500f2cd69ca4c0c34e5425144ffaa0feffffffbde9ba2988148ac2294de827433e699108e15279f149f2645488d16845ef42b7000000006a47304402203e4f3033699eaa44178b4a919b4c59428358de26eb1d5cd3017b9f498f65d1c302200e3d7cb718b123483db2d10032564cb7ace5d40e338e8e99676a87cb09c347ff012102ef09fb034dc26337de85e77c6b519bfeb2500f2cd69ca4c0c34e5425144ffaa0feffffff34a5d24b6cd48336a8af4ba30d03063044e1fd72d5df45318f1ac6bc4d2003bc000000006b483045022100f12b6e0b59da050c5919c91e13d2b6bb190b3f0be02e276270c505feff10d84d022005a55b59d2a8ae573764a26aea85c35feb3b4f8af5eb2a306e4846f4b04a12fa012102ef09fb034dc26337de85e77c6b519bfeb2500f2cd69ca4c0c34e5425144ffaa0feffffff7300321011ad83ba4dc0d4a106785974c777a4ce9c15e15c599e092fbf1221d0000000006a473044022061e4940f5abc0093975a3b52679b1433b1cdd9645880e743fa9a75865d4525bf0220155feb0f59dd0b3b61b7c1bc62b18f34ed3a1da973df18645c0b6f3e220bcff5012102ef09fb034dc26337de85e77c6b519bfeb2500f2cd69ca4c0c34e5425144ffaa0feffffff635848df35ea8145ae675bd8766fee61c9eb2064c6ca45324d7300584708ead5000000006a473044022041c35f24f3ce6028725b837617013b3fb04164d6701a7fe14760234ac9fa42a70220326d1b7013da0bb5a30a8494705c04f74ef465b9c27447dcc316bb9cfc3e2fa1012102ef09fb034dc26337de85e77c6b519bfeb2500f2cd69ca4c0c34e5425144ffaa0feffffffcdadf4fecbdcd87c1ce1023f4b641ab43c5e50fff8ff9c81955acbb6ac9f0af4000000006b4830450221009ee9b816cf033890fcad93d3bf51d754fddcec71dcbdf6f26a05898c4afe260802202b8df11d35a9d83eda4ce65ea83c63a9fce5f774c1b5dbfd1ac6a4b3adca5c99012102ef09fb034dc26337de85e77c6b519bfeb2500f2cd69ca4c0c34e5425144ffaa0feffffff02da8f9800000000001976a914a35f0ae9e3065632eccc169538c8fd3969d9675d88ac00e1f505000000001976a9149fd693cdb19c17a4011f1fc41b35587c46a5096188ac62ed0000"
+  "hex": "0100000002b03499f612ae5dbea794c5bcddddfb852544b9d9d457f1f84a94fa3002318b0f000000006b483045022100d48191b7f76da6e834c44b83328712ba9b7b7c54c6791331d2452e22d68e59ce022063c656e21e208712cf50ce66085d12e2ed4852dea52f5d4e18aef96932cb212d01210331fcac9ec8ba6114af93b70ea597ee3b7b1ca0fe8c8a2c9109b94e69e25216b5feffffffb03499f612ae5dbea794c5bcddddfb852544b9d9d457f1f84a94fa3002318b0f010000006b483045022100f7a9ded4489a74c771adeddf09a8e23b44d2dd4dd9eeb76626a6a3419f35565c022058478e76ae77ccda4afd3b0e46e77939729c5f12237604697103f7cdc8f1560a012103f32793907cbd21775461028c9b9d0a0947b953d28e500d24b03bf001fbd5dcf6feffffff02dcf91500000000001976a91489cb30247007174e3eb0a33cfcad743494bc9f6a88ac00e40b54020000001976a914f5db4caea89179c63d8870ee2d0ad1d5ebf1235a88ac25880000"
 }
 {% endhighlight %}
 
-用法二：获取指定 watch-only 交易的详细信息。
+用法二：获取包含 watch-only 地址交易的详细信息。
+
+暂无。
 
 {% highlight shell %}
 $ bitcoin-cli gettransaction "txid" true
+{% endhighlight %}
+
+### cURL
+
+{% highlight shell %}
+$ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "gettransaction", "params": ["705493d021973fd635c9e24880de70c4b002ba3cbd066783d23bce316fe00a29"] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
+{"result":{"amount":-100.00000000,"fee":-0.00009080,"confirmations":1128,"blockhash":"0000037a1b06a77e7fc0c8812e6e3200b137b4415fb8bcd1c603aa3dbc9c62b1","blockindex":1,"blocktime":1530158339,"txid":"705493d021973fd635c9e24880de70c4b002ba3cbd066783d23bce316fe00a29","walletconflicts":[],"time":1530158343,"timereceived":1530158343,"bip125-replaceable":"no","details":[{"account":"","address":"1PQyGCTohHc7y3MvKjLWk7NZQGyL9Wd6je","category":"send","amount":-100.00000000,"vout":1,"fee":-0.00009080,"abandoned":false}],"hex":"0100000002b03499f612ae5dbea794c5bcddddfb852544b9d9d457f1f84a94fa3002318b0f000000006b483045022100d48191b7f76da6e834c44b83328712ba9b7b7c54c6791331d2452e22d68e59ce022063c656e21e208712cf50ce66085d12e2ed4852dea52f5d4e18aef96932cb212d01210331fcac9ec8ba6114af93b70ea597ee3b7b1ca0fe8c8a2c9109b94e69e25216b5feffffffb03499f612ae5dbea794c5bcddddfb852544b9d9d457f1f84a94fa3002318b0f010000006b483045022100f7a9ded4489a74c771adeddf09a8e23b44d2dd4dd9eeb76626a6a3419f35565c022058478e76ae77ccda4afd3b0e46e77939729c5f12237604697103f7cdc8f1560a012103f32793907cbd21775461028c9b9d0a0947b953d28e500d24b03bf001fbd5dcf6feffffff02dcf91500000000001976a91489cb30247007174e3eb0a33cfcad743494bc9f6a88ac00e40b54020000001976a914f5db4caea89179c63d8870ee2d0ad1d5ebf1235a88ac25880000"},"error":null,"id":"curltest"}
 {% endhighlight %}
 
 ## 源码剖析

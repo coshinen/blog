@@ -22,26 +22,43 @@ importprivkey "bitcoinprivkey" ( "label" rescan ) # 导入私钥（通过 `dumpp
 2. `label` （字符串，可选，默认为 ""）一个可选的标签（账户名）。<br>
 3. `rescan` （布尔型，可选，默认为 true）再扫描钱包交易。
 
-**注：如果 `rescan` 为 true，该调用可能需要几分钟来完成。**
+**注：如果 `rescan` 为 true，该调用可能需要数分钟来完成。**
 
 结果：无返回值。
 
 ## 用法示例
 
-用法一：导入私钥到钱包默认账户 `""` 中。
+### 比特币核心客户端
+
+用法一：在钱包默认账户 `""` 中生成一个新地址，获取其私钥，再导入私钥到账户 `"tabby"` 中。
 
 {% highlight shell %}
 $ bitcoin-cli getnewaddress
 1HvgGctUMNkHPwvayRFfPePBjke477ZqsH
 $ bitcoin-cli dumpprivkey 1HvgGctUMNkHPwvayRFfPePBjke477ZqsH
 L4fh51n2P8MpNP8hgNc9kLhS2e525GLNu4NGcWNphiLMRpE8rDGH
-$ bitcoin-cli importprivkey L4fh51n2P8MpNP8hgNc9kLhS2e525GLNu4NGcWNphiLMRpE8rDGH
+$ bitcoin-cli importprivkey L4fh51n2P8MpNP8hgNc9kLhS2e525GLNu4NGcWNphiLMRpE8rDGH "tabby"
+$ bitcoin-cli getaddressesbyaccount "tabby"
+[
+  "1HvgGctUMNkHPwvayRFfPePBjke477ZqsH"
+]
 {% endhighlight %}
 
-用法二：导入私钥到钱包指定账户 `"testing"` 中，并关闭再扫描。
+用法二：导入私钥到账户 `"testing"` 中，并关闭再扫描。
 
 {% highlight shell %}
 $ bitcoin-cli importprivkey L4fh51n2P8MpNP8hgNc9kLhS2e525GLNu4NGcWNphiLMRpE8rDGH "testing" false
+$ bitcoin-cli getaddressesbyaccount "testing"
+[
+  "1HvgGctUMNkHPwvayRFfPePBjke477ZqsH"
+]
+{% endhighlight %}
+
+### cURL
+
+{% highlight shell %}
+$ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "importprivkey", "params": ["L4fh51n2P8MpNP8hgNc9kLhS2e525GLNu4NGcWNphiLMRpE8rDGH", "testing", false] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
+{"result":null,"error":null,"id":"curltest"}
 {% endhighlight %}
 
 ## 源码剖析

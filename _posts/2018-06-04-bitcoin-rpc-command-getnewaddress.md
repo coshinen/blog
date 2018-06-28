@@ -14,20 +14,22 @@ categories: Blockchain
 ## 提示说明
 
 {% highlight shell %}
-getnewaddress ( "account" ) # 获取一个用于接收支付金额的新比特币地址
+getnewaddress ( "account" ) # 获取一个用于接收付款的新的比特币地址
 {% endhighlight %}
 
 如果指定了账户（已过时），它将同地址一起添加到地址簿中，
-以便地址接收的付款将计入账户。
+以便接收付款的地址计入账户。
 
 参数：<br>
-1. `account` （字符串，可选，已过时）地址链接到的账户名称。
-如果没有提供，则使用默认账户 `""`。也可以设置空字符串 `""` 表示默认地址。
-账户不需要存在，如果没有指定名称的账户，将会创建该账户。
+1. `account` （字符串，可选，已过时）地址链接的账户名。
+如果没有提供，则使用默认账户 `""`。也可以设置空字符串 `""` 表示默认账户。
+该账户不需要存在，如果没有指定名称的账户，将会创建该账户。
 
-结果：（字符串）新比特币地址。
+结果：（字符串）返回新的比特币地址。
 
 ## 用法示例
+
+### 比特币核心客户端
 
 用法一：未指定账户，关联到默认账户 `""`。
 
@@ -41,6 +43,13 @@ $ bitcoin-cli getnewaddress
 {% highlight shell %}
 $ bitcoin-cli getnewaddress ""
 1L57BgkTtT3qYa5PfLgGmqcVgtHAWh8vAp
+{% endhighlight %}
+
+### cURL
+
+{% highlight shell %}
+$ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "getnewaddress", "params": [] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
+{"result":"1BWLn7uqfsnFxKp2J88HBGd9njWBT1JU2i","error":null,"id":"curltest"}
 {% endhighlight %}
 
 ## 源码剖析

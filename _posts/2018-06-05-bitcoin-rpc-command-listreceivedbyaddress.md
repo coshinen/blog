@@ -18,20 +18,20 @@ listreceivedbyaddress ( minconf includeempty includeWatchonly ) # 列出接收�
 {% endhighlight %}
 
 参数：<br>
-1. `minconf` （数字型，可选，默认为 1）在包含付款前的最低确认数。<br>
-2. `includeempty` （布尔型，可选，默认为 false）是否包括还未收到任何付款的账户。<br>
-3. `includeWatchonly` （布尔型，可选，默认为 false）是否包含 watchonly 地址（见 [`importaddress`]()）。
+1. `minconf` （数字，可选，默认为 1）在被包含到付款前的最低确认数。<br>
+2. `includeempty` （布尔型，可选，默认为 false）是否包括还未收到任何付款的地址。<br>
+3. `includeWatchonly` （布尔型，可选，默认为 false）是否包含 watchonly 地址（见 [`importaddress`](/2018/06/07/bitcoin-rpc-command-importaddress)）。
 
 结果：<br>
 {% highlight shell %}
 [
   {
-    "involvesWatchonly" : true,        (bool) Only returned if imported addresses were involved in transaction
-    "address" : "receivingaddress",  (string) The receiving address
-    "account" : "accountname",       (string) DEPRECATED. The account of the receiving address. The default account is "".
-    "amount" : x.xxx,                  (numeric) The total amount in BTC received by the address
-    "confirmations" : n,               (numeric) The number of confirmations of the most recent transaction included
-    "label" : "label"                (string) A comment for the address/transaction, if any
+    "involvesWatchonly" : true,        （布尔型）若被导入的地址包含交易中则只返回此项
+    "address" : "receivingaddress",  （字符串）接收地址
+    "account" : "accountname",       （字符串，已过时）接收地址的帐户名。默认帐户是 ""。
+    "amount" : x.xxx,                  （数字）通过该地址接受的以 BTC 为单位的总金额
+    "confirmations" : n,               （数字）包含最近交易的确认数
+    "label" : "label"                （字符串）地址/交易的备注，若有的话
   }
   ,...
 ]
@@ -39,21 +39,62 @@ listreceivedbyaddress ( minconf includeempty includeWatchonly ) # 列出接收�
 
 ## 用法示例
 
+### 比特币核心客户端
+
+用法一：列出全部接收到付款的地址信息。
+
 {% highlight shell %}
 $ bitcoin-cli listreceivedbyaddress
 [
+  ...
   {
-    "address": "1kjTv8TKSsbpGEBVZqLTcx1MeA4G8JkCnk",
+    "address": "1Pd97Ru8KYJCgovZzPNYi3VDkXmLQZbtKx",
     "account": "",
-    "amount": 51.10000000,
-    "confirmations": 12315,
+    "amount": 3.00000000,
+    "confirmations": 6185,
     "label": "",
     "txids": [
-      "0774341b8acca3129f4df467bac81e4bf325899b7604090d9b526ab969b52b00", 
-      "ab8021f615021384fa4f5cf3c1a7f97d832a9fcc72d766e748b8c741332af201", 
+      "6e54ab6ac385e19fa4eea08fa985db00512a7084c83a4419179240ce17ee1244", 
+      "58ae3bdc2d76457e3e536e7bac3238383b9f1e048feb86f5164aab39ceeac853"
     ]
   }
 ]
+{% endhighlight %}
+
+用法二：列出至少 6 个确认，且包含未收到付款的地址信息。
+
+{% highlight shell %}
+$ bitcoin-cli listreceivedbyaddress 6 true
+[
+  ...
+  {
+    "address": "1Pd97Ru8KYJCgovZzPNYi3VDkXmLQZbtKx",
+    "account": "",
+    "amount": 3.00000000,
+    "confirmations": 6189,
+    "label": "",
+    "txids": [
+      "6e54ab6ac385e19fa4eea08fa985db00512a7084c83a4419179240ce17ee1244", 
+      "58ae3bdc2d76457e3e536e7bac3238383b9f1e048feb86f5164aab39ceeac853"
+    ]
+  }, 
+  {
+    "address": "36cQfr8uciR5svcX5Ge3H3XuWiXTrbtAGQ",
+    "account": "",
+    "amount": 0.00000000,
+    "confirmations": 0,
+    "label": "",
+    "txids": [
+    ]
+  }
+]
+{% endhighlight %}
+
+### cURL
+
+{% highlight shell %}
+$ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "listreceivedbyaddress", "params": [6, true, true] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
+{"result":[{"address":"36cQfr8uciR5svcX5Ge3H3XuWiXTrbtAGQ","account":"","amount":0.00000000,"confirmations":0,"label":"","txids":[]}],"error":null,"id":"curltest"}
 {% endhighlight %}
 
 ## 源码剖析

@@ -20,33 +20,44 @@ getwalletinfo # 获取一个包含各种钱包状态信息的对象
 结果：<br>
 {% highlight shell %}
 {
-  "walletversion": xxxxx,     (numeric) the wallet version
-  "balance": xxxxxxx,         (numeric) the total confirmed balance of the wallet in BTC
-  "unconfirmed_balance": xxx, (numeric) the total unconfirmed balance of the wallet in BTC
-  "immature_balance": xxxxxx, (numeric) the total immature balance of the wallet in BTC
-  "txcount": xxxxxxx,         (numeric) the total number of transactions in the wallet
-  "keypoololdest": xxxxxx,    (numeric) the timestamp (seconds since GMT epoch) of the oldest pre-generated key in the key pool
-  "keypoolsize": xxxx,        (numeric) how many new keys are pre-generated
-  "unlocked_until": ttt,      (numeric) the timestamp in seconds since epoch (midnight Jan 1 1970 GMT) that the wallet is unlocked for transfers, or 0 if the wallet is locked
-  "paytxfee": x.xxxx,         (numeric) the transaction fee configuration, set in BTC/kB
+  "walletversion": xxxxx,     （数字）钱包版本
+  "balance": xxxxxxx,         （数字）钱包中以 BTC 为单位已确认的总余额
+  "unconfirmed_balance": xxx, （数字）钱包中以 BTC 为单位未确认的总余额
+  "immature_balance": xxxxxx, （数字）钱包中以 BTC 为单位未成熟的总余额
+  "txcount": xxxxxxx,         （数字）钱包中交易总数
+  "keypoololdest": xxxxxx,    （数字）密钥池中最早预生成密钥（从格林尼治时间开始以秒为单位）的时间戳
+  "keypoolsize": xxxx,        （数字）预生成密钥的数量
+  "unlocked_until": ttt,      （数字）从格林尼治时间（1970-01-01 00:00:00）开始以秒为单位钱包用于转账的解锁截止时间戳，若钱包锁定则为 0
+  "paytxfee": x.xxxx,         （数字）交易费配置，以 BTC/kB 为单位
 }
 {% endhighlight %}
 
 ## 用法示例
 
+### 比特币核心客户端
+
+获取钱包信息。
+
 {% highlight shell %}
 $ bitcoin-cli getwalletinfo
 {
   "walletversion": 60000,
-  "balance": 0.00000000,
+  "balance": 117697.01429440,
   "unconfirmed_balance": 0.00000000,
   "immature_balance": 0.00000000,
-  "txcount": 0,
-  "keypoololdest": 1527051442,
-  "keypoolsize": 100,
+  "txcount": 2413,
+  "keypoololdest": 1530153420,
+  "keypoolsize": 92,
   "unlocked_until": 0,
   "paytxfee": 0.00000000
 }
+{% endhighlight %}
+
+### cURL
+
+{% highlight shell %}
+$ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "getwalletinfo", "params": [] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
+{"result":{"walletversion":60000,"balance":117697.01429440,"unconfirmed_balance":0.00000000,"immature_balance":0.00000000,"txcount":2413,"keypoololdest":1530153420,"keypoolsize":92,"unlocked_until":0,"paytxfee":0.00000000},"error":null,"id":"curltest"}
 {% endhighlight %}
 
 ## 源码剖析

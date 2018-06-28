@@ -14,58 +14,46 @@ categories: Blockchain
 ## 提示说明
 
 {% highlight shell %}
-listtransactions ( "account" count form includeWatchonly ) # 列出跳过账户 `account` 的 `from` 笔交易的 `count` 笔交易
+listtransactions ( "account" count form includeWatchonly ) # 列出跳过账户 `account` 的 `from` 笔交易的最近 `count` 笔交易
 {% endhighlight %}
 
 参数：<br>
 1. `account` （字符串，可选，已过时）账户名。应该为 `"*"`，表示全部账户。<br>
-2. `count` （数字型，可选，默认为 10）返回的交易数量。<br>
-3. `form` （数字型，可选，默认为 0）跳过的交易数量。<br>
-4. `includeWatchonly` （布尔型，可选，默认为 false）包含到 watchonly 地址集的交易（见 [`importaddress`]()）。
+2. `count` （数字，可选，默认为 10）返回的交易数量。<br>
+3. `form` （数字，可选，默认为 0）跳过的交易数量。<br>
+4. `includeWatchonly` （布尔型，可选，默认为 false）包含到 watchonly 地址集的交易（见 [`importaddress`](/2018/06/07/bitcoin-rpc-command-importaddress)）。
 
 结果：<br>
 {% highlight shell %}
 [
   {
-    "account":"accountname",       (string) DEPRECATED. The account name associated with the transaction. 
-                                                It will be "" for the default account.
-    "address":"bitcoinaddress",    (string) The bitcoin address of the transaction. Not present for 
-                                                move transactions (category = move).
-    "category":"send|receive|move", (string) The transaction category. 'move' is a local (off blockchain)
-                                                transaction between accounts, and not associated with an address,
-                                                transaction id or block. 'send' and 'receive' transactions are 
-                                                associated with an address, transaction id and block details
-    "amount": x.xxx,          (numeric) The amount in BTC. This is negative for the 'send' category, and for the
-                                         'move' category for moves outbound. It is positive for the 'receive' category,
-                                         and for the 'move' category for inbound funds.
-    "vout": n,                (numeric) the vout value
-    "fee": x.xxx,             (numeric) The amount of the fee in BTC. This is negative and only available for the 
-                                         'send' category of transactions.
-    "confirmations": n,       (numeric) The number of confirmations for the transaction. Available for 'send' and 
-                                         'receive' category of transactions. Negative confirmations indicate the
-                                         transation conflicts with the block chain
-    "trusted": xxx            (bool) Whether we consider the outputs of this unconfirmed transaction safe to spend.
-    "blockhash": "hashvalue", (string) The block hash containing the transaction. Available for 'send' and 'receive'
-                                          category of transactions.
-    "blockindex": n,          (numeric) The block index containing the transaction. Available for 'send' and 'receive'
-                                          category of transactions.
-    "blocktime": xxx,         (numeric) The block time in seconds since epoch (1 Jan 1970 GMT).
-    "txid": "transactionid", (string) The transaction id. Available for 'send' and 'receive' category of transactions.
-    "time": xxx,              (numeric) The transaction time in seconds since epoch (midnight Jan 1 1970 GMT).
-    "timereceived": xxx,      (numeric) The time received in seconds since epoch (midnight Jan 1 1970 GMT). Available 
-                                          for 'send' and 'receive' category of transactions.
-    "comment": "...",       (string) If a comment is associated with the transaction.
-    "label": "label"        (string) A comment for the address/transaction, if any
-    "otheraccount": "accountname",  (string) For the 'move' category of transactions, the account the funds came 
-                                          from (for receiving funds, positive amounts), or went to (for sending funds,
-                                          negative amounts).
-    "bip125-replaceable": "yes|no|unknown"  (string) Whether this transaction could be replaced due to BIP125 (replace-by-fee);
-                                                     may be unknown for unconfirmed transactions not in the mempool
+    "account":"accountname",       （字符串，已过时）交易关联的帐户名。默认账户为 `""`
+    "address":"bitcoinaddress",    （字符串）交易的比特币地址。不存在 'move' 交易（类别为 move）
+    "category":"send|receive|move", （字符串）交易类别。'move' 是一笔本地（非区块链上）帐户之间的交易，且不关联地址、交易索引或区块。
+                                                'send' 和 'receive' 交易关联地址、交易索引和区块信息
+    "amount": x.xxx,          （数字）以 BTC 为单位的金额。对于 'send' 类别该值为负数，且对于 'move' 类别是移出。
+                                         对于 'receive' 类别该值为正数，且对于 'move' 类别移入资金。
+    "vout": n,                （数字）输出序号
+    "fee": x.xxx,             （数字）以 BTC 为单位的交易费。对于 'send' 类别的交易该值为负数。
+    "confirmations": n,       （数字）交易的确认数。适用于 'send' 和 'receive' 类别的交易。负的确认数表明交易和区块链冲突
+    "trusted": xxx            （布尔型）我们是否认为未确认的交易输出可安全花费。
+    "blockhash": "hashvalue", （字符串）包含该交易的区块哈希。适用于 'send' 和 'receive' 类别的交易。
+    "blockindex": n,          （数字）包含该交易的区块索引。适用于 'send' 和 'receive' 类别的交易。
+    "blocktime": xxx,         （数字）从格林尼治时间（1970-01-01 00:00:00）开始以秒为单位的区块时间
+    "txid": "transactionid", （字符串）交易索引。适用于 'send' 和 'receive' 类别的交易。
+    "time": xxx,              （数字）从格林尼治时间（1970-01-01 00:00:00）开始以秒为单位的交易时间。
+    "timereceived": xxx,      （数字）从格林尼治时间（1970-01-01 00:00:00）开始以秒为单位的交易接收时间。适用于 'send' 和 'receive' 类别的交易。
+    "comment": "...",       （字符串）交易关联的备注。
+    "label": "label"        （字符串）地址/交易的备注，如果有的话
+    "otheraccount": "accountname",  （字符串）对于 'move' 类别的交易，资金来源帐户（对于接收的资金，正的金额），或目的帐户（对于发送的资金，负的金额）。
+    "bip125-replaceable": "yes|no|unknown"  （字符串）该交易是否因 BIP125 （替换交易费）被替换；不在交易内存池中的未确认交易可能是 'unknown'
   }
 ]
 {% endhighlight %}
 
 ## 用法示例
+
+### 比特币核心客户端
 
 用法一：列出系统中最近 10 笔交易。
 
@@ -74,73 +62,76 @@ $ bitcoin-cli listtransactions
 [
   {
     "account": "",
-    "address": "1kjTv8TKSsbpGEBVZqLTcx1MeA4G8JkCnk",
+    "address": "1Mcg7MDBD38sSScsX3USbsCnkcMbPnLyTV",
     "category": "receive",
-    "amount": 0.10000000,
+    "amount": 0.01000000,
     "label": "",
     "vout": 0,
-    "confirmations": 22533,
-    "instantlock": false,
-    "blockhash": "0001b44de8ab1ff792930b96d4b5d1a25f6fce27eb9a79a9c4b0c1d950f00ca9",
-    "blockindex": 3,
-    "blocktime": 1527561500,
-    "txid": "b7a3a029e68e8a0a42a4ef55a4bb76a7aa6af4ec426134d72dd8d5023e7660e6",
+    "confirmations": 4845,
+    "blockhash": "000000de9c98ecf1bf6390391b950d36d86aa30a19a7484c0d9048ebfe121dc9",
+    "blockindex": 1,
+    "blocktime": 1530091755,
+    "txid": "921483cfa069c91804fc95b3bfb949948fc0c8456d07da2731194728d2ca7bde",
     "walletconflicts": [
     ],
-    "time": 1527561500,
-    "timereceived": 1527561505,
+    "time": 1530091754,
+    "timereceived": 1530091754,
     "bip125-replaceable": "no"
   }, 
   ...
   {
     "account": "",
-    "address": "1kGyNU2HyC4NWqEbCFbWX2rpzvjWHMhqsZ",
+    "address": "1PQyGCTohHc7y3MvKjLWk7NZQGyL9Wd6je",
     "category": "send",
-    "amount": -1.00000000,
+    "amount": -100.00000000,
     "vout": 1,
-    "fee": -0.00001702,
-    "confirmations": 1030,
-    "instantlock": false,
-    "blockhash": "00002d88af0743d798c7976699ce208e2c4947995c4e2b578aa76a6081228d43",
+    "fee": -0.00009080,
+    "confirmations": 3180,
+    "blockhash": "0000037a1b06a77e7fc0c8812e6e3200b137b4415fb8bcd1c603aa3dbc9c62b1",
     "blockindex": 1,
-    "blocktime": 1528250135,
-    "txid": "c4a531e7f0c0b4cef74b8848e45b0216e213fa7dff3235a6750b1b53caa0bfe8",
+    "blocktime": 1530158339,
+    "txid": "705493d021973fd635c9e24880de70c4b002ba3cbd066783d23bce316fe00a29",
     "walletconflicts": [
     ],
-    "time": 1528250106,
-    "timereceived": 1528250106,
+    "time": 1530158343,
+    "timereceived": 1530158343,
     "bip125-replaceable": "no",
     "abandoned": false
   }
 ]
 {% endhighlight %}
 
-用法二：列出第 100 笔后开始的 1 笔交易。
+用法二：列出从第 100 笔后开始的 1 笔交易。
 
 {% highlight shell %}
 $ bitcoin-cli listtransactions "*" 1 100
 [
   {
     "account": "",
-    "address": "1kGyNU2HyC4NWqEbCFbWX2rpzvjWHMhqsZ",
-    "category": "send",
-    "amount": -1.00000000,
-    "vout": 1,
-    "fee": -0.00001702,
-    "confirmations": 1030,
-    "instantlock": false,
-    "blockhash": "00002d88af0743d798c7976699ce208e2c4947995c4e2b578aa76a6081228d43",
-    "blockindex": 1,
-    "blocktime": 1528250135,
-    "txid": "c4a531e7f0c0b4cef74b8848e45b0216e213fa7dff3235a6750b1b53caa0bfe8",
+    "address": "1Z99Lsij11ajDEhipZbnifdFkBu8fC1Hb",
+    "category": "generate",
+    "amount": 50.00000000,
+    "vout": 0,
+    "confirmations": 5912,
+    "generated": true,
+    "blockhash": "000000fd07cd03d25f2530ade4601d672398bc8ba09efc9a11a4ce580591d4b0",
+    "blockindex": 0,
+    "blocktime": 1529997362,
+    "txid": "16c289710835cbb1b376f56b30f4514f7c6cf9d60003cfec70d30249e4faa494",
     "walletconflicts": [
     ],
-    "time": 1528250106,
-    "timereceived": 1528250106,
-    "bip125-replaceable": "no",
-    "abandoned": false
+    "time": 1529997362,
+    "timereceived": 1529997362,
+    "bip125-replaceable": "no"
   }
 ]
+{% endhighlight %}
+
+### cURL
+
+{% highlight shell %}
+$ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "listtransactions", "params": ["*", 1, 100] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
+{"result":[{"account":"","address":"1Z99Lsij11ajDEhipZbnifdFkBu8fC1Hb","category":"generate","amount":50.00000000,"vout":0,"confirmations":5922,"generated":true,"blockhash":"000000fd07cd03d25f2530ade4601d672398bc8ba09efc9a11a4ce580591d4b0","blockindex":0,"blocktime":1529997362,"txid":"16c289710835cbb1b376f56b30f4514f7c6cf9d60003cfec70d30249e4faa494","walletconflicts":[],"time":1529997362,"timereceived":1529997362,"bip125-replaceable":"no"}],"error":null,"id":"curltest"}
 {% endhighlight %}
 
 ## 源码剖析

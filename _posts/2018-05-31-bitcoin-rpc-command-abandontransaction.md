@@ -14,13 +14,13 @@ categories: Blockchain
 ## 提示说明
 
 {% highlight shell %}
-abandontransaction "txid" # 标记钱包交易 <txid> 为已抛弃
+abandontransaction "txid" # 标记钱包交易 <txid> 为已放弃
 {% endhighlight %}
 
-该操作将标记指定交易和其所有钱包后裔为已抛弃，将允许它们的输入被重新关注。<br>
+该操作将标记指定交易和其所有钱包后裔为已放弃，将允许它们的输入被重新花费。<br>
 可用来代替“卡住”或被驱逐的交易。<br>
 仅适用于未包含在区块中且当前不在交易内存池中的交易。<br>
-对已发生冲突和被抛弃的交易无影响。
+对已发生冲突和已放弃的交易无影响。
 
 参数：<br>
 1. `txid` （字符串，必备）交易索引。
@@ -29,10 +29,18 @@ abandontransaction "txid" # 标记钱包交易 <txid> 为已抛弃
 
 ## 用法示例
 
-暂缺
+### 比特币核心客户端
+
+暂缺。
 
 {% highlight shell %}
 $ bitcoin-cli abandontransaction <txid>
+{% endhighlight %}
+
+### cURL
+
+{% highlight shell %}
+$ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "abandontransaction", "params": ["txid"] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
 {% endhighlight %}
 
 ## 源码剖析

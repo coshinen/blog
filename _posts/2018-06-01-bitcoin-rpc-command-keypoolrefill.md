@@ -14,7 +14,7 @@ categories: Blockchain
 ## 提示说明
 
 {% highlight shell %}
-keypoolrefill ( newsize ) # 再填充密钥池
+keypoolrefill ( newsize ) # 填充满密钥池
 {% endhighlight %}
 
 **注：<br>
@@ -29,11 +29,19 @@ keypoolrefill ( newsize ) # 再填充密钥池
 
 ## 用法示例
 
-用法一：使用 `-keypool` 选项对应的默认值进行填充，填充大小为默认值 + 1。
+### 比特币核心客户端
+
+**注：若钱包设置了密码，使用该命令前先用 [`walletpassphrase`](/2018/05/31/bitcoin-rpc-command-walletpassphrase) 解密钱包。**
+
+用法一：使用比特币核心服务启动时的 `-keypool` 选项对应的默认值进行填充，填充大小为默认值 + 1。
 
 {% highlight shell %}
 $ bitcoin-cli getinfo | grep keypoolsize
-  "keypoolsize": 98
+  "keypoolsize": 100
+$ bitcoin-cli getnewaddress
+17HgY9ieCzTse44eFbX1bEyPUHKJKjMVEB
+$ bitcoin-cli getinfo | grep keypoolsize
+  "keypoolsize": 99
 $ bitcoin-cli keypoolrefill
 $ bitcoin-cli getinfo | grep keypoolsize
   "keypoolsize": 101
@@ -47,6 +55,13 @@ $ bitcoin-cli getinfo | grep keypoolsize
 $ bitcoin-cli keypoolrefill 200
 $ bitcoin-cli getinfo | grep keypoolsize
   "keypoolsize": 201
+{% endhighlight %}
+
+### cURL
+
+{% highlight shell %}
+$ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "keypoolrefill", "params": [] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
+{"result":null,"error":null,"id":"curltest"}
 {% endhighlight %}
 
 ## 源码剖析

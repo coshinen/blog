@@ -14,15 +14,15 @@ categories: Blockchain
 ## 提示说明
 
 {% highlight shell %}
-listunspent ( minconf maxconf  ["address",...] ) # 列出在（含） `minconf` 和 `maxconf` 之间确认数的未花费交易输出
+listunspent ( minconf maxconf  ["address",...] ) # 列出在 `minconf` 和 `maxconf` 之间（含）确认数的未花费交易输出
 {% endhighlight %}
 
-可选择的过滤只包含支付给指定地址们的交易输出。<br>
-结果是一个对象数组，每个对象都有：{交易索引，输出列表，公钥脚本，金额，确认数}
+选择性过滤只包含支付给指定地址们的交易输出。<br>
+结果是一个对象数组，每个对象都有：{交易索引，输出序号，公钥脚本，金额，确认数}
 
 参数：<br>
-1. `minconf` （数字型，可选，默认为 1）要过滤的最小确认数。<br>
-2. `maxconf` （数字型，可选，默认为 9999999）要过滤的最大确认数。<br>
+1. `minconf` （数字，可选，默认为 1）要过滤的最小确认数。<br>
+2. `maxconf` （数字，可选，默认为 9999999）要过滤的最大确认数。<br>
 3. `addresses` （字符串）要过滤的比特币地址的 json 数组。
 {% highlight shell %}
     [
@@ -33,15 +33,15 @@ listunspent ( minconf maxconf  ["address",...] ) # 列出在（含） `minconf` 
 
 结果：<br>
 {% highlight shell %}
-[                   (array of json object)
+[                   （json 对象数组）
   {
-    "txid" : "txid",        (string) the transaction id 
-    "vout" : n,               (numeric) the vout value
-    "address" : "address",  (string) the bitcoin address
-    "account" : "account",  (string) DEPRECATED. The associated account, or "" for the default account
-    "scriptPubKey" : "key", (string) the script key
-    "amount" : x.xxx,         (numeric) the transaction amount in BTC
-    "confirmations" : n       (numeric) The number of confirmations
+    "txid" : "txid",        （字符串）交易索引
+    "vout" : n,               （数字）输出序号
+    "address" : "address",  （字符串）比特币地址
+    "account" : "account",  （字符串，已过时）关联的账户，默认账户为 ""
+    "scriptPubKey" : "key", （字符串）脚本公钥
+    "amount" : x.xxx,         （数字）以 BTC 为单位的交易金额
+    "confirmations" : n       （数字）确认数
   }
   ,...
 ]
@@ -49,35 +49,49 @@ listunspent ( minconf maxconf  ["address",...] ) # 列出在（含） `minconf` 
 
 ## 用法示例
 
+### 比特币核心客户端
+
+用法一：列出全部未花费的交易输出。
+
 {% highlight shell %}
 $ bitcoin-cli listunspent
 [
-  {
-    "txid": "cf9f8c8bac02b3012ab99864a2294b88cc6105fdefcd16bbe8f7d1531fc895fe",
-    "vout": 0,
-    "address": "1kjTv8TKSsbpGEBVZqLTcx1MeA4G8JkCnk",
-    "account": "",
-    "scriptPubKey": "76a914a4d938a6461a0d6f24946b9bfcda0862a1db6f7488ac",
-    "amount": 0.10000000,
-    "confirmations": 34533,
-    "ps_rounds": -2,
-    "spendable": true,
-    "solvable": true
-  }, 
-  {
-    "txid": "5d306125b2fbfc5855b1b7729ceac1b3010e0ddaa7b03f7abeb225f7b13677ff",
-    "vout": 0,
-    "address": "1kjTv8TKSsbpGEBVZqLTcx1MeA4G8JkCnk",
-    "account": "",
-    "scriptPubKey": "76a914a4d938a6461a0d6f24946b9bfcda0862a1db6f7488ac",
-    "amount": 0.10000000,
-    "confirmations": 34529,
-    "ps_rounds": -2,
-    "spendable": true,
-    "solvable": true
-  },
   ...
+  {
+    "txid": "69e560109acccf73c6552f5f4f095cd97fde3261a568cc6547a540bcc3e372ff",
+    "vout": 0,
+    "address": "1Z99Lsij11ajDEhipZbnifdFkBu8fC1Hb",
+    "scriptPubKey": "21023d2f5ddafe8a161867bb9a9162aa5c84b0882af4bfca1fa89f4811b651761f10ac",
+    "amount": 50.00000000,
+    "confirmations": 7298,
+    "spendable": true
+  }
 ]
+{% endhighlight %}
+
+方法二：列出至少 6 个确认的未花费交易输出，并指定地址过滤器。
+
+{% highlight shell %}
+$ bitcoin-cli listunspent 6 9999999 "[\"1Z99Lsij11ajDEhipZbnifdFkBu8fC1Hb\"]"
+[
+  ...
+  {
+    "txid": "69e560109acccf73c6552f5f4f095cd97fde3261a568cc6547a540bcc3e372ff",
+    "vout": 0,
+    "address": "1Z99Lsij11ajDEhipZbnifdFkBu8fC1Hb",
+    "scriptPubKey": "21023d2f5ddafe8a161867bb9a9162aa5c84b0882af4bfca1fa89f4811b651761f10ac",
+    "amount": 50.00000000,
+    "confirmations": 7306,
+    "spendable": true
+  }
+]
+{% endhighlight %}
+
+### cURL
+
+{% highlight shell %}
+curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "listunspent", "params": [6, 9999999 "[\"1Z99Lsij11ajDEhipZbnifdFkBu8fC1Hb\"]"] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
+暂无。
 {% endhighlight %}
 
 ## 源码剖析
