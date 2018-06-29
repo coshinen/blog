@@ -17,7 +17,9 @@ categories: Blockchain
 importaddress "address" ( "label" rescan p2sh ) # 导入一个脚本（16 进制）或地址用于监视
 {% endhighlight %}
 
-该地址好像在你的钱包，但不能用来花费。
+该地址好像在你的钱包，但不能用来花费。<br>
+这就是所谓的 Watch-only 地址，在新版本中已经可以花费。<br>
+参考[如何使用 Watch-only 地址](/2018/06/06/how-to-use-watch-only-addresses)。
 
 参数：<br>
 1. `script` （字符串，必备）16 进制编码的脚本（或地址）。<br>
@@ -185,6 +187,24 @@ void ImportAddress(const CBitcoinAddress& address, const string& strLabel)
     if (address.IsValid()) // 若该地址有效
         pwalletMain->SetAddressBook(address.Get(), strLabel, "receive"); // 添加地址及关联账户、用途到地址簿
 }
+{% endhighlight %}
+
+在 ImportScript(...) 函数中，对公钥地址对应脚本进行了验证，若不在 Watch-only 集中则将其添加到该集合中。<br>
+Watch-only 集对象定义在“keystore.h”文件的 CBasicKeyStore 类中，实质上就是一个脚本对象的集合。
+
+{% highlight C++ %}
+typedef std::set<CScript> WatchOnlySet; // watch-only 脚本集合
+
+/** Basic key store, that keeps keys in an address->secret map */
+class CBasicKeyStore : public CKeyStore // 基础密钥存储，以 address->secret 映射维持私钥
+{
+protected:
+    KeyMap mapKeys; // 私钥和索引的映射列表
+    WatchKeyMap mapWatchKeys; // 公钥和索引的映射列表，用于 watch-only
+    ScriptMap mapScripts; // 脚本索引映射列表
+    WatchOnlySet setWatchOnly; // watch-only 脚本集合
+    ...
+};
 {% endhighlight %}
 
 第八步，调用 pwalletMain->ReacceptWalletTransactions() 函数把交易添加到内存池，该函数定义在“wallet/wallet.cpp”文件中。
