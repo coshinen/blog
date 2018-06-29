@@ -14,25 +14,34 @@ categories: Blockchain
 ## 提示说明
 
 {% highlight shell %}
-settxfee amount # 设置每 kB 的交易费。覆盖 paytxfee 参数对应的值
+settxfee amount # 设置每 kB 的交易费。覆盖 `paytxfee` 参数的值
 {% endhighlight %}
 
 参数：<br>
-1. `amount` （数字或字符串，必备）交易费 BTC/kB。
+1. `amount` （数字或字符串，必备）以 BTC/kB 为单位的交易费。
 
 结果：（布尔型）如果成功返回 true。
 
 ## 用法示例
 
-通过 [`getinfo`](/2018/05/23/bitcoin-rpc-command-getinfo) 命令结果中的 `paytxfee` 字段查看当前交易费。
+### 比特币核心客户端
+
+通过 [`getinfo`](/2018/05/23/bitcoin-rpc-command-getinfo) 调用反馈中的 `paytxfee` 字段查看当前交易费。
 
 {% highlight shell %}
 $ bitcoin-cli getinfo | grep paytxfee
   "paytxfee": 0.00000000,
-$ bitcoin-cli settxfee 1
+$ bitcoin-cli settxfee 0.00001
 true
 $ bitcoin-cli getinfo | grep paytxfee
-  "paytxfee": 1.00000000,
+  "paytxfee": 0.00001000,
+{% endhighlight %}
+
+### cURL
+
+{% highlight shell %}
+$ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "settxfee", "params": [0.00001] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
+{"result":true,"error":null,"id":"curltest"}
 {% endhighlight %}
 
 ## 源码剖析

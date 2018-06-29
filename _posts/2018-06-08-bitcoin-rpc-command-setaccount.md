@@ -25,6 +25,11 @@ setaccount "bitcoinaddress" "account" # （已过时）设置给定地址关联�
 
 ## 用法示例
 
+### 比特币核心客户端
+
+获取一个新的比特币地址，在默认账户下，
+重新设置该地址关联账户为 `tabby`。
+
 {% highlight shell %}
 $ bitcoin-cli getnewaddress
 1MfmEDut9v3b2MEQG8GB1s5fqRSguMw3fs
@@ -32,6 +37,13 @@ $ bitcoin-cli getaccount 1MfmEDut9v3b2MEQG8GB1s5fqRSguMw3fs
 $ bitcoin-cli setaccount 1MfmEDut9v3b2MEQG8GB1s5fqRSguMw3fs "tabby"
 $ bitcoin-cli getaccount 1MfmEDut9v3b2MEQG8GB1s5fqRSguMw3fs
 tabby
+{% endhighlight %}
+
+### cURL
+
+{% highlight shell %}
+$ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "setaccount", "params": ["1MfmEDut9v3b2MEQG8GB1s5fqRSguMw3fs", "tabby"] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
+{"result":null,"error":null,"id":"curltest"}
 {% endhighlight %}
 
 ## 源码剖析

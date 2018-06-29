@@ -21,15 +21,31 @@ signmessage "bitcoinaddress" "message" # 使用一个地址的私钥签名一个
 1. `bitcoinaddress` （字符串，必备）拥有对应私钥的比特币地址。<br>
 2. `message` （字符串，必备）用于创建一个签名的消息。
 
-结果：（字符串）base64 编码的消息的签名。
+结果：（字符串）返回 base64 编码的消息的签名。
 
 ## 用法示例
 
+### 比特币核心客户端
+
+1. 若钱包加密了，需使用 [`walletpassphrase`](/2018/05/31/bitcoin-rpc-command-walletpassphrase) 解锁钱包数秒。<br>
+2. 使用此命令对一条消息进行签名。<br>
+3. 使用 [`verifymessage`](/2018/06/15/bitcoin-rpc-command-verifymessage) 验证消息。
+
 {% highlight shell %}
-$ bitcoin-cli signmessage 1DMEoWsZoJJmaaGfhxRsE9yQmxdn6xSGfE "testmessage"
-HxJt9iDtsz2ij11IWnRWsunW0vdQ2pgrqbQb90FPYBGhAnNTLX3P2ezd4n3lyzCabevroEp4KzAODoyIGLOregQ
-$ bitcoin-cli verifymessage 1DMEoWsZoJJmaaGfhxRsE9yQmxdn6xSGfE HxJt9iDtsz2ij11IWnRWsunW0vdQ2pgrqbQb90FPYBGhAnNTLX3P2ezd4n3lyzCabevroEp4KzAODoyIGLOregQ "testmessage"
+$ bitcoin-cli walletpassphrase "mypasswd" 60
+$ bitcoin-cli getnewaddress
+1DMEoWsZoJJmaaGfhxRsE9yQmxdn6xSGfE
+$ bitcoin-cli signmessage 1DMEoWsZoJJmaaGfhxRsE9yQmxdn6xSGfE "my message"
+H/iROQoxdpDoQcWwbtd481fUZqyUhf2b/bFCsQqb/NanKrRAJtg9CkvGCFuTL9dn8BDfZULo4uduQi20mZFKDbQ=
+$ bitcoin-cli verifymessage 1DMEoWsZoJJmaaGfhxRsE9yQmxdn6xSGfE H/iROQoxdpDoQcWwbtd481fUZqyUhf2b/bFCsQqb/NanKrRAJtg9CkvGCFuTL9dn8BDfZULo4uduQi20mZFKDbQ= "my message"
 true
+{% endhighlight %}
+
+### cURL
+
+{% highlight shell %}
+$ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "signmessage", "params": ["1DMEoWsZoJJmaaGfhxRsE9yQmxdn6xSGfE", "my message"] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
+{"result":"H/iROQoxdpDoQcWwbtd481fUZqyUhf2b/bFCsQqb/NanKrRAJtg9CkvGCFuTL9dn8BDfZULo4uduQi20mZFKDbQ=","error":null,"id":"curltest"}
 {% endhighlight %}
 
 ## 源码剖析

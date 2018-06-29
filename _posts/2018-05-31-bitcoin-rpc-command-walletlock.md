@@ -14,7 +14,7 @@ categories: Blockchain
 ## 提示说明
 
 {% highlight shell %}
-walletlock # 从内存中移除钱包加密密钥，锁定钱包
+walletlock # 从内存中移除钱包密钥，锁定钱包
 {% endhighlight %}
 
 在调用此方法后，在调用任何需要钱包解锁的方法之前
@@ -24,15 +24,28 @@ walletlock # 从内存中移除钱包加密密钥，锁定钱包
 
 ## 用法示例
 
+### 比特币核心客户端
+
+先解锁钱包 120 秒，然后锁定钱包。
+
 {% highlight shell %}
 $ bitcoin-cli getinfo | grep unlocked_until
   "unlocked_until": 0,
-$ bitcoin-cli walletpassphrase 123 60
+$ bitcoin-cli walletpassphrase "mypasswd" 120
 $ bitcoin-cli getinfo | grep unlocked_until
   "unlocked_until": 1527757245,
 $ bitcoin-cli walletlock
 $ bitcoin-cli getinfo | grep unlocked_until
   "unlocked_until": 0,
+{% endhighlight %}
+
+**一般先解锁钱包数秒，在发送比特币之后，使用该命令锁定钱包。**
+
+### cURL
+
+{% highlight shell %}
+$ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "walletlock", "params": [] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
+{"result":null,"error":null,"id":"curltest"}
 {% endhighlight %}
 
 ## 源码剖析

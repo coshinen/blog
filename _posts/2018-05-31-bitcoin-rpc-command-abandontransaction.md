@@ -31,16 +31,16 @@ abandontransaction "txid" # 标记钱包交易 <txid> 为已放弃
 
 ### 比特币核心客户端
 
-暂缺。
-
 {% highlight shell %}
 $ bitcoin-cli abandontransaction <txid>
+暂无。
 {% endhighlight %}
 
 ### cURL
 
 {% highlight shell %}
 $ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "abandontransaction", "params": ["txid"] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
+暂无。
 {% endhighlight %}
 
 ## 源码剖析

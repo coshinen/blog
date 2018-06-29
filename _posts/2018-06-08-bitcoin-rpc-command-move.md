@@ -18,17 +18,19 @@ move "fromaccount" "toaccount" amount ( minconf "comment" ) # （已过时）从
 {% endhighlight %}
 
 参数：<br>
-1. `fromaccount` （字符串，必备）从该账户转移资金。可能为默认账户 `""`。<br>
-2. `toaccount` （字符串，必备）转移资金到该账户。可能为默认账户 `""`。<br>
-3. `amount` （数字型）在账户间转移 BTC 的数量，不能为负数。<br>
-4. `minconf` （数字型，可选，默认为 1）只使用至少 `minconf` 次确认的资金。<br>
+1. `fromaccount` （字符串，必备）从该账户转移资金。默认账户使用 `""`。<br>
+2. `toaccount` （字符串，必备）转移资金到该账户。默认账户使用 `""`。<br>
+3. `amount` （数字）在账户间转移 BTC 的数量，不能为负数。<br>
+4. `minconf` （数字，可选，默认为 1）只使用至少 `minconf` 次确认的资金。<br>
 5. `comment` （字符串，可选）一个可选的备注，只存储在钱包中。
 
 结果：（布尔型）如果成功返回 true。
 
 ## 用法示例
 
-用法一：从默认账户转移 0.01 BTC 到账户 tabby。
+### 比特币核心客户端
+
+用法一：从默认账户 `""` 转移 0.01 BTC 到账户 `"tabby"`。
 
 {% highlight shell %}
 $ bitcoin-cli listaccounts
@@ -42,9 +44,29 @@ $ bitcoin-cli listaccounts
   "": 0.99000000,
   "tabby": 0.01000000
 }
+$ bitcoin-cli listtransactions
+[
+  ...
+  {
+    "account": "",
+    "category": "move",
+    "time": 1530234049,
+    "amount": -0.01000000,
+    "otheraccount": "tabby",
+    "comment": ""
+  }, 
+  {
+    "account": "tabby",
+    "category": "move",
+    "time": 1530234049,
+    "amount": 0.01000000,
+    "otheraccount": "",
+    "comment": ""
+  }
+]
 {% endhighlight %}
 
-用法二：从默认账户转移有 6 个确认的 0.01 BTC 到账户 tabby，并附加备注。
+用法二：从默认账户 `""` 转移至少 6 次确认的 0.01 BTC 到账户 tabby，并附加备注。
 
 {% highlight shell %}
 $ bitcoin-cli listaccounts
@@ -52,12 +74,39 @@ $ bitcoin-cli listaccounts
   "": 0.99000000,
   "tabby": 0.01000000
 }
-$ bitcoin-cli move "" "tabby" 0.01 6 "sayonara"
+$ bitcoin-cli move "" "tabby" 0.01 6 "happy birthday!"
 $ bitcoin-cli listaccounts
 {
   "": 0.98000000,
   "tabby": 0.02000000
 }
+$ bitcoin-cli listtransactions
+[
+  ...
+  {
+    "account": "",
+    "category": "move",
+    "time": 1530234396,
+    "amount": -0.01000000,
+    "otheraccount": "tabby",
+    "comment": "happy birthday!"
+  }, 
+  {
+    "account": "tabby",
+    "category": "move",
+    "time": 1530234396,
+    "amount": 0.01000000,
+    "otheraccount": "",
+    "comment": "happy birthday!"
+  }
+]
+{% endhighlight %}
+
+### cURL
+
+{% highlight shell %}
+$ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "move", "params": ["", "tabby", 0.01, 6, "happy birthday!"] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
+{"result":true,"error":null,"id":"curltest"}
 {% endhighlight %}
 
 ## 源码剖析

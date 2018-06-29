@@ -196,10 +196,10 @@ $ bitcoin-cli help # 获取以下 RPC 命令
 [`listtransactions ( "account" count from includeWatchonly)`](/2018/06/06/bitcoin-rpc-command-listtransactions) # 列出交易<br>
 [`listunspent ( minconf maxconf  ["address",...] )`](/2018/06/05/bitcoin-rpc-command-listunspent) # 列出未花费交易输出<br>
 [`lockunspent unlock [{"txid":"txid","vout":n},...]`](/2018/06/05/bitcoin-rpc-command-lockunspent) # 加解锁未花费交易输出<br>
-[`move "fromaccount" "toaccount" amount ( minconf "comment" )`](/2018/06/08/bitcoin-rpc-command-move) # 本地账户间转账<br>
-[`sendfrom "fromaccount" "tobitcoinaddress" amount ( minconf "comment" "comment-to" )`](/2018/06/08/bitcoin-rpc-command-sendfrom) # （已过时）从指定账户发送币<br>
-[`sendmany "fromaccount" {"address":amount,...} ( minconf "comment" ["address",...] )`](/2018/06/08/bitcoin-rpc-command-sendmany) # 发送币到多个地址<br>
-[`sendtoaddress "bitcoinaddress" amount ( "comment" "comment-to" subtractfeefromamount )`](/2018/06/08/bitcoin-rpc-command-sendtoaddress) # 发送币到指定地址<br>
+[`move "fromaccount" "toaccount" amount ( minconf "comment" )`](/2018/06/08/bitcoin-rpc-command-move) # （已过时）转账<br>
+[`sendfrom "fromaccount" "tobitcoinaddress" amount ( minconf "comment" "comment-to" )`](/2018/06/08/bitcoin-rpc-command-sendfrom) # （已过时）从指定账户发送<br>
+[`sendmany "fromaccount" {"address":amount,...} ( minconf "comment" ["address",...] )`](/2018/06/08/bitcoin-rpc-command-sendmany) # 发送到多个地址<br>
+[`sendtoaddress "bitcoinaddress" amount ( "comment" "comment-to" subtractfeefromamount )`](/2018/06/08/bitcoin-rpc-command-sendtoaddress) # 发送到指定地址<br>
 [`setaccount "bitcoinaddress" "account"`](/2018/06/08/bitcoin-rpc-command-setaccount) # （已过时）设置地址关联账户<br>
 [`settxfee amount`](/2018/06/03/bitcoin-rpc-command-settxfee) # 设置交易费<br>
 [`signmessage "bitcoinaddress" "message"`](/2018/06/15/bitcoin-rpc-command-signmessage) # 签名消息<br>

@@ -25,10 +25,19 @@ walletpassphrasechange "oldpassphrase" "newpassphrase" # 更改钱包密码 `old
 
 ## 用法示例
 
-修改当前密码 `123` 为 `233`。
+### 比特币核心客户端
+
+修改钱包密码 `mypasswd` 为 `newpasswd`。
 
 {% highlight shell %}
-$ bitcoin-cli walletpassphrase 123 233
+$ bitcoin-cli walletpassphrase mypasswd newpasswd
+{% endhighlight %}
+
+### cURL
+
+{% highlight shell %}
+$ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "walletpassphrasechange", "params": ["mypasswd", "newpasswd"] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
+{"result":null,"error":null,"id":"curltest"}
 {% endhighlight %}
 
 ## 源码剖析

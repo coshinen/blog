@@ -17,35 +17,41 @@ categories: Blockchain
 sendmany "fromaccount" {"address":amount,...} ( minconf "comment" ["address",...] ) # 发送多次
 {% endhighlight %}
 
-**发送金额是双精度浮点数。**
+**发送的金额是双精度浮点数。<br>
+使用该命令前需要调用 [`walletpassphrase`](/2018/05/31/bitcoin-rpc-command-walletpassphrase) 解锁钱包。**
 
 参数：<br>
-1. `fromaccount` （字符串，必备）已过时，从该账户发送资金。应该使用默认账户 `""`。<br>
+1. `fromaccount` （字符串，必备，已过时）从该账户发送资金。应使用默认账户 `""`。<br>
 2. `amounts` （字符串，必备）一个地址和金额的 json 对象。<br>
 {% highlight shell %}
     {
-      "address":amount   (numeric or string) The bitcoin address is the key, the numeric amount (can be string) in BTC is the value
+      "address":amount   （数字或字符串）键是比特币地址，值是以 BTC 为单位的数字型（可以是字符串）金额
       ,...
     }
 {% endhighlight %}
-3. `minconf` （数字型，可选，默认为 1）只使用至少 `minconf` 次确认的余额。<br>
-4. `comment` （字符串，可选）一个备注。<br>
-5. `subtractfeefromamount` （字符串，可选）一个存放地址的 json 数组。
-费用将从每个选择的地址上扣除。
-这些接收者收到的比特币比你在金额区域输入的金额少。
-如果这里没有指定地址，发送者支付费用。
+3.`minconf` （数字，可选，默认为 1）只使用至少 `minconf` 次确认的余额。<br>
+4.`comment` （字符串，可选）一个备注。<br>
+5.`subtractfeefromamount` （字符串，可选）一个存放地址的 json 数组。
+费用将从每个选择的地址的金额中平均扣除。
+这些接收者收到比你在金额区域输入的金额少的比特币。
+如果这里没有指定地址，则发送者支付交易费。
 {% highlight shell %}
     [
-      "address"            (string) Subtract fee from this address
+      "address"            （字符串）从该地址减去交易费
       ,...
     ]
 {% endhighlight %}
 
-结果：（字符串）发送交易的索引。不管有多少地址，只创建一笔交易。
+结果：（字符串）返回发送的交易索引。不管有多少地址，只创建一笔交易。
 
 ## 用法示例
 
-**注：不要删除 `\`，直接替换对应地址即可。**
+### 比特币核心客户端
+
+**注：<br>
+1. 不要删除 `\`，直接替换对应地址即可。<br>
+2. 使用该命令前，先调用 [`walletpassphrase`](/2018/05/31/bitcoin-rpc-command-walletpassphrase) 解锁钱包。<br>
+3. 使用该命令后，再调用 [`walletlock`](/2018/05/31/bitcoin-rpc-command-walletlock) 锁定钱包。**
 
 用法一：发送两笔金额到两个不同的地址。
 
@@ -55,9 +61,8 @@ $ bitcoin-cli sendmany "" "{\"1D1ZrZNe3JUo7ZycKEYQQiQAWd9y54F4XZ\":0.01,\"1353ts
 $ bitcoin-cli gettransaction 973e6fa4495a76851a452d31c2287f0acd19f9e3d6078e34ca7d8e7dfadfa73e
 {
   "amount": -0.03000000,
-  "fee": -0.00000259,
+  "fee": -0.00000260,
   "confirmations": 8,
-  "instantlock": false,
   "blockhash": "00001b7f5ac330c5cf2c52d723713a64a1096ca9a64df7dbbc3febea17bc3366",
   "blockindex": 1,
   "blocktime": 1528449625,
@@ -74,7 +79,7 @@ $ bitcoin-cli gettransaction 973e6fa4495a76851a452d31c2287f0acd19f9e3d6078e34ca7
       "category": "send",
       "amount": -0.01000000,
       "vout": 0,
-      "fee": -0.00000259,
+      "fee": -0.00000260,
       "abandoned": false
     }, 
     {
@@ -82,8 +87,8 @@ $ bitcoin-cli gettransaction 973e6fa4495a76851a452d31c2287f0acd19f9e3d6078e34ca7
       "address": "1353tsE8YMTA4EuV7dgUXGjNFf9KpVvKHz",
       "category": "send",
       "amount": -0.02000000,
-      "vout": 1,
-      "fee": -0.00000259,
+      "vout": 2,
+      "fee": -0.00000260,
       "abandoned": false
     }
   ],
@@ -99,9 +104,8 @@ $ bitcoin-cli sendmany "" "{\"1D1ZrZNe3JUo7ZycKEYQQiQAWd9y54F4XZ\":0.01,\"1353ts
 $ bitcoin-cli gettransaction 8be88b8242e5857f68693d57f9e371bb32e456eb43f46d65684a561862c58680
 {
   "amount": -0.03000000,
-  "fee": -0.00000259,
+  "fee": -0.00000260,
   "confirmations": 1,
-  "instantlock": false,
   "blockhash": "0000429390bf30cba3a34de33a6938be16f70b1fb88a916b97df7816abd6df35",
   "blockindex": 1,
   "blocktime": 1528451528,
@@ -118,8 +122,8 @@ $ bitcoin-cli gettransaction 8be88b8242e5857f68693d57f9e371bb32e456eb43f46d65684
       "address": "1D1ZrZNe3JUo7ZycKEYQQiQAWd9y54F4XZ",
       "category": "send",
       "amount": -0.01000000,
-      "vout": 0,
-      "fee": -0.00000259,
+      "vout": 1,
+      "fee": -0.00000260,
       "abandoned": false
     }, 
     {
@@ -128,7 +132,7 @@ $ bitcoin-cli gettransaction 8be88b8242e5857f68693d57f9e371bb32e456eb43f46d65684
       "category": "send",
       "amount": -0.02000000,
       "vout": 2,
-      "fee": -0.00000259,
+      "fee": -0.00000260,
       "abandoned": false
     }
   ],
@@ -146,7 +150,6 @@ $ bitcoin-cli gettransaction 1903ac0fefc0bd63f15cef083c714d7a19f049e617dcc15ea2d
   "amount": -0.02999740,
   "fee": -0.00000260,
   "confirmations": 0,
-  "instantlock": false,
   "trusted": true,
   "txid": "1903ac0fefc0bd63f15cef083c714d7a19f049e617dcc15ea2d655f81bf3d118",
   "walletconflicts": [
@@ -169,13 +172,20 @@ $ bitcoin-cli gettransaction 1903ac0fefc0bd63f15cef083c714d7a19f049e617dcc15ea2d
       "address": "1353tsE8YMTA4EuV7dgUXGjNFf9KpVvKHz",
       "category": "send",
       "amount": -0.01999870,
-      "vout": 1,
+      "vout": 2,
       "fee": -0.00000260,
       "abandoned": false
     }
   ],
   "hex": "01000000017708d09c30b24ee303ef9fbcf4990d160fcf62a56d5218d4df0cef7c47321b15000000006b483045022100841737a0cd634af22659dd8d663e7219863f49c4e151ccafa75656a79061f15202201f895c8ad9c2e576bd6efb9785248498a3f05da14d47f7fbd85e3f2e3057008e012102ef09fb034dc26337de85e77c6b519bfeb2500f2cd69ca4c0c34e5425144ffaa0feffffff03be410f00000000001976a9149dd5d8f38714a8b07a4e702777d445d388805ebd88acfe831e00000000001976a914a679db3ef39fe34161431507cba8b579ba90281388acc0cf6a00000000001976a9149e0342205ce74dc6bb782d99b3269826e8d655b488acaa1a0100"
 }
+{% endhighlight %}
+
+### cURL
+
+{% highlight C++ %}
+$ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "sendmany", "params": ["", "{\"1D1ZrZNe3JUo7ZycKEYQQiQAWd9y54F4XZ\":0.01,\"1353tsE8YMTA4EuV7dgUXGjNFf9KpVvKHz\":0.02}", 6, "testing"] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
+暂无。
 {% endhighlight %}
 
 ## 源码剖析

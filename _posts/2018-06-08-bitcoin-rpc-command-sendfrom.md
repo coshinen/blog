@@ -17,32 +17,45 @@ categories: Blockchain
 sendfrom "fromaccount" "tobitcoinaddress" amount ( minconf "comment" "comment-to" ) # （已过时）从一个账户发送金额到一个比特币地址
 {% endhighlight %}
 
-**使用 [`sendtoaddress`](/2018/06/08/bitcoin-rpc-command-sendtoaddress) 替代该命令。**
+**使用 [`sendtoaddress`](/2018/06/08/bitcoin-rpc-command-sendtoaddress) 替代该命令。<br>
+使用该命令前需要调用 [`walletpassphrase`](/2018/05/31/bitcoin-rpc-command-walletpassphrase) 解锁钱包。**
 
 参数：<br>
-1. `fromaccount` （字符串，必备）从该账户发送资金。可能为默认账户 `""`。<br>
-2. `tobitcoinaddress` （字符串，必备）要发送资金到的比特币地址。<br>
-3. `amount` （数字型或字符串，必备）以 BTC 为单位的金额（交易费加在上面）。<br>
-4. `minconf` （数字型，可选，默认为 1）只使用至少 `minconf` 次确认的资金。<br>
+1. `fromaccount` （字符串，必备）从该账户发送资金。默认账户使用 `""`。<br>
+2. `tobitcoinaddress` （字符串，必备）发送资金到的比特币地址。<br>
+3. `amount` （数字或字符串，必备）以 BTC 为单位的金额（交易费加在上面）。<br>
+4. `minconf` （数字，可选，默认为 1）只使用至少 `minconf` 次确认的资金。<br>
 5. `comment` （字符串，可选）用于存储交易的备注。这不是交易的一部分，只保存在你的钱包中。<br>
 6. `comment-to` （字符串，可选）存储你要发送交易的个人或组织名的备注。这不是交易的一部分，只保存在你的钱包中。
 
-结果：（字符串）交易索引。
+结果：（字符串）返回交易索引。
 
 ## 用法示例
 
-用法一：从默认账户发送 0.01 BTC 到指定地址，必须至少有 1 次确认。
+### 比特币核心客户端
+
+**使用该命令前，先调用 [`walletpassphrase`](/2018/05/31/bitcoin-rpc-command-walletpassphrase) 解锁钱包，<br>
+使用该命令后，再调用 [`walletlock`](/2018/05/31/bitcoin-rpc-command-walletlock) 锁定钱包。**
+
+用法一：从默认账户发送 0.01 BTC 到指定地址，资金必须至少 1 次确认。
 
 {% highlight shell %}
 $ bitcoin-cli sendfrom "" 1M72Sfpbz1BPpXFHz9m3CdqATR44Jvaydd 0.01
 5ef2e350852ac84977fa2bff1a980bb7095046066d17b3a383f3ccd6c091cf1b
 {% endhighlight %}
 
-用法二：从账户 `tabby` 发送 0.01 BTC 到指定地址，资金必须至少 6 次确认。
+用法二：从账户 `tabby` 发送 0.01 BTC 到指定地址，资金必须至少 6 次确认，并增加备注。
 
 {% highlight shell %}
 $ bitcoin-cli sendfrom "tabby" 1M72Sfpbz1BPpXFHz9m3CdqATR44Jvaydd 0.01 6 "donation" "seans outpost"
 2165d605c35472ddb84fbacb51b6d7c39d412b58493ef7209503003ad6b79be7
+{% endhighlight %}
+
+### cURL
+
+{% highlight shell %}
+$ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "sendfrom", "params": ["tabby", "1M72Sfpbz1BPpXFHz9m3CdqATR44Jvaydd", 0.01, 6, "donation", "seans outpost"] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
+{"result":"2165d605c35472ddb84fbacb51b6d7c39d412b58493ef7209503003ad6b79be7","error":null,"id":"curltest"}
 {% endhighlight %}
 
 ## 源码剖析

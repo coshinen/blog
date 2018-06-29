@@ -14,42 +14,61 @@ categories: Blockchain
 ## 提示说明
 
 {% highlight shell %}
-walletpassphrase "passphrase" timeout # 在内存中存储钱包解密密钥 `timeout` 秒数
+walletpassphrase "passphrase" timeout # 在内存中存储钱包解密密钥 `timeout` 秒
 {% endhighlight %}
 
 在执行与私钥相关的交易前需要先执行此操作，比如发送比特币。
 
 参数：<br>
 1. `passphrase` （字符串，必备）钱包密码。<br>
-2. `timeout` （整型，必备）在内存中维持解密密钥的秒数时间。
-
-结果：无返回值。
+2. `timeout` （整型，必备）在内存中维持解密密钥的以秒为单位的时间。
 
 **注：在钱包已经解锁的情况下使用此命令，将设置一个新解锁时间覆盖旧解锁时间。**
 
+结果：无返回值。
+
 ## 用法示例
 
-用法一：解密钱包 60 秒。
+### 比特币核心客户端
+
+用法一：解锁钱包 60 秒。
 
 {% highlight shell %}
 $ bitcoin-cli getinfo | grep unlocked_until
   "unlocked_until": 0,
-$ bitcoin-cli walletpassphrase 123 60
+$ bitcoin-cli walletpassphrase "mypasswd" 60
 $ bitcoin-cli getinfo | grep unlocked_until
   "unlocked_until": 1527753859,
 {% endhighlight %}
 
-[`getinfo`](/2018/05/23/bitcoin-rpc-command-getinfo) 中 `unlocked_until` 字段表示钱包解锁的过期时间，值为 0 表示未解锁。
+[`getinfo`](/2018/05/23/bitcoin-rpc-command-getinfo) 中 `unlocked_until` 字段表示钱包解锁的过期时间，0 表示处于锁定状态。
 
-用法二：解密钱包 60 秒，再次使用此命令解密 20，密钥维持时间被覆盖。
+用法二：解锁钱包 60 秒，再次使用此命令解密 20，密钥过期时间被覆盖。
 
 {% highlight shell %}
-$ bitcoin-cli walletpassphrase 123 60
+$ bitcoin-cli walletpassphrase "mypasswd" 60
 $ bitcoin-cli getinfo | grep unlocked_until
   "unlocked_until": 1527753859,
-$ bitcoin-cli walletpassphrase 123 20
+$ bitcoin-cli walletpassphrase "mypasswd" 20
 $ bitcoin-cli getinfo | grep unlocked_until
   "unlocked_until": 1527753825,
+{% endhighlight %}
+
+用法三：锁定钱包。
+
+{% highlight shell %}
+$ bitcoin-cli getinfo | grep unlocked_until
+  "unlocked_until": 1527753825,
+$ bitcoin-cli walletpassphrase "mypasswd" 0
+$ bitcoin-cli getinfo | grep unlocked_until
+  "unlocked_until": 0
+{% endhighlight %}
+
+### cURL
+
+{% highlight shell %}
+$ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "walletpassphrase", "params": ["mypasswd", 60] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
+{"result":null,"error":null,"id":"curltest"}
 {% endhighlight %}
 
 ## 源码剖析

@@ -14,26 +14,59 @@ categories: Blockchain
 ## 提示说明
 
 {% highlight shell %}
-sendtoaddress "bitcoinaddress" amount ( "comment" "comment-to" subtractfeefromamount ) # 发送一个金额到指定地址
+sendtoaddress "bitcoinaddress" amount ( "comment" "comment-to" subtractfeefromamount ) # 发送一笔金额到指定地址
 {% endhighlight %}
 
 参数：<br>
 1. `bitcoinaddress` （字符串，必备）要发送到的比特币地址。<br>
-2. `amount` （数字型或字符串，必备）要发送的金额。例如 `0.1`。<br>
-3. `comment` （字符串，可选）用于存储交易的备注。这不是交易的一部分，只存在你的钱包中。<br>
-4. `comment-to` （字符串，可选）存储你要发送交易的个人或组织名的备注。这不是交易的一部分，只存在你的钱包中。<br>
-5. `subtractfeefromamount` （布尔型，可选，默认为 false）交易费用将从发送金额中扣除。接收者将收到少于你在金额栏输入数量的比特币。
+2. `amount` （数字或字符串，必备）以 BTC 为单位的发送的金额。例 `0.1`。<br>
+3. `comment` （字符串，可选）用于存储交易的备注。这不是交易的一部分，只保存在你的钱包中。<br>
+4. `comment-to` （字符串，可选）存储你要发送交易的个人或组织名的备注。这不是交易的一部分，只保存在你的钱包中。<br>
+5. `subtractfeefromamount` （布尔型，可选，默认为 false）交易费将从发送金额中扣除。接收者将收到少于你在金额栏输入的比特币。
 若该值为 true，则发送金额包含交易费，默认 false，交易费另算。
 
-结果：（字符串）交易索引。
+结果：（字符串）返回交易索引。
 
 ## 用法示例
+
+### 比特币核心客户端
+
+**使用该命令前，先调用 [`walletpassphrase`](/2018/05/31/bitcoin-rpc-command-walletpassphrase) 解锁钱包，<br>
+使用该命令后，再调用 [`walletlock`](/2018/05/31/bitcoin-rpc-command-walletlock) 锁定钱包。**
 
 用法一：向指定地址发送 0.1 BTC。
 
 {% highlight shell %}
 $ bitcoin-cli sendtoaddress 1M72Sfpbz1BPpXFHz9m3CdqATR44Jvaydd 0.1
 533ac3682be8723cca63f37a75178155c0b6e69d06606010d5cee1c0f7ccba97
+$ bitcoin-cli gettransaction 533ac3682be8723cca63f37a75178155c0b6e69d06606010d5cee1c0f7ccba97
+{
+  "amount": -0.10000000,
+  "fee": -0.00000226,
+  "confirmations": 9,
+  "blockhash": "000065e66f10b6b4e46558967e213f2973fb746ab077f209e254121983b1e0b6",
+  "blockindex": 1,
+  "blocktime": 1528443900,
+  "txid": "533ac3682be8723cca63f37a75178155c0b6e69d06606010d5cee1c0f7ccba97",
+  "walletconflicts": [
+  ],
+  "time": 1528443879,
+  "timereceived": 1528443879,
+  "bip125-replaceable": "no",
+  "details": [
+    {
+      "account": "",
+      "address": "1M72Sfpbz1BPpXFHz9m3CdqATR44Jvaydd",
+      "category": "send",
+      "amount": -0.10000000,
+      "label": "",
+      "vout": 1,
+      "fee": -0.00000226,
+      "abandoned": false
+    }
+  ],
+  "hex": "010000000297baccf7c0e1ced5106060069de6b6c0558117757af363ca3c72e82b68c33a53000000006a4730440220301dd1386f1f17937ecbe62193cf94772ea536cb0f2a1ef0721ace1a3086e945022007c1706db1d282022cf99eb66dde50cdd640dadaaf444fd0627b95dc09c2bfa20121026c992de443610f0775ff4ea7eab3fc2c9cecb1ec61383d1f8b0b54b4fdcc45d5feffffff1625da83e5b868b1bedd69b6579449fb2746416e73cc70fc2a8dc6df8b6863b8000000006a47304402202f1dcd475339b71578941fc10ebe3411f14b40b02d1c9a1e7dbeaa6e63c1c1a4022017b38c7628056a083f49728514b00ae1046e94724e8bea80a61c661af92dc7dc012102ef09fb034dc26337de85e77c6b519bfeb2500f2cd69ca4c0c34e5425144ffaa0feffffff02ef8c9800000000001976a914a2fe6cb25949dc7f1da3da93086c164a1bf72ef888ac80969800000000001976a9149dd5d8f38714a8b07a4e702777d445d388805ebd88acd0150100"
+}
 {% endhighlight %}
 
 用法二：向指定地址发送 0.1 BTC，增加交易备注 `donation` 和交易组织名 `seans outpost`。
@@ -44,12 +77,9 @@ f3748b3e27f22dbf04eed3d779b54507c839f89dd34c0263f9b4d21928083014
 $ bitcoin-cli gettransaction f3748b3e27f22dbf04eed3d779b54507c839f89dd34c0263f9b4d21928083014
 {
   "amount": -0.10000000,
-  "fee": -0.00000373,
-  "confirmations": 23,
-  "instantlock": false,
-  "blockhash": "000065e66f10b6b4e46558967e213f2973fb746ab077f209e254121983b1e0b6",
-  "blockindex": 1,
-  "blocktime": 1528443900,
+  "fee": -0.00000374,
+  "confirmations": 0,
+  "trusted": true,
   "txid": "f3748b3e27f22dbf04eed3d779b54507c839f89dd34c0263f9b4d21928083014",
   "walletconflicts": [
   ],
@@ -64,8 +94,9 @@ $ bitcoin-cli gettransaction f3748b3e27f22dbf04eed3d779b54507c839f89dd34c0263f9b
       "address": "1M72Sfpbz1BPpXFHz9m3CdqATR44Jvaydd",
       "category": "send",
       "amount": -0.10000000,
-      "vout": 1,
-      "fee": -0.00000373,
+      "label": "",
+      "vout": 0,
+      "fee": -0.00000374,
       "abandoned": false
     }
   ],
@@ -73,7 +104,7 @@ $ bitcoin-cli gettransaction f3748b3e27f22dbf04eed3d779b54507c839f89dd34c0263f9b
 }
 {% endhighlight %}
 
-用法三：向指定地址发送 0.1 BTC，没有备注，发送金额扣掉交易费。
+用法三：向指定地址发送 0.1 BTC，没有备注，从发送金额中扣掉交易费。
 
 {% highlight shell %}
 $ bitcoin-cli sendtoaddress 1M72Sfpbz1BPpXFHz9m3CdqATR44Jvaydd 0.1 "" "" true
@@ -83,7 +114,6 @@ $ bitcoin-cli gettransaction 191e845fc0427be5128779cbee8a25b41d2f5cf07eb6df7438c
   "amount": -0.09999808,
   "fee": -0.00000192,
   "confirmations": 4,
-  "instantlock": false,
   "blockhash": "00001bdcb2a48929fe02ad604a73df673267a00873f2644cb8b2c2278e9bb589",
   "blockindex": 1,
   "blocktime": 1528444190,
@@ -99,6 +129,7 @@ $ bitcoin-cli gettransaction 191e845fc0427be5128779cbee8a25b41d2f5cf07eb6df7438c
       "address": "1M72Sfpbz1BPpXFHz9m3CdqATR44Jvaydd",
       "category": "send",
       "amount": -0.09999808,
+      "label": "",
       "vout": 0,
       "fee": -0.00000192,
       "abandoned": false
@@ -106,6 +137,13 @@ $ bitcoin-cli gettransaction 191e845fc0427be5128779cbee8a25b41d2f5cf07eb6df7438c
   ],
   "hex": "010000000173f50ee4ecd6a810f0177c9ce42a53a7da9579a836d78ded0733397af4d8d72b000000006b483045022100eb59463fd150c1fbc1fd4389e703df7916be15abd4aa294aa40746213f329272022039c089685f4feb23847db90b039a2ba2e41b0c07b63a8d029df46c07d1e0cc61012102ef09fb034dc26337de85e77c6b519bfeb2500f2cd69ca4c0c34e5425144ffaa0feffffff01c0959800000000001976a9149dd5d8f38714a8b07a4e702777d445d388805ebd88ac00160100"
 }
+{% endhighlight %}
+
+### cURL
+
+{% highlight shell %}
+$ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "sendtoaddress", "params": ["1M72Sfpbz1BPpXFHz9m3CdqATR44Jvaydd", 0.1, "donation", "seans outpost"] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
+{"result":"f3748b3e27f22dbf04eed3d779b54507c839f89dd34c0263f9b4d21928083014","error":null,"id":"curltest"}
 {% endhighlight %}
 
 ## 源码剖析
