@@ -43,6 +43,9 @@ Watch-only 消费是最近更新的另一个功能。
 #### 这些更新在移动设备上是否可用？
 当然，我们钱包的最新版本在 IOS 和 Android 上包含了以上功能。
 
+以上内容译自区块链官方博客 [How to use Watch-only Addresses](https://blog.blockchain.com/2016/05/31/how-to-use-watch-only-addresses)。<br>
+关于 Watch-only 地址源码部分，详见[`比特币 RPC 命令剖析 "importaddress"`](/2018/06/07/bitcoin-rpc-command-importaddress)。
+
 ## 参照
 * [How to use Watch-only Addresses](https://blog.blockchain.com/2016/05/31/how-to-use-watch-only-addresses)
 * [Watch-Only Address - Bitcoin Glossary](https://bitcoin.org/en/glossary/watch-only-address)
