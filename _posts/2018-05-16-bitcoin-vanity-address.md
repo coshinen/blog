@@ -67,7 +67,7 @@ CPubKey CWallet::GenerateNewKey()
 {% endhighlight %}
 
 2.RPC 命令 `getnewaddress` 函数，位于“wallet/rpcwallet.cpp”文件中。<br>
-该函数的作用是通过比特币核心客户端该调用 RPC 命令，获取一个新的公钥地址。
+该函数的作用是通过比特币核心客户端该调用 RPC 命令，获取一个新的公钥地址。<br>
 这里只需要修改第 6 步，实现同上。
 
 {% highlight C++ %}
@@ -182,7 +182,7 @@ UniValue validateaddress(const UniValue& params, bool fHelp)
 }
 {% endhighlight %}
 
-关于比特币地址前缀 `'1'` 的修改，[详见](/2018/05/13/how-to-make-an-altcoin)。
+关于比特币地址前缀 `'1'` 的修改，参考[如何制作一枚山寨数字货币](/2018/05/13/how-to-make-an-altcoin)。
 
 ## 参照
 * [Address - Bitcoin Wiki](https://en.bitcoin.it/wiki/Address)
