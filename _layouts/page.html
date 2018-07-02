@@ -4,7 +4,9 @@ layout: default
 <article class="post">
 
   <header class="post-header">
-    <h1 class="post-title">{{ page.title }}</h1>
+    <h1 class="post-title">{{ page.title }}
+    {% if page.url == '/archive/' %}<input class="page-search-input" type="text" placeholder="Enter Search" />{% endif %}
+    </h1>
   </header>
 
   <div class="post-content">

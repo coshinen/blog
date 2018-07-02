@@ -68,12 +68,12 @@ extern UniValue listaddressgroupings(const UniValue& params, bool fHelp); // 列
 实现在“rpcwallet.cpp”文件中。
 
 {% highlight C++ %}
-UniValue listaddressgroupings(const UniValue& params, bool fHelp)
+UniValue listaddressgroupings(const UniValue& params, bool fHelp) // 列出地址分组信息（地址、余额、账户）
 {
-    if (!EnsureWalletIsAvailable(fHelp)) // 确保当前钱包可用
+    if (!EnsureWalletIsAvailable(fHelp)) // 1.确保当前钱包可用
         return NullUniValue;
     
-    if (fHelp) // 没有参数
+    if (fHelp) // 2.没有参数
         throw runtime_error( // 命令帮助反馈
             "listaddressgroupings\n"
             "\nLists groups of addresses which have had their common ownership\n"
@@ -96,35 +96,83 @@ UniValue listaddressgroupings(const UniValue& params, bool fHelp)
             + HelpExampleRpc("listaddressgroupings", "")
         );
 
-    LOCK2(cs_main, pwalletMain->cs_wallet); // 钱包上锁
+    LOCK2(cs_main, pwalletMain->cs_wallet); // 3.钱包上锁
 
-    UniValue jsonGroupings(UniValue::VARR); // 创建数组类型结果对象
-    map<CTxDestination, CAmount> balances = pwalletMain->GetAddressBalances(); // 获取地址余额映射列表
-    BOOST_FOREACH(set<CTxDestination> grouping, pwalletMain->GetAddressGroupings()) // 遍历地址分组集合
+    UniValue jsonGroupings(UniValue::VARR); // 4.地址分组集合对象
+    map<CTxDestination, CAmount> balances = pwalletMain->GetAddressBalances(); // 4.1.获取地址余额映射列表
+    BOOST_FOREACH(set<CTxDestination> grouping, pwalletMain->GetAddressGroupings()) // 4.2.获取并遍历地址分组集合
     {
-        UniValue jsonGrouping(UniValue::VARR);
+        UniValue jsonGrouping(UniValue::VARR); // 地址分组对象
         BOOST_FOREACH(CTxDestination address, grouping) // 遍历一个地址分组
         {
-            UniValue addressInfo(UniValue::VARR);
+            UniValue addressInfo(UniValue::VARR); // 一个地址信息（地址、余额、账户）
             addressInfo.push_back(CBitcoinAddress(address).ToString()); // 获取地址
             addressInfo.push_back(ValueFromAmount(balances[address])); // 获取地址余额
             {
-                if (pwalletMain->mapAddressBook.find(CBitcoinAddress(address).Get()) != pwalletMain->mapAddressBook.end()) // 若在地址簿中找到该地址
+                if (pwalletMain->mapAddressBook.find(CBitcoinAddress(address).Get()) != pwalletMain->mapAddressBook.end()) // 若地址簿中有该地址
                     addressInfo.push_back(pwalletMain->mapAddressBook.find(CBitcoinAddress(address).Get())->second.name); // 把该地址关联的账户名加入地址信息
             }
-            jsonGrouping.push_back(addressInfo);
+            jsonGrouping.push_back(addressInfo); // 加入地址分组
         }
-        jsonGroupings.push_back(jsonGrouping);
+        jsonGroupings.push_back(jsonGrouping); // 加入地址分组集合
     }
-    return jsonGroupings; // 返回结果集
+    return jsonGroupings; // 返回地址分组集合
 }
 {% endhighlight %}
 
 基本流程：<br>
-1.确保钱包当前可用（已初始化完成）。<br>
+1.确保钱包当前可用。<br>
 2.处理命令帮助和参数个数。<br>
 3.钱包上锁。<br>
-4.遍历地址分组集合，获取每个地址，把相关信息加入结果集并返回。
+4.遍历地址分组集合，获取每个地址，把相关信息加入结果集并返回。<br>
+4.1.获取地址余额映射列表。<br>
+4.2.获取并遍历地址分组集合，把每个地址的相关信息加入结果集。<br>
+
+函数 pwalletMain->GetAddressBalances() 获取地址余额映射列表，定义在“wallet.cpp”文件中。
+
+{% highlight C++ %}
+std::map<CTxDestination, CAmount> CWallet::GetAddressBalances()
+{
+    map<CTxDestination, CAmount> balances; // 地址余额映射列表
+
+    {
+        LOCK(cs_wallet); // 钱包上锁
+        BOOST_FOREACH(PAIRTYPE(uint256, CWalletTx) walletEntry, mapWallet) // 遍历钱包交易映射列表
+        { // 获取一个钱包条目（交易索引，钱包交易）
+            CWalletTx *pcoin = &walletEntry.second; // 获取钱包交易
+
+            if (!CheckFinalTx(*pcoin) || !pcoin->IsTrusted()) // 为最终交易 且 交易可信
+                continue; // 跳过
+
+            if (pcoin->IsCoinBase() && pcoin->GetBlocksToMaturity() > 0) // 若为创币交易 且 未成熟
+                continue; // 跳过
+
+            int nDepth = pcoin->GetDepthInMainChain(); // 获取该交易所在区块的主链深度
+            if (nDepth < (pcoin->IsFromMe(ISMINE_ALL) ? 0 : 1))
+                continue;
+
+            for (unsigned int i = 0; i < pcoin->vout.size(); i++) // 遍历该交易的输出列表
+            {
+                CTxDestination addr;
+                if (!IsMine(pcoin->vout[i])) // 若交易输出不是我的
+                    continue; // 跳过
+                if(!ExtractDestination(pcoin->vout[i].scriptPubKey, addr)) // 从交易输出中抽取交易地址
+                    continue;
+
+                CAmount n = IsSpent(walletEntry.first, i) ? 0 : pcoin->vout[i].nValue; // 若该交易未花费，获取其输出点的值
+
+                if (!balances.count(addr)) // 结果集中不含该地址
+                    balances[addr] = 0; // 初始化
+                balances[addr] += n; // 累加地址余额（未花费的输出点）
+            }
+        }
+    }
+
+    return balances; // 返回地址余额映射列表
+}
+{% endhighlight %}
+
+通过遍历钱包交易映射列表，获取每笔钱包交易的输入和输出列表对应的交易地址。
 
 Thanks for your time.
 
