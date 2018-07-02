@@ -304,8 +304,7 @@ q=0.45   z=340
 任何需要的规则和激励都可以通过这种共识机制强制执行。
 
 ## 感想
-在接触区块链后再回来看看白皮书，发现有些部分豁然开朗。<br>
-从头串到尾，这就是主线。
+在了解区块链后再回来看看白皮书，发现有些部分豁然开朗。
 
 ## 参照
 * [Bitcoin: A Peer-to-Peer Electronic Cash System](https://bitcoin.org/bitcoin.pdf)
