@@ -49,5 +49,8 @@ permalink: /archive/
 {:.archive-title}
         {% assign i = i | plus: 1 %}
     {% endif %}
+{% if post.hidden == true %}
+{% else %}
 * {{ post.date | date: '%m-%d' }} &raquo; [{{ post.title }}]({{ post.url }} "{{ post.title }}"){:.archive-item-link}
+{% endif %}
 {% endfor %}
