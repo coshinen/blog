@@ -1,10 +1,17 @@
 ---
 layout: post
-title:  "比特币：一种对等的电子现金系统"
+title:  "比特币白皮书中英对照"
 date:   2018-06-12 09:07:06 +0800
 author: mistydew
 categories: Blockchain
 ---
+<p align="center">
+<font size="6">
+Bitcoin: A Peer-to-Peer Electronic Cash System<br>
+比特币：一种对等的电子现金系统
+</font>
+</p>
+
 <p align="center">
 Satoshi Nakamoto<br>
 satoshin@gmx.com<br>
@@ -308,4 +315,5 @@ q=0.45   z=340
 
 ## 参照
 * [Bitcoin: A Peer-to-Peer Electronic Cash System](https://bitcoin.org/bitcoin.pdf)
+* [Bitcoin whitepaper repository on GitHub](https://github.com/wbnns/bitcoinwhitepaper)
 * [...](https://github.com/mistydew/blockchain)
