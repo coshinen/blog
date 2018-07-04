@@ -28,6 +28,7 @@ $ ls # 列出当前所在目录下的所有文件（除隐藏文件，即以 `.`
 $ ls <dir> # 列出 <dir> 目录下的所有文件（除隐藏文件，即以 `.` 开头的文件）的文件名，包含普通文件、目录文件...
 $ ls -l # 列出当前所在目录下的所有文件（除隐藏文件）的详细信息，分别是文件属性（类型、权限）、连接数、所属者、所属组、大小（字节）、日期、文件名。
 $ ls -a # 列出当前所在目录下的所有文件的文件名，包含隐藏文件。
+$ ls -R # 列出当前所在目录及其子目录下的所有文件的文件名。
 {% endhighlight %}
 
 ### 创建文件 make
@@ -165,6 +166,21 @@ $ tar Jxfv <filename>.tar.xz # 解压缩 xz 格式的文件 `<filename>.tar.xz`�
 {% highlight shell %}
 $ ln <srcfile> <destfile> # 创建源文件 `<srcfile>` 的硬链接 `<destfile>`，删除源文件不影响其硬链接文件。<br>
 $ ln -s <srcfile> <destfile> # 创建源文件 `<srcfile>` 的软链接 `<destfile>`，类似于 Windows 下的快捷方式，删除源文件后其软链接文件失效。
+{% endhighlight %}
+
+### 统计文件内容 wc
+
+{% highlight shell %}
+$ wc -l <filename> # 统计文件 `<filename>` 的行数。参数 `-c` 统计字符数即文件大小字节数，`-w` 统计字数。
+{% endhighlight %}
+
+### 统计文件个数 ls | wc
+
+{% highlight shell %}
+$ ls -l | grep "^-" | wc -l # 统计当前目录下普通文件个数。
+$ ls -l | grep "^d" | wc -l # 统计当前目录下目录文件个数。
+$ ls -lR | grep "^-" | wc -l # 统计当前目录及其子目录下普通文件个数。
+$ ls -lR | grep "^d" | wc -l # 统计当前目录及其子目录下目录文件个数。
 {% endhighlight %}
 
 ## 参考
