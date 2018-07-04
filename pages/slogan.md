@@ -4,6 +4,8 @@ title: Slogan
 permalink: /slogan/
 ---
 
+* Outliers: 10,000-Hour Rule.
+
 * 侯捷：源码之前，了无秘密。
 
 * ソルト：無理は一番の、退屈しのぎだ。
