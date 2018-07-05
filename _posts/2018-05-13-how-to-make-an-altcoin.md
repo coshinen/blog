@@ -2,6 +2,7 @@
 layout: post
 title:  "如何制作一枚山寨数字货币"
 date:   2018-05-13 16:02:28 +0800
+author: mistydew
 categories: Blockchain
 stickie: true
 ---
