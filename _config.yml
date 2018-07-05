@@ -10,7 +10,7 @@ title: mistydew
 slogan: ソルト：無理は一番の、退屈しのぎだ。
 email: mistydew@qq.com
 description: > # this means to ignore newlines until "baseurl:"
-  &copy; 2018 mistydew. Powered by Jekyll. Hosted with <img src="/images/sakura.gif" alt="sakura"> by GitHub.
+  &copy; 2018 mistydew. Powered by Jekyll. Hosted with ❤ by GitHub.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://yourdomain.com" # the base hostname & protocol for your site
 twitter_username: _mistydew_
