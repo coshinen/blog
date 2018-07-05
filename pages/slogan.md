@@ -4,6 +4,8 @@ title: Slogan
 permalink: /slogan/
 ---
 
+* Mahatma Gandhi: First they ignore you, then they laugh at you, then they fight you, then you win.
+
 * Outliers: 10,000-Hour Rule.
 
 * 侯捷：源码之前，了无秘密。
