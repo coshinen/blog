@@ -197,7 +197,7 @@ blocks per hour.  If they're generated too fast, the difficulty increases.
 
 The steps to run the network are as follows:<br>
 1) New transactions are broadcast to all nodes.<br>
-2) Each node collects new transactions into a block.<br>  
+2) Each node collects new transactions into a block.<br>
 3) Each node works on finding a difficult proof-of-work for its block.<br>
 4) When a node finds a proof-of-work, it broadcasts the block to all nodes.<br>
 5) Nodes accept the block only if all transactions in it are valid and not already spent.<br>
