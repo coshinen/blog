@@ -195,17 +195,16 @@ blocks per hour.  If they're generated too fast, the difficulty increases.
 
 ## 5. Network 网络
 
-The steps to run the network are as follows:
-1) New transactions are broadcast to all nodes.
-2) Each node collects new transactions into a block.  
-3) Each node works on finding a difficult proof-of-work for its block.
-4) When a node finds a proof-of-work, it broadcasts the block to all nodes.
-5) Nodes accept the block only if all transactions in it are valid and not already spent.
+The steps to run the network are as follows:<br>
+1) New transactions are broadcast to all nodes.<br>
+2) Each node collects new transactions into a block.<br>  
+3) Each node works on finding a difficult proof-of-work for its block.<br>
+4) When a node finds a proof-of-work, it broadcasts the block to all nodes.<br>
+5) Nodes accept the block only if all transactions in it are valid and not already spent.<br>
 6) Nodes express their acceptance of the block by working on creating the next block in the 
 chain, using the hash of the accepted block as the previous hash.
 
-这步运行如下网络：
-
+这步运行如下网络：<br>
 1) 新的交易广播到全部节点。<br>
 2) 每个节点收集新的交易到一个区块。<br>
 3) 每个节点都为了找一个区块的困难的工作量证明而工作。<br>
