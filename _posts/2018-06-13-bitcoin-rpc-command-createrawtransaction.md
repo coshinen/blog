@@ -120,7 +120,8 @@ $ bitcoin-cli createrawtransaction "[{\"txid\":\"fb9bd2df3cef0abd9f444971dff0977
 ### cURL
 
 {% highlight C++ %}
-暂无。
+$curl --user myusername:mypassword  --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "createrawtransaction", "params": [[{"txid":"fb9bd2df3cef0abd9f444971dff097790b7bf146843a752cb48461418d3c7e67","vout":0}], {"1Mcg7MDBD38sSScsX3USbsCnkcMbPnLyTV":0.01}] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
+{"result":"0100000001677e3c8d416184b42c753a8446f17b0b7997f0df7149449fbd0aef3cdfd29bfb0000000000ffffffff0140420f00000000001976a914e221b8a504199bec7c5fe8081edd011c3653118288ac00000000","error":null,"id":"curltest"}
 {% endhighlight %}
 
 ## 源码剖析
