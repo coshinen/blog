@@ -90,8 +90,8 @@ $ bitcoin-cli listunspent 6 9999999 "[\"1Z99Lsij11ajDEhipZbnifdFkBu8fC1Hb\"]"
 ### cURL
 
 {% highlight shell %}
-curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "listunspent", "params": [6, 9999999 "[\"1Z99Lsij11ajDEhipZbnifdFkBu8fC1Hb\"]"] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
-暂无。
+curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "listunspent", "params": [6, 9999999, ["1Z99Lsij11ajDEhipZbnifdFkBu8fC1Hb"]] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
+{"result":[{"txid":"69e560109acccf73c6552f5f4f095cd97fde3261a568cc6547a540bcc3e372ff","vout":0,"address":"1Z99Lsij11ajDEhipZbnifdFkBu8fC1Hb","scriptPubKey":"21023d2f5ddafe8a161867bb9a9162aa5c84b0882af4bfca1fa89f4811b651761f10ac","amount":50.00000000,"confirmations":7306,"spendable":true}],"error":null,"id":"curltest"}
 {% endhighlight %}
 
 ## 源码剖析
