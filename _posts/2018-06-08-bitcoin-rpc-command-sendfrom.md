@@ -17,7 +17,7 @@ categories: Blockchain
 sendfrom "fromaccount" "tobitcoinaddress" amount ( minconf "comment" "comment-to" ) # （已过时）从一个账户发送金额到一个比特币地址
 {% endhighlight %}
 
-**使用 [`sendtoaddress`](/2018/06/08/bitcoin-rpc-command-sendtoaddress) 替代该命令。<br>
+**使用 [`sendtoaddress`](/2018/07/06/bitcoin-rpc-command-sendtoaddress) 替代该命令。<br>
 使用该命令前需要调用 [`walletpassphrase`](/2018/05/31/bitcoin-rpc-command-walletpassphrase) 解锁钱包。**
 
 参数：<br>
@@ -144,7 +144,7 @@ UniValue sendfrom(const UniValue& params, bool fHelp)
 9.获取交易哈希，转化为 16 进制并返回。
 
 第八步，调用 SendMoney(address.Get(), nAmount, false, wtx) 发送交易，
-见 [比特币 RPC 命令剖析 sendtoaddress](/2018/06/08/bitcoin-rpc-command-sendtoaddress)。
+见 [比特币 RPC 命令剖析 sendtoaddress](/2018/07/06/bitcoin-rpc-command-sendtoaddress)。
 
 Thanks for your time.
 

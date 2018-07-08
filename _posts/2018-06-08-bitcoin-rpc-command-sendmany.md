@@ -322,7 +322,7 @@ UniValue sendmany(const UniValue& params, bool fHelp)
 9.获取交易哈希，转化为 16 进制并返回。
 
 第八步，相关的函数调用，
-见 [比特币 RPC 命令剖析 sendtoaddress](/2018/06/08/bitcoin-rpc-command-sendtoaddress)。
+见 [比特币 RPC 命令剖析 sendtoaddress](/2018/07/06/bitcoin-rpc-command-sendtoaddress)。
 
 Thanks for your time.
 
