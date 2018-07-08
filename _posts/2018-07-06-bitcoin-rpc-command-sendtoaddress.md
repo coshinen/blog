@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "比特币 RPC 命令剖析 \"sendtoaddress\""
-date:   2018-06-08 11:10:38 +0800
+date:   2018-07-06 20:10:38 +0800
 author: mistydew
 categories: Blockchain
 ---
@@ -225,7 +225,7 @@ UniValue sendtoaddress(const UniValue& params, bool fHelp)
 7.获取交易哈希，转化为 16 进制并返回。
 
 6.调用 SendMoney(address.Get(), nAmount, fSubtractFeeFromAmount, wtx) 发送指定金额到指定比特币地址，
-该函数定义在“wallet/rpcwallet.cpp”文件中，入参为：交易目的地址、金额、从金额中减去交易费标志和添加了备注的钱包交易。
+该函数定义在“wallet/rpcwallet.cpp”文件中，入参为：交易目的地址，金额，从金额中减去交易费标志，添加了备注的钱包交易。
 
 {% highlight C++ %}
 static void SendMoney(const CTxDestination &address, CAmount nValue, bool fSubtractFeeFromAmount, CWalletTx& wtxNew)
@@ -285,7 +285,7 @@ class CWallet : public CCryptoKeyStore, public CValidationInterface
 };
 {% endhighlight %}
 
-定义在“wallet/wallet.cpp”文件中。入参为：发送列表、待创建的新钱包交易、密钥池条目、待计算所需交易费、找零输出的位置和错误信息。
+定义在“wallet/wallet.cpp”文件中。入参为：发送列表，待创建的新钱包交易，密钥池条目，待计算所需交易费，找零输出的位置，错误信息。
 
 {% highlight C++ %}
 bool CWallet::CreateTransaction(const vector<CRecipient>& vecSend, CWalletTx& wtxNew, CReserveKey& reservekey, CAmount& nFeeRet,
@@ -588,7 +588,7 @@ bool CWallet::CreateTransaction(const vector<CRecipient>& vecSend, CWalletTx& wt
 6.2.9.把签好名的交易嵌入到待创建的新钱包交易中，检验序列化的交易大小，计算交易优先级，计算交易费，若当前交易费小于所需交易费，回到 6.2.3 直至大于等于。
 
 6.3.调用 pwalletMain->CommitTransaction(wtxNew, reservekey) 提交交易，包含广播。
-该函数定义在“wallet/wallet.cpp”文件中。入参为：创建好的新钱包交易（输入、输出、找零、签名）和找零密钥。
+该函数定义在“wallet/wallet.cpp”文件中。入参为：创建好的新钱包交易（输入、输出、找零、签名），找零密钥。
 
 {% highlight C++ %}
 /**
@@ -597,7 +597,7 @@ bool CWallet::CreateTransaction(const vector<CRecipient>& vecSend, CWalletTx& wt
 bool CWallet::CommitTransaction(CWalletTx& wtxNew, CReserveKey& reservekey)
 {
     {
-        LOCK2(cs_main, cs_wallet); // 钱包上锁
+        LOCK2(cs_main, cs_wallet); // 1.钱包上锁
         LogPrintf("CommitTransaction:\n%s", wtxNew.ToString()); // 记录交易信息
         {
             // This is only to keep the database open to defeat the auto-flush for the // 这只是为了在该期间内保持数据库打开以防自动刷新。
@@ -662,7 +662,7 @@ class CMerkleTx : public CTransaction // 一个连接它到区块链的默克分
 };
 {% endhighlight %}
 
-定义在“wallet/wallet.cpp”文件中。
+定义在“wallet/wallet.cpp”文件中。入参为：false，true。
 
 {% highlight C++ %}
 bool CMerkleTx::AcceptToMemoryPool(bool fLimitFree, bool fRejectAbsurdFee)
@@ -673,7 +673,7 @@ bool CMerkleTx::AcceptToMemoryPool(bool fLimitFree, bool fRejectAbsurdFee)
 {% endhighlight %}
 
 转调 ::AcceptToMemoryPool(mempool, state, *this, fLimitFree, NULL, false, fRejectAbsurdFee) 函数来尝试添加交易至内存池。
-该函数定义在“main.cpp”文件中。
+该函数定义在“main.cpp”文件中。入参为：交易内存池全局对象，待获取的验证状态，该交易，false，NULL，false，true。
 
 {% highlight C++ %}
 bool AcceptToMemoryPool(CTxMemPool& pool, CValidationState &state, const CTransaction &tx, bool fLimitFree,
@@ -682,23 +682,24 @@ bool AcceptToMemoryPool(CTxMemPool& pool, CValidationState &state, const CTransa
     std::vector<uint256> vHashTxToUncache; // 未缓存交易哈希列表
     bool res = AcceptToMemoryPoolWorker(pool, state, tx, fLimitFree, pfMissingInputs, fOverrideMempoolLimit, fRejectAbsurdFee, vHashTxToUncache); // 接收到内存池工作者
     if (!res) { // 若添加失败
-        BOOST_FOREACH(const uint256& hashTx, vHashTxToUncache) // 遍历为缓存的交易哈希列表
+        BOOST_FOREACH(const uint256& hashTx, vHashTxToUncache) // 遍历未缓存的交易哈希列表
             pcoinsTip->Uncache(hashTx); // 从缓存中移除该交易索引
     }
     return res;
 }
 {% endhighlight %}
 
-6.3.4.在广播交易中，先把该交易添加到交易内存池，然后调用 wtxNew.RelayWalletTransaction() 进行交易的中继。
-这里中继的意思是两个节点间进行交易的广播（发送和接收）。该函数定义在“wallet/wallet.cpp”文件中。
+6.3.4.调用 wtxNew.RelayWalletTransaction() 进行钱包交易的中继。
+这里中继的意思是两个节点间进行交易的广播（发送和接收）。<br>
+该函数定义在“wallet/wallet.cpp”文件中。
 
 {% highlight C++ %}
 bool CWalletTx::RelayWalletTransaction()
 {
-    assert(pwallet->GetBroadcastTransactions()); // 验证钱包是否广播交易
-    if (!IsCoinBase()) // 该交易非创币交易
+    assert(pwallet->GetBroadcastTransactions()); // 验证钱包广播交易是否开启
+    if (!IsCoinBase()) // 若该交易非创币交易
     {
-        if (GetDepthInMainChain() == 0 && !isAbandoned()) { // 链深度为 0（即未上链）且 未被标记为已抛弃
+        if (GetDepthInMainChain() == 0 && !isAbandoned()) { // 若链深度为 0（即未上链）且 未被标记为已抛弃
             LogPrintf("Relaying wtx %s\n", GetHash().ToString()); // 记录中继交易哈希
             RelayTransaction((CTransaction)*this); // 进行交易中继
             return true;
@@ -716,7 +717,7 @@ void RelayTransaction(const CTransaction& tx); // 转调下面重载函数
 void RelayTransaction(const CTransaction& tx, const CDataStream& ss); // 中继交易
 {% endhighlight %}
 
-定义在“net.cpp”文件中。
+定义在“net.cpp”文件中。入参为：该钱包交易。
 
 {% highlight C++ %}
 void RelayTransaction(const CTransaction& tx)
@@ -731,7 +732,7 @@ void RelayTransaction(const CTransaction& tx, const CDataStream& ss)
 {
     CInv inv(MSG_TX, tx.GetHash()); // 根据交易哈希创建 inv 对象
     {
-        LOCK(cs_mapRelay);
+        LOCK(cs_mapRelay); // 中继映射列表上锁
         // Expire old relay messages // 使旧的中继数据过期
         while (!vRelayExpiration.empty() && vRelayExpiration.front().first < GetTime())
         { // 中继到期队列非空 且 中继过期队列队头元素过期时间小于当前时间（表示已过期）
@@ -740,11 +741,11 @@ void RelayTransaction(const CTransaction& tx, const CDataStream& ss)
         }
 
         // Save original serialized message so newer versions are preserved // 保存原始的序列化消息，以便保留新版本
-        mapRelay.insert(std::make_pair(inv, ss)); // 插入中继数据映射列表
+        mapRelay.insert(std::make_pair(inv, ss)); // 把该交易插入中继数据映射列表
         vRelayExpiration.push_back(std::make_pair(GetTime() + 15 * 60, inv)); // 加上 15min 的过期时间，加入过期队列
     }
-    LOCK(cs_vNodes);
-    BOOST_FOREACH(CNode* pnode, vNodes) // 遍历当前已建立链接的节点列表
+    LOCK(cs_vNodes); // 已建立连接的节点列表上锁
+    BOOST_FOREACH(CNode* pnode, vNodes) // 遍历当前已建立连接的节点列表
     {
         if(!pnode->fRelayTxes) // 若中继交易状态为 false
             continue; // 跳过该节点
@@ -759,12 +760,13 @@ void RelayTransaction(const CTransaction& tx, const CDataStream& ss)
 }
 {% endhighlight %}
 
-这里遍历了建立连接的节点链表，调用 pnode->PushInventory(inv) 把 inv 消息发送到对端节点，
-该函数定义在“net.h”文件的 CNode 类中。
+这里先检查了中继过期队列把过期元素移除，接着把该交易加入中继列表同时设置 15 分钟的过期时间并加入中继过期队列。
+然后遍历了已建立连接的节点链表，调用 pnode->PushInventory(inv) 把 inv 消息发送到对端节点，
+该函数定义在“net.h”文件的 CNode 类中。入参为：该交易的库存条目对象。
 
 {% highlight C++ %}
-/** Information about a peer */
-class CNode // 关于对端节点的信息
+/** Information about a peer */ // 关于对端节点的信息
+class CNode // 对端节点信息类
 {
     ...
     // inventory based relay // 用于中继的库存数据
@@ -784,7 +786,9 @@ class CNode // 关于对端节点的信息
 };
 {% endhighlight %}
 
-最终只是把 inv 消息对象加入到要发送的库存消息列表。
+最终只是把库存条目 inv 消息对象加入到发送库存消息列表。
+
+（完）
 
 Thanks for your time.
 
