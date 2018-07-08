@@ -496,6 +496,7 @@ Node relay options:
 
   -mempoolreplacement
        Enable transaction replacement in the memory pool (default: 1)
+       开启内存池交易替换（默认：1）
 
 Block creation options:
 区块创建选项：
