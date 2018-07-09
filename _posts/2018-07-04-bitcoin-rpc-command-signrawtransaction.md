@@ -173,7 +173,7 @@ UniValue signrawtransaction(const UniValue& params, bool fHelp)
     vector<unsigned char> txData(ParseHexV(params[0], "argument 1")); // 解析第一个参数
     CDataStream ssData(txData, SER_NETWORK, PROTOCOL_VERSION); // 创建数据流对象
     vector<CMutableTransaction> txVariants; // 可变的交易列表
-    while (!ssData.empty()) { // 若数据流对象非空
+    while (!ssData.empty()) { // 当数据流对象非空
         try {
             CMutableTransaction tx;
             ssData >> tx; // 导入一笔交易
@@ -216,7 +216,7 @@ UniValue signrawtransaction(const UniValue& params, bool fHelp)
         UniValue keys = params[2].get_array(); // 获取密钥数组
         for (unsigned int idx = 0; idx < keys.size(); idx++) { // 遍历该数组
             UniValue k = keys[idx]; // 获取一个 base58 编码的密钥
-            CBitcoinSecret vchSecret; // 米特比密钥对象
+            CBitcoinSecret vchSecret; // 比特币密钥对象
             bool fGood = vchSecret.SetString(k.get_str()); // 初始化密钥
             if (!fGood)
                 throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, "Invalid private key");
@@ -239,7 +239,7 @@ UniValue signrawtransaction(const UniValue& params, bool fHelp)
             if (!p.isObject()) // 确保是对象类型
                 throw JSONRPCError(RPC_DESERIALIZATION_ERROR, "expected object with {\"txid'\",\"vout\",\"scriptPubKey\"}");
 
-            UniValue prevOut = p.get_obj(); // 获取输出
+            UniValue prevOut = p.get_obj(); // 获取输出对象
 
             RPCTypeCheckObj(prevOut, boost::assign::map_list_of("txid", UniValue::VSTR)("vout", UniValue::VNUM)("scriptPubKey", UniValue::VSTR)); // 参数类型检查
 
@@ -281,9 +281,9 @@ UniValue signrawtransaction(const UniValue& params, bool fHelp)
     }
 
 #ifdef ENABLE_WALLET
-    const CKeyStore& keystore = ((fGivenKeys || !pwalletMain) ? tempKeystore : *pwalletMain);
+    const CKeyStore& keystore = ((fGivenKeys || !pwalletMain) ? tempKeystore : *pwalletMain); // 若提供了密钥 或 主钱包无效,则获取临时密钥库的引用
 #else
-    const CKeyStore& keystore = tempKeystore; // 获取临时密钥库的引用
+    const CKeyStore& keystore = tempKeystore;
 #endif
 
     int nHashType = SIGHASH_ALL; // 脚本哈希类型，默认为 ALL
@@ -349,9 +349,11 @@ UniValue signrawtransaction(const UniValue& params, bool fHelp)
 基本流程：<br>
 1.处理命令帮助和参数个数。<br>
 2.上锁，若钱包功能开启，钱包上锁。<br>
-3.检验参数类型并获取指定参数。<br>
-4.开始签名，对每笔交易输入进行签名，然后合并全部的交易输入签名，验证脚本签名。<br>
-5.追加相关信息到结果集后返回。
+3.检验参数类型并获取指定参数：待签名的交易哈希，依赖的前一笔交易输出集，用于签名的私钥，签名的哈希类型。<br>
+4.开始签名，遍历交易输入列表，对每笔交易输入进行签名，然后遍历前一笔输出交易列表，合并全部的交易输入签名，验证脚本签名。<br>
+5.追加相关信息到对象类型的结果集后返回。
+
+（完）
 
 Thanks for your time.
 
