@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "比特币 RPC 命令剖析 \"fundrawtransaction\""
-date:   2018-06-13 13:21:44 +0800
+date:   2018-07-03 22:21:44 +0800
 author: mistydew
 categories: Blockchain
 ---
@@ -19,7 +19,7 @@ fundrawtransaction "hexstring" includeWatching # 把输入添加到交易中，�
 
 **此操作不会修改现存的输入，并且会添加一个找零输出到输出集中。<br>
 注：因为输入/输出已被添加，所以签名后的输入可能需要在完成此操作后重签。<br>
-使用 [`signrawtransaction`](/2018/06/13/bitcoin-rpc-command-signrawtransaction) 已添加的输入将不会被签名。<br>
+使用 [`signrawtransaction`](/2018/07/04/bitcoin-rpc-command-signrawtransaction) 已添加的输入将不会被签名。<br>
 注意全部现存的输入必须在钱包中有它们前一笔输出交易。<br>
 注意所选的全部输入必须是标准格式，且在钱包中的 P2SH 脚本必须使用 [`importaddress`](/2018/06/07/bitcoin-rpc-command-importaddress) 和 [`addmultisigaddress`](/2018/06/15/bitcoin-rpc-command-addmultisigaddress)（用来计算交易费）。<br>
 watch-only 目前只支持 P2PKH，多签，和 P2SH 版本。**
@@ -203,10 +203,10 @@ extern UniValue fundrawtransaction(const UniValue& params, bool fHelp); // 资�
 {% highlight C++ %}
 UniValue fundrawtransaction(const UniValue& params, bool fHelp)
 {
-    if (!EnsureWalletIsAvailable(fHelp)) // 确保当前钱包可用
+    if (!EnsureWalletIsAvailable(fHelp)) // 1.确保当前钱包可用
         return NullUniValue;
 
-    if (fHelp || params.size() < 1 || params.size() > 2) // 参数为 1 或 2 个
+    if (fHelp || params.size() < 1 || params.size() > 2) // 2.参数为 1 或 2 个
         throw runtime_error( // 命令帮助反馈
                             "fundrawtransaction \"hexstring\" includeWatching\n"
                             "\nAdd inputs to a transaction until it has enough in value to meet its out value.\n"
@@ -238,7 +238,7 @@ UniValue fundrawtransaction(const UniValue& params, bool fHelp)
                             + HelpExampleCli("sendrawtransaction", "\"signedtransactionhex\"")
                             );
 
-    RPCTypeCheck(params, boost::assign::list_of(UniValue::VSTR)(UniValue::VBOOL)); // 检查参数类型
+    RPCTypeCheck(params, boost::assign::list_of(UniValue::VSTR)(UniValue::VBOOL)); // 3.检查参数类型
 
     // parse hex string from parameter
     CTransaction origTx; // 原始交易
@@ -252,14 +252,14 @@ UniValue fundrawtransaction(const UniValue& params, bool fHelp)
     if (params.size() > 1)
         includeWatching = params[1].get_bool(); // 获取用户设置
 
-    CMutableTransaction tx(origTx); // 构建一笔可变版本的交易
+    CMutableTransaction tx(origTx); // 4.构建一笔可变版本的交易
     CAmount nFee; // 交易费
     string strFailReason;
     int nChangePos = -1; // 改变位置
     if(!pwalletMain->FundTransaction(tx, nFee, nChangePos, strFailReason, includeWatching)) // 资助交易，增加输入和找零输出（如果有的话）
         throw JSONRPCError(RPC_INTERNAL_ERROR, strFailReason);
 
-    UniValue result(UniValue::VOBJ);
+    UniValue result(UniValue::VOBJ); // 5.创建对象类型的结果集
     result.push_back(Pair("hex", EncodeHexTx(tx))); // 16 进制编码交易
     result.push_back(Pair("changepos", nChangePos)); // 改变位置
     result.push_back(Pair("fee", ValueFromAmount(nFee))); // 交易费
@@ -271,10 +271,88 @@ UniValue fundrawtransaction(const UniValue& params, bool fHelp)
 基本流程：<br>
 1.确保当前钱包可用。<br>
 2.处理命令帮助和参数个数。<br>
-3.检验参数类型。<br>
-4.获取各参数并验证交易的输出不能为空。<br>
-5.构建可变版本的交易，并资助该交易使输入大于等于输出，同时如果有找零的话，追加找零到输出。<br>
-6.追加相关信息到结果集并返回。
+3.检验参数类型并获取指定参数。<br>
+4.构建可变版本的交易，资助该交易使输入大于等于输出，同时如果有找零的话，追加找零到输出列表。<br>
+5.追加相关信息到对象类型的结果集并返回。
+
+4.调用 pwalletMain->FundTransaction(tx, nFee, nChangePos, strFailReason, includeWatching) 函数资助指定交易，
+它声明在“wallet/wallet.h”文件的 CWallet 类中。
+
+{% highlight C++ %}
+/** 
+ * A CWallet is an extension of a keystore, which also maintains a set of transactions and balances,
+ * and provides the ability to create new transactions.
+ */ // CWallet 是密钥库的扩展，可以维持一组交易和余额，并提供创建新交易的能力。
+class CWallet : public CCryptoKeyStore, public CValidationInterface
+{
+    ...
+    /**
+     * Insert additional inputs into the transaction by
+     * calling CreateTransaction();
+     */ // 通过调用 CreateTransaction() 插入额外的输入到交易中；
+    bool FundTransaction(CMutableTransaction& tx, CAmount& nFeeRet, int& nChangePosRet, std::string& strFailReason, bool includeWatching);
+    ...
+};
+{% endhighlight %}
+
+定义在“wallet/wallet.cpp”文件中。入参为：可变版本的交易，待获取的交易费，改变位置，失败原因，是否包含 watch-only 地址标志。
+
+{% highlight C++ %}
+bool CWallet::FundTransaction(CMutableTransaction& tx, CAmount &nFeeRet, int& nChangePosRet, std::string& strFailReason, bool includeWatching)
+{
+    vector<CRecipient> vecSend; // 1.发送列表
+
+    // Turn the txout set into a CRecipient vector // 把交易输出集转换为发送（接收者）列表
+    BOOST_FOREACH(const CTxOut& txOut, tx.vout) // 遍历交易输出列表
+    {
+        CRecipient recipient = {txOut.scriptPubKey, txOut.nValue, false}; // 初始化接收者对象
+        vecSend.push_back(recipient); // 加入发送列表
+    }
+
+    CCoinControl coinControl;
+    coinControl.fAllowOtherInputs = true;
+    coinControl.fAllowWatchOnly = includeWatching;
+    BOOST_FOREACH(const CTxIn& txin, tx.vin) // 2.遍历交易输入列表
+        coinControl.Select(txin.prevout); // 把输入的前一笔交易输出加入币选择集合
+
+    CReserveKey reservekey(this);
+    CWalletTx wtx; // 创建一笔钱包交易
+    if (!CreateTransaction(vecSend, wtx, reservekey, nFeeRet, nChangePosRet, strFailReason, &coinControl, false)) // 3.创建交易
+        return false;
+
+    if (nChangePosRet != -1) // 4.若找零输出位置（序号）不等于 -1，表示有位置
+        tx.vout.insert(tx.vout.begin() + nChangePosRet, wtx.vout[nChangePosRet]); // 插入原交易输出列表的指定位置
+
+    // Add new txins (keeping original txin scriptSig/order) // 5.添加新的交易输入列表（保留原始交易输入脚本签名/顺序）
+    BOOST_FOREACH(const CTxIn& txin, wtx.vin) // 遍历新的钱包交易输入列表
+    {
+        bool found = false;
+        BOOST_FOREACH(const CTxIn& origTxIn, tx.vin) // 遍历旧的交易输入列表
+        {
+            if (txin.prevout.hash == origTxIn.prevout.hash && txin.prevout.n == origTxIn.prevout.n) // 若是重复输入（相同的上一笔交易哈希和输出序号）
+            {
+                found = true;
+                break;
+            }
+        }
+        if (!found) // 若未找到该输入
+            tx.vin.push_back(txin); // 把该输入加入原交易的输入列表
+    }
+
+    return true; // 成功返回 true
+}
+{% endhighlight %}
+
+4.1.通过原交易输出列表构建发送（接收者）列表。<br>
+4.2.通过原交易输入列表构建币选择/控制对象。<br>
+4.3.创建一笔新的钱包交易，包含输入、输出（含找零）。<br>
+4.4.把找零输出插入指定位置。<br>
+4.5.遍历钱包交易和原交易的输入列表，把新的输入加入原交易输入列表中。
+
+4.3.通过调用 CreateTransaction(vecSend, wtx, reservekey, nFeeRet, nChangePosRet, strFailReason, &coinControl, false) 函数创建一笔新的钱包交易（较原始交易完整）。
+该函数详见[比特币 RPC 命令剖析 "sendtoaddress"](/2018/07/06/bitcoin-rpc-command-sendtoaddress)。
+
+（完）
 
 Thanks for your time.
 

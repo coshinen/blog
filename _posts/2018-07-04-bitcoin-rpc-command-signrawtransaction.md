@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "比特币 RPC 命令剖析 \"signrawtransaction\""
-date:   2018-06-13 14:25:33 +0800
+date:   2018-07-04 20:25:33 +0800
 author: mistydew
 categories: Blockchain
 ---
@@ -74,7 +74,7 @@ signrawtransaction "hexstring" ( [{"txid":"id","vout":n,"scriptPubKey":"hex","re
 ### 比特币核心客户端
 
 对已创建的原始交易进行签名。<br>
-原始交易的创建见 [`createrawtransaction`](/2018/06/13/bitcoin-rpc-command-createrawtransaction)。
+原始交易的创建见 [`createrawtransaction`](/2018/07/02/bitcoin-rpc-command-createrawtransaction)。
 
 {% highlight shell %}
 $ bitcoin-cli createrawtransaction "[{\"txid\":\"fb9bd2df3cef0abd9f444971dff097790b7bf146843a752cb48461418d3c7e67\",\"vout\":0}]" "{\"1Mcg7MDBD38sSScsX3USbsCnkcMbPnLyTV\":0.01}"
@@ -348,8 +348,8 @@ UniValue signrawtransaction(const UniValue& params, bool fHelp)
 
 基本流程：<br>
 1.处理命令帮助和参数个数。<br>
-2.上锁，检验参数类型。<br>
-3.获取并处理各参数。<br>
+2.上锁，若钱包功能开启，钱包上锁。<br>
+3.检验参数类型并获取指定参数。<br>
 4.开始签名，对每笔交易输入进行签名，然后合并全部的交易输入签名，验证脚本签名。<br>
 5.追加相关信息到结果集后返回。
 

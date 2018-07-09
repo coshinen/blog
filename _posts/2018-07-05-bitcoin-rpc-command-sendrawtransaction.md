@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "比特币 RPC 命令剖析 \"sendrawtransaction\""
-date:   2018-06-13 10:54:02 +0800
+date:   2018-07-05 20:54:02 +0800
 author: mistydew
 categories: Blockchain
 ---
@@ -17,7 +17,7 @@ categories: Blockchain
 sendrawtransaction "hexstring" ( allowhighfees ) # 把（序列化的，16 进制编码的）原始交易提交到本地节点和网络
 {% endhighlight %}
 
-也可以查看 [`createrawtransaction`](/2018/06/13/bitcoin-rpc-command-createrawtransaction) 和 [`signrawtransaction`](/2018/06/13/bitcoin-rpc-command-signrawtransaction) 调用。
+也可以查看 [`createrawtransaction`](/2018/07/02/bitcoin-rpc-command-createrawtransaction) 和 [`signrawtransaction`](/2018/07/04/bitcoin-rpc-command-signrawtransaction) 调用。
 
 参数：<br>
 1. `hexstring` （字符串，必备）原始交易的 16 进制字符串。<br>
@@ -30,9 +30,9 @@ sendrawtransaction "hexstring" ( allowhighfees ) # 把（序列化的，16 进�
 ### 比特币核心客户端
 
 构造一笔交易并发送流程：（1->2->3）<br>
-1.使用 [`createrawtransaction`](/2018/06/13/bitcoin-rpc-command-createrawtransaction) 创建一笔原始交易，注意找零。<br>
-1.5.（可选）若创建原始交易时为指定找零，使用 [`fundrawtransaction`](/2018/06/13/bitcoin-rpc-command-fundrawtransaction) 增加找零输出。<br>
-2.使用 [`signrawtransaction`](/2018/06/13/bitcoin-rpc-command-signrawtransaction) 对创建的原始交易进行签名。<br>
+1.使用 [`createrawtransaction`](/2018/07/02/bitcoin-rpc-command-createrawtransaction) 创建一笔原始交易，注意找零。<br>
+1.5.（可选）若创建原始交易时为指定找零，使用 [`fundrawtransaction`](/2018/07/03/bitcoin-rpc-command-fundrawtransaction) 增加找零输出。<br>
+2.使用 [`signrawtransaction`](/2018/07/04/bitcoin-rpc-command-signrawtransaction) 对创建的原始交易进行签名。<br>
 3.使用该命令提交完成签名的原始交易（放入本地节点的内存池并进行交易广播）。<br>
 
 **使用 [`getrawtransaction`](/2018/06/12/bitcoin-rpc-command-getrawtransaction) 查看提交到内存池中的原始交易，
@@ -249,7 +249,7 @@ extern UniValue sendrawtransaction(const UniValue& params, bool fHelp); // 发�
 {% highlight C++ %}
 UniValue sendrawtransaction(const UniValue& params, bool fHelp)
 {
-    if (fHelp || params.size() < 1 || params.size() > 2) // 参数为 1 或 2 个
+    if (fHelp || params.size() < 1 || params.size() > 2) // 1.参数为 1 或 2 个
         throw runtime_error( // 命令帮助反馈
             "sendrawtransaction \"hexstring\" ( allowhighfees )\n"
             "\nSubmits raw transaction (serialized, hex-encoded) to local node and network.\n"
@@ -270,8 +270,8 @@ UniValue sendrawtransaction(const UniValue& params, bool fHelp)
             + HelpExampleRpc("sendrawtransaction", "\"signedhex\"")
         );
 
-    LOCK(cs_main); // 上锁
-    RPCTypeCheck(params, boost::assign::list_of(UniValue::VSTR)(UniValue::VBOOL)); // 参数类型检查
+    LOCK(cs_main); // 2.上锁
+    RPCTypeCheck(params, boost::assign::list_of(UniValue::VSTR)(UniValue::VBOOL)); // 3.参数类型检查
 
     // parse hex string from parameter
     CTransaction tx;
@@ -287,12 +287,12 @@ UniValue sendrawtransaction(const UniValue& params, bool fHelp)
     const CCoins* existingCoins = view.AccessCoins(hashTx); // 获取该交易的修剪版本
     bool fHaveMempool = mempool.exists(hashTx); // 交易内存池中是否存在该交易
     bool fHaveChain = existingCoins && existingCoins->nHeight < 1000000000; // 交易的高度限制
-    if (!fHaveMempool && !fHaveChain) { // 若该交易不在交易内存池中 且 超过了高度限制即没有上链
+    if (!fHaveMempool && !fHaveChain) { // 4.若该交易不在交易内存池中 且 超过了高度限制即没有上链
         // push to local node and sync with wallets // 推送到本地节点并同步钱包
         CValidationState state;
         bool fMissingInputs;
-        if (!AcceptToMemoryPool(mempool, state, tx, false, &fMissingInputs, false, !fOverrideFees)) { // 首先放入交易内存池
-            if (state.IsInvalid()) { // 放入状态检测
+        if (!AcceptToMemoryPool(mempool, state, tx, false, &fMissingInputs, false, !fOverrideFees)) { // 放入交易内存池
+            if (state.IsInvalid()) { // 进行状态检测
                 throw JSONRPCError(RPC_TRANSACTION_REJECTED, strprintf("%i: %s", state.GetRejectCode(), state.GetRejectReason()));
             } else {
                 if (fMissingInputs) {
@@ -304,22 +304,40 @@ UniValue sendrawtransaction(const UniValue& params, bool fHelp)
     } else if (fHaveChain) {
         throw JSONRPCError(RPC_TRANSACTION_ALREADY_IN_CHAIN, "transaction already in block chain");
     }
-    RelayTransaction(tx); // 然后中继（发送）该交易
+    RelayTransaction(tx); // 5.然后中继（发送）该交易
 
-    return hashTx.GetHex(); // 交易哈希转换为 16 进制并返回
+    return hashTx.GetHex(); // 6.交易哈希转换为 16 进制并返回
 }
 {% endhighlight %}
 
 基本流程：<br>
 1.处理命令帮助和参数个数。<br>
-2.上锁，检验参数类型。<br>
-3.获取各参数：交易哈希和交易费超额设置。<br>
-4.获取该交易在缓存中的修剪版本，验证该交易是否存在于内存池且交易高度。<br>
-5.若不存在于内存池且未上链，则把此交易放入交易内存池。<br>
-6.中继（发送）该交易。<br>
-7.获取交易哈希，转换为 16 进制并返回。
+2.上锁。<br>
+3.检验参数类型并获取指定参数。<br>
+4.验证该交易是否上链（在内存池中是否存在、是否符合交易高度限制），若未上链则先把该交易加入内存池。<br>
+5.中继（发送）该交易。<br>
+6.返回交易的 16 进制形式。
 
-第六步，调用 RelayTransaction(tx) 中继该交易，该函数声明在“net.h”文件中。
+4.调用 AcceptToMemoryPool(mempool, state, tx, false, &fMissingInputs, false, !fOverrideFees) 函数来尝试添加交易至内存池。
+该函数定义在“main.cpp”文件中。入参为：交易内存池全局对象，待获取的验证状态，该交易，false，丢失输入标志，false，!交易费超额标志。
+
+{% highlight C++ %}
+bool AcceptToMemoryPool(CTxMemPool& pool, CValidationState &state, const CTransaction &tx, bool fLimitFree,
+                        bool* pfMissingInputs, bool fOverrideMempoolLimit, bool fRejectAbsurdFee)
+{
+    std::vector<uint256> vHashTxToUncache; // 未缓存交易哈希列表
+    bool res = AcceptToMemoryPoolWorker(pool, state, tx, fLimitFree, pfMissingInputs, fOverrideMempoolLimit, fRejectAbsurdFee, vHashTxToUncache); // 接收到内存池工作者
+    if (!res) { // 若添加失败
+        BOOST_FOREACH(const uint256& hashTx, vHashTxToUncache) // 遍历未缓存的交易哈希列表
+            pcoinsTip->Uncache(hashTx); // 从缓存中移除该交易索引
+    }
+    return res;
+}
+{% endhighlight %}
+
+（未完）
+
+5.调用 RelayTransaction(tx) 中继该交易，该函数声明在“net.h”文件中。
 
 {% highlight C++ %}
 class CTransaction;
@@ -327,7 +345,7 @@ void RelayTransaction(const CTransaction& tx); // 转调下面重载函数
 void RelayTransaction(const CTransaction& tx, const CDataStream& ss); // 中继交易
 {% endhighlight %}
 
-定义在“net.cpp”文件中。
+定义在“net.cpp”文件中。入参为：该交易。
 
 {% highlight C++ %}
 void RelayTransaction(const CTransaction& tx)
@@ -342,7 +360,7 @@ void RelayTransaction(const CTransaction& tx, const CDataStream& ss)
 {
     CInv inv(MSG_TX, tx.GetHash()); // 根据交易哈希创建 inv 对象
     {
-        LOCK(cs_mapRelay);
+        LOCK(cs_mapRelay); // 中继映射列表上锁
         // Expire old relay messages // 使旧的中继数据过期
         while (!vRelayExpiration.empty() && vRelayExpiration.front().first < GetTime())
         { // 中继到期队列非空 且 中继过期队列队头元素过期时间小于当前时间（表示已过期）
@@ -351,11 +369,11 @@ void RelayTransaction(const CTransaction& tx, const CDataStream& ss)
         }
 
         // Save original serialized message so newer versions are preserved // 保存原始的序列化消息，以便保留新版本
-        mapRelay.insert(std::make_pair(inv, ss)); // 插入中继数据映射列表
+        mapRelay.insert(std::make_pair(inv, ss)); // 把该交易插入中继数据映射列表
         vRelayExpiration.push_back(std::make_pair(GetTime() + 15 * 60, inv)); // 加上 15min 的过期时间，加入过期队列
     }
-    LOCK(cs_vNodes); // 以建立连接的节点列表上锁
-    BOOST_FOREACH(CNode* pnode, vNodes) // 遍历当前已建立链接的节点列表
+    LOCK(cs_vNodes); // 已建立连接的节点列表上锁
+    BOOST_FOREACH(CNode* pnode, vNodes) // 遍历当前已建立连接的节点列表
     {
         if(!pnode->fRelayTxes) // 若中继交易状态为 false
             continue; // 跳过该节点
@@ -370,13 +388,17 @@ void RelayTransaction(const CTransaction& tx, const CDataStream& ss)
 }
 {% endhighlight %}
 
-函数 pnode->PushInventory(inv) 定义在“net.h”文件的 CNode 类中。
+这里先检查了中继过期队列把过期元素移除，接着把该交易加入中继列表同时设置 15 分钟的过期时间并加入中继过期队列。
+然后遍历了已建立连接的节点链表，调用 pnode->PushInventory(inv) 把 inv 消息发送到对端节点，
+该函数定义在“net.h”文件的 CNode 类中。入参为：该交易的库存条目对象。
 
 {% highlight C++ %}
-/** Information about a peer */
-class CNode // 关于对端节点的信息
+/** Information about a peer */ // 关于对端节点的信息
+class CNode // 对端节点信息类
 {
     ...
+    // inventory based relay // 用于中继的库存数据
+    CRollingBloomFilter filterInventoryKnown; // 布鲁姆过滤器
     std::vector<CInv> vInventoryToSend; // 发送库存列表
     ...
     void PushInventory(const CInv& inv)
@@ -391,6 +413,10 @@ class CNode // 关于对端节点的信息
     ...
 };
 {% endhighlight %}
+
+最终只是把库存条目 inv 消息对象加入到发送库存消息列表。
+
+（完）
 
 Thanks for your time.
 
