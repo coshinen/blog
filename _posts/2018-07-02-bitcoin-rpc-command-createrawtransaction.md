@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "比特币 RPC 命令剖析 \"createrawtransaction\""
-date:   2018-06-13 09:34:41 +0800
+date:   2018-07-02 19:34:41 +0800
 author: mistydew
 categories: Blockchain
 ---
@@ -22,7 +22,7 @@ createrawtransaction [{"txid":"id","vout":n},...] {"address":amount,"data":"hex"
 注：交易的输入没有签名，且该交易不会存储在钱包或传输到网络中。**
 
 参数：<br>
-1.`transactions` （字符串，必备）一个 json 对象的 json 数组。<br>
+1.`transactions` （字符串，必备）一个由 json 对象构成的 json 数组。<br>
 {% highlight shell %}
      [
        {
@@ -136,7 +136,7 @@ extern UniValue createrawtransaction(const UniValue& params, bool fHelp); // 创
 {% highlight C++ %}
 UniValue createrawtransaction(const UniValue& params, bool fHelp)
 {
-    if (fHelp || params.size() < 2 || params.size() > 3) // 参数为 2 或 3 个
+    if (fHelp || params.size() < 2 || params.size() > 3) // 1.参数为 2 或 3 个
         throw runtime_error( // 命令帮助反馈
             "createrawtransaction [{\"txid\":\"id\",\"vout\":n},...] {\"address\":amount,\"data\":\"hex\",...} ( locktime )\n"
             "\nCreate a transaction spending the given inputs and creating new outputs.\n"
@@ -171,24 +171,24 @@ UniValue createrawtransaction(const UniValue& params, bool fHelp)
             + HelpExampleRpc("createrawtransaction", "\"[{\\\"txid\\\":\\\"myid\\\",\\\"vout\\\":0}]\", \"{\\\"data\\\":\\\"00010203\\\"}\"")
         );
 
-    LOCK(cs_main); // 上锁
-    RPCTypeCheck(params, boost::assign::list_of(UniValue::VARR)(UniValue::VOBJ)(UniValue::VNUM), true); // 检查参数类型
+    LOCK(cs_main); // 2.上锁
+    RPCTypeCheck(params, boost::assign::list_of(UniValue::VARR)(UniValue::VOBJ)(UniValue::VNUM), true); // 3.检查参数类型
     if (params[0].isNull() || params[1].isNull()) // 输入和输出均不能为空
         throw JSONRPCError(RPC_INVALID_PARAMETER, "Invalid parameter, arguments 1 and 2 must be non-null");
 
     UniValue inputs = params[0].get_array(); // 获取输入
     UniValue sendTo = params[1].get_obj(); // 获取输出
 
-    CMutableTransaction rawTx; // 创建一笔原始交易
+    CMutableTransaction rawTx; // 4.创建一笔原始交易
 
-    if (params.size() > 2 && !params[2].isNull()) { // 若指定了锁定时间
+    if (params.size() > 2 && !params[2].isNull()) { // 4.1.若指定了锁定时间
         int64_t nLockTime = params[2].get_int64(); // 获取锁定时间
         if (nLockTime < 0 || nLockTime > std::numeric_limits<uint32_t>::max()) // 锁定时间范围检查
             throw JSONRPCError(RPC_INVALID_PARAMETER, "Invalid parameter, locktime out of range");
         rawTx.nLockTime = nLockTime; // 交易锁定时间初始化
     }
 
-    for (unsigned int idx = 0; idx < inputs.size(); idx++) { // 遍历输入，构建原始交易输入列表
+    for (unsigned int idx = 0; idx < inputs.size(); idx++) { // 4.2.遍历输入，构建原始交易输入列表
         const UniValue& input = inputs[idx]; // 获取一个输入
         const UniValue& o = input.get_obj(); // 拿到该输入对象
 
@@ -207,7 +207,7 @@ UniValue createrawtransaction(const UniValue& params, bool fHelp)
         rawTx.vin.push_back(in); // 加入原始交易输入列表
     }
 
-    set<CBitcoinAddress> setAddress; // 地址集
+    set<CBitcoinAddress> setAddress; // 4.3.地址集
     vector<string> addrList = sendTo.getKeys(); // 获取输出的所有关键字（地址）
     BOOST_FOREACH(const string& name_, addrList) { // 遍历地址列表
 
@@ -233,17 +233,21 @@ UniValue createrawtransaction(const UniValue& params, bool fHelp)
         }
     }
 
-    return EncodeHexTx(rawTx); // 16 进制编码该原始交易并返回
+    return EncodeHexTx(rawTx); // 5.16 进制编码该原始交易并返回
 }
 {% endhighlight %}
 
 基本流程：<br>
 1.处理命令帮助和参数个数。<br>
-2.上锁，检验参数类型。<br>
-3.获取各参数，构建一笔原始交易并初始化锁定时间。<br>
-4.遍历输入，构建交易输入对象并加入交易输入列表。<br>
-5.遍历输出，构建交易输出对象并加入交易输出列表。<br>
-6.16 进制编码交易并返回。
+2.上锁。<br>
+3.检验参数类型并获取指定参数。<br>
+4.构建一笔原始交易。<br>
+4.1.初始化原始交易锁定时间。<br>
+4.2.构建交易输入列表。<br>
+4.3.构建交易输出列表。<br>
+5.返回原始交易的 16 进制编码形式。
+
+（完）
 
 Thanks for your time.
 
