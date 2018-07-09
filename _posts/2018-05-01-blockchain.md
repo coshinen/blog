@@ -63,6 +63,6 @@ categories: Blockchain
 
 #### 比特币核心服务启动流程 v0.12.1
 
-![bitcoindsetup](https://github.com/mistydew/blockchain/images/bitcoindsetup.png)
+![bitcoindsetup](https://raw.githubusercontent.com/mistydew/blockchain/master/images/bitcoindsetup.png)
 
 * [...](https://github.com/mistydew/blockchain)
