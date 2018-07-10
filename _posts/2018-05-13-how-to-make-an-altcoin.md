@@ -475,6 +475,34 @@ public:
 
 **注：检测点的信息可随区块链的延伸不断更新。**
 
+## 8. 修改最小链工作量（v0.13.2rc1）
+
+在 v0.13.2rc1 版本中，增加 consensus.nMinimumChainWork 参数，用于替代初始化区块下载检查中的检测点。
+引入了一个链参数“最小链工作量”，该参数用于表示软件发布时网络链的一直工作量。如果你没有达到该工作量，说明你还没有赶上。
+用于代替检测点的区块计数测试。
+因为没有主观性，信任，或位置依赖等因素，所以该标准很容易保持更新。它也是同步状态的可靠度量，而非区块计数。<br>
+详见 [IBD check uses minimumchain work instead of checkpoints. · bitcoin/bitcoin@ad20cdd](https://github.com/bitcoin/bitcoin/commit/ad20cddce2097c6561202777fccd257deb1a9810)。
+
+**注：rc1 即正式发行候选版（Release Candidate）的第一版。<br>
+测试版一般有 3 种，分别为：alpha、beta、gamma。
+alpha 表示内测版即 CB（Close Beta），beta 表示公测版即 OB（Open Beta），gamma 表示正式发布候选版即 RC（Release Candidate）。**
+
+{% highlight C++ %}
+class CMainParams : public CChainParams {
+public:
+    CMainParams() {
+        ...
+        // The best chain should have at least this much work.
+-       consensus.nMinimumChainWork = uint256S("0x0000000000000000000000000000000000000000002cb971dd56d1c583c20f90");
++       consensus.nMinimumChainWork = uint256S("0x00");
+        ...
+    }
+};
+{% endhighlight %}
+
+该值一开始置零（0x00），和检测点相同随着区块链的延伸不断更新（增加），
+可通过 RPC 命令 [`getbestblockhash`](/2018/05/22/bitcoin-rpc-command-getbestblockhash) 和 [`getblock`](/2018/05/22/bitcoin-rpc-command-getblock) 获取最佳区块信息的 `chainwork` 的值得到。
+
 现在重新编译源码，一枚基于比特币的山寨数字货币就制作完成了。<br>
 通过这个过程，可以了解到比特币源码的一些部分，为深入比特币底层的区块链技术做铺垫。
 
