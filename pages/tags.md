@@ -36,7 +36,7 @@ permalink: /tags/
 {% endfor %}
 
 {% for tag in site.tags %}
-<h2>{{ tag | first }}</h2>
+<h2 id="{{ tag[0] }}-ref">{{ tag | first }}</h2>
 <ul class="arc-list">
     {% for post in tag.last %}
       {% if post.hidden == true %}
