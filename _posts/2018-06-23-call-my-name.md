@@ -4,6 +4,7 @@ title:  "call my name"
 date:   2018-06-23 20:01:08 +0800
 author: mistydew
 categories: GARNETCROW 歌詞
+tags: gc lyric
 ---
 ![call my name](https://raw.githubusercontent.com/mistydew/gc/master/images/cover/single/Single_08th_call_my_name.jpg)
 

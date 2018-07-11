@@ -4,6 +4,7 @@ title:  "比特币白皮书中英对照"
 date:   2018-06-12 09:07:06 +0800
 author: mistydew
 categories: Blockchain
+tags: blockchain bitcoin
 ---
 <p align="center">
 <font size="6">

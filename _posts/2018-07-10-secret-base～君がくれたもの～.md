@@ -4,6 +4,7 @@ title:  "secret base～君がくれたもの～"
 date:   2018-07-10 20:01:08 +0800
 author: mistydew
 categories: 歌詞
+tags: lyric
 ---
 <audio controls>
   <source src="" type="audio/mpeg">

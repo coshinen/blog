@@ -4,6 +4,7 @@ title:  "比特币 RPC 命令剖析 \"reconsiderblock\""
 date:   2018-06-14 10:29:12 +0800
 author: mistydew
 categories: Blockchain
+tags: blockchain bitcoin client rpc
 hidden: true
 ---
 ![bitcoin](/images/20180504/bitcoin.svg)

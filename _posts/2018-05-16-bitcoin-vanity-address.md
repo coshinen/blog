@@ -4,6 +4,7 @@ title:  "比特币“靓号”地址"
 date:   2018-05-16 18:56:51 +0800
 author: mistydew
 categories: Blockchain
+tags: blockchain bitcoin address
 ---
 ![bitcoin](/images/20180504/bitcoin.svg)
 

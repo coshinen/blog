@@ -4,6 +4,7 @@ title:  "编译比特币源码"
 date:   2018-05-03 18:57:36 +0800
 author: mistydew
 categories: Blockchain
+tags: blockchain bitcoin
 ---
 ![bitcoin](/images/20180504/bitcoin.svg)
 

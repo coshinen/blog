@@ -4,6 +4,7 @@ title:  "比特币 RPC 命令剖析 \"gettxoutproof\""
 date:   2018-06-11 10:45:50 +0800
 author: mistydew
 categories: Blockchain
+tags: blockchain bitcoin client rpc
 ---
 ![bitcoin](/images/20180504/bitcoin.svg)
 

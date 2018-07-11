@@ -3,7 +3,8 @@ layout: post
 title:  "Vi/Vim 基础命令"
 date:   2018-04-21 20:11:20 +0800
 author: mistydew
-categories: Vim
+categories: Vi/Vim
+tags: vi/vim cmd
 ---
 Vim(Vi IMproved) 是 Vi 文本编辑器的升级版，在 Linux 系统中作为 “编辑器之神” 与 “神之编辑器” Emacs 并驾齐驱。
 

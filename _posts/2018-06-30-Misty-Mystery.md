@@ -4,6 +4,7 @@ title:  "Misty Mystery"
 date:   2018-06-30 20:11:08 +0800
 author: mistydew
 categories: GARNETCROW 歌詞
+tags: gc lyric
 ---
 ![Misty Mystery](https://raw.githubusercontent.com/mistydew/gc/master/images/cover/single/Single_33th_Misty_Mystery.jpg)
 

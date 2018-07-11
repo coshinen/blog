@@ -4,6 +4,7 @@ title:  "比特币 RPC 命令剖析 \"importaddress\""
 date:   2018-06-07 08:55:46 +0800
 author: mistydew
 categories: Blockchain
+tags: blockchain bitcoin client rpc
 ---
 ![bitcoin](/images/20180504/bitcoin.svg)
 

@@ -4,6 +4,7 @@ title:  "比特币 RPC 命令剖析 \"listaddressgroupings\""
 date:   2018-06-05 11:32:59 +0800
 author: mistydew
 categories: Blockchain
+tags: blockchain bitcoin client rpc
 ---
 ![bitcoin](/images/20180504/bitcoin.svg)
 

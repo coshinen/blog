@@ -4,6 +4,7 @@ title:  "比特币 RPC 命令剖析 \"setgenerate\""
 date:   2018-05-25 10:19:21 +0800
 author: mistydew
 categories: Blockchain
+tags: blockchain bitcoin client rpc
 ---
 ![bitcoin](/images/20180504/bitcoin.svg)
 

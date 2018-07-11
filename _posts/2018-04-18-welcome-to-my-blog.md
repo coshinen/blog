@@ -4,6 +4,7 @@ title:  "Welcome to my blog!"
 date:   2018-04-18 17:14:43 +0800
 author: mistydew
 categories: Profile
+tags: profile
 ---
 You can contact me via e-mail: [mistydew@qq.com](https://en.mail.qq.com).
 

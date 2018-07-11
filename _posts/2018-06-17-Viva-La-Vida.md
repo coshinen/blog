@@ -4,6 +4,7 @@ title:  "Viva La Vida"
 date:   2018-06-17 20:08:05 +0800
 author: mistydew
 categories: Coldplay 歌詞
+tags: lyric
 ---
 ![Viva La Vida](https://raw.githubusercontent.com/mistydew/audio/master/cover/Viva%20La%20Vida.jpg)
 

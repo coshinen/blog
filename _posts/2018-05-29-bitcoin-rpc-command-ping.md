@@ -4,6 +4,7 @@ title:  "比特币 RPC 命令剖析 \"ping\""
 date:   2018-05-29 14:18:16 +0800
 author: mistydew
 categories: Blockchain
+tags: blockchain bitcoin client rpc
 ---
 ![bitcoin](/images/20180504/bitcoin.svg)
 

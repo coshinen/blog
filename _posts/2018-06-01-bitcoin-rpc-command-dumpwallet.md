@@ -4,6 +4,7 @@ title:  "比特币 RPC 命令剖析 \"dumpwallet\""
 date:   2018-06-01 10:52:21 +0800
 author: mistydew
 categories: Blockchain
+tags: blockchain bitcoin client rpc
 ---
 ![bitcoin](/images/20180504/bitcoin.svg)
 
