@@ -17,8 +17,8 @@ permalink: /tags/
 {% assign diff = max | minus: min %}
 
 {% for tag in site.tags %}
-  {% assign temp = tag[1].size | minus: min | times: 36 | divided by: diff %}
-  {% assign base = temp | divided by: 4 %}
+  {% assign temp = tag[1].size | minus: min | times: 36 | divided_by: diff %}
+  {% assign base = temp | divided_by: 4 %}
   {% assign remain = temp | modulo: 4 %}
   {% if remain == 0 %}
     {% assign size = base | plus: 9 %}
@@ -33,4 +33,16 @@ permalink: /tags/
     {% assign color = 8 | minus: base %}
   {% endif %}
   <a href="{{ site.JB.tags_path }}#{{ tag[0] }}-ref" style="font-size: {{ size }}pt; color: #{{ color }}{{ color }}{{ color }};">{{ tag[0] }}</a>
+{% endfor %}
+
+{% for tag in site.tags %}
+<h2>{{ tag | first }}</h2>
+<ul class="arc-list">
+    {% for post in tag.last %}
+      {% if post.hidden == true %}
+      {% else %}
+        <li>{{ post.date | date: "%Y-%m-%d-" }}<a href="{{ post.url }}">{{ post.title }}</a></li>
+      {% endif %}
+    {% endfor %}
+</ul>
 {% endfor %}
