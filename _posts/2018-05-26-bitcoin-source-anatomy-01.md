@@ -18,6 +18,7 @@ tags: blockchain bitcoin src
 
 ## 源码剖析
 
+<p id="SetupEnvironment-ref"></p>
 1.调用 `SetupEnvironment()` 函数设置程序运行环境。该函数声明在“util.h”文件中。
 
 {% highlight C++ %}
@@ -56,6 +57,7 @@ void SetupEnvironment()
 POSIX 函数 `setenv` 用于添加或改变环境变量，详见 [setenv](http://pubs.opengroup.org/onlinepubs/9699919799/functions/setenv.html)。<br>
 Boost 库中的 `imbue` 用于嵌入路径区域设置，详见 [Filesystem Reference](https://www.boost.org/doc/libs/1_67_0/libs/filesystem/doc/reference.html#class-path)
 
+<p id="noui_connect-ref"></p>
 2.调用 `noui_connect()` 函数连接比特币核心服务的信号处理函数。该函数在“noui.h”文件中被引用。
 
 {% highlight C++ %}

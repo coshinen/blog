@@ -5,6 +5,7 @@ date:   2018-05-19 14:52:16 +0800
 author: mistydew
 categories: Blockchain
 tags: blockchain bitcoin src
+stickie: true
 ---
 ![bitcoin](/images/20180504/bitcoin.svg)
 
@@ -46,8 +47,8 @@ int main(int argc, char* argv[]) // 0.程序入口
 ![](/images/20180519/bitcoindsetup02.png)
 
 比特币核心服务程序启动流程，如上图所示：<br>
-1.设置程序运行环境：本地化处理。<br>
-2.无 UI 连接：连接信号处理函数。<br>
+1.[设置程序运行环境：本地化处理。](/2018/05/26/bitcoin-source-anatomy-01#SetupEnvironment-ref)<br>
+2.[无 UI 连接：连接信号处理函数。](/2018/05/26/bitcoin-source-anatomy-01#noui_connect-ref)<br>
 3.应用程序初始化：初始化并启动。<br>
 3.1.解析命令行（控制台传入）参数。<br>
 3.2.版本和帮助信息。<br>
