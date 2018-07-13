@@ -43,21 +43,21 @@ int main(int argc, char* argv[]) // 0.程序入口
 }
 {% endhighlight %}
 
-![](/images/20180519/bitcoindsetup01.png)
-![](/images/20180519/bitcoindsetup02.png)
+![bitcoindsetup01](/images/20180519/bitcoindsetup01.png)
+![bitcoindsetup02](/images/20180519/bitcoindsetup02.png)
 
 比特币核心服务程序启动流程，如上图所示：<br>
-1.[设置程序运行环境：本地化处理。](/2018/05/26/bitcoin-source-anatomy-01#SetupEnvironment-ref)<br>
-2.[无 UI 连接：连接信号处理函数。](/2018/05/26/bitcoin-source-anatomy-01#noui_connect-ref)<br>
-3.[应用程序初始化：初始化并启动。](/2018/06/02/bitcoin-source-anatomy-02#AppInit-ref)<br>
-3.1.[解析命令行（控制台传入）参数。](/2018/06/02/bitcoin-source-anatomy-02#ParseParameters-ref)<br>
-3.2.[版本和帮助信息。](/2018/06/02/bitcoin-source-anatomy-02#HelpVersionInfo-ref)<br>
-3.3.数据目录：先获取，若不存在则按 默认/指定 名字创建。<br>
-3.4.读取配置文件。<br>
-3.5.选择区块链（网络）参数，创世区块程序启动时便生成。<br>
-3.6.检测每个命令行参数是否以'-'或'/'开头。<br>
-3.7.Linux 下根据配置后台化，默认关闭。<br>
-3.8.服务设置，默认开启，后面启动。<br>
+1.设置程序运行环境：本地化处理。[`SetupEnvironment()`](/2018/05/26/bitcoin-source-anatomy-01#SetupEnvironment-ref)<br>
+2.无 UI 连接：连接信号处理函数。[`noui_connect()`](/2018/05/26/bitcoin-source-anatomy-01#noui_connect-ref)<br>
+3.应用程序初始化：初始化并启动。[`AppInit(argc, argv)`](/2018/06/02/bitcoin-source-anatomy-02#AppInit-ref)<br>
+3.1.解析命令行（控制台传入）参数。[`ParseParameters(argc, argv)`](/2018/06/02/bitcoin-source-anatomy-02#ParseParameters-ref)<br>
+3.2.版本和帮助信息。[`help and version info`](/2018/06/02/bitcoin-source-anatomy-02#HelpVersionInfo-ref)<br>
+3.3.获取数据目录。[`GetDataDir(false)`](/2018/06/09/bitcoin-source-anatomy-03#GetDataDir-ref)<br>
+3.4.读取配置文件。[`ReadConfigFile(mapArgs, mapMultiArgs)`](/2018/06/09/bitcoin-source-anatomy-03#ReadConfigFile-ref)<br>
+3.5.选择区块链（网络）参数。[`SelectParams(ChainNameFromCommandLine())`](/2018/06/09/bitcoin-source-anatomy-03#SelectParams-ref)<br>
+3.6.检测命令行参数完整性。[`command-line arguments sanity check`](/2018/06/09/bitcoin-source-anatomy-03#Command-line-ref)<br>
+3.7.`Linux` 下守护进程后台化。[`daemonization`](/2018/06/09/bitcoin-source-anatomy-03#Daemon-ref)<br>
+3.8.设置服务选项。[`setup server`](/2018/06/09/bitcoin-source-anatomy-03#Server-ref)<br>
 3.9.初始化日志记录，默认输出至 debug.log。<br>
 3.10.初始化参数交互，说明部分参数规则（用法）。<br>
 3.11.应用程序初始化 2（本物入口）。<br>
