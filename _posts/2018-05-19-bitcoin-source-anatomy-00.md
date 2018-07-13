@@ -49,9 +49,9 @@ int main(int argc, char* argv[]) // 0.程序入口
 比特币核心服务程序启动流程，如上图所示：<br>
 1.[设置程序运行环境：本地化处理。](/2018/05/26/bitcoin-source-anatomy-01#SetupEnvironment-ref)<br>
 2.[无 UI 连接：连接信号处理函数。](/2018/05/26/bitcoin-source-anatomy-01#noui_connect-ref)<br>
-3.应用程序初始化：初始化并启动。<br>
-3.1.解析命令行（控制台传入）参数。<br>
-3.2.版本和帮助信息。<br>
+3.[应用程序初始化：初始化并启动。](/2018/06/02/bitcoin-source-anatomy-02#AppInit-ref)<br>
+3.1.[解析命令行（控制台传入）参数。](/2018/06/02/bitcoin-source-anatomy-02#ParseParameters-ref)<br>
+3.2.[版本和帮助信息。](/2018/06/02/bitcoin-source-anatomy-02#HelpVersionInfo-ref)<br>
 3.3.数据目录：先获取，若不存在则按 默认/指定 名字创建。<br>
 3.4.读取配置文件。<br>
 3.5.选择区块链（网络）参数，创世区块程序启动时便生成。<br>
