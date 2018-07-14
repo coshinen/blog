@@ -1,7 +1,7 @@
 ---
 layout: page
 title: About
-permalink: /about/
+permalink: /about.html
 ---
 
 <pre style="font: 10px/5px monospace;"><span style="color: #800000;"><p align="right">                                                  `      

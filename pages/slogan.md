@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Slogan
-permalink: /slogan/
+permalink: /slogan.html
 ---
 
 * Mahatma Gandhi: First they ignore you, then they laugh at you, then they fight you, then you win.
