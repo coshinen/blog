@@ -66,8 +66,8 @@ Chain selection options:
        发送命令到运行在 <ip> 上的节点（默认：127.0.0.1）
 
   -rpcport=<port>
-       Connect to JSON-RPC on <port> (default: 8221 or testnet: 18221)
-       连接到指定 <port> 上的 JSON-RPC（默认：8221 或 公共测试网：18221）
+       Connect to JSON-RPC on <port> (default: 8332 or testnet: 18332)
+       连接到指定 <port> 上的 JSON-RPC（默认：8332 或 公共测试网：18332）
 
   -rpcwait
        Wait for RPC server to start
