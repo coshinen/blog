@@ -58,8 +58,8 @@ int main(int argc, char* argv[]) // 0.程序入口
 3.6.检测命令行参数完整性。[`command-line arguments sanity check`](/2018/06/09/bitcoin-source-anatomy-03#Command-line-ref)<br>
 3.7.`Linux` 下守护进程后台化。[`daemonization`](/2018/06/09/bitcoin-source-anatomy-03#Daemon-ref)<br>
 3.8.设置服务选项。[`setup server`](/2018/06/09/bitcoin-source-anatomy-03#Server-ref)<br>
-3.9.初始化日志记录，默认输出至 debug.log。<br>
-3.10.初始化参数交互，说明部分参数规则（用法）。<br>
+3.9.初始化日志记录。[`InitLogging()`](/2018/06/16/bitcoin-source-anatomy-04#InitLogging-ref)<br>
+3.10.初始化参数交互。[`InitParameterInteraction()`](/2018/06/16/bitcoin-source-anatomy-04#InitParameterInteraction-ref)<br>
 3.11.应用程序初始化 2（本物入口）。<br>
 3.11.1.安装网络环境，挂接事件处理器。<br>
 3.11.2.参数交互设置，如区块裁剪 prune 与交易索引 txindex 的冲突检测、文件描述符限制的检查。<br>
