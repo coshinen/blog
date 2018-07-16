@@ -7,7 +7,7 @@ window.onload = function() {
         width: 2,
         count: 64,		//点个数
         color: "128, 128, 128", 	//点颜色
-        stroke: "128,128,128", 		//线条颜色
+        stroke: "0,204,204", 		//线条颜色
         dist: 6000, 	//点吸附距离
         e_dist: 20000, 	//鼠标吸附加速距离
         max_conn: 10 	//点到点最大连接数
