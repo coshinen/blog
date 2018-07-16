@@ -61,19 +61,24 @@ Options:
   -alertnotify=<cmd>
        Execute command when a relevant alert is received or we see a really
        long fork (%s in cmd is replaced by message)
+       收到相关警报时或我们看到一个很长的分支时执行命令（cmd 中的 %s 被消息替换）
 
   -blocknotify=<cmd>
        Execute command when the best block changes (%s in cmd is replaced by
        block hash)
+       当最佳区块改变时执行命令（cmd 中的 %s 被区块哈希替换）
 
   -blocksonly
        Whether to operate in a blocks only mode (default: 0)
+       是否以仅区块模式运行（默认：0）
 
   -checkblocks=<n>
        How many blocks to check at startup (default: 288, 0 = all)
+       启动时检查多少区块（默认：288，0 表示全部区块）
 
   -checklevel=<n>
        How thorough the block verification of -checkblocks is (0-4, default: 3)
+       -checkblocks 选项的区块验证有多全面（0-4，默认：3）
 
   -conf=<file>
        Specify configuration file (default: bitcoin.conf)
@@ -97,6 +102,7 @@ Options:
 
   -maxorphantx=<n>
        Keep at most <n> unconnectable transactions in memory (default: 100)
+       在内存中保留最多 <n> 笔不可连接的交易（默认：100）
 
   -maxmempool=<n>
        Keep the transaction memory pool below <n> megabytes (default: 300)
@@ -129,7 +135,7 @@ Options:
 
   -reindex
        Rebuild block chain index from current blk000??.dat files on startup
-       在启动时从当前 blk000?? 数据文件重建区块链索引
+       启动时从当前的 blk000?? 数据文件重建区块链索引
 
   -sysperms
        Create new files with system default permissions, instead of umask 077
@@ -221,10 +227,12 @@ Connection options:
 
   -permitbaremultisig
        Relay non-P2SH multisig (default: 1)
+       中继非 P2SH 多重签名（默认：1）
 
   -peerbloomfilters
        Support filtering of blocks and transaction with bloom filters (default:
        1)
+       使用 bloom 过滤器支持区块和交易的过滤（默认：1）
 
   -enforcenodebloom
        Enforce minimum protocol version to limit use of bloom filters (default:
@@ -242,6 +250,7 @@ Connection options:
   -proxyrandomize
        Randomize credentials for every proxy connection. This enables Tor
        stream isolation (default: 1)
+       随机化每个代理连接的凭据。这将启动洋葱路由流隔离（默认：1）
 
   -seednode=<ip>
        Connect to a node to retrieve peer addresses, and disconnect
@@ -277,10 +286,12 @@ Connection options:
   -whitelistrelay
        Accept relayed transactions received from whitelisted peers even when
        not relaying transactions (default: 1)
+       接受来自白名单中的对端节点接收的中继交易，即使不中继交易（默认：1）
 
   -whitelistforcerelay
        Force relay of transactions from whitelisted peers even they violate
        local relay policy (default: 1)
+       强制来自白名单中的对端节点的交易的中继，甚至违反本地中继政策（默认：1）
 
   -maxuploadtarget=<n>
        Tries to keep outbound traffic under the given target (in MiB per 24h),
@@ -314,96 +325,125 @@ Wallet options:
 
   -rescan
        Rescan the block chain for missing wallet transactions on startup
+       启动时再扫描区块链用于丢失的钱包交易
 
   -salvagewallet
        Attempt to recover private keys from a corrupt wallet.dat on startup
+       启动时尝试从损坏的 wallet.dat 文件恢复私钥
 
   -sendfreetransactions
        Send transactions as zero-fee transactions if possible (default: 0)
+       可能的话，发送交易作为 0 交易费的交易（默认：0）
 
   -spendzeroconfchange
        Spend unconfirmed change when sending transactions (default: 1)
+       发送交易时花费未确认的找零（默认：1）
 
   -txconfirmtarget=<n>
        If paytxfee is not set, include enough fee so transactions begin
        confirmation on average within n blocks (default: 2)
+       如果未设置 paytxfee，包含足够的交易费以至于交易在平均 n 个区块开始确认（默认：2）
 
   -maxtxfee=<amt>
        Maximum total fees (in BTC) to use in a single wallet transaction;
        setting this too low may abort large transactions (default: 0.10)
+       单笔钱包交易中使用的最大总交易费（以 BTC 为单位）；
+       设置该值太低可能会终止大型交易（默认：0.10）
 
   -upgradewallet
        Upgrade wallet to latest format on startup
+       启动时升级钱包到最新格式
 
   -wallet=<file>
        Specify wallet file (within data directory) (default: wallet.dat)
+       指定钱包文件（在数据目录中）（默认：wallet.dat）
 
   -walletbroadcast
        Make the wallet broadcast transactions (default: 1)
+       使钱包广播交易（默认：1）
 
   -walletnotify=<cmd>
        Execute command when a wallet transaction changes (%s in cmd is replaced
        by TxID)
+       一笔钱包交易变化时执行命令（cmd 中的 %s 通过 TxID 替换）
 
   -zapwallettxes=<mode>
        Delete all wallet transactions and only recover those parts of the
        blockchain through -rescan on startup (1 = keep tx meta data e.g.
        account owner and payment request information, 2 = drop tx meta data)
+       删除全部钱包交易，只恢复启动时通过 -rescan 选项扫描的区块链的那些部分
+       （1 表示保留交易元数据，例如：账户所有者和支付请求信息，2 表示丢弃交易元数据）
 
 Debugging/Testing options:
 调试/测试选项：
 
   -uacomment=<cmt>
        Append comment to the user agent string
+       附加注释到用户代理字符串
 
   -checkblockindex
        Do a full consistency check for mapBlockIndex, setBlockIndexCandidates,
        chainActive and mapBlocksUnlinked occasionally. Also sets -checkmempool
        (default: 0)
+       偶尔对 mapBlockIndex, setBlockIndexCandidates, chainActive and mapBlocksUnlinked
+       进行完整的一致性检查。还设置 -checkmempool 选项（默认：0）
 
   -checkmempool=<n>
        Run checks every <n> transactions (default: 0)
+       每 <n> 笔交易运行检查（默认：0）
 
   -checkpoints
        Disable expensive verification for known chain history (default: 1)
+       关闭堆已知的链历史的昂贵的验证（默认：1）
 
   -dblogsize=<n>
        Flush wallet database activity from memory to disk log every <n>
        megabytes (default: 100)
+       每 <n> 兆字节，刷新钱包数据库活动从内存到磁盘日志（默认：100）
 
   -disablesafemode
        Disable safemode, override a real safe mode event (default: 0)
+       禁用安全模式，覆盖一个真正的安全模式事件（默认：0）
 
   -testsafemode
        Force safe mode (default: 0)
+       强制安全模式（默认：0）
 
   -dropmessagestest=<n>
        Randomly drop 1 of every <n> network messages
+       每 <n> 条网络消息随机丢弃 1 条
 
   -fuzzmessagestest=<n>
        Randomly fuzz 1 of every <n> network messages
+       每 <n> 条网络消息随机模糊 1 条
 
   -flushwallet
        Run a thread to flush wallet periodically (default: 1)
+       运行一个用于定期刷新钱包的线程（默认：1）
 
   -stopafterblockimport
        Stop running after importing blocks from disk (default: 0)
+       在从磁盘导入区块后停止运行（默认：0）
 
   -limitancestorcount=<n>
        Do not accept transactions if number of in-mempool ancestors is <n> or
        more (default: 25)
+       如果内存池中祖先的数量为 <n> 或更多则不接受交易（默认：25）
 
   -limitancestorsize=<n>
        Do not accept transactions whose size with all in-mempool ancestors
        exceeds <n> kilobytes (default: 101)
+       不接受所有内存池中祖先超过 <n> 千字节大小的交易（默认：101）
 
   -limitdescendantcount=<n>
        Do not accept transactions if any ancestor would have <n> or more
        in-mempool descendants (default: 25)
+       不接受内存池中任何祖先有 <n> 或更多数量后代的交易（默认：25）
 
   -limitdescendantsize=<n>
        Do not accept transactions if any ancestor would have more than <n>
        kilobytes of in-mempool descendants (default: 101).
+       不接受内存池中任何祖先有超过 <n> 字节后代的交易（默认：101）
 
   -debug=<category>
        Output debugging information (default: 0, supplying <category> is
@@ -411,58 +451,78 @@ Debugging/Testing options:
        all debugging information.<category> can be: addrman, alert, bench,
        coindb, db, lock, rand, rpc, selectcoins, mempool, mempoolrej, net,
        proxy, prune, http, libevent, tor, zmq.
+       输出调试信息（默认：0，提供的 <category> 是可选的）。如果未提供 <category>
+       或 <category> = 1，则输出全部的调试信息。<category> 可以是：addrman, alert,
+       bench, coindb, db, lock, rand, rpc, selectcoins, mempool, mempoolrej,
+       net, proxy, prune, http, libevent, tor, zmq.
 
   -nodebug
        Turn off debugging messages, same as -debug=0
+       关闭调试信息，和 -debug=0 一样
 
   -gen
        Generate coins (default: 0)
+       生成币（默认：0）
 
   -genproclimit=<n>
        Set the number of threads for coin generation if enabled (-1 = all
        cores, default: 1)
+       设置产生币的线程数，如果开启（-1 表示所有核，默认：1）
 
   -help-debug
        Show all debugging options (usage: --help -help-debug)
+       显示全部调试选项（用法：--help -help-debug）
 
   -logips
        Include IP addresses in debug output (default: 0)
+       在调试输出中包含 IP 地址集（默认：0）
 
   -logtimestamps
        Prepend debug output with timestamp (default: 1)
+       使用前置时间戳的调试输出（默认：1）
 
   -logtimemicros
        Add microsecond precision to debug timestamps (default: 0)
+       添加微秒精度到调试时间戳（默认：0）
 
   -mocktime=<n>
        Replace actual time with <n> seconds since epoch (default: 0)
+       使用格林尼治时间 <n> 秒替换真正的时间（默认：0）
 
   -limitfreerelay=<n>
        Continuously rate-limit free transactions to <n>*1000 bytes per minute
        (default: 15)
+       连续比率限制免费交易到每分钟 <n>*1000 字节（默认：15）
 
   -relaypriority
        Require high priority for relaying free or low-fee transactions
        (default: 1)
+       对于中继 0 或低交易费的交易需要的高优先级（默认：1）
 
   -maxsigcachesize=<n>
        Limit size of signature cache to <n> MiB (default: 40)
+       限制签名缓存大小到 <n> Mib（默认：40）
 
   -minrelaytxfee=<amt>
        Fees (in BTC/kB) smaller than this are considered zero fee for relaying,
        mining and transaction creation (default: 0.00001)
+       交易费（以 BTC/kB 为单位）低于此值会被认为是 0 交易费，用于中继，挖矿和交易的创建（默认：0.00001）
 
   -printtoconsole
        Send trace/debug info to console instead of debug.log file
+       发送追踪/调试信息到控制台代替 dubug.log 文件
 
   -printpriority
        Log transaction priority and fee per kB when mining blocks (default: 0)
+       当挖出块时记录交易优先级核每 kB 的交易费（默认：0）
 
   -privdb
        Sets the DB_PRIVATE flag in the wallet db environment (default: 1)
+       在钱包数据库环境中设置 DB_PRIVATE 标志（默认：1）
 
   -shrinkdebugfile
        Shrink debug.log file on client startup (default: 1 when no -debug)
+       在客户端启动时收缩 debug.log 文件（默认：1 没有 -debug 选项时）
 
 Chain selection options:
 链选择选项：（默认为主链）
@@ -484,16 +544,20 @@ Node relay options:
   -acceptnonstdtxn
        Relay and mine "non-standard" transactions (testnet/regtest only;
        default: 1)
+       中继和挖矿“非标准”交易（仅用于 testnet/regtest；默认：1）
 
   -bytespersigop
        Minimum bytes per sigop in transactions we relay and mine (default: 20)
+       我们中继和挖矿交易中每个 sigop 的最小字节（默认：20）
 
   -datacarrier
        Relay and mine data carrier transactions (default: 1)
+       中继和挖矿数据载体交易（默认：1）
 
   -datacarriersize
        Maximum size of data in data carrier transactions we relay and mine
        (default: 83)
+       我们中继和挖矿的数据载体交易中数据的最大大小（默认：83）
 
   -mempoolreplacement
        Enable transaction replacement in the memory pool (default: 1)
