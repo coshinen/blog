@@ -63,16 +63,16 @@ int main(int argc, char* argv[]) // 0.程序入口
 3.11.应用程序初始化 2（本物入口）。[`AppInit2(threadGroup, scheduler)`](/2018/06/16/bitcoin-source-anatomy-04#AppInit2-ref)<br>
 3.11.1.安装。[`Step 1: setup`](/2018/06/16/bitcoin-source-anatomy-04#Step01-ref)<br>
 3.11.2.参数交互。[`Step 2: parameter interactions`](/2018/06/16/bitcoin-source-anatomy-04#Step02-ref)<br>
-3.11.3.参数转换为内部变量，把外部参数的设置转化为程序内部的状态（bool 型参数，开关类选项）。[`Step 3: parameter-to-internal-flags`]()<br>
-3.11.4.初始化 ECC，目录锁检查（保证只有一个 bitcoind 运行），pid 文件，debug 日志。[`Step 4: application initialization: dir lock, daemonize, pidfile, debug log`]()<br>
-3.11.5.若启用钱包功能，则验证钱包数据库的完整性。[`Step 5: verify wallet database integrity`]()<br>
+3.11.3.参数转换为内部标志。[`Step 3: parameter-to-internal-flags`](/2018/06/23/bitcoin-source-anatomy-05#Step03-ref)<br>
+3.11.4.应用程序初始化：目录锁，守护进程后台化，进程号文件，调试日志文件。[`Step 4: application initialization: dir lock, daemonize, pidfile, debug log`](/2018/06/23/bitcoin-source-anatomy-05#Step04-ref)<br>
+3.11.5.验证钱包数据库的完整性。[`Step 5: verify wallet database integrity`]()<br>
 3.11.6.网络初始化。[`Step 6: network initialization`]()<br>
-3.11.7.加载区块链数据，区块数据目录 blocks。[`Step 7: load block chain`]()<br>
-3.11.8.若启用钱包功能，则加载钱包。[`Step 8: load wallet`]()<br>
-3.11.9.若是裁剪模式，则进行 blockstore 的裁剪。[`Step 9: data directory maintenance`]()<br>
-3.11.10.导入区块数据。[`Step 10: import blocks`]()<br>
-3.11.11.启动节点服务，监听网络 P2P 请求，挖矿线程。[`Step 11: start node`]()<br>
-3.11.12.初始化完成。[`Step 12: finished`]()<br>
+3.11.7.加载区块链。[`Step 7: load block chain`]()<br>
+3.11.8.加载钱包。[`Step 8: load wallet`]()<br>
+3.11.9.数据目录维护。[`Step 9: data directory maintenance`]()<br>
+3.11.10.导入区块。[`Step 10: import blocks`]()<br>
+3.11.11.启动节点。[`Step 11: start node`]()<br>
+3.11.12.完成。[`Step 12: finished`]()<br>
 3.12.根据启动标志做出相应处理。[`WaitForShutdown`]()<br>
 3.13.关闭。[`Shutdown`]()
 
