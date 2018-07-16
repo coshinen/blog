@@ -14,7 +14,7 @@ tags: blockchain bitcoin src
 
 ## 概要
 上一篇分析了数据目录路径的获取、配置文件中设置的启动选项的读取、不同网络链参数（包含创世区块信息）的选择、命令行参数完整性检测、`Linux` 下守护进程的后台化以及服务选项的设置，详见[比特币源码剖析（三）](/2018/06/09/bitcoin-source-anatomy-03)。<br>
-本篇主要分析 `InitLogging()` 初始化日志记录函数，`InitParameterInteraction()` 初始化参数交互函数。
+本篇主要分析 `InitLogging()` 初始化日志记录函数，`InitParameterInteraction()` 初始化参数交互函数，`AppInit2(threadGroup, scheduler)` 真正地初始化应用程序函数。
 
 ## 源码剖析
 
@@ -28,7 +28,7 @@ bool AppInit(int argc, char* argv[]) // [P]3.0.应用程序初始化
         // Set this early so that parameter interactions go to console // 尽早设置该项使参数交互到控制台
         InitLogging(); // 3.9.初始化日志记录
         InitParameterInteraction(); // 3.10.初始化参数交互
-        ...
+        fRet = AppInit2(threadGroup, scheduler); // 3.11.应用程序初始化 2（本物入口）
     }
     catch (const std::exception& e) {
         PrintExceptionContinue(&e, "AppInit()");
@@ -177,6 +177,188 @@ void InitParameterInteraction()
             LogPrintf("%s: parameter interaction: -whitelistforcerelay=1 -> setting -whitelistrelay=1\n", __func__);
     }
 }
+{% endhighlight %}
+
+<p id="AppInit2-ref"></p>
+3.11.调用 `AppInit2(threadGroup, scheduler)` 函数初始化应用程序，这里才是初始化真正的入口，该函数声明在“init.h”文件中。
+
+{% highlight C++ %}
+bool AppInit2(boost::thread_group& threadGroup, CScheduler& scheduler);
+{% endhighlight %}
+
+<p id="Step01-ref"></p>
+实现在“init.cpp”文件中，入参为：线程组对象，调度器对象。<br>
+3.11.1.第一步：安装。主要初始化网络环境，注册信号处理函数。
+
+{% highlight C++ %}
+/** Initialize bitcoin.
+ *  @pre Parameters should be parsed and config file should be read.
+ */ // 初始化比特币。前提：参数应该被解析，配置文件应该被读取。
+bool AppInit2(boost::thread_group& threadGroup, CScheduler& scheduler) // 3.11.0.程序初始化，共 12 步
+{
+    // ********************************************************* Step 1: setup // 初始化网络环境，注册信号处理函数
+#ifdef _MSC_VER // 1.设置 log 的输出级别为 WARNING 和 log 的输出文件
+    // Turn off Microsoft heap dump noise // 关闭微软堆转储提示音
+    _CrtSetReportMode(_CRT_WARN, _CRTDBG_MODE_FILE);
+    _CrtSetReportFile(_CRT_WARN, CreateFileA("NUL", GENERIC_WRITE, 0, NULL, OPEN_EXISTING, 0, 0));
+#endif
+#if _MSC_VER >= 1400 // 2.处理中断消息
+    // Disable confusing "helpful" text message on abort, Ctrl-C // 禁用 Ctrl-C 崩溃时烦人的“帮助”文本消息
+    _set_abort_behavior(0, _WRITE_ABORT_MSG | _CALL_REPORTFAULT);
+#endif
+#ifdef WIN32
+    // Enable Data Execution Prevention (DEP) // 3.启用数据执行保护（DEP）
+    // Minimum supported OS versions: WinXP SP3, WinVista >= SP1, Win Server 2008
+    // A failure is non-critical and needs no further attention! // 失败不重要，不需要在意！
+#ifndef PROCESS_DEP_ENABLE
+    // We define this here, because GCCs winbase.h limits this to _WIN32_WINNT >= 0x0601 (Windows 7), // 我们在这里定义它，因为 GCCs winbase.h 将此限制到 _WIN32_WINNT >= 0x0601 (Windows 7)，
+    // which is not correct. Can be removed, when GCCs winbase.h is fixed! // 这是错误的。GCCs winbase.h 修复时可以删除
+#define PROCESS_DEP_ENABLE 0x00000001
+#endif
+    typedef BOOL (WINAPI *PSETPROCDEPPOL)(DWORD);
+    PSETPROCDEPPOL setProcDEPPol = (PSETPROCDEPPOL)GetProcAddress(GetModuleHandleA("Kernel32.dll"), "SetProcessDEPPolicy");
+    if (setProcDEPPol != NULL) setProcDEPPol(PROCESS_DEP_ENABLE);
+#endif
+
+    if (!SetupNetworking()) // 4.设置 Windows 套接字
+        return InitError("Initializing networking failed");
+
+#ifndef WIN32 // 5.非 WIN32 平台，处理文件权限和相关信号
+    if (GetBoolArg("-sysperms", false)) { // 若设置了系统文件权限
+#ifdef ENABLE_WALLET // 若启用了钱包
+        if (!GetBoolArg("-disablewallet", false)) // 且未关闭钱包功能
+            return InitError("-sysperms is not allowed in combination with enabled wallet functionality");
+#endif
+    } else {
+        umask(077); // 设置掩码
+    }
+
+    // Clean shutdown on SIGTERM // 在 SIGTERM 信号下清空关闭
+    struct sigaction sa;
+    sa.sa_handler = HandleSIGTERM;
+    sigemptyset(&sa.sa_mask);
+    sa.sa_flags = 0;
+    sigaction(SIGTERM, &sa, NULL);
+    sigaction(SIGINT, &sa, NULL);
+
+    // Reopen debug.log on SIGHUP // 在 SIGHUP 信号下重新打开 debug.log 文件
+    struct sigaction sa_hup;
+    sa_hup.sa_handler = HandleSIGHUP;
+    sigemptyset(&sa_hup.sa_mask);
+    sa_hup.sa_flags = 0;
+    sigaction(SIGHUP, &sa_hup, NULL);
+
+    // Ignore SIGPIPE, otherwise it will bring the daemon down if the client closes unexpectedly
+    signal(SIGPIPE, SIG_IGN); // 忽略 SIGPIPE 信号，否则如果客户端异常关闭它会使守护进程关闭
+#endif
+    ...
+};
+{% endhighlight %}
+
+1.关闭微软堆转储提示音。<br>
+2.关闭中断提示消息。<br>
+3.启用数据执行保护（DEP）。<br>
+4.设置网络，Windows 下初始套接字，其它平台直接返回 true。<br>
+5.非 WIN32 平台，设置系统文件权限掩码，处理相关信号。
+
+4.调用 `SetupNetworking()` 函数设置网络，该函数声明在“util.h”文件中。
+
+{% highlight C++ %}
+bool SetupNetworking(); // 初始化 Windows 套接字
+{% endhighlight %}
+
+实现在“util.cpp”文件中，没有入参。
+
+{% highlight C++ %}
+bool SetupNetworking()
+{
+#ifdef WIN32
+    // Initialize Windows Sockets // 初始化 Windows 套接字
+    WSADATA wsadata;
+    int ret = WSAStartup(MAKEWORD(2,2), &wsadata);
+    if (ret != NO_ERROR || LOBYTE(wsadata.wVersion ) != 2 || HIBYTE(wsadata.wVersion) != 2)
+        return false;
+#endif
+    return true; // 非 WIN32 系统直接返回 true
+}
+{% endhighlight %}
+
+<p id="Step02-ref"></p>
+3.11.2.第二步，参数交互。主要进行区块裁剪和交易索引选项的冲突检测，文件描述符限制检测。
+这部分实现在“init.cpp”文件的 `AppInit2(...)` 函数中。
+
+{% highlight C++ %}
+bool AppInit2(boost::thread_group& threadGroup, CScheduler& scheduler) // 3.11.0.程序初始化，共 12 步
+{
+    ...
+    // ********************************************************* Step 2: parameter interactions // 参数交互设置，如：区块裁剪 prune 与交易索引 txindex 的冲突检测、文件描述符限制的检查
+    const CChainParams& chainparams = Params(); // 1.获取当前的链参数
+
+    // also see: InitParameterInteraction()
+
+    // if using block pruning, then disable txindex // 2.如果使用区块修剪，需要禁止交易索引
+    if (GetArg("-prune", 0)) { // 修剪模式（禁用交易索引），默认关闭
+        if (GetBoolArg("-txindex", DEFAULT_TXINDEX)) // 交易索引（与修剪模式不兼容），默认关闭
+            return InitError(_("Prune mode is incompatible with -txindex.")); // 不兼容的原因：修剪模式只保留区块头，而区块体包含的是交易索引 txid
+#ifdef ENABLE_WALLET // 若开启了钱包
+        if (GetBoolArg("-rescan", false)) { // 再扫描（修剪模式下不能使用，你可以使用 -reindex 再次下载整个区块链），默认关闭
+            return InitError(_("Rescans are not possible in pruned mode. You will need to use -reindex which will download the whole blockchain again."));
+        }
+#endif
+    }
+
+    // Make sure enough file descriptors are available // 3.确保足够的文件描述符可用
+    int nBind = std::max((int)mapArgs.count("-bind") + (int)mapArgs.count("-whitebind"), 1); // bind 占用的文件描述符数量
+    int nUserMaxConnections = GetArg("-maxconnections", DEFAULT_MAX_PEER_CONNECTIONS); // 最大连入数，默认 125
+    nMaxConnections = std::max(nUserMaxConnections, 0); // 记录最大连接数，默认为 125
+
+    // Trim requested connection counts, to fit into system limitations // 修剪请求的连接数，以适应系统限制
+    nMaxConnections = std::max(std::min(nMaxConnections, (int)(FD_SETSIZE - nBind - MIN_CORE_FILEDESCRIPTORS)), 0); // Linux 下一个进程同时打开的文件描述的数量为 1024，使用 ulimit -a/-n 查看
+    int nFD = RaiseFileDescriptorLimit(nMaxConnections + MIN_CORE_FILEDESCRIPTORS); // windows 下直接返回 2048，linux 下返回成功提升后的值 nMaxConnections + MIN_CORE_FILEDESCRIPTORS
+    if (nFD < MIN_CORE_FILEDESCRIPTORS) // 可用描述符数量不能低于 0
+        return InitError(_("Not enough file descriptors available."));
+    nMaxConnections = std::min(nFD - MIN_CORE_FILEDESCRIPTORS, nMaxConnections); // 选取提升前后较小的数
+
+    if (nMaxConnections < nUserMaxConnections) // 若提升后低于 125 个，发出警告，可能是由于系统限制导致的数量减少
+        InitWarning(strprintf(_("Reducing -maxconnections from %d to %d, because of system limitations."), nUserMaxConnections, nMaxConnections));
+    ...
+};
+{% endhighlight %}
+
+1.获取当前选取的区块链参数。<br>
+2.检查区块修剪和交易索引选项设置是否冲突。<br>
+3.检查进程打开的文件描述符数量。
+
+DEFAULT_TXINDEX 定义在“main.h”文件中。
+
+{% highlight C++ %}
+static const bool DEFAULT_TXINDEX = false; // 交易索引，默认关闭
+{% endhighlight %}
+
+DEFAULT_MAX_PEER_CONNECTIONS 定义在“net.h”文件中。
+
+{% highlight C++ %}
+/** The maximum number of peer connections to maintain. */ // 要维护的最大对端连接数
+static const unsigned int DEFAULT_MAX_PEER_CONNECTIONS = 125;
+{% endhighlight %}
+
+FD_SETSIZE 定义在“compat.h”文件中。
+
+{% highlight C++ %}
+#define FD_SETSIZE 1024 // max number of fds in fd_set // fd_set 中 fds 的最大数量
+{% endhighlight %}
+
+MIN_CORE_FILEDESCRIPTORS 定义在“init.cpp”文件中。
+
+{% highlight C++ %}
+#ifdef WIN32
+// Win32 LevelDB doesn't use filedescriptors, and the ones used for
+// accessing block files don't count towards the fd_set size limit
+// anyway. // Win32 LevelDB 不使用文件描述符，用于访问块文件的不会计入 fd_set 大小限制。
+#define MIN_CORE_FILEDESCRIPTORS 0 // Windows
+#else
+#define MIN_CORE_FILEDESCRIPTORS 150 // Unix/Linux
+#endif
 {% endhighlight %}
 
 未完待续...<br>
