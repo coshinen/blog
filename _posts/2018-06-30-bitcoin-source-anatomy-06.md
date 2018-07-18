@@ -18,6 +18,7 @@ tags: blockchain bitcoin src
 
 ## 源码剖析
 
+<p id="Init-ref"></p>
 1.初始化椭圆曲线代码。
 首先调用 `ECC_Start()` 函数启动椭圆曲线支持。该函数声明在“key.h”文件中。
 

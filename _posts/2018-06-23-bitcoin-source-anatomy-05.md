@@ -215,7 +215,7 @@ bool AppInit2(boost::thread_group& threadGroup, CScheduler& scheduler) // 3.11.0
 
     // Initialize elliptic curve code // 1.初始化椭圆曲线代码
     ECC_Start(); // 椭圆曲线编码启动
-    globalVerifyHandle.reset(new ECCVerifyHandle()); // pending
+    globalVerifyHandle.reset(new ECCVerifyHandle()); // 创建椭圆曲线验证对象
 
     // Sanity check // 2.完整性检查
     if (!InitSanityCheck()) // 初始化完整性检查 pending
@@ -287,8 +287,8 @@ bool AppInit2(boost::thread_group& threadGroup, CScheduler& scheduler) // 3.11.0
 };
 {% endhighlight %}
 
-1.初始化椭圆曲线代码。<br>
-2.完整性检查。<br>
+1.[初始化椭圆曲线代码。](/2018/06/30/bitcoin-source-anatomy-06#Init-ref)<br>
+2.[初始化完整性检查。](/2018/07/07/bitcoin-source-anatomy-07#InitSanityCheck-ref)<br>
 3.数据目录上锁。<br>
 4.非 WIN32 环境，创建进程号文件。<br>
 5.收缩调试日志文件。<br>

@@ -18,6 +18,7 @@ tags: blockchain bitcoin src
 
 ## 源码剖析
 
+<p id="InitSanityCheck-ref"></p>
 2.初始化完整性检查，主要检查椭圆曲线加密的初始化和 `glibc` 及 `glibcxx` 的完整性。
 
 {% highlight C++ %}
