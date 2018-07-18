@@ -357,6 +357,29 @@ void memory_cleanse(void *ptr, size_t len)
 内部调用 OpenSSL 库 `OPENSSL_cleanse(ptr, len)` 函数把指定空间填充为 0，
 详见 [/docs/manmaster/man3/OPENSSL_cleanse](https://www.openssl.org/docs/manmaster/man3/OPENSSL_cleanse.html)。
 
+然后调用 `globalVerifyHandle.reset(new ECCVerifyHandle())` 函数创建椭圆曲线验证对象，类 `ECCVerifyHandle` 定义在“pubkey.h”文件中。
+
+{% highlight C++ %}
+/** Users of this module must hold an ECCVerifyHandle. The constructor and
+ *  destructor of these are not allowed to run in parallel, though. */
+class ECCVerifyHandle // 该模块的用户必须持有 ECCVerifyHandle。但不允许构造函数和析构函数并行执行。
+{
+    static int refcount; // 引用计数
+
+public:
+    ECCVerifyHandle();
+    ~ECCVerifyHandle();
+};
+{% endhighlight %}
+
+全局静态智能指针 `globalVerifyHandle` 定义在“init.cpp”文件中。
+
+{% highlight C++ %}
+static boost::scoped_ptr<ECCVerifyHandle> globalVerifyHandle; // 该智能指针与 STL 的 std::unique_ptr 类似
+{% endhighlight %}
+
+智能指针 `boost::scoped_ptr` 不能复制或移动，类似于 STL 的 `std::unique_ptr`，详见 [`boost::scoped_ptr`](https://theboostcpplibraries.com/boost.smartpointers-sole-ownership)。
+
 未完待续...<br>
 请看下一篇[比特币源码剖析（七）](/2018/07/07/bitcoin-source-anatomy-07)。
 
