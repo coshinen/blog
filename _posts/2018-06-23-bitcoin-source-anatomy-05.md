@@ -289,9 +289,9 @@ bool AppInit2(boost::thread_group& threadGroup, CScheduler& scheduler) // 3.11.0
 
 1.[初始化椭圆曲线代码。](/2018/06/30/bitcoin-source-anatomy-06#Init-ref)<br>
 2.[初始化完整性检查。](/2018/07/07/bitcoin-source-anatomy-07#InitSanityCheck-ref)<br>
-3.数据目录上锁。<br>
-4.非 WIN32 环境，创建进程号文件。<br>
-5.收缩调试日志文件。<br>
+3.[数据目录上锁。](/2018/07/07/bitcoin-source-anatomy-07#DataDirLock-ref)<br>
+4.[非 WIN32 环境，创建进程号文件。](/2018/07/07/bitcoin-source-anatomy-07#CreatePidFile-ref)<br>
+5.[处理调试日志文件。](/2018/07/07/bitcoin-source-anatomy-07#ShrinkOrOpenDebugLogFile-ref)<br>
 6.记录相关信息到日志输出。<br>
 7.创建脚本验证线程。<br>
 8.创建轻量级任务调度线程。<br>
