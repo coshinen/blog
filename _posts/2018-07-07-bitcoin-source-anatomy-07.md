@@ -14,7 +14,7 @@ tags: blockchain bitcoin src
 
 ## 概要
 上一篇分析了应用程序初始化中椭圆曲线初始化的详细过程，详见[比特币源码剖析（六）](/2018/06/30/bitcoin-source-anatomy-06)。<br>
-本篇主要分析 `Step 4: application initialization: dir lock, daemonize, pidfile, debug log` 第四步应用程序初始化中 `InitSanityCheck()` 初始化完整性检查的详细过程。
+本篇主要分析 `Step 4: application initialization: dir lock, daemonize, pidfile, debug log` 第四步应用程序初始化中 `InitSanityCheck()` 初始化完整性检查和数据目录上锁的详细过程。
 
 ## 源码剖析
 
@@ -185,8 +185,197 @@ bool glibcxx_sanity_test()
 使用 [`std::basic_string::at`](https://en.cppreference.com/w/cpp/string/basic_string/at) 来触发超出范围异常。
 这一部分逻辑较为简单，只需耐心啃代码即可。
 
+<p id="DataDirLock-ref"></p>
+3.数据目录上锁，保证同一时间只有一个比特币后台服务进程使用该目录。
+
 {% highlight C++ %}
+bool AppInit2(boost::thread_group& threadGroup, CScheduler& scheduler) // 3.11.0.程序初始化，共 12 步
+{
+    ...
+    // ********************************************************* Step 4: application initialization: dir lock, daemonize, pidfile, debug log // 初始化 ECC，目录锁检查（保证只有一个 bitcoind 运行），pid 文件，debug 日志
+    ...
+    std::string strDataDir = GetDataDir().string(); // 3.1.获取数据目录路径
+#ifdef ENABLE_WALLET // 若开启钱包功能
+    // Wallet file must be a plain filename without a directory // 3.2.钱包文件必须是不带目录的文件名
+    if (strWalletFile != boost::filesystem::basename(strWalletFile) + boost::filesystem::extension(strWalletFile)) // 验证钱包文件名的完整性，basename 获取文件基础名 "wallet"，extension 获取文件扩展名 ".dat"
+        return InitError(strprintf(_("Wallet %s resides outside data directory %s"), strWalletFile, strDataDir));
+#endif // 钱包名校验结束
+    // Make sure only a single Bitcoin process is using the data directory. // 3.3.确保只有一个比特币进程使用该数据目录。
+    boost::filesystem::path pathLockFile = GetDataDir() / ".lock"; // 空的 lock 隐藏文件，作用：作为临界资源，保证当前只有一个 Bitcoin 进程使用数据目录
+    FILE* file = fopen(pathLockFile.string().c_str(), "a"); // empty lock file; created if it doesn't exist.
+    if (file) fclose(file); // 若文件正常打开则关闭该空文件
+
+    try {
+        static boost::interprocess::file_lock lock(pathLockFile.string().c_str()); // 初始化文件锁对象
+        if (!lock.try_lock()) // 上锁
+            return InitError(strprintf(_("Cannot obtain a lock on data directory %s. Bitcoin Core is probably already running."), strDataDir)); // 第二个进程会在这里上锁失败并退出
+    } catch(const boost::interprocess::interprocess_exception& e) {
+        return InitError(strprintf(_("Cannot obtain a lock on data directory %s. Bitcoin Core is probably already running.") + " %s.", strDataDir, e.what()));
+    }
+    ...
+}
 {% endhighlight %}
+
+3.1.获取数据目录位置。<br>
+3.2.验证钱包文件名的完整性，包含文件扩展名 `".dat"`，不含路径。<br>
+3.3.创建空的目录锁文件，并对该文件进行文件上锁，保证同一时间只有一个进程运行。
+
+3.2.调用 `boost::filesystem::basename(strWalletFile)` 和 `boost::filesystem::extension(strWalletFile)` 函数分别获取文件名和文件格式进行比对，
+详见 [extension()](https://www.boost.org/doc/libs/1_68_0_beta1/libs/filesystem/doc/reference.html#path-extension)。
+
+3.3.首先创建 `boost::interprocess::file_lock` 文件锁对象，然后调用 `lock.try_lock()` 函数使调用线程尝试获取文件锁的独占所有权而无需等待。
+详见 [file_lock](https://www.boost.org/doc/libs/1_67_0/doc/html/interprocess/synchronization_mechanisms.html#interprocess.synchronization_mechanisms.file_lock)。
+
+<p id="CreatePidFile-ref"></p>
+4.调用 `CreatePidFile(GetPidFile(), getpid())` 函数创建进程号文件，用于记录当前运行的比特币服务进程的 `PID`。
+该函数声明在“util.h”文件中。
+
+{% highlight C++ %}
+#ifndef WIN32
+boost::filesystem::path GetPidFile(); // 获取 pid 路径名
+void CreatePidFile(const boost::filesystem::path &path, pid_t pid); // 创建 pid 文件
+#endif
+{% endhighlight %}
+
+实现在“util.cpp”文件中，入参为：`PID` 文件路径名，`PID`。
+
+{% highlight C++ %}
+const char * const BITCOIN_PID_FILENAME = "bitcoind.pid"; // 比特币默认 pid 文件名
+...
+#ifndef WIN32
+boost::filesystem::path GetPidFile()
+{
+    boost::filesystem::path pathPidFile(GetArg("-pid", BITCOIN_PID_FILENAME)); // 获取 pid 文件名
+    if (!pathPidFile.is_complete()) pathPidFile = GetDataDir() / pathPidFile; // pid 文件路径拼接
+    return pathPidFile; // 返回 pid 文件路径名
+}
+
+void CreatePidFile(const boost::filesystem::path &path, pid_t pid)
+{
+    FILE* file = fopen(path.string().c_str(), "w"); // 以只写方式打开文件，若不存在则新建
+    if (file) // 创建成功
+    {
+        fprintf(file, "%d\n", pid); // 输出 pid 到该文件
+        fclose(file); // 关闭文件
+    }
+}
+#endif
+{% endhighlight %}
+
+4.1.获取 `PID` 文件的位置。<br>
+4.2.创建（仅限第一次）并打开 `PID` 文件。
+
+<p id="ShrinkOrOpenDebugLogFile-ref"></p>
+5.首先调用 `ShrinkDebugFile()` 函数收缩调试日志文件，从接近 10MiB 缩小到接近 200KB，只保留最近的 200KB 的日志记录。
+然后调用 `OpenDebugLog()` 函数打开日志文件，它们均声明在“util.h”文件中。
+
+{% highlight C++ %}
+void OpenDebugLog(); // 打开调试日志文件
+void ShrinkDebugFile(); // 收缩调试文件 10 * 1,000,000B -> 200,000B
+{% endhighlight %}
+
+5.1.函数 `ShrinkDebugFile()` 实现在“util.cpp”文件中，没有入参。
+
+{% highlight C++ %}
+void ShrinkDebugFile()
+{
+    // Scroll debug.log if it's getting too big // 若它变得太大，回滚 debug.log
+    boost::filesystem::path pathLog = GetDataDir() / "debug.log"; // 1.获取日志位置
+    FILE* file = fopen(pathLog.string().c_str(), "r"); // 以只读方式打开日志
+    if (file && boost::filesystem::file_size(pathLog) > 10 * 1000000) // 2.若日志文件大小超过约 10MiB
+    {
+        // Restart the file with some of the end // 使用结尾信息重写文件
+        std::vector <char> vch(200000,0); // 2.1.开辟 200KB 容器并初始化为 0
+        fseek(file, -((long)vch.size()), SEEK_END); // 文件指针从文件尾部向前偏移 200,000 个字节
+        int nBytes = fread(begin_ptr(vch), 1, vch.size(), file); // 读取最新的 200KB 调试日志到内存
+        fclose(file); // 关闭文件
+
+        file = fopen(pathLog.string().c_str(), "w"); // 2.2.以只写方式重新打开文件，文件存在长度清零
+        if (file) // 若打开成功
+        {
+            fwrite(begin_ptr(vch), 1, nBytes, file); // 把最新的 200KB 调试日志写入文件
+            fclose(file); // 关闭文件
+        }
+    }
+    else if (file != NULL) // 若打开成功
+        fclose(file); // 直接关闭文件
+}
+{% endhighlight %}
+
+5.1.1.获取日志文件位置，并以只读方式打开该文件。<br>
+5.1.2.若文件大小超过 `10 * 1000,000B`，则将其缩小到 `200,000B`。<br>
+5.1.2.1.首先读取文件末尾的 `200,000B` 大小的数据到内存，然后关闭文件。<br>
+5.1.2.2.以只写方式重新打开并清空日志文件，把内存中的 `200,000B` 数据写入日志文件中，并关闭文件。
+
+其中调用 `begin_ptr(vch)` 获取 `vector` 的首元素地址，这是一个模板函数，其函数模板定义在“serialize.h”文件中。
+
+{% highlight C++ %}
+/** 
+ * Get begin pointer of vector (non-const version).
+ * @note These functions avoid the undefined case of indexing into an empty
+ * vector, as well as that of indexing after the end of the vector.
+ */ // 获取容器 vector 的首部指针（非常量版）。注：这些函数用于避免索引到空 vector 的未定义情况，和 vector 尾部后的情况。
+template <typename V>
+inline typename V::value_type* begin_ptr(V& v)
+{
+    return v.empty() ? NULL : &v[0]; // 若 vector 为空，返回空，否则返回首部元素的地址
+}
+{% endhighlight %}
+
+5.2.函数 `OpenDebugLog()` 实现在“util.cpp”文件中，没有入参。
+
+{% highlight C++ %}
+/**
+ * We use boost::call_once() to make sure mutexDebugLog and
+ * vMsgsBeforeOpenLog are initialized in a thread-safe manner.
+ *
+ * NOTE: fileout, mutexDebugLog and sometimes vMsgsBeforeOpenLog
+ * are leaked on exit. This is ugly, but will be cleaned up by
+ * the OS/libc. When the shutdown sequence is fully audited and
+ * tested, explicit destruction of these objects can be implemented.
+ */ // 我们使用 boost::call_once() 确保 mutexDebugLog 和 vMsgsBeforeOpenLog 以线程安全的方式初始化。
+static FILE* fileout = NULL; // 日志文件指针
+static boost::mutex* mutexDebugLog = NULL; // 日志文件锁
+static list<string> *vMsgsBeforeOpenLog; // 打开日志文件前的消息链表
+
+static int FileWriteStr(const std::string &str, FILE *fp)
+{
+    return fwrite(str.data(), 1, str.size(), fp); // 写入字符串到文件指针关联的文件
+}
+
+static void DebugPrintInit() // 初始化调试日志文件锁
+{
+    assert(mutexDebugLog == NULL); // 若调试日志锁为空
+    mutexDebugLog = new boost::mutex(); // 新建一个互斥锁
+    vMsgsBeforeOpenLog = new list<string>; // 新建一个字符串类型的链表
+}
+
+void OpenDebugLog()
+{
+    boost::call_once(&DebugPrintInit, debugPrintInitFlag); // 1.确保只执行 DebugPrintInit() 一次
+    boost::mutex::scoped_lock scoped_lock(*mutexDebugLog); // 上锁
+
+    assert(fileout == NULL); // 文件指针检测，确保未初始化
+    assert(vMsgsBeforeOpenLog); // 确保打开日志文件前的消息链表存在
+    boost::filesystem::path pathDebug = GetDataDir() / "debug.log"; // 2.获取调试文件位置
+    fileout = fopen(pathDebug.string().c_str(), "a"); // 以追加只写的方式打开，若文件不存在则创建
+    if (fileout) setbuf(fileout, NULL); // unbuffered // 设置无缓冲
+
+    // dump buffered messages from before we opened the log // 3.导出在我们打开日志前缓冲的消息
+    while (!vMsgsBeforeOpenLog->empty()) { // 若消息链表非空，遍历该链表
+        FileWriteStr(vMsgsBeforeOpenLog->front(), fileout); // 把一个消息字符串写入日志文件
+        vMsgsBeforeOpenLog->pop_front(); // 链表头出链
+    }
+
+    delete vMsgsBeforeOpenLog; // 4.删除该链表
+    vMsgsBeforeOpenLog = NULL; // 指针置空，防止出现野指针
+}
+{% endhighlight %}
+
+5.2.1.调试打印初始化：互斥锁、消息链表，完成后上锁。<br>
+5.2.2.获取日志文件位置并以追加只写的方式打开。<br>
+5.2.3.若消息链表非空，遍历该链表，把消息写入日志文件。<br>
+5.2.4.删除该链表，指针置空，防止出现野指针。
 
 未完待续...<br>
 请看下一篇[比特币源码剖析（八）](/2018/07/14/bitcoin-source-anatomy-08)。
