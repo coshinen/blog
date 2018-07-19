@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "23 种设计模式"
+title:  "设计模式"
 date:   2018-07-16 20:08:56 +0800
 author: mistydew
 categories: DesignPatterns
@@ -12,7 +12,9 @@ tags: DesignPatterns C++
 
 ## 创建型模式（Creational pattern）
 
-* 单例模式（Singleton pattern）
+创建模式是创建对象的模式，而非直接实例化对象，为程序提供更多灵活性。
+
+* 单例模式（[`Singleton pattern`](/2018/07/17/singleton-pattern)）
 * 简单工厂模式（Simple Factory pattern）
 * 工厂方法模式（Factory Method pattern）
 * 抽象工厂模式（Abstract pattern）
@@ -20,6 +22,8 @@ tags: DesignPatterns C++
 * 原型模式（Prototype pattern）
 
 ## 结构型模式（Structural pattern）
+
+关于类及对象的复合关系。
 
 * 适配器模式（Adapter pattern）
 * 代理模式（Proxy pattern）
@@ -30,6 +34,8 @@ tags: DesignPatterns C++
 * 享元模式（Flyweight pattern）
 
 ## 行为型模式（Behavioral pattern）
+
+大多数设计模式都是关于对象间如何通讯的。
 
 * 观察者模式（Observer pattern）
 * 职责链模式（Chain of Responsibility pattern）
