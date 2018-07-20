@@ -292,8 +292,8 @@ bool AppInit2(boost::thread_group& threadGroup, CScheduler& scheduler) // 3.11.0
 3.[数据目录上锁。](/2018/07/07/bitcoin-source-anatomy-07#DataDirLock-ref)<br>
 4.[非 WIN32 环境，创建进程号文件。](/2018/07/07/bitcoin-source-anatomy-07#CreatePidFile-ref)<br>
 5.[处理调试日志文件。](/2018/07/07/bitcoin-source-anatomy-07#ShrinkOrOpenDebugLogFile-ref)<br>
-6.记录相关信息到日志输出。<br>
-7.创建脚本验证线程。<br>
+6.记录相关初始化信息到日志输出。<br>
+7.[创建脚本验证线程。](/2018/07/14/bitcoin-source-anatomy-08#ThreadScriptCheck-ref)<br>
 8.创建轻量级任务调度线程。<br>
 9.启动 RPC 服务。
 
