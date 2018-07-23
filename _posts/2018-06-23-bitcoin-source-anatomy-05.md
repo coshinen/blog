@@ -295,7 +295,7 @@ bool AppInit2(boost::thread_group& threadGroup, CScheduler& scheduler) // 3.11.0
 6.记录相关初始化信息到日志输出。<br>
 7.[创建脚本验证线程。](/2018/07/14/bitcoin-source-anatomy-08#ThreadScriptCheck-ref)<br>
 8.[创建轻量级任务调度线程。](/2018/07/21/bitcoin-source-anatomy-09#serviceQueue-ref)<br>
-9.启动 RPC 服务。
+9.[启动 RPC 服务。](/2018/07/21/bitcoin-source-anatomy-09#AppInitServers-ref)
 
 未完待续...<br>
 请看下一篇[比特币源码剖析（六）](/2018/06/30/bitcoin-source-anatomy-06)。
