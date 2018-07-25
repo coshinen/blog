@@ -530,17 +530,17 @@ void RegisterHTTPHandler(const std::string &prefix, bool exactMatch, const HTTPR
 }
 {% endhighlight %}
 
-处理 `HTTP` 请求函数定义在“httprpc.cpp”文件中，入参为：`HTTP` 请求，...。
+处理 `HTTP` 请求函数定义在“httprpc.cpp”文件中，入参为：`HTTP` 请求，`...`。
 
 {% highlight C++ %}
 static bool HTTPReq_JSONRPC(HTTPRequest* req, const std::string &) // HTTP 请求处理函数
 {
-    // JSONRPC handles only POST // JSONRPC 仅处理 POST 类型 HTTP 请求
+    // JSONRPC handles only POST // 1.JSONRPC 仅处理 POST 类型 HTTP 请求
     if (req->GetRequestMethod() != HTTPRequest::POST) { // 若非 POST 类型的请求
         req->WriteReply(HTTP_BAD_METHOD, "JSONRPC server handles only POST requests"); // 反馈信息
         return false; // 直接退出并返回 false
     }
-    // Check authorization // 检查授权
+    // Check authorization // 2.检查授权
     std::pair<bool, std::string> authHeader = req->GetHeader("authorization"); // 获取头部授权字段
     if (!authHeader.first) { // 若不存在
         req->WriteHeader("WWW-Authenticate", WWW_AUTH_HEADER_DATA);
@@ -563,29 +563,29 @@ static bool HTTPReq_JSONRPC(HTTPRequest* req, const std::string &) // HTTP 请�
 
     JSONRequest jreq; // JSON 请求对象
     try {
-        // Parse request // 解析请求
-        UniValue valRequest;
+        // Parse request // 3.解析请求
+        UniValue valRequest; // 构造一个 JSON 对象
         if (!valRequest.read(req->ReadBody())) // 获取请求体
             throw JSONRPCError(RPC_PARSE_ERROR, "Parse error");
 
-        std::string strReply; // 响应内容
-        // singleton request // 单例请求
+        std::string strReply; // 4.响应内容字符串
+        // singleton request // 4.1.单例请求
         if (valRequest.isObject()) { // 请求体是一个对象
-            jreq.parse(valRequest); // 解析请求
+            jreq.parse(valRequest); // 解析请求，放入 JSON 请求对象中
 
-            UniValue result = tableRPC.execute(jreq.strMethod, jreq.params); // 执行相应方法及其参数
+            UniValue result = tableRPC.execute(jreq.strMethod, jreq.params); // 传入相应的参数执行方法并获取响应结果
 
             // Send reply // 发送响应
-            strReply = JSONRPCReply(result, NullUniValue, jreq.id); // 包装为 JSONRPC 响应内容
+            strReply = JSONRPCReply(result, NullUniValue, jreq.id); // 包装为 JSONRPC 响应内容字符串
 
         // array of requests // 请求数组
-        } else if (valRequest.isArray()) // 数组
-            strReply = JSONRPCExecBatch(valRequest.get_array()); // 批量处理并获取请求的内容
+        } else if (valRequest.isArray()) // 4.2.数组
+            strReply = JSONRPCExecBatch(valRequest.get_array()); // 批量处理并获取请求的响应内容字符串
         else
             throw JSONRPCError(RPC_PARSE_ERROR, "Top-level object parse error");
 
-        req->WriteHeader("Content-Type", "application/json"); // 写入响应头
-        req->WriteReply(HTTP_OK, strReply); // 写入状态码和响应体
+        req->WriteHeader("Content-Type", "application/json"); // 5.写入响应头
+        req->WriteReply(HTTP_OK, strReply); // 写入状态码和响应内容字符串
     } catch (const UniValue& objError) {
         JSONErrorReply(req, objError, jreq.id);
         return false;
@@ -593,7 +593,403 @@ static bool HTTPReq_JSONRPC(HTTPRequest* req, const std::string &) // HTTP 请�
         JSONErrorReply(req, JSONRPCError(RPC_PARSE_ERROR, e.what()), jreq.id);
         return false;
     }
-    return true; // 成功返回 true
+    return true; // 6.成功返回 true
+}
+{% endhighlight %}
+
+2.1.检查请求类型，只处理 `POST` 类型的 `HTTP` 请求。<br>
+2.2.检查授权信息，即请求头部的验证信息（用户名、密码）。<br>
+2.3.获取请求内容，并构造 `UniValue（JSON）` 类型的对象。<br>
+2.4.解析请求内容，执行响应方法，并获取反馈信息 `JSON` 字符串。<br>
+2.4.1.若请求内容为一个 `JSON` 对象，则按 `2.4` 流程走。<br>
+2.4.2.若请求内容为一个 `JSON` 数组（可能含 `n` 个 `JSON` 对象），则进行批处理并获取响应字符串。<br>
+2.5.把状态码和结果字符串写入响应中，并进行反馈。<br>
+2.6.执行成功，返回 `true`。
+
+2.1.调用 `req->GetRequestMethod()` 获取 `HTTP` 请求的请求方式，该函数声明在“httpserver.h”文件的 `HTTPRequest` 类中。
+
+{% highlight C++ %}
+/** In-flight HTTP request.
+ * Thin C++ wrapper around evhttp_request.
+ */ // 正在进行的 HTTP 请求。evhttp_request 的 C++ 简易包装器。
+class HTTPRequest
+{
+    ...
+public:
+    HTTPRequest(struct evhttp_request* req);
+    ~HTTPRequest();
+
+    enum RequestMethod { // HTTP 请求方式枚举
+        UNKNOWN, // 未知
+        GET,
+        POST,
+        HEAD,
+        PUT
+    };
+    ...
+    /** Get request method.
+     */ // 获取请求方式。
+    RequestMethod GetRequestMethod();
+    ...
+};
+{% endhighlight %}
+
+实现在“httpserver.cpp”文件中，没有入参。
+
+{% highlight C++ %}
+HTTPRequest::RequestMethod HTTPRequest::GetRequestMethod()
+{
+    switch (evhttp_request_get_command(req)) { // 获取请求命令（方式）
+    case EVHTTP_REQ_GET: // 返回相应的方式
+        return GET;
+        break;
+    case EVHTTP_REQ_POST:
+        return POST;
+        break;
+    case EVHTTP_REQ_HEAD:
+        return HEAD;
+        break;
+    case EVHTTP_REQ_PUT:
+        return PUT;
+        break;
+    default:
+        return UNKNOWN;
+        break;
+    }
+}
+{% endhighlight %}
+
+2.2.先调用 `req->GetHeader("authorization")` 函数获取验证信息，再调用 `RPCAuthorized(authHeader.second)` 函数验证授权。
+`req->GetHeader("authorization")` 声明在“httpserver.h”文件的 `HTTPRequest` 类中。
+
+{% highlight C++ %}
+class HTTPRequest
+{
+    ...
+    /**
+     * Get the request header specified by hdr, or an empty string.
+     * Return an pair (isPresent,string).
+     */ // 通过 hdr 获取请求头部指定的信息，或一个空字符串。返回一个 pair（是否存在，信息字符串）。
+    std::pair<bool, std::string> GetHeader(const std::string& hdr);
+    ...
+};
+{% endhighlight %}
+
+实现在“httpserver.cpp”文件中，入参为：关键字的字符串。
+
+{% highlight C++ %}
+std::pair<bool, std::string> HTTPRequest::GetHeader(const std::string& hdr)
+{
+    const struct evkeyvalq* headers = evhttp_request_get_input_headers(req); // 获取请求头部
+    assert(headers);
+    const char* val = evhttp_find_header(headers, hdr.c_str()); // 获取头部指定键的值
+    if (val) // 若该值存在
+        return std::make_pair(true, val); // 配对返回
+    else
+        return std::make_pair(false, "");
+}
+{% endhighlight %}
+
+`RPCAuthorized(authHeader.second)` 定义在“httprpc.cpp”文件中，入参为：验证信息字符串。
+
+{% highlight C++ %}
+static bool RPCAuthorized(const std::string& strAuth)
+{
+    if (strRPCUserColonPass.empty()) // Belt-and-suspenders measure if InitRPCAuthentication was not called
+        return false; // 若未调用 InitRPCAuthentication 初始化 strRPCUserColonPass，则直接返回 false 表示验证失败
+    if (strAuth.substr(0, 6) != "Basic ") // 若验证信息前 6 个字符非 "Basic "
+        return false; // 直接返回 false 表示验证失败
+    std::string strUserPass64 = strAuth.substr(6); // 截取从下标为 6 的字符开始的字串
+    boost::trim(strUserPass64); // 去除原字符串头尾的空格
+    std::string strUserPass = DecodeBase64(strUserPass64); // base64 解码
+    
+    //Check if authorized under single-user field // 检查是否在单用户字段下授权
+    if (TimingResistantEqual(strUserPass, strRPCUserColonPass)) {
+        return true; // 验证成功返回 true
+    } // 否则
+    return multiUserAuthorized(strUserPass); // 进行多用户授权检测
+}
+{% endhighlight %}
+
+2.3.调用 `valRequest.read(req->ReadBody())` 获取请求体并初始化一个 `JSON` 对象。
+`req->ReadBody()` 声明在“httpserver.h”文件的 `HTTPRequest` 类中。
+
+{% highlight C++ %}
+class HTTPRequest
+{
+    ...
+    /**
+     * Read request body. // 读请求体。
+     *
+     * @note As this consumes the underlying buffer, call this only once.
+     * Repeated calls will return an empty string.
+     */ // 注：因为这会消耗底层缓冲区，所以仅调用一次。重复调用将返回一个空串。
+    std::string ReadBody();
+    ...
+};
+{% endhighlight %}
+
+实现在“httpserver.cpp”文件中，没有入参。
+
+{% highlight C++ %}
+std::string HTTPRequest::ReadBody()
+{
+    struct evbuffer* buf = evhttp_request_get_input_buffer(req); // 获取请求的输入缓冲区
+    if (!buf)
+        return "";
+    size_t size = evbuffer_get_length(buf); // 获取缓冲区大小
+    /** Trivial implementation: if this is ever a performance bottleneck,
+     * internal copying can be avoided in multi-segment buffers by using
+     * evbuffer_peek and an awkward loop. Though in that case, it'd be even
+     * better to not copy into an intermediate string but use a stream
+     * abstraction to consume the evbuffer on the fly in the parsing algorithm.
+     */ // 简单的实现：如果这是一个性能瓶颈，通过使用 evbuffer_peek 和笨拙的循环可以在多端缓冲区中避免内部复制。
+    const char* data = (const char*)evbuffer_pullup(buf, size); // 获取指定大小的内容
+    if (!data) // returns NULL in case of empty buffer // 若为空缓冲区
+        return ""; // 返回 ""
+    std::string rv(data, size); // 创建一个字符串对象
+    evbuffer_drain(buf, size); // 把这部分获取的数据从缓冲区前面移除
+    return rv; // 返回缓冲区内容
+}
+{% endhighlight %}
+
+2.4.1.首先调用 `jreq.parse(valRequest)` 解析请求到一个 `JSON` 请求对象中。
+该函数声明在“rpcserver.h”文件的 `JSONRequest` 类中。
+
+{% highlight C++ %}
+class JSONRequest // JSON 请求类
+{
+public:
+    UniValue id; // 请求的 id
+    std::string strMethod; // 请求的方法
+    UniValue params;
+
+    JSONRequest() { id = NullUniValue; }
+    void parse(const UniValue& valRequest); // 解析 JSON 请求
+};
+{% endhighlight %}
+
+实现在“rpcserver.cpp”文件中，入参为：`JSON` 请求对象。
+
+{% highlight C++ %}
+void JSONRequest::parse(const UniValue& valRequest)
+{
+    // Parse request // 解析请求
+    if (!valRequest.isObject()) // 若该请求非 JSON 对象
+        throw JSONRPCError(RPC_INVALID_REQUEST, "Invalid Request object"); // 抛出异常，无效请求对象
+    const UniValue& request = valRequest.get_obj(); // 获取 JSON 请求对象
+
+    // Parse id now so errors from here on will have the id
+    id = find_value(request, "id"); // 现在解析 id，以至于来自此处的错误将有 id
+
+    // Parse method // 解析方法
+    UniValue valMethod = find_value(request, "method"); // 获取方法
+    if (valMethod.isNull()) // 方法非空
+        throw JSONRPCError(RPC_INVALID_REQUEST, "Missing method");
+    if (!valMethod.isStr()) // 方法必须为字符串
+        throw JSONRPCError(RPC_INVALID_REQUEST, "Method must be a string");
+    strMethod = valMethod.get_str(); // 获取方法
+    if (strMethod != "getblocktemplate") // 若方法非 "getblocktemplate"
+        LogPrint("rpc", "ThreadRPCServer method=%s\n", SanitizeString(strMethod));
+
+    // Parse params // 解析参数
+    UniValue valParams = find_value(request, "params"); // 获取请求的参数
+    if (valParams.isArray()) // 若参数为 json 数组
+        params = valParams.get_array(); // 获取该数组
+    else if (valParams.isNull()) // 若参数为空
+        params = UniValue(UniValue::VARR); // 新建数组类型空对象
+    else // 否则（方法的参数必须为 json 数组类型）
+        throw JSONRPCError(RPC_INVALID_REQUEST, "Params must be an array"); // 抛出错误
+}
+{% endhighlight %}
+
+然后调用 `tableRPC.execute(jreq.strMethod, jreq.params)` 执行相应的方法并获取反馈结果。
+该函数声明在“rpcserver.h”文件的 `CRPCTable` 类中。
+
+{% highlight C++ %}
+/**
+ * Bitcoin RPC command dispatcher.
+ */ // 比特币 RPC 命令调度器
+class CRPCTable // RPC 列表类
+{
+private:
+    std::map<std::string, const CRPCCommand*> mapCommands; // RPC 命令列表
+public:
+    CRPCTable(); // 注册所有定义的 RPC 命令到 RPC 命令列表
+    const CRPCCommand* operator[](const std::string& name) const; // 重载的下标运算符
+    std::string help(const std::string& name) const;
+
+    /**
+     * Execute a method.
+     * @param method   Method to execute
+     * @param params   UniValue Array of arguments (JSON objects)
+     * @returns Result of the call.
+     * @throws an exception (UniValue) when an error happens.
+     */ // 执行一个方法
+    UniValue execute(const std::string &method, const UniValue &params) const;
+};
+{% endhighlight %}
+
+实现在“rpcserver.cpp”文件中，入参为：方法名，对应的参数。
+
+{% highlight C++ %}
+UniValue CRPCTable::execute(const std::string &strMethod, const UniValue &params) const
+{
+    // Return immediately if in warmup // 1.如果处于预热状态，立刻返回
+    {
+        LOCK(cs_rpcWarmup); // rpc 预热状态上锁
+        if (fRPCInWarmup) // 若处于预热状态
+            throw JSONRPCError(RPC_IN_WARMUP, rpcWarmupStatus); // 抛出异常
+    }
+
+    // Find method // 2.查找方法
+    const CRPCCommand *pcmd = tableRPC[strMethod]; // 通过方法名获取对应 RPC 命令方法
+    if (!pcmd)
+        throw JSONRPCError(RPC_METHOD_NOT_FOUND, "Method not found");
+
+    g_rpcSignals.PreCommand(*pcmd); // 3.预处理命令，检查该命令是否开启安全模式
+
+    try
+    {
+        // Execute // 4.执行
+        return pcmd->actor(params, false); // 传入参数是，执行响应的函数行为
+    }
+    catch (const std::exception& e)
+    {
+        throw JSONRPCError(RPC_MISC_ERROR, e.what());
+    }
+
+    g_rpcSignals.PostCommand(*pcmd); // 5.后处理命令，该信号未注册处理函数
+}
+{% endhighlight %}
+
+最后调用 `JSONRPCReply(result, NullUniValue, jreq.id)` 把上面得到的反馈结果包装为 `JSON` 格式的字符串。
+该函数声明在“rpcprotocol.h”文件中。
+
+{% highlight C++ %}
+UniValue JSONRPCReplyObj(const UniValue& result, const UniValue& error, const UniValue& id); // JSONRPC 响应对象
+std::string JSONRPCReply(const UniValue& result, const UniValue& error, const UniValue& id); // JSONRPC 响应
+{% endhighlight %}
+
+实现在“rpcprotocol.cpp”文件中，入参为：反馈结果 `JSON` 对象，空的 `JSON` 对象（用于保存错误信息），请求 `id`。
+
+{% highlight C++ %}
+UniValue JSONRPCReplyObj(const UniValue& result, const UniValue& error, const UniValue& id)
+{
+    UniValue reply(UniValue::VOBJ); // 构造对象类型的 JSON 对象
+    if (!error.isNull()) // 若存在错误
+        reply.push_back(Pair("result", NullUniValue)); // 返回空结果
+    else // 否则
+        reply.push_back(Pair("result", result)); // 追加响应的结果
+    reply.push_back(Pair("error", error)); // 增加错误字段
+    reply.push_back(Pair("id", id)); // 增加 id 字段
+    return reply; // 返回响应对象
+}
+
+string JSONRPCReply(const UniValue& result, const UniValue& error, const UniValue& id)
+{
+    UniValue reply = JSONRPCReplyObj(result, error, id); // 转调 JSONRPC 响应对象
+    return reply.write() + "\n"; // 结果转换为字符串，拼接换行后返回
+}
+{% endhighlight %}
+
+2.4.2.调用 `JSONRPCExecBatch(valRequest.get_array())` 批处理请求，并获取反馈结果组成的 `JSON` 对象。
+该函数声明在“rpcserver.h”文件中。
+
+{% highlight C++ %}
+std::string JSONRPCExecBatch(const UniValue& vReq); // JSONRPC 批量执行
+{% endhighlight %}
+
+实现在“rpcserver.cpp”文件中，入参为：请求的 `JSON` 数组。
+
+{% highlight C++ %}
+static UniValue JSONRPCExecOne(const UniValue& req)
+{
+    UniValue rpc_result(UniValue::VOBJ); // 创建对象类型的 JSON 对象
+
+    JSONRequest jreq;
+    try {
+        jreq.parse(req); // 解析请求
+
+        UniValue result = tableRPC.execute(jreq.strMethod, jreq.params); // 转调 execute 传入参数并执行命令
+        rpc_result = JSONRPCReplyObj(result, NullUniValue, jreq.id); // 包装结果为 JSON 对象
+    }
+    catch (const UniValue& objError)
+    {
+        rpc_result = JSONRPCReplyObj(NullUniValue, objError, jreq.id);
+    }
+    catch (const std::exception& e)
+    {
+        rpc_result = JSONRPCReplyObj(NullUniValue,
+                                     JSONRPCError(RPC_PARSE_ERROR, e.what()), jreq.id);
+    }
+
+    return rpc_result; // 返回 rpc 结果对象
+}
+
+std::string JSONRPCExecBatch(const UniValue& vReq)
+{
+    UniValue ret(UniValue::VARR); // 创建数组类型的 JSON 对象
+    for (unsigned int reqIdx = 0; reqIdx < vReq.size(); reqIdx++) // 遍历请求
+        ret.push_back(JSONRPCExecOne(vReq[reqIdx])); // 执行一次并把响应内容追加到 JSON 对象中
+
+    return ret.write() + "\n"; // 把 JSON 对象转换为字符串，拼接换行符后返回
+}
+{% endhighlight %}
+
+2.5.先调用 `req->WriteHeader("Content-Type", "application/json")` 写入响应头信息，再调用 `req->WriteReply(HTTP_OK, strReply)` 写入状态码和反馈内容。
+它们均声明在“httpserver.h”文件的 `HTTPRequest` 类中。
+
+{% highlight C++ %}
+class HTTPRequest
+{
+    ...
+    /**
+     * Write output header.
+     *
+     * @note call this before calling WriteErrorReply or Reply.
+     */ // 写入输出（响应）头。注：在调用 WriteErrorReply 或 Reply 前调用该项。
+    void WriteHeader(const std::string& hdr, const std::string& value);
+
+    /**
+     * Write HTTP reply.
+     * nStatus is the HTTP status code to send.
+     * strReply is the body of the reply. Keep it empty to send a standard message.
+     *
+     * @note Can be called only once. As this will give the request back to the
+     * main thread, do not call any other HTTPRequest methods after calling this.
+     */ // 写入 HTTP 响应。nStatus 是 HTTP 发送的状态码。strReply 是响应体。为空用来发送一条标准消息。
+    void WriteReply(int nStatus, const std::string& strReply = "");
+};
+{% endhighlight %}
+
+实现在“httpserver.cpp”文件中，`WriteHeader` 的入参为：类型字符串；`WriteReply` 的入参为：`HTTP` 状态码，反馈内容字符串。
+
+{% highlight C++ %}
+void HTTPRequest::WriteHeader(const std::string& hdr, const std::string& value)
+{
+    struct evkeyvalq* headers = evhttp_request_get_output_headers(req); // 获取请求头部指针
+    assert(headers);
+    evhttp_add_header(headers, hdr.c_str(), value.c_str()); // 把相关信息添加到请求头部
+}
+
+/** Closure sent to main thread to request a reply to be sent to
+ * a HTTP request.
+ * Replies must be sent in the main loop in the main http thread,
+ * this cannot be done from worker threads.
+ */ // 发送到主线程来请求响应用于发送一个 HTTP 请求。反馈必须在主 http 线程的主循环中发送，而不能从工作线程中发送。
+void HTTPRequest::WriteReply(int nStatus, const std::string& strReply)
+{
+    assert(!replySent && req); // 响应未发送 且 存在 http 请求
+    // Send event to main http thread to send reply message // 发送事件到主 http 线程来发送响应信息
+    struct evbuffer* evb = evhttp_request_get_output_buffer(req); // 获取输出缓冲区结构体指针
+    assert(evb);
+    evbuffer_add(evb, strReply.data(), strReply.size()); // 添加响应数据和大小到输出缓冲区
+    HTTPEvent* ev = new HTTPEvent(eventBase, true, // 构造一个 HTTP 事件对象
+        boost::bind(evhttp_send_reply, req, nStatus, (const char*)NULL, (struct evbuffer *)NULL));
+    ev->trigger(0); // 立刻触发该事件
+    replySent = true; // 响应发送标志置为 true
+    req = 0; // transferred back to main thread // 切换回主线程
 }
 {% endhighlight %}
 
