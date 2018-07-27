@@ -735,9 +735,18 @@ bool StartHTTPServer()
 3.创建 `HTTP` 工作队列处理线程。
 
 2.调用 `boost::thread(boost::bind(&ThreadHTTP, eventBase, eventHTTP))` 创建 `HTTP` 线程，进入 `http` 事件循环，
-该函数定义在“httpserver.cpp”文件中。
+线程函数 `ThreadHTTP` 定义在“httpserver.cpp”文件中。
 
 {% highlight C++ %}
+/** Event dispatcher thread */ // 事件派发线程
+static void ThreadHTTP(struct event_base* base, struct evhttp* http)
+{
+    RenameThread("bitcoin-http"); // 重命名线程
+    LogPrint("http", "Entering http event loop\n");
+    event_base_dispatch(base); // 进入 http 事件循环
+    // Event loop will be interrupted by InterruptHTTPServer() // 事件循环将被 InterruptHTTPServer() 打断
+    LogPrint("http", "Exited http event loop\n");
+}
 {% endhighlight %}
 
 `HTTPClosure` 是一个虚基类，定义在“httpserver.h”文件中。
