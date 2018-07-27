@@ -436,6 +436,28 @@ static bool HTTPBindAddresses(struct evhttp* http)
 }
 {% endhighlight %}
 
+9.2.4.调用 `StartRPC()` 启动 `RPC`，该函数声明在“rpcserver.h”文件中。
+
+{% highlight C++ %}
+bool StartRPC(); // 启动 RPC
+{% endhighlight %}
+
+实现在“rpcserver.cpp”文件中，没有入参。
+
+{% highlight C++ %}
+static bool fRPCRunning = false; // RPC 运行状态，默认为 false
+...
+bool StartRPC()
+{
+    LogPrint("rpc", "Starting RPC\n");
+    fRPCRunning = true; // 设置 RPC 运行状态为 true
+    g_rpcSignals.Started(); // 此版本未找到信号注册
+    return true; // 成功返回 true
+}
+{% endhighlight %}
+
+**注：这里调用的 `g_rpcSignals.Started()` 信号函数在该版本中并未注册。**
+
 未完待续...<br>
 请看下一篇[比特币源码剖析（十）](/2018/07/28/bitcoin-source-anatomy-10)。
 
