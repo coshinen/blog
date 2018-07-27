@@ -14,7 +14,7 @@ tags: blockchain bitcoin src
 
 ## 概要
 上一篇分析了应用程序初始化中初始化完整性检查和数据目录锁的过程，详见[比特币源码剖析（七）](/2018/07/07/bitcoin-source-anatomy-07)。<br>
-本篇主要分析 `Step 4: application initialization: dir lock, daemonize, pidfile, debug log` 第四步应用程序初始中创建脚本验证线程和轻量级任务调度线程的详细过程。
+本篇主要分析 `Step 4: application initialization: dir lock, daemonize, pidfile, debug log` 第四步应用程序初始化中创建脚本验证线程和轻量级任务调度线程的详细过程。
 
 ## 源码剖析
 
