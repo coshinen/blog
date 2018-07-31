@@ -9,7 +9,7 @@ tags: lyric
 ![arrival](https://raw.githubusercontent.com/mistydew/audio/master/cover/arrival.jpg)
 
 <audio controls>
-  <source src="" type="audio/mpeg">
+  <source src="https://raw.githubusercontent.com/mistydew/audio/master/Dancing_Queen.mp3" type="audio/mpeg">
 您的浏览器不支持 audio 元素。
 </audio>
 
@@ -125,12 +125,12 @@ Dig in the dancing queen
 宇徳敬子、中村由利 ver.
 
 <audio controls>
-  <source src="" type="audio/mpeg">
+  <source src="https://raw.githubusercontent.com/mistydew/audio/master/Dancing_Queen_(yuri_ver.).mp3" type="audio/mpeg">
 您的浏览器不支持 audio 元素。
 </audio>
 
 ## 参照
-* [ABBA | Articles](https://abbasite.com)
+* [ABBA \| Articles](https://abbasite.com)
 * [ABBA - Wikipedia](https://en.wikipedia.org/wiki/ABBA)
 * [Dancing Queen Lyrics](https://www.lyrics.com/lyric/24169579/ABBA/Dancing+Queen)
 * [...](https://github.com/mistydew)

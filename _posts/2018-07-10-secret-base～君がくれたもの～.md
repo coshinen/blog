@@ -6,8 +6,10 @@ author: mistydew
 categories: 歌詞
 tags: lyric
 ---
+[secret base](https://raw.githubusercontent.com/mistydew/audio/master/cover/secret%20base~%E5%90%9B%E3%81%8C%E3%81%8F%E3%82%8C%E3%81%9F%E3%82%82%E3%81%AE~.png)
+
 <audio controls>
-  <source src="" type="audio/mpeg">
+  <source src="https://raw.githubusercontent.com/mistydew/audio/master/secret_base_~%E5%90%9B%E3%81%8C%E3%81%8F%E3%82%8C%E3%81%9F%E3%82%82%E3%81%AE~.mp3" type="audio/mpeg">
 您的浏览器不支持 audio 元素。
 </audio>
 
