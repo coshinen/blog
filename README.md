@@ -7,10 +7,10 @@
 - [ ] add "reply to" function: disqus
 - [ ] add summary
 - [ ] The anatomy of bitcoin v0.12.1 source
-- [ ] add tag cloud
-- [x] add tags page
+- [x] add tag cloud
 
 ## Timeline
+* 2018.08.01 10:32 [new] tag cloud
 * 2018.07.10 18:40 [new] tags page
 * 2018.07.03 13:00 [new] GitHub Contribution into the archive page
 * 2018.06.19 18:05 [new] post word statistics and the time of reading full
