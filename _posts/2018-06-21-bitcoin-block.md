@@ -4,7 +4,7 @@ title:  "比特币源码剖析 - 区块"
 date:   2018-06-21 21:02:10 +0800
 author: mistydew
 categories: Blockchain
-tags: blockchain bitcoin block
+tags: blockchain bitcoin Block
 ---
 ![bitcoin](/images/20180504/bitcoin.svg)
 

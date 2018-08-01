@@ -4,7 +4,7 @@ title:  "比特币源码剖析"
 date:   2018-05-19 14:52:16 +0800
 author: mistydew
 categories: Blockchain
-tags: blockchain bitcoin src
+tags: blockchain bitcoin SourceAnalysis
 stickie: true
 ---
 ![bitcoin](/images/20180504/bitcoin.svg)
@@ -65,7 +65,7 @@ int main(int argc, char* argv[]) // 0.程序入口
 3.11.2.参数交互。[`Step 2: parameter interactions`](/2018/06/16/bitcoin-source-anatomy-04#Step02-ref)<br>
 3.11.3.参数转换为内部标志。[`Step 3: parameter-to-internal-flags`](/2018/06/23/bitcoin-source-anatomy-05#Step03-ref)<br>
 3.11.4.应用程序初始化：目录锁，守护进程后台化，进程号文件，调试日志文件。[`Step 4: application initialization: dir lock, daemonize, pidfile, debug log`](/2018/06/23/bitcoin-source-anatomy-05#Step04-ref)<br>
-3.11.5.验证钱包数据库的完整性。[`Step 5: verify wallet database integrity`]()<br>
+3.11.5.验证钱包数据库的完整性。[`Step 5: verify wallet database integrity`](/2018/08/04/bitcoin-source-anatomy-11#Step05-ref)<br>
 3.11.6.网络初始化。[`Step 6: network initialization`]()<br>
 3.11.7.加载区块链。[`Step 7: load block chain`]()<br>
 3.11.8.加载钱包。[`Step 8: load wallet`]()<br>

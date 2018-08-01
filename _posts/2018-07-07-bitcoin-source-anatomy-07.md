@@ -4,7 +4,7 @@ title:  "比特币源码剖析（七）"
 date:   2018-07-07 11:43:10 +0800
 author: mistydew
 categories: Blockchain
-tags: blockchain bitcoin src
+tags: blockchain bitcoin SourceAnalysis
 ---
 ![bitcoin](/images/20180504/bitcoin.svg)
 

@@ -4,7 +4,7 @@ title:  "比特币 RPC 命令剖析 \"getrawtransaction\""
 date:   2018-06-12 11:23:30 +0800
 author: mistydew
 categories: Blockchain
-tags: blockchain bitcoin client rpc
+tags: blockchain bitcoin bitcoin-cli commands
 ---
 ![bitcoin](/images/20180504/bitcoin.svg)
 

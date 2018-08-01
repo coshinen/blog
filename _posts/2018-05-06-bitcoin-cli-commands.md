@@ -4,7 +4,7 @@ title:  "比特币核心客户端 RPC 命令"
 date:   2018-05-06 14:02:51 +0800
 author: mistydew
 categories: Blockchain
-tags: blockchain bitcoin client
+tags: blockchain bitcoin bitcoin-cli commands
 stickie: true
 ---
 ![bitcoin](/images/20180504/bitcoin.svg)

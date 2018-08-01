@@ -4,7 +4,7 @@ title:  "比特币 RPC 命令剖析 \"getmempoolinfo\""
 date:   2018-05-22 16:19:08 +0800
 author: mistydew
 categories: Blockchain
-tags: blockchain bitcoin client rpc
+tags: blockchain bitcoin bitcoin-cli commands
 ---
 ![bitcoin](/images/20180504/bitcoin.svg)
 

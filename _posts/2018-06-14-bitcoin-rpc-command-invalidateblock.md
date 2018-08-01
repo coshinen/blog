@@ -4,7 +4,7 @@ title:  "比特币 RPC 命令剖析 \"invalidateblock\""
 date:   2018-06-14 09:25:28 +0800
 author: mistydew
 categories: Blockchain
-tags: blockchain bitcoin client rpc
+tags: blockchain bitcoin bitcoin-cli commands
 hidden: true
 ---
 ![bitcoin](/images/20180504/bitcoin.svg)
