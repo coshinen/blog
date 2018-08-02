@@ -37,8 +37,25 @@ permalink: /tags.html
 {% endfor %}
 </div></center>
 
+{% assign count = 0 %}
 {% for tag in site.tags %}
-<h2 id="{{ tag[0] }}-ref">{{ tag | first }}</h2>
+    {% for post in tag.last %}
+      {% if post.hidden == true %}
+      {% else %}
+        {% assign count = count | plus: 1 %}
+      {% endif %}
+    {% endfor %}
+    {% assign count = count | append: ', ' %}
+    {% assign counts = counts | append: count %}
+    {% assign count = 0 %}
+{% endfor %}
+
+{% assign counts = counts | split: ', ' %}
+{% assign idx = 0 %}
+
+{% for tag in site.tags %}
+<h2 id="{{ tag[0] }}-ref">{{ tag | first }} ({{ counts[idx] }})</h2>
+    {% assign idx = idx | plus: 1 %}
 <ul class="arc-list">
     {% for post in tag.last %}
       {% if post.hidden == true %}
