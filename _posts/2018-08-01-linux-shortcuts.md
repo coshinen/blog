@@ -3,8 +3,8 @@ layout: post
 title:  "每个高效的 Linux 用户必须知道的 13 个 Linux 终端快捷键"
 date:   2018-08-01 13:35:20 +0800
 author: mistydew
-categories: Shortcuts
-tags: Linux shortcuts
+categories: Translation Shortcuts
+tags: translation Linux shortcuts
 ---
 **简介：以下是一些每个 `Linux` 用户必须使用的键盘快捷键。
 使用命令行时，这些 `Linux` 快捷键将提升你的生产力和效率。**

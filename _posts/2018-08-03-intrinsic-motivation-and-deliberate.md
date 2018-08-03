@@ -3,8 +3,8 @@ layout: post
 title:  "内在动机和刻意练习相互加强"
 date:   2018-08-03 16:40:02 +0800
 author: mistydew
-categories: Translation
-tags: transalation
+categories: Translation Study
+tags: translation study
 ---
 ![intrinsic_motivation_deliberate_practice](/images/20180803/intrinsic_motivation_deliberate_practice.png)
 
@@ -18,6 +18,10 @@ tags: transalation
 换句话说，是内在动机和刻意练习的螺旋式上升。
 
 ![presentatie](/images/20180803/presentatie.jpg)
+
+## 感想
+不知为何又想起了一万小时理论，不如实践一下，只要每天花上 2 小时，坚持 13 年。<br>
+熟能生巧，要有耐心不是吗？
 
 ## 参照
 * [The Progress-Focused Approach: Intrinsic motivation and deliberate practice strengthen each other](http://www.progressfocused.com/2016/03/intrinsic-motivation-and-deliberate.html)
