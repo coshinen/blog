@@ -15,6 +15,7 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://mistydew.github.io" # the base hostname & protocol for your site
 twitter_username: _mistydew_
 github_username:  mistydew
+feed: "http://feeds.feedburner.com/mistydew"
 
 # Build settings
 markdown: kramdown
