@@ -7,10 +7,10 @@
 - [ ] add "reply to" function: disqus
 - [ ] add summary
 - [ ] The anatomy of bitcoin v0.12.1 source
-- [x] add Google Customised Search
+- [x] add Google and Baidu Customised Search
 
 ## Timeline
-* 2018.08.02 18:20 [new] Google Customised Search
+* 2018.08.02 18:20 [new] Google and Baidu Customised Search
 * 2018.08.01 10:32 [new] tag cloud
 * 2018.07.10 18:40 [new] tags page
 * 2018.07.03 13:00 [new] GitHub Contribution into the archive page
