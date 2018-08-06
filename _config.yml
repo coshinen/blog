@@ -23,7 +23,7 @@ markdown: kramdown
 
 # Gems
 gems: [jekyll-paginate]
-paginate: 10
+paginate: 07
 paginate_path: "/page/:num"
 
 # Links
