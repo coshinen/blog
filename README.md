@@ -7,9 +7,10 @@
 - [ ] add "reply to" function: disqus
 - [ ] add summary
 - [ ] The anatomy of bitcoin v0.12.1 source
-- [x] add Google and Baidu Customised Search
+- [x] add Resume/CV(Curriculum Vitae) page
 
 ## Timeline
+* 2018.08.06 12:01 [new] Resume/CV(Curriculum Vitae) page
 * 2018.08.02 18:20 [new] Google and Baidu Customised Search
 * 2018.08.01 10:32 [new] tag cloud
 * 2018.07.10 18:40 [new] tags page
