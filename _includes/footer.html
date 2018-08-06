@@ -7,8 +7,12 @@
     <div class="footer-col-wrapper">
       <div class="footer-col footer-col-1">
         <ul class="contact-list">
-          <li>{{ site.title }}</li>
-          <li><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
+          {% if site.email %}
+          <li>{% include icon-file.html resume=site.resume title=site.title %}</li>
+          {% endif %}
+          {% if site.email %}
+          <li>{% include icon-envelope.html email=site.email %}</li>
+          {% endif %}
         </ul>
       </div>
 
