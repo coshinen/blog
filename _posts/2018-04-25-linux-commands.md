@@ -139,12 +139,14 @@ $ kill -9 <pid> # 杀死指定 `<pid>` 的进程。
 $ kill -19 <pid> # 暂停指定进程 `<pid>`，和 `Ctrl+Z` 效果相同。
 {% endhighlight %}
 
-### 查看前后台任务 jobs
+### 进程的前后台切换 & jobs fg Ctrl+Z bg
 
 {% highlight shell %}
 $ <ELF> & # 把程序 `<ELF>` 放后台运行。
-$ jobs # 可查看后台运行的程序，包含 `Ctrl+Z` 暂停的进程。
-$ fg n # 把 `jobs` 列出的序号为 `n` 的任务拉到前台运行。
+$ jobs # 可查看后台运行的程序，包含 `Ctrl+Z` 暂停的进程，及其序号和运行状态。
+$ fg n # 把 `jobs` 列出的后台序号为 `n` 的任务拉到前台运行。
+$ Ctrl + Z # 把当前前台运行的程序放到后台并挂起。
+$ bg n # 把 `jobs` 列出的后台序号为 `n` 的任务继续运行。
 {% endhighlight %}
 
 ### 查看打开文件的进程 list open file
