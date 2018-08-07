@@ -34,7 +34,7 @@
 
 ## Find me on
 
-* QQ: 101911****
+* QQ: 10********
 * e-mail: mistydew@qq.com
 * weibo: [@mistydew](https://weibo.com/mistydew)
 * twitter: [@_mistydew_](https://twitter.com/_mistydew_)

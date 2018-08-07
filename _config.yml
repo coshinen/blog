@@ -18,6 +18,7 @@ twitter_username: _mistydew_
 github_username:  mistydew
 feed_username:    mistydew
 rss: "/feed.xml"
+btc_address: 1xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 
 # Build settings
 markdown: kramdown

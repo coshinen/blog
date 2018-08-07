@@ -7,14 +7,14 @@
     <div class="footer-col-wrapper">
       <div class="footer-col footer-col-1">
         <ul class="contact-list">
-          {% if site.title %}
-          <li>{% include icon-portrait.html resume=site.resume title=site.title %}</li>
+          {% if site.resume %}
+          <li>{% include icon-portrait.html resume=site.resume title="Curriculum Vitae" %}</li>
           {% endif %}
           {% if site.email %}
           <li>{% include icon-envelope.html email=site.email %}</li>
           {% endif %}
-          {% if site.title %}
-          <li>{% include icon-rss-square.html rss=site.rss title=site.title %}</li>
+          {% if site.feed_username %}
+          <li>{% include icon-rss-square.html username=site.feed_username title="Feed Subscribe(FeedBurner)" %}</li>
           {% endif %}
         </ul>
       </div>
@@ -33,9 +33,9 @@
           </li>
           {% endif %}
 
-          {% if site.feed_username %}
+          {% if site.btc_address %}
           <li>
-            {% include icon-rss.html username=site.feed_username %}
+            {% include icon-btc.html address=site.btc_address %}
           </li>
           {% endif %}
         </ul>
