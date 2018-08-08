@@ -6,6 +6,7 @@
 # 'jekyll serve'. If you change this file, please restart the server process.
 
 # Site settings
+blog: parallel universe
 title: mistydew
 slogan: ソルト：無理は一番の、退屈しのぎだ。
 resume: "/resume.html"
