@@ -2,14 +2,15 @@
 
 ## Todo
 - [ ] add asset footer refer to ruanyifeng
-- [ ] modify delimiter between post title and site name in search results
 - [ ] increase the display width
 - [ ] add "reply to" function: disqus
 - [ ] add summary
 - [ ] The anatomy of bitcoin v0.12.1 source
-- [x] add Resume/CV(Curriculum Vitae) page
+- [x] add delimiter '|' into post title
+- [x] update background-color
 
 ## Timeline
+* 2018.08.08 13:02 [new] delimiter '|' into post title, background-color
 * 2018.08.06 12:01 [new] Resume/CV(Curriculum Vitae) page
 * 2018.08.02 18:20 [new] Google and Baidu Customised Search
 * 2018.08.01 10:32 [new] tag cloud
