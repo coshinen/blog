@@ -6,7 +6,7 @@ author: mistydew
 categories: Translation Study
 tags: translation study
 ---
-**本文由 `Martins D.Okoi` 撰写，`mistydew` 翻译，原文见参照。**
+**本文由 `Martins D.Okoi` 撰写，`mistydew` 翻译，原文详见参照。**
 
 为什么这么多 `Linux` 用户更喜欢 `CLI` 而非 `GUI`？
 上次我在 `Reddit` 关注该问题时，遇到了一些有帮助的投稿：
@@ -41,7 +41,7 @@ tags: translation study
 实际上，在把功能实现为 `GUI` 选项之前，首先会对 `CLI` 方面进行排序。
 由于这一事实，`CLI` 在选项集和可用性方面总是更加详细。
 
-## 3. 只需更少的存储空间
+## 3. 只需较少的存储空间
 
 这个或多或少是一个明智的选择。
 基于命令行的应用只需更少的空间，因为他们缺少 `GUI` 应用具有的“肉体”，不管他们多么轻量。
