@@ -51,7 +51,8 @@ $ rmdir <dir> # 只能删除指定的空目录 <dir>。
 $ rm <dir> -r # 删除指定的目录 <dir> 下包含的所有文件，`-r` 参数表示循环。
 {% endhighlight %}
 
-**注：慎用 `$ sudo rm / -rf` # 删除根目录下所有文件，使用 `sudo` 进行权限提升，`-f` 参数表示不显示任何信息。**
+**注：慎用 `$ sudo rm / -rf` # 删除根目录下所有文件，使用 `sudo` 进行权限提升，`-f` 参数表示不显示任何信息。
+详见[多一个空格会发生什么？](https://github.com/MrMEEE/bumblebee-Old-and-abbandoned/commit/6cd6b2485668e8a87485cb34ca8a0a937e73f16d)**
 
 ## 安装软件 install
 
@@ -191,6 +192,12 @@ $ ls -lR | grep "^d" | wc -l # 统计当前目录及其子目录下目录文件�
 {% highlight shell %}
 $ cat -A <file> # 把文件 <file> 内容全部输出至标准输出，`-A` 用于显示不可打印字符，行尾换行显示为 `$`。
 $ more <file> # 可滚动翻看文件 <file> 的内容，`Space` 键查看下一屏，`Enter` 键查看下一行，`B` 键查看上一屏。
+{% endhighlight %}
+
+## 查看内核参数 sysctl
+
+{% highlight shell %}
+$ sysctl -a # 查看 `Linux` 系统内核的全部参数。
 {% endhighlight %}
 
 ## 参考
