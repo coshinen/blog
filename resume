@@ -1,27 +1,36 @@
-<strong>Connecting to xx.xx.xx.xx:443...</strong>
+<strong>Connecting to 185.199.108.153:443...</strong>
 <strong>Connection established.</strong>
 
-<strong>Welcome to my CV (Powered by GitHub Pages)</strong>
+<strong>Welcome to XX.XX.X LTS (GNU/Linux x.xx.x-xx-generic x86_64)</strong>
 
 <strong>&nbsp;&nbsp;System information updated as of now</strong>
 
-<p align="center"><font size="6"><strong>Curriculum Vitae</strong></font></p>
+<span id="a">mistydew</span>:~$ ls -a
+<a>. .. resume</a>
+<span id="a">mistydew</span>:~$ cat resume
+<strong>Hi, I'm mistydew. It's my curriculum vitae.</strong>
+<p align="center"><font size="6"><strong>Zichen Yuan(mistydew)</strong></font><br>(+86)xxx-xxxx-xxxx | <a target="_blank" href="mailto:mistydew@qq.com">mistydew@qq.com</a> | Shenzhen, China</p>
+<font size="4"><strong>EDUCATION</strong></font>
+---------------------------------------------------------------------------------------------
+<strong>Zhenzhou University</strong><div style="float:right;">Sep 2013 - Jun 2017</div>
+Bachelor of Computer Science<div style="float:right;">Henan</div>
 
-<span id="a">mistydew</span>:~$ Hi, I'm mistydew. Let me introduce myself.
-
+<font size="4"><strong>PROFESSIONAL EXPERIENCE</strong></font>
+---------------------------------------------------------------------------------------------
 Github: <a target="_blank" href="https://github.com/mistydew">https://github.com/mistydew</a>
-Email: <a target="_blank" href="mailto:mistydew@qq.com">mistydew@qq.com</a>
-
-<strong>Here are some of my open or public projects:</strong>
-
+<strong>Here are some of my open or public projects.</strong>
 <a target="_blank" href="https://github.com/mistydew/SkyDrive">SkyDrive</a>
-
 * SkyDrive is a customised protocol cloud storage.
-
 <a target="_blank" href="https://github.com/mistydew/rssSearchEngine">rssSearchEngine</a>
-
 * A mini search engine with RSS.
-
 <a target="_blank" href="https://github.com/mistydew/blockchain">crowcoin</a>
-
 * An altcoin based on Bitcoin.
+
+<font size="4"><strong>PROFESSIONAL SKILLS</strong></font>
+---------------------------------------------------------------------------------------------
+<strong>Languages:</strong> C, C++
+
+<font size="4"><strong>MISCELLANEOUS</strong></font>
+---------------------------------------------------------------------------------------------
+<strong>Interests:</strong> Sport, Reading, Music(GC), Animation(CONAN)
+<span id="a">mistydew</span>:~$ 
