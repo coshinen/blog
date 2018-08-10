@@ -8,13 +8,13 @@
       <div class="footer-col footer-col-1">
         <ul class="contact-list">
           {% if site.resume %}
-          <li>{% include icon-portrait.html resume=site.resume title="Curriculum Vitae" %}</li>
+          <li>{% include icon/terminal.html resume=site.resume title="Curriculum Vitae" %}</li>
           {% endif %}
           {% if site.email %}
-          <li>{% include icon-envelope.html email=site.email %}</li>
+          <li>{% include icon/mail.html email=site.email %}</li>
           {% endif %}
           {% if site.feed_username %}
-          <li>{% include icon-rss-square.html username=site.feed_username title="Feed Subscribe(FeedBurner)" %}</li>
+          <li>{% include icon/rss.html username=site.feed_username title="Feed Subscribe(FeedBurner)" %}</li>
           {% endif %}
         </ul>
       </div>

@@ -3,13 +3,13 @@
 <div class="pagination">
   <div class="prev-page" style="float:left">
     {% if paginator.next_page %}
-      <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">{% include icon-chevron-left.html %}</a>
+      <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">{% include icon/chevron-left.html %}</a>
     {% endif %}
   </div>
 
   <div class="next-page" style="float:right">
     {% if paginator.previous_page %}
-      <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">{% include icon-chevron-right.html %}</a>
+      <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">{% include icon/chevron-right.html %}</a>
     {% endif %}
   </div>
 </div>
