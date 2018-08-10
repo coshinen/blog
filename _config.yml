@@ -25,7 +25,7 @@ btc_address: 1xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 markdown: kramdown
 
 # Gems
-gems: [jekyll-paginate]
+gems: [jekyll-paginate, jekyll-sitemap]
 paginate: 07
 paginate_path: "/page/:num"
 
