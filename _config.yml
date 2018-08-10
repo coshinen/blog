@@ -20,6 +20,7 @@ github_username:  mistydew
 feed_username:    mistydew
 rss: "/feed.xml"
 btc_address: 1xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+intensedebate_comments: true
 
 # Build settings
 markdown: kramdown
