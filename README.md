@@ -6,10 +6,10 @@
 - [ ] add "reply to" function: disqus
 - [ ] add summary
 - [ ] The anatomy of bitcoin v0.12.1 source
-- [x] add delimiter '|' into post title
-- [x] update background-color
+- [x] add sitemap
 
 ## Timeline
+* 2018.08.10 12:03 [new] sitemap
 * 2018.08.08 13:02 [new] delimiter '|' into post title, background-color
 * 2018.08.06 12:01 [new] Resume/CV(Curriculum Vitae) page
 * 2018.08.02 18:20 [new] Google and Baidu Customised Search
