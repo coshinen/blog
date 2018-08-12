@@ -4,6 +4,8 @@ title: Slogan
 permalink: /slogan.html
 ---
 
+* Raymond Fowler: When I was at college, I suffered from the curious delusion that I was there to study.
+
 * Mahatma Gandhi: First they ignore you, then they laugh at you, then they fight you, then you win.
 
 * Outliers: 10,000-Hour Rule.
