@@ -10,6 +10,7 @@ blog: parallel universe
 title: mistydew
 slogan: ソルト：無理は一番の、退屈しのぎだ。
 resume: "/resume.html"
+donate: "/donate.html"
 email: mistydew@qq.com
 description: > # this means to ignore newlines until "baseurl:"
   &copy; 2018 mistydew. Powered by Jekyll. Hosted with ❤ by GitHub.
