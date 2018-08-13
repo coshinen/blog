@@ -14,7 +14,7 @@
       </a>
 
       <div class="trigger">
-		<a class="page-search">{% include baidu_search.html %}</a>
+        <!-- <a class="page-search">{% include baidu_search.html %}</a> -->
         {% for my_page in site.pages %}
           {% if my_page.title %}
             <a class="page-link" href="{{ my_page.url | prepend: site.baseurl }}">{{ my_page.title }}</a>
@@ -25,5 +25,7 @@
     </nav>
 
   </div>
+
+  <div style="float:right;">{% include honehone_clock_tr.html %}</div>
 
 </header>
