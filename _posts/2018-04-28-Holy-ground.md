@@ -6,10 +6,10 @@ author: mistydew
 categories: GARNETCROW 歌詞
 tags: gc lyric
 ---
-![sparkle](https://raw.githubusercontent.com/mistydew/gc/master/images/cover/album/Album_02nd_SPARKLE_~%E7%AD%8B%E6%9B%B8%E3%81%8D%E9%80%9A%E3%82%8A%E3%81%AE%E3%82%B9%E3%82%AB%E3%82%A4%E3%83%96%E3%83%AB%E3%83%BC~.jpg)
+![sparkle](https://raw.githubusercontent.com/mistydew/gc2/master/cover/album/Album_02nd_SPARKLE_~%E7%AD%8B%E6%9B%B8%E3%81%8D%E9%80%9A%E3%82%8A%E3%81%AE%E3%82%B9%E3%82%AB%E3%82%A4%E3%83%96%E3%83%AB%E3%83%BC~.jpg)
 
 <audio controls>
-  <source src="https://raw.githubusercontent.com/mistydew/gc2/master/Holy%20ground.mp3" type="audio/mpeg">
+  <source src="https://raw.githubusercontent.com/mistydew/gc2/master/audio/Holy%20ground.mp3" type="audio/mpeg">
 您的浏览器不支持 audio 元素。
 </audio>
 

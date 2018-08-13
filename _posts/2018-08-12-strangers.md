@@ -6,7 +6,7 @@ author: mistydew
 categories: GARNETCROW 歌詞
 tags: gc lyric
 ---
-![parallel universe](https://raw.githubusercontent.com/mistydew/gc/master/images/cover/album/Album_08th_parallel_universe.jpg)
+![parallel universe](https://raw.githubusercontent.com/mistydew/gc2/master/cover/album/Album_08th_parallel_universe.jpg)
 
 <audio controls>
   <source src="" type="audio/mpeg">

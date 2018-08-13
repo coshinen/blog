@@ -6,10 +6,10 @@ author: mistydew
 categories: GARNETCROW 歌詞
 tags: gc lyric
 ---
-![Misty Mystery](https://raw.githubusercontent.com/mistydew/gc/master/images/cover/single/Single_33th_Misty_Mystery.jpg)
+![Misty Mystery](https://raw.githubusercontent.com/mistydew/gc2/master/cover/single/Single_33th_Misty_Mystery.jpg)
 
 <audio controls>
-  <source src="https://raw.githubusercontent.com/mistydew/gc2/master/Misty%20Mystery.mp3" type="audio/mpeg">
+  <source src="https://raw.githubusercontent.com/mistydew/gc2/master/audio/Misty%20Mystery.mp3" type="audio/mpeg">
 您的浏览器不支持 audio 元素。
 </audio>
 
