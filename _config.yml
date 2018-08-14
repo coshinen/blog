@@ -26,8 +26,8 @@ intensedebate_comments: true
 # Build settings
 markdown: kramdown
 
-# Gems
-gems: [jekyll-paginate, jekyll-sitemap]
+# Deprecation: The 'gems' configuration option has been renamed to 'plugins'.
+plugins: [jekyll-paginate, jekyll-sitemap]
 paginate: 07
 paginate_path: "/page/:num"
 
