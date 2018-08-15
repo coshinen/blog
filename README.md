@@ -8,6 +8,7 @@
 - [x] add web music player
 
 ## Timeline
+* 2018.08.15 13:08 [remove] particle background
 * 2018.08.13 13:29 [new] cPlayer: web music player
 * 2018.08.10 12:03 [new] sitemap, IntenseDebate's comments system
 * 2018.08.08 13:02 [new] delimiter '|' into post title, background-color
