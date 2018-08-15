@@ -3,6 +3,7 @@
   <div class="wrapper">
 
     <a class="site-title" href="{{ site.baseurl }}/">{{ site.blog }}</a>
+    <div style="position:fixed;left:0px;top:0px;">{% include honehone_clock_tr.html %}</div>
 
     <nav class="site-nav">
       <a href="#" class="menu-icon">
@@ -25,7 +26,6 @@
     </nav>
 
   </div>
-  <div style="float:right;">{% include honehone_clock_tr.html %}</div>
-  <div style="float:right;">{% include cplayer.html %}</div>
+  <div style="position:fixed;bottom:-7px;">{% include cplayer.html %}</div>
 
 </header>
