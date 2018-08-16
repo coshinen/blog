@@ -200,6 +200,12 @@ $ more <file> # 可滚动翻看文件 <file> 的内容，`Space` 键查看下一
 $ sysctl -a # 查看 `Linux` 系统内核的全部参数。
 {% endhighlight %}
 
+## 显示登陆用户 w
+
+{% highlight shell %}
+$ w # 显示当前登陆的用户及其正在执行的命令。
+{% endhighlight %}
+
 ## 参考
 * [Why Penguin is Linux logo? - LinuxScrew: Linux Blog](http://www.linuxscrew.com/2007/11/14/why-penguin-is-linux-logo)
 * [《Linus Torvalds自传》摘录 - 阮一峰的网络日志](http://www.ruanyifeng.com/blog/2012/09/linus_torvalds.html)
