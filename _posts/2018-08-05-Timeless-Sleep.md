@@ -3,7 +3,7 @@ layout: post
 title:  "Timeless Sleep"
 date:   2018-08-05 20:01:11 +0800
 author: mistydew
-categories: GARNETCROW 歌詞
+categories: ガーネット・クロウ 歌詞
 tags: gc lyric
 ---
 ![Timeless Sleep](https://raw.githubusercontent.com/mistydew/gc/master/images/cover/single/Single_09th_Timeless_Sleep.jpg)

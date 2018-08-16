@@ -3,7 +3,7 @@ layout: post
 title:  "strangers"
 date:   2018-08-12 20:10:12 +0800
 author: mistydew
-categories: GARNETCROW 歌詞
+categories: ガーネット・クロウ 歌詞
 tags: gc lyric
 ---
 ![parallel universe](https://raw.githubusercontent.com/mistydew/gc2/master/cover/album/Album_08th_parallel_universe.jpg)

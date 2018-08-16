@@ -3,7 +3,7 @@ layout: post
 title:  "Hello Sadness"
 date:   2018-05-05 20:09:09 +0800
 author: mistydew
-categories: GARNETCROW 歌詞
+categories: ガーネット・クロウ 歌詞
 tags: gc lyric
 ---
 ![stay](https://raw.githubusercontent.com/mistydew/gc2/master/cover/album/Album_07th_STAY_~%E5%A4%9C%E6%98%8E%E3%81%91%E3%81%AESoul~.jpg)

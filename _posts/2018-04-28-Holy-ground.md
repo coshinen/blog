@@ -3,7 +3,7 @@ layout: post
 title:  "Holy ground"
 date:   2018-04-28 20:02:04 +0800
 author: mistydew
-categories: GARNETCROW 歌詞
+categories: ガーネット・クロウ 歌詞
 tags: gc lyric
 ---
 ![sparkle ~筋書き通りのスカイブルー~](https://raw.githubusercontent.com/mistydew/gc2/master/cover/album/Album_02nd_SPARKLE_~%E7%AD%8B%E6%9B%B8%E3%81%8D%E9%80%9A%E3%82%8A%E3%81%AE%E3%82%B9%E3%82%AB%E3%82%A4%E3%83%96%E3%83%AB%E3%83%BC~.jpg)
