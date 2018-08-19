@@ -13,13 +13,13 @@ tags: blockchain bitcoin SourceAnalysis
 目前比特币的最新版本为 bitcoin v0.16.0，离区块链 1.0 落地还有些距离。
 
 ## 概要
-上一篇分析了第五步验证钱包数据库的完整性的详细过程，详见[比特币源码剖析（十二）](/2018/08/11/bitcoin-source-anatomy-12)。<br>
-本篇主要分析 `Step 6: network initialization` 第六步网络初始化的详细过程。
+上一篇分析了第六步初始化网络的详细过程，详见[比特币源码剖析（十二）](/2018/08/11/bitcoin-source-anatomy-12)。<br>
+本篇主要分析 `Step 7: load block chain` 第七步加载区块链的详细过程。
 
 ## 源码剖析
 
 <p id="Step07-ref"></p>
-3.11.6.第七步，加载区块链到内存。这部分代码实现在“init.cpp”文件的 `AppInit2(...)` 函数中。
+3.11.7.第七步，加载区块链到内存。这部分代码实现在“init.cpp”文件的 `AppInit2(...)` 函数中。
 
 {% highlight C++ %}
 bool AppInit2(boost::thread_group& threadGroup, CScheduler& scheduler) // 3.11.程序初始化，共 12 步
