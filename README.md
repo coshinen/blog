@@ -1,13 +1,13 @@
 # [_mistydew's blog_](https://mistydew.github.io)
 
 ## Todo
-- [ ] add asset footer refer to ruanyifeng
 - [ ] increase the display width
 - [ ] add summary
 - [ ] The anatomy of bitcoin v0.12.1 source
-- [x] add web music player
+- [x] add post copyright info
 
 ## Timeline
+* 2018.08.20 18:02 [new] post copyright
 * 2018.08.15 13:08 [remove] particle background
 * 2018.08.13 13:29 [new] cPlayer: web music player
 * 2018.08.10 12:03 [new] sitemap, IntenseDebate's comments system
