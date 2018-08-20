@@ -6,7 +6,7 @@
 <strong>&nbsp;&nbsp;System information updated as of now</strong>
 
 <span id="a">mistydew</span>:~$ ls -a
-<a>. .. resume</a>
+<a>. .. </a>resume
 <span id="a">mistydew</span>:~$ cat resume
 <strong>Hi, I'm mistydew. It's my curriculum vitae.</strong>
 <p align="center"><font size="6"><strong>Zichen Yuan(mistydew)</strong></font><br>(+86)xxx-xxxx-xxxx | <a target="_blank" href="mailto:mistydew@qq.com">mistydew@qq.com</a> | Shenzhen, China</p>
@@ -29,6 +29,11 @@ Github: <a target="_blank" href="https://github.com/mistydew">https://github.com
 <font size="4"><strong>PROFESSIONAL SKILLS</strong></font>
 ---------------------------------------------------------------------------------------------
 <strong>Languages:</strong> C, C++
+<strong>Platform:</strong> Linux
+<strong>Editor:</strong> Vi/Vim
+<strong>DB:</strong> Mysql, Redis, LevelDB, BerkeleyDB
+<strong>Design Pattern:</strong> Reactor, Thread pool(TCP/IP, select/epoll I/O)
+<strong>Open-Source Libraries:</strong> Boost, Libevent
 
 <font size="4"><strong>MISCELLANEOUS</strong></font>
 ---------------------------------------------------------------------------------------------
