@@ -19,6 +19,10 @@ layout: default
     {{ content }}
   </div>
 
+  {% if site.doc_info %}
+    {% include postinfo.html %}
+  {% endif %}
+
   {% if site.intensedebate_comments %}
     {% include comments.html %}
   {% endif %}
