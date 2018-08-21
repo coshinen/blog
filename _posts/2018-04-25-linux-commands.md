@@ -206,6 +206,14 @@ $ sysctl -a # 查看 `Linux` 系统内核的全部参数。
 $ w # 显示当前登陆的用户及其正在执行的命令。
 {% endhighlight %}
 
+## 查看系统版本信息
+
+{% highlight shell %}
+$ uname -a # 打印当前系统相关信息，`-a` 表示全部信息。
+$ lsb_release -a # 显示 LSB 和版本信息，`-a` 表示全部信息。
+$ cat /etc/issue # 查看系统版本信息。
+{% endhighlight %}
+
 ## 参考
 * [Why Penguin is Linux logo? - LinuxScrew: Linux Blog](http://www.linuxscrew.com/2007/11/14/why-penguin-is-linux-logo)
 * [《Linus Torvalds自传》摘录 - 阮一峰的网络日志](http://www.ruanyifeng.com/blog/2012/09/linus_torvalds.html)
