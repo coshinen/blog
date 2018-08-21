@@ -7,14 +7,14 @@
 - [x] add post copyright info
 
 ## Timeline
-* 2018.08.20 18:02 [new] post copyright
+* 2018.08.20 18:02 [new] post copyright(author, date, creative commons license, more)
 * 2018.08.15 13:08 [remove] particle background
 * 2018.08.13 13:29 [new] cPlayer: web music player
 * 2018.08.10 12:03 [new] sitemap, IntenseDebate's comments system
 * 2018.08.08 13:02 [new] delimiter '|' into post title, background-color
 * 2018.08.06 12:01 [new] Resume/CV(Curriculum Vitae) page
 * 2018.08.02 18:20 [new] Google and Baidu Customised Search
-* 2018.08.01 10:32 [new] tag cloud
+* 2018.08.01 12:32 [new] tag cloud
 * 2018.07.10 18:40 [new] tags page
 * 2018.07.03 13:00 [new] GitHub Contribution into the archive page
 * 2018.06.19 18:05 [new] post word statistics and the time of reading full
