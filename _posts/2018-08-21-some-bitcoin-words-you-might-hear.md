@@ -28,13 +28,13 @@ tags: blockchain bitcoin vocabulary translation
 ## Block（区块）
 
 区块是**区块链中的记录，包含并确认许多等待的交易**。
-平均来说，大约每 10 分钟，包含交易的新区块将通过[挖矿](#Mining-ref)追加到[区块链](BlockChain-ref)上。
+平均来说，大约每 10 分钟，包含交易的新区块将通过[挖矿](#Mining-ref)追加到[区块链](#BlockChain-ref)上。
 
 <p id="BlockChain-ref"></p>
 ## Block Chain（区块链）
 
 区块链是**比特币交易按时间顺序的公共记录**。区块链在所有比特币用户间共享。
-用于验证比特币交易的持久性并防止[双重支出](#DoubleSpend)。
+用于验证比特币交易的持久性并防止[双重支出](#DoubleSpend-ref)。
 
 ## BTC（比特币单位）
 
@@ -97,7 +97,7 @@ tags: blockchain bitcoin vocabulary translation
 ## Wallet（钱包）
 
 比特币钱包**相当于比特币网络上的实体钱包**。
-钱包实际包含你的[私钥](#PrivateKey-ref)，允许你在[区块](#BlockChain-ref)中使用分配给它的比特币。
+钱包实际包含你的[私钥](#PrivateKey-ref)，允许你在[区块](#Block-ref)中使用分配给它的比特币。
 每个比特币钱包都能显示它持有的所有比特币总余额，并允许你向特定的人支付特定的金额，就像真钱包一样。
 这与商家向你收取费用的信用卡不同。
 
