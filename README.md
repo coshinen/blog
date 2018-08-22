@@ -2,13 +2,13 @@
 
 ## Todo
 - [ ] add summary
-- [ ] add baidu site search
 - [ ] increase the display width
 - [ ] The anatomy of bitcoin v0.12.1 source
+- [x] add baidu site search
 - [x] add DaoVoice chat tool
 
 ## Timeline
-* 2018.08.22 12:03 [new] DaoVoice web chat tool
+* 2018.08.22 12:03 [new] DaoVoice web chat tool, Baidu site search
 * 2018.08.20 18:02 [new] post copyright(author, date, creative commons license, more)
 * 2018.08.15 13:08 [remove] particle background
 * 2018.08.13 13:29 [new] cPlayer: web music player
