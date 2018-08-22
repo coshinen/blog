@@ -10,7 +10,7 @@ tags: blockchain bitcoin SourceAnalysis
 
 ## 读在前面
 比特币相关的解读目前均采用 [bitcoin v0.12.1](https://github.com/bitcoin/bitcoin/tree/v0.12.1)，此版本为官方内置挖矿算法的最后一版。<br>
-目前比特币的最新版本为 bitcoin v0.16.0，离区块链 1.0 落地还有些距离。
+目前比特币的最新版本为 bitcoin v0.16.1，离区块链 1.0 落地还有些距离。
 
 ## 概要
 上一篇分析了第三步参数转化为内部标志的代码，以及第四步应用程序初始化的大体过程，详见[比特币源码剖析（五）](/2018/06/23/bitcoin-source-anatomy-05)。<br>
