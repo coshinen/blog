@@ -206,6 +206,13 @@ $ sysctl -a # 查看 `Linux` 系统内核的全部参数。
 $ w # 显示当前登陆的用户及其正在执行的命令。
 {% endhighlight %}
 
+## 升级系统
+
+{% highlight shell %}
+$ do-release-upgrade # 升级。
+$ reboot # 升级完毕需要重启。
+{% endhighlight %}
+
 ## 查看系统版本信息
 
 {% highlight shell %}
