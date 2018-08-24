@@ -244,6 +244,67 @@ tags: blockchain bitcoin glossary translation
 
 **同义词**：HD wallet extended key（HD 钱包扩展的密钥）, Public extended key（扩展的公钥）, Private extended key（扩展的私钥）
 
+## Transaction Mutability（交易可变性）
+
+**定义**：某人改变的未确认交易且不使其无效的能力，这会改变交易号，使子交易无效。
+
+**同义词**：Transaction malleability（交易延展性）
+
+**不要混淆**：BIP62（可选的新交易版本的提议，减少了常见交易的已知变化集）
+
+## Txid, Transaction Identifier（交易号）
+
+**定义**：用于唯一标识特定交易的识别符；具体来说，是交易的 `sha256` 双散列。
+
+**不要混淆**：Outpoint（交易号和输出集的联合体，用于识别指定输出）
+
+## Transaction Input（交易输入）
+
+**定义**：交易的输入包含 3 个字段：输出点，签名脚本，和序列号。输出点引用前一笔交易的输出且签名脚本允许花费它。
+
+**同义词**：Input, TxIn
+
+## Transaction Output（交易输出）
+
+**定义**：交易的输出包含 2 个字段：转账 0 或更多聪的值字段和指明必须满足哪些条件才能进一步使用聪的公钥脚本。
+
+**同义词**：Output, TxOut
+
+**不要混淆**：Outpoint（特定输出的引用）
+
+## User Activated Soft Fork, UASF（用户激活的软分叉）
+
+**定义**：通过标志日或节点强制代替矿工信号激活的软分叉。
+
+**不要混淆**：Miner activated soft fork（通过矿工信号激活的软分叉）,
+Fork（常规的分叉，所有节点都遵循相同的共识规则，因此一旦一条链的工作量证明多余另一条，该分叉就消失了）,
+Hard fork（区块链中由未升级的节点不遵循新的共识规则导致的永久性的分叉）,
+Soft fork（区块链中由未升级的节点不遵循新的共识规则导致的临时的分叉）,
+Software fork（当一个或多个开发人员与其他开发人员永久分开开发一份基础代码）,
+Git fork（当一个或多个开发人员与其他开发人员临时分开开发一份基础代码）
+
+## Unspent Transaction Output, UTXO（未花费的交易输出）
+
+**定义**：能作为一笔交易输入的可花费的未花费的交易输出（UTXO）。
+
+**不要混淆**：Output（任意输出，包含花费和未花费的。输出是 UTXO 的超集，UTXO 是输出的子集）
+
+## Wallet（钱包）
+
+**定义**：存储私钥和区块链镜像的软件（有时作为执行处理的服务器的客户端），允许用户花费和接收聪。
+
+**不要混淆**：HD wallet（允许钱包从单个种子创建全部密钥的协议，使用该协议的钱包）
+
+## Wallet Import Format, WIF（钱包导入格式）
+
+**定义**：一种数据交换格式，旨在允许导出和导入单个私钥，并带有指明其是否使用压缩公钥的标志。
+
+**不要混淆**：Extended private keys（允许导入私钥的层次体系）
+
+## Watch-Only Address（Watch-Only 地址）
+
+**定义**：钱包中不带相应私钥的地址或公钥脚本，允许钱包监视其输出但不能花费它们。
+
 （未完成）
 
 Thanks for your time.
