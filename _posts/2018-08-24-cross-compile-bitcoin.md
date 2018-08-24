@@ -85,6 +85,7 @@ Press <enter> to keep the current choice[*], or type selection number: # 这里�
 $ cd depends
 $ sudo make HOST=x86_64-w64-mingw32 -j4 # 这一步会下载相关依赖，确保网络畅通
 $ cd ..
+$ ./autogen.sh # 若是首次构建，先生成 configure
 $ sudo ./configure --prefix=`pwd`/depends/x86_64-w64-mingw32
 $ sudo make # 若构建过非 Windows 版的程序，则执行 sudo make clean; sudo make
 {% endhighlight %}
