@@ -68,7 +68,7 @@ int main(int argc, char* argv[]) // 0.程序入口
 3.11.5.验证钱包数据库的完整性。[`Step 5: verify wallet database integrity`](/2018/08/04/bitcoin-source-anatomy-11#Step05-ref)<br>
 3.11.6.网络初始化。[`Step 6: network initialization`](/2018/08/11/bitcoin-source-anatomy-12#Step06-ref)<br>
 3.11.7.加载区块链。[`Step 7: load block chain`](/2018/08/18/bitcoin-source-anatomy-13#Step07-ref)<br>
-3.11.8.加载钱包。[`Step 8: load wallet`]()<br>
+3.11.8.加载钱包。[`Step 8: load wallet`](/2018/08/25/bitcoin-source-anatomy-14#Step08-ref)<br>
 3.11.9.数据目录维护。[`Step 9: data directory maintenance`]()<br>
 3.11.10.导入区块。[`Step 10: import blocks`]()<br>
 3.11.11.启动节点。[`Step 11: start node`]()<br>
