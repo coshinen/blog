@@ -5,6 +5,7 @@ date:   2018-06-04 11:42:32 +0800
 author: mistydew
 categories: Blockchain
 tags: blockchain bitcoin bitcoin-cli commands
+excerpt: $ bitcoin-cli getbalance ( "account" minconf includeWatchonly )
 ---
 ![bitcoin](/images/20180504/bitcoin.svg)
 

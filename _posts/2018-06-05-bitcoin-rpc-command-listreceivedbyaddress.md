@@ -5,6 +5,7 @@ date:   2018-06-05 10:23:32 +0800
 author: mistydew
 categories: Blockchain
 tags: blockchain bitcoin bitcoin-cli commands
+excerpt: $ bitcoin-cli listreceivedbyaddress ( minconf includeempty includeWatchonly )
 ---
 ![bitcoin](/images/20180504/bitcoin.svg)
 

@@ -5,6 +5,7 @@ date:   2018-05-29 16:47:29 +0800
 author: mistydew
 categories: Blockchain
 tags: blockchain bitcoin bitcoin-cli commands
+excerpt: $ bitcoin-cli getnettotals
 ---
 ![bitcoin](/images/20180504/bitcoin.svg)
 

@@ -5,6 +5,7 @@ date:   2018-05-29 08:52:09 +0800
 author: mistydew
 categories: Blockchain
 tags: blockchain bitcoin bitcoin-cli commands
+excerpt: $ bitcoin-cli listbanned
 ---
 ![bitcoin](/images/20180504/bitcoin.svg)
 

@@ -24,6 +24,9 @@ btc_address: 1xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 doc_info: true
 intensedebate_comments: true
 
+# Excerpt / Abstract / Summary
+excerpt_separator: "<!-- excerpt -->"
+
 # Build settings
 markdown: kramdown
 

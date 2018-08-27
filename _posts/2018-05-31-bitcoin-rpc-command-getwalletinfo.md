@@ -5,6 +5,7 @@ date:   2018-05-31 11:25:12 +0800
 author: mistydew
 categories: Blockchain
 tags: blockchain bitcoin bitcoin-cli commands
+excerpt: $ bitcoin-cli getwalletinfo
 ---
 ![bitcoin](/images/20180504/bitcoin.svg)
 

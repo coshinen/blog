@@ -5,6 +5,7 @@ date:   2018-06-11 11:43:35 +0800
 author: mistydew
 categories: Blockchain
 tags: blockchain bitcoin bitcoin-cli commands
+excerpt: $ bitcoin-cli verifytxoutproof "proof"
 ---
 ![bitcoin](/images/20180504/bitcoin.svg)
 

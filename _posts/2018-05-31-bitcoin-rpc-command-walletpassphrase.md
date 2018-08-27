@@ -5,6 +5,7 @@ date:   2018-05-31 15:47:22 +0800
 author: mistydew
 categories: Blockchain
 tags: blockchain bitcoin bitcoin-cli commands
+excerpt: $ bitcoin-cli walletpassphrase "passphrase" timeout
 ---
 ![bitcoin](/images/20180504/bitcoin.svg)
 

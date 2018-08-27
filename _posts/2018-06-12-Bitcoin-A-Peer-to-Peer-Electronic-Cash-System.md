@@ -12,6 +12,7 @@ Bitcoin: A Peer-to-Peer Electronic Cash System<br>
 比特币：一种对等的电子现金系统
 </font>
 </p>
+<!-- excerpt -->
 
 <p align="center">
 Satoshi Nakamoto<br>

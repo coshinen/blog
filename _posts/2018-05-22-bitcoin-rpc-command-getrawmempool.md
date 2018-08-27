@@ -5,6 +5,7 @@ date:   2018-05-22 16:55:31 +0800
 author: mistydew
 categories: Blockchain
 tags: blockchain bitcoin bitcoin-cli commands
+excerpt: $ bitcoin-cli getrawmempool ( verbose )
 ---
 ![bitcoin](/images/20180504/bitcoin.svg)
 

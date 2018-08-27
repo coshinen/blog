@@ -5,6 +5,7 @@ date:   2018-05-23 13:38:36 +0800
 author: mistydew
 categories: Blockchain
 tags: blockchain bitcoin bitcoin-cli commands
+excerpt: $ bitcoin-cli help ( "command" )
 ---
 ![bitcoin](/images/20180504/bitcoin.svg)
 

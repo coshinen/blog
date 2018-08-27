@@ -5,6 +5,7 @@ date:   2018-05-31 11:44:43 +0800
 author: mistydew
 categories: Blockchain
 tags: blockchain bitcoin bitcoin-cli commands
+excerpt: $ bitcoin-cli encryptwallet "passphrase"
 ---
 ![bitcoin](/images/20180504/bitcoin.svg)
 

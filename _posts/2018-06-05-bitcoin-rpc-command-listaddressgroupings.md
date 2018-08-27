@@ -5,6 +5,7 @@ date:   2018-06-05 11:32:59 +0800
 author: mistydew
 categories: Blockchain
 tags: blockchain bitcoin bitcoin-cli commands
+excerpt: $ bitcoin-cli listaddressgroupings
 ---
 ![bitcoin](/images/20180504/bitcoin.svg)
 

@@ -5,6 +5,7 @@ date:   2018-06-06 15:10:01 +0800
 author: mistydew
 categories: Blockchain
 tags: blockchain bitcoin bitcoin-cli commands
+excerpt: $ bitcoin-cli importprivkey "bitcoinprivkey" ( "label" rescan )
 ---
 ![bitcoin](/images/20180504/bitcoin.svg)
 

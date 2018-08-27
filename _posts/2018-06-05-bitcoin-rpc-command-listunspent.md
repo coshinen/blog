@@ -5,6 +5,7 @@ date:   2018-06-05 15:23:42 +0800
 author: mistydew
 categories: Blockchain
 tags: blockchain bitcoin bitcoin-cli commands
+excerpt: $ bitcoin-cli listunspent ( minconf maxconf  ["address",...] )
 ---
 ![bitcoin](/images/20180504/bitcoin.svg)
 

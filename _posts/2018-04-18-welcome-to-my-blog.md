@@ -7,6 +7,7 @@ categories: Profile
 tags: profile
 ---
 You can contact me via e-mail: [mistydew@qq.com](https://en.mail.qq.com).
+<!-- excerpt -->
 
 The following is a example of highlight.
 {% highlight ruby linenos %}

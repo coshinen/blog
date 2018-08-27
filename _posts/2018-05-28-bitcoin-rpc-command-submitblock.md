@@ -5,6 +5,7 @@ date:   2018-05-28 10:46:23 +0800
 author: mistydew
 categories: Blockchain
 tags: blockchain bitcoin bitcoin-cli commands
+excerpt: $ bitcoin-cli submitblock "hexdata" ( "jsonparametersobject" )
 ---
 ![bitcoin](/images/20180504/bitcoin.svg)
 

@@ -14,6 +14,7 @@ tags: C C++ Automake
 * autoheader
 * autoconf
 * automake
+<!-- excerpt -->
 
 ## 0. 编写源码
 

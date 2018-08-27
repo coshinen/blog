@@ -5,6 +5,7 @@ date:   2018-05-22 15:41:33 +0800
 author: mistydew
 categories: Blockchain
 tags: blockchain bitcoin bitcoin-cli commands
+excerpt: $ bitcoin-cli getdifficulty
 ---
 ![bitcoin](/images/20180504/bitcoin.svg)
 

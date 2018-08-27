@@ -5,6 +5,7 @@ date:   2018-06-15 11:32:23 +0800
 author: mistydew
 categories: Blockchain
 tags: blockchain bitcoin bitcoin-cli commands
+excerpt: $ bitcoin-cli addmultisigaddress urequired ["key",...] ( "account" )
 ---
 ![bitcoin](/images/20180504/bitcoin.svg)
 

@@ -15,6 +15,7 @@ tags: blockchain bitcoin SourceAnalysis
 ## 概要
 上一篇分析了应用程序初始化中初始化 `HTTP` 服务器的详细过程，详见[比特币源码剖析（九）](/2018/07/21/bitcoin-source-anatomy-09)。<br>
 本篇主要分析 `Step 4: application initialization: dir lock, daemonize, pidfile, debug log` 第四步应用程序初始化服务器中启动 `RPC` 的详细过程。
+<!-- excerpt -->
 
 ## 源码剖析
 

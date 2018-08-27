@@ -5,6 +5,7 @@ date:   2018-05-30 08:51:03 +0800
 author: mistydew
 categories: Blockchain
 tags: blockchain bitcoin bitcoin-cli commands
+excerpt: $ bitcoin-cli getaddednodeinfo dns ( "node" )
 ---
 ![bitcoin](/images/20180504/bitcoin.svg)
 

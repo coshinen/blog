@@ -5,6 +5,7 @@ date:   2018-06-12 11:23:30 +0800
 author: mistydew
 categories: Blockchain
 tags: blockchain bitcoin bitcoin-cli commands
+excerpt: $ bitcoin-cli getrawtransaction "txid" ( verbose )
 ---
 ![bitcoin](/images/20180504/bitcoin.svg)
 

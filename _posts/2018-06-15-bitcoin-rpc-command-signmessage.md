@@ -5,6 +5,7 @@ date:   2018-06-15 09:51:33 +0800
 author: mistydew
 categories: Blockchain
 tags: blockchain bitcoin bitcoin-cli commands
+excerpt: $ bitcoin-cli signmessage "bitcoinaddress" "message"
 ---
 ![bitcoin](/images/20180504/bitcoin.svg)
 

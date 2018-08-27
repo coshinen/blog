@@ -18,6 +18,7 @@ stickie: true
 它也提供访问公共测试网 testnet，一个全球的测试环境，使用一个使用无价值的“测试比特币”替代区块链模仿比特币主网。
 回归测试网 regtest 或回归测试模式 Regression Test Mode 创建了一个用作本地测试环境的私有区块链。
 最终，一个允许用户发送 RPC 命令到 `bitcoind` 的简单程序 `bitcoin-cli` 也包含在比特币核心内。
+<!-- excerpt -->
 
 ### 基础命令
 

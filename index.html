@@ -16,6 +16,12 @@ layout: default
           <h2>
             <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
           </h2>
+          <div class="excerpt">
+            <p>{{ post.excerpt | strip_html }}</p>
+            <footer>
+              <a class="readmore" href="{{ post.url }}">阅读全文 &raquo;</a>
+            </footer>
+          </div>
         </li>
       {% endif %}
     {% endfor %}
@@ -29,6 +35,12 @@ layout: default
         <h2>
           <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
         </h2>
+        <div class="excerpt">
+          <p>{{ post.excerpt | strip_html }}</p>
+          <footer>
+            <a class="readmore" href="{{ post.url }}">阅读全文 &raquo;</a>
+          </footer>
+        </div>
       </li>
     {% endfor %}
   </ul>

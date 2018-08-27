@@ -5,6 +5,7 @@ date:   2018-06-07 10:40:03 +0800
 author: mistydew
 categories: Blockchain
 tags: blockchain bitcoin bitcoin-cli commands
+excerpt: $ bitcoin-cli importpubkey "pubkey" ( "label" rescan )
 ---
 ![bitcoin](/images/20180504/bitcoin.svg)
 

@@ -5,6 +5,7 @@ date:   2018-05-28 14:55:52 +0800
 author: mistydew
 categories: Blockchain
 tags: blockchain bitcoin bitcoin-cli commands
+excerpt: $ bitcoin-cli addnode "node" "add|remove|onetry"
 ---
 ![bitcoin](/images/20180504/bitcoin.svg)
 

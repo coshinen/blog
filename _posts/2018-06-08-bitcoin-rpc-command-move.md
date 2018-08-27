@@ -5,6 +5,7 @@ date:   2018-06-08 10:03:06 +0800
 author: mistydew
 categories: Blockchain
 tags: blockchain bitcoin bitcoin-cli commands
+excerpt: $ bitcoin-cli move "fromaccount" "toaccount" amount ( minconf "comment" )
 ---
 ![bitcoin](/images/20180504/bitcoin.svg)
 

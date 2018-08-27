@@ -5,6 +5,7 @@ date:   2018-06-06 14:06:23 +0800
 author: mistydew
 categories: Blockchain
 tags: blockchain bitcoin bitcoin-cli commands
+excerpt: $ bitcoin-cli dumpprivkey "bitcoinaddress"
 ---
 ![bitcoin](/images/20180504/bitcoin.svg)
 

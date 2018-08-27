@@ -5,6 +5,7 @@ date:   2018-06-15 14:25:15 +0800
 author: mistydew
 categories: Blockchain
 tags: blockchain bitcoin bitcoin-cli commands
+excerpt: $ bitcoin-cli estimatesmartfee nblocks
 ---
 ![bitcoin](/images/20180504/bitcoin.svg)
 

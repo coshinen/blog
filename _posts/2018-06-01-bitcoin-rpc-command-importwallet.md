@@ -5,6 +5,7 @@ date:   2018-06-01 15:52:09 +0800
 author: mistydew
 categories: Blockchain
 tags: blockchain bitcoin bitcoin-cli commands
+excerpt: $ bitcoin-cli importwallet "filename" # 从一个导出的钱包文件（见 `dumpwallet`）导入密钥
 ---
 ![bitcoin](/images/20180504/bitcoin.svg)
 

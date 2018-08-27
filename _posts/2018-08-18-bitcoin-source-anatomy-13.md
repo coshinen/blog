@@ -15,6 +15,7 @@ tags: blockchain bitcoin SourceAnalysis
 ## 概要
 上一篇分析了第六步初始化网络的详细过程，详见[比特币源码剖析（十二）](/2018/08/11/bitcoin-source-anatomy-12)。<br>
 本篇主要分析 `Step 7: load block chain` 第七步加载区块链的详细过程。
+<!-- excerpt -->
 
 ## 源码剖析
 

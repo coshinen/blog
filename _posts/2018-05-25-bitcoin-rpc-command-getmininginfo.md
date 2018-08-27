@@ -5,6 +5,7 @@ date:   2018-05-25 11:53:32 +0800
 author: mistydew
 categories: Blockchain
 tags: blockchain bitcoin bitcoin-cli commands
+excerpt: $ bitcoin-cli getmininginfo
 ---
 ![bitcoin](/images/20180504/bitcoin.svg)
 

@@ -5,6 +5,7 @@ date:   2018-06-08 16:45:05 +0800
 author: mistydew
 categories: Blockchain
 tags: blockchain bitcoin bitcoin-cli commands
+excerpt: $ bitcoin-cli sendmany "fromaccount" {"address":amount,...} ( minconf "comment" ["address",...] )
 ---
 ![bitcoin](/images/20180504/bitcoin.svg)
 

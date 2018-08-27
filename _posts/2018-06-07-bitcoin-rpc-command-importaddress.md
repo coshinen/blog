@@ -5,6 +5,7 @@ date:   2018-06-07 08:55:46 +0800
 author: mistydew
 categories: Blockchain
 tags: blockchain bitcoin bitcoin-cli commands
+excerpt: $ bitcoin-cli importaddress "address" ( "label" rescan p2sh )
 ---
 ![bitcoin](/images/20180504/bitcoin.svg)
 

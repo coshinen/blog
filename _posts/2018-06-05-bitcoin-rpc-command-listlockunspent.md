@@ -5,6 +5,7 @@ date:   2018-06-05 17:46:53 +0800
 author: mistydew
 categories: Blockchain
 tags: blockchain bitcoin bitcoin-cli commands
+excerpt: $ bitcoin-cli listlockunspent
 ---
 ![bitcoin](/images/20180504/bitcoin.svg)
 

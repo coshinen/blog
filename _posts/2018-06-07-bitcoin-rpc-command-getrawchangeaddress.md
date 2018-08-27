@@ -5,6 +5,7 @@ date:   2018-06-07 14:28:37 +0800
 author: mistydew
 categories: Blockchain
 tags: blockchain bitcoin bitcoin-cli commands
+excerpt: $ bitcoin-cli getrawchangeaddress
 ---
 ![bitcoin](/images/20180504/bitcoin.svg)
 

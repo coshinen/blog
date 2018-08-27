@@ -6,6 +6,9 @@ author: mistydew
 categories: Blockchain
 tags: blockchain bitcoin build/compile
 ---
+在 `Linux` 平台下交叉编译比特币源码，得到 `Windows` 版本的可执行程序。
+<!-- excerpt -->
+
 ![bitcoin](/images/20180504/bitcoin.svg)
 
 ## 读在前面

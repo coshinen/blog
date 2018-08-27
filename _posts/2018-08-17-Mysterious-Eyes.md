@@ -5,6 +5,7 @@ date:   2018-08-17 20:00:03 +0800
 author: mistydew
 categories: ガーネット・クロウ 歌詞
 tags: gc lyric
+excerpt: 君と僕とは　別の人間(いきもの)だから 好みが違う　歩く速さも　想いの伝え方も
 ---
 ![Mysterious Eyes](https://raw.githubusercontent.com/mistydew/gc/master/images/cover/single/Single_01st_Mysterious_Eyes.jpg)
 

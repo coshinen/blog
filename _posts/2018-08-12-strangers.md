@@ -5,6 +5,7 @@ date:   2018-08-12 20:10:12 +0800
 author: mistydew
 categories: ガーネット・クロウ 歌詞
 tags: gc lyric
+excerpt: 緑揺れる午後の空 幾つ目の飛行機かな
 ---
 ![parallel universe](https://raw.githubusercontent.com/mistydew/gc2/master/cover/album/Album_08th_parallel_universe.jpg)
 

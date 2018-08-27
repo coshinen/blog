@@ -15,6 +15,7 @@ tags: blockchain bitcoin SourceAnalysis
 ## 概要
 上一篇分析了第五步验证钱包数据库的完整性的详细过程，详见[比特币源码剖析（十一）](/2018/08/04/bitcoin-source-anatomy-11)。<br>
 本篇主要分析 `Step 6: network initialization` 第六步网络初始化的详细过程。
+<!-- excerpt -->
 
 ## 源码剖析
 

@@ -5,6 +5,7 @@ date:   2018-07-03 22:21:44 +0800
 author: mistydew
 categories: Blockchain
 tags: blockchain bitcoin bitcoin-cli commands
+excerpt: $ bitcoin-cli fundrawtransaction "hexstring" includeWatching
 ---
 ![bitcoin](/images/20180504/bitcoin.svg)
 

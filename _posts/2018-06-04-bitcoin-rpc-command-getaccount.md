@@ -5,6 +5,7 @@ date:   2018-06-04 09:22:55 +0800
 author: mistydew
 categories: Blockchain
 tags: blockchain bitcoin bitcoin-cli commands
+excerpt: $ bitcoin-cli getaccount "bitcoinaddress"
 ---
 ![bitcoin](/images/20180504/bitcoin.svg)
 

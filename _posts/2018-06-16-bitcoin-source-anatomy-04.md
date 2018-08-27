@@ -15,6 +15,7 @@ tags: blockchain bitcoin SourceAnalysis
 ## 概要
 上一篇分析了数据目录路径的获取、配置文件中设置的启动选项的读取、不同网络链参数（包含创世区块信息）的选择、命令行参数完整性检测、`Linux` 下守护进程的后台化以及服务选项的设置，详见[比特币源码剖析（三）](/2018/06/09/bitcoin-source-anatomy-03)。<br>
 本篇主要分析 `InitLogging()` 初始化日志记录函数，`InitParameterInteraction()` 初始化参数交互函数，`AppInit2(threadGroup, scheduler)` 真正地初始化应用程序函数。
+<!-- excerpt -->
 
 ## 源码剖析
 

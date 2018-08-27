@@ -5,6 +5,7 @@ date:   2018-05-02 20:10:04 +0800
 author: mistydew
 categories: ガーネット・クロウ 歌詞
 tags: gc lyric
+excerpt: 風の音だけが 体中を包む
 ---
 ![over drive](https://raw.githubusercontent.com/mistydew/gc2/master/cover/single/Single_31th_Over_Drive.jpg)
 

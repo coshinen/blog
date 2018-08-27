@@ -5,6 +5,7 @@ date:   2018-06-07 16:41:59 +0800
 author: mistydew
 categories: Blockchain
 tags: blockchain bitcoin bitcoin-cli commands
+excerpt: $ bitcoin-cli gettransaction "txid" ( includeWatchonly )
 ---
 ![bitcoin](/images/20180504/bitcoin.svg)
 

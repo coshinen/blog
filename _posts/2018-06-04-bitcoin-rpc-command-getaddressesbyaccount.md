@@ -5,6 +5,7 @@ date:   2018-06-04 11:07:06 +0800
 author: mistydew
 categories: Blockchain
 tags: blockchain bitcoin bitcoin-cli commands
+excerpt: $ bitcoin-cli getaddressesbyaccount "account"
 ---
 ![bitcoin](/images/20180504/bitcoin.svg)
 

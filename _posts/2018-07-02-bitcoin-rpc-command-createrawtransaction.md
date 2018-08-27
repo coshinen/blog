@@ -5,6 +5,7 @@ date:   2018-07-02 19:34:41 +0800
 author: mistydew
 categories: Blockchain
 tags: blockchain bitcoin bitcoin-cli commands
+excerpt: $ bitcoin-cli createrawtransaction [{"txid":"id","vout":n},...] {"address":amount,"data":"hex",...} ( locktime )
 ---
 ![bitcoin](/images/20180504/bitcoin.svg)
 

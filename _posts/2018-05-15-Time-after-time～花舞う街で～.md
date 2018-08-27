@@ -5,6 +5,7 @@ date:   2018-05-15 20:03:03 +0800
 author: mistydew
 categories: コナン 歌詞
 tags: conan lyric
+excerpt: もしも君に巡り逢えたら 二度と君の手を離さない
 ---
 ![time after time~hanamaumachide~](https://raw.githubusercontent.com/mistydew/dc/master/images/Time%20after%20time%EF%BD%9E%E8%8A%B1%E8%88%9E%E3%81%86%E8%A1%97%E3%81%A7%EF%BD%9E.jpg)
 

@@ -15,6 +15,7 @@ tags: blockchain bitcoin SourceAnalysis
 ## 概要
 上一篇分析了应用程序启动前运行环境的设置和信号处理函数的连接，详见[比特币源码剖析（一）](/2018/05/26/bitcoin-source-anatomy-01)。<br>
 本篇开始分析 `AppInit(argc, argv)` 应用程序初始化函数。
+<!-- excerpt -->
 
 ## 源码剖析
 

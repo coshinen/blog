@@ -5,6 +5,7 @@ date:   2018-06-01 10:52:21 +0800
 author: mistydew
 categories: Blockchain
 tags: blockchain bitcoin bitcoin-cli commands
+excerpt: $ bitcoin-cli dumpwallet "filename"
 ---
 ![bitcoin](/images/20180504/bitcoin.svg)
 

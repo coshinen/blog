@@ -15,6 +15,7 @@ tags: blockchain bitcoin datadir
 ## 概要
 比特币核心通常把其所有数据放在一个目录中，该目录称为数据目录。<br>
 不同的操作系统，其默认位置是不同的，以下列出 3 种常用操作系统下比特币数据目录的默认位置：
+<!-- excerpt -->
 
 * Windows < Vista: C:\Documents and Settings\Username\Application Data\Bitcoin
 

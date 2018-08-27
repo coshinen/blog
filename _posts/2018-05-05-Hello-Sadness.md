@@ -5,6 +5,7 @@ date:   2018-05-05 20:09:09 +0800
 author: mistydew
 categories: ガーネット・クロウ 歌詞
 tags: gc lyric
+excerpt: 離陸間近の午前1時5分 空を見上げていた いつかまた会えるかなあ 何故かなあ
 ---
 ![stay](https://raw.githubusercontent.com/mistydew/gc2/master/cover/album/Album_07th_STAY_~%E5%A4%9C%E6%98%8E%E3%81%91%E3%81%AESoul~.jpg)
 

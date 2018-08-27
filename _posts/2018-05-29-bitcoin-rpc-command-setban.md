@@ -5,6 +5,7 @@ date:   2018-05-29 10:29:55 +0800
 author: mistydew
 categories: Blockchain
 tags: blockchain bitcoin bitcoin-cli commands
+excerpt: $ bitcoin-cli setban "ip(/netmask)" "add|remove" (bantime) (absolute)
 ---
 ![bitcoin](/images/20180504/bitcoin.svg)
 

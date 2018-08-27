@@ -5,6 +5,7 @@ date:   2018-06-30 20:11:08 +0800
 author: mistydew
 categories: ガーネット・クロウ 歌詞
 tags: gc lyric
+excerpt: why 見えぬ明日へと 期待込め歩いてるの
 ---
 ![Misty Mystery](https://raw.githubusercontent.com/mistydew/gc2/master/cover/single/Single_33th_Misty_Mystery.jpg)
 

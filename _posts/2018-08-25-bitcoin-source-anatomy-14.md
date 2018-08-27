@@ -15,6 +15,7 @@ tags: blockchain bitcoin SourceAnalysis
 ## 概要
 上一篇分析了第七步加载区块链的详细过程，详见[比特币源码剖析（十三）](/2018/08/18/bitcoin-source-anatomy-13)。<br>
 本篇主要分析 `Step 8: load wallet` 第八步加载钱包的详细过程。
+<!-- excerpt -->
 
 ## 源码剖析
 

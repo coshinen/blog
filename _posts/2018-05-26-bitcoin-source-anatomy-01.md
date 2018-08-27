@@ -15,6 +15,7 @@ tags: blockchain bitcoin SourceAnalysis
 ## 概要
 第一篇主要列出比特币核心服务程序 `bitcoind` 的启动流程及其入口函数，详见[比特币源码剖析](/2018/05/19/bitcoin-source-anatomy-00)。<br>
 该篇主要分析 `SetupEnvironment()` 和 `noui_connect()` 函数。
+<!-- excerpt -->
 
 ## 源码剖析
 

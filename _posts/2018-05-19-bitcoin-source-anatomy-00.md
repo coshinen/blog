@@ -15,7 +15,8 @@ stickie: true
 
 ## 概要
 下载比特币源码到本地，这里可以采用 Linux 系统的 Git 把官方源码克隆至本地。<br>
-切换到 v0.12.1 版本的源码，进入 `bitcoin/src` 目录，开始我们的源码之旅。
+切换到 v0.12.1 版本的源码，进入 `bitcoin/src` 目录，开始我们的源码阅读之旅。
+<!-- excerpt -->
 
 {% highlight shell %}
 $ git clone https://github.com/bitcoin/bitcoin.git # 克隆官方源码最新版到本地

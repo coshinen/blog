@@ -15,6 +15,7 @@ tags: blockchain bitcoin SourceAnalysis
 ## 概要
 上一篇分析了应用程序初始化中创建脚本验证的线程函数和创建轻量级任务调度线程函数，详见[比特币源码剖析（八）](/2018/07/14/bitcoin-source-anatomy-08)。<br>
 本篇主要分析 `Step 4: application initialization: dir lock, daemonize, pidfile, debug log` 第四步应用程序初始化中初始化服务器的详细过程。
+<!-- excerpt -->
 
 ## 源码剖析
 

@@ -5,6 +5,7 @@ date:   2018-06-11 13:59:06 +0800
 author: mistydew
 categories: Blockchain
 tags: blockchain bitcoin bitcoin-cli commands
+excerpt: $ bitcoin-cli gettxoutsetinfo
 ---
 ![bitcoin](/images/20180504/bitcoin.svg)
 

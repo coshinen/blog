@@ -16,6 +16,7 @@ tags: translation study
 他们发现，较高的初始内在动机预示了更多的刻意练习。
 在 12 个月的时间中，内在动机和个人的刻意练习是相互关联的，
 换句话说，是内在动机和刻意练习的螺旋式上升。
+<!-- excerpt -->
 
 ![presentatie](/images/20180803/presentatie.jpg)
 

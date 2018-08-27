@@ -5,6 +5,7 @@ date:   2018-07-04 20:25:33 +0800
 author: mistydew
 categories: Blockchain
 tags: blockchain bitcoin bitcoin-cli commands
+excerpt: $ bitcoin-cli signrawtransaction "hexstring" ( [{"txid":"id","vout":n,"scriptPubKey":"hex","redeemScript":"hex"},...] ["privatekey1",...] sighashtype )
 ---
 ![bitcoin](/images/20180504/bitcoin.svg)
 

@@ -15,6 +15,7 @@ tags: blockchain bitcoin SourceAnalysis
 ## 概要
 上一篇分析了应用程序初始化中启动 `RPC` 的详细过程，详见[比特币源码剖析（十）](/2018/07/28/bitcoin-source-anatomy-10)。<br>
 本篇主要分析 `Step 5: verify wallet database integrity` 第五步验证钱包数据库的完整性的详细过程。
+<!-- excerpt -->
 
 ## 源码剖析
 

@@ -5,6 +5,7 @@ date:   2018-06-12 12:10:12 +0800
 author: mistydew
 categories: Blockchain
 tags: blockchain bitcoin bitcoin-cli commands
+excerpt: $ bitcoin-cli decoderawtransaction "hexstring"
 ---
 ![bitcoin](/images/20180504/bitcoin.svg)
 

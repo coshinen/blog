@@ -5,6 +5,7 @@ date:   2018-05-24 09:04:12 +0800
 author: mistydew
 categories: Blockchain
 tags: blockchain bitcoin bitcoin-cli commands
+excerpt: $ bitcoin-cli generate numblocks
 ---
 ![bitcoin](/images/20180504/bitcoin.svg)
 

@@ -5,6 +5,7 @@ date:   2018-06-01 08:59:50 +0800
 author: mistydew
 categories: Blockchain
 tags: blockchain bitcoin bitcoin-cli commands
+excerpt: $ bitcoin-cli keypoolrefill ( newsize )
 ---
 ![bitcoin](/images/20180504/bitcoin.svg)
 

@@ -5,6 +5,7 @@ date:   2018-06-11 10:45:50 +0800
 author: mistydew
 categories: Blockchain
 tags: blockchain bitcoin bitcoin-cli commands
+excerpt: $ bitcoin-cli gettxoutproof ["txid",...] ( blockhash )
 ---
 ![bitcoin](/images/20180504/bitcoin.svg)
 

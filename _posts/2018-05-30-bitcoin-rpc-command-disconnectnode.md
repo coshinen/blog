@@ -5,6 +5,7 @@ date:   2018-05-30 10:28:12 +0800
 author: mistydew
 categories: Blockchain
 tags: blockchain bitcoin bitcoin-cli commands
+excerpt: $ bitcoin-cli disconnectnode "node"
 ---
 ![bitcoin](/images/20180504/bitcoin.svg)
 

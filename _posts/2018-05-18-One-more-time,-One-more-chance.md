@@ -5,6 +5,7 @@ date:   2018-05-18 20:37:01 +0800
 author: mistydew
 categories: 歌詞
 tags: lyric 秒速5センチメートル
+excerpt: これ以上何を失えば　心は許されるの どれ程の痛みならば　もういちど君に会える
 ---
 
 <audio controls>

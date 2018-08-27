@@ -7,6 +7,7 @@ categories: Blockchain
 tags: blockchain bitcoin vocabulary translation
 ---
 比特币提供了一种全新的支付方式，因此，有一些新词可能需要你了解。
+<!-- excerpt -->
 
 ## Address（地址）
 

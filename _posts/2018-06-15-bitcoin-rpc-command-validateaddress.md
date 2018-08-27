@@ -5,6 +5,7 @@ date:   2018-06-15 09:12:36 +0800
 author: mistydew
 categories: Blockchain
 tags: blockchain bitcoin bitcoin-cli commands
+excerpt: $ bitcoin-cli validateaddress "bitcoinaddress"
 ---
 ![bitcoin](/images/20180504/bitcoin.svg)
 
