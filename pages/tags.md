@@ -16,6 +16,7 @@ permalink: /tags.html
 {% endfor %}
 {% assign diff = max | minus: min %}
 
+<p id="tags"></p>
 <center><div style="width:480px">
 {% for tag in site.tags %}
   {% assign temp = tag[1].size | minus: min | times: 36 | divided_by: diff %}
@@ -54,7 +55,7 @@ permalink: /tags.html
 {% assign idx = 0 %}
 
 {% for tag in site.tags %}
-<h2 id="{{ tag[0] }}-ref">{{ tag | first }} ({{ counts[idx] }})</h2>
+<h2 id="{{ tag[0] }}-ref">{{ tag | first }} ({{ counts[idx] }})<a href="#tags">{% include icon/chevron-up.html %}</a></h2>
     {% assign idx = idx | plus: 1 %}
 <ul class="arc-list">
     {% for post in tag.last %}
