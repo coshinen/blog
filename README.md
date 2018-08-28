@@ -1,11 +1,12 @@
 # [_mistydew's blog_](https://mistydew.github.io)
 
 ## Todo
+- [ ] add avatar, bio...
 - [ ] increase the display width
 - [ ] The anatomy of bitcoin v0.12.1 source
-- [x] add post excerpt
 
 ## Timeline
+* 2018.08.28 12:00 [rename] page Slogan to Quotes
 * 2018.08.27 13:09 [add] post excerpt/abstract/summary
 * 2018.08.23 13:00 [remove] Baidu Analytics
 * 2018.08.22 12:03 [new] DaoVoice web chat tool, Baidu site search to replace Customised Search
