@@ -26,9 +26,9 @@ tags: blockchain bitcoin glossary translation
 
 ## Child Pays For Parent, CPFP（孩子为父母付钱）
 
-定义：选择挖矿交易不仅基于它们的交易费，还基于它们祖先（父母）和后代（孩子）的交易费。
+**定义**：选择挖矿交易不仅基于它们的交易费，还基于它们祖先（父母）和后代（孩子）的交易费。
 
-同义词：Ancestor mining（祖先挖矿）
+**同义词**：Ancestor mining（祖先挖矿）
 
 **不要混淆**：Replace by Fee, RBF
 
@@ -48,7 +48,6 @@ tags: blockchain bitcoin glossary translation
 
 **不要混淆**：P2SH multisig（包含在 P2SH 里的多签脚本）, 需要多个签名而不用 `OP_CHECKMULTISIG` 或 `OP_CHECKMULTISIGVERIFY`
 
-<p id="Base58check-ref"></p>
 ## Base58check（Base58 编码）
 
 **定义**：比特币中用于转换 160 位的哈希值到 P2PKH 和 P2SH 地址的方法。
