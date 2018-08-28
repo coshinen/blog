@@ -4,7 +4,7 @@ title:  "比特币源码剖析（一）"
 date:   2018-05-26 10:06:52 +0800
 author: mistydew
 categories: Blockchain
-tags: blockchain bitcoin SourceAnalysis
+tags: blockchain bitcoin 源码剖析
 ---
 ![bitcoin](/images/20180504/bitcoin.svg)
 
