@@ -4,6 +4,8 @@ title: Quotes
 permalink: /quotes.html
 ---
 
+* The imitation game: Sometimes it is the people no one imagines anything of who do the things that no one can imagine.
+
 * Raymond Fowler: When I was at college, I suffered from the curious delusion that I was there to study.
 
 * Mahatma Gandhi: First they ignore you, then they laugh at you, then they fight you, then you win.
