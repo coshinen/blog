@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "你可能会听到的一些比特币单词"
+title:  "比特币词汇表"
 date:   2018-08-21 20:43:26 +0800
 author: mistydew
 categories: Blockchain
