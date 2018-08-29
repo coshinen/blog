@@ -222,6 +222,18 @@ $ lsb_release -a # 显示 LSB 和版本信息，`-a` 表示全部信息。
 $ cat /etc/issue # 查看系统版本信息。
 {% endhighlight %}
 
+## 修改文件名 rename
+
+{% highlight shell %}
+$ find . -exec rename 's/<from>/<to>/' {} ";" # 批量修改当前目录下的文件名中字符串 <from> 为 <to>。
+{% endhighlight %}
+
+## 字符串替换 find | sed
+
+{% highlight shell %}
+$ find <filename> -type f -print0 | xargs -0 sed -i 's/<from>/<to>/g' # 把文件 <filename> 中的字符串 <from> 全部改为 <to>。
+{% endhighlight %}
+
 ## 参考
 * [Why Penguin is Linux logo? - LinuxScrew: Linux Blog](http://www.linuxscrew.com/2007/11/14/why-penguin-is-linux-logo)
 * [《Linus Torvalds自传》摘录 - 阮一峰的网络日志](http://www.ruanyifeng.com/blog/2012/09/linus_torvalds.html)
