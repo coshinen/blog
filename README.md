@@ -4,8 +4,10 @@
 - [ ] add avatar, bio...
 - [ ] increase the display width
 - [ ] The anatomy of bitcoin v0.12.1 source
+- [x] change site-title font style
 
 ## Timeline
+* 2018.08.29 [new] site-title font style
 * 2018.08.28 [rename] page Slogan to Quotes
 * 2018.08.27 [add] post excerpt/abstract/summary
 * 2018.08.23 [remove] Baidu Analytics
