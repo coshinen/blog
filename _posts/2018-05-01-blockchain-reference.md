@@ -4,7 +4,7 @@ title:  "区块链推荐阅读"
 date:   2018-05-01 20:23:17 +0800
 author: mistydew
 categories: Blockchain
-tags: blockchain bitcoin
+tags: 区块链 比特币
 ---
 ## 区块链 v1.0 推荐阅读
 

@@ -3,8 +3,8 @@ layout: post
 title:  "设计模式"
 date:   2018-07-16 20:08:56 +0800
 author: mistydew
-categories: DesignPatterns
-tags: DesignPatterns C++
+categories: 设计模式
+tags: C++ 设计模式
 ---
 ## 概要
 设计模式是一套为增加代码可读性、可靠性、可复用性的代码设计模板。

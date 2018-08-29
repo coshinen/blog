@@ -3,8 +3,8 @@ layout: post
 title:  "如何制作一枚山寨数字货币"
 date:   2018-05-13 16:02:28 +0800
 author: mistydew
-categories: Blockchain
-tags: blockchain bitcoin altcoin
+categories: Blockchain Bitcoin Altcoin
+tags: 区块链 比特币 山寨币
 stickie: true
 ---
 ![bitcoin](/images/20180504/bitcoin.svg)

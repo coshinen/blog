@@ -3,10 +3,10 @@ layout: post
 title:  "比特币词汇表"
 date:   2018-08-21 20:43:26 +0800
 author: mistydew
-categories: Blockchain
-tags: blockchain bitcoin vocabulary translation
+categories: Blockchain Bitcoin 译文
+tags: 区块链 比特币 词汇表
 ---
-比特币提供了一种全新的支付方式，因此，有一些新词可能需要你了解。
+比特币提供了一种全新的支付方式，因此你可能需要了解一些新词语。
 <!-- excerpt -->
 
 ## Address（地址）

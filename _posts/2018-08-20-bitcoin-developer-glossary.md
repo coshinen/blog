@@ -1,10 +1,10 @@
 ---
 layout: post
-title:  "比特币开发者术语汇编"
+title:  "比特币开发者术语表"
 date:   2018-08-20 22:08:57 +0800
 author: mistydew
-categories: Blockchain
-tags: blockchain bitcoin glossary translation
+categories: Blockchain Bitcoin 译文
+tags: 区块链 比特币 术语表
 ---
 这是一个专业术语汇编。普通用户应该使用[词汇表页面](/2018/08/21/some-bitcoin-words-you-might-hear)。
 <!-- excerpt -->

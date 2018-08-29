@@ -3,8 +3,8 @@ layout: post
 title:  "比特币源码剖析 - 区块"
 date:   2018-06-21 21:02:10 +0800
 author: mistydew
-categories: Blockchain
-tags: blockchain bitcoin Block
+categories: Blockchain Bitcoin
+tags: 区块链 比特币 区块
 ---
 ![bitcoin](/images/20180504/bitcoin.svg)
 

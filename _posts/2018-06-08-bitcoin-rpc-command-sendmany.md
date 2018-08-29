@@ -3,8 +3,8 @@ layout: post
 title:  "比特币 RPC 命令剖析 \"sendmany\""
 date:   2018-06-08 16:45:05 +0800
 author: mistydew
-categories: Blockchain
-tags: blockchain bitcoin bitcoin-cli commands
+categories: Blockchain Bitcoin
+tags: CLI bitcoin-cli 区块链 比特币
 excerpt: $ bitcoin-cli sendmany "fromaccount" {"address":amount,...} ( minconf "comment" ["address",...] )
 ---
 ![bitcoin](/images/20180504/bitcoin.svg)

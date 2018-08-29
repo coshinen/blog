@@ -3,8 +3,8 @@ layout: post
 title:  "Timeless Sleep"
 date:   2018-08-05 20:01:11 +0800
 author: mistydew
-categories: ガーネット・クロウ 歌詞
-tags: gc lyric
+categories: ガーネット・クロウ 翻訳
+tags: GC 歌詞
 excerpt: 君がいなくなってから 何度朝日迎えたかしれない
 ---
 ![Timeless Sleep](https://raw.githubusercontent.com/mistydew/gc/master/images/cover/single/Single_09th_Timeless_Sleep.jpg)

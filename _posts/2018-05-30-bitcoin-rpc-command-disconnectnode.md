@@ -3,8 +3,8 @@ layout: post
 title:  "比特币 RPC 命令剖析 \"disconnectnode\""
 date:   2018-05-30 10:28:12 +0800
 author: mistydew
-categories: Blockchain
-tags: blockchain bitcoin bitcoin-cli commands
+categories: Blockchain Bitcoin
+tags: CLI bitcoin-cli 区块链 比特币
 excerpt: $ bitcoin-cli disconnectnode "node"
 ---
 ![bitcoin](/images/20180504/bitcoin.svg)

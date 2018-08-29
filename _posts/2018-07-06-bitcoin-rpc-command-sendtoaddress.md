@@ -3,8 +3,8 @@ layout: post
 title:  "比特币 RPC 命令剖析 \"sendtoaddress\""
 date:   2018-07-06 20:10:38 +0800
 author: mistydew
-categories: Blockchain
-tags: blockchain bitcoin bitcoin-cli commands
+categories: Blockchain Bitcoin
+tags: CLI bitcoin-cli 区块链 比特币
 excerpt: $ bitcoin-cli sendtoaddress "bitcoinaddress" amount ( "comment" "comment-to" subtractfeefromamount )
 ---
 ![bitcoin](/images/20180504/bitcoin.svg)

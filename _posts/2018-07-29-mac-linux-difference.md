@@ -3,8 +3,8 @@ layout: post
 title:  "macOS 和 Linux 内核之间有什么不同？"
 date:   2018-07-29 15:46:38 +0800
 author: mistydew
-categories: Translation Kernels
-tags: translation C C++ macOS Linux
+categories: Kernels 译文
+tags: C C++ macOS Linux
 ---
 
 有些人可能会认为在 `macOS` 和 `Linux` 内核之间存在相似之处，因为它们可以处理类似的命令并运行类似的软件。

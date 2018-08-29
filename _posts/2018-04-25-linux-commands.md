@@ -3,8 +3,8 @@ layout: post
 title:  "Linux 基础命令"
 date:   2018-04-25 18:58:02 +0800
 author: mistydew
-categories: Linux
-tags: Linux commands
+categories: Unix/Linux
+tags: Linux CLI Terminal
 ---
 Linux mascot: crystal tux and tux(Torvalds linUX?)<br>
 ![crystal tux](/images/20180425/crystal_penguin.jpg)

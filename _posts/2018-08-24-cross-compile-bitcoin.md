@@ -3,8 +3,8 @@ layout: post
 title:  "交叉编译比特币源码"
 date:   2018-08-24 11:01:52 +0800
 author: mistydew
-categories: Blockchain
-tags: blockchain bitcoin build/compile
+categories: Blockchain Bitcoin
+tags: 区块链 比特币 源码构建 交叉编译
 ---
 在 `Linux` 平台下交叉编译比特币源码，得到 `Windows` 版本的可执行程序。
 <!-- excerpt -->

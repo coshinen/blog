@@ -3,8 +3,8 @@ layout: post
 title:  "内在动机和刻意练习相互加强"
 date:   2018-08-03 16:40:02 +0800
 author: mistydew
-categories: Translation Study
-tags: translation study
+categories: Study 译文
+tags: Study Insistence
 ---
 ![intrinsic_motivation_deliberate_practice](/images/20180803/intrinsic_motivation_deliberate_practice.png)
 

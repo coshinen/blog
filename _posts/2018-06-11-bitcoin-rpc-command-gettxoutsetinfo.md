@@ -3,8 +3,8 @@ layout: post
 title:  "比特币 RPC 命令剖析 \"gettxoutsetinfo\""
 date:   2018-06-11 13:59:06 +0800
 author: mistydew
-categories: Blockchain
-tags: blockchain bitcoin bitcoin-cli commands
+categories: Blockchain Bitcoin
+tags: CLI bitcoin-cli 区块链 比特币
 excerpt: $ bitcoin-cli gettxoutsetinfo
 ---
 ![bitcoin](/images/20180504/bitcoin.svg)

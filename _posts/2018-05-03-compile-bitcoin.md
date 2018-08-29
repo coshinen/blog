@@ -3,8 +3,8 @@ layout: post
 title:  "编译比特币源码"
 date:   2018-05-03 18:57:36 +0800
 author: mistydew
-categories: Blockchain
-tags: blockchain bitcoin
+categories: Blockchain Bitcoin
+tags: 区块链 比特币 源码构建
 ---
 ![bitcoin](/images/20180504/bitcoin.svg)
 
