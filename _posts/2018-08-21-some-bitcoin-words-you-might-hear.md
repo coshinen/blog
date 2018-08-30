@@ -21,7 +21,7 @@ tags: 区块链 比特币 词汇表
 
 ## 比特/位 | Bit
 
-比特是用于标示比特币子单位的常用单位—`1,000,000 bits` == `1 BTC`。
+比特是用于标示比特币子单位的常用单位—`1,000,000 bits == 1 BTC`。
 该单位通常在标示定价，商品和服务时更方便。
 
 ## 比特币地址 | Address
@@ -106,4 +106,5 @@ Thanks for your time.
 
 ## 参照
 * [Vocabulary - Bitcoin](https://bitcoin.org/en/vocabulary)
+* [词汇表 － 比特币](https://bitcoin.org/zh_CN/vocabulary)
 * [...](https://github.com/mistydew/blockchain)
