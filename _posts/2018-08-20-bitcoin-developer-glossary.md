@@ -113,6 +113,73 @@ tags: 区块链 比特币 术语表
 
 **不要混淆**：`Block subsidy`, [`Transaction fees`](#TransactionFee)
 
+<p id="Satoshi"></p>
+## 衡量单位 | Denominations
+
+**定义**：比特币值的衡量单位，通常用一些比特币来衡量，但有时用聪的数倍来衡量。
+一个比特币等于 100,000,000 聪。
+
+**同义词**：`Bitcoins`, `Satoshis`（聪）
+
+**不要混淆**：二进制位，有两种可能取值的数据单元。
+
+<p id="TransactionFee"></p>
+## 交易费 | Transaction Fee
+
+**定义**：一笔交易的全部[输入](#TxIn)减去全部[输出](#TxOut)值的剩余金额；该费用支付给包含该交易到[区块](#Block)的[矿工](#Miner)。
+
+**同义词**：`Miners fee`
+
+**不要混淆**：[`Minimum relay fee`](#MinimumRelayFee)（接收一笔交易到内存池并通过比特币核心[节点](#Node)中继必须支付的最低费用）
+
+<p id="MinimumRelayFee"></p>
+## 最小中继费 | Minimum Relay Fee
+
+**定义**：最小[交易费](#TransactionFee)，用于中继到其他[节点](#Node)的交易必须支付给[全节点](#Node)的费用（如果它不是[高优先级交易](#FreeTx)）。并没有最低中继费—每个[节点](#Node)选择它自己的决策。
+
+**同义词**：`Relay fee`
+
+**不要混淆**：[`Transaction fee`](#TransactionFee)（最小中继费是过滤过低[交易费](#TransactionFee)交易的决策选项）
+
+<p id="FreeTx"></p>
+## 高优先级交易 | High-Priority Transaction
+
+**定义**：没有支付[交易费](#TransactionFee)的交易，因为他们的[输入](#TxIn)空闲时间够长足以积累大量的优先级。注：[矿工](#Miner)选择是否接受免费交易。
+
+**同义词**：`Free transaction`, `Free Tx`（免费交易，不含交易费）
+
+<p id="TxIn"></p>
+## 交易输入 | Transaction Input
+
+**定义**：交易的输入包含 3 个字段：输出点，签名脚本，和序列号。输出点引用前一笔交易的输出且签名脚本允许花费它。
+
+**同义词**：Input, TxIn
+
+<p id="TxOut"></p>
+## 交易输出 | Transaction Output
+
+**定义**：交易的输出包含 2 个字段：转账 0 或更多聪的值字段和指明必须满足哪些条件才能进一步使用聪的公钥脚本。
+
+**同义词**：Output, TxOut
+
+**不要混淆**：Outpoint（特定输出的引用）
+
+<p id="Node"></p>
+## 节点 | Node
+
+**定义**：连接到比特币网络的计算机。
+
+**同义词**：`Full Node`（完整/全节点）, `Archival Node`, `Pruned Node`（修剪过的节点）, `Peer`
+
+**不要混淆**：`Lightweight node`（轻量级节点）, [`SPV node`](#SPV)
+
+<p id="SPV"></p>
+## 简单支付验证 | SPV, Simplified Payment Verification
+
+**定义**：用于验证某笔交易是否包含在某个未下载完整的[区块](#Block)中。该方法用于一些轻量级比特币客户端。
+
+**同义词**：`Lightweight client`（轻量级客户端）, `Thin client`
+
 ## 陈旧的区块 | Stale Block
 
 **定义**：成功挖出但没有包含在当前最佳区块链上的区块，可能是因为在相同高度的其他区块首先扩展链。
@@ -155,14 +222,6 @@ tags: 区块链 比特币 术语表
 
 **不要混淆**：Testnet（模仿主网的全球测试环境）
 
-## 节点 | Node
-
-**定义**：连接到比特币网络的计算机。
-
-**同义词**：Full Node（全/完整节点）, Archival Node（档案节点）, Pruned Node（修剪节点）, Peer（对端）
-
-**不要混淆**：Lightweight node（轻量级节点）, SPV node
-
 ## DNS 种子 | DNS Seed
 
 **定义**：DNS 域名解析服务器返回比特币网络上的全节点的 IP 地址集来帮助进行对端的发现。
@@ -188,12 +247,6 @@ tags: 区块链 比特币 术语表
 **定义**：控制大多数网络哈希率的某人修改交易历史并阻止新交易确认的能力。
 
 **同义词**：51 percent attack（百分之 51 攻击）, Majority Hash Rate attack（多数攻击）
-
-## 简单支付验证 | SPV, Simplified Payment Verification
-
-**定义**：用于验证特定交易是否包含在某个未下载完整区块的区块中。该方法用于一些轻量级比特币客户端。
-
-**同义词**：Lightweight client（轻量级客户端）, Thin client
 
 <p id="Base58check"></p>
 ## Base58 编码 | Base58check
@@ -598,12 +651,6 @@ P2SH multisig（P2SH 特定的实例，其中脚本使用一个多签操作码�
 
 **定义**：传递给比特币核心 `IsStandard()` 和 `IsStandardTx()` 测试的交易。只有标准交易通过运行默认比特币核心软件的对端节点挖矿或广播。
 
-## 高优先级交易 | High-Priority Transaction
-
-**定义**：没有支付交易费的交易，因为他们的输入空闲时间足够积累大量的优先级。注：矿工选择是否接受免费交易。
-
-**同义词**：Free transaction（免费交易，不含交易费）, Free Tx
-
 ## 空数据交易 | Null Data (OP_RETURN) Transaction
 
 **定义**：在比特币核心 0.9.0 版或新版中，中继和挖矿的交易类型，添加任意数据到可证明不可花费的公钥脚本，全节点不必存储在它们的 UTXO 数据库中。
@@ -638,43 +685,11 @@ P2SH multisig（P2SH 特定的实例，其中脚本使用一个多签操作码�
 
 **不要混淆**：Output index number / vout（用于后面的交易引用特定输出的交易中的 0 索引号的输出）
 
-<p id="TxIn"></p>
-## 交易输入 | Transaction Input
-
-**定义**：交易的输入包含 3 个字段：输出点，签名脚本，和序列号。输出点引用前一笔交易的输出且签名脚本允许花费它。
-
-**同义词**：Input, TxIn
-
-## 交易输出 | Transaction Output
-
-**定义**：交易的输出包含 2 个字段：转账 0 或更多聪的值字段和指明必须满足哪些条件才能进一步使用聪的公钥脚本。
-
-**同义词**：Output, TxOut
-
-**不要混淆**：Outpoint（特定输出的引用）
-
 ## 输出点 | Outpoint
 
 **定义**：用于引用特定交易输出的数据结构，由 32 字节的交易索引和 4 字节的输出索引数字（vout）组成。
 
 **不要混淆**：Output（交易的完整输出）, TxOut（和输出一样）
-
-<p id="TransactionFee"></p>
-## 交易费 | Transaction Fee
-
-**定义**：一笔交易的全部输入的值减去全部输出剩余的金额；支付该费用给包含该交易到区块的矿工。
-
-**同义词**：Miners fee（矿工费）
-
-**不要混淆**：Minimum relay fee（接收一笔交易到内存池并通过比特币核心节点中继必须支付的最低费用）
-
-## 最小中继费 | Minimum Relay Fee
-
-**定义**：最小交易费，一笔交易用于中继到其他节点必须支付给全节点的费用（如果它不是高优先级交易）。没有最低中继费—每个节点选择它自己的决策。
-
-**同义词**：Relay fee（中继费）
-
-**不要混淆**：Transaction fee（最小中继费是过滤过低交易费交易的决策设置）
 
 ## 找零 | Change
 
@@ -684,16 +699,6 @@ P2SH multisig（P2SH 特定的实例，其中脚本使用一个多签操作码�
 
 **不要混淆**：Address reuse（地址重用）
 
-## 衡量单位 | Denominations
-
-**定义**：比特币值的衡量单位，通常用一些比特币来衡量，但有时用聪的数倍来衡量。
-一个比特币等于 100,000,000 聪。
-
-**同义词**：Bitcoins（比特币）, Satoshis（聪）
-
-**不要混淆**：二进制位，有两种可能取值的数据单元。
-
-<p id="Satoshi"></p>
 ## 代币 | Token
 
 **定义**：代币使驻留在现存区块链中的具有其基本代码的可编程数字资产。代币有助于促进去中心化应用的创建。
