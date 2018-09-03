@@ -107,13 +107,13 @@ tags: 区块链 比特币 术语表
 <p id="BlockReward"></p>
 ## 区块奖励 | Block Reward
 
-**定义**：[矿工](#Miner)可能要求一定金额作为创建[区块](#Block)的奖励。等于[区块](#Block)补贴（新的可用的[聪](#Satoshi)）加[区块](#Block)交易支付的交易费的总和。
+**定义**：[矿工](#Miner)可能要求一定金额作为创建[区块](#Block)的奖励。等于[区块](#Block)补贴（新的可用的[聪](#Satoshis)）加[区块](#Block)交易支付的交易费的总和。
 
 **同义词**：`Block miner reward`
 
 **不要混淆**：`Block subsidy`, [`Transaction fees`](#TransactionFee)
 
-<p id="Satoshi"></p>
+<p id="Satoshis"></p>
 ## 衡量单位 | Denominations
 
 **定义**：比特币值的衡量单位，通常用一些比特币来衡量，但有时用聪的数倍来衡量。
@@ -151,18 +151,138 @@ tags: 区块链 比特币 术语表
 <p id="TxIn"></p>
 ## 交易输入 | Transaction Input
 
-**定义**：交易的输入包含 3 个字段：输出点，签名脚本，和序列号。输出点引用前一笔交易的输出且签名脚本允许花费它。
+**定义**：一笔交易的输入包含 3 个字段：[输出点](#Outpoint)，[签名脚本](#ScriptSig)，和[序列号](#Sequence)。[输出点](#Outpoint)引用前一笔[交易输出](#TxOut)且[签名脚本](#ScriptSig)允许花费它。
 
-**同义词**：Input, TxIn
+**同义词**：`Input`, `TxIn`
 
 <p id="TxOut"></p>
 ## 交易输出 | Transaction Output
 
-**定义**：交易的输出包含 2 个字段：转账 0 或更多聪的值字段和指明必须满足哪些条件才能进一步使用聪的公钥脚本。
+**定义**：一笔交易的输出包含 2 个字段：转账 0 或更多[聪](#Satoshis)的字段和指明必须满足哪些条件才能进一步使用这些[聪](#Satoshis)的[公钥脚本](#ScriptPubKey)。
 
-**同义词**：Output, TxOut
+**同义词**：`Output`, `TxOut`
 
-**不要混淆**：Outpoint（特定输出的引用）
+**不要混淆**：[`Outpoint`](#Outpoint)（某交易输出的引用）
+
+<p id="ScriptSig"></p>
+## 签名脚本 | Signature Script
+
+**定义**：通过付款人生成的数据，几乎总是用作满足[公钥脚本](#ScriptPubKey)的变量。签名脚本在代码中又称为脚本签名。
+
+**同义词**：`ScriptSig`（脚本签名）
+
+**不要混淆**：[`ECDSA signature`](#Signature)（一种签名，除了其他数据，能用于公钥脚本的一部分）
+
+<p id="Sequence"></p>
+## 交易序列号 | Sequence Number (Transactions)
+
+**定义**：所有交易的一部分。一个数字，旨在允许锁定时间的[未确认的交易](#Confirmations)在序列化前更新；目前尚未使用，除非在交易中禁用[锁定时间](#nLockTime)。
+
+**不要混淆**：`Output index number / vout`（后面的交易用来引用特定[输出](#TxOut)的交易中的 0 索引号[输出](#TxOut)）
+
+<p id="Confirmations"></p>
+## 确认分数 | Confirmation Score
+
+**定义**：分数表明在[最佳区块链](#BlockChain)上需要修改的[区块](#Block)数，用来移除或修改特定的交易。确认的交易有一个或更高的确认分数。
+
+**同义词**：`Confirmations`, `Confirmed transaction`, `Unconfirmed transaction`
+
+<p id="nLockTime"></p>
+## 锁定时间 | Locktime
+
+**定义**：交易的一部分用于表明交易可能被添加到[区块链](#BlockChain)的最早时间或最早的[区块](#Block)。
+
+**同义词**：`nLockTime`
+
+<p id="ScriptPubKey"></p>
+## 公钥脚本 | Pubkey Script
+
+**定义**：包含在[输出](#TxOut)中的脚本，用于设置必须满足用于花费的[聪](#Satoshis)。在签名脚本中提供满足条件的数据。[公钥脚本](#ScriptPubKey)在代码中被称为[脚本公钥 "scriptPubKey"](#ScriptPubKey)。
+
+**同义词**：`ScriptPubKey`（脚本公钥）
+
+**不要混淆**：[`Pubkey`](#PublicKey)（[`公钥`](#PublicKey)，用作公钥脚本的一部分但不提供可编程的身份验证机制）, [`Signature script`](#ScriptSig)（给公钥脚本提供数据的脚本）
+
+<p id="Signature"></p>
+## 签名 | Signature
+
+**定义**：与[公钥](#PublicKey)相关的值，该公钥只能由拥有创建[公钥](#PublicKey)的[私钥](#PrivateKey)的人来创建。在比特币中用于在发送到[公钥](#PublicKey)前验证花费的[聪](#Satoshis)。
+
+**同义词**：`ECDSA signature`（椭圆曲线加密签名）
+
+<p id="PrivateKey"></p>
+## 私钥 | Private Key
+
+**定义**：密钥对的私有部分，用于创建其他人都能使用[公钥](#PublicKey)验证的[签名](#Signature)。
+
+**同义词**：`ECDSA private key`（椭圆曲线私钥）
+
+**不要混淆**：[`Public key`](#PublicKey)（从私钥派生出的数据）, [`Parent key`](#ParentKey)（用于创建[子密钥](#ChildKey)的密钥，不一定是私钥）
+
+<p id="PublicKey"></p>
+## 公钥 | Public Key
+
+**定义**：密钥对的公共部分，用于验证使用密钥对私有部分进行的[签名](#Signature)。
+
+**同义词**：`ECDSA public key`（椭圆曲线公钥）
+
+**不要混淆**：[`Private key`](#PrivateKey)（派生出公钥的数据）, [`Parent key`](#ParentKey)（用于创建[子密钥](#ChildKey)的密钥，不一定是公钥）
+
+<p id="HDWallet"></p>
+## HD 协议 | HD Protocol
+
+**定义**：分层确定性（HD）密钥创建和传输协议（BIP32），允许从[父密钥](#ParentKey)的层次创建[子密钥](#ChildKey)。使用 HD 协议的[钱包](#Wallet)称为 HD 钱包。
+
+**同义词**：`HD wallet`, `BIP32`
+
+<p id="Wallet"></p>
+## 钱包 | Wallet
+
+**定义**：存储[私钥](#PrivateKey)和[区块链](#BlockChain)镜像的软件（有时作为执行处理的服务器的客户端），允许用户花费和接收[聪](#Satoshis)。
+
+**不要混淆**：[`HD wallet`](#HDWallet)（允许钱包从单个种子创建全部密钥的协议，使用该协议的钱包）
+
+<p id="ParentKey"></p>
+## 父密钥 | Parent Key
+
+**定义**：在 [HD 钱包](#HDWallet)中，该密钥用于生成[子密钥](#ChildKey)。该密钥可能是[私钥](#PrivateKey)或[公钥](#PublicKey)，且密钥的生成可能也需要[链编码](#ChainCode)。
+
+**同义词**：`HD wallet parent key`, `Parent public key`, `Parent private key`
+
+**不要混淆**：[`Public key`](#PublicKey)（从[私钥](#PrivateKey)派生，非父密钥）
+
+<p id="ChildKey"></p>
+## 子密钥 | Child Key
+
+**定义**：在 [HD 钱包](#HDWallet)中，从[父密钥](#ParentKey)派生的密钥。该密钥可以是[私钥](#PrivateKey)，也可以是[公钥](#PublicKey)，密钥的推导（派生）可能需要[链编码](#ChainCode)。
+
+**同义词**：`HD wallet child key`, `Child public key`, `Child private key`
+
+**不要混淆**：[`Public key`](#PublicKey)（从[私钥](#PrivateKey)派生，非父密钥）
+
+<p id="ChainCode"></p>
+## 链编码 | Chain Code
+
+**定义**：在 [HD 钱包](#HDWallet)中，256 位熵被添加到公钥和[私钥](#PrivateKey)中，来帮助它们生成安全的[子密钥](#ChildKey)；
+[主链编码](#MasterChainCode)通常派生自携带[主私钥](#MasterPrivateKey)的种子。
+
+**同义词**：`HD wallet chain code`
+
+<p id="MasterChainCode"></p>
+## 主链代码和主私钥 | Master Chain Code And Private Key
+
+**定义**：在 [HD 钱包](#HDWallet)中，主链代码和主私钥是从[根种子](#RootSeed)派生的 2 个数据。
+
+**同义词**：`Master chain code`, `Master private key`
+
+<p id="RootSeed"></p>
+## HD 钱包种子 | HD Wallet Seed
+
+**定义**：用作为 [HD 钱包](#HDWallet)生成[主私钥](#MasterChainCode)和[主链代码](#MasterChainCode)的种子的潜在短值。
+
+**同义词**：`Root seed`
+
+**不要混淆**：`Mnemonic code / mnemonic seed`（助记代码/种子，二进制根种子格式化为单词，使人们更容易记录和记忆）
 
 <p id="Node"></p>
 ## 节点 | Node
@@ -179,6 +299,17 @@ tags: 区块链 比特币 术语表
 **定义**：用于验证某笔交易是否包含在某个未下载完整的[区块](#Block)中。该方法用于一些轻量级比特币客户端。
 
 **同义词**：`Lightweight client`（轻量级客户端）, `Thin client`
+
+## 分叉 | Fork
+
+**定义**：当 2 个或更多的区块有相同的区块高度时，区块链分叉。特别是发生在 2 个或更多矿工几乎同时找到区块时。也可以用作攻击。
+
+**同义词**：Accidental fork（意外的分叉）
+
+**不要混淆**：Hard fork（区块链上由为升级的节点不遵循新的共识规则导致的永久性的分叉）,
+Soft fork（区块链上由为升级的节点不遵循新的共识规则导致的临时分叉）,
+Software fork（当一个或多个开发人员与其他开发人员永久地分开开发一份代码库）,
+Git fork（当一个或多个开发人员与其他开发人员临时分开开发一份代码库）
 
 ## 陈旧的区块 | Stale Block
 
@@ -271,12 +402,6 @@ tags: 区块链 比特币 术语表
 
 **定义**：钱包中不带相应私钥的地址或公钥脚本，允许钱包监视其输出但不能花费它们。
 
-## 钱包 | Wallet
-
-**定义**：存储私钥和区块链镜像的软件（有时作为执行处理的服务器的客户端），允许用户花费和接收聪。
-
-**不要混淆**：HD wallet（允许钱包从单个种子创建全部密钥的协议，使用该协议的钱包）
-
 ## 钱包导入格式 | Wallet Import Format, WIF
 
 **定义**：一种数据交换格式，旨在允许导出和导入单个私钥，并带有指明其是否使用压缩公钥的标志。
@@ -286,33 +411,6 @@ tags: 区块链 比特币 术语表
 ## 双重花费 | Double Spend
 
 **定义**：使用与已经广播交易相同输入的交易。当有一个交易已经记录在区块链上时，将被当作重复，欺骗或转换的尝试。
-
-## 私钥 | Private Key
-
-**定义**：密钥对的私有部分能够创建其他人使用公钥验证的签名。
-
-**同义词**：ECDSA private key（椭圆曲线加密私钥）
-
-**不要混淆**：Public key（私钥派生的数据）, Parent key（用于创建子密钥的密钥，不一定是私钥）
-
-## 公钥 | Public Key
-
-**定义**：密钥对的公共部分，用于验证使用密钥对私有部分进行的签名。
-
-**同义词**：ECDSA public key（椭圆曲线公钥）
-
-**不要混淆**：Private key（派生出公钥的数据）, Parent key（用于创建子密钥的密钥，不一定是公钥）
-
-## 分叉 | Fork
-
-**定义**：当 2 个或更多的区块有相同的区块高度时，区块链分叉。特别是发生在 2 个或更多矿工几乎同时找到区块时。也可以用作攻击。
-
-**同义词**：Accidental fork（意外的分叉）
-
-**不要混淆**：Hard fork（区块链上由为升级的节点不遵循新的共识规则导致的永久性的分叉）,
-Soft fork（区块链上由为升级的节点不遵循新的共识规则导致的临时分叉）,
-Software fork（当一个或多个开发人员与其他开发人员永久地分开开发一份代码库）,
-Git fork（当一个或多个开发人员与其他开发人员临时分开开发一份代码库）
 
 ## 硬分叉 | Hard Fork
 
@@ -374,12 +472,6 @@ Git fork（当一个或多个开发人员与其他开发人员临时分开开发
 
 **不要混淆**：Child pays for parent, CPFP（孩子为父母支付）
 
-## 确认分数 | Confirmation Score
-
-**定义**：分数表明在最佳区块链上需要修改的区块数，用来移除或修改特定的交易。确认的交易有一个或更高的确认分数。
-
-**同义词**：Confirmations（确认数）, Confirmed transaction（确认的交易）, Unconfirmed transaction（未确认的交易）
-
 ## 布鲁姆过滤器 | Bloom Filter
 
 **定义**：主要由 SPV 客户端使用过滤器，用来从全节点请求匹配的交易并默尔克区块。
@@ -398,19 +490,6 @@ Git fork（当一个或多个开发人员与其他开发人员临时分开开发
 
 **定义**：一种交易，消费者和接收者把资金放入 2 比 2（或其他的 m 比 n）的多签输出中，均不会花费资金，直到他们对某些外部结果都满意时。
 
-## 链编码 | Chain Code
-
-**定义**：在 HD 钱包中，256 位熵被添加到公钥和私钥中，来帮助它们生成安全的子密钥；
-主链编码通常继承主私钥的种子。
-
-**同义词**：HD wallet chain code（HD 钱包链编码）
-
-## HD 协议 | HD Protocol
-
-**定义**：分层确定性（HD）密钥创建和传输协议（BIP32），允许从父密钥的层次创建子密钥。使用 HD 协议的钱包称为 HD 钱包。
-
-**同义词**：HD wallet（HD 钱包）, BIP32
-
 ## 压缩公钥 | Compressed Public Key
 
 **定义**：33 字节长的椭圆曲线公钥而非 65 字节的未压缩公钥。
@@ -424,22 +503,6 @@ Git fork（当一个或多个开发人员与其他开发人员临时分开开发
 ## 硬化的扩展密钥 | Hardened Extended Key (HD Wallets)
 
 **定义**：HD 钱包扩展密钥的一个变体，只有硬化的扩展私钥才能生成子密钥。防止链代码加任何私钥的组合使整个钱包处于风险中。
-
-## 父密钥 | Parent Key
-
-**定义**：在 HD 钱包中，该密钥用于生成子密钥。该密钥可能是私钥或公钥，且密钥的生成可能也需要链编码。
-
-**同义词**：HD wallet parent key（HD 钱包父密钥）, Parent public key（父公钥）, Parent private key（父私钥）
-
-**不要混淆**：Public key（从私钥派生，非父密钥）
-
-## 子密钥 | Child Key
-
-**定义**：在 HD 钱包中，从父密钥派生的密钥。该密钥可以是私钥，也可以是公钥，密钥的推导（派生）可能需要链编码。
-
-**同义词**：HD wallet child key（HD 钱包子密钥）, Child public key（子公钥）, Child private key（子私钥）
-
-**不要混淆**：Public key（从私钥派生，非父密钥）
 
 ## 初始化区块下载 | Initial Block Download, IBD
 
@@ -462,10 +525,6 @@ Git fork（当一个或多个开发人员与其他开发人员临时分开开发
 **同义词**：Headers-First
 
 **不要混淆**：Blocks-first sync（直接下载整个区块，不首先获取他们的头）
-
-## 主链代码和主私钥 | Master Chain Code And Private Key
-
-**定义**：在 HD 钱包中，主链代码和主私钥是从根种子派生的 2 个数据。
 
 ## 默尔克树 | Merkle Tree
 
@@ -518,14 +577,6 @@ P2SH multisig（P2SH 特定的实例，其中脚本使用一个多签操作码�
 **同义词**：Pay to pubkey hash（支付到公钥哈希）, P2PKH output（P2PKH 输出）
 
 **不要混淆**：P2PK output（直接支付给公钥的输出）, P2SH address / output（包括哈希的脚本和其相应的输出的地址）
-
-## HD 钱包种子 | HD Wallet Seed
-
-**定义**：用作为 HD 钱包生成主私钥和主链代码的种子的潜在短值。
-
-**同义词**：Root seed（根种子）
-
-**不要混淆**：Mnemonic code / mnemonic seed（二进制根种子格式化为单词，使人们更容易记录和记忆）
 
 ## 内部字节序 | Internal Byte Order
 
@@ -603,12 +654,6 @@ P2SH multisig（P2SH 特定的实例，其中脚本使用一个多签操作码�
 
 **不要混淆**：SIGHASH_ANYONECANPAY（仅签名该单个输入的签名哈希类型的标志）
 
-## 签名 | Signature
-
-**定义**：与公钥相关的值，该公钥只能由拥有创建公钥的私钥的人来创建。在比特币中用于在发送到公钥前验证花费的聪。
-
-**同义词**：ECDSA signature（椭圆曲线加密签名）
-
 ## 签名哈希 | Signature Hash
 
 **定义**：比特币签名的标志，用于表明签名签署的交易的部分。（默认是 SIGHASH_ALL）交易未签名的部分可能被修改。
@@ -617,22 +662,6 @@ P2SH multisig（P2SH 特定的实例，其中脚本使用一个多签操作码�
 
 **不要混淆**：Signed hash（签名数据的哈希）, Transaction malleability / mutability（尽管非默认的签名哈希标志允许可选的延展性，延展性包含交易可能发生变化的任何方式）
 
-## 签名脚本 | Signature Script
-
-**定义**：通过支付者生成的数据，几乎总是用作满足公钥脚本的变量。签名脚本在代码中又称为脚本签名。
-
-**同义词**：ScriptSig（脚本签名）
-
-**不要混淆**：ECDSA signature（一种签名，除了其他数据，能用于公钥脚本的一部分）
-
-## 公钥脚本 | Pubkey Script
-
-**定义**：包含在输出中的脚本，用于设置必须满足用于花费的聪。在签名脚本中提供满足条件的数据。公钥脚本在代码中被称为脚本公钥 "scriptPubKey"。
-
-**同义词**：ScriptPubKey（脚本公钥）
-
-**不要混淆**：Pubkey（公钥，用作公钥脚本的一部分但不提供可编程的身份验证机制）, Signature script（给公钥脚本提供数据的脚本）
-
 ## 赎回脚本 | Redeem Script
 
 **定义**：功能上类似于公钥脚本的脚本。其中一个副本用于创建 P2SH 地址（用于实际的公钥脚本），另一个副本放在支出签名脚本用来强制其条件。
@@ -640,12 +669,6 @@ P2SH multisig（P2SH 特定的实例，其中脚本使用一个多签操作码�
 **同义词**：RedeemScript
 
 **不要混淆**：Signature script（为公钥脚本提供数据的脚本，在 P2SH 输入中包含赎回脚本）
-
-## 锁定时间 | Locktime
-
-**定义**：交易的一部分用于表明交易可能添加到区块链的最早时间或最早区块。
-
-**同义词**：nLockTime
 
 ## 标准交易 | Standard Transaction
 
@@ -678,12 +701,6 @@ P2SH multisig（P2SH 特定的实例，其中脚本使用一个多签操作码�
 **定义**：用于唯一标识特定交易的识别符；具体来说，是交易的 `sha256` 双散列。
 
 **不要混淆**：Outpoint（交易号和输出集的联合体，用于识别指定输出）
-
-## 交易序列号 | Sequence Number (Transactions)
-
-**定义**：所有交易的一部分。一个数字，旨在允许未确认的时间锁定的交易在序列化前更新；目前尚未使用，除非在交易中禁用锁定时间。
-
-**不要混淆**：Output index number / vout（用于后面的交易引用特定输出的交易中的 0 索引号的输出）
 
 ## 输出点 | Outpoint
 
