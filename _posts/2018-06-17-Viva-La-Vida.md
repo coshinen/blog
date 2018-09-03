@@ -9,11 +9,6 @@ excerpt: I used to rule the world
 ---
 ![Viva La Vida](https://raw.githubusercontent.com/mistydew/audio/master/cover/Viva%20La%20Vida.jpg)
 
-<audio controls>
-  <source src="https://raw.githubusercontent.com/mistydew/audio/master/Viva%20La%20Vida.mp3" type="audio/mpeg">
-您的浏览器不支持 audio 元素。
-</audio>
-
 ## Viva La Vida
 
 歌手：Coldplay

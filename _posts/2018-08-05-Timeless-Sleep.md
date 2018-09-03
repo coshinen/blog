@@ -9,11 +9,6 @@ excerpt: 君がいなくなってから 何度朝日迎えたかしれない
 ---
 ![Timeless Sleep](https://raw.githubusercontent.com/mistydew/gc/master/images/cover/single/Single_09th_Timeless_Sleep.jpg)
 
-<audio controls>
-  <source src="" type="audio/mpeg">
-您的浏览器不支持 audio 元素。
-</audio>
-
 ## Timeless Sleep
 
 歌手：GARNET CROW<br>

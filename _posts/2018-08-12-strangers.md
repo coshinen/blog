@@ -9,11 +9,6 @@ excerpt: 緑揺れる午後の空 幾つ目の飛行機かな
 ---
 ![parallel universe](https://raw.githubusercontent.com/mistydew/gc2/master/cover/album/Album_08th_parallel_universe.jpg)
 
-<audio controls>
-  <source src="" type="audio/mpeg">
-您的浏览器不支持 audio 元素。
-</audio>
-
 ## strangers
 
 歌手：GARNET CROW<br>

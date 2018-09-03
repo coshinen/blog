@@ -7,12 +7,7 @@ categories: コナン 翻訳
 tags: CONAN 歌詞
 excerpt: もしも君に巡り逢えたら 二度と君の手を離さない
 ---
-![time after time~hanamaumachide~](https://raw.githubusercontent.com/mistydew/dc/master/images/Time%20after%20time%EF%BD%9E%E8%8A%B1%E8%88%9E%E3%81%86%E8%A1%97%E3%81%A7%EF%BD%9E.jpg)
-
-<audio controls>
-  <source src="https://raw.githubusercontent.com/mistydew/dc/master/audio/Time%20after%20time%7E%E8%8A%B1%E8%88%9E%E3%81%86%E8%A1%97%E3%81%A7%7E.mp3" type="audio/mpeg">
-您的浏览器不支持 audio 元素。
-</audio>
+![Time after time～花舞う街で～](https://raw.githubusercontent.com/mistydew/dc/master/images/Time%20after%20time%EF%BD%9E%E8%8A%B1%E8%88%9E%E3%81%86%E8%A1%97%E3%81%A7%EF%BD%9E.jpg)
 
 ## Time after time～花舞う街で～
 

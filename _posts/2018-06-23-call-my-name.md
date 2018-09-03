@@ -9,11 +9,6 @@ excerpt: 白い壁と　Rembrandt いつまでも眺めていた
 ---
 ![call my name](https://raw.githubusercontent.com/mistydew/gc/master/images/cover/single/Single_08th_call_my_name.jpg)
 
-<audio controls>
-  <source src="https://raw.githubusercontent.com/mistydew/gc2/master/audio/call%20my%20name.mp3" type="audio/mpeg">
-您的浏览器不支持 audio 元素。
-</audio>
-
 ## call my name
 
 歌手：GARNET CROW<br>

@@ -7,12 +7,7 @@ categories: ガーネット・クロウ 翻訳
 tags: GC 歌詞
 excerpt: 離陸間近の午前1時5分 空を見上げていた いつかまた会えるかなあ 何故かなあ
 ---
-![stay](https://raw.githubusercontent.com/mistydew/gc2/master/cover/album/Album_07th_STAY_~%E5%A4%9C%E6%98%8E%E3%81%91%E3%81%AESoul~.jpg)
-
-<audio controls>
-  <source src="https://raw.githubusercontent.com/mistydew/gc2/master/audio/Hello%20Sadness.mp3" type="audio/mpeg">
-您的浏览器不支持 audio 元素。
-</audio>
+![STAY ~夜明けのSoul~](https://raw.githubusercontent.com/mistydew/gc2/master/cover/album/Album_07th_STAY_~%E5%A4%9C%E6%98%8E%E3%81%91%E3%81%AESoul~.jpg)
 
 ## Hello Sadness
 

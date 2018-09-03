@@ -9,11 +9,6 @@ excerpt: why 見えぬ明日へと 期待込め歩いてるの
 ---
 ![Misty Mystery](https://raw.githubusercontent.com/mistydew/gc2/master/cover/single/Single_33th_Misty_Mystery.jpg)
 
-<audio controls>
-  <source src="https://raw.githubusercontent.com/mistydew/gc2/master/audio/Misty%20Mystery.mp3" type="audio/mpeg">
-您的浏览器不支持 audio 元素。
-</audio>
-
 ## Misty Mystery
 
 歌手：GARNET CROW<br>

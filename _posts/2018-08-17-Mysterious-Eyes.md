@@ -9,11 +9,6 @@ excerpt: 君と僕とは　別の人間(いきもの)だから 好みが違う�
 ---
 ![Mysterious Eyes](https://raw.githubusercontent.com/mistydew/gc/master/images/cover/single/Single_01st_Mysterious_Eyes.jpg)
 
-<audio controls>
-  <source src="" type="audio/mpeg">
-您的浏览器不支持 audio 元素。
-</audio>
-
 ## Mysterious Eyes
 
 歌手：GARNET CROW<br>

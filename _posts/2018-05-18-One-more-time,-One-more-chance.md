@@ -7,12 +7,6 @@ categories: 翻訳
 tags: 秒速5センチメートル 歌詞
 excerpt: これ以上何を失えば　心は許されるの どれ程の痛みならば　もういちど君に会える
 ---
-
-<audio controls>
-  <source src="https://raw.githubusercontent.com/mistydew/audio/master/One%20more%20time%2C%20One%20more%20chance.mp3" type="audio/mpeg">
-您的浏览器不支持 audio 元素。
-</audio>
-
 ## One more time, One more chance
 
 歌手：山崎まさよし<br>

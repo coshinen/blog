@@ -9,11 +9,6 @@ excerpt: 夕暮れとこの街の匂い 染みついた諦めと希望 雨の中
 ---
 ![LOCKS](https://raw.githubusercontent.com/mistydew/gc2/master/cover/album/Album_06th_LOCKS.jpg)
 
-<audio controls>
-  <source src="" type="audio/mpeg">
-您的浏览器不支持 audio 元素。
-</audio>
-
 ## Love is a Bird
 
 歌手：GARNET CROW<br>

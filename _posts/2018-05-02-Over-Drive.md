@@ -7,14 +7,9 @@ categories: ガーネット・クロウ 翻訳
 tags: GC 歌詞
 excerpt: 風の音だけが 体中を包む
 ---
-![over drive](https://raw.githubusercontent.com/mistydew/gc2/master/cover/single/Single_31th_Over_Drive.jpg)
+![Over Drive](https://raw.githubusercontent.com/mistydew/gc2/master/cover/single/Single_31th_Over_Drive.jpg)
 
 ![parallel universe](https://raw.githubusercontent.com/mistydew/gc2/master/cover/album/Album_08th_parallel_universe.jpg)
-
-<audio controls>
-  <source src="https://raw.githubusercontent.com/mistydew/gc2/master/audio/Over%20Drive.mp3" type="audio/mpeg">
-您的浏览器不支持 audio 元素。
-</audio>
 
 ## Over Drive
 > 凌空駕馭
