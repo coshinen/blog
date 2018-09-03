@@ -241,10 +241,156 @@ DBErrors CWalletDB::ZapWalletTx(CWallet* pwallet, vector<CWalletTx>& vWtx)
 }
 {% endhighlight %}
 
-{% highlight C++ %}
-{% endhighlight %}
+1.2.调用 `pwalletMain->LoadWallet(fFirstRun)` 从数据库加载钱包到内存中，该函数声明在“wallet.h”文件的 `CWallet` 中。
 
 {% highlight C++ %}
+class CWallet : public CCryptoKeyStore, public CValidationInterface
+{
+    ...
+    DBErrors LoadWallet(bool& fFirstRunRet); // 加载钱包到内存
+    ...
+};
+{% endhighlight %}
+
+实现在“wallet.cpp”文件中，入参为：首次运行标志（初始为 true）。
+
+{% highlight C++ %}
+DBErrors CWallet::LoadWallet(bool& fFirstRunRet)
+{
+    if (!fFileBacked) // 若非首次运行
+        return DB_LOAD_OK; // 返回 0，表示加载完毕
+    fFirstRunRet = false; // 首次运行，把该标志置为 false
+    DBErrors nLoadWalletRet = CWalletDB(strWalletFile,"cr+").LoadWallet(this); // 从钱包文件中加载钱包到内存
+    if (nLoadWalletRet == DB_NEED_REWRITE) // 5 需要重写
+    {
+        if (CDB::Rewrite(strWalletFile, "\x04pool"))
+        {
+            LOCK(cs_wallet); // 对钱包上锁
+            setKeyPool.clear(); // 清空钥匙池
+            // Note: can't top-up keypool here, because wallet is locked. // 注：不能在这里充值钥匙池，因为钱包被锁了。
+            // User will be prompted to unlock wallet the next operation // 用户将被提示下一个操作需要一个新密钥来解锁钱包。
+            // that requires a new key.
+        }
+    }
+
+    if (nLoadWalletRet != DB_LOAD_OK) // 若加载错误
+        return nLoadWalletRet; // 直接返回加载状态
+    fFirstRunRet = !vchDefaultKey.IsValid(); // 否则验证默认公钥是否有效，若有效，设置第一次运行状态为 false
+
+    uiInterface.LoadWallet(this); // UI 交互，加载钱包
+
+    return DB_LOAD_OK; // 0
+}
+{% endhighlight %}
+
+1.4.调用 `pwalletMain->GetKeyFromPool(newDefaultKey)` 从密钥池中获取一个新密钥（公钥）。
+该函数声明在“wallet.h”文件的 `CWallet` 类中。
+
+{% highlight C++ %}
+class CWallet : public CCryptoKeyStore, public CValidationInterface
+{
+    ...
+    bool GetKeyFromPool(CPubKey &key); // 从密钥池中获取一个密钥的公钥
+    ...
+    void SetBestChain(const CBlockLocator& loc); // 设置最佳链
+    ...
+    bool SetAddressBook(const CTxDestination& address, const std::string& strName, const std::string& purpose); // 设置地址簿（地址，所属账户，地址用途）
+    ...
+    bool SetDefaultKey(const CPubKey &vchPubKey); // 设置默认密钥
+    ...
+};
+{% endhighlight %}
+
+实现在“wallet.cpp”文件中，入参为：待获取的新密钥（公钥）。
+
+{% highlight C++ %}
+bool CWallet::GetKeyFromPool(CPubKey& result)
+{
+    int64_t nIndex = 0;
+    CKeyPool keypool; // 密钥池条目
+    {
+        LOCK(cs_wallet);
+        ReserveKeyFromKeyPool(nIndex, keypool); // 从密钥池中预定一个密钥，若获取失败，nIndex 为 -1
+        if (nIndex == -1) // -1 表示当前 keypool 为空
+        {
+            if (IsLocked()) return false;
+            result = GenerateNewKey(); // 创建新的私钥，并用椭圆曲线加密生成对应的公钥
+            return true;
+        }
+        KeepKey(nIndex); // 从钱包数据库的密钥池中移除该密钥
+        result = keypool.vchPubKey;
+    }
+    return true;
+}
+{% endhighlight %}
+
+然后调用 `pwalletMain->SetDefaultKey(newDefaultKey)` 把上一步获取的新密钥设置为钱包的默认密钥。
+该函数实现在“wallet.cpp”文件中，入参为：刚从密钥池中取出的密钥对应的公钥。
+
+{% highlight C++ %}
+bool CWallet::SetDefaultKey(const CPubKey &vchPubKey)
+{
+    if (fFileBacked)
+    {
+        if (!CWalletDB(strWalletFile).WriteDefaultKey(vchPubKey)) // 把默认公钥写入钱包数据库 wallet.dat 中
+            return false;
+    }
+    vchDefaultKey = vchPubKey; // 设置该公钥为默认公钥
+    return true;
+}
+{% endhighlight %}
+
+然后调用 `pwalletMain->SetAddressBook(pwalletMain->vchDefaultKey.GetID(), "", "receive")` 把该默认密钥加入地址簿的默认账户中，用途为接收。
+该函数实现在“wallet.cpp”文件中，入参为：公钥索引，帐户名，用途。
+
+{% highlight C++ %}
+bool CWallet::SetAddressBook(const CTxDestination& address, const string& strName, const string& strPurpose)
+{
+    bool fUpdated = false; // 标记钱包地址簿是否更新，指地址已存在更新其用途，新增地址不算
+    {
+        LOCK(cs_wallet); // mapAddressBook
+        std::map<CTxDestination, CAddressBookData>::iterator mi = mapAddressBook.find(address); // 首先在地址簿中查找该地址
+        fUpdated = mi != mapAddressBook.end(); // 查找到的话，升级标志置为 true
+        mapAddressBook[address].name = strName; // 账户名，若地址已存在，直接改变账户名，否则插入该地址
+        if (!strPurpose.empty()) /* update purpose only if requested */ // 用途非空
+            mapAddressBook[address].purpose = strPurpose; // 升级该已存在地址的用途
+    }
+    NotifyAddressBookChanged(this, address, strName, ::IsMine(*this, address) != ISMINE_NO,
+                             strPurpose, (fUpdated ? CT_UPDATED : CT_NEW) ); // 通知地址簿已改变
+    if (!fFileBacked) // 文件未备份
+        return false;
+    if (!strPurpose.empty() && !CWalletDB(strWalletFile).WritePurpose(CBitcoinAddress(address).ToString(), strPurpose)) // 用途非空时，写入钱包数据库该地址对应的用途
+        return false;
+    return CWalletDB(strWalletFile).WriteName(CBitcoinAddress(address).ToString(), strName); // 最后写入地址对应的账户名到钱包数据库
+}
+{% endhighlight %}
+
+最后调用 `pwalletMain->SetBestChain(chainActive.GetLocator())` 来设置最佳链。
+该函数实现在“wallet.cpp”文件中，入参为：激活的链的区块位置。
+
+{% highlight C++ %}
+void CWallet::SetBestChain(const CBlockLocator& loc)
+{
+    CWalletDB walletdb(strWalletFile); // 创建钱包数据库局部对象
+    walletdb.WriteBestBlock(loc); // 写入最佳块位置到钱包数据库文件
+}
+{% endhighlight %}
+
+1.6.调用 `pwalletMain->SetBroadcastTransactions(GetBoolArg("-walletbroadcast", DEFAULT_WALLETBROADCAST));` 设置钱包交易广播标志。
+该函数实现在“wallet.h”文件的 `CWallet` 类中。
+
+{% highlight C++ %}
+static const bool DEFAULT_WALLETBROADCAST = true; // 钱包交易广播，默认开启
+...
+class CWallet : public CCryptoKeyStore, public CValidationInterface
+{
+    ...
+    bool fBroadcastTransactions; // 广播交易的标志
+    ...
+    DBErrors LoadWallet(bool& fFirstRunRet); // 加载钱包到内存    /** Set whether this wallet broadcasts transactions. */ // 设置该钱包是否广播交易。
+    void SetBroadcastTransactions(bool broadcast) { fBroadcastTransactions = broadcast; }
+    ...
+};
 {% endhighlight %}
 
 未完待续...<br>
