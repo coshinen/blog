@@ -6,19 +6,12 @@ author: mistydew
 categories: Blockchain Bitcoin
 tags: 区块链 比特币 比特币地址
 ---
-![bitcoin](/images/20180504/bitcoin.svg)
-
-## 读在前面
-比特币相关的解读目前均采用 [bitcoin v0.12.1](https://github.com/bitcoin/bitcoin/tree/v0.12.1)，此版本为官方内置挖矿算法的最后一版。<br>
-目前比特币的最新版本为 bitcoin v0.16.0，离区块链 1.0 落地还有些距离。
-
 ## 概要
 比特币“靓号”地址是拥有个性化（自定义）前缀的公钥地址。<br>
 例如以 `1kid` 开头的公钥地址 `1kidyp7EFY3xUdMGSTWpkEmLcfKu9yvoq`。<br>
 这里后 3 位 `kid` 就是我们自定义的地址前缀了，当然地址本身的生成方式并没有改变，
 只是不断地通过筛选得到拥有该前缀的地址，在你拿到这个地址前，或许已经生成了 n 个地址，这个过程有点像挖矿。
 毫无疑问，随着前缀长度的增加，这个筛选过程所耗费的时间会呈指数级增长。
-<!-- excerpt -->
 
 ## 安全性
 这里的安全指的是黑客可能会偷换博客或论坛等页面上作者留下的比特币捐赠地址，

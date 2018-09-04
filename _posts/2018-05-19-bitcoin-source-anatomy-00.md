@@ -7,16 +7,12 @@ categories: Blockchain Bitcoin
 tags: 区块链 比特币 源码剖析
 stickie: true
 ---
-![bitcoin](/images/20180504/bitcoin.svg)
-
-## 读在前面
 比特币相关的解读目前均采用 [bitcoin v0.12.1](https://github.com/bitcoin/bitcoin/tree/v0.12.1)，此版本为官方内置挖矿算法的最后一版。<br>
 目前比特币的最新版本为 bitcoin v0.16.0，离区块链 1.0 落地还有些距离。
 
 ## 概要
 下载比特币源码到本地，这里可以采用 Linux 系统的 Git 把官方源码克隆至本地。<br>
 切换到 v0.12.1 版本的源码，进入 `bitcoin/src` 目录，开始我们的源码阅读之旅。
-<!-- excerpt -->
 
 {% highlight shell %}
 $ git clone https://github.com/bitcoin/bitcoin.git # 克隆官方源码最新版到本地

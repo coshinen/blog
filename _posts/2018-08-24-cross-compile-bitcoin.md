@@ -6,14 +6,7 @@ author: mistydew
 categories: Blockchain Bitcoin
 tags: 区块链 比特币 源码构建 交叉编译
 ---
-在 `Linux` 平台下交叉编译比特币源码，得到 `Windows` 版本的可执行程序。
-<!-- excerpt -->
-
-![bitcoin](/images/20180504/bitcoin.svg)
-
-## 读在前面
-比特币相关的解读目前均采用 [bitcoin v0.12.1](https://github.com/bitcoin/bitcoin/tree/v0.12.1)，此版本为官方内置挖矿算法的最后一版。<br>
-目前比特币的最新版本为 bitcoin v0.16.2，离区块链 1.0 落地还有些距离。
+本文记录了如何在 `Linux` 平台下交叉编译比特币源码，得到 `Windows` 版本的可执行程序。
 
 ## 下载比特币源码（Ubuntu 18.04.1）
 

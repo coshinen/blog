@@ -6,9 +6,8 @@ author: mistydew
 categories: Study 译文
 tags: Study Linux CLI GUI
 ---
-**本文由 `Martins D.Okoi` 撰写，`mistydew` 翻译，原文详见参照。**
-
 为什么这么多 `Linux` 用户更喜欢 `CLI` 而非 `GUI`？
+
 上次我在 `Reddit` 关注该问题时，遇到了一些有帮助的投稿：
 
 “处于相同的原因我更喜欢谈论指指点点和七嘴八舌。
@@ -20,7 +19,6 @@ tags: Study Linux CLI GUI
 
 比起使用 `CLI` 我更常用 `GUI` 工作，但这是我做最重要的开发任务时的方式。
 命令行界面可以说具有一个陡峭的学习曲线，但一旦你掌握它，你就会喜欢上它，因为它将变成第二天性。
-<!-- excerpt -->
 
 以下是我认为许多 `Linux` 用户更喜欢命令行界面的最普遍的原因。
 

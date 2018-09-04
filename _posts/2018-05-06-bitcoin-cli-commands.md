@@ -7,18 +7,13 @@ categories: Blockchain Bitcoin
 tags: CLI bitcoin-cli 区块链 比特币
 stickie: true
 ---
-![bitcoin](/images/20180504/bitcoin.svg)
-
-## 读在前面
-比特币相关的解读目前均采用 [bitcoin v0.12.1](https://github.com/bitcoin/bitcoin/tree/v0.12.1)，此版本为官方内置挖矿算法的最后一版。<br>
-目前比特币的最新版本为 bitcoin v0.16.0，离区块链 1.0 落地还有些距离。
+目前列出了 `bitcoin v0.12.1` 版本的比特币核心客户端的所有（含隐藏分类） `RPC` 命令。
 
 ## bitcoin-cli 命令行参数
 带有 JSON-RPC 接口的基于命令行的守护进程 `bitcoind` 与 Bicoin Core 绑定在一起。
 它也提供访问公共测试网 testnet，一个全球的测试环境，使用一个使用无价值的“测试比特币”替代区块链模仿比特币主网。
 回归测试网 regtest 或回归测试模式 Regression Test Mode 创建了一个用作本地测试环境的私有区块链。
 最终，一个允许用户发送 RPC 命令到 `bitcoind` 的简单程序 `bitcoin-cli` 也包含在比特币核心内。
-<!-- excerpt -->
 
 ### 基础命令
 

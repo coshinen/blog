@@ -6,17 +6,10 @@ author: mistydew
 categories: Blockchain Bitcoin
 tags: 区块链 比特币 base58编码
 ---
-![bitcoin](/images/20180504/bitcoin.svg)
-
-## 读在前面
-比特币相关的解读目前均采用 [bitcoin v0.12.1](https://github.com/bitcoin/bitcoin/tree/v0.12.1)，此版本为官方内置挖矿算法的最后一版。<br>
-目前比特币的最新版本为 bitcoin v0.16.0，离区块链 1.0 落地还有些距离。
-
 ## 概要
 Base58 是一组二进制文本编码方案，用于把大整数表示为含有字母和数字的文本。
 它与 Base64 类似，但被修改过以避免打印输出时看起来有歧义的非字母数字和字母。
 因此，被设计用于手动输入数据的人类用户，从一些可视源复制，还允许轻松复制和粘贴，因为双击通常会选择整个字符串。
-<!-- excerpt -->
 
 对比 Base64 省略了以下外观类似的字母：
 0（零），O（大写字母 o），I（大写字母 i）和 l（小写字母 L）以及非字母数字的字符 +（加号 plus）和 /（斜杠 slash）。

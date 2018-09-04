@@ -6,6 +6,7 @@ author: mistydew
 categories: Makefile
 tags: C C++ Automake
 ---
+使用 `make` 编译工具链构建项目的简单过程。
 
 ## 必备工具
 
@@ -14,7 +15,6 @@ tags: C C++ Automake
 * autoheader
 * autoconf
 * automake
-<!-- excerpt -->
 
 ## 0. 编写源码
 

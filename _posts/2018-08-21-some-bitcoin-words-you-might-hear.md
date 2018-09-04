@@ -7,7 +7,6 @@ categories: Blockchain Bitcoin 译文
 tags: 区块链 比特币 词汇表
 ---
 比特币提供了一种全新的支付方式，因此你可能需要了解一些新词语。
-<!-- excerpt -->
 
 ## 比特币 | Bitcoin
 

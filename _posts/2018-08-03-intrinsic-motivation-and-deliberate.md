@@ -5,6 +5,7 @@ date:   2018-08-03 16:40:02 +0800
 author: mistydew
 categories: Study 译文
 tags: Study Insistence
+excerpt: 内在动机和刻意练习呈螺旋式上升
 ---
 ![intrinsic_motivation_deliberate_practice](/images/20180803/intrinsic_motivation_deliberate_practice.png)
 
@@ -16,7 +17,6 @@ tags: Study Insistence
 他们发现，较高的初始内在动机预示了更多的刻意练习。
 在 12 个月的时间中，内在动机和个人的刻意练习是相互关联的，
 换句话说，是内在动机和刻意练习的螺旋式上升。
-<!-- excerpt -->
 
 ![presentatie](/images/20180803/presentatie.jpg)
 

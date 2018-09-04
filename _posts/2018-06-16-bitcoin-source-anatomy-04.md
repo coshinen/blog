@@ -6,16 +6,8 @@ author: mistydew
 categories: Blockchain Bitcoin
 tags: 区块链 比特币 源码剖析
 ---
-![bitcoin](/images/20180504/bitcoin.svg)
-
-## 读在前面
-比特币相关的解读目前均采用 [bitcoin v0.12.1](https://github.com/bitcoin/bitcoin/tree/v0.12.1)，此版本为官方内置挖矿算法的最后一版。<br>
-目前比特币的最新版本为 bitcoin v0.16.1，离区块链 1.0 落地还有些距离。
-
-## 概要
 上一篇分析了数据目录路径的获取、配置文件中设置的启动选项的读取、不同网络链参数（包含创世区块信息）的选择、命令行参数完整性检测、`Linux` 下守护进程的后台化以及服务选项的设置，详见[比特币源码剖析（三）](/2018/06/09/bitcoin-source-anatomy-03)。<br>
 本篇主要分析 `InitLogging()` 初始化日志记录函数，`InitParameterInteraction()` 初始化参数交互函数，`AppInit2(threadGroup, scheduler)` 真正地初始化应用程序函数。
-<!-- excerpt -->
 
 ## 源码剖析
 

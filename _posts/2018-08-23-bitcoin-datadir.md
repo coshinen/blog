@@ -6,16 +6,8 @@ author: mistydew
 categories: Blockchain Bitcoin
 tags: 区块链 比特币 数据目录
 ---
-![bitcoin](/images/20180504/bitcoin.svg)
-
-## 读在前面
-比特币相关的解读目前均采用 [bitcoin v0.12.1](https://github.com/bitcoin/bitcoin/tree/v0.12.1)，此版本为官方内置挖矿算法的最后一版。<br>
-目前比特币的最新版本为 bitcoin v0.16.2，离区块链 1.0 落地还有些距离。
-
-## 概要
 比特币核心通常把其所有数据放在一个目录中，该目录称为数据目录。<br>
 不同的操作系统，其默认位置是不同的，以下列出 3 种常用操作系统下比特币数据目录的默认位置：
-<!-- excerpt -->
 
 * Windows < Vista: C:\Documents and Settings\Username\Application Data\Bitcoin
 
@@ -24,6 +16,8 @@ tags: 区块链 比特币 数据目录
 * Mac: ~/Library/Application Support/Bitcoin
 
 * Unix: ~/.bitcoin
+
+## 源码剖析
 
 数据目录默认的位置硬编在源码“util.cpp”文件的 `GetDefaultDataDir()` 函数中。
 

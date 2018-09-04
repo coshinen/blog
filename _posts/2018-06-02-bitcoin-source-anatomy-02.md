@@ -6,16 +6,8 @@ author: mistydew
 categories: Blockchain Bitcoin
 tags: 区块链 比特币 源码剖析
 ---
-![bitcoin](/images/20180504/bitcoin.svg)
-
-## 读在前面
-比特币相关的解读目前均采用 [bitcoin v0.12.1](https://github.com/bitcoin/bitcoin/tree/v0.12.1)，此版本为官方内置挖矿算法的最后一版。<br>
-目前比特币的最新版本为 bitcoin v0.16.0，离区块链 1.0 落地还有些距离。
-
-## 概要
 上一篇分析了应用程序启动前运行环境的设置和信号处理函数的连接，详见[比特币源码剖析（一）](/2018/05/26/bitcoin-source-anatomy-01)。<br>
 本篇开始分析 `AppInit(argc, argv)` 应用程序初始化函数。
-<!-- excerpt -->
 
 ## 源码剖析
 

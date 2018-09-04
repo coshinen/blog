@@ -5,7 +5,7 @@ date:   2018-07-30 20:16:08 +0800
 author: mistydew
 categories: ABBA 翻訳
 tags: 歌詞
-excerpt: You can dance You can jive
+excerpt: You can dance. You can jive. Having the time of your life. Ooh, see that girl.
 ---
 ![arrival](https://raw.githubusercontent.com/mistydew/audio/master/cover/arrival.jpg)
 

@@ -5,6 +5,7 @@ date:   2018-06-12 09:07:06 +0800
 author: mistydew
 categories: Blockchain Bitcoin 译文
 tags: 区块链 比特币 比特币白皮书
+excerpt: 比特币：一种对等的电子现金系统
 ---
 <p align="center">
 <font size="6">
@@ -12,7 +13,6 @@ Bitcoin: A Peer-to-Peer Electronic Cash System<br>
 比特币：一种对等的电子现金系统
 </font>
 </p>
-<!-- excerpt -->
 
 <p align="center">
 Satoshi Nakamoto<br>

@@ -7,7 +7,6 @@ categories: Vi/Vim
 tags: CLI Editor
 ---
 `Vim(Vi IMproved)` 是 `Vi` 文本编辑器的升级版，在 `Linux` 系统中作为 “编辑器之神” 与 “神之编辑器” `Emacs` 并驾齐驱。
-<!-- excerpt -->
 
 下图展示了各自的学习曲线，其中不乏调侃之意。<br>
 ![curves](/images/20180421/vi_emacs_learning_curves.jpg)<br>

@@ -1,11 +1,11 @@
 ---
 layout: post
 title:  "call my name"
-date:   2018-06-23 20:01:08 +0800
+date:   2018-06-24 20:01:08 +0800
 author: mistydew
 categories: ガーネット・クロウ 翻訳
 tags: GC 歌詞
-excerpt: 白い壁と　Rembrandt いつまでも眺めていた
+excerpt: 白い壁と Rembrandt いつまでも眺めていた 日曜の朝君とただ並んでた
 ---
 ![call my name](https://raw.githubusercontent.com/mistydew/gc/master/images/cover/single/Single_08th_call_my_name.jpg)
 

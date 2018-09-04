@@ -6,16 +6,8 @@ author: mistydew
 categories: Blockchain Bitcoin
 tags: 区块链 比特币 源码剖析
 ---
-![bitcoin](/images/20180504/bitcoin.svg)
-
-## 读在前面
-比特币相关的解读目前均采用 [bitcoin v0.12.1](https://github.com/bitcoin/bitcoin/tree/v0.12.1)，此版本为官方内置挖矿算法的最后一版。<br>
-目前比特币的最新版本为 bitcoin v0.16.1，离区块链 1.0 落地还有些距离。
-
-## 概要
 上一篇分析了应用程序初始化中初始化 `HTTP` 服务器的详细过程，详见[比特币源码剖析（九）](/2018/07/21/bitcoin-source-anatomy-09)。<br>
 本篇主要分析 `Step 4: application initialization: dir lock, daemonize, pidfile, debug log` 第四步应用程序初始化服务器中启动 `RPC` 的详细过程。
-<!-- excerpt -->
 
 ## 源码剖析
 

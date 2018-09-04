@@ -13,7 +13,6 @@ tags: Git CLI
 ![git](/images/20180430/git.jpg)<br>
 Git 是一个免费且开源的分布式版本控制系统，旨在处理从小到非常大项目的速度和效率。<br>
 Git 易于学习且拥有占用空间小和闪电般快速的性能。它远优于像 Subversion、CVS、Perforce 和 ClearCase 这些的 SCM 工具，有像廉价的本地分支、便捷的暂存区，和多种工作流程的特性。
-<!-- excerpt -->
 
 ## 安装（Ubuntu 16.04.4）
 

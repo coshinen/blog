@@ -6,16 +6,8 @@ author: mistydew
 categories: Blockchain Bitcoin
 tags: 区块链 比特币 源码剖析
 ---
-![bitcoin](/images/20180504/bitcoin.svg)
-
-## 读在前面
-比特币相关的解读目前均采用 [bitcoin v0.12.1](https://github.com/bitcoin/bitcoin/tree/v0.12.1)，此版本为官方内置挖矿算法的最后一版。<br>
-目前比特币的最新版本为 bitcoin v0.16.0，离区块链 1.0 落地还有些距离。
-
-## 概要
 第一篇主要列出比特币核心服务程序 `bitcoind` 的启动流程及其入口函数，详见[比特币源码剖析](/2018/05/19/bitcoin-source-anatomy-00)。<br>
 该篇主要分析 `SetupEnvironment()` 和 `noui_connect()` 函数。
-<!-- excerpt -->
 
 ## 源码剖析
 
