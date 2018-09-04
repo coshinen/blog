@@ -20,11 +20,17 @@ layout: default
   </div>
 
   {% if site.doc_info %}
-    {% include postinfo.html %}
+    {% if page.hidden == true %}
+    {% else %}
+      {% include postinfo.html %}
+    {% endif %}
   {% endif %}
 
   {% if site.intensedebate_comments %}
-    {% include comments.html %}
+    {% if page.hidden == true %}
+    {% else %}
+      {% include comments.html %}
+    {% endif %}
   {% endif %}
 
 </article>
