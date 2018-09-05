@@ -8,6 +8,12 @@ tags: 区块链 比特币 术语表
 ---
 这是一个专业术语汇编。普通用户应该使用[词汇表页面](/2018/08/21/some-bitcoin-words-you-might-hear)。
 
+## 百分之 51 攻击 | 51% Attack
+
+**定义**：控制大多数网络哈希率的某人修改交易历史并阻止新交易确认的能力。
+
+**同义词**：`51 percent attack`, `Majority Hash Rate attack`
+
 <p id="BlockChain"></p>
 ## 区块链 | Block Chain
 
@@ -63,6 +69,7 @@ tags: 区块链 比特币 术语表
 
 **不要混淆**：[`Target threshold`](#Target)（目标阈值，计算难度得到的值）
 
+<p id="BlockHeight"></p>
 ## 区块高度 | Block Height
 
 **定义**：[区块链](#BlockChain)上指定[区块](#Block)前的[区块](#Block)数。例如，因为[创世区块](#GenesisBlock)前面没有[区块](#Block)，所以其高度为 0。
@@ -299,103 +306,197 @@ tags: 区块链 比特币 术语表
 
 **同义词**：`Lightweight client`（轻量级客户端）, `Thin client`
 
+<p id="Fork"></p>
 ## 分叉 | Fork
 
-**定义**：当 2 个或更多的区块有相同的区块高度时，区块链分叉。特别是发生在 2 个或更多矿工几乎同时找到区块时。也可以用作攻击。
+**定义**：当 2 个或 2 个以上的[区块](#Block)有相同的[高度](#BlockHeight)时，[区块链](#BlockChain)分叉。特别是发生在 2 个或 2 个以上的[矿工](#Miner)几乎同时找到[区块](#Block)时。也可以用于攻击。
 
-**同义词**：Accidental fork（意外的分叉）
+**同义词**：`Accidental fork`（意外的分叉）
 
-**不要混淆**：Hard fork（区块链上由为升级的节点不遵循新的共识规则导致的永久性的分叉）,
-Soft fork（区块链上由为升级的节点不遵循新的共识规则导致的临时分叉）,
-Software fork（当一个或多个开发人员与其他开发人员永久地分开开发一份代码库）,
-Git fork（当一个或多个开发人员与其他开发人员临时分开开发一份代码库）
+**不要混淆**：[`Hard fork`](#HardFork)（[共识规则](#ConsensusRules)的变化会破坏不升级[节点](#Node)的安全性）,
+[`Soft fork`](#SoftFork)（[共识规则](#ConsensusRules)的变化会削弱不升级[节点](#Node)的安全性）,
+`Software fork`（当一个或多个开发人员与其他开发人员永久地分开开发一份代码库）,
+`Git fork`（当一个或多个开发人员与其他开发人员临时分开开发一份代码库）
 
+<p id="HardFork"></p>
+## 硬分叉 | Hard Fork
+
+**定义**：[区块链](#BlockChain)上永久性的分叉，通常发生在未升级的[节点](#Node)不能验证通过遵守新的[共识规则](#ConsensusRules)的升级的[节点](#Node)创建的[区块](#Block)时。
+
+**同义词**：`Hard-forking change`（硬分叉变化）
+
+**不要混淆**：[`Fork`](#Fork)（所有[节点](#Node)遵循相同的[共识规则](#ConsensusRules)的常规的分叉，一旦一条链的[工作量证明](#POW)高于另一条，该分叉被解决）,
+[`Soft fork`](#SoftFork)（[区块链](#BlockChain)上由未升级的[节点](#Node)不遵循新的[共识规则](#ConsensusRules)导致的临时分叉）,
+`Software fork`（当一个或多个开发人员与其他开发人员永久地分开开发一份代码库）,
+`Git fork`（当一个或多个开发人员与其他开发人员临时分开开发一份代码库）
+
+<p id="SoftFork"></p>
+## 软分叉 | Soft Fork
+
+**定义**：软分叉是比特币协议的改变，其中只有之前有效的[区块](#Block)/交易变得无效了。因为旧的[节点](#Node)将仍认为新[区块](#Block)是有效的，所以软分叉是向后兼容的。
+
+**同义词**：`Soft-forking change`（软分叉变化）
+
+**不要混淆**：[`Fork`](#Fork)（所有[节点](#Node)遵循相同的[共识规则](#ConsensusRules)的常规的分叉，一旦一条链的[工作量证明](#POW)高于另一条，该分叉被解决）,
+[`Hard fork`](#HardFork)（[区块链](#BlockChain)上因未升级的[节点](#Node)不遵循新的[共识规则](#ConsensusRules)导致的永久性的分叉）,
+`Software fork`（当一个或多个开发人员与其他开发人员永久性地分开开发一份代码）,
+`Git fork`（当一个或多个开发人员与其他开发人员临时分开开发一份代码）
+
+<p id="MASF"></p>
+## 矿工激活的软分叉 | Miner Activated Soft Fork, MASF
+
+**定义**：通过[矿工](#Miner)信号激活的[软分叉](#SoftFork)。
+
+**不要混淆**：[`User Activated Soft Fork`](#UASF)（通过标记日或[节点](#Node)强制而非[矿工](#Miner)信号激活的i[软分叉](#SoftFork)）,
+[`Fork`](#Fork)（所有[节点](#Node)遵循相同的[共识规则](#ConsensusRules)的常规的分叉，一旦一条链的[工作量证明](#POW)高于另一条，该分叉被解决）,
+[`Hard fork`](#HardFork)（[区块链](#BlockChain)上因未升级的[节点](#Node)不遵循新的[共识规则](#ConsensusRules)导致的永久性的分叉）,
+[`Soft fork`](#SoftFork)（[区块链](#BlockChain)上由未升级的[节点](#Node)不遵循新的[共识规则](#ConsensusRules)导致的临时分叉）,
+`Software fork（当一个或多个开发人员与其他开发人员永久地分开开发一份代码库）,
+`Git fork（当一个或多个开发人员与其他开发人员临时分开开发一份代码库）
+
+<p id="UASF"></p>
+## 用户激活的软分叉 | User Activated Soft Fork, UASF
+
+**定义**：通过标志日或[节点](#Node)强制代替[矿工](#Miner)信号激活的[软分叉](#SoftFork)。
+
+**不要混淆**：[`Miner activated soft fork`](#MASF)（通过[矿工](#Miner)信号激活的[软分叉](#SoftFork)）,
+[`Fork`](#Fork)（所有[节点](#Node)遵循相同的[共识规则](#ConsensusRules)的常规的分叉，一旦一条链的[工作量证明](#POW)高于另一条，该分叉被解决）,
+[`Hard fork`](#HardFork)（[区块链](#BlockChain)上因未升级的[节点](#Node)不遵循新的[共识规则](#ConsensusRules)导致的永久性的分叉）,
+[`Soft fork`](#SoftFork)（[区块链](#BlockChain)上由未升级的[节点](#Node)不遵循新的[共识规则](#ConsensusRules)导致的临时分叉）,
+`Software fork（当一个或多个开发人员与其他开发人员永久地分开开发一份代码库）,
+`Git fork（当一个或多个开发人员与其他开发人员临时分开开发一份代码库）
+
+<p id="ConsensusRules"></p>
+## 共识规则 | Consensus Rules
+
+**定义**：全[节点](#Node)遵循与其他[节点](#Node)相同的[共识](#Consensus)的区块验证规则。
+
+**同义词**：`Validation Rules`（验证规则）
+
+**不要混淆**：[`Consensus`](#Consensus)（当[节点](#Node)遵循相同的共识规则就达成了共识）
+
+<p id="Consensus"></p>
+## 共识 | Consensus
+
+**定义**：当几个[节点](#Node)（通常是网络上的大部分[节点](#Node)）在它们本地验证过的[最佳区块链](#BlockChain)中都有相同的[区块](#Block)。
+
+**不要混淆**：`Social consensus`（社会共识，通常用于开发人员之间的讨论，以表明大多数人同意某个特定的方案）, [`Consensus rules`](#ConsensusRules)（允许[节点](#Node)维持共识的规则）
+
+<p id="StaleBlock"></p>
 ## 陈旧的区块 | Stale Block
 
-**定义**：成功挖出但没有包含在当前最佳区块链上的区块，可能是因为在相同高度的其他区块首先扩展链。
+**定义**：成功挖出但没有包含在当前[最佳区块链](#BlockChain)上的[区块](#Block)，可能是因为在相同[高度](#BlockHeight)的其他[区块](#Block)首先扩展链。
 
-**不要混淆**：Orphan block（该区块的前一个区块哈希域指向一个未知的区块，意味着孤儿块不能被验证）
+**不要混淆**：[`Orphan block`](#OrphanBlock)（该[区块](#Block)的前一个区块哈希域指向一个未知的[区块](#Block)，意味着孤儿块不能被验证）
 
+<p id="OrphanBlock"></p>
 ## 孤儿块 | Orphan Block
 
-**定义**：父区块没有被本地几点处理的区块，以至于它们还不能被完全验证。
+**定义**：父[区块](#Block)没有被本地[节点](#Node)处理的[区块](#Block)，以至于它们还不能被完全验证。
 
-**不要混淆**：Stale block（陈旧的区块）
+**不要混淆**：[`Stale block`](#StaleBlock)（陈旧的区块）
 
 ## 区块大小限制 | Block Size Limit
 
-**定义**：共识规则允许一个区块的以字节为单位的最大尺寸。当前区块大小限制是 1,000,000 字节。
+**定义**：[共识规则](#ConsensusRules)允许一个[区块](#Block)的以字节为单位的最大尺寸。当前[区块](#Block)大小限制是 1,000,000 字节。
 
-**不要混淆**：Block（区块）, Blockchain（区块链）, Blockchain size（区块链大小）
+**同义词**：`Maximum block size`
 
+**不要混淆**：[`Block`](#Block), [`Blockchain`](#BlockChain), `Blockchain size`
+
+<p id="Mainnet"></p>
 ## 主网 | Mainnet
 
-**定义**：比特币交易的原始和主要网络，其中聪有真正经济价值。
+**定义**：比特币交易的原始和主要网络，其中的[聪](#Satoshis)有真正经济价值。
 
-**同义词**：Bitcoin main network（比特币主网）
+**同义词**：`Bitcoin main network`
 
-**不要混淆**：Testnet（非常类似主网的开放网络，其中的聪没有价值）, Regtest（类似于测试网的私有测试节点）
+**不要混淆**：[`Testnet`](#Testnet)（非常类似主网的开放网络，其中的[聪](#Satoshis)没有价值）, [`Regtest`](#Regtest)（类似于[测试网](#Testnet)的私有测试[节点](#Node)）
 
+<p id="Testnet"></p>
 ## 测试网 | Testnet
 
-**定义**：开发人员能够在类似于比特币主网的网络上获得并花费没有真正价值的聪的全球测试环境。
+**定义**：开发人员能够在类似于比特币[主网](#Mainnet)的网络上获得并花费没有真正价值的[聪](#Satoshis)的全球测试环境。
 
-**同义词**：Testing network
+**同义词**：`Testing network`
 
-**不要混淆**：Regtest（开发人员可控制区块生成的本地测试环境）
+**不要混淆**：[`Regtest`](#Regtest)（开发人员可控制[区块](#Block)生成的本地测试环境）
 
+<p id="Regtest"></p>
 ## 回归测试网 | Regtest
 
-**定义**：开发人员能够立刻产生测试事件所需区块的本地测试环境，能够创建没有价值的私有聪。
+**定义**：开发人员能够立刻产生测试所需[区块](#Block)的本地测试环境，能够创建没有价值的私有[聪](#Satoshis)。
 
-**同义词**：Regression test mode（回归测试模式）
+**同义词**：`Regression test mode`
 
-**不要混淆**：Testnet（模仿主网的全球测试环境）
+**不要混淆**：[`Testnet`](#Testnet)（模仿[主网](#Mainnet)的全球测试环境）
 
 ## DNS 种子 | DNS Seed
 
-**定义**：DNS 域名解析服务器返回比特币网络上的全节点的 IP 地址集来帮助进行对端的发现。
+**定义**：`DNS` 域名解析服务器返回比特币网络上的全[节点](#Node)的 IP 地址集来帮助进行对端的发现。
 
-**不要混淆**：HD wallet seeds（HD 钱包种子）
-
-## 共识 | Consensus
-
-**定义**：当几个节点（通常是网络上的大部分节点）在它们本地验证的最佳区块连中都有相同的区块。
-
-**不要混淆**：Social consensus（社会共识，通常用于开发人员之间的讨论，以表明大多数人同意某个特定的方案）, Consensus rules（允许节点维持共识的规则）
-
-## 共识规则 | Consensus Rules
-
-**定义**：全节点遵循与其他节点相同的共识的区块验证规则。
-
-**同义词**：Validation Rules（验证规则）
-
-**不要混淆**：Consensus（当节点遵循相同的共识规则就达成了共识）
-
-## 百分之 51 攻击 | 51% Attack
-
-**定义**：控制大多数网络哈希率的某人修改交易历史并阻止新交易确认的能力。
-
-**同义词**：51 percent attack（百分之 51 攻击）, Majority Hash Rate attack（多数攻击）
+**不要混淆**：[`HD wallet seeds`](#RootSeed)
 
 <p id="Base58check"></p>
 ## Base58 编码 | Base58check
 
-**定义**：比特币中用于转换 160 位的哈希值到 P2PKH 和 P2SH 地址的方法。
-也用于比特币的其他部分，例如用于 WIP 格式备份的编码私钥。与其他的 base58 实现不同。
+**定义**：比特币中用于转换 160 位的哈希值到 P2PKH 和 [P2SH 地址](#P2SH)的方法。
+也用于比特币的其他部分，例如用于 WIP 格式备份编码的[私钥](#PrivateKey)。与其他的 base58 实现不同。
 
-**同义词**：Bitcoin Address Encoding（比特币地址编码）
+**同义词**：`Bitcoin Address Encoding`
 
-**不要混淆**：P2PKH address, P2SH address, IP address
+**不要混淆**：[`P2PKH address`](#P2PKH), [`P2SH address`](#P2SH), `IP address`
 
+<p id="P2PKH"></p>
+## P2PKH 地址 | 2PKH Address
+
+**定义**：比特币[付款地址](#Address)，包含哈希的[公钥](#PublicKey)，允许付款人创建标准的支付给公钥哈希（P2PKH）的[公钥脚本](#ScriptPubKey)。
+
+**同义词**：`Pay to pubkey hash`, `P2PKH output`
+
+**不要混淆**：[`P2PK output`](#TxOut)（直接支付给[公钥](#PublicKey)的[输出](#TxOut)）, [`P2SH address / output`](#P2SH)（包括哈希的脚本和其相应的[输出](#TxOut)的[地址](#Address)）
+
+<p id="P2SH"></p>
+## P2SH 地址 | P2SH Address
+
+**定义**：比特币付款[地址](#Address)包含一个哈希的脚本，允许付款人创建一个标准的支付到脚本哈希（P2SH）的[公钥脚本](#ScriptPubKey)。该脚本几乎可能是任何有效的[公钥脚本](#ScriptPubKey)。
+
+**同义词**：`Pay to script hash`, `P2SH output`
+
+**不要混淆**：[`P2PK output`](#TxOut)（直接支付到[公钥](#PublicKey)的[输出](#TxOut)）,
+[`P2PKH address / output`](#P2PKH)（由散列的[公钥](#PublicKey)和其相应的[输出](#TxOut)组成的[地址](#Address)）,
+[`P2SH multisig`](#P2SHMultisig)（P2SH 特定的实例，其中脚本使用一个[多签操作码](#Opcode)）
+
+<p id="Address"></p>
 ## 付款地址 | Payment Addresses
 
-**定义**：使用 [`base58check`](#Base58check) 格式化的 20 个字节的哈希值，用来生成 `P2PKH` 或 `P2SH` 比特币地址。
+**定义**：使用 [`base58check`](#Base58check) 格式化的 20 个字节的哈希值，用来生成 `P2PKH` 或 `P2SH` 类型的比特币地址。
 目前用户交换支付信息的最常见方式。
 
-**同义词**：Address（地址）
+**同义词**：`Address`
 
-**不要混淆**：IP address
+**不要混淆**：`IP address`
+
+<p id="P2SHMultisig"></p>
+## P2SH 多签 | P2SH Multisig
+
+**定义**：[P2SH 输出](P2SHAddress)，其中[兑换脚本](#RedeemScript)使用其中一个[多签](#Multisig)[操作码](#Opcode)。直到比特币核心 0.10.0 版，[P2SH 多签脚本](#P2SHMultisig)是[标准交易](#StandardTransaction)，但大多数 P2SH 脚本不始。
+
+**同义词**：`P2SH multisig output`
+
+**不要混淆**：[`Multisig pubkey scripts`](#ScriptPubKey)（也称作“[裸多签](#Multisig)”，这些[多签](#Multisig)脚本不使用 P2SH 封装）, P2SH（通用 P2SH，其中 [P2SH 多签](#P2SHMultisig)是比特币核心 0.10.0 版特殊情况下的特定实例）
+
+<p id="Opcode"></p>
+## 操作码 | Opcode
+
+**定义**：来自比特币脚本语言的操作码在[公钥脚本](#ScriptPubKey)或[签名脚本](#ScriptSig)内部推送数据或执行函数。
+
+**同义词**：`Data-pushing opcode`, `Non-data-pushing opcode`
+
+<p id="StandardTransaction"></p>
+## 标准交易 | Standard Transaction
+
+**定义**：传递给比特币核心 `IsStandard()` 和 `IsStandardTx()` 测试的交易。只有标准交易通过运行默认比特币核心软件的[对端节点](#Node)挖矿或广播。
 
 ## Watch-Only 地址 | Watch-Only Address
 
@@ -410,50 +511,6 @@ Git fork（当一个或多个开发人员与其他开发人员临时分开开发
 ## 双重花费 | Double Spend
 
 **定义**：使用与已经广播交易相同输入的交易。当有一个交易已经记录在区块链上时，将被当作重复，欺骗或转换的尝试。
-
-## 硬分叉 | Hard Fork
-
-**定义**：区块链上永久性的分叉，通常发生在未升级的节点不能验证通过遵守新的共识规则的升级的节点创建的区块时。
-
-**同义词**：Hard-forking change（硬分叉变化）
-
-**不要混淆**：Fork（所有节点遵循相同的共识规则的常规的分叉，一旦一条链的工作量证明高于另一条，该分叉被解决）,
-Soft fork（区块链上由为升级的节点不遵循新的共识规则导致的临时分叉）,
-Software fork（当一个或多个开发人员与其他开发人员永久地分开开发一份代码库）,
-Git fork（当一个或多个开发人员与其他开发人员临时分开开发一份代码库）
-
-## 软分叉 | Soft Fork
-
-**定义**：软分叉是比特币协议的改变，其中只有之前有效的区块/交易变得无效了。因为旧的节点将仍认为新区块是有效的，所以软分叉是向后兼容的。
-
-**同义词**：Soft-forking change（软分叉变化）
-
-**不要混淆**：Fork（所有节点遵循相同的共识规则的普通的分叉，一旦一条链的工作量证明多于另一条，该分叉就被解决掉）,
-Hard fork（区块链上因未升级的节点不遵循新的共识规则导致的永久性的分叉）,
-Software fork（当一个或多个开发人员与其他开发人员永久性地分开开发一份代码）,
-Git fork（当一个或多个开发人员与其他开发人员临时分开开发一份代码）
-
-## 矿工激活的软分叉 | Miner Activated Soft Fork, MASF
-
-**定义**：通过矿工信号激活的软分叉。
-
-**不要混淆**：User Activated Soft Fork（通过激活的软分叉）,
-Fork（所有节点遵循相同的共识规则的常规的分叉，一旦一条链的工作量证明高于另一条，该分叉被解决）,
-Hard fork（区块链上由为升级的节点不遵循新的共识规则导致的永久性的分叉）,
-Soft fork（区块链上由为升级的节点不遵循新的共识规则导致的临时分叉）,
-Software fork（当一个或多个开发人员与其他开发人员永久地分开开发一份代码库）,
-Git fork（当一个或多个开发人员与其他开发人员临时分开开发一份代码库）
-
-## 用户激活的软分叉 | User Activated Soft Fork, UASF
-
-**定义**：通过标志日或节点强制代替矿工信号激活的软分叉。
-
-**不要混淆**：Miner activated soft fork（通过矿工信号激活的软分叉）,
-Fork（常规的分叉，所有节点都遵循相同的共识规则，因此一旦一条链的工作量证明多余另一条，该分叉就消失了）,
-Hard fork（区块链中由未升级的节点不遵循新的共识规则导致的永久性的分叉）,
-Soft fork（区块链中由未升级的节点不遵循新的共识规则导致的临时的分叉）,
-Software fork（当一个或多个开发人员与其他开发人员永久分开开发一份基础代码）,
-Git fork（当一个或多个开发人员与其他开发人员临时分开开发一份基础代码）
 
 ## 孩子为父母付钱 | Child Pays For Parent, CPFP
 
@@ -551,32 +608,6 @@ Git fork（当一个或多个开发人员与其他开发人员临时分开开发
 
 **不要混淆**：P2SH multisig（包含在 P2SH 里的多签脚本）, 需要多个签名而不用 `OP_CHECKMULTISIG` 或 `OP_CHECKMULTISIGVERIFY`
 
-## P2SH 多签 | P2SH Multisig
-
-**定义**：P2SH 输出，其中兑换脚本使用其中一个多签操作码。直到比特币核心 0.10.0 版，P2SH 多签脚本是标准交易，但大多数 P2SH 脚本不始。
-
-**同义词**：P2SH multisig output（P2SH 多签输出）
-
-**不要混淆**：Multisig pubkey scripts（也称作“裸多签”，这些多签脚本不使用 P2SH 封装）, P2SH（通用 P2SH，其中 P2SH 多签是比特币核心 0.10.0 版特殊情况下的特定实例）
-
-## P2SH 地址 | P2SH Address
-
-**定义**：比特币支付地址包含一个哈希的脚本，允许支付者创建一个标准的支付到脚本哈希（P2SH）的公钥脚本。该脚本几乎可能是任何有效的公钥脚本。
-
-**同义词**：Pay to script hash（支付到脚本哈希）, P2SH output（P2SH 输出）
-
-**不要混淆**：P2PK output（直接支付到公钥的输出）,
-P2PKH address / output（由散列的公钥和其相应的输出组成的地址）,
-P2SH multisig（P2SH 特定的实例，其中脚本使用一个多签操作码）
-
-## P2PKH 地址 | 2PKH Address
-
-**定义**：比特币付款地址，包含哈希的公钥，允许支付者创建标准的支付给公钥哈希（P2PKH）的公钥脚本。
-
-**同义词**：Pay to pubkey hash（支付到公钥哈希）, P2PKH output（P2PKH 输出）
-
-**不要混淆**：P2PK output（直接支付给公钥的输出）, P2SH address / output（包括哈希的脚本和其相应的输出的地址）
-
 ## 内部字节序 | Internal Byte Order
 
 **定义**：显示为字符串的散列摘要的标准字节序—相同的格式用于序列化的区块和交易。
@@ -627,12 +658,6 @@ P2SH multisig（P2SH 特定的实例，其中脚本使用一个多签操作码�
 
 **同义词**：Raw transaction（原始交易）
 
-## 操作码 | Opcode
-
-**定义**：来自比特币脚本语言的操作码在公钥脚本或签名脚本内部推送数据或执行功能。
-
-**同义词**：Data-pushing opcode（数据推送操作码）, Non-data-pushing opcode（无数据推送操作码）
-
 ## SIGHASH_ALL
 
 **定义**：签名除任意签名脚本的整个交易的默认的签名哈希类型，防止签名的部分修改。
@@ -668,10 +693,6 @@ P2SH multisig（P2SH 特定的实例，其中脚本使用一个多签操作码�
 **同义词**：RedeemScript
 
 **不要混淆**：Signature script（为公钥脚本提供数据的脚本，在 P2SH 输入中包含赎回脚本）
-
-## 标准交易 | Standard Transaction
-
-**定义**：传递给比特币核心 `IsStandard()` 和 `IsStandardTx()` 测试的交易。只有标准交易通过运行默认比特币核心软件的对端节点挖矿或广播。
 
 ## 空数据交易 | Null Data (OP_RETURN) Transaction
 
