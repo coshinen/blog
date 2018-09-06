@@ -6,3 +6,5 @@ Allow: /
 
 User-agent: *
 Disallow: /
+
+Sitemap: https://mistydew.github.io/sitemap.xml
