@@ -66,9 +66,9 @@ int main(int argc, char* argv[]) // 0.程序入口
 3.11.6.网络初始化。[`Step 6: network initialization`](/2018/08/11/bitcoin-source-anatomy-12#Step06-ref)<br>
 3.11.7.加载区块链。[`Step 7: load block chain`](/2018/08/18/bitcoin-source-anatomy-13#Step07-ref)<br>
 3.11.8.加载钱包。[`Step 8: load wallet`](/2018/08/25/bitcoin-source-anatomy-14#Step08-ref)<br>
-3.11.9.数据目录维护。[`Step 9: data directory maintenance`]()<br>
-3.11.10.导入区块。[`Step 10: import blocks`]()<br>
-3.11.11.启动节点。[`Step 11: start node`]()<br>
+3.11.9.数据目录维护。[`Step 9: data directory maintenance`](/2018/09/01/bitcoin-source-anatomy-15#Step09-ref)<br>
+3.11.10.导入区块。[`Step 10: import blocks`](/2018/09/01/bitcoin-source-anatomy-15#Step10-ref)<br>
+3.11.11.启动节点。[`Step 11: start node`](/2018/09/08/bitcoin-source-anatomy-16#Step11-ref)<br>
 3.11.12.完成。[`Step 12: finished`]()<br>
 3.12.根据启动标志做出相应处理。[`WaitForShutdown`]()<br>
 3.13.关闭。[`Shutdown`]()
