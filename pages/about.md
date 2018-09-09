@@ -4,6 +4,12 @@ title: About
 permalink: /about.html
 ---
 
+The parallel universe based on the base Jekyll theme.
+I'm mistydew.
+
+Contact me: 
+{% include icon-envelope.html email=site.email %}
+
 <pre style="font: 10px/5px monospace;"><span style="color: #800000;"><p align="right">                                                  `      
                                                 `++      
                                               `+++++     
@@ -69,9 +75,3 @@ permalink: /about.html
                       ++                                 
                                                          
 </p></span></pre>
-
-This is the base Jekyll theme. I'm mistydew.
-
-You can find me at: 
-{% include icon-github.html username="mistydew" %} /
-[mistydew](https://github.com/mistydew/mistydew.github.io)
