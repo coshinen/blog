@@ -36,6 +36,78 @@ let player = new cplayer({
       lyric: '',
       sublyric: '',
       album: 'STAY ~夜明けのSoul~'
+    },
+    {
+      src: 'https://raw.githubusercontent.com/mistydew/gc2/master/audio/%E5%A4%A2%E3%81%BF%E3%81%9F%E3%81%82%E3%81%A8%E3%81%A7.mp3',
+      poster: 'https://raw.githubusercontent.com/mistydew/gc/master/images/cover/single/Single_10th_%E5%A4%A2%E3%81%BF%E3%81%9F%E3%81%82%E3%81%A8%E3%81%A7.jpg',
+      name: '夢みたあとで',
+      artist: 'GARNET CROW',
+      lyric: '',
+      sublyric: '',
+      album: '夢みたあとで'
+    },
+    {
+      src: 'https://raw.githubusercontent.com/mistydew/gc2/master/audio/As%20the%20Dew.mp3',
+      poster: 'https://raw.githubusercontent.com/mistydew/gc2/master/cover/best/02nd_THE_BEST_History_of_GARNET_CROW_at_the_crest....jpg',
+      name: 'As the Dew',
+      artist: 'GARNET CROW',
+      lyric: '',
+      sublyric: '',
+      album: 'THE BEST History of GARNET CROW at the crest...'
+    },
+    {
+      src: 'https://raw.githubusercontent.com/mistydew/gc2/master/audio/As%20the%20Dew%20%E3%80%9Calbum%20version%E3%80%9C.mp3',
+      poster: 'https://raw.githubusercontent.com/mistydew/gc2/master/cover/best/02nd_THE_BEST_History_of_GARNET_CROW_at_the_crest....jpg',
+      name: 'As the Dew 〜album version〜',
+      artist: 'GARNET CROW',
+      lyric: '',
+      sublyric: '',
+      album: 'THE BEST History of GARNET CROW at the crest...'
+    },
+    {
+      src: 'https://raw.githubusercontent.com/mistydew/gc2/master/audio/%E5%A4%8F%E3%81%AE%E5%B9%BB.mp3',
+      poster: 'https://raw.githubusercontent.com/mistydew/gc/master/images/cover/single/Single_05th_%E5%A4%8F%E3%81%AE%E5%B9%BB_unofficial.jpg',
+      name: '夏の幻',
+      artist: 'GARNET CROW',
+      lyric: '',
+      sublyric: '',
+      album: '夏の幻'
+    },
+    {
+      src: 'https://raw.githubusercontent.com/mistydew/gc2/master/audio/%E5%A4%8F%E3%81%AE%E7%B5%82%E3%82%8F%E3%82%8A%E3%81%AE%E9%95%B7%E3%81%84%E9%9B%A8.mp3',
+      poster: 'https://raw.githubusercontent.com/mistydew/gc/master/images/cover/single/Single_14th_%E5%90%9B%E3%81%A8%E3%81%84%E3%81%86%E5%85%89.jpg',
+      name: '夏の終わりの長い雨',
+      artist: 'GARNET CROW',
+      lyric: '',
+      sublyric: '',
+      album: '君という光'
+    },
+    {
+      src: 'https://raw.githubusercontent.com/mistydew/gc2/master/audio/call%20my%20name.mp3',
+      poster: 'https://raw.githubusercontent.com/mistydew/gc/master/images/cover/single/Single_08th_call_my_name.jpg',
+      name: 'call my name',
+      artist: 'GARNET CROW',
+      lyric: '',
+      sublyric: '',
+      album: 'call my name'
+    },
+    {
+      src: 'https://raw.githubusercontent.com/mistydew/gc2/master/audio/Misty%20Mystery.mp3',
+      poster: 'https://raw.githubusercontent.com/mistydew/gc2/master/cover/single/Single_33th_Misty_Mystery.jpg',
+      name: 'Misty Mystery',
+      artist: 'GARNET CROW',
+      lyric: '',
+      sublyric: '',
+      album: 'Misty Mystery'
+    },
+    {
+      src: 'https://raw.githubusercontent.com/mistydew/gc2/master/audio/Tell%20Me.mp3',
+      poster: 'https://raw.githubusercontent.com/mistydew/gc/master/images/GIZA%20studio%20R%26B%20Respect%20Vol.1%20-%20six%20sisters%20selection.jpg',
+      name: 'Tell Me',
+      artist: '中村由利',
+      lyric: '',
+      sublyric: '',
+      album: 'GIZA studio R&B Respect Vol.1 - six sisters selection'
     }
   ]
 })
