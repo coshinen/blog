@@ -168,12 +168,10 @@ a {
  * Blockquotes
  */
 blockquote {
-    color: $grey-color;
-    border-left: 4px solid $grey-color-light;
-    padding-left: $spacing-unit / 2;
-    font-size: 18px;
-    letter-spacing: -1px;
-    font-style: italic;
+    background-color: #f5f2f0;
+    border: 0.2em solid #e0dfcc;
+    border-radius: 0.8em;
+    padding: 10px 10px;
 
     > :last-child {
         margin-bottom: 0;
