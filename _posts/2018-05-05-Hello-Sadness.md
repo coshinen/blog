@@ -9,7 +9,7 @@ excerpt: 離陸間近の午前1時5分 空を見上げていた いつかまた�
 ---
 ![STAY ~夜明けのSoul~](https://raw.githubusercontent.com/mistydew/gc2/master/cover/album/Album_07th_STAY_~%E5%A4%9C%E6%98%8E%E3%81%91%E3%81%AESoul~.jpg)
 
-## Hello Sadness
+## Hello Sadness | 你好 悲傷
 
 歌手：GARNET CROW<br>
 作詞：AZUKI 七<br>

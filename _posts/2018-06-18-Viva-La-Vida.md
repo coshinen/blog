@@ -9,7 +9,7 @@ excerpt: I used to rule the world. Seas would rise when I gave the word. Now in 
 ---
 ![Viva La Vida](https://raw.githubusercontent.com/mistydew/audio/master/cover/Viva%20La%20Vida.jpg)
 
-## Viva La Vida
+## Viva La Vida | 活在當下（為生命歡呼）
 
 歌手：Coldplay
 
@@ -67,13 +67,6 @@ For some reason I can't explain<br>
 I know Saint Peter won't call my name<br>
 Never an honest word<br>
 But that was when I ruled the world
-
-以下是 J.Fla 翻唱版。
-
-<audio controls>
-  <source src="https://raw.githubusercontent.com/mistydew/audio/master/Viva%20la%20Vida(cover%20by%20J.Fla).mp3" type="audio/mpeg">
-您的浏览器不支持 audio 元素。
-</audio>
 
 ## 参照
 * [Coldplay - Viva La Vida \| MetroLyrics](http://www.metrolyrics.com/viva-la-vida-lyrics-coldplay.html)

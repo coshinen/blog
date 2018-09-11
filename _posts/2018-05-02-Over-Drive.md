@@ -11,8 +11,7 @@ excerpt: 風の音だけが 体中を包む サイレント・Kiss 夢に似た�
 
 ![parallel universe](https://raw.githubusercontent.com/mistydew/gc2/master/cover/album/Album_08th_parallel_universe.jpg)
 
-## Over Drive
-> 凌空駕馭
+## Over Drive | 凌空駕馭
 
 歌手：GARNET CROW<br>
 作詞：AZUKI 七<br>

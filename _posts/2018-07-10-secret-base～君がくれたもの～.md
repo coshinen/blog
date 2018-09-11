@@ -9,8 +9,7 @@ excerpt: 君と夏の終わり 将来の夢 大きな希望 忘れない 10年�
 ---
 ![secret base~君がくれたもの~](https://raw.githubusercontent.com/mistydew/audio/master/cover/secret%20base~%E5%90%9B%E3%81%8C%E3%81%8F%E3%82%8C%E3%81%9F%E3%82%82%E3%81%AE~.png)
 
-## secret base～君がくれたもの～
-> secret base~你給我的東西~
+## secret base～君がくれたもの～ | secret base~你贈予我的東西~
 
 歌手：ZONE<br>
 作詞：町田紀彦<br>

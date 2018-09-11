@@ -9,7 +9,7 @@ excerpt: why 見えぬ明日へと 期待込め歩いてるの まだ君を想�
 ---
 ![Misty Mystery](https://raw.githubusercontent.com/mistydew/gc2/master/cover/single/Single_33th_Misty_Mystery.jpg)
 
-## Misty Mystery
+## Misty Mystery | 朦朧的神秘
 
 歌手：GARNET CROW<br>
 作詞：AZUKI 七<br>

@@ -9,7 +9,7 @@ excerpt: 君と僕とは 別の人間(いきもの)だから 好みが違う 歩
 ---
 ![Mysterious Eyes](https://raw.githubusercontent.com/mistydew/gc/master/images/cover/single/Single_01st_Mysterious_Eyes.jpg)
 
-## Mysterious Eyes
+## Mysterious Eyes | 神秘的眼睛
 
 歌手：GARNET CROW<br>
 作詞：AZUKI 七<br>
