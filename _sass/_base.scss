@@ -28,6 +28,14 @@ body {
 
 
 /**
+ * Border-bottom: h2
+ */
+h2 {
+  color: #000;
+  border-bottom: 1px solid #d3d3d3;
+}
+
+/**
  * Font: site-title
  */
 @font-face {
