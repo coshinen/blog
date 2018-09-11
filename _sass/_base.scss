@@ -28,7 +28,7 @@ body {
 
 
 /**
- * font: site-title
+ * Font: site-title
  */
 @font-face {
   font-family: 'Underwater Love';
@@ -47,7 +47,7 @@ a.site-title {
 }
 
 /**
- * font: author
+ * Font: author
  */
 @font-face {
   font-family: 'Gloria Hallelujah';
@@ -63,6 +63,16 @@ a.author {
   font-display: fallback;
   letter-spacing: 0.05em;
   line-height: 0;
+}
+
+/**
+ * Background and border: document-information
+ */
+div.document-information {
+  background-color: #eef;
+  border: 0.2em solid #e0dfcc;
+  border-radius: 0.8em;
+  padding: 10px 10px;
 }
 
 
