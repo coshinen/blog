@@ -4,17 +4,18 @@
 - [ ] add avatar, bio...
 - [ ] increase the display width
 - [ ] The anatomy of bitcoin v0.12.1 source
-- [x] change site-title font style
+- [ ] add donate info: Bitcoin address
 
 ## Timeline
 * 2018.08.29 [new] site-title font style
-* 2018.08.28 [rename] page Slogan to Quotes
+* 2018.08.28 [rename] page slogan to quotes
 * 2018.08.27 [add] post excerpt/abstract/summary
 * 2018.08.23 [remove] Baidu Analytics
 * 2018.08.22 [new] DaoVoice web chat tool, Baidu site search to replace Customised Search
 * 2018.08.20 [new] post copyright(author, date, creative commons license, more)
 * 2018.08.15 [remove] particle background
 * 2018.08.13 [new] cPlayer: web music player
+* 2018.08.12 [new] donate page
 * 2018.08.10 [new] sitemap, IntenseDebate's comments system
 * 2018.08.08 [new] delimiter '|' into post title, background-color
 * 2018.08.06 [new] Resume/CV(Curriculum Vitae) page
