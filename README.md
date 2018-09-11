@@ -7,6 +7,7 @@
 - [ ] add donate info: Bitcoin address
 
 ## Timeline
+* 2018.09.11 [rename] page donate to coffee
 * 2018.08.29 [new] site-title font style
 * 2018.08.28 [rename] page slogan to quotes
 * 2018.08.27 [add] post excerpt/abstract/summary
