@@ -28,15 +28,17 @@ body {
 
 
 /**
- * Border-bottom: h2
+ * Border-bottom
  */
 h2 {
   color: #000;
   border-bottom: 1px solid #d3d3d3;
 }
 
+
+
 /**
- * Font: site-title
+ * Font
  */
 @font-face {
   font-family: 'Underwater Love';
@@ -54,9 +56,6 @@ a.site-title {
   line-height: 2.5;
 }
 
-/**
- * Font: author
- */
 @font-face {
   font-family: 'Gloria Hallelujah';
   font-style: normal;
@@ -73,8 +72,10 @@ a.author {
   line-height: 0;
 }
 
+
+
 /**
- * Background and border: document-information
+ * Background and border
  */
 div.document-information {
   background-color: #eef;
@@ -149,16 +150,22 @@ h1, h2, h3, h4, h5, h6 {
  * Links
  */
 a {
-    color: $brand-color;
+    color: $text-color; // $brand-color
     text-decoration: none;
 
-    &:visited {
-        color: darken($brand-color, 15%);
+    &:hover {
+        color: darken($brand-color, 20%); // $text-color
+        text-decoration: none; // underline
     }
+}
+
+a.readmore, a.category, a.tag, a.author {
+    color: $garnet-color;
+    text-decoration: none;
 
     &:hover {
-        color: $text-color;
-        text-decoration: none; // underline
+        color: darken($grey-color, 20%);
+        text-decoration: none;
     }
 }
 
