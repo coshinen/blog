@@ -169,7 +169,7 @@ a.readmore, a.category, a.tag, a.author {
     }
 }
 
-article div.post-content a {
+article.post div.post-content a {
     color: $text-color;
     border-bottom: 1px dotted;
 
