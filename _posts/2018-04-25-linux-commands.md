@@ -11,6 +11,21 @@ Linux mascot: crystal tux and tux(Torvalds linUX?)<br>
 ![tux](/images/20180425/tux.jpg)<br>
 Childhood and Adult(funny)
 
+## 修改用户密码 passwd
+
+{% highlight shell %}
+$ sudo passwd [root] # 初始化 root 用户密码。
+$ passwd [current_user] # 修改当前用户密码。
+$ sudo passwd [other_user] # 修改其他用户密码。
+{% endhighlight %}
+
+## 添加/删除用户 useradd/userdel
+
+{% highlight shell %}
+$ sudo useradd -m <user> -s /bin/bash # 添加一个用户 <user>，-m 参数为该用户在 /home 目录下创建同名目录，-s 参数为该用户指定 bash 脚本编译器。
+$ sudo userdel <user> # 删除用户 <user>（不会删除用户目录）。
+{% endhighlight %}
+
 ## 切换目录 change directory
 
 {% highlight shell %}
