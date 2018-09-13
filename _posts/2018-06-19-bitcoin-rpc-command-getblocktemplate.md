@@ -13,12 +13,12 @@ excerpt: $ bitcoin-cli getblocktemplate ( "jsonrequestobject" )
 getblocktemplate ( "jsonrequestobject" ) # 获取一个区块模板
 {% endhighlight %}
 
-如果请求参数包含 `mode` 关键字，用于在默认的 `template` 请求或 `proposal` 间选择。
+如果请求参数包含 mode 关键字，用于在默认的 template 请求或 proposal 间选择。
 返回构建一个区块所需的数据。
 完整规范详见 [https://en.bitcoin.it/wiki/BIP_0022](https://en.bitcoin.it/wiki/BIP_0022)。
 
 参数：<br>
-1. `jsonrequestobject` （字符串，可选）以下规范中的 json 对象。<br>
+1. jsonrequestobject （字符串，可选）以下规范中的 json 对象。<br>
 {% highlight shell %}
      {
        "mode":"template"    （字符串，可选）该项必须设置 "template" 或省略
@@ -113,7 +113,7 @@ $ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curl
 {% endhighlight %}
 
 ## 源码剖析
-`getblocktemplate` 对应的函数在“rpcserver.h”文件中被引用。
+getblocktemplate 对应的函数在“rpcserver.h”文件中被引用。
 
 {% highlight C++ %}
 extern UniValue getblocktemplate(const UniValue& params, bool fHelp); // 获取区块模板

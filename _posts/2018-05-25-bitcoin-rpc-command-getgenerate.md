@@ -14,7 +14,7 @@ getgenerate # 获取比特币核心服务的挖矿状态
 {% endhighlight %}
 
 默认为 false。
-服务器程序设置命令行参数 `-gen`（或配置文件 bitcoin.conf 中设置 `gen`），也可以使用 [`setgenerate`](/2018/05/25/bitcoin-rpc-command-setgenerate) 命令设置。
+服务器程序设置命令行参数 -gen（或配置文件 bitcoin.conf 中设置 gen），也可以使用 [setgenerate](/2018/05/25/bitcoin-rpc-command-setgenerate) 命令设置。
 
 结果：（布尔型）true 表示服务器开启 CPU 挖矿，false 表示关闭。
 
@@ -37,7 +37,7 @@ $ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curl
 {% endhighlight %}
 
 ## 源码剖析
-`getgenerate` 对应的函数在“rpcserver.h”文件中被引用。
+getgenerate 对应的函数在“rpcserver.h”文件中被引用。
 
 {% highlight C++ %}
 extern UniValue getgenerate(const UniValue& params, bool fHelp); // 获取挖矿状态

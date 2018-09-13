@@ -13,11 +13,11 @@ excerpt: $ bitcoin-cli submitblock "hexdata" ( "jsonparametersobject" )
 submitblock "hexdata" ( "jsonparametersobject" ) # 尝试提交一个新区块到网络
 {% endhighlight %}
 
-**注：`jsonparametersobject` 当前被忽略。详见 [https://en.bitcoin.it/wiki/BIP_0022](https://en.bitcoin.it/wiki/BIP_0022)。**
+**注：jsonparametersobject 当前被忽略。详见 [https://en.bitcoin.it/wiki/BIP_0022](https://en.bitcoin.it/wiki/BIP_0022)。**
 
 参数：<br>
-1. `hexdata` （字符串，必备）用于提交的 16 进制编码的区块数据。<br>
-2. `jsonparametersobject` （字符串，可选）可选的参数对象。<br>
+1. hexdata （字符串，必备）用于提交的 16 进制编码的区块数据。<br>
+2. jsonparametersobject （字符串，可选）可选的参数对象。<br>
 {% highlight shell %}
 {
   "workid" : "id"  （字符串，可选）如果服务器提供一个工作 id，它必须包含在提交内容中。
@@ -49,7 +49,7 @@ $ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curl
 {% endhighlight %}
 
 ## 源码剖析
-`submitblock` 对应的函数在“rpcserver.h”文件中被引用。
+submitblock 对应的函数在“rpcserver.h”文件中被引用。
 
 {% highlight C++ %}
 extern UniValue submitblock(const UniValue& params, bool fHelp); // 提交区块

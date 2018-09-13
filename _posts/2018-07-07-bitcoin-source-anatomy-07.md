@@ -7,12 +7,12 @@ categories: Blockchain Bitcoin
 tags: 区块链 比特币 源码剖析
 ---
 上一篇分析了应用程序初始化中椭圆曲线初始化的详细过程，详见[比特币源码剖析（六）](/2018/06/30/bitcoin-source-anatomy-06)。<br>
-本篇主要分析 `Step 4: application initialization: dir lock, daemonize, pidfile, debug log` 第四步应用程序初始化中 `InitSanityCheck()` 初始化完整性检查和数据目录上锁的详细过程。
+本篇主要分析 Step 4: application initialization: dir lock, daemonize, pidfile, debug log 第四步应用程序初始化中 InitSanityCheck() 初始化完整性检查和数据目录上锁的详细过程。
 
 ## 源码剖析
 
 <p id="InitSanityCheck-ref"></p>
-2.初始化完整性检查，主要检查椭圆曲线加密的初始化和 `glibc` 及 `glibcxx` 的完整性。
+2.初始化完整性检查，主要检查椭圆曲线加密的初始化和 glibc 及 glibcxx 的完整性。
 
 {% highlight C++ %}
 /** Sanity checks
@@ -32,7 +32,7 @@ bool InitSanityCheck(void)
 }
 {% endhighlight %}
 
-2.1.调用 `ECC_InitSanityCheck()` 函数检查椭圆曲线加密初始化完整性，该函数声明在“key.h”文件中。
+2.1.调用 ECC_InitSanityCheck() 函数检查椭圆曲线加密初始化完整性，该函数声明在“key.h”文件中。
 
 {% highlight C++ %}
 /** Check that required EC support is available at runtime. */
@@ -52,7 +52,7 @@ bool ECC_InitSanityCheck() {
 
 椭圆曲线加密初始化完整性验证流程就是一个比特币地址生成过程中的前一部分：私钥->公钥->验证。
 
-2.2.调用 `glibc_sanity_test()` 和 `glibcxx_sanity_test()` 函数测试 `glibc` 及 `glibcxx` 的完整性。
+2.2.调用 glibc_sanity_test() 和 glibcxx_sanity_test() 函数测试 glibc 及 glibcxx 的完整性。
 它们声明在“sanity.h”文件中。
 
 {% highlight C++ %}
@@ -60,7 +60,7 @@ bool glibc_sanity_test(); // glibc 完整性测试
 bool glibcxx_sanity_test(); // glibcxx 完整性测试
 {% endhighlight %}
 
-首先调用 `glibc_sanity_test()` 测试 `glibc` 的完整性，该函数实现在“glib_sanity.cpp”文件中，没有入参。
+首先调用 glibc_sanity_test() 测试 glibc 的完整性，该函数实现在“glib_sanity.cpp”文件中，没有入参。
 
 {% highlight C++ %}
 namespace
@@ -113,9 +113,9 @@ bool glibc_sanity_test()
 }
 {% endhighlight %}
 
-在 `glibc` 测试中测试了文件描述符集合与内存拷贝两项。
+在 glibc 测试中测试了文件描述符集合与内存拷贝两项。
 
-然后调用 `glibcxx_sanity_test()` 测试 `glibcxx` 的完整性，该函数实现在“glibcxx_sanity.cpp”文件中，没有入参。
+然后调用 glibcxx_sanity_test() 测试 glibcxx 的完整性，该函数实现在“glibcxx_sanity.cpp”文件中，没有入参。
 
 {% highlight C++ %}
 namespace
@@ -173,9 +173,9 @@ bool glibcxx_sanity_test()
 }
 {% endhighlight %}
 
-在 `glibcxx` 测试中测试了宽窄字符互转、链表、范围的异常处理。
-调用 [`std::ctype::widen`](https://en.cppreference.com/w/cpp/locale/ctype/widen)、[`std::ctype::narrow`](https://en.cppreference.com/w/cpp/locale/ctype/narrow) 进行宽窄字符转换。
-使用 [`std::basic_string::at`](https://en.cppreference.com/w/cpp/string/basic_string/at) 来触发超出范围异常。
+在 glibcxx 测试中测试了宽窄字符互转、链表、范围的异常处理。
+调用 [std::ctype::widen](https://en.cppreference.com/w/cpp/locale/ctype/widen)、[std::ctype::narrow](https://en.cppreference.com/w/cpp/locale/ctype/narrow) 进行宽窄字符转换。
+使用 [std::basic_string::at](https://en.cppreference.com/w/cpp/string/basic_string/at) 来触发超出范围异常。
 这一部分逻辑较为简单，只需耐心啃代码即可。
 
 <p id="DataDirLock-ref"></p>
@@ -210,17 +210,17 @@ bool AppInit2(boost::thread_group& threadGroup, CScheduler& scheduler) // 3.11.0
 {% endhighlight %}
 
 3.1.获取数据目录位置。<br>
-3.2.验证钱包文件名的完整性，包含文件扩展名 `".dat"`，不含路径。<br>
+3.2.验证钱包文件名的完整性，包含文件扩展名 ".dat"，不含路径。<br>
 3.3.创建空的目录锁文件，并对该文件进行文件上锁，保证同一时间只有一个进程运行。
 
-3.2.调用 `boost::filesystem::basename(strWalletFile)` 和 `boost::filesystem::extension(strWalletFile)` 函数分别获取文件名和文件格式进行比对，
+3.2.调用 boost::filesystem::basename(strWalletFile) 和 boost::filesystem::extension(strWalletFile) 函数分别获取文件名和文件格式进行比对，
 详见 [extension()](https://www.boost.org/doc/libs/1_68_0_beta1/libs/filesystem/doc/reference.html#path-extension)。
 
-3.3.首先创建 `boost::interprocess::file_lock` 文件锁对象，然后调用 `lock.try_lock()` 函数使调用线程尝试获取文件锁的独占所有权而无需等待。
+3.3.首先创建 boost::interprocess::file_lock 文件锁对象，然后调用 lock.try_lock() 函数使调用线程尝试获取文件锁的独占所有权而无需等待。
 详见 [file_lock](https://www.boost.org/doc/libs/1_67_0/doc/html/interprocess/synchronization_mechanisms.html#interprocess.synchronization_mechanisms.file_lock)。
 
 <p id="CreatePidFile-ref"></p>
-4.调用 `CreatePidFile(GetPidFile(), getpid())` 函数创建进程号文件，用于记录当前运行的比特币服务进程的 `PID`。
+4.调用 CreatePidFile(GetPidFile(), getpid()) 函数创建进程号文件，用于记录当前运行的比特币服务进程的 PID。
 该函数声明在“util.h”文件中。
 
 {% highlight C++ %}
@@ -230,7 +230,7 @@ void CreatePidFile(const boost::filesystem::path &path, pid_t pid); // 创建 pi
 #endif
 {% endhighlight %}
 
-实现在“util.cpp”文件中，入参为：`PID` 文件路径名，`PID`。
+实现在“util.cpp”文件中，入参为：PID 文件路径名，PID。
 
 {% highlight C++ %}
 const char * const BITCOIN_PID_FILENAME = "bitcoind.pid"; // 比特币默认 pid 文件名
@@ -255,19 +255,19 @@ void CreatePidFile(const boost::filesystem::path &path, pid_t pid)
 #endif
 {% endhighlight %}
 
-4.1.获取 `PID` 文件的位置。<br>
-4.2.创建（仅限第一次）并打开 `PID` 文件。
+4.1.获取 PID 文件的位置。<br>
+4.2.创建（仅限第一次）并打开 PID 文件。
 
 <p id="ShrinkOrOpenDebugLogFile-ref"></p>
-5.首先调用 `ShrinkDebugFile()` 函数收缩调试日志文件，从接近 10MiB 缩小到接近 200KB，只保留最近的 200KB 的日志记录。
-然后调用 `OpenDebugLog()` 函数打开日志文件，它们均声明在“util.h”文件中。
+5.首先调用 ShrinkDebugFile() 函数收缩调试日志文件，从接近 10MiB 缩小到接近 200KB，只保留最近的 200KB 的日志记录。
+然后调用 OpenDebugLog() 函数打开日志文件，它们均声明在“util.h”文件中。
 
 {% highlight C++ %}
 void OpenDebugLog(); // 打开调试日志文件
 void ShrinkDebugFile(); // 收缩调试文件 10 * 1,000,000B -> 200,000B
 {% endhighlight %}
 
-5.1.函数 `ShrinkDebugFile()` 实现在“util.cpp”文件中，没有入参。
+5.1.函数 ShrinkDebugFile() 实现在“util.cpp”文件中，没有入参。
 
 {% highlight C++ %}
 void ShrinkDebugFile()
@@ -296,11 +296,11 @@ void ShrinkDebugFile()
 {% endhighlight %}
 
 5.1.1.获取日志文件位置，并以只读方式打开该文件。<br>
-5.1.2.若文件大小超过 `10 * 1000,000B`，则将其缩小到 `200,000B`。<br>
-5.1.2.1.首先读取文件末尾的 `200,000B` 大小的数据到内存，然后关闭文件。<br>
-5.1.2.2.以只写方式重新打开并清空日志文件，把内存中的 `200,000B` 数据写入日志文件中，并关闭文件。
+5.1.2.若文件大小超过 10 * 1000,000B，则将其缩小到 200,000B。<br>
+5.1.2.1.首先读取文件末尾的 200,000B 大小的数据到内存，然后关闭文件。<br>
+5.1.2.2.以只写方式重新打开并清空日志文件，把内存中的 200,000B 数据写入日志文件中，并关闭文件。
 
-其中调用 `begin_ptr(vch)` 获取 `vector` 的首元素地址，这是一个模板函数，其函数模板定义在“serialize.h”文件中。
+其中调用 begin_ptr(vch) 获取 vector 的首元素地址，这是一个模板函数，其函数模板定义在“serialize.h”文件中。
 
 {% highlight C++ %}
 /** 
@@ -315,7 +315,7 @@ inline typename V::value_type* begin_ptr(V& v)
 }
 {% endhighlight %}
 
-5.2.函数 `OpenDebugLog()` 实现在“util.cpp”文件中，没有入参。
+5.2.函数 OpenDebugLog() 实现在“util.cpp”文件中，没有入参。
 
 {% highlight C++ %}
 /**

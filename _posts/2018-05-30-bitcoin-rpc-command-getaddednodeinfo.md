@@ -10,12 +10,12 @@ excerpt: $ bitcoin-cli getaddednodeinfo dns ( "node" )
 ## 提示说明
 
 {% highlight shell %}
-getaddednodeinfo dns ( "node" ) # 获取关于给定或全部添加节点的信息（注意 `addnode` 命令中 `onetry` 选项不在这儿列出）
+getaddednodeinfo dns ( "node" ) # 获取关于给定或全部添加节点的信息（注意 addnode 命令中 onetry 选项不在这儿列出）
 {% endhighlight %}
 
 参数：<br>
-1. `dns` （布尔型，必备）如果为 false，只提供一个添加节点的列表，否则显示连接信息。<br>
-2. `node` （字符串，可选）如果提供，则返回关于指定节点的信息，否则返回所有节点信息。
+1. dns （布尔型，必备）如果为 false，只提供一个添加节点的列表，否则显示连接信息。<br>
+2. node （字符串，可选）如果提供，则返回关于指定节点的信息，否则返回所有节点信息。
 
 结果：<br>
 {% highlight shell %}
@@ -122,7 +122,7 @@ $ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curl
 {% endhighlight %}
 
 ## 源码剖析
-`getaddednodeinfo` 对应的函数在“rpcserver.h”文件中被引用。
+getaddednodeinfo 对应的函数在“rpcserver.h”文件中被引用。
 
 {% highlight C++ %}
 extern UniValue getaddednodeinfo(const UniValue& params, bool fHelp); // 获取添加节点的信息

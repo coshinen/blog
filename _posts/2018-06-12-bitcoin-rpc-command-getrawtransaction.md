@@ -15,15 +15,15 @@ getrawtransaction "txid" ( verbose ) # 获取原始交易信息
 
 **注：默认情况，此功能只在某些情况下有效。
 这是当交易在交易内存池或在此交易的未花费交易输出集中有一个未花费输出时。
-为了使其总是有效，你需要使用 `-txindex` 命令行选项来维护一个交易索引。**
+为了使其总是有效，你需要使用 -txindex 命令行选项来维护一个交易索引。**
 
 参数：<br>
-1. `txid` （字符串，必备）交易索引。<br>
-2. `verbose` （数字型，可选，默认为 0）如果为 0，返回一个交易 `txid` 序列化的 16 进制编码的交易索引数据的字符串，
-否则返回一个关于交易 `txid` 信息的 json 对象。
+1. txid （字符串，必备）交易索引。<br>
+2. verbose （数字型，可选，默认为 0）如果为 0，返回一个交易 txid 序列化的 16 进制编码的交易索引数据的字符串，
+否则返回一个关于交易 txid 信息的 json 对象。
 
 结果：（如果 verbose 未设置或设置为 0）<br>
-（字符串）返回交易 `txid` 序列化的 16 进制编码的数据。
+（字符串）返回交易 txid 序列化的 16 进制编码的数据。
 
 结果：（如果 verbose 大于 0）<br>
 {% highlight shell %}
@@ -134,7 +134,7 @@ $ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curl
 {% endhighlight %}
 
 ## 源码剖析
-`getrawtransaction` 对应的函数在“rpcserver.h”文件中被引用。
+getrawtransaction 对应的函数在“rpcserver.h”文件中被引用。
 
 {% highlight C++ %}
 extern UniValue getrawtransaction(const UniValue& params, bool fHelp); // 获取原始交易信息

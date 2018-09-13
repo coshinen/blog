@@ -10,13 +10,13 @@ excerpt: $ bitcoin-cli dumpprivkey "bitcoinaddress"
 ## 提示说明
 
 {% highlight shell %}
-dumpprivkey "bitcoinaddress" # 导出 `bitcoinaddress` 对应的私钥
+dumpprivkey "bitcoinaddress" # 导出 bitcoinaddress 对应的私钥
 {% endhighlight %}
 
-RPC 命令 [`importprivkey`]() 可以使用该输出作为输入。
+RPC 命令 [importprivkey]() 可以使用该输出作为输入。
 
 参数：<br>
-1. `bitcoinaddress` （字符串，必备）私钥对应的比特币地址。
+1. bitcoinaddress （字符串，必备）私钥对应的比特币地址。
 
 结果：（字符串）返回私钥。
 
@@ -24,7 +24,7 @@ RPC 命令 [`importprivkey`]() 可以使用该输出作为输入。
 
 ### 比特币核心客户端
 
-使用 [`getnewaddress`](/2018/06/04/bitcoin-rpc-command-getnewaddress) 命令获取一个比特币地址，
+使用 [getnewaddress](/2018/06/04/bitcoin-rpc-command-getnewaddress) 命令获取一个比特币地址，
 然后以该地址为输入，导出其对应的私钥。
 
 {% highlight shell %}
@@ -42,7 +42,7 @@ $ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curl
 {% endhighlight %}
 
 ## 源码剖析
-`dumpprivkey` 对应的函数在“rpcserver.h”文件中被引用。
+dumpprivkey 对应的函数在“rpcserver.h”文件中被引用。
 
 {% highlight C++ %}
 extern UniValue dumpprivkey(const UniValue& params, bool fHelp); // 导出私钥

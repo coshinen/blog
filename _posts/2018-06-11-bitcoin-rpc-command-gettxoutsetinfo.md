@@ -55,7 +55,7 @@ $ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curl
 {% endhighlight %}
 
 ## 源码剖析
-`gettxoutsetinfo` 对应的函数在“rpcserver.h”文件中被引用。
+gettxoutsetinfo 对应的函数在“rpcserver.h”文件中被引用。
 
 {% highlight C++ %}
 extern UniValue gettxoutsetinfo(const UniValue& params, bool fHelp); // 获取交易输出集合信息

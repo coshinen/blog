@@ -14,20 +14,20 @@ sendmany "fromaccount" {"address":amount,...} ( minconf "comment" ["address",...
 {% endhighlight %}
 
 **发送的金额是双精度浮点数。<br>
-使用该命令前需要调用 [`walletpassphrase`](/2018/05/31/bitcoin-rpc-command-walletpassphrase) 解锁钱包。**
+使用该命令前需要调用 [walletpassphrase](/2018/05/31/bitcoin-rpc-command-walletpassphrase) 解锁钱包。**
 
 参数：<br>
-1. `fromaccount` （字符串，必备，已过时）从该账户发送资金。应使用默认账户 `""`。<br>
-2. `amounts` （字符串，必备）一个地址和金额的 json 对象。<br>
+1. fromaccount （字符串，必备，已过时）从该账户发送资金。应使用默认账户 ""。<br>
+2. amounts （字符串，必备）一个地址和金额的 json 对象。<br>
 {% highlight shell %}
     {
       "address":amount   （数字或字符串）键是比特币地址，值是以 BTC 为单位的数字型（可以是字符串）金额
       ,...
     }
 {% endhighlight %}
-3.`minconf` （数字，可选，默认为 1）只使用至少 `minconf` 次确认的余额。<br>
-4.`comment` （字符串，可选）一个备注。<br>
-5.`subtractfeefromamount` （字符串，可选）一个存放地址的 json 数组。
+3.minconf （数字，可选，默认为 1）只使用至少 minconf 次确认的余额。<br>
+4.comment （字符串，可选）一个备注。<br>
+5.subtractfeefromamount （字符串，可选）一个存放地址的 json 数组。
 费用将从每个选择的地址的金额中平均扣除。
 这些接收者收到比你在金额区域输入的金额少的比特币。
 如果这里没有指定地址，则发送者支付交易费。
@@ -45,9 +45,9 @@ sendmany "fromaccount" {"address":amount,...} ( minconf "comment" ["address",...
 ### 比特币核心客户端
 
 **注：<br>
-1. 不要删除 `\`，直接替换对应地址即可。<br>
-2. 使用该命令前，先调用 [`walletpassphrase`](/2018/05/31/bitcoin-rpc-command-walletpassphrase) 解锁钱包。<br>
-3. 使用该命令后，再调用 [`walletlock`](/2018/05/31/bitcoin-rpc-command-walletlock) 锁定钱包。**
+1. 不要删除 \，直接替换对应地址即可。<br>
+2. 使用该命令前，先调用 [walletpassphrase](/2018/05/31/bitcoin-rpc-command-walletpassphrase) 解锁钱包。<br>
+3. 使用该命令后，再调用 [walletlock](/2018/05/31/bitcoin-rpc-command-walletlock) 锁定钱包。**
 
 用法一：发送两笔金额到两个不同的地址。
 
@@ -185,7 +185,7 @@ $ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curl
 {% endhighlight %}
 
 ## 源码剖析
-`sendmany` 对应的函数在“rpcserver.h”文件中被引用。
+sendmany 对应的函数在“rpcserver.h”文件中被引用。
 
 {% highlight C++ %}
 extern UniValue sendmany(const UniValue& params, bool fHelp); // 发送金额到多个地址

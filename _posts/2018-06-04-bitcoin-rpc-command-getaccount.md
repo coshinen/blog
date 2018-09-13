@@ -14,7 +14,7 @@ getaccount "bitcoinaddress" # （已过时）获取指定地址关联的账户
 {% endhighlight %}
 
 参数：<br>
-1. `bitcoinaddress` （字符串，必备）用于查询所属账户的比特币地址。
+1. bitcoinaddress （字符串，必备）用于查询所属账户的比特币地址。
 
 结果：（字符串）返回地址所属的账户名。
 
@@ -22,7 +22,7 @@ getaccount "bitcoinaddress" # （已过时）获取指定地址关联的账户
 
 ### 比特币核心客户端
 
-使用 [`getnewaddress`](/2018/06/04/bitcoin-rpc-command-getnewaddress) 在指定账户下创建一个地址，
+使用 [getnewaddress](/2018/06/04/bitcoin-rpc-command-getnewaddress) 在指定账户下创建一个地址，
 根据该地址查询账户。
 
 {% highlight shell %}
@@ -40,7 +40,7 @@ $ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curl
 {% endhighlight %}
 
 ## 源码剖析
-`getaccount` 对应的函数在“rpcserver.h”文件中被引用。
+getaccount 对应的函数在“rpcserver.h”文件中被引用。
 
 {% highlight C++ %}
 extern UniValue getaccount(const UniValue& params, bool fHelp); // 获取地址所属账户

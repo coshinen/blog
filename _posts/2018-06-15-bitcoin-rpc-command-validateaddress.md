@@ -14,7 +14,7 @@ validateaddress "bitcoinaddress" # 获取关于给定比特币地址的信息（
 {% endhighlight %}
 
 参数：<br>
-1. `bitcoinaddress` （字符串，必备）用于验证的比特币地址。
+1. bitcoinaddress （字符串，必备）用于验证的比特币地址。
 
 结果：<br>
 {% highlight shell %}
@@ -27,7 +27,7 @@ validateaddress "bitcoinaddress" # 获取关于给定比特币地址的信息（
   "isscript" : true|false,      （布尔型）密钥是否为一个脚本
   "pubkey" : "publickeyhex",    （字符串）原始公钥的 16 进制值
   "iscompressed" : true|false,  （布尔型）地址是否压缩过
-  "account" : "account"         （字符串，已过时）该地址关联的账户，`""` 为默认账户
+  "account" : "account"         （字符串，已过时）该地址关联的账户，"" 为默认账户
 }
 {% endhighlight %}
 
@@ -85,7 +85,7 @@ $ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curl
 {% endhighlight %}
 
 ## 源码剖析
-`validateaddress` 对应的函数在“rpcserver.h”文件中被引用。
+validateaddress 对应的函数在“rpcserver.h”文件中被引用。
 
 {% highlight C++ %}
 extern UniValue validateaddress(const UniValue& params, bool fHelp); // 验证地址

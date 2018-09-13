@@ -7,14 +7,14 @@ categories: Blockchain Bitcoin
 tags: 区块链 比特币 源码剖析
 ---
 上一篇分析了应用程序初始化中初始化完整性检查和数据目录锁的过程，详见[比特币源码剖析（七）](/2018/07/07/bitcoin-source-anatomy-07)。<br>
-本篇主要分析 `Step 4: application initialization: dir lock, daemonize, pidfile, debug log` 第四步应用程序初始化中创建脚本验证线程和轻量级任务调度线程的详细过程。
+本篇主要分析 Step 4: application initialization: dir lock, daemonize, pidfile, debug log 第四步应用程序初始化中创建脚本验证线程和轻量级任务调度线程的详细过程。
 
 ## 源码剖析
 
 <p id="ThreadScriptCheck-ref"></p>
-7.调用 `threadGroup.create_thread(&ThreadScriptCheck)` 函数创建脚本验证线程，
+7.调用 threadGroup.create_thread(&ThreadScriptCheck) 函数创建脚本验证线程，
 详见 [create_thread](https://www.boost.org/doc/libs/1_67_0/doc/html/thread/thread_management.html#thread.thread_management.threadgroup)。
-传入的线程行为函数 `ThreadScriptCheck` 声明在”main.h”文件中。
+传入的线程行为函数 ThreadScriptCheck 声明在”main.h”文件中。
 
 {% highlight C++ %}
 /** Run an instance of the script checking thread */
@@ -35,7 +35,7 @@ void ThreadScriptCheck() {
 7.1.重命名线程。<br>
 7.2.执行线程工作函数。
 
-7.1.调用 `RenameThread("bitcoin-scriptch")` 函数重命名线程，3 种不同平台的重命名。
+7.1.调用 RenameThread("bitcoin-scriptch") 函数重命名线程，3 种不同平台的重命名。
 该函数声明在“util.h”文件中。
 
 {% highlight C++ %}
@@ -62,9 +62,9 @@ void RenameThread(const char* name)
 }
 {% endhighlight %}
 
-Linux 下调用 `prctl` 进行线程的命名，该函数详见 [prctl](http://man7.org/linux/man-pages/man2/prctl.2.html)。
+Linux 下调用 prctl 进行线程的命名，该函数详见 [prctl](http://man7.org/linux/man-pages/man2/prctl.2.html)。
 
-7.2.调用 `scriptcheckqueue.Thread()` 执行脚本验证线程工作函数，该函数定义在“checkqueue.h”文件的 `CCheckQueue` 类模板中。
+7.2.调用 scriptcheckqueue.Thread() 执行脚本验证线程工作函数，该函数定义在“checkqueue.h”文件的 CCheckQueue 类模板中。
 
 {% highlight C++ %}
 /** 
@@ -190,8 +190,8 @@ public:
 };
 {% endhighlight %}
 
-从这里可以看出为什么指定创建 `N` 个脚本检测线程，实际上只显示创建了 `N-1` 个。
-有一个主工作线程负责往验证队列中添加元素，完成添加工作后就作为第 `N` 个普通工作线程加入工作线程池，直到完成工作。
+从这里可以看出为什么指定创建 N 个脚本检测线程，实际上只显示创建了 N-1 个。
+有一个主工作线程负责往验证队列中添加元素，完成添加工作后就作为第 N 个普通工作线程加入工作线程池，直到完成工作。
 
 7.2.1.获取条件变量的引用，这里进行线程的选择。<br>
 7.2.2.上锁。<br>
@@ -200,7 +200,7 @@ public:
 7.2.5.处理工作单元，根据一批次的大小把队列中的元素换入检查列表中。<br>
 7.2.6.遍历检查列表，顺序执行每个待检测的脚本。
 
-7.2.6.调用 `check()` 函数来进行脚本检测，其重载的函数调用运算符声明在“main.h”文件的 `CScriptCheck` 类中。
+7.2.6.调用 check() 函数来进行脚本检测，其重载的函数调用运算符声明在“main.h”文件的 CScriptCheck 类中。
 
 {% highlight C++ %}
 /**
@@ -227,7 +227,7 @@ bool CScriptCheck::operator()() {
 }
 {% endhighlight %}
 
-这里调用 `VerifyScript(scriptSig, scriptPubKey, nFlags, CachingTransactionSignatureChecker(ptxTo, nIn, cacheStore), &error)` 函数验证交易指定输入的脚本。
+这里调用 VerifyScript(scriptSig, scriptPubKey, nFlags, CachingTransactionSignatureChecker(ptxTo, nIn, cacheStore), &error) 函数验证交易指定输入的脚本。
 该函数声明在“interpreter.h”文件中。
 
 {% highlight C++ %}
@@ -305,7 +305,7 @@ bool VerifyScript(const CScript& scriptSig, const CScript& scriptPubKey, unsigne
 {% endhighlight %}
 
 <p id="serviceQueue-ref"></p>
-8.创建轻量级任务调度线程，这部分代码实现在“init.cpp”文件的 `AppInit2(...)` 函数的第四步 `Step 4: application initialization: dir lock, daemonize, pidfile, debug log`。
+8.创建轻量级任务调度线程，这部分代码实现在“init.cpp”文件的 AppInit2(...) 函数的第四步 Step 4: application initialization: dir lock, daemonize, pidfile, debug log。
 
 {% highlight C++ %}
 bool AppInit2(boost::thread_group& threadGroup, CScheduler& scheduler) // 3.11.程序初始化，共 12 步
@@ -318,10 +318,10 @@ bool AppInit2(boost::thread_group& threadGroup, CScheduler& scheduler) // 3.11.�
 }
 {% endhighlight %}
 
-8.1.`Function/bind` 绑定线程函数 `CScheduler::serviceQueue` 到函数对象 `serviceLoop`。<br>
-8.2.创建一个轻量级任务调度线程加入线程组 `threadGroup`。
+8.1.Function/bind 绑定线程函数 CScheduler::serviceQueue 到函数对象 serviceLoop。<br>
+8.2.创建一个轻量级任务调度线程加入线程组 threadGroup。
 
-线程函数 `CScheduler::serviceQueue` 声明在“scheduler.h”文件的 `CScheduler` 类中。
+线程函数 CScheduler::serviceQueue 声明在“scheduler.h”文件的 CScheduler 类中。
 
 {% highlight C++ %}
 class CScheduler // 调度器类
@@ -413,8 +413,8 @@ void CScheduler::serviceQueue()
 3.5.解锁并执行该任务。<br>
 4.使用任务队列的线程数减 1。
 
-3.5.调用模板类 `reverse_lock` 创建对象，执行反转锁操作：它提供 `RAII` 功能，在构造时解锁并在析构时上锁。
-另外，它会临时转移所有权，所以互斥锁不能用该锁锁定。其实例永远不会持有锁。详见 [`reverse_lock`](https://www.boost.org/doc/libs/1_65_0/doc/html/thread/synchronization.html#thread.synchronization.other_locks.reverse_lock)。
+3.5.调用模板类 reverse_lock 创建对象，执行反转锁操作：它提供 RAII 功能，在构造时解锁并在析构时上锁。
+另外，它会临时转移所有权，所以互斥锁不能用该锁锁定。其实例永远不会持有锁。详见 [reverse_lock](https://www.boost.org/doc/libs/1_65_0/doc/html/thread/synchronization.html#thread.synchronization.other_locks.reverse_lock)。
 
 未完待续...<br>
 请看下一篇[比特币源码剖析（九）](/2018/07/21/bitcoin-source-anatomy-09)。

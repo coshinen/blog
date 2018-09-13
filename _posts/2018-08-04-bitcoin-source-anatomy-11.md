@@ -6,13 +6,13 @@ author: mistydew
 categories: Blockchain Bitcoin
 tags: 区块链 比特币 源码剖析
 ---
-上一篇分析了应用程序初始化中启动 `RPC` 的详细过程，详见[比特币源码剖析（十）](/2018/07/28/bitcoin-source-anatomy-10)。<br>
-本篇主要分析 `Step 5: verify wallet database integrity` 第五步验证钱包数据库的完整性的详细过程。
+上一篇分析了应用程序初始化中启动 RPC 的详细过程，详见[比特币源码剖析（十）](/2018/07/28/bitcoin-source-anatomy-10)。<br>
+本篇主要分析 Step 5: verify wallet database integrity 第五步验证钱包数据库的完整性的详细过程。
 
 ## 源码剖析
 
 <p id="Step05-ref"></p>
-3.11.5.第五步，验证钱包数据库的完整性。这部分代码实现在“init.cpp”文件的 `AppInit2(...)` 函数中。
+3.11.5.第五步，验证钱包数据库的完整性。这部分代码实现在“init.cpp”文件的 AppInit2(...) 函数中。
 
 {% highlight C++ %}
 bool AppInit2(boost::thread_group& threadGroup, CScheduler& scheduler) // 3.11.程序初始化，共 12 步
@@ -41,8 +41,8 @@ bool AppInit2(boost::thread_group& threadGroup, CScheduler& scheduler) // 3.11.�
 };
 {% endhighlight %}
 
-这里调用了 `CWallet::Verify(strWalletFile, warningString, errorString)` 来验证会恢复钱包数据库，
-该函数声明在“wallet/wallet.h”文件的 `CWallet` 类中。
+这里调用了 CWallet::Verify(strWalletFile, warningString, errorString) 来验证会恢复钱包数据库，
+该函数声明在“wallet/wallet.h”文件的 CWallet 类中。
 
 {% highlight C++ %}
 /** 
@@ -111,12 +111,12 @@ bool CWallet::Verify(const string& walletFile, string& warningString, string& er
 {% endhighlight %}
 
 1.若打开数据库文件失败，尝试重命名后再次打开，得到钱包数据库环境对象。<br>
-2.若 `-salvagewallet` 选项开启，则恢复可读的密钥对。<br>
+2.若 -salvagewallet 选项开启，则恢复可读的密钥对。<br>
 3.若钱包文件存在，则验证钱包数据库文件，若文件异常，则尝试恢复。<br>
 4.验证成功返回 true。
 
-2.调用 `CWalletDB::Recover(bitdb, walletFile, true)` 尝试恢复钱包可读的密钥对，
-该函数声明在“wallet/walletdb.h”文件的 `CWalletDB` 类中。
+2.调用 CWalletDB::Recover(bitdb, walletFile, true) 尝试恢复钱包可读的密钥对，
+该函数声明在“wallet/walletdb.h”文件的 CWalletDB 类中。
 
 {% highlight C++ %}
 /** Access to the wallet database (wallet.dat) */ // 访问钱包数据库（wallet.dat）
@@ -218,12 +218,12 @@ bool CWalletDB::Recover(CDBEnv& dbenv, const std::string& filename, bool fOnlyKe
 
 2.1.重命名钱包文件。<br>
 2.2.抢救钱包数据，并获取抢救的数据。<br>
-2.3.创建新的数据库堆对象副本，并打开原数据库文件 `wallet.dat`。<br>
+2.3.创建新的数据库堆对象副本，并打开原数据库文件 wallet.dat。<br>
 2.4.遍历抢救的数据，把键值对写入数据库副本中。<br>
 2.5.提交更新的内容到数据库，并关闭数据库。
 
-2.2.调用 `dbenv.Salvage(newFilename, true, salvagedData)` 抢救钱包，并获取恢复的数据，
-该函数声明在“wallet/db.h”文件的 `CDBEnv` 类中。
+2.2.调用 dbenv.Salvage(newFilename, true, salvagedData) 抢救钱包，并获取恢复的数据，
+该函数声明在“wallet/db.h”文件的 CDBEnv 类中。
 
 {% highlight C++ %}
 class CDBEnv // 数据库环境（钱包）
@@ -301,8 +301,8 @@ bool CDBEnv::Salvage(const std::string& strFile, bool fAggressive, std::vector<C
 {% highlight C++ %}
 {% endhighlight %}
 
-3.调用 `bitdb.Verify(walletFile, CWalletDB::Recover)` 验证数据库文件，
-该函数声明在“wallet/db.h”文件的 `CDBEnv` 类中。
+3.调用 bitdb.Verify(walletFile, CWalletDB::Recover) 验证数据库文件，
+该函数声明在“wallet/db.h”文件的 CDBEnv 类中。
 
 {% highlight C++ %}
 class CDBEnv // 数据库环境（钱包）

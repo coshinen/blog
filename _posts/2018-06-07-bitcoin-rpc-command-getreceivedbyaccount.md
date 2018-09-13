@@ -10,12 +10,12 @@ excerpt: $ bitcoin-cli getreceivedbyaccount "account" ( minconf )
 ## 提示说明
 
 {% highlight shell %}
-getreceivedbyaccount "account" ( minconf ) # （已过时）获取账户 `account` 下所有地址至少 `minconf` 个确认的交易接收到的总金额
+getreceivedbyaccount "account" ( minconf ) # （已过时）获取账户 account 下所有地址至少 minconf 个确认的交易接收到的总金额
 {% endhighlight %}
 
 参数：<br>
-1. `account` （字符串，必备）选择的账户，默认账户使用 `""`。<br>
-2. `minconf` （数字，可选，默认为 1）只包含至少 `minconf` 次确认的交易。
+1. account （字符串，必备）选择的账户，默认账户使用 ""。<br>
+2. minconf （数字，可选，默认为 1）只包含至少 minconf 次确认的交易。
 
 结果：（数字）返回该账户接收到的 BTC 总数。
 
@@ -52,7 +52,7 @@ $ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curl
 {% endhighlight %}
 
 ## 源码剖析
-`getreceivedbyaccount` 对应的函数在“rpcserver.h”文件中被引用。
+getreceivedbyaccount 对应的函数在“rpcserver.h”文件中被引用。
 
 {% highlight C++ %}
 extern UniValue getreceivedbyaccount(const UniValue& params, bool fHelp); // 获取某账户接收到的金额

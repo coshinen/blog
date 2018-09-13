@@ -7,12 +7,12 @@ categories: Blockchain Bitcoin
 tags: 区块链 比特币 源码剖析
 ---
 上一篇分析了第六步初始化网络的详细过程，详见[比特币源码剖析（十二）](/2018/08/11/bitcoin-source-anatomy-12)。<br>
-本篇主要分析 `Step 7: load block chain` 第七步加载区块链的详细过程。
+本篇主要分析 Step 7: load block chain 第七步加载区块链的详细过程。
 
 ## 源码剖析
 
 <p id="Step07-ref"></p>
-3.11.7.第七步，加载区块链到内存。这部分代码实现在“init.cpp”文件的 `AppInit2(...)` 函数中。
+3.11.7.第七步，加载区块链到内存。这部分代码实现在“init.cpp”文件的 AppInit2(...) 函数中。
 
 {% highlight C++ %}
 bool AppInit2(boost::thread_group& threadGroup, CScheduler& scheduler) // 3.11.程序初始化，共 12 步
@@ -199,11 +199,11 @@ bool AppInit2(boost::thread_group& threadGroup, CScheduler& scheduler) // 3.11.�
 3.2.加载区块索引。<br>
 3.3.初始化区块索引到磁盘上。<br>
 3.4.区块链加载失败处理。<br>
-4.退出处理，这里不调用 `Shutdown()` 直接退出。<br>
+4.退出处理，这里不调用 Shutdown() 直接退出。<br>
 5.费用估计。<br>
 
-3.1.先调用 `pblocktree->WriteReindexing(true)` 把再索引标志写入区块数据库（`leveldb`），
-该函数声明在“txdb.h”文件的 `CblockTreeDB` 类中。
+3.1.先调用 pblocktree->WriteReindexing(true) 把再索引标志写入区块数据库（leveldb），
+该函数声明在“txdb.h”文件的 CblockTreeDB 类中。
 
 {% highlight C++ %}
 /** Access to the block database (blocks/index/) */ // 访问区块数据库（/blocks/index）
@@ -228,7 +228,7 @@ bool CBlockTreeDB::WriteReindexing(bool fReindexing) { // true
 }
 {% endhighlight %}
 
-再调用 `CleanupBlockRevFiles()` 函数删除全部的 `rev` 文件和无用的区块（`blk`）文件，
+再调用 CleanupBlockRevFiles() 函数删除全部的 rev 文件和无用的区块（blk）文件，
 该函数定义再“init.cpp”文件中。
 
 {% highlight C++ %}
@@ -275,7 +275,7 @@ void CleanupBlockRevFiles() // 删除某个缺失区块之后的所有区块数�
 }
 {% endhighlight %}
 
-3.2.调用 `LoadBlockIndex()` 加载区块索引，该函数声明在“main.h”文件中。
+3.2.调用 LoadBlockIndex() 加载区块索引，该函数声明在“main.h”文件中。
 
 {% highlight C++ %}
 /** Load the block tree and coins database from disk */
@@ -404,7 +404,7 @@ bool LoadBlockIndex()
 }
 {% endhighlight %}
 
-3.3.调用 `InitBlockIndex(chainparams)` 初始化区块树/索引数据库到磁盘，该函数声明在“main.h”文件中。
+3.3.调用 InitBlockIndex(chainparams) 初始化区块树/索引数据库到磁盘，该函数声明在“main.h”文件中。
 
 {% highlight C++ %}
 /** Initialize a new block tree database + block data on disk */

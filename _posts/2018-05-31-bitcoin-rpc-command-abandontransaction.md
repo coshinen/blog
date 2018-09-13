@@ -19,7 +19,7 @@ abandontransaction "txid" # 标记钱包交易 <txid> 为已放弃
 对已发生冲突和已放弃的交易无影响。
 
 参数：<br>
-1. `txid` （字符串，必备）交易索引。
+1. txid （字符串，必备）交易索引。
 
 结果：无返回值。
 
@@ -40,7 +40,7 @@ $ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curl
 {% endhighlight %}
 
 ## 源码剖析
-`abandontransaction` 对应的函数在“rpcserver.h”文件中被引用。
+abandontransaction 对应的函数在“rpcserver.h”文件中被引用。
 
 {% highlight C++ %}
 extern UniValue abandontransaction(const UniValue& params, bool fHelp); // 抛弃钱包内的交易

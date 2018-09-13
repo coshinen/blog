@@ -19,7 +19,7 @@ Watch-only 地址是一个区块链钱包功能，你可以在你的钱包导入
 
 了解更多关于在你钱包中的地址部分，包括导入的地址，查看该[指南](https://support.blockchain.com/hc/en-us/articles/207746403-Addresses)。
 
-一个 watch-only 地址的交易活动在该交易类型（发送或接收）右侧会有一个 `Watch Only` 标签。
+一个 watch-only 地址的交易活动在该交易类型（发送或接收）右侧会有一个 Watch Only 标签。
 ![watch-only-example](https://blog.blockchain.com/content/images/2016/05/watch-only-example.png)
 在这种情况下，底部的第三笔交易属于 watch-only 地址。
 

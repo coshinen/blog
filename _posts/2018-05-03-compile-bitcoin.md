@@ -6,7 +6,7 @@ author: mistydew
 categories: Blockchain Bitcoin
 tags: 区块链 比特币 源码构建
 ---
-`Linux` 平台构建比特币源码。
+Linux 平台构建比特币源码。
 
 ## 下载比特币源码（Ubuntu 16.04.4）
 使用 git 把 GitHub 上托管的比特币源码克隆到本地，关于 git 的安装和使用详见 [Git 基础命令](/2018/04/30/git-commands)篇。
@@ -28,8 +28,8 @@ nothing to commit, working directory clean
 {% highlight shell %}
 $ ./autogen.sh
 $ sudo ./configure
-$ sudo make # 使用 Makefile 进行比特币源码的编译，编译完成会生成 4 至 6 个 ELF 程序，分别为 `bitcoind`、`bitcoin-cli`、`bitcoin-tx`、`test_bitcoin`，若安装了 Qt 图形库，则会增加 `bitcoin-qt`、`test_bitcoin-qt`。
-$ sudo make install # 该项可选，作用为把编译好的比特币相关程序安装到系统默认可执行程序目录 `/usr/local/bin` 下。
+$ sudo make # 使用 Makefile 进行比特币源码的编译，编译完成会生成 4 至 6 个 ELF 程序，分别为 bitcoind、bitcoin-cli、bitcoin-tx、test_bitcoin，若安装了 Qt 图形库，则会增加 bitcoin-qt、test_bitcoin-qt。
+$ sudo make install # 该项可选，作用为把编译好的比特币相关程序安装到系统默认可执行程序目录 /usr/local/bin 下。
 {% endhighlight %}
 
 ## 依赖

@@ -13,19 +13,19 @@ excerpt: $ bitcoin-cli setgenerate generate ( genproclimit )
 setgenerate generate ( genproclimit ) # 设置打开或关闭挖矿的开关和矿工线程数
 {% endhighlight %}
 
-挖矿受限于 `genproclimit` 线程数，-1 表示无限制（与 CPU 核数相同）。<br>
-使用 [`getgenerate`](/2018/05/25/bitcoin-rpc-command-getgenerate) 查看当前设置。
+挖矿受限于 genproclimit 线程数，-1 表示无限制（与 CPU 核数相同）。<br>
+使用 [getgenerate](/2018/05/25/bitcoin-rpc-command-getgenerate) 查看当前设置。
 
 参数：<br>
-1. `generate` （布尔型，必备）默认为 false，true 表示开启挖矿，false 表示关闭。<br>
-2. `genproclimit` （整型，可选）设置开启挖矿时的线程数，默认为 1，-1 表示无限制（同 CPU 核数）。<br>
-**注：此方法不适用于 regtest 回归测试模式，在该模式下使用 RPC 命令 [`generate`](/2018/05/24/bitcoin-rpc-command-generate)。**
+1. generate （布尔型，必备）默认为 false，true 表示开启挖矿，false 表示关闭。<br>
+2. genproclimit （整型，可选）设置开启挖矿时的线程数，默认为 1，-1 表示无限制（同 CPU 核数）。<br>
+**注：此方法不适用于 regtest 回归测试模式，在该模式下使用 RPC 命令 [generate](/2018/05/24/bitcoin-rpc-command-generate)。**
 
 ## 用法示例
 
 ### 比特币核心客户端
 
-**注：该命令执行成功不会有任何反馈，可以通过 RPC 命令 [`getgenerate`](/2018/05/25/bitcoin-rpc-command-getgenerate) 查看当前挖矿状态。**
+**注：该命令执行成功不会有任何反馈，可以通过 RPC 命令 [getgenerate](/2018/05/25/bitcoin-rpc-command-getgenerate) 查看当前挖矿状态。**
 
 用法一：开启挖矿功能，使用默认的单线程挖矿。
 
@@ -75,7 +75,7 @@ $ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curl
 {% endhighlight %}
 
 ## 源码剖析
-`setgenerate` 对应的函数在“rpcserver.h”文件中被引用。
+setgenerate 对应的函数在“rpcserver.h”文件中被引用。
 
 {% highlight C++ %}
 extern UniValue setgenerate(const UniValue& params, bool fHelp); // 设置挖矿状态，挖矿开关

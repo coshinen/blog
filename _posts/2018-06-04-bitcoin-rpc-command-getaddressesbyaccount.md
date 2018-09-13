@@ -14,7 +14,7 @@ getaddressesbyaccount "account" # （已过时）获取指定账户的地址列�
 {% endhighlight %}
 
 参数：<br>
-1. `account` （字符串，必备）账户名。
+1. account （字符串，必备）账户名。
 
 结果：
 {% highlight shell %}
@@ -47,7 +47,7 @@ $ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curl
 {% endhighlight %}
 
 ## 源码剖析
-`getaddressesbyaccount` 对应的函数在“rpcserver.h”文件中被引用。
+getaddressesbyaccount 对应的函数在“rpcserver.h”文件中被引用。
 
 {% highlight C++ %}
 extern UniValue getaddressesbyaccount(const UniValue& params, bool fHelp); // 获取账户下的所有地址
@@ -98,7 +98,7 @@ UniValue getaddressesbyaccount(const UniValue& params, bool fHelp)
 1.确保钱包当前可用（已初始化完成）。<br>
 2.处理命令帮助和参数个数。<br>
 3.钱包上锁。<br>
-4.获取指定账户，账户名不能为 `*`。<br>
+4.获取指定账户，账户名不能为 *。<br>
 5.遍历地址簿，把与指定账户相同的地址加入结果集。<br>
 6.返回结果集。
 

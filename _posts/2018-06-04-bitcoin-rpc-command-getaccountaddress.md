@@ -10,11 +10,11 @@ excerpt: $ bitcoin-cli getaccountaddress "account"
 ## 提示说明
 
 {% highlight shell %}
-getaccountaddress "account" # （已过时）获取该账户 `account` 当前用于接收付款的比特币地址
+getaccountaddress "account" # （已过时）获取该账户 account 当前用于接收付款的比特币地址
 {% endhighlight %}
 
 参数：<br>
-1. `account` （字符串，必备）地址所属的账户名。它也可以设置空字符串 `""` 来表示默认账户。
+1. account （字符串，必备）地址所属的账户名。它也可以设置空字符串 "" 来表示默认账户。
 该账户不需要存在，若给定的账户不存在，则它将被创建并新建一个地址。
 
 结果：（字符串）返回该账户的比特币地址。
@@ -58,7 +58,7 @@ $ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curl
 {% endhighlight %}
 
 ## 源码剖析
-`getaccountaddress` 对应的函数在“rpcserver.h”文件中被引用。
+getaccountaddress 对应的函数在“rpcserver.h”文件中被引用。
 
 {% highlight C++ %}
 extern UniValue getaccountaddress(const UniValue& params, bool fHelp); // 获取账户收款地址
@@ -103,11 +103,11 @@ UniValue getaccountaddress(const UniValue& params, bool fHelp)
 1.确保钱包当前可用（已初始化完成）。<br>
 2.处理命令帮助和参数个数。<br>
 3.钱包上锁。<br>
-4.获取指定账户，账户名不能为 `*`。<br>
+4.获取指定账户，账户名不能为 *。<br>
 5.获取指定账户的收款地址，若该账户不存在，则创建一个同时新建一个地址。<br>
 6.返回指定账户的收款地址。
 
-第四步，调用 AccountFromValue(params[0]) 函数获取指定账户，注意这里指定的账户名不能为 `*`。
+第四步，调用 AccountFromValue(params[0]) 函数获取指定账户，注意这里指定的账户名不能为 *。
 该函数定义在“rpcwallet.cpp”文件中。
 
 {% highlight C++ %}

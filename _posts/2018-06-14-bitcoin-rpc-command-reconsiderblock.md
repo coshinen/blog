@@ -13,10 +13,10 @@ hidden: true
 reconsiderblock "hash" # 移除指定区块及其后代的无效状态，再次考虑它们为激活状态
 {% endhighlight %}
 
-**该操作能够撤销 [`invalidateblock`](/2018/06/14/bitcoin-rpc-command-invalidateblock) 的效果，但无法恢复连接。**
+**该操作能够撤销 [invalidateblock](/2018/06/14/bitcoin-rpc-command-invalidateblock) 的效果，但无法恢复连接。**
 
 参数：<br>
-1. `hash` （字符串，必备）用来再次考虑的区块哈希。
+1. hash （字符串，必备）用来再次考虑的区块哈希。
 
 结果：无返回值。
 
@@ -24,8 +24,8 @@ reconsiderblock "hash" # 移除指定区块及其后代的无效状态，再次�
 
 ### 比特币核心客户端
 
-参考 [`invalidateblock`](/2018/06/14/bitcoin-rpc-command-invalidateblock) 命令，
-再次考虑高度为 `32723` 的区块及其之后的区块。
+参考 [invalidateblock](/2018/06/14/bitcoin-rpc-command-invalidateblock) 命令，
+再次考虑高度为 32723 的区块及其之后的区块。
 
 {% highlight shell %}
 $ bitcoin-cli reconsiderblock 000000ea5bb666e0ab8e837691bbb2a0605c4a82281eecd858ad3ffce917df96
@@ -43,7 +43,7 @@ $ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curl
 {% endhighlight %}
 
 ## 源码剖析
-`reconsiderblock` 对应的函数在“rpcserver.h”文件中被引用。
+reconsiderblock 对应的函数在“rpcserver.h”文件中被引用。
 
 {% highlight C++ %}
 extern UniValue reconsiderblock(const UniValue& params, bool fHelp); // 再考虑区块

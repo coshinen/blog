@@ -10,13 +10,13 @@ excerpt: $ bitcoin-cli estimatesmartpriority nblocks
 ## 提示说明
 
 {% highlight shell %}
-estimatesmartpriority nblocks # 估计一笔 0 交易费的交易在 `nblocks` 个区块开始确认的大致优先级，如果可能则返回估计有效的区块数
+estimatesmartpriority nblocks # 估计一笔 0 交易费的交易在 nblocks 个区块开始确认的大致优先级，如果可能则返回估计有效的区块数
 {% endhighlight %}
 
 **警告：该接口不稳定且可能消失或改变！**
 
 参数：<br>
-1. `nblocks` （数字）区块数。
+1. nblocks （数字）区块数。
 
 结果：<br>
 {% highlight shell %}
@@ -56,7 +56,7 @@ $ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curl
 {% endhighlight %}
 
 ## 源码剖析
-`estimatesmartpriority` 对应的函数在“rpcserver.h”文件中被引用。
+estimatesmartpriority 对应的函数在“rpcserver.h”文件中被引用。
 
 {% highlight C++ %}
 extern UniValue estimatesmartpriority(const UniValue& params, bool fHelp); // 智能估计交易优先级

@@ -18,13 +18,13 @@ importaddress "address" ( "label" rescan p2sh ) # 导入一个脚本（16 进制
 参考[如何使用 Watch-only 地址](/2018/06/06/how-to-use-watch-only-addresses)。
 
 参数：<br>
-1. `script` （字符串，必备）16 进制编码的脚本（或地址）。<br>
-2. `label` （字符串，可选，默认为 ""）一个可选的标签（账户名）。<br>
-3. `rescan` （布尔型，可选，默认为 true）再扫描钱包交易。<br>
-4. `p2sh` （布尔型，可选，默认为 true）添加 P2SH 版本的脚本。
+1. script （字符串，必备）16 进制编码的脚本（或地址）。<br>
+2. label （字符串，可选，默认为 ""）一个可选的标签（账户名）。<br>
+3. rescan （布尔型，可选，默认为 true）再扫描钱包交易。<br>
+4. p2sh （布尔型，可选，默认为 true）添加 P2SH 版本的脚本。
 
-**注：如果 `rescan` 为 true，该调用可能需要数分钟来完成。
-如果你有完整的公钥，你应该使用 [`importpubkey`](/2018/06/07/bitcoin-rpc-command-importpubkey) 代替该命令。**
+**注：如果 rescan 为 true，该调用可能需要数分钟来完成。
+如果你有完整的公钥，你应该使用 [importpubkey](/2018/06/07/bitcoin-rpc-command-importpubkey) 代替该命令。**
 
 结果：无返回值。
 
@@ -47,7 +47,7 @@ $ bitcoin-cli getaddressesbyaccount ""
 ]
 {% endhighlight %}
 
-用法二：导入地址到钱包账户 `"testing"` 中，并关闭再扫描。
+用法二：导入地址到钱包账户 "testing" 中，并关闭再扫描。
 
 {% highlight shell %}
 $ bitcoin-cli getaddressesbyaccount "testing"
@@ -68,7 +68,7 @@ $ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curl
 {% endhighlight %}
 
 ## 源码剖析
-`importaddress` 对应的函数在“rpcserver.h”文件中被引用。
+importaddress 对应的函数在“rpcserver.h”文件中被引用。
 
 {% highlight C++ %}
 extern UniValue importaddress(const UniValue& params, bool fHelp); // 导入地址或脚本

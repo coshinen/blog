@@ -7,12 +7,12 @@ categories: Blockchain Bitcoin
 tags: 区块链 比特币 源码剖析
 ---
 上一篇分析了应用程序初始化中创建脚本验证的线程函数和创建轻量级任务调度线程函数，详见[比特币源码剖析（八）](/2018/07/14/bitcoin-source-anatomy-08)。<br>
-本篇主要分析 `Step 4: application initialization: dir lock, daemonize, pidfile, debug log` 第四步应用程序初始化中初始化服务器的详细过程。
+本篇主要分析 Step 4: application initialization: dir lock, daemonize, pidfile, debug log 第四步应用程序初始化中初始化服务器的详细过程。
 
 ## 源码剖析
 
 <p id="AppInitServers-ref"></p>
-9.应用程序初始化服务器，这部分代码实现在“init.cpp”文件的 `AppInit2(...)` 函数的第四步 `Step 4: application initialization: dir lock, daemonize, pidfile, debug log`。
+9.应用程序初始化服务器，这部分代码实现在“init.cpp”文件的 AppInit2(...) 函数的第四步 Step 4: application initialization: dir lock, daemonize, pidfile, debug log。
 
 {% highlight C++ %}
 bool AppInit2(boost::thread_group& threadGroup, CScheduler& scheduler) // 3.11.程序初始化，共 12 步
@@ -35,10 +35,10 @@ bool AppInit2(boost::thread_group& threadGroup, CScheduler& scheduler) // 3.11.�
 }
 {% endhighlight %}
 
-9.1.连接设置 `RPC` 预热状态函数。<br>
-9.2.应用程序初始化服务（`HTTP`、`RPC`）。
+9.1.连接设置 RPC 预热状态函数。<br>
+9.2.应用程序初始化服务（HTTP、RPC）。
 
-9.1.调用 `uiInterface.InitMessage.connect(SetRPCWarmupStatus)` 函数把信号连接到处理函数 `SetRPCWarmupStatus` 上。
+9.1.调用 uiInterface.InitMessage.connect(SetRPCWarmupStatus) 函数把信号连接到处理函数 SetRPCWarmupStatus 上。
 该处理函数声明在“rpcserver.h”文件中。
 
 {% highlight C++ %}
@@ -49,7 +49,7 @@ bool AppInit2(boost::thread_group& threadGroup, CScheduler& scheduler) // 3.11.�
 void SetRPCWarmupStatus(const std::string& newStatus);
 {% endhighlight %}
 
-实现在“rpcserver.cpp”文件中，入参为：新的 `RPC` 热身状态。
+实现在“rpcserver.cpp”文件中，入参为：新的 RPC 热身状态。
 
 {% highlight C++ %}
 static std::string rpcWarmupStatus("RPC server started"); // 全局静态 rpc 预热状态字符串
@@ -62,14 +62,14 @@ void SetRPCWarmupStatus(const std::string& newStatus)
 }
 {% endhighlight %}
 
-9.2.调用 `AppInitServers(threadGroup)` 函数初始化服务设置，该服务用于和客户端命令行 `RPC` 通讯。
+9.2.调用 AppInitServers(threadGroup) 函数初始化服务设置，该服务用于和客户端命令行 RPC 通讯。
 该函数定义在“init.cpp”文件中。
 
 {% highlight C++ %}
 bool AppInitServers(boost::thread_group& threadGroup)
 {
-    RPCServer::OnStopped(&OnRPCStopped); // 1.连接停止 `RPC` 信号函数
-    RPCServer::OnPreCommand(&OnRPCPreCommand); // 2.连接监控 `RPC` 安全模式信号函数
+    RPCServer::OnStopped(&OnRPCStopped); // 1.连接停止 RPC 信号函数
+    RPCServer::OnPreCommand(&OnRPCPreCommand); // 2.连接监控 RPC 安全模式信号函数
     if (!InitHTTPServer()) //3. 初始化 HTTP 服务
         return false;
     if (!StartRPC()) // 4.启动 RPC 远程过程调用
@@ -84,17 +84,17 @@ bool AppInitServers(boost::thread_group& threadGroup)
 }
 {% endhighlight %}
 
-9.2.1.连接停止 `RPC` 信号函数。<br>
-9.2.2.连接监控 `RPC` 安全模式信号函数。<br>
-9.2.3.初始化 `HTTP` 服务。<br>
-9.2.4.启动 `RPC`。<br>
-9.2.5.启动 `HTTPRPC`。<br>
-9.2.6.启动 `REST`。<br>
-9.2.7.启动 `HTTP` 服务。
+9.2.1.连接停止 RPC 信号函数。<br>
+9.2.2.连接监控 RPC 安全模式信号函数。<br>
+9.2.3.初始化 HTTP 服务。<br>
+9.2.4.启动 RPC。<br>
+9.2.5.启动 HTTPRPC。<br>
+9.2.6.启动 REST。<br>
+9.2.7.启动 HTTP 服务。
 
-9.2.1.调用 `RPCServer::OnStopped(&OnRPCStopped)` 函数设置的回调函数，用于停止 `RPC`，内部还是连接信号函数。<br>
-9.2.2.调用 `RPCServer::OnPreCommand(&OnRPCPreCommand)` 函数设置的回调函数，用于监控 `RPC` 安全模式。
-`OnStopped` 和 `OnPreCommand` 均声明在“rpcserver.h”文件的 `RPCServer` 命名空间中。
+9.2.1.调用 RPCServer::OnStopped(&OnRPCStopped) 函数设置的回调函数，用于停止 RPC，内部还是连接信号函数。<br>
+9.2.2.调用 RPCServer::OnPreCommand(&OnRPCPreCommand) 函数设置的回调函数，用于监控 RPC 安全模式。
+OnStopped 和 OnPreCommand 均声明在“rpcserver.h”文件的 RPCServer 命名空间中。
 
 {% highlight C++ %}
 namespace RPCServer // RPC 服务
@@ -128,7 +128,7 @@ void RPCServer::OnPreCommand(boost::function<void (const CRPCCommand&)> slot)
 }
 {% endhighlight %}
 
-信号函数 `OnRPCStopped` 和 `OnRPCPreCommand` 均定义在“init.cpp”文件中。
+信号函数 OnRPCStopped 和 OnRPCPreCommand 均定义在“init.cpp”文件中。
 
 {% highlight C++ %}
 void OnRPCStopped()
@@ -147,7 +147,7 @@ void OnRPCPreCommand(const CRPCCommand& cmd)
 }
 {% endhighlight %}
 
-`cvBlockChange` 是一个条件变量，定义在“main.cpp”文件中，在“main.h”文件中引用。
+cvBlockChange 是一个条件变量，定义在“main.cpp”文件中，在“main.h”文件中引用。
 
 {% highlight C++ %}
 /** Just a typedef for boost::condition_variable, can be wrapped later if desired */
@@ -160,7 +160,7 @@ typedef boost::condition_variable CConditionVariable; // 只是一个定义类�
 CConditionVariable cvBlockChange; // 区块改变的条件变量
 {% endhighlight %}
 
-类 `CRPCCommand` 定义在“rpcserver.h”文件中。
+类 CRPCCommand 定义在“rpcserver.h”文件中。
 
 {% highlight C++ %}
 typedef UniValue(*rpcfn_type)(const UniValue& params, bool fHelp); // RPC 命令对应函数行为的回调函数
@@ -175,7 +175,7 @@ public:
 };
 {% endhighlight %}
 
-9.2.3.调用 `InitHTTPServer()` 函数初始化 `HTTP` 服务，声明在“httpserver.h”文件中。
+9.2.3.调用 InitHTTPServer() 函数初始化 HTTP 服务，声明在“httpserver.h”文件中。
 
 {% highlight C++ %}
 /** Initialize HTTP server.
@@ -266,20 +266,20 @@ bool InitHTTPServer()
 }
 {% endhighlight %}
 
-**这里用到了 `libevent` 事件库中的 `evhttp` 用来初始化 `http` 的服务端。**
+**这里用到了 libevent 事件库中的 evhttp 用来初始化 http 的服务端。**
 
-1.初始化 `HTTP` 访问控制列表 `ACL`（即白名单）。<br>
-2.重定向 `libevent` 日志到我们自己的日志系统。<br>
-3.初始化 `libevent` 的 `evhttp` 服务端。<br>
-3.1.初始化 `libevent` 多线程支持。<br>
-3.2.（必备）新建 `event_base` 对象。<br>
-3.3.（必备）根据上面创建的 `event_base` 新建 `evhttp` 对象。<br>
-3.4.设置 `http` 相关参数：超时，协议头上限，消息体上限。<br>
-3.5.（必备）设置处理 `http` 请求的回调函数。<br>
-3.6.（必备）绑定 `http` 服务的地址和端口，至此 `evhttp` 服务端初始化完毕。<br>
-4.创建 `HTTP` 任务队列。
+1.初始化 HTTP 访问控制列表 ACL（即白名单）。<br>
+2.重定向 libevent 日志到我们自己的日志系统。<br>
+3.初始化 libevent 的 evhttp 服务端。<br>
+3.1.初始化 libevent 多线程支持。<br>
+3.2.（必备）新建 event_base 对象。<br>
+3.3.（必备）根据上面创建的 event_base 新建 evhttp 对象。<br>
+3.4.设置 http 相关参数：超时，协议头上限，消息体上限。<br>
+3.5.（必备）设置处理 http 请求的回调函数。<br>
+3.6.（必备）绑定 http 服务的地址和端口，至此 evhttp 服务端初始化完毕。<br>
+4.创建 HTTP 任务队列。
 
-1.调用 `InitHTTPAllowList()` 来初始化 `ACL` 列表（即白名单），在该列表中的 `IP` 对应的节点才能连入本节点，
+1.调用 InitHTTPAllowList() 来初始化 ACL 列表（即白名单），在该列表中的 IP 对应的节点才能连入本节点，
 该函数定义在“httpserver.cpp”文件中。
 
 {% highlight C++ %}
@@ -310,8 +310,8 @@ static bool InitHTTPAllowList() // ACL: Allow Control List
 }
 {% endhighlight %}
 
-2.调用 `event_set_log_callback(&libevent_log_cb)` 设置回调函数，把 `libevent` 库中的日志信息重定向（转入）到我们自己的日志系统。
-回调函数 `libevent_log_cb` 定义在“httpserver.cpp”文件中。
+2.调用 event_set_log_callback(&libevent_log_cb) 设置回调函数，把 libevent 库中的日志信息重定向（转入）到我们自己的日志系统。
+回调函数 libevent_log_cb 定义在“httpserver.cpp”文件中。
 
 {% highlight C++ %}
 /** libevent event log callback */ // libevent 事件日志回调函数
@@ -328,8 +328,8 @@ static void libevent_log_cb(int severity, const char *msg)
 }
 {% endhighlight %}
 
-3.5.调用 `evhttp_set_gencb(http, http_request_cb, NULL)` 设置处理 `http` 请求的回调函数，
-回调函数 `http_request_cb` 定义在“httpserver.cpp”文件中。
+3.5.调用 evhttp_set_gencb(http, http_request_cb, NULL) 设置处理 http 请求的回调函数，
+回调函数 http_request_cb 定义在“httpserver.cpp”文件中。
 
 {% highlight C++ %}
 /** HTTP request callback */ // HTTP 请求回调函数
@@ -383,7 +383,7 @@ static void http_request_cb(struct evhttp_request* req, void* arg)
 }
 {% endhighlight %}
 
-3.6.调用 `HTTPBindAddresses(http)` 绑定 `http` 服务端的地址和端口，该函数定义在“httpserver.cpp”文件中。
+3.6.调用 HTTPBindAddresses(http) 绑定 http 服务端的地址和端口，该函数定义在“httpserver.cpp”文件中。
 
 {% highlight C++ %}
 //! Bound listening sockets // 绑定的用于监听的套接字
@@ -429,7 +429,7 @@ static bool HTTPBindAddresses(struct evhttp* http)
 }
 {% endhighlight %}
 
-9.2.4.调用 `StartRPC()` 启动 `RPC`，该函数声明在“rpcserver.h”文件中。
+9.2.4.调用 StartRPC() 启动 RPC，该函数声明在“rpcserver.h”文件中。
 
 {% highlight C++ %}
 bool StartRPC(); // 启动 RPC
@@ -449,7 +449,7 @@ bool StartRPC()
 }
 {% endhighlight %}
 
-**注：这里调用的 `g_rpcSignals.Started()` 信号函数在该版本中并未注册。**
+**注：这里调用的 g_rpcSignals.Started() 信号函数在该版本中并未注册。**
 
 未完待续...<br>
 请看下一篇[比特币源码剖析（十）](/2018/07/28/bitcoin-source-anatomy-10)。

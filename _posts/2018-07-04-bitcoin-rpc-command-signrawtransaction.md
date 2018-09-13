@@ -17,8 +17,8 @@ signrawtransaction "hexstring" ( [{"txid":"id","vout":n,"scriptPubKey":"hex","re
 第三个可选的参数（可能为空）是一个 base58 编码的私钥数组，如果指定，它将是签名该交易的唯一私钥。**
 
 参数：<br>
-1.`hexstring` （字符串，必备）交易的 16 进制字符串。<br>
-2.`prevtxs` （字符串，可选）依赖的前一笔交易输出的 json 数组。<br>
+1.hexstring （字符串，必备）交易的 16 进制字符串。<br>
+2.prevtxs （字符串，可选）依赖的前一笔交易输出的 json 数组。<br>
 {% highlight shell %}
      [               （json 对象的 json 数组，若未提供则为空）
        {
@@ -30,14 +30,14 @@ signrawtransaction "hexstring" ( [{"txid":"id","vout":n,"scriptPubKey":"hex","re
        ,...
     ]
 {% endhighlight %}
-3.`privatekeys` （字符串，可选）用于签名的 base58 编码的私钥组成的 json 数组。<br>
+3.privatekeys （字符串，可选）用于签名的 base58 编码的私钥组成的 json 数组。<br>
 {% highlight shell %}
     [                  （字符串 json 数组，若未提供则为空）
       "privatekey"   （字符串）base58 编码的私钥
       ,...
     ]
 {% endhighlight %}
-4.`sighashtype` （字符串，可选，默认为 ALL）签名哈希类型。必须是下列中的一个：
+4.sighashtype （字符串，可选，默认为 ALL）签名哈希类型。必须是下列中的一个：
 {% highlight shell %}
        "ALL"
        "NONE"
@@ -70,7 +70,7 @@ signrawtransaction "hexstring" ( [{"txid":"id","vout":n,"scriptPubKey":"hex","re
 ### 比特币核心客户端
 
 对已创建的原始交易进行签名。<br>
-原始交易的创建见 [`createrawtransaction`](/2018/07/02/bitcoin-rpc-command-createrawtransaction)。
+原始交易的创建见 [createrawtransaction](/2018/07/02/bitcoin-rpc-command-createrawtransaction)。
 
 {% highlight shell %}
 $ bitcoin-cli createrawtransaction "[{\"txid\":\"fb9bd2df3cef0abd9f444971dff097790b7bf146843a752cb48461418d3c7e67\",\"vout\":0}]" "{\"1Mcg7MDBD38sSScsX3USbsCnkcMbPnLyTV\":0.01}"
@@ -90,7 +90,7 @@ $ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curl
 {% endhighlight %}
 
 ## 源码剖析
-`signrawtransaction` 对应的函数在“rpcserver.h”文件中被引用。
+signrawtransaction 对应的函数在“rpcserver.h”文件中被引用。
 
 {% highlight C++ %}
 extern UniValue signrawtransaction(const UniValue& params, bool fHelp); // 签名原始交易

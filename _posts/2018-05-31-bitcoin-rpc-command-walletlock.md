@@ -14,7 +14,7 @@ walletlock # 从内存中移除钱包密钥，锁定钱包
 {% endhighlight %}
 
 在调用此方法后，在调用任何需要钱包解锁的方法之前
-你将需要再次调用 [`walletpassphrase`](/2018/05/31/bitcoin-rpc-command-walletpassphrase)。
+你将需要再次调用 [walletpassphrase](/2018/05/31/bitcoin-rpc-command-walletpassphrase)。
 
 结果：无返回值。
 
@@ -45,7 +45,7 @@ $ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curl
 {% endhighlight %}
 
 ## 源码剖析
-`walletlock` 对应的函数在“rpcserver.h”文件中被引用。
+walletlock 对应的函数在“rpcserver.h”文件中被引用。
 
 {% highlight C++ %}
 extern UniValue walletlock(const UniValue& params, bool fHelp); // 锁定钱包

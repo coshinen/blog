@@ -14,8 +14,8 @@ getnetworkhashps ( blocks height ) # 获取基于最后 n 个区块估算的网�
 {% endhighlight %}
 
 参数：<br>
-1. `blocks` （整型，可选，默认为 120）区块的数量，-1 表示从上一次变化的难度开始。<br>
-2. `height` （整型，可选，默认为 -1 表示当前高度）给定区块链高度用于评估当某个块被找到时的网络速度。
+1. blocks （整型，可选，默认为 120）区块的数量，-1 表示从上一次变化的难度开始。<br>
+2. height （整型，可选，默认为 -1 表示当前高度）给定区块链高度用于评估当某个块被找到时的网络速度。
 
 结果：（数字）返回估算的每秒网络哈希的次数（链工作量 chainwork 之差 / 时间 time 之差）。
 
@@ -69,7 +69,7 @@ $ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curl
 {% endhighlight %}
 
 ## 源码剖析
-`getnetworkhashps` 对应的函数在“rpcserver.h”文件中被引用。
+getnetworkhashps 对应的函数在“rpcserver.h”文件中被引用。
 
 {% highlight C++ %}
 extern UniValue getnetworkhashps(const UniValue& params, bool fHelp); // 获取全网算力

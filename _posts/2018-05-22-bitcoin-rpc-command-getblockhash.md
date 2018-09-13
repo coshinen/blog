@@ -14,7 +14,7 @@ getblockhash index # 获取在最佳区块链上指定索引的区块哈希
 {% endhighlight %}
 
 参数：<br>
-1. `index` （整型，必备）区块索引（最佳链高度）。
+1. index （整型，必备）区块索引（最佳链高度）。
 
 结果：（字符串）区块哈希（16 进制形式）。
 
@@ -37,7 +37,7 @@ $ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curl
 {% endhighlight %}
 
 ## 源码剖析
-`getblockhash` 对应的函数在“rpcserver.h”文件中被引用。
+getblockhash 对应的函数在“rpcserver.h”文件中被引用。
 
 {% highlight C++ %}
 extern UniValue getblockhash(const UniValue& params, bool fHelp); // 获取指定区块索引的区块哈希
@@ -79,7 +79,7 @@ UniValue getblockhash(const UniValue& params, bool fHelp)
 4.获取激活区块链相应高度的区块索引。<br>
 5.获取该区块的哈希，转换为 16 进制并返回。
 
-相关函数调用见 RPC 命令 [`getbestblockhash`](/2018/05/22/bitcoin-rpc-command-getbestblockhash)。
+相关函数调用见 RPC 命令 [getbestblockhash](/2018/05/22/bitcoin-rpc-command-getbestblockhash)。
 
 Thanks for your time.
 

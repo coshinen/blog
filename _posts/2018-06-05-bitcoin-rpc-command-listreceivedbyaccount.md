@@ -14,9 +14,9 @@ listreceivedbyaccount ( minconf includeempty includeWatchonly ) # （已过时�
 {% endhighlight %}
 
 参数：<br>
-1. `minconf` （数字，可选，默认为 1）在被包含到付款前的最小确认数。<br>
-2. `includeempty` （布尔型，可选，默认为 false）是否包括还未收到任何付款的账户。<br>
-3. `includeWatchonly` （布尔型，可选，默认为 false）是否包含 watchonly 地址（见 [`importaddress`](/2018/06/07/bitcoin-rpc-command-importaddress)）。
+1. minconf （数字，可选，默认为 1）在被包含到付款前的最小确认数。<br>
+2. includeempty （布尔型，可选，默认为 false）是否包括还未收到任何付款的账户。<br>
+3. includeWatchonly （布尔型，可选，默认为 false）是否包含 watchonly 地址（见 [importaddress](/2018/06/07/bitcoin-rpc-command-importaddress)）。
 
 结果：<br>
 {% highlight shell %}
@@ -85,7 +85,7 @@ $ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curl
 {% endhighlight %}
 
 ## 源码剖析
-`listreceivedbyaccount` 对应的函数在“rpcserver.h”文件中被引用。
+listreceivedbyaccount 对应的函数在“rpcserver.h”文件中被引用。
 
 {% highlight C++ %}
 extern UniValue listreceivedbyaccount(const UniValue& params, bool fHelp); // 列出账户余额

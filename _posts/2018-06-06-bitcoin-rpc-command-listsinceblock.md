@@ -10,13 +10,13 @@ excerpt: $ bitcoin-cli listsinceblock ( "blockhash" target-confirmations include
 ## 提示说明
 
 {% highlight shell %}
-listsinceblock ( "blockhash" target-confirmations includeWatchonly ) # 获取从区块 `blockhash` 开始到最佳区块上的全部交易，如果该参数省略则获取全部区块交易
+listsinceblock ( "blockhash" target-confirmations includeWatchonly ) # 获取从区块 blockhash 开始到最佳区块上的全部交易，如果该参数省略则获取全部区块交易
 {% endhighlight %}
 
 参数：<br>
-1. `blockhash` （字符串，可选）列出从该区块哈希开始的全部交易。<br>
-2. `target-confirmations` （数字型，可选）所需的确认数，必须大于等于 1。<br>
-3. `includeWatchonly` （布尔型，可选，默认为 false）包含到 watchonly 地址的交易（见 [`importaddress`](/2018/06/07/bitcoin-rpc-command-importaddress)）。
+1. blockhash （字符串，可选）列出从该区块哈希开始的全部交易。<br>
+2. target-confirmations （数字型，可选）所需的确认数，必须大于等于 1。<br>
+3. includeWatchonly （布尔型，可选，默认为 false）包含到 watchonly 地址的交易（见 [importaddress](/2018/06/07/bitcoin-rpc-command-importaddress)）。
 
 结果：<br>
 {% highlight shell %}
@@ -117,7 +117,7 @@ $ bitcoin-cli listsinceblock 0000014c2436b10caba31a8ab61b78b91a3f877d1e00f9995f0
 {% endhighlight %}
 
 ## 源码剖析
-`listsinceblock` 对应的函数在“rpcserver.h”文件中被引用。
+listsinceblock 对应的函数在“rpcserver.h”文件中被引用。
 
 {% highlight C++ %}
 extern UniValue listsinceblock(const UniValue& params, bool fHelp); // 列出指定区块开始区块上的全部交易

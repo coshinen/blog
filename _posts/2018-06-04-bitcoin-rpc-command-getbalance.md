@@ -15,12 +15,12 @@ getbalance ( "account" minconf includeWatchonly ) # 获取钱包余额
 
 如果未指定账户，返回服务器钱包总可用余额。<br>
 如果指定了账户（已过时），返回账户的余额。<br>
-**注：默认账户 `""` 与没有参数不同。服务器钱包总余额可能与默认账户 `""` 余额不同。**
+**注：默认账户 "" 与没有参数不同。服务器钱包总余额可能与默认账户 "" 余额不同。**
 
 参数：<br>
-1. `account` （字符串，可选，已过时）选择的账户，或 `*` 表示整个钱包。可能是默认账户 `""`。<br>
-2. `minconf` （数字，可选，默认为 1）。只包含至少确认 `minconf` 次的交易。<br>
-3. `includeWatchonly` （布尔型，可选，默认为 false）也包括包含在 watchonly 地址中的余额（参阅 [`importaddress`](/2018/06/07/bitcoin-rpc-command-importaddress)）。
+1. account （字符串，可选，已过时）选择的账户，或 * 表示整个钱包。可能是默认账户 ""。<br>
+2. minconf （数字，可选，默认为 1）。只包含至少确认 minconf 次的交易。<br>
+3. includeWatchonly （布尔型，可选，默认为 false）也包括包含在 watchonly 地址中的余额（参阅 [importaddress](/2018/06/07/bitcoin-rpc-command-importaddress)）。
 
 结果：（数字）返回该账户收到的 BTC 的总金额。
 
@@ -57,7 +57,7 @@ $ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curl
 {% endhighlight %}
 
 ## 源码剖析
-`getbalance` 对应的函数在“rpcserver.h”文件中被引用。
+getbalance 对应的函数在“rpcserver.h”文件中被引用。
 
 {% highlight C++ %}
 extern UniValue getbalance(const UniValue& params, bool fHelp); // 获取余额
@@ -148,8 +148,8 @@ UniValue getbalance(const UniValue& params, bool fHelp)
 3.钱包上锁。<br>
 4.若无参数，直接获取钱包总余额并返回。<br>
 5.若指定了参数，处理相应的参数。<br>
-6.若指定的账户为 `"*"`，以不同于 4 的方式获取钱包总余额并返回。<br>
-7.若指定的账户非 `"*"`，获取指定账户下的余额并返回。
+6.若指定的账户为 "*"，以不同于 4 的方式获取钱包总余额并返回。<br>
+7.若指定的账户非 "*"，获取指定账户下的余额并返回。
 
 Thanks for your time.
 

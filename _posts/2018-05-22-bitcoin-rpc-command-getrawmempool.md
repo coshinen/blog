@@ -14,7 +14,7 @@ getrawmempool ( verbose ) # 获取内存池中所有交易索引作为一个交�
 {% endhighlight %}
 
 参数：<br>
-1. `verbose` （布尔型，可选，默认为 false）true 返回 json 对象，false 返回交易索引的数组。
+1. verbose （布尔型，可选，默认为 false）true 返回 json 对象，false 返回交易索引的数组。
 
 结果：（verbose 为 false）<br>
 {% highlight shell %}
@@ -110,7 +110,7 @@ $ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curl
 {% endhighlight %}
 
 ## 源码剖析
-`getrawmempool` 对应的函数在“rpcserver.h”文件中被引用。
+getrawmempool 对应的函数在“rpcserver.h”文件中被引用。
 
 {% highlight C++ %}
 extern UniValue getrawmempool(const UniValue& params, bool fHelp); // 获取交易内存池元信息（交易索引）

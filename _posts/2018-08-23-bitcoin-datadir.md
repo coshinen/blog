@@ -19,7 +19,7 @@ tags: 区块链 比特币 数据目录
 
 ## 源码剖析
 
-数据目录默认的位置硬编在源码“util.cpp”文件的 `GetDefaultDataDir()` 函数中。
+数据目录默认的位置硬编在源码“util.cpp”文件的 GetDefaultDataDir() 函数中。
 
 {% highlight C++ %}
 boost::filesystem::path GetDefaultDataDir()
@@ -53,7 +53,7 @@ boost::filesystem::path GetDefaultDataDir()
 {% endhighlight %}
 
 ## 目录结构
-以 `Ubuntu 18.04.1` 下比特币的默认数据根目录 `"~/.bitcoin"` 为例，其文件结构如下：
+以 Ubuntu 18.04.1 下比特币的默认数据根目录 "~/.bitcoin" 为例，其文件结构如下：
 
 * bitcoin.conf # 配置文件（启动选项）
 * /blocks/ # 区块数据目录

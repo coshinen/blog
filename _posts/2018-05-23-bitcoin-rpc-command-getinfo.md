@@ -70,7 +70,7 @@ $ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curl
 {% endhighlight %}
 
 ## 源码剖析
-`getinfo` 对应的函数在“rpcserver.h”文件中被引用。
+getinfo 对应的函数在“rpcserver.h”文件中被引用。
 
 {% highlight C++ %}
 extern UniValue getinfo(const UniValue& params, bool fHelp); // 获取比特币核心信息
@@ -81,14 +81,14 @@ extern UniValue getinfo(const UniValue& params, bool fHelp); // 获取比特币�
 {% highlight C++ %}
 /**
  * @note Do not add or change anything in the information returned by this
- * method. `getinfo` exists for backwards-compatibility only. It combines
+ * method. getinfo exists for backwards-compatibility only. It combines
  * information from wildly different sources in the program, which is a mess,
  * and is thus planned to be deprecated eventually.
  *
  * Based on the source of the information, new information should be added to:
- * - `getblockchaininfo`,
- * - `getnetworkinfo` or
- * - `getwalletinfo`
+ * - getblockchaininfo,
+ * - getnetworkinfo or
+ * - getwalletinfo
  *
  * Or alternatively, create a specific query method for the information.
  **/ // 在该信息通过此方式返回时不添加或改变任何东西

@@ -10,15 +10,15 @@ excerpt: $ bitcoin-cli importprivkey "bitcoinprivkey" ( "label" rescan )
 ## 提示说明
 
 {% highlight shell %}
-importprivkey "bitcoinprivkey" ( "label" rescan ) # 导入私钥（通过 `dumpprivkey` 返回）到你的钱包
+importprivkey "bitcoinprivkey" ( "label" rescan ) # 导入私钥（通过 dumpprivkey 返回）到你的钱包
 {% endhighlight %}
 
 参数：<br>
-1. `bitcoinprivkey` （字符串，必备）私钥（见 [`dumpprivkey`](/2018/06/06/bitcoin-rpc-command-dumpprivkey)）。<br>
-2. `label` （字符串，可选，默认为 ""）一个可选的标签（账户名）。<br>
-3. `rescan` （布尔型，可选，默认为 true）再扫描钱包交易。
+1. bitcoinprivkey （字符串，必备）私钥（见 [dumpprivkey](/2018/06/06/bitcoin-rpc-command-dumpprivkey)）。<br>
+2. label （字符串，可选，默认为 ""）一个可选的标签（账户名）。<br>
+3. rescan （布尔型，可选，默认为 true）再扫描钱包交易。
 
-**注：如果 `rescan` 为 true，该调用可能需要数分钟来完成。**
+**注：如果 rescan 为 true，该调用可能需要数分钟来完成。**
 
 结果：无返回值。
 
@@ -26,7 +26,7 @@ importprivkey "bitcoinprivkey" ( "label" rescan ) # 导入私钥（通过 `dumpp
 
 ### 比特币核心客户端
 
-用法一：在钱包默认账户 `""` 中生成一个新地址，获取其私钥，再导入私钥到账户 `"tabby"` 中。
+用法一：在钱包默认账户 "" 中生成一个新地址，获取其私钥，再导入私钥到账户 "tabby" 中。
 
 {% highlight shell %}
 $ bitcoin-cli getnewaddress
@@ -40,7 +40,7 @@ $ bitcoin-cli getaddressesbyaccount "tabby"
 ]
 {% endhighlight %}
 
-用法二：导入私钥到账户 `"testing"` 中，并关闭再扫描。
+用法二：导入私钥到账户 "testing" 中，并关闭再扫描。
 
 {% highlight shell %}
 $ bitcoin-cli importprivkey L4fh51n2P8MpNP8hgNc9kLhS2e525GLNu4NGcWNphiLMRpE8rDGH "testing" false
@@ -58,7 +58,7 @@ $ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curl
 {% endhighlight %}
 
 ## 源码剖析
-`importprivkey` 对应的函数在“rpcserver.h”文件中被引用。
+importprivkey 对应的函数在“rpcserver.h”文件中被引用。
 
 {% highlight C++ %}
 extern UniValue importprivkey(const UniValue& params, bool fHelp); // 导入私钥

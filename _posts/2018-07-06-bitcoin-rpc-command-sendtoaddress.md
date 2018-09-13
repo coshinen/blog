@@ -14,11 +14,11 @@ sendtoaddress "bitcoinaddress" amount ( "comment" "comment-to" subtractfeefromam
 {% endhighlight %}
 
 参数：<br>
-1.`bitcoinaddress` （字符串，必备）要发送到的比特币地址。<br>
-2.`amount` （数字或字符串，必备）以 BTC 为单位的发送的金额。例 `0.1`。<br>
-3.`comment` （字符串，可选）用于存储交易的备注。这不是交易的一部分，只保存在你的钱包中。<br>
-4.`comment-to` （字符串，可选）存储你要发送交易的个人或组织名的备注。这不是交易的一部分，只保存在你的钱包中。<br>
-5.`subtractfeefromamount` （布尔型，可选，默认为 false）交易费将从发送金额中扣除。接收者将收到少于你在金额栏输入的比特币。
+1.bitcoinaddress （字符串，必备）要发送到的比特币地址。<br>
+2.amount （数字或字符串，必备）以 BTC 为单位的发送的金额。例 0.1。<br>
+3.comment （字符串，可选）用于存储交易的备注。这不是交易的一部分，只保存在你的钱包中。<br>
+4.comment-to （字符串，可选）存储你要发送交易的个人或组织名的备注。这不是交易的一部分，只保存在你的钱包中。<br>
+5.subtractfeefromamount （布尔型，可选，默认为 false）交易费将从发送金额中扣除。接收者将收到少于你在金额栏输入的比特币。
 若该值为 true，则发送金额包含交易费，默认 false，交易费另算。
 
 结果：（字符串）返回交易索引。
@@ -27,8 +27,8 @@ sendtoaddress "bitcoinaddress" amount ( "comment" "comment-to" subtractfeefromam
 
 ### 比特币核心客户端
 
-**使用该命令前，先调用 [`walletpassphrase`](/2018/05/31/bitcoin-rpc-command-walletpassphrase) 解锁钱包，<br>
-使用该命令后，再调用 [`walletlock`](/2018/05/31/bitcoin-rpc-command-walletlock) 锁定钱包。**
+**使用该命令前，先调用 [walletpassphrase](/2018/05/31/bitcoin-rpc-command-walletpassphrase) 解锁钱包，<br>
+使用该命令后，再调用 [walletlock](/2018/05/31/bitcoin-rpc-command-walletlock) 锁定钱包。**
 
 用法一：向指定地址发送 0.1 BTC。
 
@@ -65,7 +65,7 @@ $ bitcoin-cli gettransaction 533ac3682be8723cca63f37a75178155c0b6e69d06606010d5c
 }
 {% endhighlight %}
 
-用法二：向指定地址发送 0.1 BTC，增加交易备注 `donation` 和交易组织名 `seans outpost`。
+用法二：向指定地址发送 0.1 BTC，增加交易备注 donation 和交易组织名 seans outpost。
 
 {% highlight shell %}
 $ bitcoin-cli sendtoaddress 1M72Sfpbz1BPpXFHz9m3CdqATR44Jvaydd 0.1 "donation" "seans outpost"
@@ -143,7 +143,7 @@ $ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curl
 {% endhighlight %}
 
 ## 源码剖析
-`sendtoaddress` 对应的函数在“rpcserver.h”文件中被引用。
+sendtoaddress 对应的函数在“rpcserver.h”文件中被引用。
 
 {% highlight C++ %}
 extern UniValue sendtoaddress(const UniValue& params, bool fHelp); // 发送比特币到指定地址
@@ -641,7 +641,7 @@ bool CWallet::CommitTransaction(CWalletTx& wtxNew, CReserveKey& reservekey)
 {% endhighlight %}
 
 6.3.1.钱包上锁，打开钱包数据库，移除找零密钥防止该找零地址再次被使用，添加交易到钱包数据库，并把该交易输入列表中所有 UTXO 对应交易绑定到当前钱包。<br>
-6.3.2.把新交易添加到 `getdata` 消息请求次数映射列表并初始化次数为 0，用于追踪该交易获取的 `getdata` 请求次数。<br>
+6.3.2.把新交易添加到 getdata 消息请求次数映射列表并初始化次数为 0，用于追踪该交易获取的 getdata 请求次数。<br>
 6.3.3.若开启了交易广播，先把该交易添加到交易内存池中。<br>
 6.3.4.然后广播（中继/发送）该交易。
 

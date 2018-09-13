@@ -6,8 +6,8 @@ author: mistydew
 categories: Blockchain Bitcoin
 tags: 区块链 比特币 源码剖析
 ---
-上一篇分析了数据目录路径的获取、配置文件中设置的启动选项的读取、不同网络链参数（包含创世区块信息）的选择、命令行参数完整性检测、`Linux` 下守护进程的后台化以及服务选项的设置，详见[比特币源码剖析（三）](/2018/06/09/bitcoin-source-anatomy-03)。<br>
-本篇主要分析 `InitLogging()` 初始化日志记录函数，`InitParameterInteraction()` 初始化参数交互函数，`AppInit2(threadGroup, scheduler)` 真正地初始化应用程序函数。
+上一篇分析了数据目录路径的获取、配置文件中设置的启动选项的读取、不同网络链参数（包含创世区块信息）的选择、命令行参数完整性检测、Linux 下守护进程的后台化以及服务选项的设置，详见[比特币源码剖析（三）](/2018/06/09/bitcoin-source-anatomy-03)。<br>
+本篇主要分析 InitLogging() 初始化日志记录函数，InitParameterInteraction() 初始化参数交互函数，AppInit2(threadGroup, scheduler) 真正地初始化应用程序函数。
 
 ## 源码剖析
 
@@ -33,7 +33,7 @@ bool AppInit(int argc, char* argv[]) // [P]3.0.应用程序初始化
 {% endhighlight %}
 
 <p id="InitLogging-ref"></p>
-3.9.调用 `InitLogging()` 函数初始化日志记录，实际上只是初始化了部分启动选项，该函数声明在“init.h”文件中。
+3.9.调用 InitLogging() 函数初始化日志记录，实际上只是初始化了部分启动选项，该函数声明在“init.h”文件中。
 
 {% highlight C++ %}
 //!Initialize the logging infrastructure // 初始化日志记录基础结构
@@ -56,9 +56,9 @@ void InitLogging()
 {% endhighlight %}
 
 1.对记录日志的相关启动选项进行初始化。<br>
-2.空出 `n` 行后，记录比特币客户端的版本号和构建时间。
+2.空出 n 行后，记录比特币客户端的版本号和构建时间。
 
-宏定义 `DEFAULT_LOGTIMESTAMPS`、`DEFAULT_LOGTIMEMICROS`、`DEFAULT_LOGIPS` 均定义在“util.h”文件中。
+宏定义 DEFAULT_LOGTIMESTAMPS、DEFAULT_LOGTIMEMICROS、DEFAULT_LOGIPS 均定义在“util.h”文件中。
 
 {% highlight C++ %}
 static const bool DEFAULT_LOGTIMEMICROS = false; // 时间戳微秒，默认为 false
@@ -66,7 +66,7 @@ static const bool DEFAULT_LOGIPS        = false; // 记录 IPs，默认关闭
 static const bool DEFAULT_LOGTIMESTAMPS = true; // 记录时间戳，默认为 true
 {% endhighlight %}
 
-`CLIENT_DATE` 宏定义在“clientversion.cpp”文件中。
+CLIENT_DATE 宏定义在“clientversion.cpp”文件中。
 
 {% highlight C++ %}
 #ifndef BUILD_DATE
@@ -81,7 +81,7 @@ const std::string CLIENT_DATE(BUILD_DATE); // 客户端日期即构建日期
 {% endhighlight %}
 
 <p id="InitParameterInteraction-ref"></p>
-3.10.调用 `InitParameterInteraction()` 函数初始化参数交互，该函数声明在“init.h”文件中。
+3.10.调用 InitParameterInteraction() 函数初始化参数交互，该函数声明在“init.h”文件中。
 
 {% highlight C++ %}
 //!Parameter interaction: change current parameters depending on various rules // 参数交互：基于多种规则改变当前参数
@@ -173,7 +173,7 @@ void InitParameterInteraction()
 {% endhighlight %}
 
 <p id="AppInit2-ref"></p>
-3.11.调用 `AppInit2(threadGroup, scheduler)` 函数初始化应用程序，这里才是初始化真正的入口，该函数声明在“init.h”文件中。
+3.11.调用 AppInit2(threadGroup, scheduler) 函数初始化应用程序，这里才是初始化真正的入口，该函数声明在“init.h”文件中。
 
 {% highlight C++ %}
 bool AppInit2(boost::thread_group& threadGroup, CScheduler& scheduler);
@@ -254,7 +254,7 @@ bool AppInit2(boost::thread_group& threadGroup, CScheduler& scheduler) // 3.11.0
 4.设置网络，Windows 下初始套接字，其它平台直接返回 true。<br>
 5.非 WIN32 平台，设置系统文件权限掩码，处理相关信号。
 
-4.调用 `SetupNetworking()` 函数设置网络，该函数声明在“util.h”文件中。
+4.调用 SetupNetworking() 函数设置网络，该函数声明在“util.h”文件中。
 
 {% highlight C++ %}
 bool SetupNetworking(); // 初始化 Windows 套接字
@@ -278,7 +278,7 @@ bool SetupNetworking()
 
 <p id="Step02-ref"></p>
 3.11.2.第二步，参数交互。主要进行区块裁剪和交易索引选项的冲突检测，文件描述符限制检测。
-这部分实现在“init.cpp”文件的 `AppInit2(...)` 函数中。
+这部分实现在“init.cpp”文件的 AppInit2(...) 函数中。
 
 {% highlight C++ %}
 bool AppInit2(boost::thread_group& threadGroup, CScheduler& scheduler) // 3.11.0.程序初始化，共 12 步

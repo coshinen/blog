@@ -19,7 +19,7 @@ clearbanned # 清除所有禁止的 IP
 
 ### 比特币核心客户端
 
-使用 RPC 命令 [`listbanned`](/2018/05/29/bitcoin-rpc-command-listbanned) 查看黑名单。
+使用 RPC 命令 [listbanned](/2018/05/29/bitcoin-rpc-command-listbanned) 查看黑名单。
 
 {% highlight shell %}
 $ bitcoin-cli listbanned
@@ -45,7 +45,7 @@ $ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curl
 {% endhighlight %}
 
 ## 源码剖析
-`listbanned` 对应的函数在“rpcserver.h”文件中被引用。
+listbanned 对应的函数在“rpcserver.h”文件中被引用。
 
 {% highlight C++ %}
 extern UniValue clearbanned(const UniValue& params, bool fHelp); // 清空黑名单

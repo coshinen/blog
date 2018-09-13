@@ -10,11 +10,11 @@ excerpt: $ bitcoin-cli backupwallet "destination"
 ## 提示说明
 
 {% highlight shell %}
-backupwallet "destination" # 安全复制 `wallet.dat` 到目标 `destination`，它可以是一个目录或一个文件名
+backupwallet "destination" # 安全复制 wallet.dat 到目标 destination，它可以是一个目录或一个文件名
 {% endhighlight %}
 
 参数：<br>
-1. `destination` （字符串）目标目录或文件。
+1. destination （字符串）目标目录或文件。
 
 结果：无返回值。
 
@@ -23,7 +23,7 @@ backupwallet "destination" # 安全复制 `wallet.dat` 到目标 `destination`�
 ### 比特币核心客户端
 
 用法一：备份为指定文件名，默认保存在用户首次使用该命令的工作目录下。<br>
-这里在家目录 `~` 下使用该命令。
+这里在家目录 ~ 下使用该命令。
 
 {% highlight shell %}
 $ bitcoin-cli backupwallet backup.dat
@@ -57,7 +57,7 @@ $ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curl
 {% endhighlight %}
 
 ## 源码剖析
-`backupwallet` 对应的函数在“rpcserver.h”文件中被引用。
+backupwallet 对应的函数在“rpcserver.h”文件中被引用。
 
 {% highlight C++ %}
 extern UniValue backupwallet(const UniValue& params, bool fHelp); // 备份钱包

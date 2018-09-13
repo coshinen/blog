@@ -10,17 +10,17 @@ excerpt: $ bitcoin-cli encryptwallet "passphrase"
 ## 提示说明
 
 {% highlight shell %}
-encryptwallet "passphrase" # 使用 `passphrase` 加密钱包
+encryptwallet "passphrase" # 使用 passphrase 加密钱包
 {% endhighlight %}
 
 用于第一次加密。<br>
 在此之后，任何与私钥相关的调用，例如发送或签名，需要在调用前设置密钥解密。<br>
-使用 [`walletpassphrase`](/2018/05/31/bitcoin-rpc-command-walletpassphrase) 解密钱包，或使用 [`walletlock`](/2018/05/31/bitcoin-rpc-command-walletlock) 锁定钱包。<br>
-如果钱包已经加密，使用 [`walletpassphrasechange`](/2018/05/31/bitcoin-rpc-command-walletpassphrasechange) 更改密码。<br>
+使用 [walletpassphrase](/2018/05/31/bitcoin-rpc-command-walletpassphrase) 解密钱包，或使用 [walletlock](/2018/05/31/bitcoin-rpc-command-walletlock) 锁定钱包。<br>
+如果钱包已经加密，使用 [walletpassphrasechange](/2018/05/31/bitcoin-rpc-command-walletpassphrasechange) 更改密码。<br>
 **注：该命令将会关闭服务器。**
 
 参数：<br>
-1. `passphrase` （字符串）用来加密钱包的密码。至少 1 个字符，应该较长。
+1. passphrase （字符串）用来加密钱包的密码。至少 1 个字符，应该较长。
 
 结果：返回提示信息。
 
@@ -28,7 +28,7 @@ encryptwallet "passphrase" # 使用 `passphrase` 加密钱包
 
 ### 比特币核心客户端
 
-使用密码 `mypasswd` 加密钱包。
+使用密码 mypasswd 加密钱包。
 
 {% highlight shell %}
 $ bitcoin-cli encryptwallet mypasswd
@@ -43,7 +43,7 @@ $ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curl
 {% endhighlight %}
 
 ## 源码剖析
-`encryptwallet` 对应的函数在“rpcserver.h”文件中被引用。
+encryptwallet 对应的函数在“rpcserver.h”文件中被引用。
 
 {% highlight C++ %}
 extern UniValue encryptwallet(const UniValue& params, bool fHelp); // 加密钱包

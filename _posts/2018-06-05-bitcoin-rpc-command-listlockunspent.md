@@ -13,7 +13,7 @@ excerpt: $ bitcoin-cli listlockunspent
 listlockunspent # 获取暂时不能花费（锁定的）交易输出列表
 {% endhighlight %}
 
-查看 [`lockunspent`](/2018/06/05/bitcoin-rpc-command-lockunspent) 加解锁未花费的交易输出。
+查看 [lockunspent](/2018/06/05/bitcoin-rpc-command-lockunspent) 加解锁未花费的交易输出。
 
 结果：<br>
 {% highlight shell %}
@@ -30,8 +30,8 @@ listlockunspent # 获取暂时不能花费（锁定的）交易输出列表
 
 ### 比特币核心客户端
 
-1. 使用 [`listunspent`](/2018/06/05/bitcoin-rpc-command-listunspent) 获取一笔未花费的交易输出。<br>
-2. 使用 [`lockunspent`](/2018/06/05/bitcoin-rpc-command-lockunspent) 锁定该为花费交易输出。<br>
+1. 使用 [listunspent](/2018/06/05/bitcoin-rpc-command-listunspent) 获取一笔未花费的交易输出。<br>
+2. 使用 [lockunspent](/2018/06/05/bitcoin-rpc-command-lockunspent) 锁定该为花费交易输出。<br>
 3. 使用该命令查看锁定的未花费交易输出列表。
 
 {% highlight shell %}
@@ -67,7 +67,7 @@ $ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curl
 {% endhighlight %}
 
 ## 源码剖析
-`listlockunspent` 对应的函数在“rpcserver.h”文件中被引用。
+listlockunspent 对应的函数在“rpcserver.h”文件中被引用。
 
 {% highlight C++ %}
 extern UniValue listlockunspent(const UniValue& params, bool fHelp); // 列出锁定的未花费交易输出

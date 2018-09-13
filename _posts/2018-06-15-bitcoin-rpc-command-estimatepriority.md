@@ -10,11 +10,11 @@ excerpt: $ bitcoin-cli estimatepriority nblocks
 ## 提示说明
 
 {% highlight shell %}
-estimatepriority nblocks # 估算一笔 0 交易费的交易在 `nblocks` 个区块开始确认的大致优先级
+estimatepriority nblocks # 估算一笔 0 交易费的交易在 nblocks 个区块开始确认的大致优先级
 {% endhighlight %}
 
 参数：<br>
-1. `nblocks` （数字）区块数。
+1. nblocks （数字）区块数。
 
 结果：（数字）返回预估的交易优先级。<br>
 如果没有足够的交易和区块用来估算则会返回一个负值，-1 表示交易优先级为 0。
@@ -38,7 +38,7 @@ $ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curl
 {% endhighlight %}
 
 ## 源码剖析
-`estimatepriority` 对应的函数在“rpcserver.h”文件中被引用。
+estimatepriority 对应的函数在“rpcserver.h”文件中被引用。
 
 {% highlight C++ %}
 extern UniValue estimatepriority(const UniValue& params, bool fHelp); // 预估交易优先级

@@ -14,7 +14,7 @@ disconnectnode "node" # 立刻断开与指定节点的连接
 {% endhighlight %}
 
 参数：<br>
-1. `node` （字符串，必备）节点（见 [`getpeerinfo`](/2018/05/29/bitcoin-rpc-command-getpeerinfo) 获取的节点信息）。
+1. node （字符串，必备）节点（见 [getpeerinfo](/2018/05/29/bitcoin-rpc-command-getpeerinfo) 获取的节点信息）。
 
 结果：无返回值。
 
@@ -63,7 +63,7 @@ $ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curl
 {% endhighlight %}
 
 ## 源码剖析
-`getaddednodeinfo` 对应的函数在“rpcserver.h”文件中被引用。
+getaddednodeinfo 对应的函数在“rpcserver.h”文件中被引用。
 
 {% highlight C++ %}
 extern UniValue disconnectnode(const UniValue& params, bool fHelp); // 断开与指定节点的连接

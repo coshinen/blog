@@ -6,13 +6,13 @@ author: mistydew
 categories: Blockchain Bitcoin
 tags: 区块链 比特币 源码剖析
 ---
-第一篇主要列出比特币核心服务程序 `bitcoind` 的启动流程及其入口函数，详见[比特币源码剖析](/2018/05/19/bitcoin-source-anatomy-00)。<br>
-该篇主要分析 `SetupEnvironment()` 和 `noui_connect()` 函数。
+第一篇主要列出比特币核心服务程序 bitcoind 的启动流程及其入口函数，详见[比特币源码剖析](/2018/05/19/bitcoin-source-anatomy-00)。<br>
+该篇主要分析 SetupEnvironment() 和 noui_connect() 函数。
 
 ## 源码剖析
 
 <p id="SetupEnvironment-ref"></p>
-1.调用 `SetupEnvironment()` 函数设置程序运行环境。该函数声明在“util.h”文件中。
+1.调用 SetupEnvironment() 函数设置程序运行环境。该函数声明在“util.h”文件中。
 
 {% highlight C++ %}
 void SetupEnvironment(); // 设置运行环境
@@ -41,17 +41,17 @@ void SetupEnvironment()
 }
 {% endhighlight %}
 
-1.1.先尝试调用 `std::locale("")` 进行本地的区域设置，若因系统使该接口无效，则调用 setenv 改变区域设置为 `"C"` 环境变量。<br>
+1.1.先尝试调用 std::locale("") 进行本地的区域设置，若因系统使该接口无效，则调用 setenv 改变区域设置为 "C" 环境变量。<br>
 1.2.先用一个虚假的区域设置获取原来内部的区域设置，然后再显示的填充路径区域设置。
 
-区域设置 `locale` 是一组特定文化的功能，程序可以使用这些功能在国际上更佳的方便被使用。
+区域设置 locale 是一组特定文化的功能，程序可以使用这些功能在国际上更佳的方便被使用。
 简单来说就是根据系统进行该程序的区域设置，用于日期、时间、语言的显示风格提供支持。
 详见 [locale - C++ Reference](http://www.cplusplus.com/reference/locale/locale)。<br>
-POSIX 函数 `setenv` 用于添加或改变环境变量，详见 [setenv](http://pubs.opengroup.org/onlinepubs/9699919799/functions/setenv.html)。<br>
-Boost 库中的 `imbue` 用于嵌入路径区域设置，详见 [Filesystem Reference](https://www.boost.org/doc/libs/1_67_0/libs/filesystem/doc/reference.html#class-path)
+POSIX 函数 setenv 用于添加或改变环境变量，详见 [setenv](http://pubs.opengroup.org/onlinepubs/9699919799/functions/setenv.html)。<br>
+Boost 库中的 imbue 用于嵌入路径区域设置，详见 [Filesystem Reference](https://www.boost.org/doc/libs/1_67_0/libs/filesystem/doc/reference.html#class-path)
 
 <p id="noui_connect-ref"></p>
-2.调用 `noui_connect()` 函数连接比特币核心服务的信号处理函数。该函数在“noui.h”文件中被引用。
+2.调用 noui_connect() 函数连接比特币核心服务的信号处理函数。该函数在“noui.h”文件中被引用。
 
 {% highlight C++ %}
 extern void noui_connect(); // 连接信号处理函数
@@ -100,15 +100,15 @@ void noui_connect()
 }
 {% endhighlight %}
 
-`uiInterface` 是一个客户端 UI 通讯信号接口类对象，定义在“init.cpp”文件中。
+uiInterface 是一个客户端 UI 通讯信号接口类对象，定义在“init.cpp”文件中。
 
 {% highlight C++ %}
 CClientUIInterface uiInterface; // Declared but not defined in ui_interface.h
 {% endhighlight %}
 
-`uiInterface.ThreadSafeMessageBox` 和 `uiInterface.InitMessage` 均为 boost::signals2::signal 信号，类似于 `function/bind`，它们定义在“ui_interface.h”文件的 CClientUIInterface 类中。
+uiInterface.ThreadSafeMessageBox 和 uiInterface.InitMessage 均为 boost::signals2::signal 信号，类似于 function/bind，它们定义在“ui_interface.h”文件的 CClientUIInterface 类中。
 详见 [Chapter 67. Boost.Signals2 - Signals](https://theboostcpplibraries.com/boost.signals2-signals)。<br>
-关于 `function/bind` 可以参考孟岩的 [function/bind的救赎（上） - CSDN博客](https://blog.csdn.net/myan/article/details/5928531)。
+关于 function/bind 可以参考孟岩的 [function/bind的救赎（上） - CSDN博客](https://blog.csdn.net/myan/article/details/5928531)。
 
 {% highlight C++ %}
 /** Signals for UI communication. */ // UI 通讯信号
@@ -124,10 +124,10 @@ class CClientUIInterface // 客户端 UI 接口类
 };
 {% endhighlight %}
 
-2.1.连接无 UI 线程安全消息框（消息类型+内容）函数 `noui_ThreadSafeMessageBox`。<br>
-2.2.连接无 UI 初始化消息 `noui_InitMessage`。
+2.1.连接无 UI 线程安全消息框（消息类型+内容）函数 noui_ThreadSafeMessageBox。<br>
+2.2.连接无 UI 初始化消息 noui_InitMessage。
 
-其中均调用 `LogPrintf` 函数进行记录打印，该函数定义在“util.h”文件中，是宏定义函数。
+其中均调用 LogPrintf 函数进行记录打印，该函数定义在“util.h”文件中，是宏定义函数。
 
 {% highlight C++ %}
 /** Return true if log accepts specified category */ // 如果日志接受特殊的类别返回 true
@@ -148,11 +148,11 @@ static inline int LogPrint(const char* category, const char* format)
 }
 {% endhighlight %}
 
-函数 `LogPrint` 类似于 `C` 语言的标准库函数 `printf`。
-其中第一个参数为类别（用于调试，这里为 `NULL`），第二个为可变参数的宏 `__VA_ARGS__`（包含格式控制字符串）。
+函数 LogPrint 类似于 C 语言的标准库函数 printf。
+其中第一个参数为类别（用于调试，这里为 NULL），第二个为可变参数的宏 __VA_ARGS__（包含格式控制字符串）。
 
-首先调用 `LogAcceptCategory(category)` 函数进行类型检查（与调试有关），
-然后调用 `LogPrintStr(format)` 进行日志输出，即把指定字符串以指定格式进行输出到控制台或日志文件。
+首先调用 LogAcceptCategory(category) 函数进行类型检查（与调试有关），
+然后调用 LogPrintStr(format) 进行日志输出，即把指定字符串以指定格式进行输出到控制台或日志文件。
 该函数定义在“util.cpp”文件中。
 
 {% highlight C++ %}

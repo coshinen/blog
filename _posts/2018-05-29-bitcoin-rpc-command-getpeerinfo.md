@@ -92,7 +92,7 @@ $ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curl
 {% endhighlight %}
 
 ## 源码剖析
-`getpeerinfo` 对应的函数在“rpcserver.h”文件中被引用。
+getpeerinfo 对应的函数在“rpcserver.h”文件中被引用。
 
 {% highlight C++ %}
 extern UniValue getpeerinfo(const UniValue& params, bool fHelp); // 获取同辈节点信息

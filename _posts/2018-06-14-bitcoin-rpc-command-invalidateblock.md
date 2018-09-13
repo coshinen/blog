@@ -14,7 +14,7 @@ invalidateblock "hash" # 永久标记一个区块无效，就像该块违反了�
 {% endhighlight %}
 
 参数：<br>
-1. `hash` （字符串，必备）用来标记为无效的区块哈希。
+1. hash （字符串，必备）用来标记为无效的区块哈希。
 
 结果：无返回值。
 
@@ -22,7 +22,7 @@ invalidateblock "hash" # 永久标记一个区块无效，就像该块违反了�
 
 ### 比特币核心服务程序
 
-获取当前最佳区块哈希，记录该区块高度 `32723` 和当前区块数 `32729` 和连接数 `1`，
+获取当前最佳区块哈希，记录该区块高度 32723 和当前区块数 32729 和连接数 1，
 无效化该区块后，再次查看...
 
 {% highlight shell %}
@@ -41,7 +41,7 @@ $ bitcoin-cli getconnectioncount
 0
 {% endhighlight %}
 
-此时区块数变为 `32722`，从高度 `32723` 开始的区块均被标记为无效，但不会影响与其相连的其他节点，
+此时区块数变为 32722，从高度 32723 开始的区块均被标记为无效，但不会影响与其相连的其他节点，
 之后全部连接也会自动断开。
 
 ### cURL
@@ -52,7 +52,7 @@ $ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curl
 {% endhighlight %}
 
 ## 源码剖析
-`invalidateblock` 对应的函数在“rpcserver.h”文件中被引用。
+invalidateblock 对应的函数在“rpcserver.h”文件中被引用。
 
 {% highlight C++ %}
 extern UniValue invalidateblock(const UniValue& params, bool fHelp); // 无效化区块

@@ -7,13 +7,13 @@ categories: Blockchain Bitcoin
 tags: 区块链 比特币 源码剖析
 ---
 上一篇分析了第三步参数转化为内部标志的代码，以及第四步应用程序初始化的大体过程，详见[比特币源码剖析（五）](/2018/06/23/bitcoin-source-anatomy-05)。<br>
-本篇主要分析 `Step 4: application initialization: dir lock, daemonize, pidfile, debug log` 第四步应用程序初始化中初始化椭圆曲线代码的详细过程。
+本篇主要分析 Step 4: application initialization: dir lock, daemonize, pidfile, debug log 第四步应用程序初始化中初始化椭圆曲线代码的详细过程。
 
 ## 源码剖析
 
 <p id="Init-ref"></p>
 1.初始化椭圆曲线代码。
-首先调用 `ECC_Start()` 函数启动椭圆曲线支持。该函数声明在“key.h”文件中。
+首先调用 ECC_Start() 函数启动椭圆曲线支持。该函数声明在“key.h”文件中。
 
 {% highlight C++ %}
 /** Initialize the elliptic curve support. May not be called twice without calling ECC_Stop first. */
@@ -43,13 +43,13 @@ void ECC_Start() {
 }
 {% endhighlight %}
 
-1.1.创建一个 `secp256k1` 上下文对象。<br>
+1.1.创建一个 secp256k1 上下文对象。<br>
 1.2.锁定待生成的随机数种子数组。<br>
 1.3.生成 32 字节的随机数种子。<br>
 1.4.使用随机数种子设置致盲值。<br>
 1.5.解锁已生成的随机数种子数组。
 
-1.1.调用 `secp256k1_context_create(SECP256K1_CONTEXT_SIGN)` 函数创建一个 `secp256k1` 上下文对象。
+1.1.调用 secp256k1_context_create(SECP256K1_CONTEXT_SIGN) 函数创建一个 secp256k1 上下文对象。
 该函数声明在“secp256k1.h”文件中。
 
 {% highlight C++ %}
@@ -75,7 +75,7 @@ SECP256K1_API secp256k1_context* secp256k1_context_create(
 ) SECP256K1_WARN_UNUSED_RESULT;
 {% endhighlight %}
 
-实现在“secp256k1.c”文件中，入参为：`SECP256K1_CONTEXT_SIGN`。
+实现在“secp256k1.c”文件中，入参为：SECP256K1_CONTEXT_SIGN。
 
 {% highlight C++ %}
 secp256k1_context* secp256k1_context_create(unsigned int flags) {
@@ -104,7 +104,7 @@ secp256k1_context* secp256k1_context_create(unsigned int flags) {
 }
 {% endhighlight %}
 
-1.2.调用 `LockObject(seed)` 函数锁定待生成的随机数种子内存栈空间。
+1.2.调用 LockObject(seed) 函数锁定待生成的随机数种子内存栈空间。
 该函数是一个模板函数，其模板定义在“pagelocker.h”文件中。
 
 {% highlight C++ %}
@@ -157,8 +157,8 @@ void LockObject(const T& t)
 }
 {% endhighlight %}
 
-`LockedPageManager` 是派生于模板类 `LockedPageManagerBase<MemoryPageLocker>` 的单例类，静态数据成员 `_instance` 和 `init_flag` 初始化在“pagelocker.cpp”文件中。<br>
-成员函数 `Instance()` 内的 `boost::call_once(LockedPageManager::CreateInstance, LockedPageManager::init_flag)` 确保成员函数 `LockedPageManager::CreateInstance` 只执行一次，
+LockedPageManager 是派生于模板类 LockedPageManagerBase<MemoryPageLocker> 的单例类，静态数据成员 _instance 和 init_flag 初始化在“pagelocker.cpp”文件中。<br>
+成员函数 Instance() 内的 boost::call_once(LockedPageManager::CreateInstance, LockedPageManager::init_flag) 确保成员函数 LockedPageManager::CreateInstance 只执行一次，
 以线程安全的方式来初始化数据，详见 [boost:call_once](https://www.boost.org/doc/libs/1_32_0/doc/html/call_once.html)。
 
 {% highlight C++ %}
@@ -166,8 +166,8 @@ LockedPageManager* LockedPageManager::_instance = NULL; // 懒汉式，单独无
 boost::once_flag LockedPageManager::init_flag = BOOST_ONCE_INIT; // 可保证线程安全
 {% endhighlight %}
 
-先调用 `LockedPageManager::Instance()` 获取锁定页面管理器单例对象，然后调用其基类成员函数 `LockedPageManager::Instance().LockRange((void*)(&t), sizeof(T))` 来进行区域锁定。
-其继承基类传入的类模板类型参数 `MemoryPageLocker` 是一个依赖操作系统的内存页加解锁类，该类定义在“pagelocker.h”文件中。
+先调用 LockedPageManager::Instance() 获取锁定页面管理器单例对象，然后调用其基类成员函数 LockedPageManager::Instance().LockRange((void*)(&t), sizeof(T)) 来进行区域锁定。
+其继承基类传入的类模板类型参数 MemoryPageLocker 是一个依赖操作系统的内存页加解锁类，该类定义在“pagelocker.h”文件中。
 
 {% highlight C++ %}
 /**
@@ -211,7 +211,7 @@ bool MemoryPageLocker::Unlock(const void* addr, size_t len)
 {% endhighlight %}
 
 <p id="UnlockRange-ref"></p>
-而基类成员函数 `LockedPageManager::Instance().LockRange(...)` 定义在“pagelocker.cpp”文件的 `LockedPageManagerBase` 类中。
+而基类成员函数 LockedPageManager::Instance().LockRange(...) 定义在“pagelocker.cpp”文件的 LockedPageManagerBase 类中。
 
 {% highlight C++ %}
 /**
@@ -285,7 +285,7 @@ private:
 };
 {% endhighlight %}
 
-1.3.调用 `GetRandBytes(seed, 32)` 获取 32 个字节的随机数，该函数声明在“random.h”文件中。
+1.3.调用 GetRandBytes(seed, 32) 获取 32 个字节的随机数，该函数声明在“random.h”文件中。
 
 {% highlight C++ %}
 /**
@@ -306,10 +306,10 @@ void GetRandBytes(unsigned char* buf, int num)
 }
 {% endhighlight %}
 
-直接调用 OpenSSL 库的 `RAND_bytes(buf, num)` 函数获取 `num` 字节的随机数到 `buf` 中。
+直接调用 OpenSSL 库的 RAND_bytes(buf, num) 函数获取 num 字节的随机数到 buf 中。
 详见[/docs/manmaster/man3/RAND_bytes](https://www.openssl.org/docs/manmaster/man3/RAND_bytes.html)。
 
-1.4.调用 `secp256k1_context_randomize(ctx, seed)` 函数设置致盲值，该函数实现在“secp256k1.c”文件中。
+1.4.调用 secp256k1_context_randomize(ctx, seed) 函数设置致盲值，该函数实现在“secp256k1.c”文件中。
 
 {% highlight C++ %}
 int secp256k1_context_randomize(secp256k1_context* ctx, const unsigned char *seed32) {
@@ -320,7 +320,7 @@ int secp256k1_context_randomize(secp256k1_context* ctx, const unsigned char *see
 }
 {% endhighlight %}
 
-1.5.调用 `UnLockObject(seed)` 函数解锁已生成的随机数种子内存栈空间。
+1.5.调用 UnLockObject(seed) 函数解锁已生成的随机数种子内存栈空间。
 该函数是一个模板函数，其模板定义在“pagelocker.h”文件中。
 
 {% highlight C++ %}
@@ -332,7 +332,7 @@ void UnlockObject(const T& t)
 }
 {% endhighlight %}
 
-首先调用 `memory_cleanse((void*)(&t), sizeof(T))` 函数清空指定区域，该函数声明在“cleanse.h”文件中。
+首先调用 memory_cleanse((void*)(&t), sizeof(T)) 函数清空指定区域，该函数声明在“cleanse.h”文件中。
 然后解锁该区域的内存，详见 [1.2](#UnlockRange-ref)。
 
 {% highlight C++ %}
@@ -348,10 +348,10 @@ void memory_cleanse(void *ptr, size_t len)
 }
 {% endhighlight %}
 
-内部调用 OpenSSL 库 `OPENSSL_cleanse(ptr, len)` 函数把指定空间填充为 0，
+内部调用 OpenSSL 库 OPENSSL_cleanse(ptr, len) 函数把指定空间填充为 0，
 详见 [/docs/manmaster/man3/OPENSSL_cleanse](https://www.openssl.org/docs/manmaster/man3/OPENSSL_cleanse.html)。
 
-然后调用 `globalVerifyHandle.reset(new ECCVerifyHandle())` 函数创建椭圆曲线验证对象，类 `ECCVerifyHandle` 定义在“pubkey.h”文件中。
+然后调用 globalVerifyHandle.reset(new ECCVerifyHandle()) 函数创建椭圆曲线验证对象，类 ECCVerifyHandle 定义在“pubkey.h”文件中。
 
 {% highlight C++ %}
 /** Users of this module must hold an ECCVerifyHandle. The constructor and
@@ -366,13 +366,13 @@ public:
 };
 {% endhighlight %}
 
-全局静态智能指针 `globalVerifyHandle` 定义在“init.cpp”文件中。
+全局静态智能指针 globalVerifyHandle 定义在“init.cpp”文件中。
 
 {% highlight C++ %}
 static boost::scoped_ptr<ECCVerifyHandle> globalVerifyHandle; // 该智能指针与 STL 的 std::unique_ptr 类似
 {% endhighlight %}
 
-智能指针 `boost::scoped_ptr` 不能复制或移动，类似于 STL 的 `std::unique_ptr`，详见 [`boost::scoped_ptr`](https://theboostcpplibraries.com/boost.smartpointers-sole-ownership)。
+智能指针 boost::scoped_ptr 不能复制或移动，类似于 STL 的 std::unique_ptr，详见 [boost::scoped_ptr](https://theboostcpplibraries.com/boost.smartpointers-sole-ownership)。
 
 未完待续...<br>
 请看下一篇[比特币源码剖析（七）](/2018/07/07/bitcoin-source-anatomy-07)。

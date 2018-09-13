@@ -16,7 +16,7 @@ generate numblocks # 立刻挖出区块（在 RPC 调用返回前）
 **注：此功能仅限回归测试网 regtest 使用。**
 
 参数：<br>
-1. `numblocks` （数字，必备）立刻生成区块的数量。
+1. numblocks （数字，必备）立刻生成区块的数量。
 
 结果：（数组）返回生成区块的哈希集。
 
@@ -42,7 +42,7 @@ $ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curl
 {% endhighlight %}
 
 ## 源码剖析
-`generate` 对应的函数在“rpcserver.h”文件中被引用。
+generate 对应的函数在“rpcserver.h”文件中被引用。
 
 {% highlight C++ %}
 extern UniValue generate(const UniValue& params, bool fHelp); // 产生指定数目个区块（回归测试网用）

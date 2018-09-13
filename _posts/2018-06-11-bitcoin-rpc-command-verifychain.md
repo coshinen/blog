@@ -14,13 +14,13 @@ verifychain ( checklevel numblocks ) # 验证区块链数据库
 {% endhighlight %}
 
 参数：<br>
-1. `checklevel` （字符串，可选，0-4，默认为 3）区块验证等级。<br>
+1. checklevel （字符串，可选，0-4，默认为 3）区块验证等级。<br>
 检查等级 0：从磁盘读区块数据到内存。<br>
 检查等级 1：验证区块有效性。<br>
 检查等级 2：验证撤销有效性。<br>
 检查等级 3：检查在内存中断开链尖区块连接的不一致性。<br>
 检查等级 4：尝试重连区块。<br>
-2. `numblocks` （字符串，可选，默认为 288，0 或负数表示全部）检查的区块数。
+2. numblocks （字符串，可选，默认为 288，0 或负数表示全部）检查的区块数。
 
 结果：（布尔型）true 表示已验证。
 
@@ -50,7 +50,7 @@ $ curl --user myusername:userpassword --data-binary '{"jsonrpc": "1.0", "id":"cu
 {% endhighlight %}
 
 ## 源码剖析
-`verifychain` 对应的函数在“rpcserver.h”文件中被引用。
+verifychain 对应的函数在“rpcserver.h”文件中被引用。
 
 {% highlight C++ %}
 extern UniValue verifychain(const UniValue& params, bool fHelp); // 验证区块链数据库

@@ -10,10 +10,10 @@ excerpt: $ bitcoin-cli getdifficulty
 ## 提示说明
 
 {% highlight shell %}
-getdifficulty # 获取作为最低难度 `1` 倍数的工作量证明难度
+getdifficulty # 获取作为最低难度 1 倍数的工作量证明难度
 {% endhighlight %}
 
-结果：（数字）返回作为最低难度 `1` 倍数的工作量证明难度。
+结果：（数字）返回作为最低难度 1 倍数的工作量证明难度。
 
 ## 用法示例
 
@@ -32,7 +32,7 @@ $ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curl
 {% endhighlight %}
 
 ## 源码剖析
-`getdifficulty` 对应的函数在“rpcserver.h”文件中被引用。
+getdifficulty 对应的函数在“rpcserver.h”文件中被引用。
 
 {% highlight C++ %}
 extern UniValue getdifficulty(const UniValue& params, bool fHelp); // 获取当前挖矿难度

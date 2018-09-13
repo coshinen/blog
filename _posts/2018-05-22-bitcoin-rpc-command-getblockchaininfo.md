@@ -133,7 +133,7 @@ $ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curl
 {% endhighlight %}
 
 ## 源码剖析
-`getblockchaininfo` 对应的函数在“rpcserver.h”文件中被引用。
+getblockchaininfo 对应的函数在“rpcserver.h”文件中被引用。
 
 {% highlight C++ %}
 extern UniValue getblockchaininfo(const UniValue& params, bool fHelp); // 获取区块链信息

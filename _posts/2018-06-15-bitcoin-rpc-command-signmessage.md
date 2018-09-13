@@ -14,8 +14,8 @@ signmessage "bitcoinaddress" "message" # 使用一个地址的私钥签名一个
 {% endhighlight %}
 
 参数：<br>
-1. `bitcoinaddress` （字符串，必备）拥有对应私钥的比特币地址。<br>
-2. `message` （字符串，必备）用于创建一个签名的消息。
+1. bitcoinaddress （字符串，必备）拥有对应私钥的比特币地址。<br>
+2. message （字符串，必备）用于创建一个签名的消息。
 
 结果：（字符串）返回 base64 编码的消息的签名。
 
@@ -23,9 +23,9 @@ signmessage "bitcoinaddress" "message" # 使用一个地址的私钥签名一个
 
 ### 比特币核心客户端
 
-1. 若钱包加密了，需使用 [`walletpassphrase`](/2018/05/31/bitcoin-rpc-command-walletpassphrase) 解锁钱包数秒。<br>
+1. 若钱包加密了，需使用 [walletpassphrase](/2018/05/31/bitcoin-rpc-command-walletpassphrase) 解锁钱包数秒。<br>
 2. 使用此命令对一条消息进行签名。<br>
-3. 使用 [`verifymessage`](/2018/06/15/bitcoin-rpc-command-verifymessage) 验证消息。
+3. 使用 [verifymessage](/2018/06/15/bitcoin-rpc-command-verifymessage) 验证消息。
 
 {% highlight shell %}
 $ bitcoin-cli walletpassphrase "mypasswd" 60
@@ -45,7 +45,7 @@ $ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curl
 {% endhighlight %}
 
 ## 源码剖析
-`signmessage` 对应的函数在“rpcserver.h”文件中被引用。
+signmessage 对应的函数在“rpcserver.h”文件中被引用。
 
 {% highlight C++ %}
 extern UniValue signmessage(const UniValue& params, bool fHelp); // 签名消息

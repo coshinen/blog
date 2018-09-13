@@ -49,7 +49,7 @@ $ find . -type f -print0 | xargs -0 sed -i 's/btc/atc/g'
 $ find . -type f -print0 | xargs -0 sed -i 's/BTC/ATC/g'
 {% endhighlight %}
 
-使用 `grep` 命令查看是否修改成功。
+使用 grep 命令查看是否修改成功。
 
 ### 1.4. 修改错误拼写
 
@@ -57,8 +57,8 @@ $ find . -type f -print0 | xargs -0 sed -i 's/BTC/ATC/g'
 $ grep -inr bitc
 {% endhighlight %}
 
-从结果中可以看到部分拼写错误，如：“src/qt/locale/altcoin_et.ts”文件的 `Bitconi`、
-“src/qt/locale/altcoin_ar.ts”文件中的 `Bitcion` 和“src/qt/locale/altcoin_da.ts”文件中的 `bitcon`，
+从结果中可以看到部分拼写错误，如：“src/qt/locale/altcoin_et.ts”文件的 Bitconi、
+“src/qt/locale/altcoin_ar.ts”文件中的 Bitcion 和“src/qt/locale/altcoin_da.ts”文件中的 bitcon，
 修改这些误拼，或者选择忽略。使用以下命令修改这些误拼：
 
 {% highlight shell %}
@@ -89,8 +89,8 @@ $ sed -i 's/Altcoin/Bitcoin/g' doc/release-notes/*
 
 ### 1.7. 修改图标和图像
 
-比特币的图标和图像保存在“src/qt/res”目录下，你可以使用 `GIMP` 进行编辑，
-至少要修改 `altcoin.ico`、`altcoin.png`、`altcoin_testnet.ico`、`altcoin_testnet.png` 和 `altcoin.icns`。
+比特币的图标和图像保存在“src/qt/res”目录下，你可以使用 GIMP 进行编辑，
+至少要修改 altcoin.ico、altcoin.png、altcoin_testnet.ico、altcoin_testnet.png 和 altcoin.icns。
 
 ### 1.8. 再次构建源码
 
@@ -99,7 +99,7 @@ $ sed -i 's/Altcoin/Bitcoin/g' doc/release-notes/*
 ## 2. 修改默认端口
 这里需要修改节点间通讯的端口以及服务端与客户端之间通讯的 RCP 端口。
 
-**注：比特币源码的目录为 `bitcoin/src`，之后文件的位置均以 `src` 为根目录。**
+**注：比特币源码的目录为 bitcoin/src，之后文件的位置均以 src 为根目录。**
 
 ### 2.1. 修改节点间通讯的端口
 节点间通讯的端口硬编在“chainparams.cpp”文件的 3 个网络类 CMainParams（主网）、CTestNetParams（测试网）和 CRegTestParams（回归测试网）的默认无参构造函数中。<br>
@@ -149,7 +149,7 @@ public:
 };
 {% endhighlight %}
 
-**注：`nRPCPort` 和 `nDefaultPort` 不能相同，否则会导致默认端口被占用而绑定失败。**
+**注：nRPCPort 和 nDefaultPort 不能相同，否则会导致默认端口被占用而绑定失败。**
 
 ## 3. 修改 DNS 种子
 
@@ -213,7 +213,7 @@ public:
 };
 {% endhighlight %}
 
-可以取一个有意义的单词作为魔数，例如：`0xcafecafe`。<br>
+可以取一个有意义的单词作为魔数，例如：0xcafecafe。<br>
 或使用下面命令：
 
 {% highlight shell %}
@@ -241,7 +241,7 @@ public:
 {% endhighlight %}
 
 PUBKEY_ADDRESS 公钥地址前缀对应的 10 进制根据 [List of address prefixes](https://en.bitcoin.it/wiki/List_of_address_prefixes) 进行修改。<br>
-例：把比特币的公钥地址前缀 `1` 改为大写字母 `C`，通过查表得到 `C` 对应的 10 进制为 28，所以直接把 `std::vector<unsigned char>(1,0)` 改为 `std::vector<unsigned char>(1,28)`。
+例：把比特币的公钥地址前缀 1 改为大写字母 C，通过查表得到 C 对应的 10 进制为 28，所以直接把 std::vector<unsigned char>(1,0) 改为 std::vector<unsigned char>(1,28)。
 
 {% highlight C++ %}
 -       base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,0);
@@ -320,7 +320,7 @@ public:
 相关信息有：文字版时间戳。
 
 1.文字版时间戳使用大多数人都知道可以成为历史（可以追溯）事件，例：报纸当日的新闻标题。<br>
-中本聪留下的泰晤士报的头条 `The Times 03/Jan/2009 Chancellor on brink of second bailout for banks`。
+中本聪留下的泰晤士报的头条 The Times 03/Jan/2009 Chancellor on brink of second bailout for banks。
 
 ### 6.2. 修改创世区块基本信息
 
@@ -347,7 +347,7 @@ $ date +%s
 +      genesis = CreateGenesisBlock(1526197820, 0, 0x207fffff, 1, 50 * COIN);
 {% endhighlight %}
 
-接下来需要进行挖块获取创世区块随机数 `nNonce`。<br>
+接下来需要进行挖块获取创世区块随机数 nNonce。<br>
 首先在“miner.cpp”文件中增加以下代码，用于寻找创世区块。
 
 {% highlight C++ %}
@@ -402,8 +402,8 @@ $ date +%s
         consensus.hashGenesisBlock = genesis.GetHash();
 {% endhighlight %}
 
-做完以上工作，只需重新 `make`，再生成 `altcoind` 程序后，`make` 会失败，
-此时只需执行 `altcoind` 程序，喝杯咖啡静静等待创世区块的成功挖掘。<br>
+做完以上工作，只需重新 make，再生成 altcoind 程序后，make 会失败，
+此时只需执行 altcoind 程序，喝杯咖啡静静等待创世区块的成功挖掘。<br>
 由于设置的难度很低，基本上是秒出块，记录下区块信息：随机数（nNonce）、区块哈希（hashGenesisBlock）和默尔克树根哈希（hashMerkleRoot），
 替换以下对应位置即可。
 
@@ -495,7 +495,7 @@ public:
 {% endhighlight %}
 
 该值一开始置零（0x00），和检测点相同随着区块链的延伸不断更新（增加），
-可通过 RPC 命令 [`getbestblockhash`](/2018/05/22/bitcoin-rpc-command-getbestblockhash) 和 [`getblock`](/2018/05/22/bitcoin-rpc-command-getblock) 获取最佳区块信息的 `chainwork` 的值得到。
+可通过 RPC 命令 [getbestblockhash](/2018/05/22/bitcoin-rpc-command-getbestblockhash) 和 [getblock](/2018/05/22/bitcoin-rpc-command-getblock) 获取最佳区块信息的 chainwork 的值得到。
 
 现在重新编译源码，一枚基于比特币的山寨数字货币就制作完成了。<br>
 通过这个过程，可以了解到比特币源码的一些部分，为深入比特币底层的区块链技术做铺垫。

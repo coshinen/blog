@@ -15,14 +15,14 @@ fundrawtransaction "hexstring" includeWatching # 把输入添加到交易中，�
 
 **此操作不会修改现存的输入，并且会添加一个找零输出到输出集中。<br>
 注：因为输入/输出已被添加，所以签名后的输入可能需要在完成此操作后重签。<br>
-使用 [`signrawtransaction`](/2018/07/04/bitcoin-rpc-command-signrawtransaction) 已添加的输入将不会被签名。<br>
+使用 [signrawtransaction](/2018/07/04/bitcoin-rpc-command-signrawtransaction) 已添加的输入将不会被签名。<br>
 注意全部现存的输入必须在钱包中有它们前一笔输出交易。<br>
-注意所选的全部输入必须是标准格式，且在钱包中的 P2SH 脚本必须使用 [`importaddress`](/2018/06/07/bitcoin-rpc-command-importaddress) 和 [`addmultisigaddress`](/2018/06/15/bitcoin-rpc-command-addmultisigaddress)（用来计算交易费）。<br>
+注意所选的全部输入必须是标准格式，且在钱包中的 P2SH 脚本必须使用 [importaddress](/2018/06/07/bitcoin-rpc-command-importaddress) 和 [addmultisigaddress](/2018/06/15/bitcoin-rpc-command-addmultisigaddress)（用来计算交易费）。<br>
 watch-only 目前只支持 P2PKH，多签，和 P2SH 版本。**
 
 参数：<br>
-1. `hexstring` （字符串，必备）原始交易的 16 进制字符串。<br>
-2. `includeWatching` （布尔型，可选，默认为 false）选择 watch-only 的输入。
+1. hexstring （字符串，必备）原始交易的 16 进制字符串。<br>
+2. includeWatching （布尔型，可选，默认为 false）选择 watch-only 的输入。
 
 结果：<br>
 {% highlight shell %}
@@ -178,7 +178,7 @@ $ bitcoin-cli getrawtransaction cd92e2a951d5624355fff82288d28cd4d213a711f7ddb10f
 }
 {% endhighlight %}
 
-这里可以看到签名前后交易大小的变化，从 `119` 到 `226` 增加了 107 个字节。
+这里可以看到签名前后交易大小的变化，从 119 到 226 增加了 107 个字节。
 
 ### cURL
 
@@ -188,7 +188,7 @@ $ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curl
 {% endhighlight %}
 
 ## 源码剖析
-`fundrawtransaction` 对应的函数在“rpcserver.h”文件中被引用。
+fundrawtransaction 对应的函数在“rpcserver.h”文件中被引用。
 
 {% highlight C++ %}
 extern UniValue fundrawtransaction(const UniValue& params, bool fHelp); // 资助原始交易

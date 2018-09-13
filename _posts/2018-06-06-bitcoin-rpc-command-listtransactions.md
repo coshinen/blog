@@ -10,20 +10,20 @@ excerpt: $ bitcoin-cli listtransactions ( "account" count form includeWatchonly 
 ## 提示说明
 
 {% highlight shell %}
-listtransactions ( "account" count form includeWatchonly ) # 列出跳过账户 `account` 的 `from` 笔交易的最近 `count` 笔交易
+listtransactions ( "account" count form includeWatchonly ) # 列出跳过账户 account 的 from 笔交易的最近 count 笔交易
 {% endhighlight %}
 
 参数：<br>
-1. `account` （字符串，可选，已过时）账户名。应该为 `"*"`，表示全部账户。<br>
-2. `count` （数字，可选，默认为 10）返回的交易数量。<br>
-3. `form` （数字，可选，默认为 0）跳过的交易数量。<br>
-4. `includeWatchonly` （布尔型，可选，默认为 false）包含到 watchonly 地址集的交易（见 [`importaddress`](/2018/06/07/bitcoin-rpc-command-importaddress)）。
+1. account （字符串，可选，已过时）账户名。应该为 "*"，表示全部账户。<br>
+2. count （数字，可选，默认为 10）返回的交易数量。<br>
+3. form （数字，可选，默认为 0）跳过的交易数量。<br>
+4. includeWatchonly （布尔型，可选，默认为 false）包含到 watchonly 地址集的交易（见 [importaddress](/2018/06/07/bitcoin-rpc-command-importaddress)）。
 
 结果：<br>
 {% highlight shell %}
 [
   {
-    "account":"accountname",       （字符串，已过时）交易关联的帐户名。默认账户为 `""`
+    "account":"accountname",       （字符串，已过时）交易关联的帐户名。默认账户为 ""
     "address":"bitcoinaddress",    （字符串）交易的比特币地址。不存在 'move' 交易（类别为 move）
     "category":"send|receive|move", （字符串）交易类别。'move' 是一笔本地（非区块链上）帐户之间的交易，且不关联地址、交易索引或区块。
                                                 'send' 和 'receive' 交易关联地址、交易索引和区块信息
@@ -131,7 +131,7 @@ $ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curl
 {% endhighlight %}
 
 ## 源码剖析
-`listtransactions` 对应的函数在“rpcserver.h”文件中被引用。
+listtransactions 对应的函数在“rpcserver.h”文件中被引用。
 
 {% highlight C++ %}
 extern UniValue listtransactions(const UniValue& params, bool fHelp); // 列出最近的交易信息

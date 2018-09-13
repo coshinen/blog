@@ -32,11 +32,11 @@ getchaintips # 获取关于区块树上全部已知的尖部的信息，包括�
 {% endhighlight %}
 
 可能的状态取值：<br>
-1. `invalid` 该分支包含至少一块无效区块。<br>
-2. `headers-only` 该分支上并非所有区块都有效，但区块头都有效。<br>
-3. `valid-headers` 该分支上所有区块都有效，但它们没有完全验证。<br>
-4. `valid-fork` 该分支不是激活区块链的一部分，但已完全验证。<br>
-5. `active` 这是激活主链的尖部，确定有效。
+1. invalid 该分支包含至少一块无效区块。<br>
+2. headers-only 该分支上并非所有区块都有效，但区块头都有效。<br>
+3. valid-headers 该分支上所有区块都有效，但它们没有完全验证。<br>
+4. valid-fork 该分支不是激活区块链的一部分，但已完全验证。<br>
+5. active 这是激活主链的尖部，确定有效。
 
 ## 用法示例
 
@@ -64,7 +64,7 @@ $ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curl
 {% endhighlight %}
 
 ## 源码剖析
-`getchaintips` 对应的函数在“rpcserver.h”文件中被引用。
+getchaintips 对应的函数在“rpcserver.h”文件中被引用。
 
 {% highlight C++ %}
 extern UniValue getchaintips(const UniValue& params, bool fHelp); // 获取链尖信息

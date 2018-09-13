@@ -10,12 +10,12 @@ excerpt: $ bitcoin-cli gettransaction "txid" ( includeWatchonly )
 ## 提示说明
 
 {% highlight shell %}
-gettransaction "txid" ( includeWatchonly ) # 获取关于钱包内交易 `txid` 的详细信息
+gettransaction "txid" ( includeWatchonly ) # 获取关于钱包内交易 txid 的详细信息
 {% endhighlight %}
 
 参数：<br>
-1. `txid` （字符串，必备）交易索引。<br>
-2. `includeWatchonly` （布尔型，可选，默认为 false）在余额计算和 `details[]` 是否包含 watchonly 地址。
+1. txid （字符串，必备）交易索引。<br>
+2. includeWatchonly （布尔型，可选，默认为 false）在余额计算和 details[] 是否包含 watchonly 地址。
 
 结果：<br>
 {% highlight shell %}
@@ -32,7 +32,7 @@ gettransaction "txid" ( includeWatchonly ) # 获取关于钱包内交易 `txid` 
                                                    不在内存池中未确认的交易可能是未知
   "details" : [
     {
-      "account" : "accountname",  （字符串，已过时）包含在交易中的账户名，对于默认账户可以为 `""`
+      "account" : "accountname",  （字符串，已过时）包含在交易中的账户名，对于默认账户可以为 ""
       "address" : "bitcoinaddress",   （字符串）包含在交易中的比特币地址
       "category" : "send|receive",    （字符串）类别，'send' 或 'receive'
       "amount" : x.xxx,                 （数字）以 BTC 为单位的金额
@@ -50,7 +50,7 @@ gettransaction "txid" ( includeWatchonly ) # 获取关于钱包内交易 `txid` 
 ### 比特币核心客户端
 
 用法一：获取指定交易的详细信息。<br>
-先使用 [`listtransactions`](/2018/06/06/bitcoin-rpc-command-listtransactions) 获取钱包交易。
+先使用 [listtransactions](/2018/06/06/bitcoin-rpc-command-listtransactions) 获取钱包交易。
 
 {% highlight shell %}
 $ bitcoin-cli listtransactions
@@ -121,7 +121,7 @@ $ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curl
 {% endhighlight %}
 
 ## 源码剖析
-`gettransaction` 对应的函数在“rpcserver.h”文件中被引用。
+gettransaction 对应的函数在“rpcserver.h”文件中被引用。
 
 {% highlight C++ %}
 extern UniValue gettransaction(const UniValue& params, bool fHelp); // 获取交易详细信息

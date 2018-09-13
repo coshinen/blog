@@ -14,8 +14,8 @@ setaccount "bitcoinaddress" "account" # （已过时）设置给定地址关联�
 {% endhighlight %}
 
 参数：<br>
-1. `bitcoinaddress` （字符串，必备）用于关联一个账户的比特币地址。<br>
-2. `account` （字符串，必备）要分配地址的账户。
+1. bitcoinaddress （字符串，必备）用于关联一个账户的比特币地址。<br>
+2. account （字符串，必备）要分配地址的账户。
 
 结果：无返回值。
 
@@ -24,7 +24,7 @@ setaccount "bitcoinaddress" "account" # （已过时）设置给定地址关联�
 ### 比特币核心客户端
 
 获取一个新的比特币地址，在默认账户下，
-重新设置该地址关联账户为 `tabby`。
+重新设置该地址关联账户为 tabby。
 
 {% highlight shell %}
 $ bitcoin-cli getnewaddress
@@ -43,7 +43,7 @@ $ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curl
 {% endhighlight %}
 
 ## 源码剖析
-`setaccount` 对应的函数在“rpcserver.h”文件中被引用。
+setaccount 对应的函数在“rpcserver.h”文件中被引用。
 
 {% highlight C++ %}
 extern UniValue setaccount(const UniValue& params, bool fHelp); // 设置地址关联账户

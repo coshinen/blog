@@ -21,8 +21,8 @@ getmininginfo # 获取挖矿信息
   "currentblocktx": nnn,     （数字）最后一个区块的交易数
   "difficulty": xxx.xxxxx    （数字）当前的挖矿难度
   "errors": "..."          （字符串）当前的错误
-  "generate": true|false     （布尔型）挖矿开启或关闭（查看 `getgenerate` 或 `setgenerate` 命令）
-  "genproclimit": n          （数字）挖矿线程数。如果未开启挖矿则为 -1。（查看 `getgenerate` 或 `setgenerate` 命令）
+  "generate": true|false     （布尔型）挖矿开启或关闭（查看 getgenerate 或 setgenerate 命令）
+  "genproclimit": n          （数字）挖矿线程数。如果未开启挖矿则为 -1。（查看 getgenerate 或 setgenerate 命令）
   "pooledtx": n              （数字）交易内存池的大小
   "testnet": true|false      （布尔型）使用了测试网或没有使用
   "chain": "xxxx",         （字符串）BIP70 定义的当前的网络名（main, test, regtest）
@@ -60,7 +60,7 @@ $ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curl
 {% endhighlight %}
 
 ## 源码剖析
-`getmininginfo` 对应的函数在“rpcserver.h”文件中被引用。
+getmininginfo 对应的函数在“rpcserver.h”文件中被引用。
 
 {% highlight C++ %}
 extern UniValue getmininginfo(const UniValue& params, bool fHelp); // 获取挖矿信息

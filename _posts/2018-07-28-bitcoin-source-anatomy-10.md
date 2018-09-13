@@ -6,12 +6,12 @@ author: mistydew
 categories: Blockchain Bitcoin
 tags: 区块链 比特币 源码剖析
 ---
-上一篇分析了应用程序初始化中初始化 `HTTP` 服务器的详细过程，详见[比特币源码剖析（九）](/2018/07/21/bitcoin-source-anatomy-09)。<br>
-本篇主要分析 `Step 4: application initialization: dir lock, daemonize, pidfile, debug log` 第四步应用程序初始化服务器中启动 `RPC` 的详细过程。
+上一篇分析了应用程序初始化中初始化 HTTP 服务器的详细过程，详见[比特币源码剖析（九）](/2018/07/21/bitcoin-source-anatomy-09)。<br>
+本篇主要分析 Step 4: application initialization: dir lock, daemonize, pidfile, debug log 第四步应用程序初始化服务器中启动 RPC 的详细过程。
 
 ## 源码剖析
 
-9.2.5.调用 `StartHTTPRPC()` 函数启动 `HTTP` 和 `RPC`（在这里注册的 `RPC` 处理函数），该函数声明在“httprpc.h”文件中。
+9.2.5.调用 StartHTTPRPC() 函数启动 HTTP 和 RPC（在这里注册的 RPC 处理函数），该函数声明在“httprpc.h”文件中。
 
 {% highlight C++ %}
 /** Start HTTP RPC subsystem.
@@ -38,11 +38,11 @@ bool StartHTTPRPC()
 }
 {% endhighlight %}
 
-1.初始化 `RPC` 身份验证，用于验证 `RPC` 用户名和密码。<br>
-2.注册 `HTTP` 处理函数。<br>
-3.创建 `HTTP` 定时器接口对象，并注册定时器接口。
+1.初始化 RPC 身份验证，用于验证 RPC 用户名和密码。<br>
+2.注册 HTTP 处理函数。<br>
+3.创建 HTTP 定时器接口对象，并注册定时器接口。
 
-1.调用 `InitRPCAuthentication()` 初始化 `RPC` 验证（`"用户名:密码"`），该函数实现在“httprpc.cpp”文件中。
+1.调用 InitRPCAuthentication() 初始化 RPC 验证（"用户名:密码"），该函数实现在“httprpc.cpp”文件中。
 
 {% highlight C++ %}
 /* Pre-base64-encoded authentication token */
@@ -67,14 +67,14 @@ static bool InitRPCAuthentication()
 }
 {% endhighlight %}
 
-若启动选项 `-rpcpassword` 的值为空时，调用 `GenerateAuthCookie(&strRPCUserColonPass)` 随机生成身份验证 `cookie`，该函数声明在“rpcprotocol.h”文件中。
+若启动选项 -rpcpassword 的值为空时，调用 GenerateAuthCookie(&strRPCUserColonPass) 随机生成身份验证 cookie，该函数声明在“rpcprotocol.h”文件中。
 
 {% highlight C++ %}
 /** Generate a new RPC authentication cookie and write it to disk */
 bool GenerateAuthCookie(std::string *cookie_out); // 生成一个新的 RPC 身份验证 cookie 并写入磁盘
 {% endhighlight %}
 
-实现在“rpcprotocol.cpp”文件中，入参为：`RPC` 验证信息（用户名冒号密码）全局字符串对象。
+实现在“rpcprotocol.cpp”文件中，入参为：RPC 验证信息（用户名冒号密码）全局字符串对象。
 
 {% highlight C++ %}
 bool GenerateAuthCookie(std::string *cookie_out)
@@ -103,11 +103,11 @@ bool GenerateAuthCookie(std::string *cookie_out)
 }
 {% endhighlight %}
 
-若启动选项 `-rpcpassword` 的值非空，及指定了 `RPC` 密码，则直接以 `"用户名:密码"` 的形式拼接验证信息字符串。
+若启动选项 -rpcpassword 的值非空，及指定了 RPC 密码，则直接以 "用户名:密码" 的形式拼接验证信息字符串。
 
-**注：`RPC` 用户名可以为空。**
+**注：RPC 用户名可以为空。**
 
-2.调用 `RegisterHTTPHandler("/", true, HTTPReq_JSONRPC)` 函数注册 `HTTP` 请求处理函数，它声明在“httpserver.h”文件中。
+2.调用 RegisterHTTPHandler("/", true, HTTPReq_JSONRPC) 函数注册 HTTP 请求处理函数，它声明在“httpserver.h”文件中。
 
 {% highlight C++ %}
 /** Handler for requests to a certain HTTP path */ // 用于请求一个确定的 HTTP 路径的处理函数
@@ -119,7 +119,7 @@ typedef boost::function<void(HTTPRequest* req, const std::string &)> HTTPRequest
 void RegisterHTTPHandler(const std::string &prefix, bool exactMatch, const HTTPRequestHandler &handler);
 {% endhighlight %}
 
-实现在“httpserver.cpp”文件中，入参为：前缀，是否精准匹配，`HTTP` 请求处理函数对象。
+实现在“httpserver.cpp”文件中，入参为：前缀，是否精准匹配，HTTP 请求处理函数对象。
 
 {% highlight C++ %}
 struct HTTPPathHandler
@@ -143,7 +143,7 @@ void RegisterHTTPHandler(const std::string &prefix, bool exactMatch, const HTTPR
 }
 {% endhighlight %}
 
-处理 `HTTP` 请求函数定义在“httprpc.cpp”文件中，入参为：`HTTP` 请求，`...`。
+处理 HTTP 请求函数定义在“httprpc.cpp”文件中，入参为：HTTP 请求，...。
 
 {% highlight C++ %}
 static bool HTTPReq_JSONRPC(HTTPRequest* req, const std::string &) // HTTP 请求处理函数
@@ -210,16 +210,16 @@ static bool HTTPReq_JSONRPC(HTTPRequest* req, const std::string &) // HTTP 请�
 }
 {% endhighlight %}
 
-2.1.检查请求类型，只处理 `POST` 类型的 `HTTP` 请求。<br>
+2.1.检查请求类型，只处理 POST 类型的 HTTP 请求。<br>
 2.2.检查授权信息，即请求头部的验证信息（用户名、密码）。<br>
-2.3.获取请求内容，并构造 `UniValue（JSON）` 类型的对象。<br>
-2.4.解析请求内容，执行响应方法，并获取反馈信息 `JSON` 字符串。<br>
-2.4.1.若请求内容为一个 `JSON` 对象，则按 `2.4` 流程走。<br>
-2.4.2.若请求内容为一个 `JSON` 数组（可能含 `n` 个 `JSON` 对象），则进行批处理并获取响应字符串。<br>
+2.3.获取请求内容，并构造 UniValue（JSON） 类型的对象。<br>
+2.4.解析请求内容，执行响应方法，并获取反馈信息 JSON 字符串。<br>
+2.4.1.若请求内容为一个 JSON 对象，则按 2.4 流程走。<br>
+2.4.2.若请求内容为一个 JSON 数组（可能含 n 个 JSON 对象），则进行批处理并获取响应字符串。<br>
 2.5.把状态码和结果字符串写入响应中，并进行反馈。<br>
-2.6.执行成功，返回 `true`。
+2.6.执行成功，返回 true。
 
-2.1.调用 `req->GetRequestMethod()` 获取 `HTTP` 请求的请求方式，该函数声明在“httpserver.h”文件的 `HTTPRequest` 类中。
+2.1.调用 req->GetRequestMethod() 获取 HTTP 请求的请求方式，该函数声明在“httpserver.h”文件的 HTTPRequest 类中。
 
 {% highlight C++ %}
 /** In-flight HTTP request.
@@ -272,8 +272,8 @@ HTTPRequest::RequestMethod HTTPRequest::GetRequestMethod()
 }
 {% endhighlight %}
 
-2.2.先调用 `req->GetHeader("authorization")` 函数获取验证信息，再调用 `RPCAuthorized(authHeader.second)` 函数验证授权。
-`req->GetHeader("authorization")` 声明在“httpserver.h”文件的 `HTTPRequest` 类中。
+2.2.先调用 req->GetHeader("authorization") 函数获取验证信息，再调用 RPCAuthorized(authHeader.second) 函数验证授权。
+req->GetHeader("authorization") 声明在“httpserver.h”文件的 HTTPRequest 类中。
 
 {% highlight C++ %}
 class HTTPRequest
@@ -303,7 +303,7 @@ std::pair<bool, std::string> HTTPRequest::GetHeader(const std::string& hdr)
 }
 {% endhighlight %}
 
-`RPCAuthorized(authHeader.second)` 定义在“httprpc.cpp”文件中，入参为：验证信息字符串。
+RPCAuthorized(authHeader.second) 定义在“httprpc.cpp”文件中，入参为：验证信息字符串。
 
 {% highlight C++ %}
 static bool RPCAuthorized(const std::string& strAuth)
@@ -324,8 +324,8 @@ static bool RPCAuthorized(const std::string& strAuth)
 }
 {% endhighlight %}
 
-2.3.调用 `valRequest.read(req->ReadBody())` 获取请求体并初始化一个 `JSON` 对象。
-`req->ReadBody()` 声明在“httpserver.h”文件的 `HTTPRequest` 类中。
+2.3.调用 valRequest.read(req->ReadBody()) 获取请求体并初始化一个 JSON 对象。
+req->ReadBody() 声明在“httpserver.h”文件的 HTTPRequest 类中。
 
 {% highlight C++ %}
 class HTTPRequest
@@ -366,8 +366,8 @@ std::string HTTPRequest::ReadBody()
 }
 {% endhighlight %}
 
-2.4.1.首先调用 `jreq.parse(valRequest)` 解析请求到一个 `JSON` 请求对象中。
-该函数声明在“rpcserver.h”文件的 `JSONRequest` 类中。
+2.4.1.首先调用 jreq.parse(valRequest) 解析请求到一个 JSON 请求对象中。
+该函数声明在“rpcserver.h”文件的 JSONRequest 类中。
 
 {% highlight C++ %}
 class JSONRequest // JSON 请求类
@@ -382,7 +382,7 @@ public:
 };
 {% endhighlight %}
 
-实现在“rpcserver.cpp”文件中，入参为：`JSON` 请求对象。
+实现在“rpcserver.cpp”文件中，入参为：JSON 请求对象。
 
 {% highlight C++ %}
 void JSONRequest::parse(const UniValue& valRequest)
@@ -416,8 +416,8 @@ void JSONRequest::parse(const UniValue& valRequest)
 }
 {% endhighlight %}
 
-然后调用 `tableRPC.execute(jreq.strMethod, jreq.params)` 执行相应的方法并获取反馈结果。
-该函数声明在“rpcserver.h”文件的 `CRPCTable` 类中。
+然后调用 tableRPC.execute(jreq.strMethod, jreq.params) 执行相应的方法并获取反馈结果。
+该函数声明在“rpcserver.h”文件的 CRPCTable 类中。
 
 {% highlight C++ %}
 /**
@@ -476,7 +476,7 @@ UniValue CRPCTable::execute(const std::string &strMethod, const UniValue &params
 }
 {% endhighlight %}
 
-最后调用 `JSONRPCReply(result, NullUniValue, jreq.id)` 把上面得到的反馈结果包装为 `JSON` 格式的字符串。
+最后调用 JSONRPCReply(result, NullUniValue, jreq.id) 把上面得到的反馈结果包装为 JSON 格式的字符串。
 该函数声明在“rpcprotocol.h”文件中。
 
 {% highlight C++ %}
@@ -484,7 +484,7 @@ UniValue JSONRPCReplyObj(const UniValue& result, const UniValue& error, const Un
 std::string JSONRPCReply(const UniValue& result, const UniValue& error, const UniValue& id); // JSONRPC 响应
 {% endhighlight %}
 
-实现在“rpcprotocol.cpp”文件中，入参为：反馈结果 `JSON` 对象，空的 `JSON` 对象（用于保存错误信息），请求 `id`。
+实现在“rpcprotocol.cpp”文件中，入参为：反馈结果 JSON 对象，空的 JSON 对象（用于保存错误信息），请求 id。
 
 {% highlight C++ %}
 UniValue JSONRPCReplyObj(const UniValue& result, const UniValue& error, const UniValue& id)
@@ -506,14 +506,14 @@ string JSONRPCReply(const UniValue& result, const UniValue& error, const UniValu
 }
 {% endhighlight %}
 
-2.4.2.调用 `JSONRPCExecBatch(valRequest.get_array())` 批处理请求，并获取反馈结果组成的 `JSON` 对象。
+2.4.2.调用 JSONRPCExecBatch(valRequest.get_array()) 批处理请求，并获取反馈结果组成的 JSON 对象。
 该函数声明在“rpcserver.h”文件中。
 
 {% highlight C++ %}
 std::string JSONRPCExecBatch(const UniValue& vReq); // JSONRPC 批量执行
 {% endhighlight %}
 
-实现在“rpcserver.cpp”文件中，入参为：请求的 `JSON` 数组。
+实现在“rpcserver.cpp”文件中，入参为：请求的 JSON 数组。
 
 {% highlight C++ %}
 static UniValue JSONRPCExecOne(const UniValue& req)
@@ -550,8 +550,8 @@ std::string JSONRPCExecBatch(const UniValue& vReq)
 }
 {% endhighlight %}
 
-2.5.先调用 `req->WriteHeader("Content-Type", "application/json")` 写入响应头信息，再调用 `req->WriteReply(HTTP_OK, strReply)` 写入状态码和反馈内容。
-它们均声明在“httpserver.h”文件的 `HTTPRequest` 类中。
+2.5.先调用 req->WriteHeader("Content-Type", "application/json") 写入响应头信息，再调用 req->WriteReply(HTTP_OK, strReply) 写入状态码和反馈内容。
+它们均声明在“httpserver.h”文件的 HTTPRequest 类中。
 
 {% highlight C++ %}
 class HTTPRequest
@@ -576,7 +576,7 @@ class HTTPRequest
 };
 {% endhighlight %}
 
-实现在“httpserver.cpp”文件中，`WriteHeader` 的入参为：类型字符串；`WriteReply` 的入参为：`HTTP` 状态码，反馈内容字符串。
+实现在“httpserver.cpp”文件中，WriteHeader 的入参为：类型字符串；WriteReply 的入参为：HTTP 状态码，反馈内容字符串。
 
 {% highlight C++ %}
 void HTTPRequest::WriteHeader(const std::string& hdr, const std::string& value)
@@ -606,7 +606,7 @@ void HTTPRequest::WriteReply(int nStatus, const std::string& strReply)
 }
 {% endhighlight %}
 
-3.创建 `HTTP RPC` 定时器接口对象，并调用 `RPCRegisterTimerInterface(httpRPCTimerInterface)` 注册定时器接口。
+3.创建 HTTP RPC 定时器接口对象，并调用 RPCRegisterTimerInterface(httpRPCTimerInterface) 注册定时器接口。
 该函数声明在“rpcserver.h”文件中。
 
 {% highlight C++ %}
@@ -614,7 +614,7 @@ void HTTPRequest::WriteReply(int nStatus, const std::string& strReply)
 void RPCRegisterTimerInterface(RPCTimerInterface *iface);
 {% endhighlight %}
 
-实现在“rpcserver.cpp”文件中，入参为：`HTTPRPC` 定时器接口对象。
+实现在“rpcserver.cpp”文件中，入参为：HTTPRPC 定时器接口对象。
 
 {% highlight C++ %}
 /* Timer-creating functions */ // 定时器创建功能
@@ -626,7 +626,7 @@ void RPCRegisterTimerInterface(RPCTimerInterface *iface)
 }
 {% endhighlight %}
 
-`HTTPRPCTimerInterface ` 是类 `RPCTimerInterface` 的派生类，这里把派生类指针转换为基类指针（向上转型）。
+HTTPRPCTimerInterface  是类 RPCTimerInterface 的派生类，这里把派生类指针转换为基类指针（向上转型）。
 该类定义在“httprpc.cpp”文件中。
 
 {% highlight C++ %}
@@ -636,7 +636,7 @@ class HTTPRPCTimerInterface : public RPCTimerInterface // HTTPRPC 定时器接�
 };
 {% endhighlight %}
 
-9.2.6.若设置了 `-rest` 启动选项，则调用 `StartREST()` 函数启动 `REST`，它声明在“httprpc.h”文件中。
+9.2.6.若设置了 -rest 启动选项，则调用 StartREST() 函数启动 REST，它声明在“httprpc.h”文件中。
 
 {% highlight C++ %}
 /** Start HTTP REST subsystem.
@@ -670,7 +670,7 @@ bool StartREST()
 }
 {% endhighlight %}
 
-遍历 `uri_prefixes` 结构体数组，调用 `RegisterHTTPHandler(uri_prefixes[i].prefix, false, uri_prefixes[i].handler)` 把路径对应的处理函数注册（加入）到处理函数列表中，
+遍历 uri_prefixes 结构体数组，调用 RegisterHTTPHandler(uri_prefixes[i].prefix, false, uri_prefixes[i].handler) 把路径对应的处理函数注册（加入）到处理函数列表中，
 该函数声明在“httpserver.h”文件中。
 
 {% highlight C++ %}
@@ -681,7 +681,7 @@ bool StartREST()
 void RegisterHTTPHandler(const std::string &prefix, bool exactMatch, const HTTPRequestHandler &handler);
 {% endhighlight %}
 
-实现在“httpserver.cpp”文件中，入参为：前缀（路径），`false`（前缀匹配），处理函数入口地址。
+实现在“httpserver.cpp”文件中，入参为：前缀（路径），false（前缀匹配），处理函数入口地址。
 
 {% highlight C++ %}
 //! Handlers for (sub)paths // 处理函数（子）路径
@@ -694,7 +694,7 @@ void RegisterHTTPHandler(const std::string &prefix, bool exactMatch, const HTTPR
 }
 {% endhighlight %}
 
-9.2.7.调用 `StartHTTPServer()` 函数启动 `HTTP` 服务，它声明在“httpserver.h”文件中。
+9.2.7.调用 StartHTTPServer() 函数启动 HTTP 服务，它声明在“httpserver.h”文件中。
 
 {% highlight C++ %}
 /** Start HTTP server.
@@ -723,12 +723,12 @@ bool StartHTTPServer()
 }
 {% endhighlight %}
 
-1.获取 `RPC` 线程数，可通过启动选项 `-rpcthreads` 设置，默认为 4。<br>
-2.创建 `HTTP` 线程。<br>
-3.创建 `HTTP` 工作队列处理线程。
+1.获取 RPC 线程数，可通过启动选项 -rpcthreads 设置，默认为 4。<br>
+2.创建 HTTP 线程。<br>
+3.创建 HTTP 工作队列处理线程。
 
-2.调用 `boost::thread(boost::bind(&ThreadHTTP, eventBase, eventHTTP))` 创建 `HTTP` 线程，进入 `http` 事件循环，
-线程函数 `ThreadHTTP` 定义在“httpserver.cpp”文件中。
+2.调用 boost::thread(boost::bind(&ThreadHTTP, eventBase, eventHTTP)) 创建 HTTP 线程，进入 http 事件循环，
+线程函数 ThreadHTTP 定义在“httpserver.cpp”文件中。
 
 {% highlight C++ %}
 /** Event dispatcher thread */ // 事件派发线程
@@ -742,8 +742,8 @@ static void ThreadHTTP(struct event_base* base, struct evhttp* http)
 }
 {% endhighlight %}
 
-`HTTPClosure` 是一个虚基类，定义在“httpserver.h”文件中。
-`DEFAULT_HTTP_THREADS` 定义在“httpserver.h”文件中，可通过 `-rpcthreads` 启动选项改变默认值。
+HTTPClosure 是一个虚基类，定义在“httpserver.h”文件中。
+DEFAULT_HTTP_THREADS 定义在“httpserver.h”文件中，可通过 -rpcthreads 启动选项改变默认值。
 
 {% highlight C++ %}
 static const int DEFAULT_HTTP_THREADS=4; // HTTP RPC 线程数，默认为 4
@@ -758,8 +758,8 @@ public:
 };
 {% endhighlight %}
 
-3.调用 `boost::thread(boost::bind(&HTTPWorkQueueRun, workQueue))` 创建 `HTTP` 工作队列处理线程，
-线程函数 `HTTPWorkQueueRun` 定义在“httpserver.cpp”文件中。
+3.调用 boost::thread(boost::bind(&HTTPWorkQueueRun, workQueue)) 创建 HTTP 工作队列处理线程，
+线程函数 HTTPWorkQueueRun 定义在“httpserver.cpp”文件中。
 
 {% highlight C++ %}
 /** Simple wrapper to set thread name and run work queue */ // 设置线程名并运行工作队列的简单包装器
@@ -770,7 +770,7 @@ static void HTTPWorkQueueRun(WorkQueue<HTTPClosure>* queue)
 }
 {% endhighlight %}
 
-调用 `queue->Run()` 运行工作队列，该函数定义在“httpserver.cpp”文件的 `WorkQueue` 类中。
+调用 queue->Run() 运行工作队列，该函数定义在“httpserver.cpp”文件的 WorkQueue 类中。
 
 {% highlight C++ %}
 /** Simple work queue for distributing work over multiple threads.
@@ -832,7 +832,7 @@ public:
 };
 {% endhighlight %}
 
-至此，第四步应用程序初始化服务器（`HTTP`、`RPC`）完成。
+至此，第四步应用程序初始化服务器（HTTP、RPC）完成。
 
 未完待续...<br>
 请看下一篇[比特币源码剖析（十一）](/2018/08/04/bitcoin-source-anatomy-11)。

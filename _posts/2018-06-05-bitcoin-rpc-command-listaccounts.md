@@ -14,8 +14,8 @@ listaccounts ( minconf includeWatchonly ) # （已过时）列出以账户名为
 {% endhighlight %}
 
 参数：<br>
-1. `minconf` （数字，可选，默认为 1）只包含至少有 `minconf` 次确认的交易。<br>
-2. `includeWatchonly` （布尔型，可选，默认为 false）包含在 watchonly 地址上的余额（见 [`importaddress`](/2018/06/07/bitcoin-rpc-command-importaddress)）。
+1. minconf （数字，可选，默认为 1）只包含至少有 minconf 次确认的交易。<br>
+2. includeWatchonly （布尔型，可选，默认为 false）包含在 watchonly 地址上的余额（见 [importaddress](/2018/06/07/bitcoin-rpc-command-importaddress)）。
 
 结果：<br>
 {% highlight shell %}
@@ -67,7 +67,7 @@ $ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curl
 {% endhighlight %}
 
 ## 源码剖析
-`listaccounts` 对应的函数在“rpcserver.h”文件中被引用。
+listaccounts 对应的函数在“rpcserver.h”文件中被引用。
 
 {% highlight C++ %}
 extern UniValue listaccounts(const UniValue& params, bool fHelp); // 列出账户及其余额

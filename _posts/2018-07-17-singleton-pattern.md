@@ -15,7 +15,7 @@ tags: C++ 设计模式
 
 ## 实现方法
 0.声明该类的默认构造函数为私有，防止在类外实例化。<br>
-1.使用 `static` 关键字保证只实例化一次。<br>
+1.使用 static 关键字保证只实例化一次。<br>
 2.提供一个静态方法，返回对实例的引用。
 
 **注：该实例通常存储私有静态变量，在首次调用静态方法前创建实例。**
@@ -67,7 +67,7 @@ private:
 };
 {% endhighlight %}
 
-参考 [`bitcoin v0.12.1`](https://github.com/bitcoin/bitcoin/tree/v0.12.1) 源码中的类 [`LockedPageManager`](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/support/pagelocker.h) 的实现。
+参考 [bitcoin v0.12.1](https://github.com/bitcoin/bitcoin/tree/v0.12.1) 源码中的类 [LockedPageManager](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/support/pagelocker.h) 的实现。
 
 Thanks for your time.
 

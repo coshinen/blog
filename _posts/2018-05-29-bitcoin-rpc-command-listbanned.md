@@ -41,7 +41,7 @@ $ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curl
 {% endhighlight %}
 
 ## 源码剖析
-`listbanned` 对应的函数在“rpcserver.h”文件中被引用。
+listbanned 对应的函数在“rpcserver.h”文件中被引用。
 
 {% highlight C++ %}
 extern UniValue listbanned(const UniValue& params, bool fHelp); // 列出黑名单

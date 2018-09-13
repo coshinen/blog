@@ -14,7 +14,7 @@ tags: C++ 设计模式
 
 创建模式是创建对象的模式，而非直接实例化对象，为程序提供更多灵活性。
 
-* 单例模式（[`Singleton pattern`](/2018/07/17/singleton-pattern)）
+* 单例模式（[Singleton pattern](/2018/07/17/singleton-pattern)）
 * 简单工厂模式（Simple Factory pattern）
 * 工厂方法模式（Factory Method pattern）
 * 抽象工厂模式（Abstract pattern）

@@ -14,9 +14,9 @@ gettxout "txid" n ( includemempool ) # 获取关于一笔未花费交易输出�
 {% endhighlight %}
 
 参数：<br>
-1. `txid` （字符串，必备）交易索引。<br>
-2. `n` （数字，必备）输出序号（索引）。<br>
-3. `includemempool` （布尔型，可选）是否在交易内存池中。
+1. txid （字符串，必备）交易索引。<br>
+2. n （数字，必备）输出序号（索引）。<br>
+3. includemempool （布尔型，可选）是否在交易内存池中。
 
 结果：<br>
 {% highlight shell %}
@@ -41,7 +41,7 @@ gettxout "txid" n ( includemempool ) # 获取关于一笔未花费交易输出�
 
 ## 用法示例
 
-先使用 [`listunspent`](/2018/06/05/bitcoin-rpc-command-listunspent) 命令列出未花费交易输出，
+先使用 [listunspent](/2018/06/05/bitcoin-rpc-command-listunspent) 命令列出未花费交易输出，
 再通过交易索引和交易输出序号获取该交易输出的详细信息。
 
 {% highlight shell %}
@@ -95,7 +95,7 @@ $ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curl
 {% endhighlight %}
 
 ## 源码剖析
-`gettxout` 对应的函数在“rpcserver.h”文件中被引用。
+gettxout 对应的函数在“rpcserver.h”文件中被引用。
 
 {% highlight C++ %}
 extern UniValue gettxout(const UniValue& params, bool fHelp); // 获取一笔交易输出（链上或内存池中）的细节

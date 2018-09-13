@@ -6,7 +6,7 @@ author: mistydew
 categories: Blockchain Bitcoin
 tags: 区块链 比特币 源码构建 交叉编译
 ---
-本文记录了如何在 `Linux` 平台下交叉编译比特币源码，得到 `Windows` 版本的可执行程序。
+本文记录了如何在 Linux 平台下交叉编译比特币源码，得到 Windows 版本的可执行程序。
 
 ## 下载比特币源码（Ubuntu 18.04.1）
 
@@ -25,7 +25,7 @@ nothing to commit, working directory clean
 $ vim depends/packages/qt.mk # Line 3: 把 official_releases 改为 archive，其他不变
 {% endhighlight %}
 
-第 3 行应该为 `$(package)_download_path=http://download.qt.io/archive/qt/5.5/$($(package)_version)/submodules`。
+第 3 行应该为 $(package)_download_path=http://download.qt.io/archive/qt/5.5/$($(package)_version)/submodules。
 
 ## 安装基本依赖
 
@@ -35,17 +35,17 @@ $ sudo apt upgrade
 $ sudo apt install build-essential libtool autotools-dev automake pkg-config bsdmainutils curl git
 {% endhighlight %}
 
-主机工具链（`build-essential`）是必需的，因为某些依赖包（例如：`protobuf`）需要构建用于构建过程中的主机实用程序。
+主机工具链（build-essential）是必需的，因为某些依赖包（例如：protobuf）需要构建用于构建过程中的主机实用程序。
 
 ## 构建 64 位 Windows 版
 
-第一步，安装 `mingw-w64` 交叉编译工具链。
+第一步，安装 mingw-w64 交叉编译工具链。
 
 {% highlight shell %}
 $ sudo apt install g++-mingw-w64-x86-64
 {% endhighlight %}
 
-对于 Ubuntu 18.04，设置默认的 `mingw32 g++` 编译器选项为 `posix`，选择序号为 1 的选项回车即可。
+对于 Ubuntu 18.04，设置默认的 mingw32 g++ 编译器选项为 posix，选择序号为 1 的选项回车即可。
 
 {% highlight shell %}
 $ sudo update-alternatives --config x86_64-w64-mingw32-g++ # Set the default mingw32 g++ compiler option to posix.
@@ -82,7 +82,7 @@ $ cd depends
 $ sudo make HOST=x86_64-w64-mingw32 -j4 # 这一步会下载相关依赖，确保网络畅通
 $ cd ..
 $ ./autogen.sh # 若是首次构建，先生成 configure
-$ sudo ./configure --prefix=`pwd`/depends/x86_64-w64-mingw32
+$ sudo ./configure --prefix=pwd/depends/x86_64-w64-mingw32
 $ sudo make # 若构建过非 Windows 版的程序，则执行 sudo make clean; sudo make
 {% endhighlight %}
 

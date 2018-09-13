@@ -14,12 +14,12 @@ keypoolrefill ( newsize ) # 填充满密钥池
 {% endhighlight %}
 
 **注：<br>
-1. 需要调用 [`walletpassphrase`](/2018/05/31/bitcoin-rpc-command-walletpassphrase) 设置钱包密码。<br>
+1. 需要调用 [walletpassphrase](/2018/05/31/bitcoin-rpc-command-walletpassphrase) 设置钱包密码。<br>
 2. 填充后大小必定比填充前大。<br>
 3. 填充后密钥池大小为指定或默认值 + 1。**
 
 参数：<br>
-1. `newsize` （整型，可选，默认为 100）新密钥池大小。
+1. newsize （整型，可选，默认为 100）新密钥池大小。
 
 结果：无返回值。
 
@@ -27,9 +27,9 @@ keypoolrefill ( newsize ) # 填充满密钥池
 
 ### 比特币核心客户端
 
-**注：若钱包设置了密码，使用该命令前先用 [`walletpassphrase`](/2018/05/31/bitcoin-rpc-command-walletpassphrase) 解密钱包。**
+**注：若钱包设置了密码，使用该命令前先用 [walletpassphrase](/2018/05/31/bitcoin-rpc-command-walletpassphrase) 解密钱包。**
 
-用法一：使用比特币核心服务启动时的 `-keypool` 选项对应的默认值进行填充，填充大小为默认值 + 1。
+用法一：使用比特币核心服务启动时的 -keypool 选项对应的默认值进行填充，填充大小为默认值 + 1。
 
 {% highlight shell %}
 $ bitcoin-cli getinfo | grep keypoolsize
@@ -61,7 +61,7 @@ $ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curl
 {% endhighlight %}
 
 ## 源码剖析
-`keypoolrefill` 对应的函数在“rpcserver.h”文件中被引用。
+keypoolrefill 对应的函数在“rpcserver.h”文件中被引用。
 
 {% highlight C++ %}
 extern UniValue keypoolrefill(const UniValue& params, bool fHelp); // 再填充密钥池
@@ -116,7 +116,7 @@ UniValue keypoolrefill(const UniValue& params, bool fHelp)
 6.填充满密钥池。<br>
 7.检测填充后的密钥池大小。
 
-第五步，调用 EnsureWalletIsUnlocked() 函数确保当前钱包未加密，若已加密，先使用 [`wallepassphrase`](/2018/05/31/bitcoin-rpc-command-walletpassphrase) 解密钱包。
+第五步，调用 EnsureWalletIsUnlocked() 函数确保当前钱包未加密，若已加密，先使用 [wallepassphrase](/2018/05/31/bitcoin-rpc-command-walletpassphrase) 解密钱包。
 该函数定义在“rpcwallet.cpp”文件中。
 
 {% highlight C++ %}

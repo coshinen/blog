@@ -10,22 +10,22 @@ excerpt: $ bitcoin-cli addmultisigaddress urequired ["key",...] ( "account" )
 ## 提示说明
 
 {% highlight shell %}
-addmultisigaddress urequired ["key",...] ( "account" ) # 添加一个需要 `nrequired` 个签名的多重签名地址到钱包
+addmultisigaddress urequired ["key",...] ( "account" ) # 添加一个需要 nrequired 个签名的多重签名地址到钱包
 {% endhighlight %}
 
 **每个密钥都是一个比特币地址或 16 进制编码公钥。<br>
 如果指定了账户（已过时），则分配地址到该账户。**
 
 参数：<br>
-1.`nrequired` （数字，必备）n 个密钥或地址所需的签名数量。<br>
-2.`keysobject` （字符串，必备）一个比特币地址或 16 进制编码公钥的 json 数组。
+1.nrequired （数字，必备）n 个密钥或地址所需的签名数量。<br>
+2.keysobject （字符串，必备）一个比特币地址或 16 进制编码公钥的 json 数组。
 {% highlight shell %}
      [
        "key"    （字符串）比特币地址或 16 进制编码的公钥
        ,...
      ]
 {% endhighlight %}
-3.`account` （字符串，可选，已过时）分配地址到该账户。
+3.account （字符串，可选，已过时）分配地址到该账户。
 
 结果：（字符串）返回一个关联密钥的比特币地址（base58 编码的脚本索引）。<br>
 
@@ -49,7 +49,7 @@ $ bitcoin-cli addmultisigaddress 2 "[\"1Ge7nrPf46ynNkzASjFxAtxim5qRJG3CVB\",\"1G
 {% endhighlight %}
 
 ## 源码剖析
-`addmultisigaddress` 对应的函数在“rpcserver.h”文件中被引用。
+addmultisigaddress 对应的函数在“rpcserver.h”文件中被引用。
 
 {% highlight C++ %}
 extern UniValue addmultisigaddress(const UniValue& params, bool fHelp); // 添加多重签名地址
@@ -111,9 +111,9 @@ UniValue addmultisigaddress(const UniValue& params, bool fHelp)
 1.确保当前钱包可用。<br>
 2.处理命令帮助和参数个数。<br>
 3.钱包上锁。<br>
-4.获取指定的账户名，若未指定，则为默认账户 `""`。<br>
+4.获取指定的账户名，若未指定，则为默认账户 ""。<br>
 5.创建多签赎回脚本，获取脚本索引并把该索引添加到钱包。<br>
-6.设置脚本索引和指定账户到地址簿，脚本用途为 `"send"`。<br>
+6.设置脚本索引和指定账户到地址簿，脚本用途为 "send"。<br>
 7.对脚本索引进行 base58 编码并返回。
 
 Thanks for your time.

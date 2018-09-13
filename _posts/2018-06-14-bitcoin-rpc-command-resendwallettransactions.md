@@ -65,7 +65,7 @@ $ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curl
 {% endhighlight %}
 
 ## 源码剖析
-`resendwallettransactions` 对应的函数在“rpcserver.h”文件中被引用。
+resendwallettransactions 对应的函数在“rpcserver.h”文件中被引用。
 
 {% highlight C++ %}
 extern UniValue resendwallettransactions(const UniValue& params, bool fHelp); // 重新发送钱包交易
@@ -155,7 +155,7 @@ bool CWalletTx::RelayWalletTransaction()
 }
 {% endhighlight %}
 
-相关函数调用见 [`sendrawtransaction`](/2018/07/05/bitcoin-rpc-command-sendrawtransaction)。
+相关函数调用见 [sendrawtransaction](/2018/07/05/bitcoin-rpc-command-sendrawtransaction)。
 
 Thanks for your time.
 

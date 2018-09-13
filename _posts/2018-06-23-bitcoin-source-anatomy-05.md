@@ -7,12 +7,12 @@ categories: Blockchain Bitcoin
 tags: 区块链 比特币 源码剖析
 ---
 上一篇分析了日志记录的初始化，参数交互的初始化，应用程序初始化真正入口的前两步：安装和参数交互，详见[比特币源码剖析（四）](/2018/06/16/bitcoin-source-anatomy-04)。<br>
-本篇主要分析 `Step 3: parameter-to-internal-flags` 第三步参数转化为内部标志，`Step 4: application initialization: dir lock, daemonize, pidfile, debug log` 第四步应用程序初始化。
+本篇主要分析 Step 3: parameter-to-internal-flags 第三步参数转化为内部标志，Step 4: application initialization: dir lock, daemonize, pidfile, debug log 第四步应用程序初始化。
 
 ## 源码剖析
 
 <p id="Step03-ref"></p>
-3.11.3.第三步，参数转化为内部标志。这部分代码实现在“init.cpp”文件的 `AppInit2(...)` 函数中。
+3.11.3.第三步，参数转化为内部标志。这部分代码实现在“init.cpp”文件的 AppInit2(...) 函数中。
 
 {% highlight C++ %}
 bool AppInit2(boost::thread_group& threadGroup, CScheduler& scheduler) // 3.11.0.程序初始化，共 12 步
@@ -198,7 +198,7 @@ bool AppInit2(boost::thread_group& threadGroup, CScheduler& scheduler) // 3.11.0
 
 <p id="Step04-ref"></p>
 3.11.4.第四步，应用程序初始化，涉及到椭圆曲线的初始化、数据目录锁、守护进程后台化、进程号文件、调试日志文件。
-这部分代码实现在“init.cpp”文件的 `AppInit2(...)` 函数中。
+这部分代码实现在“init.cpp”文件的 AppInit2(...) 函数中。
 
 {% highlight C++ %}
 bool AppInit2(boost::thread_group& threadGroup, CScheduler& scheduler) // 3.11.0.程序初始化，共 12 步
@@ -283,7 +283,7 @@ bool AppInit2(boost::thread_group& threadGroup, CScheduler& scheduler) // 3.11.0
 1.[初始化椭圆曲线代码。](/2018/06/30/bitcoin-source-anatomy-06#Init-ref)<br>
 2.[初始化完整性检查。](/2018/07/07/bitcoin-source-anatomy-07#InitSanityCheck-ref)<br>
 3.[数据目录上锁。](/2018/07/07/bitcoin-source-anatomy-07#DataDirLock-ref)<br>
-4.[非 `WIN32` 环境，创建进程号文件。](/2018/07/07/bitcoin-source-anatomy-07#CreatePidFile-ref)<br>
+4.[非 WIN32 环境，创建进程号文件。](/2018/07/07/bitcoin-source-anatomy-07#CreatePidFile-ref)<br>
 5.[处理调试日志文件。](/2018/07/07/bitcoin-source-anatomy-07#ShrinkOrOpenDebugLogFile-ref)<br>
 6.记录相关初始化信息到日志输出。<br>
 7.[创建脚本验证线程。](/2018/07/14/bitcoin-source-anatomy-08#ThreadScriptCheck-ref)<br>

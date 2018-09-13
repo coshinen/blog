@@ -8,8 +8,8 @@ tags: 区块链 比特币 比特币地址
 ---
 ## 概要
 比特币“靓号”地址是拥有个性化（自定义）前缀的公钥地址。<br>
-例如以 `1kid` 开头的公钥地址 `1kidyp7EFY3xUdMGSTWpkEmLcfKu9yvoq`。<br>
-这里后 3 位 `kid` 就是我们自定义的地址前缀了，当然地址本身的生成方式并没有改变，
+例如以 1kid 开头的公钥地址 1kidyp7EFY3xUdMGSTWpkEmLcfKu9yvoq。<br>
+这里后 3 位 kid 就是我们自定义的地址前缀了，当然地址本身的生成方式并没有改变，
 只是不断地通过筛选得到拥有该前缀的地址，在你拿到这个地址前，或许已经生成了 n 个地址，这个过程有点像挖矿。
 毫无疑问，随着前缀长度的增加，这个筛选过程所耗费的时间会呈指数级增长。
 
@@ -23,7 +23,7 @@ tags: 区块链 比特币 比特币地址
 “源码之前，了无秘密” — 侯捷<br>
 要想让比特币启动时就生成指定地址前缀（长度大于 1）的公钥地址，就需要修改源码了。<br>
 共需要修改 3 个函数：<br>
-1.`GenerateNewKey` 函数，位于“wallet/wallet.cpp”文件中。<br>
+1.GenerateNewKey 函数，位于“wallet/wallet.cpp”文件中。<br>
 该函数的作用是生成一个私钥，并返回对应的公钥。<br>
 实现：生成私钥，获取公钥地址，对比地址前缀，不满足则重复以上过程，直至找到指定前缀的地址。
 
@@ -61,7 +61,7 @@ CPubKey CWallet::GenerateNewKey()
 }
 {% endhighlight %}
 
-2.RPC 命令 `getnewaddress` 函数，位于“wallet/rpcwallet.cpp”文件中。<br>
+2.RPC 命令 getnewaddress 函数，位于“wallet/rpcwallet.cpp”文件中。<br>
 该函数的作用是通过比特币核心客户端该调用 RPC 命令，获取一个新的公钥地址。<br>
 这里只需要修改第 6 步，实现同上。
 
@@ -113,7 +113,7 @@ UniValue getnewaddress(const UniValue& params, bool fHelp) // 在指定账户下
 }
 {% endhighlight %}
 
-3.RPC 命令 `validateaddress` 函数，位于“rpcmisc.cpp”文件中。<br>
+3.RPC 命令 validateaddress 函数，位于“rpcmisc.cpp”文件中。<br>
 该函数的作用是通过比特币核心客户端该调用 RPC 命令，验证一个公钥地址是否有效。
 
 {% highlight C++ %}
@@ -177,7 +177,7 @@ UniValue validateaddress(const UniValue& params, bool fHelp)
 }
 {% endhighlight %}
 
-关于比特币地址前缀 `'1'` 的修改，参考[如何制作一枚山寨数字货币](/2018/05/13/how-to-make-an-altcoin)。
+关于比特币地址前缀 '1' 的修改，参考[如何制作一枚山寨数字货币](/2018/05/13/how-to-make-an-altcoin)。
 
 ## 参照
 * [Address - Bitcoin Wiki](https://en.bitcoin.it/wiki/Address)

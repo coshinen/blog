@@ -7,12 +7,12 @@ categories: Blockchain Bitcoin
 tags: 区块链 比特币 源码剖析
 ---
 上一篇分析了第八步加载钱包的详细过程，详见[比特币源码剖析（十四）](/2018/08/25/bitcoin-source-anatomy-14)。<br>
-本篇主要分析 `Step 9: data directory maintenance` 第九步数据目录维护的详细过程。
+本篇主要分析 Step 9: data directory maintenance 第九步数据目录维护的详细过程。
 
 ## 源码剖析
 
 <p id="Step09-ref"></p>
-3.11.9.第九步，数据目录维护。这部分代码实现在“init.cpp”文件的 `AppInit2(...)` 函数中。
+3.11.9.第九步，数据目录维护。这部分代码实现在“init.cpp”文件的 AppInit2(...) 函数中。
 
 {% highlight C++ %}
 bool AppInit2(boost::thread_group& threadGroup, CScheduler& scheduler) // 3.11.程序初始化，共 12 步
@@ -35,7 +35,7 @@ bool AppInit2(boost::thread_group& threadGroup, CScheduler& scheduler) // 3.11.�
 {% endhighlight %}
 
 若满足条件，开启了裁剪模式且关闭了再索引选项，则进行数据目录中区块的修剪。
-这里调用 `PruneAndFlush()` 来设置修剪标志并刷新磁盘上的链状态。
+这里调用 PruneAndFlush() 来设置修剪标志并刷新磁盘上的链状态。
 该函数声明在“main.h”文件中。
 
 {% highlight C++ %}
@@ -164,7 +164,7 @@ void PruneAndFlush() {
 {% endhighlight %}
 
 <p id="Step10-ref"></p>
-3.11.10.第九步，数据目录维护。这部分代码实现在“init.cpp”文件的 `AppInit2(...)` 函数中。
+3.11.10.第九步，数据目录维护。这部分代码实现在“init.cpp”文件的 AppInit2(...) 函数中。
 
 {% highlight C++ %}
 bool AppInit2(boost::thread_group& threadGroup, CScheduler& scheduler) // 3.11.程序初始化，共 12 步
@@ -202,7 +202,7 @@ bool AppInit2(boost::thread_group& threadGroup, CScheduler& scheduler) // 3.11.�
 3.遍历指定的区块文件路径，加入导入文件列表。<br>
 4.创建一个线程，用于导入指定的区块文件。
 
-1.调用 `uiInterface.NotifyBlockTip.connect(BlockNotifyCallback)` 注册区块通知回调函数 `BlockNotifyCallback`。
+1.调用 uiInterface.NotifyBlockTip.connect(BlockNotifyCallback) 注册区块通知回调函数 BlockNotifyCallback。
 该函数实现在“init.cpp”文件中，入参为：初始化标志，区块索引。
 
 {% highlight C++ %}
@@ -219,7 +219,7 @@ static void BlockNotifyCallback(bool initialSync, const CBlockIndex *pBlockIndex
 {% endhighlight %}
 
 这里创建了一个局部线程对象来执行传入的命令。
-线程函数 `runCommand` 声明在“util.h”文件中。
+线程函数 runCommand 声明在“util.h”文件中。
 
 {% highlight C++ %}
 void runCommand(const std::string& strCommand); // 运行 shell 命令
@@ -238,8 +238,8 @@ void runCommand(const std::string& strCommand)
 
 这里直接进行系统调用执行传入的命令。
 
-4.调用 `threadGroup.create_thread(boost::bind(&ThreadImport, vImportFiles))` 在线程组中创建一个线程，用于导入指定的区块文件到内存。
-线程函数 `ThreadImport` 实现在“init.cpp” 文件中，入参为：指定的待导入去快文件路径列表。
+4.调用 threadGroup.create_thread(boost::bind(&ThreadImport, vImportFiles)) 在线程组中创建一个线程，用于导入指定的区块文件到内存。
+线程函数 ThreadImport 实现在“init.cpp” 文件中，入参为：指定的待导入去快文件路径列表。
 
 {% highlight C++ %}
 void ThreadImport(std::vector<boost::filesystem::path> vImportFiles) // 导入区块线程处理函数

@@ -10,12 +10,12 @@ excerpt: $ bitcoin-cli addnode "node" "add|remove|onetry"
 ## 提示说明
 
 {% highlight shell %}
-addnode "node" "add|remove|onetry" # 尝试从 `addnode` 列表中添加或移除一个节点，或尝试连接某节点一次
+addnode "node" "add|remove|onetry" # 尝试从 addnode 列表中添加或移除一个节点，或尝试连接某节点一次
 {% endhighlight %}
 
 参数：<br>
-1. `node` （字符串，必备）节点（见 [`getpeerinfo`](/2018/05/29/bitcoin-rpc-command-getpeerinfo) 获取的节点）。<br>
-2. `add|remove|onetry` （字符串，必备）`add` 添加一个节点到列表（不会主动连接），`remove` 从列表移除一个节点，`onetry` 尝试连接到节点一次。<br>
+1. node （字符串，必备）节点（见 [getpeerinfo](/2018/05/29/bitcoin-rpc-command-getpeerinfo) 获取的节点）。<br>
+2. add|remove|onetry （字符串，必备）add 添加一个节点到列表（不会主动连接），remove 从列表移除一个节点，onetry 尝试连接到节点一次。<br>
 
 结果：无返回值。
 
@@ -23,7 +23,7 @@ addnode "node" "add|remove|onetry" # 尝试从 `addnode` 列表中添加或移�
 
 ### 比特币核心客户端
 
-用法一：添加节点，由于无法查看 `addnode` 节点列表，添加 2 次进行验证。
+用法一：添加节点，由于无法查看 addnode 节点列表，添加 2 次进行验证。
 
 {% highlight shell %}
 $ bitcoin-cli addnode "192.168.0.2:8333" "add"
@@ -33,7 +33,7 @@ error message:
 Error: Node already added
 {% endhighlight %}
 
-用法二：移除节点，由于无法查看 `addnode` 节点列表，先添加 1 次，再移除 2 次进行验证。
+用法二：移除节点，由于无法查看 addnode 节点列表，先添加 1 次，再移除 2 次进行验证。
 
 {% highlight shell %}
 $ bitcoin-cli addnode "192.168.0.2:8333" "add"
@@ -44,7 +44,7 @@ error message:
 Error: Node has not been added.
 {% endhighlight %}
 
-用法三：尝试连接节点一次，使用 `getpeerinfo`、`getconnectioncount` 查看是否成功建立连接。
+用法三：尝试连接节点一次，使用 getpeerinfo、getconnectioncount 查看是否成功建立连接。
 
 {% highlight shell %}
 $ bitcoin-cli addnode "192.168.0.2:8333" "onetry"
@@ -60,7 +60,7 @@ $ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curl
 {% endhighlight %}
 
 ## 源码剖析
-`addnode` 对应的函数在“rpcserver.h”文件中被引用。
+addnode 对应的函数在“rpcserver.h”文件中被引用。
 
 {% highlight C++ %}
 extern UniValue addnode(const UniValue& params, bool fHelp); // 添加节点
@@ -352,7 +352,7 @@ bool static ConnectSocketDirectly(const CService &addrConnect, SOCKET& hSocketRe
 }
 {% endhighlight %}
 
-这里可以看到，经过层层封装最终调用 `socket` 和 `connect` 系统调用连接到指定 IP 和端口。
+这里可以看到，经过层层封装最终调用 socket 和 connect 系统调用连接到指定 IP 和端口。
 
 Thanks for your time.
 

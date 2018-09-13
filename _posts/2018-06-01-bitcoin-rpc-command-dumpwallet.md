@@ -10,11 +10,11 @@ excerpt: $ bitcoin-cli dumpwallet "filename"
 ## 提示说明
 
 {% highlight shell %}
-dumpwallet "filename" # 以可读的方式导出全部钱包密钥到指定文件 `filename`
+dumpwallet "filename" # 以可读的方式导出全部钱包密钥到指定文件 filename
 {% endhighlight %}
 
 参数：<br>
-1. `filename` （字符串，必备）文件名。
+1. filename （字符串，必备）文件名。
 
 结果：无返回值。
 
@@ -23,7 +23,7 @@ dumpwallet "filename" # 以可读的方式导出全部钱包密钥到指定文�
 ### 比特币核心客户端
 
 导出到指定文件，默认保存在用户首次使用该命令的工作目录下。<br>
-这里在家目录 `~` 下使用该命令。
+这里在家目录 ~ 下使用该命令。
 
 {% highlight shell %}
 $ bitcoin-cli backupwallet wallet.txt
@@ -39,7 +39,7 @@ $ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curl
 {% endhighlight %}
 
 ## 源码剖析
-`dumpwallet` 对应的函数在“rpcserver.h”文件中被引用。
+dumpwallet 对应的函数在“rpcserver.h”文件中被引用。
 
 {% highlight C++ %}
 extern UniValue dumpwallet(const UniValue& params, bool fHelp); // 导出钱包

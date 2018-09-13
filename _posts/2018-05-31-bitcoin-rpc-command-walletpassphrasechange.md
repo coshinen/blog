@@ -10,12 +10,12 @@ excerpt: $ bitcoin-cli walletpassphrasechange "oldpassphrase" "newpassphrase"
 ## 提示说明
 
 {% highlight shell %}
-walletpassphrasechange "oldpassphrase" "newpassphrase" # 更改钱包密码 `oldpassphrase` 为 `newpassphrase`
+walletpassphrasechange "oldpassphrase" "newpassphrase" # 更改钱包密码 oldpassphrase 为 newpassphrase
 {% endhighlight %}
 
 参数：<br>
-1. `oldpassphrase` （字符串）当前密码。<br>
-2. `newpassphrase` （字符串）新密码。
+1. oldpassphrase （字符串）当前密码。<br>
+2. newpassphrase （字符串）新密码。
 
 结果：无返回值。
 
@@ -23,7 +23,7 @@ walletpassphrasechange "oldpassphrase" "newpassphrase" # 更改钱包密码 `old
 
 ### 比特币核心客户端
 
-修改钱包密码 `mypasswd` 为 `newpasswd`。
+修改钱包密码 mypasswd 为 newpasswd。
 
 {% highlight shell %}
 $ bitcoin-cli walletpassphrase mypasswd newpasswd
@@ -37,7 +37,7 @@ $ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curl
 {% endhighlight %}
 
 ## 源码剖析
-`walletpassphrase` 对应的函数在“rpcserver.h”文件中被引用。
+walletpassphrase 对应的函数在“rpcserver.h”文件中被引用。
 
 {% highlight C++ %}
 extern UniValue walletpassphrasechange(const UniValue& params, bool fHelp); // 修改钱包密码

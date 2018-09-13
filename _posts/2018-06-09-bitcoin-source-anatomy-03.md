@@ -7,7 +7,7 @@ categories: Blockchain Bitcoin
 tags: 区块链 比特币 源码剖析
 ---
 上一篇分析了命令行参数解析以及帮助和版本信息的获取，详见[比特币源码剖析（二）](/2018/06/02/bitcoin-source-anatomy-02)。<br>
-本篇主要分析 `GetDataDir(false)` 获取数据目录函数，`ReadConfigFile(mapArgs, mapMultiArgs)` 读取配置文件函数，`SelectParams(ChainNameFromCommandLine())` 选择链参数（含创世区块信息）函数，检测命令行参数完整性，`Linux` 下守护进程的后台化以及服务选项的设置。
+本篇主要分析 GetDataDir(false) 获取数据目录函数，ReadConfigFile(mapArgs, mapMultiArgs) 读取配置文件函数，SelectParams(ChainNameFromCommandLine()) 选择链参数（含创世区块信息）函数，检测命令行参数完整性，Linux 下守护进程的后台化以及服务选项的设置。
 
 ## 源码剖析
 
@@ -41,7 +41,7 @@ bool AppInit(int argc, char* argv[]) // 3.0.应用程序初始化
 {% endhighlight %}
 
 <p id="GetDataDir-ref"></p>
-3.3.调用 `GetDataDir(false)` 函数获取数据目录，并检查该文件是否为目录类型，该函数声明在“util.h”文件中。
+3.3.调用 GetDataDir(false) 函数获取数据目录，并检查该文件是否为目录类型，该函数声明在“util.h”文件中。
 
 {% highlight C++ %}
 boost::filesystem::path GetDefaultDataDir(); // 获取默认数据目录路径
@@ -124,7 +124,7 @@ const boost::filesystem::path &GetDataDir(bool fNetSpecific)
 7.返回数据目录的路径。
 
 <p id="ReadConfigFile-ref"></p>
-3.4.调用 `ReadConfigFile(mapArgs, mapMultiArgs)` 函数读取配置文件，该函数声明在“util.h”文件中。
+3.4.调用 ReadConfigFile(mapArgs, mapMultiArgs) 函数读取配置文件，该函数声明在“util.h”文件中。
 
 {% highlight C++ %}
 void ReadConfigFile(std::map<std::string, std::string>& mapSettingsRet, std::map<std::string, std::vector<std::string> >& mapMultiSettingsRet); // 读取配置文件，加载启动选项
@@ -174,16 +174,16 @@ void ReadConfigFile(map<string, string>& mapSettingsRet,
 {% endhighlight %}
 
 1.获取配置文件的路径并创建文件输入流对象，允许首次运行没有配置文件。<br>
-2.构造选择集，并插入字符 `'*'`。<br>
-3.按行遍历配置文件文件输入流，跳过含有 `'*'` 的行。<br>
-3.1.获取选项名和选项值，并把 `-noX` 转换为 `-X=0`。<br>
+2.构造选择集，并插入字符 '*'。<br>
+3.按行遍历配置文件文件输入流，跳过含有 '*' 的行。<br>
+3.1.获取选项名和选项值，并把 -noX 转换为 -X=0。<br>
 3.2.插入启动选项映射列表，若在单值映射列表中存在，则不插入该列表，不覆盖已存在的选项设置。<br>
 4.清理数据目录路径缓存，因为数据目录可能在配置文件中改变。
 
 **注：根据 3.2 可以得出命令行参数会覆盖配置文件中的选项设置。**
 
 <p id="SelectParams-ref"></p>
-3.5.首先调用 `ChainNameFromCommandLine()` 函数从命令行获取指定的链名，该函数声明在“chainparamsbase.h”文件中。
+3.5.首先调用 ChainNameFromCommandLine() 函数从命令行获取指定的链名，该函数声明在“chainparamsbase.h”文件中。
 
 {% highlight C++ %}
 /**
@@ -215,7 +215,7 @@ std::string ChainNameFromCommandLine()
 }
 {% endhighlight %}
 
-然后调用 `SelectParams(ChainNameFromCommandLine())` 根据链名选择不同网络的链参数，该函数声明在“chainparams.h”文件中。
+然后调用 SelectParams(ChainNameFromCommandLine()) 根据链名选择不同网络的链参数，该函数声明在“chainparams.h”文件中。
 
 {% highlight C++ %}
 /**
@@ -225,7 +225,7 @@ std::string ChainNameFromCommandLine()
 void SelectParams(const std::string& chain);
 {% endhighlight %}
 
-实现在“chainparams.cpp”文件中，入参为：`BIP70` 链名。
+实现在“chainparams.cpp”文件中，入参为：BIP70 链名。
 
 {% highlight C++ %}
 void SelectParams(const std::string& network)
@@ -238,14 +238,14 @@ void SelectParams(const std::string& network)
 1.选择网络基础参数。<br>
 2.选择网络参数。
 
-1.调用 `SelectBaseParams(network)` 选择网络基础参数，包含 `RPC` 端口号，数据目录名（网络名），该函数声明在“chainparamsbase.h”文件中。
+1.调用 SelectBaseParams(network) 选择网络基础参数，包含 RPC 端口号，数据目录名（网络名），该函数声明在“chainparamsbase.h”文件中。
 
 {% highlight C++ %}
 /** Sets the params returned by Params() to those for the given network. */ // 将 Params() 返回的参数设置到给定的网络。
 void SelectBaseParams(const std::string& chain);
 {% endhighlight %}
 
-实现在“chainparamsbase.cpp”文件中，入参为：`BIP70` 链名。
+实现在“chainparamsbase.cpp”文件中，入参为：BIP70 链名。
 
 {% highlight C++ %}
 /**
@@ -311,7 +311,7 @@ void SelectBaseParams(const std::string& chain)
 
 这一步是让当前选择的基础链参数对象全局静态指针指向相应的基础链参数全局静态对象，方便以后通过指针进行基础链参数的访问。
 
-2.调用 `Params(network)` 获取选择网络参数对象的地址，该函数定义在“chainparams.cpp”文件中，入参为：`BIP70` 链名。
+2.调用 Params(network) 获取选择网络参数对象的地址，该函数定义在“chainparams.cpp”文件中，入参为：BIP70 链名。
 
 {% highlight C++ %}
 /**
@@ -373,7 +373,7 @@ CChainParams& Params(const std::string& chain) // 根据网络名字返回相应
 这一步是让当前选择的链参数对象全局静态指针指向相应的链参数全局静态对象，方便以后通过指针进行基础链参数的访问。
 
 <p id="Command-line-ref"></p>
-3.6.这部分实现在“bitcoind.cpp”文件的 `AppInit(int argc, char* argv[])` 函数中。
+3.6.这部分实现在“bitcoind.cpp”文件的 AppInit(int argc, char* argv[]) 函数中。
 
 {% highlight C++ %}
 bool AppInit(int argc, char* argv[]) // [P]3.0.应用程序初始化
@@ -404,10 +404,10 @@ bool AppInit(int argc, char* argv[]) // [P]3.0.应用程序初始化
 }
 {% endhighlight %}
 
-1.遍历指定的命令行参数，检查每个开始是否以 `'-'` 或 `'/'` 开头，若不满足以上条件，则标记命令行参数出错。<br>
+1.遍历指定的命令行参数，检查每个开始是否以 '-' 或 '/' 开头，若不满足以上条件，则标记命令行参数出错。<br>
 2.若命令参数出错，打印错误信息后直接退出程序。
 
-1.调用 `IsSwitchChar(argv[i][0])` 函数进行命令行参数首字母的检查，该函数定义在“util.h”文件中。
+1.调用 IsSwitchChar(argv[i][0]) 函数进行命令行参数首字母的检查，该函数定义在“util.h”文件中。
 
 {% highlight C++ %}
 inline bool IsSwitchChar(char c)
@@ -421,7 +421,7 @@ inline bool IsSwitchChar(char c)
 {% endhighlight %}
 
 <p id="Daemon-ref"></p>
-3.7.这部分只在非 `WIN32` 平台上有效，实现在“bitcoind.cpp”文件的 `AppInit(int argc, char* argv[])` 函数中。
+3.7.这部分只在非 WIN32 平台上有效，实现在“bitcoind.cpp”文件的 AppInit(int argc, char* argv[]) 函数中。
 
 {% highlight C++ %}
 bool AppInit(int argc, char* argv[]) // [P]3.0.应用程序初始化
@@ -467,13 +467,13 @@ bool AppInit(int argc, char* argv[]) // [P]3.0.应用程序初始化
 
 1.获取守护进程后台化标志，默认为 false。<br>
 2.若开启了后台化选项，是当前进程后台化。<br>
-2.1.`fork` 派生子进程，父进程返回子进程 `pid`，子进程返回 0。<br>
+2.1.fork 派生子进程，父进程返回子进程 pid，子进程返回 0。<br>
 2.2.父进程退出。<br>
 2.3.子进程设置新会话，完成守护进程后台化。
 
-**注：一般子进程还会关闭默认打开的 `STDIN_FILENO`、`STDOUT_FILENO`、`STDERR_FILENO`，分别为标准输入、标准输出、标准错误描述符。**
+**注：一般子进程还会关闭默认打开的 STDIN_FILENO、STDOUT_FILENO、STDERR_FILENO，分别为标准输入、标准输出、标准错误描述符。**
 
-1.调用 `GetBoolArg("-daemon", false)` 获取 `"-daemon"` 后台化选项的值，该函数声明在“util.h”文件中。
+1.调用 GetBoolArg("-daemon", false) 获取 "-daemon" 后台化选项的值，该函数声明在“util.h”文件中。
 
 {% highlight C++ %}
 /**
@@ -498,7 +498,7 @@ bool GetBoolArg(const std::string& strArg, bool fDefault)
 {% endhighlight %}
 
 <p id="Server-ref"></p>
-3.7.这部分实现在“bitcoind.cpp”文件的 `AppInit(int argc, char* argv[])` 函数中。
+3.7.这部分实现在“bitcoind.cpp”文件的 AppInit(int argc, char* argv[]) 函数中。
 
 {% highlight C++ %}
 bool AppInit(int argc, char* argv[]) // [P]3.0.应用程序初始化
@@ -519,7 +519,7 @@ bool AppInit(int argc, char* argv[]) // [P]3.0.应用程序初始化
 }
 {% endhighlight %}
 
-调用 `SoftSetBoolArg("-server", true)` 对服务选项 `"-server"` 进行软设置，该函数声明在“util.h”文件中。
+调用 SoftSetBoolArg("-server", true) 对服务选项 "-server" 进行软设置，该函数声明在“util.h”文件中。
 所谓软设置就是若该选项已经设置过，直接返回 false 表示设置失败，若该选项未设置，则设置为指定的值后，返回 true 表示设置成功。
 
 {% highlight C++ %}

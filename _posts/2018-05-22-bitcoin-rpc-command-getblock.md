@@ -14,8 +14,8 @@ getblock "hash" ( verbose ) # 通过区块哈希（16 进制形式）获取指�
 {% endhighlight %}
 
 参数：<br>
-1. `"hash"` （字符串，必备）区块哈希（16 进制形式）。<br>
-2. `verbose` （布尔型，可选，默认为 true）true 获取区块信息的 json 格式对象，false 获取 16 进制编码的区块数据。
+1. "hash" （字符串，必备）区块哈希（16 进制形式）。<br>
+2. verbose （布尔型，可选，默认为 true）true 获取区块信息的 json 格式对象，false 获取 16 进制编码的区块数据。
 
 结果（verbose 为 true）：<br>
 {% highlight shell %}
@@ -100,7 +100,7 @@ $ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curl
 {% endhighlight %}
 
 ## 源码剖析
-`getblock` 对应的函数在“rpcserver.h”文件中被引用。
+getblock 对应的函数在“rpcserver.h”文件中被引用。
 
 {% highlight C++ %}
 extern UniValue getblock(const UniValue& params, bool fHelp); // 获取区块信息
@@ -334,7 +334,7 @@ uint256 CBlockHeader::GetHash() const
 
 第七、八步，取决于指定的 verbose，默认为 true，走第八步。<br>
 先来看第七步，若 verbose 指定为 false，则序列化区块数据，转换为 16 进制并返回。<br>
-类 CDataStream 定义在“streams.h”文件中，重载了输出运算符 `<<`。
+类 CDataStream 定义在“streams.h”文件中，重载了输出运算符 <<。
 
 {% highlight C++ %}
 /** Double ended buffer combining vector and stream-like interfaces.

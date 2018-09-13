@@ -14,7 +14,7 @@ decoderawtransaction "hexstring" # 获取一个表示序列化的 16 进制编�
 {% endhighlight %}
 
 参数：<br>
-1. `hex` （字符串，必备）交易的 16 进制字符串。
+1. hex （字符串，必备）交易的 16 进制字符串。
 
 结果：<br>
 {% highlight shell %}
@@ -59,7 +59,7 @@ decoderawtransaction "hexstring" # 获取一个表示序列化的 16 进制编�
 
 ### 比特币核心客户端
 
-查看一笔通过 [`createrawtransaction`](/2018/07/02/bitcoin-rpc-command-createrawtransaction) 创建的原始交易。
+查看一笔通过 [createrawtransaction](/2018/07/02/bitcoin-rpc-command-createrawtransaction) 创建的原始交易。
 
 {% highlight shell %}
 $ bitcoin-cli decoderawtransaction 0100000001677e3c8d416184b42c753a8446f17b0b7997f0df7149449fbd0aef3cdfd29bfb0000000000ffffffff0140420f00000000001976a914e221b8a504199bec7c5fe8081edd011c3653118288ac00000000
@@ -105,7 +105,7 @@ $ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curl
 {% endhighlight %}
 
 ## 源码剖析
-`decoderawtransaction` 对应的函数在“rpcserver.h”文件中被引用。
+decoderawtransaction 对应的函数在“rpcserver.h”文件中被引用。
 
 {% highlight C++ %}
 extern UniValue decoderawtransaction(const UniValue& params, bool fHelp); // 解码原始交易

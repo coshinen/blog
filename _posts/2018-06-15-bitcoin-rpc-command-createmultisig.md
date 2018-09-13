@@ -14,8 +14,8 @@ createmultisig urequired ["key",...] # 创建一个需要 m 个密钥的 n 个�
 {% endhighlight %}
 
 参数：<br>
-1. `nrequired` （数字，必备）n 个密钥或地址所需的签名数量。<br>
-2. `keys` （字符串，必备）一个比特币地址或 16 进制编码的公钥的 json 数组。
+1. nrequired （数字，必备）n 个密钥或地址所需的签名数量。<br>
+2. keys （字符串，必备）一个比特币地址或 16 进制编码的公钥的 json 数组。
 {% highlight shell %}
      [
        "key"    （字符串）比特币地址或 16 进制编码的公钥
@@ -56,7 +56,7 @@ $ bitcoin-cli createmultisig 2 "[\"16vpmdSDaX3Nv9UMuk2vSecMrdstjjSP4R\",\"1KfU9y
 {% endhighlight %}
 
 ## 源码剖析
-`createmultisig` 对应的函数在“rpcserver.h”文件中被引用。
+createmultisig 对应的函数在“rpcserver.h”文件中被引用。
 
 {% highlight C++ %}
 extern UniValue createmultisig(const UniValue& params, bool fHelp); // 创建多重签名

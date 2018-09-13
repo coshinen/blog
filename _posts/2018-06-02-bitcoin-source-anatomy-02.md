@@ -7,12 +7,12 @@ categories: Blockchain Bitcoin
 tags: 区块链 比特币 源码剖析
 ---
 上一篇分析了应用程序启动前运行环境的设置和信号处理函数的连接，详见[比特币源码剖析（一）](/2018/05/26/bitcoin-source-anatomy-01)。<br>
-本篇开始分析 `AppInit(argc, argv)` 应用程序初始化函数。
+本篇开始分析 AppInit(argc, argv) 应用程序初始化函数。
 
 ## 源码剖析
 
 <p id="AppInit-ref"></p>
-3.调用 `AppInit(argc, argv)` 函数初始化并启动应用程序。该函数定义在“bitcoind.cpp”文件中 `main` 函数的上面，入参为 `main` 函数的入参：参数个数，参数。
+3.调用 AppInit(argc, argv) 函数初始化并启动应用程序。该函数定义在“bitcoind.cpp”文件中 main 函数的上面，入参为 main 函数的入参：参数个数，参数。
 
 {% highlight C++ %}
 //////////////////////////////////////////////////////////////////////////////
@@ -39,13 +39,13 @@ bool AppInit(int argc, char* argv[]) // 3.0.应用程序初始化
 接着创建了一个调度器对象，用于定时运行后台任务，具体用途也在后面进行描述。
 
 <p id="ParseParameters-ref"></p>
-3.1.调用 `ParseParameters(argc, argv)` 函数解析命令行参数，该函数声明在“util.h”文件中。
+3.1.调用 ParseParameters(argc, argv) 函数解析命令行参数，该函数声明在“util.h”文件中。
 
 {% highlight C++ %}
 void ParseParameters(int argc, const char*const argv[]); // 解析命令行参数（启动选项）
 {% endhighlight %}
 
-实现在“util.cpp”文件中，入参为 `main` 函数入参：参数个数，指向参数的二级指针（指针数组）。
+实现在“util.cpp”文件中，入参为 main 函数入参：参数个数，指向参数的二级指针（指针数组）。
 
 {% highlight C++ %}
 map<string, string> mapArgs; // 启动选项（命令行参数，配置文件）单值映射列表，map<选项名，选项值>
@@ -108,13 +108,13 @@ void ParseParameters(int argc, const char* const argv[]) // 3.1.0.解析命令�
 1.清空 2 个全局的启动选项映射列表对象。<br>
 2.从第 1 个命令行参数开始，遍历命令行参数指针数组。<br>
 2.1.分离一个命令行参数中的选项名和选项值，一个命令行参数的形式为：选项名=选项值。<br>
-2.2.windows 平台下把选项名开头的字符 `'/'` 转换为 `'-'`。<br>
-2.3.选项名必须以 `-` 开头，并把选项名形式 `--foo` 转换为 `-foo`。<br>
-2.4.把命令行参数 `-noX` 转换为 `-X=0` 的形式。<br>
+2.2.windows 平台下把选项名开头的字符 '/' 转换为 '-'。<br>
+2.3.选项名必须以 - 开头，并把选项名形式 --foo 转换为 -foo。<br>
+2.4.把命令行参数 -noX 转换为 -X=0 的形式。<br>
 2.5.把选项名和选项值加入 2 个启动选项映射列表。
 
 <p id="HelpVersionInfo-ref"></p>
-3.2.在处理数据目录前，先处理帮助和版本信息，实现在“bitcoind.cpp”文件的 `AppInit(argc, argv)` 函数中。
+3.2.在处理数据目录前，先处理帮助和版本信息，实现在“bitcoind.cpp”文件的 AppInit(argc, argv) 函数中。
 
 {% highlight C++ %}
 bool AppInit(int argc, char* argv[]) // 3.0.应用程序初始化
@@ -144,16 +144,16 @@ bool AppInit(int argc, char* argv[]) // 3.0.应用程序初始化
 };
 {% endhighlight %}
 
-若启动选项单值映射列表中含有 `"-?"`、`"-h"`、`"-help"` 和 `"-version"` 中的一项，则显示帮助或版本信息。
+若启动选项单值映射列表中含有 "-?"、"-h"、"-help" 和 "-version" 中的一项，则显示帮助或版本信息。
 **注意此时配置文件还未读取，只解析了命令函参数，所以以上命令只有在控制台输入（作为命令行参数）时才有效。**
 
 1.获取比特币核心服务守护进程的版本信息。<br>
 2.进行版本许可和帮助信息的选择。<br>
-2.1.若指定了 `"-version"`，则获取许可信息。<br>
+2.1.若指定了 "-version"，则获取许可信息。<br>
 2.2.否则获取帮助信息。<br>
 3.把信息输出到标准输出。
 
-1.调用 `FormatFullVersion()` 函数获取版本信息，该函数声明在“clientversion.h”文件中。
+1.调用 FormatFullVersion() 函数获取版本信息，该函数声明在“clientversion.h”文件中。
 
 {% highlight C++ %}
 std::string FormatFullVersion(); // 格式化全版本信息
@@ -223,7 +223,7 @@ std::string FormatFullVersion()
 {% endhighlight %}
 
 宏定义 BUILD_SUFFIX 定义在“obj/build.h”文件中，这个文件是构建比特币过程中生成的。<br>
-宏替换函数 `DO_STRINGIZE(...)` 和版本号的宏定义在“clientversion.h”文件中。
+宏替换函数 DO_STRINGIZE(...) 和版本号的宏定义在“clientversion.h”文件中。
 
 {% highlight C++ %}
 /**
@@ -244,10 +244,10 @@ std::string FormatFullVersion()
 #define DO_STRINGIZE(X) #X
 {% endhighlight %}
 
-`#X` 中 `#` 的作用就是把后面跟着的 `X` 转换为字符串。
+#X 中 # 的作用就是把后面跟着的 X 转换为字符串。
 
-2.1.调用 `LicenseInfo()` 函数获取许可信息。<br>
-2.2.调用 `HelpMessage(HMM_BITCOIND)` 函数获取帮助信息。<br>
+2.1.调用 LicenseInfo() 函数获取许可信息。<br>
+2.2.调用 HelpMessage(HMM_BITCOIND) 函数获取帮助信息。<br>
 它们均声明在“init.h”文件中。
 
 {% highlight C++ %}
@@ -263,7 +263,7 @@ std::string HelpMessage(HelpMessageMode mode);
 std::string LicenseInfo();
 {% endhighlight %}
 
-实现在“init.cpp”文件中，`LicenseInfo()` 没有入参，`HelpMessage(...)` 入参为 `HMM_BITCOIND`。
+实现在“init.cpp”文件中，LicenseInfo() 没有入参，HelpMessage(...) 入参为 HMM_BITCOIND。
 
 {% highlight C++ %}
 std::string HelpMessage(HelpMessageMode mode)

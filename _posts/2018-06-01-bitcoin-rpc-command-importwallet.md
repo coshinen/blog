@@ -5,16 +5,16 @@ date:   2018-06-01 15:52:09 +0800
 author: mistydew
 categories: Blockchain Bitcoin
 tags: CLI bitcoin-cli 区块链 比特币
-excerpt: $ bitcoin-cli importwallet "filename" # 从一个导出的钱包文件（见 `dumpwallet`）导入密钥
+excerpt: $ bitcoin-cli importwallet "filename" # 从一个导出的钱包文件（见 dumpwallet）导入密钥
 ---
 ## 提示说明
 
 {% highlight shell %}
-importwallet "filename" # 从一个导出的钱包文件（见 `dumpwallet`）导入密钥
+importwallet "filename" # 从一个导出的钱包文件（见 dumpwallet）导入密钥
 {% endhighlight %}
 
 参数：<br>
-1. `filename` （字符串，必备）钱包文件（使用 [`dumpwallet`](/2018/06/01/bitcoin-rpc-command-dumpwallet) 导出的）。
+1. filename （字符串，必备）钱包文件（使用 [dumpwallet](/2018/06/01/bitcoin-rpc-command-dumpwallet) 导出的）。
 
 结果：无返回值。
 
@@ -22,8 +22,8 @@ importwallet "filename" # 从一个导出的钱包文件（见 `dumpwallet`）�
 
 ### 比特币核心客户端
 
-导入 [`dumpwallet`](/2018/06/01/bitcoin-rpc-command-dumpwallet) 导出的钱包文件。<br>
-这里在家目录 `~` 下使用该命令。
+导入 [dumpwallet](/2018/06/01/bitcoin-rpc-command-dumpwallet) 导出的钱包文件。<br>
+这里在家目录 ~ 下使用该命令。
 
 {% highlight shell %}
 $ bitcoin-cli dumpwallet wallet.txt
@@ -44,7 +44,7 @@ $ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curl
 {% endhighlight %}
 
 ## 源码剖析
-`importwallet` 对应的函数在“rpcserver.h”文件中被引用。
+importwallet 对应的函数在“rpcserver.h”文件中被引用。
 
 {% highlight C++ %}
 extern UniValue importwallet(const UniValue& params, bool fHelp); // 导入钱包

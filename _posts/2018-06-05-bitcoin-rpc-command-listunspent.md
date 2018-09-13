@@ -10,16 +10,16 @@ excerpt: $ bitcoin-cli listunspent ( minconf maxconf  ["address",...] )
 ## 提示说明
 
 {% highlight shell %}
-listunspent ( minconf maxconf  ["address",...] ) # 列出在 `minconf` 和 `maxconf` 之间（含）确认数的未花费交易输出
+listunspent ( minconf maxconf  ["address",...] ) # 列出在 minconf 和 maxconf 之间（含）确认数的未花费交易输出
 {% endhighlight %}
 
 选择性过滤只包含支付给指定地址们的交易输出。<br>
 结果是一个对象数组，每个对象都有：{交易索引，输出序号，公钥脚本，金额，确认数}
 
 参数：<br>
-1. `minconf` （数字，可选，默认为 1）要过滤的最小确认数。<br>
-2. `maxconf` （数字，可选，默认为 9999999）要过滤的最大确认数。<br>
-3. `addresses` （字符串）要过滤的比特币地址的 json 数组。
+1. minconf （数字，可选，默认为 1）要过滤的最小确认数。<br>
+2. maxconf （数字，可选，默认为 9999999）要过滤的最大确认数。<br>
+3. addresses （字符串）要过滤的比特币地址的 json 数组。
 {% highlight shell %}
     [
       "address" （字符串）比特币地址
@@ -91,7 +91,7 @@ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curlte
 {% endhighlight %}
 
 ## 源码剖析
-`listunspent` 对应的函数在“rpcserver.h”文件中被引用。
+listunspent 对应的函数在“rpcserver.h”文件中被引用。
 
 {% highlight C++ %}
 extern UniValue listunspent(const UniValue& params, bool fHelp); // 列出未花费的交易输出

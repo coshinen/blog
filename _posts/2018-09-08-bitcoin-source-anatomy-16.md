@@ -7,12 +7,12 @@ categories: Blockchain Bitcoin
 tags: 区块链 比特币 源码剖析
 ---
 上一篇分析了第九步数据目录维护和第十步导入区块文件的详细过程，详见[比特币源码剖析（十五）](/2018/09/01/bitcoin-source-anatomy-15)。<br>
-本篇主要分析 `Step 11: start node` 第十一步启动节点服务的详细过程。
+本篇主要分析 Step 11: start node 第十一步启动节点服务的详细过程。
 
 ## 源码剖析
 
 <p id="Step11-ref"></p>
-3.11.11.第十一步，启动节点服务相关线程。这部分代码实现在“init.cpp”文件的 `AppInit2(...)` 函数中。
+3.11.11.第十一步，启动节点服务相关线程。这部分代码实现在“init.cpp”文件的 AppInit2(...) 函数中。
 
 {% highlight C++ %}
 bool AppInit2(boost::thread_group& threadGroup, CScheduler& scheduler) // 3.11.程序初始化，共 12 步
@@ -67,9 +67,9 @@ bool AppInit2(boost::thread_group& threadGroup, CScheduler& scheduler) // 3.11.�
 4.记录区块链、钱包的相关数据大小。<br>
 5.创建洋葱路由监听线程。<br>
 6.启动比特币节点相关线程。<br>
-7.创建比特币 `CPU` 挖矿线程。
+7.创建比特币 CPU 挖矿线程。
 
-1.调用 `CheckDiskSpace()` 检测硬盘剩余空间是否充足（最低 50MB），用于接收并存储新区块。
+1.调用 CheckDiskSpace() 检测硬盘剩余空间是否充足（最低 50MB），用于接收并存储新区块。
 该函数声明在“main.h”文件中。
 
 {% highlight C++ %}
@@ -107,7 +107,7 @@ bool CheckDiskSpace(uint64_t nAdditionalBytes) // 0
 1.1.获取当前硬盘可用空间。<br>
 1.2.判断空间是否低于最小硬盘空间阈值。
 
-2.调用 `InitError(strErrors.str())` 输出错误信息并退出。
+2.调用 InitError(strErrors.str()) 输出错误信息并退出。
 该函数实现在“init.cpp”文件中，入参为：错误信息字符串。
 
 {% highlight C++ %}
@@ -118,7 +118,7 @@ bool static InitError(const std::string &str)
 }
 {% endhighlight %}
 
-5.调用 `StartTorControl(threadGroup, scheduler)` 启动洋葱路由服务线程。
+5.调用 StartTorControl(threadGroup, scheduler) 启动洋葱路由服务线程。
 该函数声明在“torcontrol.h”文件中。
 
 {% highlight C++ %}
@@ -157,7 +157,7 @@ void StartTorControl(boost::thread_group& threadGroup, CScheduler& scheduler)
 }
 {% endhighlight %}
 
-类 `TorController` 定义在“torcontrol.cpp”文件中。
+类 TorController 定义在“torcontrol.cpp”文件中。
 
 {% highlight C++ %}
 /** Low-level handling for Tor control connection.

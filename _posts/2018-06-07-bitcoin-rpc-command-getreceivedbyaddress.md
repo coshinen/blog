@@ -10,12 +10,12 @@ excerpt: $ bitcoin-cli getreceivedbyaddress "bitcoinaddress" ( minconf )
 ## 提示说明
 
 {% highlight shell %}
-getreceivedbyaddress "bitcoinaddress" ( minconf ) # 获取给定比特币地址交易中至少 `minconf` 次确认接收到的总金额
+getreceivedbyaddress "bitcoinaddress" ( minconf ) # 获取给定比特币地址交易中至少 minconf 次确认接收到的总金额
 {% endhighlight %}
 
 参数：<br>
-1. `bitcoinaddress` （字符串，必备）交易的比特币地址。<br>
-2. `minconf` （数字，可选，默认为 1）只包含至少 `minconf` 次确认的交易。
+1. bitcoinaddress （字符串，必备）交易的比特币地址。<br>
+2. minconf （数字，可选，默认为 1）只包含至少 minconf 次确认的交易。
 
 结果：（数字）该地址接收到的 BTC 总数。
 
@@ -52,7 +52,7 @@ $ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curl
 {% endhighlight %}
 
 ## 源码剖析
-`getreceivedbyaddress` 对应的函数在“rpcserver.h”文件中被引用。
+getreceivedbyaddress 对应的函数在“rpcserver.h”文件中被引用。
 
 {% highlight C++ %}
 extern UniValue getreceivedbyaddress(const UniValue& params, bool fHelp); // 获取某地址接收到的金额

@@ -6,7 +6,7 @@ author: mistydew
 categories: Makefile
 tags: C C++ Automake
 ---
-使用 `make` 编译工具链构建项目的简单过程。
+使用 make 编译工具链构建项目的简单过程。
 
 ## 必备工具
 
@@ -18,16 +18,16 @@ tags: C C++ Automake
 
 ## 0. 编写源码
 
-下面是一个 `C++` 例子，意在向终端输出一串字符。<br>
-这里分为 2 个文件：头文件 `main.h` 和源文件 `main.cc`，放在同一目录 `src` 下。
+下面是一个 C++ 例子，意在向终端输出一串字符。<br>
+这里分为 2 个文件：头文件 main.h 和源文件 main.cc，放在同一目录 src 下。
 
-头文件 `main.h`：
+头文件 main.h：
 
 {% highlight C++ %}
 #include <iostream>
 {% endhighlight %}
 
-源文件 `main.cc`（`configure.ac` 默认只识别 `main` 关键字命名的文件）：
+源文件 main.cc（configure.ac 默认只识别 main 关键字命名的文件）：
 
 {% highlight C++ %}
 #include "main.h"
@@ -42,21 +42,21 @@ int main(void)
 
 ## 1. 修改 configure.ac（旧版格式为 .in，已过时，新版不兼容）
 
-进入 `src` 目录，使用 `autoscan` 扫描源码结构。
+进入 src 目录，使用 autoscan 扫描源码结构。
 
 {% highlight shell %}
 $ src
 $ autoscan
 {% endhighlight %}
 
-这里会生成 `autoscan.log` 和 `configure.scan` 两个文件，修改 `configure.scan` 作为 `configure.ac`。
+这里会生成 autoscan.log 和 configure.scan 两个文件，修改 configure.scan 作为 configure.ac。
 
 {% highlight shell %}
 $ mv configure.scan configure.ac
 $ vim configure.ac
 {% endhighlight %}
 
-打开 `configure.ac` 做以下修改。
+打开 configure.ac 做以下修改。
 
 {% highlight C++ %}
 #                                               -*- Autoconf -*-
@@ -112,17 +112,17 @@ main_SOURCES=main.cc # 指定 main 函数所在的源文件
 
 ## 4. 生成 Makefile.in
 
-使用 `automake` 生成 `Makefile.in` 文件。
+使用 automake 生成 Makefile.in 文件。
 
 {% highlight C++ %}
 $ automake --add-missing
 {% endhighlight %}
 
-**注：`--add-missing` 选项会添加丢失的必备的文件。**
+**注：--add-missing 选项会添加丢失的必备的文件。**
 
 ## 5. 生成 Makefile
 
-执行上面生成的 `configure` 文件，得到 `Makefile`。
+执行上面生成的 configure 文件，得到 Makefile。
 
 {% highlight C++ %}
 $ ./configure
@@ -130,7 +130,7 @@ $ ./configure
 
 ## 6. make 构建源码
 
-使用 `make` 命令得到可执行程序 `main`。
+使用 make 命令得到可执行程序 main。
 
 {% highlight C++ %}
 $ make

@@ -14,7 +14,7 @@ setmocktime timestamp # 设置本地时间为给定时间戳（仅限回归测�
 {% endhighlight %}
 
 参数：<br>
-1. `timestamp` （整型，必备）Unix 从格林尼治时间 1970-01-01 00:00:00 开始以秒为单位的时间戳，通过 0 返回到使用系统时间。
+1. timestamp （整型，必备）Unix 从格林尼治时间 1970-01-01 00:00:00 开始以秒为单位的时间戳，通过 0 返回到使用系统时间。
 
 结果：无返回值。
 
@@ -38,7 +38,7 @@ $ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curl
 {% endhighlight %}
 
 ## 源码剖析
-`setmocktime` 对应的函数在“rpcserver.h”文件中被引用。
+setmocktime 对应的函数在“rpcserver.h”文件中被引用。
 
 {% highlight C++ %}
 extern UniValue setmocktime(const UniValue& params, bool fHelp); // 设置 mocktime

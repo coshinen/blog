@@ -15,7 +15,7 @@ tags: 区块链 比特币 公钥、私钥 比特币地址
 从编程角度实现随机数，在一个密码学安全的随机源中取一长串随机字节，使用 SHA256 算法运算得到一个 256 位的数字，然后判断是否在指定范围内，若不在就重复上述过程。<br>
 **注：私钥很重要，持有私钥就拥有相应公钥地址上的比特币，一旦私钥丢失，对应的比特币将无法找回。**
 
-使用 RPC 中的 `getnewaddress` 命令生成一个新的密钥（私钥、公钥对）。<br>
+使用 RPC 中的 getnewaddress 命令生成一个新的密钥（私钥、公钥对）。<br>
 为了安全考虑，只显示生成的公钥地址，私钥默认存入本地钱包数据库。例：
 
 {% highlight shell %}
@@ -23,7 +23,7 @@ $ ./bitcoin-cli getnewaddress
 12PbLWS4h3qSmQfdu4oEgXCYMGY4TVbL3N
 {% endhighlight %}
 
-然后使用 RPC 中的 `dumpprivkey` 命令导出公钥地址对应的私钥。<br>
+然后使用 RPC 中的 dumpprivkey 命令导出公钥地址对应的私钥。<br>
 以 WIF(wallet import format) 钱包导入格式即 Base58 校验和编码进行导出。<br>
 **注：该命令只适用于本地钱包数据库中的私钥。**例：
 
@@ -56,7 +56,7 @@ KzCFcgtfrPA2uWmXn4zjVNaKYMEUHbh732XzZ4aZ737545DqZ3V4
 
 {% highlight shell %}
 $ cd bitcoin/src # 进入比特币根目录下的 src 目录，之后未作特殊说明的均以该目录作为比特币源码的根目录。
-$ grep "getnewaddress" * -nir # 搜索 RPC 命令 `getnewaddress` 所出现的文件及位置，`grep` 是 Linux 下的一个查找字符串命令，其他平台或 IDE 请自行忽略。
+$ grep "getnewaddress" * -nir # 搜索 RPC 命令 getnewaddress 所出现的文件及位置，grep 是 Linux 下的一个查找字符串命令，其他平台或 IDE 请自行忽略。
 rpcserver.cpp:344:    { "wallet",             "getnewaddress",          &getnewaddress,          true  },
 rpcserver.h:199:extern UniValue getnewaddress(const UniValue& params, bool fHelp); // in rpcwallet.cpp
 test/rpc_wallet_tests.cpp:174:     * 		getnewaddress
@@ -110,7 +110,7 @@ rpcfn_type 是一个函数标签为 UniValue(const UniValue&, bool) 的回调函
   bitcoin-cli [options] help <command>      Get help for a command # 获取一条命令的帮助信息（用法示例）
 {% endhighlight %}
 
-详见 [比特币 RCP 命令剖析 `getnewaddress`](/2018/06/04/bitcoin-rpc-command-getnewaddress)。
+详见 [比特币 RCP 命令剖析 getnewaddress](/2018/06/04/bitcoin-rpc-command-getnewaddress)。
 
 ## 参照
 * [Technical background of version 1 Bitcoin addresses - Bitcoin Wiki](https://en.bitcoin.it/wiki/Technical_background_of_version_1_Bitcoin_addresses)

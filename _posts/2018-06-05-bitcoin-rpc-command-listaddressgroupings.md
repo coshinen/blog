@@ -55,7 +55,7 @@ $ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curl
 {% endhighlight %}
 
 ## 源码剖析
-`listaddressgroupings` 对应的函数在“rpcserver.h”文件中被引用。
+listaddressgroupings 对应的函数在“rpcserver.h”文件中被引用。
 
 {% highlight C++ %}
 extern UniValue listaddressgroupings(const UniValue& params, bool fHelp); // 列出地址分组

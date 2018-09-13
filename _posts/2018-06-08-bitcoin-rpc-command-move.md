@@ -14,11 +14,11 @@ move "fromaccount" "toaccount" amount ( minconf "comment" ) # （已过时）从
 {% endhighlight %}
 
 参数：<br>
-1. `fromaccount` （字符串，必备）从该账户转移资金。默认账户使用 `""`。<br>
-2. `toaccount` （字符串，必备）转移资金到该账户。默认账户使用 `""`。<br>
-3. `amount` （数字）在账户间转移 BTC 的数量，不能为负数。<br>
-4. `minconf` （数字，可选，默认为 1）只使用至少 `minconf` 次确认的资金。<br>
-5. `comment` （字符串，可选）一个可选的备注，只存储在钱包中。
+1. fromaccount （字符串，必备）从该账户转移资金。默认账户使用 ""。<br>
+2. toaccount （字符串，必备）转移资金到该账户。默认账户使用 ""。<br>
+3. amount （数字）在账户间转移 BTC 的数量，不能为负数。<br>
+4. minconf （数字，可选，默认为 1）只使用至少 minconf 次确认的资金。<br>
+5. comment （字符串，可选）一个可选的备注，只存储在钱包中。
 
 结果：（布尔型）如果成功返回 true。
 
@@ -26,7 +26,7 @@ move "fromaccount" "toaccount" amount ( minconf "comment" ) # （已过时）从
 
 ### 比特币核心客户端
 
-用法一：从默认账户 `""` 转移 0.01 BTC 到账户 `"tabby"`。
+用法一：从默认账户 "" 转移 0.01 BTC 到账户 "tabby"。
 
 {% highlight shell %}
 $ bitcoin-cli listaccounts
@@ -62,7 +62,7 @@ $ bitcoin-cli listtransactions
 ]
 {% endhighlight %}
 
-用法二：从默认账户 `""` 转移至少 6 次确认的 0.01 BTC 到账户 tabby，并附加备注。
+用法二：从默认账户 "" 转移至少 6 次确认的 0.01 BTC 到账户 tabby，并附加备注。
 
 {% highlight shell %}
 $ bitcoin-cli listaccounts
@@ -106,7 +106,7 @@ $ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curl
 {% endhighlight %}
 
 ## 源码剖析
-`move` 对应的函数在“rpcserver.h”文件中被引用。
+move 对应的函数在“rpcserver.h”文件中被引用。
 
 {% highlight C++ %}
 extern UniValue movecmd(const UniValue& params, bool fHelp); // 账户间转移资金

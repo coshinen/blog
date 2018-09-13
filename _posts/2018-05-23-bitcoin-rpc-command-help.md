@@ -14,7 +14,7 @@ help ( "command" ) # 列出所有（含 RPC）命令或指定命令的用法（�
 {% endhighlight %}
 
 参数：<br>
-1. `command` （字符串，可选）想要获取帮助信息的命令。
+1. command （字符串，可选）想要获取帮助信息的命令。
 
 结果：返回帮助信息的字符串。
 
@@ -174,7 +174,7 @@ $ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curl
 {% endhighlight %}
 
 ## 源码剖析
-`help` 对应的函数实现在“rpcmisc.cpp”文件中。
+help 对应的函数实现在“rpcmisc.cpp”文件中。
 
 {% highlight C++ %}
 UniValue help(const UniValue& params, bool fHelp)
@@ -200,10 +200,10 @@ UniValue help(const UniValue& params, bool fHelp)
 基本流程：<br>
 1.处理命令帮助和参数个数。<br>
 2.获取首个参数并转换为字符串。<br>
-3.把参数传入 tableRPC.help(strCommand)，这个是 `help` 命令的核心。
+3.把参数传入 tableRPC.help(strCommand)，这个是 help 命令的核心。
 
-这里我们可以看到传参的方式，可以指定某个 RPC 命令作为 `help` 参数，或不带参数。<br>
-调用 tableRPC.help(strCommand) 函数来完成 `help` 命令的主要功能。对象 tableRPC 定义在“rpcserver.cpp”文件最后面。
+这里我们可以看到传参的方式，可以指定某个 RPC 命令作为 help 参数，或不带参数。<br>
+调用 tableRPC.help(strCommand) 函数来完成 help 命令的主要功能。对象 tableRPC 定义在“rpcserver.cpp”文件最后面。
 
 {% highlight C++ %}
 const CRPCTable tableRPC; // 全局常量对象
@@ -329,7 +329,7 @@ std::string CRPCTable::help(const std::string& strCommand) const
 }
 {% endhighlight %}
 
-这里我们可以看出 `help` 命令的实现还是很巧妙的，把有参和无参两种方式合二为一。<br>
+这里我们可以看出 help 命令的实现还是很巧妙的，把有参和无参两种方式合二为一。<br>
 最主要的是把无参结果作为有参结果的子集，该实现在以后版本中可能会改变。
 
 ## 参照
