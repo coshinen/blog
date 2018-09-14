@@ -20,11 +20,13 @@ permalink: /category.html
 {% assign counts = counts | split: ', ' %}
 {% assign idx = 0 %}
 
+<blockquote>
 <p id="category"></p>
 {% for category in site.categories %}
 <p style="line-height:8px"><a href="{{ site.JB.tags_path }}#{{ category[0] }}-ref">{{ category | first }} [{{ counts[idx] }}]</a></p>
     {% assign idx = idx | plus: 1 %}
 {% endfor %}
+</blockquote>
 
 {% assign idx = 0 %}
 
