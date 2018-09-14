@@ -4,9 +4,9 @@
 - [ ] add avatar, bio...
 - [ ] The anatomy of bitcoin v0.12.1 source
 - [ ] add donate info: Bitcoin address
-- [x] increase the display width
 
 ## Timeline
+* 2018.09.14 [remove] ~~IntenseDebate's comments system~~ [new] Widget Pack Comments System
 * 2018.09.12 [remove] ~~DaoVoice web chat tool~~(many bugs); [new] page content-width
 * 2018.09.11 [rename] page donate to coffee
 * 2018.08.29 [new] site-title font style
@@ -18,7 +18,7 @@
 * 2018.08.15 [remove] ~~particle background~~
 * 2018.08.13 [new] cPlayer: web music player
 * 2018.08.12 [new] donate page
-* 2018.08.10 [new] sitemap, IntenseDebate's comments system
+* 2018.08.10 [new] sitemap, ~~IntenseDebate's comments system~~
 * 2018.08.08 [new] delimiter '|' into post title, background-color
 * 2018.08.06 [new] Resume/CV(Curriculum Vitae) page
 * 2018.08.02 [new] Google and ~~Baidu~~ Customised Search
