@@ -22,7 +22,7 @@ github_username:  mistydew
 feed_username:    mistydew
 rss: "/feed.xml"
 doc_info: true
-intensedebate_comments: true
+comments: true
 btc_address: 1xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 
 # Excerpt / Abstract / Summary

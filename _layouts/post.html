@@ -26,7 +26,8 @@ layout: default
     {% endif %}
   {% endif %}
 
-  {% if site.intensedebate_comments %}
+  <div>Do you have any additional questions about this post? Leave them in the comments!</div>
+  {% if site.comments %}
     {% if page.hidden == true %}
     {% else %}
       {% include comments.html %}
