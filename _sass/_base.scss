@@ -169,13 +169,23 @@ a.readmore, a.category, a.tag, a.author {
     }
 }
 
-article.post div.post-content a {
+article.post div.post-content p a {
     color: $text-color;
     border-bottom: 1px dotted;
 
     &:hover {
         color: $garnet-color;
         border-bottom: 1px solid;
+    }
+}
+/* reference */
+article.post div.post-content a {
+    color: $text-color;
+    text-decoration: none;
+
+    &:hover {
+        color: darken($grey-color, 20%);
+        text-decoration: none;
     }
 }
 
