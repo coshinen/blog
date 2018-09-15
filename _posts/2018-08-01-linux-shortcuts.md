@@ -117,13 +117,13 @@ Ctrl+A 送光标到行首，反之 Ctrl+E 移动光标到行尾。
 如果使用 Ctrl+P 查看上一条命令，你可以使用 Ctrl+N 来回导航。
 许多终端都把此快捷键映射到 PgDn 键。
 
-## <font color="white">14. Ctrl + R</font>
+## 14. Ctrl + R（新增）
 
-<font color="white">你可以使用该快捷键来搜索历史命令。</font>
+你可以使用该快捷键来搜索历史命令。
 
 ## 你最喜欢的 Linux 终端快捷键是什么？
 
-如果你想要了解更多 Linux 终端技巧，可以该视频来发掘隐藏的命令行精华：
+如果你想要了解更多 Linux 终端技巧，可以该（YouTube）视频来发掘隐藏的命令行精华：
 
 <div style="position:relative;height:0;padding-bottom:60.54%"><iframe src="https://www.youtube.com/embed/61_gRSCS6AI?ecver=2" style="position:absolute;width:100%;height:100%;left:0" width="595" height="360" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></div>
 
