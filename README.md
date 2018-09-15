@@ -2,11 +2,12 @@
 
 ## Todo
 - [ ] add avatar, bio...
-- [ ] The anatomy of bitcoin v0.12.1 source
+- [ ] The anatomy of bitcoin v0.12.1 and the latest ver. source
+  - [ ] The latest ver. bitcoin rpc command
 - [ ] add donate info: Bitcoin address
 
 ## Timeline
-* 2018.09.14 [remove] ~~IntenseDebate's comments system~~ [new] Widget Pack Comments System
+* 2018.09.14 [remove] ~~IntenseDebate's comments system~~; [new] Widget Pack Comments System
 * 2018.09.12 [remove] ~~DaoVoice web chat tool~~(many bugs); [new] page content-width
 * 2018.09.11 [rename] page donate to coffee
 * 2018.08.29 [new] site-title font style
