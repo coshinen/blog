@@ -4,6 +4,7 @@
 - [ ] add avatar, bio...
 - [ ] The anatomy of bitcoin v0.12.1 and the latest ver. source
   - [ ] The latest ver. bitcoin rpc command
+- [ ] GC Music Diary longtime plan
 - [ ] add donate info: Bitcoin address
 
 ## Timeline
