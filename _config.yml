@@ -20,10 +20,11 @@ quote: ソルト：無理は一番の、退屈しのぎだ。
 twitter_username: _mistydew_
 github_username:  mistydew
 feed_username:    mistydew
-rss: "/feed.xml"
 doc_info: true
 comments: true
 btc_address: 1xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+rss: "/feed.xml"
+gc: "gc"
 
 # Excerpt / Abstract / Summary
 excerpt_separator: "\n\n"

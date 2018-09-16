@@ -20,7 +20,8 @@
             <a class="page-link" href="{{ my_page.url | prepend: site.baseurl }}">{{ my_page.title }}</a>
           {% endif %}
         {% endfor %}
-		<a class="page-link" href="{{ site.rss | prepend: site.baseurl }}" title="Feed 订阅"><img src="/images/feed.png" alt style="border: 0pt none;"></a>
+      <a class="page-link" href="{{ site.rss | prepend: site.baseurl }}" title="Feed 订阅"><img src="/images/feed.png" alt="RSS"></a>
+      <a class="page-link" href="{{ site.gc | prepend: site.baseurl }}" title="GC Music Diary"><img src="/images/favicon.ico" alt="GC"></a>
       </div>
     </nav>
 
