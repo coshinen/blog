@@ -477,7 +477,7 @@ Git fork（当一个或多个开发人员与其他开发人员临时分开开发
 
 **不要混淆**：[P2PK output](#TxOut-ref)（直接支付给[公钥](#PublicKey-ref)的[输出](#TxOut-ref)）, [P2SH address / output](#P2SH-ref)（包括哈希的脚本和其相应的[输出](#TxOut-ref)的[地址](#Address-ref)）
 
-<p id="P2SH-ref"></p>
+<p id="P2SHAddress-ref"></p>
 ## P2SH 地址 | P2SH Address
 
 **定义**：比特币付款[地址](#Address-ref)包含一个哈希的脚本，允许付款人创建一个标准的支付到脚本哈希（P2SH）的[公钥脚本](#ScriptPubKey-ref)。该脚本几乎可能是任何有效的[公钥脚本](#ScriptPubKey-ref)。
@@ -501,7 +501,7 @@ Git fork（当一个或多个开发人员与其他开发人员临时分开开发
 <p id="P2SHMultisig-ref"></p>
 ## P2SH 多签 | P2SH Multisig
 
-**定义**：[P2SH 输出](P2SHAddress-ref)，其中[兑换脚本](#RedeemScript-ref)使用其中一个[多签](#Multisig-ref)[操作码](#Opcode-ref)。直到比特币核心 0.10.0 版，[P2SH 多签脚本](#P2SHMultisig-ref)是[标准交易](#StandardTransaction-ref)，但大多数 P2SH 脚本不始。
+**定义**：[P2SH 输出](#P2SHAddress-ref)，其中[兑换脚本](#RedeemScript-ref)使用其中一个[多签](#Multisig-ref)[操作码](#Opcode-ref)。直到比特币核心 0.10.0 版，[P2SH 多签脚本](#P2SHMultisig-ref)是[标准交易](#StandardTransaction-ref)，但大多数 P2SH 脚本不始。
 
 **同义词**：P2SH multisig output
 
@@ -530,7 +530,7 @@ Git fork（当一个或多个开发人员与其他开发人员临时分开开发
 
 ## Watch-Only 地址 | Watch-Only Address
 
-**定义**：[钱包](#Wallet-ref)中不带相应[私钥](#PrivateKey-ref)的[地址](#Address-ref)或[公钥脚本](ScriptPubKey-ref)，允许[钱包](#Wallet-ref)监视其[输出](TxOut-ref)但不能花费它们。
+**定义**：[钱包](#Wallet-ref)中不带相应[私钥](#PrivateKey-ref)的[地址](#Address-ref)或[公钥脚本](#ScriptPubKey-ref)，允许[钱包](#Wallet-ref)监视其[输出](#TxOut-ref)但不能花费它们。
 
 ## 钱包导入格式 | Wallet Import Format, WIF
 
@@ -647,7 +647,7 @@ Git fork（当一个或多个开发人员与其他开发人员临时分开开发
 
 **定义**：逆序显示的哈希摘要；在比特币核心 RPCs，众多[区块](#Block-ref)浏览器，和其他软件中使用。
 
-**不要混淆**：[Internal byte order](#InternalByteOrder-ref)（内部字节序，典型顺序显示的哈希摘要；用于[序列化的区块](#SerializedBlock-ref)和[序列化的交易](SerializedTransaction-ref)）
+**不要混淆**：[Internal byte order](#InternalByteOrder-ref)（内部字节序，典型顺序显示的哈希摘要；用于[序列化的区块](#SerializedBlock-ref)和[序列化的交易](#SerializedTransaction-ref)）
 
 <p id="SerializedTransaction-ref"></p>
 ## 序列化的交易 | Serialized Transaction
