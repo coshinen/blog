@@ -83,6 +83,10 @@ div.document-information {
   border-radius: 0.8em;
   padding: 10px 10px;
 }
+/* post-date abbr: remove border-bottom dotted */
+abbr {
+    text-decoration: none;
+}
 
 
 
