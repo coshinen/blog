@@ -24,7 +24,7 @@ doc_info: true
 comments: true
 btc_address: 1xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 rss: "/feed.xml"
-gc: "gc"
+gc: "/gc"
 
 # Excerpt / Abstract / Summary
 excerpt_separator: "\n\n"
