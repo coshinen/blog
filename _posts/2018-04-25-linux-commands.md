@@ -11,7 +11,16 @@ Linux mascot: crystal tux and tux(Torvalds linUX?)<br>
 ![tux](/images/20180425/tux.jpg)<br>
 Childhood and Adult(funny)
 
-## 修改用户密码 passwd
+## 添加/删除用户 | useradd/userdel
+
+{% highlight shell %}
+$ sudo useradd -m <user> -s /bin/bash # 添加一个用户 <user>，-m 参数为该用户在 /home 目录下创建同名目录，-s 参数为该用户指定 bash 脚本编译器。
+$ sudo userdel -d <user> -s -g # 删除用户 <user>（不会删除用户目录），-d 删除用户家目录，-s 使用的 bash，-g 用户所属组。
+$ sudo cat /etc/passwd # 查看用户信息。
+$ sudo cat /etc/shadow # 查看用户（加密的）密码。
+{% endhighlight %}
+
+## 修改用户密码 | passwd
 
 {% highlight shell %}
 $ sudo passwd [root] # 初始化 root 用户密码。
@@ -19,11 +28,25 @@ $ passwd [current_user] # 修改当前用户密码。
 $ sudo passwd [other_user] # 修改其他用户密码。
 {% endhighlight %}
 
-## 添加/删除用户 useradd/userdel
+## 设置超级用户 sudoers | visudo
 
 {% highlight shell %}
-$ sudo useradd -m <user> -s /bin/bash # 添加一个用户 <user>，-m 参数为该用户在 /home 目录下创建同名目录，-s 参数为该用户指定 bash 脚本编译器。
-$ sudo userdel <user> # 删除用户 <user>（不会删除用户目录）。
+$ sudo visudo # 打开 /etc/sudoers.tmp 文件。
+{% endhighlight %}
+
+在 root ALL=(ALL:ALL) ALL 下添加 sudoers。
+
+> \# User privilege specification<br>
+> root ALL=(ALL:ALL) ALL<br>
+> user ALL=(ALL:ALL) ALL
+
+## 添加/删除用户组 groupadd/groupdel
+
+{% highlight shell %}
+$ sudo groupadd <groupname> # 添加用户组 <groupname>。
+$ sudo groupdel <groupname> # 删除用户组 <groupname>（不能为主组）。
+$ sudo usermod -G <groupname> <username> # 把用户 <username> 添加到组 <groupname> 中，-g 修改用户的组。
+$ sudo cat /etc/group # 查看组信息。
 {% endhighlight %}
 
 ## 切换目录 change directory
@@ -35,7 +58,7 @@ $ cd - # 切换工作目录至上一个工作目录。
 $ cd ~ # 同 $ cd 切换工作目录至当前用户家目录。
 {% endhighlight %}
 
-**注：本文出现的 <dir> 均为相对路径 或 绝对路径**
+**注：本文出现的 `<dir>` 均为相对路径或绝对路径**
 
 ## 查看目录下的内容 list
 
