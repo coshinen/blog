@@ -32,10 +32,5 @@ excerpt_separator: "\n\n"
 # Build settings
 markdown: kramdown
 
-# Deprecation: The 'gems' configuration option has been renamed to 'plugins'.
-plugins: [jekyll-paginate]
-paginate: 07
-paginate_path: "/page/:num"
-
 # Links
 permalink: /:year/:month/:day/:title
