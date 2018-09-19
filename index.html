@@ -8,20 +8,25 @@ layout: default
 
   <ul class="post-list">
 <!-- This loops through the site posts -->
-    {% for post in site.posts limit:1 %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span><span style="float:right;"> 分类：{% for category in post.categories %}<a class="category" href="/category.html#{{ category }}-ref">{{ category | prepend: " " }}</a>{% endfor %}</span>
+    {% for post in site.posts %}
+      {% if post.hidden %}
+        {% continue %}
+      {% else %}
+        <li>
+          <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span><span style="float:right;"> 分类：{% for category in post.categories %}<a class="category" href="/category.html#{{ category }}-ref">{{ category | prepend: " " }}</a>{% endfor %}</span>
 
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
-        <div class="excerpt">
-          <p>{{ post.excerpt | strip_html }}</p>
-          <footer>
-            <a class="readmore" href="{{ post.url }}">阅读全文 &raquo;</a>
-          </footer>
-        </div>
-      </li>
+          <h2>
+            <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+          </h2>
+          <div class="excerpt">
+            <p>{{ post.excerpt | strip_html }}</p>
+            <footer>
+              <a class="readmore" href="{{ post.url }}">阅读全文 &raquo;</a>
+            </footer>
+          </div>
+        </li>
+        {% break %}
+      {% endif %}
     {% endfor %}
   </ul>
 
