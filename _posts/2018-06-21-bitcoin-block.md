@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "比特币源码剖析 - 区块"
+title:  "比特币源码剖析—区块"
 date:   2018-06-21 21:02:10 +0800
 author: mistydew
 categories: Blockchain Bitcoin
@@ -76,8 +76,10 @@ public:
 5.nBits，难度对应值，可通过此值推算出难度，从主网、测试网和回归测试网参数可以看出，此值越小难度越大。<br>
 6.nNonce，随机数，通过不断的变化来寻找满足要求的区块（挖矿）。
 
-## 参照
+完。
+Thanks for your time.
 
+## 参照
 * [Block - Bitcoin Wiki](https://en.bitcoin.it/wiki/Block)
 * [精通比特币（第二版）第九章 区块链 · 巴比特图书](http://book.8btc.com/books/6/masterbitcoin2cn/_book/ch09.html)
 * [...](https://github.com/mistydew/blockchain)

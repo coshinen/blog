@@ -7,11 +7,21 @@ categories: Blockchain Bitcoin Altcoin
 tags: 区块链 比特币 山寨币
 stickie: true
 ---
-基于比特币制作一枚山寨数字货币是了解比特币或者其底层区块链技术入门的最好方式。
-了解各种相关概念后，终于要开始接触源码了，还记得侯捷的“源码之前，了无秘密”吗？
-让我们来一探比特币源码的世界。
+**基于比特币制作一枚山寨币是了解数字货币比特币或其底层技术区块链的最好方式。**
+在了解了相关概念后，要开始接触源码了，还记得侯捷的“源码之前，了无秘密”吗？
+现在，让我们来一探比特币的源码世界。
 
-## 0. 获取比特币源码 v0.12.1
+## 0. 准备
+
+### 0.1. 平台和工具
+
+> * 平台：Ubuntu 16.04.0* LTS
+> * 工具：Git
+
+### 0.2. 比特币源码
+
+这里使用 [bitcoin v0.12.1](https://github.com/bitcoin/bitcoin/tree/v0.12.1) 版本的源码，
+因为这是比特币源码含 CPU 挖矿功能的最后一版。
 
 {% highlight shell %}
 $ git clone https://github.com/bitcoin/bitcoin.git
@@ -19,20 +29,20 @@ $ cd bitcoin
 $ git checkout v0.12.1
 {% endhighlight %}
 
-尝试构建比特币源码，确保其正常工作。<br>
+尝试构建比特币源码，确保其正常工作。
 关于比特币源码的编译详见[编译比特币源码](/2018/05/03/compile-bitcoin)篇。
 
-## 1. 修改山寨币名
+## 1. 修改币名
 
-### 1.1. 修改源码文件币种名
+### 1.1. 修改源码文件名中币名
 
 {% highlight shell %}
-$ mv bitcoin altcoin
+$ mv bitcoin altcoin # 修改目录名
 $ cd altcoin
-$ find . -exec rename 's/bitcoin/altcoin/' {} ";"
+$ find . -exec rename 's/bitcoin/altcoin/' {} ";" # 修改所有含币名的文件名
 {% endhighlight %}
 
-### 1.2. 修改源码中的币种名
+### 1.2. 修改源码中的币名
 
 {% highlight shell %}
 $ find . -type f -print0 | xargs -0 sed -i 's/bitcoin/altcoin/g'
@@ -42,16 +52,16 @@ $ find . -type f -print0 | xargs -0 sed -i 's/BItCoin/AltCoin/g'
 $ find . -type f -print0 | xargs -0 sed -i 's/BITCOIN/ALTCOIN/g'
 {% endhighlight %}
 
-### 1.3. 修改源码中币的单位
+### 1.3. 修改源码中的币单位
 
 {% highlight shell %}
 $ find . -type f -print0 | xargs -0 sed -i 's/btc/atc/g'
 $ find . -type f -print0 | xargs -0 sed -i 's/BTC/ATC/g'
 {% endhighlight %}
 
-使用 grep 命令查看是否修改成功。
+小提示：使用 grep 命令查看是否修改成功。
 
-### 1.4. 修改错误拼写
+### 1.4. 修改源码中的错误拼写
 
 {% highlight shell %}
 $ grep -inr bitc
@@ -59,7 +69,9 @@ $ grep -inr bitc
 
 从结果中可以看到部分拼写错误，如：“src/qt/locale/altcoin_et.ts”文件的 Bitconi、
 “src/qt/locale/altcoin_ar.ts”文件中的 Bitcion 和“src/qt/locale/altcoin_da.ts”文件中的 bitcon，
-修改这些误拼，或者选择忽略。使用以下命令修改这些误拼：
+修改这些误拼，或者选择忽略。
+
+使用以下命令修改这些误拼：
 
 {% highlight shell %}
 $ sed -i 's/Bitconi/Altcoin/' src/qt/locale/altcoin_et.ts
@@ -69,16 +81,17 @@ $ sed -i 's/bitcon/altcoin/' src/qt/locale/altcoin_da.ts
 
 ### 1.5. 修复版权信息
 
+不要直接更改现有版权，你可以在现有版权下面新增一条自己的版权。
+首先修复 Bitcoin 版权信息：
+
 {% highlight shell %}
 $ sed -i 's/Altcoin/Bitcoin/' COPYING
 {% endhighlight %}
 
-不要直接更改现有版权，你可以在其下面新增一条自己的版权。
+然后在该版权信息下面增加自己的版权：
 
-{% highlight C++ %}
-Copyright (c) 2009-2016 The Bitcoin Core developers
-Copyright (c) 2017-2018 The Altcoin Core developers
-{% endhighlight %}
+> Copyright (c) 2009-2016 The Bitcoin Core developers<br>
+> Copyright (c) 2017-2018 The Altcoin Core developers（这条是新增的）
 
 ### 1.6. 修复旧发行版信息
 
@@ -92,19 +105,23 @@ $ sed -i 's/Altcoin/Bitcoin/g' doc/release-notes/*
 比特币的图标和图像保存在“src/qt/res”目录下，你可以使用 GIMP 进行编辑，
 至少要修改 altcoin.ico、altcoin.png、altcoin_testnet.ico、altcoin_testnet.png 和 altcoin.icns。
 
-### 1.8. 再次构建源码
+### 1.8. 重新构建源码
 
-重新构建源码，保证以上修改不影响其正常工作。
+第二次构建源码，确保以上修改不会影响其正常工作。
 
 ## 2. 修改默认端口
-这里需要修改节点间通讯的端口以及服务端与客户端之间通讯的 RCP 端口。
 
-**注：比特币源码的目录为 bitcoin/src，之后文件的位置均以 src 为根目录。**
+这一步修改的是节点间通讯的端口以及服务器端与客户端之间通讯的 RCP 端口。
+从这里开始进入核心内容的修改。
 
-### 2.1. 修改节点间通讯的端口
-节点间通讯的端口硬编在“chainparams.cpp”文件的 3 个网络类 CMainParams（主网）、CTestNetParams（测试网）和 CRegTestParams（回归测试网）的默认无参构造函数中。<br>
-主网和测试网均为公网，而回归测试网是用于给开发者提供测试的私网。<br>
-下面均以**主网**为例进行修改。
+**注：比特币源码的目录为 bitcoin/src，之后文件的位置若无特殊说明，则均以 src 为根目录。**
+
+### 2.1. 修改节点间通讯的默认端口
+
+节点间通讯的默认端口硬编在“chainparams.cpp”文件的 3 个网络类：
+CMainParams（主网，公有）、CTestNetParams（测试网，公有）和 CRegTestParams（回归测试网，私有）的默认无参构造函数中。
+
+下面以**主网**为例进行修改：
 
 {% highlight C++ %}
 /**
@@ -122,7 +139,7 @@ class CMainParams : public CChainParams {
 public:
     CMainParams() {
         ...
--       nDefaultPort = 8333; // 改为其它合适的端口，例："8331"
+-       nDefaultPort = 8333; // 改为其它端口，例："8331"
 +       nDefaultPort = 8331;
         ...
         };
@@ -130,9 +147,9 @@ public:
 };
 {% endhighlight %}
 
-### 2.2. 修改服务端（d）与客户端（cli）通讯的 RCP 端口
+### 2.2. 修改服务器端（d）与客户端（cli）通讯的 RCP 默认端口
 
-RPC 端口硬编在“chainparamsbase.cpp”文件中。
+RPC 默认端口硬编在“chainparamsbase.cpp”文件中。修改如下：
 
 {% highlight C++ %}
 /**
@@ -143,20 +160,20 @@ class CBaseMainParams : public CBaseChainParams
 public:
     CBaseMainParams()
     {
--       nRPCPort = 8332; // 改为其它合适的端口，例："8330"
+-       nRPCPort = 8332; // 改为其它端口，例："8330"
 +       nRPCPort = 8330;
     }
 };
 {% endhighlight %}
 
-**注：nRPCPort 和 nDefaultPort 不能相同，否则会导致默认端口被占用而绑定失败。**
+**注：nRPCPort 和 nDefaultPort 不能相同，否则会导致在节点启动时其中一个默认端口被占用而绑定失败。**
 
 ## 3. 修改 DNS 种子
 
-比特币（核心服务）节点启动后会自动连接到区块链网络，
-底层通过 DNS 种子来获取正在运行的节点列表并进行连接，
-建立连接之后节点间交换它们已建立连接的节点地址。<br>
-如果没有该种子可以直接注释掉这部分，源码如下：
+比特币（核心）服务节点启动后会自动连接到区块链网络，
+底层通过 DNS 种子来获取正在运行的节点列表并进行连接。
+
+如果没有该种子可以直接注释掉这部分，修改如下：
 
 {% highlight C++ %}
 class CMainParams : public CChainParams {
@@ -186,8 +203,10 @@ public:
 
 ## 4. 修改网络协议魔数
 
-所谓协议魔术就是网络中节点之间传递信息的消息头，类似于 TCP 协议 20 个字节的报头和 IP 协议 20 个字节的报头，
-这里的消息头共 4 个字节。使用一个特殊的不同于原魔数的消息头即可。
+所谓协议魔数就是节点之间网络中传递信息的消息头，类似于 TCP 协议 20 个字节的报头和 IP 协议 20 个字节的报头，
+这里的消息头共 4 个字节。
+
+可随意设置，不同于原魔数即可。修改如下：
 
 {% highlight C++ %}
 class CMainParams : public CChainParams {
@@ -198,29 +217,30 @@ public:
          * The message start string is designed to be unlikely to occur in normal data.
          * The characters are rarely used upper ASCII, not valid as UTF-8, and produce
          * a large 32-bit integer with any alignment.
-         */ // 随意设置           例：0xcafecafe
--       pchMessageStart[0] = 0xf9; // 0xca
--       pchMessageStart[1] = 0xbe; // 0xfe
--       pchMessageStart[2] = 0xb4; // 0xca
--       pchMessageStart[3] = 0xd9; // 0xfe
-+       pchMessageStart[0] = 0xca
-+       pchMessageStart[1] = 0xfe
-+       pchMessageStart[2] = 0xca
-+       pchMessageStart[3] = 0xfe
+         */
+-       pchMessageStart[0] = 0xf9;
+-       pchMessageStart[1] = 0xbe;
+-       pchMessageStart[2] = 0xb4;
+-       pchMessageStart[3] = 0xd9;
++       pchMessageStart[0] = 0xca; // 例：0xcafecafe
++       pchMessageStart[1] = 0xfe;
++       pchMessageStart[2] = 0xca;
++       pchMessageStart[3] = 0xfe;
         ...
         };
     }
 };
 {% endhighlight %}
 
-可以取一个有意义的单词作为魔数，例如：0xcafecafe。<br>
-或使用下面命令：
+可以取一个有意义的单词作为魔数，例如：0xcafecafe。注意 16 进制范围。
+
+或使用随机数替代，方法如下：
 
 {% highlight shell %}
 $ echo $RANDOM
 {% endhighlight %}
 
-获取随机数的后三位（当 <= 255 时取值）转换为 16 进制，取 4 个作为魔数。
+使用该命令获取随机数，取其后三位（当 <= 255 时取值）转换为 16 进制，取 4 个作为魔数。
 
 ## 5. 修改公钥地址前缀
 
@@ -240,23 +260,25 @@ public:
 };
 {% endhighlight %}
 
-PUBKEY_ADDRESS 公钥地址前缀对应的 10 进制根据 [List of address prefixes](https://en.bitcoin.it/wiki/List_of_address_prefixes) 进行修改。<br>
-例：把比特币的公钥地址前缀 1 改为大写字母 C，通过查表得到 C 对应的 10 进制为 28，所以直接把 std::vector<unsigned char>(1,0) 改为 std::vector<unsigned char>(1,28)。
+PUBKEY_ADDRESS 是 P2PKH 类型的地址，其前缀对应的 10 进制根据 [List of address prefixes](https://en.bitcoin.it/wiki/List_of_address_prefixes) 进行修改。
+
+例：把比特币的公钥地址前缀 1 改为大写字母 C，通过查表得到 C 对应的 10 进制为 28，修改如下：
 
 {% highlight C++ %}
 -       base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,0);
 +       base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,28);
 {% endhighlight %}
 
-**注：<br>
-1.公钥地址和脚本地址以及私钥均采用 base58 编码后显示，方便人类使用，详见[Base58 编码](/2018/05/12/base58-encoding)。<br>
-2.这里的前缀只有一个字符，若是超过 1 个字符长度的前缀，可以参考[比特币“靓号”地址](/2018/05/16/bitcoin-vanity-address)。**
+**注：公钥地址和脚本地址以及私钥均采用 base58 编码后显示，方便人类使用，详见[Base58 编码](/2018/05/12/base58-encoding)。**
 
-## 6. 修改创世区块信息
+这里的前缀只有一个字符，若想获取超过 1 个字符长度的前缀，可以参考[比特币“靓号”地址](/2018/05/16/bitcoin-vanity-address)。
 
-要修改的创世区块信息分为基本信息和相关信息，基本信息包含在区块内，而相关信息在区块外。<br>
-关于区块的构造，详见[比特币源码剖析 - 区块](/2018/06/21/bitcoin-block)篇。<br>
-创世区块信息硬编在“chainparams.cpp”文件中：
+## 6. 修改创世区块内容
+
+创世区块的内容包含 2 部分：基本信息和相关信息。基本信息直接保存在区块内，而相关信息则保存在在区块外。
+相关信息通过某种方式转换为基本信息，即可以通过区块内的基本信息索引找到相关信息。
+
+创世区块信息硬编在“chainparams.cpp”文件中，具体如下：
 
 {% highlight C++ %}
 ...
@@ -315,27 +337,31 @@ public:
 };
 {% endhighlight %}
 
+关于区块的内部构造，详见[比特币源码剖析—区块](/2018/06/21/bitcoin-block)篇。
+
 ### 6.1. 修改创世区块相关信息
 
 相关信息有：文字版时间戳。
 
-1.文字版时间戳使用大多数人都知道可以成为历史（可以追溯）事件，例：报纸当日的新闻标题。<br>
-中本聪留下的泰晤士报的头条 The Times 03/Jan/2009 Chancellor on brink of second bailout for banks。
+文字版时间戳使用大多数人都知道的可以成为历史的（可追溯的）事件表示。
+例：中本聪在比特币创世区块中留下的是泰晤士报的头条 "The Times 03/Jan/2009 Chancellor on brink of second bailout for banks"。
 
 ### 6.2. 修改创世区块基本信息
 
 基本信息有：创建时间（时间戳），随机数（挖到块时），难度对应值（影响挖矿速度），版本（一般不变），奖励（包含在创币交易的输出中，影响货币的发行量）。<br>
 
-1.使用如下命令获取当前的 UNIX 时间戳：
+步骤如下：
+
+> 1.使用如下命令获取当前的 UNIX 时间戳：
 
 {% highlight shell %}
 $ date +%s
 {% endhighlight %}
 
-2.随机数置为 0，为挖创世区块做准备，挖到块时确定此值。<br>
-3.难度可以设为回归测试网难度 0x207fffff（很低，可秒出块），同时修改共识中的工作量证明限制。<br>
-4.版本一般不变。<br>
-5.奖励根据货币发行量配合奖励减半时间间隔来更改。
+> 2.随机数置为 0，为挖创世区块做准备，挖到块后重置此值。<br>
+> 3.难度可以设为回归测试网难度 0x207fffff（很低，可秒出块），同时修改共识中的工作量证明限制。<br>
+> 4.版本一般不变。<br>
+> 5.奖励根据货币发行量配合奖励减半时间间隔来更改。
 
 例：修改了时间戳、随机数（非最终值）、难度对应值及共识中工作量证明限制，版本和奖励未改变。
 
@@ -343,44 +369,44 @@ $ date +%s
 -       consensus.powLimit = uint256S("00000000ffffffffffffffffffffffffffffffffffffffffffffffffffffffff");
 +       consensus.powLimit = uint256S("7fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff");
         ...
--      genesis = CreateGenesisBlock(1231006505, 2083236893, 0x1d00ffff, 1, 50 * COIN);
-+      genesis = CreateGenesisBlock(1526197820, 0, 0x207fffff, 1, 50 * COIN);
+-       genesis = CreateGenesisBlock(1231006505, 2083236893, 0x1d00ffff, 1, 50 * COIN);
++       genesis = CreateGenesisBlock(1526197820, 0, 0x207fffff, 1, 50 * COIN);
 {% endhighlight %}
 
-接下来需要进行挖块获取创世区块随机数 nNonce。<br>
+接下来需要进行挖矿获取创世区块的随机数 nNonce 和哈希值以及默尔克树根哈希值。<br>
 首先在“miner.cpp”文件中增加以下代码，用于寻找创世区块。
 
 {% highlight C++ %}
 +void getGenesisBlock(CBlock *pblock) // 获取创世区块的基本信息（nNonce, hash, merkleroot）
 +{
-+	arith_uint256 hashTarget = arith_uint256().SetCompact(pblock->nBits);
-+	printf("hashTarget: %s\n", hashTarget.ToString().c_str());
-+	uint256 hash;
-+	uint32_t nNonce = 0;
-+	int64_t nStart = GetTime();
-+	while (true) {
-+		if (ScanHash(pblock, nNonce, &hash))
-+		{
-+			printf("block hash: %s", hash.ToString().c_str());
-+		    if (UintToArith256(hash) <= hashTarget)
-+		    {
-+				printf(" true\n"
-+						"Congratulation! You found the genesis block. total time: %lds\n"
-+						"the nNonce: %u\n"
-+						"genesis block hash: %s\n"
-+						"genesis block merkle root: %s\n", GetTime() - nStart, nNonce, hash.ToString().c_str(), pblock->hashMerkleRoot.ToString().c_str());
-+				break;
-+			}
-+			else
-+			{
-+				printf(" false\n");
-+			}
-+		}
-+	}
++   arith_uint256 hashTarget = arith_uint256().SetCompact(pblock->nBits);
++   printf("hashTarget: %s\n", hashTarget.ToString().c_str());
++   uint256 hash;
++   uint32_t nNonce = 0;
++   int64_t nStart = GetTime();
++   while (true) {
++       if (ScanHash(pblock, nNonce, &hash))
++       {
++           printf("block hash: %s", hash.ToString().c_str());
++           if (UintToArith256(hash) <= hashTarget)
++           {
++      	        printf(" true\n"
++       	        "Congratulation! You found the genesis block. total time: %lds\n"
++       	        "the nNonce: %u\n"
++       	        "genesis block hash: %s\n"
++       	        "genesis block merkle root: %s\n", GetTime() - nStart, nNonce, hash.ToString().c_str(), pblock->hashMerkleRoot.ToString().c_str());
++       	    break;
++           }
++           else
++           {
++               printf(" false\n");
++           }
++       }
++   }
 +}
 {% endhighlight %}
 
-同时在“miner.h”头文件中增加在函数的声明。
+同时在“miner.h”头文件中增加该函数的声明。
 
 {% highlight C++ %}
 +/** Search the genesis block */
@@ -402,9 +428,8 @@ $ date +%s
         consensus.hashGenesisBlock = genesis.GetHash();
 {% endhighlight %}
 
-做完以上工作，只需重新 make，再生成 altcoind 程序后，make 会失败，
-此时只需执行 altcoind 程序，喝杯咖啡静静等待创世区块的成功挖掘。<br>
-由于设置的难度很低，基本上是秒出块，记录下区块信息：随机数（nNonce）、区块哈希（hashGenesisBlock）和默尔克树根哈希（hashMerkleRoot），
+做完以上工作，只需重新 make，再生成 altcoind 程序后，make 会失败，此时只需执行 altcoind 程序，喝杯咖啡静静等待创世区块的成功挖掘。
+由于设置的难度很低，所以基本上是秒出块，记录下区块信息：随机数（nNonce）、区块哈希（hashGenesisBlock）和默尔克树根哈希（hashMerkleRoot），
 替换以下对应位置即可。
 
 {% highlight C++ %}
@@ -417,13 +442,14 @@ $ date +%s
 +       assert(genesis.hashMerkleRoot == uint256S("0xhashMerkleRoot"));
 {% endhighlight %}
 
-至此，新的创世区块就修改完成了。
+至此，新的创世区块就诞生了。
 
 ## 7. 修改检测点
 
-检测点用于验证区块链上的区块，是一个 kv 键值对，对应区块号（高度）和区块哈希。<br>
-检测点数据对象包含检测点映射列表、最后一个检测点区块的时间戳、创世区块和最后一个检测点区块间的总交易数以及对以后每天交易量的估计值。
-检测点硬编主网参数类的默认无参构造函数中：
+检测点用于验证区块链上的区块，是一个 kv 键值对，对应区块号（高度）和区块哈希。
+检测点数据对象包含检测点映射列表、最后一个检测点区块的时间戳、创世区块与最后一个检测点区块间的总交易数以及对以后每天交易总量的估计值。
+
+检测点硬编在主网参数类的默认无参构造函数中，修改如下：
 
 {% highlight C++ %}
 class CMainParams : public CChainParams {
@@ -472,14 +498,16 @@ public:
 ## 8. 修改最小链工作量（v0.13.2rc1）
 
 在 v0.13.2rc1 版本中，增加 consensus.nMinimumChainWork 参数，用于替代初始化区块下载检查中的检测点。
-引入了一个链参数“最小链工作量”，该参数用于表示软件发布时网络链的一直工作量。如果你没有达到该工作量，说明你还没有赶上。
+引入了一个链参数“最小链工作量”，该参数用于表示软件发布时区块链的工作量。如果没有达到该工作量，说明你还没有赶上。
 用于代替检测点的区块计数测试。
-因为没有主观性，信任，或位置依赖等因素，所以该标准很容易保持更新。它也是同步状态的可靠度量，而非区块计数。<br>
+因为没有主观性，信任，或位置依赖等因素，所以该标准很容易保持更新。它也是同步状态的可靠度量，而非区块计数。
+
 详见 [IBD check uses minimumchain work instead of checkpoints. · bitcoin/bitcoin@ad20cdd](https://github.com/bitcoin/bitcoin/commit/ad20cddce2097c6561202777fccd257deb1a9810)。
 
-**注：rc1 即正式发行候选版（Release Candidate）的第一版。<br>
-测试版一般有 3 种，分别为：alpha、beta、gamma。
+**注：rc1 即正式发行候选版（Release Candidate）的第一版。测试版一般有 3 种，分别为：alpha、beta、gamma。
 alpha 表示内测版即 CB（Close Beta），beta 表示公测版即 OB（Open Beta），gamma 表示正式发布候选版即 RC（Release Candidate）。**
+
+最小链工作量作为共识的成员变量，其初始化硬编在主网参数类的无参构造函数中，修改如下：
 
 {% highlight C++ %}
 class CMainParams : public CChainParams {
@@ -494,11 +522,14 @@ public:
 };
 {% endhighlight %}
 
-该值一开始置零（0x00），和检测点相同随着区块链的延伸不断更新（增加），
-可通过 RPC 命令 [getbestblockhash](/2018/05/22/bitcoin-rpc-command-getbestblockhash) 和 [getblock](/2018/05/22/bitcoin-rpc-command-getblock) 获取最佳区块信息的 chainwork 的值得到。
+该值一开始置零（0x00），和检测点一样随着区块链的延伸不断更新（增加），
+可通过 RPC 命令 [getbestblockhash](/2018/05/22/bitcoin-rpc-command-getbestblockhash) 和 [getblock](/2018/05/22/bitcoin-rpc-command-getblock) 获取最佳区块信息的链工作量 chainwork 的值得到。
 
-现在重新编译源码，一枚基于比特币的山寨数字货币就制作完成了。<br>
-通过这个过程，可以了解到比特币源码的一些部分，为深入比特币底层的区块链技术做铺垫。
+现在第三次编译源码，一枚基于比特币的山寨币就制作完成了。
+通过这个过程，了解了比特币源码的一些部分，为深入比特币底层区块链技术做铺垫。
+
+完。<br>
+Thanks for your time.
 
 ## 参照
 * [How to make an altcoin \| Bear's Den](http://dillingers.com/blog/2015/04/18/how-to-make-an-altcoin)
