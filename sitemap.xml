@@ -4,34 +4,34 @@ layout: null
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
-<loc>http://localhost:4000/</loc>
+<loc>{{ site.url }}</loc>
 </url>
 <url>
-<loc>http://localhost:4000/gc/</loc>
+<loc>{{ "/gc/" | prepend: site.url }}</loc>
 </url>
 {% for post in site.posts reversed %}{% if post.hidden %}{% else %}<url>
 <loc>{{ post.url | prepend: site.baseurl | prepend: site.url }}</loc>
 <lastmod>{{ post.date | date_to_xmlschema }}</lastmod>
 </url>{% endif %}{% endfor %}
 <url>
-<loc>http://localhost:4000/about.html</loc>
+<loc>{{ "/about.html" | prepend: site.url }}</loc>
 </url>
 <url>
-<loc>http://localhost:4000/archive.html</loc>
+<loc>{{ "/archive.html" | prepend: site.url }}</loc>
 </url>
 <url>
-<loc>http://localhost:4000/category.html</loc>
+<loc>{{ "/category.html" | prepend: site.url }}</loc>
 </url>
 <url>
-<loc>http://localhost:4000/coffee.html</loc>
+<loc>{{ "/coffee.html" | prepend: site.url }}</loc>
 </url>
 <url>
-<loc>http://localhost:4000/quotes.html</loc>
+<loc>{{ "/quotes.html" | prepend: site.url }}</loc>
 </url>
 <url>
-<loc>http://localhost:4000/tags.html</loc>
+<loc>{{ "/tags.html" | prepend: site.url }}</loc>
 </url>
 <url>
-<loc>http://localhost:4000/resume.html</loc>
+<loc>{{ "/resume.html" | prepend: site.url }}</loc>
 </url>
 </urlset>
