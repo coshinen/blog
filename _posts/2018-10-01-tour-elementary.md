@@ -3,7 +3,6 @@ layout: post
 title:  "Tour Elementary"
 date:   2018-10-01 08:00:02 +0800
 author: mistydew
-sitemap: false
 hidden: true
 ---
 ## 短期旅行基础装备
