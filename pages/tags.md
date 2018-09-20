@@ -34,7 +34,7 @@ permalink: /blog/tags.html
   {% else %}
     {% assign color = 8 | minus: base %}
   {% endif %}
-  <a href="/tags.html#{{ tag[0] }}-ref" style="font-size: {{ size }}pt; color: #{{ color }}{{ color }}{{ color }};">{{ tag[0] }}</a>
+  <a href="#{{ tag[0] }}-ref" style="font-size: {{ size }}pt; color: #{{ color }}{{ color }}{{ color }};">{{ tag[0] }}</a>
 {% endfor %}
 </div></center>
 
