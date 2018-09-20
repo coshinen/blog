@@ -41,4 +41,4 @@ excerpt_separator: "\n\n"
 markdown: kramdown
 
 # Links
-permalink: /:year/:month/:day/:title
+permalink: /blog/:year/:month/:title.html
