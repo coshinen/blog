@@ -6,7 +6,7 @@ author: mistydew
 categories: Blockchain Bitcoin 译文
 tags: 区块链 比特币 术语表
 ---
-这是一个专业术语汇编。普通用户应该使用[词汇表页面](/2018/08/21/some-bitcoin-words-you-might-hear)。
+这是一个专业术语汇编。普通用户应该使用[词汇表页面](/blog/2018/08/some-bitcoin-words-you-might-hear.html)。
 
 ## 百分之 51 攻击 | 51% Attack
 

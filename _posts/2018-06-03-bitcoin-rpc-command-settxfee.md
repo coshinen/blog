@@ -22,7 +22,7 @@ settxfee amount # 设置每 kB 的交易费。覆盖 paytxfee 参数的值
 
 ### 比特币核心客户端
 
-通过 [getinfo](/2018/05/23/bitcoin-rpc-command-getinfo) 调用反馈中的 paytxfee 字段查看当前交易费。
+通过 [getinfo](/blog/2018/05/bitcoin-rpc-command-getinfo.html) 调用反馈中的 paytxfee 字段查看当前交易费。
 
 {% highlight shell %}
 $ bitcoin-cli getinfo | grep paytxfee

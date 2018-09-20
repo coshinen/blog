@@ -6,7 +6,7 @@ author: mistydew
 categories: Blockchain Bitcoin
 tags: 区块链 比特币 源码剖析
 ---
-上一篇分析了第五步验证钱包数据库的完整性的详细过程，详见[比特币源码剖析（十一）](/2018/08/04/bitcoin-source-anatomy-11)。<br>
+上一篇分析了第五步验证钱包数据库的完整性的详细过程，详见[比特币源码剖析（十一）](/blog/2018/08/bitcoin-source-anatomy-11.html)。<br>
 本篇主要分析 Step 6: network initialization 第六步网络初始化的详细过程。
 
 ## 源码剖析
@@ -512,7 +512,7 @@ void CNode::SetMaxOutboundTarget(uint64_t limit)
 {% endhighlight %}
 
 未完待续...<br>
-请看下一篇[比特币源码剖析（十三）](/2018/08/18/bitcoin-source-anatomy-13)。
+请看下一篇[比特币源码剖析（十三）](/blog/2018/08/bitcoin-source-anatomy-13.html)。
 
 Thanks for your time.
 

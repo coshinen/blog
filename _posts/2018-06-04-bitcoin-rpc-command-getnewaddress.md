@@ -247,7 +247,7 @@ bool CWallet::TopUpKeyPool(unsigned int kpSize)
 static const unsigned int DEFAULT_KEYPOOL_SIZE = 100;
 {% endhighlight %}
 
-可以直接修改该值（硬编码），也可通过 -keypool=<n> 选项或配置文件来在[启动比特币核心服务 bitcoind](/2018/05/04/running-bitcoin) 时修改该值（软编码）。
+可以直接修改该值（硬编码），也可通过 -keypool=<n> 选项或配置文件来在[启动比特币核心服务 bitcoind](/blog/2018/05/running-bitcoin.html) 时修改该值（软编码）。
 
 接下来就开始不断生成新密钥并将与之对应的公钥加入密钥池，直至密钥池中密钥的数量达到指定大小 DEFAULT_KEYPOOL_SIZE + 1。<br>
 进入 GenerateNewKey() 函数，同样属于 CWallet 类，实现在“wallet/wallet.cpp”文件中。

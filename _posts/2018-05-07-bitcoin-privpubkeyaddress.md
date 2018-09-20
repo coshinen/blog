@@ -104,13 +104,13 @@ public:
 
 该类的 4 个成员变量对应注释的 4 个列名。<br>
 rpcfn_type 是一个函数标签为 UniValue(const UniValue&, bool) 的回调函数类型，
-形参 params 为 RPC 命令的参数，形参 fHelp 为显示该命令帮助的标志，对应[比特币核心客户端基础命令](/2018/05/06/bitcoin-cli-commands)用法的第 3 条。
+形参 params 为 RPC 命令的参数，形参 fHelp 为显示该命令帮助的标志，对应[比特币核心客户端基础命令](/blog/2018/05/bitcoin-cli-commands.html)用法的第 3 条。
 
 {% highlight shell %}
   bitcoin-cli [options] help <command>      Get help for a command # 获取一条命令的帮助信息（用法示例）
 {% endhighlight %}
 
-详见 [比特币 RCP 命令剖析 getnewaddress](/2018/06/04/bitcoin-rpc-command-getnewaddress)。
+详见 [比特币 RCP 命令剖析 getnewaddress](/blog/2018/06/bitcoin-rpc-command-getnewaddress.html)。
 
 ## 参照
 * [Technical background of version 1 Bitcoin addresses - Bitcoin Wiki](https://en.bitcoin.it/wiki/Technical_background_of_version_1_Bitcoin_addresses)

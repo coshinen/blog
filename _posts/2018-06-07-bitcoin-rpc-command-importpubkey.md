@@ -127,7 +127,7 @@ UniValue importpubkey(const UniValue& params, bool fHelp)
 7.导入脚本。<br>
 8.若开启了再扫描选项，进行钱包交易再扫描并把交易放入内存池。
 
-相关函数调用，见 [importaddress](/2018/06/07/bitcoin-rpc-command-importaddress)。
+相关函数调用，见 [importaddress](/blog/2018/06/bitcoin-rpc-command-importaddress.html)。
 
 Thanks for your time.
 

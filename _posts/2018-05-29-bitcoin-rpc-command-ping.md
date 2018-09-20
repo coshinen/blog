@@ -13,7 +13,7 @@ excerpt: $ bitcoin-cli ping
 ping # 把一个 ping 发送到其他全部节点的请求，用以衡量 ping 时间
 {% endhighlight %}
 
-[getpeerinfo](/2018/05/29/bitcoin-rpc-command-getpeerinfo) 提供的结果 pingtime 和 pingwait 字段是以 10 进制的秒为单位。<br>
+[getpeerinfo](/blog/2018/05/bitcoin-rpc-command-getpeerinfo.html) 提供的结果 pingtime 和 pingwait 字段是以 10 进制的秒为单位。<br>
 ping 命令和所有其他命令在队列中被处理，所以它测量处理积压，而不仅是网络 ping。
 
 结果：无返回值。
@@ -22,7 +22,7 @@ ping 命令和所有其他命令在队列中被处理，所以它测量处理积
 
 ### 比特币核心客户端
 
-配合使用 RPC 命令 [getpeerinfo](/2018/05/29/bitcoin-rpc-command-getpeerinfo) 查看 ping 时间。
+配合使用 RPC 命令 [getpeerinfo](/blog/2018/05/bitcoin-rpc-command-getpeerinfo.html) 查看 ping 时间。
 
 {% highlight shell %}
 $ bitcoin-cli getpeerinfo | grep ping

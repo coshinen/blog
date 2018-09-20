@@ -20,7 +20,7 @@ getbalance ( "account" minconf includeWatchonly ) # 获取钱包余额
 参数：<br>
 1. account （字符串，可选，已过时）选择的账户，或 * 表示整个钱包。可能是默认账户 ""。<br>
 2. minconf （数字，可选，默认为 1）。只包含至少确认 minconf 次的交易。<br>
-3. includeWatchonly （布尔型，可选，默认为 false）也包括包含在 watchonly 地址中的余额（参阅 [importaddress](/2018/06/07/bitcoin-rpc-command-importaddress)）。
+3. includeWatchonly （布尔型，可选，默认为 false）也包括包含在 watchonly 地址中的余额（参阅 [importaddress](/blog/2018/06/bitcoin-rpc-command-importaddress.html)）。
 
 结果：（数字）返回该账户收到的 BTC 的总金额。
 

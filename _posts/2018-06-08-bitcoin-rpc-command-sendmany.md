@@ -14,7 +14,7 @@ sendmany "fromaccount" {"address":amount,...} ( minconf "comment" ["address",...
 {% endhighlight %}
 
 **发送的金额是双精度浮点数。<br>
-使用该命令前需要调用 [walletpassphrase](/2018/05/31/bitcoin-rpc-command-walletpassphrase) 解锁钱包。**
+使用该命令前需要调用 [walletpassphrase](/blog/2018/05/bitcoin-rpc-command-walletpassphrase.html) 解锁钱包。**
 
 参数：<br>
 1. fromaccount （字符串，必备，已过时）从该账户发送资金。应使用默认账户 ""。<br>
@@ -46,8 +46,8 @@ sendmany "fromaccount" {"address":amount,...} ( minconf "comment" ["address",...
 
 **注：<br>
 1. 不要删除 \，直接替换对应地址即可。<br>
-2. 使用该命令前，先调用 [walletpassphrase](/2018/05/31/bitcoin-rpc-command-walletpassphrase) 解锁钱包。<br>
-3. 使用该命令后，再调用 [walletlock](/2018/05/31/bitcoin-rpc-command-walletlock) 锁定钱包。**
+2. 使用该命令前，先调用 [walletpassphrase](/blog/2018/05/bitcoin-rpc-command-walletpassphrase.html) 解锁钱包。<br>
+3. 使用该命令后，再调用 [walletlock](/blog/2018/05/bitcoin-rpc-command-walletlock.html) 锁定钱包。**
 
 用法一：发送两笔金额到两个不同的地址。
 
@@ -318,7 +318,7 @@ UniValue sendmany(const UniValue& params, bool fHelp)
 9.获取交易哈希，转化为 16 进制并返回。
 
 第八步，相关的函数调用，
-见 [比特币 RPC 命令剖析 sendtoaddress](/2018/07/06/bitcoin-rpc-command-sendtoaddress)。
+见 [比特币 RPC 命令剖析 sendtoaddress](/blog/2018/07/bitcoin-rpc-command-sendtoaddress.html)。
 
 Thanks for your time.
 

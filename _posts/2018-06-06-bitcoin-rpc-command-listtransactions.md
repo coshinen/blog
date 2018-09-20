@@ -17,7 +17,7 @@ listtransactions ( "account" count form includeWatchonly ) # 列出跳过账户 
 1. account （字符串，可选，已过时）账户名。应该为 "*"，表示全部账户。<br>
 2. count （数字，可选，默认为 10）返回的交易数量。<br>
 3. form （数字，可选，默认为 0）跳过的交易数量。<br>
-4. includeWatchonly （布尔型，可选，默认为 false）包含到 watchonly 地址集的交易（见 [importaddress](/2018/06/07/bitcoin-rpc-command-importaddress)）。
+4. includeWatchonly （布尔型，可选，默认为 false）包含到 watchonly 地址集的交易（见 [importaddress](/blog/2018/06/bitcoin-rpc-command-importaddress.html)）。
 
 结果：<br>
 {% highlight shell %}

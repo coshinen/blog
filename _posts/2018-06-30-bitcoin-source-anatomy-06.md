@@ -6,7 +6,7 @@ author: mistydew
 categories: Blockchain Bitcoin
 tags: 区块链 比特币 源码剖析
 ---
-上一篇分析了第三步参数转化为内部标志的代码，以及第四步应用程序初始化的大体过程，详见[比特币源码剖析（五）](/2018/06/23/bitcoin-source-anatomy-05)。<br>
+上一篇分析了第三步参数转化为内部标志的代码，以及第四步应用程序初始化的大体过程，详见[比特币源码剖析（五）](/blog/2018/06/bitcoin-source-anatomy-05.html)。<br>
 本篇主要分析 Step 4: application initialization: dir lock, daemonize, pidfile, debug log 第四步应用程序初始化中初始化椭圆曲线代码的详细过程。
 
 ## 源码剖析
@@ -375,7 +375,7 @@ static boost::scoped_ptr<ECCVerifyHandle> globalVerifyHandle; // 该智能指针
 智能指针 boost::scoped_ptr 不能复制或移动，类似于 STL 的 std::unique_ptr，详见 [boost::scoped_ptr](https://theboostcpplibraries.com/boost.smartpointers-sole-ownership)。
 
 未完待续...<br>
-请看下一篇[比特币源码剖析（七）](/2018/07/07/bitcoin-source-anatomy-07)。
+请看下一篇[比特币源码剖析（七）](/blog/2018/07/bitcoin-source-anatomy-07.html)。
 
 Thanks for your time.
 

@@ -59,7 +59,7 @@ decoderawtransaction "hexstring" # 获取一个表示序列化的 16 进制编�
 
 ### 比特币核心客户端
 
-查看一笔通过 [createrawtransaction](/2018/07/02/bitcoin-rpc-command-createrawtransaction) 创建的原始交易。
+查看一笔通过 [createrawtransaction](/blog/2018/07/bitcoin-rpc-command-createrawtransaction.html) 创建的原始交易。
 
 {% highlight shell %}
 $ bitcoin-cli decoderawtransaction 0100000001677e3c8d416184b42c753a8446f17b0b7997f0df7149449fbd0aef3cdfd29bfb0000000000ffffffff0140420f00000000001976a914e221b8a504199bec7c5fe8081edd011c3653118288ac00000000

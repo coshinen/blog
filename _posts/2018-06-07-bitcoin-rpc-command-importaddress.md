@@ -15,7 +15,7 @@ importaddress "address" ( "label" rescan p2sh ) # 导入一个脚本（16 进制
 
 该地址好像在你的钱包，但不能用来花费。<br>
 这就是所谓的 Watch-only 地址，在新版本中已经可以花费。<br>
-参考[如何使用 Watch-only 地址](/2018/06/06/how-to-use-watch-only-addresses)。
+参考[如何使用 Watch-only 地址](/blog/2018/06/how-to-use-watch-only-addresses.html)。
 
 参数：<br>
 1. script （字符串，必备）16 进制编码的脚本（或地址）。<br>
@@ -24,7 +24,7 @@ importaddress "address" ( "label" rescan p2sh ) # 导入一个脚本（16 进制
 4. p2sh （布尔型，可选，默认为 true）添加 P2SH 版本的脚本。
 
 **注：如果 rescan 为 true，该调用可能需要数分钟来完成。
-如果你有完整的公钥，你应该使用 [importpubkey](/2018/06/07/bitcoin-rpc-command-importpubkey) 代替该命令。**
+如果你有完整的公钥，你应该使用 [importpubkey](/blog/2018/06/bitcoin-rpc-command-importpubkey.html) 代替该命令。**
 
 结果：无返回值。
 

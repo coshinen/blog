@@ -9,7 +9,8 @@ tags: 区块链 比特币 源码构建
 Linux 平台构建比特币源码。
 
 ## 下载比特币源码（Ubuntu 16.04.4）
-使用 git 把 GitHub 上托管的比特币源码克隆到本地，关于 git 的安装和使用详见 [Git 基础命令](/2018/04/30/git-commands)篇。
+
+使用 git 把 GitHub 上托管的比特币源码克隆到本地，关于 git 的安装和使用详见 [Git 基础命令](/blog/2018/04/git-commands.html)篇。
 
 {% highlight shell %}
 $ git clone https://github.com/bitcoin/bitcoin.git # 克隆最新版的比特币源码到本地。
@@ -21,6 +22,7 @@ nothing to commit, working directory clean
 {% endhighlight %}
 
 ## 构建（编译和安装）比特币源码（Ubuntu 16.04.4）
+
 参照 [doc/build-unix.md](https://github.com/bitcoin/bitcoin/blob/master/doc/build-unix.md) 来进行比特币源码的编译和安装。你也可以参照以下内容：
 
 **在构建源码之前，应该先安装相关的依赖库。**
@@ -77,6 +79,9 @@ $ sudo apt-get install libqrencode-dev
 {% endhighlight %}
 
 **注：Linux 上安装任何程序，若没有错误提示，则表示安装成功。**
+
+完。<br>
+Thanks for your time.
 
 ## 参照
 * [bitcoin/bitcoin](https://github.com/bitcoin/bitcoin)

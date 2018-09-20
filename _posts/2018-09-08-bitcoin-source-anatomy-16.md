@@ -6,7 +6,7 @@ author: mistydew
 categories: Blockchain Bitcoin
 tags: 区块链 比特币 源码剖析
 ---
-上一篇分析了第九步数据目录维护和第十步导入区块文件的详细过程，详见[比特币源码剖析（十五）](/2018/09/01/bitcoin-source-anatomy-15)。<br>
+上一篇分析了第九步数据目录维护和第十步导入区块文件的详细过程，详见[比特币源码剖析（十五）](/blog/2018/09/bitcoin-source-anatomy-15.html)。<br>
 本篇主要分析 Step 11: start node 第十一步启动节点服务的详细过程。
 
 ## 源码剖析
@@ -361,7 +361,7 @@ std::string TorController::GetPrivateKeyFile()
 {% endhighlight %}
 
 未完待续...<br>
-请看下一篇[比特币源码剖析（十七）](/2018/09/15/bitcoin-source-anatomy-17)。
+请看下一篇[比特币源码剖析（十七）](/blog/2018/09/bitcoin-source-anatomy-17.html)。
 
 Thanks for your time.
 

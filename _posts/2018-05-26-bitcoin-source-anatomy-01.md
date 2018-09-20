@@ -6,7 +6,7 @@ author: mistydew
 categories: Blockchain Bitcoin
 tags: 区块链 比特币 源码剖析
 ---
-第一篇主要列出比特币核心服务程序 bitcoind 的启动流程及其入口函数，详见[比特币源码剖析](/2018/05/19/bitcoin-source-anatomy-00)。<br>
+第一篇主要列出比特币核心服务程序 bitcoind 的启动流程及其入口函数，详见[比特币源码剖析](/blog/2018/05/bitcoin-source-anatomy-00.html)。<br>
 该篇主要分析 SetupEnvironment() 和 noui_connect() 函数。
 
 ## 源码剖析
@@ -294,7 +294,7 @@ int LogPrintStr(const std::string &str)
 {% endhighlight %}
 
 未完待续...<br>
-请看下一篇[比特币源码剖析（二）](/2018/06/02/bitcoin-source-anatomy-02)。
+请看下一篇[比特币源码剖析（二）](/blog/2018/06/bitcoin-source-anatomy-02.html)。
 
 Thanks for your time.
 

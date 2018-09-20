@@ -16,7 +16,7 @@ listreceivedbyaddress ( minconf includeempty includeWatchonly ) # 列出接收�
 参数：<br>
 1. minconf （数字，可选，默认为 1）在被包含到付款前的最低确认数。<br>
 2. includeempty （布尔型，可选，默认为 false）是否包括还未收到任何付款的地址。<br>
-3. includeWatchonly （布尔型，可选，默认为 false）是否包含 watchonly 地址（见 [importaddress](/2018/06/07/bitcoin-rpc-command-importaddress)）。
+3. includeWatchonly （布尔型，可选，默认为 false）是否包含 watchonly 地址（见 [importaddress](/blog/2018/06/bitcoin-rpc-command-importaddress.html)）。
 
 结果：<br>
 {% highlight shell %}
@@ -148,7 +148,7 @@ UniValue listreceivedbyaddress(const UniValue& params, bool fHelp)
 3.钱包上锁。<br>
 4.列出各账户余额并返回。
 
-第四步，调用 ListReceived(params, false) 函数获取接收地址余额信息列表并返回，见 [listreceivedbyaccount](/2018/06/05/bitcoin-rpc-command-listreceivedbyaccount)。
+第四步，调用 ListReceived(params, false) 函数获取接收地址余额信息列表并返回，见 [listreceivedbyaccount](/blog/2018/06/bitcoin-rpc-command-listreceivedbyaccount.html)。
 
 Thanks for your time.
 

@@ -15,8 +15,8 @@ encryptwallet "passphrase" # 使用 passphrase 加密钱包
 
 用于第一次加密。<br>
 在此之后，任何与私钥相关的调用，例如发送或签名，需要在调用前设置密钥解密。<br>
-使用 [walletpassphrase](/2018/05/31/bitcoin-rpc-command-walletpassphrase) 解密钱包，或使用 [walletlock](/2018/05/31/bitcoin-rpc-command-walletlock) 锁定钱包。<br>
-如果钱包已经加密，使用 [walletpassphrasechange](/2018/05/31/bitcoin-rpc-command-walletpassphrasechange) 更改密码。<br>
+使用 [walletpassphrase](/blog/2018/05/bitcoin-rpc-command-walletpassphrase.html) 解密钱包，或使用 [walletlock](/blog/2018/05/bitcoin-rpc-command-walletlock.html) 锁定钱包。<br>
+如果钱包已经加密，使用 [walletpassphrasechange](/blog/2018/05/bitcoin-rpc-command-walletpassphrasechange.html) 更改密码。<br>
 **注：该命令将会关闭服务器。**
 
 参数：<br>

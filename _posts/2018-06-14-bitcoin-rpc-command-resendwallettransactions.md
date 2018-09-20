@@ -155,8 +155,9 @@ bool CWalletTx::RelayWalletTransaction()
 }
 {% endhighlight %}
 
-相关函数调用见 [sendrawtransaction](/2018/07/05/bitcoin-rpc-command-sendrawtransaction)。
+相关函数调用见 [sendrawtransaction](/blog/2018/07/bitcoin-rpc-command-sendrawtransaction.html)。
 
+完。<br>
 Thanks for your time.
 
 ## 参照

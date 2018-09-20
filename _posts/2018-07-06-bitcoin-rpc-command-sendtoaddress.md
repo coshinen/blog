@@ -27,8 +27,8 @@ sendtoaddress "bitcoinaddress" amount ( "comment" "comment-to" subtractfeefromam
 
 ### 比特币核心客户端
 
-**使用该命令前，先调用 [walletpassphrase](/2018/05/31/bitcoin-rpc-command-walletpassphrase) 解锁钱包，<br>
-使用该命令后，再调用 [walletlock](/2018/05/31/bitcoin-rpc-command-walletlock) 锁定钱包。**
+**使用该命令前，先调用 [walletpassphrase](/blog/2018/05/bitcoin-rpc-command-walletpassphrase.html) 解锁钱包，<br>
+使用该命令后，再调用 [walletlock](/blog/2018/05/bitcoin-rpc-command-walletlock.html) 锁定钱包。**
 
 用法一：向指定地址发送 0.1 BTC。
 

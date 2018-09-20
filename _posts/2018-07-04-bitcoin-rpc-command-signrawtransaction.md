@@ -70,7 +70,7 @@ signrawtransaction "hexstring" ( [{"txid":"id","vout":n,"scriptPubKey":"hex","re
 ### 比特币核心客户端
 
 对已创建的原始交易进行签名。<br>
-原始交易的创建见 [createrawtransaction](/2018/07/02/bitcoin-rpc-command-createrawtransaction)。
+原始交易的创建见 [createrawtransaction](/blog/2018/07/bitcoin-rpc-command-createrawtransaction.html)。
 
 {% highlight shell %}
 $ bitcoin-cli createrawtransaction "[{\"txid\":\"fb9bd2df3cef0abd9f444971dff097790b7bf146843a752cb48461418d3c7e67\",\"vout\":0}]" "{\"1Mcg7MDBD38sSScsX3USbsCnkcMbPnLyTV\":0.01}"

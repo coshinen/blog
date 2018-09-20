@@ -115,7 +115,7 @@ boost::filesystem::path GetDefaultDataDir()
 > * .lock
 >   * 比特币数据目录锁文件。
 > * bitcoin.conf【可选】
->   * 包含[配置文件](/2018/05/04/running-bitcoin)。
+>   * 包含[配置文件](/blog/2018/05/running-bitcoin.html)。
 > * blkxxxx.dat【v0.8.0 之前的版本】
 >   * 包含链接的原始区块。存储的是真正的比特币区块，以网络格式，转储到硬盘上。
 > * blkindex.dat【v0.8.0 之前的版本】

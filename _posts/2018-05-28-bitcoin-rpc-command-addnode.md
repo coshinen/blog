@@ -14,7 +14,7 @@ addnode "node" "add|remove|onetry" # 尝试从 addnode 列表中添加或移除�
 {% endhighlight %}
 
 参数：<br>
-1. node （字符串，必备）节点（见 [getpeerinfo](/2018/05/29/bitcoin-rpc-command-getpeerinfo) 获取的节点）。<br>
+1. node （字符串，必备）节点（见 [getpeerinfo](/blog/2018/05/bitcoin-rpc-command-getpeerinfo.html) 获取的节点）。<br>
 2. add|remove|onetry （字符串，必备）add 添加一个节点到列表（不会主动连接），remove 从列表移除一个节点，onetry 尝试连接到节点一次。<br>
 
 结果：无返回值。

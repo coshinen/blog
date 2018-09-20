@@ -23,9 +23,9 @@ signmessage "bitcoinaddress" "message" # 使用一个地址的私钥签名一个
 
 ### 比特币核心客户端
 
-1. 若钱包加密了，需使用 [walletpassphrase](/2018/05/31/bitcoin-rpc-command-walletpassphrase) 解锁钱包数秒。<br>
+1. 若钱包加密了，需使用 [walletpassphrase](/blog/2018/05/bitcoin-rpc-command-walletpassphrase.html) 解锁钱包数秒。<br>
 2. 使用此命令对一条消息进行签名。<br>
-3. 使用 [verifymessage](/2018/06/15/bitcoin-rpc-command-verifymessage) 验证消息。
+3. 使用 [verifymessage](/blog/2018/06/bitcoin-rpc-command-verifymessage.html) 验证消息。
 
 {% highlight shell %}
 $ bitcoin-cli walletpassphrase "mypasswd" 60

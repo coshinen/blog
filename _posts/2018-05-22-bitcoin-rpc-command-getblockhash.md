@@ -79,7 +79,7 @@ UniValue getblockhash(const UniValue& params, bool fHelp)
 4.获取激活区块链相应高度的区块索引。<br>
 5.获取该区块的哈希，转换为 16 进制并返回。
 
-相关函数调用见 RPC 命令 [getbestblockhash](/2018/05/22/bitcoin-rpc-command-getbestblockhash)。
+相关函数调用见 RPC 命令 [getbestblockhash](/blog/2018/05/bitcoin-rpc-command-getbestblockhash.html)。
 
 Thanks for your time.
 

@@ -13,7 +13,7 @@ excerpt: $ bitcoin-cli sendrawtransaction "hexstring" ( allowhighfees )
 sendrawtransaction "hexstring" ( allowhighfees ) # 把（序列化的，16 进制编码的）原始交易提交到本地节点和网络
 {% endhighlight %}
 
-也可以查看 [createrawtransaction](/2018/07/02/bitcoin-rpc-command-createrawtransaction) 和 [signrawtransaction](/2018/07/04/bitcoin-rpc-command-signrawtransaction) 调用。
+也可以查看 [createrawtransaction](/blog/2018/07/bitcoin-rpc-command-createrawtransaction.html) 和 [signrawtransaction](/blog/2018/07/bitcoin-rpc-command-signrawtransaction.html) 调用。
 
 参数：<br>
 1. hexstring （字符串，必备）原始交易的 16 进制字符串。<br>
@@ -26,13 +26,13 @@ sendrawtransaction "hexstring" ( allowhighfees ) # 把（序列化的，16 进�
 ### 比特币核心客户端
 
 构造一笔交易并发送流程：（1->2->3）<br>
-1.使用 [createrawtransaction](/2018/07/02/bitcoin-rpc-command-createrawtransaction) 创建一笔原始交易，注意找零。<br>
-1.5.（可选）若创建原始交易时为指定找零，使用 [fundrawtransaction](/2018/07/03/bitcoin-rpc-command-fundrawtransaction) 增加找零输出。<br>
-2.使用 [signrawtransaction](/2018/07/04/bitcoin-rpc-command-signrawtransaction) 对创建的原始交易进行签名。<br>
+1.使用 [createrawtransaction](/blog/2018/07/bitcoin-rpc-command-createrawtransaction.html) 创建一笔原始交易，注意找零。<br>
+1.5.（可选）若创建原始交易时为指定找零，使用 [fundrawtransaction](/blog/2018/07/bitcoin-rpc-command-fundrawtransaction.html) 增加找零输出。<br>
+2.使用 [signrawtransaction](/blog/2018/07/bitcoin-rpc-command-signrawtransaction.html) 对创建的原始交易进行签名。<br>
 3.使用该命令提交完成签名的原始交易（放入本地节点的内存池并进行交易广播）。<br>
 
-**使用 [getrawtransaction](/2018/06/12/bitcoin-rpc-command-getrawtransaction) 查看提交到内存池中的原始交易，
-或使用 [gettransaction](/2018/06/07/bitcoin-rpc-command-gettransaction) 查看。**
+**使用 [getrawtransaction](/blog/2018/06/bitcoin-rpc-command-getrawtransaction.html) 查看提交到内存池中的原始交易，
+或使用 [gettransaction](/blog/2018/06/bitcoin-rpc-command-gettransaction.html) 查看。**
 
 {% highlight shell %}
 $ bitcoin-cli createrawtransaction "[{\"txid\":\"fb9bd2df3cef0abd9f444971dff097790b7bf146843a752cb48461418d3c7e67\",\"vout\":0}]" "{\"1Mcg7MDBD38sSScsX3USbsCnkcMbPnLyTV\":0.01}"

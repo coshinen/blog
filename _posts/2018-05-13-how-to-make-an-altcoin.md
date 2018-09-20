@@ -30,7 +30,7 @@ $ git checkout v0.12.1
 {% endhighlight %}
 
 尝试构建比特币源码，确保其正常工作。
-关于比特币源码的编译详见[编译比特币源码](/2018/05/03/compile-bitcoin)篇。
+关于比特币源码的编译详见[编译比特币源码](/blog/2018/05/compile-bitcoin.html)篇。
 
 ## 1. 修改币名
 
@@ -269,9 +269,9 @@ PUBKEY_ADDRESS 是 P2PKH 类型的地址，其前缀对应的 10 进制根据 [L
 +       base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,28);
 {% endhighlight %}
 
-**注：公钥地址和脚本地址以及私钥均采用 base58 编码后显示，方便人类使用，详见[Base58 编码](/2018/05/12/base58-encoding)。**
+**注：公钥地址和脚本地址以及私钥均采用 base58 编码后显示，方便人类使用，详见[Base58 编码](/blog/2018/05/base58-encoding.html)。**
 
-这里的前缀只有一个字符，若想获取超过 1 个字符长度的前缀，可以参考[比特币“靓号”地址](/2018/05/16/bitcoin-vanity-address)。
+这里的前缀只有一个字符，若想获取超过 1 个字符长度的前缀，可以参考[比特币“靓号”地址](/blog/2018/05/bitcoin-vanity-address.html)。
 
 ## 6. 修改创世区块内容
 
@@ -337,7 +337,7 @@ public:
 };
 {% endhighlight %}
 
-关于区块的内部构造，详见[比特币源码剖析—区块](/2018/06/21/bitcoin-block)篇。
+关于区块的内部构造，详见[比特币源码剖析—区块](/blog/2018/06/bitcoin-block.html)篇。
 
 ### 6.1. 修改创世区块相关信息
 
@@ -523,7 +523,7 @@ public:
 {% endhighlight %}
 
 该值一开始置零（0x00），和检测点一样随着区块链的延伸不断更新（增加），
-可通过 RPC 命令 [getbestblockhash](/2018/05/22/bitcoin-rpc-command-getbestblockhash) 和 [getblock](/2018/05/22/bitcoin-rpc-command-getblock) 获取最佳区块信息的链工作量 chainwork 的值得到。
+可通过 RPC 命令 [getbestblockhash](/blog/2018/05/bitcoin-rpc-command-getbestblockhash.html) 和 [getblock](/blog/2018/05/bitcoin-rpc-command-getblock.html) 获取最佳区块信息的链工作量 chainwork 的值得到。
 
 现在第三次编译源码，一枚基于比特币的山寨币就制作完成了。
 通过这个过程，了解了比特币源码的一些部分，为深入比特币底层区块链技术做铺垫。

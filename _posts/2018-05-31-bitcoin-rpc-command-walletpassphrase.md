@@ -37,7 +37,7 @@ $ bitcoin-cli getinfo | grep unlocked_until
   "unlocked_until": 1527753859,
 {% endhighlight %}
 
-[getinfo](/2018/05/23/bitcoin-rpc-command-getinfo) 中 unlocked_until 字段表示钱包解锁的过期时间，0 表示处于锁定状态。
+[getinfo](/blog/2018/05/bitcoin-rpc-command-getinfo.html) 中 unlocked_until 字段表示钱包解锁的过期时间，0 表示处于锁定状态。
 
 用法二：解锁钱包 60 秒，再次使用此命令解密 20，密钥过期时间被覆盖。
 

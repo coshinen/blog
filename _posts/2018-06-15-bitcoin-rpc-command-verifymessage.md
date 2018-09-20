@@ -15,7 +15,7 @@ verifymessage "bitcoinaddress" "signature" "message" # 验证一个签过名的�
 
 参数：<br>
 1. bitcoinaddress （字符串，必备）用于签名的比特币地址。<br>
-2. signature （字符串，必备）通过签名者提供的 base64 编码的签名（见 [signmessage](/2018/06/15/bitcoin-rpc-command-signmessage)）。<br>
+2. signature （字符串，必备）通过签名者提供的 base64 编码的签名（见 [signmessage](/blog/2018/06/bitcoin-rpc-command-signmessage.html)）。<br>
 3. message （字符串，必备）签过名的消息。
 
 结果：（布尔型）返回 true 表示签名验证通过，反之不通过。
@@ -31,7 +31,7 @@ $ bitcoin-cli walletpassphrase "passphrase" 60
 {% endhighlight %}
 
 若钱包未加密，可忽略此步，直接进行消息验证。<br>
-使用 [signmessage](/2018/06/15/bitcoin-rpc-command-signmessage) 签名一个消息。
+使用 [signmessage](/blog/2018/06/bitcoin-rpc-command-signmessage.html) 签名一个消息。
 
 {% highlight shell %}
 $ bitcoin-cli getnewaddress

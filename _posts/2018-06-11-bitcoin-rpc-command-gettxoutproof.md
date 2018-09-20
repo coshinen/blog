@@ -40,7 +40,7 @@ $ bitcoin-cli gettxoutproof [\"b797bafd7830774cec4d24d1e649cafb0aa7a67b9f1cc0695
 {% endhighlight %}
 
 用法二：通过指定交易所在的区块获取指定索引的交易验证。<br>
-先使用 [gettransaction](/2018/06/07/bitcoin-rpc-command-gettransaction) 获取指定交易所在的区块。
+先使用 [gettransaction](/blog/2018/06/bitcoin-rpc-command-gettransaction.html) 获取指定交易所在的区块。
 
 {% highlight shell %}
 $ bitcoin-cli gettransaction b797bafd7830774cec4d24d1e649cafb0aa7a67b9f1cc06954102a50b463fa0f

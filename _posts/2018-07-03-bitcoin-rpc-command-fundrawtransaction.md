@@ -15,9 +15,9 @@ fundrawtransaction "hexstring" includeWatching # 把输入添加到交易中，�
 
 **此操作不会修改现存的输入，并且会添加一个找零输出到输出集中。<br>
 注：因为输入/输出已被添加，所以签名后的输入可能需要在完成此操作后重签。<br>
-使用 [signrawtransaction](/2018/07/04/bitcoin-rpc-command-signrawtransaction) 已添加的输入将不会被签名。<br>
+使用 [signrawtransaction](/blog/2018/07/bitcoin-rpc-command-signrawtransaction.html) 已添加的输入将不会被签名。<br>
 注意全部现存的输入必须在钱包中有它们前一笔输出交易。<br>
-注意所选的全部输入必须是标准格式，且在钱包中的 P2SH 脚本必须使用 [importaddress](/2018/06/07/bitcoin-rpc-command-importaddress) 和 [addmultisigaddress](/2018/06/15/bitcoin-rpc-command-addmultisigaddress)（用来计算交易费）。<br>
+注意所选的全部输入必须是标准格式，且在钱包中的 P2SH 脚本必须使用 [importaddress](/blog/2018/06/bitcoin-rpc-command-importaddress.html) 和 [addmultisigaddress](/blog/2018/06/bitcoin-rpc-command-addmultisigaddress.html)（用来计算交易费）。<br>
 watch-only 目前只支持 P2PKH，多签，和 P2SH 版本。**
 
 参数：<br>
@@ -346,10 +346,9 @@ bool CWallet::FundTransaction(CMutableTransaction& tx, CAmount &nFeeRet, int& nC
 4.5.遍历钱包交易和原交易的输入列表，把新的输入加入原交易输入列表中。
 
 4.3.通过调用 CreateTransaction(vecSend, wtx, reservekey, nFeeRet, nChangePosRet, strFailReason, &coinControl, false) 函数创建一笔新的钱包交易（较原始交易完整）。
-该函数详见[比特币 RPC 命令剖析 "sendtoaddress"](/2018/07/06/bitcoin-rpc-command-sendtoaddress)。
+该函数详见[比特币 RPC 命令剖析 "sendtoaddress"](/blog/2018/07/bitcoin-rpc-command-sendtoaddress.html)。
 
-（完）
-
+完。<br>
 Thanks for your time.
 
 ## 参照

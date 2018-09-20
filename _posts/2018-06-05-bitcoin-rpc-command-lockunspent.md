@@ -16,7 +16,7 @@ lockunspent unlock [{"txid":"txid","vout":n},...] # 临时加锁（unlock=false�
 更新不可花费的临时输出列表。<br>
 一个锁定的交易输出，当花费比特币时，将不会被自动筛选币选中。<br>
 该锁只存储在内存中。节点启动时零个锁定的输出，且当一个节点停止或崩溃时，锁定的输出列表总会被清空。<br>
-也可以查看 [listunspent](/2018/06/05/bitcoin-rpc-command-listunspent)。
+也可以查看 [listunspent](/blog/2018/06/bitcoin-rpc-command-listunspent.html)。
 
 参数：<br>
 1. unlock （布尔型，必备）指定交易是否解锁（true）或上锁（false）。<br>
@@ -37,9 +37,9 @@ lockunspent unlock [{"txid":"txid","vout":n},...] # 临时加锁（unlock=false�
 
 ### 比特币核心客户端
 
-1. 使用 [listunspent](/2018/06/05/bitcoin-rpc-command-listunspent) 获取未花费的交易输出列表。<br>
+1. 使用 [listunspent](/blog/2018/06/bitcoin-rpc-command-listunspent.html) 获取未花费的交易输出列表。<br>
 2. 使用该命令对其中一个未花费的交易输出加临时锁。<br>
-3. 使用 [listlockunspent](/2018/06/05/bitcoin-rpc-command-listlockunspent) 查看未花费交易输出的临时锁定列表。
+3. 使用 [listlockunspent](/blog/2018/06/bitcoin-rpc-command-listlockunspent.html) 查看未花费交易输出的临时锁定列表。
 
 {% highlight shell %}
 $ bitcoin-cli listunspent

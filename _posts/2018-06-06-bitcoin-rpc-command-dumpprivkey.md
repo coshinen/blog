@@ -24,7 +24,7 @@ RPC 命令 [importprivkey]() 可以使用该输出作为输入。
 
 ### 比特币核心客户端
 
-使用 [getnewaddress](/2018/06/04/bitcoin-rpc-command-getnewaddress) 命令获取一个比特币地址，
+使用 [getnewaddress](/blog/2018/06/bitcoin-rpc-command-getnewaddress.html) 命令获取一个比特币地址，
 然后以该地址为输入，导出其对应的私钥。
 
 {% highlight shell %}

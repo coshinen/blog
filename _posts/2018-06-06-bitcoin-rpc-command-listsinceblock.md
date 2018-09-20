@@ -16,7 +16,7 @@ listsinceblock ( "blockhash" target-confirmations includeWatchonly ) # 获取从
 参数：<br>
 1. blockhash （字符串，可选）列出从该区块哈希开始的全部交易。<br>
 2. target-confirmations （数字型，可选）所需的确认数，必须大于等于 1。<br>
-3. includeWatchonly （布尔型，可选，默认为 false）包含到 watchonly 地址的交易（见 [importaddress](/2018/06/07/bitcoin-rpc-command-importaddress)）。
+3. includeWatchonly （布尔型，可选，默认为 false）包含到 watchonly 地址的交易（见 [importaddress](/blog/2018/06/bitcoin-rpc-command-importaddress.html)）。
 
 结果：<br>
 {% highlight shell %}
