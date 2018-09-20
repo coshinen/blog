@@ -4,7 +4,7 @@ layout: default
 
 <div class="home">
 
-  <h1 class="page-heading">Posts</h1>
+  <h1 class="page-heading">The Latest Post</h1>
 
   <ul class="post-list">
 <!-- This loops through the site posts -->
@@ -28,6 +28,35 @@ layout: default
         {% break %}
       {% endif %}
     {% endfor %}
+  </ul>
+
+  <h2 class="page-heading">Newer Posts</h2>
+
+  <ul class="post-list-more">
+    {% assign idx = 0 %}{% assign maximum = 8 %}
+<!-- This loops through the site posts -->
+    {% for post in site.posts %}
+      {% if post.hidden %}
+        {% continue %}
+      {% else %}
+        {% assign idx = idx | plus: 1 %}
+        {% if idx == 1 %}
+          {% continue %}
+        {% endif %}
+        <li>
+          <span>{{ post.date | date: '%Y年%m月%d日' }} &raquo; </span>
+          <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+        </li>
+        {% if idx == maximum %}
+          {% break %}
+        {% endif %}
+      {% endif %}
+    {% endfor %}
+    <li>
+      <footer>
+        <a class="readmore" href="{{ site.blog }}">更多……</a>
+      </footer>
+    </li>
   </ul>
 
 </div>
