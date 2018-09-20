@@ -20,10 +20,10 @@ permalink: /category.html
 {% assign counts = counts | split: ', ' %}
 {% assign idx = 0 %}
 
-<blockquote>
 <p id="category"></p>
+<blockquote>
 {% for category in site.categories %}
-<p style="line-height:8px"><a href="{{ site.JB.tags_path }}#{{ category[0] }}-ref">{{ category | first }} [{{ counts[idx] }}]</a></p>
+<div><a href="{{ site.JB.tags_path }}#{{ category[0] }}-ref">{{ category | first }} [{{ counts[idx] }}]</a></div>
     {% assign idx = idx | plus: 1 %}
 {% endfor %}
 </blockquote>
@@ -31,6 +31,7 @@ permalink: /category.html
 {% assign idx = 0 %}
 
 {% for category in site.categories %}
+<blockquote>
 <h2 id="{{ category[0] }}-ref">{{ category | first }} ({{ counts[idx] }})<a href="#category">{% include icon/chevron-up.html %}</a></h2>
     {% assign idx = idx | plus: 1 %}
 <ul class="arc-list">
@@ -41,4 +42,5 @@ permalink: /category.html
       {% endif %}
     {% endfor %}
 </ul>
+</blockquote>
 {% endfor %}

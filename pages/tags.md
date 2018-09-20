@@ -55,6 +55,7 @@ permalink: /tags.html
 {% assign idx = 0 %}
 
 {% for tag in site.tags %}
+<blockquote>
 <h2 id="{{ tag[0] }}-ref">{{ tag | first }} ({{ counts[idx] }})<a href="#tags">{% include icon/chevron-up.html %}</a></h2>
     {% assign idx = idx | plus: 1 %}
 <ul class="arc-list">
@@ -65,4 +66,5 @@ permalink: /tags.html
       {% endif %}
     {% endfor %}
 </ul>
+</blockquote>
 {% endfor %}
