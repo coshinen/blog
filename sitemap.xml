@@ -8,14 +8,20 @@ layout: null
 </url>
 <url>
 <loc>{{ site.gc | prepend: site.url }}</loc>
+</url>
+<url>
+<loc>{{ site.about | prepend: site.url }}</loc>
+</url>
+<url>
+<loc>{{ site.donate | prepend: site.url }}</loc>
+</url>
+<url>
+<loc>{{ site.resume | prepend: site.url }}</loc>
 </url>{% for post in site.posts reversed %}{% if post.hidden %}{% else %}
 <url>
 <loc>{{ post.url | prepend: site.url }}</loc>
 <lastmod>{{ post.date | date_to_xmlschema }}</lastmod>
 </url>{% endif %}{% endfor %}
-<url>
-<loc>{{ site.about | prepend: site.url }}</loc>
-</url>
 <url>
 <loc>{{ site.archive | prepend: site.url }}</loc>
 </url>
@@ -23,15 +29,9 @@ layout: null
 <loc>{{ site.category | prepend: site.url }}</loc>
 </url>
 <url>
-<loc>{{ site.donate | prepend: site.url }}</loc>
-</url>
-<url>
 <loc>{{ site.quotes | prepend: site.url }}</loc>
 </url>
 <url>
 <loc>{{ site.tag | prepend: site.url }}</loc>
-</url>
-<url>
-<loc>{{ site.resume | prepend: site.url }}</loc>
 </url>
 </urlset>
