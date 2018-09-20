@@ -9,8 +9,6 @@
 root: mistydew
 title: parallel universe
 email: mistydew@qq.com
-resume: "/resume.html"
-donate: "/coffee.html"
 description: >- # this means to ignore newlines until "baseurl:"
   Welcome to the parallel universe!
   Copyright &copy; 2018 mistydew. Powered by Jekyll. Hosted with ❤ by GitHub.
@@ -23,8 +21,18 @@ feed_username:    mistydew
 doc_info: true
 comments: true
 btc_address: 1xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+# Page baseurl
+sitemap: "/sitemap.xml"
 rss: "/feed.xml"
-gc: "/gc"
+gc: "/gc/"
+about:    "/about.html"
+archive:  "/archive.html"
+category: "/category.html"
+donate:   "/coffee.html"
+quotes:    "/quotes.html"
+tag:      "/tags.html"
+resume:   "/resume.html"
 
 # Excerpt / Abstract / Summary
 excerpt_separator: "\n\n"

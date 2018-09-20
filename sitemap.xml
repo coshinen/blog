@@ -7,31 +7,31 @@ layout: null
 <loc>{{ site.url }}</loc>
 </url>
 <url>
-<loc>{{ "/gc/" | prepend: site.url }}</loc>
+<loc>{{ site.gc | prepend: site.url }}</loc>
 </url>{% for post in site.posts reversed %}{% if post.hidden %}{% else %}
 <url>
 <loc>{{ post.url | prepend: site.url }}</loc>
 <lastmod>{{ post.date | date_to_xmlschema }}</lastmod>
 </url>{% endif %}{% endfor %}
 <url>
-<loc>{{ "/about.html" | prepend: site.url }}</loc>
+<loc>{{ site.about | prepend: site.url }}</loc>
 </url>
 <url>
-<loc>{{ "/archive.html" | prepend: site.url }}</loc>
+<loc>{{ site.archive | prepend: site.url }}</loc>
 </url>
 <url>
-<loc>{{ "/category.html" | prepend: site.url }}</loc>
+<loc>{{ site.category | prepend: site.url }}</loc>
 </url>
 <url>
-<loc>{{ "/coffee.html" | prepend: site.url }}</loc>
+<loc>{{ site.donate | prepend: site.url }}</loc>
 </url>
 <url>
-<loc>{{ "/quotes.html" | prepend: site.url }}</loc>
+<loc>{{ site.quotes | prepend: site.url }}</loc>
 </url>
 <url>
-<loc>{{ "/tags.html" | prepend: site.url }}</loc>
+<loc>{{ site.tag | prepend: site.url }}</loc>
 </url>
 <url>
-<loc>{{ "/resume.html" | prepend: site.url }}</loc>
+<loc>{{ site.resume | prepend: site.url }}</loc>
 </url>
 </urlset>
