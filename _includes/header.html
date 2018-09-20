@@ -2,7 +2,7 @@
 
   <div class="wrapper">
 
-    <a class="site-title" href="{{ site.baseurl }}/">{{ site.title }}</a>
+    <a class="site-title" href="{{ site.baseurl }}/" title="平行宇宙">{{ site.title }}</a>
     <div style="position:fixed;left:0px;top:0px;">{% include honehone_clock_tr.html %}</div>
 
     <nav class="site-nav">
@@ -15,13 +15,13 @@
       </a>
 
       <div class="trigger">
-        {% for my_page in site.pages %}
-          {% if my_page.title %}
-            <a class="page-link" href="{{ my_page.url | prepend: site.baseurl }}">{{ my_page.title }}</a>
-          {% endif %}
-        {% endfor %}
-      <a class="page-link" href="{{ site.feed | prepend: site.baseurl }}" title="Feed 订阅"><img src="/images/feed.png" alt="RSS"></a>
-      <a class="page-link" href="{{ site.gc | prepend: site.baseurl }}" title="GC Music Diary"><img src="/images/favicon.ico" alt="GC"></a>
+        <a class="page-link" href="{{ site.archive | prepend: site.baseurl }}" title="歸檔">Archive</a>
+        <a class="page-link" href="{{ site.category | prepend: site.baseurl }}" title="分類">Category</a>
+        <a class="page-link" href="{{ site.quotes | prepend: site.baseurl }}" title="名言">Quotes</a>
+        <a class="page-link" href="{{ site.tag | prepend: site.baseurl }}" title="標簽">Tags</a>
+        <a class="page-link" href="{{ site.about | prepend: site.baseurl }}" title="關於">About</a>
+        <a class="page-link" href="{{ site.feed | prepend: site.baseurl }}" title="Feed 訂閲"><img src="/images/feed.png" alt="RSS"></a>
+        <a class="page-link" href="{{ site.gc | prepend: site.baseurl }}" title="GC 音樂日記"><img src="/images/favicon.ico" alt="GC"></a>
       </div>
     </nav>
 

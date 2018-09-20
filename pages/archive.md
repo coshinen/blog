@@ -51,6 +51,6 @@ permalink: /blog/archive.html
     {% endif %}
 {% if post.hidden == true %}
 {% else %}
-* {{ post.date | date: '%m-%d' }} &raquo; [{{ post.title }}]({{ post.url }} "{{ post.title }}"){:.archive-item-link}
+* {{ post.date | date: '%m-%d' }} &raquo; [{{ post.title }}]({{ post.url }} "{{ post.title }}"){:.archive-item}
 {% endif %}
 {% endfor %}
