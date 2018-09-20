@@ -9,7 +9,7 @@ layout: default
   <ul class="post-list">
 <!-- This loops through the site posts -->
     {% for post in site.posts %}
-      {% if post.hidden %}
+      {% if post.hidden == true %}
         {% continue %}
       {% else %}
         <li>
@@ -33,10 +33,10 @@ layout: default
   <h2 class="page-heading">Newer Posts</h2>
 
   <ul class="post-list-more">
-    {% assign idx = 0 %}{% assign maximum = 8 %}
+    {% assign idx = 0 %}{% assign maximum = 7 %}
 <!-- This loops through the site posts -->
     {% for post in site.posts %}
-      {% if post.hidden %}
+      {% if post.hidden == true %}
         {% continue %}
       {% else %}
         {% assign idx = idx | plus: 1 %}

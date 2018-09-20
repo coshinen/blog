@@ -7,6 +7,9 @@ layout: null
 <loc>{{ site.url }}</loc>
 </url>
 <url>
+<loc>{{ site.blog | prepend: site.url }}</loc>
+</url>
+<url>
 <loc>{{ site.gc | prepend: site.url }}</loc>
 </url>
 <url>
