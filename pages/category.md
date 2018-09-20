@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Category
-permalink: /category.html
+permalink: /blog/category.html
 ---
 
 {% assign count = 0 %}

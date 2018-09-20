@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Tags
-permalink: /tags.html
+permalink: /blog/tags.html
 ---
 
 {% assign first = site.tags.first %}

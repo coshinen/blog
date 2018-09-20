@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Quotes
-permalink: /quotes.html
+permalink: /blog/quotes.html
 ---
 
 > クリスタル・ゲージ：<br>

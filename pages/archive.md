@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Archive
-permalink: /archive.html
+permalink: /blog/archive.html
 ---
 
 <!-- Include the library. -->

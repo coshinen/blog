@@ -22,17 +22,19 @@ doc_info: true
 comments: true
 btc_address: 1xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 
-# Page baseurl
-sitemap: "/sitemap.xml"
-rss: "/feed.xml"
+# Site page baseurl
 gc: "/gc/"
-about:    "/about.html"
-archive:  "/archive.html"
-category: "/category.html"
-donate:   "/coffee.html"
-quotes:    "/quotes.html"
-tag:      "/tags.html"
-resume:   "/resume.html"
+sitemap: "/sitemap.xml"
+about:  "/about.html"
+donate: "/coffee.html"
+resume: "/resume.html"
+
+# Blog page baseurl
+feed: "/blog/feed.xml"
+archive:  "/blog/archive.html"
+category: "/blog/category.html"
+quotes:   "/blog/quotes.html"
+tag:      "/blog/tags.html"
 
 # Excerpt / Abstract / Summary
 excerpt_separator: "\n\n"
