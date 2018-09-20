@@ -8,9 +8,9 @@ layout: null
 </url>
 <url>
 <loc>{{ "/gc/" | prepend: site.url }}</loc>
-</url>
-{% for post in site.posts reversed %}{% if post.hidden %}{% else %}<url>
-<loc>{{ post.url | prepend: site.baseurl | prepend: site.url }}</loc>
+</url>{% for post in site.posts reversed %}{% if post.hidden %}{% else %}
+<url>
+<loc>{{ post.url | prepend: site.url }}</loc>
 <lastmod>{{ post.date | date_to_xmlschema }}</lastmod>
 </url>{% endif %}{% endfor %}
 <url>
