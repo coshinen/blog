@@ -3,6 +3,7 @@ layout: post
 title:  "比特币源码剖析 - 私钥、公钥、地址"
 date:   2018-05-07 20:22:21 +0800
 author: mistydew
+comments: true
 categories: Blockchain Bitcoin
 tags: 区块链 比特币 公钥、私钥 比特币地址
 ---

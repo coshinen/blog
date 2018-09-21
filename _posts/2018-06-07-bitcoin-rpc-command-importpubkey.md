@@ -3,6 +3,7 @@ layout: post
 title:  "比特币 RPC 命令剖析 \"importpubkey\""
 date:   2018-06-07 10:40:03 +0800
 author: mistydew
+comments: true
 categories: Blockchain Bitcoin
 tags: CLI bitcoin-cli 区块链 比特币
 excerpt: $ bitcoin-cli importpubkey "pubkey" ( "label" rescan )

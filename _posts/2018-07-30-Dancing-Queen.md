@@ -3,6 +3,7 @@ layout: post
 title:  "Dancing Queen"
 date:   2018-07-30 20:16:08 +0800
 author: mistydew
+comments: true
 categories: ABBA 翻訳
 tags: 歌詞
 excerpt: You can dance. You can jive. Having the time of your life. Ooh, see that girl.

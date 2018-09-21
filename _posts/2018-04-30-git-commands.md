@@ -3,6 +3,7 @@ layout: post
 title:  "Git 基础命令"
 date:   2018-04-30 16:20:08 +0800
 author: mistydew
+comments: true
 categories: Git
 tags: Git CLI
 ---

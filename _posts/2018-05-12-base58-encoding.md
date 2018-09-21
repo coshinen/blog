@@ -3,6 +3,7 @@ layout: post
 title:  "Base58 编码"
 date:   2018-05-12 16:02:28 +0800
 author: mistydew
+comments: true
 categories: Blockchain Bitcoin
 tags: 区块链 比特币 base58编码
 ---

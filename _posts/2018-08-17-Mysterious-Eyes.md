@@ -3,6 +3,7 @@ layout: post
 title:  "Mysterious Eyes"
 date:   2018-08-17 20:00:03 +0800
 author: mistydew
+comments: true
 categories: ガーネット・クロウ 翻訳
 tags: GC 歌詞
 excerpt: 君と僕とは 別の人間(いきもの)だから 好みが違う 歩く速さも 想いの伝え方も

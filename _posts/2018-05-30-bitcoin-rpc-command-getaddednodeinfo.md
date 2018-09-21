@@ -3,6 +3,7 @@ layout: post
 title:  "比特币 RPC 命令剖析 \"getaddednodeinfo\""
 date:   2018-05-30 08:51:03 +0800
 author: mistydew
+comments: true
 categories: Blockchain Bitcoin
 tags: CLI bitcoin-cli 区块链 比特币
 excerpt: $ bitcoin-cli getaddednodeinfo dns ( "node" )

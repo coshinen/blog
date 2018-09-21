@@ -3,6 +3,7 @@ layout: post
 title:  "Love is a Bird"
 date:   2018-08-26 20:08:03 +0800
 author: mistydew
+comments: true
 categories: ガーネット・クロウ 翻訳
 tags: GC 歌詞
 excerpt: 夕暮れとこの街の匂い 染みついた諦めと希望 雨の中うつむいていた 少年の足取り

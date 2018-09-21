@@ -3,6 +3,7 @@ layout: post
 title:  "设计模式"
 date:   2018-07-16 20:08:56 +0800
 author: mistydew
+comments: true
 categories: 设计模式
 tags: C++ 设计模式
 ---

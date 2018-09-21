@@ -3,6 +3,7 @@ layout: post
 title:  "设计模式之单例模式"
 date:   2018-07-17 21:31:55 +0800
 author: mistydew
+comments: true
 categories: 设计模式
 tags: C++ 设计模式
 ---

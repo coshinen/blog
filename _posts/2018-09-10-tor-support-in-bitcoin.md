@@ -3,6 +3,7 @@ layout: post
 title:  "比特币中的洋葱路由"
 date:   2018-09-10 16:50:30 +0800
 author: mistydew
+comments: true
 categories: Bitcoin 译文
 tags: Tor 比特币
 ---

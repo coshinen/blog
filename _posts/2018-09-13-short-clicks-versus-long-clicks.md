@@ -3,6 +3,7 @@ layout: post
 title:  "短点击 vs. 长点击"
 date:   2018-09-13 14:30:23 +0800
 author: mistydew
+comments: true
 categories: Search 译文
 tags: Google 搜索权重
 ---

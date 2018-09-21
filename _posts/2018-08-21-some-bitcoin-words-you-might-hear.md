@@ -3,6 +3,7 @@ layout: post
 title:  "比特币词汇表"
 date:   2018-08-21 20:43:26 +0800
 author: mistydew
+comments: true
 categories: Blockchain Bitcoin 译文
 tags: 区块链 比特币 词汇表
 ---

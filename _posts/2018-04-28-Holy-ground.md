@@ -3,6 +3,7 @@ layout: post
 title:  "Holy ground"
 date:   2018-04-28 20:02:04 +0800
 author: mistydew
+comments: true
 categories: ガーネット・クロウ 翻訳
 tags: GC 歌詞
 excerpt: 君のいない未来が ただ大きな闇にみえ 死んでしまえば生きなくていい

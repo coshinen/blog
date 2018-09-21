@@ -3,6 +3,7 @@ layout: post
 title:  "比特币白皮书中英对照"
 date:   2018-06-12 09:07:06 +0800
 author: mistydew
+comments: true
 categories: Blockchain Bitcoin 译文
 tags: 区块链 比特币 比特币白皮书
 excerpt: 比特币：一种对等的电子现金系统

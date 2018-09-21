@@ -3,6 +3,7 @@ layout: post
 title:  "比特币数据目录"
 date:   2018-08-23 09:28:37 +0800
 author: mistydew
+comments: true
 categories: Blockchain Bitcoin 译文
 tags: 区块链 比特币 数据目录
 ---

@@ -3,6 +3,7 @@ layout: post
 title:  "比特币 RPC 命令剖析 \"estimatesmartfee\""
 date:   2018-06-15 14:25:15 +0800
 author: mistydew
+comments: true
 categories: Blockchain Bitcoin
 tags: CLI bitcoin-cli 区块链 比特币
 excerpt: $ bitcoin-cli estimatesmartfee nblocks

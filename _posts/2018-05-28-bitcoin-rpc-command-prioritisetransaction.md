@@ -3,6 +3,7 @@ layout: post
 title:  "比特币 RPC 命令剖析 \"prioritisetransaction\""
 date:   2018-05-28 09:25:05 +0800
 author: mistydew
+comments: true
 categories: Blockchain Bitcoin
 tags: CLI bitcoin-cli 区块链 比特币
 excerpt: $ bitcoin-cli prioritisetransaction <txid> <priority delta> <fee delta>

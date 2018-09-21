@@ -3,6 +3,7 @@ layout: post
 title:  "Over Drive"
 date:   2018-05-02 20:10:04 +0800
 author: mistydew
+comments: true
 categories: ガーネット・クロウ 翻訳
 tags: GC 歌詞
 excerpt: 風の音だけが 体中を包む サイレント・Kiss 夢に似た気配

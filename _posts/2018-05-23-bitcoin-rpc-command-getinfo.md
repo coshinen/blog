@@ -3,6 +3,7 @@ layout: post
 title:  "比特币 RPC 命令剖析 \"getinfo\""
 date:   2018-05-23 11:40:02 +0800
 author: mistydew
+comments: true
 categories: Blockchain Bitcoin
 tags: CLI bitcoin-cli 区块链 比特币
 excerpt: $ bitcoin-cli getinfo

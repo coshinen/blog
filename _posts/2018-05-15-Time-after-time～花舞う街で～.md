@@ -3,6 +3,7 @@ layout: post
 title:  "Time after time～花舞う街で～"
 date:   2018-05-15 20:03:03 +0800
 author: mistydew
+comments: true
 categories: コナン 翻訳
 tags: CONAN 歌詞
 excerpt: もしも君に巡り逢えたら 二度と君の手を離さない

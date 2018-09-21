@@ -3,6 +3,7 @@ layout: post
 title:  "libevent evhttp c/s"
 date:   2018-07-27 15:32:02 +0800
 author: mistydew
+comments: true
 categories: Libevent
 tags: C C++ libevent evhttp
 ---

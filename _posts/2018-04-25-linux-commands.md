@@ -3,6 +3,7 @@ layout: post
 title:  "Linux 基础命令"
 date:   2018-04-25 18:58:02 +0800
 author: mistydew
+comments: true
 categories: Unix/Linux
 tags: Linux CLI Terminal
 ---

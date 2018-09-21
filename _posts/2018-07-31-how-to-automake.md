@@ -3,6 +3,7 @@ layout: post
 title:  "如何使用 Automake 生成 Makefile"
 date:   2018-07-31 15:10:52 +0800
 author: mistydew
+comments: true
 categories: Makefile
 tags: C C++ Automake
 ---

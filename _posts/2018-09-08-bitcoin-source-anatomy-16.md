@@ -3,6 +3,7 @@ layout: post
 title:  "比特币源码剖析（十六）"
 date:   2018-09-08 15:56:20 +0800
 author: mistydew
+comments: true
 categories: Blockchain Bitcoin
 tags: 区块链 比特币 源码剖析
 ---

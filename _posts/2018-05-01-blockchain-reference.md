@@ -3,6 +3,7 @@ layout: post
 title:  "区块链推荐阅读"
 date:   2018-05-01 20:23:17 +0800
 author: mistydew
+comments: true
 categories: Blockchain
 tags: 区块链 比特币
 ---

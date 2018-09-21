@@ -3,6 +3,7 @@ layout: post
 title:  "Viva La Vida"
 date:   2018-06-18 20:08:05 +0800
 author: mistydew
+comments: true
 categories: Coldplay 翻訳
 tags: 歌詞
 excerpt: I used to rule the world. Seas would rise when I gave the word. Now in the morning I sleep alone. Sweep the streets I used to own.

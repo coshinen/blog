@@ -3,6 +3,7 @@ layout: post
 title:  "比特币 RPC 命令剖析 \"setban\""
 date:   2018-05-29 10:29:55 +0800
 author: mistydew
+comments: true
 categories: Blockchain Bitcoin
 tags: CLI bitcoin-cli 区块链 比特币
 excerpt: $ bitcoin-cli setban "ip(/netmask)" "add|remove" (bantime) (absolute)

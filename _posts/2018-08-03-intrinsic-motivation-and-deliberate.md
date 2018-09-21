@@ -3,6 +3,7 @@ layout: post
 title:  "内在动机和刻意练习相互加强"
 date:   2018-08-03 16:40:02 +0800
 author: mistydew
+comments: true
 categories: Study 译文
 tags: Study Insistence
 excerpt: 内在动机和刻意练习呈螺旋式上升
