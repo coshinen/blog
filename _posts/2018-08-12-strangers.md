@@ -8,7 +8,7 @@ categories: ガーネット・クロウ 翻訳
 tags: GC 歌詞
 excerpt: 緑揺れる午後の空 幾つ目の飛行機かな 遠く潮騒が届いて 客船が泊まった
 ---
-![parallel universe](https://raw.githubusercontent.com/mistydew/gc2/master/cover/album/Album_08th_parallel_universe.jpg)
+![parallel universe](https://raw.githubusercontent.com/mistydew/gc2/master/cover/album/Album_08th_parallel_universe.jpg){:.border}
 
 ## strangers | 異鄉人
 

@@ -11,7 +11,7 @@ tags: C C++ macOS Linux
 一些人甚至认为 Apple 的 macOS 是基于 Linux。事实上，两个内核有着不同的历史和特性。
 今天，我们就来看看 macOS 和 Linux 内核之间的差异。
 
-![macos-vs-linux-kernels](/images/20180729/macos-vs-linux-kernels.jpeg)
+![macos-vs-linux-kernels](/images/20180729/macos-vs-linux-kernels.jpeg){:.border}
 
 ## macOS 内核的历史
 

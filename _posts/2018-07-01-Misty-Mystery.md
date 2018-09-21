@@ -8,7 +8,7 @@ categories: ガーネット・クロウ 翻訳
 tags: GC 歌詞
 excerpt: why 見えぬ明日へと 期待込め歩いてるの まだ君を想う 途中みたいにざわめく
 ---
-![Misty Mystery](https://raw.githubusercontent.com/mistydew/gc2/master/cover/single/Single_33th_Misty_Mystery.jpg)
+![Misty Mystery](https://raw.githubusercontent.com/mistydew/gc2/master/cover/single/Single_33th_Misty_Mystery.jpg){:.border}
 
 ## Misty Mystery | 朦朧的神秘
 

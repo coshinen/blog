@@ -8,7 +8,7 @@ categories: ガーネット・クロウ 翻訳
 tags: GC 歌詞
 excerpt: 君と僕とは 別の人間(いきもの)だから 好みが違う 歩く速さも 想いの伝え方も
 ---
-![Mysterious Eyes](https://raw.githubusercontent.com/mistydew/gc/master/images/cover/single/Single_01st_Mysterious_Eyes.jpg)
+![Mysterious Eyes](https://raw.githubusercontent.com/mistydew/gc/master/images/cover/single/Single_01st_Mysterious_Eyes.jpg){:.border}
 
 ## Mysterious Eyes | 神秘的眼睛
 

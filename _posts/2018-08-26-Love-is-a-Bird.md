@@ -8,7 +8,7 @@ categories: ガーネット・クロウ 翻訳
 tags: GC 歌詞
 excerpt: 夕暮れとこの街の匂い 染みついた諦めと希望 雨の中うつむいていた 少年の足取り
 ---
-![LOCKS](https://raw.githubusercontent.com/mistydew/gc2/master/cover/album/Album_06th_LOCKS.jpg)
+![LOCKS](https://raw.githubusercontent.com/mistydew/gc2/master/cover/album/Album_06th_LOCKS.jpg){:.border}
 
 ## Love is a Bird
 
