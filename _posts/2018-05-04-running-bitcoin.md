@@ -644,6 +644,20 @@ RPC 服务选项：
 {% endhighlight %}
 
 ## 比特币配置文件样例
+
+> # 打印调试信息到控制台<br>
+> #printtoconsole=1<br>
+> # 后台运行<br>
+> daemon=1<br>
+> # 开启 CPU 挖矿（默认挖矿线程数为 1）<br>
+> gen=1<br>
+> # RPC 验证信息（用户名、密码）<br>
+> rpcuser=myusername<br>
+> rpcpassword=mypasswd<br>
+> # RPC 白名单（外网 IP）<br>
+> rpcallowip=xxx.xxx.xxx.xxx<br>
+> ...
+
 来自 [https://github.com/mistydew/blockchain/blob/master/bitcoin.conf](https://github.com/mistydew/blockchain/blob/master/bitcoin.conf):
 
 ## 参照
