@@ -645,6 +645,8 @@ RPC 服务选项：
 
 ## 比特币配置文件样例
 
+Linux: .bitcoin/bitcoin.conf
+
 > \# 打印调试信息到控制台<br>
 > #printtoconsole=1<br>
 > \# 后台运行<br>
