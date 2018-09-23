@@ -5,7 +5,6 @@ layout: default
 <div class="home">
 
   <h1 class="page-heading">The Latest Post</h1>
-
   <ul class="post-list">
 <!-- This loops through the site posts -->
     {% for post in site.posts %}
@@ -13,8 +12,7 @@ layout: default
         {% continue %}
       {% else %}
         <li>
-          <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span><span style="float:right;"> 分类：{% for category in post.categories %}<a class="category" href="/category.html#{{ category }}-ref">{{ category | prepend: " " }}</a>{% endfor %}</span>
-
+          <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span><span style="float:right;"> 分类：{% for category in post.categories %}<a class="category" href="{{ site.category }}#{{ category }}-ref">{{ category | prepend: " " }}</a>{% endfor %}</span>
           <h2>
             <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
           </h2>
@@ -31,7 +29,6 @@ layout: default
   </ul>
 
   <h2 class="page-heading">Newer Posts</h2>
-
   <ul class="post-list-more">
     {% assign idx = 0 %}{% assign maximum = 7 %}
 <!-- This loops through the site posts -->

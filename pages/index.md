@@ -6,14 +6,12 @@ permalink: /blog/index.html
 <div class="home">
 
   <h1 class="page-heading">Posts</h1>
-
   <ul class="post-list">
 <!-- This loops through the site posts for sticky -->
     {% for post in site.posts %}
       {% if post.stickie == true %}
         <li>
-          <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }} [Sticky]</span><span style="float:right;"> 分类：{% for category in post.categories %}<a class="category" href="/category.html#{{ category }}-ref">{{ category | prepend: " " }}</a>{% endfor %}</span>
-
+          <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }} [Sticky]</span><span style="float:right;"> 分类：{% for category in post.categories %}<a class="category" href="{{ site.category }}#{{ category }}-ref">{{ category | prepend: " " }}</a>{% endfor %}</span>
           <h2>
             <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
           </h2>
@@ -35,8 +33,7 @@ permalink: /blog/index.html
         {% continue %}
       {% else %}
         <li>
-          <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span><span style="float:right;"> 分类：{% for category in post.categories %}<a class="category" href="/category.html#{{ category }}-ref">{{ category | prepend: " " }}</a>{% endfor %}</span>
-
+          <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span><span style="float:right;"> 分类：{% for category in post.categories %}<a class="category" href="{{ site.category }}#{{ category }}-ref">{{ category | prepend: " " }}</a>{% endfor %}</span>
           <h2>
             <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
           </h2>
