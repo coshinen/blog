@@ -43,3 +43,6 @@ markdown: kramdown
 
 # Links
 permalink: /blog/:year/:month/:title.html
+
+# Exclude
+exclude: [LICENSE.md, README.md]
