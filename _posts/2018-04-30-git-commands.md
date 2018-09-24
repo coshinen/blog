@@ -25,7 +25,7 @@ $ git config --global user.email "<useremail>" # 添加邮箱到 git 配置文�
 
 **注：若在 git command 过程中出现错误提示 fatal: unable to auto-detect email address，则重新执行以上两句配置命令。**
 
-## 命令 commands
+## 命令 | commands
 
 ### 本地仓库
 **注：以下命令必须在某个 git 仓库中输入。**
@@ -38,8 +38,8 @@ $ git status # 查看当前仓库和暂存区中文件的状态。
 $ git diff # 查看当前版本相对于上一版的变化内容（有颜色对比：+ 加号绿色表示新增的内容，- 减号红色表示移除的内容）。
 $ git log # 查看提交的历史信息，默认时间从近到远排序。
 $ git reflog # 查看 git 的历史记录。
-$ git checkout -- <flie> # 撤销使用 $ git add <file> 添加到暂存区中的所有文件。
-$ git checkout -- <flie> # 撤销使用 $ git add <file> 添加到暂存区中的指定文件。
+$ git checkout # 撤销使用 $ git add <file> 添加到暂存区中的所有文件。
+$ git checkout -- <flie> # 撤销使用 $ git add <file> 添加到暂存区中的指定文件，或未放入暂存区的已更改的文件。
 $ git reset --hard HEAD^ # 版本回退至上一版。
 $ git reset --hard <version> # 版本回退至指定版本。
 $ git commit --amend # 修改上一次提交的评论，同时按 Ctrl + X 保存，然后按 Y 确认，最后按 Enter 退出。
