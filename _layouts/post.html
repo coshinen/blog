@@ -19,12 +19,7 @@ layout: default
     {{ content }}
   </div>
 
-  {% if site.doc_info %}
-    {% if page.hidden == true %}
-    {% else %}
-      {% include postinfo.html %}
-    {% endif %}
-  {% endif %}
+  {% include postinfo.html %}
 
   {% if page.comments == true %}
     <div>Do you have any additional questions about this post? Leave them in the comments!</div>
