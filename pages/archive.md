@@ -4,6 +4,8 @@ title: Archive
 permalink: /blog/archive.html
 ---
 
+{% include google_search.html %}
+
 <!-- Include the library. -->
 <script
   src="/js/github-calendar.min.js"
