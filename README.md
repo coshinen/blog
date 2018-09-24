@@ -1,4 +1,4 @@
-# [_mistydew's blog_](https://mistydew.github.io)
+# [_mistydew's blog_](https://mistydew.github.io/blog)
 
 ## Todo
 - [ ] add avatar, bio...
@@ -6,7 +6,6 @@
   - [ ] The latest ver. bitcoin rpc command
 - [ ] GC Music Diary longtime plan
 - [ ] add donate info: Bitcoin address
-- [x] refactoring: home page, blog permanlink
 
 ## Timeline
 * 2018.09.20 [new] refactoring: home page, blog permanlink; [remove] ~~jekyll-paginate plugin~~
@@ -49,7 +48,7 @@
 
 ## Find me on
 
-* QQ: 10********
-* e-mail: mistydew@qq.com
+* site: [parallel universe](https://mistydew.github.io)
+* e-mail: [mistydew@qq.com](mailto:mistydew@qq.com)
 * weibo: [@mistydew](https://weibo.com/mistydew)
-* twitter: [@_mistydew_](https://twitter.com/_mistydew_)
+* twitter: [@\_mistydew\_](https://twitter.com/_mistydew_)
