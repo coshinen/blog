@@ -122,7 +122,7 @@ $ bitcoin-cli help # 获取以下 RPC 命令
 > [getblocktemplate ( "jsonrequestobject" )](/blog/2018/06/bitcoin-rpc-command-getblocktemplate.html) # 获取区块模板<br>
 > [getmininginfo](/blog/2018/05/bitcoin-rpc-command-getmininginfo.html) # 获取挖矿信息<br>
 > [getnetworkhashps ( blocks height )](/blog/2018/05/bitcoin-rpc-command-getnetworkhashps.html) # 获取网络算力<br>
-> [prioritisetransaction <txid> <priority delta> <fee delta>](/blog/2018/05/bitcoin-rpc-command-prioritisetransaction.html) # 改变交易优先级<br>
+> [prioritisetransaction \<txid> \<priority delta> \<fee delta>](/blog/2018/05/bitcoin-rpc-command-prioritisetransaction.html) # 改变交易优先级<br>
 > [submitblock "hexdata" ( "jsonparametersobject" )](/blog/2018/05/bitcoin-rpc-command-submitblock.html) # 提交区块
 > 
 > == Network ==<br>
@@ -156,11 +156,11 @@ $ bitcoin-cli help # 获取以下 RPC 命令
 > [validateaddress "bitcoinaddress"](/blog/2018/06/bitcoin-rpc-command-validateaddress.html) # 验证地址<br>
 > [verifymessage "bitcoinaddress" "signature" "message"](/blog/2018/06/bitcoin-rpc-command-verifymessage.html) # 验证消息
 > 
-> <font color="white">== Hidden ==</font>
-> [<font color="white">invalidateblock</font>](/blog/2018/06/bitcoin-rpc-command-invalidateblock.html) <font color="white"># 无效化区块</font><br>
-> [<font color="white">reconsiderblock</font>](/blog/2018/06/bitcoin-rpc-command-reconsiderblock.html) <font color="white"># 再考虑区块</font><br>
-> [<font color="white">setmocktime</font>](/blog/2018/06/bitcoin-rpc-command-setmocktime.html) <font color="white"># 设置 mocktime</font><br>
-> [<font color="white">resendwallettransactions</font>](/blog/2018/06/bitcoin-rpc-command-resendwallettransactions.html) <font color="white"># 再次发送钱包交易</font>
+> <font color="#f5f2f0">== Hidden ==</font>
+> [<font color="#f5f2f0">invalidateblock</font>](/blog/2018/06/bitcoin-rpc-command-invalidateblock.html) <font color="#f5f2f0"># 无效化区块</font><br>
+> [<font color="#f5f2f0">reconsiderblock</font>](/blog/2018/06/bitcoin-rpc-command-reconsiderblock.html) <font color="#f5f2f0"># 再考虑区块</font><br>
+> [<font color="#f5f2f0">setmocktime</font>](/blog/2018/06/bitcoin-rpc-command-setmocktime.html) <font color="#f5f2f0"># 设置 mocktime</font><br>
+> [<font color="#f5f2f0">resendwallettransactions</font>](/blog/2018/06/bitcoin-rpc-command-resendwallettransactions.html) <font color="#f5f2f0"># 再次发送钱包交易</font>
 > 
 > == Wallet ==<br>
 > [abandontransaction "txid"](/blog/2018/05/bitcoin-rpc-command-abandontransaction.html) # 放弃交易<br>
