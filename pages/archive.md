@@ -6,27 +6,6 @@ permalink: /blog/archive.html
 
 {% include google_search.html %}
 
-<!-- Include the library. -->
-<script
-  src="/js/github-calendar.min.js"
-></script>
-
-<!-- Optionally, include the theme (if you don't want to struggle to write the CSS) -->
-<link
-  rel="stylesheet"
-  href="/css/github-calendar.css"
-/>
-
-<!-- Prepare a container for your calendar. -->
-<div class="calendar">
-    <!-- Loading stuff -->
-    Loading the data just for you.
-</div>
-
-<script>
-    GitHubCalendar(".calendar", "mistydew");
-</script>
-
 {% assign count = 1 %}
 {% for post in site.posts reversed %}
     {% assign year = post.date | date: '%Y' %}
