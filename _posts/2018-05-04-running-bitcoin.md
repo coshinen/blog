@@ -649,6 +649,9 @@ Linux: ~/.bitcoin/bitcoin.conf
 
 > \# 打印调试信息到控制台<br>
 > #printtoconsole=1<br>
+> \# 调试信息（IPs、时间戳微秒）<br>
+> logips=1<br>
+> logtimemicros=1<br>
 > \# 后台运行<br>
 > daemon=1<br>
 > \# 开启 CPU 挖矿（默认挖矿线程数为 1）<br>
@@ -661,6 +664,9 @@ Linux: ~/.bitcoin/bitcoin.conf
 > ...
 
 来自 [https://github.com/mistydew/blockchain/blob/master/bitcoin.conf](https://github.com/mistydew/blockchain/blob/master/bitcoin.conf):
+
+完。<br>
+Thanks for your time.
 
 ## 参照
 * [Running Bitcoin - Bitcoin Wiki](https://en.bitcoin.it/wiki/Running_Bitcoin)
