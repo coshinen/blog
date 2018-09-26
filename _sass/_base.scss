@@ -178,7 +178,8 @@ a.readmore, a.category, a.tag, a.author {
     }
 }
 /* post */
-article.post div.post-content p a {
+article.post div.post-content p a,
+article.post div.post-content blockquote a {
     color: $text-color;
     border-bottom: 1px dotted;
 
