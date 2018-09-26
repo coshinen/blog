@@ -113,27 +113,48 @@ boost::filesystem::path GetDefaultDataDir()
 
 比特币核心文档 [file.md](https://github.com/bitcoin/bitcoin/blob/master/doc/files.md) 内容总览。
 
+> * .cookie【v0.12.0 及之后的版本】
+>   * 会话 RPC 验证 cookie（当首次使用 cookie 验证时写入，在关闭时删除）。
 > * .lock
 >   * 比特币数据目录锁文件。
+> * banlist.dat
+>   * 存储禁用节点的 IPs/子网。
 > * bitcoin.conf【可选】
->   * 包含[配置文件](/blog/2018/05/running-bitcoin.html)。
-> * blkxxxx.dat【v0.8.0 之前的版本】
->   * 包含链接的原始区块。存储的是真正的比特币区块，以网络格式，转储到硬盘上。
-> * blkindex.dat【v0.8.0 之前的版本】
->   * 与 blkxxxx.dat 一起使用的索引信息。
-> * _db.xxx
->   * 通过 BDB 使用。
-> * db.log
+>   * 包含用于 bitcoind 或 bitcoin-qt 的[配置选项](/blog/2018/05/running-bitcoin.html)。
+> * bitcoind.pid
+>   * 存储 bitcoind 运行时的进程号。
+> * blocks/blk000??.dat【v0.8.0 及之后的版本】; blkxxxx.dat【v0.8.0 之前的版本】
+>   * 区块数据（定制，每个文件 128MiB）；包含链接的原始区块。存储的是真正的比特币区块，以网络格式，转储到硬盘上。
+> * blocks/rev000??.dat【v0.8.0 及之后的版本】
+>   * 区块回退数据（定制）。
+> * blocks/index/*【v0.8.0 及之后的版本】; blkindex.dat【v0.8.0 之前的版本】
+>   * 区块索引（LevelDB）；与 blkxxxx.dat 一起使用的索引信息。
+> * chainstate/*【v0.8.0 及之后的版本】
+>   * 区块链状态数据库（LevelDB）。
+> * database/*【v0.8.0 及之后的版本】;【v0.16.0 及之后的版本】
+>   * BDB（Berkeley DB）数据库环境，仅用于钱包；移动到 wallets/ 目录下。
+> * db.log【v0.16.0 及之后的版本】
+>   * 钱包数据库日志文件，移动到 wallets/ 目录下。
 > * debug.log
->   * 比特币详细的日志文件。不时自动修剪。
-> * wallet.dat
->   * 存储密钥，交易，元数据和选项。**请务必备份该文件。它包含花费你的比特币所必须的密钥。**
-> * addr.dat【v0.7.0 之前的版本】
->   * 存储 ip 地址以便更容易重新连接。
-> * peers.dat【v0.7.0 及之后的版本】
->   * 存储对端信息以便更容易重连。该文件使用比特币指定的文件格式，与任何数据库系统不相关。
+>   * 比特币详细的日志文件，包含通过 bitcoind 或 bitcoin-qt 生成的调试信息和日志信息。不时自动修剪。
 > * fee_estimates.dat【v0.10.0 及之后的版本】
->   * 用于估算费用和优先级的统计数据。在程序关闭之前保存，并在启动时读入。
+>   * 存储用于确认所必需的估算的最小交易费和优先级的统计数据。在程序关闭之前保存，并在启动时读入。
+> * indexes/txindex/*【v0.17.0 及之后的版本】
+>   * 可选的交易索引数据库（LevelDB）。
+> * mempool.dat【v0.14.0 及之后的版本】
+>   * 内存池交易的导出数据。
+> * peers.dat【v0.7.0 及之后的版本】; addr.dat【v0.7.0 之前的版本】
+>   * 对端 IP 地址数据库（特定的格式）。存储对端信息以便更容易重连。该文件使用比特币指定的文件格式，与任何数据库系统不相关；存储 ip 地址以便更容易重新连接。
+> * wallets/wallet.dat【v0.16.0 及之后的版本】; wallet.dat
+>   * 包含密钥和交易的个人钱包（BDB）；存储密钥，交易，元数据和选项。**请务必备份该文件。它包含花费你的比特币所必须的密钥。**
+> * wallets/database/*【v0.16.0 及之后的版本】
+>   * BDB 数据库环境。
+> * wallets/db.log【v0.16.0 及之后的版本】
+>   * 钱包数据库日志文件。
+> * onion_private_key【v0.12.0 及之后的版本】
+>   * 使用 -listenonion 选项缓存的洋葱路由隐藏服务私钥。
+> * guisettings.ini.bak
+>   * 使用 -resetguisettings 选项后之前的 GUI 设置的备份。
 
 该数据，索引和日志文件通过 Oracle Berkeley DB 使用，这是比特币使用的嵌入式键/值对数据存储。
 
@@ -211,6 +232,7 @@ LevelDB 数据库，具有所有当前未花费的交易输出的紧凑表达和
 Thanks for your time.
 
 ## 参照
+* [bitcoin/files.md at master · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/master/doc/files.md)
 * [Data directory - Bitcoin Wiki](https://en.bitcoin.it/wiki/Data_directory)
 * [Splitting the data directory - Bitcoin Wiki](https://en.bitcoin.it/wiki/Splitting_the_data_directory)
 * [...](https://github.com/mistydew/blockchain)
