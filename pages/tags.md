@@ -17,7 +17,7 @@ permalink: /blog/tags.html
 {% assign diff = max | minus: min %}
 
 <p id="tags"></p>
-<center><div style="width:600px">
+<center><div class="tagcloud">
 {% for tag in site.tags %}
   {% assign temp = tag[1].size | minus: min | times: 36 | divided_by: diff %}
   {% assign base = temp | divided_by: 4 %}

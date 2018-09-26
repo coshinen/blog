@@ -95,6 +95,20 @@
 
 
 /**
+ * Tag cloud
+ */
+.tagcloud {
+    width: 600px;
+}
+@include media-query($on-palm) {
+    .tagcloud {
+        width: 280px;
+    }
+}
+
+
+
+/**
  * Site footer
  */
 .site-footer {
