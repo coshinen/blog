@@ -20,7 +20,7 @@ layout: null
 </url>
 <url>
 <loc>{{ site.resume | prepend: site.url }}</loc>
-</url>{% for post in site.posts reversed %}{% if post.hidden %}{% else %}
+</url>{% for post in site.posts reversed %}{% if post.hidden == true %}{% else %}
 <url>
 <loc>{{ post.url | prepend: site.url }}</loc>
 <lastmod>{{ post.date | date_to_xmlschema }}</lastmod>
