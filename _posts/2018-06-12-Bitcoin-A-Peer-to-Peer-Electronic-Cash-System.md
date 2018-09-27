@@ -6,7 +6,7 @@ author: mistydew
 comments: true
 categories: Blockchain Bitcoin 译文
 tags: 区块链 比特币 比特币白皮书
-excerpt: 比特币：一种对等的电子现金系统
+excerpt: 比特币：一种对等的电子现金系统，将允许在线支付从一方直接发送到另一方，而不需要通过金融机构。
 ---
 <p align="center">
 <font size="6">
@@ -36,7 +36,7 @@ network itself requires minimal structure.  Messages are broadcast on a best eff
 basis, and nodes can leave and rejoin the network at will, accepting the longest
 proof-of-work chain as proof of what happened while they were gone.
 
-**概要.** 一个电子现金的纯对等版本将允许在线支付来从一方直接发送到另一方，而不需要通过金融机构。
+**概要.** 一个电子现金的纯对等版本将允许在线支付从一方直接发送到另一方，而不需要通过金融机构。
 数字签名提供了部分解决方案，但如果仍需要可信的第三方来防止双重花费，其主要优势将会丢失。
 我们提出了使用对等网络的双重花费问题的解决方案。
 网络通过把交易时间戳散列到正在运行的基于散列的工作量证明链中，形成不重做工作量证明就无法改变的记录。

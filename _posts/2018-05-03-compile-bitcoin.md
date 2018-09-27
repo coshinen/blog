@@ -7,7 +7,7 @@ comments: true
 categories: Blockchain Bitcoin
 tags: 区块链 比特币 源码构建
 ---
-Linux 平台构建比特币源码。
+本文记录了如何在 Linux 平台下构建比特币源码，得到 Linux 版本的可执行程序 bitcoind、bitcoin-cli 等。
 
 ## 下载比特币源码（Ubuntu 16.04.4）
 

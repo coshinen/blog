@@ -7,7 +7,7 @@ comments: true
 categories: Blockchain Bitcoin
 tags: 区块链 比特币 源码构建 交叉编译
 ---
-本文记录了如何在 Linux 平台下交叉编译比特币源码，得到 Windows 版本的可执行程序。
+本文记录了如何在 Linux 平台下交叉编译比特币源码，得到 Windows 版本的可执行程序 bitcoin.exe、bitcoin-cli.exe、bitcoin-qt.exe 等。
 
 ## 下载比特币源码（Ubuntu 18.04.1）
 
