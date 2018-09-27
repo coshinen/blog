@@ -33,7 +33,7 @@ feed: "/blog/feed.xml"
 archive:  "/blog/archive.html"
 category: "/blog/category.html"
 quotes:   "/blog/quotes.html"
-tag:      "/blog/tags.html"
+tagcloud: "/blog/tags.html"
 
 # Excerpt / Abstract / Summary
 excerpt_separator: "\n\n"
