@@ -69,4 +69,4 @@ macOS 内核（XNU）比 Linux 时间更长，是基于 2 个很早的代码库�
 * [macOS High Sierra - Apple](https://www.apple.com/macos/high-sierra)
 * [The Linux Kernel Archives](https://www.kernel.org)
 * [What is the Difference Between the macOS and Linux Kernels \| It's FOSS](https://itsfoss.com/mac-linux-difference)
-* [...](https://github.com/mistydew)
+* [...]({{ site.url | append: site.blog }})

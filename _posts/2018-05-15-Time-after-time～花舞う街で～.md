@@ -64,4 +64,4 @@ Time after time<br>
 * [倉木麻衣の歌詞一覧リスト](https://www.uta-net.com/artist/3126)
 * [倉木麻衣 の歌詞 歌手](http://www.kasi-time.com/subcat-uta-393-1.html)
 * [倉木麻衣の歌詞・音楽・情報 \| 歌詞検索UtaTen（うたてん）](https://utaten.com/artist/倉木麻衣)
-* [...](https://github.com/mistydew)
+* [...]({{ site.url | append: site.blog }})

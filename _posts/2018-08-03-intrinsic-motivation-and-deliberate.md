@@ -27,4 +27,4 @@ excerpt: 内在动机和刻意练习呈螺旋式上升
 
 ## 参照
 * [The Progress-Focused Approach: Intrinsic motivation and deliberate practice strengthen each other](http://www.progressfocused.com/2016/03/intrinsic-motivation-and-deliberate.html)
-* [...](https://github.com/mistydew)
+* [...]({{ site.url | append: site.blog }})

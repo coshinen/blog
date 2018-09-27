@@ -55,4 +55,4 @@ Timeless Sleep<br>
 * [GARNET CROWの歌詞一覧リスト](https://www.uta-net.com/artist/344)
 * [GARNET CROW の歌詞 歌手](http://www.kasi-time.com/subcat-uta-167-1.html)
 * [GARNET CROWの歌詞・音楽・情報 \| 歌詞検索UtaTen（うたてん）](https://utaten.com/artist/GARNET+CROW)
-* [...](https://github.com/mistydew/gc)
+* [...]({{ site.url | append: site.gc }})

@@ -75,4 +75,4 @@ One more time　ふざけあった　時間よ
 * [山崎まさよしの歌詞一覧リスト](https://www.uta-net.com/artist/2503)
 * [山崎まさよし の歌詞 歌手](http://www.kasi-time.com/subcat-uta-332-1.html)
 * [山崎まさよしの歌詞・音楽・情報 \| 歌詞検索UtaTen（うたてん）](https://utaten.com/artist/山崎まさよし)
-* [...](https://github.com/mistydew)
+* [...]({{ site.url | append: site.blog }})

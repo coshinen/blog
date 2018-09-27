@@ -130,4 +130,4 @@ $ vim -b <file> # -b 选项表示二进制模式。
 * [Vim - 维基百科，自由的百科全书](https://zh.wikipedia.org/wiki/Vim)
 * [Learning the vi Editor/Vim/Modes - Wikibooks](https://en.wikibooks.org/wiki/Learning_the_vi_Editor/Vim/Modes)
 * [jmoon018/PacVim](https://github.com/jmoon018/PacVim) - 练习 Vim 命令的游戏
-* [...](http://github.com/mistydew)
+* [...]({{ site.url | append: site.blog }})

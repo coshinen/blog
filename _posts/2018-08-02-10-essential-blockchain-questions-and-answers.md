@@ -79,4 +79,4 @@ scriptSig: empty
 
 ## 参照
 * [10 Essential blockchain Interview Questions and Answers](https://www.toptal.com/blockchain/interview-questions)
-* [...](https://github.com/mistydew)
+* [...]({{ site.url | append: site.blog }})

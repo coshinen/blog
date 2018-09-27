@@ -7,7 +7,7 @@ comments: true
 categories: First
 tags: Start
 ---
-You can contact me via e-mail: [mistydew@qq.com](https://en.mail.qq.com).
+You can contact me via e-mail: [mistydew@qq.com](mailto:mistydew@qq.com).
 
 The following is a example of highlight.
 {% highlight ruby linenos %}
@@ -20,4 +20,4 @@ print_hi('Tom')
 
 Check out the [mistydew][md] for more info on who am I.
 
-[md]: http://github.com/mistydew
+[md]: https://github.com/mistydew

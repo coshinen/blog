@@ -61,4 +61,4 @@ $ git pull # 同步 GitHub 上的项目到本地。
 * [Git - Book](https://git-scm.com/book/en/v2)
 * [Git教程 - 廖雪峰的官方网站](https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000)
 * [Git教程 \| 菜鸟教程](http://www.runoob.com/git/git-tutorial.html)
-* [...](https://github.com/mistydew)
+* [...]({{ site.url | append: site.blog }})

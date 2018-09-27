@@ -123,4 +123,4 @@ Dig in the dancing queen
 * [ABBA \| Articles](https://abbasite.com)
 * [ABBA - Wikipedia](https://en.wikipedia.org/wiki/ABBA)
 * [Dancing Queen Lyrics](https://www.lyrics.com/lyric/24169579/ABBA/Dancing+Queen)
-* [...](https://github.com/mistydew)
+* [...]({{ site.url | append: site.blog }})
