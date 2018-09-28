@@ -6,6 +6,7 @@ author: mistydew
 comments: true
 categories: Blockchain
 tags: 区块链 比特币
+excerpt: 写在前面：与其说比特币是区块链技术的第一个应用，不如说区块链技术是为了实现虚拟数字货币比特币而出现的一种重组现有技术而得到的“新”技术，至于除了数字货币之外还能实现什么应用，我想等比特币落地那一天一切都会揭晓。
 ---
 ## 区块链 v1.0 推荐阅读
 
@@ -52,8 +53,7 @@ tags: 区块链 比特币
 * [比特币源码解析 - 呼，是出一口气；吸，是争一口气!](https://blog.csdn.net/pure_lady/article/category/7131199/2)
 * [比特币源码解读 - ttblack](https://www.jianshu.com/u/ef215107c407) v0.9.5rc2
 * [比特币源码研读 - 菜菜子_forest](https://www.jianshu.com/u/30081a05cf95) 0.14
-* [比特币源码剖析 - mistydew](https://mistydew.github.io) v0.12.1
-* [...](https://github.com/mistydew/blockchain)
+* [比特币源码剖析 - mistydew](https://mistydew.github.io/blog/2018/05/bitcoin-source-anatomy-00.html) v0.12.1
 
 #### 基础知识
 
@@ -71,3 +71,6 @@ tags: 区块链 比特币
 ### 以太坊
 
 暂无。
+
+## 参照
+* [...](https://github.com/mistydew/blockchain)

@@ -6,7 +6,7 @@ author: mistydew
 comments: true
 categories: ABBA 翻訳
 tags: 歌詞
-excerpt: You can dance. You can jive. Having the time of your life. Ooh, see that girl.
+excerpt: You can dance. You can jive. Having the time of your life. Ooh, see that girl. Watch that scene. Dig in the dancing queen.
 ---
 ![arrival](https://raw.githubusercontent.com/mistydew/audio/master/cover/arrival.jpg){:.border}
 

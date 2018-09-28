@@ -6,7 +6,7 @@ author: mistydew
 comments: true
 categories: 翻訳
 tags: 秒速5センチメートル 歌詞
-excerpt: これ以上何を失えば 心は許されるの どれ程の痛みならば もういちど君に会える
+excerpt: これ以上何を失えば 心は許されるの どれ程の痛みならば もういちど君に会える One more time 季節よ うつろわないで One more time ふざけあった 時間よ
 ---
 ## One more time, One more chance
 
