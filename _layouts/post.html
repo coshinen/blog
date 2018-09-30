@@ -9,9 +9,9 @@ layout: default
       <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{% include icon/calendar.html %}{{ page.date | date: "%b %-d, %Y" }}</time>
       {% if page.author %}<span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name"> | {% include icon/user-alt.html %}{{ page.author }}</span></span>{% endif %}
       <span id="busuanzi_container_page_pv"> | {% include icon/eye.html %}<span id="busuanzi_value_page_pv"></span> views</span>
-	  <span class="post-count"> | {% include icon/edit.html %}{{ page.content | strip_html | strip_newlines | remove: " " | size }} words</span>
-	  <span> | {% include icon/book-open.html %}≈ {{ page.content | strip_html | strip_newlines | remove: " " | size | divided_by: 350 | plus: 1 }} min</span>
-      <span> | {% include icon/tags.html %}{% for tag in page.tags %}<a class=tag" href="{{ site.tag }}#{{ tag }}-ref">{{ tag | prepend: " " }}</a>{% endfor %}</span>
+      <span class="post-count"> | {% include icon/edit.html %}{{ page.content | strip_html | strip_newlines | remove: " " | size }} words</span>
+      <span> | {% include icon/book-open.html %}≈ {{ page.content | strip_html | strip_newlines | remove: " " | size | divided_by: 350 | plus: 1 }} min</span>
+      <span> | {% include icon/tags.html %}{% for tag in page.tags %}<a class=tag" href="{{ site.tagcloud }}#{{ tag }}-ref">{{ tag | prepend: " " }}</a>{% endfor %}</span>
     </p>
   </header>
 
