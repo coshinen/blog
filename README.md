@@ -5,7 +5,6 @@
 - [ ] The anatomy of bitcoin v0.12.1 and the latest ver. source
   - [ ] The latest ver. bitcoin rpc command
 - [ ] GC Music Diary longtime plan
-- [x] add donate info: Bitcoin address
 
 ## Timeline
 * 2018.09.25 [new] Bitcoin donation address and QR(Quick Response) code
