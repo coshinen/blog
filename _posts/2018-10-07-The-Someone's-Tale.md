@@ -10,7 +10,7 @@ excerpt: まっすぐな思いはまっすぐに伝わるの? 唐突な青空 �
 ---
 ![Terminus](https://raw.githubusercontent.com/mistydew/gc2/master/cover/album/Album_10th_Terminus.jpg){:.border}
 
-## The Someone's Tale | 某人的傳說
+## The Someone's Tale | 某人的故事
 
 歌手：GARNET CROW<br>
 作詞：AZUKI 七<br>
