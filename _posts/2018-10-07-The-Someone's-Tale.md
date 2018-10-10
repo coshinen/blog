@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "The Someone's Tale"
-date:   2018-10-05 20:13:03 +0800
+date:   2018-10-07 20:13:03 +0800
 author: mistydew
 comments: true
 categories: ガーネット・クロウ 翻訳
