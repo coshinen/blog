@@ -10,7 +10,7 @@ excerpt: Doing all right! かみしめた君の記憶 木漏れ日の匂い 置�
 ---
 ![Doing all right](https://raw.githubusercontent.com/mistydew/gc2/master/cover/single/Single_29th_Doing_all_right.jpg){:.border}
 
-## Doing all right | 做好一起
+## Doing all right | 做好一切
 
 歌手：GARNET CROW<br>
 作詞：AZUKI 七<br>
