@@ -4,6 +4,9 @@ title: Quotes
 permalink: /blog/quotes.html
 ---
 
+> Francis Bacon:<br>
+> * Knowledge is power.
+
 > Martin Luther King, Jr.:<br>
 > * In the End, we will remember not the words of our enemies, but the silence of our friends.
 
