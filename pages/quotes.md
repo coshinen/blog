@@ -4,6 +4,9 @@ title: Quotes
 permalink: /blog/quotes.html
 ---
 
+> ブラック：<br>
+> * 自信があっても、結果にならなきゃダメでしょ！
+
 > Francis Bacon:<br>
 > * Knowledge is power.
 
