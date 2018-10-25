@@ -2,8 +2,8 @@
 
 ## Todo
 - [ ] add avatar, bio...
-- [ ] The anatomy of bitcoin v0.12.1 and the latest ver. source
-  - [ ] The latest ver. bitcoin rpc command
+- [ ] The anatomy of bitcoin v0.12.1 and the latest version source
+  - [ ] The latest version bitcoin rpc command
 - [ ] GC Music Diary longtime plan
   - [ ] all songs' lyric translation
 
