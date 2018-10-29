@@ -4,6 +4,7 @@
 - [ ] add avatar, bio...
 - [ ] The anatomy of bitcoin v0.12.1 and the latest version source
   - [ ] The latest version bitcoin rpc command
+  - [ ] The process of  the bitcoind function main
 - [ ] GC Music Diary longtime plan
   - [ ] all songs' lyric translation
 
