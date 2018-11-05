@@ -7,6 +7,7 @@
   - [ ] The process of  the bitcoind function main
 - [ ] GC Music Diary longtime plan
   - [ ] all songs' lyric translation
+  - [ ] home page
 
 ## Timeline
 * 2018.09.25 [new] Bitcoin donation address and QR(Quick Response) code
