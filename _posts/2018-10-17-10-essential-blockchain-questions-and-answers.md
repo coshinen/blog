@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "10 个区块链的基础知识"
-date:   2018-08-02 09:23:37 +0800
+date:   2018-10-17 09:23:37 +0800
 author: mistydew
 comments: true
 categories: Blockchain 译文

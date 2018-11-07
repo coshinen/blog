@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Mysterious Eyes"
-date:   2018-08-17 20:00:03 +0800
+date:   2018-10-03 20:00:03 +0800
 author: mistydew
 comments: true
 categories: ガーネット・クロウ 翻訳

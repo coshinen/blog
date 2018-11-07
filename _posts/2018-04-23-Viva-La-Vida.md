@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Viva La Vida"
-date:   2018-06-18 20:08:05 +0800
+date:   2018-04-23 20:08:05 +0800
 author: mistydew
 comments: true
 categories: Coldplay 翻訳

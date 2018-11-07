@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "如何使用 Watch-only 地址"
-date:   2018-06-06 16:20:00 +0800
+date:   2018-04-22 16:20:00 +0800
 author: mistydew
 comments: true
 categories: Blockchain Bitcoin 译文

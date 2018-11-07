@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Dancing Queen"
-date:   2018-07-30 20:16:08 +0800
+date:   2018-04-27 20:16:08 +0800
 author: mistydew
 comments: true
 categories: ABBA 翻訳
@@ -10,8 +10,7 @@ excerpt: You can dance. You can jive. Having the time of your life. Ooh, see tha
 ---
 ![arrival](https://raw.githubusercontent.com/mistydew/audio/master/cover/arrival.jpg){:.border}
 
-## Dancing Queen
-> 舞后
+## Dancing Queen | 舞后
 
 歌手：ABBA
 

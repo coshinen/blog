@@ -338,7 +338,7 @@ public:
 };
 {% endhighlight %}
 
-关于区块的内部构造，详见[比特币源码剖析—区块](/blog/2018/06/bitcoin-block.html)篇。
+关于区块的内部构造，详见[比特币源码剖析—区块](/blog/2018/04/bitcoin-block.html)篇。
 
 ### 6.1. 修改创世区块相关信息
 

@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "secret base～君がくれたもの～"
-date:   2018-07-10 20:01:08 +0800
+date:   2018-10-01 20:01:08 +0800
 author: mistydew
 comments: true
 categories: 翻訳

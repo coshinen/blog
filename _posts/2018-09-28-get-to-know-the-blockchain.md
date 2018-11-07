@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "认识区块链"
-date:   2018-09-21 15:19:08 +0800
+date:   2018-09-28 15:19:08 +0800
 author: mistydew
 comments: true
 categories: Blockchain 译文

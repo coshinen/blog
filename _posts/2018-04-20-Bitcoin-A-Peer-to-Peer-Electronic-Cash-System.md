@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "比特币白皮书中英对照"
-date:   2018-06-12 09:07:06 +0800
+date:   2018-04-20 09:07:06 +0800
 author: mistydew
 comments: true
 categories: Blockchain Bitcoin 译文
@@ -588,9 +588,6 @@ http://www.hashcash.org/papers/hashcash.pdf, 2002.<br>
 [7] R.C. Merkle, "Protocols for public key cryptosystems," In Proc. 1980 Symposium on Security and 
 Privacy, IEEE Computer Society, pages 122-133, April 1980.<br>
 [8] W. Feller, "An introduction to probability theory and its applications," 1957.
-
-## 感想
-在了解区块链后再回来看看白皮书，发现有些部分豁然开朗。
 
 ## 参照
 * [Bitcoin: A Peer-to-Peer Electronic Cash System](https://bitcoin.org/bitcoin.pdf)
