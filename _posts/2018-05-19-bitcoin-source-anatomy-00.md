@@ -41,8 +41,8 @@ int main(int argc, char* argv[]) // 0.程序入口
 }
 {% endhighlight %}
 
-![bitcoindsetup01](/images/20180519/bitcoindsetup01.png)
-![bitcoindsetup02](/images/20180519/bitcoindsetup02.png)
+![bitcoindsetup01](/images/bitcoindsetup01.png)
+![bitcoindsetup02](/images/bitcoindsetup02.png)
 
 > 比特币核心服务程序启动流程，如上图所示：<br>
 > 1.设置程序运行环境：本地化处理。[SetupEnvironment()](/blog/2018/05/bitcoin-source-anatomy-01.html#SetupEnvironment-ref)<br>

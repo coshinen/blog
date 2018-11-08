@@ -8,7 +8,7 @@ categories: コナン 翻訳
 tags: CONAN 歌詞
 excerpt: もしも君に巡り逢えたら 二度と君の手を離さない 春の終わり告げる 花御堂 霞む花 一枚(ひとひら) 蘇る 思い出の歌 この胸に 今も優しく
 ---
-![Time after time～花舞う街で～](https://raw.githubusercontent.com/mistydew/dc/master/images/cover/Time%20after%20time%EF%BD%9E%E8%8A%B1%E8%88%9E%E3%81%86%E8%A1%97%E3%81%A7%EF%BD%9E.jpg){:.border}
+![Time after time～花舞う街で～](https://raw.githubusercontent.com/mistydew/dc/master/cover/Time%20after%20time%EF%BD%9E%E8%8A%B1%E8%88%9E%E3%81%86%E8%A1%97%E3%81%A7%EF%BD%9E.jpg){:.border}
 
 ## Time after time～花舞う街で～ | 一次又一次~在落花紛飛的街道上~
 

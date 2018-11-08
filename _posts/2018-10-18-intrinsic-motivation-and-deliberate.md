@@ -8,7 +8,7 @@ categories: Study 译文
 tags: Study Insistence
 excerpt: 内在动机和刻意练习呈螺旋式上升
 ---
-![intrinsic_motivation_deliberate_practice](/images/20180803/intrinsic_motivation_deliberate_practice.png){:.border}
+![intrinsic_motivation_deliberate_practice](/images/intrinsic_motivation_deliberate_practice.png){:.border}
 
 [内在动机](http://www.progressfocused.com/2015/11/autonomous-motivation-interesting-andor.html)，当你做你觉得有趣的事时你感受到的动机，
 以及[刻意练习](http://www.progressfocused.com/2011/10/deliberate-practice-crucial-factor.html)，以目标为中心的练习方式，
@@ -19,7 +19,7 @@ excerpt: 内在动机和刻意练习呈螺旋式上升
 在 12 个月的时间中，内在动机和个人的刻意练习是相互关联的，
 换句话说，是内在动机和刻意练习的螺旋式上升。
 
-![presentatie](/images/20180803/presentatie.jpg){:.border}
+![presentatie](/images/presentatie.jpg){:.border}
 
 ## 感想
 不知为何又想起了一万小时理论，不如实践一下，只要每天花上 2 小时，坚持 13 年。<br>

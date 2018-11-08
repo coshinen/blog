@@ -7,7 +7,7 @@ comments: true
 categories: Search 译文
 tags: Google 搜索权重
 ---
-![short-clicks-vs-long-clicks](/images/20180913/short-clicks-vs-long-clicks.png){:.border}<br>
+![short-clicks-vs-long-clicks](/images/short-clicks-vs-long-clicks.png){:.border}<br>
 Google 希望看到**长点击**而非**短点击**。
 这是来自谷歌的新的搜索引擎优化（SEO, Search Engine Optimization）术语。
 

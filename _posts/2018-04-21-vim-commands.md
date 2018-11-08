@@ -11,7 +11,7 @@ Vim(Vi IMproved) 是 Vi 文本编辑器的升级版，在 Linux 系统中作为 
 
 下图展示了各自的学习曲线，其中不乏调侃之意。
 
-![curves](/images/20180421/vi_emacs_learning_curves.jpg){:.border}
+![curves](/images/vi_emacs_learning_curves.jpg){:.border}
 
 （横坐标对应熟练度，纵坐标对应技能）
 

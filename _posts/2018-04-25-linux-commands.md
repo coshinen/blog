@@ -8,8 +8,8 @@ categories: Unix/Linux
 tags: Linux CLI Terminal
 ---
 Linux mascot: crystal tux and tux(Torvalds linUX?)<br>
-![crystal tux](/images/20180425/crystal_penguin.jpg)
-![tux](/images/20180425/tux.jpg)<br>
+![crystal tux](/images/crystal_penguin.jpg)
+![tux](/images/tux.jpg)<br>
 Childhood and Adult(funny)
 
 ## 添加/删除用户 | useradd/userdel

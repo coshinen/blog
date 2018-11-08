@@ -22,7 +22,7 @@ tags: C++ 设计模式
 **注：该实例通常存储私有静态变量，在首次调用静态方法前创建实例。**
 
 基础类图如下：<br>
-![Singleton_UML_class_diagram](/images/20180717/Singleton_UML_class_diagram.svg)
+![Singleton_UML_class_diagram](/images/Singleton_UML_class_diagram.svg)
 
 ## 实现
 
