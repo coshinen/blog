@@ -10,12 +10,13 @@ tags: Start
 You can contact me via e-mail: [mistydew@qq.com](mailto:mistydew@qq.com).
 
 The following is a example of highlight.
-{% highlight ruby linenos %}
-def print_hi(name)
-  puts "Hi, #{name}"
-end
-print_hi('Tom')
-#=> prints 'Hi, Tom' to STDOUT.
+{% highlight C++ linenos %}
+#include <iostream>
+int main(void)
+{
+  std::cout << "Hello world!" << std::endl;
+  return 0;
+}
 {% endhighlight %}
 
 Check out the [mistydew][md] for more info on who am I.
