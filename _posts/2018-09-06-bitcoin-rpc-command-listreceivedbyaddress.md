@@ -15,9 +15,9 @@ listreceivedbyaddress ( minconf includeempty includeWatchonly ) # 列出接收�
 {% endhighlight %}
 
 参数：<br>
-1. minconf （数字，可选，默认为 1）在被包含到付款前的最低确认数。<br>
-2. includeempty （布尔型，可选，默认为 false）是否包括还未收到任何付款的地址。<br>
-3. includeWatchonly （布尔型，可选，默认为 false）是否包含 watchonly 地址（见 [importaddress](/blog/2018/06/bitcoin-rpc-command-importaddress.html)）。
+1.minconf（数字，可选，默认为 1）在被包含到付款前的最低确认数。<br>
+2.includeempty（布尔型，可选，默认为 false）是否包括还未收到任何付款的地址。<br>
+3.includeWatchonly（布尔型，可选，默认为 false）是否包含 watchonly 地址（见 [importaddress](/blog/2018/06/bitcoin-rpc-command-importaddress.html)）。
 
 结果：<br>
 {% highlight shell %}

@@ -15,7 +15,7 @@ verifytxoutproof "proof" # 验证指向块上的一笔交易的证明，返回�
 {% endhighlight %}
 
 参数：<br>
-1. proof （字符串，必备）通过 [gettxoutproof](/blog/2018/06/bitcoin-rpc-command-gettxoutproof.html) 生成的 16 进制编码的证明。
+1.proof（字符串，必备）通过 [gettxoutproof](/blog/2018/06/bitcoin-rpc-command-gettxoutproof.html) 生成的 16 进制编码的证明。
 
 结果：（数组，字符串）返回证明提交的交易索引集，如果证明无效则为空数组。
 

@@ -15,7 +15,7 @@ getaddressesbyaccount "account" # （已过时）获取指定账户的地址列�
 {% endhighlight %}
 
 参数：<br>
-1. account （字符串，必备）账户名。
+1.account（字符串，必备）账户名。
 
 结果：
 {% highlight shell %}

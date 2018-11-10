@@ -15,7 +15,7 @@ decoderawtransaction "hexstring" # 获取一个表示序列化的 16 进制编�
 {% endhighlight %}
 
 参数：<br>
-1. hex （字符串，必备）交易的 16 进制字符串。
+1.hex（字符串，必备）交易的 16 进制字符串。
 
 结果：<br>
 {% highlight shell %}

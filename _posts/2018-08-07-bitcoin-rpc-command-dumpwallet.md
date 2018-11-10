@@ -15,7 +15,7 @@ dumpwallet "filename" # 以可读的方式导出全部钱包密钥到指定文�
 {% endhighlight %}
 
 参数：<br>
-1. filename （字符串，必备）文件名。
+1.filename（字符串，必备）文件名。
 
 结果：无返回值。
 

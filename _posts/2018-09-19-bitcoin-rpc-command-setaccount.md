@@ -15,8 +15,8 @@ setaccount "bitcoinaddress" "account" # （已过时）设置给定地址关联�
 {% endhighlight %}
 
 参数：<br>
-1. bitcoinaddress （字符串，必备）用于关联一个账户的比特币地址。<br>
-2. account （字符串，必备）要分配地址的账户。
+1.bitcoinaddress（字符串，必备）用于关联一个账户的比特币地址。<br>
+2.account（字符串，必备）要分配地址的账户。
 
 结果：无返回值。
 

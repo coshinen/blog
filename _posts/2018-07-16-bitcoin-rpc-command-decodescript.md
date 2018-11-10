@@ -15,7 +15,7 @@ decodescript "hex" # 解码一个 16 进制编码的脚本
 {% endhighlight %}
 
 参数：<br>
-1. hex （字符串，必备）16 进制编码的脚本，可以为空 ""。
+1.hex（字符串，必备）16 进制编码的脚本，可以为空 ""。
 
 结果：<br>
 {% highlight shell %}

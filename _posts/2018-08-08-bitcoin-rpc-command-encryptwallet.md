@@ -21,7 +21,7 @@ encryptwallet "passphrase" # 使用 passphrase 加密钱包
 **注：该命令将会关闭服务器。**
 
 参数：<br>
-1. passphrase （字符串）用来加密钱包的密码。至少 1 个字符，应该较长。
+1.passphrase（字符串）用来加密钱包的密码。至少 1 个字符，应该较长。
 
 结果：返回提示信息。
 

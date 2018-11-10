@@ -19,7 +19,7 @@ getblocktemplate ( "jsonrequestobject" ) # 获取一个区块模板
 完整规范详见 [https://en.bitcoin.it/wiki/BIP_0022](https://en.bitcoin.it/wiki/BIP_0022)。
 
 参数：<br>
-1. jsonrequestobject （字符串，可选）以下规范中的 json 对象。<br>
+1.jsonrequestobject（字符串，可选）以下规范中的 json 对象。<br>
 {% highlight shell %}
      {
        "mode":"template"    （字符串，可选）该项必须设置 "template" 或省略

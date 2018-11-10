@@ -15,7 +15,7 @@ backupwallet "destination" # 安全复制 wallet.dat 到目标 destination，它
 {% endhighlight %}
 
 参数：<br>
-1. destination （字符串）目标目录或文件。
+1.destination（字符串）目标目录或文件。
 
 结果：无返回值。
 

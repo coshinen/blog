@@ -15,7 +15,7 @@ settxfee amount # 设置每 kB 的交易费。覆盖 paytxfee 参数的值
 {% endhighlight %}
 
 参数：<br>
-1. amount （数字或字符串，必备）以 BTC/kB 为单位的交易费。
+1.amount（数字或字符串，必备）以 BTC/kB 为单位的交易费。
 
 结果：（布尔型）如果成功返回 true。
 

@@ -18,8 +18,8 @@ sendmany "fromaccount" {"address":amount,...} ( minconf "comment" ["address",...
 使用该命令前需要调用 [walletpassphrase](/blog/2018/09/bitcoin-rpc-command-walletpassphrase.html) 解锁钱包。**
 
 参数：<br>
-1.fromaccount （字符串，必备，已过时）从该账户发送资金。应使用默认账户 ""。<br>
-2.amounts （字符串，必备）一个地址和金额的 json 对象。<br>
+1.fromaccount（字符串，必备，已过时）从该账户发送资金。应使用默认账户 ""。<br>
+2.amounts（字符串，必备）一个地址和金额的 json 对象。<br>
 {% highlight shell %}
     {
       "address":amount   （数字或字符串）键是比特币地址，值是以 BTC 为单位的数字型（可以是字符串）金额

@@ -15,9 +15,9 @@ verifymessage "bitcoinaddress" "signature" "message" # 验证一个签过名的�
 {% endhighlight %}
 
 参数：<br>
-1. bitcoinaddress （字符串，必备）用于签名的比特币地址。<br>
-2. signature （字符串，必备）通过签名者提供的 base64 编码的签名（见 [signmessage](/blog/2018/06/bitcoin-rpc-command-signmessage.html)）。<br>
-3. message （字符串，必备）签过名的消息。
+1.bitcoinaddress（字符串，必备）用于签名的比特币地址。<br>
+2.signature（字符串，必备）通过签名者提供的 base64 编码的签名（见 [signmessage](/blog/2018/06/bitcoin-rpc-command-signmessage.html)）。<br>
+3.message（字符串，必备）签过名的消息。
 
 结果：（布尔型）返回 true 表示签名验证通过，反之不通过。
 

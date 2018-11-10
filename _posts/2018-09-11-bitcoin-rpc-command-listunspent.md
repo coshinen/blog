@@ -18,9 +18,9 @@ listunspent ( minconf maxconf  ["address",...] ) # 列出在 minconf 和 maxconf
 结果是一个对象数组，每个对象都有：{交易索引，输出序号，公钥脚本，金额，确认数}
 
 参数：<br>
-1. minconf （数字，可选，默认为 1）要过滤的最小确认数。<br>
-2. maxconf （数字，可选，默认为 9999999）要过滤的最大确认数。<br>
-3. addresses （字符串）要过滤的比特币地址的 json 数组。
+1.minconf（数字，可选，默认为 1）要过滤的最小确认数。<br>
+2.maxconf（数字，可选，默认为 9999999）要过滤的最大确认数。<br>
+3.addresses（字符串）要过滤的比特币地址的 json 数组。
 {% highlight shell %}
     [
       "address" （字符串）比特币地址

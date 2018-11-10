@@ -15,8 +15,8 @@ getreceivedbyaddress "bitcoinaddress" ( minconf ) # 获取给定比特币地址�
 {% endhighlight %}
 
 参数：<br>
-1. bitcoinaddress （字符串，必备）交易的比特币地址。<br>
-2. minconf （数字，可选，默认为 1）只包含至少 minconf 次确认的交易。
+1.bitcoinaddress（字符串，必备）交易的比特币地址。<br>
+2.minconf（数字，可选，默认为 1）只包含至少 minconf 次确认的交易。
 
 结果：（数字）该地址接收到的 BTC 总数。
 

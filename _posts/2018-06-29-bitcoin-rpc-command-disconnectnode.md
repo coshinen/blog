@@ -15,7 +15,7 @@ disconnectnode "node" # 立刻断开与指定节点的连接
 {% endhighlight %}
 
 参数：<br>
-1. node （字符串，必备）节点（见 [getpeerinfo](/blog/2018/05/bitcoin-rpc-command-getpeerinfo.html) 获取的节点信息）。
+1.node（字符串，必备）节点（见 [getpeerinfo](/blog/2018/05/bitcoin-rpc-command-getpeerinfo.html) 获取的节点信息）。
 
 结果：无返回值。
 

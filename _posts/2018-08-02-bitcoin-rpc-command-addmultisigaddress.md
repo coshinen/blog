@@ -18,15 +18,15 @@ addmultisigaddress urequired ["key",...] ( "account" ) # 添加一个需要 nreq
 如果指定了账户（已过时），则分配地址到该账户。**
 
 参数：<br>
-1.nrequired （数字，必备）n 个密钥或地址所需的签名数量。<br>
-2.keysobject （字符串，必备）一个比特币地址或 16 进制编码公钥的 json 数组。
+1.nrequired（数字，必备）n 个密钥或地址所需的签名数量。<br>
+2.keysobject（字符串，必备）一个比特币地址或 16 进制编码公钥的 json 数组。
 {% highlight shell %}
      [
        "key"    （字符串）比特币地址或 16 进制编码的公钥
        ,...
      ]
 {% endhighlight %}
-3.account （字符串，可选，已过时）分配地址到该账户。
+3.account（字符串，可选，已过时）分配地址到该账户。
 
 结果：（字符串）返回一个关联密钥的比特币地址（base58 编码的脚本索引）。<br>
 

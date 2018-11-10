@@ -17,7 +17,7 @@ estimatesmartfee nblocks # 估计交易在 nblocks 个区块开始确认的每�
 **警告：该接口不稳定且可能消失或改变！**
 
 参数：<br>
-1. nblocks （数字）区块数。
+1.nblocks（数字）区块数。
 
 结果：<br>
 {% highlight shell %}

@@ -22,8 +22,8 @@ fundrawtransaction "hexstring" includeWatching # 把输入添加到交易中，�
 watch-only 目前只支持 P2PKH，多签，和 P2SH 版本。**
 
 参数：<br>
-1. hexstring （字符串，必备）原始交易的 16 进制字符串。<br>
-2. includeWatching （布尔型，可选，默认为 false）选择 watch-only 的输入。
+1.hexstring（字符串，必备）原始交易的 16 进制字符串。<br>
+2.includeWatching（布尔型，可选，默认为 false）选择 watch-only 的输入。
 
 结果：<br>
 {% highlight shell %}

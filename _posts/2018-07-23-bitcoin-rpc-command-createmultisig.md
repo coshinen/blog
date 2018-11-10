@@ -15,8 +15,8 @@ createmultisig urequired ["key",...] # 创建一个需要 m 个密钥的 n 个�
 {% endhighlight %}
 
 参数：<br>
-1. nrequired （数字，必备）n 个密钥或地址所需的签名数量。<br>
-2. keys （字符串，必备）一个比特币地址或 16 进制编码的公钥的 json 数组。
+1.nrequired（数字，必备）n 个密钥或地址所需的签名数量。<br>
+2.keys（字符串，必备）一个比特币地址或 16 进制编码的公钥的 json 数组。
 {% highlight shell %}
      [
        "key"    （字符串）比特币地址或 16 进制编码的公钥

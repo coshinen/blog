@@ -19,10 +19,10 @@ importaddress "address" ( "label" rescan p2sh ) # 导入一个脚本（16 进制
 参考[如何使用 Watch-only 地址](/blog/2018/04/how-to-use-watch-only-addresses.html)。
 
 参数：<br>
-1. script （字符串，必备）16 进制编码的脚本（或地址）。<br>
-2. label （字符串，可选，默认为 ""）一个可选的标签（账户名）。<br>
-3. rescan （布尔型，可选，默认为 true）再扫描钱包交易。<br>
-4. p2sh （布尔型，可选，默认为 true）添加 P2SH 版本的脚本。
+1.script（字符串，必备）16 进制编码的脚本（或地址）。<br>
+2.label（字符串，可选，默认为 ""）一个可选的标签（账户名）。<br>
+3.rescan（布尔型，可选，默认为 true）再扫描钱包交易。<br>
+4.p2sh（布尔型，可选，默认为 true）添加 P2SH 版本的脚本。
 
 **注：如果 rescan 为 true，该调用可能需要数分钟来完成。
 如果你有完整的公钥，你应该使用 [importpubkey](/blog/2018/06/bitcoin-rpc-command-importpubkey.html) 代替该命令。**

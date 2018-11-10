@@ -15,7 +15,7 @@ validateaddress "bitcoinaddress" # 获取关于给定比特币地址的信息（
 {% endhighlight %}
 
 参数：<br>
-1. bitcoinaddress （字符串，必备）用于验证的比特币地址。
+1.bitcoinaddress（字符串，必备）用于验证的比特币地址。
 
 结果：<br>
 {% highlight shell %}

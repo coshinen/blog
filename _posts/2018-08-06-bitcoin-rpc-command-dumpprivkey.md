@@ -17,7 +17,7 @@ dumpprivkey "bitcoinaddress" # 导出 bitcoinaddress 对应的私钥
 RPC 命令 [importprivkey](/blog/2018/08/bitcoin-rpc-command-importprivkey.html) 可以使用该输出作为输入。
 
 参数：<br>
-1. bitcoinaddress （字符串，必备）私钥对应的比特币地址。
+1.bitcoinaddress（字符串，必备）私钥对应的比特币地址。
 
 结果：（字符串）返回私钥。
 

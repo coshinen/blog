@@ -15,11 +15,11 @@ move "fromaccount" "toaccount" amount ( minconf "comment" ) # （已过时）从
 {% endhighlight %}
 
 参数：<br>
-1. fromaccount （字符串，必备）从该账户转移资金。默认账户使用 ""。<br>
-2. toaccount （字符串，必备）转移资金到该账户。默认账户使用 ""。<br>
-3. amount （数字）在账户间转移 BTC 的数量，不能为负数。<br>
-4. minconf （数字，可选，默认为 1）只使用至少 minconf 次确认的资金。<br>
-5. comment （字符串，可选）一个可选的备注，只存储在钱包中。
+1.fromaccount（字符串，必备）从该账户转移资金。默认账户使用 ""。<br>
+2.toaccount（字符串，必备）转移资金到该账户。默认账户使用 ""。<br>
+3.amount（数字）在账户间转移 BTC 的数量，不能为负数。<br>
+4.minconf（数字，可选，默认为 1）只使用至少 minconf 次确认的资金。<br>
+5.comment（字符串，可选）一个可选的备注，只存储在钱包中。
 
 结果：（布尔型）如果成功返回 true。
 

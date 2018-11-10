@@ -15,8 +15,8 @@ gettransaction "txid" ( includeWatchonly ) # 获取关于钱包内交易 txid �
 {% endhighlight %}
 
 参数：<br>
-1. txid （字符串，必备）交易索引。<br>
-2. includeWatchonly （布尔型，可选，默认为 false）在余额计算和 details[] 是否包含 watchonly 地址。
+1.txid（字符串，必备）交易索引。<br>
+2.includeWatchonly（布尔型，可选，默认为 false）在余额计算和 details[] 是否包含 watchonly 地址。
 
 结果：<br>
 {% highlight shell %}

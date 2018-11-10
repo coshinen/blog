@@ -20,8 +20,8 @@ lockunspent unlock [{"txid":"txid","vout":n},...] # 临时加锁（unlock=false�
 也可以查看 [listunspent](/blog/2018/09/bitcoin-rpc-command-listunspent.html)。
 
 参数：<br>
-1. unlock （布尔型，必备）指定交易是否解锁（true）或上锁（false）。<br>
-2. transactions （字符串，可选，默认为全部交易输出）一个 json 对象数组。每个对象的交易索引（字符串）和交易输出序号（数字）。<br>
+1.unlock（布尔型，必备）指定交易是否解锁（true）或上锁（false）。<br>
+2.transactions（字符串，可选，默认为全部交易输出）一个 json 对象数组。每个对象的交易索引（字符串）和交易输出序号（数字）。<br>
 {% highlight shell %}
      [           （json 对象的 json 数组）
        {

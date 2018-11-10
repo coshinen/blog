@@ -15,7 +15,7 @@ estimatefee nblocks # 估算交易在 nblocks 个区块开始确认的每千字�
 {% endhighlight %}
 
 参数：<br>
-1. nblocks （数字）区块数。
+1.nblocks（数字）区块数。
 
 结果：（数字型）返回预估的每千字节的交易费。<br>
 如果没有足够的交易和区块用来估算则会返回一个负值，-1 表示交易费为 0。
