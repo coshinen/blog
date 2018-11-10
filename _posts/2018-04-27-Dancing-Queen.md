@@ -118,6 +118,8 @@ Dig in the dancing queen
 > 喜歡作爲舞后<br>
 > 喜歡作爲舞后
 
+Thanks for your time.
+
 ## 参照
 * [ABBA \| Articles](https://abbasite.com)
 * [ABBA - Wikipedia](https://en.wikipedia.org/wiki/ABBA)

@@ -68,6 +68,8 @@ One more time　ふざけあった　時間よ
 欲しいものなど　もう何もない<br>
 君のほかに大切なものなど
 
+Thanks for your time.
+
 ## 参照
 * [山崎まさよし - Wikipedia](https://ja.wikipedia.org/wiki/山崎まさよし)
 * [山崎まさよし - 维基百科，自由的百科全书](https://zh.wikipedia.org/wiki/山崎将义)

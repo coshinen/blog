@@ -32,7 +32,7 @@ $ bitcoin-cli walletpassphrase "passphrase" 60
 {% endhighlight %}
 
 若钱包未加密，可忽略此步，直接进行消息验证。<br>
-使用 [signmessage](/blog/2018/06/bitcoin-rpc-command-signmessage.html) 签名一个消息。
+使用 [signmessage](/blog/2018/09/bitcoin-rpc-command-signmessage.html) 签名一个消息。
 
 {% highlight shell %}
 $ bitcoin-cli getnewaddress

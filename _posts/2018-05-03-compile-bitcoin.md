@@ -81,7 +81,6 @@ $ sudo apt-get install libqrencode-dev
 
 **注：Linux 上安装任何程序，若没有错误提示，则表示安装成功。**
 
-完。<br>
 Thanks for your time.
 
 ## 参照

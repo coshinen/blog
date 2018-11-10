@@ -350,8 +350,6 @@ UniValue signrawtransaction(const UniValue& params, bool fHelp)
 4.开始签名，遍历交易输入列表，对每笔交易输入进行签名，然后遍历前一笔输出交易列表，合并全部的交易输入签名，验证脚本签名。<br>
 5.追加相关信息到对象类型的结果集后返回。
 
-（完）
-
 Thanks for your time.
 
 ## 参照

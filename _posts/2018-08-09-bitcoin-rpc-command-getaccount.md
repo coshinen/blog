@@ -23,7 +23,7 @@ getaccount "bitcoinaddress" # （已过时）获取指定地址关联的账户
 
 ### 比特币核心客户端
 
-使用 [getnewaddress](/blog/2018/06/bitcoin-rpc-command-getnewaddress.html) 在指定账户下创建一个地址，
+使用 [getnewaddress](/blog/2018/08/bitcoin-rpc-command-getnewaddress.html) 在指定账户下创建一个地址，
 根据该地址查询账户。
 
 {% highlight shell %}

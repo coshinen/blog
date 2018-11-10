@@ -15,8 +15,8 @@ signmessage "bitcoinaddress" "message" # 使用一个地址的私钥签名一个
 {% endhighlight %}
 
 参数：<br>
-1. bitcoinaddress （字符串，必备）拥有对应私钥的比特币地址。<br>
-2. message （字符串，必备）用于创建一个签名的消息。
+1.bitcoinaddress（字符串，必备）拥有对应私钥的比特币地址。<br>
+2.message（字符串，必备）用于创建一个签名的消息。
 
 结果：（字符串）返回 base64 编码的消息的签名。
 
@@ -24,9 +24,9 @@ signmessage "bitcoinaddress" "message" # 使用一个地址的私钥签名一个
 
 ### 比特币核心客户端
 
-1. 若钱包加密了，需使用 [walletpassphrase](/blog/2018/05/bitcoin-rpc-command-walletpassphrase.html) 解锁钱包数秒。<br>
-2. 使用此命令对一条消息进行签名。<br>
-3. 使用 [verifymessage](/blog/2018/06/bitcoin-rpc-command-verifymessage.html) 验证消息。
+1.若钱包加密了，需使用 [walletpassphrase](/blog/2018/09/bitcoin-rpc-command-walletpassphrase.html) 解锁钱包数秒。<br>
+2.使用此命令对一条消息进行签名。<br>
+3.使用 [verifymessage](/blog/2018/07/bitcoin-rpc-command-verifymessage.html) 验证消息。
 
 {% highlight shell %}
 $ bitcoin-cli walletpassphrase "mypasswd" 60

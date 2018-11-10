@@ -72,7 +72,9 @@ void StartShutdown()
 }
 {% endhighlight %}
 
-更多细节请参考[比特币核心服务启动过程]()。
+更多细节请参考[比特币核心服务启动过程](/blog/2018/05/bitcoin-source-anatomy-00.html)。
+
+Thanks for your time.
 
 ## 参照
 * [Developer Documentation - Bitcoin](https://bitcoin.org/en/developer-documentation)

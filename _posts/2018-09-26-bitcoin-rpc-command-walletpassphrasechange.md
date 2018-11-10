@@ -15,8 +15,8 @@ walletpassphrasechange "oldpassphrase" "newpassphrase" # 更改钱包密码 oldp
 {% endhighlight %}
 
 参数：<br>
-1. oldpassphrase （字符串）当前密码。<br>
-2. newpassphrase （字符串）新密码。
+1.oldpassphrase（字符串）当前密码。<br>
+2.newpassphrase（字符串）新密码。
 
 结果：无返回值。
 

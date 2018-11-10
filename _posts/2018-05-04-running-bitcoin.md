@@ -666,7 +666,6 @@ Linux: ~/.bitcoin/bitcoin.conf
 
 来自 [https://github.com/mistydew/blockchain/blob/master/bitcoin.conf](https://github.com/mistydew/blockchain/blob/master/bitcoin.conf):
 
-完。<br>
 Thanks for your time.
 
 ## 参照

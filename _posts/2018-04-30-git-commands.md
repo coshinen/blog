@@ -55,6 +55,8 @@ $ git push origin master -f # 强制同步本地的项目分支到 GitHub 上，
 $ git pull # 同步 GitHub 上的项目到本地。
 {% endhighlight %}
 
+Thanks for your time.
+
 ## 参照
 * [Git](https://git-scm.com)
 * [Git - Reference](https://git-scm.com/docs)

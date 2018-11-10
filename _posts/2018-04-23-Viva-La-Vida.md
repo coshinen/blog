@@ -69,6 +69,8 @@ I know Saint Peter won't call my name<br>
 Never an honest word<br>
 But that was when I ruled the world
 
+Thanks for your time.
+
 ## 参照
 * [Coldplay - Viva La Vida \| MetroLyrics](http://www.metrolyrics.com/viva-la-vida-lyrics-coldplay.html)
 * [...]({{ site.url | append: site.blog }})

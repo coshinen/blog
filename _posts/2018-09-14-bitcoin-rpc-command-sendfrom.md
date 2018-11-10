@@ -14,8 +14,8 @@ excerpt: $ bitcoin-cli sendfrom "fromaccount" "tobitcoinaddress" amount ( mincon
 sendfrom "fromaccount" "tobitcoinaddress" amount ( minconf "comment" "comment-to" ) # （已过时）从一个账户发送金额到一个比特币地址
 {% endhighlight %}
 
-**使用 [sendtoaddress](/blog/2018/07/bitcoin-rpc-command-sendtoaddress.html) 替代该命令。<br>
-使用该命令前需要调用 [walletpassphrase](/blog/2018/05/bitcoin-rpc-command-walletpassphrase.html) 解锁钱包。**
+**使用 [sendtoaddress](/blog/2018/09/bitcoin-rpc-command-sendtoaddress.html) 替代该命令。<br>
+使用该命令前需要调用 [walletpassphrase](/blog/2018/09/bitcoin-rpc-command-walletpassphrase.html) 解锁钱包。**
 
 参数：<br>
 1. fromaccount （字符串，必备）从该账户发送资金。默认账户使用 ""。<br>
@@ -31,8 +31,8 @@ sendfrom "fromaccount" "tobitcoinaddress" amount ( minconf "comment" "comment-to
 
 ### 比特币核心客户端
 
-**使用该命令前，先调用 [walletpassphrase](/blog/2018/05/bitcoin-rpc-command-walletpassphrase.html) 解锁钱包，<br>
-使用该命令后，再调用 [walletlock](/blog/2018/05/bitcoin-rpc-command-walletlock.html) 锁定钱包。**
+**使用该命令前，先调用 [walletpassphrase](/blog/2018/09/bitcoin-rpc-command-walletpassphrase.html) 解锁钱包，<br>
+使用该命令后，再调用 [walletlock](/blog/2018/09/bitcoin-rpc-command-walletlock.html) 锁定钱包。**
 
 用法一：从默认账户发送 0.01 BTC 到指定地址，资金必须至少 1 次确认。
 
@@ -141,7 +141,7 @@ UniValue sendfrom(const UniValue& params, bool fHelp)
 9.获取交易哈希，转化为 16 进制并返回。
 
 第八步，调用 SendMoney(address.Get(), nAmount, false, wtx) 发送交易，
-见 [比特币 RPC 命令剖析 sendtoaddress](/blog/2018/07/bitcoin-rpc-command-sendtoaddress.html)。
+见 [比特币 RPC 命令剖析 sendtoaddress](/blog/2018/09/bitcoin-rpc-command-sendtoaddress.html)。
 
 Thanks for your time.
 

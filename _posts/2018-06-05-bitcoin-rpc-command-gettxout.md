@@ -42,7 +42,7 @@ gettxout "txid" n ( includemempool ) # 获取关于一笔未花费交易输出�
 
 ## 用法示例
 
-先使用 [listunspent](/blog/2018/06/bitcoin-rpc-command-listunspent.html) 命令列出未花费交易输出，
+先使用 [listunspent](/blog/2018/09/bitcoin-rpc-command-listunspent.html) 命令列出未花费交易输出，
 再通过交易索引和交易输出序号获取该交易输出的详细信息。
 
 {% highlight shell %}

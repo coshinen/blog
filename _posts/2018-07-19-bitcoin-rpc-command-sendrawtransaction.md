@@ -32,8 +32,8 @@ sendrawtransaction "hexstring" ( allowhighfees ) # 把（序列化的，16 进�
 2.使用 [signrawtransaction](/blog/2018/07/bitcoin-rpc-command-signrawtransaction.html) 对创建的原始交易进行签名。<br>
 3.使用该命令提交完成签名的原始交易（放入本地节点的内存池并进行交易广播）。<br>
 
-**使用 [getrawtransaction](/blog/2018/06/bitcoin-rpc-command-getrawtransaction.html) 查看提交到内存池中的原始交易，
-或使用 [gettransaction](/blog/2018/06/bitcoin-rpc-command-gettransaction.html) 查看。**
+**使用 [getrawtransaction](/blog/2018/07/bitcoin-rpc-command-getrawtransaction.html) 查看提交到内存池中的原始交易，
+或使用 [gettransaction](/blog/2018/08/bitcoin-rpc-command-gettransaction.html) 查看。**
 
 {% highlight shell %}
 $ bitcoin-cli createrawtransaction "[{\"txid\":\"fb9bd2df3cef0abd9f444971dff097790b7bf146843a752cb48461418d3c7e67\",\"vout\":0}]" "{\"1Mcg7MDBD38sSScsX3USbsCnkcMbPnLyTV\":0.01}"
@@ -412,8 +412,6 @@ class CNode // 对端节点信息类
 {% endhighlight %}
 
 最终只是把库存条目 inv 消息对象加入到发送库存消息列表。
-
-（完）
 
 Thanks for your time.
 

@@ -18,14 +18,14 @@ gettxoutproof ["txid",...] ( blockhash ) # 获取包含在一个区块上的交�
 为了使其一直工作，你需要维持一个交易索引，使用 -txindex 命令行选项或手动指定包含该交易的区块（通过区块哈希）。**
 
 参数：<br>
-1. txids （字符串）一个用于过滤器的交易索引 json 数组。<br>
+1.txids（字符串）一个用于过滤器的交易索引 json 数组。<br>
 {% highlight shell %}
     [
       "txid"     （字符串）一笔交易哈希
       ,...
     ]
 {% endhighlight %}
-2. block hash （字符串，可选）如果指定了，则在该哈希对应的区块上查询交易。
+2.block hash（字符串，可选）如果指定了，则在该哈希对应的区块上查询交易。
 
 结果：（字符串）返回原始交易数据。一个序列化的字符串，16 进制编码的证明。
 
@@ -41,7 +41,7 @@ $ bitcoin-cli gettxoutproof [\"b797bafd7830774cec4d24d1e649cafb0aa7a67b9f1cc0695
 {% endhighlight %}
 
 用法二：通过指定交易所在的区块获取指定索引的交易验证。<br>
-先使用 [gettransaction](/blog/2018/06/bitcoin-rpc-command-gettransaction.html) 获取指定交易所在的区块。
+先使用 [gettransaction](/blog/2018/08/bitcoin-rpc-command-gettransaction.html) 获取指定交易所在的区块。
 
 {% highlight shell %}
 $ bitcoin-cli gettransaction b797bafd7830774cec4d24d1e649cafb0aa7a67b9f1cc06954102a50b463fa0f

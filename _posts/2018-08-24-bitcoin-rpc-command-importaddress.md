@@ -16,7 +16,7 @@ importaddress "address" ( "label" rescan p2sh ) # 导入一个脚本（16 进制
 
 该地址好像在你的钱包，但不能用来花费。<br>
 这就是所谓的 Watch-only 地址，在新版本中已经可以花费。<br>
-参考[如何使用 Watch-only 地址](/blog/2018/06/how-to-use-watch-only-addresses.html)。
+参考[如何使用 Watch-only 地址](/blog/2018/04/how-to-use-watch-only-addresses.html)。
 
 参数：<br>
 1. script （字符串，必备）16 进制编码的脚本（或地址）。<br>

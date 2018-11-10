@@ -15,7 +15,7 @@ getgenerate # 获取比特币核心服务的挖矿状态
 {% endhighlight %}
 
 默认为 false。
-服务器程序设置命令行参数 -gen（或配置文件 bitcoin.conf 中设置 gen），也可以使用 [setgenerate](/blog/2018/05/bitcoin-rpc-command-setgenerate.html) 命令设置。
+服务器程序设置命令行参数 -gen（或配置文件 bitcoin.conf 中设置 gen），也可以使用 [setgenerate](/blog/2018/06/bitcoin-rpc-command-setgenerate.html) 命令设置。
 
 结果：（布尔型）true 表示服务器开启 CPU 挖矿，false 表示关闭。
 

@@ -20,7 +20,7 @@ clearbanned # 清除所有禁止的 IP
 
 ### 比特币核心客户端
 
-使用 RPC 命令 [listbanned](/blog/2018/05/bitcoin-rpc-command-listbanned.html) 查看黑名单。
+使用 RPC 命令 [listbanned](/blog/2018/07/bitcoin-rpc-command-listbanned.html) 查看黑名单。
 
 {% highlight shell %}
 $ bitcoin-cli listbanned

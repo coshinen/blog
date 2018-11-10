@@ -14,7 +14,7 @@ excerpt: $ bitcoin-cli dumpprivkey "bitcoinaddress"
 dumpprivkey "bitcoinaddress" # 导出 bitcoinaddress 对应的私钥
 {% endhighlight %}
 
-RPC 命令 [importprivkey]() 可以使用该输出作为输入。
+RPC 命令 [importprivkey](/blog/2018/08/bitcoin-rpc-command-importprivkey.html) 可以使用该输出作为输入。
 
 参数：<br>
 1. bitcoinaddress （字符串，必备）私钥对应的比特币地址。
@@ -25,7 +25,7 @@ RPC 命令 [importprivkey]() 可以使用该输出作为输入。
 
 ### 比特币核心客户端
 
-使用 [getnewaddress](/blog/2018/06/bitcoin-rpc-command-getnewaddress.html) 命令获取一个比特币地址，
+使用 [getnewaddress](/blog/2018/08/bitcoin-rpc-command-getnewaddress.html) 命令获取一个比特币地址，
 然后以该地址为输入，导出其对应的私钥。
 
 {% highlight shell %}

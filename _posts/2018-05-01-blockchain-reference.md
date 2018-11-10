@@ -72,5 +72,7 @@ excerpt: 写在前面：与其说比特币是区块链技术的第一个应用�
 
 暂无。
 
+Thanks for your time.
+
 ## 参照
 * [...](https://github.com/mistydew/blockchain)

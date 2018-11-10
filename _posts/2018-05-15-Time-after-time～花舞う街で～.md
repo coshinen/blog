@@ -57,6 +57,8 @@ Time after time<br>
 誰よりもずっと　傷付きやすい君の<br>
 そばにいたい今度は　きっと
 
+Thanks for your time.
+
 ## 参照
 * [倉木麻衣 - Wikipedia](https://ja.wikipedia.org/wiki/倉木麻衣)
 * [倉木麻衣 - 维基百科，自由的百科全书](https://zh.wikipedia.org/wiki/倉木麻衣)

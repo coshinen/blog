@@ -15,7 +15,7 @@ importwallet "filename" # 从一个导出的钱包文件（见 dumpwallet）导�
 {% endhighlight %}
 
 参数：<br>
-1. filename （字符串，必备）钱包文件（使用 [dumpwallet](/blog/2018/06/bitcoin-rpc-command-dumpwallet.html) 导出的）。
+1.filename（字符串，必备）钱包文件（使用 [dumpwallet](/blog/2018/08/bitcoin-rpc-command-dumpwallet.html) 导出的）。
 
 结果：无返回值。
 
@@ -23,7 +23,7 @@ importwallet "filename" # 从一个导出的钱包文件（见 dumpwallet）导�
 
 ### 比特币核心客户端
 
-导入 [dumpwallet](/blog/2018/06/bitcoin-rpc-command-dumpwallet.html) 导出的钱包文件。<br>
+导入 [dumpwallet](/blog/2018/08/bitcoin-rpc-command-dumpwallet.html) 导出的钱包文件。<br>
 这里在家目录 ~ 下使用该命令。
 
 {% highlight shell %}

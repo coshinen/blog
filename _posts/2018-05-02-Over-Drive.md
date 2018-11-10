@@ -124,6 +124,8 @@ raise up<br>
 ## 感想
 仿佛勾起了回憶，M14 也算得上是個轉折點了。
 
+Thanks for your time.
+
 ## 参照
 * [GARNET CROW - Wikipedia](https://ja.wikipedia.org/wiki/GARNET_CROW)
 * [GARNET CROW - 维基百科，自由的百科全书](https://zh.wikipedia.org/wiki/GARNET_CROW)

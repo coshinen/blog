@@ -15,12 +15,12 @@ keypoolrefill ( newsize ) # 填充满密钥池
 {% endhighlight %}
 
 **注：<br>
-1. 需要调用 [walletpassphrase](/blog/2018/05/bitcoin-rpc-command-walletpassphrase.html) 设置钱包密码。<br>
-2. 填充后大小必定比填充前大。<br>
-3. 填充后密钥池大小为指定或默认值 + 1。**
+1.需要调用 [walletpassphrase](/blog/2018/09/bitcoin-rpc-command-walletpassphrase.html) 设置钱包密码。<br>
+2.填充后大小必定比填充前大。<br>
+3.填充后密钥池大小为指定或默认值 + 1。**
 
 参数：<br>
-1. newsize （整型，可选，默认为 100）新密钥池大小。
+1.newsize（整型，可选，默认为 100）新密钥池大小。
 
 结果：无返回值。
 
@@ -28,7 +28,7 @@ keypoolrefill ( newsize ) # 填充满密钥池
 
 ### 比特币核心客户端
 
-**注：若钱包设置了密码，使用该命令前先用 [walletpassphrase](/blog/2018/05/bitcoin-rpc-command-walletpassphrase.html) 解密钱包。**
+**注：若钱包设置了密码，使用该命令前先用 [walletpassphrase](/blog/2018/09/bitcoin-rpc-command-walletpassphrase.html) 解密钱包。**
 
 用法一：使用比特币核心服务启动时的 -keypool 选项对应的默认值进行填充，填充大小为默认值 + 1。
 

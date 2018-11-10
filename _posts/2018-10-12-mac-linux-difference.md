@@ -65,6 +65,8 @@ macOS 内核（XNU）比 Linux 时间更长，是基于 2 个很早的代码库�
 可以感受到苹果以其流畅的系统和高标准的软件生态营造了较佳的用户体验。<br>
 偶然读到这篇文章，就分享给大家以作了解。
 
+Thanks for your time.
+
 ## 参照
 * [macOS High Sierra - Apple](https://www.apple.com/macos/high-sierra)
 * [The Linux Kernel Archives](https://www.kernel.org)

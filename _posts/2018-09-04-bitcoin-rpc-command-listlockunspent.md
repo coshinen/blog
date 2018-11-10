@@ -14,7 +14,7 @@ excerpt: $ bitcoin-cli listlockunspent
 listlockunspent # 获取暂时不能花费（锁定的）交易输出列表
 {% endhighlight %}
 
-查看 [lockunspent](/blog/2018/06/bitcoin-rpc-command-lockunspent.html) 加解锁未花费的交易输出。
+查看 [lockunspent](/blog/2018/09/bitcoin-rpc-command-lockunspent.html) 加解锁未花费的交易输出。
 
 结果：<br>
 {% highlight shell %}

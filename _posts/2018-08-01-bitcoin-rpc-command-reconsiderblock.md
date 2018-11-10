@@ -13,7 +13,7 @@ hidden: true
 reconsiderblock "hash" # 移除指定区块及其后代的无效状态，再次考虑它们为激活状态
 {% endhighlight %}
 
-**该操作能够撤销 [invalidateblock](/blog/2018/06/bitcoin-rpc-command-invalidateblock.html) 的效果，但无法恢复连接。**
+**该操作能够撤销 [invalidateblock](/blog/2018/08/bitcoin-rpc-command-invalidateblock.html) 的效果，但无法恢复连接。**
 
 参数：<br>
 1. hash （字符串，必备）用来再次考虑的区块哈希。
@@ -24,7 +24,7 @@ reconsiderblock "hash" # 移除指定区块及其后代的无效状态，再次�
 
 ### 比特币核心客户端
 
-参考 [invalidateblock](/blog/2018/06/bitcoin-rpc-command-invalidateblock.html) 命令，
+参考 [invalidateblock](/blog/2018/08/bitcoin-rpc-command-invalidateblock.html) 命令，
 再次考虑高度为 32723 的区块及其之后的区块。
 
 {% highlight shell %}

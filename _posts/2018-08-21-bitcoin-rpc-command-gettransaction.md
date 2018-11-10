@@ -51,7 +51,7 @@ gettransaction "txid" ( includeWatchonly ) # 获取关于钱包内交易 txid �
 ### 比特币核心客户端
 
 用法一：获取指定交易的详细信息。<br>
-先使用 [listtransactions](/blog/2018/06/bitcoin-rpc-command-listtransactions.html) 获取钱包交易。
+先使用 [listtransactions](/blog/2018/09/bitcoin-rpc-command-listtransactions.html) 获取钱包交易。
 
 {% highlight shell %}
 $ bitcoin-cli listtransactions

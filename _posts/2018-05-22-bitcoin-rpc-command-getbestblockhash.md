@@ -121,6 +121,8 @@ public:
 
 最后把得到区块哈希调用 GetHex() 函数转换为 16 进制返回给客户端。
 
+Thanks for your time.
+
 ## 参照
 * [Developer Documentation - Bitcoin](https://bitcoin.org/en/developer-documentation)
 * [Bitcoin Developer Reference - Bitcoin](https://bitcoin.org/en/developer-reference#getbestblockhash)

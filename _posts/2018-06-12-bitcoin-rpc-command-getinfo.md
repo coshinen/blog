@@ -167,6 +167,8 @@ UniValue getinfo(const UniValue& params, bool fHelp)
 2.上锁，避免并发。<br>
 3.相关信息的追加。
 
+Thanks for your time.
+
 ## 参照
 * [Developer Documentation - Bitcoin](https://bitcoin.org/en/developer-documentation)
 * [Bitcoin Developer Reference - Bitcoin](https://bitcoin.org/en/developer-reference#getinfo)

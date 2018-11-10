@@ -15,7 +15,7 @@ walletlock # 从内存中移除钱包密钥，锁定钱包
 {% endhighlight %}
 
 在调用此方法后，在调用任何需要钱包解锁的方法之前
-你将需要再次调用 [walletpassphrase](/blog/2018/05/bitcoin-rpc-command-walletpassphrase.html)。
+你将需要再次调用 [walletpassphrase](/blog/2018/09/bitcoin-rpc-command-walletpassphrase.html)。
 
 结果：无返回值。
 

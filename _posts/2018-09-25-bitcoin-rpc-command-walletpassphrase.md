@@ -17,8 +17,8 @@ walletpassphrase "passphrase" timeout # 在内存中存储钱包解密密钥 tim
 在执行与私钥相关的交易前需要先执行此操作，比如发送比特币。
 
 参数：<br>
-1. passphrase （字符串，必备）钱包密码。<br>
-2. timeout （整型，必备）在内存中维持解密密钥的以秒为单位的时间。
+1.passphrase（字符串，必备）钱包密码。<br>
+2.timeout（整型，必备）在内存中维持解密密钥的以秒为单位的时间。
 
 **注：在钱包已经解锁的情况下使用此命令，将设置一个新解锁时间覆盖旧解锁时间。**
 
@@ -38,7 +38,7 @@ $ bitcoin-cli getinfo | grep unlocked_until
   "unlocked_until": 1527753859,
 {% endhighlight %}
 
-[getinfo](/blog/2018/05/bitcoin-rpc-command-getinfo.html) 中 unlocked_until 字段表示钱包解锁的过期时间，0 表示处于锁定状态。
+[getinfo](/blog/2018/06/bitcoin-rpc-command-getinfo.html) 中 unlocked_until 字段表示钱包解锁的过期时间，0 表示处于锁定状态。
 
 用法二：解锁钱包 60 秒，再次使用此命令解密 20，密钥过期时间被覆盖。
 

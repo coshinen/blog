@@ -375,6 +375,8 @@ MEM |0x04|0x1A|
     +---------+
 {% endhighlight %}
 
+Thanks for your time.
+
 ## 参照
 * [Base58 - Wikipedia](https://en.wikipedia.org/wiki/Base58)
 * [Base64 - Wikipedia](https://en.wikipedia.org/wiki/Base64)

@@ -46,8 +46,8 @@ createrawtransaction [{"txid":"id","vout":n},...] {"address":amount,"data":"hex"
 ### 比特币核心客户端
 
 方法一：指定输入（交易索引和 UTXO 序号）和输出（地址和金额）创建一笔原始交易。<br>
-这里的输入即一笔未花费的输出所在的交易索引和输出序号，通过 [listunspent](/blog/2018/06/bitcoin-rpc-command-listunspent.html) 获取 UTXO。<br>
-创建原始交易完成后，通过 [decoderawtransaction](/blog/2018/06/bitcoin-rpc-command-decoderawtransaction.html) 解码获取该原始交易的详细信息。
+这里的输入即一笔未花费的输出所在的交易索引和输出序号，通过 [listunspent](/blog/2018/09/bitcoin-rpc-command-listunspent.html) 获取 UTXO。<br>
+创建原始交易完成后，通过 [decoderawtransaction](/blog/2018/07/bitcoin-rpc-command-decoderawtransaction.html) 解码获取该原始交易的详细信息。
 
 {% highlight shell %}
 $ bitcoin-cli listunspent
@@ -243,8 +243,6 @@ UniValue createrawtransaction(const UniValue& params, bool fHelp)
 4.2.构建交易输入列表。<br>
 4.3.构建交易输出列表。<br>
 5.返回原始交易的 16 进制编码形式。
-
-（完）
 
 Thanks for your time.
 

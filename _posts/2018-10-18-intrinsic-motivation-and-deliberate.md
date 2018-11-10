@@ -25,6 +25,8 @@ excerpt: 内在动机和刻意练习呈螺旋式上升
 不知为何又想起了一万小时理论，不如实践一下，只要每天花上 2 小时，坚持 13 年。<br>
 熟能生巧，要有耐心不是吗？
 
+Thanks for your time.
+
 ## 参照
 * [The Progress-Focused Approach: Intrinsic motivation and deliberate practice strengthen each other](http://www.progressfocused.com/2016/03/intrinsic-motivation-and-deliberate.html)
 * [...]({{ site.url | append: site.blog }})

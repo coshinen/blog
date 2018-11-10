@@ -63,6 +63,8 @@ Love is a Bird…<br>
 愛は自由に踊るものね<br>
 とどまることなど知らぬ様に
 
+Thanks for your time.
+
 ## 参照
 * [GARNET CROW - Wikipedia](https://ja.wikipedia.org/wiki/GARNET_CROW)
 * [GARNET CROW - 维基百科，自由的百科全书](https://zh.wikipedia.org/wiki/GARNET_CROW)

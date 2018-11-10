@@ -589,6 +589,8 @@ http://www.hashcash.org/papers/hashcash.pdf, 2002.<br>
 Privacy, IEEE Computer Society, pages 122-133, April 1980.<br>
 [8] W. Feller, "An introduction to probability theory and its applications," 1957.
 
+Thanks for your time.
+
 ## 参照
 * [Bitcoin: A Peer-to-Peer Electronic Cash System](https://bitcoin.org/bitcoin.pdf)
 * [Bitcoin whitepaper repository on GitHub](https://github.com/wbnns/bitcoinwhitepaper)

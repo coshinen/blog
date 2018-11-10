@@ -56,6 +56,8 @@ strangers<br>
 すべてが流れゆく<br>
 落陽(おちてゆくひ)が綺麗...sky...
 
+Thanks for your time.
+
 ## 参照
 * [GARNET CROW - Wikipedia](https://ja.wikipedia.org/wiki/GARNET_CROW)
 * [GARNET CROW - 维基百科，自由的百科全书](https://zh.wikipedia.org/wiki/GARNET_CROW)

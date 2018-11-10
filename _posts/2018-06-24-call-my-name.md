@@ -60,6 +60,8 @@ excerpt: 白い壁と Rembrandt いつまでも眺めていた 日曜の朝君�
 ふと思い出したように call my name<br>
 見えない気持ち信じてしまいそう
 
+Thanks for your time.
+
 ## 参照
 * [GARNET CROW - Wikipedia](https://ja.wikipedia.org/wiki/GARNET_CROW)
 * [GARNET CROW - 维基百科，自由的百科全书](https://zh.wikipedia.org/wiki/GARNET_CROW)

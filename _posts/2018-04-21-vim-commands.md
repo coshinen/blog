@@ -125,6 +125,8 @@ $ vim -b <file> # -b 选项表示二进制模式。
 
 命令模式下，使用 :set noeol，即设置无行尾结束符（set no end-of-line）。
 
+Thanks for your time.
+
 ## 参考
 * [Vim (text editor) - Wikipedia](https://en.wikipedia.org/wiki/Vim_(text_editor))
 * [Vim - 维基百科，自由的百科全书](https://zh.wikipedia.org/wiki/Vim)

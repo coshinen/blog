@@ -75,6 +75,8 @@ I'd like to be in your love
 密やかに　繰り返してゆく　迷いの中<br>
 I feel so all in secret life
 
+Thanks for your time.
+
 ## 参照
 * [GARNET CROW - Wikipedia](https://ja.wikipedia.org/wiki/GARNET_CROW)
 * [GARNET CROW - 维基百科，自由的百科全书](https://zh.wikipedia.org/wiki/GARNET_CROW)
