@@ -102,12 +102,12 @@ let player = new cplayer({
     },
     {
       src: 'https://raw.githubusercontent.com/mistydew/gc2/master/audio/Tell%20Me.mp3',
-      poster: 'https://raw.githubusercontent.com/mistydew/gc/master/images/GIZA%20studio%20R%26B%20Respect%20Vol.1%20-%20six%20sisters%20selection.jpg',
+      poster: 'https://raw.githubusercontent.com/mistydew/gc2/master/cover/GIZA%20studio%20R%26B%20Respect%20Vol.1%20-%20six%20sisters%20selection.jpg',
       name: 'Tell Me',
       artist: '中村由利',
       lyric: '',
       sublyric: '',
-      album: 'GIZA studio R&B Respect Vol.1 - six sisters selection'
+      album: 'GIZA studio R&B RESPECT vol.1 - six sisters selection'
     }
   ]
 })
