@@ -29,7 +29,7 @@
 * 2018.08.10 [new] sitemap, ~~IntenseDebate's comments system~~
 * 2018.08.08 [new] delimiter '|' into post title, background-color
 * 2018.08.06 [new] Resume/CV(Curriculum Vitae) page
-* 2018.08.02 [new] Google and ~~Baidu~~ Customised Search
+* 2018.08.02 [new] Google ~~and Baidu~~ Customised Search
 * 2018.08.01 [new] tag cloud on the tags page
 * 2018.07.10 [new] tags page
 * 2018.07.03 [new] ~~GitHub Contribution on the archive page~~
