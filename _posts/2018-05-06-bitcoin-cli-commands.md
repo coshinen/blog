@@ -99,24 +99,35 @@ $ bitcoin-cli help # 获取以下 RPC 命令
 > [getblockhash index](/blog/2018/05/bitcoin-rpc-command-getblockhash.html) # 获取指定区块哈希<br>
 > [getblockheader "hash" ( verbose )](/blog/2018/05/bitcoin-rpc-command-getblockheader.html) # 获取指定区块头信息<br>
 > [getchaintips](/blog/2018/05/bitcoin-rpc-command-getchaintips.html) # 获取区块链尖信息<br>
+> [getchaintxstats ( nblocks blockhash )]() new!
 > [getdifficulty](/blog/2018/05/bitcoin-rpc-command-getdifficulty.html) # 获取当前挖矿难度<br>
+> [getmempoolancestors txid (verbose)]() new!
+> [getmempooldescendants txid (verbose)]() new!
+> [getmempoolentry txid]() new!
 > [getmempoolinfo](/blog/2018/06/bitcoin-rpc-command-getmempoolinfo.html) # 获取交易内存池信息<br>
 > [getrawmempool ( verbose )](/blog/2018/06/bitcoin-rpc-command-getrawmempool.html) # 获取内存池原始交易<br>
 > [gettxout "txid" n ( includemempool )](/blog/2018/06/bitcoin-rpc-command-gettxout.html) # 获取交易输出细节<br>
 > [gettxoutproof ["txid",...] ( blockhash )](/blog/2018/06/bitcoin-rpc-command-gettxoutproof.html) # 获取交易证明<br>
 > [gettxoutsetinfo](/blog/2018/06/bitcoin-rpc-command-gettxoutsetinfo.html) # 获取交易输出集合信息<br>
+> [preciousblock "blockhash"]() new!
+> [pruneblockchain]() new!
+> [savemempool]() new!
 > [verifychain ( checklevel numblocks )](/blog/2018/06/bitcoin-rpc-command-verifychain.html) # 验证链<br>
 > [verifytxoutproof "proof"](/blog/2018/06/bitcoin-rpc-command-verifytxoutproof.html) # 验证交易证明
 > 
 > == Control ==<br>
 > [getinfo](/blog/2018/06/bitcoin-rpc-command-getinfo.html) # 获取比特币核心信息<br>
+> [getmemoryinfo ("mode")]() new!
 > [help ( "command" )](/blog/2018/06/bitcoin-rpc-command-help.html) # 获取命令帮助信息<br>
+> [logging ( <include> <exclude> )]() new!
 > [stop](/blog/2018/06/bitcoin-rpc-command-stop.html) # 远程终止比特币核心服务
+> [uptime]() new!
 > 
 > == Generating ==<br>
 > [generate numblocks](/blog/2018/06/bitcoin-rpc-command-generate.html) # 生成区块<br>
 > [getgenerate](/blog/2018/06/bitcoin-rpc-command-getgenerate.html) # 获取挖矿状态<br>
 > [setgenerate generate ( genproclimit )](/blog/2018/06/bitcoin-rpc-command-setgenerate.html) # 挖矿开关
+> [generatetoaddress nblocks address (maxtries)]() new!
 > 
 > == Mining ==<br>
 > [getblocktemplate ( "jsonrequestobject" )](/blog/2018/06/bitcoin-rpc-command-getblocktemplate.html) # 获取区块模板<br>
@@ -137,8 +148,10 @@ $ bitcoin-cli help # 获取以下 RPC 命令
 > [listbanned](/blog/2018/07/bitcoin-rpc-command-listbanned.html) # 列出黑名单<br>
 > [ping](/blog/2018/07/bitcoin-rpc-command-ping.html) # ping 连接的节点<br>
 > [setban "ip(/netmask)" "add|remove" (bantime) (absolute)](/blog/2018/07/bitcoin-rpc-command-setban.html) # 设置黑名单
+> [setnetworkactive true|false]() new!
 > 
 > == Rawtransactions ==<br>
+> [combinerawtransaction ["hexstring",...]]() new!
 > [createrawtransaction [{"txid":"id","vout":n},...] {"address":amount,"data":"hex",...} ( locktime )](/blog/2018/07/bitcoin-rpc-command-createrawtransaction.html) # 创建原始交易<br>
 > [decoderawtransaction "hexstring"](/blog/2018/07/bitcoin-rpc-command-decoderawtransaction.html) # 解码原始交易<br>
 > [decodescript "hex"](/blog/2018/07/bitcoin-rpc-command-decodescript.html) # 解码脚本<br>
@@ -164,8 +177,10 @@ $ bitcoin-cli help # 获取以下 RPC 命令
 > 
 > == Wallet ==<br>
 > [abandontransaction "txid"](/blog/2018/08/bitcoin-rpc-command-abandontransaction.html) # 放弃交易<br>
+> [abortrescan]() new!
 > [addmultisigaddress nrequired ["key",...] ( "account" )](/blog/2018/08/bitcoin-rpc-command-addmultisigaddress.html) # 添加多签地址<br>
 > [backupwallet "destination"](/blog/2018/08/bitcoin-rpc-command-backupwallet.html) # 备份钱包<br>
+> [bumpfee "txid" ( options ) ]() new!
 > [dumpprivkey "bitcoinaddress"](/blog/2018/08/bitcoin-rpc-command-dumpprivkey.html) # 导出私钥<br>
 > [dumpwallet "filename"](/blog/2018/08/bitcoin-rpc-command-dumpwallet.html) # 导出钱包<br>
 > [encryptwallet "passphrase"](/blog/2018/08/bitcoin-rpc-command-encryptwallet.html) # 加密钱包<br>
@@ -181,7 +196,9 @@ $ bitcoin-cli help # 获取以下 RPC 命令
 > [getunconfirmedbalance](/blog/2018/06/bitcoin-rpc-command-getunconfirmedbalance.html) # 获取未确认的余额<br>
 > [getwalletinfo](/blog/2018/05/bitcoin-rpc-command-getwalletinfo.html) # 获取钱包信息<br>
 > [importaddress "address" ( "label" rescan p2sh )](/blog/2018/08/bitcoin-rpc-command-importaddress.html) # 导入地址或脚本<br>
+> [importmulti "requests" ( "options" )]() new!
 > [importprivkey "bitcoinprivkey" ( "label" rescan )](/blog/2018/08/bitcoin-rpc-command-importprivkey.html) # 导入私钥<br>
+> [importprunedfunds]() new!
 > [importpubkey "pubkey" ( "label" rescan )](/blog/2018/08/bitcoin-rpc-command-importpubkey.html) # 导入公钥<br>
 > [importwallet "filename"](/blog/2018/08/bitcoin-rpc-command-importwallet.html) # 导入钱包<br>
 > [keypoolrefill ( newsize )](/blog/2018/08/bitcoin-rpc-command-keypoolrefill.html) # 再填充钥匙池<br>
@@ -193,8 +210,11 @@ $ bitcoin-cli help # 获取以下 RPC 命令
 > [listsinceblock ( "blockhash" target-confirmations includeWatchonly)](/blog/2018/09/bitcoin-rpc-command-listsinceblock.html) # 列从某区块开始的全部交易<br>
 > [listtransactions ( "account" count from includeWatchonly)](/blog/2018/09/bitcoin-rpc-command-listtransactions.html) # 列出交易<br>
 > [listunspent ( minconf maxconf  ["address",...] )](/blog/2018/09/bitcoin-rpc-command-listunspent.html) # 列出未花费交易输出<br>
+> [listwallets]() new!
 > [lockunspent unlock [{"txid":"txid","vout":n},...]](/blog/2018/09/bitcoin-rpc-command-lockunspent.html) # 加解锁未花费交易输出<br>
 > [move "fromaccount" "toaccount" amount ( minconf "comment" )](/blog/2018/09/bitcoin-rpc-command-move.html) # （已过时）转账<br>
+> [removeprunedfunds "txid"]() new!
+> [rescanblockchain ("start_height") ("stop_height")]() new!
 > [sendfrom "fromaccount" "tobitcoinaddress" amount ( minconf "comment" "comment-to" )](/blog/2018/09/bitcoin-rpc-command-sendfrom.html) # （已过时）从指定账户发送<br>
 > [sendmany "fromaccount" {"address":amount,...} ( minconf "comment" ["address",...] )](/blog/2018/09/bitcoin-rpc-command-sendmany.html) # 发送到多个地址<br>
 > [sendtoaddress "bitcoinaddress" amount ( "comment" "comment-to" subtractfeefromamount )](/blog/2018/09/bitcoin-rpc-command-sendtoaddress.html) # 发送到指定地址<br>
