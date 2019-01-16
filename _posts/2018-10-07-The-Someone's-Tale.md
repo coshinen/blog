@@ -8,7 +8,7 @@ categories: ガーネット・クロウ 翻訳
 tags: GC 歌詞
 excerpt: まっすぐな思いはまっすぐに伝わるの? 唐突な青空 遠ざかる飛行機
 ---
-![Terminus](https://raw.githubusercontent.com/mistydew/gc2/master/cover/album/Album_10th_Terminus.jpg){:.border}
+![Terminus](https://raw.githubusercontent.com/mistydew/gc2/master/cover/album/AL10_Terminus.jpg){:.border}
 
 ## The Someone's Tale | 某人的故事
 

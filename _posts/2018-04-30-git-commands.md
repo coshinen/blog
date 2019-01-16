@@ -8,7 +8,7 @@ categories: Git
 tags: Git CLI
 ---
 什么是 [GitHub](https://github.com)？不知道 Git 的请往下看，Hub 有中心、枢纽之意。<br>
-传言：[GitHub](https://github.com) 是全球最大的同性交友网站。
+据传 [GitHub](https://github.com) 是全球最大的同性交友网站。
 
 官方简介：<br>
 ![git](/images/git.jpg)<br>

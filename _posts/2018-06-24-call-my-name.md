@@ -8,7 +8,7 @@ categories: ガーネット・クロウ 翻訳
 tags: GC 歌詞
 excerpt: 白い壁と Rembrandt いつまでも眺めていた 日曜の朝君とただ並んでた 開いた窓から差し込む光がほらそこに ふと思い出したように call my name
 ---
-![call my name](https://raw.githubusercontent.com/mistydew/gc/master/images/cover/single/Single_08th_call_my_name.jpg){:.border}
+![call my name](https://raw.githubusercontent.com/mistydew/gc2/master/cover/single/SG08_call%20my%20name.jpg){:.border}
 
 ## call my name
 

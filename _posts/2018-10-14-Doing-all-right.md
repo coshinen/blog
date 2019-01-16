@@ -8,7 +8,7 @@ categories: ガーネット・クロウ 翻訳
 tags: GC 歌詞
 excerpt: Doing all right! かみしめた君の記憶 木漏れ日の匂い 置いてきた何かはもう 此処にはないけど
 ---
-![Doing all right](https://raw.githubusercontent.com/mistydew/gc2/master/cover/single/Single_29th_Doing_all_right.jpg){:.border}
+![Doing all right](https://raw.githubusercontent.com/mistydew/gc2/master/cover/single/SG29_Doing%20all%20right.jpg){:.border}
 
 ## Doing all right | 做好一切
 

@@ -8,7 +8,7 @@ categories: ガーネット・クロウ 翻訳
 tags: GC 歌詞
 excerpt: 君がいなくなってから 何度朝日迎えたかしれない 急に地平線をみたくなって ふらり 始発に飛び乗る
 ---
-![Timeless Sleep](https://raw.githubusercontent.com/mistydew/gc/master/images/cover/single/Single_09th_Timeless_Sleep.jpg){:.border}
+![Timeless Sleep](https://raw.githubusercontent.com/mistydew/gc2/master/cover/single/SG09_Timeless%20Sleep.jpg){:.border}
 
 ## Timeless Sleep
 

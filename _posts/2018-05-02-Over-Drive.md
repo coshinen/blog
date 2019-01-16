@@ -8,9 +8,7 @@ categories: ガーネット・クロウ 翻訳
 tags: GC 歌詞
 excerpt: 風の音だけが 体中を包む サイレント・Kiss 夢に似た気配
 ---
-![Over Drive](https://raw.githubusercontent.com/mistydew/gc2/master/cover/single/Single_31th_Over_Drive.jpg){:.border}
-
-![parallel universe](https://raw.githubusercontent.com/mistydew/gc2/master/cover/album/Album_08th_parallel_universe.jpg){:.border}
+![Over Drive](https://raw.githubusercontent.com/mistydew/gc2/master/cover/single/SG31_Over%20Drive.jpg){:.border}
 
 ## Over Drive | 凌空駕馭
 

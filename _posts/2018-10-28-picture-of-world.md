@@ -8,7 +8,7 @@ categories: ガーネット・クロウ 翻訳
 tags: GC 歌詞
 excerpt: ずっと みてたんだ一枚のポスター 壁の片隅で色褪せた きっと誰かが 剥がし忘れた 夕ぐれのストーリーは そこにあり
 ---
-![I'm waiting 4 you](https://raw.githubusercontent.com/mistydew/gc2/master/cover/album/Album_04th_I'm_waiting_4_you.jpg){:.border}
+![I'm waiting 4 you](https://raw.githubusercontent.com/mistydew/gc2/master/cover/album/AL04_I'm%20waiting%204%20you.jpg){:.border}
 
 ## picture of world | 世界的影像
 
