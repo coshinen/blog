@@ -3,7 +3,7 @@ let player = new cplayer({
   playlist: [
     {
       src: 'https://raw.githubusercontent.com/mistydew/gc2/master/audio/%E9%9D%99%E5%AF%82%E3%81%AEconcerto.mp3',
-      poster: 'https://raw.githubusercontent.com/mistydew/gc2/master/cover/album/Album_09th_%E3%83%A1%E3%83%A2%E3%83%AA%E3%83%BC%E3%82%BA.jpg',
+      poster: 'https://raw.githubusercontent.com/mistydew/gc2/master/cover/album/AL09_メモリーズ.jpg',
       name: '静寂のconcerto',
       artist: 'GARNET CROW',
       lyric: '[00:00.00]静寂のconcerto\n[00:21.90]太陽が色彩(いろ)を連れて\n[00:26.50]この町を照らしはじめる\n[00:31.80]こんなに静かで深い朝がここにもある\n[00:42.70]バスが来る 待合人 共に暮らしがあるような\n[00:52.60]やさしい時間(とき) 流れる日々がこの地球(ほし)にある\n[01:03.40]追い越した景色の中にあるリズムは\n[01:12.70]いつからかそっと体中を支配してく forever\n[01:28.90]氷上を舞う水鳥達\n[01:34.30]アランフェスの調べ\n[01:39.30]踊る心の情熱が生きた証\n[02:11.30]空をゆく乾いた風この土地を離れることなく\n[02:21.30]生きた人々の想いに敵うものなどない\n[02:32.10]想像の中にある幸福への願いに\n[02:41.10]揺さぶられる きっと想うことのつながりに forever\n[02:57.60]六弦響く宵闇にはからみつくような鼓動\n[03:08.00]時にしなやかな生命打ち砕くように\n[03:18.50]祈り 踊る 命はまだかきたてる術がある\n[03:28.90]すべてに息づく躍動と静寂の concerto',
@@ -12,7 +12,7 @@ let player = new cplayer({
     },
     {
       src: 'https://raw.githubusercontent.com/mistydew/gc2/master/audio/Holy%20ground.mp3',
-      poster: 'https://raw.githubusercontent.com/mistydew/gc2/master/cover/album/Album_02nd_SPARKLE_~%E7%AD%8B%E6%9B%B8%E3%81%8D%E9%80%9A%E3%82%8A%E3%81%AE%E3%82%B9%E3%82%AB%E3%82%A4%E3%83%96%E3%83%AB%E3%83%BC~.jpg',
+      poster: 'https://raw.githubusercontent.com/mistydew/gc2/master/cover/album/AL02_SPARKLE～筋書き通りのスカイブルー～.jpg',
       name: 'Holy ground',
       artist: 'GARNET CROW',
       lyric: '[00:00.00]Holy ground\n君のいない未来が\n[00:18.60]ただ大きな闇にみえ\n[00:21.60]死んでしまえば生きなくていい\n[00:26.70]そんな事ばかり考えてた\n[00:33.20]穏やかな月明かりに\n[00:39.60]体中を充たした こんな強い気持ちに\n[00:45.70]出会えたから もう何もいらない\n[00:50.30]欲しがる術 なくしても今\n[00:56.30]生き延びるの?\n[01:04.70]通り過ぎた幸福な時が\n[01:09.20]今をただ無意味に変える\n[01:16.80]病んだ躰が\n[01:18.80]昨日までの健康(しあわせ)を喜ぶなんてことしない\n[01:28.00]ただ焦がれるように求めてた\n[01:33.10]日々は するり 蜃気楼の向こうへ\n[01:38.70]今日が終われば今日へ\n[01:42.80]出遭うことない夢をみては\n[01:47.20]まだ過ごすなら\n[01:52.00]与え続けることでしか満たされない\n[01:59.20]聖地へ辿り着こう\n[02:04.60]行き場をなくした情熱は\n[02:10.60]冷えてゆくよ\n[02:24.80]不確かな気持ちを抱えながら\n[02:29.50]家路を辿りながら昇華してゆく\n[02:35.40]守るべきもの持たないなら\n[02:40.00]何を祈ろうか\n[02:49.60]世界が優しい光にいつか包まれますように…\n[03:01.80]なんて偽善者みたいな願い声にして\n[03:08.20]本当に変わればいい\n[03:13.00]深い傷よりも いつの日にか\n[03:18.40]愛しい気持ちが残るように\n[03:24.00]明日がくればまた明日へ\n[03:27.70]優しい方へ倒れ込んでゆけるように…\n[03:37.10]いつかその足で歩いてゆける時がきたら\n[03:44.40]聖地へ辿り着ける?\n[03:49.50]行き場をなくしたココロは\n[03:55.60]いつか目覚めて\n[03:58.50]揺れ動く波にのって\n[04:12.40]きっと生まれるよ',
@@ -21,7 +21,7 @@ let player = new cplayer({
     },
     {
       src: 'https://raw.githubusercontent.com/mistydew/gc2/master/audio/Over%20Drive.mp3',
-      poster: 'https://raw.githubusercontent.com/mistydew/gc2/master/cover/album/Album_08th_parallel_universe.jpg',
+      poster: 'https://raw.githubusercontent.com/mistydew/gc2/master/cover/single/SG31_Over%20Drive.jpg',
       name: 'Over Drive',
       artist: 'GARNET CROW',
       lyric: '[00:00.00]Over Drive\n[00:24.00]風の音だけが\n[00:29.30]体中を包む\n[00:34.00]サイレント・Kiss\n[00:40.00]夢に似た気配\n[00:44.60]胸がキュッとなること\n[00:48.60]君といた季節\n[00:52.10]スカイハイ・Blue\n[00:55.80]遠ざかる\n[01:00.00]都合いい Happy End\n[01:03.80]さがしても癒せない\n[01:07.10]心が自由なら飛んでみせる\n[01:14.30]上空 舞うもの達と Over Drive\n[01:18.80]どこまでも青い世界にいたい\n[01:23.80]紙吹雪のように鳥が舞う\n[01:29.10]キレイね\n[01:31.20]追い風に乗るスリルも\n[01:35.30]まだ見ぬ行き先を想う\n[01:39.30]大切な期待に変えてゆける\n[01:44.30]raise up\n[02:00.40]波がキラめいたら\n[02:04.30]吸い込まれそうね\n[02:08.10]スターライト・Night\n[02:11.70]空高く\n[02:15.90]近づいた last scene\n[02:19.80]まだ今つかめない\n[02:22.80]不確かな未来さえ心地よく\n[02:30.30]上昇 恋は揺らいで Over Drive\n[02:35.10]目を見て無邪気に笑ってみせて\n[02:39.80]まるで風のようにすり抜ける\n[02:45.00]心ね\n[02:47.20]もっと近くにいたいと\n[02:51.40]願う空は 果てしなくて\n[02:55.20]本当の君に出会う日を\n[03:04.20]待ってる\n[03:18.20]上空 舞うもの達と Over Drive\n[03:22.90]どこまでも青い世界にいたい\n[03:27.90]紙吹雪のように鳥が舞う\n[03:32.90]キレイね\n[03:35.10]追い風に乗るスリルも\n[03:39.50]まだ見ぬ行き先を想う\n[03:43.30]大切な期待に変えてゆける\n[03:48.30]raise up\n[03:51.20]本当の君に出会う日を\n[03:56.20]待ってる',
@@ -30,7 +30,7 @@ let player = new cplayer({
     },
     {
       src: 'https://raw.githubusercontent.com/mistydew/gc2/master/audio/Hello%20Sadness.mp3',
-      poster: 'https://raw.githubusercontent.com/mistydew/gc2/master/cover/album/Album_07th_STAY_~%E5%A4%9C%E6%98%8E%E3%81%91%E3%81%AESoul~.jpg',
+      poster: 'https://raw.githubusercontent.com/mistydew/gc2/master/cover/album/AL07_STAY～夜明けのSoul～.jpg',
       name: 'Hello Sadness',
       artist: 'GARNET CROW',
       lyric: '',
