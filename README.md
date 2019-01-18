@@ -4,12 +4,13 @@
 - [ ] add avatar, bio...
 - [ ] The anatomy of bitcoin v0.12.1 and the latest version source
   - [ ] The latest version bitcoin rpc command
-  - [ ] The process of  the bitcoind function main
+  - [ ] The process of the bitcoind function main
 - [ ] GC Music Diary longtime plan
   - [ ] all songs' lyric translation
-  - [ ] home page
+  - [x] home page
 
 ## Timeline
+* 2019.01.01 [new] GC Music Diary new home page
 * 2018.09.25 [new] Bitcoin donation address and QR(Quick Response) code
 * 2018.09.24 [remove] GitHub Contribution from the archive page
 * 2018.09.20 [new] refactoring: home page, blog permanlink; [remove] jekyll-paginate plugin
