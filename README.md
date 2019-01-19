@@ -6,8 +6,7 @@
   - [ ] The latest version bitcoin rpc command
   - [ ] The process of the bitcoind function main
 - [ ] GC Music Diary longtime plan
-  - [ ] all songs' lyric translation
-  - [x] home page
+  - [ ] translation of all lyrics
 
 ## Timeline
 * 2019.01.01 [new] GC Music Diary new home page
@@ -55,5 +54,3 @@
 
 * site: [parallel universe](https://mistydew.github.io)
 * e-mail: [mistydew@qq.com](mailto:mistydew@qq.com)
-* weibo: [@mistydew](https://weibo.com/mistydew)
-* twitter: [@\_mistydew\_](https://twitter.com/_mistydew_)
