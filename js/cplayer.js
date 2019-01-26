@@ -29,6 +29,24 @@ let player = new cplayer({
       album: 'parallel universe'
     },
     {
+      src: 'https://raw.githubusercontent.com/mistydew/dc/master/audio/運命のルーレット廻して.mp3',
+      poster: 'https://raw.githubusercontent.com/mistydew/dc/master/cover/運命のルーレット廻して.jpg',
+      name: '運命のルーレット廻して',
+      artist: 'ZARD',
+      lyric: '',
+      sublyric: '',
+      album: '運命のルーレット廻して'
+    },
+    {
+      src: 'https://raw.githubusercontent.com/mistydew/dc/master/audio/Time%20after%20time～花舞う街で～.mp3',
+      poster: 'https://raw.githubusercontent.com/mistydew/dc/master/cover/Time%20after%20time～花舞う街で～.jpg',
+      name: 'Time after time～花舞う街で～',
+      artist: '倉木麻衣',
+      lyric: '',
+      sublyric: '',
+      album: 'Time after time～花舞う街で～'
+    },
+    {
       src: 'https://raw.githubusercontent.com/mistydew/dc/master/audio/キミがいれば.mp3',
       poster: 'https://raw.githubusercontent.com/mistydew/dc/master/cover/キミがいれば.jpg',
       name: 'キミがいれば',
@@ -36,6 +54,24 @@ let player = new cplayer({
       lyric: '',
       sublyric: '',
       album: 'キミがいれば'
+    },
+    {
+      src: 'https://raw.githubusercontent.com/mistydew/dc/master/audio/丸竹夷.mp3',
+      poster: 'https://raw.githubusercontent.com/mistydew/dc/master/cover/遠山和葉.jpg',
+      name: '丸竹夷',
+      artist: '遠山和葉',
+      lyric: '',
+      sublyric: '',
+      album: '丸竹夷'
+    },
+    {
+      src: 'https://raw.githubusercontent.com/mistydew/dc/master/audio/ぼくがいる～コナンのテーマ～.mp3',
+      poster: 'https://raw.githubusercontent.com/mistydew/dc/master/cover/ぼくがいる.jpg',
+      name: 'ぼくがいる～コナンのテーマ～',
+      artist: '高山みなみ',
+      lyric: '',
+      sublyric: '',
+      album: 'ぼくがいる～コナンのテーマ～'
     }
   ]
 })
