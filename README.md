@@ -9,6 +9,7 @@
   - [ ] translation of all lyrics
 
 ## Timeline
+* 2019.02.01 [+] new gc favicon
 * 2019.01.01 [+] GC Music Diary new home page
 * 2018.09.25 [+] Bitcoin donation address and QR(Quick Response) code
 * 2018.09.24 [-] ~~GitHub Contribution from the archive page~~
