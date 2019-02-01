@@ -125,6 +125,13 @@ $ scp username@ip:<file> <dir> # 复制远程主机 username@ip 下的文件 <fi
 $ time <command> # 统计执行给定命令 <command> 所花费的时间。
 {% endhighlight %}
 
+## 修改时区 | time zone
+
+{% highlight shell %}
+$ timedatectl status # 查看系统时间。
+$ timedatectl set-timezone "Asia/Shanghai" # 修改系统时区为中国上海。
+{% endhighlight %}
+
 ## 查找文件 | find
 
 {% highlight shell %}
