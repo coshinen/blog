@@ -10,7 +10,7 @@ excerpt: これ以上何を失えば 心は許されるの どれ程の痛みな
 ---
 ![One more time, One more chance](https://raw.githubusercontent.com/mistydew/misc/master/cover/One%20more%20time,%20One%20more%20chance.jpg){:.border}
 
-## One more time, One more chance
+## One more time, One more chance | 多一次，多一個機會
 
 歌手：山崎まさよし<br>
 作詞：山崎将義<br>

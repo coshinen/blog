@@ -10,7 +10,7 @@ excerpt: 夕暮れとこの街の匂い 染みついた諦めと希望 雨の中
 ---
 ![LOCKS](https://raw.githubusercontent.com/mistydew/gc2/master/cover/album/AL06_LOCKS.jpg){:.border}
 
-## Love is a Bird
+## Love is a Bird | 愛是一隻鳥兒
 
 歌手：GARNET CROW<br>
 作詞：AZUKI 七<br>

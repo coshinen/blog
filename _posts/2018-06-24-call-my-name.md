@@ -10,7 +10,7 @@ excerpt: 白い壁と Rembrandt いつまでも眺めていた 日曜の朝君�
 ---
 ![call my name](https://raw.githubusercontent.com/mistydew/gc2/master/cover/single/SG08_call%20my%20name.jpg){:.border}
 
-## call my name
+## call my name | 喚我的名字
 
 歌手：GARNET CROW<br>
 作詞：AZUKI 七<br>

@@ -10,7 +10,7 @@ excerpt: 君がいなくなってから 何度朝日迎えたかしれない 急
 ---
 ![Timeless Sleep](https://raw.githubusercontent.com/mistydew/gc2/master/cover/single/SG09_Timeless%20Sleep.jpg){:.border}
 
-## Timeless Sleep
+## Timeless Sleep | 永眠
 
 歌手：GARNET CROW<br>
 作詞：AZUKI 七<br>

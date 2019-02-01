@@ -10,7 +10,7 @@ excerpt: Lyin' here with you so close to me. It's hard to fight these feelings w
 ---
 ![own the night](https://raw.githubusercontent.com/mistydew/misc/master/cover/own%20the%20night.jpg){:.border}
 
-## Just A Kiss
+## Just A Kiss | 只是一個吻
 
 歌手：Lady Antebellum
 
