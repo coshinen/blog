@@ -7,6 +7,7 @@
   - [ ] the process of the bitcoind function main
 - [ ] GC Music Diary longtime plan
   - [ ] translation of all lyrics
+- [ ] remake site search engine
 
 ## Timeline
 * 2019.02.01 [+] new gc favicon
