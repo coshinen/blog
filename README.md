@@ -8,6 +8,7 @@
 - [ ] GC Music Diary longtime plan
   - [ ] translation of all lyrics
 - [ ] remake site search engine
+- [ ] adjust the position of the widget: APlayer, clock, searchbox
 
 ## Timeline
 * 2019.02.01 [+] new gc favicon
