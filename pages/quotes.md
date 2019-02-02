@@ -4,7 +4,7 @@ title: Quotes
 permalink: /blog/quotes.html
 ---
 
-> マジスカロックンロール<br>
+> マジスカロックンロール：<br>
 > * マジにならなきゃ、勝てねぇよ！
 
 > ブラック：<br>
