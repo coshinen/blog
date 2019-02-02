@@ -4,6 +4,9 @@ title: Quotes
 permalink: /blog/quotes.html
 ---
 
+> マジスカロックンロール<br>
+> * マジにならなきゃ、勝てねぇよ！
+
 > ブラック：<br>
 > * 自信があっても、結果にならなきゃダメでしょ！
 
