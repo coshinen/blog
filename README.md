@@ -8,9 +8,10 @@
 - [ ] GC Music Diary longtime plan
   - [ ] translation of all lyrics
 - [ ] remake site search engine
-- [ ] adjust the position of the widget: APlayer, clock, searchbox
+- [ ] adjust the position of the widget: cPlayer, searchbox
 
 ## Timeline
+* 2019.02.02 [-] ~~hone hone clock~~
 * 2019.02.01 [+] new gc favicon
 * 2019.01.01 [+] GC Music Diary new home page
 * 2018.09.25 [+] Bitcoin donation address and QR(Quick Response) code
@@ -46,7 +47,7 @@
 * 2018.05.18 [+] 404 page
 * 2018.05.17 [+] slogan on footer
 * 2018.05.16 [+] category and slogan page
-* 2018.05.14 [+] hone hone clock, ~~pagination~~
+* 2018.05.14 [+] ~~honehone clock~~; ~~pagination~~
 * 2018.05.02 [+] gc favicon
 * 2018.04.27 [-] ~~directory audio~~
 * 2018.04.21 [+] images and reference for blog
