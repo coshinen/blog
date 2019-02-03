@@ -2,11 +2,6 @@
 
 ## Todo
 - [ ] add avatar, bio...
-- [ ] The anatomy of bitcoin v0.12.1 and the latest version source
-  - [x] rpc commands of the latest version bitcoin
-  - [ ] the process of the bitcoind function main
-- [ ] GC Music Diary longtime plan
-  - [ ] translation of all lyrics
 - [ ] remake site search engine
 - [ ] adjust the position of the widget: cPlayer, searchbox
 
