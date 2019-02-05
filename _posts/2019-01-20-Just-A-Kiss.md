@@ -17,12 +17,12 @@ excerpt: Lyin' here with you so close to me. It's hard to fight these feelings w
 Lyin' here with you so close to me<br>
 It's hard to fight these feelings when it feels so hard to breathe<br>
 I'm caught up in this moment<br>
-I'm caught up in your smile
+Caught up in your smile
 
 > 當你如此的靠近我時<br>
 > 這些感覺難以抗拒以至於我無法呼吸<br>
 > 我停留在這個時刻<br>
-> 我沉溺於你的笑容
+> 沉溺於你的笑容
 
 I've never opened up to anyone<br>
 So hard to hold back when I'm holding you in my arms<br>
