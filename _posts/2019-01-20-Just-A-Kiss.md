@@ -14,13 +14,13 @@ excerpt: Lyin' here with you so close to me. It's hard to fight these feelings w
 
 歌手：Lady Antebellum
 
-Lying here with you so close to me<br>
+Lyin' here with you so close to me<br>
 It's hard to fight these feelings when it feels so hard to breathe<br>
 I'm caught up in this moment<br>
 I'm caught up in your smile
 
 > 當你如此的靠近我時<br>
-> 無法抗拒這些感覺以至於難以呼吸<br>
+> 這些感覺難以抗拒以至於我無法呼吸<br>
 > 我停留在這個時刻<br>
 > 我沉溺於你的笑容
 
@@ -30,9 +30,9 @@ We don't need to rush this<br>
 Let's just take it slow
 
 > 我從未向任何人敞開過心扉<br>
-> 所以無法抗拒把妳擁入我懷<br>
-> 我們不需要著急<br>
-> 就讓我們慢慢來
+> 所以情不自禁把妳擁入懷中<br>
+> 我們不需要過於著急<br>
+> 就讓我們慢慢來吧
 
 Chorus:<br>
 Just a kiss on your lips in the moonlight<br>
@@ -44,21 +44,21 @@ Be the one I've been waiting for my whole life<br>
 So baby I'm alright, with just a kiss goodnight
 
 > 合唱：<br>
-> 只是在月光下吻你的嘴唇<br>
+> 只是在月光下親吻你的嘴唇<br>
 > 只是觸碰到這火焰燃燒般的明亮<br>
 > 而且我不想搞砸它<br>
-> 我不想太著急<br>
-> 只是你可能就是黑暗中的一個鏡頭<br>
-> 成為那個我等待一生的人<br>
-> 所以寶貝我很好，只是一個晚安吻
+> 我不想太過著急<br>
+> 黑暗中就一個瞬間猜想你可能<br>
+> 是那個我等待一生的人<br>
+> 所以寶貝我很好，只需一個晚安吻
 
 I know that if we give this a little time<br>
 It'll only bring us closer to the love we wanna find<br>
 It's never felt so real, no it's never felt so right
 
 > 我知道如果我們給它一點時間<br>
-> 它就會使我們更接近我們想要的愛情<br>
-> 它從來沒有感覺如此真實，不它從來沒有感覺如此正確
+> 就會使我們更接近我們想要的愛情<br>
+> 從來沒有感覺如此真實，不，是從來沒有感覺如此好
 
 Chorus:<br>
 Just a kiss on your lips in the moonlight<br>
@@ -70,13 +70,13 @@ Be the one I've been waiting for my whole life<br>
 So baby I'm alright, with just a kiss goodnight
 
 > 合唱：<br>
-> 只是在月光下吻你的嘴唇<br>
+> 只是在月光下親吻你的嘴唇<br>
 > 只是觸碰到這火焰燃燒般的明亮<br>
 > 而且我不想搞砸它<br>
-> 我不想太著急<br>
-> 只是你可能就是黑暗中的一個鏡頭<br>
-> 成為那個我等待一生的人<br>
-> 所以寶貝我很好，只是一個晚安吻
+> 我不想太過著急<br>
+> 黑暗中就一個瞬間猜想你可能<br>
+> 是那個我等待一生的人<br>
+> 所以寶貝我很好，只需一個晚安吻
 
 Bridge:<br>
 No I don't wanna say goodnight<br>
@@ -86,11 +86,11 @@ Tonight<br>
 Tonight
 
 > Bridge:<br>
-> 不我不想說晚安<br>
-> 我知道是時候離開了，但你會出現在我的夢中<br>
+> 不，我還不想說晚安<br>
+> 我知道是時候離開了，但你會出現在我的夢裡<br>
 > 就在今晚<br>
-> 就在今晚<br>
-> 就在今晚
+> 就在今夜<br>
+> 就在今宵
 
 Just a kiss on your lips in the moonlight<br>
 Just a touch of the fire burning so bright<br>
@@ -102,15 +102,15 @@ So baby I'm alright, oh, let's do this right, with just a kiss goodnight<br>
 With a kiss goodnight<br>
 Kiss goodnight
 
-> 只是在月光下吻你的嘴唇<br>
+> 只是在月光下親吻你的嘴唇<br>
 > 只是觸碰到這火焰燃燒般的明亮<br>
 > 而且我不想搞砸它<br>
-> 我不想太著急<br>
-> 只是你可能就是黑暗中的一個鏡頭<br>
-> 成為那個我等待一生的人<br>
-> 所以寶貝我很好，哦，讓我們這樣，就一個晚安吻
+> 我不想太過著急<br>
+> 黑暗中就一個瞬間猜想你可能<br>
+> 是那個我等待一生的人<br>
+> 所以寶貝我很好，哦，讓我們好好地，只需一個晚安吻<br>
 > 一個晚安吻<br>
-> 晚安吻<br>
+> 晚安吻
 
 ## 感想
 這首戰前女神樂隊的歌和 GC 的英雄前奏出奇的像，
