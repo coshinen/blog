@@ -24,7 +24,7 @@
 * 2018.08.20 [+] post copyright(author, date, creative commons license, more)
 * 2018.08.15 [-] ~~particle background~~
 * 2018.08.13 [+] cPlayer: web music player
-* 2018.08.12 [+] donate page
+* 2018.08.12 [+] ~~donate~~ page
 * 2018.08.10 [+] sitemap, ~~IntenseDebate's comments system~~
 * 2018.08.08 [+] delimiter '|' into post title, background-color
 * 2018.08.06 [+] Resume/CV(Curriculum Vitae) page
@@ -41,7 +41,7 @@
 * 2018.05.21 [+] archive page
 * 2018.05.18 [+] 404 page
 * 2018.05.17 [+] slogan on footer
-* 2018.05.16 [+] category and slogan page
+* 2018.05.16 [+] category ~~and slogan~~ page
 * 2018.05.14 [+] ~~honehone clock~~; ~~pagination~~
 * 2018.05.02 [+] gc favicon
 * 2018.04.27 [-] ~~directory audio~~
