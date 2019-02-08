@@ -277,6 +277,12 @@ $ find . -exec rename 's/<from>/<to>/' {} ";" # 批量修改当前目录下的�
 $ find <filename> -type f -print0 | xargs -0 sed -i 's/<from>/<to>/g' # 把文件 <filename> 中的字符串 <from> 全部改为 <to>。
 {% endhighlight %}
 
+## 域名地址查询 | domain name system lookup
+
+{% highlight shell %}
+$ nslookup <url> # 查询指定域名 <url> 的主机名和主机 IP。
+{% endhighlight %}
+
 Thanks for your time.
 
 ## 参考
