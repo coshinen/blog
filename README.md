@@ -6,6 +6,7 @@
 - [ ] adjust the position of the widget: cPlayer, searchbox
 
 ## Timeline
+* 2019.02.12 [+] dir \_drafts
 * 2019.02.02 [-] ~~hone hone clock~~
 * 2019.02.01 [+] new gc favicon
 * 2019.01.01 [+] GC Music Diary new home page
