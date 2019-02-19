@@ -6,7 +6,9 @@
 - [ ] remake site search engine
 - [ ] adjust the position of the widget: cPlayer, searchbox
 
-## [Timeline](/TIMELINE.md)
+## Timeline
+
+* [...](/TIMELINE.md)
 
 ## Find me on
 
