@@ -1,4 +1,4 @@
-# [_mistydew's blog_](https://mistydew.github.io/blog)
+# [_mistydew's blog_](https://mistydew.github.io)
 
 ## Todo
 
