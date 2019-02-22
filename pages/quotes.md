@@ -7,10 +7,10 @@ permalink: /blog/quotes.html
 > Martin Luther King, Jr.:<br>
 > * In the End, we will remember not the words of our enemies, but the silence of our friends.
 
-> The imitation game:<br>
+> Alan Turing, The imitation game:<br>
 > * Sometimes it is the people no one imagines anything of who do the things that no one can imagine.
 
-> Raymond Fowler:<br>
+> Raymond Fowler, The Thin Blue Line:<br>
 > * When I was at college, I suffered from the curious delusion that I was there to study.
 
 > Mahatma Gandhi:<br>
@@ -25,29 +25,29 @@ permalink: /blog/quotes.html
 > 侯捷：<br>
 > * 源码之前，了无秘密。
 
-> ブラック：<br>
+> ブラック, AKBINGO!：<br>
 > * 自信があっても、結果にならなきゃダメでしょ！
 
-> おたべ：<br>
+> おたべ, マジすか学園5：<br>
 > * 感情は、煽させてもらうで。
 
-> ソルト：<br>
+> ソルト, マジすか学園4, 5：<br>
 > * 天辺までは、まだまだ遠い。自分の弱さを知る、そして強くなれ！
 > * 無理は一番の、退屈しのぎだ。
 
-> ゲキカラ：<br>
+> ゲキカラ, マジすか学園2：<br>
 > * 本当の強さはケンカじゃねえ、怖さを知ってるヤツだ。
 
-> マジスカロックンロール：<br>
+> 前田敦子, マジスカロックンロール：<br>
 > * マジにならなきゃ、勝てねぇよ！
 
-> 中村由利：<br>
+> 中村由利, ガーネット・クロウ：<br>
 > * 「ガーネット・クロウ」として、すべてのことを出し切りました。
 
 > クリスタル・ゲージ：<br>
 > * 善悪の基準はすべての人に共通じゃない。
 
-> 秋熊：<br>
+> 秋熊, 深秋之葵：<br>
 > * 学习GC精神，低调中坚持！
 
 > 江戸川コナン（工藤新一）：<br>
