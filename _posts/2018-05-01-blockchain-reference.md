@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "区块链相关阅读"
+title:  "区块链相关推荐"
 date:   2018-05-01 20:23:17 +0800
 author: mistydew
 comments: true
@@ -69,6 +69,10 @@ excerpt: 与其说比特币是区块链技术的第一个应用，不如说区�
 ![bitcoindsetup](https://raw.githubusercontent.com/mistydew/blockchain/master/images/bitcoindsetup.png)
 
 ## Ethereum | 以太坊（区块链 v2.0）
+
+暂无。
+
+## EOS(Enterprise Operation System) | 区块链操作系统（区块链 v3.0）
 
 暂无。
 
