@@ -3,9 +3,6 @@ layout: post
 title:  "Welcome to my blog!"
 date:   2018-04-18 17:14:43 +0800
 author: mistydew
-comments: true
-categories: First
-tags: Start
 ---
 You can contact me via e-mail: [mistydew@qq.com](mailto:mistydew@qq.com).
 
