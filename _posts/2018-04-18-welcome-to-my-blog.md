@@ -9,8 +9,10 @@ tags: misc
 You can contact me via e-mail: [mistydew@qq.com](mailto:mistydew@qq.com).
 
 The following is a example of highlight.
+
 {% highlight C++ linenos %}
 #include <iostream>
+
 int main(void)
 {
   std::cout << "Hello world!" << std::endl;
