@@ -27,7 +27,7 @@ sitemap: "/sitemap.xml"
 blog: "/blog"
 gc: "/gc"
 about:  "/about.html"
-donate: "/coffee.html"
+donate: "/donate.html"
 resume: "/resume.html"
 
 # Blog page baseurl

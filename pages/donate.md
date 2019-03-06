@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "Buy me a coffee"
-permalink: /coffee.html
+permalink: /donate.html
 ---
 
 ![bitcoin address](/images/btca.png){:.border}
