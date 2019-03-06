@@ -12,6 +12,7 @@ permalink: /blog/quotes.html
 
 > Raymond Fowler, The Thin Blue Line:<br>
 > * When I was at college, I suffered from the curious delusion that I was there to study.
+> * Nothing is without fault.
 
 > Mahatma Gandhi:<br>
 > * First they ignore you, then they laugh at you, then they fight you, then you win.
@@ -35,7 +36,7 @@ permalink: /blog/quotes.html
 > * 天辺までは、まだまだ遠い。自分の弱さを知る、そして強くなれ！
 > * 無理は一番の、退屈しのぎだ。
 
-> ゲキカラ「マジすか学園2」：<br>
+> ゲキカラ／甘口「マジすか学園2」：<br>
 > * ねぇ、怒ってる？
 > * マジで怒ってるよ。手目ら、許さねぇ！ぶっ殺す！
 > * 本当の強さはケンカじゃねぇ、怖さを知ってるヤツだ。
