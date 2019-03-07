@@ -9,8 +9,6 @@
 ## Timeline
 
 * 2019.02.12 [+] dir \_drafts
-* 2019.02.02 [-] ~~hone hone clock~~
-* 2019.02.01 [+] new gc favicon
 * [...](/TIMELINE.md)
 
 ## Find me on
