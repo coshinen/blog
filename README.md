@@ -9,7 +9,7 @@
 ## Timeline
 
 * 2019.02.12 [+] dir \_drafts
-* [...](/TIMELINE.md)
+* [...](/TIMELINE)
 
 ## Find me on
 
