@@ -28,6 +28,7 @@ $ git config --global user.email "<useremail>" # 添加邮箱到 git 配置文�
 ## 命令 | commands
 
 ### 本地仓库
+
 **注：以下命令必须在某个 git 仓库中输入。**
 
 {% highlight shell %}
@@ -46,6 +47,8 @@ $ git commit --amend # 修改上一次提交的评论，同时按 Ctrl + X 保�
 {% endhighlight %}
 
 ### 远程仓库 GitHub
+
+**注：慎用 --force/-f 参数。**
 
 {% highlight shell %}
 $ git clone https://github.com/<username/organization>/<projectname>.git # 克隆 GitHub 上某用户或组织的项目到本地。
