@@ -54,5 +54,5 @@ Thanks for your time.
 ## 参照
 * [The Beatles - Wikipedia](https://en.wikipedia.org/wiki/The_Beatles)
 * [披头士乐队 - 维基百科，自由的百科全书](https://zh.wikipedia.org/wiki/披頭四樂隊)
-* [The Beatles – Here Comes the Sun Lyrics | Genius Lyrics](https://genius.com/The-beatles-here-comes-the-sun-lyrics)
+* [The Beatles – Here Comes the Sun Lyrics \| Genius Lyrics](https://genius.com/The-beatles-here-comes-the-sun-lyrics)
 * [...]({{ site.url | append: site.blog }})
