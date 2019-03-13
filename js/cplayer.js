@@ -54,24 +54,6 @@ let player = new cplayer({
       lyric: '',
       sublyric: '',
       album: 'キミがいれば'
-    },
-    {
-      src: 'https://raw.githubusercontent.com/mistydew/dc/master/audio/丸竹夷.mp3',
-      poster: 'https://raw.githubusercontent.com/mistydew/dc/master/cover/遠山和葉.jpg',
-      name: '丸竹夷',
-      artist: '遠山和葉',
-      lyric: '',
-      sublyric: '',
-      album: '丸竹夷'
-    },
-    {
-      src: 'https://raw.githubusercontent.com/mistydew/dc/master/audio/ぼくがいる～コナンのテーマ～.mp3',
-      poster: 'https://raw.githubusercontent.com/mistydew/dc/master/cover/ぼくがいる.jpg',
-      name: 'ぼくがいる～コナンのテーマ～',
-      artist: '高山みなみ',
-      lyric: '',
-      sublyric: '',
-      album: 'ぼくがいる～コナンのテーマ～'
     }
   ]
 })
