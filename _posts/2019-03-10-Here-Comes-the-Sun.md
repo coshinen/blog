@@ -82,6 +82,10 @@ It's all right
 > 沒關係的<br>
 > 沒關係的
 
+## 感想
+
+最早聽到這首歌是在動畫電影 Bee Movie 中，是 Sheryl Crow 的翻唱版。
+
 Thanks for your time.
 
 ## 参照
