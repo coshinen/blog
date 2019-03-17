@@ -22,11 +22,11 @@ Ooh, see that girl<br>
 Watch that scene<br>
 Dig in the dancing queen
 
-> Ooh<br>
+> 哦<br>
 > 你能跳舞<br>
 > 你能搖擺<br>
 > 享受你生命中的時光<br>
-> Ooh, 看那女孩<br>
+> 哦，看那女孩<br>
 > 看那一幕<br>
 > 喜歡作爲舞后
 
@@ -70,11 +70,11 @@ Dig in the dancing queen
 > 年輕又可愛<br>
 > 只有十七嵗<br>
 > 舞后<br>
-> 感受著來自手鼓的節奏，oh yeah<br>
+> 感受著來自手鼓的節奏，哦耶<br>
 > 你能跳舞<br>
 > 你能搖擺<br>
 > 享受你生命中的時光<br>
-> Ooh, 看那女孩<br>
+> 哦，看那女孩<br>
 > 看那一幕<br>
 > 喜歡作爲舞后
 
@@ -109,11 +109,11 @@ Dig in the dancing queen
 > 年輕又可愛<br>
 > 只有十七嵗<br>
 > 舞后<br>
-> 感受著來自手鼓的節奏，oh yeah<br>
+> 感受著來自手鼓的節奏，哦耶<br>
 > 你能跳舞<br>
 > 你能搖擺<br>
 > 享受你生命中的時光<br>
-> Ooh, 看那女孩<br>
+> 哦，看那女孩<br>
 > 看那一幕<br>
 > 喜歡作爲舞后<br>
 > 喜歡作爲舞后
