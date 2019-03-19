@@ -12,7 +12,7 @@ excerpt: Lying here with you so close to me. It's hard to fight these feelings w
 
 ## Just A Kiss | 只是一個吻
 
-歌手：Lady Antebellum
+歌手：Lady Antebellum<br>
 作詞：Hillary Scott・Charles Kelley・Dave Haywood・Dallas Davidson<br>
 作曲：Hillary Scott・Charles Kelley・Dave Haywood・Dallas Davidson
 
