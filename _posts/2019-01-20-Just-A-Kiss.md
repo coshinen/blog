@@ -13,6 +13,8 @@ excerpt: Lying here with you so close to me. It's hard to fight these feelings w
 ## Just A Kiss | 只是一個吻
 
 歌手：Lady Antebellum
+作詞：Hillary Scott・Charles Kelley・Dave Haywood・Dallas Davidson<br>
+作曲：Hillary Scott・Charles Kelley・Dave Haywood・Dallas Davidson
 
 Lying here with you so close to me<br>
 It's hard to fight these feelings when it feels so hard to breathe<br>
@@ -34,7 +36,6 @@ Let's just take it slow
 > 我們不需要過於著急<br>
 > 就讓我們慢慢來吧
 
-Chorus:<br>
 Just a kiss on your lips in the moonlight<br>
 Just a touch of the fire burning so bright<br>
 No I don't wanna mess this thing up<br>
@@ -43,7 +44,6 @@ Just a shot in the dark that you just might<br>
 Be the one I've been waiting for my whole life<br>
 So baby I'm alright, with just a kiss goodnight
 
-> 合唱：<br>
 > 只是在月光下親吻你的嘴唇<br>
 > 只是觸碰到這火焰燃燒般的明亮<br>
 > 不我不想搞砸它<br>
