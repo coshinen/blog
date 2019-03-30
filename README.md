@@ -3,8 +3,7 @@
 ## Todo
 
 - [ ] add avatar, bio...
-- [ ] remake site search engine
-- [ ] adjust the position of widget searchbox
+- [ ] remake site search engine, adjust the position of widget searchbox
 
 ## Timeline
 
