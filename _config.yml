@@ -13,7 +13,7 @@ description: >- # this means to ignore newlines until "baseurl:"
   Welcome to the parallel universe!
   Powered by Jekyll.
   Hosted with ❤ by GitHub.
-  Copyright &copy; 2018-2019 mistydew.
+  Copyright &copy; 2019 mistydew.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://mistydew.github.io" # the base hostname & protocol for your site
 quote: ソルト：無理は一番の、退屈しのぎだ。
