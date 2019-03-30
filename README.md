@@ -4,12 +4,12 @@
 
 - [ ] add avatar, bio...
 - [ ] remake site search engine
-- [ ] adjust the position of the widget: cPlayer, searchbox
+- [ ] adjust the position of widget searchbox
 
 ## Timeline
 
-* 2019.02.12 [+] dir \_drafts
-* [...](/TIMELINE)
+* 2019.03.30 [-] ~~cPlayer~~
+* [...](/timeline.md)
 
 ## Find me on
 
