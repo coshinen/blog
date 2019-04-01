@@ -24,7 +24,15 @@
       </div>
     </nav>
 
+    <!-- Baidu Customised Site Search -->
+    <div id="site-search">
+      <form action="https://www.baidu.com/s" target="_blank" method="get" id="cse-search-box">
+        <input class="searchbox" type="text" name="origin" value="" placeholder="Enter Search" size="20">
+        <input type="hidden" name="wd" value="">
+        <input class="searchbox_submit" type="image" name="sa" value="" onclick="this.form.wd.value = this.form.origin.value + ' site:mistydew.github.io'">
+      </form>
+    </div>
+
   </div>
-  {% include baidu_search.html %}
 
 </header>
