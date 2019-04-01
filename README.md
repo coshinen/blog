@@ -3,11 +3,11 @@
 ## Todo
 
 - [ ] add avatar, bio...
-- [ ] remake site search engine, adjust the position of the widget searchbox
+- [ ] remake site search engine
 
 ## Timeline
 
-* 2019.03.30 [-] ~~cPlayer~~
+* 2019.04.01 [+] adjust the position of the site searchbox
 * [...](/timeline.md)
 
 ## Find me on
