@@ -4,6 +4,9 @@ title: Quotes
 permalink: /blog/quotes.html
 ---
 
+> Master Oogway, Kung Fu Panda:<br>
+> * Yesterday is history, tomorrow is a mystery, but today is a gift. That is why it is called the present.
+
 > Negan, The Walking Dead:<br>
 > * It's just that no one ever thinks that they're the evil one.
 
