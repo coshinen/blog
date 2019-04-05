@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title:  "Linux 基础命令"
 date:   2018-04-25 18:58:02 +0800
@@ -128,8 +128,9 @@ $ time <command> # 统计执行给定命令 <command> 所花费的时间。
 ## 修改时区 | time zone
 
 {% highlight shell %}
-$ timedatectl status # 查看系统时间。
+$ timedatectl status # 查看系统时间和日期。
 $ timedatectl set-timezone "Asia/Shanghai" # 修改系统时区为中国上海。
+$ timedatectl set-local-rtc 1 # 把实时时钟设置为本地时间，0 表示设置为 UTC，适用于 Win/Linux 双系统。
 {% endhighlight %}
 
 ## 查找文件 | find
