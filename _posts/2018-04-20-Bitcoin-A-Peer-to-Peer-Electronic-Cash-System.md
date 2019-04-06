@@ -45,7 +45,7 @@ proof-of-work chain as proof of what happened while they were gone.
 网络本身需要最小的结构。
 消息以尽力而为的方式广播，节点可以随意离开和重新加入该网络，接受最长的工作量证明链来作为它们离开后发生事件的证明。
 
-## 1. Introduction 介绍
+## 1. Introduction | 介绍
 
 Commerce on the Internet has come to rely almost exclusively on financial institutions serving as 
 trusted third parties to process electronic payments.  While the system works well enough for 
@@ -87,7 +87,7 @@ cooperating group of attacker nodes.
 使用对等分布式时间戳服务器来生成时间顺序的交易的计算量证明。
 只要诚实节点一起控制比任何协作的攻击者节点组更多的 CPU 能力，该系统就是安全的。
 
-## 2. Transactions 交易
+## 2. Transactions | 交易
 
 We define an electronic coin as a chain of digital signatures.  Each owner transfers the coin to the 
 next by digitally signing a hash of the previous transaction and the public key of the next owner 
@@ -129,7 +129,7 @@ majority of nodes agreed it was the first received.
 并且我们需要让参与者与其收到的订单历史达成一致的系统。
 收款人需要每笔交易的时间以及大多数节点都同意该交易是第一个被收到的证明。
 
-## 3. Timestamp Server 时间戳服务器
+## 3. Timestamp Server | 时间戳服务器
 
 The solution we propose begins with a timestamp server.  A timestamp server works by taking a 
 hash of a block of items to be timestamped and widely publishing the hash, such as in a 
@@ -144,7 +144,7 @@ its hash, forming a chain, with each additional timestamp reinforcing the ones b
 
 ![timestamp](/images/timestamp.jpg){:.border}
 
-## 4. Proof-of-Work 工作量证明
+## 4. Proof-of-Work | 工作量证明
 
 To implement a distributed timestamp server on a peer-to-peer basis, we will need to use a proof-
 of-work system similar to Adam Back's Hashcash [6], rather than newspaper or Usenet posts. 
@@ -196,7 +196,7 @@ blocks per hour.  If they're generated too fast, the difficulty increases.
 工作量证明的难度通过一个变化的平均值确定，以每小时的平均块数为平均值。
 如果它们产生的过快，难度会增加。
 
-## 5. Network 网络
+## 5. Network | 网络
 
 The steps to run the network are as follows:<br>
 1) New transactions are broadcast to all nodes.<br>
@@ -238,7 +238,7 @@ realizes it missed one.
 区块广播也允许丢弃消息。
 如果一个节点没有接收到一个区块，它将会在它接收到下一个区块并识别出它错过了一个时请求该区块。
 
-## 6. Incentive 激励
+## 6. Incentive | 激励
 
 By convention, the first transaction in a block is a special transaction that starts a new coin owned 
 by the creator of the block.  This adds an incentive for nodes to support the network, and provides 
@@ -273,7 +273,7 @@ everyone else combined, than to undermine the system and the validity of his own
 他应该会发现按照规则去玩更加有利，这种规则帮助他有比其他人合起来还要多的新币，
 而不是破环系统和他拥有的财富值。
 
-## 7. Reclaiming Disk Space 回收硬盘空间
+## 7. Reclaiming Disk Space | 回收硬盘空间
 
 Once the latest transaction in a coin is buried under enough blocks, the spent transactions before 
 it can be discarded to save disk space.  To facilitate this without breaking the block's hash, 
@@ -299,7 +299,7 @@ memory.
 随着在 2008 年 2GB RAM 的计算机系统销售，且摩尔定于预测目前每年增长 1.2GB，
 即使区块头必须在内存中，存储也应该不成问题。
 
-## 8. Simplified Payment Verification 简单支付验证
+## 8. Simplified Payment Verification | 简单支付验证
 
 It is possible to verify payments without running a full network node.  A user only needs to keep 
 a copy of the block headers of the longest proof-of-work chain, which he can get by querying 
@@ -332,7 +332,7 @@ run their own nodes for more independent security and quicker verification.
 提示用户的软件下载完整的区块并提醒交易以确认不一致性。
 频繁接收到支付的企业可能仍想要运行它们自己的节点以获得更加独立的安全性和更快的验证。
 
-## 9. Combining and Splitting Value 合并与分离价值
+## 9. Combining and Splitting Value | 合并与分离价值
 
 Although it would be possible to handle coins individually, it would be unwieldy to make a 
 separate transaction for every cent in a transfer.  To allow value to be split and combined, 
@@ -354,7 +354,7 @@ complete standalone copy of a transaction's history.
 应该指出，交易依赖多个交易，且这些交易依赖更多的交易，在这里不是一个问题。
 从不需要提取完整的交易历史的独立副本。
 
-## 10. Privacy 隐私
+## 10. Privacy | 隐私
 
 The traditional banking model achieves a level of privacy by limiting access to information to the 
 parties involved and the trusted third party.  The necessity to announce all transactions publicly 
@@ -382,7 +382,7 @@ the same owner.
 对于多输入交易，一些连接仍是不可避免的，这必然会表明它们的输入属于相同的所有者。
 风险在于，如果所有者被揭露，则连接可揭示属于该所有者的其他交易。
 
-## 11. Calculations 计算
+## 11. Calculations | 计算
 
 We consider the scenario of an attacker trying to generate an alternate chain faster than the honest 
 chain.  Even if this is accomplished, it does not throw the system open to arbitrary changes, such 
@@ -547,7 +547,7 @@ q=0.40   z=89
 q=0.45   z=340
 {% endhighlight %}
 
-## 12. Conclusion 结论
+## 12. Conclusion | 结论
 
 We have proposed a system for electronic transactions without relying on trust.  We started with 
 the usual framework of coins made from digital signatures, which provides strong control of 
@@ -573,7 +573,8 @@ them.  Any needed rules and incentives can be enforced with this consensus mecha
 它们使用其 CPU 能力投票，表示它们通过接受有效块来扩展工作量，通过拒绝无效块来拒绝在其上面工作。
 任何需要的规则和激励都可以通过这种共识机制强制执行。
 
-## References 参考
+## References | 参考
+
 [1] W. Dai, "b-money," http://www.weidai.com/bmoney.txt, 1998.<br>
 [2] H. Massias, X.S. Avila, and J.-J. Quisquater, "Design of a secure timestamping service with minimal 
 trust requirements," In 20th Symposium on Information Theory in the Benelux, May 1999.<br>
