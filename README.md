@@ -4,11 +4,10 @@
 
 - [ ] add avatar, bio...
 - [ ] remake site search engine
-- [ ] add page-content padding
 
 ## Timeline
 
-* 2019.04.07 [+] add page-content width
+* 2019.04.07 [+] add page-content wrapper padding
 * [...](/timeline.md)
 
 ## Find me on
