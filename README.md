@@ -7,7 +7,7 @@
 
 ## Timeline
 
-* 2019.04.07 [+] add page-content wrapper padding
+* 2019.04.01 [+] adjust the position of the site searchbox
 * [...](/timeline.md)
 
 ## Find me on
