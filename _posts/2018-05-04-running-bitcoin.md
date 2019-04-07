@@ -14,6 +14,7 @@ stickie: true
 你可以在你的系统上一次运行一个比特币或 bitcoind 的副本（如果你不小心又启动来另一个，该副本会告诉你：比特币或 bitcoind 已经启动并且该程序将退出）。
 
 ## Linux 快速启动
+
 使用命令行客户端启动（从头开始）的最简单方式，自动同步区块并创建一个钱包，只要在包含你的 bitcoind 二进制程序的目录运行下面命令（不带参数）：
 
 {% highlight shell %}
@@ -27,6 +28,7 @@ stickie: true
 {% endhighlight %}
 
 ## 命令行参数
+
 以下命令来自于比特币核心版本 [v0.12.1](https://github.com/bitcoin/bitcoin/tree/v0.12.1)。
 
 {% highlight shell %}

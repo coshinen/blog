@@ -21,6 +21,7 @@ Base58 是一组二进制文本编码方案，用于把大整数表示为含有�
 Base58Check 是一种 Base58 编码格式，可在前几个字符中明确编码的数据类型（版本号 Version），并在最后几个字符中包含一个错误检测代码（校验和 Checksum）。
 
 ## Base58 符号表
+
 <table border="1">
 <tbody><tr>
 <th>Value
@@ -288,6 +289,7 @@ Base58Check 是一种 Base58 编码格式，可在前几个字符中明确编码
 </td></tr></tbody></table>
 
 ## 源码剖析
+
 “源码之前，了无秘密” — 侯捷<br>
 比特币中的 Base58 编码使用的是 Base58Check。实现如下：
 
