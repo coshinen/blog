@@ -59,8 +59,7 @@ KzCFcgtfrPA2uWmXn4zjVNaKYMEUHbh732XzZ4aZ737545DqZ3V4
 
 ## 源码剖析
 
-“源码之前，了无秘密” — 侯捷<br>
-最后放上一张从公钥到地址转换的总流程图，就开始我们的源码之旅。
+从公钥到地址转换的流程图：
 
 ![pubkeytoaddr](/images/pubkeytoaddr.png)
 

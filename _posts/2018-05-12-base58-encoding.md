@@ -290,8 +290,7 @@ Base58Check 是一种 Base58 编码格式，可在前几个字符中明确编码
 
 ## 源码剖析
 
-“源码之前，了无秘密” — 侯捷<br>
-比特币中的 Base58 编码使用的是 Base58Check。实现如下：
+比特币中的 Base58 编码使用的是 Base58Check，实现如下：
 
 {% highlight C++ %}
 /** All alphanumeric characters except for "0", "I", "O", and "l" */
