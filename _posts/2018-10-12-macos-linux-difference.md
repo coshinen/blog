@@ -59,10 +59,6 @@ macOS 内核（XNU）比 Linux 时间更长，是基于 2 个很早的代码库�
 
 如果您发现这篇文章很有趣，请花些时间在社交媒体，骇客新闻或 [Reddit](http://reddit.com/r/linuxusersgroup) 上分享。
 
-## 感想
-
-苹果的 iOS 系统和 Android 系统分别对应类 Unix 与 Linux 内核。
-
 Thanks for your time.
 
 ## 参照
