@@ -1,5 +1,5 @@
 DEMO: index.html
-	jekyll clean; jekyll server --incremental
+	jekyll server --incremental; jekyll clean
 
 clean:
 	jekyll clean
