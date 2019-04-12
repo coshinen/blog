@@ -5,9 +5,9 @@
 
 <strong>&nbsp;&nbsp;System information updated as of now</strong>
 
-<span id="a">mistydew</span>:~$ ls -a
+<span id="a">mistydew</span>@<a href="https://github.com/mistydew">GitHub</a>:~$ ls -a
 <a>. .. </a>resume
-<span id="a">mistydew</span>:~$ cat resume
+<span id="a">mistydew</span>@<a href="https://github.com/mistydew">GitHub</a>:~$ cat resume
 <p align="center"><font size="6"><strong>Zichen Yuan(mistydew)</strong></font><br>(+86)xxx-xxxx-xxxx | <a target="_blank" href="mailto:mistydew@qq.com">mistydew@qq.com</a> | Shenzhen, China</p>
 <font size="4"><strong>EDUCATION</strong></font>
 -----------------------------------------------------------------------------------------
@@ -16,13 +16,12 @@ Bachelor of Computer Science<div style="float:right;">Henan</div>
 
 <font size="4"><strong>PROFESSIONAL EXPERIENCE</strong></font>
 -----------------------------------------------------------------------------------------
-Github: <a target="_blank" href="https://github.com/mistydew">https://github.com/mistydew</a>
 <strong>Here are some of my open or public projects(repositories).</strong>
-<a target="_blank" href="https://github.com/mistydew/SkyDrive">SkyDrive</a>
+<a href="https://github.com/mistydew/SkyDrive">SkyDrive</a>
 * SkyDrive is a customised protocol cloud storage.
-<a target="_blank" href="https://github.com/mistydew/rssSearchEngine">rssSearchEngine</a>
+<a href="https://github.com/mistydew/rssSearchEngine">rssSearchEngine</a>
 * A mini search engine with RSS.
-<a target="_blank" href="https://github.com/mistydew/blockchain">crowcoin</a>
+<a href="https://github.com/mistydew/blockchain">crowcoin</a>
 * An altcoin based on Bitcoin.
 
 <font size="4"><strong>PROFESSIONAL SKILLS</strong></font>
@@ -38,4 +37,4 @@ Github: <a target="_blank" href="https://github.com/mistydew">https://github.com
 -----------------------------------------------------------------------------------------
 <strong>Languages:</strong> Mandarin, English, Japanese(JLPT N?)
 <strong>Interests:</strong> Reading/Writing, Painting, Music(Sing, Paino/Keyboard), Animation(DC), CROWSUB(GC), Cooking, Sport(Soccer/Football)
-<span id="a">mistydew</span>:~$ 
+<span id="a">mistydew</span>@<a href="https://github.com/mistydew">GitHub</a>:~$ 
