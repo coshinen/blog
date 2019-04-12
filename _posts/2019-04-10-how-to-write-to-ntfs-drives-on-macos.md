@@ -7,8 +7,25 @@ comments: true
 categories: R/W
 tags: macOS NTFS
 ---
-苹果的 macOS 只支持 NTFS 格式硬盘的读操作，而不支持写操作。
-据说是版权原因，事实上可以通过修改系统配置文件开启对 NTFS 硬盘的写操作。
+苹果的 macOS 只支持 NTFS 格式硬盘的读操作，据说是版权原因。
+事实上可以通过编辑系统配置文件 fstab 开启 NTFS 硬盘的写操作。
+
+fstab 全称 file system table，即文件系统表，是 Unix 和类 Unix 计算机系统上常见的系统配置文件。
+该文件通常列出所有可用磁盘分区，并指明如何初始化它们。
+mount 命令在引导时自动读取 fstab 文件以确定整个文件系统结构，直至当用户执行 mount 命令修改该结构。
+
+## 0.fstab 文件中各字段及其含义
+
+> LABEL=device-spec mount-point fs-type options dump pass
+> * device-spec: 设备名，标签。
+> * mount-point: 安装后访问设备内容的位置；对于交换分区或文件，设置为 none。
+> * fs-type: 要挂载文件系统的类型。
+> * options: 描述文件系统各种其他方面，例如是否在引导时自动挂载，用户可以挂载或访问，是否可以写入或只读，大小等等；特殊选项默认值是指一组预定的基于文件系统类型的选项。
+> * dump: 一个数字，指明转储程序是否应该以及多久备份文件系统；0 表示永远不会自动备份文件系统。
+> * pass: 一个数字，指明 fsck 程序在引导时检查设备是否有错误的顺序；1 表示对于 root 文件系统，2（在 root 后检查）或 0（不检查）表示对于所有其他设备。
+
+**最后两个字段缺省值被解释为 0。
+如果有必要，在第一，二，四字段中的空格字符由八进制的字符代码 \040 表示，可参照 ASCII 码表。**
 
 ## 1.使用 root 权限在 /etc/ 目录下创建 fstab 文件
 
@@ -16,19 +33,13 @@ tags: macOS NTFS
 $ sudo vim /etc/fstab
 {% endhighlight %}
 
-## 2.在 fstab 文件中键入以下文字并保存
-
-> LABEL=\<drive name> none ntfs rw,auto,nobrowse # \<drive name> 为硬盘名，空格使用 \040 转移字符替代
-
-**注：这里 \040 为八进制的 40，即十进制的 32，对应 ASCII 码中的空格。**
-
-例：硬盘名为 My Passport，则应该键入：
+## 2.以硬盘名为 My Passport 为例，在 fstab 文件中键入以下文字并保存
 
 > LABEL=My\040Passport none ntfs rw,auto,nobrowse
 
-## 3.重新插入硬盘，硬盘默认挂载在 /Volumes/ 目录下
+该段文字的含义为：对于 My Passport 设备，挂载到默认位置 /Volumes/ 目录下，以 NTFS 文件系统类型，引导时自动挂载，用户可读写，永不自动备份，引导时不检查设备错误。
 
-## 4.现在可以开始进行写操作了
+## 3.重新插入硬盘，现在可以开始进行写操作了
 
 Thanks for your time.
 
