@@ -119,6 +119,5 @@ Thanks for your time.
 ## 参照
 * [Lady Antebellum](https://www.ladyantebellum.com)
 * [Lady Antebellum - Wikipedia](https://en.wikipedia.org/wiki/Lady_Antebellum)
-* [战前女神 - 维基百科，自由的百科全书](https://zh.wikipedia.org/wiki/懷舊女郎)
 * [Lady Antebellum – Just a Kiss Lyrics \| Genius Lyrics](https://genius.com/Lady-antebellum-just-a-kiss-lyrics)
 * [...]({{ site.url | append: site.blog }})
