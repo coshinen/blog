@@ -107,6 +107,5 @@ Thanks for your time.
 ## 参照
 * [ABBA \| Articles](https://abbasite.com)
 * [ABBA - Wikipedia](https://en.wikipedia.org/wiki/ABBA)
-* [ABBA - 维基百科，自由的百科全书](https://zh.wikipedia.org/wiki/ABBA)
 * [ABBA – Dancing Queen Lyrics \| Genius Lyrics](https://genius.com/Abba-dancing-queen-lyrics)
 * [...]({{ site.url | append: site.blog }})

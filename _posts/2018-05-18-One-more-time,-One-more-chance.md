@@ -73,10 +73,9 @@ One more time　ふざけあった　時間よ
 Thanks for your time.
 
 ## 参照
-* [山崎まさよし - Wikipedia](https://ja.wikipedia.org/wiki/山崎まさよし)
-* [山崎まさよし - 维基百科，自由的百科全书](https://zh.wikipedia.org/wiki/山崎将义)
+* [秒速5センチメートル](https://www.cwfilms.jp/5cm)
+* [秒速5センチメートル - Wikipedia](https://ja.wikipedia.org/wiki/秒速5センチメートル)
 * [山崎まさよし Official Web Site](http://www.office-augusta.com/yama)
-* [山崎まさよしの歌詞一覧リスト](https://www.uta-net.com/artist/2503)
-* [山崎まさよし の歌詞 歌手](http://www.kasi-time.com/subcat-uta-332-1.html)
-* [山崎まさよしの歌詞・音楽・情報 \| 歌詞検索UtaTen（うたてん）](https://utaten.com/artist/山崎まさよし)
+* [山崎まさよし - Wikipedia](https://ja.wikipedia.org/wiki/山崎まさよし)
+* [山崎まさよしの歌詞一覧リスト - 歌ネット](https://www.uta-net.com/artist/2503)
 * [...]({{ site.url | append: site.blog }})

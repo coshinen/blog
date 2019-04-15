@@ -70,6 +70,5 @@ Thanks for your time.
 ## 参照
 * [Coldplay official website](https://coldplay.com)
 * [Coldplay - Wikipedia](https://en.wikipedia.org/wiki/Coldplay)
-* [酷玩乐队 - 维基百科，自由的百科全书](https://zh.wikipedia.org/wiki/酷玩樂團)
 * [Coldplay – Viva la Vida Lyrics \| Genius Lyrics](https://genius.com/Coldplay-viva-la-vida-lyrics)
 * [...]({{ site.url | append: site.blog }})
