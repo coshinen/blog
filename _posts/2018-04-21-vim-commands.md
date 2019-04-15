@@ -115,7 +115,7 @@ Vim(Vi IMproved) 是 Vi 文本编辑器的升级版，在 Linux 系统中作为 
 
 ## 插入模式
 
-码字就好，略。
+码字就好。
 
 ## 删除行尾的换行符
 
@@ -129,7 +129,7 @@ Thanks for your time.
 
 ## 参考
 * [Vim (text editor) - Wikipedia](https://en.wikipedia.org/wiki/Vim_(text_editor))
-* [Vim - 维基百科，自由的百科全书](https://zh.wikipedia.org/wiki/Vim)
 * [Learning the vi Editor/Vim/Modes - Wikibooks](https://en.wikibooks.org/wiki/Learning_the_vi_Editor/Vim/Modes)
-* [jmoon018/PacVim](https://github.com/jmoon018/PacVim) - 练习 Vim 命令的游戏
+* [PacVim - a game that teaches you vim commands](https://github.com/jmoon018/PacVim)
+* [Where Vim Came From](https://twobithistory.org/2018/08/05/where-vim-came-from.html)
 * [...]({{ site.url | append: site.blog }})
