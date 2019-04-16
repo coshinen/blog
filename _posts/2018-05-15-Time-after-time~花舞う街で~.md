@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Time after time～花舞う街で～"
+title:  "Time after time ~花舞う街で~"
 date:   2018-05-15 20:03:03 +0800
 author: mistydew
 comments: true
@@ -8,9 +8,9 @@ categories: コナン 翻訳
 tags: CONAN 歌詞
 excerpt: もしも君に巡り逢えたら 二度と君の手を離さない 春の終わり告げる 花御堂 霞む花 一枚(ひとひら) 蘇る 思い出の歌 この胸に 今も優しく
 ---
-![Time after time～花舞う街で～](https://raw.githubusercontent.com/mistydew/dc/master/cover/Time%20after%20time～花舞う街で～.jpg){:.border}
+![Time after time ~花舞う街で~](https://raw.githubusercontent.com/mistydew/dc/master/cover/Time%20after%20time%20~花舞う街で~.jpg){:.border}
 
-## Time after time～花舞う街で～ | 一次又一次~在落花紛飛的街道上~
+## Time after time ~花舞う街で~ | 一次又一次 ~在落花紛飛的街道上~
 
 歌手：倉木麻衣<br>
 作詞：倉木麻衣<br>

@@ -8,7 +8,7 @@ categories: ガーネット・クロウ 翻訳
 tags: GC 歌詞
 excerpt: ため息ひとつ落ちた週末の どうしようもない感じ 絶望より深く堕ちてゆく 夜明け
 ---
-![first kaleidscope～君の家に着くまでずっと走ってゆく～](https://raw.githubusercontent.com/mistydew/gc2/master/cover/minial/MINIAL_first%20kaleidscope～君の家に着くまでずっと走ってゆく～.jpg){:.border}
+![first kaleidscope ~君の家に着くまでずっと走ってゆく~](https://raw.githubusercontent.com/mistydew/gc2/master/cover/minial/MINIAL_first%20kaleidscope%20~君の家に着くまでずっと走ってゆく~.jpg){:.border}
 
 ## dreaming of love | 愛之夢
 

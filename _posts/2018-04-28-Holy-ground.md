@@ -8,7 +8,7 @@ categories: ガーネット・クロウ 翻訳
 tags: GC 歌詞
 excerpt: 君のいない未来が ただ大きな闇にみえ 死んでしまえば生きなくていい そんな事ばかり考えてた 穏やかな月明かりに
 ---
-![SPARKLE～筋書き通りのスカイブルー～](https://raw.githubusercontent.com/mistydew/gc2/master/cover/album/AL02_SPARKLE～筋書き通りのスカイブルー～.jpg){:.border}
+![SPARKLE ~筋書き通りのスカイブルー~](https://raw.githubusercontent.com/mistydew/gc2/master/cover/album/AL02_SPARKLE%20~筋書き通りのスカイブルー~.jpg){:.border}
 
 ## Holy ground | 聖地
 
