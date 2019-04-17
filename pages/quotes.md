@@ -76,3 +76,9 @@ permalink: /blog/quotes.html
 > * 理由（わけ）なんているのかよ？人は人を殺す動機なんて知ったこっちゃねぇが、人が人を助ける理由に、論理的な思考を存在しねぇだろう？
 > * たった一つの真実見抜く、見た目は子供、頭脳は大人。その名は…
 > * 真実はいつもひとつ！
+
+> Sherlock Holmes, A Game of Shadows:<br>
+> * Let me pay you one in return, when I said if I were assured of the former eventuality, I will cheerfully accept the latter.
+
+> Sherlock Holmes, The Final Problem:<br>
+> * Let me pay you one in return when I say that if I were assured of the former eventuality I would, in the interests of the public, cheerfully accept the latter.
