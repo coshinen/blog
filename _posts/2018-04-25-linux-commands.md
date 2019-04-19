@@ -251,11 +251,11 @@ $ sysctl -a # 查看 Linux 系统内核的全部参数。
 $ w # 显示当前登陆的用户及其正在执行的命令。
 {% endhighlight %}
 
-## 升级系统
+## 关机 | shutdown
 
 {% highlight shell %}
-$ do-release-upgrade # 升级。
-$ reboot # 升级完毕需要重启。
+$ shutdown -h now # 立刻关机，h 表示 halt，可以指定时间。
+$ halt # 同 shutdown -h now。
 {% endhighlight %}
 
 ## 查看系统版本信息 | release
@@ -264,6 +264,13 @@ $ reboot # 升级完毕需要重启。
 $ uname -a # 打印当前系统相关信息，-a 表示全部信息。
 $ lsb_release -a # 显示 LSB 和版本信息，-a 表示全部信息。
 $ cat /etc/issue # 查看系统版本信息。
+{% endhighlight %}
+
+## 升级系统 | upgrade
+
+{% highlight shell %}
+$ do-release-upgrade # 升级。
+$ reboot # 升级完毕需要重启。
 {% endhighlight %}
 
 ## 修改文件名 | rename
