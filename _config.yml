@@ -20,6 +20,8 @@ github_username:  mistydew
 feed_username:    mistydew
 btc_address: 1GC1iAZz9Wroy99bwJUzuLrqpmayUhjYbZ
 
+timezone: Asia/Shanghai # Beijing Time
+
 # Site page baseurl
 sitemap: "/sitemap.xml"
 blog: "/blog"
