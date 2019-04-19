@@ -1,5 +1,6 @@
 ## Timeline
 
+* 2019.04.19 [+] set site timezone on GitHub Pages
 * 2019.04.01 [+] adjust the position of the site searchbox
 * 2019.03.30 [-] ~~cPlayer~~
 * 2019.02.12 [+] dir \_drafts

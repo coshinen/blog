@@ -4,11 +4,11 @@
 
 - [ ] add avatar, bio...
 - [ ] remake site search engine
-- [ ] modify post-date time on GitHub server
+- [x] modify post-date time on GitHub server
 
 ## Timeline
 
-* 2019.04.01 [+] adjust the position of the site searchbox
+* 2019.04.19 [+] set site timezone on GitHub Pages
 * [...](/timeline.md)
 
 ## Find me on
