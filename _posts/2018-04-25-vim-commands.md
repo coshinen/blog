@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Vi/Vim 基础命令"
-date:   2018-04-21 20:11:20 +0800
+date:   2018-04-25 20:11:20 +0800
 author: mistydew
 comments: true
 categories: Vi/Vim
