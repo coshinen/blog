@@ -8,12 +8,12 @@ categories: Blockchain Bitcoin
 tags: 区块链 比特币 源码剖析
 stickie: true
 ---
-比特币相关的解读目前均采用 [bitcoin v0.12.1](https://github.com/bitcoin/bitcoin/tree/v0.12.1)，此版本为官方内置挖矿算法的最后一版。<br>
+比特币相关的解读目前均采用 [bitcoin v0.12.1](https://github.com/bitcoin/bitcoin/tree/v0.12.1)，此版本为官方内置挖矿算法的最后一版。
 当前比特币的最新版本为 bitcoin v0.16.0，离区块链 1.0 落地还有些距离。
 
 ## 概要
 
-下载比特币源码到本地，这里可以采用 Linux 系统的 Git 把官方源码克隆至本地。<br>
+下载比特币源码到本地，这里可以采用 Linux 系统的 Git 把官方源码克隆至本地。
 切换到 v0.12.1 版本的源码，进入 bitcoin/src 目录，开始我们的源码阅读之旅。
 
 {% highlight shell %}
@@ -25,8 +25,8 @@ $ cd src # 进入 src 目录，之后未作特殊说明的均以该目录作为�
 
 ## 源码剖析
 
-首先要找到一个程序的入口，也就是 main 函数。<br>
-使用 grep 命令查找 main 函数所出现的文件即位置。<br>
+首先要找到一个程序的入口，也就是 main 函数。
+使用 grep 命令查找 main 函数所出现的文件即位置。
 根据比特币核心服务程序 bitcoind，可以找到该程序对应的 main 函数在“bitcoind.cpp”文件中。
 
 {% highlight C++ %}
