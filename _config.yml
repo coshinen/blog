@@ -47,4 +47,4 @@ markdown: kramdown
 permalink: /blog/:year/:month/:title.html
 
 # Exclude
-exclude: [LICENSE.md, README.md, Makefile]
+exclude: [LICENSE, README.md, timeline.md]
