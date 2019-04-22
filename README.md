@@ -8,7 +8,7 @@
 
 ## Timeline
 
-* 2019.04.19 [+] set site timezone on GitHub Pages
+* 2019.04.19 [+] jekyll config: site timezone
 * [...](/timeline.md)
 
 ## Find me on
