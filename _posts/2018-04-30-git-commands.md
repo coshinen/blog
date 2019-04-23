@@ -7,13 +7,14 @@ comments: true
 categories: Git
 tags: Git CLI
 ---
-什么是 [GitHub](https://github.com)？不知道 Git 的请往下看，Hub 有中心、枢纽之意。<br>
-据传 [GitHub](https://github.com) 是全球最大的同性交友网站。
+Git 是一个免费且开源的分布式版本控制系统，旨在处理从小到非常大项目的速度和效率。
 
-官方简介：<br>
-![git](/images/git.jpg)<br>
-Git 是一个免费且开源的分布式版本控制系统，旨在处理从小到非常大项目的速度和效率。<br>
-Git 易于学习且拥有占用空间小和闪电般快速的性能。它远优于像 Subversion、CVS、Perforce 和 ClearCase 这些的 SCM 工具，有像廉价的本地分支、便捷的暂存区，和多种工作流程的特性。
+Git 易于学习且拥有占用空间小和闪电般快速的性能。
+它远优于像 Subversion、CVS、Perforce 和 ClearCase 这些的 SCM 工具，有像廉价的本地分支、便捷的暂存区，和多种工作流程的特性。
+
+![git](/images/git.jpg)
+
+据传 [GitHub](https://github.com) 是全球最大的同性交友网站，Hub 有中心、枢纽之意。
 
 ## 安装（Ubuntu 16.04.4）
 
@@ -27,7 +28,7 @@ $ git config --global user.email "<useremail>" # 添加邮箱到 git 配置文�
 
 ## 命令 | commands
 
-### 本地仓库
+### 本地仓库 | offline
 
 **注：以下命令必须在某个 git 仓库中输入。**
 
@@ -46,16 +47,16 @@ $ git reset --hard <version> # 版本回退至指定版本。
 $ git commit --amend # 修改上一次提交的评论，同时按 Ctrl + X 保存，然后按 Y 确认，最后按 Enter 退出。
 {% endhighlight %}
 
-### 远程仓库 GitHub
+### 远程仓库 | online (GitHub)
 
 **注：慎用 --force/-f 参数。**
 
 {% highlight shell %}
 $ git clone https://github.com/<username/organization>/<projectname>.git # 克隆 GitHub 上某用户或组织的项目到本地。
+$ git pull # 同步 GitHub 上的项目到本地。
 $ git push # 同步本地的项目到 GitHub 上。
 $ git push origin HEAD --force # 强制同步本地的项目分支到 GitHub 上，用于 $ git commit --amend 之后。
 $ git push origin master -f # 强制同步本地的项目分支到 GitHub 上，用于 $ git reset --hard <version> 修改远程仓库的错误提交。
-$ git pull # 同步 GitHub 上的项目到本地。
 {% endhighlight %}
 
 Thanks for your time.
