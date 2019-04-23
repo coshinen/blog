@@ -4,11 +4,11 @@
 
 - [ ] add avatar, bio...
 - [ ] remake site search engine
-- [x] modify post-date time on GitHub server
+- [x] add the site searchbox submit icon
 
 ## Timeline
 
-* 2019.04.19 [+] jekyll config: site timezone
+* 2019.04.23 [+] the site searchbox submit icon
 * [...](/timeline.md)
 
 ## Find me on
