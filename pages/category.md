@@ -20,12 +20,11 @@ permalink: /blog/category.html
 {% assign counts = counts | split: ', ' %}
 {% assign idx = 0 %}
 
-<p id="category"></p>
 <blockquote>
-<details>
-<summary>Contents</summary>
+<details open>
+<summary id="contents">Contents</summary>
 {% for category in site.categories %}
-<div><a href="#{{ category[0] }}-ref">{{ category | first }} [{{ counts[idx] }}]</a></div>
+<div><li><a href="#{{ category[0] }}-ref">{{ category | first }} [{{ counts[idx] }}]</a></li></div>
     {% assign idx = idx | plus: 1 %}
 {% endfor %}
 </details>
@@ -35,7 +34,7 @@ permalink: /blog/category.html
 
 {% for category in site.categories %}
 <blockquote>
-<h2 id="{{ category[0] }}-ref">{{ category | first }} ({{ counts[idx] }})<a href="#category">{% include icon/chevron-up.html %}</a></h2>
+<h2 id="{{ category[0] }}-ref">{{ category | first }} ({{ counts[idx] }})<a href="#contents">{% include icon/chevron-up.html %}</a></h2>
     {% assign idx = idx | plus: 1 %}
 <ul class="arc-list">
     {% for post in category.last %}
