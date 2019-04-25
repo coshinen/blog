@@ -22,10 +22,13 @@ permalink: /blog/category.html
 
 <p id="category"></p>
 <blockquote>
+<details>
+<summary>Contents</summary>
 {% for category in site.categories %}
 <div><a href="#{{ category[0] }}-ref">{{ category | first }} [{{ counts[idx] }}]</a></div>
     {% assign idx = idx | plus: 1 %}
 {% endfor %}
+</details>
 </blockquote>
 
 {% assign idx = 0 %}
