@@ -1,9 +1,10 @@
-# [_mistydew's blog_](https://mistydew.github.io)
+# [_mistydew's blog_](https://mistydew.github.io/blog)
 
 ## Todo
 
 - [ ] add avatar, bio...
 - [ ] remake site search engine
+- [ ] remake gc history timeline just like bd video
 - [x] add the site searchbox submit icon
 
 ## Timeline
