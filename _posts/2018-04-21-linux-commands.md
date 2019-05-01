@@ -44,22 +44,23 @@ $ vi/vim <file> # 使用 Vi/Vim 编辑器打开指定的文件进行编辑，若
 
 **注：Vi/Vim 编辑过的文件会在结尾自动添加一个 '\n' 换行，所以编辑过文件至少有一个字节的大小。**
 
-## 删除文件 | remove
-
-{% highlight shell %}
-$ rm <file> # 删除指定的 <file> 文件。
-$ rmdir <dir> # 只能删除指定的空目录 <dir>。
-$ rm <dir> -rf # 删除指定的目录 <dir> 下包含的所有文件，-r 参数表示循环，-f 参数表示不显示任何信息。
-{% endhighlight %}
-
-**注：慎用 "$ sudo rm / -rf"，详见[多一个空格会发生什么？](https://github.com/MrMEEE/bumblebee-Old-and-abbandoned/commit/6cd6b2485668e8a87485cb34ca8a0a937e73f16d)**
-
 ## 查找文件 | find
 
 {% highlight shell %}
 $ find . -name <filename> -type f # 以当前目录 . 为起始目录，查询并显示指定文件名 <filename> 的文件（相对）路径，f 表示文件类型普通文件。
 $ find . -empty #  以当前目录 . 为起始目录，查询并显示所有大小为 0 的文件（相对）路径。
 {% endhighlight %}
+
+## 删除文件 | remove
+
+{% highlight shell %}
+$ rm <file> # 删除指定的 <file> 文件。
+$ rmdir <dir> # 只能删除指定的空目录 <dir>。
+$ rm <dir> -rf # 删除指定的目录 <dir> 下包含的所有文件，-r 参数表示循环，-f 参数表示不显示任何信息。
+$ find . -name <filename> | xargs rm # 批量删除当前目录下所有 <filename> 文件，xargs 参数是一个过滤器，把参数列表分段传递给另一个命令，与管道 | 一起使用。
+{% endhighlight %}
+
+**注：慎用 "$ sudo rm / -rf"，详见[多一个空格会发生什么？](https://github.com/MrMEEE/bumblebee-Old-and-abbandoned/commit/6cd6b2485668e8a87485cb34ca8a0a937e73f16d)**
 
 ## 搜索内容 | grep
 
