@@ -26,7 +26,7 @@ excerpt: 風の音だけが、体中を包む。サイレント・Kiss、夢に�
 > 唯有風聲<br>
 > 包裹著全身<br>
 > (Oh) Silent Kiss (Oh yeah)<br>
-> 似夢的氣息<br>
+> 似夢的氣息
 
 胸がキュッとなること<br>
 君といた季節<br>
@@ -36,7 +36,7 @@ excerpt: 風の音だけが、体中を包む。サイレント・Kiss、夢に�
 > 心中變得忐忑不安<br>
 > 和你在一起的季節<br>
 > Sky High Blue (Oh yeah)<br>
-> 漸行漸遠<br>
+> 漸行漸遠
 
 都合いい Happy End<br>
 さがしても癒せない<br>
@@ -44,7 +44,7 @@ excerpt: 風の音だけが、体中を包む。サイレント・Kiss、夢に�
 
 > 美好的 Happy End<br>
 > 即便找到也無法治愈<br>
-> 心若自由定會飛翔<br>
+> 心若自由定會飛翔
 
 上空 舞うもの達と Over Drive<br>
 どこまでも青い世界にいたい<br>
@@ -62,7 +62,7 @@ raise up
 > 乘風而上的刺激感<br>
 > 想像著尚未知曉的前路<br>
 > 逐漸化爲珍貴的期待<br>
-> raise up<br>
+> raise up
 
 波がキラめいたら<br>
 吸い込まれそうね<br>
@@ -72,7 +72,7 @@ raise up
 > 當波光粼粼時<br>
 > 仿佛被吸入其中<br>
 > Starlight Night (Oh yeah)<br>
-> 晴空高遠<br>
+> 晴空高遠
 
 近づいた last scene<br>
 まだ今つかめない<br>
@@ -80,7 +80,7 @@ raise up
 
 > 已經接近了的 last scene<br>
 > 現在依然無法把握<br>
-> 連不確定的未來都如此愜意<br>
+> 連不確定的未來都如此愜意
 
 上昇 恋は揺らいで Over Drive<br>
 目を見て無邪気に笑ってみせて<br>
@@ -98,7 +98,7 @@ raise up
 > 想要更加靠近你些<br>
 > 向着無垠的天空祈禱<br>
 > 與真正的你相遇的那一天<br>
-> 我會等下去<br>
+> 我會等下去
 
 上空 舞うもの達と Over Drive<br>
 どこまでも青い世界にいたい<br>
@@ -120,7 +120,7 @@ raise up<br>
 > 逐漸化爲珍貴的期待<br>
 > raise up<br>
 > 與真正的你相遇的那一天<br>
-> 我會等下去<br>
+> 我會等下去
 
 ## 感想
 
