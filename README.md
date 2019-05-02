@@ -5,16 +5,17 @@
 - [ ] add avatar, bio...
 - [ ] remake site search engine
 - [ ] remake gc history timeline just like bd video
-- [x] replace comment system
+- [x] test new comments system
 
 ## Timeline
 
-* 2019.04.28 [-] ~~Widget Pack Comments System~~; [+] LiveRe City comments system
+* 2019.05.03 [-] ~~LiveRe City comments system~~; [+] Remarkbox comments system
 
 
 <details>
 <summary>more</summary>
 
+* 2019.04.28 [-] ~~Widget Pack Comments System~~; [+] ~~LiveRe City comments system~~
 * 2019.04.23 [+] the site searchbox submit icon
 * 2019.04.19 [+] jekyll config: site timezone
 * 2019.04.01 [+] adjust the position of the site searchbox
