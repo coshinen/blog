@@ -5,7 +5,6 @@
 - [ ] add avatar, bio...
 - [ ] remake site search engine
 - [ ] remake gc history timeline just like bd video
-- [x] test new comments system
 
 ## Timeline
 
