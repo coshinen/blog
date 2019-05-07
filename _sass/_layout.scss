@@ -164,6 +164,29 @@
 
 
 /**
+ * Site lyrics
+ */
+div.lyric-original {
+    float: left;
+    padding-right: 15px;
+    width: calc(50% - (30px / 2));
+}
+
+div.lyric-translation {
+    float: right;
+    padding-right: 15px;
+    width: calc(50% - (30px / 2));
+}
+
+@include media-query($on-palm) {
+    div.lyric-original, div.lyric-translation {
+        float: none;
+        width: calc(100% - (30px / 2));
+    }
+}
+
+
+/**
  * Site footer
  */
 .site-footer {
