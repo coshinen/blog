@@ -168,14 +168,14 @@
  */
 div.lyric-original {
     float: left;
-    padding-right: 15px;
-    width: calc(50% - (30px / 2));
+    padding-right: 10px;
+    width: calc(50% - (20px / 2));
 }
 
 div.lyric-translation {
-    float: right;
-    padding-right: 15px;
-    width: calc(50% - (30px / 2));
+    float: left;
+    padding-right: 10px;
+    width: calc(50% - (20px / 2));
 }
 
 @include media-query($on-palm) {

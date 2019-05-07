@@ -27,8 +27,8 @@ Now the old King is dead, long live the King<br>
 One minute I held the key<br>
 Next the walls were closed on me<br>
 And I discovered that my castles stand<br>
-Upon pillars of salt and pillars of sand
-
+Upon pillars of salt and pillars of sand<br>
+<br>
 I hear Jerusalem bells a-ringing<br>
 Roman Cavalry choirs are singing<br>
 Be my mirror, my sword and shield<br>
@@ -36,8 +36,8 @@ My missionaries in a foreign field<br>
 For some reason I can't explain<br>
 Once you'd gone there was never<br>
 Never an honest word<br>
-And that was when I ruled the world
-
+And that was when I ruled the world<br>
+<br>
 It was the wicked and wild wind<br>
 Blew down the doors to let me in<br>
 Shattered windows and the sound of drums<br>
@@ -45,8 +45,8 @@ People couldn't believe what I'd become<br>
 Revolutionaries wait<br>
 For my head on a silver plate<br>
 Just a puppet on a lonely string<br>
-Oh who would ever want to be king?
-
+Oh who would ever want to be king?<br>
+<br>
 I hear Jerusalem bells a-ringing<br>
 Roman Cavalry choirs are singing<br>
 Be my mirror, my sword and shield<br>
@@ -54,8 +54,8 @@ My missionaries in a foreign field<br>
 For some reason I can't explain<br>
 I know Saint Peter won't call my name<br>
 Never an honest word<br>
-But that was when I ruled the world
-
+But that was when I ruled the world<br>
+<br>
 I hear Jerusalem bells a-ringing<br>
 Roman Cavalry choirs are singing<br>
 Be my mirror, my sword and shield<br>

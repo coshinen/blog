@@ -20,23 +20,23 @@ excerpt: ため息ひとつ落ちた週末の どうしようもない感じ 絶
 
 ため息ひとつ落ちた週末の<br>
 どうしようもない感じ<br>
-絶望より深く堕ちてゆく 夜明け
-
+絶望より深く堕ちてゆく 夜明け<br>
+<br>
 紅い～花の行く先は<br>
 投げ捨てられたの<br>
-誰もいない丘の片隅で 息絶えた
-
+誰もいない丘の片隅で 息絶えた<br>
+<br>
 ねぇ いつの日か 手に入れるより<br>
-失ってゆくものの方が多くなるんでしょう?
-
+失ってゆくものの方が多くなるんでしょう?<br>
+<br>
 最後の一雫がおちた<br>
 その瞬間 君は<br>
-何をみたの? 彼の未来を願って……
-
+何をみたの? 彼の未来を願って……<br>
+<br>
 ah 本当はもう 知っていたのかな<br>
 終わりゆくものの すべて 永遠の在り方<br>
-in your die
-
+in your die<br>
+<br>
 I'm dreaming of rain<br>
 過去も未来も 消えてしまった君の<br>
 I'm dreaming of rose<br>
@@ -44,17 +44,16 @@ I'm dreaming of rose<br>
 I'm dreaming of night<br>
 二度と目覚めぬ様に祈りを込めて<br>
 I'm dreaming of love<br>
-甘く 輝いたイメージ please please yhe-
-
+甘く 輝いたイメージ please please yhe-<br>
+<br>
 窓の向こう続くパーティーと<br>
 閉ざされた door に<br>
-背を向けてゆく君の軌跡に 囁いた
-
+背を向けてゆく君の軌跡に 囁いた<br>
+<br>
 ねぇ いつの日も旅立ちゆく者<br>
 残されてく者の気持ち<br>
-知らずに羽ばたいてゆく in your game
-
-
+知らずに羽ばたいてゆく in your game<br>
+<br>
 I'm dreaming of wake<br>
 いつか安らぎを与え 飛び立つ様に<br>
 I'm dreaming of pain<br>
@@ -62,8 +61,8 @@ I'm dreaming of pain<br>
 I'm dreaming of rail<br>
 誰も交わらずにいた世界の意味を<br>
 I'm dreaming of love<br>
-強く 身勝手なイメージ freeze freeze
-
+強く 身勝手なイメージ freeze freeze<br>
+<br>
 I'm dreaming of rain<br>
 過去も未来も 消えてしまった君の<br>
 I'm dreaming of rose<br>

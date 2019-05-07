@@ -18,34 +18,22 @@ excerpt: 風の音だけが、体中を包む。サイレント・Kiss、夢に�
 編曲：古井弘人<br>
 ギター：岡本仁志
 
+<div class="lyric-original">
+<p>
 風の音だけが<br>
 体中を包む<br>
 (Oh) サイレント・Kiss (Oh yeah)<br>
-夢に似た気配
-
-> 唯有風聲<br>
-> 包裹著全身<br>
-> (Oh) Silent Kiss (Oh yeah)<br>
-> 似夢的氣息
-
+夢に似た気配<br>
+<br>
 胸がキュッとなること<br>
 君といた季節<br>
 スカイハイ・Blue (Oh yeah)<br>
-遠ざかる
-
-> 心中變得忐忑不安<br>
-> 和你在一起的季節<br>
-> Sky High Blue (Oh yeah)<br>
-> 漸行漸遠
-
+遠ざかる<br>
+<br>
 都合いい Happy End<br>
 さがしても癒せない<br>
-心が自由なら飛んでみせる
-
-> 美好的 Happy End<br>
-> 即便找到也無法治愈<br>
-> 心若自由定會飛翔
-
+心が自由なら飛んでみせる<br>
+<br>
 上空 舞うもの達と Over Drive<br>
 どこまでも青い世界にいたい<br>
 紙吹雪のように鳥が舞う<br>
@@ -53,35 +41,17 @@ excerpt: 風の音だけが、体中を包む。サイレント・Kiss、夢に�
 追い風に乗るスリルも<br>
 まだ見ぬ行き先を想う<br>
 大切な期待に変えてゆける<br>
-raise up
-
-> 與凌空飛舞的它們 Over Drive<br>
-> 想留在這無盡的藍色世界<br>
-> 鳥兒如雪花紙屑般飛舞<br>
-> 真美啊<br>
-> 乘風而上的刺激感<br>
-> 想像著尚未知曉的前路<br>
-> 逐漸化爲珍貴的期待<br>
-> raise up
-
+raise up<br>
+<br>
 波がキラめいたら<br>
 吸い込まれそうね<br>
 スターライト・Night (Oh yeah)<br>
-空高く
-
-> 當波光粼粼時<br>
-> 仿佛被吸入其中<br>
-> Starlight Night (Oh yeah)<br>
-> 晴空高遠
-
+空高く<br>
+<br>
 近づいた last scene<br>
 まだ今つかめない<br>
-不確かな未来さえ心地よく
-
-> 已經接近了的 last scene<br>
-> 現在依然無法把握<br>
-> 連不確定的未來都如此愜意
-
+不確かな未来さえ心地よく<br>
+<br>
 上昇 恋は揺らいで Over Drive<br>
 目を見て無邪気に笑ってみせて<br>
 まるで風のようにすり抜ける<br>
@@ -89,17 +59,8 @@ raise up
 もっと近くにいたいと<br>
 願う空は 果てしなくて<br>
 本当の君に出会う日を<br>
-待ってる
-
-> 上升 戀情搖擺不定 Over Drive<br>
-> 四目相對天真無邪地笑著<br>
-> 簡直就像風拂過<br>
-> 心靈<br>
-> 想要更加靠近你些<br>
-> 向着無垠的天空祈禱<br>
-> 與真正的你相遇的那一天<br>
-> 我在等待
-
+待ってる<br>
+<br>
 上空 舞うもの達と Over Drive<br>
 どこまでも青い世界にいたい<br>
 紙吹雪のように鳥が舞う<br>
@@ -110,17 +71,64 @@ raise up
 raise up<br>
 本当の君に出会う日を<br>
 待ってる
+</p>
+</div>
 
-> 與凌空飛舞的它們 Over Drive<br>
-> 想留在這無盡的藍色世界<br>
-> 鳥兒如雪花紙屑般飛舞<br>
-> 真美啊<br>
-> 乘風而上的刺激感<br>
-> 想像著尚未知曉的前路<br>
-> 逐漸化爲珍貴的期待<br>
-> raise up<br>
-> 與真正的你相遇的那一天<br>
-> 我在等待
+<div class="lyric-translation">
+<blockquote>
+唯有風聲<br>
+包裹著全身<br>
+(Oh) Silent Kiss (Oh yeah)<br>
+似夢的氣息<br>
+<br>
+心中變得忐忑不安<br>
+和你在一起的季節<br>
+Sky High Blue (Oh yeah)<br>
+漸行漸遠<br>
+<br>
+美好的 Happy End<br>
+即便找到也無法治愈<br>
+心若自由定會飛翔<br>
+<br>
+與凌空飛舞的它們 Over Drive<br>
+想留在這無盡的藍色世界<br>
+鳥兒如雪花紙屑般飛舞<br>
+真美啊<br>
+乘風而上的刺激感<br>
+想像著尚未知曉的前路<br>
+逐漸化爲珍貴的期待<br>
+raise up<br>
+<br>
+當波光粼粼時<br>
+仿佛被吸入其中<br>
+Starlight Night (Oh yeah)<br>
+晴空高遠<br>
+<br>
+已經接近了的 last scene<br>
+現在依然無法把握<br>
+連不確定的未來都如此愜意<br>
+<br>
+上升 戀情搖擺不定 Over Drive<br>
+四目相對天真無邪地笑著<br>
+簡直就像風拂過<br>
+心靈<br>
+想要更加靠近你些<br>
+向着無垠的天空祈禱<br>
+與真正的你相遇的那一天<br>
+我在等待<br>
+<br>
+與凌空飛舞的它們 Over Drive<br>
+想留在這無盡的藍色世界<br>
+鳥兒如雪花紙屑般飛舞<br>
+真美啊<br>
+乘風而上的刺激感<br>
+想像著尚未知曉的前路<br>
+逐漸化爲珍貴的期待<br>
+raise up<br>
+與真正的你相遇的那一天<br>
+我在等待
+</blockquote>
+</div>
 
 ## 感想
 
