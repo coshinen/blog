@@ -24,6 +24,10 @@ nothing to commit, working directory clean
 
 ## macOS Mojave 下构建（编译和安装）
 
+参照 [bitcoin/build-osx.md at master · bitcoin/bitcoin · GitHub](https://github.com/bitcoin/bitcoin/blob/master/doc/build-osx.md) 来进行比特币源码的编译和安装。你也可以参照以下内容：
+
+**在构建源码之前，应该先安装相关的依赖库。**
+
 ### 依赖
 
 {% highlight shell %}
@@ -38,11 +42,11 @@ $ ./configure
 $ make
 {% endhighlight %}
 
+**目前 macOS 平台仅最新版 Bitcoin Core 0.17.1 通过编译测试，0.12.1 未通过。**
+
 ## Ubuntu 16.04.4 下构建（编译和安装）
 
 参照 [doc/build-unix.md](https://github.com/bitcoin/bitcoin/blob/v0.12.1/doc/build-unix.md) 来进行比特币源码的编译和安装。你也可以参照以下内容：
-
-**在构建源码之前，应该先安装相关的依赖库。**
 
 ### 依赖
 
@@ -103,6 +107,7 @@ Thanks for your time.
 
 ## 参照
 * [bitcoin/bitcoin](https://github.com/bitcoin/bitcoin)
-* [doc/build-unix.md](https://github.com/bitcoin/bitcoin/blob/v0.12.1/doc/build-unix.md)
+* [bitcoin/build-osx.md at master · bitcoin/bitcoin · GitHub](https://github.com/bitcoin/bitcoin/blob/master/doc/build-osx.md)
+* [bitcoin/build-unix.md at v0.12.1 · bitcoin/bitcoin · GitHub](https://github.com/bitcoin/bitcoin/blob/v0.12.1/doc/build-unix.md)
 * [精通比特币（第二版） \| 巴比特图书](http://book.8btc.com/masterbitcoin2cn)
 * [...](https://github.com/mistydew/blockchain)
