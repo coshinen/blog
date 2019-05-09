@@ -1,7 +1,13 @@
-User-agent: Baiduspider
+User-agent: Googlebot
 Allow: /
 
-User-agent: Googlebot
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+User-agent: Baiduspider
 Allow: /
 
 User-agent: *
