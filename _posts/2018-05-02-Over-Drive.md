@@ -115,7 +115,7 @@ Starlight Night (Oh yeah)<br>
 想要更加靠近你些<br>
 向着無垠的天空祈禱<br>
 與真正的你相遇的那一天<br>
-我在等待<br>
+等待著<br>
 <br>
 與凌空飛舞的它們 Over Drive<br>
 想留在這無盡的藍色世界<br>
@@ -126,7 +126,7 @@ Starlight Night (Oh yeah)<br>
 逐漸化爲珍貴的期待<br>
 raise up<br>
 與真正的你相遇的那一天<br>
-我在等待
+等待著
 </blockquote>
 </div>
 
