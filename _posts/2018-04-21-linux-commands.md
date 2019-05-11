@@ -12,6 +12,8 @@ Linux mascot: crystal tux and tux(Torvalds linUX?)<br>
 ![tux](/images/tux.jpg)<br>
 Childhood and Adult(funny)
 
+**Unix/Linux 下执行命令没有错误提示即执行成功。**
+
 ## 查看目录下的内容 | list
 
 {% highlight shell %}

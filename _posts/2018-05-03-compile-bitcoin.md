@@ -38,6 +38,7 @@ brew install automake berkeley-db4 libtool boost miniupnpc openssl pkg-config pr
 $ ./autogen.sh
 $ ./configure
 $ make
+$ make install # 可选
 {% endhighlight %}
 
 **目前 macOS 平台仅最新版 Bitcoin Core 0.17.1 通过编译测试，0.12.1 未通过。**
@@ -92,9 +93,9 @@ $ sudo apt-get install libqrencode-dev
 
 {% highlight shell %}
 $ ./autogen.sh
-$ sudo ./configure
-$ sudo make # 使用 Makefile 进行比特币源码的编译，编译完成会生成 4 至 6 个 ELF 程序，分别为 bitcoind、bitcoin-cli、bitcoin-tx、test_bitcoin，若安装了 Qt 图形库，则会增加 bitcoin-qt、test_bitcoin-qt。
-$ sudo make install # 该项可选，作用为把编译好的比特币相关程序安装到系统默认可执行程序目录 /usr/local/bin 下。
+$ ./configure
+$ make # 使用 Makefile 进行比特币源码的编译，编译完成后会生成 4 至 6 个 ELF 程序，分别为 bitcoind、bitcoin-cli、bitcoin-tx、test_bitcoin，若安装了 Qt 图形库，则会增加 bitcoin-qt、test_bitcoin-qt。
+$ make install # 该项可选，把编译好的比特币程序拷贝到系统默认的可执行程序目录 /usr/local/bin 下。
 {% endhighlight %}
 
 也可以参照官方手册来构建比特币源码。
