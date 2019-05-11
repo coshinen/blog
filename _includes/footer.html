@@ -8,13 +8,13 @@
       <div class="footer-col footer-col-1">
         <ul class="contact-list">
           {% if site.feed_username %}
-          <li>{% include icon-rss-square.html username=site.feed_username title="Subscribe Feed" %}</li>
+          <li>{% include footer/icon-rss-square.html username=site.feed_username title="Subscribe Feed" %}</li>
           {% endif %}
           {% if site.resume %}
-          <li>{% include icon-terminal.html resume=site.resume title="Curriculum Vitae" %}</li>
+          <li>{% include footer/icon-terminal.html resume=site.resume title="Curriculum Vitae" %}</li>
           {% endif %}
           {% if site.email %}
-          <li>{% include icon-envelope.html email=site.email %}</li>
+          <li>{% include footer/icon-envelope.html email=site.email %}</li>
           {% endif %}
         </ul>
       </div>
@@ -23,19 +23,19 @@
         <ul class="social-media-list">
           {% if site.github_username %}
           <li>
-            {% include icon-github.html username=site.github_username %}
+            {% include footer/icon-github.html username=site.github_username %}
           </li>
           {% endif %}
 
           {% if site.twitter_username %}
           <li>
-            {% include icon-twitter.html username=site.twitter_username %}
+            {% include footer/icon-twitter.html username=site.twitter_username %}
           </li>
           {% endif %}
 
           {% if site.donate %}
           <li>
-            {% include icon-donate.html title="Coffee Cafe" %}
+            {% include footer/icon-donate.html title="Coffee Cafe" %}
           </li>
           {% endif %}
         </ul>
