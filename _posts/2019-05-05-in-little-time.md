@@ -68,7 +68,7 @@ um- I have so little time×3
 
 <div class="lyric-translation">
 <blockquote>
-雖然是十二月但在這樣暖和的夜晚<br>
+儘管是在十二月但如此暖和的夜晚<br>
 一時興起出門了<br>
 在車中一直牽著手睡著了<br>
 直到朝陽把兩人喚醒<br>
@@ -84,7 +84,7 @@ um- I have so little time×3
 <br>
 為了不迷惑地愛<br>
 喂 要變得多強大才好？<br>
-永遠持續給予<br>
+永遠持續給予著<br>
 絕對不會枯萎的<br>
 想要堅強地活下去<br>
 注入虛幻的願望<br>
@@ -100,7 +100,7 @@ um- I have so little time<br>
 回想起 Mathilde<br>
 在投身的河中<br>
 永遠地活著<br>
-一定位在某一天終結<br>
+一定會在某一天終結<br>
 in little time<br>
 <br>
 站在無人的街角<br>
