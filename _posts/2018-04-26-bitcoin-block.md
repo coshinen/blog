@@ -80,6 +80,7 @@ public:
 Thanks for your time.
 
 ## 参照
+* [GitHub - bitcoin/bitcoin at v0.12.1](https://github.com/bitcoin/bitcoin/tree/v0.12.1)
 * [Block - Bitcoin Wiki](https://en.bitcoin.it/wiki/Block)
 * [精通比特币（第二版）第九章 区块链 · 巴比特图书](http://book.8btc.com/books/6/masterbitcoin2cn/_book/ch09.html)
 * [...](https://github.com/mistydew/blockchain)
