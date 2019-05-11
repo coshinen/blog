@@ -7,7 +7,7 @@ comments: true
 categories: Blockchain Bitcoin
 tags: 区块链 比特币 源码构建
 ---
-本文记录了如何在 macOS、Linux 平台下构建比特币源码，得到相应版本的 bitcoind、bitcoin-cli、bitcoin-qt 等可执行程序。
+本文记录了如何在 macOS、Unix/Linux 平台下构建比特币源码，得到相应版本的 bitcoind、bitcoin-cli、bitcoin-qt 等可执行程序。
 
 ## 下载比特币源码
 
@@ -15,16 +15,14 @@ tags: 区块链 比特币 源码构建
 
 {% highlight shell %}
 $ git clone https://github.com/bitcoin/bitcoin.git # 克隆最新版的比特币源码到本地。
-$ cd bitcoin # 进入比特币项目根目录。
-$ git checkout v0.12.1 # 在当前分支上切换至 tag 为 v0.12.1 的版本，或省略来编译最新版。
-$ git status # 查看当前状态（这里会显示版本信息）。
+$ cd bitcoin # 切换至比特币根目录。
+$ git checkout v0.12.1 # 在当前分支上切换至 tag 为 v0.12.1 的版本，或省略此步骤以编译最新版。
+$ git status # 查看当前状态（这里会显示版本信息），此步可省略。
 HEAD detached at v0.12.1
 nothing to commit, working directory clean
 {% endhighlight %}
 
 ## macOS Mojave 下构建（编译和安装）
-
-参照 [bitcoin/build-osx.md at master · bitcoin/bitcoin · GitHub](https://github.com/bitcoin/bitcoin/blob/master/doc/build-osx.md) 来进行比特币源码的编译和安装。你也可以参照以下内容：
 
 **在构建源码之前，应该先安装相关的依赖库。**
 
@@ -45,8 +43,6 @@ $ make
 **目前 macOS 平台仅最新版 Bitcoin Core 0.17.1 通过编译测试，0.12.1 未通过。**
 
 ## Ubuntu 16.04.4 下构建（编译和安装）
-
-参照 [doc/build-unix.md](https://github.com/bitcoin/bitcoin/blob/v0.12.1/doc/build-unix.md) 来进行比特币源码的编译和安装。你也可以参照以下内容：
 
 ### 依赖
 
@@ -84,15 +80,13 @@ $ sudo apt-get install libminiupnpc-dev
 $ sudo apt-get install libzmq3-dev
 {% endhighlight %}
 
-#### GUI Qt 图形库
+#### GUI Qt 图形库（若不使用图形化界面可省略此步，同时减少构建时间）
 
 {% highlight shell %}
 $ sudo apt-get install libqt5gui5 libqt5core5a libqt5dbus5 qttools5-dev qttools5-dev-tools libprotobuf-dev protobuf-compiler # Qt 5
 $ sudo apt-get install libqt4-dev libprotobuf-dev protobuf-compiler # Qt 4 可选
 $ sudo apt-get install libqrencode-dev
 {% endhighlight %}
-
-**注：Linux 上安装任何程序，若没有错误提示，则表示安装成功。**
 
 ### 构建
 
@@ -103,11 +97,12 @@ $ sudo make # 使用 Makefile 进行比特币源码的编译，编译完成会�
 $ sudo make install # 该项可选，作用为把编译好的比特币相关程序安装到系统默认可执行程序目录 /usr/local/bin 下。
 {% endhighlight %}
 
+也可以参照官方手册来构建比特币源码。
+
 Thanks for your time.
 
 ## 参照
 * [bitcoin/bitcoin](https://github.com/bitcoin/bitcoin)
 * [bitcoin/build-osx.md at master · bitcoin/bitcoin · GitHub](https://github.com/bitcoin/bitcoin/blob/master/doc/build-osx.md)
 * [bitcoin/build-unix.md at v0.12.1 · bitcoin/bitcoin · GitHub](https://github.com/bitcoin/bitcoin/blob/v0.12.1/doc/build-unix.md)
-* [精通比特币（第二版） \| 巴比特图书](http://book.8btc.com/masterbitcoin2cn)
 * [...](https://github.com/mistydew/blockchain)
