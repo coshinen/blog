@@ -7,12 +7,14 @@
     <div class="footer-col-wrapper">
       <div class="footer-col footer-col-1">
         <ul class="contact-list">
-          {% if site.feed_username %}
-          <li>{% include footer/icon-rss-square.html username=site.feed_username title="Subscribe Feed" %}</li>
+          {% if site.github_username %}
+          <li>{% include footer/icon-github.html username=site.github_username %}</li>
           {% endif %}
+
           {% if site.resume %}
           <li>{% include footer/icon-terminal.html resume=site.resume title="Curriculum Vitae" %}</li>
           {% endif %}
+
           {% if site.email %}
           <li>{% include footer/icon-envelope.html email=site.email %}</li>
           {% endif %}
@@ -21,22 +23,16 @@
 
       <div class="footer-col footer-col-2">
         <ul class="social-media-list">
-          {% if site.github_username %}
-          <li>
-            {% include footer/icon-github.html username=site.github_username %}
-          </li>
+          {% if site.feed_username %}
+          <li>{% include footer/icon-rss-square.html username=site.feed_username title="Subscribe Feed" %}</li>
           {% endif %}
 
-          {% if site.twitter_username %}
-          <li>
-            {% include footer/icon-twitter.html username=site.twitter_username %}
-          </li>
+          {% if site.subtitle %}
+          <li>{% include footer/icon-crow.html title=site.subtitle %}</li>
           {% endif %}
 
           {% if site.donate %}
-          <li>
-            {% include footer/icon-donate.html title="Coffee Cafe" %}
-          </li>
+          <li>{% include footer/icon-donate.html title="Coffee Cafe" %}</li>
           {% endif %}
         </ul>
       </div>
