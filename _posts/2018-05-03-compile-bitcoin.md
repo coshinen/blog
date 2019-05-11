@@ -29,7 +29,7 @@ nothing to commit, working directory clean
 ### 依赖
 
 {% highlight shell %}
-brew install automake berkeley-db4 libtool boost miniupnpc openssl pkg-config protobuf python qt libevent qrencode
+$ brew install automake berkeley-db4 libtool boost miniupnpc openssl pkg-config protobuf python qt libevent qrencode
 {% endhighlight %}
 
 ### 构建
