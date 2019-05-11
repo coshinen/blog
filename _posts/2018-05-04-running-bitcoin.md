@@ -18,13 +18,13 @@ stickie: true
 使用命令行客户端启动（从头开始）的最简单方式，自动同步区块并创建一个钱包，只要在包含你的 bitcoind 二进制程序的目录运行下面命令（不带参数）：
 
 {% highlight shell %}
-./bitcoind
+$ ./bitcoind
 {% endhighlight %}
 
 运行标准图形化界面：
 
 {% highlight shell %}
-./bitcoin-qt
+$ ./bitcoin-qt
 {% endhighlight %}
 
 ## 命令行参数
