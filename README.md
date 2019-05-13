@@ -35,7 +35,7 @@
 * 2018.08.22 [+] ~~DaoVoice web chat tool~~, Baidu site search to replace Customised Search
 * 2018.08.20 [+] post copyright(author, date, creative commons license, more)
 * 2018.08.15 [-] ~~particle background~~
-* 2018.08.13 [+] cPlayer: web music player
+* 2018.08.13 [+] ~~cPlayer: web music player~~
 * 2018.08.12 [+] donate page
 * 2018.08.10 [+] sitemap, ~~IntenseDebate's comments system~~
 * 2018.08.08 [+] delimiter '|' into post title, background-color
