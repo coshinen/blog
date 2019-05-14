@@ -6,12 +6,12 @@
 <strong>&nbsp;&nbsp;System information updated as of now</strong>
 
 <span id="a">mistydew</span>@<a href="https://github.com/mistydew">GitHub</a>:~$ ls -a
-<a>. .. </a>resume
-<span id="a">mistydew</span>@<a href="https://github.com/mistydew">GitHub</a>:~$ cat resume
+<a>. .. </a>.resume
+<span id="a">mistydew</span>@<a href="https://github.com/mistydew">GitHub</a>:~$ cat .resume
 <p align="center"><font size="6"><strong>Zichen Yuan(mistydew)</strong></font><br>(+86)xxx-xxxx-xxxx | <a target="_blank" href="mailto:mistydew@qq.com">mistydew@qq.com</a> | Shenzhen, China</p>
 <font size="4"><strong>EDUCATION</strong></font>
 -----------------------------------------------------------------------------------------
-<strong>Zhenzhou University</strong><div style="float:right;">Sep 2013 - Jun 2017</div>
+<strong>Zhengzhou University</strong><div style="float:right;">Sep 2013 - Jun 2017</div>
 Bachelor of Computer Science<div style="float:right;">Henan</div>
 
 <font size="4"><strong>PROFESSIONAL EXPERIENCE</strong></font>
@@ -24,12 +24,12 @@ Bachelor of Computer Science<div style="float:right;">Henan</div>
 <a href="https://github.com/mistydew/blockchain">crowcoin</a>
 * An altcoin based on Bitcoin.
 <a href="https://github.com/mistydew/asstolrc">asstolrc</a>
-* A command tool to convert complete ass of the Aegisub to lrc.
+* A mini command tool to convert complete ass of the Aegisub to lrc.
 
 <font size="4"><strong>PROFESSIONAL SKILLS</strong></font>
 -----------------------------------------------------------------------------------------
-<strong>Languages:</strong> C, C++...
-<strong>Platform:</strong> Unix/Linux...
+<strong>Languages:</strong> C/C++...
+<strong>Platform:</strong> macOS, Unix/Linux...
 <strong>Editor:</strong> Vi/Vim
 <strong>DB:</strong> Mysql, Redis, LevelDB, BerkeleyDB
 <strong>Design Pattern:</strong> Reactor, Thread pool(TCP/IP, select/epoll I/O)
