@@ -4,21 +4,20 @@ title:  "THE LITTLE OLD LADY FROM PASADENA"
 date:   2019-05-19 20:02:07 +0800
 author: mistydew
 comments: true
-categories: 翻訳
-tags: 歌詞
-excerpt: It's the little old lady from Pasadena.
+categories: ガーネット・クロウ 翻訳
+tags: GC 歌詞
+excerpt: It's the little old lady from Pasadena, has a pretty little flower bed of white gardenias. But parked in a rickety old garage, is a brand new shiny red super stocked Dodge.
 ---
+![HOTROD BEACH PARTY](https://raw.githubusercontent.com/mistydew/gc2/master/cover/featuring/HOTROD%20BEACH%20PARTY.jpg)
 
 ## THE LITTLE OLD LADY FROM PASADENA | 來自帕薩迪納的小老太太
 
-歌手：The Beach Boys<br>
+歌手：中村由利<br>
 作詞：Roger Christian, Don Altfeld & Jan Berry<br>
 作曲：Roger Christian, Don Altfeld & Jan Berry
 
 <div class="lyric-original">
 <p>
-It's the little old lady from Pasadena<br>
-<br>
 It's the little old lady from Pasadena<br>
 (Go granny, go granny, go granny, go!)<br>
 Has a pretty little flower bed of white gardenias<br>
@@ -28,23 +27,28 @@ Is a brand new shiny red super stocked Dodge<br>
 <br>
 And everybody's saying that there's nobody meaner<br>
 Than the little old lady from Pasadena<br>
-She drives real fast and she drives real hard<br>
+(She drives real fast and she drives real hard)<br>
 She's the terror of Colorado Boulevard<br>
-It's the little old lady from Pasadena<br>
-<br>
-If you see her on the street just getting her kicks now<br>
-(Go granny, go granny, go granny, go!)<br>
-With her four speed stick and a four-two-six now<br>
-(Go granny, go granny, go granny, go!)<br>
-She's going to get a ticket now sooner or later<br>
-Because she can't keep her foot off the accelerator<br>
+(It's the little old lady from Pasadena)<br>
 <br>
 You'll see her all the time don't try to choose her<br>
 (Go granny, go granny, go granny, go!)<br>
 You might drive a go-er but you'll never lose her<br>
 (Go granny, go granny, go granny, go!)<br>
-The guys come to race her from all around<br>
-But she'll give them a length then she'll shut them down<br>
+With she's going to get a ticket now sooner or later<br>
+Because she can't keep her foot off the accelerator<br>
+<br>
+And everybody's saying that there's nobody meaner<br>
+Than the little old lady from Pasadena<br>
+(She drives real fast and she drives real hard)<br>
+She's the terror of Colorado Boulevard<br>
+(It's the little old lady from Pasadena)<br>
+<br>
+And everybody's saying that there's nobody meaner<br>
+Than the little old lady from Pasadena<br>
+(She drives real fast and she drives real hard)<br>
+She's the terror of Colorado Boulevard<br>
+(It's the little old lady from Pasadena)<br>
 <br>
 (Go granny, go granny, go granny, go!)
 </p>
