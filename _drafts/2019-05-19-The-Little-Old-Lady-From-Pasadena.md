@@ -58,5 +58,6 @@ But she'll give them a length then she'll shut them down<br>
 Thanks for your time.
 
 ## 参照
+* [The Little Old Lady (from Pasadena) - Wikipedia](https://en.wikipedia.org/wiki/The_Little_Old_Lady_(from_Pasadena))
 * [The Beach Boys – The Little Old Lady From Pasadena Lyrics \| Genius Lyrics](https://genius.com/The-beach-boys-the-little-old-lady-from-pasadena-lyrics)
 * [...]({{ site.url | append: site.blog }})
