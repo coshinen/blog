@@ -7,21 +7,17 @@ comments: true
 categories: Blockchain Bitcoin 译文
 tags: 区块链 比特币 数据目录
 ---
-数据目录是存放比特币数据文件的位置，包含钱包数据文件。
+数据目录是存放比特币数据文件的位置，包含区块数据和钱包数据等相关文件。
 
 ## 默认位置
 
 默认位置与操作系统相关，下面列出 3 种常用操作系统下比特币数据目录的默认存放位置：
 
-### **Mac**
-
-比特币默认将把数据放在这里：
+### macOSX
 
 > ~/Library/Application Support/Bitcoin
 
-### **Linux**
-
-比特币默认将把数据放在这里：
+### Unix/Linux
 
 > ~/.bitcoin
 
@@ -30,7 +26,7 @@ tags: 区块链 比特币 数据目录
 
 > find / -name wallet.dat -print 2>/dev/null
 
-### **Windows**
+### Windows
 
 > C:\Documents and Settings\Username\Application Data\Bitcoin (XP)
 >
