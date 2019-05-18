@@ -19,6 +19,7 @@ permalink: /blog/quotes.html
 
 > Sherlock Holmes, A Game of Shadows:<br>
 > * Let me pay you one in return, when I said if I were assured of the former eventuality, I will cheerfully accept the latter.
+> * Come at once if convenient, if inconvenient come all the same.
 
 > Martin Luther King, Jr.:<br>
 > * In the End, we will remember not the words of our enemies, but the silence of our friends.
