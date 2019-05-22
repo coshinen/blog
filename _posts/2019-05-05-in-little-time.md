@@ -117,7 +117,7 @@ um- I have so little time×3
 Thanks for your time.
 
 ## 参照
-* [GARNET CROW official website：ガーネットクロウ オフィシャルサイト](http://www.garnetcrow.com)
+* [GARNET CROW official website : ガーネットクロウ オフィシャルサイト](http://www.garnetcrow.com)
 * [GARNET CROW - Wikipedia](https://ja.wikipedia.org/wiki/GARNET_CROW)
 * [GARNET CROW - generasia](https://www.generasia.com/wiki/GARNET_CROW)
 * [GARNET CROWの歌詞一覧リスト - 歌ネット](https://www.uta-net.com/artist/344)
