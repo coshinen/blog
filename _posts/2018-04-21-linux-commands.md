@@ -51,6 +51,7 @@ $ vi/vim <file> # 使用 Vi/Vim 编辑器打开指定的文件进行编辑，若
 {% highlight shell %}
 $ find . -name <filename> -type f # 以当前目录 . 为起始目录，查询并显示指定文件名 <filename> 的文件（相对）路径，f 表示文件类型普通文件。
 $ find . -empty #  以当前目录 . 为起始目录，查询并显示所有大小为 0 的文件（相对）路径。
+$ find / -name <filename> -print 2>/dev/null # 以根目录 / 为起始目录，查询并显示指定文件名 <filename> 的文件（相对）路径，同时把标准错误缓冲区的内容导入 /dev/null 中，以加快查找速度。
 {% endhighlight %}
 
 ## 删除文件 | remove
