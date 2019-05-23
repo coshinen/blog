@@ -24,7 +24,7 @@ nothing to commit, working directory clean
 
 ## 内存需求
 
-C++ 编译器吃内存。在编译比特币核心时推荐至少有 1.5GB 的的空闲内存。在内存较小系统上，可以使用附加的 CXXFLAGS 选项对 gcc 进行调优来节省内存。
+C++ 编译器较吃内存。推荐在编译比特币核心时至少有 1.5GB 的空闲内存。在内存较小系统上，可以使用附加的 CXXFLAGS 选项对 gcc 进行调优以节省内存。
 
 {% highlight shell %}
 $ ./configure CXXFLAGS="--param ggc-min-expand=1 --param gcc-min-heapsize=32768"
