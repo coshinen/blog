@@ -21,11 +21,6 @@ tags: 区块链 比特币 数据目录
 
 > ~/.bitcoin
 
-你需要使用“ls -a”来查看以点开头的（隐藏）目录。
-如果不是该目录，你也可以这样搜索：
-
-> find / -name wallet.dat -print 2>/dev/null
-
 ### Windows
 
 > C:\Documents and Settings\Username\Application Data\Bitcoin (XP)
