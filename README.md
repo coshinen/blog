@@ -9,10 +9,8 @@
 
 * 2019.05.03 [-] ~~LiveRe City comments system~~; [+] Remarkbox comments system
 
-
 <details>
 <summary>more</summary>
-
 * 2019.04.28 [-] ~~Widget Pack Comments System~~; [+] ~~LiveRe City comments system~~
 * 2019.04.23 [+] the site searchbox submit icon
 * 2019.04.19 [+] jekyll config: site timezone
@@ -60,10 +58,16 @@
 * 2018.04.21 [+] images and reference for blog
 * 2018.04.19 [+] ~~directory audio~~; Todo list and Timeline
 * 2018.04.18 [+] base jekyll theme template
-
 </details>
 
 ## Find me on
 
 * site: [parallel universe](https://mistydew.github.io)
 * e-mail: [mistydew@qq.com](mailto:mistydew@qq.com)
+
+## Dependencies
+
+* Hosted: [GitHub](https://github.com), [GitHub Pages](https://pages.github.com)
+* Powered: [Jekyll](http://www.jekyllrb.com)
+* Analytics: [Google Analytics](https://analytics.google.com/analytics/web), [不蒜子 - 极简网页计数器](https://busuanzi.ibruce.info)
+* Comments System: [Hosted Comments Service | Remarkbox](https://www.remarkbox.com)
