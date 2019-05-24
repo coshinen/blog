@@ -69,5 +69,5 @@
 
 * Hosted: [GitHub](https://github.com), [GitHub Pages](https://pages.github.com)
 * Powered: [Jekyll](http://www.jekyllrb.com)
-* Analytics: [Google Analytics](https://analytics.google.com/analytics/web), [不蒜子 - 极简网页计数器](https://busuanzi.ibruce.info)
-* Comments System: [Hosted Comments Service | Remarkbox](https://www.remarkbox.com)
+* Analytics: [Google Analytics](https://analytics.google.com/analytics/web), [Busuanzi](https://busuanzi.ibruce.info)
+* Comments System: [Remarkbox](https://www.remarkbox.com)
