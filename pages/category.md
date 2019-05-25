@@ -21,13 +21,11 @@ permalink: /blog/category.html
 {% assign idx = 0 %}
 
 <blockquote>
-<details open>
-<summary id="contents">Contents</summary>
+<h2 align="center" id="contents">Contents</h2>
 {% for category in site.categories %}
 <div><li><a href="#{{ category[0] }}-ref">{{ category | first }} [{{ counts[idx] }}]</a></li></div>
     {% assign idx = idx | plus: 1 %}
 {% endfor %}
-</details>
 </blockquote>
 
 {% assign idx = 0 %}
