@@ -7,7 +7,7 @@ comments: true
 categories: Blockchain Bitcoin
 tags: 区块链 比特币 源码构建 交叉编译
 ---
-本文记录了如何在 Linux 平台下交叉编译比特币源码，得到 Windows 版本的可执行程序 bitcoin.exe、bitcoin-cli.exe、bitcoin-qt.exe 等。
+在 Unix/Linux 平台下交叉编译比特币源码，得到 Windows 版本的 bitcoin.exe、bitcoin-cli.exe、bitcoin-qt.exe 等可执行程序。
 
 ## 下载比特币源码（Ubuntu 18.04.1）
 
@@ -38,7 +38,7 @@ $ sudo apt install build-essential libtool autotools-dev automake pkg-config bsd
 
 主机工具链（build-essential）是必需的，因为某些依赖包（例如：protobuf）需要构建用于构建过程中的主机实用程序。
 
-## 构建 64 位 Windows 版
+## 构建 Windows 64位版
 
 第一步，安装 mingw-w64 交叉编译工具链。
 
@@ -80,11 +80,11 @@ Press <enter> to keep the current choice[*], or type selection number: # 这里�
 
 {% highlight shell %}
 $ cd depends
-$ sudo make HOST=x86_64-w64-mingw32 -j4 # 这一步会下载相关依赖，确保网络畅通
+$ make HOST=x86_64-w64-mingw32 -j4 # 这一步会下载相关依赖，确保网络畅通
 $ cd ..
 $ ./autogen.sh # 若是首次构建，先生成 configure
-$ sudo ./configure --prefix=pwd/depends/x86_64-w64-mingw32
-$ sudo make # 若构建过非 Windows 版的程序，则执行 sudo make clean; sudo make
+$ ./configure --prefix=pwd/depends/x86_64-w64-mingw32
+$ make # 若构建过非 Windows 版的程序，则执行 sudo make clean; sudo make
 {% endhighlight %}
 
 Thanks for your time.
