@@ -66,8 +66,8 @@ permalink: /blog/quotes.html
 > 秋熊「深秋之葵」：<br>
 > * 学习GC精神，低调中坚持！
 
-> 中村由利, GARNET CROW：<br>
-> * 「ガーネット・クロウ」として、すべてのことを出し切りました。
+> 中村由利「GARNET CROW livescope 2013 〜Terminus〜」：<br>
+> * GARNET CROWとして、全てのことを出し切りました。
 
 > AZUKI 七「クリスタル・ゲージ」：<br>
 > * 善悪の基準はすべての人に共通じゃない。
