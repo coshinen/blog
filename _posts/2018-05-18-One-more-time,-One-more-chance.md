@@ -78,4 +78,5 @@ Thanks for your time.
 * [山崎まさよし Official Web Site](http://www.office-augusta.com/yama)
 * [山崎まさよし - Wikipedia](https://ja.wikipedia.org/wiki/山崎まさよし)
 * [山崎まさよしの歌詞一覧リスト - 歌ネット](https://www.uta-net.com/artist/2503)
+* [山崎まさよし One more time, One more chance  FULL version video 羅馬拼音+日文歌詞+中文翻譯 - garylui的創作 - 巴哈姆特](https://home.gamer.com.tw/creationDetail.php?sn=2044805)
 * [...]({{ site.url | append: site.blog }})
