@@ -21,6 +21,9 @@ permalink: /blog/quotes.html
 > * Let me pay you one in return, when I said if I were assured of the former eventuality, I will cheerfully accept the latter.
 > * Come at once if convenient, if inconvenient come all the same.
 
+> Sherlock Holmes, A Scandal in Bohemia:<br>
+> * You see, but you do not observe. The distinction is clear.
+
 > Martin Luther King, Jr.:<br>
 > * In the End, we will remember not the words of our enemies, but the silence of our friends.
 
