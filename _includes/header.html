@@ -1,45 +1,37 @@
-<header class="site-header">
-
-  <div class="wrapper">
-
-    <a class="site-title" href="{{ site.baseurl }}/" title="平行宇宙">{{ site.title }}</a>
-
-    <nav class="site-nav">
-      <a href="#" class="menu-icon">
-        <svg viewBox="0 0 18 15">
-          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
-          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
-          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
-        </svg>
-      </a>
-
-      <div class="trigger">
-        <a class="page-link" href="{{ site.archive | prepend: site.baseurl }}" title="歸檔">Archive</a>
-        <a class="page-link" href="{{ site.category | prepend: site.baseurl }}" title="分類">Category</a>
-        <a class="page-link" href="{{ site.quotes | prepend: site.baseurl }}" title="引言">Quotes</a>
-        <a class="page-link" href="{{ site.tagcloud | prepend: site.baseurl }}" title="標簽">Tags</a>
-        <a class="page-link" href="{{ site.about | prepend: site.baseurl }}" title="關於">About</a>
-        <a class="page-link" href="{{ site.feed | prepend: site.baseurl }}" title="訂閲">Feed</a>
+    <header class="site-header">
+      <div class="wrapper">
+        <a class="site-title" href="{{ site.baseurl }}/" title="平行宇宙">{{ site.title }}</a>
+        <nav class="site-nav">
+          <a href="#" class="menu-icon">
+            <svg viewBox="0 0 18 15">
+              <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+              <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+              <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+            </svg>
+          </a>
+          <div class="trigger">
+            <a class="page-link" href="{{ site.archive | prepend: site.baseurl }}" title="歸檔">Archive</a>
+            <a class="page-link" href="{{ site.category | prepend: site.baseurl }}" title="分類">Category</a>
+            <a class="page-link" href="{{ site.quotes | prepend: site.baseurl }}" title="引言">Quotes</a>
+            <a class="page-link" href="{{ site.tagcloud | prepend: site.baseurl }}" title="標簽">Tags</a>
+            <a class="page-link" href="{{ site.about | prepend: site.baseurl }}" title="關於">About</a>
+            <a class="page-link" href="{{ site.feed | prepend: site.baseurl }}" title="訂閲">Feed</a>
+          </div>
+        </nav>
+        <!-- Baidu Customised Site Search -->
+        <nav class="site-search">
+          <a href="#" class="search-icon">
+            <svg viewBox="0 0 512 512">
+              <path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"></path>
+            </svg>
+          </a>
+          <div id="search-box">
+            <form action="https://www.baidu.com/s" target="_blank" method="get" id="cse-search-box">
+              <input class="searchbox" type="text" name="origin" placeholder="Enter Search" size="20" value>
+              <input type="hidden" name="wd" value>
+              <input class="searchbox_submit" type="image" src="/images/search.svg" name="sa" onclick="this.form.wd.value = this.form.origin.value + ' site:mistydew.github.io'" value>
+            </form>
+          </div>
+        </nav>
       </div>
-    </nav>
-
-    <!-- Baidu Customised Site Search -->
-    <nav class="site-search">
-      <a href="#" class="search-icon">
-        <svg viewBox="0 0 512 512">
-          <path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"></path>
-        </svg>
-      </a>
-
-      <div id="search-box">
-        <form action="https://www.baidu.com/s" target="_blank" method="get" id="cse-search-box">
-          <input class="searchbox" type="text" name="origin" placeholder="Enter Search" size="20" value>
-          <input type="hidden" name="wd" value>
-          <input class="searchbox_submit" type="image" src="/images/search.svg" name="sa" onclick="this.form.wd.value = this.form.origin.value + ' site:mistydew.github.io'" value>
-        </form>
-      </div>
-    </nav>
-
-  </div>
-
-</header>
+    </header>
