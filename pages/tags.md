@@ -17,7 +17,8 @@ permalink: /blog/tags.html
 {% assign diff = max | minus: min %}
 
 <p id="tags"></p>
-<center><div class="tagcloud">
+<center>
+<div class="tagcloud">
 {% for tag in site.tags %}
   {% assign temp = tag[1].size | minus: min | times: 36 | divided_by: diff %}
   {% assign base = temp | divided_by: 4 %}
@@ -36,19 +37,20 @@ permalink: /blog/tags.html
   {% endif %}
   <a href="#{{ tag[0] }}-ref" style="font-size: {{ size }}pt; color: #{{ color }}{{ color }}{{ color }};">{{ tag[0] }}</a>
 {% endfor %}
-</div></center>
+</div>
+</center>
 
 {% assign count = 0 %}
 {% for tag in site.tags %}
-    {% for post in tag.last %}
-      {% if post.hidden == true %}
-      {% else %}
-        {% assign count = count | plus: 1 %}
-      {% endif %}
-    {% endfor %}
-    {% assign count = count | append: ', ' %}
-    {% assign counts = counts | append: count %}
-    {% assign count = 0 %}
+  {% for post in tag.last %}
+    {% if post.hidden == true %}
+    {% else %}
+      {% assign count = count | plus: 1 %}
+    {% endif %}
+  {% endfor %}
+  {% assign count = count | append: ', ' %}
+  {% assign counts = counts | append: count %}
+  {% assign count = 0 %}
 {% endfor %}
 
 {% assign counts = counts | split: ', ' %}
@@ -56,15 +58,15 @@ permalink: /blog/tags.html
 
 {% for tag in site.tags %}
 <blockquote>
-<h2 id="{{ tag[0] }}-ref">{{ tag | first }} ({{ counts[idx] }})<a href="#tags">{% include pages/icon-chevron-up.html %}</a></h2>
+  <h2 id="{{ tag[0] }}-ref">{{ tag | first }} ({{ counts[idx] }})<a href="#tags">{% include pages/icon-chevron-up.html %}</a></h2>
     {% assign idx = idx | plus: 1 %}
-<ul class="arc-list">
+  <ul class="arc-list">
     {% for post in tag.last %}
       {% if post.hidden == true %}
       {% else %}
-        <li>{{ post.date | date: "%Y-%m-%d-" }}<a href="{{ post.url }}">{{ post.title }}</a></li>
+    <li>{{ post.date | date: "%Y-%m-%d-" }}<a href="{{ post.url }}">{{ post.title }}</a></li>
       {% endif %}
     {% endfor %}
-</ul>
+  </ul>
 </blockquote>
 {% endfor %}
