@@ -69,7 +69,7 @@
 
 ## Dependencies
 
-* Hosted: [GitHub](https://github.com), [GitHub Pages](https://pages.github.com)
-* Powered: [Jekyll](http://www.jekyllrb.com)
+* Hosted: [GitHub](https://github.com)
+* Powered: [GitHub Pages](https://pages.github.com), [Jekyll](http://www.jekyllrb.com)
 * Analytics: [Google Analytics](https://analytics.google.com/analytics/web), [Busuanzi](https://busuanzi.ibruce.info)
 * Comments System: [Remarkbox](https://www.remarkbox.com)
