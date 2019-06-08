@@ -43,6 +43,8 @@ $ sudo apt install build-essential libtool autotools-dev automake pkg-config bsd
 
 主机工具链（build-essential）是必需的，因为某些依赖包（例如：protobuf）需要构建用于构建过程中的主机实用程序。
 
+查看[编译比特币源码](https://mistydew.github.io/blog/2018/05/compile-bitcoin.html)安装比特币基础依赖。
+
 ## 构建 Windows 64位版
 
 ### 安装 mingw-w64 交叉编译工具链
