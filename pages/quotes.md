@@ -4,6 +4,9 @@ title: Quotes
 permalink: /blog/quotes.html
 ---
 
+> Henri Poincaré, Science and Hypothesis:
+> * To doubt everything or to believe everything are two equally convenient solutions; both dispense with the necessity of reflection.
+
 > Master Oogway, Kung Fu Panda:
 > * Yesterday is history, tomorrow is a mystery, but today is a gift. That is why it is called the present.
 
