@@ -37,8 +37,11 @@ $ ./configure CXXFLAGS="--param ggc-min-expand=1 --param gcc-min-heapsize=32768"
 ### macOS Mojave 下的相关依赖
 
 {% highlight shell %}
-$ brew install automake berkeley-db4 libtool boost miniupnpc openssl pkg-config protobuf python qt libevent qrencode
+$ brew install automake berkeley-db4 libtool boost@1.59 miniupnpc openssl pkg-config protobuf python qt libevent qrencode
 {% endhighlight %}
+
+brew 默认安装指定库的最新版本，可以使用`$ brew search <libname>`命令查看指定库的所有版本。
+**bitcoin v0.12.1对应的 boost 库的版本为1.59.0，可以从 [bitcoin/depends/packages/boost.mk](https://github.com/bitcoin/bitcoin/blob/v0.12.1/depends/packages/boost.mk) 中获取当前版本比特币对应的 boost 库的版本。**
 
 ### Ubuntu 16.04.4 下的相关依赖
 
@@ -356,6 +359,6 @@ Thanks for your time.
 
 ## 参照
 * [bitcoin/bitcoin](https://github.com/bitcoin/bitcoin)
-* [bitcoin/build-osx.md at master · bitcoin/bitcoin · GitHub](https://github.com/bitcoin/bitcoin/blob/master/doc/build-osx.md)
+* [bitcoin/build-osx.md at v0.12.1 · bitcoin/bitcoin · GitHub](https://github.com/bitcoin/bitcoin/blob/v0.12.1/doc/build-osx.md)
 * [bitcoin/build-unix.md at v0.12.1 · bitcoin/bitcoin · GitHub](https://github.com/bitcoin/bitcoin/blob/v0.12.1/doc/build-unix.md)
 * [...](https://github.com/mistydew/blockchain)
