@@ -148,44 +148,6 @@
 }
 
 
-
-/**
- * Tag cloud
- */
-.tagcloud {
-    width: 600px;
-}
-@include media-query($on-palm) {
-    .tagcloud {
-        width: 280px;
-    }
-}
-
-
-
-/**
- * Site lyrics
- */
-div.lyric-original {
-    float: left;
-    padding-right: 10px;
-    width: calc(50% - (20px / 2));
-}
-
-div.lyric-translation {
-    float: left;
-    padding-right: 10px;
-    width: calc(50% - (20px / 2));
-}
-
-@include media-query($on-palm) {
-    div.lyric-original, div.lyric-translation {
-        float: none;
-        width: calc(100% - (30px / 2));
-    }
-}
-
-
 /**
  * Site footer
  */
@@ -284,6 +246,66 @@ div.lyric-translation {
 .post-link {
     display: block;
     font-size: 24px;
+}
+
+/**
+ * Home page
+ */
+.home-left {
+    float: left;
+    width: 70%;
+}
+
+@include media-query($on-palm) {
+    .home-left {
+        float: none;
+        width: 100%;
+    }
+}
+
+.home-right {
+    float: right;
+}
+
+@include media-query($on-palm) {
+    .home-right {
+        float: none;
+    }
+}
+
+/**
+ * Tag cloud
+ */
+.tagcloud {
+    width: 600px;
+}
+
+@include media-query($on-palm) {
+    .tagcloud {
+        width: 280px;
+    }
+}
+
+/**
+ * Lyrics
+ */
+div.lyric-original {
+    float: left;
+    padding-right: 10px;
+    width: calc(50% - (20px / 2));
+}
+
+div.lyric-translation {
+    float: left;
+    padding-right: 10px;
+    width: calc(50% - (20px / 2));
+}
+
+@include media-query($on-palm) {
+    div.lyric-original, div.lyric-translation {
+        float: none;
+        width: calc(100% - (30px / 2));
+    }
 }
 
 
