@@ -96,7 +96,7 @@ $ make # 使用 Makefile 进行比特币源码的编译，编译完成后会生�
 $ make install # 该项可选，把编译好的比特币程序拷贝到系统默认的可执行程序目录 /usr/local/bin 下。
 {% endhighlight %}
 
-**注：macOS Mojave 无法构建 bitcoin v0.12.1 的可执行文件 bitcoin-qt，因为 macOS Mojave 已不支持 bitcoin v0.12.1 所对应的 qt5.5 的构建。**
+**注：macOS Mojave 无法构建 bitcoin v0.12.1 的可执行文件 bitcoin-qt，因为 macOS Mojave 不支持 bitcoin v0.12.1 对应的 qt5.5 的构建。**
 
 <details>
 <summary>额外的配置选项 configure v0.12.1</summary>
