@@ -7,11 +7,12 @@
 
 ## Timeline
 
-* 2019.05.24 [+] Dependencies
+* 2019.06.10 [+] Crypto Currencies Price Ticker
 
 <details>
 <summary>more</summary>
 
+* 2019.05.24 [+] Dependencies
 * 2019.05.03 [-] ~~LiveRe City comments system~~; [+] Remarkbox comments system
 * 2019.04.28 [-] ~~Widget Pack Comments System~~; [+] ~~LiveRe City comments system~~
 * 2019.04.23 [+] the site searchbox submit icon
