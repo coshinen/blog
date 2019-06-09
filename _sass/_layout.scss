@@ -253,7 +253,7 @@
  */
 .home-left {
     float: left;
-    width: 70%;
+    width: 66%;
 }
 
 @include media-query($on-palm) {
@@ -265,11 +265,13 @@
 
 .home-right {
     float: right;
+    width: 32%;
 }
 
 @include media-query($on-palm) {
     .home-right {
         float: none;
+        width: 100%;
     }
 }
 
