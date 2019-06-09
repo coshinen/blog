@@ -7,7 +7,7 @@ comments: true
 categories: Blockchain Bitcoin
 tags: 区块链 比特币 源码构建 交叉编译
 ---
-在 Unix/Linux 平台下交叉编译比特币源码，得到 Windows 版本的 bitcoin.exe、bitcoin-cli.exe、bitcoin-qt.exe 等可执行程序。
+在 Unix/Linux 平台下交叉编译比特币源码，得到 Windows 版本的 bitcoin.exe、bitcoin-cli.exe、bitcoin-qt.exe 等可执行文件。
 
 **这里以比特币v0.12.1为例，进行交叉编译。**
 
@@ -68,7 +68,7 @@ There are 2 choices for the alternative x86_64-w64-mingw32-g++ (providing /usr/b
 Press <enter> to keep the current choice[*], or type selection number: 1 # 这里输入 1，回车完成设置
 {% endhighlight %}
 
-再次使用该命令，查看是否设置成功，直接回车。
+可再次使用该命令，查看是否设置成功。
 
 {% highlight shell %}
 $ sudo update-alternatives --config x86_64-w64-mingw32-g++ # Set the default mingw32 g++ compiler option to posix.
@@ -87,11 +87,11 @@ Press <enter> to keep the current choice[*], or type selection number: # 这里�
 
 {% highlight shell %}
 $ cd depends
-$ make HOST=x86_64-w64-mingw32 -j4 # 这一步会下载相关依赖，确保网络畅通
+$ make HOST=x86_64-w64-mingw32 -j4 # 这一步会下载相关依赖，确保网络畅通，若某个依赖包请求失败，可多尝试几次
 $ cd ..
 $ ./autogen.sh # 若是首次构建，先生成 configure
 $ ./configure --prefix=`pwd`/depends/x86_64-w64-mingw32
-$ make # 若构建过非 Windows 版的程序，则执行 sudo make clean; sudo make
+$ make # 若构建过非 Windows 版的程序，则先执行 make clean 进行清理
 {% endhighlight %}
 
 Thanks for your time.
