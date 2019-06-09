@@ -7,7 +7,7 @@ comments: true
 categories: Blockchain Bitcoin
 tags: 区块链 比特币 源码构建
 ---
-本文记录了如何在 macOS、Unix/Linux 平台下构建比特币源码，得到相应版本的 bitcoind、bitcoin-cli、bitcoin-qt 等可执行程序。
+本文记录了如何在 macOS、Unix/Linux 平台下构建比特币源码，得到相应版本的 bitcoind、bitcoin-cli、bitcoin-qt 等可执行文件。
 
 ## 下载比特币源码
 
@@ -95,6 +95,8 @@ $ ./configure # 定制并生成 Makefile，例：关闭钱包功能，使用静�
 $ make # 使用 Makefile 进行比特币源码的编译，编译完成后会生成 4 至 6 个 ELF 程序，分别为 bitcoind、bitcoin-cli、bitcoin-tx、test_bitcoin，若安装了 Qt 图形库，则会增加 bitcoin-qt、test_bitcoin-qt。
 $ make install # 该项可选，把编译好的比特币程序拷贝到系统默认的可执行程序目录 /usr/local/bin 下。
 {% endhighlight %}
+
+**注：macOS Mojave 无法构建 bitcoin v0.12.1 的可执行文件 bitcoin-qt，因为 macOS Mojave 已不支持 bitcoin v0.12.1 所对应的 qt5.5 的构建。**
 
 <details>
 <summary>额外的配置选项 configure v0.12.1</summary>
@@ -361,4 +363,6 @@ Thanks for your time.
 * [bitcoin/bitcoin](https://github.com/bitcoin/bitcoin)
 * [bitcoin/build-osx.md at v0.12.1 · bitcoin/bitcoin · GitHub](https://github.com/bitcoin/bitcoin/blob/v0.12.1/doc/build-osx.md)
 * [bitcoin/build-unix.md at v0.12.1 · bitcoin/bitcoin · GitHub](https://github.com/bitcoin/bitcoin/blob/v0.12.1/doc/build-unix.md)
+* [qt@5.5 fails to configure on MacOS Mojave 10.14 · Issue #32467 · Homebrew/homebrew-core · GitHub](https://github.com/Homebrew/homebrew-core/issues/32467)
+* [qt@5.5: delete by fxcoudert · Pull Request #32565 · Homebrew/homebrew-core · GitHub](https://github.com/Homebrew/homebrew-core/pull/32565)
 * [...](https://github.com/mistydew/blockchain)
