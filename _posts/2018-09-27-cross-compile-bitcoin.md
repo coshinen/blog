@@ -9,7 +9,7 @@ tags: 区块链 比特币 源码构建 交叉编译
 ---
 在 Unix/Linux 平台下交叉编译比特币源码，得到 Windows 版本的 bitcoin.exe、bitcoin-cli.exe、bitcoin-qt.exe 等可执行文件。
 
-**这里以比特币v0.12.1为例，进行交叉编译。**
+**这里以比特币 v0.12.1 为例，进行交叉编译。**
 
 ## 下载比特币源码（Ubuntu 18.04.1）
 
@@ -53,7 +53,7 @@ $ sudo apt install build-essential libtool autotools-dev automake pkg-config bsd
 $ sudo apt install g++-mingw-w64-x86-64
 {% endhighlight %}
 
-对于 Ubuntu 18.04，设置默认的 mingw32 g++ 编译器选项为 posix，选择序号为 1 的选项回车即可。
+对于 Ubuntu 18.04，设置默认的 mingw32 g++ 编译器选项为 posix，对应的序号为 1。
 
 {% highlight shell %}
 $ sudo update-alternatives --config x86_64-w64-mingw32-g++ # Set the default mingw32 g++ compiler option to posix.
@@ -65,7 +65,7 @@ There are 2 choices for the alternative x86_64-w64-mingw32-g++ (providing /usr/b
   1            /usr/bin/x86_64-w64-mingw32-g++-posix   30        manual mode
   2            /usr/bin/x86_64-w64-mingw32-g++-win32   60        manual mode
 
-Press <enter> to keep the current choice[*], or type selection number: 1 # 这里输入 1，回车完成设置
+Press <enter> to keep the current choice[*], or type selection number: 1 # 输入 1 后按回车完成设置
 {% endhighlight %}
 
 可再次使用该命令，查看是否设置成功。
@@ -80,7 +80,7 @@ There are 2 choices for the alternative x86_64-w64-mingw32-g++ (providing /usr/b
 * 1            /usr/bin/x86_64-w64-mingw32-g++-posix   30        manual mode
   2            /usr/bin/x86_64-w64-mingw32-g++-win32   60        manual mode
 
-Press <enter> to keep the current choice[*], or type selection number: # 这里不输入，直接回车结束设置
+Press <enter> to keep the current choice[*], or type selection number: # 直接按回车即可
 {% endhighlight %}
 
 ### 开始构建
