@@ -8,7 +8,7 @@ categories: Blockchain Bitcoin
 tags: CLI bitcoin-cli 区块链 比特币
 stickie: true
 ---
-目前列出了 bitcoin v0.12.1 版本的比特币核心客户端的所有（含隐藏分类） RPC 命令。
+本文列出了 bitcoin v0.12.1 的客户端 bitcoin-cli 所有（包含隐藏分类）的 RPC 命令。
 
 ## bitcoin-cli 命令行参数
 
@@ -84,7 +84,7 @@ Chain selection options:
        HTTP 请求的超时时间（默认：900s）
 {% endhighlight %}
 
-### RPC 命令（需要 bitcoind）
+### RPC 命令（需要 bitcoind 提供相关服务）
 
 {% highlight shell %}
 $ bitcoin-cli help # 获取以下 RPC 命令
@@ -120,7 +120,7 @@ $ bitcoin-cli help # 获取以下 RPC 命令
 > [getinfo](/blog/2018/06/bitcoin-rpc-command-getinfo.html) # 获取比特币核心信息<br>
 > [getmemoryinfo ("mode")](/blog/2018/11/bitcoin-rpc-command-getmemoryinfo.html) new!<br>
 > [help ( "command" )](/blog/2018/06/bitcoin-rpc-command-help.html) # 获取命令帮助信息<br>
-> [logging ( <include> <exclude> )](/blog/2018/11/bitcoin-rpc-command-logging.html) new!<br>
+> [logging ( \<include\> \<exclude\> )](/blog/2018/11/bitcoin-rpc-command-logging.html) new!<br>
 > [stop](/blog/2018/06/bitcoin-rpc-command-stop.html) # 远程终止比特币核心服务<br>
 > [uptime](/blog/2018/11/bitcoin-rpc-command-uptime.html) new!
 > 
