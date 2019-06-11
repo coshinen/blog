@@ -399,9 +399,7 @@ $ date +%s
 +       	    break;
 +           }
 +           else
-+           {
 +               printf(" false\n");
-+           }
 +       }
 +   }
 +}
