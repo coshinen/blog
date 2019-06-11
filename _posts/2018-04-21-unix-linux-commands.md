@@ -1,10 +1,10 @@
 ﻿---
 layout: post
-title:  "Linux 基础命令"
+title:  "UNIX/Linux 基础命令"
 date:   2018-04-21 18:58:02 +0800
 author: mistydew
 comments: true
-categories: Unix/Linux
+categories: UNIX/Linux
 tags: Linux CLI Terminal
 ---
 Linux mascot: crystal tux and tux(Torvalds linUX?)<br>
@@ -12,7 +12,7 @@ Linux mascot: crystal tux and tux(Torvalds linUX?)<br>
 ![tux](/images/tux.jpg)<br>
 Childhood and Adult(funny)
 
-**Unix/Linux 下执行命令没有错误提示即执行成功。**
+**UNIX/Linux 下执行命令没有错误提示即执行成功。**
 
 ## 查看目录下的内容 | list
 

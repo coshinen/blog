@@ -17,7 +17,7 @@ tags: 区块链 比特币 数据目录
 
 > ~/Library/Application Support/Bitcoin
 
-### Unix/Linux
+### UNIX/Linux
 
 > ~/.bitcoin
 
@@ -52,7 +52,7 @@ boost::filesystem::path GetDefaultDataDir()
 #ifdef WIN32
     // Windows
     return GetSpecialFolderPath(CSIDL_APPDATA) / "Bitcoin";
-#else // Unix/Linux
+#else // UNIX/Linux
     fs::path pathRet;
     char* pszHome = getenv("HOME");
     if (pszHome == NULL || strlen(pszHome) == 0)

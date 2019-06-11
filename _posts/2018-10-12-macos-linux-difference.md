@@ -42,7 +42,7 @@ Linus [在 1991 年 8 月向 Usenet 发布](https://groups.google.com/forum/#!or
 
 ## macOS 内核的特性
 
-macOS 内核官方称为 XNU。该[缩写](https://github.com/apple/darwin-xnu)代表“XNU 不是 Unix”。
+macOS 内核官方称为 XNU。该[缩写](https://github.com/apple/darwin-xnu)代表“XNU 不是 UNIX”。
 根据[苹果的 GitHub 页面](https://github.com/apple/darwin-xnu)，XNU 是“卡内基梅隆大学的马赫内核与用于编写驱动程序的 FreeBSD 组件和 C++ API 相结合的混合内核”。
 代码的 BSD 子系统的部分是[“通常实现为微内核系统中的用户空间服务器”](http://osxbook.com/book/bonus/ancient/whatismacosx/arch_xnu.html)。
 马赫部分负责低级工作，诸如多任务，受保护的内存，虚拟内存管理，内核调试支持和控制台 I/O。

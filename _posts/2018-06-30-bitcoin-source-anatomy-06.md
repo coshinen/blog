@@ -196,7 +196,7 @@ bool MemoryPageLocker::Lock(const void* addr, size_t len)
 {
 #ifdef WIN32
     return VirtualLock(const_cast<void*>(addr), len) != 0;
-#else // Unix/Linux
+#else // UNIX/Linux
     return mlock(addr, len) == 0; // 锁定内存页
 #endif
 }
@@ -205,7 +205,7 @@ bool MemoryPageLocker::Unlock(const void* addr, size_t len)
 {
 #ifdef WIN32
     return VirtualUnlock(const_cast<void*>(addr), len) != 0;
-#else // Unix/Linux
+#else // UNIX/Linux
     return munlock(addr, len) == 0; // 解锁内存页
 #endif
 }

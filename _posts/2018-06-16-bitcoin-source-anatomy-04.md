@@ -351,7 +351,7 @@ MIN_CORE_FILEDESCRIPTORS 定义在“init.cpp”文件中。
 // anyway. // Win32 LevelDB 不使用文件描述符，用于访问块文件的不会计入 fd_set 大小限制。
 #define MIN_CORE_FILEDESCRIPTORS 0 // Windows
 #else
-#define MIN_CORE_FILEDESCRIPTORS 150 // Unix/Linux
+#define MIN_CORE_FILEDESCRIPTORS 150 // UNIX/Linux
 #endif
 {% endhighlight %}
 

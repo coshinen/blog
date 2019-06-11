@@ -73,7 +73,7 @@ public:
 参照 [DEFAULT_BLOCK_MAX_SIZE](https://github.com/bitcoin/bitcoin/search?q=DEFAULT_BLOCK_MAX_SIZE&type=Issues)。<br>
 2.nhashPrevBlock，前一个区块（头）的哈希值，类似于单链表的指针。<br>
 3.nMerkleRoot，默尔克树根哈希值，用于校验交易数据的一致性。<br>
-4.nTime，区块创建时间，Unix 时间戳，作为一个变量影响区块哈希的寻找。<br>
+4.nTime，区块创建时间，UNIX 时间戳，作为一个变量影响区块哈希的寻找。<br>
 5.nBits，难度对应值，可通过此值推算出难度，从主网、测试网和回归测试网参数可以看出，此值越小难度越大。<br>
 6.nNonce，随机数，通过不断的变化来寻找满足要求的区块（挖矿）。
 

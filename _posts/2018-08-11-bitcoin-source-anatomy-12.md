@@ -412,7 +412,7 @@ bool BindListenPort(const CService &addrBind, string& strError, bool fWhiteliste
     }
 
 
-#ifndef WIN32 // Unix/Linux
+#ifndef WIN32 // UNIX/Linux
 #ifdef SO_NOSIGPIPE // BSD
     // Different way of disabling SIGPIPE on BSD // 在 BSD 使用不同的方式禁止 SIGPIPE 信号
     setsockopt(hListenSocket, SOL_SOCKET, SO_NOSIGPIPE, (void*)&nOne, sizeof(int));

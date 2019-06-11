@@ -62,7 +62,7 @@ boost::filesystem::path GetDefaultDataDir()
 #ifdef WIN32
     // Windows
     return GetSpecialFolderPath(CSIDL_APPDATA) / "Bitcoin";
-#else // Unix/Linux
+#else // UNIX/Linux
     fs::path pathRet;
     char* pszHome = getenv("HOME");
     if (pszHome == NULL || strlen(pszHome) == 0)
@@ -75,7 +75,7 @@ boost::filesystem::path GetDefaultDataDir()
     TryCreateDirectory(pathRet);
     return pathRet / "Bitcoin";
 #else
-    // Unix
+    // UNIX/Linux
     return pathRet / ".bitcoin";
 #endif
 #endif
@@ -415,7 +415,7 @@ inline bool IsSwitchChar(char c)
 {
 #ifdef WIN32
     return c == '-' || c == '/';
-#else // Unix/Linux
+#else // UNIX/Linux
     return c == '-';
 #endif
 }
