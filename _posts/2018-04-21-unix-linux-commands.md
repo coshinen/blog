@@ -7,12 +7,12 @@ comments: true
 categories: UNIX/Linux
 tags: Linux CLI Terminal
 ---
+**UNIX/Linux 下执行命令没有（错误）提示即表示执行成功。**
+
 Linux mascot: crystal tux and tux(Torvalds linUX?)<br>
 ![crystal tux](/images/crystal_penguin.jpg)
 ![tux](/images/tux.jpg)<br>
 Childhood and Adult(funny)
-
-**UNIX/Linux 下执行命令没有错误提示即执行成功。**
 
 ## 查看目录下的内容 | list
 
@@ -286,6 +286,14 @@ $ cat /etc/issue # 查看系统版本信息。
 {% highlight shell %}
 $ shutdown -h now # 立刻关机，h 表示 halt，可以指定时间。
 $ halt # 同 shutdown -h now。
+{% endhighlight %}
+
+## 远程连接 | SSH(Secure Shell)
+
+{% highlight shell %}
+$ sudo apt-get install ssh # 安装 ssh 服务。
+$ ps -elf | grep ssh # 看到 /usr/sbin/sshd -D 的进程表示 ssh 服务启动正常。
+$ ssh <username>@<hostname> # 连接至指定用户名 <username> 和主机 IP <hostname> 的主机上。
 {% endhighlight %}
 
 Thanks for your time.
