@@ -126,9 +126,9 @@ $ tar Jxfv <filename>.tar.xz # 解压缩 xz 格式的文件 <filename>.tar.xz。
 ## 安装软件 | install
 
 {% highlight shell %}
-$ apt-get install vim # 安装 vim 软件到系统，一般默认装在 /usr/bin 目录下，所以要使用 root 用户进行安装，或在命令的前面加 sudo 进行权限提升。e.g. $ sudo apt-get install vim。
-$ apt-get update # 从所有配置的源中下载包信息，用于安装软件时显示没有该软件的情况。
-$ apt-get upgrade # 从通过 sources.list 配置的源安装在系统上的所有包中安装可用的升级，即通过 update 的结果进行已安装软件的升级。
+$ sudo apt install vim # 安装 vim 软件到系统，一般默认装在 /usr/bin 目录下，所以要使用 root 用户进行安装，或在命令的前面加 sudo 进行权限提升。e.g. $ sudo apt install vim。
+$ sudo apt update # 从所有配置的源中下载包信息，用于安装软件时显示没有该软件的情况。
+$ sudo apt upgrade # 从通过 sources.list 配置的源安装在系统上的所有包中安装可用的升级，即通过 update 的结果进行已安装软件的升级。
 {% endhighlight %}
 
 ## 域名信息查询 | domain name system lookup
@@ -282,7 +282,7 @@ $ halt # 同 shutdown -h now。
 ## 远程安全连接 | SSH(Secure Shell)
 
 {% highlight shell %}
-$ sudo apt-get install ssh # 安装 ssh 服务。
+$ sudo apt install ssh # 安装 ssh 服务。
 $ ps -elf | grep ssh # 看到 /usr/sbin/sshd -D 的进程表示 ssh 服务启动正常。
 $ ssh <username>@<hostname> # 连接至指定“用户名@主机 IP”的主机上，根据提示输入相应密码。
 {% endhighlight %}
