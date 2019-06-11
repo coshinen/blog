@@ -192,15 +192,6 @@ $ chgrp <group> <file> # 改变文件 <file> 所属组 <group>。
 
 **注：只有文件创建者和 root 用户才能使用此命令，且 `<group>` 必须是本机存在的组。本机用户所属组记录在 "/etc/group" 文件中。**
 
-## 远程安全拷贝 | secure copy
-
-{% highlight shell %}
-$ scp <file> username@ip:<dir> # 复制本地文件 <file> 到远程主机 username@ip 的 <dir> 目录下。
-$ scp username@ip:<file> <dir> # 复制远程主机 username@ip 下的文件 <file> 到本地 <dir> 目录下。
-{% endhighlight %}
-
-**注：username 和 ip 的顺序，且需要知道 username 对应的密码。**
-
 ## 进程的前后台切换 | & jobs fg Ctrl+Z bg
 
 {% highlight shell %}
@@ -288,13 +279,22 @@ $ shutdown -h now # 立刻关机，h 表示 halt，可以指定时间。
 $ halt # 同 shutdown -h now。
 {% endhighlight %}
 
-## 远程连接 | SSH(Secure Shell)
+## 远程安全连接 | SSH(Secure Shell)
 
 {% highlight shell %}
 $ sudo apt-get install ssh # 安装 ssh 服务。
 $ ps -elf | grep ssh # 看到 /usr/sbin/sshd -D 的进程表示 ssh 服务启动正常。
-$ ssh <username>@<hostname> # 连接至指定用户名 <username> 和主机 IP <hostname> 的主机上。
+$ ssh <username>@<hostname> # 连接至指定“用户名@主机 IP”的主机上，根据提示输入相应密码。
 {% endhighlight %}
+
+## 远程安全拷贝 | secure copy
+
+{% highlight shell %}
+$ scp <file> username@ip:<dir> # 复制本地文件 <file> 到远程主机 username@ip 的 <dir> 目录下。
+$ scp username@ip:<file> <dir> # 复制远程主机 username@ip 下的文件 <file> 到本地 <dir> 目录下。
+{% endhighlight %}
+
+**注：username 和 ip 的顺序，且需要知道 username 对应的密码。**
 
 Thanks for your time.
 
