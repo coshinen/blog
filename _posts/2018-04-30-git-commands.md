@@ -19,7 +19,7 @@ Git 易于学习且拥有占用空间小和闪电般快速的性能。
 ## 安装（Ubuntu 16.04.4）
 
 {% highlight shell %}
-$ sudo apt-get install git # 安装 git。
+$ sudo apt install git # 安装 git。
 $ git config --global user.name "<username>" # 添加用户名到 git 配置文件 .git/config。
 $ git config --global user.email "<useremail>" # 添加邮箱到 git 配置文件 .git/config。
 {% endhighlight %}
@@ -63,6 +63,7 @@ Thanks for your time.
 
 ## 参照
 * [Git](https://git-scm.com)
+* [GitHub](https://github.com)
 * [Git - Reference](https://git-scm.com/docs)
 * [Git - Book](https://git-scm.com/book/en/v2)
 * [Git教程 - 廖雪峰的官方网站](https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000)
