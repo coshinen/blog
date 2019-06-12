@@ -43,7 +43,7 @@ $ brew install automake berkeley-db4 libtool boost@1.59 miniupnpc openssl pkg-co
 brew 默认安装指定库的最新版本，可以使用命令`$ brew search <libname>`查看指定库的所有版本。
 **bitcoin v0.12.1 对应的 boost 库的版本为1.59.0，可以从 [bitcoin/depends/packages/boost.mk](https://github.com/bitcoin/bitcoin/blob/v0.12.1/depends/packages/boost.mk) 中获取当前版本比特币对应的 boost 库的版本。**
 
-### Ubuntu 16.04.4 下的相关依赖
+### Ubuntu 16.04.* 下的相关依赖
 
 #### 基础依赖
 
@@ -57,6 +57,8 @@ $ sudo apt-get install build-essential libtool autotools-dev automake pkg-config
 $ sudo apt-get install libboost-system-dev libboost-filesystem-dev libboost-chrono-dev libboost-program-options-dev libboost-test-dev libboost-thread-dev
 $ sudo apt-get install libboost-all-dev
 {% endhighlight %}
+
+**ubuntu 16.04.* 默认安装 boost 库的版本为 1.58.0，可满足 bitcoin v0.12.1 对 boost 库的需求。**
 
 #### db4.8（仅限 Ubuntu）
 

@@ -11,8 +11,10 @@ excerpt: $ bitcoin-cli listunspent ( minconf maxconf  ["address",...] )
 ## 提示说明
 
 {% highlight shell %}
-listunspent ( minconf maxconf  ["address",...] ) # 列出在 minconf 和 maxconf 之间（含）确认数的未花费交易输出
+listunspent ( minconf maxconf  ["address",...] ) # 列出在 minconf（含）和 maxconf（含）之间确认数的未花费交易输出
 {% endhighlight %}
+
+**注：只能查看本钱包内的地址所关联的交易的 UTXO。**
 
 选择性过滤只包含支付给指定地址们的交易输出。<br>
 结果是一个对象数组，每个对象都有：{交易索引，输出序号，公钥脚本，金额，确认数}

@@ -16,7 +16,7 @@ stickie: true
 
 ### 0.1. 平台和工具
 
-> * 平台：Ubuntu 16.04.0* LTS
+> * 平台：Ubuntu 16.04.* LTS
 > * 工具：Git
 
 ### 0.2. 比特币源码
@@ -477,7 +477,7 @@ public:
 -       };
 +       checkpointData = (CCheckpointData) {
 +           boost::assign::map_list_of
-+           ( 0, uint256S("0xhashGenesisBlock"))
++           (0, uint256S("0xhashGenesisBlock"))
 +           1526197820, // * Unix timestamp of last checkpoint block
 +           0,   // * total number of transactions between genesis and last checkpoint
 +                       //   (the tx=... number in the SetBestChain debug.log lines)
@@ -531,9 +531,6 @@ Thanks for your time.
 
 ## 参照
 * [How to make an altcoin \| Bear's Den](http://dillingers.com/blog/2015/04/18/how-to-make-an-altcoin)
-* [如何仿照比特币创造自己的山寨币 \| Sunny's Blog](http://shusunny.github.io)
-* [手动做一个自己的 COIN 客户端：附区块链核心代码解读](http://gitbook.cn/books/5a9792622afd2366fc629d01/index.html)
-* [【比特币】自己动手制作山寨币 - 区块链知识库](http://lib.csdn.net/article/blockchain/45844)
+* [如何仿照比特币创造自己的山寨币 \| Sunny's Blog](http://shusunny.github.io/2016/04/How-to-make-altcoin-1)
 * [从 0 到 1 建立自己的区块链 \| 巴比特](http://www.8btc.com/build-your-own-blockchain)
-* [比特币源代码阅读笔记-创世块的产生_易安定_新浪博客](http://blog.sina.com.cn/s/blog_5922b3960101s3ap.html)
 * [...](https://github.com/mistydew/blockchain)
