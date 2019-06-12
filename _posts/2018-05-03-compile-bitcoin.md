@@ -91,7 +91,7 @@ $ sudo apt-get install libqrencode-dev
 
 {% highlight shell %}
 $ ./autogen.sh
-$ ./configure # 定制并生成 Makefile，例：关闭钱包功能，使用静态库链接得到移植后不依赖库文件的可执行文件等。
+$ ./configure # 定制并生成 Makefile，例：关闭钱包功能，使用静态库链接得到移植后不依赖库文件的可执行文件，指定 boost 库路径等。
 $ make # 使用 Makefile 进行比特币源码的编译，编译完成后会生成 4 至 6 个 ELF 程序，分别为 bitcoind、bitcoin-cli、bitcoin-tx、test_bitcoin，若安装了 Qt 图形库，则会增加 bitcoin-qt、test_bitcoin-qt。
 $ make install # 该项可选，把编译好的比特币程序拷贝到系统默认的可执行程序目录 /usr/local/bin 下。
 {% endhighlight %}
