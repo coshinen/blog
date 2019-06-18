@@ -1,5 +1,8 @@
 # [_mistydew's blog_](https://mistydew.github.io/blog)
 
+[![Build Status](https://travis-ci.org/mistydew/mistydew.github.io.svg?branch=master)](https://travis-ci.org/mistydew/mistydew.github.io)
+[![HitCount](http://hits.dwyl.io/mistydew/mistydewgithubio.svg)](http://hits.dwyl.io/mistydew/mistydewgithubio)
+
 ## Todo
 
 - [ ] add avatar, bio...
