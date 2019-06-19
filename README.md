@@ -7,6 +7,7 @@
 
 - [ ] add avatar, bio...
 - [ ] remake site search engine
+- [ ] add book/reading list
 
 ## Timeline
 
