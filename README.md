@@ -1,7 +1,5 @@
 # [_mistydew's blog_](https://mistydew.github.io/blog)
 
-[![HitCount](http://hits.dwyl.io/mistydew/mistydewgithubio.svg)](http://hits.dwyl.io/mistydew/mistydewgithubio)
-
 ## Todo
 
 - [ ] add avatar, bio...
