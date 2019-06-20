@@ -10,7 +10,6 @@ root: mistydew
 title: parallel universe
 email: mistydew@qq.com
 subtitle: GC music diary
-timezone: Asia/Shanghai # Beijing Time
 btc_address: 1GC1iAZz9Wroy99bwJUzuLrqpmayUhjYbZ
 description: >- # this means to ignore newlines until "baseurl:"
   Welcome to the ❤ parallel universe! Copyright &copy; 2019 mistydew.
@@ -36,14 +35,14 @@ category: "/blog/category.html"
 quotes:   "/blog/quotes.html"
 tagcloud: "/blog/tags.html"
 
-# Excerpt / Abstract / Summary
-excerpt_separator: "\n\n"
-
-# Build settings
-markdown: kramdown
-
-# Links
-permalink: /blog/:year/:month/:title.html
-
-# Exclude
+# Handling Reading
 exclude: [LICENSE, README.md]
+encoding : "utf-8"
+
+# Conversion
+markdown: kramdown
+excerpt_separator: "\n\n" # Excerpt/Abstract/Summary
+
+# Outputting
+permalink: /blog/:year/:month/:title.html
+timezone: Asia/Shanghai # Beijing Time
