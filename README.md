@@ -76,3 +76,5 @@
 * Powered: [GitHub Pages](https://pages.github.com), [Jekyll](http://www.jekyllrb.com)
 * Analytics: [Google Analytics](https://analytics.google.com/analytics/web), [Busuanzi](https://busuanzi.ibruce.info)
 * Comments System: [Remarkbox](https://www.remarkbox.com)
+* Shared Service: [bShare](http://www.bshare.cn)
+* Crypto Widget: [Coinlib](https://coinlib.io)
