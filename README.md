@@ -8,11 +8,12 @@
 
 ## Timeline
 
-* 2019.06.20 [+] bShare on the post
+* 2019.06.21 [-] ~~bShare on the post~~; [+] AddToAny share system
 
 <details>
 <summary>more</summary>
 
+* 2019.06.20 [+] ~~bShare on the post~~
 * 2019.06.10 [+] Crypto Currencies Price Ticker on the site home page
 * 2019.05.24 [+] Site Dependencies
 * 2019.05.03 [-] ~~LiveRe City comments system~~; [+] Remarkbox comments system
@@ -76,5 +77,5 @@
 * Powered: [GitHub Pages](https://pages.github.com), [Jekyll](http://www.jekyllrb.com)
 * Analytics: [Google Analytics](https://analytics.google.com/analytics/web), [Busuanzi](https://busuanzi.ibruce.info)
 * Comments System: [Remarkbox](https://www.remarkbox.com)
-* Shared Service: [bShare](http://www.bshare.cn)
+* Shared Service: [AddToAny](https://www.addtoany.com)
 * Crypto Widget: [Coinlib](https://coinlib.io)
