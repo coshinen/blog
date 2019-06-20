@@ -4,7 +4,7 @@ title: Archive
 permalink: /blog/archive.html
 ---
 
-{% include google_search.html %}
+{% include search.html %}
 
 {% assign count = 1 %}
 {% for post in site.posts reversed %}
