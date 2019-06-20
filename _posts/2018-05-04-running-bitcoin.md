@@ -672,6 +672,7 @@ Thanks for your time.
 
 ## 参照
 * [Running Bitcoin - Bitcoin Wiki](https://en.bitcoin.it/wiki/Running_Bitcoin)
+* [bitcoin/bitcoin at v0.12.1](https://github.com/bitcoin/bitcoin/tree/v0.12.1)
 * [bitcoin.conf](https://github.com/mistydew/blockchain/blob/master/bitcoin.conf)
 * [精通比特币（第二版） \| 巴比特图书](http://book.8btc.com/masterbitcoin2cn)
 * [...](https://github.com/mistydew/blockchain)
