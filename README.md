@@ -8,12 +8,13 @@
 
 ## Timeline
 
-* 2019.06.10 [+] Crypto Currencies Price Ticker
+* 2019.06.20 [+] bShare on the post
 
 <details>
 <summary>more</summary>
 
-* 2019.05.24 [+] Dependencies
+* 2019.06.10 [+] Crypto Currencies Price Ticker on the site home page
+* 2019.05.24 [+] Site Dependencies
 * 2019.05.03 [-] ~~LiveRe City comments system~~; [+] Remarkbox comments system
 * 2019.04.28 [-] ~~Widget Pack Comments System~~; [+] ~~LiveRe City comments system~~
 * 2019.04.23 [+] the site searchbox submit icon
@@ -59,7 +60,7 @@
 * 2018.05.14 [+] ~~honehone clock~~; ~~pagination~~
 * 2018.05.02 [+] gc favicon
 * 2018.04.27 [-] ~~directory audio~~
-* 2018.04.21 [+] images and reference for blog
+* 2018.04.21 [+] images and reference for post
 * 2018.04.19 [+] ~~directory audio~~; Todo list and Timeline
 * 2018.04.18 [+] base jekyll theme template
 </details>
