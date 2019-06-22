@@ -6,7 +6,7 @@ author: mistydew
 comments: true
 categories: ガーネット・クロウ 翻訳
 tags: GC 歌詞
-excerpt: コーヒーは最初の一口、甘いケーキの端っこ。ポテトは揚げたてにして、おいしいトコは少しだけ。
+excerpt: コーヒーは最初の一口、甘いケーキの端っこ、ポテトは揚げたてにして、おいしいトコは少しだけ。
 ---
 ![夏の幻](https://raw.githubusercontent.com/mistydew/gc2/master/cover/single/SG05_夏の幻.jpg){:.border}
 
@@ -82,6 +82,63 @@ He is not trusted darling.
 
 <div class="lyric-translation">
 <blockquote>
+咖啡是最初的一口<br>
+甜的蛋糕的邊上<br>
+土豆是剛炸好<br>
+美味的地方只有一點<br>
+<br>
+最近味覺麻痹了<br>
+冷湯也是調味品<br>
+胡亂等待風波<br>
+總覺得 無聊的感覺<br>
+<br>
+即使萬一犯了罪<br>
+對人來說是有原因的<br>
+<br>
+hi-speed 特別的 oneday<br>
+想再品嚐一下啊<br>
+sweet time 回到現實<br>
+雖然瞬間難以忍受<br>
+hi-speed 特別的 anyway<br>
+總有一天會忘記吧？<br>
+slow time 不要弄髒<br>
+像融化一樣 沈睡的早晨<br>
+He is not trusted darling.<br>
+<br>
+快點搞錯<br>
+反覆失敗也很可愛<br>
+所以被允許<br>
+自己在想吧？<br>
+<br>
+即使說謊也裝作不知道的樣子<br>
+準備好的辯解<br>
+雖然特別堅強的地方<br>
+也是非常喜歡<br>
+<br>
+裝作沒有什麼的樣子<br>
+這些日子 也累了<br>
+<br>
+hi-speed 特別的 oneday<br>
+是玩笑啊 很抱歉哦<br>
+sweet time 魔法解除<br>
+到那時讓展現溫柔<br>
+hi-speed 特別的 anyway<br>
+希望感受更多<br>
+slow time 不要犯傻<br>
+我 不是普通的機器<br>
+<br>
+和吵架次數相同的和好次數<br>
+變成環狀正閃閃發光 yha-<br>
+<br>
+hi-speed 特別的 oneday<br>
+想再品嚐一下啊<br>
+sweet time 回到現實<br>
+雖然瞬間難以忍受<br>
+hi-speed 特別的 anyway<br>
+總有一天會忘記吧？<br>
+slow time 不要弄髒<br>
+像融化一樣 沈睡的早晨<br>
+He is not trusted darling.
 </blockquote>
 </div>
 
