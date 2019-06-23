@@ -10,6 +10,7 @@ permalink: /blog/quotes.html
 > Master Oogway, Kung Fu Panda:
 > * Inner peace, inner peace. itchy nose. Ah-choo! Finally, inner peace. Now what?
 > * Yesterday is history, tomorrow is a mystery, but today is a gift. That is why it is called the present.
+> * There are no accidents.
 
 > Negan, The Walking Dead:
 > * It's just that no one ever thinks that they're the evil one.
