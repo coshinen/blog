@@ -26,11 +26,11 @@ excerpt: 单例模式是一种软件设计模式，它限制类的实例化为�
 
 **注：该实例通常存储私有静态变量，在首次调用静态方法前创建实例。**
 
-基础类图如下：
+基础类图：
 
 ![Singleton_UML_class_diagram](/images/Singleton_UML_class_diagram.svg)
 
-## 实现
+## 基础实现
 
 {% highlight C++ %}
 class Singleton
@@ -74,10 +74,11 @@ private:
 };
 {% endhighlight %}
 
-参考 [bitcoin v0.12.1](https://github.com/bitcoin/bitcoin/tree/v0.12.1) 源码中的类 [LockedPageManager](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/support/pagelocker.h) 的实现。
+参考 bitcoin v0.12.1 源码中的类 [LockedPageManager](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/support/pagelocker.h) 的实现。
 
 Thanks for your time.
 
 ## 参照
 * [Singleton pattern - Wikipedia](https://en.wikipedia.org/wiki/Singleton_pattern)
+* [bitcoin/bitcoin at v0.12.1](https://github.com/bitcoin/bitcoin/tree/v0.12.1)
 * [...](https://github.com/mistydew/DesignPatterns)
