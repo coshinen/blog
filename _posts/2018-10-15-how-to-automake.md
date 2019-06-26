@@ -11,11 +11,11 @@ tags: C C++ Automake
 
 ## 必备工具
 
-* autoscan
-* aclocal
-* autoheader
-* autoconf
-* automake
+> * autoscan
+> * aclocal
+> * autoheader
+> * autoconf
+> * automake
 
 ## 0. 编写源码
 
@@ -46,7 +46,7 @@ int main(void)
 进入 src 目录，使用 autoscan 扫描源码结构。
 
 {% highlight shell %}
-$ src
+$ cd src
 $ autoscan
 {% endhighlight %}
 
@@ -115,7 +115,7 @@ main_SOURCES=main.cc # 指定 main 函数所在的源文件
 
 使用 automake 生成 Makefile.in 文件。
 
-{% highlight C++ %}
+{% highlight shell %}
 $ automake --add-missing
 {% endhighlight %}
 
@@ -125,7 +125,7 @@ $ automake --add-missing
 
 执行上面生成的 configure 文件，得到 Makefile。
 
-{% highlight C++ %}
+{% highlight shell %}
 $ ./configure
 {% endhighlight %}
 
@@ -133,7 +133,7 @@ $ ./configure
 
 使用 make 命令得到可执行程序 main。
 
-{% highlight C++ %}
+{% highlight shell %}
 $ make
 {% endhighlight %}
 
