@@ -572,6 +572,6 @@ Privacy, IEEE Computer Society, pages 122-133, April 1980.<br>
 Thanks for your time.
 
 ## 参照
+
 * [Bitcoin: A Peer-to-Peer Electronic Cash System](https://bitcoin.org/bitcoin.pdf)
 * [Bitcoin whitepaper repository on GitHub](https://github.com/wbnns/bitcoinwhitepaper)
-* [...](https://github.com/mistydew/blockchain)

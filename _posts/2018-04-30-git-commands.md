@@ -62,10 +62,10 @@ $ git push origin master -f # 强制同步本地的项目分支到 GitHub 上，
 Thanks for your time.
 
 ## 参照
+
 * [Git](https://git-scm.com)
 * [GitHub](https://github.com)
 * [Git - Reference](https://git-scm.com/docs)
 * [Git - Book](https://git-scm.com/book/en/v2)
 * [Git教程 - 廖雪峰的官方网站](https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000)
 * [Git教程 \| 菜鸟教程](http://www.runoob.com/git/git-tutorial.html)
-* [...]({{ site.url | append: site.blog }})

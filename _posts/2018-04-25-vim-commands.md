@@ -132,9 +132,6 @@ $ vim -b <file> # -b 选项表示二进制模式。
 Thanks for your time.
 
 ## 参考
-* [Vim (text editor) - Wikipedia](https://en.wikipedia.org/wiki/Vim_(text_editor))
-* [Learning the vi Editor/Vim/Modes - Wikibooks](https://en.wikibooks.org/wiki/Learning_the_vi_Editor/Vim/Modes)
-* [PacVim - a game that teaches you vim commands](https://github.com/jmoon018/PacVim)
+
 * [Where Vim Came From](https://twobithistory.org/2018/08/05/where-vim-came-from.html)
 * [Vim 配置入门 - 阮一峰的网络日志](http://www.ruanyifeng.com/blog/2018/09/vimrc.html)
-* [...]({{ site.url | append: site.blog }})

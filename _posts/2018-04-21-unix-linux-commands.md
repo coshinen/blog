@@ -300,7 +300,7 @@ $ scp username@ip:<file> <dir> # 复制远程主机 username@ip 下的文件 <fi
 Thanks for your time.
 
 ## 参考
+
 * [Why Penguin is Linux logo? - LinuxScrew: Linux Blog](http://www.linuxscrew.com/2007/11/14/why-penguin-is-linux-logo)
 * [《Linus Torvalds自传》摘录 - 阮一峰的网络日志](http://www.ruanyifeng.com/blog/2012/09/linus_torvalds.html)
 * [Linux命令大全（手册）](http://man.linuxde.net)
-* [...]({{ site.url | append: site.blog }})

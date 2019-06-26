@@ -68,7 +68,6 @@ But that was when I ruled the world
 Thanks for your time.
 
 ## 参照
+
 * [Coldplay official website](https://coldplay.com)
-* [Coldplay - Wikipedia](https://en.wikipedia.org/wiki/Coldplay)
 * [Coldplay – Viva la Vida Lyrics \| Genius Lyrics](https://genius.com/Coldplay-viva-la-vida-lyrics)
-* [...]({{ site.url | append: site.blog }})

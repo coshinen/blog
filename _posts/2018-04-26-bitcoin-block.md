@@ -7,7 +7,6 @@ comments: true
 categories: Blockchain Bitcoin
 tags: 区块链 比特币 区块
 ---
-## 概要
 交易数据永久记录在区块中。
 它们可以被当作城市记录器记录簿中的单个页面（记录房地产所有权的变更）或股票交易的分类账。
 区块按时间组成一条线性序列（也称为区块链）。
@@ -16,8 +15,7 @@ tags: 区块链 比特币 区块
 
 ## 源码剖析
 
-区块头和区块的数据结构定义在“primitives/block.h”文件中，分别为 CBlockHeader 和 CBlock 类。
-CBlock 是 CBlockHeader 的派生类，具体如下：
+区块头和区块的数据结构定义在“primitives/block.h”文件中，分别为类 CBlockHeader 和 CBlock，CBlock 是 CBlockHeader 的派生类，如下：
 
 {% highlight C++ %}
 /** Nodes collect new transactions into a block, hash them into a hash tree,
@@ -67,20 +65,19 @@ public:
 +---+---+---------------+
 {% endhighlight %}
 
-区块头固定 80 个字节，共由 6 个数据成员构成：<br>
-1.nVersion，区块的版本号，一般只有共识改变时，比如提升区块大小限制。
+区块头固定 80 个字节，共由 6 个数据成员构成：
+1. nVersion，区块的版本号，一般只有共识改变时，比如提升区块大小限制。
 历史上提升过 2 次，从 250KB 到 750KB 再到 1000KB。
-参照 [DEFAULT_BLOCK_MAX_SIZE](https://github.com/bitcoin/bitcoin/search?q=DEFAULT_BLOCK_MAX_SIZE&type=Issues)。<br>
-2.nhashPrevBlock，前一个区块（头）的哈希值，类似于单链表的指针。<br>
-3.nMerkleRoot，默尔克树根哈希值，用于校验交易数据的一致性。<br>
-4.nTime，区块创建时间，UNIX 时间戳，作为一个变量影响区块哈希的寻找。<br>
-5.nBits，难度对应值，可通过此值推算出难度，从主网、测试网和回归测试网参数可以看出，此值越小难度越大。<br>
-6.nNonce，随机数，通过不断的变化来寻找满足要求的区块（挖矿）。
+2. nhashPrevBlock，前一个区块（头）的哈希值，类似于单链表的指针。
+3. nMerkleRoot，默尔克树根哈希值，用于校验交易数据的一致性。
+4. nTime，区块创建时间，UNIX 时间戳，作为一个变量影响区块哈希的寻找。
+5. nBits，难度对应值，可通过此值推算出难度，从主网、测试网和回归测试网参数可以看出，此值越小难度越大。
+6. nNonce，随机数，通过不断的变化来寻找满足要求的区块（挖矿）。
 
 Thanks for your time.
 
 ## 参照
+
 * [GitHub - bitcoin/bitcoin at v0.12.1](https://github.com/bitcoin/bitcoin/tree/v0.12.1)
+* [DEFAULT_BLOCK_MAX_SIZE](https://github.com/bitcoin/bitcoin/search?q=DEFAULT_BLOCK_MAX_SIZE&type=Issues)
 * [Block - Bitcoin Wiki](https://en.bitcoin.it/wiki/Block)
-* [精通比特币（第二版）第九章 区块链 · 巴比特图书](http://book.8btc.com/books/6/masterbitcoin2cn/_book/ch09.html)
-* [...](https://github.com/mistydew/blockchain)
