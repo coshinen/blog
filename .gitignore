@@ -2,4 +2,9 @@ _site/
 .sass-cache/
 .jekyll-cache/
 .jekyll-metadata
+
+# Sub site
 gc/
+
+# Mac specific
+.DS_Store
