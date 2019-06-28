@@ -62,7 +62,7 @@ macOS 内核（XNU）比 Linux 时间更长，是基于 2 个很早的代码库�
 Thanks for your time.
 
 ## 参照
+
 * [macOS Mojave - Apple](https://www.apple.com/macos/mojave)
 * [The Linux Kernel Archives](https://www.kernel.org)
 * [What is the Difference Between the macOS and Linux Kernels \| It's FOSS](https://itsfoss.com/mac-linux-difference)
-* [...]({{ site.url | append: site.blog }})

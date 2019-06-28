@@ -105,6 +105,6 @@ BTC 是用于标示一个比特币的常用单位。
 Thanks for your time.
 
 ## 参照
+
 * [Vocabulary - Bitcoin](https://bitcoin.org/en/vocabulary)
 * [词汇表 － 比特币](https://bitcoin.org/zh_CN/vocabulary)
-* [...](https://github.com/mistydew/blockchain)

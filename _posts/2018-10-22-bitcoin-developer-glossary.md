@@ -769,5 +769,5 @@ Git fork（当一个或多个开发人员与其他开发人员临时分开开发
 Thanks for your time.
 
 ## 参照
+
 * [Developer Glossary - Bitcoin](https://bitcoin.org/en/developer-glossary)
-* [...](https://github.com/mistydew/blockchain)

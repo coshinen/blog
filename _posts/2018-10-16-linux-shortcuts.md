@@ -134,5 +134,5 @@ Ctrl+A 送光标到行首，反之 Ctrl+E 移动光标到行尾。
 Thanks for your time.
 
 ## 参照
+
 * [13 Linux Terminal Shortcuts Every Power Linux User Must Know](https://linuxhandbook.com/linux-shortcuts)
-* [...]({{ site.url | append: site.blog }})

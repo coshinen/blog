@@ -8,7 +8,6 @@ categories: 设计模式
 tags: C++ 设计模式
 excerpt: 单例模式是一种软件设计模式，它限制类的实例化为一个对象。
 ---
-
 ## 概要
 
 单例模式是一种软件设计模式，它限制类的实例化为一个对象。
@@ -79,6 +78,6 @@ private:
 Thanks for your time.
 
 ## 参照
+
 * [Singleton pattern - Wikipedia](https://en.wikipedia.org/wiki/Singleton_pattern)
 * [bitcoin/bitcoin at v0.12.1](https://github.com/bitcoin/bitcoin/tree/v0.12.1)
-* [...](https://github.com/mistydew/DesignPatterns)

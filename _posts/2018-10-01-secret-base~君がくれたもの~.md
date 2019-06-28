@@ -121,8 +121,6 @@ excerpt: 君と夏の終わり 将来の夢 大きな希望 忘れない、10年
 Thanks for your time.
 
 ## 参照
+
 * [ZONE](http://www.sonymusic.co.jp/Music/Info/ZONE)
-* [ZONE (バンド) - Wikipedia](https://ja.wikipedia.org/wiki/ZONE_(%E3%83%90%E3%83%B3%E3%83%89))
-* [ZONE - generasia](https://www.generasia.com/wiki/ZONE)
-* [secret base 〜君がくれたもの〜 - Wikipedia](https://ja.wikipedia.org/wiki/Secret_base_%E3%80%9C%E5%90%9B%E3%81%8C%E3%81%8F%E3%82%8C%E3%81%9F%E3%82%82%E3%81%AE%E3%80%9C)
-* [...]({{ site.url | append: site.blog }})
+* [ZONE secret base 〜君がくれたもの〜 歌詞 - 歌ネット](https://www.uta-net.com/song/13699)

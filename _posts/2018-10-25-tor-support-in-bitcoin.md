@@ -112,7 +112,6 @@ Tor 客户端不直连到权威服务器—它们连接到许多目录镜像中�
 Thanks for your time.
 
 ## 参照
+
 * [Tor - Bitcoin WiKi](https://en.bitcoin.it/wiki/Tor)
 * [Setting up a Tor hidden service - Bitcoin Wiki](https://en.bitcoin.it/wiki/Setting_up_a_Tor_hidden_service)
-* [bitcoin/bitcoin v0.12.1](https://github.com/bitcoin/bitcoin/tree/v0.12.1)
-* [...](https://github.com/mistydew/blockchain)

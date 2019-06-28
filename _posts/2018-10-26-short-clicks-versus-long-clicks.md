@@ -52,5 +52,5 @@ Google 希望看到**长点击**而非**短点击**。
 Thanks for your time.
 
 ## 参照
+
 * [Short Clicks vs Long Clicks (Why Longer is Better!)](http://www.blindfiveyearold.com/short-clicks-versus-long-clicks)
-* [...](https://github.com/mistydew/blockchain)

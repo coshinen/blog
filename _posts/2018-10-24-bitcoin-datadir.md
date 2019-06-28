@@ -222,7 +222,7 @@ LevelDB 数据库，具有所有当前未花费的交易输出的紧凑表达和
 Thanks for your time.
 
 ## 参照
+
 * [bitcoin/files.md at master · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/master/doc/files.md)
 * [Data directory - Bitcoin Wiki](https://en.bitcoin.it/wiki/Data_directory)
 * [Splitting the data directory - Bitcoin Wiki](https://en.bitcoin.it/wiki/Splitting_the_data_directory)
-* [...](https://github.com/mistydew/blockchain)

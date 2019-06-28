@@ -140,6 +140,6 @@ $ make
 Thanks for your time.
 
 ## 参照
+
 * [algorithms/automake_help.md at master · luofengmacheng/algorithms](https://github.com/luofengmacheng/algorithms/blob/master/myalgo/automake_help.md)
 * [概念：GNU构建系统和Autotool](http://www.pchou.info/linux/2016/09/16/gnu-build-system-1.html)
-* [...]({{ site.url | append: site.blog }})
