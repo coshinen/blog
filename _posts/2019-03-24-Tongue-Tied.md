@@ -133,6 +133,5 @@ Ooh, ooh
 Thanks for your time.
 
 ## 参照
-* [Tongue Tied (Grouplove song) - Wikipedia](https://en.wikipedia.org/wiki/Tongue_Tied_(Grouplove_song))
+
 * [Grouplove – Tongue Tied Lyrics \| Genius Lyrics](https://genius.com/Grouplove-tongue-tied-lyrics)
-* [...]({{ site.url | append: site.blog }})

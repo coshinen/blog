@@ -131,8 +131,6 @@ I wish we could stay forever as one
 Thanks for your time.
 
 ## 参照
+
 * [倉木麻衣公式WEBサイト](http://www.mai-kuraki.com)
-* [倉木麻衣 - Wikipedia](https://ja.wikipedia.org/wiki/倉木麻衣)
-* [Kuraki Mai - generasia](https://www.generasia.com/wiki/Kuraki_Mai)
-* [倉木麻衣の歌詞一覧リスト - 歌ネット](https://www.uta-net.com/artist/3126)
-* [...]({{ site.url | append: site.blog }})
+* [倉木麻衣 Tonight, I feel close to you 歌詞 - 歌ネット](https://www.uta-net.com/song/17658)

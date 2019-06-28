@@ -103,6 +103,5 @@ It's all right
 Thanks for your time.
 
 ## 参照
-* [The Beatles - Wikipedia](https://en.wikipedia.org/wiki/The_Beatles)
+
 * [The Beatles – Here Comes the Sun Lyrics \| Genius Lyrics](https://genius.com/The-beatles-here-comes-the-sun-lyrics)
-* [...]({{ site.url | append: site.blog }})

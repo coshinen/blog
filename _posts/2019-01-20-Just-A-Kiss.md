@@ -125,7 +125,6 @@ Kiss goodnight
 Thanks for your time.
 
 ## 参照
+
 * [Lady Antebellum](https://www.ladyantebellum.com)
-* [Lady Antebellum - Wikipedia](https://en.wikipedia.org/wiki/Lady_Antebellum)
 * [Lady Antebellum – Just a Kiss Lyrics \| Genius Lyrics](https://genius.com/Lady-antebellum-just-a-kiss-lyrics)
-* [...]({{ site.url | append: site.blog }})

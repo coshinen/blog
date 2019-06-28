@@ -119,6 +119,5 @@ Don't worry baby
 Thanks for your time.
 
 ## 参照
-* [Don't Worry Baby - Wikipedia](https://en.wikipedia.org/wiki/Don't_Worry_Baby)
+
 * [The Beach Boys – Don't Worry Baby Lyrics \| Genius Lyrics](https://genius.com/The-beach-boys-dont-worry-baby-lyrics)
-* [...]({{ site.url | append: site.blog }})

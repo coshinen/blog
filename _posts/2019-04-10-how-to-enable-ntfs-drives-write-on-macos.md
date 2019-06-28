@@ -74,7 +74,7 @@ $ ln -s /Volumes/My\ Passport ~/Desktop/My\ Passport
 Thanks for your time.
 
 ## 参照
+
 * [How to Enable NTFS Write Support in Mac OS X](http://osxdaily.com/2013/10/02/enable-ntfs-write-support-mac-os-x)
 * [fstab - Wikipedia](https://en.wikipedia.org/wiki/Fstab)
 * [ASCII Codes - Table of ascii characters and symbols](https://ascii.cl)
-* [...]({{ site.url | append: site.blog }})

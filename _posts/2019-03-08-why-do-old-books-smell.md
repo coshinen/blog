@@ -25,6 +25,6 @@ tags: Translation
 Thanks for your time.
 
 ## 参照
+
 * [Why Do Old Books Smell? – Flavorwire](http://flavorwire.com/282771/why-do-old-books-smell)
 * [bookofjoe: Why do old books smell?](https://www.bookofjoe.com/2019/03/why-do-old-books-smell.html)
-* [...]({{ site.url | append: site.blog }})
