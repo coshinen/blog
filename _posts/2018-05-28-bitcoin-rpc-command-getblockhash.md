@@ -73,19 +73,18 @@ UniValue getblockhash(const UniValue& params, bool fHelp)
 }
 {% endhighlight %}
 
-基本流程：<br>
-1.处理命令帮助和参数个数。<br>
-2.上锁。<br>
-3.获取指定的区块索引作为区块链高度。<br>
-4.获取激活区块链相应高度的区块索引。<br>
-5.获取该区块的哈希，转换为 16 进制并返回。
+基本流程：
+1. 处理命令帮助和参数个数。
+2. 上锁。
+3. 获取指定的区块索引作为区块链高度。
+4. 获取激活区块链相应高度的区块索引。
+5. 获取该区块的哈希，转换为 16 进制并返回。
 
 相关函数调用见 RPC 命令 [getbestblockhash](/blog/2018/05/bitcoin-rpc-command-getbestblockhash.html)。
 
 Thanks for your time.
 
 ## 参照
+
 * [Developer Documentation - Bitcoin](https://bitcoin.org/en/developer-documentation)
 * [Bitcoin Developer Reference - Bitcoin](https://bitcoin.org/en/developer-reference#getblockhash)
-* [精通比特币（第二版） \| 巴比特图书](http://book.8btc.com/masterbitcoin2cn)
-* [...](https://github.com/mistydew/blockchain)

@@ -69,8 +69,7 @@ in silence
 Thanks for your time.
 
 ## 参照
+
 * [GARNET CROW official website : ガーネットクロウ オフィシャルサイト](http://www.garnetcrow.com)
-* [GARNET CROW - Wikipedia](https://ja.wikipedia.org/wiki/GARNET_CROW)
-* [GARNET CROW - generasia](https://www.generasia.com/wiki/GARNET_CROW)
-* [GARNET CROWの歌詞一覧リスト - 歌ネット](https://www.uta-net.com/artist/344)
-* [...]({{ site.url | append: site.gc }})
+* [GARNET CROW Hello Sadness 歌詞 - 歌ネット](https://www.uta-net.com/song/85223)
+* [Hello Sadness Lyrics \| GARNET CROW music diary](https://mistydew.github.io/gc/lyrics/original/Hello%20Sadness.html)

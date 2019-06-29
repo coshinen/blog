@@ -59,4 +59,4 @@ Thanks for your time.
 
 * [GARNET CROW official website : ガーネットクロウ オフィシャルサイト](http://www.garnetcrow.com)
 * [GARNET CROW Doing all right 歌詞 - 歌ネット](https://www.uta-net.com/song/79833)
-* [Doing all right Lyrics \| GARNET CROW music diary](https://mistydew.github.io/gc/lyrics/original/Doing all right.html)
+* [Doing all right Lyrics \| GARNET CROW music diary](https://mistydew.github.io/gc/lyrics/original/Doing%20all%20right.html)

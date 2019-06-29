@@ -7,16 +7,15 @@ comments: true
 categories: Blockchain Bitcoin
 tags: 区块链 比特币 公钥、私钥 比特币地址
 ---
-## 概要
-私钥使用单向的椭圆曲线乘法加密函数得到对应的公钥。<br>
+私钥使用单向的椭圆曲线乘法加密函数得到对应的公钥。
 公钥经过一系列的哈希函数运算生成相应地址，这一过程涉及到 Base58 编码。
 
-私钥是一个有固定的范围的 256 位二进制随机数，其作用是生成签名用于证明私钥持有者对相应公钥地址上资金的所有权。<br>
-比特币采用操作系统底层密码学安全的伪随机数生成器 CSPRNG 来产生 256 位随机数，只要保证生成的随机数“不可预测”且“不可重复”这两点即可。<br>
-从编程角度实现随机数，在一个密码学安全的随机源中取一长串随机字节，使用 SHA256 算法运算得到一个 256 位的数字，然后判断是否在指定范围内，若不在就重复上述过程。<br>
+私钥是一个有固定的范围的 256 位二进制随机数，其作用是生成签名用于证明私钥持有者对相应公钥地址上资金的所有权。
+比特币采用操作系统底层密码学安全的伪随机数生成器 CSPRNG 来产生 256 位随机数，只要保证生成的随机数“不可预测”且“不可重复”这两点即可。
+从编程角度实现随机数，在一个密码学安全的随机源中取一长串随机字节，使用 SHA256 算法运算得到一个 256 位的数字，然后判断是否在指定范围内，若不在就重复上述过程。
 **注：私钥很重要，持有私钥就拥有相应公钥地址上的比特币，一旦私钥丢失，对应的比特币将无法找回。**
 
-使用 RPC 中的 getnewaddress 命令生成一个新的密钥（私钥、公钥对）。<br>
+使用 RPC 中的 getnewaddress 命令生成一个新的密钥（私钥、公钥对）。
 为了安全考虑，只显示生成的公钥地址，私钥默认存入本地钱包数据库。例：
 
 {% highlight shell %}
@@ -24,8 +23,8 @@ $ ./bitcoin-cli getnewaddress
 12PbLWS4h3qSmQfdu4oEgXCYMGY4TVbL3N
 {% endhighlight %}
 
-然后使用 RPC 中的 dumpprivkey 命令导出公钥地址对应的私钥。<br>
-以 WIF(wallet import format) 钱包导入格式即 Base58 校验和编码进行导出。<br>
+然后使用 RPC 中的 dumpprivkey 命令导出公钥地址对应的私钥。
+以 WIF(wallet import format) 钱包导入格式即 Base58 校验和编码进行导出。
 **注：该命令只适用于本地钱包数据库中的私钥。**例：
 
 {% highlight shell %}
@@ -75,8 +74,8 @@ Binary file wallet/rpcwallet.cpp matches
 wallet/wallet.h:439:    //! todo: add something to note what created it (user, getnewaddress, change)
 {% endhighlight %}
 
-从结果中我们可以看到出现该命令的文件名以及在该文件中出现的行号。<br>
-分别出现在“rpcserver.cpp”、“rpcserver.h”、“test/rpc_wallet_tests.cpp”、“wallet/rpcwallet.cpp”、“wallet/wallet.h”这 5 个文件中。<br>
+从结果中我们可以看到出现该命令的文件名以及在该文件中出现的行号。
+分别出现在“rpcserver.cpp”、“rpcserver.h”、“test/rpc_wallet_tests.cpp”、“wallet/rpcwallet.cpp”、“wallet/wallet.h”这 5 个文件中。
 打开“rpcserver.cpp”文件，找到该命令出现的位置。
 
 {% highlight C++ %}
@@ -111,9 +110,8 @@ public:
 };
 {% endhighlight %}
 
-该类的 4 个成员变量对应注释的 4 个列名。<br>
-rpcfn_type 是一个函数标签为 UniValue(const UniValue&, bool) 的回调函数类型，
-形参 params 为 RPC 命令的参数，形参 fHelp 为显示该命令帮助的标志，对应[比特币核心客户端基础命令](/blog/2018/05/bitcoin-cli-commands.html)用法的第 3 条。
+该类的 4 个成员变量对应注释的 4 个列名。
+rpcfn_type 是一个函数标签为 UniValue(const UniValue&, bool) 的回调函数类型，形参 params 为 RPC 命令的参数，形参 fHelp 为显示该命令帮助的标志，对应[比特币核心客户端基础命令](/blog/2018/05/bitcoin-cli-commands.html)用法的第 3 条。
 
 {% highlight shell %}
   bitcoin-cli [options] help <command>      Get help for a command # 获取一条命令的帮助信息（用法示例）
@@ -124,6 +122,7 @@ rpcfn_type 是一个函数标签为 UniValue(const UniValue&, bool) 的回调函
 Thanks for your time.
 
 ## 参照
+
 * [Technical background of version 1 Bitcoin addresses - Bitcoin Wiki](https://en.bitcoin.it/wiki/Technical_background_of_version_1_Bitcoin_addresses)
 * [List of address prefixes - Bitcoin Wiki](https://en.bitcoin.it/wiki/List_of_address_prefixes)
 * [Address - Bitcoin Wiki](https://en.bitcoin.it/wiki/Address)
@@ -131,4 +130,3 @@ Thanks for your time.
 * [Base58Check encoding - Bitcoin Wiki](https://en.bitcoin.it/wiki/Base58Check_encoding)
 * [bitcoin/bitcoin/src/base58.cpp](https://github.com/bitcoin/bitcoin/blob/master/src/base58.cpp)
 * [精通比特币（第二版）第四章 密钥和地址 · 巴比特图书](http://book.8btc.com/books/6/masterbitcoin2cn/_book/ch04.html)
-* [...](https://github.com/mistydew/blockchain)

@@ -362,9 +362,9 @@ Report bugs to <https://github.com/bitcoin/bitcoin/issues>.
 Thanks for your time.
 
 ## 参照
+
 * [bitcoin/bitcoin](https://github.com/bitcoin/bitcoin)
 * [bitcoin/build-osx.md at v0.12.1 · bitcoin/bitcoin · GitHub](https://github.com/bitcoin/bitcoin/blob/v0.12.1/doc/build-osx.md)
 * [bitcoin/build-unix.md at v0.12.1 · bitcoin/bitcoin · GitHub](https://github.com/bitcoin/bitcoin/blob/v0.12.1/doc/build-unix.md)
 * [qt@5.5 fails to configure on MacOS Mojave 10.14 · Issue #32467 · Homebrew/homebrew-core · GitHub](https://github.com/Homebrew/homebrew-core/issues/32467)
 * [qt@5.5: delete by fxcoudert · Pull Request #32565 · Homebrew/homebrew-core · GitHub](https://github.com/Homebrew/homebrew-core/pull/32565)
-* [...](https://github.com/mistydew/blockchain)

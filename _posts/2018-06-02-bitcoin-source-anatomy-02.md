@@ -7,7 +7,7 @@ comments: true
 categories: Blockchain Bitcoin
 tags: 区块链 比特币 源码剖析
 ---
-上一篇分析了应用程序启动前运行环境的设置和信号处理函数的连接，详见[比特币源码剖析（一）](/blog/2018/05/bitcoin-source-anatomy-01.html)。<br>
+上一篇分析了应用程序启动前运行环境的设置和信号处理函数的连接，详见[比特币源码剖析（一）](/blog/2018/05/bitcoin-source-anatomy-01.html)。
 本篇开始分析 AppInit(argc, argv) 应用程序初始化函数。
 
 ## 源码剖析
@@ -305,5 +305,5 @@ std::string LicenseInfo() // 许可证信息
 Thanks for your time.
 
 ## 参照
+
 * [bitcoin/bitcoin v0.12.1](https://github.com/bitcoin/bitcoin/tree/v0.12.1)
-* [...](https://github.com/mistydew/blockchain)

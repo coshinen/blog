@@ -60,8 +60,6 @@ Time after time<br>
 Thanks for your time.
 
 ## 参照
+
 * [倉木麻衣公式WEBサイト](http://www.mai-kuraki.com)
-* [倉木麻衣 - Wikipedia](https://ja.wikipedia.org/wiki/倉木麻衣)
-* [Kuraki Mai - generasia](https://www.generasia.com/wiki/Kuraki_Mai)
-* [倉木麻衣の歌詞一覧リスト - 歌ネット](https://www.uta-net.com/artist/3126)
-* [...]({{ site.url | append: site.blog }})
+* [倉木麻衣 Time after time 〜花舞う街で〜 歌詞 - 歌ネット](https://www.uta-net.com/song/16899)

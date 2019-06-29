@@ -148,4 +148,4 @@ Thanks for your time.
 
 * [GARNET CROW official website : ガーネットクロウ オフィシャルサイト](http://www.garnetcrow.com)
 * [GARNET CROW hi-speed スペシャル oneday 歌詞 - 歌ネット](https://www.uta-net.com/song/20133)
-* [hi-speed スペシャル oneday Lyrics \| GARNET CROW music diary](https://mistydew.github.io/gc/lyrics/original/hi-speed スペシャル oneday.html)
+* [hi-speed スペシャル oneday Lyrics \| GARNET CROW music diary](https://mistydew.github.io/gc/lyrics/original/hi-speed%20スペシャル%20oneday.html)

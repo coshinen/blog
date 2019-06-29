@@ -77,4 +77,4 @@ Thanks for your time.
 
 * [GARNET CROW official website : ガーネットクロウ オフィシャルサイト](http://www.garnetcrow.com)
 * [GARNET CROW Cried a little 歌詞 - 歌ネット](https://www.uta-net.com/song/20136)
-* [Cried a little Lyrics \| GARNET CROW music diary](https://mistydew.github.io/gc/lyrics/original/Cried a little.html)
+* [Cried a little Lyrics \| GARNET CROW music diary](https://mistydew.github.io/gc/lyrics/original/Cried%20a%20little.html)

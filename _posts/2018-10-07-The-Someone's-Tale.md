@@ -84,4 +84,4 @@ Thanks for your time.
 
 * [GARNET CROW official website : ガーネットクロウ オフィシャルサイト](http://www.garnetcrow.com)
 * [GARNET CROW The Someone's Tale 歌詞 - 歌ネット](https://www.uta-net.com/song/143806)
-* [The Someone's Tale Lyrics \| GARNET CROW music diary](https://mistydew.github.io/gc/lyrics/original/The Someone's Tale.html)
+* [The Someone's Tale Lyrics \| GARNET CROW music diary](https://mistydew.github.io/gc/lyrics/original/The%20Someone's%20Tale.html)

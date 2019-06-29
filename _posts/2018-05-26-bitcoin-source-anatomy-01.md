@@ -7,7 +7,7 @@ comments: true
 categories: Blockchain Bitcoin
 tags: 区块链 比特币 源码剖析
 ---
-第一篇主要列出比特币核心服务程序 bitcoind 的启动流程及其入口函数，详见[比特币源码剖析](/blog/2018/05/bitcoin-source-anatomy-00.html)。<br>
+第一篇主要列出比特币核心服务程序 bitcoind 的启动流程及其入口函数，详见[比特币源码剖析](/blog/2018/05/bitcoin-source-anatomy-00.html)。
 该篇主要分析 SetupEnvironment() 和 noui_connect() 函数。
 
 ## 源码剖析
@@ -300,5 +300,5 @@ int LogPrintStr(const std::string &str)
 Thanks for your time.
 
 ## 参照
+
 * [bitcoin/bitcoin v0.12.1](https://github.com/bitcoin/bitcoin/tree/v0.12.1)
-* [...](https://github.com/mistydew/blockchain)

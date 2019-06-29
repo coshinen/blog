@@ -73,7 +73,7 @@ One more time ふざけあった 時間よ<br>
 Thanks for your time.
 
 ## 参照
+
 * [秒速5センチメートル](https://www.cwfilms.jp/5cm)
 * [山崎まさよし Official Web Site](http://www.office-augusta.com/yama)
-* [山崎まさよしの歌詞一覧リスト - 歌ネット](https://www.uta-net.com/artist/2503)
-* [...]({{ site.url | append: site.blog }})
+* [山崎まさよし One more time, One more chance 歌詞 - 歌ネット](https://www.uta-net.com/song/9778)

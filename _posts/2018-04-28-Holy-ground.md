@@ -132,4 +132,4 @@ Thanks for your time.
 
 * [GARNET CROW official website : ガーネットクロウ オフィシャルサイト](http://www.garnetcrow.com)
 * [GARNET CROW Holy ground 歌詞 - 歌ネット](https://www.uta-net.com/song/20142)
-* [Holy ground Lyrics \| GARNET CROW music diary](https://mistydew.github.io/gc/lyrics/original/Holy ground.html)
+* [Holy ground Lyrics \| GARNET CROW music diary](https://mistydew.github.io/gc/lyrics/original/Holy%20ground.html)

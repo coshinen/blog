@@ -120,4 +120,4 @@ Thanks for your time.
 
 * [GARNET CROW official website : ガーネットクロウ オフィシャルサイト](http://www.garnetcrow.com)
 * [GARNET CROW in little time 歌詞 - 歌ネット](https://www.uta-net.com/song/20143)
-* [in little time Lyrics \| GARNET CROW music diary](https://mistydew.github.io/gc/lyrics/original/in little time.html)
+* [in little time Lyrics \| GARNET CROW music diary](https://mistydew.github.io/gc/lyrics/original/in%20little%20time.html)

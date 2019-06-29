@@ -209,9 +209,9 @@ $ bitcoin-cli help # 获取以下 RPC 命令
 Thanks for your time.
 
 ## 参照
+
 * [bitcoin/bitcoin at v0.12.1](https://github.com/bitcoin/bitcoin/tree/v0.12.1)
 * [Bitcoin Core - Wikipedia](https://en.wikipedia.org/wiki/Bitcoin_Core)
 * [JSON-RPC - Wikipedia](https://en.wikipedia.org/wiki/JSON-RPC)
 * [Developer Documentation - Bitcoin](https://bitcoin.org/en/developer-documentation)
 * [精通比特币（第二版） \| 巴比特图书](http://book.8btc.com/masterbitcoin2cn)
-* [...](https://github.com/mistydew/blockchain)
