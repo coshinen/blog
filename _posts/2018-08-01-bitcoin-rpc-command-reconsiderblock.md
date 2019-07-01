@@ -92,17 +92,16 @@ UniValue reconsiderblock(const UniValue& params, bool fHelp)
 }
 {% endhighlight %}
 
-基本流程：<br>
-1.处理命令帮助和参数个数。<br>
-2.获取指定区块哈希，构造 uint256 对象。<br>
-3.验证指定区块是否存在，若存在，再次考虑该区块。<br>
-4.检查验证状态，若有效，激活最佳链。<br>
-5.再次检查激活验证状态，若有效，直接返回空值。
+基本流程：
+1. 处理命令帮助和参数个数。
+2. 获取指定区块哈希，构造 uint256 对象。
+3. 验证指定区块是否存在，若存在，再次考虑该区块。
+4. 检查验证状态，若有效，激活最佳链。
+5. 再次检查激活验证状态，若有效，直接返回空值。
 
 Thanks for your time.
 
 ## 参照
+
 * [Developer Documentation - Bitcoin](https://bitcoin.org/en/developer-documentation)
 * [Bitcoin Developer Reference - Bitcoin](https://bitcoin.org/en/developer-reference#reconsiderblock)
-* [精通比特币（第二版） \| 巴比特图书](http://book.8btc.com/masterbitcoin2cn)
-* [...](https://github.com/mistydew/blockchain)

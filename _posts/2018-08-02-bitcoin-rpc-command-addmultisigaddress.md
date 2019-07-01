@@ -108,19 +108,18 @@ UniValue addmultisigaddress(const UniValue& params, bool fHelp)
 }
 {% endhighlight %}
 
-基本流程：<br>
-1.确保当前钱包可用。<br>
-2.处理命令帮助和参数个数。<br>
-3.钱包上锁。<br>
-4.获取指定的账户名，若未指定，则为默认账户 ""。<br>
-5.创建多签赎回脚本，获取脚本索引并把该索引添加到钱包。<br>
-6.设置脚本索引和指定账户到地址簿，脚本用途为 "send"。<br>
-7.对脚本索引进行 base58 编码并返回。
+基本流程：
+1. 确保当前钱包可用。
+2. 处理命令帮助和参数个数。
+3. 钱包上锁。
+4. 获取指定的账户名，若未指定，则为默认账户 ""。
+5. 创建多签赎回脚本，获取脚本索引并把该索引添加到钱包。
+6. 设置脚本索引和指定账户到地址簿，脚本用途为 "send"。
+7. 对脚本索引进行 base58 编码并返回。
 
 Thanks for your time.
 
 ## 参照
+
 * [Developer Documentation - Bitcoin](https://bitcoin.org/en/developer-documentation)
 * [Bitcoin Developer Reference - Bitcoin](https://bitcoin.org/en/developer-reference#addmultisigaddress)
-* [精通比特币（第二版） \| 巴比特图书](http://book.8btc.com/masterbitcoin2cn)
-* [...](https://github.com/mistydew/blockchain)

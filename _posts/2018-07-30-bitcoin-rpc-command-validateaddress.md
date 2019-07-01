@@ -154,17 +154,16 @@ UniValue validateaddress(const UniValue& params, bool fHelp)
 }
 {% endhighlight %}
 
-基本流程：<br>
-1.处理命令帮助和参数个数。<br>
-2.上锁，若开启钱包功能，钱包上锁。<br>
-3.获取指定的比特币地址，并判断该地址是否有效。<br>
-4.获取相关地址信息，判断该地址是否属于自己并添加到结果对象中。<br>
-5.返回结果。
+基本流程：
+1. 处理命令帮助和参数个数。
+2. 上锁，若开启钱包功能，钱包上锁。
+3. 获取指定的比特币地址，并判断该地址是否有效。
+4. 获取相关地址信息，判断该地址是否属于自己并添加到结果对象中。
+5. 返回结果。
 
 Thanks for your time.
 
 ## 参照
+
 * [Developer Documentation - Bitcoin](https://bitcoin.org/en/developer-documentation)
 * [Bitcoin Developer Reference - Bitcoin](https://bitcoin.org/en/developer-reference#validateaddress)
-* [精通比特币（第二版） \| 巴比特图书](http://book.8btc.com/masterbitcoin2cn)
-* [...](https://github.com/mistydew/blockchain)

@@ -7,7 +7,7 @@ comments: true
 categories: Blockchain Bitcoin
 tags: 区块链 比特币 源码剖析
 ---
-上一篇分析了应用程序初始化中创建脚本验证的线程函数和创建轻量级任务调度线程函数，详见[比特币源码剖析（八）](/blog/2018/07/bitcoin-source-anatomy-08.html)。<br>
+上一篇分析了应用程序初始化中创建脚本验证的线程函数和创建轻量级任务调度线程函数，详见[比特币源码剖析（八）](/blog/2018/07/bitcoin-source-anatomy-08.html)。
 本篇主要分析 Step 4: application initialization: dir lock, daemonize, pidfile, debug log 第四步应用程序初始化中初始化服务器的详细过程。
 
 ## 源码剖析
@@ -458,5 +458,5 @@ bool StartRPC()
 Thanks for your time.
 
 ## 参照
+
 * [bitcoin/bitcoin v0.12.1](https://github.com/bitcoin/bitcoin/tree/v0.12.1)
-* [...](https://github.com/mistydew/blockchain)

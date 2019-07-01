@@ -7,7 +7,7 @@ comments: true
 categories: Blockchain Bitcoin
 tags: 区块链 比特币 源码剖析
 ---
-上一篇分析了命令行参数解析以及帮助和版本信息的获取，详见[比特币源码剖析（二）](/blog/2018/06/bitcoin-source-anatomy-02.html)。<br>
+上一篇分析了命令行参数解析以及帮助和版本信息的获取，详见[比特币源码剖析（二）](/blog/2018/06/bitcoin-source-anatomy-02.html)。
 本篇主要分析 GetDataDir(false) 获取数据目录函数，ReadConfigFile(mapArgs, mapMultiArgs) 读取配置文件函数，SelectParams(ChainNameFromCommandLine()) 选择链参数（含创世区块信息）函数，检测命令行参数完整性，Linux 下守护进程的后台化以及服务选项的设置。
 
 ## 源码剖析
@@ -560,5 +560,5 @@ bool SoftSetBoolArg(const std::string& strArg, bool fValue)
 Thanks for your time.
 
 ## 参照
+
 * [bitcoin/bitcoin v0.12.1](https://github.com/bitcoin/bitcoin/tree/v0.12.1)
-* [...](https://github.com/mistydew/blockchain)

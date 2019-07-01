@@ -86,17 +86,16 @@ UniValue verifytxoutproof(const UniValue& params, bool fHelp)
 }
 {% endhighlight %}
 
-基本流程：<br>
-1.处理命令帮助和参数个数。<br>
-2.获取交易证明，并从该证明中提取交易索引列表。<br>
-3.上锁。<br>
-4.验证交易所在区块是否为有效区块。<br>
-5.遍历交易索引列表，加入结果集并返回。
+基本流程：
+1. 处理命令帮助和参数个数。
+2. 获取交易证明，并从该证明中提取交易索引列表。
+3. 上锁。
+4. 验证交易所在区块是否为有效区块。
+5. 遍历交易索引列表，加入结果集并返回。
 
 Thanks for your time.
 
 ## 参照
+
 * [Developer Documentation - Bitcoin](https://bitcoin.org/en/developer-documentation)
 * [Bitcoin Developer Reference - Bitcoin](https://bitcoin.org/en/developer-reference#verifytxoutproof)
-* [精通比特币（第二版） \| 巴比特图书](http://book.8btc.com/masterbitcoin2cn)
-* [...](https://github.com/mistydew/blockchain)

@@ -7,7 +7,7 @@ comments: true
 categories: Blockchain Bitcoin
 tags: 区块链 比特币 源码剖析
 ---
-上一篇分析了第五步验证钱包数据库的完整性的详细过程，详见[比特币源码剖析（十一）](/blog/2018/08/bitcoin-source-anatomy-11.html)。<br>
+上一篇分析了第五步验证钱包数据库的完整性的详细过程，详见[比特币源码剖析（十一）](/blog/2018/08/bitcoin-source-anatomy-11.html)。
 本篇主要分析 Step 6: network initialization 第六步网络初始化的详细过程。
 
 ## 源码剖析
@@ -518,5 +518,5 @@ void CNode::SetMaxOutboundTarget(uint64_t limit)
 Thanks for your time.
 
 ## 参照
+
 * [bitcoin/bitcoin v0.12.1](https://github.com/bitcoin/bitcoin/tree/v0.12.1)
-* [...](https://github.com/mistydew/blockchain)

@@ -104,15 +104,14 @@ UniValue gettxoutsetinfo(const UniValue& params, bool fHelp)
 }
 {% endhighlight %}
 
-基本流程：<br>
-1.处理命令帮助和参数个数。<br>
-2.更新内存中的数据到本地磁盘。。<br>
-3.获取币状态信息，添加到结果集并返回。
+基本流程：
+1. 处理命令帮助和参数个数。
+2. 更新内存中的数据到本地磁盘。
+3. 获取币状态信息，添加到结果集并返回。
 
 Thanks for your time.
 
 ## 参照
+
 * [Developer Documentation - Bitcoin](https://bitcoin.org/en/developer-documentation)
 * [Bitcoin Developer Reference - Bitcoin](https://bitcoin.org/en/developer-reference#gettxoutsetinfo)
-* [精通比特币（第二版） \| 巴比特图书](http://book.8btc.com/masterbitcoin2cn)
-* [...](https://github.com/mistydew/blockchain)

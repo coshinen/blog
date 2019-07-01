@@ -110,17 +110,16 @@ UniValue createmultisig(const UniValue& params, bool fHelp)
 }
 {% endhighlight %}
 
-基本流程：<br>
-1.处理命令帮助和参数个数。<br>
-2.创建多钱赎回脚本。<br>
-3.通过脚本获取脚本索引。<br>
-4.通过脚本索引获取比特币地址。<br>
-5.添加地址或赎回脚本到结果对象并返回。
+基本流程：
+1. 处理命令帮助和参数个数。
+2. 创建多钱赎回脚本。
+3. 通过脚本获取脚本索引。
+4. 通过脚本索引获取比特币地址。
+5. 添加地址或赎回脚本到结果对象并返回。
 
 Thanks for your time.
 
 ## 参照
+
 * [Developer Documentation - Bitcoin](https://bitcoin.org/en/developer-documentation)
 * [Bitcoin Developer Reference - Bitcoin](https://bitcoin.org/en/developer-reference#createmultisig)
-* [精通比特币（第二版） \| 巴比特图书](http://book.8btc.com/masterbitcoin2cn)
-* [...](https://github.com/mistydew/blockchain)

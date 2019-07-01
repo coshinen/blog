@@ -174,20 +174,19 @@ UniValue gettxoutproof(const UniValue& params, bool fHelp)
 }
 {% endhighlight %}
 
-基本流程：<br>
-1.处理命令帮助和参数个数。<br>
-2.获取相关参数：交易索引集合，上锁。<br>
-3.若指定了区块，获取指定的区块哈希并验证同时获取区块索引。<br>
-4.若未指定区块，先获取指定的最后一个交易的币信息，在获取其所在区块的索引。<br>
-5.若区块索引为空，再次尝试获取。<br>
-6.通过区块索引从磁盘读区块数据到内存 block 对象。<br>
-7.遍历该区块体交易列表，验证所有指定的交易都存在于该区块。<br>
-8.构建一个 CMerkleBlock 对象，导入数据流对象并转换为 16 进制后返回。
+基本流程：
+1. 处理命令帮助和参数个数。
+2. 获取相关参数：交易索引集合，上锁。
+3. 若指定了区块，获取指定的区块哈希并验证同时获取区块索引。
+4. 若未指定区块，先获取指定的最后一个交易的币信息，在获取其所在区块的索引。
+5. 若区块索引为空，再次尝试获取。
+6. 通过区块索引从磁盘读区块数据到内存 block 对象。
+7. 遍历该区块体交易列表，验证所有指定的交易都存在于该区块。
+8. 构建一个 CMerkleBlock 对象，导入数据流对象并转换为 16 进制后返回。
 
 Thanks for your time.
 
 ## 参照
+
 * [Developer Documentation - Bitcoin](https://bitcoin.org/en/developer-documentation)
 * [Bitcoin Developer Reference - Bitcoin](https://bitcoin.org/en/developer-reference#gettxoutproof)
-* [精通比特币（第二版） \| 巴比特图书](http://book.8btc.com/masterbitcoin2cn)
-* [...](https://github.com/mistydew/blockchain)

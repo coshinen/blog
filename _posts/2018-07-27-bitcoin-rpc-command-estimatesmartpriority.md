@@ -103,17 +103,16 @@ UniValue estimatesmartpriority(const UniValue& params, bool fHelp)
 }
 {% endhighlight %}
 
-基本流程：<br>
-1.处理命令帮助和参数个数。<br>
-2.参数类型检查。<br>
-3.获取指定的块数。<br>
-4.智能估算优先级，同时获取估算有效的区块数。<br>
-5.把交易优先级和有效区块数加入结果对象并返回。
+基本流程：
+1. 处理命令帮助和参数个数。
+2. 参数类型检查。
+3. 获取指定的块数。
+4. 智能估算优先级，同时获取估算有效的区块数。
+5. 把交易优先级和有效区块数加入结果对象并返回。
 
 Thanks for your time.
 
 ## 参照
+
 * [Developer Documentation - Bitcoin](https://bitcoin.org/en/developer-documentation)
 * [Bitcoin Developer Reference - Bitcoin](https://bitcoin.org/en/developer-reference#estimatesmartpriority)
-* [精通比特币（第二版） \| 巴比特图书](http://book.8btc.com/masterbitcoin2cn)
-* [...](https://github.com/mistydew/blockchain)

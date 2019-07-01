@@ -343,17 +343,16 @@ UniValue signrawtransaction(const UniValue& params, bool fHelp)
 }
 {% endhighlight %}
 
-基本流程：<br>
-1.处理命令帮助和参数个数。<br>
-2.上锁，若钱包功能开启，钱包上锁。<br>
-3.检验参数类型并获取指定参数：待签名的交易哈希，依赖的前一笔交易输出集，用于签名的私钥，签名的哈希类型。<br>
-4.开始签名，遍历交易输入列表，对每笔交易输入进行签名，然后遍历前一笔输出交易列表，合并全部的交易输入签名，验证脚本签名。<br>
-5.追加相关信息到对象类型的结果集后返回。
+基本流程：
+1. 处理命令帮助和参数个数。
+2. 上锁，若钱包功能开启，钱包上锁。
+3. 检验参数类型并获取指定参数：待签名的交易哈希，依赖的前一笔交易输出集，用于签名的私钥，签名的哈希类型。
+4. 开始签名，遍历交易输入列表，对每笔交易输入进行签名，然后遍历前一笔输出交易列表，合并全部的交易输入签名，验证脚本签名。
+5. 追加相关信息到对象类型的结果集后返回。
 
 Thanks for your time.
 
 ## 参照
+
 * [Developer Documentation - Bitcoin](https://bitcoin.org/en/developer-documentation)
 * [Bitcoin Developer Reference - Bitcoin](https://bitcoin.org/en/developer-reference#signrawtransaction)
-* [精通比特币（第二版） \| 巴比特图书](http://book.8btc.com/masterbitcoin2cn)
-* [...](https://github.com/mistydew/blockchain)

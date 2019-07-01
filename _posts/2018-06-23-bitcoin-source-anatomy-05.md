@@ -7,7 +7,7 @@ comments: true
 categories: Blockchain Bitcoin
 tags: 区块链 比特币 源码剖析
 ---
-上一篇分析了日志记录的初始化，参数交互的初始化，应用程序初始化真正入口的前两步：安装和参数交互，详见[比特币源码剖析（四）](/blog/2018/06/bitcoin-source-anatomy-04.html)。<br>
+上一篇分析了日志记录的初始化，参数交互的初始化，应用程序初始化真正入口的前两步：安装和参数交互，详见[比特币源码剖析（四）](/blog/2018/06/bitcoin-source-anatomy-04.html)。
 本篇主要分析 Step 3: parameter-to-internal-flags 第三步参数转化为内部标志，Step 4: application initialization: dir lock, daemonize, pidfile, debug log 第四步应用程序初始化。
 
 ## 源码剖析
@@ -297,5 +297,5 @@ bool AppInit2(boost::thread_group& threadGroup, CScheduler& scheduler) // 3.11.0
 Thanks for your time.
 
 ## 参照
+
 * [bitcoin/bitcoin v0.12.1](https://github.com/bitcoin/bitcoin/tree/v0.12.1)
-* [...](https://github.com/mistydew/blockchain)

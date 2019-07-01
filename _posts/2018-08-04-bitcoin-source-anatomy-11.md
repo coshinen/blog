@@ -7,7 +7,7 @@ comments: true
 categories: Blockchain Bitcoin
 tags: 区块链 比特币 源码剖析
 ---
-上一篇分析了应用程序初始化中启动 RPC 的详细过程，详见[比特币源码剖析（十）](/blog/2018/07/bitcoin-source-anatomy-10.html)。<br>
+上一篇分析了应用程序初始化中启动 RPC 的详细过程，详见[比特币源码剖析（十）](/blog/2018/07/bitcoin-source-anatomy-10.html)。
 本篇主要分析 Step 5: verify wallet database integrity 第五步验证钱包数据库的完整性的详细过程。
 
 ## 源码剖析
@@ -355,5 +355,5 @@ CDBEnv::VerifyResult CDBEnv::Verify(const std::string& strFile, bool (*recoverFu
 Thanks for your time.
 
 ## 参照
+
 * [bitcoin/bitcoin v0.12.1](https://github.com/bitcoin/bitcoin/tree/v0.12.1)
-* [...](https://github.com/mistydew/blockchain)

@@ -249,17 +249,16 @@ UniValue getaddednodeinfo(const UniValue& params, bool fHelp)
 }
 {% endhighlight %}
 
-基本流程：<br>
-1.处理命令帮助和参数个数。<br>
-2.获取布尔型的 dns 标志。<br>
-3.创建添加节点 IP 的链表，根据是否有第二个参数，添加相应（全部或指定）节点到该链表。<br>
-4.若关闭了 dns，只添加节点 IP 到结果集并返回。<br>
-5.若开启了 dns，则追加相应的连接状态以及端口号到结果集并返回。
+基本流程：
+1. 处理命令帮助和参数个数。
+2. 获取布尔型的 dns 标志。
+3. 创建添加节点 IP 的链表，根据是否有第二个参数，添加相应（全部或指定）节点到该链表。
+4. 若关闭了 dns，只添加节点 IP 到结果集并返回。
+5. 若开启了 dns，则追加相应的连接状态以及端口号到结果集并返回。
 
 Thanks for your time.
 
 ## 参照
+
 * [Developer Documentation - Bitcoin](https://bitcoin.org/en/developer-documentation)
 * [Bitcoin Developer Reference - Bitcoin](https://bitcoin.org/en/developer-reference#getaddednodeinfo)
-* [精通比特币（第二版） \| 巴比特图书](http://book.8btc.com/masterbitcoin2cn)
-* [...](https://github.com/mistydew/blockchain)

@@ -186,20 +186,19 @@ UniValue gettxout(const UniValue& params, bool fHelp)
 }
 {% endhighlight %}
 
-基本流程：<br>
-1.处理命令帮助和参数个数。<br>
-2.上锁。<br>
-3.获取相关参数：交易索引，交易输出索引，是否包含交易内存池标志。<br>
-4.若包含交易内存池，则获取修剪版本交易，并标记该交易输出已花费。<br>
-5.若不包含，直接获取缓存的币数据。<br>
-6.交易输出索引检测。<br>
-7.获取相关信息并追加到结果对象。<br>
-8.返回结果。
+基本流程：
+1. 处理命令帮助和参数个数。
+2. 上锁。
+3. 获取相关参数：交易索引，交易输出索引，是否包含交易内存池标志。
+4. 若包含交易内存池，则获取修剪版本交易，并标记该交易输出已花费。
+5. 若不包含，直接获取缓存的币数据。
+6. 交易输出索引检测。
+7. 获取相关信息并追加到结果对象。
+8. 返回结果。
 
 Thanks for your time.
 
 ## 参照
+
 * [Developer Documentation - Bitcoin](https://bitcoin.org/en/developer-documentation)
 * [Bitcoin Developer Reference - Bitcoin](https://bitcoin.org/en/developer-reference#gettxout)
-* [精通比特币（第二版） \| 巴比特图书](http://book.8btc.com/masterbitcoin2cn)
-* [...](https://github.com/mistydew/blockchain)

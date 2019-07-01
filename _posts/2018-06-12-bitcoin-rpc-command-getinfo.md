@@ -162,15 +162,14 @@ UniValue getinfo(const UniValue& params, bool fHelp)
 }
 {% endhighlight %}
 
-基本流程：<br>
-1.处理命令帮助和参数个数。<br>
-2.上锁，避免并发。<br>
-3.相关信息的追加。
+基本流程：
+1. 处理命令帮助和参数个数。
+2. 上锁，避免并发。
+3. 相关信息的追加。
 
 Thanks for your time.
 
 ## 参照
+
 * [Developer Documentation - Bitcoin](https://bitcoin.org/en/developer-documentation)
 * [Bitcoin Developer Reference - Bitcoin](https://bitcoin.org/en/developer-reference#getinfo)
-* [精通比特币（第二版） \| 巴比特图书](http://book.8btc.com/masterbitcoin2cn)
-* [...](https://github.com/mistydew/blockchain)
