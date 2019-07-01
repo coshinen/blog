@@ -94,6 +94,9 @@ permalink: /blog/quotes.html
 > * たった一つの真実見抜く、見た目は子供、頭脳は大人。その名は…
 > * 真実はいつもひとつ！
 
+> Sherlock Holmes, BBC Sherlock:
+> * Come at once if convenient. If inconvenient come anyway.
+
 > Sherlock Holmes, A Game of Shadows:
 > * Let me pay you one in return, when I said if I were assured of the former eventuality, I will cheerfully accept the latter.
 > * Come at once if convenient, if inconvenient come all the same.
