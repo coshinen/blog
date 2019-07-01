@@ -14,12 +14,12 @@ excerpt: $ bitcoin-cli sendtoaddress "bitcoinaddress" amount ( "comment" "commen
 sendtoaddress "bitcoinaddress" amount ( "comment" "comment-to" subtractfeefromamount ) # 发送一笔金额到指定地址
 {% endhighlight %}
 
-参数：<br>
-1.bitcoinaddress（字符串，必备）要发送到的比特币地址。<br>
-2.amount（数字或字符串，必备）以 BTC 为单位的发送的金额。例 0.1。<br>
-3.comment（字符串，可选）用于存储交易的备注。这不是交易的一部分，只保存在你的钱包中。<br>
-4.comment-to（字符串，可选）存储你要发送交易的个人或组织名的备注。这不是交易的一部分，只保存在你的钱包中。<br>
-5.subtractfeefromamount（布尔型，可选，默认为 false）交易费将从发送金额中扣除。接收者将收到少于你在金额栏输入的比特币。
+参数：
+1. bitcoinaddress（字符串，必备）要发送到的比特币地址。
+2. amount（数字或字符串，必备）以 BTC 为单位的发送的金额。例 0.1。
+3. comment（字符串，可选）用于存储交易的备注。这不是交易的一部分，只保存在你的钱包中。
+4. comment-to（字符串，可选）存储你要发送交易的个人或组织名的备注。这不是交易的一部分，只保存在你的钱包中。
+5. subtractfeefromamount（布尔型，可选，默认为 false）交易费将从发送金额中扣除。接收者将收到少于你在金额栏输入的比特币。
 若该值为 true，则发送金额包含交易费，默认 false，交易费另算。
 
 结果：（字符串）返回交易索引。
@@ -788,7 +788,6 @@ class CNode // 对端节点信息类
 Thanks for your time.
 
 ## 参照
+
 * [Developer Documentation - Bitcoin](https://bitcoin.org/en/developer-documentation)
 * [Bitcoin Developer Reference - Bitcoin](https://bitcoin.org/en/developer-reference#sendtoaddress)
-* [精通比特币（第二版） \| 巴比特图书](http://book.8btc.com/masterbitcoin2cn)
-* [...](https://github.com/mistydew/blockchain)

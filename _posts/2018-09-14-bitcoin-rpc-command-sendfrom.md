@@ -129,16 +129,16 @@ UniValue sendfrom(const UniValue& params, bool fHelp)
 }
 {% endhighlight %}
 
-基本流程：<br>
-1.确保钱包当前可用（已初始化完成）。<br>
-2.处理命令帮助和参数个数。<br>
-3.钱包上锁。<br>
-4.获取相关参数：指定账户，目标地址，发送金额，最小确认数和交易备注。<br>
-5.创建钱包交易并初始化发送账户和交易备注。<br>
-6.确保当前钱包处于为解密状态。<br>
-7.检查余额是否充足。<br>
-8.发送金额到指定的地址。<br>
-9.获取交易哈希，转化为 16 进制并返回。
+基本流程：
+1. 确保钱包当前可用（已初始化完成）。
+2. 处理命令帮助和参数个数。
+3. 钱包上锁。
+4. 获取相关参数：指定账户，目标地址，发送金额，最小确认数和交易备注。
+5. 创建钱包交易并初始化发送账户和交易备注。
+6. 确保当前钱包处于为解密状态。
+7. 检查余额是否充足。
+8. 发送金额到指定的地址。
+9. 获取交易哈希，转化为 16 进制并返回。
 
 第八步，调用 SendMoney(address.Get(), nAmount, false, wtx) 发送交易，
 见 [比特币 RPC 命令剖析 sendtoaddress](/blog/2018/09/bitcoin-rpc-command-sendtoaddress.html)。
@@ -146,7 +146,6 @@ UniValue sendfrom(const UniValue& params, bool fHelp)
 Thanks for your time.
 
 ## 参照
+
 * [Developer Documentation - Bitcoin](https://bitcoin.org/en/developer-documentation)
 * [Bitcoin Developer Reference - Bitcoin](https://bitcoin.org/en/developer-reference#sendfrom)
-* [精通比特币（第二版） \| 巴比特图书](http://book.8btc.com/masterbitcoin2cn)
-* [...](https://github.com/mistydew/blockchain)

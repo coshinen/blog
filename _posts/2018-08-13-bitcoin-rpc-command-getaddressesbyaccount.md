@@ -95,18 +95,17 @@ UniValue getaddressesbyaccount(const UniValue& params, bool fHelp)
 }
 {% endhighlight %}
 
-基本流程：<br>
-1.确保钱包当前可用（已初始化完成）。<br>
-2.处理命令帮助和参数个数。<br>
-3.钱包上锁。<br>
-4.获取指定账户，账户名不能为 *。<br>
-5.遍历地址簿，把与指定账户相同的地址加入结果集。<br>
-6.返回结果集。
+基本流程：
+1. 确保钱包当前可用（已初始化完成）。
+2. 处理命令帮助和参数个数。
+3. 钱包上锁。
+4. 获取指定账户，账户名不能为 *。
+5. 遍历地址簿，把与指定账户相同的地址加入结果集。
+6. 返回结果集。
 
 Thanks for your time.
 
 ## 参照
+
 * [Developer Documentation - Bitcoin](https://bitcoin.org/en/developer-documentation)
 * [Bitcoin Developer Reference - Bitcoin](https://bitcoin.org/en/developer-reference#getaddressesbyaccount)
-* [精通比特币（第二版） \| 巴比特图书](http://book.8btc.com/masterbitcoin2cn)
-* [...](https://github.com/mistydew/blockchain)

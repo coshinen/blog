@@ -601,6 +601,7 @@ std::string EncodeBase58(const std::vector<unsigned char>& vch)
 Thanks for your time.
 
 ## 参照
+
 * [Developer Documentation - Bitcoin](https://bitcoin.org/en/developer-documentation)
 * [Bitcoin Developer Reference - Bitcoin](https://bitcoin.org/en/developer-reference#getnewaddress)
 * [Technical background of version 1 Bitcoin addresses - Bitcoin Wiki](https://en.bitcoin.it/wiki/Technical_background_of_version_1_Bitcoin_addresses)
@@ -610,4 +611,3 @@ Thanks for your time.
 * [Base58Check encoding - Bitcoin Wiki](https://en.bitcoin.it/wiki/Base58Check_encoding)
 * [bitcoin/bitcoin/src/base58.cpp](https://github.com/bitcoin/bitcoin/blob/master/src/base58.cpp)
 * [精通比特币（第二版） \| 巴比特图书](http://book.8btc.com/masterbitcoin2cn)
-* [...](https://github.com/mistydew/blockchain)

@@ -6,6 +6,7 @@ author: mistydew
 comments: true
 categories: Blockchain 译文
 tags: 区块链
+excerpt: 区块链是一个数字化的分布式记录链。
 ---
 ## 什么是区块链？
 
@@ -137,5 +138,5 @@ tags: 区块链
 Thanks for your time.
 
 ## 参照
+
 * [Blockchain - Get to know it](https://blockchainhandbook.io)
-* [...](https://github.com/mistydew/blockchain)

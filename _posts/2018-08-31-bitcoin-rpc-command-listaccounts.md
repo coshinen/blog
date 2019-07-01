@@ -157,20 +157,19 @@ UniValue listaccounts(const UniValue& params, bool fHelp)
 }
 {% endhighlight %}
 
-基本流程：<br>
-1.确保钱包当前可用（已初始化完成）。<br>
-2.处理命令帮助和参数个数。<br>
-3.钱包上锁。<br>
-4.获取指定的参数：确认数、watchonly。<br>
-5.创建账户余额映射列表，遍历地址簿把输入自己的地址加入该列表，并初始化余额为 0。<br>
-6.遍历钱包交易索引列表，计算相应账户的余额。<br>
-7.获取账户条目列表，遍历该列表，对应账户加上信用借记。<br>
-8.遍历得到的账户余额列表，把账户名和余额配对加入结果集并返回。
+基本流程：
+1. 确保钱包当前可用（已初始化完成）。
+2. 处理命令帮助和参数个数。
+3. 钱包上锁。
+4. 获取指定的参数：确认数、watchonly。
+5. 创建账户余额映射列表，遍历地址簿把输入自己的地址加入该列表，并初始化余额为 0。
+6. 遍历钱包交易索引列表，计算相应账户的余额。
+7. 获取账户条目列表，遍历该列表，对应账户加上信用借记。
+8. 遍历得到的账户余额列表，把账户名和余额配对加入结果集并返回。
 
 Thanks for your time.
 
 ## 参照
+
 * [Developer Documentation - Bitcoin](https://bitcoin.org/en/developer-documentation)
 * [Bitcoin Developer Reference - Bitcoin](https://bitcoin.org/en/developer-reference#listaccounts)
-* [精通比特币（第二版） \| 巴比特图书](http://book.8btc.com/masterbitcoin2cn)
-* [...](https://github.com/mistydew/blockchain)

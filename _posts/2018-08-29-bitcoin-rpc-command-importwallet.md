@@ -162,22 +162,21 @@ UniValue importwallet(const UniValue& params, bool fHelp)
 }
 {% endhighlight %}
 
-基本流程：<br>
-1.确保钱包当前可用（已初始化完成）。<br>
-2.处理命令帮助和参数个数。<br>
-3.修剪模式下禁止导入钱包。<br>
-4.钱包上锁。<br>
-5.确保钱包当前未加密。<br>
-6.创建文件输入流对象打开指定钱包导出文件。<br>
-7.获取文件大小，用于加载密钥时显示进度。<br>
-8.加载钱包数据：私钥、创建时间、标签。<br>
-9.关闭文件输入流对象。<br>
-10.标记钱包已改变。
+基本流程：
+1. 确保钱包当前可用（已初始化完成）。
+2. 处理命令帮助和参数个数。
+3. 修剪模式下禁止导入钱包。
+4. 钱包上锁。
+5. 确保钱包当前未加密。
+6. 创建文件输入流对象打开指定钱包导出文件。
+7. 获取文件大小，用于加载密钥时显示进度。
+8. 加载钱包数据：私钥、创建时间、标签。
+9. 关闭文件输入流对象。
+10. 标记钱包已改变。
 
 Thanks for your time.
 
 ## 参照
+
 * [Developer Documentation - Bitcoin](https://bitcoin.org/en/developer-documentation)
 * [Bitcoin Developer Reference - Bitcoin](https://bitcoin.org/en/developer-reference#importwallet)
-* [精通比特币（第二版） \| 巴比特图书](http://book.8btc.com/masterbitcoin2cn)
-* [...](https://github.com/mistydew/blockchain)

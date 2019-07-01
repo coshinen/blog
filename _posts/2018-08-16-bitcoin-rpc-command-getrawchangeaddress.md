@@ -81,21 +81,20 @@ UniValue getrawchangeaddress(const UniValue& params, bool fHelp)
 }
 {% endhighlight %}
 
-基本流程：<br>
-1.确保钱包当前可用（已初始化完成）。<br>
-2.处理命令帮助和参数个数。<br>
-3.钱包上锁。<br>
-4.若当前钱包处于解密状态，填充满密钥池。<br>
-5.从密钥池中取出一个密钥，并获取对应的公钥。<br>
-6.从密钥池中移除获取的密钥。<br>
-7.获取公钥索引，经 Base58 编码转化为公钥地址并返回。
+基本流程：
+1. 确保钱包当前可用（已初始化完成）。
+2. 处理命令帮助和参数个数。
+3. 钱包上锁。
+4. 若当前钱包处于解密状态，填充满密钥池。
+5. 从密钥池中取出一个密钥，并获取对应的公钥。
+6. 从密钥池中移除获取的密钥。
+7. 获取公钥索引，经 Base58 编码转化为公钥地址并返回。
 
 源码中貌似未体现出获取的地址不能用于普通交易。
 
 Thanks for your time.
 
 ## 参照
+
 * [Developer Documentation - Bitcoin](https://bitcoin.org/en/developer-documentation)
 * [Bitcoin Developer Reference - Bitcoin](https://bitcoin.org/en/developer-reference#getrawchangeaddress)
-* [精通比特币（第二版） \| 巴比特图书](http://book.8btc.com/masterbitcoin2cn)
-* [...](https://github.com/mistydew/blockchain)

@@ -143,19 +143,18 @@ UniValue getbalance(const UniValue& params, bool fHelp)
 }
 {% endhighlight %}
 
-基本流程：<br>
-1.确保钱包当前可用（已初始化完成）。<br>
-2.处理命令帮助和参数个数。<br>
-3.钱包上锁。<br>
-4.若无参数，直接获取钱包总余额并返回。<br>
-5.若指定了参数，处理相应的参数。<br>
-6.若指定的账户为 "*"，以不同于 4 的方式获取钱包总余额并返回。<br>
-7.若指定的账户非 "*"，获取指定账户下的余额并返回。
+基本流程：
+1. 确保钱包当前可用（已初始化完成）。
+2. 处理命令帮助和参数个数。
+3. 钱包上锁。
+4. 若无参数，直接获取钱包总余额并返回。
+5. 若指定了参数，处理相应的参数。
+6. 若指定的账户为 "*"，以不同于 4 的方式获取钱包总余额并返回。
+7. 若指定的账户非 "*"，获取指定账户下的余额并返回。
 
 Thanks for your time.
 
 ## 参照
+
 * [Developer Documentation - Bitcoin](https://bitcoin.org/en/developer-documentation)
 * [Bitcoin Developer Reference - Bitcoin](https://bitcoin.org/en/developer-reference#getbalance)
-* [精通比特币（第二版） \| 巴比特图书](http://book.8btc.com/masterbitcoin2cn)
-* [...](https://github.com/mistydew/blockchain)

@@ -97,7 +97,7 @@ $ make # 若构建过非 Windows 版的程序，则先执行 make clean 进行�
 Thanks for your time.
 
 ## 参照
+
 * [bitcoin/build-windows.md at master · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/master/doc/build-windows.md)
 * [bitcoin/build-windows.md at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/doc/build-windows.md)
 * [Error during build 0.12 · Issue #9629 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/issues/9629)
-* [...](https://github.com/mistydew/blockchain)

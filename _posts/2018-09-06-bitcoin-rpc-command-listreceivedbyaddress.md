@@ -14,12 +14,12 @@ excerpt: $ bitcoin-cli listreceivedbyaddress ( minconf includeempty includeWatch
 listreceivedbyaddress ( minconf includeempty includeWatchonly ) # 列出接收地址余额
 {% endhighlight %}
 
-参数：<br>
-1.minconf（数字，可选，默认为 1）在被包含到付款前的最低确认数。<br>
-2.includeempty（布尔型，可选，默认为 false）是否包括还未收到任何付款的地址。<br>
-3.includeWatchonly（布尔型，可选，默认为 false）是否包含 watchonly 地址（见 [importaddress](/blog/2018/06/bitcoin-rpc-command-importaddress.html)）。
+参数：
+1. minconf（数字，可选，默认为 1）在被包含到付款前的最低确认数。
+2. includeempty（布尔型，可选，默认为 false）是否包括还未收到任何付款的地址。
+3. includeWatchonly（布尔型，可选，默认为 false）是否包含 watchonly 地址（见 [importaddress](/blog/2018/06/bitcoin-rpc-command-importaddress.html)）。
 
-结果：<br>
+结果：
 {% highlight shell %}
 [
   {
@@ -143,18 +143,17 @@ UniValue listreceivedbyaddress(const UniValue& params, bool fHelp)
 }
 {% endhighlight %}
 
-基本流程：<br>
-1.确保钱包当前可用（已初始化完成）。<br>
-2.处理命令帮助和参数个数。<br>
-3.钱包上锁。<br>
-4.列出各账户余额并返回。
+基本流程：
+1. 确保钱包当前可用（已初始化完成）。
+2. 处理命令帮助和参数个数。
+3. 钱包上锁。
+4. 列出各账户余额并返回。
 
 第四步，调用 ListReceived(params, false) 函数获取接收地址余额信息列表并返回，见 [listreceivedbyaccount](/blog/2018/06/bitcoin-rpc-command-listreceivedbyaccount.html)。
 
 Thanks for your time.
 
 ## 参照
+
 * [Developer Documentation - Bitcoin](https://bitcoin.org/en/developer-documentation)
 * [Bitcoin Developer Reference - Bitcoin](https://bitcoin.org/en/developer-reference#listreceivedbyaddress)
-* [精通比特币（第二版） \| 巴比特图书](http://book.8btc.com/masterbitcoin2cn)
-* [...](https://github.com/mistydew/blockchain)

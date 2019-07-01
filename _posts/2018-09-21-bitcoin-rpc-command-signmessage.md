@@ -112,20 +112,19 @@ UniValue signmessage(const UniValue& params, bool fHelp)
 }
 {% endhighlight %}
 
-基本流程：<br>
-1.确保当前钱包可用。<br>
-2.处理命令帮助和参数个数。<br>
-3.钱包上锁，并确保当前钱包处于解密状态。<br>
-4.获取指定的参数：比特币地址，用于签名的消息，并验证地址是否有效。<br>
-5.获取地址对应的密钥索引，再通过索引获取对应私钥。<br>
-6.创建哈希写入器对象，导入消息魔术头和指定消息。<br>
-7.使用私钥对该消息进行签名，并获取签名数据。<br>
-8.base64 编码签名数据并返回。
+基本流程：
+1. 确保当前钱包可用。
+2. 处理命令帮助和参数个数。
+3. 钱包上锁，并确保当前钱包处于解密状态。
+4. 获取指定的参数：比特币地址，用于签名的消息，并验证地址是否有效。
+5. 获取地址对应的密钥索引，再通过索引获取对应私钥。
+6. 创建哈希写入器对象，导入消息魔术头和指定消息。
+7. 使用私钥对该消息进行签名，并获取签名数据。
+8. base64 编码签名数据并返回。
 
 Thanks for your time.
 
 ## 参照
+
 * [Developer Documentation - Bitcoin](https://bitcoin.org/en/developer-documentation)
 * [Bitcoin Developer Reference - Bitcoin](https://bitcoin.org/en/developer-reference#signmessage)
-* [精通比特币（第二版） \| 巴比特图书](http://book.8btc.com/masterbitcoin2cn)
-* [...](https://github.com/mistydew/blockchain)
