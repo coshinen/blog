@@ -10,8 +10,8 @@ tags: Linux CLI Terminal
 **UNIX/Linux 下执行命令没有（错误）提示即表示执行成功。**
 
 Linux mascot: crystal tux and tux(Torvalds linUX?)<br>
-![crystal tux](/images/crystal_penguin.jpg)
-![tux](/images/tux.jpg)<br>
+![crystal tux](/images/linux/crystal_penguin.jpg)
+![tux](/images/linux/tux.jpg)<br>
 Childhood and Adult(funny)
 
 ## 查看目录下的内容 | list

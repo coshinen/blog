@@ -94,7 +94,7 @@ ownership.
 > 每个所有者把币通过数字签名前一笔交易的哈希和下一个所有者的公钥并把它们添加到币的尾部，转账到下一个所有者。
 > 收款人能够验证签名来验证链的所有权。
 
-![tx](/images/bitcoin/transaction.jpg){:.border}
+![tx](/images/bitcoin/whitepaper/transaction.jpg){:.border}
 
 The problem of course is the payee can't verify that one of the owners did not double-spend 
 the coin.  A common solution is to introduce a trusted central authority, or mint, that checks every 
@@ -137,7 +137,7 @@ its hash, forming a chain, with each additional timestamp reinforcing the ones b
 > 时间戳证明数据必须在当时存在，显然是为了散列。
 > 每个时间戳在其散列中都包含前一个时间戳，形成一个链，每个附加上的时间戳都会加强它之前的时间戳。
 
-![timestamp](/images/bitcoin/timestamp.jpg){:.border}
+![timestamp](/images/bitcoin/whitepaper/timestamp.jpg){:.border}
 
 ## 4. Proof-of-Work | 工作量证明
 
@@ -161,7 +161,7 @@ would include redoing all the blocks after it.
 > 一旦 CPU 花费功夫在使其满足工作量证明上，该块在没有重做工作量的情况下不能改变。
 > 随后区块被连接在后面，改变区块的工作量将包含重做在该块之后全部区块的工作量。
 
-![proofofwork](/images/bitcoin/proofofwork.jpg){:.border}
+![proofofwork](/images/bitcoin/whitepaper/proofofwork.jpg){:.border}
 
 The proof-of-work also solves the problem of determining representation in majority decision 
 making.  If the majority were based on one-IP-address-one-vote, it could be subverted by anyone 
@@ -276,7 +276,7 @@ not need to be stored.
 > 然后通过除去树枝来压缩旧的区块。
 > 树内部（树枝）哈希不需要存储（在区块中）。
 
-![merkletree](/images/bitcoin/merkletree.jpg){:.border}
+![merkletree](/images/bitcoin/whitepaper/merkletree.jpg){:.border}
 
 A block header with no transactions would be about 80 bytes.  If we suppose blocks are 
 generated every 10 minutes, 80 bytes * 6 * 24 * 365 = 4.2MB per year.  With computer systems 
@@ -300,7 +300,7 @@ and blocks added after it further confirm the network has accepted it.
 > 不需要运行完整的网络节点也可以验证支付。用户只需要保留最长工作量证明链的区块头的副本，他能通过查询网络节点获取，直到他确信他拥有最长的链，并获得默尔克分支，从而把交易连接到加时间戳的区块上。
 > 他不能自行检查交易，但通过连接交易到链上的某个地方，他能够看到网络节点已接受该交易，并在进一步确认网络接受了该交易后添加到区块上。
 
-![spv](/images/bitcoin/spv.jpg){:.border}
+![spv](/images/bitcoin/whitepaper/spv.jpg){:.border}
 
 As such, the verification is reliable as long as honest nodes control the network, but is more 
 vulnerable if the network is overpowered by an attacker.  While network nodes can verify 
@@ -328,7 +328,7 @@ outputs: one for the payment, and one returning the change, if any, back to the 
 > 为了允许价值被拆分和组合，交易包含多个输入和输出。
 > 通常来自较大金额的前一笔交易的单一输入或联合多个较小金额的输入，并且最多连个输出：一个用于付款，另一个（如果有）返回找零给发送者。
 
-![inoutput](/images/bitcoin/inoutput.jpg){:.border}
+![inoutput](/images/bitcoin/whitepaper/inoutput.jpg){:.border}
 
 It should be noted that fan-out, where a transaction depends on several transactions, and those 
 transactions depend on many more, is not a problem here.  There is never the need to extract a 
@@ -352,7 +352,7 @@ individual trades, the "tape", is made public, but without telling who the parti
 > 公众能够看到某人向某人发送一笔金额，但没有交易与任何人相关联的信息。
 > 这和证券交易所发布的信息类似，其中个别交易的时间和大小（the "tape"）是公开的，但没有告知双方是谁。
 
-![privacy](/images/bitcoin/privacy.jpg){:.border}
+![privacy](/images/bitcoin/whitepaper/privacy.jpg){:.border}
 
 As an additional firewall, a new key pair should be used for each transaction to keep them 
 from being linked to a common owner.  Some linking is still unavoidable with multi-input 
@@ -403,7 +403,7 @@ q = probability the attacker will ever catch up from z blocks behind
 > q = 攻击者找到下一个块的概率<br>
 > qz = 攻击者将从后面 z 个块追赶上的概率
 
-![math01](/images/bitcoin/math01.jpg){:.border}
+![math01](/images/bitcoin/whitepaper/math01.jpg){:.border}
 
 Given our assumption that p > q, the probability drops exponentially as the number of blocks the 
 attacker has to catch up with increases.  With the odds against him, if he doesn't make a lucky 
@@ -440,20 +440,20 @@ progress will be a Poisson distribution with expected value:
 > 收款人等到交易添加到区块上且 z 个块被链接在该块后面。
 > 他不知道攻击者进展的具体数量，但假设诚实的区块花费了每个区块被挖出的平均时间，攻击者的潜在进度将是具有预期值的泊松分布（Poisson distribution）：
 
-![math02](/images/bitcoin/math02.jpg){:.border}
+![math02](/images/bitcoin/whitepaper/math02.jpg){:.border}
 
 To get the probability the attacker could still catch up now, we multiply the Poisson density for 
 each amount of progress he could have made by the probability he could catch up from that point:
 
 > 为了获得攻击者现在可能仍在追赶的概率，我们将泊松密度乘以他从那个点赶上额概率所取得的进步量：
 
-![math03](/images/bitcoin/math03.jpg){:.border}
+![math03](/images/bitcoin/whitepaper/math03.jpg){:.border}
 
 Rearranging to avoid summing the infinite tail of the distribution...
 
 > 重新排列以避免对分布的无穷尾数求和...
 
-![math04](/images/bitcoin/math04.jpg){:.border}
+![math04](/images/bitcoin/whitepaper/math04.jpg){:.border}
 
 Converting to C code...
 

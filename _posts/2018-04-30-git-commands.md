@@ -12,7 +12,7 @@ Git 是一个免费且开源的分布式版本控制系统，旨在处理从小�
 Git 易于学习且拥有占用空间小和闪电般快速的性能。
 它远优于像 Subversion、CVS、Perforce 和 ClearCase 这些的 SCM 工具，有像廉价的本地分支、便捷的暂存区，和多种工作流程的特性。
 
-![git](/images/git.jpg)
+![git](/images/git/git.jpg)
 
 据传 [GitHub](https://github.com) 是全球最大的同性交友网站，Hub 有中心、枢纽之意。
 

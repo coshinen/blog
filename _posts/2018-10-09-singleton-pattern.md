@@ -27,7 +27,7 @@ excerpt: 单例模式是一种软件设计模式，它限制类的实例化为�
 
 基础类图：
 
-![Singleton_UML_class_diagram](/images/Singleton_UML_class_diagram.svg)
+![Singleton_UML_class_diagram](/images/designpatterns/Singleton_UML_class_diagram.svg)
 
 ## 基础实现
 
