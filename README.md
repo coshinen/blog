@@ -77,6 +77,8 @@
 * Hosted: [GitHub](https://github.com)
 * Powered: [GitHub Pages](https://pages.github.com), [Jekyll](http://www.jekyllrb.com)
 * Analytics: [Google Analytics](https://analytics.google.com/analytics/web), [Busuanzi](https://busuanzi.ibruce.info)
+* Site Search Engine: [Google](https://www.google.com), [DogeDoge](https://dogedoge.com)
 * Comments System: [Remarkbox](https://www.remarkbox.com)
 * Shared Service: [AddToAny](https://www.addtoany.com)
 * Crypto Widget: [Coinlib](https://coinlib.io)
+
