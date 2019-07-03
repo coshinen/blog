@@ -8,11 +8,12 @@
 
 ## Timeline
 
-* 2019.06.21 [-] ~~bShare on the post~~; [+] AddToAny share system
+* 2019.07.04 [-] ~~Baidu Customised Site Search~~; [+] Doge Search
 
 <details>
 <summary>more</summary>
 
+* 2019.06.21 [-] ~~bShare on the post~~; [+] AddToAny share system
 * 2019.06.20 [+] ~~bShare on the post~~
 * 2019.06.10 [+] Crypto Currencies Price Ticker on the site home page
 * 2019.05.24 [+] Site Dependencies
@@ -36,7 +37,7 @@
 * 2018.08.28 [+] rename page slogan to quotes
 * 2018.08.27 [+] post excerpt/abstract/summary
 * 2018.08.23 [-] ~~Baidu Analytics~~
-* 2018.08.22 [+] ~~DaoVoice web chat tool~~, Baidu site search to replace Customised Search
+* 2018.08.22 [+] ~~DaoVoice web chat tool~~
 * 2018.08.20 [+] post copyright(author, date, creative commons license, more)
 * 2018.08.15 [-] ~~particle background~~
 * 2018.08.13 [+] ~~cPlayer: web music player~~
