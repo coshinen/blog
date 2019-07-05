@@ -203,10 +203,11 @@ $ Ctrl + Z # 把当前前台运行的程序放到后台并挂起。
 $ bg n # 把 jobs 列出的后台序号为 n 的任务继续运行。
 {% endhighlight %}
 
-## 查看打开文件的进程 | list open file
+## 列出打开文件的进程 | list open file
 
 {% highlight shell %}
-$ lsof -i[:<port>] # 查看占用端口 <port> 的进程，注意 sudo。
+$ lsof -i [:<port>] # 列出占用端口 <port> 的进程，-i 用于指定条件。
+$ lsof -i tcp/udp[:<port>] # 列出占用 tcp/udp 端口 <port> 的进程。
 {% endhighlight %}
 
 ## 发信号到进程 | kill
