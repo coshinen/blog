@@ -67,7 +67,48 @@ Why なくしてから気づく<br>
 
 <div class="lyric-translation">
 <blockquote>
+微弱的陽光在桌面上搖晃<br>
+在打開的世界地圖上<br>
+還殘留著你習慣的文字<br>
+ah- 是現實嗎、、<br>
 <br>
+溫柔是為了什麼？<br>
+時間越是流逝 越是在心中迴響？<br>
+像束縛一樣<br>
+在印象中 成長<br>
+<br>
+Cried a little.<br>
+Long time, I was crying.<br>
+Freeze 在回首的時光中<br>
+Why 失去後才意識到<br>
+不知何時知道必須守護的時候啊<br>
+<br>
+沒有人在身邊的週末的夜晚<br>
+從今天開始只屬於我<br>
+難以對付不自由的自由<br>
+ah- 心情舒暢<br>
+<br>
+像要甩開一樣<br>
+眼花繚亂的 奔走的記憶<br>
+注意到的話還是<br>
+在同一個地方咕嚕咕嚕地打轉<br>
+<br>
+Cried a little.<br>
+Long time, I was crying.<br>
+你無心的舉止剛剛<br>
+cloud 在銘刻的一瞬間<br>
+現在好像也被捕獲了<br>
+<br>
+投身於晴朗的天空<br>
+等待著今天流逝<br>
+ha- 在虛幻的夢中<br>
+一定會活下去的吧<br>
+<br>
+Cried a little.<br>
+Long time, I was crying.<br>
+Freeze 在回首的時光中<br>
+Why 失去後才意識到<br>
+不知何時知道必須守護的時候啊
 </blockquote>
 </div>
 
