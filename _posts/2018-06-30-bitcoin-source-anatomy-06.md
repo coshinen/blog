@@ -383,3 +383,4 @@ Thanks for your time.
 ## 参照
 
 * [bitcoin/bitcoin v0.12.1](https://github.com/bitcoin/bitcoin/tree/v0.12.1)
+* [mistydew/blockchain](https://github.com/mistydew/blockchain)
