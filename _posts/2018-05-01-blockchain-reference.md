@@ -1,10 +1,10 @@
 ---
 layout: post
-title:  "区块链相关推荐阅读"
+title:  "区块链相关推荐"
 date:   2018-05-01 20:23:17 +0800
 author: mistydew
 comments: true
-categories: Blockchain
+categories: Blockchain Bitcoin
 tags: 区块链 比特币
 stickie: true
 ---
