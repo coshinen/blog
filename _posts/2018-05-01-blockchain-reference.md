@@ -22,14 +22,17 @@ tags: 区块链 比特币
 
 ### Guide | 实现机制
 
-* [精通比特币（第二版） \| 巴比特图书](http://book.8btc.com/masterbitcoin2cn)
-* [区块链技术指南](https://yeasy.gitbooks.io/blockchain_guide/content)
-* [比特币开发者指南-巴比特图书](http://book.8btc.com/books/6/bitcoin-developer-guide/_book)
 * [How Does Bitcoin Work?](https://learnmeabitcoin.com)
+* [区块链技术指南](https://yeasy.gitbooks.io/blockchain_guide/content)
+* [简介 · 比特币开发者指南-巴比特图书](https://book.8btc.com/books/6/bitcoin-developer-guide/_book)
+* [简介 · 区块链开发者指南-巴比特图书](https://book.8btc.com/books/6/blockchain-developer-guide/_book)
+* [bitcoinbook/bitcoinbook: Mastering Bitcoin 2nd Edition - Programming the Open Blockchain](https://github.com/bitcoinbook/bitcoinbook)
+* [tianmingyun/MasterBitcoin2CN: 《精通比特币》第二版 区块链研习社 云天明联合出品](https://github.com/tianmingyun/MasterBitcoin2CN)
 
 ### Official Website | 官方网站
 
 * [Bitcoin - Open source P2P money](https://bitcoin.org/en)
+* [Bitcoin Core :: Bitcoin](https://bitcoincore.org)
 
 ### Developer Documentation | 官方文档
 
