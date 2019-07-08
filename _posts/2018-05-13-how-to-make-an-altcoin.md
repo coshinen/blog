@@ -6,7 +6,6 @@ author: mistydew
 comments: true
 categories: Blockchain Bitcoin Altcoin
 tags: 区块链 比特币 山寨币
-stickie: true
 ---
 **基于比特币制作一枚山寨币是了解数字货币比特币及其底层区块链技术的最好方式。**
 在了解比特币及区块链的相关概念后，要开始接触源码了，侯捷曾说过“源码之前，了无秘密”。

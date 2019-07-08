@@ -6,7 +6,6 @@ author: mistydew
 comments: true
 categories: Blockchain Bitcoin
 tags: CLI bitcoin-cli 区块链 比特币
-stickie: true
 ---
 本文列出了 bitcoin v0.12.1 的客户端 bitcoin-cli 所有（包含隐藏分类）的 RPC 命令。
 
@@ -210,8 +209,7 @@ Thanks for your time.
 
 ## 参照
 
-* [bitcoin/bitcoin at v0.12.1](https://github.com/bitcoin/bitcoin/tree/v0.12.1)
-* [Bitcoin Core - Wikipedia](https://en.wikipedia.org/wiki/Bitcoin_Core)
 * [JSON-RPC - Wikipedia](https://en.wikipedia.org/wiki/JSON-RPC)
+* [bitcoin/bitcoin at v0.12.1](https://github.com/bitcoin/bitcoin/tree/v0.12.1)
 * [Developer Documentation - Bitcoin](https://bitcoin.org/en/developer-documentation)
 * [mistydew/blockchain](https://github.com/mistydew/blockchain)
