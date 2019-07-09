@@ -554,24 +554,24 @@ them.  Any needed rules and incentives can be enforced with this consensus mecha
 
 ## References | 参考
 
-[1] W. Dai, "b-money," http://www.weidai.com/bmoney.txt, 1998.<br>
-[2] H. Massias, X.S. Avila, and J.-J. Quisquater, "Design of a secure timestamping service with minimal 
-trust requirements," In 20th Symposium on Information Theory in the Benelux, May 1999.<br>
-[3] S. Haber, W.S. Stornetta, "How to time-stamp a digital document," In Journal of Cryptology, vol 3, no 
+[1] W. Dai, "b-money," [http://www.weidai.com/bmoney.txt](http://www.weidai.com/bmoney.txt), 1998.<br>
+[2] H. Massias, X.S. Avila, and J.-J. Quisquater, "[Design of a secure timestamping service with minimal 
+trust requirements](http:// citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.13.6228)," In 20th Symposium on Information Theory in the Benelux, May 1999.<br>
+[3] S. Haber, W.S. Stornetta, "[How to time-stamp a digital document](https://doi.org/cwwxd4)," In Journal of Cryptology, vol 3, no 
 2, pages 99-111, 1991.<br>
-[4] D. Bayer, S. Haber, W.S. Stornetta, "Improving the efficiency and reliability of digital time-stamping," 
+[4] D. Bayer, S. Haber, W.S. Stornetta, "[Improving the efficiency and reliability of digital time-stamping](https://doi.org/bn4rpx)," 
 In Sequences II: Methods in Communication, Security and Computer Science, pages 329-334, 1993.<br>
-[5] S. Haber, W.S. Stornetta, "Secure names for bit-strings," In Proceedings of the 4th ACM Conference 
+[5] S. Haber, W.S. Stornetta, "[Secure names for bit-strings](https://doi.org/dtnrf6)," In Proceedings of the 4th ACM Conference 
 on Computer and Communications Security, pages 28-35, April 1997.<br>
-[6] A. Back, "Hashcash - a denial of service counter-measure," 
-http://www.hashcash.org/papers/hashcash.pdf, 2002.<br>
-[7] R.C. Merkle, "Protocols for public key cryptosystems," In Proc. 1980 Symposium on Security and 
+[6] A. Back, "[Hashcash - a denial of service counter-measure](http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.15.8)," 
+[http://www.hashcash.org/papers/hashcash.pdf](http://www.hashcash.org/papers/hashcash.pdf), 2002.<br>
+[7] R.C. Merkle, "[Protocols for public key cryptosystems](https://doi.org/bmvbd6)," In Proc. 1980 Symposium on Security and 
 Privacy, IEEE Computer Society, pages 122-133, April 1980.<br>
-[8] W. Feller, "An introduction to probability theory and its applications," 1957.
+[8] W. Feller, "[An introduction to probability theory and its applications](https://archive.org/details/ AnIntroductionToProbabilityTheoryAndItsApplicationsVolume1)," 1957.
 
 Thanks for your time.
 
 ## 参照
 
-* [Bitcoin: A Peer-to-Peer Electronic Cash System](https://bitcoin.org/bitcoin.pdf)
-* [Bitcoin whitepaper repository on GitHub](https://github.com/wbnns/bitcoinwhitepaper)
+* [Bitcoin: A Peer-to-Peer Electronic Cash System](https://bitcoin.org/bitcoin.pdf) - 官方原版
+* [Bitcoin: A Peer-to-Peer Electronic Cash System](https://git.dhimmel.com/bitcoin-whitepaper) - 非官方重新排版
