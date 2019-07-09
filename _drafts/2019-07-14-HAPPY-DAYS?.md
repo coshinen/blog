@@ -132,4 +132,4 @@ Thanks for your time.
 
 * [GARNET CROW official website : ガーネットクロウ オフィシャルサイト](http://www.garnetcrow.com)
 * [GARNET CROW HAPPY DAYS? 歌詞 - 歌ネット](https://www.uta-net.com/song/20139)
-* [HAPPY DAYS? Lyrics \| GARNET CROW music diary](https://mistydew.github.io/gc/lyrics/original/HAPPY%20DAYS?.html)
+* [HAPPY DAYS? Lyrics \| GARNET CROW music diary](https://mistydew.github.io/gc/lyrics/original/HAPPY%20DAYS%3F.html)
