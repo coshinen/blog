@@ -1,9 +1,10 @@
+# Jekyll generated site
 _site/
 .sass-cache/
 .jekyll-cache/
 .jekyll-metadata
 
-# Sub site
+# Subsite
 gc/
 
 # Mac specific
