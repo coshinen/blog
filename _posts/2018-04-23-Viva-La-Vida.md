@@ -8,7 +8,7 @@ categories: Coldplay 翻訳
 tags: 歌詞
 excerpt: I used to rule the world. Seas would rise when I gave the word. Now in the morning I sleep alone. Sweep the streets I used to own.
 ---
-![Viva La Vida](/images/cover/misc/Viva La Vida.jpg){:.border}
+![Viva La Vida](/images/cover/misc/Viva%20La%20Vida.jpg){:.border}
 
 ## Viva La Vida | 活在當下（為生命歡呼）
 

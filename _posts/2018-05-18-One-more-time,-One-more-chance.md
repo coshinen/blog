@@ -8,7 +8,7 @@ categories: 翻訳
 tags: 秒速5センチメートル 歌詞
 excerpt: これ以上何を失えば 心は許されるの どれ程の痛みならば もういちど君に会える One more time 季節よ うつろわないで One more time ふざけあった 時間よ
 ---
-![One more time, One more chance](/images/cover/misc/One more time, One more chance.jpg){:.border}
+![One more time, One more chance](/images/cover/misc/One%20more%20time,%20One%20more%20chance.jpg){:.border}
 
 ## One more time, One more chance | 多一次，多一個機會
 
