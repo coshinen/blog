@@ -393,17 +393,17 @@ reaches breakeven, or that an attacker ever catches up with the honest chain, as
 
 > 攻击者从给定的赤字中追赶的可能性类似于赌徒破产问题（Gambler's Ruin problem）。
 > 假设一个拥有无限信用的赌徒从赤字开始，并可能进行无限次尝试以达到收支平衡。
-> 我们可以计算出他达到收支平衡的可能性，或攻击者追赶上诚实的链，如下所示：
+> 我们可以计算出他达到收支平衡的可能性，或攻击者追赶上诚实的链，如下：
 
 p = probability an honest node finds the next block<br>
 q = probability the attacker finds the next block<br>
-q = probability the attacker will ever catch up from z blocks behind
+qz = probability the attacker will ever catch up from z blocks behind
 
 > p = 诚实节点找到下一个块的概率<br>
 > q = 攻击者找到下一个块的概率<br>
 > qz = 攻击者将从后面 z 个块追赶上的概率
 
-![math01](/images/bitcoin/whitepaper/math01.jpg){:.border}
+![math](/images/bitcoin/whitepaper/math.png){:.border}
 
 Given our assumption that p > q, the probability drops exponentially as the number of blocks the 
 attacker has to catch up with increases.  With the odds against him, if he doesn't make a lucky 
@@ -440,20 +440,20 @@ progress will be a Poisson distribution with expected value:
 > 收款人等到交易添加到区块上且 z 个块被链接在该块后面。
 > 他不知道攻击者进展的具体数量，但假设诚实的区块花费了每个区块被挖出的平均时间，攻击者的潜在进度将是具有预期值的泊松分布（Poisson distribution）：
 
-![math02](/images/bitcoin/whitepaper/math02.jpg){:.border}
+![math2](/images/bitcoin/whitepaper/math2.png){:.border}
 
 To get the probability the attacker could still catch up now, we multiply the Poisson density for 
 each amount of progress he could have made by the probability he could catch up from that point:
 
 > 为了获得攻击者现在可能仍在追赶的概率，我们将泊松密度乘以他从那个点赶上额概率所取得的进步量：
 
-![math03](/images/bitcoin/whitepaper/math03.jpg){:.border}
+![math3](/images/bitcoin/whitepaper/math3.png){:.border}
 
 Rearranging to avoid summing the infinite tail of the distribution...
 
 > 重新排列以避免对分布的无穷尾数求和...
 
-![math04](/images/bitcoin/whitepaper/math04.jpg){:.border}
+![math4](/images/bitcoin/whitepaper/math4.png){:.border}
 
 Converting to C code...
 
