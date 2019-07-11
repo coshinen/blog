@@ -391,17 +391,17 @@ Ruin problem.  Suppose a gambler with unlimited credit starts at a deficit and p
 infinite number of trials to try to reach breakeven.  We can calculate the probability he ever 
 reaches breakeven, or that an attacker ever catches up with the honest chain, as follows [8]:
 
+&emsp;p = probability an honest node finds the next block<br>
+&emsp;q = probability the attacker finds the next block<br>
+&emsp;q<font size="2" style="position:relative;top:2.8px;left:0.8px;">z</font> = probability the attacker will ever catch up from z blocks behind
+
 > 攻击者从给定的赤字中追赶的可能性类似于赌徒破产问题（Gambler's Ruin problem）。
 > 假设一个拥有无限信用的赌徒从赤字开始，并可能进行无限次尝试以达到收支平衡。
 > 我们可以计算出他达到收支平衡的可能性，或攻击者追赶上诚实的链，如下：
-
-p = probability an honest node finds the next block<br>
-q = probability the attacker finds the next block<br>
-qz = probability the attacker will ever catch up from z blocks behind
-
-> p = 诚实节点找到下一个块的概率<br>
-> q = 攻击者找到下一个块的概率<br>
-> qz = 攻击者将从后面 z 个块追赶上的概率
+>
+> &emsp;p = 诚实节点找到下一个块的概率<br>
+> &emsp;q = 攻击者找到下一个块的概率<br>
+> &emsp;q<font size="2" style="position:relative;top:2.8px;left:0.8px;">z</font> = 攻击者将从后面 z 个块追赶上的概率
 
 ![math](/images/bitcoin/whitepaper/math.png){:.border}
 
