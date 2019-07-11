@@ -1,97 +1,100 @@
+<!DOCTYPE html>
 <html>
-<head>
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-120508705-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
 
-  gtag('config', 'UA-120508705-1');
-</script>
-<title>mistydew</title>
-<script type="text/javascript" src="/js/jquery.min.js"></script>
-<style type="text/css">
-body{background-color:#000}#console{font-family:courier,monospace;color:#fff;width:750px;margin-left:auto;margin-right:auto;margin-top:100px;font-size:14px}a{color:#0bc;text-decoration:none}#a{color:#0f0}
-</style>
-</head>
-<body>
-<script type="text/javascript">
-function replaceUrls(a) {
-    var d, b = a.indexOf("https://"),
-    c = a.indexOf(".me ", b);
-    return - 1 != c ? (d = a.slice(b, c - 1), a.replace(d, '<a href="' + d + '">' + d + "</a>")) : a
-}
-function t() {
-    Typer.addText({
-        keyCode: 123748
-    }),
-    Typer.index > Typer.text.length && clearInterval(timer)
-}
-var timer, Typer = {
-    text: null,
-    accessCountimer: null,
-    index: 0,
-    speed: 2,
-    file: "",
-    accessCount: 0,
-    deniedCount: 0,
-    init: function() {
-        accessCountimer = setInterval(function() {
-            Typer.updLstChr()
-        },
-        500),
-        $.get(Typer.file,
-        function(a) {
-            Typer.text = a,
-            Typer.text = Typer.text.slice(0, Typer.text.length - 1)
-        })
-    },
-    content: function() {
-        return $("#console").html()
-    },
-    write: function(a) {
-        return $("#console").append(a),
-        !1
-    },
-    makeAccess: function() {
-        Typer.hidepop(),
-        Typer.accessCount = 0;
-        var a = $("<div id='gran'>").html("");
-        return a.addClass("accessGranted"),
-        a.html("<h1>ACCESS GRANTED</h1>"),
-        $(document.body).prepend(a),
-        !1
-    },
-    makeDenied: function() {
-        Typer.hidepop(),
-        Typer.deniedCount = 0;
-        var a = $("<div id='deni'>").html("");
-        return a.addClass("accessDenied"),
-        a.html("<h1>ACCESS DENIED</h1>"),
-        $(document.body).prepend(a),
-        !1
-    },
-    hidepop: function() {
-        $("#deni").remove(),
-        $("#gran").remove()
-    },
-    addText: function(a) {
-        var b, c, d;
-        18 == a.keyCode ? (Typer.accessCount++, Typer.accessCount >= 3 && Typer.makeAccess()) : 20 == a.keyCode ? (Typer.deniedCount++, Typer.deniedCount >= 3 && Typer.makeDenied()) : 27 == a.keyCode ? Typer.hidepop() : Typer.text && (b = Typer.content(), "|" == b.substring(b.length - 1, b.length) && $("#console").html($("#console").html().substring(0, b.length - 1)), 8 != a.keyCode ? Typer.index += Typer.speed: Typer.index > 0 && (Typer.index -= Typer.speed), c = Typer.text.substring(0, Typer.index), d = new RegExp("\n", "g"), $("#console").html(c.replace(d, "<br/>")), window.scrollBy(0, 50)),
-        a.preventDefault && 122 != a.keyCode && a.preventDefault(),
-        122 != a.keyCode && (a.returnValue = !1)
-    },
-    updLstChr: function() {
-        var a = this.content();
-        "|" == a.substring(a.length - 1, a.length) ? $("#console").html($("#console").html().substring(0, a.length - 1)) : this.write("|")
-    }
-};
-Typer.speed = 3,
-Typer.file = "resume",
-Typer.init(),
-timer = setInterval("t();", 30);
-</script>
-<div id="console"></div>
-</body>
+    <title>resume | mistydew</title>
+    <meta name="description" content="The resume of mistydew (Zichen Yuan).">
+
+    <link rel="shortcut icon" href="/images/favicon.ico"></link>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-120508705-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-120508705-1');
+    </script>
+    <script type="text/javascript" src="/js/jquery-1.4.2.min.js"></script>
+    <style type="text/css">
+      body{background-color:#000}#console{font-family:courier,monospace;color:#fff;width:750px;margin-left:auto;margin-right:auto;margin-top:100px;font-size:14px}a{color:#0bc;text-decoration:none}#a{color:#0f0}
+    </style>
+  </head>
+  <body>
+    <script type="text/javascript">
+      function t() {
+          Typer.addText({
+              keyCode: 123748
+          }),
+          Typer.index > Typer.text.length && clearInterval(timer)
+      }
+      var timer, Typer = {
+          text: null,
+          accessCountimer: null,
+          index: 0,
+          speed: 2,
+          file: "",
+          accessCount: 0,
+          deniedCount: 0,
+          init: function() {
+              accessCountimer = setInterval(function() {
+                  Typer.updLstChr()
+              },
+              500),
+              $.get(Typer.file,
+              function(a) {
+                  Typer.text = a,
+                  Typer.text = Typer.text.slice(0, Typer.text.length - 1)
+              })
+          },
+          content: function() {
+              return $("#console").html()
+          },
+          write: function(a) {
+              return $("#console").append(a),
+              !1
+          },
+          makeAccess: function() {
+              Typer.hidepop(),
+              Typer.accessCount = 0;
+              var a = $("<div id='gran'>").html("");
+              return a.addClass("accessGranted"),
+              a.html("<h1>ACCESS GRANTED</h1>"),
+              $(document.body).prepend(a),
+              !1
+          },
+          makeDenied: function() {
+              Typer.hidepop(),
+              Typer.deniedCount = 0;
+              var a = $("<div id='deni'>").html("");
+              return a.addClass("accessDenied"),
+              a.html("<h1>ACCESS DENIED</h1>"),
+              $(document.body).prepend(a),
+              !1
+          },
+          hidepop: function() {
+              $("#deni").remove(),
+              $("#gran").remove()
+          },
+          addText: function(a) {
+              var b, c, d;
+              18 == a.keyCode ? (Typer.accessCount++, Typer.accessCount >= 3 && Typer.makeAccess()) : 20 == a.keyCode ? (Typer.deniedCount++, Typer.deniedCount >= 3 && Typer.makeDenied()) : 27 == a.keyCode ? Typer.hidepop() : Typer.text && (b = Typer.content(), "|" == b.substring(b.length - 1, b.length) && $("#console").html($("#console").html().substring(0, b.length - 1)), 8 != a.keyCode ? Typer.index += Typer.speed: Typer.index > 0 && (Typer.index -= Typer.speed), c = Typer.text.substring(0, Typer.index), d = new RegExp("\n", "g"), $("#console").html(c.replace(d, "<br/>")), window.scrollBy(0, 50)),
+              a.preventDefault && 122 != a.keyCode && a.preventDefault(),
+              122 != a.keyCode && (a.returnValue = !1)
+          },
+          updLstChr: function() {
+              var a = this.content();
+              "|" == a.substring(a.length - 1, a.length) ? $("#console").html($("#console").html().substring(0, a.length - 1)) : this.write("|")
+          }
+      };
+      Typer.speed = 3,
+      Typer.file = "resume",
+      Typer.init(),
+      timer = setInterval("t();", 30);
+    </script>
+    <div id="console"></div>
+  </body>
 </html>
