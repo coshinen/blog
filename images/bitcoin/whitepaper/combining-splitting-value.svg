@@ -353,7 +353,7 @@
            x="109.59386"
            y="748.55432"
            id="tspan2991-4-4-6-7-1"
-           style="font-weight:bold;-inkscape-font-specification:Sans Bold">Transaction</tspan></text>
+           style="font-weight:bold;-inkscape-font-specification:Sans Bold">交易</tspan></text>
       <g
          transform="translate(0,-24.21875)"
          id="g9701">
@@ -374,7 +374,7 @@
              x="127.83118"
              y="793.76788"
              id="tspan3783-2-5-5-1-6-7-9-7"
-             style="text-align:center;text-anchor:middle">In</tspan></text>
+             style="text-align:center;text-anchor:middle">进</tspan></text>
       </g>
       <g
          transform="translate(9.375,-24.21875)"
@@ -396,7 +396,7 @@
              x="163.83118"
              y="793.76788"
              id="tspan3783-2-5-5-1-6-7-3-4-1"
-             style="text-align:center;text-anchor:middle">Out</tspan></text>
+             style="text-align:center;text-anchor:middle">出</tspan></text>
       </g>
       <g
          transform="translate(-3.4130859e-6,1.781249)"
@@ -418,7 +418,7 @@
              x="127.83118"
              y="793.76788"
              id="tspan3783-2-5-5-1-6-7-9-7-2"
-             style="text-align:center;text-anchor:middle">In</tspan></text>
+             style="text-align:center;text-anchor:middle">进</tspan></text>
       </g>
       <g
          transform="translate(9.3749966,1.781249)"

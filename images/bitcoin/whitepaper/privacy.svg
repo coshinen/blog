@@ -361,7 +361,7 @@
              x="117.21981"
              y="811.29877"
              id="tspan3783-2-5-5-92-8"
-             style="text-align:center;text-anchor:middle">Identities</tspan></text>
+             style="text-align:center;text-anchor:middle">双方身份</tspan></text>
         <rect
            width="70.551994"
            height="22.806498"
@@ -379,7 +379,7 @@
              x="225.41226"
              y="772.58405"
              id="tspan3783-2-5-5-92-8-7"
-             style="font-weight:bold;text-align:start;text-anchor:start;-inkscape-font-specification:Sans Bold">Traditional Privacy Model</tspan></text>
+             style="font-weight:bold;text-align:start;text-anchor:start;-inkscape-font-specification:Sans Bold">传统的隐私模式</tspan></text>
         <text
            x="203.21982"
            y="811.29877"
@@ -389,7 +389,7 @@
              x="203.21982"
              y="811.29877"
              id="tspan3783-2-5-5-92-8-2"
-             style="text-align:center;text-anchor:middle">Transactions</tspan></text>
+             style="text-align:center;text-anchor:middle">交易</tspan></text>
         <rect
            width="60.554966"
            height="31.591993"
@@ -407,11 +407,11 @@
              x="289.21982"
              y="805.29877"
              id="tspan3783-2-5-5-92-8-2-4"
-             style="text-align:center;text-anchor:middle">Trusted</tspan><tspan
+             style="text-align:center;text-anchor:middle">可信任的</tspan><tspan
              x="289.21982"
              y="817.79877"
              id="tspan10192"
-             style="text-align:center;text-anchor:middle">Third Party</tspan></text>
+             style="text-align:center;text-anchor:middle">第三方</tspan></text>
         <rect
            width="72.752686"
            height="22.797483"
@@ -429,7 +429,7 @@
              x="375.21982"
              y="811.29877"
              id="tspan3783-2-5-5-92-8-2-4-2"
-             style="text-align:center;text-anchor:middle">Counterparty</tspan></text>
+             style="text-align:center;text-anchor:middle">交易对方</tspan></text>
         <rect
            width="60.650768"
            height="22.848963"
@@ -447,7 +447,7 @@
              x="461.21982"
              y="811.29877"
              id="tspan3783-2-5-5-92-8-2-4-2-9"
-             style="text-align:center;text-anchor:middle">Public</tspan></text>
+             style="text-align:center;text-anchor:middle">公众</tspan></text>
         <path
            d="m 422.05436,783.33011 0,51.3758"
            id="path10242"
@@ -485,7 +485,7 @@
              x="202.84602"
              y="900.89978"
              id="tspan3783-2-5-5-92-8-4"
-             style="text-align:center;text-anchor:middle">Identities</tspan></text>
+             style="text-align:center;text-anchor:middle">双方身份</tspan></text>
         <rect
            width="70.551994"
            height="22.806498"
@@ -503,7 +503,7 @@
              x="288.84604"
              y="900.89978"
              id="tspan3783-2-5-5-92-8-2-9"
-             style="text-align:center;text-anchor:middle">Transactions</tspan></text>
+             style="text-align:center;text-anchor:middle">交易</tspan></text>
         <rect
            width="60.650768"
            height="22.848963"
@@ -521,7 +521,7 @@
              x="374.84604"
              y="900.89978"
              id="tspan3783-2-5-5-92-8-2-4-2-9-4"
-             style="text-align:center;text-anchor:middle">Public</tspan></text>
+             style="text-align:center;text-anchor:middle">公众</tspan></text>
         <path
            d="m 243.68058,872.93108 0,51.3758"
            id="path10242-4"
@@ -535,7 +535,7 @@
              x="239.22293"
              y="859.42291"
              id="tspan3783-2-5-5-92-8-7-1"
-             style="font-weight:bold;text-align:start;text-anchor:start;-inkscape-font-specification:Sans Bold">New Privacy Model</tspan></text>
+             style="font-weight:bold;text-align:start;text-anchor:start;-inkscape-font-specification:Sans Bold">新的隐私模式</tspan></text>
       </g>
     </g>
   </g>

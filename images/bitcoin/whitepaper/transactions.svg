@@ -265,11 +265,11 @@
            x="507.06851"
            y="227.8271"
            id="tspan2997-0-4-2"
-           style="text-align:center;text-anchor:middle">Owner 3's</tspan><tspan
+           style="text-align:center;text-anchor:middle">所有者 3 的</tspan><tspan
            x="507.06851"
            y="240.3271"
            id="tspan2999-5-4-8"
-           style="text-align:center;text-anchor:middle">Private Key</tspan></text>
+           style="text-align:center;text-anchor:middle">私钥</tspan></text>
       <rect
          width="84.547424"
          height="150.7124"
@@ -287,7 +287,7 @@
            x="471.02161"
            y="57.179874"
            id="tspan2991-4-3-1"
-           style="font-weight:bold;-inkscape-font-specification:Sans Bold">Transaction</tspan></text>
+           style="font-weight:bold;-inkscape-font-specification:Sans Bold">交易</tspan></text>
       <path
          d="m 429.85792,102.63674 69.19545,0 0,9.34391"
          id="path3814-9-2-0"
@@ -332,11 +332,11 @@
            x="506.73477"
            y="76.120239"
            id="tspan2997-03-2-7"
-           style="text-align:center;text-anchor:middle">Owner 3's</tspan><tspan
+           style="text-align:center;text-anchor:middle">所有者 3 的</tspan><tspan
            x="506.73477"
            y="88.620239"
            id="tspan2999-0-2-7"
-           style="text-align:center;text-anchor:middle">Public Key</tspan></text>
+           style="text-align:center;text-anchor:middle">公钥</tspan></text>
       <rect
          width="60.143658"
          height="34.132225"
@@ -354,11 +354,11 @@
            x="506.22971"
            y="166.02382"
            id="tspan3801-7-6-7"
-           style="text-align:center;text-anchor:middle">Owner 2's</tspan><tspan
+           style="text-align:center;text-anchor:middle">所有者 2 的</tspan><tspan
            x="506.22971"
            y="178.52382"
            id="tspan3806-4-5-2"
-           style="text-align:center;text-anchor:middle">Signature</tspan></text>
+           style="text-align:center;text-anchor:middle">签名</tspan></text>
       <rect
          width="36.596325"
          height="19.17119"
@@ -376,7 +376,7 @@
            x="506.22971"
            y="127.38548"
            id="tspan3783-2-6-6"
-           style="text-align:center;text-anchor:middle">Hash</tspan></text>
+           style="text-align:center;text-anchor:middle">哈希</tspan></text>
       <path
          d="m 593.50263,157.69008 -57.83123,-31.31473 0,-30.557115"
          id="path4415-7-4"
@@ -509,11 +509,11 @@
            x="387.06851"
            y="227.8271"
            id="tspan2997-0-4"
-           style="text-align:center;text-anchor:middle">Owner 2's</tspan><tspan
+           style="text-align:center;text-anchor:middle">所有者 2 的</tspan><tspan
            x="387.06851"
            y="240.3271"
            id="tspan2999-5-4"
-           style="text-align:center;text-anchor:middle">Private Key</tspan></text>
+           style="text-align:center;text-anchor:middle">私钥</tspan></text>
       <rect
          width="84.547424"
          height="150.7124"
@@ -531,7 +531,7 @@
            x="351.02161"
            y="57.179874"
            id="tspan2991-4-3"
-           style="font-weight:bold;-inkscape-font-specification:Sans Bold">Transaction</tspan></text>
+           style="font-weight:bold;-inkscape-font-specification:Sans Bold">交易</tspan></text>
       <path
          d="m 309.85792,102.63674 69.19545,0 0,9.34391"
          id="path3814-9-2"
@@ -576,11 +576,11 @@
            x="386.73477"
            y="76.120239"
            id="tspan2997-03-2"
-           style="text-align:center;text-anchor:middle">Owner 2's</tspan><tspan
+           style="text-align:center;text-anchor:middle">所有者 2 的</tspan><tspan
            x="386.73477"
            y="88.620239"
            id="tspan2999-0-2"
-           style="text-align:center;text-anchor:middle">Public Key</tspan></text>
+           style="text-align:center;text-anchor:middle">公钥</tspan></text>
       <rect
          width="60.143658"
          height="34.132225"
@@ -598,11 +598,11 @@
            x="386.22971"
            y="166.02382"
            id="tspan3801-7-6"
-           style="text-align:center;text-anchor:middle">Owner 1's</tspan><tspan
+           style="text-align:center;text-anchor:middle">所有者 1 的</tspan><tspan
            x="386.22971"
            y="178.52382"
            id="tspan3806-4-5"
-           style="text-align:center;text-anchor:middle">Signature</tspan></text>
+           style="text-align:center;text-anchor:middle">签名</tspan></text>
       <rect
          width="36.596325"
          height="19.17119"
@@ -620,7 +620,7 @@
            x="386.22971"
            y="127.38548"
            id="tspan3783-2-6"
-           style="text-align:center;text-anchor:middle">Hash</tspan></text>
+           style="text-align:center;text-anchor:middle">哈希</tspan></text>
       <path
          d="m 189.15106,31.855574 -1.53093,-2.651651 -1.53093,-2.65165 3.06186,0 3.06186,0 -1.53093,2.65165 z"
          transform="matrix(-1,0,0,-1,662.55713,185.79436)"
@@ -649,7 +649,7 @@
            x="458.75223"
            y="-91.694557"
            id="tspan4477-1"
-           style="font-size:8px">Verify</tspan></text>
+           style="font-size:8px">确认</tspan></text>
       <text
          x="229.34293"
          y="432.17374"
@@ -660,7 +660,7 @@
            x="229.34293"
            y="432.17374"
            id="tspan4477-9-9"
-           style="font-size:8px">Sign</tspan></text>
+           style="font-size:8px">签名</tspan></text>
       <rect
          width="84.547424"
          height="150.7124"
@@ -785,11 +785,11 @@
            x="267.06851"
            y="227.8271"
            id="tspan2997-0"
-           style="text-align:center;text-anchor:middle">Owner 1's</tspan><tspan
+           style="text-align:center;text-anchor:middle">所有者 1 的</tspan><tspan
            x="267.06851"
            y="240.3271"
            id="tspan2999-5"
-           style="text-align:center;text-anchor:middle">Private Key</tspan></text>
+           style="text-align:center;text-anchor:middle">私钥</tspan></text>
       <rect
          width="84.547424"
          height="150.7124"
@@ -807,7 +807,7 @@
            x="231.02162"
            y="57.179874"
            id="tspan2991-4"
-           style="font-weight:bold;-inkscape-font-specification:Sans Bold">Transaction</tspan></text>
+           style="font-weight:bold;-inkscape-font-specification:Sans Bold">交易</tspan></text>
       <path
          d="m 189.85792,102.63674 69.19545,0 0,9.34391"
          id="path3814-9"
@@ -852,11 +852,11 @@
            x="266.73477"
            y="76.120239"
            id="tspan2997-03"
-           style="text-align:center;text-anchor:middle">Owner 1's</tspan><tspan
+           style="text-align:center;text-anchor:middle">所有者 1 的</tspan><tspan
            x="266.73477"
            y="88.620239"
            id="tspan2999-0"
-           style="text-align:center;text-anchor:middle">Public Key</tspan></text>
+           style="text-align:center;text-anchor:middle">公钥</tspan></text>
       <rect
          width="60.143658"
          height="34.132225"
@@ -874,11 +874,11 @@
            x="266.22971"
            y="166.02382"
            id="tspan3801-7"
-           style="text-align:center;text-anchor:middle">Owner 0's</tspan><tspan
+           style="text-align:center;text-anchor:middle">所有者 0 的</tspan><tspan
            x="266.22971"
            y="178.52382"
            id="tspan3806-4"
-           style="text-align:center;text-anchor:middle">Signature</tspan></text>
+           style="text-align:center;text-anchor:middle">签名</tspan></text>
       <rect
          width="36.596325"
          height="19.17119"
@@ -896,7 +896,7 @@
            x="266.22971"
            y="127.38548"
            id="tspan3783-2"
-           style="text-align:center;text-anchor:middle">Hash</tspan></text>
+           style="text-align:center;text-anchor:middle">哈希</tspan></text>
       <path
          d="m 189.15106,31.855574 -1.53093,-2.651651 -1.53093,-2.65165 3.06186,0 3.06186,0 -1.53093,2.65165 z"
          transform="matrix(-1,0,0,-1,542.55713,185.79436)"
@@ -925,7 +925,7 @@
            x="353.26355"
            y="-34.491974"
            id="tspan4477"
-           style="font-size:8px">Verify</tspan></text>
+           style="font-size:8px">确认</tspan></text>
       <text
          x="135.6732"
          y="357.16718"
@@ -936,7 +936,7 @@
            x="135.6732"
            y="357.16718"
            id="tspan4477-9"
-           style="font-size:8px">Sign</tspan></text>
+           style="font-size:8px">签名</tspan></text>
       <path
          d="m 549.5881,102.63674 31.85437,0"
          id="path3814-9-2-0-6"
