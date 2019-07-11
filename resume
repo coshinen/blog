@@ -1,16 +1,16 @@
 <strong>Connecting to 185.199.108.153:443...</strong>
 <strong>Connection established.</strong>
 
-<strong>Welcome to Xxxxxx XX.XX.X LTS (GNU/Linux x.xx.x-xx-generic x86_64)</strong>
+<strong>Welcome to Ubuntu 16.04.6 LTS (GNU/Linux 4.15.0-54-generic x86_64)</strong>
 
 <strong>&nbsp;* Management: https://github.com/mistydew</strong>
-<strong>&nbsp;* Support:    https://mistydew.github.io/blog</strong>
+<strong>&nbsp;* Support:&nbsp;&nbsp;&nbsp;&nbsp;https://mistydew.github.io/blog</strong>
 
-<strong>System information updated as of now.</strong>
+<strong>0 packages can be updated.</strong>
 <span id="a">mistydew</span>@<a href="https://github.com/mistydew">GitHub</a>:~$ ls -a
 <a>. .. </a>.resume
 <span id="a">mistydew</span>@<a href="https://github.com/mistydew">GitHub</a>:~$ cat .resume
-<p align="center"><font size="6"><strong>Zichen Yuan (mistydew)</strong></font><br>(+86)xxx-xxxx-xxxx | <a target="_blank" href="mailto:mistydew@qq.com">mistydew@qq.com</a> | Shenzhen, China</p>
+<p align="center"><font size="6"><strong>Zichen Yuan (mistydew)</strong></font><br>(+86) xxx-xxxx-xxxx | <a target="_blank" href="mailto:mistydew@qq.com">mistydew@qq.com</a> | Shenzhen, China</p>
 <font size="4"><strong>EDUCATION</strong></font>
 -----------------------------------------------------------------------------------------
 <strong>Zhengzhou University</strong><div style="float:right;">Sep 2013 - Jun 2017</div>
