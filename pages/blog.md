@@ -15,10 +15,10 @@ permalink: /blog/index.html
       </h2>
       <div class="excerpt">
         <p>{{ post.excerpt | strip_html }}</p>
-        <footer>
-          <a class="readmore" href="{{ post.url }}">阅读全文 &raquo;</a>
-        </footer>
       </div>
+      <footer>
+        <a class="readmore" href="{{ post.url }}">阅读全文 &raquo;</a>
+      </footer>
     </li>{% endif %}{% endfor %}
   <!-- This loops through the site posts -->
     {% assign idx = 0 %}{% assign maximum = 7 %}{% for post in site.posts %}{% if post.stickie == true %}{% continue %}{% elsif post.hidden == true %}{% continue %}{% else %}
@@ -29,10 +29,10 @@ permalink: /blog/index.html
       </h2>
       <div class="excerpt">
         <p>{{ post.excerpt | strip_html }}</p>
-        <footer>
-          <a class="readmore" href="{{ post.url }}">阅读全文 &raquo;</a>
-        </footer>
       </div>
+      <footer>
+        <a class="readmore" href="{{ post.url }}">阅读全文 &raquo;</a>
+      </footer>
     </li>{% assign idx = idx | plus: 1 %}{% if idx == maximum %}{% break %}{% endif %}{% endif %}{% endfor %}
   </ul>
 </div>
