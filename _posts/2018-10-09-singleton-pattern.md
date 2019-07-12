@@ -6,10 +6,7 @@ author: mistydew
 comments: true
 categories: 设计模式
 tags: C++ 设计模式
-excerpt: 单例模式是一种软件设计模式，它限制类的实例化为一个对象。
 ---
-## 概要
-
 单例模式是一种软件设计模式，它限制类的实例化为一个对象。
 
 ## 特性
@@ -27,7 +24,7 @@ excerpt: 单例模式是一种软件设计模式，它限制类的实例化为�
 
 基础类图：
 
-![Singleton_UML_class_diagram](/images/designpatterns/Singleton_UML_class_diagram.svg)
+![singleton](/images/designpatterns/singleton.svg)
 
 ## 基础实现
 

@@ -34,7 +34,7 @@ KzCFcgtfrPA2uWmXn4zjVNaKYMEUHbh732XzZ4aZ737545DqZ3V4
 
 ## 私钥、公钥、地址之间的转换流程
 
-![privpubkeyaddr](/images/bitcoin/address/privpubkeyaddr.png){:.border}
+![private-public-key-address](/images/bitcoin/address/private-public-key-address.png){:.border}
 
 **注：“私钥->公钥”、“公钥->地址”这两步是单向不可逆的。**
 
@@ -43,13 +43,13 @@ KzCFcgtfrPA2uWmXn4zjVNaKYMEUHbh732XzZ4aZ737545DqZ3V4
 1.使用伪随机数生成器 PRNG 生成一个给定范围内的 256 位随机数作为私钥 PrivKey。<br>
 2.使用 OpenSSL 加密库中 secp256k1 标准的椭圆曲线相乘加密算法计算上一步生成私钥 PrivKey 得到相应的公钥 PubKey。
 
-![pubkeytoaddress](/images/bitcoin/address/pubkeytoaddress.png){:.border}
+![public-key-to-bitcoin-address](/images/bitcoin/address/public-key-to-bitcoin-address.png){:.border}
 
 3.使用 "Double Hash" 或 "Hash160" 运算上一步生成的公钥 PubKey 得到公钥地址 PubKeyAddress，用户看到的是该地址经过 Base58Check 编码后得到地址 address。<br>
 3.1."Hash160" 是先后经过了 SHA256 和 RIPEMD160 两步运算得到 160 位及 20 个字节的公钥地址，PubKeyAddress = RIPEMD160(SHA256(PubKey))。<br>
 3.2.最后经过 Base58 编码得到最后的地址，address = Base58Check(PubKeyAddress)。
 
-![base58check](/images/bitcoin/address/base58check.png){:.border}
+![base58check-encoding](/images/bitcoin/address/base58check-encoding.png){:.border}
 
 3.2.1.在 20 个字节的公钥地址前附加 1 个字节的版本前缀，比特币主网的版本号为 "0x00" 对应前缀为 "1"，VersionPrefix + PubKeyAddress。<br>
 3.2.2.对上步得到的 21bytes 进行两次哈希 SHA256，SHA256(SHA256(VersionPrefix + PubKeyAddress))。<br>
@@ -60,7 +60,7 @@ KzCFcgtfrPA2uWmXn4zjVNaKYMEUHbh732XzZ4aZ737545DqZ3V4
 
 从公钥到地址转换的流程图：
 
-![pubkeytoaddr](/images/bitcoin/address/pubkeytoaddr.png)
+![public-key-to-btc-address](/images/bitcoin/address/public-key-to-btc-address.png)
 
 {% highlight shell %}
 $ cd bitcoin/src # 进入比特币根目录下的 src 目录，之后未作特殊说明的均以该目录作为比特币源码的根目录。
