@@ -298,6 +298,12 @@ $ scp username@ip:<file> <dir> # 复制远程主机 username@ip 下的文件 <fi
 
 **注：username 和 ip 的顺序，且需要知道 username 对应的密码。**
 
+## 精简可执行文件 | strip
+
+{% highlight shell %}
+$ strip <ELF> # 通过删除可执行文件 <ELF> 中的调试符号等相关信息减少其大小，此操作不可逆。
+{% endhighlight %}
+
 Thanks for your time.
 
 ## 参考
