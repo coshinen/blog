@@ -22,74 +22,9 @@ HEAD detached at v0.12.1
 nothing to commit, working directory clean
 {% endhighlight %}
 
-## 内存需求
-
-C++ 编译器较吃内存。推荐在编译比特币核心时至少有 1GB 的空闲内存。
-使用 512MB 或更少的内存编译由于内存交换将花费更长的时间。
-
-## 依赖
+## 构建（编译和安装）
 
 **在构建源码之前，应该先安装相关的依赖库。**
-
-### macOS Mojave 下的相关依赖
-
-{% highlight shell %}
-$ brew install automake berkeley-db4 libtool boost@1.59 miniupnpc openssl pkg-config protobuf python qt libevent qrencode
-{% endhighlight %}
-
-brew 默认安装指定库的最新版本，可以使用命令`$ brew search <libname>`查看指定库的所有版本。
-**bitcoin v0.12.1 对应的 boost 库的版本为1.59.0，可以从 [bitcoin/depends/packages/boost.mk](https://github.com/bitcoin/bitcoin/blob/v0.12.1/depends/packages/boost.mk) 中获取当前版本比特币对应的 boost 库的版本。**
-
-<p id="Dependencies-ref"></p>
-### Ubuntu 16.04.* 下的相关依赖
-
-#### 基础依赖
-
-{% highlight shell %}
-$ sudo apt-get install build-essential libtool autotools-dev automake pkg-config libssl-dev libevent-dev bsdmainutils python3
-{% endhighlight %}
-
-#### Boost 库
-
-{% highlight shell %}
-$ sudo apt-get install libboost-system-dev libboost-filesystem-dev libboost-chrono-dev libboost-program-options-dev libboost-test-dev libboost-thread-dev
-$ sudo apt-get install libboost-all-dev
-{% endhighlight %}
-
-**ubuntu 16.04.* 默认安装 boost 库的版本为 1.58.0，可满足 bitcoin v0.12.1 对 boost 库的需求。**
-
-#### db4.8（仅限 Ubuntu）
-
-{% highlight shell %}
-$ sudo apt-get install software-properties-common
-$ sudo add-apt-repository ppa:bitcoin/bitcoin
-$ sudo apt-get update
-$ sudo apt-get install libdb4.8-dev libdb4.8++-dev
-{% endhighlight %}
-
-#### upnp 库 miniupnpc
-
-{% highlight shell %}
-$ sudo apt-get install libminiupnpc-dev
-{% endhighlight %}
-
-#### ZMQ（提供 ZMQ API 4.x）
-
-{% highlight shell %}
-$ sudo apt-get install libzmq3-dev
-{% endhighlight %}
-
-#### GUI Qt 图形库（若不使用图形化界面可省略此步，同时减少构建时间）
-
-{% highlight shell %}
-$ sudo apt-get install libqt5gui5 libqt5core5a libqt5dbus5 qttools5-dev qttools5-dev-tools libprotobuf-dev protobuf-compiler # Qt 5
-$ sudo apt-get install libqt4-dev libprotobuf-dev protobuf-compiler # Qt 4 可选
-$ sudo apt-get install libqrencode-dev
-{% endhighlight %}
-
-**注：发行版是使用 GCC 构建然后使用“strip bitcoind”去掉调试符号，该操作可减少可执行文件大小约 90%。**
-
-## 构建（编译和安装）
 
 {% highlight shell %}
 $ ./autogen.sh # 生成 configure
@@ -100,10 +35,89 @@ $ make install # 该项可选，把编译好的比特币程序拷贝到系统默
 
 **注：macOS Mojave 无法构建 bitcoin v0.12.1 的可执行文件 bitcoin-qt，因为 macOS Mojave 不支持 bitcoin v0.12.1 对应的 qt5.5 的构建。**
 
-<details>
-<summary>额外的配置选项 configure v0.12.1</summary>
+## 内存需求
+
+C++ 编译器较吃内存。推荐在编译比特币核心时至少有 1GB 的空闲内存。
+使用 512MB 或更少的内存编译由于内存交换将花费更长的时间。
+
+## 依赖构建说明：macOS & Ubuntu
+
+### macOS Mojave
+
+使用 Homebrew 安装依赖。
+
+{% highlight shell %}
+$ brew install automake berkeley-db4 libtool boost@1.59 miniupnpc openssl pkg-config protobuf python qt libevent qrencode
+{% endhighlight %}
+
+brew 默认安装指定库的最新版本，可以使用命令`$ brew search <libname>`查看指定库的所有版本。
+**bitcoin v0.12.1 对应的 boost 库的版本为1.59.0，可以从 [bitcoin/depends/packages/boost.mk](https://github.com/bitcoin/bitcoin/blob/v0.12.1/depends/packages/boost.mk) 中获取当前版本比特币对应的 boost 库的版本。**
+
+### Ubuntu 16.04.*
+
+构建必备：
+
+{% highlight shell %}
+$ sudo apt-get install build-essential libtool autotools-dev automake pkg-config libssl-dev libevent-dev bsdmainutils python3
+{% endhighlight %}
+
+Boost 库：
+
+{% highlight shell %}
+$ sudo apt-get install libboost-system-dev libboost-filesystem-dev libboost-chrono-dev libboost-program-options-dev libboost-test-dev libboost-thread-dev
+$ sudo apt-get install libboost-all-dev # 如果不管用，你可以安装全部的 boost 开发包
+{% endhighlight %}
+
+**ubuntu 16.04.* 默认安装 boost 库的版本为 1.58.0，可满足 bitcoin v0.12.1 对 boost 库的需求。**
+
+BerkeleyDB 钱包所需：
+
+{% highlight shell %}
+$ sudo apt-get install software-properties-common
+$ sudo add-apt-repository ppa:bitcoin/bitcoin
+$ sudo apt-get update
+$ sudo apt-get install libdb4.8-dev libdb4.8++-dev
+{% endhighlight %}
+
+UPnP 库：
+
+{% highlight shell %}
+$ sudo apt-get install libminiupnpc-dev # 查看 --with-miniupnpc 和 --enable-upnp-default
+{% endhighlight %}
+
+ZMQ 依赖：
+
+{% highlight shell %}
+$ sudo apt-get install libzmq3-dev # 提供 ZMQ API 4.x
+{% endhighlight %}
+
+## GUI 依赖
+
+Qt5 图形库（推荐，若不使用图形化界面可省略此步，同时减少构建时间）：
+
+{% highlight shell %}
+$ sudo apt-get install libqt5gui5 libqt5core5a libqt5dbus5 qttools5-dev qttools5-dev-tools libprotobuf-dev protobuf-compiler # Qt 5
+{% endhighlight %}
+
+libqrencode 二维码生成库（可选）：
+
+{% highlight shell %}
+$ sudo apt-get install libqrencode-dev
+{% endhighlight %}
+
+**注：发行版是使用 GCC 构建然后使用“strip bitcoind”去掉调试符号，该操作可减少可执行文件大小约 90%。**
+
+## 额外的配置选项
+
+使用下面命令显示额外的配置选项列表：
+
 {% highlight shell %}
 $ ./configure --help
+{% endhighlight %}
+
+<details>
+<summary>bitcoin v0.12.1 configure list</summary>
+{% highlight shell %}
 `configure' configures Bitcoin Core 0.12.1 to adapt to many kinds of systems.
 
 Usage: ./configure [OPTION]... [VAR=VALUE]...

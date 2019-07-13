@@ -36,8 +36,6 @@ $ vim depends/packages/qt.mk # Line 3: 把 official_releases 改为 archive，�
 
 ## 安装基本依赖
 
-**先安装比特币基础依赖，查看[编译比特币源码](/blog/2018/05/compile-bitcoin.html#Dependencies-ref)。**
-
 {% highlight shell %}
 $ sudo apt update
 $ sudo apt upgrade
