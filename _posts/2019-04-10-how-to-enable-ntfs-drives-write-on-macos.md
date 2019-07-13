@@ -15,7 +15,7 @@ fstab 全称 file system table，即文件系统表，用于描述文件系统�
 mount 命令在引导时自动读取 fstab 文件以确定整个文件系统结构，直至当用户执行 mount 命令修改该结构。
 传统的 UNIX 总是允许特权用户（root 用户和 wheel 组的用户）在没有 fstab 条目的情况下挂载或卸载设备。
 
-## 0.fstab 文件中各字段及其含义
+## fstab 文件中各字段及其含义
 
 > LABEL=device-spec mount-point fs-type options dump pass
 > * device-spec: 设备名，UUID。
@@ -28,13 +28,7 @@ mount 命令在引导时自动读取 fstab 文件以确定整个文件系统结�
 **最后两个字段缺省值被解释为 0。
 如果有必要，在第一，二，四字段中的空格字符由八进制的字符代码 \040 表示，可参照 ASCII 码表。**
 
-或使用下面命令查看 fstab 手册：
-
-{% highlight shell %}
-$ man fstab
-{% endhighlight %}
-
-### 0.1.所有文件系统通用的选项 options
+## 所有文件系统通用的选项 options
 
 由于 /etc/fstab 中的文件系统最终使用 mount 挂载，因此 options 字段使用逗号分隔符。
 
@@ -43,21 +37,21 @@ $ man fstab
 > * nobrowse: 未知，禁止磁盘在访达中显式，若删除此项，则不能开启写模式。
 > * ...
 
-## 1.开启 NTFS 硬盘的写支持
+## 开启 NTFS 硬盘的写支持
 
-## 1.1.使用 root 权限在 /etc/ 目录下创建 fstab 文件
+使用 root 权限在 /etc/ 目录下创建 fstab 文件。
 
 {% highlight shell %}
 $ sudo vim /etc/fstab
 {% endhighlight %}
 
-## 1.2.以硬盘名为 My Passport 为例，在 fstab 文件中键入以下文字并保存
+以硬盘名为 My Passport 为例，在 fstab 文件中键入以下文字并保存。
 
 > LABEL=My\040Passport none ntfs rw,auto,nobrowse
 
 该段文字的含义为：对于 My Passport 设备，挂载到默认位置 /Volumes/ 目录下，以 NTFS 文件系统类型，引导时自动挂载，用户可读写，永不自动备份，引导时不检查设备错误。
 
-## 1.3.重新插入硬盘，现在可以开始进行写操作了
+重新插入硬盘，就可以进行写操作了。
 
 使用下面命令可打开 GUI 进行操作：
 
