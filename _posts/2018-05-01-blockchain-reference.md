@@ -22,11 +22,11 @@ stickie: true
 * [比特币白皮书 个人翻译+注解](https://zhuanlan.zhihu.com/p/25039679) - 知乎
 * [比特币白皮书中英对照 - mistydew](https://mistydew.github.io/blog/2018/04/Bitcoin-A-Peer-to-Peer-Electronic-Cash-System.html)
 
-### Guide | 实现机制
+### Guide | 指南
 
 * [How Does Bitcoin Work?](https://learnmeabitcoin.com)
-* [Blockchain Demo](https://anders.com/blockchain)
 * [Blockchain - Get to know it](https://blockchainhandbook.io)
+* [Blockchain Demo](https://anders.com/blockchain)
 * [区块链技术指南](https://yeasy.gitbooks.io/blockchain_guide/content)
 * [简介 · 比特币开发者指南-巴比特图书](https://book.8btc.com/books/6/bitcoin-developer-guide/_book)
 * [简介 · 区块链开发者指南-巴比特图书](https://book.8btc.com/books/6/blockchain-developer-guide/_book)
@@ -38,13 +38,12 @@ stickie: true
 * [Bitcoin - Open source P2P money](https://bitcoin.org/en)
 * [Bitcoin Core :: Bitcoin](https://bitcoincore.org)
 
-### Developer Documentation | 官方文档
+### Wiki and Developer Documentation | 维基及开发者文档
 
+* [Bitcoin Wiki](https://en.bitcoin.it/wiki/Main_Page)
 * [Developer Documentation - Bitcoin](https://bitcoin.org/en/developer-documentation)
-* [Bitcoin Improvement Proposals](https://github.com/bitcoin/bips#readme)
-* [Technical Pages - Wiki](https://en.bitcoin.it/wiki/Category:Technical)
 
-### Source Code | 源码
+### Source Code and BIPs | 源码及改进建议
 
 * [Bitcoin v0.1 released](https://www.metzdowd.com/pipermail/cryptography/2009-January/014994.html) - the actual first email sent to the cryptography mailing-list by Satoshi where he actually delivered the 0.1 version
 * [bitcoin v0.1](https://bitcointalk.org/index.php?topic=68121.0) - Bitcoin Forum
@@ -52,6 +51,7 @@ stickie: true
 * [bitcoin/bitcoin at v0.1.5 ALPHA](https://github.com/bitcoin/bitcoin/tree/4405b78d6059e536c36974088a8ed4d9f0f29898) - very close to what Satoshi initially wrote
 * [bitcoin/bitcoin at v0.12.1](https://github.com/bitcoin/bitcoin/tree/v0.12.1) - turning point
 * [bitcoin/bitcoin](https://github.com/bitcoin/bitcoin) - the latest release
+* [bitcoin/bips: Bitcoin Improvement Proposals](https://github.com/bitcoin/bips)
 
 ### Annotated Sources | 源码剖析
 
@@ -72,10 +72,6 @@ stickie: true
 * [JSON](http://www.json.org)
 * [Remote procedure call - Wikipedia](https://en.wikipedia.org/wiki/Remote_procedure_call)
 * [JSON-RPC](https://www.jsonrpc.org)
-
-### bitcoind startup process v0.12.1 | 比特币核心服务启动流程
-
-![bitcoind-startup](https://raw.githubusercontent.com/mistydew/blockchain/master/images/bitcoind-startup-v0.12.1.png)
 
 ## Ethereum | 以太坊（区块链 v2.0）
 

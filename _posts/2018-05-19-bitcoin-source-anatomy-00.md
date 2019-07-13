@@ -24,8 +24,8 @@ $ cd src # 进入 src 目录，之后未作特殊说明的均以该目录作为�
 ## 源码剖析
 
 首先要找到一个程序的入口，也就是 main 函数。
-使用 grep 命令查找 main 函数所出现的文件即位置。
-根据比特币核心服务程序 bitcoind，可以找到该程序对应的 main 函数在“bitcoind.cpp”文件中。
+使用 grep 命令找出 main 函数所在的文件及位置。
+根据比特币核心服务程序 bitcoind，可以确定该程序对应的 main 函数在“bitcoind.cpp”文件中。
 
 {% highlight C++ %}
 int main(int argc, char* argv[]) // 0.程序入口
@@ -44,34 +44,34 @@ int main(int argc, char* argv[]) // 0.程序入口
 ![bitcoind-startup](https://raw.githubusercontent.com/mistydew/blockchain/master/images/bitcoind-startup-v0.12.1.png)
 
 > 比特币核心服务程序启动流程：<br>
-> 1.[SetupEnvironment()](/blog/2018/05/bitcoin-source-anatomy-01.html#SetupEnvironment-ref) - 设置程序运行环境：本地化处理。<br>
-> 2.[noui_connect()](/blog/2018/05/bitcoin-source-anatomy-01.html#noui_connect-ref) - 无 UI 连接：连接信号处理函数。<br>
-> 3.[AppInit(argc, argv)](/blog/2018/06/bitcoin-source-anatomy-02.html#AppInit-ref) - 应用程序初始化：初始化并启动。<br>
-> 3.1.[ParseParameters(argc, argv)](/blog/2018/06/bitcoin-source-anatomy-02.html#ParseParameters-ref) - 解析命令行（控制台传入）参数。<br>
-> 3.2.[help and version info](/blog/2018/06/bitcoin-source-anatomy-02.html#HelpVersionInfo-ref) - 版本和帮助信息。<br>
-> 3.3.[GetDataDir(false)](/blog/2018/06/bitcoin-source-anatomy-03.html#GetDataDir-ref) - 获取数据目录。<br>
-> 3.4.[ReadConfigFile(mapArgs, mapMultiArgs)](/blog/2018/06/bitcoin-source-anatomy-03.html#ReadConfigFile-ref) - 读取配置文件。<br>
-> 3.5.[SelectParams(ChainNameFromCommandLine())](/blog/2018/06/bitcoin-source-anatomy-03.html#SelectParams-ref) - 选择区块链（网络）参数。<br>
-> 3.6.[command-line arguments sanity check](/blog/2018/06/bitcoin-source-anatomy-03.html#Command-line-ref) - 检测命令行参数完整性。<br>
-> 3.7.[daemonization](/blog/2018/06/bitcoin-source-anatomy-03.html#Daemon-ref) - 守护进程后台化。<br>
-> 3.8.[setup server](/blog/2018/06/bitcoin-source-anatomy-03.html#Server-ref) - 设置服务选项。<br>
-> 3.9.[InitLogging()](/blog/2018/06/bitcoin-source-anatomy-04.html#InitLogging-ref) - 初始化日志记录。<br>
-> 3.10.[InitParameterInteraction()](/blog/2018/06/bitcoin-source-anatomy-04.html#InitParameterInteraction-ref) - 初始化参数交互。<br>
-> 3.11.[AppInit2(threadGroup, scheduler)](/blog/2018/06/bitcoin-source-anatomy-04.html#AppInit2-ref) - 应用程序初始化 2（本物入口）。<br>
-> 3.11.1.[Step 1: setup](/blog/2018/06/bitcoin-source-anatomy-04.html#Step01-ref) - 安装。<br>
-> 3.11.2.[Step 2: parameter interactions](/blog/2018/06/bitcoin-source-anatomy-04.html#Step02-ref) - 参数交互。<br>
-> 3.11.3.[Step 3: parameter-to-internal-flags](/blog/2018/06/bitcoin-source-anatomy-05.html#Step03-ref) - 参数转换为内部标志。<br>
-> 3.11.4.[Step 4: application initialization: dir lock, daemonize, pidfile, debug log](/blog/2018/06/bitcoin-source-anatomy-05.html#Step04-ref) - 应用程序初始化：目录锁，守护进程后台化，进程号文件，调试日志文件。<br>
-> 3.11.5.[Step 5: verify wallet database integrity](/blog/2018/08/bitcoin-source-anatomy-11.html#Step05-ref) - 验证钱包数据库的完整性。<br>
-> 3.11.6.[Step 6: network initialization](/blog/2018/08/bitcoin-source-anatomy-12.html#Step06-ref) - 网络初始化。<br>
-> 3.11.7.[Step 7: load block chain](/blog/2018/08/bitcoin-source-anatomy-13.html#Step07-ref) - 加载区块链。<br>
-> 3.11.8.[Step 8: load wallet](/blog/2018/08/bitcoin-source-anatomy-14.html#Step08-ref) - 加载钱包。<br>
-> 3.11.9.[Step 9: data directory maintenance](/blog/2018/09/bitcoin-source-anatomy-15.html#Step09-ref) - 数据目录维护。<br>
-> 3.11.10.[Step 10: import blocks](/blog/2018/09/bitcoin-source-anatomy-15.html#Step10-ref) - 导入区块。<br>
-> 3.11.11.[Step 11: start node](/blog/2018/09/bitcoin-source-anatomy-16.html#Step11-ref) - 启动节点。<br>
-> 3.11.12.[Step 12: finished]() - 完成。<br>
-> 3.12.[WaitForShutdown]() - 根据启动标志做出相应处理。<br>
-> 3.13.[Shutdown]() - 关闭。
+> 1.[SetupEnvironment()](/blog/2018/05/bitcoin-source-anatomy-01.html#SetupEnvironment-ref) | 设置程序运行环境：本地化处理。<br>
+> 2.[noui_connect()](/blog/2018/05/bitcoin-source-anatomy-01.html#noui_connect-ref) | 无 UI 连接：连接信号处理函数。<br>
+> 3.[AppInit(argc, argv)](/blog/2018/06/bitcoin-source-anatomy-02.html#AppInit-ref) | 应用程序初始化：初始化并启动。<br>
+> 3.1.[ParseParameters(argc, argv)](/blog/2018/06/bitcoin-source-anatomy-02.html#ParseParameters-ref) | 解析命令行（控制台传入）参数。<br>
+> 3.2.[help and version info](/blog/2018/06/bitcoin-source-anatomy-02.html#HelpVersionInfo-ref) | 版本和帮助信息。<br>
+> 3.3.[GetDataDir(false)](/blog/2018/06/bitcoin-source-anatomy-03.html#GetDataDir-ref) | 获取数据目录。<br>
+> 3.4.[ReadConfigFile(mapArgs, mapMultiArgs)](/blog/2018/06/bitcoin-source-anatomy-03.html#ReadConfigFile-ref) | 读取配置文件。<br>
+> 3.5.[SelectParams(ChainNameFromCommandLine())](/blog/2018/06/bitcoin-source-anatomy-03.html#SelectParams-ref) | 选择区块链（网络）参数。<br>
+> 3.6.[command-line arguments sanity check](/blog/2018/06/bitcoin-source-anatomy-03.html#Command-line-ref) | 检测命令行参数完整性。<br>
+> 3.7.[daemonization](/blog/2018/06/bitcoin-source-anatomy-03.html#Daemon-ref) | 守护进程后台化。<br>
+> 3.8.[setup server](/blog/2018/06/bitcoin-source-anatomy-03.html#Server-ref) | 设置服务选项。<br>
+> 3.9.[InitLogging()](/blog/2018/06/bitcoin-source-anatomy-04.html#InitLogging-ref) | 初始化日志记录。<br>
+> 3.10.[InitParameterInteraction()](/blog/2018/06/bitcoin-source-anatomy-04.html#InitParameterInteraction-ref) | 初始化参数交互。<br>
+> 3.11.[AppInit2(threadGroup, scheduler)](/blog/2018/06/bitcoin-source-anatomy-04.html#AppInit2-ref) | 应用程序初始化 2（本物入口）。<br>
+> 3.11.1.[Step 1: setup](/blog/2018/06/bitcoin-source-anatomy-04.html#Step01-ref) | 安装。<br>
+> 3.11.2.[Step 2: parameter interactions](/blog/2018/06/bitcoin-source-anatomy-04.html#Step02-ref) | 参数交互。<br>
+> 3.11.3.[Step 3: parameter-to-internal-flags](/blog/2018/06/bitcoin-source-anatomy-05.html#Step03-ref) | 参数转换为内部标志。<br>
+> 3.11.4.[Step 4: application initialization: dir lock, daemonize, pidfile, debug log](/blog/2018/06/bitcoin-source-anatomy-05.html#Step04-ref) | 应用程序初始化：目录锁，守护进程后台化，进程号文件，调试日志文件。<br>
+> 3.11.5.[Step 5: verify wallet database integrity](/blog/2018/08/bitcoin-source-anatomy-11.html#Step05-ref) | 验证钱包数据库的完整性。<br>
+> 3.11.6.[Step 6: network initialization](/blog/2018/08/bitcoin-source-anatomy-12.html#Step06-ref) | 网络初始化。<br>
+> 3.11.7.[Step 7: load block chain](/blog/2018/08/bitcoin-source-anatomy-13.html#Step07-ref) | 加载区块链。<br>
+> 3.11.8.[Step 8: load wallet](/blog/2018/08/bitcoin-source-anatomy-14.html#Step08-ref) | 加载钱包。<br>
+> 3.11.9.[Step 9: data directory maintenance](/blog/2018/09/bitcoin-source-anatomy-15.html#Step09-ref) | 数据目录维护。<br>
+> 3.11.10.[Step 10: import blocks](/blog/2018/09/bitcoin-source-anatomy-15.html#Step10-ref) | 导入区块。<br>
+> 3.11.11.[Step 11: start node](/blog/2018/09/bitcoin-source-anatomy-16.html#Step11-ref) | 启动节点。<br>
+> 3.11.12.[Step 12: finished]() | 完成。<br>
+> 3.12.[WaitForShutdown]() | 根据启动标志做出相应处理。<br>
+> 3.13.[Shutdown]() | 关闭。
 
 Thanks for your time.
 
