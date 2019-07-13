@@ -26,12 +26,17 @@ permalink: /blog/archive.html
   {% assign year = post.date | date: '%Y' %}
   {% assign nyear = post.next.date | date: '%Y' %}
   {% if year != nyear %}
-## {{ post.date | date: '%Y' }} ({{ counts[i] }})
-{:.archive-title}
+    {% if i != 0 %}
+  </ul>
+</blockquote>
+    {% endif %}
+<blockquote>
+  <h2>{{ post.date | date: '%Y' }} ({{ counts[i] }})</h2>
+  <ul class="archive-list">
     {% assign i = i | plus: 1 %}
   {% endif %}
   {% if post.hidden == true %}
   {% else %}
-* {{ post.date | date: '%m-%d' }} &raquo; [{{ post.title }}]({{ post.url }} "{{ post.title }}"){:.archive-item}
+    <li>{{ post.date | date: "%Y-%m-%d-" }}<a href="{{ post.url }}">{{ post.title }}</a></li>
   {% endif %}
 {% endfor %}

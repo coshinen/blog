@@ -19,6 +19,7 @@ permalink: /blog/tags.html
 <p id="tags"></p>
 <center>
 <div class="tagcloud">
+<blockquote>
 {% for tag in site.tags %}
   {% assign temp = tag[1].size | minus: min | times: 36 | divided_by: diff %}
   {% assign base = temp | divided_by: 4 %}
@@ -37,6 +38,7 @@ permalink: /blog/tags.html
   {% endif %}
   <a href="#{{ tag[0] }}-ref" style="font-size: {{ size }}pt; color: #{{ color }}{{ color }}{{ color }};">{{ tag[0] }}</a>
 {% endfor %}
+</blockquote>
 </div>
 </center>
 
@@ -60,7 +62,7 @@ permalink: /blog/tags.html
 <blockquote>
   <h2 id="{{ tag[0] }}-ref">{{ tag | first }} ({{ counts[idx] }})<a href="#tags">{% include pages/icon-chevron-up.html %}</a></h2>
     {% assign idx = idx | plus: 1 %}
-  <ul class="arc-list">
+  <ul class="tag-list">
     {% for post in tag.last %}
       {% if post.hidden == true %}
       {% else %}

@@ -34,7 +34,7 @@ permalink: /blog/category.html
 <blockquote>
   <h2 id="{{ category[0] }}-ref">{{ category | first }} ({{ counts[idx] }})<a href="#contents">{% include pages/icon-chevron-up.html %}</a></h2>
     {% assign idx = idx | plus: 1 %}
-  <ul class="arc-list">
+  <ul class="category-list">
     {% for post in category.last %}
       {% if post.hidden == true %}
       {% else %}
