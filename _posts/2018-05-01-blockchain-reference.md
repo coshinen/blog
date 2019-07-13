@@ -25,6 +25,8 @@ stickie: true
 ### Guide | 实现机制
 
 * [How Does Bitcoin Work?](https://learnmeabitcoin.com)
+* [Blockchain Demo](https://anders.com/blockchain)
+* [Blockchain - Get to know it](https://blockchainhandbook.io)
 * [区块链技术指南](https://yeasy.gitbooks.io/blockchain_guide/content)
 * [简介 · 比特币开发者指南-巴比特图书](https://book.8btc.com/books/6/bitcoin-developer-guide/_book)
 * [简介 · 区块链开发者指南-巴比特图书](https://book.8btc.com/books/6/blockchain-developer-guide/_book)
