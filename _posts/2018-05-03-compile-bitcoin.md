@@ -9,7 +9,7 @@ tags: 区块链 比特币 源码构建
 ---
 在 macOS、UNIX/Linux 平台下构建比特币源码，得到对应版本的 bitcoind、bitcoin-cli、bitcoin-qt 等可执行文件。
 
-## 下载比特币源码
+## 获取比特币源码
 
 使用 git 把 GitHub 上托管的比特币源码克隆到本地，关于 git 的安装和使用详见 [Git 基础命令](/blog/2018/04/git-commands.html)篇。
 
@@ -375,15 +375,23 @@ Report bugs to <https://github.com/bitcoin/bitcoin/issues>.
 
 ## 特殊构建（编译得到类似于官方发布的可执行文件）
 
-**注：比特币源码 v0.12.1 需先修改 Qt 包源路径，查看[交叉编译比特币源码](/blog/2018/09/cross-compile-bitcoin.html#Qt-ref)。**
+通过 configure 定制 Makefile，以构建源码得到便于移植的、静态（不需要依赖库）的 bitcoind、bitcoin-cli、bitcoin-qt 等可执行文件。
+
+首先，安装基本依赖：
+
+{% highlight shell %}
+$ sudo apt install build-essential libtool autotools-dev automake pkg-config bsdmainutils curl
+{% endhighlight %}
+
+**注：比特币 v0.12.1 源码需先修改 Qt 包源路径，查看[交叉编译比特币源码](/blog/2018/09/cross-compile-bitcoin.html#Qt-ref)。**
 
 {% highlight shell %}
 $ cd depends
-$ make # 这一步会下载相关依赖，确保网络畅通，若某个依赖包请求失败，可多尝试几次，注：miniupnpc 包所在网址可能需要科学上网
+$ make # 这一步会使用 curl 下载并编译相关依赖，确保网络畅通，若某个依赖包请求失败，可多尝试几次，注：miniupnpc 包所在网址可能需要科学上网
 $ cd ..
 $ ./autogen.sh # 若是首次构建，先生成 configure
 $ ./configure --prefix=`pwd`/depends/x86_64-pc-linux-gnu # 使用指定位置的依赖安装独立于目录结构的文件
-$ make # 若构建过，则先执行 make clean 进行清理，make 后即可得到便于移植（不需要依赖库）的可执行文件
+$ make # 若构建过，则先执行 make clean 进行清理
 {% endhighlight %}
 
 Thanks for your time.

@@ -11,7 +11,7 @@ tags: 区块链 比特币 源码构建 交叉编译
 
 **以比特币 v0.12.1 为例，进行交叉编译。**
 
-## 下载比特币源码（Ubuntu 18.04.1）
+## 获取比特币源码（Ubuntu 18.04.1）
 
 {% highlight shell %}
 $ git clone https://github.com/bitcoin/bitcoin.git # 克隆最新版的比特币源码到本地。
@@ -31,8 +31,10 @@ $ vim depends/packages/qt.mk # Line 3: 把 official_releases 改为 archive，�
 
 第 3 行内容变化如下：
 
-> -$(package)_download_path=http://download.qt.io/official_releases/qt/5.5/$($(package)_version)/submodules
-> +$(package)_download_path=http://download.qt.io/archive/qt/5.5/$($(package)_version)/submodules
+{% highlight shell %}
+-$(package)_download_path=http://download.qt.io/official_releases/qt/5.5/$($(package)_version)/submodules
++$(package)_download_path=http://download.qt.io/archive/qt/5.5/$($(package)_version)/submodules
+{% endhighlight %}
 
 ## 安装基本依赖
 
@@ -67,7 +69,7 @@ There are 2 choices for the alternative x86_64-w64-mingw32-g++ (providing /usr/b
 Press <enter> to keep the current choice[*], or type selection number: 1 # 输入 1 后按回车完成设置
 {% endhighlight %}
 
-可再次使用该命令，查看是否设置成功。
+再次使用该命令，查看是否设置成功。
 
 {% highlight shell %}
 $ sudo update-alternatives --config x86_64-w64-mingw32-g++ # Set the default mingw32 g++ compiler option to posix.
@@ -86,10 +88,10 @@ Press <enter> to keep the current choice[*], or type selection number: # 直接�
 
 {% highlight shell %}
 $ cd depends
-$ make HOST=x86_64-w64-mingw32 -j4 # 这一步会下载相关依赖，确保网络畅通，若某个依赖包请求失败，可多尝试几次
+$ make HOST=x86_64-w64-mingw32 -j4 # 这一步会使用 curl 下载并编译相关依赖，确保网络畅通，若某个依赖包请求失败，可多尝试几次，注：miniupnpc 包所在网址可能需要科学上网
 $ cd ..
 $ ./autogen.sh # 若是首次构建，先生成 configure
-$ ./configure --prefix=`pwd`/depends/x86_64-w64-mingw32
+$ ./configure --prefix=`pwd`/depends/x86_64-w64-mingw32 # 使用指定位置的依赖安装独立于目录结构的文件
 $ make # 若构建过非 Windows 版的程序，则先执行 make clean 进行清理
 {% endhighlight %}
 
