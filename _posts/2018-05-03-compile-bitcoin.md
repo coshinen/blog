@@ -7,7 +7,7 @@ comments: true
 categories: Blockchain Bitcoin
 tags: 区块链 比特币 源码构建
 ---
-本文记录了如何在 macOS、UNIX/Linux 平台下构建比特币源码，得到相应版本的 bitcoind、bitcoin-cli、bitcoin-qt 等可执行文件。
+在 macOS、UNIX/Linux 平台下构建比特币源码，得到对应版本的 bitcoind、bitcoin-cli、bitcoin-qt 等可执行文件。
 
 ## 下载比特币源码
 
@@ -40,6 +40,7 @@ $ brew install automake berkeley-db4 libtool boost@1.59 miniupnpc openssl pkg-co
 brew 默认安装指定库的最新版本，可以使用命令`$ brew search <libname>`查看指定库的所有版本。
 **bitcoin v0.12.1 对应的 boost 库的版本为1.59.0，可以从 [bitcoin/depends/packages/boost.mk](https://github.com/bitcoin/bitcoin/blob/v0.12.1/depends/packages/boost.mk) 中获取当前版本比特币对应的 boost 库的版本。**
 
+<p id="Dependencies-ref"></p>
 ### Ubuntu 16.04.* 下的相关依赖
 
 #### 基础依赖
@@ -86,13 +87,15 @@ $ sudo apt-get install libqt4-dev libprotobuf-dev protobuf-compiler # Qt 4 可�
 $ sudo apt-get install libqrencode-dev
 {% endhighlight %}
 
+**注：发行版是使用 GCC 构建然后使用“strip bitcoind”去掉调试符号，该操作可减少可执行文件大小约 90%。**
+
 ## 构建（编译和安装）
 
 {% highlight shell %}
-$ ./autogen.sh
-$ ./configure # 定制并生成 Makefile，例：关闭钱包功能，使用静态库链接得到移植后不依赖库文件的可执行文件，指定 boost 库路径等。
-$ make # 使用 Makefile 进行比特币源码的编译，编译完成后会生成 4 至 6 个 ELF 程序，分别为 bitcoind、bitcoin-cli、bitcoin-tx、test_bitcoin，若安装了 Qt 图形库，则会增加 bitcoin-qt、test_bitcoin-qt。
-$ make install # 该项可选，把编译好的比特币程序拷贝到系统默认的可执行程序目录 /usr/local/bin 下。
+$ ./autogen.sh # 生成 configure
+$ ./configure # 配置生成 Makefile，例：关闭钱包功能，使用静态库链接得到移植后不依赖库文件的可执行文件，指定 boost 库路径等
+$ make # 使用 Makefile 进行比特币源码的编译，编译完成后会生成 4 至 6 个 ELF，分别为 bitcoind、bitcoin-cli、bitcoin-tx、test_bitcoin，若安装了 Qt 图形库，则会增加 bitcoin-qt、test_bitcoin-qt
+$ make install # 该项可选，把编译好的比特币程序拷贝到系统默认的可执行程序目录 /usr/local/bin 下
 {% endhighlight %}
 
 **注：macOS Mojave 无法构建 bitcoin v0.12.1 的可执行文件 bitcoin-qt，因为 macOS Mojave 不支持 bitcoin v0.12.1 对应的 qt5.5 的构建。**
@@ -356,12 +359,28 @@ Report bugs to <https://github.com/bitcoin/bitcoin/issues>.
 {% endhighlight %}
 </details>
 
+## 特殊构建（编译得到类似于官方发布的可执行文件）
+
+**注：比特币源码 v0.12.1 需先修改 Qt 包源路径，查看[交叉编译比特币源码](/blog/2018/09/cross-compile-bitcoin.html#Qt-ref)。**
+
+{% highlight shell %}
+$ cd depends
+$ make # 这一步会下载相关依赖，确保网络畅通，若某个依赖包请求失败，可多尝试几次，注：miniupnpc 包所在网址可能需要科学上网
+$ cd ..
+$ ./autogen.sh # 若是首次构建，先生成 configure
+$ ./configure --prefix=`pwd`/depends/x86_64-pc-linux-gnu # 使用指定位置的依赖安装独立于目录结构的文件
+$ make # 若构建过，则先执行 make clean 进行清理，make 后即可得到便于移植（不需要依赖库）的可执行文件
+{% endhighlight %}
+
 Thanks for your time.
 
 ## 参照
 
 * [bitcoin/bitcoin](https://github.com/bitcoin/bitcoin)
+* [Bitcoin Core :: Bitcoin](https://bitcoincore.org)
 * [bitcoin/build-osx.md at v0.12.1 · bitcoin/bitcoin · GitHub](https://github.com/bitcoin/bitcoin/blob/v0.12.1/doc/build-osx.md)
 * [bitcoin/build-unix.md at v0.12.1 · bitcoin/bitcoin · GitHub](https://github.com/bitcoin/bitcoin/blob/v0.12.1/doc/build-unix.md)
 * [qt@5.5 fails to configure on MacOS Mojave 10.14 · Issue #32467 · Homebrew/homebrew-core · GitHub](https://github.com/Homebrew/homebrew-core/issues/32467)
 * [qt@5.5: delete by fxcoudert · Pull Request #32565 · Homebrew/homebrew-core · GitHub](https://github.com/Homebrew/homebrew-core/pull/32565)
+* [How to compile a static binary bitcoind in Ubuntu · Issue #3781 · bitcoin/bitcoin · GitHub](https://github.com/bitcoin/bitcoin/issues/3781)
+* [How to compile static version bitcoind?](https://bitcointalk.org/index.php?topic=1636271.0)

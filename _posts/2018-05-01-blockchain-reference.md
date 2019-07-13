@@ -20,7 +20,7 @@ stickie: true
 * [Bitcoin Whitepaper - Satoshi Nakamoto](http://satoshinakamoto.me/whitepaper) - 非官方多语言版
 * [Bitcoin: A Peer-to-Peer Electronic Cash System](https://git.dhimmel.com/bitcoin-whitepaper) - 非官方重新排版
 * [比特币白皮书 个人翻译+注解](https://zhuanlan.zhihu.com/p/25039679) - 知乎
-* [比特币白皮书中英对照 - mistydew](https://mistydew.github.io/blog/2018/04/Bitcoin-A-Peer-to-Peer-Electronic-Cash-System.html)
+* [比特币白皮书中英对照 - mistydew](/blog/2018/04/Bitcoin-A-Peer-to-Peer-Electronic-Cash-System.html)
 
 ### Guide | 指南
 
@@ -58,7 +58,7 @@ stickie: true
 * [比特币源码解析 - 呼，是出一口气；吸，是争一口气!](https://blog.csdn.net/pure_lady/article/category/7131199/2)
 * [比特币源码解读 - ttblack](https://www.jianshu.com/u/ef215107c407) - v0.9.5rc2
 * [比特币源码研读 - 菜菜子_forest](https://www.jianshu.com/u/30081a05cf95) - 0.14
-* [比特币源码剖析 - mistydew](https://mistydew.github.io/blog/2018/05/bitcoin-source-anatomy-00.html) - v0.12.1
+* [比特币源码剖析 - mistydew](/blog/2018/05/bitcoin-source-anatomy-00.html) - v0.12.1
 
 ### Basic Knowledge | 基础知识
 

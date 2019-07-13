@@ -7,12 +7,12 @@ comments: true
 categories: Git
 tags: Git CLI
 ---
-Git 是一个免费且开源的分布式版本控制系统，旨在处理从小到非常大项目的速度和效率。
+[Git](https://git-scm.com) 是一个免费且开源的分布式版本控制系统，旨在处理从小到非常大项目的速度和效率。
 
 Git 易于学习且拥有占用空间小和闪电般快速的性能。
 它远优于像 Subversion、CVS、Perforce 和 ClearCase 这些的 SCM 工具，有像廉价的本地分支、便捷的暂存区，和多种工作流程的特性。
 
-![git](/images/git/git.jpg)
+![git](/images/git/git.png)
 
 据传 [GitHub](https://github.com) 是全球最大的同性交友网站，Hub 有中心、枢纽之意。
 
@@ -71,7 +71,5 @@ Thanks for your time.
 
 ## 参照
 
-* [Git](https://git-scm.com)
-* [GitHub](https://github.com)
 * [Git - Documentation](https://git-scm.com/doc)
 * [Git教程 - 廖雪峰的官方网站](https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000)

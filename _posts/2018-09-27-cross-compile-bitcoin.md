@@ -9,7 +9,7 @@ tags: 区块链 比特币 源码构建 交叉编译
 ---
 在 UNIX/Linux 平台下交叉编译比特币源码，得到 Windows 版本的 bitcoin.exe、bitcoin-cli.exe、bitcoin-qt.exe 等可执行文件。
 
-**这里以比特币 v0.12.1 为例，进行交叉编译。**
+**以比特币 v0.12.1 为例，进行交叉编译。**
 
 ## 下载比特币源码（Ubuntu 18.04.1）
 
@@ -22,6 +22,7 @@ HEAD detached at v0.12.1
 nothing to commit, working directory clean
 {% endhighlight %}
 
+<p id="Qt-ref"></p>
 ## 修改 v0.12.1 源码 Qt 包源路径
 
 {% highlight shell %}
@@ -35,6 +36,8 @@ $ vim depends/packages/qt.mk # Line 3: 把 official_releases 改为 archive，�
 
 ## 安装基本依赖
 
+**先安装比特币基础依赖，查看[编译比特币源码](/blog/2018/05/compile-bitcoin.html#Dependencies-ref)。**
+
 {% highlight shell %}
 $ sudo apt update
 $ sudo apt upgrade
@@ -43,9 +46,7 @@ $ sudo apt install build-essential libtool autotools-dev automake pkg-config bsd
 
 主机工具链（build-essential）是必需的，因为某些依赖包（例如：protobuf）需要构建用于构建过程中的主机实用程序。
 
-查看[编译比特币源码](https://mistydew.github.io/blog/2018/05/compile-bitcoin.html)安装比特币基础依赖。
-
-## 构建 Windows 64位版
+## 构建 Windows 64 位版
 
 ### 安装 mingw-w64 交叉编译工具链
 
@@ -83,7 +84,7 @@ There are 2 choices for the alternative x86_64-w64-mingw32-g++ (providing /usr/b
 Press <enter> to keep the current choice[*], or type selection number: # 直接按回车即可
 {% endhighlight %}
 
-### 开始构建
+### 构建
 
 {% highlight shell %}
 $ cd depends
