@@ -46,7 +46,6 @@ stickie: true
 ### Source Code and BIPs | 源码及改进建议
 
 * [Bitcoin v0.1 released](https://www.metzdowd.com/pipermail/cryptography/2009-January/014994.html) - the actual first email sent to the cryptography mailing-list by Satoshi where he actually delivered the 0.1 version
-* [bitcoin v0.1](https://bitcointalk.org/index.php?topic=68121.0) - Bitcoin Forum
 * [Code \| Satoshi Nakamoto Institute](https://satoshi.nakamotoinstitute.org/code) - Pre-Release (nov08), v0.1.0, v0.1.3
 * [bitcoin/bitcoin at v0.1.5 ALPHA](https://github.com/bitcoin/bitcoin/tree/4405b78d6059e536c36974088a8ed4d9f0f29898) - very close to what Satoshi initially wrote
 * [bitcoin/bitcoin at v0.12.1](https://github.com/bitcoin/bitcoin/tree/v0.12.1) - turning point
