@@ -390,7 +390,7 @@ $ cd depends
 $ make # 这一步会使用 curl 下载并编译相关依赖，确保网络畅通，若某个依赖包请求失败，可多尝试几次，注：miniupnpc 包所在网址可能需要科学上网
 $ cd ..
 $ ./autogen.sh # 若是首次构建，先生成 configure
-$ ./configure --prefix=`pwd`/depends/x86_64-pc-linux-gnu # 使用指定位置的依赖安装独立于目录结构的文件
+$ ./configure --prefix=`pwd`/depends/x86_64-pc-linux-gnu --enable-glibc-back-compat LDFLAGS="-static-libstdc++" # 使用指定位置的依赖安装独立于目录结构的文件，开启 glibc 的向后兼容并使用静态链接选项
 $ make # 若构建过，则先执行 make clean 进行清理
 {% endhighlight %}
 
