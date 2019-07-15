@@ -4,6 +4,9 @@ title: Quotes
 permalink: /blog/quotes.html
 ---
 
+> Satoshi Nakamoto, Bitcoin P2P e-cash paper:
+> * It's very attractive to the libertarian viewpoint if we can explain it properly. I'm better with code than with words though.
+
 > Henri Poincaré, Science and Hypothesis:
 > * To doubt everything or to believe everything are two equally convenient solutions; both dispense with the necessity of reflection.
 
