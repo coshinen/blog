@@ -14,13 +14,13 @@ tags: bitcoind 区块链 比特币
 
 ## Linux 快速启动
 
-使用命令行客户端启动（从头开始）的最简单方式，自动同步区块并创建一个钱包，只要在包含你的 bitcoind 二进制程序的目录运行下面命令（不带参数）：
+使用命令行客户端启动，自动同步区块链并创建一个钱包的最简单的方法是，只需从包含你的 bitcoind 二进制程序的目录运行这条（不带参数）命令：
 
 {% highlight shell %}
 $ ./bitcoind
 {% endhighlight %}
 
-运行标准图形化界面：
+运行标准的图形化界面：
 
 {% highlight shell %}
 $ ./bitcoin-qt
@@ -31,7 +31,12 @@ $ ./bitcoin-qt
 以下命令来自于比特币核心版本 [v0.12.1](https://github.com/bitcoin/bitcoin/tree/v0.12.1)。
 
 {% highlight shell %}
-$ ./bitcoind --help -help-debug # 获取以下详细帮助。
+$ ./bitcoind --help -help-debug # 获取详细帮助信息
+{% endhighlight %}
+
+<details>
+<summary>bitcoind v0.12.1 help info</summary>
+{% highlight shell %}
 Bitcoin Core Daemon version v0.12.1.0-61906ac
 比特币核心守护进程版本 v0.12.1.0-意味不明
 
@@ -644,28 +649,48 @@ RPC 服务选项：
        Timeout during HTTP requests (default: 30)
        HTTP 请求的超时时间（默认：30s）
 {% endhighlight %}
+</details>
+
+## 比特币配置文件
+
+所有的命令行选项（除了 -conf）都可以在配置文件中指定，所有的配置文件选项也都可以在命令行中指定。
+命令行选项覆盖配置文件中设置的值。
+
+配置文件是一个“设置=值”对的列表，每行一个，可选注释以字符‘#’开头。
+
+配置文件不是自动创建的；你可以使用你最爱的纯文本编辑器创建它。
+一个用户友好的配置文件生成器在[这里](https://jlopp.github.io/bitcoin-core-config-generator)。
+默认情况下，比特币（或 bitcoind）将在比特币数据目录中查找名为“bitcoin.conf”的文件，但数据目录和配置文件路径都可以使用 -datedir 和 -conf 命令行参数改变。
+
+> Windows: C:\Users\username\AppData\Roaming\Bitcoin\bitcoin.conf
+>
+> Linux: /home/username/.bitcoin/bitcoin.conf
+>
+> Mac OSX: /Users/username/Library/Application Support/Bitcoin/bitcoin.conf
+
+注意：如果运行比特币测试网（testnet）模式，则子目录“testnet”将被自动追加到数据目录。
 
 ## 比特币配置文件样例
 
-Linux: ~/.bitcoin/bitcoin.conf
-
-> \# 打印调试信息到控制台<br>
-> #printtoconsole=1<br>
-> \# 调试信息（IPs、时间戳微秒）<br>
-> logips=1<br>
-> logtimemicros=1<br>
-> \# 后台运行<br>
-> daemon=1<br>
-> \# 开启 CPU 挖矿（默认挖矿线程数为 1）<br>
-> gen=1<br>
-> \# RPC 验证信息（用户名、密码）<br>
-> rpcuser=myusername<br>
-> rpcpassword=mypasswd<br>
-> \# RPC 白名单（外网 IP）<br>
-> rpcallowip=xxx.xxx.xxx.xxx<br>
-> ...
-
 来自 [https://github.com/mistydew/blockchain/blob/master/bitcoin.conf](https://github.com/mistydew/blockchain/blob/master/bitcoin.conf):
+
+{% highlight shell %}
+# 打印调试信息到控制台
+#printtoconsole=1
+# 调试信息（IPs、时间戳微秒）
+logips=1
+logtimemicros=1
+# 后台运行
+daemon=1
+# 开启 CPU 挖矿（默认挖矿线程数为 1）
+gen=1
+# RPC 验证信息（用户名、密码）
+rpcuser=username
+rpcpassword=passwd
+# RPC 白名单（外网 IP）
+rpcallowip=xxx.xxx.xxx.xxx
+...
+{% endhighlight %}
 
 Thanks for your time.
 
@@ -673,4 +698,5 @@ Thanks for your time.
 
 * [Running Bitcoin - Bitcoin Wiki](https://en.bitcoin.it/wiki/Running_Bitcoin)
 * [bitcoin/bitcoin at v0.12.1](https://github.com/bitcoin/bitcoin/tree/v0.12.1)
+* [Bitcoin Core Config Generator](https://jlopp.github.io/bitcoin-core-config-generator)
 * [mistydew/blockchain](https://github.com/mistydew/blockchain)
