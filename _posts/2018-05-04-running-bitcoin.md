@@ -672,7 +672,7 @@ RPC 服务选项：
 
 ## 比特币配置文件样例
 
-来自 [https://github.com/mistydew/blockchain/blob/master/bitcoin.conf](https://github.com/mistydew/blockchain/blob/master/bitcoin.conf):
+来自 [https://github.com/mistydew/blockchain/blob/master/.bitcoin/bitcoin.conf](https://github.com/mistydew/blockchain/blob/master/bitcoin.conf):
 
 {% highlight shell %}
 # 打印调试信息到控制台
