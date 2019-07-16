@@ -128,7 +128,7 @@ Ooh, ooh
 
 ## 感想
 
-明天就是 Apple 春季發佈會了，突然想起這首 N 年前 iPod Touch 宣傳片的 BGM。
+明天就是 Apple 春季發佈會了，突然想起 N 年前看到的這首 iPod Touch 宣傳片的 BGM。
 
 Thanks for your time.
 

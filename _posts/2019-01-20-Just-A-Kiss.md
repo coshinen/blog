@@ -120,7 +120,7 @@ Kiss goodnight
 
 ## 感想
 
-這首戰前女神樂隊的歌和 GC 的「英雄」前奏出奇地像，MV 是一個小故事，很有意思。
+這首歌和 GARNET CROW 的「英雄」前奏出奇地像，MV 是一個小故事，很有意思。
 
 Thanks for your time.
 
