@@ -6,15 +6,18 @@ author: mistydew
 comments: true
 categories: Blockchain Bitcoin 译文
 tags: 区块链 比特币 比特币白皮书
-excerpt: 比特币：一种对等的电子现金系统，将允许在线支付从一方直接发送到另一方，而不需要通过金融机构。
+excerpt: 比特币：一种点对点的电子现金系统，一个电子现金的纯点对点版本允许在线支付从一方直接发送到另一方，而不通过一个金融机构。
 ---
 <p align="center">
 <font size="6">
-Bitcoin: A Peer-to-Peer Electronic Cash System<br>
-比特币：一种对等的电子现金系统
+Bitcoin: A Peer-to-Peer Electronic Cash System
 </font>
 </p>
-
+<blockquote align="center">
+<font size="6">
+比特币：一种点对点的电子现金系统
+</font>
+</blockquote>
 <p align="center">
 Satoshi Nakamoto<br>
 satoshin@gmx.com<br>
@@ -36,14 +39,14 @@ network itself requires minimal structure.  Messages are broadcast on a best eff
 basis, and nodes can leave and rejoin the network at will, accepting the longest
 proof-of-work chain as proof of what happened while they were gone.
 
-> **概要.** 一个电子现金的纯对等版本将允许在线支付从一方直接发送到另一方，而不需要通过金融机构。
-> 数字签名提供了部分解决方案，但如果仍需要可信的第三方来防止双重花费，其主要优势将会丢失。
-> 我们提出了使用对等网络的双重花费问题的解决方案。
-> 网络通过把交易时间戳散列到正在运行的基于散列的工作量证明链中，形成不重做工作量证明就无法改变的记录。
-> 最长的链不仅可以作为事件发生顺序的证明，而且可以证明它来自最大的 CPU 能力池。
-> 只要大部分 CPU 能力被不合作攻击该网络的节点控制，它们将产生最长的链并超过攻击者。
-> 网络本身需要最小的结构。
-> 消息以尽力而为的方式广播，节点可以随意离开和重新加入该网络，接受最长的工作量证明链来作为它们离开后发生事件的证明。
+> **概要.** 一个电子现金的纯点对点版本允许在线支付从一方直接发送到另一方，而不通过一个金融机构。
+> 数字签名提供了部分解决方案，但如果仍需要一个可信的第三方来防止双重花费，其主要的优势就丧失了。
+> 我们提出一种使用一个点对点网络解决双重花费问题的方案。
+> 该网络通过把交易散列进一条不断增长的基于散列的工作量证明链中来为交易打时间戳，形成一条不重做工作量证明就不能改变的记录。
+> 最长的链不仅作为被见证事件顺序的证明，而且是它来自最大 CPU 算力池的证明。
+> 只要多数的 CPU 算力被不攻击该网络的节点控制，它们将生成最长的链并超过攻击者。
+> 该网络本身只需最小的结构。
+> 消息被尽力广播，节点可以随意离开和重新加入该网络，只要接受最长的工作量证明链作为它们离开时发生事件的证明。
 
 ## 1. Introduction | 介绍
 
