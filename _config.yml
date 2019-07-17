@@ -22,17 +22,17 @@ feed_username:   mistydew
 
 # Site page baseurl
 sitemap: "/sitemap.xml"
-blog:    "/blog/"
 gc:      "/gc/"
+quotes:  "/quotes.html"
 about:   "/about.html"
 donate:  "/donate.html"
 resume:  "/resume.html"
 
 # Blog page baseurl
+blog:     "/blog/"
 feed:     "/blog/feed.xml"
 archive:  "/blog/archive.html"
 category: "/blog/category.html"
-quotes:   "/blog/quotes.html"
 tagcloud: "/blog/tags.html"
 
 # Handling Reading

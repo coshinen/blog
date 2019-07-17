@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Quotes
-permalink: /blog/quotes.html
+permalink: /quotes.html
 ---
 
 > Satoshi Nakamoto, Bitcoin P2P e-cash paper:
