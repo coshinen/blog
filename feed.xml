@@ -12,7 +12,7 @@ permalink: /blog/feed.xml
     <pubDate>{{ site.time | date_to_rfc822 }}</pubDate>
     <lastBuildDate>{{ site.time | date_to_rfc822 }}</lastBuildDate>
     <generator>Jekyll v{{ jekyll.version }}</generator>
-    {% for post in site.posts limit:10 %}{% if post.hidden == true %}{% else %}
+    {% for post in site.posts limit:7 %}{% if post.hidden == true %}{% else %}
       <item>
         <title>{{ post.title | xml_escape }}</title>
         <description>{{ post.content | xml_escape }}</description>
