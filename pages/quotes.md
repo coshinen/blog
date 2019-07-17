@@ -110,3 +110,6 @@ permalink: /blog/quotes.html
 
 > Sherlock Holmes, A Scandal in Bohemia:
 > * You see, but you do not observe. The distinction is clear.
+
+> Sherlock Holmes, Sign of the Four:
+> * How often have I said to you that when you have eliminated the impossible whatever remains, HOWEVER IMPROBABLE, must be the truth?
