@@ -22,18 +22,19 @@ feed_username:   mistydew
 
 # Site page baseurl
 sitemap: "/sitemap.xml"
-gc:      "/gc/"
+booklog: "/booklog.html"
 quotes:  "/quotes.html"
 about:   "/about.html"
-donate:  "/donate.html"
 resume:  "/resume.html"
+gc:      "/gc/"
+donate:  "/donate.html"
 
 # Blog page baseurl
 blog:     "/blog/"
-feed:     "/blog/feed.xml"
 archive:  "/blog/archive.html"
 category: "/blog/category.html"
 tagcloud: "/blog/tags.html"
+feed:     "/blog/feed.xml"
 
 # Handling Reading
 exclude: [LICENSE, README.md]
