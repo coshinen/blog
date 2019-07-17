@@ -49,6 +49,8 @@ stickie: true
 
 ## 杂项
 
+* [认识区块链](/blog/2018/09/get-to-know-the-blockchain.html)
+* [10 个区块链的基础知识](/blog/2018/10/10-essential-blockchain-questions-and-answers.html)
 * [比特币源码剖析—区块](/blog/2018/04/bitcoin-block.html)
 * [比特币数据目录](/blog/2018/10/bitcoin-datadir.html)
 * [比特币中的洋葱路由](/blog/2018/10/tor-support-in-bitcoin.html)
