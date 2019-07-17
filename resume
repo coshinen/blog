@@ -20,7 +20,7 @@ Bachelor of Computer Science<div style="float:right;">Henan, China</div>
 -----------------------------------------------------------------------------------------
 <strong>Here are some of my open source repo.</strong>
 <a href="https://github.com/mistydew/netCloud">netCloud</a>
-* netCloud is a customised protocol cloud storage tool.
+* netCloud is a custom protocol cloud storage tool.
 <a href="https://github.com/mistydew/spellCorrection">spellCorrection</a>
 * A spell correction system.
 <a href="https://github.com/mistydew/rssSearchEngine">rssSearchEngine</a>
@@ -37,10 +37,10 @@ Bachelor of Computer Science<div style="float:right;">Henan, China</div>
 <strong>Editor:</strong> Vi/Vim
 <strong>DB:</strong> Mysql, Redis, LevelDB, BerkeleyDB
 <strong>Design Pattern:</strong> Reactor, Thread Pool (TCP/IP, Select/Epoll I/O)
-<strong>Open-Source Libraries:</strong> STL, Boost, Libevent
+<strong>Open-Source Libraries:</strong> STL, Boost, Libevent, Libssl (OpenSSL)
 
 <font size="4"><strong>MISCELLANEOUS</strong></font>
 -----------------------------------------------------------------------------------------
 <strong>Languages:</strong> Mandarin, English, Japanese (JLPT N?)
-<strong>Interests:</strong> Reading/Thinking, Writing/Drawing, Music(Singing, Keyboard), Animation(DC), CROWSUB(GC), Cooking/Tasting, Sports(Soccer/Football)
+<strong>Interests:</strong> Reading/Thinking, Writing/Drawing, Music (Singing, Keyboard), Animation (DC), CROWSUB (GC), Cooking/Tasting, Sports (Soccer/Football)
 <span id="a">mistydew</span>@<a href="https://github.com/mistydew">GitHub</a>:~$ 
