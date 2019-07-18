@@ -101,10 +101,15 @@
         display: none;
     }
 
+    #search-box .searchbox {
+        height: 24px;
+        font-size: 1em;
+	}
+
     #search-box .searchbox_submit {
         position: relative;
-        top: 4px;
-        right: 23px;
+        top: 2px;
+        right: 32px;
 	}
 
     @include media-query($on-palm) {
