@@ -93,6 +93,7 @@ permalink: /quotes.html
 > * よっ！ボウズ、知ってるか？怪盗はあざやかに獲物を盗み出す創造的な芸術家だが、探偵はその跡を見てなんくせつける、ただの批評家に過ぎねぇんだぜ。
 
 > 江戸川コナン／工藤新一「名探偵コナン」：
+> * 不可能なものを除外していって残ったものが、たとえどんなに信じられなくても、それが真相なんだ。
 > * 君を確実に破滅させることができれば、公共の利益のために僕は喜んで死を受け入れよう。
 > * 理由（わけ）なんているのかよ？人は人を殺す動機なんて知ったこっちゃねぇが、人が人を助ける理由に、論理的な思考を存在しねぇだろう？
 > * たった一つの真実見抜く、見た目は子供、頭脳は大人。その名は…
@@ -105,11 +106,14 @@ permalink: /quotes.html
 > * Let me pay you one in return, when I said if I were assured of the former eventuality, I will cheerfully accept the latter.
 > * Come at once if convenient, if inconvenient come all the same.
 
-> Sherlock Holmes, The Final Problem:
+> Sherlock Holmes, [Memoirs of Sherlock Holmes, The Final Problem](https://www.pagebypagebooks.com/Arthur_Conan_Doyle/Memoirs_of_Sherlock_Holmes/Adventure_XI_The_Final_Problem_p5.html):
 > * Let me pay you one in return when I say that if I were assured of the former eventuality I would, in the interests of the public, cheerfully accept the latter.
 
-> Sherlock Holmes, A Scandal in Bohemia:
+> Sherlock Holmes, [The Adventures of Sherlock Holmes, A Scandal in Bohemia](https://www.pagebypagebooks.com/Arthur_Conan_Doyle/The_Adventures_of_Sherlock_Holmes/ADVENTURE_I_A_SCANDAL_IN_BOHEMIA_p2.html):
 > * You see, but you do not observe. The distinction is clear.
 
-> Sherlock Holmes, Sign of the Four:
+> Sherlock Holmes, [Sign of the Four, Sherlock Holmes Gives a Demonstration](https://www.pagebypagebooks.com/Arthur_Conan_Doyle/Sign_of_the_Four/Sherlock_Holmes_Gives_a_Demonstration_p2.html):
 > * How often have I said to you that when you have eliminated the impossible whatever remains, HOWEVER IMPROBABLE, must be the truth?
+
+> Sherlock Holmes, [Sign of the Four, The Science of Deduction](https://www.pagebypagebooks.com/Arthur_Conan_Doyle/Sign_of_the_Four/The_Science_of_Deduction_p4.html):
+> * Eliminate all other factors, and the one which remains must be the truth.
