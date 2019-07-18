@@ -34,7 +34,8 @@ blog:     "/blog/"
 archive:  "/blog/archive.html"
 category: "/blog/category.html"
 tagcloud: "/blog/tags.html"
-feed:     "/blog/feed.xml"
+feed:     "/blog/feed.html"
+blogfeed: "/blog/feed.xml"
 
 # Handling Reading
 exclude: [LICENSE, README.md]

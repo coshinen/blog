@@ -35,6 +35,9 @@ layout: null
 </url>
 <url>
 <loc>{{ site.tagcloud | prepend: site.url }}</loc>
+</url>
+<url>
+<loc>{{ site.feed | prepend: site.url }}</loc>
 </url>{% for post in site.posts reversed %}{% if post.hidden == true %}{% else %}
 <url>
 <loc>{{ post.url | prepend: site.url }}</loc>
