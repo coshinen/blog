@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "Buy me a coffee"
+title: "Buy me a coffee?"
 permalink: /donate.html
 ---
 
