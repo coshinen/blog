@@ -8,17 +8,22 @@
 # Site settings
 root: mistydew
 title: parallel universe
-email: mistydew@qq.com
-subtitle: GC music diary
-btc_address: 1GC1iAZz9Wroy99bwJUzuLrqpmayUhjYbZ
+quote: ソルト：無理は一番の、退屈しのぎだ。
 description: >- # this means to ignore newlines until "baseurl:"
   Welcome to the ❤ parallel universe! Copyright &copy; 2019 mistydew.
   Powered by Jekyll. Hosted on GitHub.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://mistydew.github.io" # the base hostname & protocol for your site
-quote: ソルト：無理は一番の、退屈しのぎだ。
-github_username: mistydew
-feed_username:   mistydew
+
+# Site footer
+github: mistydew
+cv: Curriculum Vitae 
+email: mistydew@qq.com
+subtitle: GC music diary
+rss: Subscribe Feed
+feedburner: mistydew
+coffee: Buy me a coffee
+btc: 1GC1iAZz9Wroy99bwJUzuLrqpmayUhjYbZ
 
 # Site page baseurl
 sitemap: "/sitemap.xml"

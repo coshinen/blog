@@ -4,6 +4,8 @@ title: "Buy me a coffee?"
 permalink: /donate.html
 ---
 
+{% if site.btc %}
 ![btc-address](/images/donate/btc-address.png){:.border}
 
-{% if site.btc_address %}{% include pages/icon-btc.html address=site.btc_address %}{% endif %}
+{% include pages/icon-btc.html address=site.btc %}
+{% endif %}

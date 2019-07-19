@@ -4,16 +4,16 @@
         <div class="footer-col-wrapper">
           <div class="footer-col footer-col-1">
             <ul class="contact-list">
-              {% if site.github_username %}<li>{% include footer/icon-github.html username=site.github_username %}</li>{% endif %}
-              {% if site.resume %}<li>{% include footer/icon-terminal.html resume=site.resume title="Curriculum Vitae" %}</li>{% endif %}
+              {% if site.github %}<li>{% include footer/icon-github.html username=site.github %}</li>{% endif %}
+              {% if site.resume %}<li>{% include footer/icon-terminal.html title=site.cv %}</li>{% endif %}
               {% if site.email %}<li>{% include footer/icon-envelope.html email=site.email %}</li>{% endif %}
             </ul>
           </div>
           <div class="footer-col footer-col-2">
             <ul class="social-media-list">
               {% if site.subtitle %}<li>{% include footer/icon-bird.html title=site.subtitle %}</li>{% endif %}
-              {% if site.feed %}<li>{% include footer/icon-rss-square.html title="Subscribe Feed" %}</li>{% endif %}
-              {% if site.donate %}<li>{% include footer/icon-donate.html title="Buy me a coffee" %}</li>{% endif %}
+              {% if site.feed %}<li>{% include footer/icon-rss-square.html title=site.rss %}</li>{% endif %}
+              {% if site.donate %}<li>{% include footer/icon-donate.html title=site.coffee %}</li>{% endif %}
             </ul>
           </div>
           <div class="footer-col footer-col-3">
