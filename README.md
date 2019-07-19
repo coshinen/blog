@@ -57,7 +57,7 @@
 * 2018.06.04 [+] site: Busuanzi analytics (hits, visitors, pageviews)
 * 2018.05.22 [+] site: robots.txt (Allow Googlebot, Baiduspider)
 * 2018.05.21 [+] pages: archive page
-* 2018.05.18 [+] pages: 404 page
+* 2018.05.18 [+] pages: 404 page (Tencent search lost children)
 * 2018.05.17 [+] footer: ~~slogan~~ quote
 * 2018.05.16 [+] pages: category, ~~slogan~~ page
 * 2018.05.14 [+] site: ~~honehone clock~~; home page: ~~pagination~~
