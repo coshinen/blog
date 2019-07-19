@@ -10,7 +10,7 @@ excerpt: ため息ひとつ落ちた週末の、どうしようもない感じ�
 ---
 ![first kaleidscope 〜君の家に着くまでずっと走ってゆく〜](https://raw.githubusercontent.com/mistydew/gc2/master/cover/minial/MINIAL_first%20kaleidscope%20〜君の家に着くまでずっと走ってゆく〜.jpg){:.border}
 
-## dreaming of love | 愛之夢
+## dreaming of love | 夢見愛情
 
 歌手：GARNET CROW<br>
 作詞：AZUKI 七<br>

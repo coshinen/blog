@@ -10,7 +10,7 @@ excerpt: コーヒーは最初の一口、甘いケーキの端っこ、ポテ�
 ---
 ![夏の幻](https://raw.githubusercontent.com/mistydew/gc2/master/cover/single/SG05_夏の幻.jpg){:.border}
 
-## hi-speed スペシャル oneday | 你好-速度 特別的 一天
+## hi-speed スペシャル oneday | 高速 特別的 一天
 
 歌手：GARNET CROW<br>
 作詞：AZUKI 七<br>
