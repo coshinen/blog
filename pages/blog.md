@@ -11,7 +11,7 @@ permalink: /blog/index.html
     <li>
       <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }} [Sticky]</span><span style="float:right;"> 分类：{% for category in post.categories %}<a class="category" href="{{ site.category }}#{{ category }}-ref">{{ category | prepend: " " }}</a>{% endfor %}</span>
       <h2>
-        <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+        <a class="post-link" href="{{ post.url }}">{{ post.title }}</a>
       </h2>
       <div class="excerpt">
         <p>{{ post.excerpt | strip_html }}</p>
@@ -25,7 +25,7 @@ permalink: /blog/index.html
     <li>
       <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span><span style="float:right;"> 分类：{% for category in post.categories %}<a class="category" href="{{ site.category }}#{{ category }}-ref">{{ category | prepend: " " }}</a>{% endfor %}</span>
       <h2>
-        <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+        <a class="post-link" href="{{ post.url }}">{{ post.title }}</a>
       </h2>
       <div class="excerpt">
         <p>{{ post.excerpt | strip_html }}</p>
