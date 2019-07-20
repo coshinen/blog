@@ -1,4 +1,4 @@
-# Welcome to Jekyll!
+# Welcome to Jekyll 3.0.1!
 #
 # This config file is meant for settings that affect your whole blog, values
 # which you are expected to set up once and rarely need to edit after that.
@@ -6,6 +6,7 @@
 # 'jekyll serve'. If you change this file, please restart the server process.
 
 # Site settings
+# Site base
 root: mistydew
 title: parallel universe
 quote: ソルト：無理は一番の、退屈しのぎだ。
@@ -42,13 +43,21 @@ tagcloud: "/blog/tags.html"
 feed:     "/blog/feed.html"
 blogfeed: "/blog/feed.xml"
 
+# Build settings
 # Handling Reading
 exclude: [LICENSE, README.md]
 encoding : "utf-8"
+markdown_ext: "markdown, mkdown, mkdn, mkd, md"
 
 # Conversion
 markdown: kramdown
+highlighter: rouge
 excerpt_separator: "\n\n" # Excerpt/Abstract/Summary
+incremental: false
+
+# Serving
+port: 4000
+host: 127.0.0.1
 
 # Outputting
 permalink: /blog/:year/:month/:title.html
