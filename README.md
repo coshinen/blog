@@ -65,7 +65,7 @@
 * 2018.04.27 [-] site: ~~audio directory~~
 * 2018.04.21 [+] post: images, reference
 * 2018.04.19 [+] site: ~~audio directory~~; README: Todo list, Timeline
-* 2018.04.18 [+] site: new Jekyll base theme template (jekyll new)
+* 2018.04.18 [+] site: the base Jekyll theme (jekyll new)
 </details>
 
 ## Find me on
