@@ -4,7 +4,7 @@ title: About
 permalink: /about.html
 ---
 
-The parallel universe based on Jekyll base theme.
+The parallel universe is based on the base Jekyll theme.
 I'm mistydew, a coder.
 
 > Contact me:
