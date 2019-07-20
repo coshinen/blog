@@ -47,7 +47,7 @@ blogfeed: "/blog/feed.xml"
 # Handling Reading
 exclude: [LICENSE, README.md]
 encoding : "utf-8"
-markdown_ext: "markdown, mkdown, mkdn, mkd, md"
+markdown_ext: "markdown,mkdown,mkdn,mkd,md"
 
 # Conversion
 markdown: kramdown
