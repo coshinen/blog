@@ -40,8 +40,8 @@ blog:     "/blog/"
 archive:  "/blog/archive.html"
 category: "/blog/category.html"
 tagcloud: "/blog/tags.html"
-feed:     "/blog/feed.html"
-blogfeed: "/blog/feed.xml"
+feedme:   "/blog/feed.html"
+feed:     "/blog/feed.xml"
 
 # Build settings
 # Handling Reading

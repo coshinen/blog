@@ -10,4 +10,4 @@ Welcome to subscribe the following feed for keep track of my updates in time:
 > * <a href="https://feeds.feedburner.com/{{ site.feedburner }}" target="_blank">https://feeds.feedburner.com/{{ site.feedburner }}</a><br>
 
 > Alternative Feed: (Normal access)
-> * [{{ site.blogfeed | prepend: site.url }}]({{ site.blogfeed | prepend: site.url }})
+> * [{{ site.feed | prepend: site.url }}]({{ site.feed | prepend: site.url }})
