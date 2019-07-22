@@ -126,5 +126,5 @@ Thanks for your time.
 
 ## 参照
 
-* [Lady Antebellum](https://www.ladyantebellum.com)
-* [Lady Antebellum – Just a Kiss Lyrics \| Genius Lyrics](https://genius.com/Lady-antebellum-just-a-kiss-lyrics)
+* [Lady Antebellum](https://www.ladyantebellum.com){:target="_blank"}
+* [Lady Antebellum – Just a Kiss Lyrics \| Genius Lyrics](https://genius.com/Lady-antebellum-just-a-kiss-lyrics){:target="_blank"}

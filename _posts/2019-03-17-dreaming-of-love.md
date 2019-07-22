@@ -138,6 +138,6 @@ Thanks for your time.
 
 ## 参照
 
-* [GARNET CROW official website : ガーネットクロウ オフィシャルサイト](http://www.garnetcrow.com)
-* [GARNET CROW dreaming of love 歌詞 - 歌ネット](https://www.uta-net.com/song/20147)
-* [dreaming of love Lyrics \| GARNET CROW music diary](https://mistydew.github.io/gc/lyrics/original/dreaming%20of%20love.html)
+* [GARNET CROW official website : ガーネットクロウ オフィシャルサイト](http://www.garnetcrow.com){:target="_blank"}
+* [GARNET CROW dreaming of love 歌詞 - 歌ネット](https://www.uta-net.com/song/20147){:target="_blank"}
+* [dreaming of love Lyrics \| GARNET CROW music diary](https://mistydew.github.io/gc/lyrics/original/dreaming%20of%20love.html){:target="_blank"}

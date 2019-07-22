@@ -130,6 +130,6 @@ Thanks for your time.
 
 ## 参照
 
-* [GARNET CROW official website : ガーネットクロウ オフィシャルサイト](http://www.garnetcrow.com)
-* [GARNET CROW HAPPY DAYS? 歌詞 - 歌ネット](https://www.uta-net.com/song/20139)
-* [HAPPY DAYS? Lyrics \| GARNET CROW music diary](https://mistydew.github.io/gc/lyrics/original/HAPPY%20DAYS%3F.html)
+* [GARNET CROW official website : ガーネットクロウ オフィシャルサイト](http://www.garnetcrow.com){:target="_blank"}
+* [GARNET CROW HAPPY DAYS? 歌詞 - 歌ネット](https://www.uta-net.com/song/20139){:target="_blank"}
+* [HAPPY DAYS? Lyrics \| GARNET CROW music diary](https://mistydew.github.io/gc/lyrics/original/HAPPY%20DAYS%3F.html){:target="_blank"}

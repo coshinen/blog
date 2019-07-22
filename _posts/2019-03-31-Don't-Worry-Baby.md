@@ -120,4 +120,4 @@ Thanks for your time.
 
 ## 参照
 
-* [The Beach Boys – Don't Worry Baby Lyrics \| Genius Lyrics](https://genius.com/The-beach-boys-dont-worry-baby-lyrics)
+* [The Beach Boys – Don't Worry Baby Lyrics \| Genius Lyrics](https://genius.com/The-beach-boys-dont-worry-baby-lyrics){:target="_blank"}

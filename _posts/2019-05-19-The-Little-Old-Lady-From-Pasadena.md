@@ -96,4 +96,4 @@ Thanks for your time.
 
 ## 参照
 
-* [The Beach Boys – The Little Old Lady From Pasadena Lyrics \| Genius Lyrics](https://genius.com/The-beach-boys-the-little-old-lady-from-pasadena-lyrics)
+* [The Beach Boys – The Little Old Lady From Pasadena Lyrics \| Genius Lyrics](https://genius.com/The-beach-boys-the-little-old-lady-from-pasadena-lyrics){:target="_blank"}

@@ -134,4 +134,4 @@ Thanks for your time.
 
 ## 参照
 
-* [Grouplove – Tongue Tied Lyrics \| Genius Lyrics](https://genius.com/Grouplove-tongue-tied-lyrics)
+* [Grouplove – Tongue Tied Lyrics \| Genius Lyrics](https://genius.com/Grouplove-tongue-tied-lyrics){:target="_blank"}
