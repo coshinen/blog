@@ -16,8 +16,8 @@ generate numblocks # 立刻挖出区块（在 RPC 调用返回前）
 
 **注：此功能仅限回归测试网 regtest 使用。**
 
-参数：<br>
-1.numblocks（数字，必备）立刻生成区块的数量。
+参数：
+1. numblocks（数字，必备）立刻生成区块的数量。
 
 结果：（数组）返回生成区块的哈希集。
 
@@ -735,5 +735,5 @@ Thanks for your time.
 
 ## 参照
 
-* [Developer Documentation - Bitcoin](https://bitcoin.org/en/developer-documentation)
-* [Bitcoin Developer Reference - Bitcoin](https://bitcoin.org/en/developer-reference#generate)
+* [Developer Documentation - Bitcoin](https://bitcoin.org/en/developer-documentation){:target="_blank"}
+* [Bitcoin Developer Reference - Bitcoin](https://bitcoin.org/en/developer-reference#generate){:target="_blank"}

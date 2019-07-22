@@ -60,6 +60,6 @@ Thanks for your time.
 
 ## 参照
 
-* [GARNET CROW official website : ガーネットクロウ オフィシャルサイト](http://www.garnetcrow.com)
-* [GARNET CROW strangers 歌詞 - 歌ネット](https://www.uta-net.com/song/105961)
-* [strangers Lyrics \| GARNET CROW music diary](https://mistydew.github.io/gc/lyrics/original/strangers.html)
+* [GARNET CROW official website : ガーネットクロウ オフィシャルサイト](http://www.garnetcrow.com){:target="_blank"}
+* [GARNET CROW strangers 歌詞 - 歌ネット](https://www.uta-net.com/song/105961){:target="_blank"}
+* [strangers Lyrics \| GARNET CROW music diary](https://mistydew.github.io/gc/lyrics/original/strangers.html){:target="_blank"}

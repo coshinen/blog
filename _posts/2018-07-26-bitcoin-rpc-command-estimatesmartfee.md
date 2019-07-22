@@ -16,10 +16,10 @@ estimatesmartfee nblocks # 估计交易在 nblocks 个区块开始确认的每�
 
 **警告：该接口不稳定且可能消失或改变！**
 
-参数：<br>
-1.nblocks（数字）区块数。
+参数：
+1. nblocks（数字）区块数。
 
-结果：<br>
+结果：
 {% highlight shell %}
 {
   "feerate" : x.x,     （数字）估算每千字节的交易费（以 BTC 为单位）
@@ -109,5 +109,5 @@ Thanks for your time.
 
 ## 参照
 
-* [Developer Documentation - Bitcoin](https://bitcoin.org/en/developer-documentation)
-* [Bitcoin Developer Reference - Bitcoin](https://bitcoin.org/en/developer-reference#estimatesmartfee)
+* [Developer Documentation - Bitcoin](https://bitcoin.org/en/developer-documentation){:target="_blank"}
+* [Bitcoin Developer Reference - Bitcoin](https://bitcoin.org/en/developer-reference#estimatesmartfee){:target="_blank"}

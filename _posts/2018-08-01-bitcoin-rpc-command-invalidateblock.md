@@ -13,8 +13,8 @@ hidden: true
 invalidateblock "hash" # 永久标记一个区块无效，就像该块违反了共识规则
 {% endhighlight %}
 
-参数：<br>
-1.hash（字符串，必备）用来标记为无效的区块哈希。
+参数：
+1. hash（字符串，必备）用来标记为无效的区块哈希。
 
 结果：无返回值。
 
@@ -204,5 +204,5 @@ Thanks for your time.
 
 ## 参照
 
-* [Developer Documentation - Bitcoin](https://bitcoin.org/en/developer-documentation)
-* [Bitcoin Developer Reference - Bitcoin](https://bitcoin.org/en/developer-reference#invalidateblock)
+* [Developer Documentation - Bitcoin](https://bitcoin.org/en/developer-documentation){:target="_blank"}
+* [Bitcoin Developer Reference - Bitcoin](https://bitcoin.org/en/developer-reference#invalidateblock){:target="_blank"}

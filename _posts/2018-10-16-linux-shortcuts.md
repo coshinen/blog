@@ -54,7 +54,7 @@ Bash 是最受欢迎的 shell，所以列出的快捷键集中在 Bash。
 
 ## 4. Ctrl + D
 
-这对键盘快捷键将使你退出当前终端。如果你使用 [SSH](https://www.ssh.com/ssh/protocol) 连接，它将会关闭。
+这对键盘快捷键将使你退出当前终端。如果你使用 [SSH](https://www.ssh.com/ssh/protocol){:target="_blank"} 连接，它将会关闭。
 如果你直接使用一个终端，该应用将会立刻关闭。
 
 把它当成“退出”命令。
@@ -135,4 +135,4 @@ Thanks for your time.
 
 ## 参照
 
-* [13 Linux Terminal Shortcuts Every Power Linux User Must Know](https://linuxhandbook.com/linux-shortcuts)
+* [13 Linux Terminal Shortcuts Every Power Linux User Must Know](https://linuxhandbook.com/linux-shortcuts){:target="_blank"}

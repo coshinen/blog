@@ -113,5 +113,5 @@ Thanks for your time.
 
 ## 参照
 
-* [Tor - Bitcoin WiKi](https://en.bitcoin.it/wiki/Tor)
-* [Setting up a Tor hidden service - Bitcoin Wiki](https://en.bitcoin.it/wiki/Setting_up_a_Tor_hidden_service)
+* [Tor - Bitcoin WiKi](https://en.bitcoin.it/wiki/Tor){:target="_blank"}
+* [Setting up a Tor hidden service - Bitcoin Wiki](https://en.bitcoin.it/wiki/Setting_up_a_Tor_hidden_service){:target="_blank"}

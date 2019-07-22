@@ -143,6 +143,6 @@ Thanks for your time.
 
 ## 参照
 
-* [Developer Documentation - Bitcoin](https://bitcoin.org/en/developer-documentation)
-* [Bitcoin Developer Reference - Bitcoin](https://bitcoin.org/en/developer-reference#listbanned)
-* [JSON 数组 \| 菜鸟教程](http://www.runoob.com/json/js-json-arrays.html)
+* [Developer Documentation - Bitcoin](https://bitcoin.org/en/developer-documentation){:target="_blank"}
+* [Bitcoin Developer Reference - Bitcoin](https://bitcoin.org/en/developer-reference#listbanned){:target="_blank"}
+* [JSON 数组 \| 菜鸟教程](http://www.runoob.com/json/js-json-arrays.html){:target="_blank"}

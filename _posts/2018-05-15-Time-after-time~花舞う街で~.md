@@ -61,5 +61,5 @@ Thanks for your time.
 
 ## 参照
 
-* [倉木麻衣公式WEBサイト](http://www.mai-kuraki.com)
-* [倉木麻衣 Time after time 〜花舞う街で〜 歌詞 - 歌ネット](https://www.uta-net.com/song/16899)
+* [倉木麻衣公式WEBサイト](http://www.mai-kuraki.com){:target="_blank"}
+* [倉木麻衣 Time after time 〜花舞う街で〜 歌詞 - 歌ネット](https://www.uta-net.com/song/16899){:target="_blank"}

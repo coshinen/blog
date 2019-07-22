@@ -14,7 +14,7 @@ excerpt: $ bitcoin-cli getmempoolinfo
 getmempoolinfo # 获取交易内存池激活状态的细节
 {% endhighlight %}
 
-结果：<br>
+结果：
 {% highlight shell %}
 {
   "size": xxxxx,               （数字）当前的交易数
@@ -107,5 +107,5 @@ Thanks for your time.
 
 ## 参照
 
-* [Developer Documentation - Bitcoin](https://bitcoin.org/en/developer-documentation)
-* [Bitcoin Developer Reference - Bitcoin](https://bitcoin.org/en/developer-reference#getmempoolinfo)
+* [Developer Documentation - Bitcoin](https://bitcoin.org/en/developer-documentation){:target="_blank"}
+* [Bitcoin Developer Reference - Bitcoin](https://bitcoin.org/en/developer-reference#getmempoolinfo){:target="_blank"}

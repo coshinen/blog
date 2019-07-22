@@ -138,6 +138,6 @@ Thanks for your time.
 
 ## 参照
 
-* [GARNET CROW official website : ガーネットクロウ オフィシャルサイト](http://www.garnetcrow.com)
-* [GARNET CROW Over Drive 歌詞 - 歌ネット](https://www.uta-net.com/song/93464)
-* [Over Drive Lyrics \| GARNET CROW music diary](https://mistydew.github.io/gc/lyrics/original/Over%20Drive.html)
+* [GARNET CROW official website : ガーネットクロウ オフィシャルサイト](http://www.garnetcrow.com){:target="_blank"}
+* [GARNET CROW Over Drive 歌詞 - 歌ネット](https://www.uta-net.com/song/93464){:target="_blank"}
+* [Over Drive Lyrics \| GARNET CROW music diary](https://mistydew.github.io/gc/lyrics/original/Over%20Drive.html){:target="_blank"}

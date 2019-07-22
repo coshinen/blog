@@ -183,11 +183,10 @@ Thanks for your time.
 
 ## 参照
 
-* [Address - Bitcoin Wiki](https://en.bitcoin.it/wiki/Address)
-* [List of address prefixes - Bitcoin Wiki](https://en.bitcoin.it/wiki/List_of_address_prefixes)
-* [Technical background of version 1 Bitcoin addresses - Bitcoin Wiki](https://en.bitcoin.it/wiki/Technical_background_of_version_1_Bitcoin_addresses)
-* [精通比特币（第二版）第四章 密钥和地址 · 巴比特图书](http://book.8btc.com/books/6/masterbitcoin2cn/_book/ch04.html)
-* [samr7/vanitygen](https://github.com/samr7/vanitygen) 比特币靓号地址生成器
-* [手把手教你拥有个性化的BTC地址 \| 巴比特](http://www.8btc.com/get-a-vanitygen-address)
-* [jonathanfoster/vanity-miner: Bitcoin vanity address miner](https://github.com/jonathanfoster/vanity-miner) C++ 版比特币靓号矿工（需要依赖）
-* [BitcoinVanityGen.com - Bitcoin Vanity Address Generator Online, Free Bicoin Vanity Address Generation](http://bitcoinvanitygen.com) 在线比特币靓号地址生成器，最多定制 9 位，6 位（含 6 位）以内免费
+* [Address - Bitcoin Wiki](https://en.bitcoin.it/wiki/Address){:target="_blank"}
+* [List of address prefixes - Bitcoin Wiki](https://en.bitcoin.it/wiki/List_of_address_prefixes){:target="_blank"}
+* [Technical background of version 1 Bitcoin addresses - Bitcoin Wiki](https://en.bitcoin.it/wiki/Technical_background_of_version_1_Bitcoin_addresses){:target="_blank"}
+* [精通比特币（第二版）第四章 密钥和地址 · 巴比特图书](http://book.8btc.com/books/6/masterbitcoin2cn/_book/ch04.html){:target="_blank"}
+* [samr7/vanitygen](https://github.com/samr7/vanitygen){:target="_blank"} 比特币靓号地址生成器
+* [手把手教你拥有个性化的BTC地址 \| 巴比特](http://www.8btc.com/get-a-vanitygen-address){:target="_blank"}
+* [BitcoinVanityGen.com - Bitcoin Vanity Address Generator Online, Free Bicoin Vanity Address Generation](http://bitcoinvanitygen.com){:target="_blank"} 在线比特币靓号地址生成器，最多定制 9 位，6 位（含 6 位）以内免费

@@ -114,5 +114,5 @@ Thanks for your time.
 
 ## 参照
 
-* [ABBA \| Articles](https://abbasite.com)
-* [ABBA – Dancing Queen Lyrics \| Genius Lyrics](https://genius.com/Abba-dancing-queen-lyrics)
+* [ABBA \| Articles](https://abbasite.com){:target="_blank"}
+* [ABBA – Dancing Queen Lyrics \| Genius Lyrics](https://genius.com/Abba-dancing-queen-lyrics){:target="_blank"}

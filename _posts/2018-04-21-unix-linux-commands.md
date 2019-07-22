@@ -310,6 +310,6 @@ Thanks for your time.
 
 ## 参考
 
-* [Why Penguin is Linux logo? - LinuxScrew: Linux Blog](http://www.linuxscrew.com/2007/11/14/why-penguin-is-linux-logo)
-* [《Linus Torvalds自传》摘录 - 阮一峰的网络日志](http://www.ruanyifeng.com/blog/2012/09/linus_torvalds.html)
-* [Linux命令大全（手册）](http://man.linuxde.net)
+* [Why Penguin is Linux logo? - LinuxScrew: Linux Blog](http://www.linuxscrew.com/2007/11/14/why-penguin-is-linux-logo){:target="_blank"}
+* [《Linus Torvalds自传》摘录 - 阮一峰的网络日志](http://www.ruanyifeng.com/blog/2012/09/linus_torvalds.html){:target="_blank"}
+* [Linux命令大全（手册）](http://man.linuxde.net){:target="_blank"}

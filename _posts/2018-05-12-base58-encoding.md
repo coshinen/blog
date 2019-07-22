@@ -131,8 +131,8 @@ Thanks for your time.
 
 ## 参照
 
-* [Base58 - Wikipedia](https://en.wikipedia.org/wiki/Base58)
-* [Base64 - Wikipedia](https://en.wikipedia.org/wiki/Base64)
-* [Base58Check encoding - Bitcoin Wiki](https://en.bitcoin.it/wiki/Base58Check_encoding)
-* [bitcoin/bitcoin/src/base58.cpp](https://github.com/bitcoin/bitcoin/blob/master/src/base58.cpp)
-* [Bitcoin Base58 Encoder, Decoder, and Validator](http://lenschulwitz.com/base58)
+* [Base58 - Wikipedia](https://en.wikipedia.org/wiki/Base58){:target="_blank"}
+* [Base64 - Wikipedia](https://en.wikipedia.org/wiki/Base64){:target="_blank"}
+* [Base58Check encoding - Bitcoin Wiki](https://en.bitcoin.it/wiki/Base58Check_encoding){:target="_blank"}
+* [bitcoin/bitcoin/src/base58.cpp](https://github.com/bitcoin/bitcoin/blob/master/src/base58.cpp){:target="_blank"}
+* [Bitcoin Base58 Encoder, Decoder, and Validator](http://lenschulwitz.com/base58){:target="_blank"}

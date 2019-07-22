@@ -69,5 +69,5 @@ Thanks for your time.
 
 ## 参照
 
-* [Coldplay official website](https://coldplay.com)
-* [Coldplay – Viva la Vida Lyrics \| Genius Lyrics](https://genius.com/Coldplay-viva-la-vida-lyrics)
+* [Coldplay official website](https://coldplay.com){:target="_blank"}
+* [Coldplay – Viva la Vida Lyrics \| Genius Lyrics](https://genius.com/Coldplay-viva-la-vida-lyrics){:target="_blank"}

@@ -70,11 +70,11 @@ private:
 };
 {% endhighlight %}
 
-参考 bitcoin v0.12.1 源码中的类 [LockedPageManager](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/support/pagelocker.h) 的实现。
+参考 bitcoin v0.12.1 源码中的类 [LockedPageManager](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/support/pagelocker.h){:target="_blank"} 的实现。
 
 Thanks for your time.
 
 ## 参照
 
-* [Singleton pattern - Wikipedia](https://en.wikipedia.org/wiki/Singleton_pattern)
-* [bitcoin/bitcoin at v0.12.1](https://github.com/bitcoin/bitcoin/tree/v0.12.1)
+* [Singleton pattern - Wikipedia](https://en.wikipedia.org/wiki/Singleton_pattern){:target="_blank"}
+* [bitcoin/bitcoin at v0.12.1](https://github.com/bitcoin/bitcoin/tree/v0.12.1){:target="_blank"}

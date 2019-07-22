@@ -415,7 +415,7 @@ void CScheduler::serviceQueue()
 4.使用任务队列的线程数减 1。
 
 3.5.调用模板类 reverse_lock 创建对象，执行反转锁操作：它提供 RAII 功能，在构造时解锁并在析构时上锁。
-另外，它会临时转移所有权，所以互斥锁不能用该锁锁定。其实例永远不会持有锁。详见 [reverse_lock](https://www.boost.org/doc/libs/1_65_0/doc/html/thread/synchronization.html#thread.synchronization.other_locks.reverse_lock)。
+另外，它会临时转移所有权，所以互斥锁不能用该锁锁定。其实例永远不会持有锁。详见 [reverse_lock](https://www.boost.org/doc/libs/1_65_0/doc/html/thread/synchronization.html#thread.synchronization.other_locks.reverse_lock){:target="_blank"}。
 
 未完待续...<br>
 请看下一篇[比特币源码剖析（九）](/blog/2018/07/bitcoin-source-anatomy-09.html)。
@@ -424,5 +424,5 @@ Thanks for your time.
 
 ## 参照
 
-* [bitcoin/bitcoin v0.12.1](https://github.com/bitcoin/bitcoin/tree/v0.12.1)
-* [mistydew/blockchain](https://github.com/mistydew/blockchain)
+* [bitcoin/bitcoin v0.12.1](https://github.com/bitcoin/bitcoin/tree/v0.12.1){:target="_blank"}
+* [mistydew/blockchain](https://github.com/mistydew/blockchain){:target="_blank"}

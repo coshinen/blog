@@ -83,4 +83,4 @@ Thanks for your time.
 
 ## 参照
 
-* [Why Do So Many Linux Users Prefer the Command Line to a GUI?](https://www.fossmint.com/why-linux-users-prefer-the-commandline-to-a-gui)
+* [Why Do So Many Linux Users Prefer the Command Line to a GUI?](https://www.fossmint.com/why-linux-users-prefer-the-commandline-to-a-gui){:target="_blank"}

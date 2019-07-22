@@ -109,14 +109,14 @@ permalink: /quotes.html
 > * Let me pay you one in return, when I said if I were assured of the former eventuality, I will cheerfully accept the latter.
 > * Come at once if convenient, if inconvenient come all the same.
 
-> Sherlock Holmes, [Memoirs of Sherlock Holmes, The Final Problem](https://www.pagebypagebooks.com/Arthur_Conan_Doyle/Memoirs_of_Sherlock_Holmes/Adventure_XI_The_Final_Problem_p5.html):
+> Sherlock Holmes, [Memoirs of Sherlock Holmes, The Final Problem](https://www.pagebypagebooks.com/Arthur_Conan_Doyle/Memoirs_of_Sherlock_Holmes/Adventure_XI_The_Final_Problem_p5.html){:target="_blank"}:
 > * Let me pay you one in return when I say that if I were assured of the former eventuality I would, in the interests of the public, cheerfully accept the latter.
 
-> Sherlock Holmes, [The Adventures of Sherlock Holmes, A Scandal in Bohemia](https://www.pagebypagebooks.com/Arthur_Conan_Doyle/The_Adventures_of_Sherlock_Holmes/ADVENTURE_I_A_SCANDAL_IN_BOHEMIA_p2.html):
+> Sherlock Holmes, [The Adventures of Sherlock Holmes, A Scandal in Bohemia](https://www.pagebypagebooks.com/Arthur_Conan_Doyle/The_Adventures_of_Sherlock_Holmes/ADVENTURE_I_A_SCANDAL_IN_BOHEMIA_p2.html){:target="_blank"}:
 > * You see, but you do not observe. The distinction is clear.
 
-> Sherlock Holmes, [Sign of the Four, Sherlock Holmes Gives a Demonstration](https://www.pagebypagebooks.com/Arthur_Conan_Doyle/Sign_of_the_Four/Sherlock_Holmes_Gives_a_Demonstration_p2.html):
+> Sherlock Holmes, [Sign of the Four, Sherlock Holmes Gives a Demonstration](https://www.pagebypagebooks.com/Arthur_Conan_Doyle/Sign_of_the_Four/Sherlock_Holmes_Gives_a_Demonstration_p2.html){:target="_blank"}:
 > * How often have I said to you that when you have eliminated the impossible whatever remains, HOWEVER IMPROBABLE, must be the truth?
 
-> Sherlock Holmes, [Sign of the Four, The Science of Deduction](https://www.pagebypagebooks.com/Arthur_Conan_Doyle/Sign_of_the_Four/The_Science_of_Deduction_p4.html):
+> Sherlock Holmes, [Sign of the Four, The Science of Deduction](https://www.pagebypagebooks.com/Arthur_Conan_Doyle/Sign_of_the_Four/The_Science_of_Deduction_p4.html){:target="_blank"}:
 > * Eliminate all other factors, and the one which remains must be the truth.

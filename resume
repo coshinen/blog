@@ -7,9 +7,9 @@
 <strong>&nbsp;* Support:&nbsp;&nbsp;&nbsp;&nbsp;https://mistydew.github.io/blog</strong>
 
 <strong>0 packages can be updated.</strong>
-<span id="a">mistydew</span>@<a href="https://github.com/mistydew">GitHub</a>:~$ ls -a
+<span id="a">mistydew</span>@<a href="https://github.com/mistydew" target="_blank">GitHub</a>:~$ ls -a
 <a>. .. </a>.resume
-<span id="a">mistydew</span>@<a href="https://github.com/mistydew">GitHub</a>:~$ cat .resume
+<span id="a">mistydew</span>@<a href="https://github.com/mistydew" target="_blank">GitHub</a>:~$ cat .resume
 <p align="center"><font size="6"><strong>Zichen Yuan (mistydew)</strong></font><br>(+86) xxx-xxxx-xxxx | <a target="_blank" href="mailto:mistydew@qq.com">mistydew@qq.com</a> | Shenzhen, China</p>
 <font size="4"><strong>EDUCATION</strong></font>
 -----------------------------------------------------------------------------------------
@@ -19,15 +19,15 @@ Bachelor of Computer Science<div style="float:right;">Henan, China</div>
 <font size="4"><strong>PROFESSIONAL EXPERIENCE</strong></font>
 -----------------------------------------------------------------------------------------
 <strong>Here are some of my open source repo.</strong>
-<a href="https://github.com/mistydew/netCloud">netCloud</a>
+<a href="https://github.com/mistydew/netCloud" target="_blank">netCloud</a>
 * netCloud is a custom protocol cloud storage tool.
-<a href="https://github.com/mistydew/spellCorrection">spellCorrection</a>
+<a href="https://github.com/mistydew/spellCorrection" target="_blank">spellCorrection</a>
 * A spell correction system.
-<a href="https://github.com/mistydew/rssSearchEngine">rssSearchEngine</a>
+<a href="https://github.com/mistydew/rssSearchEngine" target="_blank">rssSearchEngine</a>
 * A mini search engine with RSS.
-<a href="https://github.com/mistydew/blockchain">crowcoin</a>
+<a href="https://github.com/mistydew/blockchain" target="_blank">crowcoin</a>
 * An altcoin based on Bitcoin.
-<a href="https://github.com/mistydew/asstolrc">asstolrc</a>
+<a href="https://github.com/mistydew/asstolrc" target="_blank">asstolrc</a>
 * A mini command tool to convert complete ass of the Aegisub to lrc.
 
 <font size="4"><strong>PROFESSIONAL SKILLS</strong></font>
@@ -43,4 +43,4 @@ Bachelor of Computer Science<div style="float:right;">Henan, China</div>
 -----------------------------------------------------------------------------------------
 <strong>Languages:</strong> Mandarin, English, Japanese (JLPT N?)
 <strong>Interests:</strong> Reading/Thinking, Writing/Drawing, Music (Singing, Keyboard), Animation (DC), CROWSUB (GC), Cooking/Tasting, Sports (Soccer/Football)
-<span id="a">mistydew</span>@<a href="https://github.com/mistydew">GitHub</a>:~$ 
+<span id="a">mistydew</span>@<a href="https://github.com/mistydew" target="_blank">GitHub</a>:~$ 

@@ -144,6 +144,6 @@ Thanks for your time.
 
 ## 参照
 
-* [GARNET CROW official website : ガーネットクロウ オフィシャルサイト](http://www.garnetcrow.com)
-* [GARNET CROW Mysterious Eyes 歌詞 - 歌ネット](https://www.uta-net.com/song/14347)
-* [Mysterious Eyes Lyrics \| GARNET CROW music diary](https://mistydew.github.io/gc/lyrics/original/Mysterious%20Eyes.html)
+* [GARNET CROW official website : ガーネットクロウ オフィシャルサイト](http://www.garnetcrow.com){:target="_blank"}
+* [GARNET CROW Mysterious Eyes 歌詞 - 歌ネット](https://www.uta-net.com/song/14347){:target="_blank"}
+* [Mysterious Eyes Lyrics \| GARNET CROW music diary](https://mistydew.github.io/gc/lyrics/original/Mysterious%20Eyes.html){:target="_blank"}

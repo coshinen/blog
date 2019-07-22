@@ -209,7 +209,7 @@ Thanks for your time.
 
 ## 参照
 
-* [JSON-RPC - Wikipedia](https://en.wikipedia.org/wiki/JSON-RPC)
-* [bitcoin/bitcoin at v0.12.1](https://github.com/bitcoin/bitcoin/tree/v0.12.1)
-* [Developer Documentation - Bitcoin](https://bitcoin.org/en/developer-documentation)
-* [mistydew/blockchain](https://github.com/mistydew/blockchain)
+* [JSON-RPC - Wikipedia](https://en.wikipedia.org/wiki/JSON-RPC){:target="_blank"}
+* [bitcoin/bitcoin at v0.12.1](https://github.com/bitcoin/bitcoin/tree/v0.12.1){:target="_blank"}
+* [Developer Documentation - Bitcoin](https://bitcoin.org/en/developer-documentation){:target="_blank"}
+* [mistydew/blockchain](https://github.com/mistydew/blockchain){:target="_blank"}

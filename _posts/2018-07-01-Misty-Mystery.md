@@ -85,6 +85,6 @@ Thanks for your time.
 
 ## 参照
 
-* [GARNET CROW official website : ガーネットクロウ オフィシャルサイト](http://www.garnetcrow.com)
-* [GARNET CROW Misty Mystery 歌詞 - 歌ネット](https://www.uta-net.com/song/117216)
-* [Misty Mystery Lyrics \| GARNET CROW music diary](https://mistydew.github.io/gc/lyrics/original/Misty%20Mystery.html)
+* [GARNET CROW official website : ガーネットクロウ オフィシャルサイト](http://www.garnetcrow.com){:target="_blank"}
+* [GARNET CROW Misty Mystery 歌詞 - 歌ネット](https://www.uta-net.com/song/117216){:target="_blank"}
+* [Misty Mystery Lyrics \| GARNET CROW music diary](https://mistydew.github.io/gc/lyrics/original/Misty%20Mystery.html){:target="_blank"}

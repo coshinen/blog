@@ -14,8 +14,8 @@ hidden: true
 setmocktime timestamp # 设置本地时间为给定时间戳（仅限回归测试模式）
 {% endhighlight %}
 
-参数：<br>
-1.timestamp（整型，必备）UNIX 从格林尼治时间 1970-01-01 00:00:00 开始以秒为单位的时间戳，通过 0 返回到使用系统时间。
+参数：
+1. timestamp（整型，必备）UNIX 从格林尼治时间 1970-01-01 00:00:00 开始以秒为单位的时间戳，通过 0 返回到使用系统时间。
 
 结果：无返回值。
 
@@ -109,5 +109,5 @@ Thanks for your time.
 
 ## 参照
 
-* [Developer Documentation - Bitcoin](https://bitcoin.org/en/developer-documentation)
-* [Bitcoin Developer Reference - Bitcoin](https://bitcoin.org/en/developer-reference#setmocktime)
+* [Developer Documentation - Bitcoin](https://bitcoin.org/en/developer-documentation){:target="_blank"}
+* [Bitcoin Developer Reference - Bitcoin](https://bitcoin.org/en/developer-reference#setmocktime){:target="_blank"}

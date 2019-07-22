@@ -398,11 +398,11 @@ Thanks for your time.
 
 ## 参照
 
-* [bitcoin/bitcoin](https://github.com/bitcoin/bitcoin)
-* [Bitcoin Core :: Bitcoin](https://bitcoincore.org)
-* [bitcoin/build-osx.md at v0.12.1 · bitcoin/bitcoin · GitHub](https://github.com/bitcoin/bitcoin/blob/v0.12.1/doc/build-osx.md)
-* [bitcoin/build-unix.md at v0.12.1 · bitcoin/bitcoin · GitHub](https://github.com/bitcoin/bitcoin/blob/v0.12.1/doc/build-unix.md)
-* [qt@5.5 fails to configure on MacOS Mojave 10.14 · Issue #32467 · Homebrew/homebrew-core · GitHub](https://github.com/Homebrew/homebrew-core/issues/32467)
-* [qt@5.5: delete by fxcoudert · Pull Request #32565 · Homebrew/homebrew-core · GitHub](https://github.com/Homebrew/homebrew-core/pull/32565)
-* [How to compile a static binary bitcoind in Ubuntu · Issue #3781 · bitcoin/bitcoin · GitHub](https://github.com/bitcoin/bitcoin/issues/3781)
-* [How to compile static version bitcoind?](https://bitcointalk.org/index.php?topic=1636271.0)
+* [bitcoin/bitcoin](https://github.com/bitcoin/bitcoin){:target="_blank"}
+* [Bitcoin Core :: Bitcoin](https://bitcoincore.org){:target="_blank"}
+* [bitcoin/build-osx.md at v0.12.1 · bitcoin/bitcoin · GitHub](https://github.com/bitcoin/bitcoin/blob/v0.12.1/doc/build-osx.md){:target="_blank"}
+* [bitcoin/build-unix.md at v0.12.1 · bitcoin/bitcoin · GitHub](https://github.com/bitcoin/bitcoin/blob/v0.12.1/doc/build-unix.md){:target="_blank"}
+* [qt@5.5 fails to configure on MacOS Mojave 10.14 · Issue #32467 · Homebrew/homebrew-core · GitHub](https://github.com/Homebrew/homebrew-core/issues/32467){:target="_blank"}
+* [qt@5.5: delete by fxcoudert · Pull Request #32565 · Homebrew/homebrew-core · GitHub](https://github.com/Homebrew/homebrew-core/pull/32565){:target="_blank"}
+* [How to compile a static binary bitcoind in Ubuntu · Issue #3781 · bitcoin/bitcoin · GitHub](https://github.com/bitcoin/bitcoin/issues/3781){:target="_blank"}
+* [How to compile static version bitcoind?](https://bitcointalk.org/index.php?topic=1636271.0){:target="_blank"}

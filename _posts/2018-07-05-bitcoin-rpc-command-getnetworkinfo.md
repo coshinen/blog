@@ -14,7 +14,7 @@ excerpt: $ bitcoin-cli getnetworkinfo
 getnetworkinfo # 获取一个包含 P2P 网络各种状态信息的对象
 {% endhighlight %}
 
-结果：<br>
+结果：
 {% highlight shell %}
 {
   "version": xxxxx,                      （数字）服务器版本
@@ -209,5 +209,5 @@ Thanks for your time.
 
 ## 参照
 
-* [Developer Documentation - Bitcoin](https://bitcoin.org/en/developer-documentation)
-* [Bitcoin Developer Reference - Bitcoin](https://bitcoin.org/en/developer-reference#getnetworkinfo)
+* [Developer Documentation - Bitcoin](https://bitcoin.org/en/developer-documentation){:target="_blank"}
+* [Bitcoin Developer Reference - Bitcoin](https://bitcoin.org/en/developer-reference#getnetworkinfo){:target="_blank"}

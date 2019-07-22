@@ -70,6 +70,6 @@ Thanks for your time.
 
 ## 参照
 
-* [GARNET CROW official website : ガーネットクロウ オフィシャルサイト](http://www.garnetcrow.com)
-* [GARNET CROW Hello Sadness 歌詞 - 歌ネット](https://www.uta-net.com/song/85223)
-* [Hello Sadness Lyrics \| GARNET CROW music diary](https://mistydew.github.io/gc/lyrics/original/Hello%20Sadness.html)
+* [GARNET CROW official website : ガーネットクロウ オフィシャルサイト](http://www.garnetcrow.com){:target="_blank"}
+* [GARNET CROW Hello Sadness 歌詞 - 歌ネット](https://www.uta-net.com/song/85223){:target="_blank"}
+* [Hello Sadness Lyrics \| GARNET CROW music diary](https://mistydew.github.io/gc/lyrics/original/Hello%20Sadness.html){:target="_blank"}

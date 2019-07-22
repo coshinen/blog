@@ -139,4 +139,4 @@ Thanks for your time.
 
 ## 参照
 
-* [Blockchain - Get to know it](https://blockchainhandbook.io)
+* [Blockchain - Get to know it](https://blockchainhandbook.io){:target="_blank"}

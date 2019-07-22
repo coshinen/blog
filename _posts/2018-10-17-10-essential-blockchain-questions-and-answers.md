@@ -81,4 +81,4 @@ Thanks for your time.
 
 ## 参照
 
-* [10 Essential blockchain Interview Questions and Answers](https://www.toptal.com/blockchain/interview-questions)
+* [10 Essential blockchain Interview Questions and Answers](https://www.toptal.com/blockchain/interview-questions){:target="_blank"}

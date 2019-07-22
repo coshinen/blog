@@ -52,5 +52,5 @@ tags: C++ 设计模式
 Thanks for your time.
 
 ## 参照
-* [Design Patterns - Wikipedia](https://en.wikipedia.org/wiki/Design_Patterns)
-* [...](https://github.com/mistydew/DesignPatterns)
+* [Design Patterns - Wikipedia](https://en.wikipedia.org/wiki/Design_Patterns){:target="_blank"}
+* [...](https://github.com/mistydew/DesignPatterns){:target="_blank"}

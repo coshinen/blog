@@ -122,5 +122,5 @@ Thanks for your time.
 
 ## 参照
 
-* [ZONE](http://www.sonymusic.co.jp/Music/Info/ZONE)
-* [ZONE secret base 〜君がくれたもの〜 歌詞 - 歌ネット](https://www.uta-net.com/song/13699)
+* [ZONE](http://www.sonymusic.co.jp/Music/Info/ZONE){:target="_blank"}
+* [ZONE secret base 〜君がくれたもの〜 歌詞 - 歌ネット](https://www.uta-net.com/song/13699){:target="_blank"}

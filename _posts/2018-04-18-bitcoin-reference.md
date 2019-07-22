@@ -59,4 +59,4 @@ Thanks for your time.
 
 ## 参照
 
-* [mistydew/blockchain](https://github.com/mistydew/blockchain)
+* [mistydew/blockchain](https://github.com/mistydew/blockchain){:target="_blank"}

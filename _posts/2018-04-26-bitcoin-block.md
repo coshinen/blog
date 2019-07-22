@@ -78,6 +78,6 @@ Thanks for your time.
 
 ## 参照
 
-* [GitHub - bitcoin/bitcoin at v0.12.1](https://github.com/bitcoin/bitcoin/tree/v0.12.1)
-* [DEFAULT_BLOCK_MAX_SIZE](https://github.com/bitcoin/bitcoin/search?q=DEFAULT_BLOCK_MAX_SIZE&type=Issues)
-* [Block - Bitcoin Wiki](https://en.bitcoin.it/wiki/Block)
+* [GitHub - bitcoin/bitcoin at v0.12.1](https://github.com/bitcoin/bitcoin/tree/v0.12.1){:target="_blank"}
+* [DEFAULT_BLOCK_MAX_SIZE](https://github.com/bitcoin/bitcoin/search?q=DEFAULT_BLOCK_MAX_SIZE&type=Issues){:target="_blank"}
+* [Block - Bitcoin Wiki](https://en.bitcoin.it/wiki/Block){:target="_blank"}

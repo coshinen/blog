@@ -27,7 +27,7 @@ Google 希望看到**长点击**而非**短点击**。
 
 不，这不是通过谷歌分析（Google Analytics）。
 他们并没有偷看跳出率。
-相反，谷歌正通过利用当前跟踪机制来衡量 [pogosticking](http://www.blindfiveyearold.com/search-pogosticking-and-seo) 活动。
+相反，谷歌正通过利用当前跟踪机制来衡量 [pogosticking](http://www.blindfiveyearold.com/search-pogosticking-and-seo){:target="_blank"} 活动。
 请记住，谷歌已经跟踪了用户，即搜索和点击的结果。
 谷歌需要做的就是准确地按时间维度建模。
 
@@ -53,4 +53,4 @@ Thanks for your time.
 
 ## 参照
 
-* [Short Clicks vs Long Clicks (Why Longer is Better!)](http://www.blindfiveyearold.com/short-clicks-versus-long-clicks)
+* [Short Clicks vs Long Clicks (Why Longer is Better!)](http://www.blindfiveyearold.com/short-clicks-versus-long-clicks){:target="_blank"}

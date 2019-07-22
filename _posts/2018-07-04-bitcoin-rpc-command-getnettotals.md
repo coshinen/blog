@@ -14,7 +14,7 @@ excerpt: $ bitcoin-cli getnettotals
 getnettotals # 获取关于网络流量的信息，包含流入字节，流出字节，和当前时间
 {% endhighlight %}
 
-结果：<br>
+结果：
 {% highlight shell %}
 {
   "totalbytesrecv": n,   （数字）接收的总字节
@@ -124,5 +124,5 @@ Thanks for your time.
 
 ## 参照
 
-* [Developer Documentation - Bitcoin](https://bitcoin.org/en/developer-documentation)
-* [Bitcoin Developer Reference - Bitcoin](https://bitcoin.org/en/developer-reference#getnettotals)
+* [Developer Documentation - Bitcoin](https://bitcoin.org/en/developer-documentation){:target="_blank"}
+* [Bitcoin Developer Reference - Bitcoin](https://bitcoin.org/en/developer-reference#getnettotals){:target="_blank"}

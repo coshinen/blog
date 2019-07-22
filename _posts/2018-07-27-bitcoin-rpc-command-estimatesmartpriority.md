@@ -16,10 +16,10 @@ estimatesmartpriority nblocks # 估计一笔 0 交易费的交易在 nblocks 个
 
 **警告：该接口不稳定且可能消失或改变！**
 
-参数：<br>
-1.nblocks（数字）区块数。
+参数：
+1. nblocks（数字）区块数。
 
-结果：<br>
+结果：
 {% highlight shell %}
 {
   "priority" : x.x,    （数字）估算的优先级
@@ -114,5 +114,5 @@ Thanks for your time.
 
 ## 参照
 
-* [Developer Documentation - Bitcoin](https://bitcoin.org/en/developer-documentation)
-* [Bitcoin Developer Reference - Bitcoin](https://bitcoin.org/en/developer-reference#estimatesmartpriority)
+* [Developer Documentation - Bitcoin](https://bitcoin.org/en/developer-documentation){:target="_blank"}
+* [Bitcoin Developer Reference - Bitcoin](https://bitcoin.org/en/developer-reference#estimatesmartpriority){:target="_blank"}

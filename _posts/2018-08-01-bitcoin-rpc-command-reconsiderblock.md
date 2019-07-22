@@ -15,8 +15,8 @@ reconsiderblock "hash" # 移除指定区块及其后代的无效状态，再次�
 
 **该操作能够撤销 [invalidateblock](/blog/2018/08/bitcoin-rpc-command-invalidateblock.html) 的效果，但无法恢复连接。**
 
-参数：<br>
-1.hash（字符串，必备）用来再次考虑的区块哈希。
+参数：
+1. hash（字符串，必备）用来再次考虑的区块哈希。
 
 结果：无返回值。
 
@@ -103,5 +103,5 @@ Thanks for your time.
 
 ## 参照
 
-* [Developer Documentation - Bitcoin](https://bitcoin.org/en/developer-documentation)
-* [Bitcoin Developer Reference - Bitcoin](https://bitcoin.org/en/developer-reference#reconsiderblock)
+* [Developer Documentation - Bitcoin](https://bitcoin.org/en/developer-documentation){:target="_blank"}
+* [Bitcoin Developer Reference - Bitcoin](https://bitcoin.org/en/developer-reference#reconsiderblock){:target="_blank"}

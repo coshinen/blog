@@ -53,6 +53,6 @@ Thanks for your time.
 
 ## 参照
 
-* [GARNET CROW official website : ガーネットクロウ オフィシャルサイト](http://www.garnetcrow.com)
-* [GARNET CROW Timeless Sleep 歌詞一覧リスト - 歌ネット](https://www.uta-net.com/song/20123)
-* [Timeless Sleep Lyrics \| GARNET CROW music diary](https://mistydew.github.io/gc/lyrics/original/Timeless%20Sleep.html)
+* [GARNET CROW official website : ガーネットクロウ オフィシャルサイト](http://www.garnetcrow.com){:target="_blank"}
+* [GARNET CROW Timeless Sleep 歌詞一覧リスト - 歌ネット](https://www.uta-net.com/song/20123){:target="_blank"}
+* [Timeless Sleep Lyrics \| GARNET CROW music diary](https://mistydew.github.io/gc/lyrics/original/Timeless%20Sleep.html){:target="_blank"}

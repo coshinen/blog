@@ -533,7 +533,7 @@ Thanks for your time.
 
 ## 参照
 
-* [How to make an altcoin \| Bear's Den](http://dillingers.com/blog/2015/04/18/how-to-make-an-altcoin)
-* [如何仿照比特币创造自己的山寨币 \| Sunny's Blog](http://shusunny.github.io/2016/04/How-to-make-altcoin-1)
-* [从 0 到 1 建立自己的区块链 \| 巴比特](http://www.8btc.com/build-your-own-blockchain)
-* [mistydew/blockchain](https://github.com/mistydew/blockchain)
+* [How to make an altcoin \| Bear's Den](http://dillingers.com/blog/2015/04/18/how-to-make-an-altcoin){:target="_blank"}
+* [如何仿照比特币创造自己的山寨币 \| Sunny's Blog](http://shusunny.github.io/2016/04/How-to-make-altcoin-1){:target="_blank"}
+* [从 0 到 1 建立自己的区块链 \| 巴比特](http://www.8btc.com/build-your-own-blockchain){:target="_blank"}
+* [mistydew/blockchain](https://github.com/mistydew/blockchain){:target="_blank"}

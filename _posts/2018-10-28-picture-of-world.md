@@ -59,6 +59,6 @@ Thanks for your time.
 
 ## 参照
 
-* [GARNET CROW official website : ガーネットクロウ オフィシャルサイト](http://www.garnetcrow.com)
-* [GARNET CROW picture of world 歌詞 - 歌ネット](https://www.uta-net.com/song/25836)
-* [picture of world Lyrics \| GARNET CROW music diary](https://mistydew.github.io/gc/lyrics/original/picture%20of%20world.html)
+* [GARNET CROW official website : ガーネットクロウ オフィシャルサイト](http://www.garnetcrow.com){:target="_blank"}
+* [GARNET CROW picture of world 歌詞 - 歌ネット](https://www.uta-net.com/song/25836){:target="_blank"}
+* [picture of world Lyrics \| GARNET CROW music diary](https://mistydew.github.io/gc/lyrics/original/picture%20of%20world.html){:target="_blank"}

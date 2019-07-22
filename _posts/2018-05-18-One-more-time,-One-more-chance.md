@@ -74,6 +74,6 @@ Thanks for your time.
 
 ## 参照
 
-* [秒速5センチメートル](https://www.cwfilms.jp/5cm)
-* [山崎まさよし Official Web Site](http://www.office-augusta.com/yama)
-* [山崎まさよし One more time, One more chance 歌詞 - 歌ネット](https://www.uta-net.com/song/9778)
+* [秒速5センチメートル](https://www.cwfilms.jp/5cm){:target="_blank"}
+* [山崎まさよし Official Web Site](http://www.office-augusta.com/yama){:target="_blank"}
+* [山崎まさよし One more time, One more chance 歌詞 - 歌ネット](https://www.uta-net.com/song/9778){:target="_blank"}

@@ -102,7 +102,7 @@ boost::filesystem::path GetDefaultDataDir()
 
 ### 文件
 
-比特币核心文档 [file.md](https://github.com/bitcoin/bitcoin/blob/master/doc/files.md) 内容总览。
+比特币核心文档 [file.md](https://github.com/bitcoin/bitcoin/blob/master/doc/files.md){:target="_blank"} 内容总览。
 
 > * .cookie【v0.12.0 及之后的版本】
 >   * 会话 RPC 验证 cookie（当首次使用 cookie 验证时写入，在关闭时删除）。
@@ -223,6 +223,6 @@ Thanks for your time.
 
 ## 参照
 
-* [bitcoin/files.md at master · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/master/doc/files.md)
-* [Data directory - Bitcoin Wiki](https://en.bitcoin.it/wiki/Data_directory)
-* [Splitting the data directory - Bitcoin Wiki](https://en.bitcoin.it/wiki/Splitting_the_data_directory)
+* [bitcoin/files.md at master · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/master/doc/files.md){:target="_blank"}
+* [Data directory - Bitcoin Wiki](https://en.bitcoin.it/wiki/Data_directory){:target="_blank"}
+* [Splitting the data directory - Bitcoin Wiki](https://en.bitcoin.it/wiki/Splitting_the_data_directory){:target="_blank"}

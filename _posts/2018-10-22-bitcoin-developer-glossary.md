@@ -770,4 +770,4 @@ Thanks for your time.
 
 ## 参照
 
-* [Developer Glossary - Bitcoin](https://bitcoin.org/en/developer-glossary)
+* [Developer Glossary - Bitcoin](https://bitcoin.org/en/developer-glossary){:target="_blank"}

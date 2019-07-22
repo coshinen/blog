@@ -67,6 +67,6 @@ Thanks for your time.
 
 ## 参照
 
-* [GARNET CROW official website : ガーネットクロウ オフィシャルサイト](http://www.garnetcrow.com)
-* [GARNET CROW Love is a Bird 歌詞 - 歌ネット](https://www.uta-net.com/song/63136)
-* [Love is a Bird Lyrics \| GARNET CROW music diary](https://mistydew.github.io/gc/lyrics/original/Love%20is%20a%20Bird.html)
+* [GARNET CROW official website : ガーネットクロウ オフィシャルサイト](http://www.garnetcrow.com){:target="_blank"}
+* [GARNET CROW Love is a Bird 歌詞 - 歌ネット](https://www.uta-net.com/song/63136){:target="_blank"}
+* [Love is a Bird Lyrics \| GARNET CROW music diary](https://mistydew.github.io/gc/lyrics/original/Love%20is%20a%20Bird.html){:target="_blank"}

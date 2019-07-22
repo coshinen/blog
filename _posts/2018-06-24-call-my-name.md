@@ -63,6 +63,6 @@ excerpt: 白い壁と Rembrandt いつまでも眺めていた 日曜の朝君�
 Thanks for your time.
 
 ## 参照
-* [GARNET CROW official website : ガーネットクロウ オフィシャルサイト](http://www.garnetcrow.com)
-* [GARNET CROW call my name 歌詞 - 歌ネット](https://www.uta-net.com/song/14411)
-* [call my name Lyrics \| GARNET CROW music diary](https://mistydew.github.io/gc/lyrics/original/call%20my%20name.html)
+* [GARNET CROW official website : ガーネットクロウ オフィシャルサイト](http://www.garnetcrow.com){:target="_blank"}
+* [GARNET CROW call my name 歌詞 - 歌ネット](https://www.uta-net.com/song/14411){:target="_blank"}
+* [call my name Lyrics \| GARNET CROW music diary](https://mistydew.github.io/gc/lyrics/original/call%20my%20name.html){:target="_blank"}

@@ -19,8 +19,8 @@ abandontransaction "txid" # 标记钱包交易 <txid> 为已放弃
 仅适用于未包含在区块中且当前不在交易内存池中的交易。<br>
 对已发生冲突和已放弃的交易无影响。
 
-参数：<br>
-1.txid（字符串，必备）交易索引。
+参数：
+1. txid（字符串，必备）交易索引。
 
 结果：无返回值。
 
@@ -331,5 +331,5 @@ Thanks for your time.
 
 ## 参照
 
-* [Developer Documentation - Bitcoin](https://bitcoin.org/en/developer-documentation)
-* [Bitcoin Developer Reference - Bitcoin](https://bitcoin.org/en/developer-reference#abandontransaction)
+* [Developer Documentation - Bitcoin](https://bitcoin.org/en/developer-documentation){:target="_blank"}
+* [Bitcoin Developer Reference - Bitcoin](https://bitcoin.org/en/developer-reference#abandontransaction){:target="_blank"}

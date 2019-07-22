@@ -14,10 +14,10 @@ excerpt: $ bitcoin-cli decodescript "hex"
 decodescript "hex" # 解码一个 16 进制编码的脚本
 {% endhighlight %}
 
-参数：<br>
-1.hex（字符串，必备）16 进制编码的脚本，可以为空 ""。
+参数：
+1. hex（字符串，必备）16 进制编码的脚本，可以为空 ""。
 
-结果：<br>
+结果：
 {% highlight shell %}
 {
   "asm":"asm",   （字符串）脚本公钥
@@ -195,5 +195,5 @@ Thanks for your time.
 
 ## 参照
 
-* [Developer Documentation - Bitcoin](https://bitcoin.org/en/developer-documentation)
-* [Bitcoin Developer Reference - Bitcoin](https://bitcoin.org/en/developer-reference#decodescript)
+* [Developer Documentation - Bitcoin](https://bitcoin.org/en/developer-documentation){:target="_blank"}
+* [Bitcoin Developer Reference - Bitcoin](https://bitcoin.org/en/developer-reference#decodescript){:target="_blank"}

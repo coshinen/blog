@@ -14,8 +14,8 @@ excerpt: $ bitcoin-cli disconnectnode "node"
 disconnectnode "node" # 立刻断开与指定节点的连接
 {% endhighlight %}
 
-参数：<br>
-1.node（字符串，必备）节点（见 [getpeerinfo](/blog/2018/05/bitcoin-rpc-command-getpeerinfo.html) 获取的节点信息）。
+参数：
+1. node（字符串，必备）节点（见 [getpeerinfo](/blog/2018/05/bitcoin-rpc-command-getpeerinfo.html) 获取的节点信息）。
 
 结果：无返回值。
 
@@ -135,5 +135,5 @@ Thanks for your time.
 
 ## 参照
 
-* [Developer Documentation - Bitcoin](https://bitcoin.org/en/developer-documentation)
-* [Bitcoin Developer Reference - Bitcoin](https://bitcoin.org/en/developer-reference#disconnectnode)
+* [Developer Documentation - Bitcoin](https://bitcoin.org/en/developer-documentation){:target="_blank"}
+* [Bitcoin Developer Reference - Bitcoin](https://bitcoin.org/en/developer-reference#disconnectnode){:target="_blank"}

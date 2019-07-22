@@ -14,11 +14,11 @@ excerpt: $ bitcoin-cli getblockheader "hash" ( verbose )
 getblockheader "hash" ( verbose ) # 通过区块哈希（16 进制形式）获取指定区块头的信息
 {% endhighlight %}
 
-参数：<br>
-1."hash"（字符串，必备）区块哈希（16 进制形式）。<br>
-2.verbose（布尔型，可选，默认为 true）true 获取区块头信息的 json 格式对象，false 获取 16 进制编码的区块头数据。
+参数：
+1. "hash"（字符串，必备）区块哈希（16 进制形式）。
+2. verbose（布尔型，可选，默认为 true）true 获取区块头信息的 json 格式对象，false 获取 16 进制编码的区块头数据。
 
-结果（verbose 为 true）：<br>
+结果（verbose 为 true）：
 {% highlight shell %}
 {
   "hash" : "hash",     （字符串）区块哈希（和提供的一样）
@@ -206,5 +206,5 @@ Thanks for your time.
 
 ## 参照
 
-* [Developer Documentation - Bitcoin](https://bitcoin.org/en/developer-documentation)
-* [Bitcoin Developer Reference - Bitcoin](https://bitcoin.org/en/developer-reference#getblockheader)
+* [Developer Documentation - Bitcoin](https://bitcoin.org/en/developer-documentation){:target="_blank"}
+* [Bitcoin Developer Reference - Bitcoin](https://bitcoin.org/en/developer-reference#getblockheader){:target="_blank"}

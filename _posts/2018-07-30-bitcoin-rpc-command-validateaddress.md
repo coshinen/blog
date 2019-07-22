@@ -14,10 +14,10 @@ excerpt: $ bitcoin-cli validateaddress "bitcoinaddress"
 validateaddress "bitcoinaddress" # 获取关于给定比特币地址的信息（不含余额）
 {% endhighlight %}
 
-参数：<br>
-1.bitcoinaddress（字符串，必备）用于验证的比特币地址。
+参数：
+1. bitcoinaddress（字符串，必备）用于验证的比特币地址。
 
-结果：<br>
+结果：
 {% highlight shell %}
 {
   "isvalid" : true|false,       （布尔型）地址是否有效。若无效，则只返回该项
@@ -165,5 +165,5 @@ Thanks for your time.
 
 ## 参照
 
-* [Developer Documentation - Bitcoin](https://bitcoin.org/en/developer-documentation)
-* [Bitcoin Developer Reference - Bitcoin](https://bitcoin.org/en/developer-reference#validateaddress)
+* [Developer Documentation - Bitcoin](https://bitcoin.org/en/developer-documentation){:target="_blank"}
+* [Bitcoin Developer Reference - Bitcoin](https://bitcoin.org/en/developer-reference#validateaddress){:target="_blank"}

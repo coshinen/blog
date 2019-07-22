@@ -22,9 +22,7 @@ resendwallettransactions # 立即重新广播未确认的（交易内存池中�
 
 ### 比特币核心客户端
 
-在无连接的情况下，新建 2 笔交易，并确认它们进入内存池，<br>
-此时建立连接，连接建立后我们在对端节点查看该交易并未被广播，<br>
-回到该节点重新发送钱包交易，可在对端节点查看到交易以被广播。
+在无连接的情况下，新建 2 笔交易，并确认它们进入内存池，此时建立连接，连接建立后我们在对端节点查看该交易并未被广播，回到该节点重新发送钱包交易，可在对端节点查看到交易以被广播。
 
 {% highlight shell %}
 $ bitcoin-cli getconnectioncount
@@ -162,5 +160,5 @@ Thanks for your time.
 
 ## 参照
 
-* [Developer Documentation - Bitcoin](https://bitcoin.org/en/developer-documentation)
-* [Bitcoin Developer Reference - Bitcoin](https://bitcoin.org/en/developer-reference#resendwallettransactions)
+* [Developer Documentation - Bitcoin](https://bitcoin.org/en/developer-documentation){:target="_blank"}
+* [Bitcoin Developer Reference - Bitcoin](https://bitcoin.org/en/developer-reference#resendwallettransactions){:target="_blank"}

@@ -106,5 +106,5 @@ Thanks for your time.
 
 ## 参照
 
-* [Vocabulary - Bitcoin](https://bitcoin.org/en/vocabulary)
-* [词汇表 － 比特币](https://bitcoin.org/zh_CN/vocabulary)
+* [Vocabulary - Bitcoin](https://bitcoin.org/en/vocabulary){:target="_blank"}
+* [词汇表 － 比特币](https://bitcoin.org/zh_CN/vocabulary){:target="_blank"}
