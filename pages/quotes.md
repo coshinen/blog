@@ -5,9 +5,6 @@ permalink: /quotes.html
 excerpt: ソルト：無理は一番の、退屈しのぎだ。
 ---
 
-> THE SEVEN COMMANDMENTS, Animal Farm:
-> * FOUR LEGS GOOD, TWO LEGS BAD.
-
 > Satoshi Nakamoto, Bitcoin P2P e-cash paper:
 > * It's very attractive to the libertarian viewpoint if we can explain it properly. I'm better with code than with words though.
 
@@ -36,6 +33,10 @@ excerpt: ソルト：無理は一番の、退屈しのぎだ。
 
 > Francis Bacon:
 > * Knowledge is power.
+
+> THE SEVEN COMMANDMENTS, Animal Farm:
+> * ALL ANIMALS ARE EQUAL BUT SOME ANIMALS ARE MORE EQUAL THAN OTHERS.
+> * FOUR LEGS GOOD, TWO LEGS BAD.
 
 > Outliers:
 > * 10,000-Hour Rule.
@@ -97,9 +98,10 @@ excerpt: ソルト：無理は一番の、退屈しのぎだ。
 > * よっ！ボウズ、知ってるか？怪盗はあざやかに獲物を盗み出す創造的な芸術家だが、探偵はその跡を見てなんくせつける、ただの批評家に過ぎねぇんだぜ。
 
 > 江戸川コナン／工藤新一「名探偵コナン」：
-> * 不可能なものを除外していって残ったものが、たとえどんなに信じられなくても、それが真相なんだ。
 > * 君を確実に破滅させることができれば、公共の利益のために僕は喜んで死を受け入れよう。
+> * 不可能なものを除外していって残ったものが、たとえどんなに信じられなくても、それが真相なんだ。
 > * 理由（わけ）なんているのかよ？人は人を殺す動機なんて知ったこっちゃねぇが、人が人を助ける理由に、論理的な思考を存在しねぇだろう？
+> * 犯人を推理で追い詰めて、みすみす自殺させちまう探偵は、殺人者と変わんねーよ…完璧な人間なんてこの世にいやしねーよ、俺だって、たった一人（たった一人だけ）…
 > * たった一つの真実見抜く、見た目は子供、頭脳は大人。その名は…
 > * 真実はいつもひとつ！
 
