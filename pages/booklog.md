@@ -20,5 +20,5 @@ excerpt: It's a reading list.
 > Literature:
 > * [动物庄园](https://book.douban.com/subject/25854767){:target="_blank"}，[英] 乔治·奥威尔
 > * [百年孤独](https://book.douban.com/subject/6082808){:target="_blank"}，[哥伦比亚] 加夫列尔·加西亚·马尔克斯
-> * [哈利波特](https://book.douban.com/subject/3393172){:target="_blank"}，[英] J.K.罗琳
-> * [福尔摩斯](https://book.douban.com/subject/1086779){:target="_blank"}，[英] 阿瑟·柯南·道尔
+> * [哈利波特](https://book.douban.com/subject/27167519){:target="_blank"}，[英] J.K. 罗琳
+> * [福尔摩斯](https://book.douban.com/subject/20441264){:target="_blank"}，[英] 阿瑟·柯南·道尔
