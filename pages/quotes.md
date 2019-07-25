@@ -8,6 +8,9 @@ excerpt: ソルト：無理は一番の、退屈しのぎだ。
 > Satoshi Nakamoto, Bitcoin P2P e-cash paper:
 > * It's very attractive to the libertarian viewpoint if we can explain it properly. I'm better with code than with words though.
 
+> Master Shifu, Kung Fu Panda 3:
+> * If you only do what you can do, you will never be more than you are now.
+
 > Master Oogway, Kung Fu Panda:
 > * Inner peace, inner peace. itchy nose. Ah-choo! Finally, inner peace. Now what?
 > * Yesterday is history, tomorrow is a mystery, but today is a gift. That is why it is called the present.
