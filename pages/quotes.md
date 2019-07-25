@@ -5,6 +5,9 @@ permalink: /quotes.html
 excerpt: ソルト：無理は一番の、退屈しのぎだ。
 ---
 
+> THE SEVEN COMMANDMENTS, Animal Farm:
+> * FOUR LEGS GOOD, TWO LEGS BAD.
+
 > Satoshi Nakamoto, Bitcoin P2P e-cash paper:
 > * It's very attractive to the libertarian viewpoint if we can explain it properly. I'm better with code than with words though.
 
