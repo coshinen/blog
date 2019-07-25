@@ -2,6 +2,7 @@
 layout: page
 title: Tags
 permalink: /blog/tags.html
+excerpt: It's blog tags.
 ---
 
 {% assign first = site.tags.first %}

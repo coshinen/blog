@@ -2,6 +2,7 @@
 layout: page
 title: Category
 permalink: /blog/category.html
+excerpt: It's blog category.
 ---
 
 {% assign count = 0 %}

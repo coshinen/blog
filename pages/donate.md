@@ -2,6 +2,7 @@
 layout: page
 title: "Buy me a coffee?"
 permalink: /donate.html
+excerpt: Buy me a coffee.
 ---
 
 {% if site.btc %}

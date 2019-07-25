@@ -2,6 +2,7 @@
 layout: page
 title: Archive
 permalink: /blog/archive.html
+excerpt: It's blog archive.
 ---
 
 {% include search.html %}

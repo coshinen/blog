@@ -1,6 +1,8 @@
 ---
 layout: default
+title: blog
 permalink: /blog/index.html
+excerpt: Welcome to mistydew's blog.
 ---
 
 <div class="home">

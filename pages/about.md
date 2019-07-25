@@ -2,6 +2,7 @@
 layout: page
 title: About
 permalink: /about.html
+excerpt: It's about parallel universe.
 ---
 
 The parallel universe is based on the base Jekyll theme.

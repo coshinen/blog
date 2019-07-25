@@ -2,13 +2,11 @@
 layout: page
 title: Quotes
 permalink: /quotes.html
+excerpt: ソルト：無理は一番の、退屈しのぎだ。
 ---
 
 > Satoshi Nakamoto, Bitcoin P2P e-cash paper:
 > * It's very attractive to the libertarian viewpoint if we can explain it properly. I'm better with code than with words though.
-
-> Henri Poincaré, Science and Hypothesis:
-> * To doubt everything or to believe everything are two equally convenient solutions; both dispense with the necessity of reflection.
 
 > Master Oogway, Kung Fu Panda:
 > * Inner peace, inner peace. itchy nose. Ah-choo! Finally, inner peace. Now what?
