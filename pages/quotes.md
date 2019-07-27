@@ -28,6 +28,9 @@ excerpt: ソルト：無理は一番の、退屈しのぎだ。
 > * When I was at college, I suffered from the curious delusion that I was there to study.
 > * Nothing is without fault.
 
+> Professor Severus Snape, Harry Potter and the Philosopher's Stone:
+> * Clearly, fame isn't everything...
+
 > Martin Luther King, Jr.:
 > * In the End, we will remember not the words of our enemies, but the silence of our friends.
 
