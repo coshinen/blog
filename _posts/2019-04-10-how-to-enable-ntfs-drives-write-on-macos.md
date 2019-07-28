@@ -1,14 +1,14 @@
 ---
 layout: post
-title:  "如何在 macOS 上开启 NTFS 硬盘的写模式"
+title:  "如何在 macOS 上开启 NTFS 硬盘的写权限"
 date:   2019-04-10 20:54:36 +0800
 author: mistydew
 comments: true
 categories: Filesystem NTFS
 tags: macOS fstab
 ---
-苹果的 macOS 只支持 NTFS 格式硬盘的读操作，据说是版权原因。
-事实上可以通过编辑系统配置文件 fstab 开启 NTFS 硬盘的写操作。
+苹果的 macOS 对 NTFS 硬盘默认只支持读操作，据说是版权原因。
+事实上可以通过编辑系统配置文件 fstab 开启 NTFS 硬盘的写权限。
 
 fstab 全称 file system table，即文件系统表，用于描述文件系统的静态信息，是 UNIX 和类 UNIX 计算机系统上常见的系统配置文件。
 该文件通常列出所有可用磁盘分区，并指明如何初始化它们。
@@ -37,7 +37,7 @@ mount 命令在引导时自动读取 fstab 文件以确定整个文件系统结�
 > * nobrowse: 未知，禁止磁盘在访达中显式，若删除此项，则不能开启写模式。
 > * ...
 
-## 开启 NTFS 硬盘的写支持
+## 开启 NTFS 硬盘的写权限
 
 使用 root 权限在 /etc/ 目录下创建 fstab 文件。
 
