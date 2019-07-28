@@ -22,3 +22,7 @@ excerpt: It's a reading list.
 > * [百年孤独](https://book.douban.com/subject/6082808){:target="_blank"}，[哥伦比亚] 加夫列尔·加西亚·马尔克斯
 > * [哈利波特](https://book.douban.com/subject/27167519){:target="_blank"}，[英] J.K. 罗琳
 > * [福尔摩斯](https://book.douban.com/subject/20441264){:target="_blank"}，[英] 阿瑟·柯南·道尔
+
+> Free eBooks:
+> * [Page By Page Books. Read Classic Books Online, Free.](https://www.pagebypagebooks.com){:target="_blank"}
+> * [Gutenberg](http://www.gutenberg.org/wiki/Main_Page){:target="_blank"} - Free eBooks Project
