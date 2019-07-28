@@ -28,6 +28,9 @@ excerpt: ソルト：無理は一番の、退屈しのぎだ。
 > * When I was at college, I suffered from the curious delusion that I was there to study.
 > * Nothing is without fault.
 
+> Professor Albus Dumbledore, Harry Potter and the Chamber of Secrets:
+> * It is not our abilities that show what we truly are. It is our choices.
+
 > Professor Severus Snape, Harry Potter and the Philosopher's Stone:
 > * Clearly, fame isn't everything...
 
