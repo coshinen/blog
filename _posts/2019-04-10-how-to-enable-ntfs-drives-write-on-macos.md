@@ -15,7 +15,7 @@ fstab 全称 file system table，即文件系统表，用于描述文件系统�
 mount 命令在引导时自动读取 fstab 文件以确定整个文件系统结构，直至当用户执行 mount 命令修改该结构。
 传统的 UNIX 总是允许特权用户（root 用户和 wheel 组的用户）在没有 fstab 条目的情况下挂载或卸载设备。
 
-## fstab 文件中各字段及其含义
+## fstab 文件中各字段说明
 
 > LABEL=device-spec mount-point fs-type options dump pass
 > * device-spec: 设备名，UUID。
