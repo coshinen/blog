@@ -28,6 +28,13 @@ excerpt: ソルト：無理は一番の、退屈しのぎだ。
 > * When I was at college, I suffered from the curious delusion that I was there to study.
 > * Nothing is without fault.
 
+> Harry Potter and the Prisoner of Azkaban:
+> * I solemnly swear that I am up to no good.
+
+> Professor Albus Dumbledore, Harry Potter and the Prisoner of Azkaban:
+> * Oh, and by the way. When in doubt, I find retracing my steps to be a wise place to begin.
+> * A child's voice, however honest and true is meaningless to those who have forgotten how to listen.
+
 > Professor Albus Dumbledore, Harry Potter and the Chamber of Secrets:
 > * It is not our abilities that show what we truly are. It is our choices.
 
