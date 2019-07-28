@@ -117,7 +117,7 @@ Holding you, and swinging<br>
 ah- 想活下去<br>
 過於喜愛的 John Doe<br>
 去哪裡呢...<br>
-高傲地消失了
+高傲地消失了<br>
 <br>
 即使還殘留著悲傷<br>
 注意到的話正站在不同的位置上所以<br>
