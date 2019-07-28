@@ -38,6 +38,15 @@ excerpt: ソルト：無理は一番の、退屈しのぎだ。
 > Professor Albus Dumbledore, Harry Potter and the Chamber of Secrets:
 > * It is not our abilities that show what we truly are. It is our choices.
 
+> Voldemort, Harry Potter and the Philosopher's Stone:
+> * There is no good and evil, there is only power, and those too weak to seek it.
+
+> Hermione Granger, Harry Potter and the Philosopher's Stone:
+> * Me? Books and cleverness. There are more important things, friendship and bravery.
+
+> Professor Albus Dumbledore, Harry Potter and the Philosopher's Stone:
+> * It does not do to dwell on dreams, and forget to live.
+
 > Professor Severus Snape, Harry Potter and the Philosopher's Stone:
 > * Clearly, fame isn't everything...
 
