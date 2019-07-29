@@ -106,12 +106,15 @@
         font-size: 1em;
         border: 1px solid #d3d3d3;
         border-radius: 2px;
+        background-color: transparent;
+        outline: none;
 	}
 
     #search-box .searchbox_submit {
         position: relative;
         top: 2px;
-        right: 28px;
+        right: 26px;
+        outline: none;
 	}
 
     @include media-query($on-palm) {
