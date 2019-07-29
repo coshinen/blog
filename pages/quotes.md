@@ -28,6 +28,9 @@ excerpt: ソルト：無理は一番の、退屈しのぎだ。
 > * When I was at college, I suffered from the curious delusion that I was there to study.
 > * Nothing is without fault.
 
+> Professor Severus Snape, Harry Potter and the Order of the Phoenix:
+> * Sentimental children forever whining about how bitterly unfair your lives have been. Well, it may have escaped your notice, but life isn't fair.
+
 > Harry Potter and the Prisoner of Azkaban:
 > * I solemnly swear that I am up to no good.
 
@@ -45,6 +48,7 @@ excerpt: ソルト：無理は一番の、退屈しのぎだ。
 > * Me? Books and cleverness. There are more important things, friendship and bravery.
 
 > Professor Albus Dumbledore, Harry Potter and the Philosopher's Stone:
+> * It takes a great deal of bravery to stand up to your enemies, but a great deal more to stand up to your friends.
 > * It does not do to dwell on dreams, and forget to live.
 
 > Professor Severus Snape, Harry Potter and the Philosopher's Stone:
