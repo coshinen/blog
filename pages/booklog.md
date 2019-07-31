@@ -18,6 +18,8 @@ excerpt: It's a reading list.
 > * [C++ Primer 中文版（第 5 版）](https://book.douban.com/subject/25708312){:target="_blank"}，[美] Stanley B. Lippman, Josée Lajoie, Barbara E. Moo
 
 > Literature:
+> * [前方的路](http://www.ruanyifeng.com/road){:target="_blank"}，阮一峰
+> * [未来世界的幸存者](http://www.ruanyifeng.com/survivor){:target="_blank"}，阮一峰
 > * [动物庄园](https://book.douban.com/subject/25854767){:target="_blank"}，[英] 乔治·奥威尔
 > * [百年孤独](https://book.douban.com/subject/6082808){:target="_blank"}，[哥伦比亚] 加夫列尔·加西亚·马尔克斯
 > * [哈利波特](https://book.douban.com/subject/27167519){:target="_blank"}，[英] J.K. 罗琳
