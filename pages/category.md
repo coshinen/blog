@@ -21,7 +21,7 @@ excerpt: It's blog category.
 {% assign counts = counts | split: ', ' %}
 {% assign idx = 0 %}
 
-<blockquote>
+<blockquote class="contents">
 <h2 align="center" id="contents">Contents</h2>
 {% for category in site.categories %}
   <div><li><a href="#{{ category[0] }}-ref">{{ category | first }} [{{ counts[idx] }}]</a></li></div>

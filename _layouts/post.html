@@ -16,7 +16,7 @@ layout: default
       <span>|</span>
       <span>{% include posts/icon-book-open.html %}≈ {{ page.content | strip_html | strip_newlines | remove: " " | size | divided_by: 350 | plus: 1 }} min</span>
       <span>|</span>
-      <span>{% include posts/icon-tags.html %}{% for tag in page.tags %}<a class=tag" href="{{ site.tagcloud }}#{{ tag }}-ref">{{ tag | prepend: " " }}</a>{% endfor %}</span>
+      <span>{% include posts/icon-tags.html %}{% for tag in page.tags %}<a class="tag" href="{{ site.tagcloud }}#{{ tag }}-ref">{{ tag | prepend: " " }}</a>{% endfor %}</span>
     </p>
   </header>
   <div class="post-content" itemprop="articleBody">

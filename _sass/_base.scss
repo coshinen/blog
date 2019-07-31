@@ -164,43 +164,75 @@ h1, h2, h3, h4, h5, h6 {
  * Links
  */
 a {
-    color: $text-color; // $brand-color
+    color: darken($brand-color, 32%);
     text-decoration: none;
 
     &:hover {
-        color: darken($garnet-color, 2%); // $text-color
+        color: darken($grey-color, 20%); // $text-color
         text-decoration: none; // underline
     }
 }
 
-a.readmore, a.category, a.tag, a.author {
+/* header */
+header.site-header a {
+    &:hover {
+        color: $garnet-color;
+    }
+}
+
+/* footer */
+footer.site-footer a {
+    color: $text-color;
+
+    &:hover {
+        color: $garnet-color;
+    }
+}
+
+/* home page post title */
+a.post-link {
+    color: $text-color;
+
+    &:hover {
+        color: $garnet-color;
+    }
+}
+
+/* home page post misc */
+a.category, a.readmore, a.tag, a.author {
     color: $garnet-color;
-    text-decoration: none;
 
     &:hover {
         color: darken($grey-color, 20%);
-        text-decoration: none;
     }
 }
-/* post */
-article.post div.post-content p a,
+
+/* category page contents */
+blockquote.contents a {
+    color: $text-color;
+}
+
+/* post content */
+article.post div.post-content a {
+    color: $text-color;
+    text-decoration: underline;
+
+    &:hover {
+        color: darken($grey-color, 20%);
+        text-decoration: underline;
+    }
+}
+
+/* post blockquote */
 article.post div.post-content blockquote a {
     color: $text-color;
+    text-decoration: none;
     border-bottom: 1px dotted;
 
     &:hover {
         color: $garnet-color;
-        border-bottom: 1px solid;
-    }
-}
-/* reference */
-article.post div.post-content a {
-    color: $text-color;
-    text-decoration: none;
-
-    &:hover {
-        color: darken($grey-color, 20%);
         text-decoration: none;
+        border-bottom: 1px solid;
     }
 }
 
