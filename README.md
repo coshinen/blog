@@ -3,15 +3,16 @@
 ## Todo
 
 - [ ] home page: avatar, bio...
-- [ ] remake: site search engine
+- [x] remake: site search engine
 
 ## Timeline
 
-* 2019.07.18 [+] pages: booklog (reading list) page, feed page
+* 2019.08.02 [+] site: Simple Jekyll Search
 
 <details>
 <summary>more</summary>
 
+* 2019.07.18 [+] pages: booklog (reading list) page, feed page
 * 2019.07.04 [-] site: ~~Baidu Search~~; [+] site: DogeDoge Search
 * 2019.06.21 [-] post: ~~bShare~~; [+] post: AddToAny share system
 * 2019.06.20 [+] post: ~~bShare~~
@@ -78,7 +79,8 @@
 * Hosted: [GitHub](https://github.com)
 * Powered: [GitHub Pages](https://pages.github.com), [Jekyll](http://www.jekyllrb.com)
 * Analytics: [Google Analytics](https://analytics.google.com/analytics/web), [Busuanzi](https://busuanzi.ibruce.info)
-* Site Search Engine: [Google](https://www.google.com), [DogeDoge](https://dogedoge.com)
+* Site Search: [Google](https://www.google.com), [DogeDoge](https://dogedoge.com), [Simple Jekyll Search](https://github.com/christian-fei/Simple-Jekyll-Search)
 * Comments System: [Remarkbox](https://www.remarkbox.com)
 * Shared Service: [AddToAny](https://www.addtoany.com)
 * Crypto Widget: [Coinlib](https://coinlib.io)
+* 404 Page: [Tencent 404](https://www.qq.com/404)
