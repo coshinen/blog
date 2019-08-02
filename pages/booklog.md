@@ -22,9 +22,12 @@ excerpt: It's a reading list.
 > * [未来世界的幸存者](http://www.ruanyifeng.com/survivor){:target="_blank"}，阮一峰
 > * [动物庄园](https://book.douban.com/subject/25854767){:target="_blank"}，[英] 乔治·奥威尔
 > * [百年孤独](https://book.douban.com/subject/6082808){:target="_blank"}，[哥伦比亚] 加夫列尔·加西亚·马尔克斯
+> * [神奇动物在哪里](https://book.douban.com/subject/27625554){:target="_blank"}，[英] J.K. 罗琳
+> * [神奇的魁地奇球](https://book.douban.com/subject/30193054){:target="_blank"}，[英] J.K. 罗琳
+> * [诗翁彼豆故事集](https://book.douban.com/subject/27594566){:target="_blank"}，[英] J.K. 罗琳
 > * [哈利波特](https://book.douban.com/subject/27167519){:target="_blank"}，[英] J.K. 罗琳
 > * [福尔摩斯](https://book.douban.com/subject/20441264){:target="_blank"}，[英] 阿瑟·柯南·道尔
 
 > Free eBooks:
 > * [Page By Page Books. Read Classic Books Online, Free.](https://www.pagebypagebooks.com){:target="_blank"}
-> * [Gutenberg](http://www.gutenberg.org/wiki/Main_Page){:target="_blank"} - Free eBooks Project
+> * [Free eBooks - Project Gutenberg](http://www.gutenberg.org/wiki/Main_Page){:target="_blank"}
