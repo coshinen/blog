@@ -26,8 +26,8 @@
 * 2019.04.01 [+] site: position of site searchbox
 * 2019.03.30 [-] site: ~~cPlayer~~
 * 2019.02.02 [-] site: ~~honehone clock~~
-* 2019.02.01 [+] site: new gc favicon
-* 2019.01.01 [+] subsite: GC music diary new home page; [~] LICENSE: update license year range to 2019
+* 2019.02.01 [+] remake: gc favicon
+* 2019.01.01 [+] subsite: GC music diary home page; [~] LICENSE: update license year range to 2019
 * 2018.09.25 [+] donate page: Bitcoin address, QR (Quick Response) code
 * 2018.09.24 [-] archive page: ~~GitHub Contribution~~
 * 2018.09.20 [+] remake: home page, blog permalink; [-] site: ~~jekyll-paginate plugin~~
