@@ -18,8 +18,11 @@ excerpt: ソルト：無理は一番の、退屈しのぎだ。
 > * One often meets his destiny on the road he takes to avoid it.
 > * Nothing is impossible.
 
-> Negan, The Walking Dead:
+> Negan, The Walking Dead Season 9:
 > * It's just that no one ever thinks that they're the evil one.
+
+> Rick Grimes, The Walking Dead Season 8:
+> * My mercy prevails over my wrath.
 
 > Alan Turing, The imitation game:
 > * Sometimes it is the people no one imagines anything of who do the things that no one can imagine.
