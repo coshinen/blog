@@ -78,7 +78,7 @@ in silence
 內心是回家的念頭<br>
 <br>
 在你的身旁沈睡的日子 在遠行之後訴說的未來<br>
-現在也是讀到莎岡的時候 好像還能聽到波浪的聲音<br>
+現在也是讀到莎崗的時候 好像還能聽到波浪的聲音<br>
 <br>
 這裡好像一直是夏天 熊熊燃燒的熱情<br>
 來來回回悄悄地嘗試著<br>
@@ -121,6 +121,11 @@ I'll walk alone with you<br>
 in silence
 </blockquote>
 </div>
+
+## 感想
+
+莎崗指的是法國女作家弗蘭西絲·莎崗（Françoise Sagan），以中產階級的愛情故事聞名。
+據說這首歌詞的靈感來自於其 19 歲時出版的處女作日安憂鬱（Bonjour tristesse）。
 
 Thanks for your time.
 
