@@ -6,11 +6,11 @@ author: mistydew
 comments: true
 categories: ガーネット・クロウ 翻訳
 tags: GC 歌詞
-excerpt: 離陸間近の午前1時5分 空を見上げていた いつかまた会えるかなあ 何故かなあ もう離れてしまったことばかりを思うこと止められず 心がきしんだ
+excerpt: 離陸間近の午前1時5分 空を見上げていた。いつかまた会えるかなあ 何故かなあ、もう離れてしまったことばかりを思うこと止められず、心がきしんだ。
 ---
 ![STAY 〜夜明けのSoul〜](https://raw.githubusercontent.com/mistydew/gc2/master/cover/album/AL07_STAY%20〜夜明けのSoul〜.jpg){:.border}
 
-## Hello Sadness | 你好 悲傷
+## Hello Sadness | 你好悲傷
 
 歌手：GARNET CROW<br>
 作詞：AZUKI 七<br>
@@ -18,6 +18,8 @@ excerpt: 離陸間近の午前1時5分 空を見上げていた いつかまた�
 編曲：古井弘人<br>
 ギター：岡本仁志
 
+<div class="lyric-original">
+<p>
 離陸間近の午前1時5分 空を見上げていた<br>
 いつかまた会えるかなあ 何故かなあ<br>
 もう離れてしまったことばかりを思うこと止められず<br>
@@ -65,6 +67,60 @@ in silence<br>
 Hello Sadness… and I need you<br>
 I'll walk alone with you<br>
 in silence
+</p>
+</div>
+
+<div class="lyric-translation">
+<blockquote>
+臨近起飛的午前1點5分 抬頭看著天空<br>
+什麼時候能再見面呢 不知為何<br>
+盡是想著已經離去的事無法停止<br>
+內心是回家的念頭<br>
+<br>
+在你的身旁沈睡的日子 在遠行之後訴說的未來<br>
+現在也是讀到莎岡的時候 好像還能聽到波浪的聲音<br>
+<br>
+這裡好像一直是夏天 熊熊燃燒的熱情<br>
+來來回回悄悄地嘗試著<br>
+突然視線交纏 內心變得騷然<br>
+什麼在內心深處妨礙著 tonight...<br>
+Hello Sadness... and I need you<br>
+I'll walk alone with you<br>
+in silence<br>
+<br>
+炙熱的陽光 委身閉上眼睛睡覺的午後<br>
+融入地球<br>
+<br>
+幸福之中 有著不安 躊躇的前面隱藏著期待<br>
+因為是生命之中所有的 沈溺於悲傷的光輝<br>
+<br>
+流逝的時光只是流逝 孤獨只不過是自由<br>
+過去和未來一直都不會消失<br>
+困惑於機緣 內心搖曳執子之手<br>
+像波浪一樣總有一天定會破碎散落 tonight...<br>
+Hello Sadness... and I need you<br>
+I'll walk alone with you<br>
+In silence<br>
+<br>
+只有綻放色彩的罪孽穩固地照耀著現在<br>
+<br>
+流逝的時光只是流逝 孤獨只不過是自由<br>
+過去和未來一直都不會消失<br>
+困惑於機緣 內心搖曳執子之手<br>
+像波浪一樣總有一天定會破碎散落 tonight...<br>
+Hello Sadness... and I need you<br>
+I'll walk alone with you<br>
+in silence<br>
+<br>
+這裡好像一直是夏天 熊熊燃燒的熱情<br>
+來來回回悄悄地嘗試著<br>
+突然視線交纏 內心變得騷然<br>
+什麼在內心深處妨礙著 tonight...<br>
+Hello Sadness... and I need you<br>
+I'll walk alone with you<br>
+in silence
+</blockquote>
+</div>
 
 Thanks for your time.
 
