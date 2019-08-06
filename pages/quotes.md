@@ -140,7 +140,10 @@ excerpt: ソルト：無理は一番の、退屈しのぎだ。
 > * たった一つの真実見抜く、見た目は子供、頭脳は大人。その名は…
 > * 真実はいつもひとつ！
 
-> Sherlock Holmes, BBC Sherlock:
+> Sherlock Holmes, BBC SHERLOCK Series 3, Episode 3, His Last Vow:
+> * Oh, do your research. I'm not a hero, I'm a high-functioning sociopath. Merry Christmas!
+>
+> Sherlock Holmes, BBC SHERLOCK Series 1, Episode 1, A Study in Pink:
 > * Come at once if convenient. If inconvenient come anyway.
 
 > Sherlock Holmes, A Game of Shadows:
