@@ -24,7 +24,7 @@ excerpt: It's blog category.
 <blockquote class="contents">
 <h2 align="center" id="contents">Contents</h2>
 {% for category in site.categories %}
-  <div><li><a href="#{{ category[0] }}-ref">{{ category | first }} [{{ counts[idx] }}]</a></li></div>
+  <div><li><a href="#{{ category[0] }}-ref">{{ category | first }}（{{ counts[idx] }}）</a></li></div>
   {% assign idx = idx | plus: 1 %}
 {% endfor %}
 </blockquote>
@@ -33,7 +33,7 @@ excerpt: It's blog category.
 
 {% for category in site.categories %}
 <blockquote>
-  <h2 id="{{ category[0] }}-ref">{{ category | first }} ({{ counts[idx] }})<a href="#contents">{% include pages/icon-chevron-up.html %}</a></h2>
+  <h2 id="{{ category[0] }}-ref">{{ category | first }}（{{ counts[idx] }}）<a href="#contents">{% include pages/icon-chevron-up.html %}</a></h2>
     {% assign idx = idx | plus: 1 %}
   <ul class="category-list">
     {% for post in category.last %}
