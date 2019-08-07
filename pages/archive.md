@@ -32,7 +32,7 @@ excerpt: It's blog archive.
 </blockquote>
     {% endif %}
 <blockquote>
-  <h2>{{ post.date | date: '%Y' }} ({{ counts[i] }})</h2>
+  <h2>{{ post.date | date: '%Y' }}（{{ counts[i] }}）</h2>
   <ul class="archive-list">
     {% assign i = i | plus: 1 %}
   {% endif %}
