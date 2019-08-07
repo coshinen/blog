@@ -288,13 +288,13 @@
 /**
  * Tag cloud
  */
-.tagcloud {
-    width: 600px;
+blockquote#tagcloud {
+    width: 512px;
 }
 
 @include media-query($on-palm) {
-    .tagcloud {
-        width: 280px;
+    blockquote#tagcloud {
+        width: 256px;
     }
 }
 

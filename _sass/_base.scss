@@ -211,6 +211,13 @@ a.category, a.readmore, a.tag, a.author {
 /* category page contents */
 blockquote.contents a {
     color: $text-color;
+    text-decoration: underline;
+}
+
+/* tags page tagcloud */
+blockquote#tagcloud a {
+    color: $text-color;
+    text-decoration: underline;
 }
 
 /* post content */

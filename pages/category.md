@@ -24,7 +24,7 @@ excerpt: It's blog category.
 <blockquote class="contents">
 <h2 align="center" id="contents">Contents</h2>
 {% for category in site.categories %}
-  <div><li><a href="#{{ category[0] }}-ref">{{ category | first }}（{{ counts[idx] }}）</a></li></div>
+  <div><li><a href="#{{ category[0] }}-ref">{{ category | first }}</a>（{{ counts[idx] }}）</li></div>
   {% assign idx = idx | plus: 1 %}
 {% endfor %}
 </blockquote>
