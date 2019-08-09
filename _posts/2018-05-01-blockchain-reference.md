@@ -20,7 +20,7 @@ stickie: true
 * [Bitcoin Whitepaper - Satoshi Nakamoto](http://satoshinakamoto.me/whitepaper){:target="_blank"} - 非官方多语言版
 * [Bitcoin: A Peer-to-Peer Electronic Cash System](https://git.dhimmel.com/bitcoin-whitepaper){:target="_blank"} - 非官方重新排版
 * [比特币白皮书 个人翻译+注解](https://zhuanlan.zhihu.com/p/25039679){:target="_blank"} - 知乎
-* [比特币白皮书中英对照 - mistydew](/blog/2018/04/Bitcoin-A-Peer-to-Peer-Electronic-Cash-System.html)
+* [比特币白皮书中英对照 \| mistydew](/blog/2018/04/Bitcoin-A-Peer-to-Peer-Electronic-Cash-System.html)
 
 ### Guide | 指南
 
@@ -45,8 +45,8 @@ stickie: true
 
 ### Source Code and BIPs | 源码及改进建议
 
-* [Bitcoin source from November 2008.](https://bitcointalk.org/index.php?topic=382374.0){:target="_blank"} - pre-release
-* [v0.1](https://bitcointalk.org/index.php?topic=68121.0){:target="_blank"} - v0.1.0, v0.1.3
+* [Bitcoin source from November 2008.](https://bitcointalk.org/index.php?topic=382374.0){:target="_blank"} - Satoshi Nakamoto wrote pre-release
+* [v0.1](https://bitcointalk.org/index.php?topic=68121.0){:target="_blank"} - Satoshi Nakamoto wrote v0.1.0, v0.1.3
 * [bitcoin/bitcoin at v0.1.5](https://github.com/bitcoin/bitcoin/tree/v0.1.5){:target="_blank"} - very close to what Satoshi initially wrote
 * [bitcoin/bitcoin at v0.12.1](https://github.com/bitcoin/bitcoin/tree/v0.12.1){:target="_blank"} - turning point maybe
 * [bitcoin/bitcoin](https://github.com/bitcoin/bitcoin){:target="_blank"} - the latest release
