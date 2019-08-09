@@ -8,7 +8,7 @@ categories: Blockchain Bitcoin Altcoin
 tags: 区块链 比特币 山寨币
 ---
 **基于比特币制作一枚山寨币是了解数字货币比特币及其底层区块链技术的最好方式。**
-在了解比特币及区块链的相关概念后，要开始接触源码了，侯捷曾说过“源码之前，了无秘密”。
+在了解比特币及区块链的相关概念后，要开始接触源码了，侯捷说过“源码之前，了无秘密”。
 现在，让我们来一探比特币源码的世界。
 
 ## 0. 准备
@@ -527,7 +527,7 @@ public:
 可通过 RPC 命令 [getbestblockhash](/blog/2018/05/bitcoin-rpc-command-getbestblockhash.html) 和 [getblock](/blog/2018/05/bitcoin-rpc-command-getblock.html) 获取最佳区块信息的链工作量 chainwork 的值得到。
 
 现在第三次编译源码，一枚基于比特币的山寨币就制作完成了。
-通过这个过程，了解了比特币源码的一些部分，为深入比特币底层区块链技术做铺垫。
+通过这个过程，可以了解比特币源码的一小部分，为深入比特币底层区块链技术做铺垫。
 
 Thanks for your time.
 
