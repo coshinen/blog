@@ -57,7 +57,7 @@ stickie: true
 * [比特币源码解析 - 呼，是出一口气；吸，是争一口气!](https://blog.csdn.net/pure_lady/article/category/7131199/2){:target="_blank"}
 * [比特币源码解读 - ttblack](https://www.jianshu.com/u/ef215107c407){:target="_blank"} - v0.9.5rc2
 * [比特币源码研读 - 菜菜子_forest](https://www.jianshu.com/u/30081a05cf95){:target="_blank"} - 0.14
-* [比特币源码剖析 - mistydew](/blog/2018/05/bitcoin-source-anatomy-00.html) - v0.12.1
+* [比特币源码剖析 \| mistydew](/blog/2018/05/bitcoin-source-anatomy-00.html) - v0.12.1
 
 ### Basic Knowledge | 基础知识
 
@@ -76,14 +76,6 @@ stickie: true
 
 * [Bitcoin Forum - Index](https://bitcointalk.org){:target="_blank"}
 * [Satoshi Nakamoto Institute](https://nakamotoinstitute.org){:target="_blank"}
-
-## Ethereum | 以太坊（区块链 v2.0）
-
-暂无。
-
-## EOS(Enterprise Operation System) | 区块链操作系统（区块链 v3.0）
-
-暂无。
 
 Thanks for your time.
 
