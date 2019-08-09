@@ -2,11 +2,11 @@
 layout: page
 title: About
 permalink: /about.html
-excerpt: It's about parallel universe.
+excerpt: It's about parallel universe and contact information.
 ---
 
 The parallel universe is based on the base Jekyll theme.
-I'm mistydew, a coder.
+I'm mistydew.
 
-> Contact me:
+> Drop me a line:
 > * {% include footer/icon-envelope.html email=site.email %}
