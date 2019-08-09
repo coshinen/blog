@@ -8,5 +8,9 @@ excerpt: About parallel universe and contact information.
 The parallel universe is based on the base Jekyll theme.
 I'm mistydew.
 
-> Drop me a line:
+Drop me a line.
+> Formal Email: (Primary)
 > * {% include footer/icon-envelope.html email=site.email %}
+
+> Alternative Email: (Privacy)
+> * {% include footer/icon-envelope.html email="mistydew@mailo.com" %}
