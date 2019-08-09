@@ -2,7 +2,7 @@
 layout: page
 title: "Feed me!"
 permalink: /blog/feed.html
-excerpt: To subscribe blog feed.
+excerpt: Subscribe me? Feed me!
 ---
 
 Welcome to subscribe the following feed for keep track of my updates in time:
