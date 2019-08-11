@@ -10,7 +10,7 @@ excerpt: Lying here with you so close to me. It's hard to fight these feelings w
 ---
 ![own the night](/images/cover/misc/own%20the%20night.jpg){:.border}
 
-## Just A Kiss | 只是一個吻
+## Just A Kiss | 只是個吻
 
 歌手：Lady Antebellum<br>
 作詞：Hillary Scott・Charles Kelley・Dave Haywood・Dallas Davidson<br>
@@ -120,7 +120,7 @@ Kiss goodnight
 
 ## 感想
 
-這首歌和 GARNET CROW 的「英雄」前奏出奇地像，MV 是一個小故事，很有意思。
+這首歌和 GARNET CROW 的「英雄」前奏出奇地像，不過發行時間在前，MV 是一個小故事，很有意思。
 
 Thanks for your time.
 
