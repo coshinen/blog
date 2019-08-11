@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "THE LITTLE OLD LADY FROM PASADENA"
+title:  "中村由利 THE LITTLE OLD LADY FROM PASADENA 歌詞翻訳"
 date:   2019-05-19 20:02:07 +0800
 author: mistydew
 comments: true

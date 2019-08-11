@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Timeless Sleep"
+title:  "GARNET CROW Timeless Sleep 歌詞翻訳"
 date:   2018-08-05 20:01:11 +0800
 author: mistydew
 comments: true

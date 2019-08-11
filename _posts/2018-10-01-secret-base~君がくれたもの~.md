@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "secret base 〜君がくれたもの〜"
+title:  "ZONE secret base 〜君がくれたもの〜 歌詞翻訳"
 date:   2018-10-01 20:01:08 +0800
 author: mistydew
 comments: true

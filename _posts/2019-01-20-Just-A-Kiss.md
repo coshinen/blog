@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Just A Kiss"
+title:  "Lady Antebellum Just A Kiss 歌詞翻訳"
 date:   2019-01-20 20:11:09 +0800
 author: mistydew
 comments: true

@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "picture of world"
+title:  "GARNET CROW picture of world 歌詞翻訳"
 date:   2018-10-28 20:04:12 +0800
 author: mistydew
 comments: true

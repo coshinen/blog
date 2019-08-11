@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "HAPPY DAYS?"
+title:  "GARNET CROW HAPPY DAYS? 歌詞翻訳"
 date:   2019-07-14 20:01:01 +0800
 author: mistydew
 comments: true

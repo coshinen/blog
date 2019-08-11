@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Mysterious Eyes"
+title:  "GARNET CROW Mysterious Eyes 歌詞翻訳"
 date:   2018-10-03 20:00:03 +0800
 author: mistydew
 comments: true

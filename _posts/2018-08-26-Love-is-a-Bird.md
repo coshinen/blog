@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Love is a Bird"
+title:  "GARNET CROW Love is a Bird 歌詞翻訳"
 date:   2018-08-26 20:08:03 +0800
 author: mistydew
 comments: true

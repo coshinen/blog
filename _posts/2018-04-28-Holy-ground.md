@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Holy ground"
+title:  "GARNET CROW Holy ground 歌詞翻訳"
 date:   2018-04-28 20:02:04 +0800
 author: mistydew
 comments: true

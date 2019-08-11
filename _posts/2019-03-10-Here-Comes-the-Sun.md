@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Here Comes the Sun"
+title:  "The Beatles Here Comes the Sun 歌詞翻訳"
 date:   2019-03-10 20:09:09 +0800
 author: mistydew
 comments: true

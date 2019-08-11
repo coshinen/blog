@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "wonder land"
+title:  "GARNET CROW wonder land 歌詞翻訳"
 date:   2019-08-04 20:01:01 +0800
 author: mistydew
 comments: true

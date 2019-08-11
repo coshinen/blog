@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "hi-speed スペシャル oneday"
+title:  "GARNET CROW hi-speed スペシャル oneday 歌詞翻訳"
 date:   2019-06-23 20:00:10 +0800
 author: mistydew
 comments: true

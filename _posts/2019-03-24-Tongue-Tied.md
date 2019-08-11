@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Tongue Tied"
+title:  "Grouplove Tongue Tied 歌詞翻訳"
 date:   2019-03-24 20:11:09 +0800
 author: mistydew
 comments: true

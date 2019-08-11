@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Time after time 〜花舞う街で〜"
+title:  "倉木麻衣 Time after time 〜花舞う街で〜 歌詞翻訳"
 date:   2018-05-15 20:03:03 +0800
 author: mistydew
 comments: true

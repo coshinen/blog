@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "call my name"
+title:  "GARNET CROW call my name 歌詞翻訳"
 date:   2018-06-24 20:01:08 +0800
 author: mistydew
 comments: true

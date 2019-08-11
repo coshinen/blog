@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "One more time, One more chance"
+title:  "山崎まさよし One more time, One more chance 歌詞翻訳"
 date:   2018-05-18 20:37:01 +0800
 author: mistydew
 comments: true

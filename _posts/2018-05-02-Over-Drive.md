@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Over Drive"
+title:  "GARNET CROW Over Drive 歌詞翻訳"
 date:   2018-05-02 20:10:04 +0800
 author: mistydew
 comments: true

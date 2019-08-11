@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "dreaming of love"
+title:  "GARNET CROW dreaming of love 歌詞翻訳"
 date:   2019-03-17 20:39:12 +0800
 author: mistydew
 comments: true

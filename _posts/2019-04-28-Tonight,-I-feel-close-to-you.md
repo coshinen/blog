@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Tonight, I feel close to you"
+title:  "倉木麻衣・孫燕姿 Tonight, I feel close to you 歌詞翻訳"
 date:   2019-04-28 20:03:07 +0800
 author: mistydew
 comments: true
