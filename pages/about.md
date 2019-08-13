@@ -16,5 +16,5 @@ You can follow my GitHub account {% include footer/icon-github.html username=sit
 
 Drop me a line if you will, send email to {% include footer/icon-envelope.html email=site.email %}.
 
-My current **PGP key** is [here]().<br>
+My current **PGP key** is [here](public_key.asc).<br>
 The fingerprint is: 
