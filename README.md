@@ -4,14 +4,16 @@
 
 - [ ] home page: avatar, bio...
 - [x] remake: site search engine
+- [ ] remake: resume to cv
 
 ## Timeline
 
-* 2019.08.02 [+] site: Simple Jekyll Search
+* 2019.08.14 [+] about page: PGP key and fingerprint
 
 <details>
 <summary>more</summary>
 
+* 2019.08.02 [+] site: Simple Jekyll Search
 * 2019.07.18 [+] pages: booklog (reading list) page, feed page
 * 2019.07.04 [-] site: ~~Baidu Search~~; [+] site: DogeDoge Search
 * 2019.06.21 [-] post: ~~bShare~~; [+] post: AddToAny share system
