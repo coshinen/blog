@@ -21,6 +21,7 @@ excerpt: Reading list.
 > Literature:
 > * [前方的路](http://www.ruanyifeng.com/road){:target="_blank"}，阮一峰
 > * [未来世界的幸存者](http://www.ruanyifeng.com/survivor){:target="_blank"}，阮一峰
+> * [小王子](https://book.douban.com/subject/1084336){:target="_blank"}，[法] 圣埃克苏佩里
 > * [动物庄园](https://book.douban.com/subject/25854767){:target="_blank"}，[英] 乔治·奥威尔
 > * [百年孤独](https://book.douban.com/subject/6082808){:target="_blank"}，[哥伦比亚] 加夫列尔·加西亚·马尔克斯
 > * [神奇动物在哪里](https://book.douban.com/subject/27625554){:target="_blank"}，[英] J.K. 罗琳
