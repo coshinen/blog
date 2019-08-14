@@ -5,8 +5,9 @@
 - [ ] home page: avatar, bio...
 - [x] remake: site search engine
 - [ ] remake: resume to cv
-- [ ] post: IntenseDebate comments; subsite: Remarkbox Hosted Comments Service
+- [ ] remake: blog page
 - [ ] site: searchbox icon svg to font woff2
+- [ ] post: IntenseDebate comments; subsite: Remarkbox Hosted Comments Service
 
 ## Timeline
 
