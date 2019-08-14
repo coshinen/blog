@@ -16,17 +16,20 @@ description: >- # this means to ignore newlines until "baseurl:"
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://mistydew.github.io" # the base hostname & protocol for your site
 
+# About page
+mailo: mistydew at mailo.com
+pgpkey: public_key.asc
+fingerprint: 7752 D418 D94C 33FB 8F6F 9197 44D9 CCA7 F81A 1FB3
+
 # Site footer
 github: mistydew
-cv: Curriculum Vitae 
+cv: Curriculum Vitae
 email: mistydew@qq.com
-mailo: mistydew at mailo.com
 subtitle: GC music diary
 rss: Subscribe Feed
 feedburner: mistydew
 coffee: Buy me a coffee
 btc: 1GC1iAZz9Wroy99bwJUzuLrqpmayUhjYbZ
-pgpkey: public_key.asc
 
 # Site page baseurl
 sitemap: "/sitemap.xml"

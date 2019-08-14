@@ -19,4 +19,4 @@ Or subscribe my blog [feed]({{ site.feedme }}) to get the latest post if you wan
 Drop me a line if you will, send email to {% include footer/icon-envelope.html email=site.email %} or {{ site.mailo }}.
 
 My current **PGP key** is [here]({{ site.pgpkey }}).<br>
-The fingerprint is: 7752 D418 D94C 33FB 8F6F 9197 44D9 CCA7 F81A 1FB3
+The fingerprint is: {{ site.fingerprint }}
