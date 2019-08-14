@@ -31,7 +31,7 @@ excerpt: Reading list.
 > * [福尔摩斯](https://book.douban.com/subject/20441264){:target="_blank"}，[英] 阿瑟·柯南·道尔
 
 > Miscellaneous:
-> * [异类](https://book.douban.com/subject/3688489){:target="_blank"}，[加] 马尔科姆·格拉德威尔
+> * [异类 不一样的成功启示录](https://book.douban.com/subject/3688489){:target="_blank"}，[加] 马尔科姆·格拉德威尔
 > * [谁“害”了北大学生](https://book.douban.com/subject/1605954){:target="_blank"}，群言
 
 > Free eBooks:
