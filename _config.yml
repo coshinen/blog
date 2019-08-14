@@ -20,11 +20,13 @@ url: "https://mistydew.github.io" # the base hostname & protocol for your site
 github: mistydew
 cv: Curriculum Vitae 
 email: mistydew@qq.com
+mailo: mistydew at mailo.com
 subtitle: GC music diary
 rss: Subscribe Feed
 feedburner: mistydew
 coffee: Buy me a coffee
 btc: 1GC1iAZz9Wroy99bwJUzuLrqpmayUhjYbZ
+pgpkey: public_key.asc
 
 # Site page baseurl
 sitemap: "/sitemap.xml"
