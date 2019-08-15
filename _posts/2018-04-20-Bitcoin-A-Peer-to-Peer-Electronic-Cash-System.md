@@ -532,28 +532,28 @@ q=0.45   z=340
 
 ## 12. Conclusion | 结论
 
-We have proposed a system for electronic transactions without relying on trust.  We started with 
-the usual framework of coins made from digital signatures, which provides strong control of 
-ownership, but is incomplete without a way to prevent double-spending.  To solve this, we 
-proposed a peer-to-peer network using proof-of-work to record a public history of transactions 
-that quickly becomes computationally impractical for an attacker to change if honest nodes 
-control a majority of CPU power.  The network is robust in its unstructured simplicity.  Nodes 
-work all at once with little coordination.  They do not need to be identified, since messages are 
-not routed to any particular place and only need to be delivered on a best effort basis.  Nodes can 
-leave and rejoin the network at will, accepting the proof-of-work chain as proof of what 
-happened while they were gone.  They vote with their CPU power, expressing their acceptance of 
-valid blocks by working on extending them and rejecting invalid blocks by refusing to work on 
+We have proposed a system for electronic transactions without relying on trust.  We started with
+the usual framework of coins made from digital signatures, which provides strong control of
+ownership, but is incomplete without a way to prevent double-spending.  To solve this, we
+proposed a peer-to-peer network using proof-of-work to record a public history of transactions
+that quickly becomes computationally impractical for an attacker to change if honest nodes
+control a majority of CPU power.  The network is robust in its unstructured simplicity.  Nodes
+work all at once with little coordination.  They do not need to be identified, since messages are
+not routed to any particular place and only need to be delivered on a best effort basis.  Nodes can
+leave and rejoin the network at will, accepting the proof-of-work chain as proof of what
+happened while they were gone.  They vote with their CPU power, expressing their acceptance of
+valid blocks by working on extending them and rejecting invalid blocks by refusing to work on
 them.  Any needed rules and incentives can be enforced with this consensus mechanism.
 
-> 我们提出了不依赖信任的电子交易系统。
-> 我们从普通的数字签名框架开始制作币，它提供所属权的强大的控制力，但是没有防止双重花费的方法是不完整的。
-> 为了解决该问题，我们提出了使用工作量证明的对等网络来记录公共交易历史，如果诚实节点控制了 CPU 的主要能力，攻击者在计算上很快就会变得不切实际。
-> 该网络是非结构化简单健壮的。
-> 节点们只需很少的协作即可完成全部工作。
-> 它们不需要被识别，因为消息不会被路由到任何特定地方，只需要尽力而为地传递。
-> 节点能够随意离开和重新加入网络，接受工作量证明链作为它们离开后发生事件的证明。
-> 它们使用其 CPU 能力投票，表示它们通过接受有效块来扩展工作量，通过拒绝无效块来拒绝在其上面工作。
-> 任何需要的规则和激励都可以通过这种共识机制强制执行。
+> 我们提出了一个不依赖信任的电子交易系统。
+> 我们从通用的数字签名铸币构架开始，它提供了强有力的所有权控制，但没有一种防止双重花费方法的它是不完善的。
+> 为了解决该问题，我们提出了一个使用工作量证明来记录公共交易历史的点对点网络，如果诚实节点控制了大多数 CPU 算力，那么改变交易历史的攻击者很快就会在计算上变得不切实际。
+> 该网络因其非结构化的简单性而健壮。
+> 节点们只需很少的协调就能同时工作。
+> 它们不需要被识别，因为消息不会被路由到任何特定地方，只需要尽最大努力传递。
+> 节点可以随意离开和重新加入网络，接受工作量证明链作为它们离开后发生事件的证明。
+> 它们使用其 CPU 算力投票，表示它们通过扩展有效区块来接受有效区块，通过拒绝在无效区块上工作来拒绝无效区块。
+> 任何必要的规则和激励都可以通过这种共识机制强制执行。
 
 ## References | 参考
 
