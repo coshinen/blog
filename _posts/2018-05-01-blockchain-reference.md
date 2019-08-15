@@ -32,8 +32,6 @@ stickie: true
 * [Blockchain - Get to know it](https://blockchainhandbook.io){:target="_blank"}
 * [Blockchain Demo](https://anders.com/blockchain){:target="_blank"}
 * [区块链技术指南](https://yeasy.gitbooks.io/blockchain_guide/content){:target="_blank"}
-* [简介 · 比特币开发者指南-巴比特图书](https://book.8btc.com/books/6/bitcoin-developer-guide/_book){:target="_blank"}
-* [简介 · 区块链开发者指南-巴比特图书](https://book.8btc.com/books/6/blockchain-developer-guide/_book){:target="_blank"}
 * [bitcoinbook/bitcoinbook: Mastering Bitcoin 2nd Edition - Programming the Open Blockchain](https://github.com/bitcoinbook/bitcoinbook){:target="_blank"}
 * [tianmingyun/MasterBitcoin2CN: 《精通比特币》第二版 区块链研习社 云天明联合出品](https://github.com/tianmingyun/MasterBitcoin2CN){:target="_blank"}
 
