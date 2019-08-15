@@ -2,7 +2,7 @@
 layout: page
 title: Quotes
 permalink: /quotes.html
-excerpt: ソルト：無理は一番の、退屈しのぎだ。
+excerpt: Here are my favorite quotes from someones that inspire me or make me laugh. I hope you enjoy them.
 ---
 
 > Satoshi Nakamoto, Bitcoin P2P e-cash paper:
