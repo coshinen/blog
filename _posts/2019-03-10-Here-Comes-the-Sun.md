@@ -96,8 +96,6 @@ It's all right
 </blockquote>
 </div>
 
-## 感想
-
 最早聽到這首歌是在動畫電影 Bee Movie 中，是 Sheryl Crow 的翻唱版。
 
 Thanks for your time.

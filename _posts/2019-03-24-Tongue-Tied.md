@@ -126,9 +126,8 @@ Ooh, ooh
 </blockquote>
 </div>
 
-## 感想
-
-明天就是 Apple 春季發佈會了，突然想起 N 年前看到的這首 iPod Touch 宣傳片的 BGM。
+明天就是 Apple 2019 春季發佈會。
+突然想起了這首 N 年前看到的 iPod Touch 宣傳片的 BGM，舌頭打結。
 
 Thanks for your time.
 

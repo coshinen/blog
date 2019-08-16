@@ -106,8 +106,6 @@ Digging the dancing queen
 </blockquote>
 </div>
 
-## 感想
-
 这里的 digging 是 appreciating 的意思，而 dig in 无意义。
 
 Thanks for your time.

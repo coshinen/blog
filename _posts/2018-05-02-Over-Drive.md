@@ -130,9 +130,8 @@ raise up<br>
 </blockquote>
 </div>
 
-## 感想
-
 這首歌是劇場版「名偵探柯南 天空的遇難船」的主題曲，曾取得 Oricon 週單曲排行榜第 4 位。
+入坑神曲，居然不是大夢。
 
 Thanks for your time.
 

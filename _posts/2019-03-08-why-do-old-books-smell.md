@@ -22,8 +22,6 @@ tags: Translation
 
 <iframe src="https://www.youtube.com/embed/aUaInTfrDnA" frameborder="0" height="360" width="600"></iframe>
 
-## 感想
-
 比起电子书，我更喜欢实体书，味道就是原因之一，但不得不承认电子书在便携性上的巨大优势。
 
 Thanks for your time.

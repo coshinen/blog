@@ -110,8 +110,6 @@ excerpt: 白い壁と Rembrandt、いつまでも眺めていた、日曜の朝�
 </blockquote>
 </div>
 
-## 感想
-
 倫勃朗（Rembrandt）是 17 世紀荷蘭黃金時代的畫家，代表作有《夜巡》、《月亮與狩獵女神》等。
 
 Thanks for your time.

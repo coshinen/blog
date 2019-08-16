@@ -122,8 +122,6 @@ in silence
 </blockquote>
 </div>
 
-## 感想
-
 莎崗指的是法國女作家弗蘭西絲·莎崗（Françoise Sagan），以中產階級的愛情故事聞名。
 據說這首歌詞的靈感來自於其 19 歲時出版的處女作日安憂鬱（Bonjour tristesse）。
 
