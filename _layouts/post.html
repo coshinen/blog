@@ -16,7 +16,7 @@ layout: default
       <span>|</span>
       <span id="busuanzi_container_page_pv">{% include posts/icon-eye.html %}<span id="busuanzi_value_page_pv"></span> views</span>
       <span>|</span>
-      <span>{% include posts/icon-tags.html %}{% for tag in page.tags %}<a class="tag" href="{{ site.tagcloud }}#{{ tag }}-ref">{{ tag | prepend: " " }}</a>{% endfor %}</span>
+      <span>{% include posts/icon-tags.html %}{% for tag in page.tags %}<a class="tag" href="{{ site.tagcloud }}#{{ tag }}-ref">{{ tag | append: " " }}</a>{% endfor %}</span>
     </p>
   </header>
   <div class="post-content" itemprop="articleBody">
