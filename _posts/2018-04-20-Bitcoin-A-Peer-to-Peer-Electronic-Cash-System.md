@@ -4,8 +4,8 @@ title:  "比特币白皮书中英对照"
 date:   2018-04-20 09:07:06 +0800
 author: mistydew
 comments: true
-categories: Blockchain Bitcoin 译文
-tags: 区块链 比特币 比特币白皮书
+categories: Blockchain Bitcoin Translation
+tags: 区块链 比特币白皮书 译文
 excerpt: 比特币：一种点对点的电子现金系统，一个电子现金的纯点对点版本允许在线支付从一方直接发送到另一方，而不通过一个金融机构。
 ---
 <p align="center">
@@ -40,8 +40,8 @@ basis, and nodes can leave and rejoin the network at will, accepting the longest
 proof-of-work chain as proof of what happened while they were gone.
 
 > **概要.** 一个电子现金的纯点对点版本允许在线支付从一方直接发送到另一方，而不通过一个金融机构。
-> 数字签名提供了部分解决方案，但如果仍需要一个可信的第三方来防止双重花费，其主要的优势就丧失了。
-> 我们提出一种使用一个点对点网络解决双重花费问题的方案。
+> 数字签名提供了部分解决方案，但如果仍需要一个可信的第三方来防止双重花费，其主要优势就丧失了。
+> 我们提出一个使用点对点网络解决双重花费问题的方案。
 > 该网络通过把交易散列进一条不断增长的基于散列的工作量证明链中来为交易打时间戳，形成一条不重做工作量证明就不能改变的记录。
 > 最长的链不仅作为被见证事件顺序的证明，而且是它来自最大 CPU 算力池的证明。
 > 只要多数的 CPU 算力被不攻击该网络的节点控制，它们将生成最长的链并超过攻击者。
@@ -50,17 +50,17 @@ proof-of-work chain as proof of what happened while they were gone.
 
 ## 1. Introduction | 介绍
 
-Commerce on the Internet has come to rely almost exclusively on financial institutions serving as 
-trusted third parties to process electronic payments.  While the system works well enough for 
-most transactions, it still suffers from the inherent weaknesses of the trust based model. 
-Completely non-reversible transactions are not really possible, since financial institutions cannot 
-avoid mediating disputes.  The cost of mediation increases transaction costs, limiting the 
-minimum practical transaction size and cutting off the possibility for small casual transactions, 
+Commerce on the Internet has come to rely almost exclusively on financial institutions serving as
+trusted third parties to process electronic payments.  While the system works well enough for
+most transactions, it still suffers from the inherent weaknesses of the trust based model.
+Completely non-reversible transactions are not really possible, since financial institutions cannot
+avoid mediating disputes.  The cost of mediation increases transaction costs, limiting the
+minimum practical transaction size and cutting off the possibility for small casual transactions,
 and there is a broader cost in the loss of ability to make non-reversible payments for non-
-reversible services.  With the possibility of reversal, the need for trust spreads.  Merchants must 
-be wary of their customers, hassling them for more information than they would otherwise need. 
-A certain percentage of fraud is accepted as unavoidable.  These costs and payment uncertainties 
-can be avoided in person by using physical currency, but no mechanism exists to make payments 
+reversible services.  With the possibility of reversal, the need for trust spreads.  Merchants must
+be wary of their customers, hassling them for more information than they would otherwise need.
+A certain percentage of fraud is accepted as unavoidable.  These costs and payment uncertainties
+can be avoided in person by using physical currency, but no mechanism exists to make payments
 over a communications channel without a trusted party.
 
 > 互联网上的商务几乎完全依赖作为可信的第三方金融机构来处理电子支付。
@@ -83,19 +83,19 @@ cooperating group of attacker nodes.
 
 > 需要的是一种基于密码学证明而不是信任的电子支付系统，允许任何两个有意愿的当事方直接与对方交易，而不需要可信任的第三方。
 > 在计算上不可逆转的交易可以保护卖家避免欺诈，并且可以轻松实施例行托管机制来保护买家。
-> 在这篇论文中，我们提出了双重花费问题的解决方案，使用对等分布式时间戳服务器来生成时间顺序的交易的计算量证明。
+> 在这篇论文中，我们提出了双重花费问题的解决方案，使用点对点分布式时间戳服务器来生成时间顺序的交易的计算量证明。
 > 只要诚实节点一起控制比任何协作的攻击者节点组更多的 CPU 能力，该系统就是安全的。
 
 ## 2. Transactions | 交易
 
-We define an electronic coin as a chain of digital signatures.  Each owner transfers the coin to the 
-next by digitally signing a hash of the previous transaction and the public key of the next owner 
-and adding these to the end of the coin.  A payee can verify the signatures to verify the chain of 
+We define an electronic coin as a chain of digital signatures.  Each owner transfers the coin to the
+next by digitally signing a hash of the previous transaction and the public key of the next owner
+and adding these to the end of the coin.  A payee can verify the signatures to verify the chain of
 ownership.
 
-> 我们定义电子货币作为数字签名链。
-> 每个所有者把币通过数字签名前一笔交易的哈希和下一个所有者的公钥并把它们添加到币的尾部，转账到下一个所有者。
-> 收款人能够验证签名来验证链的所有权。
+> 我们把一个电子货币定义为一个数字签名链。
+> 每个所有者通过数字签名前一笔交易的哈希和下一个所有者的公钥并把它们添加到币的尾部，转移币到下一个所有者。
+> 收款者可以验证该签名以验证链的所有权。
 
 ![transactions](/images/bitcoin/whitepaper/transactions.svg){:.border#center}
 
@@ -150,7 +150,7 @@ The proof-of-work involves scanning for a value that when hashed, such as with S
 hash begins with a number of zero bits.  The average work required is exponential in the number 
 of zero bits required and can be verified by executing a single hash.
 
-> 为了在对等的基础上实现分布式时间戳服务器，我们需要使用与 Adam Back 的 Hashcash 类似的工作量证明系统，而不是报纸或 Usenet 文章。
+> 为了在点对点的基础上实现分布式时间戳服务器，我们需要使用与 Adam Back 的 Hashcash 类似的工作量证明系统，而不是报纸或 Usenet 文章。
 > 工作量证明涉及扫描散列时的值，例如 SHA-256，从一个 0 位数字开始散列。
 > 所需的平均工作量是指数所需的 0 位数，且能通过执行一个单一散列来验证。
 
