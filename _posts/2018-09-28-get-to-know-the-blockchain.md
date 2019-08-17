@@ -4,8 +4,8 @@ title:  "认识区块链"
 date:   2018-09-28 15:19:08 +0800
 author: mistydew
 comments: true
-categories: Blockchain 译文
-tags: 区块链
+categories: Blockchain Translation
+tags: 区块链 译文
 excerpt: 区块链是一个数字化的分布式记录链。
 ---
 ## 什么是区块链？

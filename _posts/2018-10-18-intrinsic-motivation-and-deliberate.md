@@ -4,8 +4,8 @@ title:  "内在动机和刻意练习相互加强"
 date:   2018-10-18 16:40:02 +0800
 author: mistydew
 comments: true
-categories: Study 译文
-tags: Study Insistence
+categories: Study Translation
+tags: Study Insistence 译文
 excerpt: 内在动机和刻意练习呈螺旋式上升。
 ---
 ![intrinsic-motivation-deliberate-practice](/images/translation/intrinsic-motivation-deliberate-practice.png){:.border}

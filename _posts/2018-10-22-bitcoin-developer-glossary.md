@@ -4,8 +4,8 @@ title:  "比特币开发者术语表"
 date:   2018-10-22 22:08:57 +0800
 author: mistydew
 comments: true
-categories: Blockchain Bitcoin 译文
-tags: 区块链 比特币 术语表
+categories: Blockchain Bitcoin Translation
+tags: 区块链 比特币 术语表 译文
 ---
 这是一个专业术语汇编。普通用户应该使用[词汇表页面](/blog/2018/08/some-bitcoin-words-you-might-hear.html)。
 
