@@ -5,8 +5,8 @@ permalink: /blog/atom.xml
 
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>{{ site.title }}</title>
-  <subtitle>{{ site.root }}'s blog</subtitle>
+  <title>{{ site.title | xml_escape }}</title>
+  <subtitle>{{ site.subtitle | xml_escape }}</subtitle>
   <updated>{{ site.time | date_to_xmlschema }}</updated>
   <id>tag:{{ site.url }}</id>
   <link rel="alternate" type="text/html" href="{{ site.blog | prepend: site.url }}"/>
@@ -15,22 +15,22 @@ permalink: /blog/atom.xml
   <generator uri="https://jekyllrb.com" version="{{ jekyll.version }}">Jekyll v{{ jekyll.version }}</generator>
 {% for post in site.posts limit:7 %}{% if post.hidden == true %}{% else %}
   <entry>
-    <title>{{ post.title }}</title>
+    <title>{{ post.title | uri_escape }}</title>
     <link rel="alternate" type="text/html" href="{{ post.url | prepend: site.url }}"/>
     <id>tag:{{ site.url }},{{ post.id }}</id>
     <updated>{{ post.date | date_to_xmlschema }}</updated>
     <published>{{ post.date | date_to_xmlschema }}</published>
     <author>
-      <name>{{ site.root }}</name>
-      <uri>{{ site.url }}</uri>
+      <name>{{ site.root | xml_escape }}</name>
+      <uri>{{ site.url | uri_escape }}</uri>
       <email>{{ site.email }}</email>
     </author>
     <content type="html" xml:lang="en" xml:base="{{ site.blog | prepend: site.url }}">
-      {{ post.content }}
+      {{ post.content | xml_escape }}
       <div class="post-information">
         <h2 class="post-header">文档信息</h2>
         <ul class="post-copyright">
-          <li class="post-author"><strong>本文作者：</strong><a class="author" href="{{ site.url }}{{ site.about }}">{{ site.root }}</a></li>
+          <li class="post-author"><strong>本文作者：</strong><a class="author" href="{{ site.url }}{{ site.about }}">{{ site.root | xml_escape }}</a></li>
           <li class="post-date"><strong>发表日期：</strong><abbr title="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%Y年%m月%d日" }}</abbr></li>
           <li class="post-license"><strong>版权声明：</strong>自由转载-保持署名-非商用-非衍生（国际 创意共享许可证 4.0）<a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh"><img alt="(CC) BY-NC-ND" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/4.0/80x15.png" /></a></li>
           <li class="post-categories"><strong>更多内容：</strong>{% for category in post.categories %}<a class="category" href="{{ site.category }}#{{ category }}-ref">{{ category | append: " " }}</a>{% endfor %}</li>
