@@ -15,7 +15,7 @@ permalink: /blog/atom.xml
   <generator uri="https://jekyllrb.com" version="{{ jekyll.version }}">Jekyll v{{ jekyll.version }}</generator>
 {% for post in site.posts limit:7 %}{% if post.hidden == true %}{% else %}
   <entry>
-    <title>{{ post.title | uri_escape }}</title>
+    <title>{{ post.title }}</title>
     <link rel="alternate" type="text/html" href="{{ post.url | prepend: site.url }}"/>
     <id>tag:{{ site.url }},{{ post.id }}</id>
     <updated>{{ post.date | date_to_xmlschema }}</updated>
