@@ -85,6 +85,7 @@ $ find . -exec rename 's/<from>/<to>/' {} ";" # 批量修改当前目录下的�
 {% highlight shell %}
 $ find <filename> -type f -print0 | xargs -0 sed -i 's/<from>/<to>/g' # 把文件 <filename> 中的字符串 <from> 全部改为 <to>。
 $ find <dirname> -type f -print0 | xargs -0 sed -i 's/\t/    /g' # 把 <dirname> 下全部文件中的 tab 全部改为 4 个空格。
+$ find <dirname> -type f -print0 | xargs -0 sed -i '/<content>/,+1d' # 把 <dirname> 下全部文件中的含 <content> 的行及其下一行。
 $ find <filename> -type f -print0 | xargs -0 sed -i '' 's/<from>/<to>/g' # macOS 下指定一个字符串作为备份文件后缀，若字符串为空，则不备份。
 {% endhighlight %}
 
