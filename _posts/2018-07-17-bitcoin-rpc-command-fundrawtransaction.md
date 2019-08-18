@@ -349,8 +349,6 @@ bool CWallet::FundTransaction(CMutableTransaction& tx, CAmount &nFeeRet, int& nC
 4.3.通过调用 CreateTransaction(vecSend, wtx, reservekey, nFeeRet, nChangePosRet, strFailReason, &coinControl, false) 函数创建一笔新的钱包交易（较原始交易完整）。
 该函数详见[比特币 RPC 命令剖析 "sendtoaddress"](/blog/2018/09/bitcoin-rpc-command-sendtoaddress.html)。
 
-Thanks for your time.
-
 ## 参照
 
 * [Developer Documentation - Bitcoin](https://bitcoin.org/en/developer-documentation){:target="_blank"}

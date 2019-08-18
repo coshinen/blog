@@ -161,8 +161,6 @@ UniValue validateaddress(const UniValue& params, bool fHelp)
 4. 获取相关地址信息，判断该地址是否属于自己并添加到结果对象中。
 5. 返回结果。
 
-Thanks for your time.
-
 ## 参照
 
 * [Developer Documentation - Bitcoin](https://bitcoin.org/en/developer-documentation){:target="_blank"}

@@ -82,8 +82,6 @@ UniValue getblockhash(const UniValue& params, bool fHelp)
 
 相关函数调用见 RPC 命令 [getbestblockhash](/blog/2018/05/bitcoin-rpc-command-getbestblockhash.html)。
 
-Thanks for your time.
-
 ## 参照
 
 * [Developer Documentation - Bitcoin](https://bitcoin.org/en/developer-documentation){:target="_blank"}

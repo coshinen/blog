@@ -81,8 +81,6 @@ Misty Mystery<br>
 <br>
 解き放て無謀な衝動
 
-Thanks for your time.
-
 ## 参照
 
 * [GARNET CROW official website : ガーネットクロウ オフィシャルサイト](http://www.garnetcrow.com){:target="_blank"}

@@ -167,8 +167,6 @@ UniValue listaccounts(const UniValue& params, bool fHelp)
 7. 获取账户条目列表，遍历该列表，对应账户加上信用借记。
 8. 遍历得到的账户余额列表，把账户名和余额配对加入结果集并返回。
 
-Thanks for your time.
-
 ## 参照
 
 * [Developer Documentation - Bitcoin](https://bitcoin.org/en/developer-documentation){:target="_blank"}

@@ -92,8 +92,6 @@ UniValue getrawchangeaddress(const UniValue& params, bool fHelp)
 
 源码中貌似未体现出获取的地址不能用于普通交易。
 
-Thanks for your time.
-
 ## 参照
 
 * [Developer Documentation - Bitcoin](https://bitcoin.org/en/developer-documentation){:target="_blank"}

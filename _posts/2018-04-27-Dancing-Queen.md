@@ -108,8 +108,6 @@ Digging the dancing queen
 
 这里的 digging 是 appreciating 的意思，而 dig in 无意义。
 
-Thanks for your time.
-
 ## 参照
 
 * [ABBA \| Articles](https://abbasite.com){:target="_blank"}

@@ -133,8 +133,6 @@ $ vim -b <file> # -b 选项表示二进制模式。
 
 [~/.vimrc](https://github.com/mistydew/os.conf/blob/master/macOS/Users/mistydew/.vimrc){:target="_blank"}
 
-Thanks for your time.
-
 ## 参考
 
 * [Where Vim Came From](https://twobithistory.org/2018/08/05/where-vim-came-from.html){:target="_blank"}

@@ -129,8 +129,6 @@ Ooh, ooh
 明天就是 Apple 2019 春季發佈會。
 突然想起了這首 N 年前看到的 iPod Touch 宣傳片的 BGM，舌頭打結。
 
-Thanks for your time.
-
 ## 参照
 
 * [Grouplove – Tongue Tied Lyrics \| Genius Lyrics](https://genius.com/Grouplove-tongue-tied-lyrics){:target="_blank"}

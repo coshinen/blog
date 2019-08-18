@@ -135,8 +135,6 @@ excerpt: 区块链是一个数字化的分布式记录链。
 增加单个值并检查它产生所需哈希值需要的时间和算力。
 随着难度要求变得越来越难（额外的“0”），节点计算出一个随机数的平均时间和算力也会增加。
 
-Thanks for your time.
-
 ## 参照
 
 * [Blockchain - Get to know it](https://blockchainhandbook.io){:target="_blank"}

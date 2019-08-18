@@ -413,8 +413,6 @@ class CNode // 对端节点信息类
 
 最终只是把库存条目 inv 消息对象加入到发送库存消息列表。
 
-Thanks for your time.
-
 ## 参照
 
 * [Developer Documentation - Bitcoin](https://bitcoin.org/en/developer-documentation){:target="_blank"}

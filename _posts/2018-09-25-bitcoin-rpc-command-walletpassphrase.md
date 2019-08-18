@@ -183,8 +183,6 @@ static std::vector<RPCTimerInterface*> timerInterfaces; // RPC 定时器接口�
 static std::map<std::string, boost::shared_ptr<RPCTimerBase> > deadlineTimers; // 截止时间定时器
 {% endhighlight %}
 
-Thanks for your time.
-
 ## 参照
 
 * [Developer Documentation - Bitcoin](https://bitcoin.org/en/developer-documentation){:target="_blank"}

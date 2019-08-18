@@ -184,8 +184,6 @@ UniValue gettxoutproof(const UniValue& params, bool fHelp)
 7. 遍历该区块体交易列表，验证所有指定的交易都存在于该区块。
 8. 构建一个 CMerkleBlock 对象，导入数据流对象并转换为 16 进制后返回。
 
-Thanks for your time.
-
 ## 参照
 
 * [Developer Documentation - Bitcoin](https://bitcoin.org/en/developer-documentation){:target="_blank"}

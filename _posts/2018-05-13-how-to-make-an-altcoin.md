@@ -529,8 +529,6 @@ public:
 现在第三次编译源码，一枚基于比特币的山寨币就制作完成了。
 通过这个过程，可以了解比特币源码的一小部分，为深入比特币底层区块链技术做铺垫。
 
-Thanks for your time.
-
 ## 参照
 
 * [How to make an altcoin \| Bear's Den](http://dillingers.com/blog/2015/04/18/how-to-make-an-altcoin){:target="_blank"}

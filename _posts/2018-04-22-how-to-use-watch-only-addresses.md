@@ -51,8 +51,6 @@ Watch-only 消费是最近更新的另一个功能。
 
 关于 Watch-only 地址的源码部分，详见[比特币 RPC 命令剖析 "importaddress"](/blog/2018/08/bitcoin-rpc-command-importaddress.html)。
 
-Thanks for your time.
-
 ## 参照
 
 * [How to use Watch-only Addresses](https://blog.blockchain.com/2016/05/31/how-to-use-watch-only-addresses){:target="_blank"}

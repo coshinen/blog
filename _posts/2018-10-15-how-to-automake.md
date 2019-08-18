@@ -137,8 +137,6 @@ $ ./configure
 $ make
 {% endhighlight %}
 
-Thanks for your time.
-
 ## 参照
 
 * [algorithms/automake_help.md at master · luofengmacheng/algorithms](https://github.com/luofengmacheng/algorithms/blob/master/myalgo/automake_help.md){:target="_blank"}

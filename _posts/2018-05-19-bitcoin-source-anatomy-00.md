@@ -73,8 +73,6 @@ int main(int argc, char* argv[]) // 0.程序入口
 > 3.12.[WaitForShutdown]() | 根据启动标志做出相应处理。<br>
 > 3.13.[Shutdown]() | 关闭。
 
-Thanks for your time.
-
 ## 参照
 
 * [bitcoin/bitcoin v0.12.1](https://github.com/bitcoin/bitcoin/tree/v0.12.1){:target="_blank"}

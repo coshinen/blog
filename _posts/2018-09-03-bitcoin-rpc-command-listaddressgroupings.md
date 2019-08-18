@@ -171,8 +171,6 @@ std::map<CTxDestination, CAmount> CWallet::GetAddressBalances()
 
 通过遍历钱包交易映射列表，获取每笔钱包交易的输入和输出列表对应的交易地址。
 
-Thanks for your time.
-
 ## 参照
 
 * [Developer Documentation - Bitcoin](https://bitcoin.org/en/developer-documentation){:target="_blank"}

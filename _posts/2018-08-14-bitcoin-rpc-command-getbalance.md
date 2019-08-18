@@ -152,8 +152,6 @@ UniValue getbalance(const UniValue& params, bool fHelp)
 6. 若指定的账户为 "*"，以不同于 4 的方式获取钱包总余额并返回。
 7. 若指定的账户非 "*"，获取指定账户下的余额并返回。
 
-Thanks for your time.
-
 ## 参照
 
 * [Developer Documentation - Bitcoin](https://bitcoin.org/en/developer-documentation){:target="_blank"}

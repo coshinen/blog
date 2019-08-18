@@ -125,8 +125,6 @@ excerpt: 君のいない未来が、ただ大きな闇にみえ。死んでし�
 黑暗、死、聖地、偽善者、愛、重生...
 歌詞充分體現了七的文學功底。
 
-Thanks for your time.
-
 ## 参照
 
 * [GARNET CROW official website : ガーネットクロウ オフィシャルサイト](http://www.garnetcrow.com){:target="_blank"}

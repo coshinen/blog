@@ -102,8 +102,6 @@ BTC 是用于标示一个比特币的常用单位。
 对于小额交易，即使是单个确认也能被认为是安全的，但对于像 1000 美刀的大额交易，等待 6 个及以上的确认是比较合理的。
 每个确认都会指数级地降低交易被撤回的风险。
 
-Thanks for your time.
-
 ## 参照
 
 * [Vocabulary - Bitcoin](https://bitcoin.org/en/vocabulary){:target="_blank"}

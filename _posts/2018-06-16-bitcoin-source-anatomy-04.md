@@ -358,8 +358,6 @@ MIN_CORE_FILEDESCRIPTORS 定义在“init.cpp”文件中。
 未完待续...<br>
 请看下一篇[比特币源码剖析（五）](/blog/2018/06/bitcoin-source-anatomy-05.html)。
 
-Thanks for your time.
-
 ## 参照
 
 * [bitcoin/bitcoin v0.12.1](https://github.com/bitcoin/bitcoin/tree/v0.12.1){:target="_blank"}

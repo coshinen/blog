@@ -266,8 +266,6 @@ void CNode::copyStats(CNodeStats &stats)
 }
 {% endhighlight %}
 
-Thanks for your time.
-
 ## 参照
 
 * [Developer Documentation - Bitcoin](https://bitcoin.org/en/developer-documentation){:target="_blank"}

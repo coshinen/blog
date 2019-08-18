@@ -57,8 +57,6 @@ Time after time<br>
 誰よりもずっと 傷付きやすい君の<br>
 そばにいたい今度は きっと
 
-Thanks for your time.
-
 ## 参照
 
 * [倉木麻衣公式WEBサイト](http://www.mai-kuraki.com){:target="_blank"}

@@ -394,8 +394,6 @@ $ ./configure --prefix=`pwd`/depends/x86_64-pc-linux-gnu --enable-glibc-back-com
 $ make # 若构建过，则先执行 make clean 进行清理
 {% endhighlight %}
 
-Thanks for your time.
-
 ## 参照
 
 * [bitcoin/bitcoin](https://github.com/bitcoin/bitcoin){:target="_blank"}

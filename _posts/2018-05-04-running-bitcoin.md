@@ -692,8 +692,6 @@ rpcallowip=xxx.xxx.xxx.xxx
 ...
 {% endhighlight %}
 
-Thanks for your time.
-
 ## 参照
 
 * [Running Bitcoin - Bitcoin Wiki](https://en.bitcoin.it/wiki/Running_Bitcoin){:target="_blank"}

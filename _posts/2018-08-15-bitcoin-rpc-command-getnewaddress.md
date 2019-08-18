@@ -598,8 +598,6 @@ std::string EncodeBase58(const std::vector<unsigned char>& vch)
 
 至此，RPC 命令 getnewaddress 对应的源码剖析就结束了。
 
-Thanks for your time.
-
 ## 参照
 
 * [Developer Documentation - Bitcoin](https://bitcoin.org/en/developer-documentation){:target="_blank"}

@@ -122,8 +122,6 @@ UniValue signmessage(const UniValue& params, bool fHelp)
 7. 使用私钥对该消息进行签名，并获取签名数据。
 8. base64 编码签名数据并返回。
 
-Thanks for your time.
-
 ## 参照
 
 * [Developer Documentation - Bitcoin](https://bitcoin.org/en/developer-documentation){:target="_blank"}

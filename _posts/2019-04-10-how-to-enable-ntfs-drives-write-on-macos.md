@@ -65,8 +65,6 @@ $ open /Volumes
 $ ln -s /Volumes/My\ Passport ~/Desktop/My\ Passport
 {% endhighlight %}
 
-Thanks for your time.
-
 ## 参照
 
 * [How to Enable NTFS Write Support in Mac OS X](http://osxdaily.com/2013/10/02/enable-ntfs-write-support-mac-os-x){:target="_blank"}

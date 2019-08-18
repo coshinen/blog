@@ -117,8 +117,6 @@ UniValue createmultisig(const UniValue& params, bool fHelp)
 4. 通过脚本索引获取比特币地址。
 5. 添加地址或赎回脚本到结果对象并返回。
 
-Thanks for your time.
-
 ## 参照
 
 * [Developer Documentation - Bitcoin](https://bitcoin.org/en/developer-documentation){:target="_blank"}

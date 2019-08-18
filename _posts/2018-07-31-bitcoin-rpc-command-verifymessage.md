@@ -127,8 +127,6 @@ UniValue verifymessage(const UniValue& params, bool fHelp)
 7. 通过解码的签名和消息写入器获取相应的公钥。
 8. 若公钥对应索引等于指定地址的密钥索引，验证成功，返回 true。
 
-Thanks for your time.
-
 ## 参照
 
 * [Developer Documentation - Bitcoin](https://bitcoin.org/en/developer-documentation){:target="_blank"}

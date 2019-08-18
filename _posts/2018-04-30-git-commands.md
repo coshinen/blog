@@ -67,8 +67,6 @@ $ git push origin HEAD --force # 强制同步本地的项目分支到 GitHub 上
 $ git push origin master -f # 强制同步本地的项目分支到 GitHub 上，用于 $ git reset --hard <version> 修改远程仓库的错误提交。
 {% endhighlight %}
 
-Thanks for your time.
-
 ## 参照
 
 * [Git - Documentation](https://git-scm.com/doc){:target="_blank"}

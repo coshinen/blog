@@ -129,8 +129,6 @@ UniValue submitblock(const UniValue& params, bool fHelp)
 4. 查找该区块是否存在，若存在，...
 5. 若不存在，...
 
-Thanks for your time.
-
 ## 参照
 
 * [Developer Documentation - Bitcoin](https://bitcoin.org/en/developer-documentation){:target="_blank"}

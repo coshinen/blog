@@ -333,8 +333,6 @@ std::string CRPCTable::help(const std::string& strCommand) const
 这里我们可以看出 help 命令的实现还是很巧妙的，把有参和无参两种方式合二为一。
 最主要的是把无参结果作为有参结果的子集，该实现在以后版本中可能会改变。
 
-Thanks for your time.
-
 ## 参照
 
 * [Developer Documentation - Bitcoin](https://bitcoin.org/en/developer-documentation){:target="_blank"}

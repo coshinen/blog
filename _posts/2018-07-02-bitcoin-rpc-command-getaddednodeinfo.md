@@ -256,8 +256,6 @@ UniValue getaddednodeinfo(const UniValue& params, bool fHelp)
 4. 若关闭了 dns，只添加节点 IP 到结果集并返回。
 5. 若开启了 dns，则追加相应的连接状态以及端口号到结果集并返回。
 
-Thanks for your time.
-
 ## 参照
 
 * [Developer Documentation - Bitcoin](https://bitcoin.org/en/developer-documentation){:target="_blank"}

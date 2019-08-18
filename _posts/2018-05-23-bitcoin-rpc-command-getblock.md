@@ -460,8 +460,6 @@ class CChain { // 一个内存中用于区块索引的链
 };
 {% endhighlight %}
 
-Thanks for your time.
-
 ## 参照
 
 * [Developer Documentation - Bitcoin](https://bitcoin.org/en/developer-documentation){:target="_blank"}

@@ -24,8 +24,6 @@ tags: 译文
 
 比起电子书，我更喜欢实体书，味道就是原因之一，但不得不承认电子书在便携性上的巨大优势。
 
-Thanks for your time.
-
 ## 参照
 
 * [Why Do Old Books Smell? – Flavorwire](http://flavorwire.com/282771/why-do-old-books-smell){:target="_blank"}

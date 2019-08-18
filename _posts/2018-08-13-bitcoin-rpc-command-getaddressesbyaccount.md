@@ -103,8 +103,6 @@ UniValue getaddressesbyaccount(const UniValue& params, bool fHelp)
 5. 遍历地址簿，把与指定账户相同的地址加入结果集。
 6. 返回结果集。
 
-Thanks for your time.
-
 ## 参照
 
 * [Developer Documentation - Bitcoin](https://bitcoin.org/en/developer-documentation){:target="_blank"}

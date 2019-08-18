@@ -128,8 +128,6 @@ I wish we could stay forever as one
 </blockquote>
 </div>
 
-Thanks for your time.
-
 ## 参照
 
 * [倉木麻衣公式WEBサイト](http://www.mai-kuraki.com){:target="_blank"}

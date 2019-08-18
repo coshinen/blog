@@ -139,8 +139,6 @@ banmap_t CNode::setBanned; // 设置屏蔽地址列表
 CCriticalSection CNode::cs_setBanned;
 {% endhighlight %}
 
-Thanks for your time.
-
 ## 参照
 
 * [Developer Documentation - Bitcoin](https://bitcoin.org/en/developer-documentation){:target="_blank"}

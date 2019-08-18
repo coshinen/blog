@@ -93,8 +93,6 @@ UniValue verifytxoutproof(const UniValue& params, bool fHelp)
 4. 验证交易所在区块是否为有效区块。
 5. 遍历交易索引列表，加入结果集并返回。
 
-Thanks for your time.
-
 ## 参照
 
 * [Developer Documentation - Bitcoin](https://bitcoin.org/en/developer-documentation){:target="_blank"}

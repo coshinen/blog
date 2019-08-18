@@ -117,8 +117,6 @@ UniValue addmultisigaddress(const UniValue& params, bool fHelp)
 6. 设置脚本索引和指定账户到地址簿，脚本用途为 "send"。
 7. 对脚本索引进行 base58 编码并返回。
 
-Thanks for your time.
-
 ## 参照
 
 * [Developer Documentation - Bitcoin](https://bitcoin.org/en/developer-documentation){:target="_blank"}

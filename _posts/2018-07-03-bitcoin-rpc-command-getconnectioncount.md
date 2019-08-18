@@ -80,8 +80,6 @@ extern std::vector<CNode*> vNodes; // 已建立连接的节点列表
 vector<CNode*> vNodes; // 成功建立连接的节点列表
 {% endhighlight %}
 
-Thanks for your time.
-
 ## 参照
 
 * [Developer Documentation - Bitcoin](https://bitcoin.org/en/developer-documentation){:target="_blank"}

@@ -378,8 +378,6 @@ static boost::scoped_ptr<ECCVerifyHandle> globalVerifyHandle; // 该智能指针
 未完待续...<br>
 请看下一篇[比特币源码剖析（七）](/blog/2018/07/bitcoin-source-anatomy-07.html)。
 
-Thanks for your time.
-
 ## 参照
 
 * [bitcoin/bitcoin v0.12.1](https://github.com/bitcoin/bitcoin/tree/v0.12.1{:target="_blank"})

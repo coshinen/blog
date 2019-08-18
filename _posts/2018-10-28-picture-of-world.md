@@ -55,8 +55,6 @@ yah～ あぁそうだ<br>
 君にとって未来っていうものでも<br>
 yah～ 私なら何一つ なくしはしない
 
-Thanks for your time.
-
 ## 参照
 
 * [GARNET CROW official website : ガーネットクロウ オフィシャルサイト](http://www.garnetcrow.com){:target="_blank"}

@@ -77,8 +77,6 @@ scriptSig: empty
 
 （注意：这种类型的分叉与硬分叉不同，硬分叉是一些开发者决定对区块链协议创建向后不兼容的更改，导致两个永远不同的区块链。）
 
-Thanks for your time.
-
 ## 参照
 
 * [10 Essential blockchain Interview Questions and Answers](https://www.toptal.com/blockchain/interview-questions){:target="_blank"}

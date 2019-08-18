@@ -74,8 +74,6 @@ public:
 5. nBits，难度对应值，可通过此值推算出难度，从主网、测试网和回归测试网参数可以看出，此值越小难度越大。
 6. nNonce，随机数，通过不断的变化来寻找满足要求的区块（挖矿）。
 
-Thanks for your time.
-
 ## 参照
 
 * [GitHub - bitcoin/bitcoin at v0.12.1](https://github.com/bitcoin/bitcoin/tree/v0.12.1){:target="_blank"}

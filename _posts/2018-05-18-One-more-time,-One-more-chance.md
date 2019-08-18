@@ -70,8 +70,6 @@ One more time ふざけあった 時間よ<br>
 欲しいものなど もう何もない<br>
 君のほかに大切なものなど
 
-Thanks for your time.
-
 ## 参照
 
 * [秒速5センチメートル](https://www.cwfilms.jp/5cm){:target="_blank"}

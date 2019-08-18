@@ -118,8 +118,6 @@ excerpt: 君と夏の終わり 将来の夢 大きな希望 忘れない、10年
 </blockquote>
 </div>
 
-Thanks for your time.
-
 ## 参照
 
 * [ZONE](http://www.sonymusic.co.jp/Music/Info/ZONE){:target="_blank"}

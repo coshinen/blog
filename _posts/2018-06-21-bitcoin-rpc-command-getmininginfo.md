@@ -118,8 +118,6 @@ UniValue getmininginfo(const UniValue& params, bool fHelp)
 2. 上锁。
 3. 追加必要的挖矿信息并返回。
 
-Thanks for your time.
-
 ## 参照
 
 * [Developer Documentation - Bitcoin](https://bitcoin.org/en/developer-documentation){:target="_blank"}

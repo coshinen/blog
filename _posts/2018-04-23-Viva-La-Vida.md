@@ -65,8 +65,6 @@ I know Saint Peter won't call my name<br>
 Never an honest word<br>
 But that was when I ruled the world
 
-Thanks for your time.
-
 ## 参照
 
 * [Coldplay official website](https://coldplay.com){:target="_blank"}

@@ -79,8 +79,6 @@ stickie: true
 * [Bitcoin Forum - Index](https://bitcointalk.org){:target="_blank"}
 * [Satoshi Nakamoto Institute](https://nakamotoinstitute.org){:target="_blank"}
 
-Thanks for your time.
-
 ## 参照
 
 * [mistydew/blockchain](https://github.com/mistydew/blockchain){:target="_blank"}

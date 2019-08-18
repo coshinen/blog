@@ -104,8 +104,6 @@ excerpt: 午後になると西陽が射す、部屋の片隅のソファー。�
 </blockquote>
 </div>
 
-Thanks for your time.
-
 ## 参照
 
 * [GARNET CROW official website : ガーネットクロウ オフィシャルサイト](http://www.garnetcrow.com){:target="_blank"}

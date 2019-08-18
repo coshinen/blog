@@ -120,8 +120,6 @@ Kiss goodnight
 
 這首歌和 GARNET CROW 的「英雄」前奏出奇地像，不過發行時間在前，MV 是一個小故事，很有意思。
 
-Thanks for your time.
-
 ## 参照
 
 * [Lady Antebellum](https://www.ladyantebellum.com){:target="_blank"}

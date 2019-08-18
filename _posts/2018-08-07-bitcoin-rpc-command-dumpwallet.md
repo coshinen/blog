@@ -313,8 +313,6 @@ static bool DecryptKey(const CKeyingMaterial& vMasterKey, const std::vector<unsi
 
 未完成。
 
-Thanks for your time.
-
 ## 参照
 
 * [Developer Documentation - Bitcoin](https://bitcoin.org/en/developer-documentation){:target="_blank"}

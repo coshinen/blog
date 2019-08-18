@@ -420,8 +420,6 @@ void CScheduler::serviceQueue()
 未完待续...<br>
 请看下一篇[比特币源码剖析（九）](/blog/2018/07/bitcoin-source-anatomy-09.html)。
 
-Thanks for your time.
-
 ## 参照
 
 * [bitcoin/bitcoin v0.12.1](https://github.com/bitcoin/bitcoin/tree/v0.12.1){:target="_blank"}

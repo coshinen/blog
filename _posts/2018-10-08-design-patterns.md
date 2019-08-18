@@ -49,8 +49,6 @@ tags: C++ 设计模式
 * 模板方法模式（Template Method）
 * 访问者模式（Visitor Method）
 
-Thanks for your time.
-
 ## 参照
 * [Design Patterns - Wikipedia](https://en.wikipedia.org/wiki/Design_Patterns){:target="_blank"}
 * [...](https://github.com/mistydew/DesignPatterns){:target="_blank"}

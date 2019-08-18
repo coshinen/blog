@@ -111,8 +111,6 @@ Libevent 提供了一个非常简单的事件驱动的 HTTP 服务器，可以�
     event_base_free(base);
 {% endhighlight %}
 
-Thanks for your time.
-
 ## 参照
 
 * [libevent](http://libevent.org){:target="_blank"}

@@ -206,8 +206,6 @@ CBanDB::CBanDB()
 
 可以看到被禁止的 IP 列表的数据库文件名为“banlist.dat”，就存放在数据目录“~/.bitcoin”下。
 
-Thanks for your time.
-
 ## 参照
 
 * [Developer Documentation - Bitcoin](https://bitcoin.org/en/developer-documentation){:target="_blank"}

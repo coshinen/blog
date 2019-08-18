@@ -196,8 +196,6 @@ UniValue gettxout(const UniValue& params, bool fHelp)
 7. 获取相关信息并追加到结果对象。
 8. 返回结果。
 
-Thanks for your time.
-
 ## 参照
 
 * [Developer Documentation - Bitcoin](https://bitcoin.org/en/developer-documentation){:target="_blank"}

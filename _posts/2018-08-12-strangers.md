@@ -56,8 +56,6 @@ strangers<br>
 すべてが流れゆく<br>
 落陽(おちてゆくひ)が綺麗...sky...
 
-Thanks for your time.
-
 ## 参照
 
 * [GARNET CROW official website : ガーネットクロウ オフィシャルサイト](http://www.garnetcrow.com){:target="_blank"}

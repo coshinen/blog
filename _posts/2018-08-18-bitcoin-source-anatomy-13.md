@@ -462,8 +462,6 @@ bool InitBlockIndex(const CChainParams& chainparams)
 未完待续...<br>
 请看下一篇[比特币源码剖析（十四）](/blog/2018/08/bitcoin-source-anatomy-14.html)。
 
-Thanks for your time.
-
 ## 参照
 
 * [bitcoin/bitcoin v0.12.1](https://github.com/bitcoin/bitcoin/tree/v0.12.1){:target="_blank"}

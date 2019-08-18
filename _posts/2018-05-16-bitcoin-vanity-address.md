@@ -179,8 +179,6 @@ UniValue validateaddress(const UniValue& params, bool fHelp)
 
 关于比特币地址前缀 '1' 的修改，参考[如何制作一枚山寨数字货币](/blog/2018/05/how-to-make-an-altcoin.html)。
 
-Thanks for your time.
-
 ## 参照
 
 * [Address - Bitcoin Wiki](https://en.bitcoin.it/wiki/Address){:target="_blank"}
