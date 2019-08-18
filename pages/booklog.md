@@ -23,6 +23,7 @@ excerpt: Reading list.
 > * [前方的路](http://www.ruanyifeng.com/road){:target="_blank"}，阮一峰
 > * [未来世界的幸存者](http://www.ruanyifeng.com/survivor){:target="_blank"}，阮一峰
 > * [兔子共和国](https://book.douban.com/subject/22693008){:target="_blank"}，[英] 理查德·亚当斯
+> * [冰与火之歌](https://book.douban.com/subject/25826936){:target="_blank"}，[美] 乔治·R.R.马丁
 > * [小王子](https://book.douban.com/subject/1084336){:target="_blank"}，[法] 圣埃克苏佩里
 > * [三个火枪手](https://book.douban.com/subject/1203244){:target="_blank"}，[法] 大仲马
 > * [80,0 AZUKI NANA photo & anthology](https://book.douban.com/subject/2249654){:target="_blank"}，[日] AZUKI 七
