@@ -46,8 +46,8 @@ blog:     "/blog/"
 archive:  "/blog/archive.html"
 category: "/blog/category.html"
 tagcloud: "/blog/tags.html"
-feedme:   "/blog/feed.html"
-feed:     "/blog/atom.xml"
+feed:     "/blog/feed.html"
+atom:     "/blog/atom.xml"
 
 # Build settings
 # Handling Reading

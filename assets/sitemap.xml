@@ -1,6 +1,8 @@
 ---
 layout: null
+permalink: /sitemap.xml
 ---
+
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
@@ -37,7 +39,7 @@ layout: null
 <loc>{{ site.tagcloud | prepend: site.url }}</loc>
 </url>
 <url>
-<loc>{{ site.feedme | prepend: site.url }}</loc>
+<loc>{{ site.feed | prepend: site.url }}</loc>
 </url>{% for post in site.posts reversed %}{% if post.hidden == true %}{% else %}
 <url>
 <loc>{{ post.url | prepend: site.url }}</loc>

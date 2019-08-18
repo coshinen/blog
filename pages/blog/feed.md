@@ -11,4 +11,4 @@ Welcome to subscribe the following feed for keep track of my updates in time:
 > * <a href="https://feeds.feedburner.com/{{ site.feedburner }}" target="_blank">https://feeds.feedburner.com/{{ site.feedburner }}</a><br>
 
 > Alternative Feed: (Normal access)
-> * [{{ site.feed | prepend: site.url }}]({{ site.feed | prepend: site.url }})
+> * [{{ site.atom | prepend: site.url }}]({{ site.atom | prepend: site.url }})

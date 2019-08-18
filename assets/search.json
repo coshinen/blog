@@ -1,6 +1,8 @@
 ---
 layout: null
+permalink: /search.json
 ---
+
 [{% for post in site.posts %}
     {
       "title"    : "{{ post.title | escape }}",

@@ -1,7 +1,7 @@
 ---
 layout: default
 title: blog
-permalink: /blog/index.html
+permalink: /blog/
 excerpt: Welcome to mistydew's blog!
 ---
 

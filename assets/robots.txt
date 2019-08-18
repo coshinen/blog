@@ -1,3 +1,8 @@
+---
+layout: null
+permalink: /robots.txt
+---
+
 User-agent: Googlebot
 Allow: /
 
@@ -13,4 +18,4 @@ Allow: /
 User-agent: *
 Disallow: /
 
-Sitemap: https://mistydew.github.io/sitemap.xml
+Sitemap: {{ site.sitemap | prepend: site.url }}
