@@ -10,6 +10,7 @@
 root: mistydew
 title: parallel universe
 quote: ソルト：無理は一番の、退屈しのぎだ。
+subtitle: mistydew's blog
 description: >- # this means to ignore newlines until "baseurl:"
   Welcome to the ❤ parallel universe! Copyright &copy; 2019 mistydew.
   Powered by Jekyll. Hosted on GitHub.
@@ -25,7 +26,7 @@ fingerprint: 7752 D418 D94C 33FB 8F6F 9197 44D9 CCA7 F81A 1FB3
 github: mistydew
 cv: Curriculum Vitae
 email: mistydew@qq.com
-subtitle: GC music diary
+gcmd: GC music diary
 rss: Subscribe Feed
 feedburner: mistydew
 coffee: Buy me a coffee
