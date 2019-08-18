@@ -8,6 +8,9 @@ excerpt: Here are my favorite quotes from someones that inspire me or make me la
 > Satoshi Nakamoto, Bitcoin P2P e-cash paper:
 > * It's very attractive to the libertarian viewpoint if we can explain it properly. I'm better with code than with words though.
 
+> Ygritte, Game of Thrones:
+> * You know nothing, Jon Snow.
+
 > Master Shifu, Kung Fu Panda 3:
 > * If you only do what you can do, you will never be more than you are now.
 
