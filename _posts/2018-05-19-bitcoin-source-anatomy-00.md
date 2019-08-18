@@ -41,7 +41,7 @@ int main(int argc, char* argv[]) // 0.程序入口
 
 下图为比特币核心服务程序启动过程中函数调用的流程：
 
-![bitcoind-startup](https://raw.githubusercontent.com/mistydew/blockchain/master/images/bitcoind-startup-v0.12.1.png)
+![bitcoind-startup](https://raw.githubusercontent.com/mistydew/blockchain/master/assets/images/bitcoind-startup-v0.12.1.png)
 
 > 比特币核心服务程序启动流程：<br>
 > 1.[SetupEnvironment()](/blog/2018/05/bitcoin-source-anatomy-01.html#SetupEnvironment-ref) | 设置程序运行环境：本地化处理。<br>

@@ -24,7 +24,7 @@ tags: C++ 设计模式
 
 基础类图：
 
-![singleton](/images/designpatterns/singleton.svg)
+![singleton](/assets/images/designpatterns/singleton.svg)
 
 ## 基础实现
 

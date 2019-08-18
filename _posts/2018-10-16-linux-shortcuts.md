@@ -23,7 +23,7 @@ Linux 终端也不例外。这里是一些每个用户必须直到并练习的 L
 
 ## 必须知道的 Linux 快捷键
 
-![linux-terminal-shortcuts](/images/translation/linux-terminal-shortcuts.jpeg){:.border}
+![linux-terminal-shortcuts](/assets/images/translation/linux-terminal-shortcuts.jpeg){:.border}
 
 我想提一下一些快捷键可能依赖于你使用的 Shell。
 Bash 是最受欢迎的 shell，所以列出的快捷键集中在 Bash。

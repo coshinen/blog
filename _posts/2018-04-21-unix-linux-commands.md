@@ -11,8 +11,8 @@ tags: Linux CLI Terminal
 
 Linux mascot: crystal tux and tux(Torvalds linUX?)
 
-![penguin](/images/linux/penguin.jpg)
-![tux](/images/linux/tux.jpg)
+![penguin](/assets/images/linux/penguin.jpg)
+![tux](/assets/images/linux/tux.jpg)
 
 Childhood and Adult(funny)
 

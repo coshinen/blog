@@ -8,7 +8,7 @@ categories: 翻訳
 tags: 歌詞
 excerpt: Lying here with you so close to me. It's hard to fight these feelings when it feels so hard to breathe. I'm caught up in this moment. I'm caught up in your smile.
 ---
-![own the night](/images/cover/misc/own%20the%20night.jpg){:.border}
+![own the night](/assets/images/cover/misc/own%20the%20night.jpg){:.border}
 
 ## Just A Kiss | 只是個吻
 

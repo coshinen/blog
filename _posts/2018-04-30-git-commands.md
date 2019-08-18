@@ -12,7 +12,7 @@ tags: Git CLI
 Git 易于学习且拥有占用空间小和闪电般快速的性能。
 它远优于像 Subversion、CVS、Perforce 和 ClearCase 这些的 SCM 工具，有像廉价的本地分支、便捷的暂存区，和多种工作流程的特性。
 
-![git](/images/git/git.png)
+![git](/assets/images/git/git.png)
 
 据传 [GitHub](https://github.com){:target="_blank"} 是全球最大的同性交友网站，Hub 有中心、枢纽之意。
 

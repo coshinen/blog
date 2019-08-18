@@ -8,7 +8,7 @@ categories: ABBA 翻訳
 tags: 歌詞
 excerpt: Ooh, you can dance, you can jive. Having the time of your life. Ooh, see that girl, watch that scene. Digging the dancing queen.
 ---
-![GOLD GREATEST HITS](/images/cover/misc/GOLD%20GREATEST%20HITS.jpg){:.border}
+![GOLD GREATEST HITS](/assets/images/cover/misc/GOLD%20GREATEST%20HITS.jpg){:.border}
 
 ## Dancing Queen | 舞后
 
