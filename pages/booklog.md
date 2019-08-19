@@ -23,7 +23,8 @@ excerpt: Reading list.
 > * [前方的路](http://www.ruanyifeng.com/road){:target="_blank"}，阮一峰
 > * [未来世界的幸存者](http://www.ruanyifeng.com/survivor){:target="_blank"}，阮一峰
 > * [兔子共和国](https://book.douban.com/subject/22693008){:target="_blank"}，[英] 理查德·亚当斯
-> * [冰与火之歌](https://book.douban.com/subject/25826936){:target="_blank"}，[美] 乔治·R.R.马丁
+> * [冰与火之歌 卷一 权力的游戏](https://book.douban.com/subject/1336330){:target="_blank"}，[美] 乔治·R.R.马丁
+> * [冰与火之歌（五卷）](https://book.douban.com/subject/25826936){:target="_blank"}，[美] 乔治·R.R.马丁
 > * [小王子](https://book.douban.com/subject/1084336){:target="_blank"}，[法] 圣埃克苏佩里
 > * [三个火枪手](https://book.douban.com/subject/1203244){:target="_blank"}，[法] 大仲马
 > * [80,0 AZUKI NANA photo & anthology](https://book.douban.com/subject/2249654){:target="_blank"}，[日] AZUKI 七
@@ -32,7 +33,8 @@ excerpt: Reading list.
 > * [神奇动物在哪里](https://book.douban.com/subject/27625554){:target="_blank"}，[英] J.K. 罗琳
 > * [神奇的魁地奇球](https://book.douban.com/subject/30193054){:target="_blank"}，[英] J.K. 罗琳
 > * [诗翁彼豆故事集](https://book.douban.com/subject/27594566){:target="_blank"}，[英] J.K. 罗琳
-> * [哈利波特](https://book.douban.com/subject/27167519){:target="_blank"}，[英] J.K. 罗琳
+> * [哈利·波特与魔法石](https://book.douban.com/subject/1041007){:target="_blank"}，[英] J.K. 罗琳
+> * [哈利波特全集（七卷）](https://book.douban.com/subject/27167519){:target="_blank"}，[英] J.K. 罗琳
 > * [福尔摩斯](https://book.douban.com/subject/20441264){:target="_blank"}，[英] 阿瑟·柯南·道尔
 
 > Miscellaneous:
