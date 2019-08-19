@@ -1,20 +1,20 @@
 ﻿---
 layout: post
-title:  "UNIX/Linux 基础命令"
+title:  "UNIX/Linux 常用命令"
 date:   2018-04-21 18:58:02 +0800
 author: mistydew
 comments: true
-categories: UNIX/Linux
-tags: Linux CLI Terminal
+categories: UNIX/Linux Terminal
+tags: UNIX/Linux CLI
 ---
-**UNIX/Linux 下执行命令没有（错误）提示即表示执行成功。**
+**一般来说 UNIX/Linux 下成功执行命令的标志是没有（错误）提示。**
 
 Linux mascot: crystal tux and tux(Torvalds linUX?)
 
 ![penguin](/assets/images/linux/penguin.jpg)
 ![tux](/assets/images/linux/tux.jpg)
 
-Childhood and Adult(funny)
+Childhood and Adult tux :)
 
 ## 查看目录下的内容 | list
 
@@ -284,7 +284,7 @@ $ shutdown -h now # 立刻关机，h 表示 halt，可以指定时间。
 $ halt # 同 shutdown -h now。
 {% endhighlight %}
 
-## 远程安全连接 | SSH(Secure Shell)
+## 远程安全连接 | SSH (Secure Shell)
 
 {% highlight shell %}
 $ sudo apt install ssh # 安装 ssh 服务。
@@ -310,5 +310,3 @@ $ strip <ELF> # 通过删除可执行文件 <ELF> 中的调试符号等相关信
 ## 参考
 
 * [Why Penguin is Linux logo? - LinuxScrew: Linux Blog](http://www.linuxscrew.com/2007/11/14/why-penguin-is-linux-logo){:target="_blank"}
-* [《Linus Torvalds自传》摘录 - 阮一峰的网络日志](http://www.ruanyifeng.com/blog/2012/09/linus_torvalds.html){:target="_blank"}
-* [Linux命令大全（手册）](http://man.linuxde.net){:target="_blank"}

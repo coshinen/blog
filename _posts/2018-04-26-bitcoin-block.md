@@ -5,7 +5,7 @@ date:   2018-04-26 21:02:10 +0800
 author: mistydew
 comments: true
 categories: Blockchain Bitcoin
-tags: 区块链 比特币 区块
+tags: 区块链 比特币区块
 ---
 交易数据永久记录在区块中。
 它们可以被当作城市记录器记录簿中的单个页面（记录房地产所有权的变更）或股票交易的分类账。

@@ -5,7 +5,7 @@ date:   2018-10-09 21:31:55 +0800
 author: mistydew
 comments: true
 categories: 设计模式
-tags: C++ 设计模式
+tags: C/C++ 设计模式
 ---
 单例模式是一种软件设计模式，它限制类的实例化为一个对象。
 

@@ -5,7 +5,7 @@ date:   2018-10-23 20:43:26 +0800
 author: mistydew
 comments: true
 categories: Blockchain Bitcoin Translation
-tags: 区块链 比特币 词汇表 译文
+tags: 区块链 比特币词汇表 译文
 ---
 比特币提供了一种全新的支付方式，因此你可能需要了解一些新词语。
 

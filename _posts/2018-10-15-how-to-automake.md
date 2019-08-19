@@ -4,8 +4,8 @@ title:  "如何使用 Automake 生成 Makefile"
 date:   2018-10-15 15:10:52 +0800
 author: mistydew
 comments: true
-categories: Makefile
-tags: C C++ Automake
+categories: Makefile Automake
+tags: C/C++ make
 ---
 使用 make 编译工具链构建项目的简单过程。
 

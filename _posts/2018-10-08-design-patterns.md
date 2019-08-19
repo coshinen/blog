@@ -5,7 +5,7 @@ date:   2018-10-08 20:08:56 +0800
 author: mistydew
 comments: true
 categories: 设计模式
-tags: C++ 设计模式
+tags: C/C++ 设计模式
 ---
 设计模式是一套为增加代码可读性、可靠性、可复用性的代码设计模板。
 共分 3 大类，23 种。
@@ -51,4 +51,4 @@ tags: C++ 设计模式
 
 ## 参照
 * [Design Patterns - Wikipedia](https://en.wikipedia.org/wiki/Design_Patterns){:target="_blank"}
-* [...](https://github.com/mistydew/DesignPatterns){:target="_blank"}
+* [mistydew/DesignPatterns](https://github.com/mistydew/DesignPatterns){:target="_blank"}

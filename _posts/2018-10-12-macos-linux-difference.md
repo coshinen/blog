@@ -5,7 +5,7 @@ date:   2018-10-12 15:46:38 +0800
 author: mistydew
 comments: true
 categories: Kernels macOS UNIX/Linux Translation
-tags: C/C++ macOS Linux 译文
+tags: C/C++ macOS UNIX/Linux 译文
 ---
 有些人可能会认为在 macOS 和 Linux 内核之间存在相似之处，因为它们可以处理类似的命令并运行类似的软件。
 一些人甚至认为 Apple 的 macOS 是基于 Linux。事实上，两个内核有着不同的历史和特性。
