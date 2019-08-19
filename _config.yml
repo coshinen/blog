@@ -12,15 +12,10 @@ title: parallel universe
 quote: ソルト：無理は一番の、退屈しのぎだ。
 subtitle: mistydew's blog
 description: >- # this means to ignore newlines until "baseurl:"
-  Welcome to the ❤ parallel universe! Copyright &copy; 2019 mistydew.
+  Welcome to the parallel universe ❤ mistydew's blog!
   Powered by Jekyll. Hosted on GitHub.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://mistydew.github.io" # the base hostname & protocol for your site
-
-# About page
-mailo: mistydew at mailo.com
-pgpkey: public_key.asc
-fingerprint: 7752 D418 D94C 33FB 8F6F 9197 44D9 CCA7 F81A 1FB3
 
 # Site footer
 github: mistydew
@@ -41,6 +36,11 @@ resume:  "/resume.html"
 gc:      "/gc/"
 donate:  "/donate.html"
 
+# About page
+mailo: mistydew at mailo.com
+pgpkey: public_key.asc
+fingerprint: 7752 D418 D94C 33FB 8F6F 9197 44D9 CCA7 F81A 1FB3
+
 # Blog page baseurl
 blog:     "/blog/"
 archive:  "/blog/archive.html"
@@ -58,7 +58,7 @@ markdown_ext: "markdown,mkdown,mkdn,mkd,md"
 # Conversion
 markdown: kramdown
 highlighter: rouge
-excerpt_separator: "\n\n" # Excerpt/Abstract/Summary
+excerpt_separator: "\n\n" # Abstract / Summary
 incremental: false
 
 # Serving
