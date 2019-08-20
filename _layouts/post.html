@@ -6,9 +6,9 @@ layout: default
   <header class="post-header">
     <h1 class="post-title" itemprop="name headline">{{ page.title }}<span>{% include share.html %}</span></h1>
     <p class="post-meta">
-      <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{% include posts/icon-calendar.html %}{{ page.date | date: "%b %-d, %Y" }}</time>
+      <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished"><abbr title="{{ page.date | date_to_xmlschema }}">{% include posts/icon-calendar.html %}{{ page.date | date: "%b %-d, %Y" }}</abbr></time>
       <span>|</span>
-      {% if page.author %}<span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{% include posts/icon-user-alt.html %}{{ page.author }}</span></span>{% endif %}
+      {% if page.author %}<span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{% include posts/icon-user-circle.html %}{{ page.author }}</span></span>{% endif %}
       <span>|</span>
       <span class="post-count">{% include posts/icon-edit.html %}{{ page.content | strip_html | strip_newlines | remove: " " | size }} words</span>
       <span>|</span>
@@ -17,6 +17,8 @@ layout: default
       <span id="busuanzi_container_page_pv">{% include posts/icon-eye.html %}<span id="busuanzi_value_page_pv"></span> views</span>
       <span>|</span>
       <span>{% include posts/icon-tags.html %}{% for tag in page.tags %}<a class="tag" href="{{ site.tagcloud }}#{{ tag }}-ref">{{ tag | append: " " }}</a>{% endfor %}</span>
+      <span>|</span>
+      <span>{% include posts/icon-copyright.html %}<a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh"><img alt="(CC) BY-NC-ND" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/4.0/80x15.png" /></a></span>
     </p>
   </header>
   <div class="post-content" itemprop="articleBody">
