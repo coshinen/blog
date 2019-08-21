@@ -2,16 +2,15 @@
 
 ## Todo
 
-- [ ] home page: avatar, bio...
-- [x] remake: site search engine
-- [ ] remake: resume to cv
-- [ ] remake: blog page
+- [ ] site: search engine using lunr.js
 - [ ] site: searchbox icon svg to font woff2
+- [ ] remake: blog page (comments, avatar, bio...)
 - [ ] post: IntenseDebate comments; subsite: Remarkbox Hosted Comments Service
+- [ ] remake: replace resume with cv (Curriculum Vitae)
 
 ## Timeline
 
-* 2019.08.18 [+] assets: css, js, images and fonts...
+* 2019.08.18 [+] assets: css, fonts, images and js...
 
 <details>
 <summary>more</summary>
