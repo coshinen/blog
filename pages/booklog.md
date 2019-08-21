@@ -12,6 +12,7 @@ excerpt: Reading list.
 > * [区块链技术指南](https://yeasy.gitbooks.io/blockchain_guide/content){:target="_blank"}，Baohua Yang
 > * [精通比特币（第二版）](https://book.douban.com/subject/30280401){:target="_blank"}，Andreas M. Antonopoulos
 > * [Bitcoin: A Peer-to-Peer Electronic Cash System](/blog/2018/04/Bitcoin-A-Peer-to-Peer-Electronic-Cash-System.html), Satoshi Nakamoto
+> * [Pro Git 2nd Edition](https://git-scm.com/book/zh/v2){:target="_blank"}，[美] Scott Chacon and Ben Straub
 > * [TCP/IP 详解 卷1：协议](https://book.douban.com/subject/1088054){:target="_blank"}，[美] [W. Richard Stevens](http://www.kohala.com/start){:target="_blank"}
 > * [Linux/UNIX 系统编程手册（上、下册）](https://book.douban.com/subject/25809330){:target="_blank"}，[德] Michael Kerrisk
 > * [你的灯亮着吗？发现问题的真正所在](https://book.douban.com/subject/1135754){:target="_blank"}，[美] 唐纳德·高斯
