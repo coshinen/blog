@@ -9,7 +9,7 @@ excerpt: Welcome to mistydew's blog!
   <h1 class="page-heading">Posts</h1>
   <ul class="post-list">
   <!-- This loops through the site posts for sticky -->
-    {% for post in site.posts %}{% if post.stickie == true %}
+{% for post in site.posts %}{% if post.stickie == true %}
     <li>
       <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }} [Sticky]</span>
       <span style="float:right;">分类：{% for category in post.categories %}<a class="category" href="{{ site.category }}#{{ category }}-ref">{{ category | append: " " }}</a>{% endfor %}</span>
@@ -22,9 +22,10 @@ excerpt: Welcome to mistydew's blog!
       <footer>
         <a class="readmore" href="{{ post.url }}">阅读全文 &raquo;</a>
       </footer>
-    </li>{% endif %}{% endfor %}
+    </li>
+{% endif %}{% endfor %}
   <!-- This loops through the site posts -->
-    {% assign idx = 0 %}{% assign maximum = 7 %}{% for post in site.posts %}{% if post.stickie == true %}{% continue %}{% elsif post.hidden == true %}{% continue %}{% else %}
+{% assign idx = 0 %}{% assign maximum = 7 %}{% for post in site.posts %}{% if post.stickie == true %}{% continue %}{% elsif post.hidden == true %}{% continue %}{% else %}
     <li>
       <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
       <span style="float:right;">分类：{% for category in post.categories %}<a class="category" href="{{ site.category }}#{{ category }}-ref">{{ category | append: " " }}</a>{% endfor %}</span>
@@ -37,6 +38,7 @@ excerpt: Welcome to mistydew's blog!
       <footer>
         <a class="readmore" href="{{ post.url }}">阅读全文 &raquo;</a>
       </footer>
-    </li>{% assign idx = idx | plus: 1 %}{% if idx == maximum %}{% break %}{% endif %}{% endif %}{% endfor %}
+    </li>
+{% assign idx = idx | plus: 1 %}{% if idx == maximum %}{% break %}{% endif %}{% endif %}{% endfor %}
   </ul>
 </div>

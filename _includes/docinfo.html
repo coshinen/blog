@@ -1,10 +1,10 @@
-  <!-- Document information -->
-  <div class="post-information">
-    <h2 class="post-header">文档信息</h2>
-    <ul class="post-copyright">
-      <li class="post-author"><strong>本文作者：</strong><a class="author" href="{{ site.url }}{{ site.about }}">{{ page.author }}</a></li>
-      <li class="post-date"><strong>发表日期：</strong><abbr title="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%Y年%m月%d日" }}</abbr></li>
-      <li class="post-license"><strong>版权声明：</strong>自由转载-保持署名-非商用-非衍生（<a class="license" target="_blank" rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh">国际 创意共享许可证 4.0</a>）</li>
-      <li class="post-categories"><strong>更多内容：</strong>{% for category in page.categories %}<a class="category" href="{{ site.category }}#{{ category }}-ref">{{ category | append: " " }}</a>{% endfor %}</li>
-    </ul>
-  </div>
+          <!-- Document information -->
+          <div class="post-information">
+            <h2 class="post-header">文档信息</h2>
+            <ul class="post-copyright">
+              <li class="post-author"><strong>本文作者：</strong><a class="author" href="{{ site.url }}{{ site.about }}">{{ page.author }}</a></li>
+              <li class="post-date"><strong>发表日期：</strong><abbr title="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%Y年%m月%d日" }}</abbr></li>
+              <li class="post-license"><strong>版权声明：</strong>自由转载-保持署名-非商用-非衍生（<a class="license" target="_blank" rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh">国际 创意共享许可证 4.0</a>）</li>
+              <li class="post-categories"><strong>更多内容：</strong>{% for category in page.categories %}<a class="category" href="{{ site.category }}#{{ category }}-ref">{{ category | append: " " }}</a>{% endfor %}</li>
+            </ul>
+          </div>
