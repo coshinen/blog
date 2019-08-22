@@ -5,8 +5,9 @@
 - [ ] site: search engine using lunr.js
 - [ ] site: searchbox icon svg to font woff2
 - [ ] remake: blog page (comments, avatar, bio...)
-- [ ] post: IntenseDebate comments; subsite: Remarkbox Hosted Comments Service
 - [ ] remake: replace resume with cv (Curriculum Vitae)
+- [ ] post: IntenseDebate comments; subsite: Remarkbox Hosted Comments Service
+- [ ] post: categories and tags of all posts
 
 ## Timeline
 
