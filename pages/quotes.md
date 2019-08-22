@@ -159,6 +159,9 @@ excerpt: Here are my favorite quotes from someones that inspire me or make me la
 > Sherlock Holmes, BBC SHERLOCK Series 3, Episode 3, His Last Vow:
 > * Oh, do your research. I'm not a hero, I'm a high-functioning sociopath. Merry Christmas!
 >
+> Sherlock Holmes, BBC SHERLOCK Series 2, Episode 2, The Hounds of Baskerville:
+> * Once you've ruled out the impossible, whatever remains, however improbable, must be true.
+>
 > Sherlock Holmes, BBC SHERLOCK Series 2, Episode 1, A Scandal in Belgravia:
 > * Sentiment is a chemical defect found in the losing side.
 >
