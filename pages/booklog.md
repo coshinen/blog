@@ -27,10 +27,13 @@ excerpt: Reading list.
 > * [冰与火之歌 卷一 权力的游戏](https://book.douban.com/subject/1336330){:target="_blank"}，[美] 乔治·R.R.马丁
 > * [冰与火之歌（五卷）](https://book.douban.com/subject/25826936){:target="_blank"}，[美] 乔治·R.R.马丁
 > * [小王子](https://book.douban.com/subject/1084336){:target="_blank"}，[法] 圣埃克苏佩里
-> * [三个火枪手](https://book.douban.com/subject/1203244){:target="_blank"}，[法] 大仲马
-> * [80,0 AZUKI NANA photo & anthology](https://book.douban.com/subject/2249654){:target="_blank"}，[日] AZUKI 七
 > * [动物庄园](https://book.douban.com/subject/25854767){:target="_blank"}，[英] 乔治·奥威尔
 > * [百年孤独](https://book.douban.com/subject/6082808){:target="_blank"}，[哥伦比亚] 加夫列尔·加西亚·马尔克斯
+> * [80,0 AZUKI NANA photo & anthology](https://book.douban.com/subject/2249654){:target="_blank"}，[日] AZUKI 七
+> * [三个火枪手](https://book.douban.com/subject/1203244){:target="_blank"}，[法] 大仲马
+> * [你的名字](https://book.douban.com/subject/26916709){:target="_blank"}，[日] 新海诚
+> * [言叶之庭](https://book.douban.com/subject/26314932){:target="_blank"}，[日] 新海诚
+> * [秒速五厘米](https://book.douban.com/subject/21460732){:target="_blank"}，[日] 新海诚
 > * [神奇动物在哪里](https://book.douban.com/subject/27625554){:target="_blank"}，[英] J.K. 罗琳
 > * [神奇的魁地奇球](https://book.douban.com/subject/30193054){:target="_blank"}，[英] J.K. 罗琳
 > * [诗翁彼豆故事集](https://book.douban.com/subject/27594566){:target="_blank"}，[英] J.K. 罗琳
