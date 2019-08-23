@@ -11,7 +11,7 @@
 
 ## Timeline
 
-* 2019.08.24 [-] post: ~~Remarkbox Hosted Comments Service (uncompleted)~~; [+] post: IntenseDebate comments
+* 2019.08.24 [-] post: ~~Remarkbox Hosted Comments Service (incomplete)~~; [+] post: IntenseDebate comments
 
 <details>
 <summary>more</summary>
@@ -76,11 +76,6 @@
 * 2018.04.18 [+] site: the base Jekyll theme (jekyll new)
 </details>
 
-## Find me on
-
-* Site: [parallel universe](https://mistydew.github.io)
-* E-mail: [mistydew@qq.com](mailto:mistydew@qq.com)
-
 ## Dependencies
 
 * Hosted: [GitHub](https://github.com)
@@ -91,3 +86,10 @@
 * Shared Service: [AddToAny](https://www.addtoany.com)
 * Crypto Widget: [Coinlib](https://coinlib.io)
 * 404 Page: [Tencent 404](https://www.qq.com/404)
+
+## License
+
+The parallel universe theme is released under the terms of MIT license.
+See [LICENSE](LICENSE) for more information or see https://opensource.org/licenses/MIT.
+All posts is released under the terms of Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0) license.
+See https://creativecommons.org/licenses/by-nc-nd/4.0 for more information.
