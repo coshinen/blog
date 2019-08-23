@@ -14,11 +14,12 @@ excerpt: $ bitcoin-cli getblock "hash" ( verbose )
 getblock "hash" ( verbose ) # 通过区块哈希（16 进制形式）获取指定区块信息
 {% endhighlight %}
 
-参数：<br>
-1."hash"（字符串，必备）区块哈希（16 进制形式）。<br>
-2.verbose（布尔型，可选，默认为 true）true 获取区块信息的 json 格式对象，false 获取 16 进制编码的区块数据。
+参数：
+1. "hash"（字符串，必备）区块哈希（16 进制形式）。
+2. verbose（布尔型，可选，默认为 true）true 获取区块信息的 json 格式对象，false 获取 16 进制编码的区块数据。
 
-结果（verbose 为 true）：<br>
+结果（verbose 为 true）：
+
 {% highlight shell %}
 {
   "hash" : "hash",     （字符串）区块哈希（和提供的一样）
@@ -84,7 +85,7 @@ $ bitcoin-cli getblock 000000ee6688672afe26c714e89592d2926eb53dfd8642f0a7412a6c4
 ... # 结果同上
 {% endhighlight %}
 
-用法三：设置 verbose 为 false，获取序列化的最佳区块数据（用途不明）。
+用法三：设置 verbose 为 false，获取序列化的最佳区块数据。
 
 {% highlight shell %}
 $ bitcoin-cli getbestblockhash
@@ -101,6 +102,7 @@ $ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curl
 {% endhighlight %}
 
 ## 源码剖析
+
 getblock 对应的函数在“rpcserver.h”文件中被引用。
 
 {% highlight C++ %}
@@ -112,7 +114,7 @@ extern UniValue getblock(const UniValue& params, bool fHelp); // 获取区块信
 {% highlight C++ %}
 UniValue getblock(const UniValue& params, bool fHelp)
 {
-    if (fHelp || params.size() < 1 || params.size() > 2) // 1.必须有 1 个参数（谋区块的哈希），最多 2 个
+    if (fHelp || params.size() < 1 || params.size() > 2) // 1.必须有 1 个参数（某区块的哈希），最多 2 个
         throw runtime_error( // 命令帮助反馈
             "getblock \"hash\" ( verbose )\n"
             "\nIf verbose is false, returns a string that is serialized, hex-encoded data for block 'hash'.\n"
@@ -181,17 +183,17 @@ UniValue getblock(const UniValue& params, bool fHelp)
 }
 {% endhighlight %}
 
-基本流程：<br>
-1.处理命令帮助和参数个数。<br>
-2.把首个参数转换为字符串，并包装为 uint256 对象。<br>
-3.获取指定的详细标志（布尔型）。<br>
-4.检查指定的哈希是否在区块索引映射中。<br>
-5.检查区块数据状态。<br>
-6.从磁盘上的区块文件中读取区块数据。<br>
-7.若详细标志为 false，则序列化区块数据，转换为 16 进制并返回。<br>
-8.否则把区块信息打包为 JSON 格式并返回。
+基本流程：
+1. 处理命令帮助和参数个数。
+2. 把首个参数转换为字符串，并包装为 uint256 对象。
+3. 获取指定的详细标志（布尔型）。
+4. 检查指定的哈希是否在区块索引映射中。
+5. 检查区块数据状态。
+6. 从磁盘上的区块文件中读取区块数据。
+7. 若详细标志为 false，则序列化区块数据，转换为 16 进制并返回。
+8. 否则把区块信息打包为 JSON 格式并返回。
 
-对象 mapBlockIndex 在“main.h”文件中被引用。<br>
+第四步，对象 mapBlockIndex 在“main.h”文件中被引用。
 
 {% highlight C++ %}
 struct BlockHasher // 区块哈希的函数对象
@@ -203,8 +205,8 @@ typedef boost::unordered_map<uint256, CBlockIndex*, BlockHasher> BlockMap;
 extern BlockMap mapBlockIndex; // 区块索引映射 <区块哈希，区块索引指针，函数对象>
 {% endhighlight %}
 
-在“main.cpp”文件中定义，是一个 boost::unordered_map。<br>
-这里的 BlockHasher 是一个重载了函数调用运算符的函数对象，用作比较排序。
+在“main.cpp”文件中定义，是一个 boost::unordered_map。
+这里的 BlockHasher 是一个重载了函数调用运算符的函数对象，用于获取区块哈希的 uint256 对象引用。
 
 {% highlight C++ %}
 BlockMap mapBlockIndex; // 保存区块链上区块的索引
@@ -223,7 +225,7 @@ extern bool fHavePruned; // 如果全部区块文件被修剪过则为 true
 bool fHavePruned = false;
 {% endhighlight %}
 
-变量 pblockindex->nStatus 和 pblockindex->nTx 定义在“chain.h”文件的 CBlockIndex 类中。<br>
+变量 pblockindex->nStatus 和 pblockindex->nTx 定义在“chain.h”文件的 CBlockIndex 类中。
 BLOCK_HAVE_DATA 是一个枚举类型，这里的值为 8，表示在区块文件中是完整的区块。
 
 {% highlight C++ %}
@@ -244,7 +246,7 @@ public:
     ...
     //! Number of transactions in this block.
     //! Note: in a potential headers-first mode, this number cannot be relied upon
-    unsigned int nTx; // 该区块中的交易号
+    unsigned int nTx; // 该区块中的交易数
     ...
     //! Verification status of this block. See enum BlockStatus
     unsigned int nStatus; // 验证该区块的状态
@@ -297,7 +299,7 @@ bool ReadBlockFromDisk(CBlock& block, const CBlockIndex* pindex, const Consensus
 }
 {% endhighlight %}
 
-把数据读到内存中的 block 对象后需验证该区块的哈希是否为指定区块的哈希。<br>
+把数据读到内存中的 block 对象后需验证该区块的哈希是否为指定区块的哈希。
 调用 block.GetHash() 函数获取区块哈希，该函数声明在“block.h”文件的 CBlockHeader 类中。
 
 {% highlight C++ %}
@@ -333,8 +335,8 @@ uint256 CBlockHeader::GetHash() const
 
 这里调用 SerializeHash(*this) 这个模板函数进行区块的哈希。
 
-第七、八步，取决于指定的 verbose，默认为 true，走第八步。<br>
-先来看第七步，若 verbose 指定为 false，则序列化区块数据，转换为 16 进制并返回。<br>
+第七、八步，取决于指定的 verbose，默认为 true，走第八步。
+先来看第七步，若 verbose 指定为 false，则序列化区块数据，转换为 16 进制并返回。
 类 CDataStream 定义在“streams.h”文件中，重载了输出运算符 <<。
 
 {% highlight C++ %}
@@ -357,7 +359,7 @@ class CDataStream
 }；
 {% endhighlight %}
 
-调用模板函数 HexStr(ssBlock.begin(), ssBlock.end()) 把流化的数据转换为 16 进制。<br>
+调用模板函数 HexStr(ssBlock.begin(), ssBlock.end()) 把流化的数据转换为 16 进制。
 该模板实现在“utilstrencodings.h”文件中。
 
 {% highlight C++ %}
@@ -381,11 +383,11 @@ std::string HexStr(const T itbegin, const T itend, bool fSpaces=false)
 }
 {% endhighlight %}
 
-把每个字节拆成高 4 位和低 4 位分别转换为 16 进制的字符。<br>
+把每个字节拆成高 4 位和低 4 位分别转换为 16 进制的字符。
 还可以在每个 16 进制字符中间加入空格，这里使用了默认不加。
 
-第八步，指定了 verbose 为 true 或未指定采用默认。<br>
-把获取到的区块数据调用 blockToJSON(block, pblockindex) 函数打包为 JSON 格式并返回。<br>
+第八步，指定了 verbose 为 true 或未指定采用默认。
+把获取到的区块数据调用 blockToJSON(block, pblockindex) 函数打包为 JSON 格式并返回。
 该函数实现在“rpcblockchain.cpp”文件中。
 
 {% highlight C++ %}
