@@ -156,6 +156,9 @@ excerpt: Here are my favorite quotes from someones that inspire me or make me la
 > * たった一つの真実見抜く、見た目は子供、頭脳は大人。その名は…
 > * 真実はいつもひとつ！
 
+> Sherlock Holmes, BBC SHERLOCK Series 4, Episode 2, The Lying Detective:
+> * Must be something comforting about the number three, people always give up after three.
+
 > Sherlock Holmes, BBC SHERLOCK Series 3, Episode 3, His Last Vow:
 > * Oh, do your research. I'm not a hero, I'm a high-functioning sociopath. Merry Christmas!
 
@@ -168,6 +171,9 @@ excerpt: Here are my favorite quotes from someones that inspire me or make me la
 
 > Sherlock Holmes, BBC SHERLOCK Series 2, Episode 1, A Scandal in Belgravia:
 > * Sentiment is a chemical defect found in the losing side.
+
+> Sherlock Holmes, BBC SHERLOCK Series 1, Episode 3, The Great Game:
+> * Listen, this is my hard drive, and it only makes sense to put things in there that are useful, REALLY useful.
 
 > Sherlock Holmes, BBC SHERLOCK Series 1, Episode 1, A Study in Pink:
 > * Come at once if convenient. If inconvenient come anyway.
