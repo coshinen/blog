@@ -6,16 +6,17 @@
 - [ ] site: searchbox icon svg to font woff2
 - [ ] remake: blog page (comments, avatar, bio...)
 - [ ] remake: replace resume with cv (Curriculum Vitae)
-- [ ] post: IntenseDebate comments; subsite: Remarkbox Hosted Comments Service
+- [x] post: return to IntenseDebate comments
 - [ ] post: categories and tags of all posts
 
 ## Timeline
 
-* 2019.08.18 [+] assets: css, fonts, images and js...
+* 2019.08.24 [-] post: ~~Remarkbox Hosted Comments Service (uncompleted)~~; [+] post: IntenseDebate comments
 
 <details>
 <summary>more</summary>
 
+* 2019.08.18 [+] assets: css, fonts, images and js...
 * 2019.08.14 [+] about page: PGP key and fingerprint
 * 2019.08.02 [+] site: Simple Jekyll Search
 * 2019.07.18 [+] pages: booklog (reading list) page, feed page
@@ -25,7 +26,7 @@
 * 2019.06.10 [+] home page: Crypto Currencies Price Ticker
 * 2019.05.24 [+] README: Site Dependencies
 * 2019.05.09 [+] site: robots.txt (Allow Bingbot, Yahoo Slurp)
-* 2019.05.03 [-] post: ~~LiveRe City comment (realname)~~; [+] post: Remarkbox Hosted Comments Service
+* 2019.05.03 [-] post: ~~LiveRe City comment (realname)~~; [+] post: ~~Remarkbox Hosted Comments Service~~
 * 2019.04.28 [-] post: ~~Widget Pack Comments System (realname)~~; [+] post: ~~LiveRe City comment~~
 * 2019.04.23 [+] site: the searchbox submit icon
 * 2019.04.19 [+] config: site timezone
@@ -86,7 +87,7 @@
 * Powered: [GitHub Pages](https://pages.github.com), [Jekyll](http://www.jekyllrb.com)
 * Analytics: [Google Analytics](https://analytics.google.com/analytics/web), [Busuanzi](https://busuanzi.ibruce.info)
 * Site Search: [Google](https://www.google.com), [DogeDoge](https://dogedoge.com), [Simple Jekyll Search](https://github.com/christian-fei/Simple-Jekyll-Search)
-* Comments System: [Remarkbox](https://www.remarkbox.com)
+* Comments System: [IntenseDebate](https://intensedebate.com)
 * Shared Service: [AddToAny](https://www.addtoany.com)
 * Crypto Widget: [Coinlib](https://coinlib.io)
 * 404 Page: [Tencent 404](https://www.qq.com/404)
