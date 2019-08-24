@@ -8,7 +8,7 @@ layout: default
             <p class="post-meta">
               <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished"><abbr title="{{ page.date | date_to_xmlschema }}">{% include posts/icon-calendar.html %}{{ page.date | date: "%b %-d, %Y" }}</abbr></time>
               <span>|</span>
-              {% if page.author %}<span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{% include posts/icon-user-circle.html %}{{ page.author }}</span></span>{% endif %}
+              {% if page.author %}<span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{% include posts/icon-user-circle.html %}<a class="author" href="{{ site.url }}{{ site.about }}" title="袁子晨">{{ page.author }}</a></span></span>{% endif %}
               <span>|</span>
               <span class="post-count">{% include posts/icon-edit.html %}{{ page.content | strip_html | strip_newlines | remove: " " | size }} words</span>
               <span>|</span>
