@@ -6,7 +6,7 @@ author: mistydew
 comments: true
 categories: コナン ガーネット・クロウ 翻訳
 tags: CONAN GC 歌詞
-excerpt: Doing all right! かみしめた君の記憶 木漏れ日の匂い 置いてきた何かはもう 此処にはないけど
+excerpt: Doing all right!かみしめた君の記憶 木漏れ日の匂い、置いてきた何かはもう 此処にはないけど。
 ---
 ![Doing all right](https://raw.githubusercontent.com/mistydew/gc2/master/cover/single/SG29_Doing%20all%20right.jpg){:.border}
 
@@ -18,6 +18,8 @@ excerpt: Doing all right! かみしめた君の記憶 木漏れ日の匂い 置�
 編曲：古井弘人<br>
 ギター：岡本仁志
 
+<div class="lyric-original">
+<p>
 Doing all right!<br>
 <br>
 かみしめた君の記憶 木漏れ日の匂い<br>
@@ -52,6 +54,47 @@ Doing all right!<br>
 重ね合う時 素敵な予感集めたい<br>
 <br>
 Doing all right!
+</p>
+</div>
+
+<div class="lyric-translation">
+<blockquote>
+Doing all right!<br>
+<br>
+仔細回憶的你的記憶 透過樹葉的陽光的氣味<br>
+放下的什麼雖然已經 不在這裡了<br>
+<br>
+循環往復得思念 一下子 穿越過往人的眷戀<br>
+<br>
+Doing all right!<br>
+內心被動搖 不回頭就無法活下去<br>
+Doing all right!<br>
+摸索著 常常做夢不是很好嗎<br>
+<br>
+風停的午後 少許的自由 沒有答案的提問<br>
+輕輕地像振翅一樣綻開<br>
+<br>
+如果有開始 也會有結束<br>
+在不熟悉的街道也 突然看到了明天哦<br>
+<br>
+改變主意的本領 哭了？ 生氣了？ 還是一笑了之了呢？<br>
+<br>
+Doing all right!<br>
+走過的 不回去時沒關係<br>
+Doing all right!<br>
+無法消失的地方 遙遠的未來還未知曉<br>
+<br>
+被釋放的生命只是 想感受當下<br>
+穿透 興奮的天空吧<br>
+<br>
+Doing all right!<br>
+心連心 不可思議的命運<br>
+Doing all right!<br>
+重疊的時候 想要收集美好的預感<br>
+<br>
+Doing all right!
+</blockquote>
+</div>
 
 ## 参照
 
