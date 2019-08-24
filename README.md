@@ -12,7 +12,7 @@
 * 2019.08.24 [-] post: ~~Remarkbox Hosted Comments Service (incomplete)~~; [+] post: IntenseDebate comments
 
 <details>
-<summary>more</summary>
+<summary>history</summary>
 
 * 2019.08.18 [+] assets: css, fonts, images and js...
 * 2019.08.14 [+] about page: PGP key and fingerprint
@@ -40,7 +40,7 @@
 * 2018.09.14 [-] post: ~~IntenseDebate comments~~; [+] post: ~~Widget Pack Comments System~~
 * 2018.09.12 [+] site: page content-width; [-] site: ~~DaoVoice web chat tool (redundancy and many bugs)~~
 * 2018.09.06 [+] site: robots.txt (Sitemap URL)
-* 2018.08.29 [+] fonts: site and blog title (Underwater love), post information (Gloria Hallelujah)
+* 2018.08.29 [+] fonts: Underwater Love (site and blog title), Gloria Hallelujah (post information)
 * 2018.08.28 [+] pages: rename ~~slogan~~ to quotes
 * 2018.08.27 [+] config: excerpt separator
 * 2018.08.23 [-] site: ~~Baidu Analytics (unfriendly)~~
