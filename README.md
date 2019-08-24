@@ -3,10 +3,8 @@
 ## Todo
 
 - [ ] site: search engine using lunr.js
-- [ ] site: searchbox icon svg to font woff2
 - [ ] remake: blog page (comments, avatar, bio...)
 - [ ] remake: replace resume with cv (Curriculum Vitae)
-- [x] post: return to IntenseDebate comments
 - [ ] post: categories and tags of all posts
 
 ## Timeline
@@ -42,12 +40,12 @@
 * 2018.09.14 [-] post: ~~IntenseDebate comments~~; [+] post: ~~Widget Pack Comments System~~
 * 2018.09.12 [+] site: page content-width; [-] site: ~~DaoVoice web chat tool (redundancy and many bugs)~~
 * 2018.09.06 [+] site: robots.txt (Sitemap URL)
-* 2018.08.29 [+] site: title font; post: document info author font
+* 2018.08.29 [+] fonts: site and blog title (Underwater love), post information (Gloria Hallelujah)
 * 2018.08.28 [+] pages: rename ~~slogan~~ to quotes
 * 2018.08.27 [+] config: excerpt separator
 * 2018.08.23 [-] site: ~~Baidu Analytics (unfriendly)~~
 * 2018.08.22 [+] site: ~~DaoVoice web chat tool~~
-* 2018.08.20 [+] post: document info (author, date, creative commons license, more)
+* 2018.08.20 [+] post: document info (author, date, license, more)
 * 2018.08.15 [-] site: ~~particle background (redundancy)~~
 * 2018.08.13 [+] site: ~~cPlayer (web music player)~~
 * 2018.08.12 [+] pages: donate page
