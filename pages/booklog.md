@@ -23,6 +23,8 @@ excerpt: Reading list.
 > Literature:
 > * [前方的路](http://www.ruanyifeng.com/road){:target="_blank"}，阮一峰
 > * [未来世界的幸存者](http://www.ruanyifeng.com/survivor){:target="_blank"}，阮一峰
+> * [如何变得有思想](http://www.ruanyifeng.com/blog){:target="_blank"}，阮一峰
+> * 左手程序右手诗，侯捷
 > * [兔子共和国](https://book.douban.com/subject/22693008){:target="_blank"}，[英] 理查德·亚当斯
 > * [冰与火之歌 卷一 权力的游戏](https://book.douban.com/subject/1336330){:target="_blank"}，[美] 乔治·R.R.马丁
 > * [冰与火之歌（五卷）](https://book.douban.com/subject/25826936){:target="_blank"}，[美] 乔治·R.R.马丁
