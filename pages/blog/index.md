@@ -1,6 +1,6 @@
 ---
 layout: default
-title: blog
+title: mistydew's blog
 permalink: /blog/
 excerpt: Welcome to mistydew's blog!
 ---
