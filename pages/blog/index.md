@@ -5,7 +5,7 @@ permalink: /blog/
 excerpt: Welcome to mistydew's blog!
 ---
 
-<div class="home">
+<div class="home-left">
   <h1 class="page-heading">Posts</h1>
   <ul class="post-list">
   <!-- This loops through the site posts for sticky -->
@@ -41,4 +41,24 @@ excerpt: Welcome to mistydew's blog!
     </li>
 {% assign idx = idx | plus: 1 %}{% if idx == maximum %}{% break %}{% endif %}{% endif %}{% endfor %}
   </ul>
+</div>
+<div class="home-right">
+  <script src='https://www.intensedebate.com/widgets/acctComment/412180/10' defer="defer" type='text/javascript'> </script>
+  <blockquote class="bio">
+    <h2><a href="{{ site.about }}">mistydew</a></h2>
+    <div>
+      <a href="https://github.com/{{ site.github }}" target="_blank"><img class="border" height="128" width="128" alt="@mistydew" src="https://avatars0.githubusercontent.com/u/29818825"></a>
+    </div>
+    {% assign count = 0 %}
+    {% for post in site.posts %}
+      {% assign count = count | plus: 1 %}
+    {% endfor %}
+    <ul>
+      <li>posts: <a href="{{ site.archive }}">{{ count }}</a></li>
+      <li>bio: blockchain developer</li>
+      <li>gpg key: <a href="{{ site.pgpkey }}">here</a></li>
+      <li>fingerprint: {{ site.fingerprint }}</li>
+    </ul>
+  </blockquote>
+  <script type='text/javascript' defer='defer' src='https://www.intensedebate.com/widgets/blogStats/412180'></script>
 </div>

@@ -59,7 +59,7 @@ a.site-title, a.blog-title {
   font-display: fallback;src: local('Gloria Hallelujah'), local('GloriaHallelujah'), url(/assets/fonts/gloriahallelujah.woff2) format('woff2');unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
-div.post-information {
+div.post-information, blockquote.bio {
   font-family: 'Gloria Hallelujah', sans-serif;
 }
 
@@ -153,7 +153,7 @@ h1, h2, h3, h4, h5, h6 {
 
 
 /**
- * Links
+ * Links: blue, gray
  */
 a {
     color: darken($brand-color, 20%);
@@ -165,14 +165,14 @@ a {
     }
 }
 
-/* header */
+/* header: black, garnet */
 header.site-header a {
     &:hover {
         color: $garnet-color;
     }
 }
 
-/* footer */
+/* footer: black, garnet */
 footer.site-footer a {
     color: $text-color;
 
@@ -190,20 +190,20 @@ a.post-link {
     }
 }
 
-/* category page contents */
+/* category page contents: garnet, gray */
 blockquote.contents a {
     color: $text-color;
     text-decoration: underline;
 }
 
-/* tags page tagcloud */
+/* tags page tagcloud: garnet, gray */
 blockquote#tagcloud a {
     color: $text-color;
     text-decoration: underline;
 }
 
-/* post attribute */
-a.category, a.readmore, a.tag, a.author, a.license {
+/* post attribute: garnet, gray */
+a.category, a.readmore, a.tag, a.author, a.license, blockquote.bio a {
     color: $garnet-color;
 
     &:hover {
@@ -211,7 +211,7 @@ a.category, a.readmore, a.tag, a.author, a.license {
     }
 }
 
-/* post content */
+/* post content: black (underline), gray (underline) */
 article.post div.post-content a {
     color: $text-color;
     text-decoration: underline;
@@ -222,7 +222,7 @@ article.post div.post-content a {
     }
 }
 
-/* post blockquote */
+/* post blockquote: black (dotted), garnet (solid) */
 article.post div.post-content blockquote a {
     color: $text-color;
     text-decoration: none;
@@ -243,6 +243,17 @@ article.post div.post-content blockquote a {
 blockquote {
     background-color: #f5f2f0;
     border: 0.2em solid #e0dfcc;
+    border-radius: 0.8em;
+    padding: 10px 10px;
+
+    > :last-child {
+        margin-bottom: 0;
+    }
+}
+
+blockquote.bio {
+    background-color: transparent;
+    border: 2px solid #e0dfcc;
     border-radius: 0.8em;
     padding: 10px 10px;
 
