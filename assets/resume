@@ -25,7 +25,7 @@ Bachelor of Computer Science<div style="float:right;">Henan, China</div>
 -----------------------------------------------------------------------------------------
 <strong>Here are some of my open source repo.</strong>
 <a href="https://github.com/mistydew/netCloud" target="_blank">netCloud</a>
-* netCloud is a custom cloud storage.
+* A custom cloud storage.
 <a href="https://github.com/mistydew/spellCorrection" target="_blank">spellCorrection</a>
 * A spell correction system.
 <a href="https://github.com/mistydew/rssSearchEngine" target="_blank">rssSearchEngine</a>
@@ -33,12 +33,12 @@ Bachelor of Computer Science<div style="float:right;">Henan, China</div>
 <a href="https://github.com/mistydew/blockchain" target="_blank">crowcoin</a>
 * An altcoin based on Bitcoin.
 <a href="https://github.com/mistydew/asstolrc" target="_blank">asstolrc</a>
-* A mini command tool to convert complete ass of the Aegisub to lrc.
+* A command tool to convert complete ass of the Aegisub to lrc.
 
 <font size="4"><strong>PROFESSIONAL SKILLS</strong></font>
 -----------------------------------------------------------------------------------------
 <strong>Languages:</strong> C/C++, Python
-<strong>Platform:</strong> macOS, Unix/Linux, Windows
+<strong>Platform:</strong> UNIX/Linux, macOS, Windows
 <strong>Editor:</strong> Vi/Vim
 <strong>DB:</strong> Mysql, Redis, LevelDB, BerkeleyDB
 <strong>Design Pattern:</strong> Reactor, Thread Pool (TCP/IP, Select/Epoll I/O)
@@ -47,5 +47,5 @@ Bachelor of Computer Science<div style="float:right;">Henan, China</div>
 <font size="4"><strong>MISCELLANEOUS</strong></font>
 -----------------------------------------------------------------------------------------
 <strong>Languages:</strong> Mandarin, English, Japanese (JLPT N?)
-<strong>Interests:</strong> Reading/Thinking, Writing/Drawing, Music (Singing, Keyboard), Animation (DC), CROWSUB (GC), Cooking/Tasting, Sports (Soccer/Football)
+<strong>Interests:</strong> Reading/Thinking, Writing/Drawing, Music (Karaoke, Keyboard), Animation (DC), CROWSUB (GC), Cooking/Tasting, Sports (Soccer/Football)
 <span id="a">mistydew</span>@<a href="https://github.com/mistydew" target="_blank">GitHub</a>:~$ 
