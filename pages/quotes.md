@@ -176,6 +176,7 @@ excerpt: Here are my favorite quotes from someones that inspire me or make me la
 > * Listen, this is my hard drive, and it only makes sense to put things in there that are useful, REALLY useful.
 
 > Sherlock Holmes, BBC SHERLOCK Series 1, Episode 2, The Blind Banker:
+> * I don't eat when I'm working. Digesting slows me down.
 > * You want to hide a tree, then a forest is the best place to do it, wouldn't you say? People would just walk straight past, not knowing, unable to decipher the message.
 
 > Sherlock Holmes, BBC SHERLOCK Series 1, Episode 1, A Study in Pink:
