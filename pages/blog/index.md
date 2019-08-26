@@ -43,9 +43,9 @@ excerpt: Welcome to mistydew's blog!
   </ul>
 </div>
 <div class="home-right">
-  <script src='https://www.intensedebate.com/widgets/acctComment/412180/10' defer="defer" type='text/javascript'> </script>
+  <script src='https://www.intensedebate.com/widgets/acctComment/412180/8' defer="defer" type='text/javascript'> </script>
   <blockquote class="bio">
-    <h2><a href="{{ site.about }}">mistydew</a></h2>
+    <h2><a href="{{ site.about }}" title="袁子晨">mistydew</a></h2>
     <div>
       <a href="https://github.com/{{ site.github }}" target="_blank"><img class="border" height="128" width="128" alt="@mistydew" src="https://avatars0.githubusercontent.com/u/29818825"></a>
     </div>
