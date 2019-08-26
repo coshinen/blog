@@ -6,6 +6,7 @@
 - [ ] remake: replace resume with cv (Curriculum Vitae)
 - [ ] post: categories and tags of all posts
 - [ ] post: file by year like 2018, 2019...
+- [ ] blog page: add category contents (or tag cloud)
 
 ## Timeline
 
