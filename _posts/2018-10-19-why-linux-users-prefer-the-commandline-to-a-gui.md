@@ -74,9 +74,6 @@ Git 的 GUI 应用程序具有足够的记忆效率，但直接使用 Git 命令
 
 无论你使用命令行还是 GUI 应用，我相信你对为什么这么多 Linux 用户更喜欢使用命令行而不是 GUI 应用会有所了解。
 
-对于后端工作者来说，像大部分 Linux 用户一样，倾向于使用命令行。
-比如我。
-
 ## 参照
 
 * [Why Do So Many Linux Users Prefer the Command Line to a GUI?](https://www.fossmint.com/why-linux-users-prefer-the-commandline-to-a-gui){:target="_blank"}
