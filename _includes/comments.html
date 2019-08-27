@@ -1,8 +1,9 @@
           <!-- IntenseDebate Imagine better comments. -->
           <script>
           var idcomments_acct = 'ac691642dfcf84ebaecaf8ec3ed335e8';
-          var idcomments_post_id;
-          var idcomments_post_url;
+          var idcomments_post_id = '{{ page.url }}';
+          var idcomments_post_url = '{{ page.url | prepend: site.url }}';
+          var idcomments_post_title= '{{ page.title }}';
           </script>
           <span id="IDCommentsPostTitle" style="display:none"></span>
           <script type='text/javascript' src='https://www.intensedebate.com/js/genericCommentWrapperV2.js'></script>
