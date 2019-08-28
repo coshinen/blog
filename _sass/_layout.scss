@@ -258,9 +258,7 @@
     font-size: 24px;
 }
 
-/**
- * Home page
- */
+/* Home page */
 .home-left {
     float: left;
     width: 66%;
@@ -285,9 +283,7 @@
     }
 }
 
-/**
- * Tag cloud
- */
+/* Tag cloud */
 blockquote#tagcloud {
     width: 512px;
 }
@@ -295,28 +291,6 @@ blockquote#tagcloud {
 @include media-query($on-palm) {
     blockquote#tagcloud {
         width: 256px;
-    }
-}
-
-/**
- * Lyrics
- */
-div.lyric-original {
-    float: left;
-    padding-right: 10px;
-    width: calc(50% - (20px / 2));
-}
-
-div.lyric-translation {
-    float: left;
-    padding-right: 10px;
-    width: calc(50% - (20px / 2));
-}
-
-@include media-query($on-palm) {
-    div.lyric-original, div.lyric-translation {
-        float: none;
-        width: calc(100% - (30px / 2));
     }
 }
 
@@ -364,5 +338,25 @@ div.lyric-translation {
         @include media-query($on-laptop) {
             font-size: 18px;
         }
+    }
+}
+
+/* Lyrics */
+div.lyric-original {
+    float: left;
+    padding-right: 10px;
+    width: calc(50% - (20px / 2));
+}
+
+div.lyric-translation {
+    float: left;
+    padding-right: 10px;
+    width: calc(50% - (20px / 2));
+}
+
+@include media-query($on-palm) {
+    div.lyric-original, div.lyric-translation {
+        float: none;
+        width: calc(100% - (30px / 2));
     }
 }

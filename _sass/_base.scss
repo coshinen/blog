@@ -66,23 +66,6 @@ div.post-information, blockquote.bio {
 
 
 /**
- * Background and border
- */
-div.post-information {
-  background-color: #eef;
-  border: 0.2em solid #e0dfcc;
-  border-radius: 0.8em;
-  padding: 10px 10px;
-}
-
-/* Document information post-date abbr: remove border-bottom dotted */
-abbr {
-    text-decoration: none;
-}
-
-
-
-/**
  * Set `margin-bottom` to maintain vertical rhythm
  */
 h1, h2, h3, h4, h5, h6,
@@ -165,15 +148,17 @@ a {
     }
 }
 
-/* header: black, garnet */
-header.site-header a {
+/* header, blog page bio title: gray, garnet */
+header.site-header a, blockquote.bio h2 a {
+    color: $grey-color-dark;
+
     &:hover {
         color: $garnet-color;
     }
 }
 
-/* footer: black, garnet */
-footer.site-footer a {
+/* footer, home page post title: black, garnet */
+footer.site-footer a, a.post-link {
     color: $text-color;
 
     &:hover {
@@ -181,23 +166,8 @@ footer.site-footer a {
     }
 }
 
-/* home page post title */
-a.post-link {
-    color: $text-color;
-
-    &:hover {
-        color: $garnet-color;
-    }
-}
-
-/* category page contents: garnet, gray */
-blockquote.contents a {
-    color: $text-color;
-    text-decoration: underline;
-}
-
-/* tags page tagcloud: garnet, gray */
-blockquote#tagcloud a {
+/* category page contents, tags page tagcloud: black (underline) */
+blockquote.contents a, blockquote#tagcloud a {
     color: $text-color;
     text-decoration: underline;
 }
@@ -238,7 +208,7 @@ article.post div.post-content blockquote a {
 
 
 /**
- * Blockquotes
+ * Blockquote
  */
 blockquote {
     background-color: #f5f2f0;
@@ -254,12 +224,27 @@ blockquote {
 blockquote.bio {
     background-color: transparent;
     border: 2px solid #e0dfcc;
-    border-radius: 0.8em;
-    padding: 10px 10px;
+}
 
-    > :last-child {
-        margin-bottom: 0;
-    }
+
+
+/**
+ * Document information
+ */
+div.post-information {
+  background-color: #eef;
+  border: 0.2em solid #e0dfcc;
+  border-radius: 0.8em;
+  padding: 10px 10px;
+}
+
+
+
+/**
+ * Remove abbr border-bottom dotted: Document information post-date
+ */
+abbr {
+    text-decoration: none;
 }
 
 
@@ -353,4 +338,5 @@ pre {
 table, th, article.post td {
   border-collapse: collapse;
   border: 1px solid black;
+  padding: 2px;
 }
