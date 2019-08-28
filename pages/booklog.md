@@ -17,6 +17,7 @@ excerpt: Reading list.
 > * [Linux/UNIX 系统编程手册（上、下册）](https://book.douban.com/subject/25809330){:target="_blank"}，[德] Michael Kerrisk
 > * [你的灯亮着吗？发现问题的真正所在](https://book.douban.com/subject/1135754){:target="_blank"}，[美] 唐纳德·高斯
 > * [STL 源码剖析](https://book.douban.com/subject/1110934){:target="_blank"}，侯捷
+> * [C++ 沉思录](https://book.douban.com/subject/2970056){:target="_blank"}，[美] Andrew Koenig, Barbara Moo
 > * [C++ 编程规范 101条规则、准则与最佳实践](https://book.douban.com/subject/26899830){:target="_blank"}，[加] Herb Sutter [罗] Andrei Alexandrescu
 > * [C++ Primer 中文版（第 5 版）](https://book.douban.com/subject/25708312){:target="_blank"}，[美] Stanley B. Lippman, Josée Lajoie, Barbara E. Moo
 
@@ -42,8 +43,11 @@ excerpt: Reading list.
 > * [哈利波特全集（七卷）](https://book.douban.com/subject/27167519){:target="_blank"}，[英] J.K. 罗琳
 > * [福尔摩斯](https://book.douban.com/subject/20441264){:target="_blank"}，[英] 阿瑟·柯南·道尔
 
+> Biography:
+> * [只是为了好玩 偶然的革命故事](https://book.douban.com/subject/25930025){:target="_blank"}，[芬] 林纳斯·托瓦兹
+> * [史蒂夫·乔布斯传](https://book.douban.com/subject/6798611){:target="_blank"}，[美] 沃尔特·艾萨克森
+
 > Miscellaneous:
-> * 左手程序右手诗，侯捷
 > * [如何变得有思想](http://www.ruanyifeng.com/blog){:target="_blank"}，阮一峰
 > * [异类 不一样的成功启示录](https://book.douban.com/subject/3688489){:target="_blank"}，[加] 马尔科姆·格拉德威尔
 > * [公正 该如何做是好](https://book.douban.com/subject/5408882){:target="_blank"}，[美] 迈克尔·桑德尔
