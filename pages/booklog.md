@@ -46,8 +46,12 @@ excerpt: Reading list.
 > * 左手程序右手诗，侯捷
 > * [如何变得有思想](http://www.ruanyifeng.com/blog){:target="_blank"}，阮一峰
 > * [异类 不一样的成功启示录](https://book.douban.com/subject/3688489){:target="_blank"}，[加] 马尔科姆·格拉德威尔
+> * [公正 该如何做是好](https://book.douban.com/subject/5408882){:target="_blank"}，[美] 迈克尔·桑德尔
 > * [谁“害”了北大学生](https://book.douban.com/subject/1605954){:target="_blank"}，群言
 
 > Free eBooks:
 > * [Page By Page Books. Read Classic Books Online, Free.](https://www.pagebypagebooks.com){:target="_blank"}
 > * [Free eBooks - Project Gutenberg](http://www.gutenberg.org/wiki/Main_Page){:target="_blank"}
+
+> Open Courses:
+> * [Harvard Justice](http://justiceharvard.org){:target="_blank"}，[美] Michael Sandel
