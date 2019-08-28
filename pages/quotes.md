@@ -11,6 +11,9 @@ excerpt: Here are my favorite quotes from someones that inspire me or make me la
 > Ygritte, Game of Thrones:
 > * You know nothing, Jon Snow.
 
+> Jeor Mormont, Game of Thrones:
+> * The things we love destroy us every time, lad. Remember that.
+
 > Master Shifu, Kung Fu Panda 3:
 > * If you only do what you can do, you will never be more than you are now.
 
