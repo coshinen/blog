@@ -10,11 +10,12 @@
 
 ## Timeline
 
-* 2019.08.25 [+] remake: blog page (comments, avatar and bio...)
+* 2019.08.28 [+] site: GitHub Actions workflows CI
 
 <details>
 <summary>history</summary>
 
+* 2019.08.25 [+] remake: blog page (comments, avatar and bio...)
 * 2019.08.24 [-] post: ~~Remarkbox Hosted Comments Service (incomplete)~~; [+] post: IntenseDebate comments
 * 2019.08.18 [+] assets: css, fonts, images and js...
 * 2019.08.14 [+] about page: PGP key and fingerprint
