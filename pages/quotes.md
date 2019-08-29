@@ -76,12 +76,6 @@ excerpt: Here are my favorite quotes from someones that inspire me or make me la
 > * ALL ANIMALS ARE EQUAL BUT SOME ANIMALS ARE MORE EQUAL THAN OTHERS.
 > * FOUR LEGS GOOD, TWO LEGS BAD.
 
-> Outliers:
-> * 10,000-Hour Rule.
-
-> 王朔，无知者无畏：
-> * Ignorance is fearless.
-
 > 侯捷，STL 源码剖析：
 > * 源码之前，了无秘密。天下大事，必做于细。
 
