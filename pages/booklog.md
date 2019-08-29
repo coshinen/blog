@@ -26,7 +26,7 @@ excerpt: Reading list.
 > * [未来世界的幸存者](http://www.ruanyifeng.com/survivor){:target="_blank"}，阮一峰
 > * [兔子共和国](https://book.douban.com/subject/22693008){:target="_blank"}，[英] 理查德·亚当斯
 > * [冰与火之歌 卷一 权力的游戏](https://book.douban.com/subject/1336330){:target="_blank"}，[美] 乔治·R.R.马丁
-> * [冰与火之歌（五卷）](https://book.douban.com/subject/25826936){:target="_blank"}，[美] 乔治·R.R.马丁
+> * [冰与火之歌（五卷）](https://book.douban.com/subject/25826936){:target="_blank"}，[美] [George R.R. Martin](http://www.georgerrmartin.com){:target="_blank"}
 > * [小王子](https://book.douban.com/subject/1084336){:target="_blank"}，[法] 圣埃克苏佩里
 > * [动物庄园](https://book.douban.com/subject/25854767){:target="_blank"}，[英] 乔治·奥威尔
 > * [百年孤独](https://book.douban.com/subject/6082808){:target="_blank"}，[哥伦比亚] 加夫列尔·加西亚·马尔克斯
@@ -40,7 +40,7 @@ excerpt: Reading list.
 > * [诗翁彼豆故事集](https://book.douban.com/subject/27594566){:target="_blank"}，[英] J.K. 罗琳
 > * [哈利·波特与密室](https://book.douban.com/subject/1039487){:target="_blank"}，[英] J.K. 罗琳
 > * [哈利·波特与魔法石](https://book.douban.com/subject/1041007){:target="_blank"}，[英] J.K. 罗琳
-> * [哈利波特全集（七卷）](https://book.douban.com/subject/27167519){:target="_blank"}，[英] J.K. 罗琳
+> * [哈利波特全集（七卷）](https://book.douban.com/subject/27167519){:target="_blank"}，[英] [J.K. Rowling](https://www.jkrowling.com){:target="_blank"}
 > * [福尔摩斯](https://book.douban.com/subject/20441264){:target="_blank"}，[英] 阿瑟·柯南·道尔
 
 > Biography:
@@ -58,4 +58,4 @@ excerpt: Reading list.
 > * [Free eBooks - Project Gutenberg](http://www.gutenberg.org/wiki/Main_Page){:target="_blank"}
 
 > Open Courses:
-> * [Harvard Justice](http://justiceharvard.org){:target="_blank"}，[美] Michael Sandel
+> * [Harvard Justice](http://justiceharvard.org){:target="_blank"}，[美] [Michael J. Sandel](https://scholar.harvard.edu/sandel){:target="_blank"}
