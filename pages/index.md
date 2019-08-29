@@ -4,7 +4,7 @@ permalink: /
 ---
 
 <div class="home-left">
-  <h1 class="page-heading">The Latest Post</h1>
+  <h1 class="page-heading">Latest Post</h1>
   <ul class="post-list">
     <!-- This loops through the site posts -->
     {% for post in site.posts %}{% if post.hidden == true %}{% continue %}{% else %}<li>
