@@ -14,6 +14,9 @@ excerpt: Here are my favorite quotes from someones that inspire me or make me la
 > Jeor Mormont, Game of Thrones:
 > * The things we love destroy us every time, lad. Remember that.
 
+> Tyrion Lannister, Game of Thrones Series 1, Episode 1:
+> * Never forget what you are. The rest of the world will not. Wear it like armor, and it can never be used to hurt you.
+
 > Master Shifu, Kung Fu Panda 3:
 > * If you only do what you can do, you will never be more than you are now.
 
