@@ -4,8 +4,8 @@ title:  "GARNET CROW Mysterious Eyes 歌詞翻訳"
 date:   2018-10-03 20:00:03 +0800
 author: mistydew
 comments: true
-categories: コナン ガーネット・クロウ 翻訳
-tags: CONAN GC 歌詞
+categories: CONAN GARNETCROW Lyrics
+tags: コナン ガーネット・クロウ 歌詞翻訳
 excerpt: 君と僕とは 別の人間(いきもの)だから、好みが違う 歩く速さも 想いの伝え方も。
 ---
 ![Mysterious Eyes](https://raw.githubusercontent.com/mistydew/gc2/master/cover/single/SG01_Mysterious%20Eyes.jpg){:.border}

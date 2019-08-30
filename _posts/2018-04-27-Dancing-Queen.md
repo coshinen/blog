@@ -4,8 +4,8 @@ title:  "ABBA Dancing Queen 歌詞翻訳"
 date:   2018-04-27 20:16:08 +0800
 author: mistydew
 comments: true
-categories: ABBA 翻訳
-tags: 歌詞
+categories: Lyrics
+tags: ABBA 歌詞翻訳
 excerpt: Ooh, you can dance, you can jive. Having the time of your life. Ooh, see that girl, watch that scene. Digging the dancing queen.
 ---
 ![GOLD GREATEST HITS](/assets/images/cover/misc/GOLD%20GREATEST%20HITS.jpg){:.border}

@@ -4,8 +4,8 @@ title:  "GARNET CROW strangers 歌詞翻訳"
 date:   2018-08-12 20:10:12 +0800
 author: mistydew
 comments: true
-categories: ガーネット・クロウ 翻訳
-tags: GC 歌詞
+categories: GARNETCROW Lyrics
+tags: ガーネット・クロウ 歌詞翻訳
 excerpt: 緑揺れる午後の空 幾つ目の飛行機かな 遠く潮騒が届いて 客船が泊まった
 ---
 ![parallel universe](https://raw.githubusercontent.com/mistydew/gc2/master/cover/album/AL08_parallel%20universe.jpg){:.border}

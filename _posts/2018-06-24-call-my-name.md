@@ -4,8 +4,8 @@ title:  "GARNET CROW call my name 歌詞翻訳"
 date:   2018-06-24 20:01:08 +0800
 author: mistydew
 comments: true
-categories: ガーネット・クロウ 翻訳
-tags: GC 歌詞
+categories: GARNETCROW Lyrics
+tags: ガーネット・クロウ 歌詞翻訳
 excerpt: 白い壁と Rembrandt、いつまでも眺めていた、日曜の朝君とただ並んでた。開いた窓から差し込む光がほらそこに、ふと思い出したように call my name。
 ---
 ![call my name](https://raw.githubusercontent.com/mistydew/gc2/master/cover/single/SG08_call%20my%20name.jpg){:.border}

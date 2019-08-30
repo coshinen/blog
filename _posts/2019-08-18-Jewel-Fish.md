@@ -4,8 +4,8 @@ title:  "GARNET CROW Jewel Fish 歌詞翻訳"
 date:   2019-08-18 20:01:05 +0800
 author: mistydew
 comments: true
-categories: ガーネット・クロウ 翻訳
-tags: GC 歌詞
+categories: GARNETCROW Lyrics
+tags: ガーネット・クロウ 歌詞翻訳
 excerpt: 走り出したら通り雨、もう一休みしてる。待ちきれない君は飛び出して、振り返りもせずに。
 ---
 ![Last love song](https://raw.githubusercontent.com/mistydew/gc2/master/cover/single/SG07_Last%20love%20song.jpg){:.border}

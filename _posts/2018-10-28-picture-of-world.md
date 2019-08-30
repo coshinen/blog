@@ -4,8 +4,8 @@ title:  "GARNET CROW picture of world 歌詞翻訳"
 date:   2018-10-28 20:04:12 +0800
 author: mistydew
 comments: true
-categories: ガーネット・クロウ 翻訳
-tags: GC 歌詞
+categories: GARNETCROW Lyrics
+tags: ガーネット・クロウ 歌詞翻訳
 excerpt: ずっと みてたんだ一枚のポスター、壁の片隅で色褪せた。きっと誰かが 剥がし忘れた、夕ぐれのストーリーは そこにあり。
 ---
 ![I'm waiting 4 you](https://raw.githubusercontent.com/mistydew/gc2/master/cover/album/AL04_I'm%20waiting%204%20you.jpg){:.border}

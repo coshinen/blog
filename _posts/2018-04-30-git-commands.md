@@ -4,7 +4,7 @@ title:  "Git 基础命令"
 date:   2018-04-30 16:20:08 +0800
 author: mistydew
 comments: true
-categories: Git
+categories: Git/GitHub Terminal
 tags: Git GitHub CLI
 ---
 [Git](https://git-scm.com){:target="_blank"} 是一个免费且开源的分布式版本控制系统，旨在处理从小到非常大项目的速度和效率。

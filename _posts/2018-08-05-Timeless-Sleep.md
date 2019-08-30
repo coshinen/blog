@@ -4,8 +4,8 @@ title:  "GARNET CROW Timeless Sleep 歌詞翻訳"
 date:   2018-08-05 20:01:11 +0800
 author: mistydew
 comments: true
-categories: ガーネット・クロウ 翻訳
-tags: GC 歌詞
+categories: GARNETCROW Lyrics
+tags: ガーネット・クロウ 歌詞翻訳
 excerpt: 君がいなくなってから、何度朝日迎えたかしれない。急に地平線をみたくなって ふらり、始発に飛び乗る。
 ---
 ![Timeless Sleep](https://raw.githubusercontent.com/mistydew/gc2/master/cover/single/SG09_Timeless%20Sleep.jpg){:.border}

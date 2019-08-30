@@ -4,8 +4,8 @@ title:  "Lady Antebellum Just A Kiss 歌詞翻訳"
 date:   2019-01-20 20:11:09 +0800
 author: mistydew
 comments: true
-categories: 翻訳
-tags: 歌詞
+categories: Lyrics
+tags: 歌詞翻訳
 excerpt: Lying here with you so close to me. It's hard to fight these feelings when it feels so hard to breathe. I'm caught up in this moment. I'm caught up in your smile.
 ---
 ![own the night](/assets/images/cover/misc/own%20the%20night.jpg){:.border}

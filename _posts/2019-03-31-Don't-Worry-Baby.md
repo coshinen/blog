@@ -4,8 +4,8 @@ title:  "The Beach Boys Don't Worry Baby 歌詞翻訳"
 date:   2019-03-31 20:04:03 +0800
 author: mistydew
 comments: true
-categories: 翻訳
-tags: 歌詞
+categories: Lyrics
+tags: 歌詞翻訳
 excerpt: Well its been building up inside of me. For oh I don't know how long. I don't know why. But I keep thinking. Something's bound to go wrong.
 ---
 ![SHUT DOWN VOLUME 2](/assets/images/cover/misc/SHUT%20DOWN%20VOLUME%202.jpg){:.border}

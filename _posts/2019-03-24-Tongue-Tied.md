@@ -4,8 +4,8 @@ title:  "Grouplove Tongue Tied 歌詞翻訳"
 date:   2019-03-24 20:11:09 +0800
 author: mistydew
 comments: true
-categories: 翻訳
-tags: 歌詞
+categories: Lyrics
+tags: 歌詞翻訳
 excerpt: Take me to your best friend's house. Going around this roundabout, oh, yeah. Take me to your best friend's house. I loved you then and I love you now, oh, yeah.
 ---
 ![NEVER TRUST A HAPPY SONG](/assets/images/cover/misc/NEVER%20TRUST%20A%20HAPPY%20SONG.jpg){:.border}

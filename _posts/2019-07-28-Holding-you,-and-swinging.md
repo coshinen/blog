@@ -4,8 +4,8 @@ title:  "GARNET CROW Holding you, and swinging 歌詞翻訳"
 date:   2019-07-28 20:01:01 +0800
 author: mistydew
 comments: true
-categories: ガーネット・クロウ 翻訳
-tags: GC 歌詞
+categories: GARNETCROW Lyrics
+tags: ガーネット・クロウ 歌詞翻訳
 excerpt: 街の音 人の声 ざわめき、やけに今 躰が音をひらうよ。君一人で世界が変わるなんて、ah- なんて 単純な feel & brain。
 ---
 ![first soundscope 〜水のない晴れた海へ〜](https://raw.githubusercontent.com/mistydew/gc2/master/cover/album/AL01_first%20soundscope%20〜水のない晴れた海へ〜.jpg){:.border}
