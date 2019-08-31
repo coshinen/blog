@@ -63,10 +63,10 @@ UniValue getconnectioncount(const UniValue& params, bool fHelp)
 }
 {% endhighlight %}
 
-基本流程：<br>
-1.处理命令帮助和参数个数。<br>
-2.上锁。<br>
-3.返回节点列表的大小。
+基本流程：
+1. 处理命令帮助和参数个数。
+2. 上锁。
+3. 返回节点列表的大小。
 
 以建立连接的节点列表 vNodes 在“net.h”文件中被引用。
 

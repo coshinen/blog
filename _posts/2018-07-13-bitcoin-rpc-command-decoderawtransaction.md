@@ -14,8 +14,8 @@ excerpt: $ bitcoin-cli decoderawtransaction "hexstring"
 decoderawtransaction "hexstring" # 获取一个表示序列化的 16 进制编码交易的 JSON 对象
 {% endhighlight %}
 
-参数：<br>
-1.hex（字符串，必备）交易的 16 进制字符串。
+参数：
+1. hex（字符串，必备）交易的 16 进制字符串。
 
 结果：<br>
 {% highlight shell %}

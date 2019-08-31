@@ -222,11 +222,11 @@ UniValue getblockchaininfo(const UniValue& params, bool fHelp)
 }
 {% endhighlight %}
 
-基本流程：<br>
-1.处理命令帮助和参数个数。<br>
-2.构造一个目标类型的对象。<br>
-3.追加区块链相关信息到该对象。<br>
-4.返回结果。
+基本流程：
+1. 处理命令帮助和参数个数。
+2. 构造一个目标类型的对象。
+3. 追加区块链相关信息到该对象。
+4. 返回结果。
 
 ## 参照
 

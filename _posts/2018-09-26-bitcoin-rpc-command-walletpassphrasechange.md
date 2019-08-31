@@ -14,9 +14,9 @@ excerpt: $ bitcoin-cli walletpassphrasechange "oldpassphrase" "newpassphrase"
 walletpassphrasechange "oldpassphrase" "newpassphrase" # 更改钱包密码 oldpassphrase 为 newpassphrase
 {% endhighlight %}
 
-参数：<br>
-1.oldpassphrase（字符串）当前密码。<br>
-2.newpassphrase（字符串）新密码。
+参数：
+1. oldpassphrase（字符串）当前密码。
+2. newpassphrase（字符串）新密码。
 
 结果：无返回值。
 

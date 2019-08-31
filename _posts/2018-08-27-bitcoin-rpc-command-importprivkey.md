@@ -14,10 +14,10 @@ excerpt: $ bitcoin-cli importprivkey "bitcoinprivkey" ( "label" rescan )
 importprivkey "bitcoinprivkey" ( "label" rescan ) # 导入私钥（通过 dumpprivkey 返回）到你的钱包
 {% endhighlight %}
 
-参数：<br>
-1.bitcoinprivkey（字符串，必备）私钥（见 [dumpprivkey](/blog/2018/06/bitcoin-rpc-command-dumpprivkey.html)）。<br>
-2.label（字符串，可选，默认为 ""）一个可选的标签（账户名）。<br>
-3.rescan（布尔型，可选，默认为 true）再扫描钱包交易。
+参数：
+1. bitcoinprivkey（字符串，必备）私钥（见 [dumpprivkey](/blog/2018/06/bitcoin-rpc-command-dumpprivkey.html)）。
+2. label（字符串，可选，默认为 ""）一个可选的标签（账户名）。
+3. rescan（布尔型，可选，默认为 true）再扫描钱包交易。
 
 **注：如果 rescan 为 true，该调用可能需要数分钟来完成。**
 

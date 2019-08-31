@@ -50,5 +50,6 @@ tags: C/C++ 设计模式
 * 访问者模式（Visitor Method）
 
 ## 参照
+
 * [Design Patterns - Wikipedia](https://en.wikipedia.org/wiki/Design_Patterns){:target="_blank"}
 * [mistydew/DesignPatterns](https://github.com/mistydew/DesignPatterns){:target="_blank"}

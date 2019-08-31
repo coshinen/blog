@@ -14,9 +14,9 @@ excerpt: $ bitcoin-cli signmessage "bitcoinaddress" "message"
 signmessage "bitcoinaddress" "message" # 使用一个地址的私钥签名一个消息
 {% endhighlight %}
 
-参数：<br>
-1.bitcoinaddress（字符串，必备）拥有对应私钥的比特币地址。<br>
-2.message（字符串，必备）用于创建一个签名的消息。
+参数：
+1. bitcoinaddress（字符串，必备）拥有对应私钥的比特币地址。
+2. message（字符串，必备）用于创建一个签名的消息。
 
 结果：（字符串）返回 base64 编码的消息的签名。
 

@@ -133,7 +133,7 @@ $ vim -b <file> # -b 选项表示二进制模式。
 
 [~/.vimrc](https://github.com/mistydew/os.conf/blob/master/macOS/Users/mistydew/.vimrc){:target="_blank"}
 
-## 参考
+## 参照
 
 * [Where Vim Came From](https://twobithistory.org/2018/08/05/where-vim-came-from.html){:target="_blank"}
 * [Vim 配置入门 - 阮一峰的网络日志](http://www.ruanyifeng.com/blog/2018/09/vimrc.html){:target="_blank"}

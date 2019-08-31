@@ -14,8 +14,8 @@ excerpt: $ bitcoin-cli getaddressesbyaccount "account"
 getaddressesbyaccount "account" # （已过时）获取指定账户的地址列表
 {% endhighlight %}
 
-参数：<br>
-1.account（字符串，必备）账户名。
+参数：
+1. account（字符串，必备）账户名。
 
 结果：
 {% highlight shell %}

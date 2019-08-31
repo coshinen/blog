@@ -14,12 +14,12 @@ excerpt: $ bitcoin-cli listsinceblock ( "blockhash" target-confirmations include
 listsinceblock ( "blockhash" target-confirmations includeWatchonly ) # 获取从区块 blockhash 开始到最佳区块上的全部交易，如果该参数省略则获取全部区块交易
 {% endhighlight %}
 
-参数：<br>
-1.blockhash（字符串，可选）列出从该区块哈希开始的全部交易。<br>
-2.target-confirmations（数字型，可选）所需的确认数，必须大于等于 1。<br>
-3.includeWatchonly（布尔型，可选，默认为 false）包含到 watchonly 地址的交易（见 [importaddress](/blog/2018/08/bitcoin-rpc-command-importaddress.html)）。
+参数：
+1. blockhash（字符串，可选）列出从该区块哈希开始的全部交易。
+2. target-confirmations（数字型，可选）所需的确认数，必须大于等于 1。
+3. includeWatchonly（布尔型，可选，默认为 false）包含到 watchonly 地址的交易（见 [importaddress](/blog/2018/08/bitcoin-rpc-command-importaddress.html)）。
 
-结果：<br>
+结果：
 {% highlight shell %}
 {
   "transactions": [
