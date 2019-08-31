@@ -48,6 +48,8 @@ excerpt: Reading list.
 > * [史蒂夫·乔布斯传](https://book.douban.com/subject/6798611){:target="_blank"}，[美] 沃尔特·艾萨克森
 
 > Miscellaneous:
+> * [少有人走的路 心智成熟的旅程](https://book.douban.com/subject/1775691){:target="_blank"}，[美] 斯科特·派克
+> * [黑客与画家 硅谷创业之父Paul Graham文集](https://book.douban.com/subject/6021440){:target="_blank"}，[美] 保罗·格雷厄姆
 > * [如何变得有思想](http://www.ruanyifeng.com/blog){:target="_blank"}，阮一峰
 > * [异类 不一样的成功启示录](https://book.douban.com/subject/3688489){:target="_blank"}，[加] 马尔科姆·格拉德威尔
 > * [公正 该如何做是好](https://book.douban.com/subject/5408882){:target="_blank"}，[美] 迈克尔·桑德尔
