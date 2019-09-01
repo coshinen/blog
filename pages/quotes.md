@@ -14,6 +14,9 @@ excerpt: Here are my favorite quotes from someones that inspire me or make me la
 > Jeor Mormont, Game of Thrones:
 > * The things we love destroy us every time, lad. Remember that.
 
+> Varys, Game of Thrones Series 2, Episode 3:
+> * Power resides where men believe it resides. It's a trick, a shadow on the wall, and a very smell man can cast a very large shadow.
+
 > Tyrion Lannister, Game of Thrones Series 1, Episode 1:
 > * Never forget what you are. The rest of the world will not. Wear it like armor, and it can never be used to hurt you.
 
