@@ -8,11 +8,14 @@ excerpt: Here are my favorite quotes from someones that inspire me or make me la
 > Satoshi Nakamoto, Bitcoin P2P e-cash paper:
 > * It's very attractive to the libertarian viewpoint if we can explain it properly. I'm better with code than with words though.
 
-> Ygritte, Game of Thrones:
-> * You know nothing, Jon Snow.
-
 > Jeor Mormont, Game of Thrones:
 > * The things we love destroy us every time, lad. Remember that.
+
+> Tywin Lannister, Game of Thrones Series 3, Episode 4:
+> * I don't distrust you because you're a woman. I distrust you because you're not as smart as you think you are.
+
+> Ygritte, Game of Thrones Series 2, Episode 7:
+> * You know nothing, Jon Snow.
 
 > Varys, Game of Thrones Series 2, Episode 3:
 > * Power resides where men believe it resides. It's a trick, a shadow on the wall, and a very smell man can cast a very large shadow.
