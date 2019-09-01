@@ -75,15 +75,12 @@ excerpt: Here are my favorite quotes from someones that inspire me or make me la
 > Mahatma Gandhi:
 > * First they ignore you, then they laugh at you, then they fight you, then you win.
 
-> Francis Bacon:
-> * Knowledge is power.
-
 > THE SEVEN COMMANDMENTS, Animal Farm:
 > * ALL ANIMALS ARE EQUAL BUT SOME ANIMALS ARE MORE EQUAL THAN OTHERS.
 > * FOUR LEGS GOOD, TWO LEGS BAD.
 
 > 侯捷，STL 源码剖析：
-> * 源码之前，了无秘密。天下大事，必做于细。
+> * 源码之前，了无秘密。
 
 > サイタマ「ワンパンマン 第3話 執念の科学者」：
 > * お前も知りたいのか？いいだろう！ジェノスもよく聞いとけ…えっ、誰？…あ？まぁ、いいだろう。心して聞け…
