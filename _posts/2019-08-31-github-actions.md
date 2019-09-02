@@ -7,13 +7,12 @@ comments: true
 categories: Git/GitHub CI/CD
 tags: Git/GitHub CI/CD
 ---
-GitHub Actions 使自动化所有的软件工作流变得简单，现在使用世界级的 CI/CD。
-从 GitHub 构建，测试，和部署代码。
-以你想要的方式进行代码审查，分支管理，和问题修复工作。
+持续集成 CI（Continuous Integration）是指软件开发过程中，进行的一系列自动化测试。
+持续部署 CD（Continuous Deployment）是指项目的部署上线，例如：GitHub Pages。
+CI、CD 都属于敏捷开发。
 
-持续集成 CI（Continuous Integration）是指软件开发过程中，进行的一系列自动化测试，以发现错误来提高开发的速度，该过程属于敏捷开发。
-持续部署 CD（Continuous Deployment）是指代码的部署上线，例如：GitHub Pages。
-这里的持续（Continuous）表示代码的每次更新都会自动执行相应的行为-集成、部署等。
+GitHub Actions 可以自动化 GitHub 上托管项目的工作流，实现从 GitHub 上托管、构建、测试和部署代码的一体化。
+目前 GitHub 上较为流行的第三方持续集成服务是 Travis CI，或将被 GitHub Actions workflows CI 取代。
 
 ## 1. 定义工作流的名称
 
