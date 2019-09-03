@@ -9,8 +9,11 @@ excerpt: Here are my favorite quotes from someones that inspire me or make me la
 > * It's very attractive to the libertarian viewpoint if we can explain it properly.
 > I'm better with code than with words though.
 
-> Jeor Mormont, Game of Thrones:
-> * The things we love destroy us every time, lad. Remember that.
+> Sansa Stark, Game of Thrones Series 7, Episode 7:
+> * I'm a slow learner, it's true. But I learn.
+
+> Jon Snow, Game of Thrones Series 7, Episode 1:
+> * Everything before the word "but" is horse shit.
 
 > Sandor Clegane (The Hound), Game of Thrones Series 4, Episode 5:
 > * Hate's as good a thing as any to keep a person going. Better than most.
@@ -34,7 +37,7 @@ excerpt: Here are my favorite quotes from someones that inspire me or make me la
 > * Power resides where men believe it resides.
 > It's a trick, a shadow on the wall, and a very smell man can cast a very large shadow.
 
-> Tyrion Lannister, Game of Thrones Series 1, Episode 1:
+> Tyrion Lannister (The Imp), Game of Thrones Series 1, Episode 1:
 > * Never forget what you are. The rest of the world will not.
 > Wear it like armor, and it can never be used to hurt you.
 
@@ -167,6 +170,7 @@ excerpt: Here are my favorite quotes from someones that inspire me or make me la
 > * よっ！ボウズ、知ってるか？怪盗はあざやかに獲物を盗み出す創造的な芸術家だが、探偵はその跡を見てなんくせつける、ただの批評家に過ぎねぇんだぜ。
 
 > 江戸川コナン／工藤新一「名探偵コナン」：
+> * 言葉は刃物なんだ。使い方を間違えると、厄介な凶器になる。
 > * 君を確実に破滅させることができれば、公共の利益のために僕は喜んで死を受け入れよう。
 > * 不可能なものを除外していって残ったものが、たとえどんなに信じられなくても、それが真相なんだ。
 > * 理由（わけ）なんているのかよ？人は人を殺す動機なんて知ったこっちゃねぇが、人が人を助ける理由に、論理的な思考を存在しねぇだろう？
