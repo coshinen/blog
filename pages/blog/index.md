@@ -47,7 +47,7 @@ excerpt: Welcome to mistydew's blog!
     </div>
     <ul>{% assign count = 0 %}{% for post in site.posts %}{% assign count = count | plus: 1 %}{% endfor %}
       <li>posts: <a href="{{ site.archive }}">{{ count }}</a></li>
-      <li>bio: blockchain developer</li>
+      <li>bio: {{ site.bio }}</li>
     </ul>
   </blockquote>
   <script type='text/javascript' defer='defer' src='https://www.intensedebate.com/widgets/blogStats/412180'></script>

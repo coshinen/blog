@@ -16,7 +16,7 @@ Or subscribe my blog [feed]({{ site.feed }}) to get the latest post if you want.
 
 **Contact**
 
-Drop me a line if you will, send email to {% include footer/icon-envelope.html email=site.email %} or {{ site.mailo }}.
+Drop me a line if you will, send email to {% include footer/icon-envelope.html email=site.email %} or mistydew at mailo.com.
 
 My current **PGP key** is [here]({{ site.pgpkey }}).<br>
 The fingerprint is: {{ site.fingerprint }}

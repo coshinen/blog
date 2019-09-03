@@ -16,6 +16,7 @@ description: >- # this means to ignore newlines until "baseurl:"
   Powered by Jekyll. Hosted on GitHub.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://mistydew.github.io" # the base hostname & protocol for your site
+bio: blockchain developer
 
 # Site footer
 github: mistydew
@@ -37,7 +38,6 @@ gc:      "/gc/"
 donate:  "/donate.html"
 
 # About page
-mailo: mistydew at mailo.com
 pgpkey: "/public_key.asc"
 fingerprint: 7752 D418 D94C 33FB 8F6F 9197 44D9 CCA7 F81A 1FB3
 
