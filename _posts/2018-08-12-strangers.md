@@ -6,7 +6,7 @@ author: mistydew
 comments: true
 categories: GARNETCROW Lyrics
 tags: ガーネット・クロウ 歌詞翻訳
-excerpt: 緑揺れる午後の空 幾つ目の飛行機かな 遠く潮騒が届いて 客船が泊まった
+excerpt: 緑揺れる午後の空、幾つ目の飛行機かな。遠く潮騒が届いて、客船が泊まった。
 ---
 ![parallel universe](https://raw.githubusercontent.com/mistydew/gc2/master/cover/album/AL08_parallel%20universe.jpg){:.border}
 
@@ -18,6 +18,8 @@ excerpt: 緑揺れる午後の空 幾つ目の飛行機かな 遠く潮騒が届
 編曲：古井弘人<br>
 ギター：岡本仁志
 
+<div class="lyric-original">
+<p>
 緑揺れる午後の空<br>
 幾つ目の飛行機かな<br>
 遠く潮騒が届いて<br>
@@ -55,6 +57,50 @@ strangers<br>
 止まらぬ時の中<br>
 すべてが流れゆく<br>
 落陽(おちてゆくひ)が綺麗...sky...
+</p>
+</div>
+
+<div class="lyric-translation">
+<blockquote>
+綠色搖曳的午後的天空<br>
+是第機架飛機呢<br>
+遠方的波濤聲傳來<br>
+客船停泊下來<br>
+<br>
+住慣了的這個城市總是<br>
+因 stranger（陌生人）而熱鬧<br>
+100 年以前未變的地方<br>
+<br>
+I'm a traveler<br>
+在這個氣喘吁吁跑過的道路上<br>
+You're a stranger<br>
+從即將消失的遙遠的記憶中<br>
+像是被彈開了<br>
+<br>
+即使斷絕來訪<br>
+感覺總有一天會見面<br>
+共同分擔的時間很少<br>
+只要有就很棒<br>
+<br>
+雖然記得那份懷念<br>
+我也是 stranger（路過）而已<br>
+100 年以後也不會改變的地方<br>
+<br>
+You're a traveler<br>
+人們用人受傷來安慰<br>
+I'm a stranger<br>
+祈禱想要回到哪裡<br>
+即使沒有那樣的地方<br>
+柔和的陽光啊<br>
+<br>
+偶然觸碰到難過在傍晚風平浪靜<br>
+strangers<br>
+想著要回到哪裡<br>
+在不會停止的時間裡<br>
+一切都在不斷流逝<br>
+夕陽很美...sky...
+</blockquote>
+</div>
 
 ## 参照
 
