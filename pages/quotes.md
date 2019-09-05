@@ -44,8 +44,10 @@ excerpt: Here are my favorite quotes from someones that inspire me or make me la
 > Master Shifu, Kung Fu Panda 3:
 > * If you only do what you can do, you will never be more than you are now.
 
-> Master Oogway, Kung Fu Panda:
+> Master Oogway, Kung Fu Panda 3:
 > * Inner peace, inner peace. itchy nose. Ah-choo! Finally, inner peace. Now what?
+
+> Master Oogway, Kung Fu Panda:
 > * Yesterday is history, tomorrow is a mystery, but today is a gift. That is why it is called the present.
 > * There are no accidents.
 > * One often meets his destiny on the road he takes to avoid it.
@@ -60,9 +62,14 @@ excerpt: Here are my favorite quotes from someones that inspire me or make me la
 > Alan Turing, The imitation game:
 > * Sometimes it is the people no one imagines anything of who do the things that no one can imagine.
 
-> Raymond Fowler, The Thin Blue Line:
-> * When I was at college, I suffered from the curious delusion that I was there to study.
-> * Nothing is without fault.
+> Raymond Fowler, The Thin Blue Line Series 2, Episode 1 Court in the Act:
+> * Even our greatest and most revered institutions, are mixtures of good and bad.
+> Those who have had to rummage through the remnants of the Christmas tin of Quality street, will vouch for the truth in that.
+> Nothing is without fault.
+> Even police officers are, as we shall see, like the lottery predictions of Mystic Meg, not completely infallible.
+
+> Raymond Fowler, The Thin Blue Line Series 1, Episode 4 Rag Week:
+> * When I was at college I suffered from the curious delusion, that I was there to study.
 
 > Professor Severus Snape, Harry Potter and the Order of the Phoenix:
 > * Sentimental children forever whining about how bitterly unfair your lives have been. Well, it may have escaped your notice, but life isn't fair.
@@ -122,8 +129,15 @@ excerpt: Here are my favorite quotes from someones that inspire me or make me la
 > サリシノハラ：
 > * 人はヒヨリミなんだしょうがない。
 
-> ブラック／お天気お姉さん, AKBINGO!：
+> 松井玲奈「輝きYELL! お母さんから」：
+> * いつ死ねかわからない、好きな事しなさい！
+
+> ブラック／お天気お姉さん「AKBINGO!」：
 > * 自信があっても、結果にならなきゃダメでしょ！
+> * 晴れ、雨、曇り、雪。
+
+> おたべ「マジすか学園5」：
+> * 勘定は、合わさせてもらうで...
 
 > ソルト「マジすか学園4, 5」：
 > * 無理は一番の、退屈しのぎだ。
@@ -134,21 +148,17 @@ excerpt: Here are my favorite quotes from someones that inspire me or make me la
 > サド「マジすか学園2」：
 > * 人は変わる。
 
-> おたべ「マジすか学園2, 5」：
-> * 勘定は、合わさせてもらうで...
+> おたべ「マジすか学園2」：
 > * 本当に強いヤツはな、本当の恐怖を知ってんねん。
 > * 放火魔は、必ず現場に戻る。自分がつけた火が、どこまで燃え広がるか、見ておきたいからや。
 
-> 松井玲奈「お母さんから、輝きYELL!」：
-> * いつ死ねかわからない、好きな事しなさい！
-
 > ゲキカラ／甘口「マジすか学園2」：
-> * 本当の強さはケンカじゃねぇ、怖さを知ってるヤツだ。
-> * 理由のないケンカは、勝っても負けても、むなしい。
+> * 本当の強さは喧嘩じゃねぇ、怖さを知ってるヤツだ。
 > * マジで怒ってるよ。手目ら、許さねぇ！ぶっ殺す！
+> * 優子さんが、教えてくれた。喧嘩には理由がなきゃいけない。理由のない喧嘩は、勝っても負けても虚しい。
 > * ねぇ、怒ってる？
 
-> 前田敦子「マジスカロックンロール、マジすか学園」：
+> 前田敦子「マジすか学園 マジスカロックンロール」：
 > * マジにならなきゃ、勝てねぇよ！
 
 > 秋熊「深秋之葵」：
@@ -172,16 +182,29 @@ excerpt: Here are my favorite quotes from someones that inspire me or make me la
 > ベルモット「名探偵コナン」：
 > * A secret makes a woman woman. 女は秘密を着飾って美しくなるのよ。
 
-> 怪盗キッド「名探偵コナン」：
+> 怪盗キッド／黒羽盗一「名探偵コナン」：
 > * ポーカーフェイスを忘れるな！
+
+> 江戸川コナン／工藤新一「名探偵コナン 沈黙の15分（クォーター）」：
+> * 言葉は刃物なんだ。使い方を間違えると、厄介な凶器になる。
+
+> 江戸川コナン／工藤新一「名探偵コナン ベイカー街（ストリート）の亡霊」：
+> * 君を確実に破滅させることができれば、公共の利益のために僕は喜んで死を受け入れよう。
+
+> 江戸川コナン／工藤新一「名探偵コナン コナンとキッドとクリスタル・マザー」：
+> * 木の葉を隠すなら森の中、森がない時は自分で森をつく。
+
+> 江戸川コナン／工藤新一「名探偵コナン 工藤新一NYの事件（解決編）」：
+> * 理由（わけ）なんているのかよ？人は人を殺す動機なんて知ったこっちゃねぇが、人が人を助ける理由に、論理的な思考を存在しねぇだろう？
+
+> 江戸川コナン／工藤新一「名探偵コナン 名家連続変死事件（後編）」：
+> * 犯人を推理で追い詰めて、みすみす自殺させちまう探偵は、殺人者と変わんねーよ…完璧な人間なんてこの世にいやしねーよ、俺だって、たった一人（たった一人だけ）…
+
+> 怪盗キッド／黒羽快斗「名探偵コナン コナンvs怪盗キッド」：
 > * よっ！ボウズ、知ってるか？怪盗はあざやかに獲物を盗み出す創造的な芸術家だが、探偵はその跡を見てなんくせつける、ただの批評家に過ぎねぇんだぜ。
 
 > 江戸川コナン／工藤新一「名探偵コナン」：
-> * 言葉は刃物なんだ。使い方を間違えると、厄介な凶器になる。
-> * 君を確実に破滅させることができれば、公共の利益のために僕は喜んで死を受け入れよう。
 > * 不可能なものを除外していって残ったものが、たとえどんなに信じられなくても、それが真相なんだ。
-> * 理由（わけ）なんているのかよ？人は人を殺す動機なんて知ったこっちゃねぇが、人が人を助ける理由に、論理的な思考を存在しねぇだろう？
-> * 犯人を推理で追い詰めて、みすみす自殺させちまう探偵は、殺人者と変わんねーよ…完璧な人間なんてこの世にいやしねーよ、俺だって、たった一人（たった一人だけ）…
 > * たった一つの真実見抜く、見た目は子供、頭脳は大人。その名は…
 > * 真実はいつもひとつ！
 
