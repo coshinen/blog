@@ -15,6 +15,7 @@ excerpt: Reading list.
 > * [Pro Git 2nd Edition](https://git-scm.com/book/zh/v2){:target="_blank"}，[美] Scott Chacon and Ben Straub
 > * [TCP/IP 详解 卷1：协议](https://book.douban.com/subject/1088054){:target="_blank"}，[美] [W. Richard Stevens](http://www.kohala.com/start){:target="_blank"}
 > * [Linux/UNIX 系统编程手册（上、下册）](https://book.douban.com/subject/25809330){:target="_blank"}，[德] Michael Kerrisk
+> * [重构 改善既有代码的设计](https://book.douban.com/subject/4262627){:target="_blank"}，[美] Martin Fowler
 > * [代码整洁之道](https://book.douban.com/subject/4199741){:target="_blank"}，[美] Robert C. Martin
 > * [STL 源码剖析](https://book.douban.com/subject/1110934){:target="_blank"}，侯捷
 > * [C++ 沉思录](https://book.douban.com/subject/2970056){:target="_blank"}，[美] Andrew Koenig, Barbara Moo
