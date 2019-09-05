@@ -20,6 +20,7 @@ excerpt: Reading list.
 > * [C++ 沉思录](https://book.douban.com/subject/2970056){:target="_blank"}，[美] Andrew Koenig, Barbara Moo
 > * [C++ 编程规范 101条规则、准则与最佳实践](https://book.douban.com/subject/26899830){:target="_blank"}，[加] Herb Sutter [罗] Andrei Alexandrescu
 > * [C++ Primer 中文版（第 5 版）](https://book.douban.com/subject/25708312){:target="_blank"}，[美] Stanley B. Lippman, Josée Lajoie, Barbara E. Moo
+> * [Essential C](http://cslibrary.stanford.edu/101/EssentialC.pdf){:target="_blank"}，[美] Nick Parlante
 
 > Literature:
 > * [前方的路](http://www.ruanyifeng.com/road){:target="_blank"}，阮一峰
