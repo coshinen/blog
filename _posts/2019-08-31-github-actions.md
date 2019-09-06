@@ -8,24 +8,30 @@ categories: Git/GitHub CI/CD
 tags: Git/GitHub CI/CD
 ---
 持续集成 CI（Continuous Integration）是指软件开发过程中，进行的一系列自动化测试。
-持续部署 CD（Continuous Deployment）是指项目的部署上线，例如：GitHub Pages。
+持续部署 CD（Continuous Deployment）是指项目的部署上线，比如：GitHub Pages，每次提交之后，都会自动进行部署。
 CI、CD 都属于敏捷开发。
 
-GitHub Actions 可以自动化 GitHub 上托管项目的工作流，实现从 GitHub 上托管、构建、测试和部署代码的一体化。
-目前 GitHub 上较为流行的第三方持续集成服务是 Travis CI，或将被 GitHub Actions workflows CI 取代。
+GitHub Actions 可以自动化 GitHub 上托管项目的工作流，从而实现 GitHub 对代码的托管、测试和部署一体化。
+目前 GitHub 上较为流行的持续集成服务是 Travis CI，可能会被 GitHub Actions workflows CI 取代。
+
+GitHub Actions 目前处于测试阶段，需要提前注册 beta 版待官方开启后才能使用。
+
+下面以 C/C++ 项目为例，对其 GitHub Actions 工作流进行基本的设置。
 
 ## 1. 定义工作流的名称
 
-以 C/C++ 项目为例：
+name 定义工作流的名称，对该工作流要完成的任务进行简单的描述。
 
 {% highlight yml %}
-name: C/C++ CI ## name 定义工作流的名称，这里表示这是一个 C/C++ 项目的 CI 工作流
+name: C/C++ CI ## 表示这是一个 C/C++ 项目的 CI 工作流
 {% endhighlight %}
 
 ## 2. 控制工作流的触发时机
 
+on 设置工作流的触发条件，一般指定为 push，表示在每次 git push 操作后自动触发该项目的工作流。
+
 {% highlight yml %}
-on: [push] ## on 定义工作流的触发条件，这里表示在每次 git push 操作后自动触发该项目的工作流
+on: [push]
 {% endhighlight %}
 
 可以让工作流在 master 和 release 分支的 push 事件上运行：
@@ -38,7 +44,7 @@ on:
     - release/*
 {% endhighlight %}
 
-或在只以 master 分支为目标的 pull_request 上运行：
+或只在 master 分支的 pull_request 事件上运行：
 
 {% highlight yml %}
 on:
@@ -47,7 +53,7 @@ on:
     - master
 {% endhighlight %}
 
-或者设置定时运行计划，从每周一到周五在每天的 02:00 运行：
+也可以设置定时运行计划，在周一到周五每天的 02:00 运行：
 
 {% highlight yml %}
 on:
@@ -58,13 +64,15 @@ on:
 ## 3. 在不同的操作系统上运行
 
 GitHub Actions 提供 Linux、Windows 和 macOS 来构建运行。
-要更改操作系统只需指定一个不同的虚拟机：
+更换操作系统只需指定一个不同的虚拟机：
+
+runs-on 指定运行所在操作系统的类型。
 
 {% highlight yml %}
 jobs:
   build:
 
-    runs-on: ubuntu-latest # runs-on 定义运行操作系统的类型，这里指定的是 ubuntu 最新版本
+    runs-on: ubuntu-latest # 表示该工作流将在 ubuntu 的最新版本上运行
 {% endhighlight %}
 
 可用的虚拟机类型如下：
@@ -77,14 +85,17 @@ jobs:
 
 每个 jobs 都在 runs-on 指定的一个虚拟环境新实例中运行。
 
+steps 用于设置工作流的运行步骤，即在终端中执行的 shell 命令。
+run 设置要执行的命令。
+
 {% highlight yml %}
 jobs:
   build:
     
     steps:
     - uses: actions/checkout@v1
-    - name: make # 定义运行命令的名称
-      run: make # run 设置要执行的命令，这里使用 Makefile 来构建项目
+    - name: make # 定义命令的名称
+      run: make # 使用 Makefile 来构建项目
     - name: ...
       run: ...
 {% endhighlight %}
@@ -113,13 +124,13 @@ jobs:
       run: make distcheck
 {% endhighlight %}
 
-## 6. 该配置文件的默认路径
+## 6. 工作流配置文件的默认路径
 
-每个工作流必须使用 YAML 写入一个 .yml 扩展名的文件中。
+每个工作流必须使用 YAML 写入一个扩展名为 .yml 的文件中。
+文件名一般定义为项目主要使用的语言名称。
+比如 c-cpp.yml，默认路径如下：
 
-> .github/workflows/xxx.yml
-
-GitHub Actions 目前处于测试阶段，需要提前注册 beta 版待官方开启后才能使用。
+> .github/workflows/c-cpp.yml
 
 ## 参照
 
