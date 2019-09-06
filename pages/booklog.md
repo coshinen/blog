@@ -59,6 +59,7 @@ excerpt: Reading list.
 > * [谁“害”了北大学生](https://book.douban.com/subject/1605954){:target="_blank"}，群言
 
 > Free eBooks:
+> * [Standard Ebooks: Free and liberated ebooks, carefully produced for the true book lover.](https://standardebooks.org){:target="_blank"}
 > * [Page By Page Books. Read Classic Books Online, Free.](https://www.pagebypagebooks.com){:target="_blank"}
 > * [Free eBooks - Project Gutenberg](http://www.gutenberg.org/wiki/Main_Page){:target="_blank"}
 
