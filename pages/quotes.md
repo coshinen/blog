@@ -9,16 +9,16 @@ excerpt: Here are my favorite quotes from someones that inspire me or make me la
 > * It's very attractive to the libertarian viewpoint if we can explain it properly.
 > I'm better with code than with words though.
 
-> Sansa Stark, Game of Thrones Series 7, Episode 7:
+> Sansa Stark, Game of Thrones, Season 7 Episode 7:
 > * I'm a slow learner, it's true. But I learn.
 
-> Jon Snow, Game of Thrones Series 7, Episode 1:
+> Jon Snow, Game of Thrones, Season 7 Episode 1:
 > * Everything before the word "but" is horse shit.
 
-> Sandor Clegane (The Hound), Game of Thrones Series 4, Episode 5:
+> Sandor Clegane (The Hound), Game of Thrones, Season 4 Episode 5:
 > * Hate's as good a thing as any to keep a person going. Better than most.
 
-> Petyr Baelish (Littlefinger), Game of Thrones Series 3, Episode 6:
+> Petyr Baelish (Littlefinger), Game of Thrones, Season 3 Episode 6:
 > * Chaos isn't a pit. Chaos is a ladder.
 > Many who try to climb it fail, and never get to try again.
 > The fall breaks them.
@@ -26,18 +26,18 @@ excerpt: Here are my favorite quotes from someones that inspire me or make me la
 > They cling to the realm, or the gods, or love. Illusions.
 > Only the ladder is real. The climb is all there is.
 
-> Tywin Lannister, Game of Thrones Series 3, Episode 4:
+> Tywin Lannister, Game of Thrones, Season 3 Episode 4:
 > * I don't distrust you because you're a woman.
 > I distrust you because you're not as smart as you think you are.
 
-> Ygritte, Game of Thrones Series 2, Episode 7:
+> Ygritte, Game of Thrones, Season 2 Episode 7:
 > * You know nothing, Jon Snow.
 
-> Varys, Game of Thrones Series 2, Episode 3:
+> Varys, Game of Thrones, Season 2 Episode 3:
 > * Power resides where men believe it resides.
 > It's a trick, a shadow on the wall, and a very smell man can cast a very large shadow.
 
-> Tyrion Lannister (The Imp), Game of Thrones Series 1, Episode 1:
+> Tyrion Lannister (The Imp), Game of Thrones, Season 1 Episode 1:
 > * Never forget what you are. The rest of the world will not.
 > Wear it like armor, and it can never be used to hurt you.
 
@@ -53,22 +53,22 @@ excerpt: Here are my favorite quotes from someones that inspire me or make me la
 > * One often meets his destiny on the road he takes to avoid it.
 > * Nothing is impossible.
 
-> Negan, The Walking Dead Season 9:
+> Negan, The Walking Dead, Season 9 Episode 16:
 > * It's just that no one ever thinks that they're the evil one.
 
-> Rick Grimes, The Walking Dead Season 8:
+> Rick Grimes, The Walking Dead, Season 8:
 > * My mercy prevails over my wrath.
 
 > Alan Turing, The imitation game:
 > * Sometimes it is the people no one imagines anything of who do the things that no one can imagine.
 
-> Raymond Fowler, The Thin Blue Line Series 2, Episode 1 Court in the Act:
+> Raymond Fowler, The Thin Blue Line, Series 2 Episode 1, Court in the Act:
 > * Even our greatest and most revered institutions, are mixtures of good and bad.
 > Those who have had to rummage through the remnants of the Christmas tin of Quality street, will vouch for the truth in that.
 > Nothing is without fault.
 > Even police officers are, as we shall see, like the lottery predictions of Mystic Meg, not completely infallible.
 
-> Raymond Fowler, The Thin Blue Line Series 1, Episode 4 Rag Week:
+> Raymond Fowler, The Thin Blue Line, Series 1 Episode 4, Rag Week:
 > * When I was at college I suffered from the curious delusion, that I was there to study.
 
 > Professor Severus Snape, Harry Potter and the Order of the Phoenix:
@@ -208,30 +208,30 @@ excerpt: Here are my favorite quotes from someones that inspire me or make me la
 > * たった一つの真実見抜く、見た目は子供、頭脳は大人。その名は…
 > * 真実はいつもひとつ！
 
-> Sherlock Holmes, BBC SHERLOCK Series 4, Episode 2, The Lying Detective:
+> Sherlock Holmes, BBC SHERLOCK, Series 4 Episode 2, The Lying Detective:
 > * Must be something comforting about the number three, people always give up after three.
 
-> Sherlock Holmes, BBC SHERLOCK Series 3, Episode 3, His Last Vow:
+> Sherlock Holmes, BBC SHERLOCK, Series 3 Episode 3, His Last Vow:
 > * Oh, do your research. I'm not a hero, I'm a high-functioning sociopath. Merry Christmas!
 
-> Sherlock Holmes, BBC SHERLOCK Series 2, Episode 3, The Reichenbach Fall:
+> Sherlock Holmes, BBC SHERLOCK, Series 2 Episode 3, The Reichenbach Fall:
 > * I may be on the side of the angels, but don't think for one second that I am one of them.
 > * Alone is what I have. Alone protects me.
 
-> Sherlock Holmes, BBC SHERLOCK Series 2, Episode 2, The Hounds of Baskerville:
+> Sherlock Holmes, BBC SHERLOCK, Series 2 Episode 2, The Hounds of Baskerville:
 > * Once you've ruled out the impossible, whatever remains, however improbable, must be true.
 
-> Sherlock Holmes, BBC SHERLOCK Series 2, Episode 1, A Scandal in Belgravia:
+> Sherlock Holmes, BBC SHERLOCK, Series 2 Episode 1, A Scandal in Belgravia:
 > * Sentiment is a chemical defect found in the losing side.
 
-> Sherlock Holmes, BBC SHERLOCK Series 1, Episode 3, The Great Game:
+> Sherlock Holmes, BBC SHERLOCK, Series 1 Episode 3, The Great Game:
 > * Listen, this is my hard drive, and it only makes sense to put things in there that are useful, REALLY useful.
 
-> Sherlock Holmes, BBC SHERLOCK Series 1, Episode 2, The Blind Banker:
+> Sherlock Holmes, BBC SHERLOCK, Series 1 Episode 2, The Blind Banker:
 > * I don't eat when I'm working. Digesting slows me down.
 > * You want to hide a tree, then a forest is the best place to do it, wouldn't you say? People would just walk straight past, not knowing, unable to decipher the message.
 
-> Sherlock Holmes, BBC SHERLOCK Series 1, Episode 1, A Study in Pink:
+> Sherlock Holmes, BBC SHERLOCK, Series 1 Episode 1, A Study in Pink:
 > * Come at once if convenient. If inconvenient come anyway.
 
 > Sherlock Holmes, A Game of Shadows:
