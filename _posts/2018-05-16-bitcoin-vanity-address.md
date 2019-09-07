@@ -177,14 +177,13 @@ UniValue validateaddress(const UniValue& params, bool fHelp)
 }
 {% endhighlight %}
 
-关于比特币地址前缀 '1' 的修改，参考[如何制作一枚山寨数字货币](/blog/2018/05/how-to-make-an-altcoin.html)。
+关于比特币地址前缀 '1' 的修改，可以参考[如何制作一枚山寨数字货币](/blog/2018/05/how-to-make-an-altcoin.html)。
 
 ## 参照
 
+* [bitcoin/bitcoin v0.12.1](https://github.com/bitcoin/bitcoin/tree/v0.12.1){:target="_blank"}
 * [Address - Bitcoin Wiki](https://en.bitcoin.it/wiki/Address){:target="_blank"}
 * [List of address prefixes - Bitcoin Wiki](https://en.bitcoin.it/wiki/List_of_address_prefixes){:target="_blank"}
 * [Technical background of version 1 Bitcoin addresses - Bitcoin Wiki](https://en.bitcoin.it/wiki/Technical_background_of_version_1_Bitcoin_addresses){:target="_blank"}
-* [精通比特币（第二版）第四章 密钥和地址 · 巴比特图书](http://book.8btc.com/books/6/masterbitcoin2cn/_book/ch04.html){:target="_blank"}
-* [samr7/vanitygen](https://github.com/samr7/vanitygen){:target="_blank"} 比特币靓号地址生成器
-* [手把手教你拥有个性化的BTC地址 \| 巴比特](http://www.8btc.com/get-a-vanitygen-address){:target="_blank"}
-* [BitcoinVanityGen.com - Bitcoin Vanity Address Generator Online, Free Bicoin Vanity Address Generation](http://bitcoinvanitygen.com){:target="_blank"} 在线比特币靓号地址生成器，最多定制 9 位，6 位（含 6 位）以内免费
+* [samr7/vanitygen](https://github.com/samr7/vanitygen){:target="_blank"} - a standalone command line vanity address generator
+* [BitcoinVanityGen.com - Bitcoin Vanity Address Generator Online, Free Bicoin Vanity Address Generation](http://bitcoinvanitygen.com){:target="_blank"}
