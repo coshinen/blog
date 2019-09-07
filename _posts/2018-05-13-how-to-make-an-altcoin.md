@@ -21,7 +21,7 @@ tags: 区块链 比特币 山寨币
 ### 0.2. 比特币源码
 
 这里使用 [bitcoin v0.12.1](https://github.com/bitcoin/bitcoin/tree/v0.12.1) 版本的源码，
-因为这是比特币源码含 CPU 挖矿功能的最后一版。
+因为这是比特币含 CPU 挖矿代码的最后一版。
 
 ```shell
 $ git clone https://github.com/bitcoin/bitcoin.git
@@ -29,7 +29,7 @@ $ cd bitcoin
 $ git checkout v0.12.1
 ```
 
-尝试构建比特币源码，确保其正常工作。
+尝试构建比特币源码，确保其在当前平台正常工作。
 关于比特币源码的编译详见[编译比特币源码](/blog/2018/05/compile-bitcoin.html)篇。
 
 ## 1. 修改币名
@@ -59,7 +59,7 @@ $ find . -type f -print0 | xargs -0 sed -i 's/btc/atc/g'
 $ find . -type f -print0 | xargs -0 sed -i 's/BTC/ATC/g'
 ```
 
-小提示：使用 grep 命令查看是否修改成功。
+提示：使用 grep 命令查看是否修改成功。
 
 ### 1.4. 修改源码中的错误拼写
 
@@ -82,16 +82,32 @@ $ sed -i 's/bitcon/altcoin/' src/qt/locale/altcoin_da.ts
 ### 1.5. 修复版权信息
 
 不要直接更改现有版权，你可以在现有版权下面新增一条自己的版权。
+
 首先修复 Bitcoin 版权信息：
 
 ```shell
-$ sed -i 's/Altcoin/Bitcoin/' COPYING
+$ find . -type f -print0 | xargs -0 sed -i 's/\ The\ Altcoin\ Core\ developers/\ The\ Bitcoin\ Core\ developers/g'
 ```
 
 然后在该版权信息下面增加自己的版权：
 
+**注：src 目录下源码文件的版权信息（年份）并不统一。**
+
+> // Copyright (c) 2009-2015 The Bitcoin Core developers<br>
+> +// Copyright (c) 2018 The Altcoin Core developers
+
+```shell
+$ find src -type f -print0 | xargs -0 sed -i '/\ The\ Bitcoin\ Core\ developers/a\\/\/\ Copyright\ (c)\ 2018\ The\ Altcoin\ Core\ developers'
+```
+
+最后单独修改版权文件 COPYING：
+
 > Copyright (c) 2009-2016 The Bitcoin Core developers<br>
-> Copyright (c) 2017-2018 The Altcoin Core developers（这条是新增的）
+> +Copyright (c) 2018 The Altcoin Core developers
+
+```shell
+$ sed -i '/Copyright\ (c)\ 2009-2016\ The\ Bitcoin\ Core\ developers/a\Copyright\ (c)\ 2018\ The\ Altcoin\ Core\ developers' COPYING
+```
 
 ### 1.6. 修复旧发行版信息
 
@@ -118,10 +134,13 @@ $ sed -i 's/Altcoin/Bitcoin/g' doc/release-notes/*
 
 ### 2.1. 修改节点间通讯的默认端口
 
-节点间通讯的默认端口硬编在“chainparams.cpp”文件的 3 个网络类：
-CMainParams（主网，公有）、CTestNetParams（测试网，公有）和 CRegTestParams（回归测试网，私有）的默认无参构造函数中。
+节点间通讯的默认端口硬编在 3 个网络类的默认无参构造函数中。
 
-下面以**主网**为例进行修改：
+> * CMainParams（主网，公有）
+> * CTestNetParams（测试网，公有）
+> * CRegTestParams（回归测试网，私有）
+
+它们均定义在文件 “chainparams.cpp” 中，下面以**主网（Main network）**为例进行修改：
 
 ```cpp
 /**
@@ -203,7 +222,7 @@ public:
 
 ## 4. 修改网络协议魔数
 
-所谓协议魔数就是节点之间网络中传递信息的消息头，类似于 TCP 协议 20 个字节的报头和 IP 协议 20 个字节的报头，
+所谓协议魔数就是节点在网络中传递信息的消息头，类似于 TCP 协议 20 个字节的报头和 IP 协议 20 个字节的报头，
 这里的消息头共 4 个字节。
 
 可随意设置，不同于原魔数即可。修改如下：
@@ -232,7 +251,7 @@ public:
 };
 ```
 
-可以取一个有意义的单词作为魔数，例如：0xcafecafe。注意 16 进制范围。
+可以取一个有意义的单词作为魔数，例如：0xcafecafe。单词所含字母必须在 16 进制范围内，也就是在 a、b、c、d、e、f 中选取。
 
 或使用随机数替代，方法如下：
 
@@ -352,16 +371,14 @@ public:
 
 步骤如下：
 
-> 1.使用如下命令获取当前的 UNIX 时间戳：
-
-```shell
-$ date +%s
-```
-
-> 2.随机数置为 0，为挖创世区块做准备，挖到块后重置此值。<br>
-> 3.难度可以设为回归测试网难度 0x207fffff（很低，可秒出块），同时修改共识中的工作量证明限制。<br>
-> 4.版本一般不变。<br>
-> 5.奖励根据货币发行量配合奖励减半时间间隔来更改。
+> 1. 使用如下命令获取当前的 UNIX 时间戳：
+> ```shell
+> $ date +%s
+> ```
+> 2. 随机数置为 0，为挖创世区块做准备，挖到块后重置此值。
+> 3. 难度可以设为回归测试网难度 0x207fffff（很低，可秒出块），同时修改共识中的工作量证明限制。
+> 4. 版本一般不变。
+> 5. 奖励根据货币发行量配合奖励减半时间间隔来更改。
 
 例：修改了时间戳、随机数（非最终值）、难度对应值及共识中工作量证明限制，版本和奖励未改变。
 
@@ -373,8 +390,8 @@ $ date +%s
 +       genesis = CreateGenesisBlock(1526197820, 0, 0x207fffff, 1, 50 * COIN);
 ```
 
-接下来需要进行挖矿获取创世区块的随机数 nNonce 和哈希值以及默尔克树根哈希值。
-首先在“miner.cpp”文件中增加以下代码，用于寻找创世区块。
+接下来开始挖创世区块，其主要信息有随机数（nNonce）、区块哈希和默尔克树根哈希。
+首先在“miner.cpp”文件中增加以下代码，来寻找创世区块。
 
 ```cpp
 +void getGenesisBlock(CBlock *pblock) // 获取创世区块的基本信息（nNonce, hash, merkleroot）
@@ -429,7 +446,7 @@ $ date +%s
         consensus.hashGenesisBlock = genesis.GetHash();
 ```
 
-做完以上工作，只需重新 make，再生成 altcoind 程序后，make 会失败，此时只需执行 altcoind 程序，喝杯咖啡静静等待创世区块的成功挖掘。
+做完以上工作，只需重新 make，再次生成 altcoind 程序后，make 会失败，此时只需执行 altcoind 程序，喝杯咖啡静静等待创世区块的成功挖掘。
 由于设置的难度很低，所以基本上是秒出块，记录下区块信息：随机数（nNonce）、区块哈希（hashGenesisBlock）和默尔克树根哈希（hashMerkleRoot），
 替换以下对应位置即可。
 
@@ -489,10 +506,10 @@ public:
 };
 ```
 
-1. 把检测点列表删除，增加创世区块检测点到该列表，创世区块的哈希由第六步得到。
-2. 填入创世区块的创建时间。
-3. 交易数为 0。
-4. 估计交易数为 500（这个值随意填）。
+> 1. 把检测点列表删除，增加创世区块检测点到该列表，创世区块的哈希由第六步得到。
+> 2. 填入创世区块的创建时间。
+> 3. 交易数为 0。
+> 4. 估计交易数为 500（这个值随意填）。
 
 **注：检测点的信息可随区块链的延伸不断更新。**
 
@@ -523,15 +540,14 @@ public:
 };
 ```
 
-该值一开始置零（0x00），和检测点一样随着区块链的延伸不断更新（增加），
-可通过 RPC 命令 [getbestblockhash](/blog/2018/05/bitcoin-rpc-command-getbestblockhash.html) 和 [getblock](/blog/2018/05/bitcoin-rpc-command-getblock.html) 获取最佳区块信息的链工作量 chainwork 的值得到。
+该值一开始置零（0x00），和检测点一样，随着区块链的延伸不断增加（更新），可通过 RPC 命令 [getbestblockhash](/blog/2018/05/bitcoin-rpc-command-getbestblockhash.html) 和 [getblock](/blog/2018/05/bitcoin-rpc-command-getblock.html) 获取最佳区块信息的链工作量（chainwork）值获取。
 
 现在第三次编译源码，一枚基于比特币的山寨币就制作完成了。
 通过这个过程，可以了解比特币源码的一小部分，为深入比特币底层区块链技术做铺垫。
 
 ## 参照
 
-* [How to make an altcoin \| Bear's Den](http://dillingers.com/blog/2015/04/18/how-to-make-an-altcoin){:target="_blank"}
+* [How to make an altcoin \| Bear's Den](http://dillingers.com/blog/2015/04/18/how-to-make-an-altcoin/){:target="_blank"}
 * [如何仿照比特币创造自己的山寨币 \| Sunny's Blog](http://shusunny.github.io/2016/04/How-to-make-altcoin-1){:target="_blank"}
 * [从 0 到 1 建立自己的区块链 \| 巴比特](http://www.8btc.com/build-your-own-blockchain){:target="_blank"}
 * [mistydew/blockchain](https://github.com/mistydew/blockchain){:target="_blank"}
