@@ -5,15 +5,16 @@
 - [ ] site: search engine using lunr.js
 - [ ] remake: replace resume with cv (Curriculum Vitae)
 - [x] post: categories and tags of all posts
-- [ ] post: file by year like 2018, 2019...
+- [ ] post: file by year, e.g. 2018, 2019...
 
 ## Timeline
 
-* 2019.08.28 [+] site: GitHub Actions workflows CI
+* 2019.09.07 [+] post: change markdown code highlight ~~{% highlight %}~~ to ```
 
 <details>
 <summary>history</summary>
 
+* 2019.08.28 [+] site: GitHub Actions workflows CI
 * 2019.08.25 [+] remake: blog page (comments, avatar and bio...)
 * 2019.08.24 [-] post: ~~Remarkbox Hosted Comments Service (incomplete)~~; [+] post: IntenseDebate comments
 * 2019.08.18 [+] assets: css, fonts, images and js...
