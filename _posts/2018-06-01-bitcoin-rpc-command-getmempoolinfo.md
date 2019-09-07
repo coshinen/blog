@@ -10,12 +10,12 @@ excerpt: $ bitcoin-cli getmempoolinfo
 ---
 ## 提示说明
 
-{% highlight shell %}
+```shell
 getmempoolinfo # 获取交易内存池激活状态的细节
-{% endhighlight %}
+```
 
 结果：
-{% highlight shell %}
+```shell
 {
   "size": xxxxx,               （数字）当前的交易数
   "bytes": xxxxx,              （数字）全部交易的总大小
@@ -23,7 +23,7 @@ getmempoolinfo # 获取交易内存池激活状态的细节
   "maxmempool": xxxxx,         （数字）交易内存池的最大内存用量
   "mempoolminfee": xxxxx       （数字）能接受的最小交易费
 }
-{% endhighlight %}
+```
 
 ## 用法示例
 
@@ -31,7 +31,7 @@ getmempoolinfo # 获取交易内存池激活状态的细节
 
 获取当前交易内存池信息。
 
-{% highlight shell %}
+```shell
 $ bitcoin-cli getmempoolinfo
 {
   "size": 2,
@@ -40,25 +40,25 @@ $ bitcoin-cli getmempoolinfo
   "maxmempool": 300000000,
   "mempoolminfee": 0.00000000
 }
-{% endhighlight %}
+```
 
 ### cURL
 
-{% highlight shell %}
+```shell
 $ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "getmempoolinfo", "params": [] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
 {"result":{"size":2,"bytes":382,"usage":1792,"maxmempool":300000000,"mempoolminfee":0.00000000},"error":null,"id":"curltest"}
-{% endhighlight %}
+```
 
 ## 源码剖析
 getmempoolinfo 对应的函数在“rpcserver.h”文件中被引用。
 
-{% highlight C++ %}
+```cpp
 extern UniValue getmempoolinfo(const UniValue& params, bool fHelp); // 获取交易内存池信息
-{% endhighlight %}
+```
 
 实现在“rpcblockchain.cpp”文件中。
 
-{% highlight C++ %}
+```cpp
 UniValue getmempoolinfo(const UniValue& params, bool fHelp)
 {
     if (fHelp || params.size() != 0) // 没有参数
@@ -80,7 +80,7 @@ UniValue getmempoolinfo(const UniValue& params, bool fHelp)
 
     return mempoolInfoToJSON(); // 把交易内存池信息打包为 JSON 格式并返回
 }
-{% endhighlight %}
+```
 
 基本流程：<br>
 1.处理命令帮助和参数个数。<br>
@@ -88,7 +88,7 @@ UniValue getmempoolinfo(const UniValue& params, bool fHelp)
 
 第二步，调用 mempoolInfoToJSON() 函数打包交易池信息至 JSON 格式的目标对象，该函数实现在“rpcblockchain.cpp”文件中。
 
-{% highlight C++ %}
+```cpp
 UniValue mempoolInfoToJSON()
 {
     UniValue ret(UniValue::VOBJ); // 构造一个目标对象
@@ -101,7 +101,7 @@ UniValue mempoolInfoToJSON()
 
     return ret;
 }
-{% endhighlight %}
+```
 
 ## 参照
 

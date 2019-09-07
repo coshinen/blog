@@ -28,7 +28,7 @@ tags: C/C++ 设计模式
 
 ## 基础实现
 
-{% highlight C++ %}
+```cpp
 class Singleton
 {
 public:
@@ -43,11 +43,11 @@ private:
 
     static Singleton * _pInstance;
 };
-{% endhighlight %}
+```
 
 ## 比特币中单例类的实现
 
-{% highlight C++ %}
+```cpp
 class Singleton
 {
 public:
@@ -68,7 +68,7 @@ private:
     static Singleton * _pInstance;
     static boost::once_flag _init_flag;
 };
-{% endhighlight %}
+```
 
 参考 bitcoin v0.12.1 源码中的类 [LockedPageManager](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/support/pagelocker.h){:target="_blank"} 的实现。
 

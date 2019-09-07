@@ -10,9 +10,9 @@ excerpt: $ bitcoin-cli clearbanned
 ---
 ## 提示说明
 
-{% highlight shell %}
+```shell
 clearbanned # 清除所有禁止的 IP
-{% endhighlight %}
+```
 
 结果：无返回值。
 
@@ -22,7 +22,7 @@ clearbanned # 清除所有禁止的 IP
 
 使用 RPC 命令 [listbanned](/blog/2018/07/bitcoin-rpc-command-listbanned.html) 查看黑名单。
 
-{% highlight shell %}
+```shell
 $ bitcoin-cli listbanned
 [
   {
@@ -36,25 +36,25 @@ $ bitcoin-cli clearbanned
 $ bitcoin-cli listbanned
 [
 ]
-{% endhighlight %}
+```
 
 ### cURL
 
-{% highlight shell %}
+```shell
 $ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "clearbanned", "params": [] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
 {"result":null,"error":null,"id":"curltest"}
-{% endhighlight %}
+```
 
 ## 源码剖析
 listbanned 对应的函数在“rpcserver.h”文件中被引用。
 
-{% highlight C++ %}
+```cpp
 extern UniValue clearbanned(const UniValue& params, bool fHelp); // 清空黑名单
-{% endhighlight %}
+```
 
 实现在“rpcnet.cpp”文件中。
 
-{% highlight C++ %}
+```cpp
 UniValue clearbanned(const UniValue& params, bool fHelp)
 {
     if (fHelp || params.size() != 0) // 没有参数
@@ -72,7 +72,7 @@ UniValue clearbanned(const UniValue& params, bool fHelp)
 
     return NullUniValue;
 }
-{% endhighlight %}
+```
 
 基本流程：<br>
 1.处理命令帮助和参数个数。<br>
@@ -82,7 +82,7 @@ UniValue clearbanned(const UniValue& params, bool fHelp)
 
 函数 CNode::ClearBanned() 声明在“net.h”文件的 CNode 类中。
 
-{% highlight C++ %}
+```cpp
 /** Information about a peer */
 class CNode // 关于同辈的信息
 {
@@ -98,11 +98,11 @@ protected:
     static void ClearBanned(); // needed for unit testing
     ...
 };
-{% endhighlight %}
+```
 
 实现在“net.cpp”文件中。
 
-{% highlight C++ %}
+```cpp
 banmap_t CNode::setBanned; // 设置屏蔽地址列表
 CCriticalSection CNode::cs_setBanned;
 bool CNode::setBannedIsDirty; // 标志禁止列表已被清空过
@@ -113,17 +113,17 @@ void CNode::ClearBanned()
     setBanned.clear(); // 清空列表
     setBannedIsDirty = true; // 标志置为 true
 }
-{% endhighlight %}
+```
 
 函数 DumpBanlist() 声明在“net.h”文件中。
 
-{% highlight C++ %}
+```cpp
 void DumpBanlist();
-{% endhighlight %}
+```
 
 实现在“net.cpp”文件中。
 
-{% highlight C++ %}
+```cpp
 void DumpBanlist()
 {
     int64_t nStart = GetTimeMillis();
@@ -138,11 +138,11 @@ void DumpBanlist()
     LogPrint("net", "Flushed %d banned node ips/subnets to banlist.dat  %dms\n",
              banmap.size(), GetTimeMillis() - nStart); // 记录大小及用时
 }
-{% endhighlight %}
+```
 
 函数 CNode::SweepBanned() 声明在“net.h”文件的 CNode 类中。
 
-{% highlight C++ %}
+```cpp
 /** Information about a peer */
 class CNode // 关于同辈的信息
 {
@@ -151,11 +151,11 @@ class CNode // 关于同辈的信息
     static void SweepBanned(); // 清除无用的条目（若禁止时间已过期）
     ...
 };
-{% endhighlight %}
+```
 
 实现在“net.cpp”文件中，用于清除黑名单中过期的条目。
 
-{% highlight C++ %}
+```cpp
 void CNode::SweepBanned()
 {
     int64_t now = GetTime(); // 获取当前时间
@@ -174,11 +174,11 @@ void CNode::SweepBanned()
             ++it;
     }
 }
-{% endhighlight %}
+```
 
 类 CBanDB 定义在“net.h”文件中。
 
-{% highlight C++ %}
+```cpp
 /** Access to the banlist database (banlist.dat) */
 class CBanDB // 访问禁止列表数据库（banlist.dat）
 {
@@ -189,11 +189,11 @@ public:
     bool Write(const banmap_t& banSet);
     bool Read(banmap_t& banSet);
 };
-{% endhighlight %}
+```
 
 数据库对象 bandb 生成时，其无参构造函数自动初始化数据库文件名。
 
-{% highlight C++ %}
+```cpp
 //
 // CBanDB
 //
@@ -202,7 +202,7 @@ CBanDB::CBanDB()
 {
     pathBanlist = GetDataDir() / "banlist.dat";
 }
-{% endhighlight %}
+```
 
 可以看到被禁止的 IP 列表的数据库文件名为“banlist.dat”，就存放在数据目录“~/.bitcoin”下。
 

@@ -10,9 +10,9 @@ excerpt: $ bitcoin-cli addnode "node" "add|remove|onetry"
 ---
 ## 提示说明
 
-{% highlight shell %}
+```shell
 addnode "node" "add|remove|onetry" # 尝试从 addnode 列表中添加或移除一个节点，或尝试连接某节点一次
-{% endhighlight %}
+```
 
 参数：<br>
 1.node（字符串，必备）节点（见 [getpeerinfo](/blog/2018/07/bitcoin-rpc-command-getpeerinfo.html) 获取的节点）。<br>
@@ -26,50 +26,50 @@ addnode "node" "add|remove|onetry" # 尝试从 addnode 列表中添加或移除�
 
 用法一：添加节点，由于无法查看 addnode 节点列表，添加 2 次进行验证。
 
-{% highlight shell %}
+```shell
 $ bitcoin-cli addnode "192.168.0.2:8333" "add"
 $ bitcoin-cli addnode "192.168.0.2:8333" "add"
 error code: -23
 error message:
 Error: Node already added
-{% endhighlight %}
+```
 
 用法二：移除节点，由于无法查看 addnode 节点列表，先添加 1 次，再移除 2 次进行验证。
 
-{% highlight shell %}
+```shell
 $ bitcoin-cli addnode "192.168.0.2:8333" "add"
 $ bitcoin-cli addnode "192.168.0.2:8333" "remove"
 $ bitcoin-cli addnode "192.168.0.2:8333" "remove"
 error code: -24
 error message:
 Error: Node has not been added.
-{% endhighlight %}
+```
 
 用法三：尝试连接节点一次，使用 getpeerinfo、getconnectioncount 查看是否成功建立连接。
 
-{% highlight shell %}
+```shell
 $ bitcoin-cli addnode "192.168.0.2:8333" "onetry"
-{% endhighlight %}
+```
 
 **注：端口号可以省略，使用默认端口。**
 
 ### cURL
 
-{% highlight shell %}
+```shell
 $ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "addnode", "params": ["192.168.0.6:8333", "onetry"] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
 {"result":null,"error":null,"id":"curltest"}
-{% endhighlight %}
+```
 
 ## 源码剖析
 addnode 对应的函数在“rpcserver.h”文件中被引用。
 
-{% highlight C++ %}
+```cpp
 extern UniValue addnode(const UniValue& params, bool fHelp); // 添加节点
-{% endhighlight %}
+```
 
 实现在“rpcnet.cpp”文件中。
 
-{% highlight C++ %}
+```cpp
 UniValue addnode(const UniValue& params, bool fHelp)
 {
     string strCommand;
@@ -119,7 +119,7 @@ UniValue addnode(const UniValue& params, bool fHelp)
 
     return NullUniValue; // 无返回值
 }
-{% endhighlight %}
+```
 
 基本流程：<br>
 1.处理命令帮助和参数个数。<br>
@@ -130,25 +130,25 @@ UniValue addnode(const UniValue& params, bool fHelp)
 
 添加节点的列表 vAddedNodes 对象在“net.h”文件中被引用。
 
-{% highlight C++ %}
+```cpp
 extern std::vector<std::string> vAddedNodes; // 添加的节点列表
-{% endhighlight %}
+```
 
 定义在“net.cpp”文件中。
 
-{% highlight C++ %}
+```cpp
 vector<std::string> vAddedNodes; // 通过 "addnode" 命令添加的节点列表
-{% endhighlight %}
+```
 
 第二步，尝试连接一次，调用 OpenNetworkConnection(addr, NULL, strNode.c_str()) 函数，声明在“net.h”文件中。
 
-{% highlight C++ %}
+```cpp
 bool OpenNetworkConnection(const CAddress& addrConnect, CSemaphoreGrant *grantOutbound = NULL, const char *strDest = NULL, bool fOneShot = false); // 打开网络连接
-{% endhighlight %}
+```
 
 实现在“net.cpp”文件中。
 
-{% highlight C++ %}
+```cpp
 // if successful, this moves the passed grant to the constructed node // 如果连接成功，这将通过授权移动到构造的节点
 bool OpenNetworkConnection(const CAddress& addrConnect, CSemaphoreGrant *grantOutbound, const char *pszDest, bool fOneShot)
 {
@@ -177,11 +177,11 @@ bool OpenNetworkConnection(const CAddress& addrConnect, CSemaphoreGrant *grantOu
 
     return true;
 }
-{% endhighlight %}
+```
 
 调用 ConnectNode(addrConnect, pszDest) 函数连接到指定节点，该函数实现在“net.cpp”文件中。
 
-{% highlight C++ %}
+```cpp
 CNode* ConnectNode(CAddress addrConnect, const char *pszDest)
 {
     if (pszDest == NULL) {
@@ -236,17 +236,17 @@ CNode* ConnectNode(CAddress addrConnect, const char *pszDest)
 
     return NULL;
 }
-{% endhighlight %}
+```
 
 调用 ConnectSocket(addrConnect, hSocket, nConnectTimeout, &proxyConnectionFailed) 函数连接到 socket，声明在“netbase.h”文件中。
 
-{% highlight C++ %}
+```cpp
 bool ConnectSocket(const CService &addr, SOCKET& hSocketRet, int nTimeout, bool *outProxyConnectionFailed = 0); // 连接套接字
-{% endhighlight %}
+```
 
 实现在“netbase.cpp”文件中。
 
-{% highlight C++ %}
+```cpp
 bool ConnectSocket(const CService &addrDest, SOCKET& hSocketRet, int nTimeout, bool *outProxyConnectionFailed)
 {
     proxyType proxy;
@@ -258,11 +258,11 @@ bool ConnectSocket(const CService &addrDest, SOCKET& hSocketRet, int nTimeout, b
     else // no proxy needed (none set for target network)
         return ConnectSocketDirectly(addrDest, hSocketRet, nTimeout); // 直接连接到套接字
 }
-{% endhighlight %}
+```
 
 又调用 ConnectSocketDirectly(addrDest, hSocketRet, nTimeout) 函数直接连接到指定节点，该函数实现在“netbase.cpp”文件中。
 
-{% highlight C++ %}
+```cpp
 bool static ConnectSocketDirectly(const CService &addrConnect, SOCKET& hSocketRet, int nTimeout)
 {
     hSocketRet = INVALID_SOCKET;
@@ -351,7 +351,7 @@ bool static ConnectSocketDirectly(const CService &addrConnect, SOCKET& hSocketRe
     hSocketRet = hSocket;
     return true;
 }
-{% endhighlight %}
+```
 
 这里可以看到，经过层层封装最终调用 socket 和 connect 系统调用连接到指定 IP 和端口。
 

@@ -10,9 +10,9 @@ excerpt: $ bitcoin-cli help ( "command" )
 ---
 ## 提示说明
 
-{% highlight shell %}
+```shell
 help ( "command" ) # 列出所有（含 RPC）命令或指定命令的用法（帮助信息）
-{% endhighlight %}
+```
 
 参数：<br>
 1.command（字符串，可选）想要获取帮助信息的命令。
@@ -25,7 +25,7 @@ help ( "command" ) # 列出所有（含 RPC）命令或指定命令的用法（�
 
 用法一：获取所有比特币核心 RPC 命令名。
 
-{% highlight shell %}
+```shell
 $ bitcoin-cli help
 == Blockchain ==
 getbestblockhash
@@ -133,11 +133,11 @@ signmessage "bitcoinaddress" "message"
 walletlock
 walletpassphrase "passphrase" timeout
 walletpassphrasechange "oldpassphrase" "newpassphrase"
-{% endhighlight %}
+```
 
 用法二：获取指定的 RPC 命令的帮助信息（用法）。
 
-{% highlight shell %}
+```shell
 $ bitcoin-cli help getinfo
 getinfo
 Returns an object containing various state info.
@@ -165,19 +165,19 @@ Result:
 Examples:
 > bitcoin-cli getinfo 
 > curl --user myusername --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "getinfo", "params": [] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
-{% endhighlight %}
+```
 
 ### cURL
 
-{% highlight shell %}
+```shell
 $ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "help", "params": [] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
 {"result":"== Blockchain ==\ngetbestblockhash\ngetblock \"hash\" ( verbose )\ngetblockchaininfo\ngetblockcount\ngetblockhash index\ngetblockheader \"hash\" ( verbose )\ngetchaintips\ngetdifficulty\ngetmempoolinfo\ngetrawmempool ( verbose )\ngettxout \"txid\" n ( includemempool )\ngettxoutproof [\"txid\",...] ( blockhash )\ngettxoutsetinfo\nverifychain ( checklevel numblocks )\nverifytxoutproof \"proof\"\n\n== Control ==\ngetinfo\nhelp ( \"command\" )\nstop\n\n== Generating ==\ngenerate numblocks\ngetgenerate\nsetgenerate generate ( genproclimit )\n\n== Mining ==\ngetblocktemplate ( \"jsonrequestobject\" )\ngetmininginfo\ngetnetworkhashps ( blocks height )\nprioritisetransaction <txid> <priority delta> <fee delta>\nsubmitblock \"hexdata\" ( \"jsonparametersobject\" )\n\n== Network ==\naddnode \"node\" \"add|remove|onetry\"\nclearbanned\ndisconnectnode \"node\" \ngetaddednodeinfo dns ( \"node\" )\ngetconnectioncount\ngetnettotals\ngetnetworkinfo\ngetpeerinfo\nlistbanned\nping\nsetban \"ip(/netmask)\" \"add|remove\" (bantime) (absolute)\n\n== Rawtransactions ==\ncreaterawtransaction [{\"txid\":\"id\",\"vout\":n},...] {\"address\":amount,\"data\":\"hex\",...} ( locktime )\ndecoderawtransaction \"hexstring\"\ndecodescript \"hex\"\nfundrawtransaction \"hexstring\" includeWatching\ngetrawtransaction \"txid\" ( verbose )\nsendrawtransaction \"hexstring\" ( allowhighfees )\nsignrawtransaction \"hexstring\" ( [{\"txid\":\"id\",\"vout\":n,\"scriptPubKey\":\"hex\",\"redeemScript\":\"hex\"},...] [\"privatekey1\",...] sighashtype )\n\n== Util ==\ncreatemultisig nrequired [\"key\",...]\nestimatefee nblocks\nestimatepriority nblocks\nestimatesmartfee nblocks\nestimatesmartpriority nblocks\nvalidateaddress \"bitcoinaddress\"\nverifymessage \"bitcoinaddress\" \"signature\" \"message\"\n\n== Wallet ==\nabandontransaction \"txid\"\naddmultisigaddress nrequired [\"key\",...] ( \"account\" )\nbackupwallet \"destination\"\ndumpprivkey \"bitcoinaddress\"\ndumpwallet \"filename\"\nencryptwallet \"passphrase\"\ngetaccount \"bitcoinaddress\"\ngetaccountaddress \"account\"\ngetaddressesbyaccount \"account\"\ngetbalance ( \"account\" minconf includeWatchonly )\ngetnewaddress ( \"account\" )\ngetrawchangeaddress\ngetreceivedbyaccount \"account\" ( minconf )\ngetreceivedbyaddress \"bitcoinaddress\" ( minconf )\ngettransaction \"txid\" ( includeWatchonly )\ngetunconfirmedbalance\ngetwalletinfo\nimportaddress \"address\" ( \"label\" rescan p2sh )\nimportprivkey \"bitcoinprivkey\" ( \"label\" rescan )\nimportpubkey \"pubkey\" ( \"label\" rescan )\nimportwallet \"filename\"\nkeypoolrefill ( newsize )\nlistaccounts ( minconf includeWatchonly)\nlistaddressgroupings\nlistlockunspent\nlistreceivedbyaccount ( minconf includeempty includeWatchonly)\nlistreceivedbyaddress ( minconf includeempty includeWatchonly)\nlistsinceblock ( \"blockhash\" target-confirmations includeWatchonly)\nlisttransactions ( \"account\" count from includeWatchonly)\nlistunspent ( minconf maxconf  [\"address\",...] )\nlockunspent unlock [{\"txid\":\"txid\",\"vout\":n},...]\nmove \"fromaccount\" \"toaccount\" amount ( minconf \"comment\" )\nsendfrom \"fromaccount\" \"tobitcoinaddress\" amount ( minconf \"comment\" \"comment-to\" )\nsendmany \"fromaccount\" {\"address\":amount,...} ( minconf \"comment\" [\"address\",...] )\nsendtoaddress \"bitcoinaddress\" amount ( \"comment\" \"comment-to\" subtractfeefromamount )\nsetaccount \"bitcoinaddress\" \"account\"\nsettxfee amount\nsignmessage \"bitcoinaddress\" \"message\"","error":null,"id":"curltest"}
-{% endhighlight %}
+```
 
 ## 源码剖析
 help 对应的函数实现在“rpcmisc.cpp”文件中。
 
-{% highlight C++ %}
+```cpp
 UniValue help(const UniValue& params, bool fHelp)
 {
     if (fHelp || params.size() > 1) // 1.参数最多为 1 个（RPC 命令）
@@ -196,7 +196,7 @@ UniValue help(const UniValue& params, bool fHelp)
 
     return tableRPC.help(strCommand); // 3.传入命令（可能为空）并返回
 }
-{% endhighlight %}
+```
 
 基本流程：<br>
 1.处理命令帮助和参数个数。<br>
@@ -206,13 +206,13 @@ UniValue help(const UniValue& params, bool fHelp)
 这里我们可以看到传参的方式，可以指定某个 RPC 命令作为 help 参数，或不带参数。<br>
 调用 tableRPC.help(strCommand) 函数来完成 help 命令的主要功能。对象 tableRPC 定义在“rpcserver.cpp”文件最后面。
 
-{% highlight C++ %}
+```cpp
 const CRPCTable tableRPC; // 全局常量对象
-{% endhighlight %}
+```
 
 类 CRPCTable 定义在“rpcserver.h”文件中，我们还能看到这里引用了对象 tableRPC。
 
-{% highlight C++ %}
+```cpp
 /**
  * Bitcoin RPC command dispatcher.
  */ // 比特币 RPC 命令调度器
@@ -236,12 +236,12 @@ public:
 };
 
 extern const CRPCTable tableRPC; // 在 rpcserver.cpp 中创建的一个全局的常量对象
-{% endhighlight %}
+```
 
 全局对象 tableRPC 初始化时调用默认无参构造进行 RPC 列表的注册。<br>
 RPC 调用列表和类 CRPCTable 无参构造的实现均在“rpcserver.cpp”文件中。
 
-{% highlight C++ %}
+```cpp
 /**
  * Call Table
  */ // 调用列表
@@ -265,11 +265,11 @@ CRPCTable::CRPCTable()
         mapCommands[pcmd->name] = pcmd; // 把该命令注册到 RPC 命令列表中
     }
 }
-{% endhighlight %}
+```
 
 进入 tableRPC.help(strCommand) 函数，它的实现在“rpcserver.cpp”文件中。
 
-{% highlight C++ %}
+```cpp
 **
  * Note: This interface may still be subject to change.
  */
@@ -328,7 +328,7 @@ std::string CRPCTable::help(const std::string& strCommand) const
     strRet = strRet.substr(0,strRet.size()-1); // 去除结尾的 '\n'
     return strRet; // 返回结果
 }
-{% endhighlight %}
+```
 
 这里我们可以看出 help 命令的实现还是很巧妙的，把有参和无参两种方式合二为一。
 最主要的是把无参结果作为有参结果的子集，该实现在以后版本中可能会改变。

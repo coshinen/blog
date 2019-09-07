@@ -10,12 +10,12 @@ excerpt: $ bitcoin-cli getinfo
 ---
 ## 提示说明
 
-{% highlight shell %}
+```shell
 getinfo # 获取比特币核心信息
-{% endhighlight %}
+```
 
 结果：返回一个包含变量状态信息的对象。<br>
-{% highlight shell %}
+```shell
 {
   "version": xxxxx,           （数字）服务器版本
   "protocolversion": xxxxx,   （数字）协议版本
@@ -34,7 +34,7 @@ getinfo # 获取比特币核心信息
   "relayfee": x.xxxx,         （数字）对于不免费交易的最小中继费，以 BTC/kB 为单位
   "errors": "..."           （字符串）任何错误信息
 }
-{% endhighlight %}
+```
 
 ## 用法示例
 
@@ -42,7 +42,7 @@ getinfo # 获取比特币核心信息
 
 获取当前比特币核心服务器基本信息。
 
-{% highlight shell %}
+```shell
 $ bitcoin-cli getinfo
 {
   "version": 120100,
@@ -61,25 +61,25 @@ $ bitcoin-cli getinfo
   "relayfee": 0.00001000,
   "errors": ""
 }
-{% endhighlight %}
+```
 
 ### cURL
 
-{% highlight shell %}
+```shell
 $ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "getinfo", "params": [] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
 {"result":{"version":120100,"protocolversion":70012,"walletversion":60000,"balance":97.99992320,"blocks":25759,"timeoffset":0,"connections":1,"proxy":"","difficulty":0.001532956637923291,"testnet":false,"keypoololdest":1529572814,"keypoolsize":101,"paytxfee":0.00000000,"relayfee":0.00001000,"errors":""},"error":null,"id":"curltest"}
-{% endhighlight %}
+```
 
 ## 源码剖析
 getinfo 对应的函数在“rpcserver.h”文件中被引用。
 
-{% highlight C++ %}
+```cpp
 extern UniValue getinfo(const UniValue& params, bool fHelp); // 获取比特币核心信息
-{% endhighlight %}
+```
 
 实现在“rpcmisc.cpp”文件中。
 
-{% highlight C++ %}
+```cpp
 /**
  * @note Do not add or change anything in the information returned by this
  * method. getinfo exists for backwards-compatibility only. It combines
@@ -160,7 +160,7 @@ UniValue getinfo(const UniValue& params, bool fHelp)
     obj.push_back(Pair("errors",        GetWarnings("statusbar"))); // 错误信息
     return obj;
 }
-{% endhighlight %}
+```
 
 基本流程：
 1. 处理命令帮助和参数个数。

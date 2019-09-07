@@ -10,9 +10,9 @@ excerpt: $ bitcoin-cli walletpassphrasechange "oldpassphrase" "newpassphrase"
 ---
 ## 提示说明
 
-{% highlight shell %}
+```shell
 walletpassphrasechange "oldpassphrase" "newpassphrase" # 更改钱包密码 oldpassphrase 为 newpassphrase
-{% endhighlight %}
+```
 
 参数：
 1. oldpassphrase（字符串）当前密码。
@@ -26,27 +26,27 @@ walletpassphrasechange "oldpassphrase" "newpassphrase" # 更改钱包密码 oldp
 
 修改钱包密码 mypasswd 为 newpasswd。
 
-{% highlight shell %}
+```shell
 $ bitcoin-cli walletpassphrase mypasswd newpasswd
-{% endhighlight %}
+```
 
 ### cURL
 
-{% highlight shell %}
+```shell
 $ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "walletpassphrasechange", "params": ["mypasswd", "newpasswd"] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
 {"result":null,"error":null,"id":"curltest"}
-{% endhighlight %}
+```
 
 ## 源码剖析
 walletpassphrase 对应的函数在“rpcserver.h”文件中被引用。
 
-{% highlight C++ %}
+```cpp
 extern UniValue walletpassphrasechange(const UniValue& params, bool fHelp); // 修改钱包密码
-{% endhighlight %}
+```
 
 实现在“rpcwallet.cpp”文件中。
 
-{% highlight C++ %}
+```cpp
 UniValue walletpassphrasechange(const UniValue& params, bool fHelp)
 {
     if (!EnsureWalletIsAvailable(fHelp)) // 确保钱包当前可用
@@ -91,7 +91,7 @@ UniValue walletpassphrasechange(const UniValue& params, bool fHelp)
 
     return NullUniValue; // 返回空值
 }
-{% endhighlight %}
+```
 
 基本流程：<br>
 1.确保当前钱包可用（已初始化完成）。<br>
@@ -105,7 +105,7 @@ UniValue walletpassphrasechange(const UniValue& params, bool fHelp)
 
 第七步，调用 pwalletMain->ChangeWalletPassphrase(strOldWalletPass, strNewWalletPass) 函数改变钱包密码，先解密旧密码，后加密新密码，定义在“wallet.cpp”文件中。
 
-{% highlight C++ %}
+```cpp
 bool CWallet::ChangeWalletPassphrase(const SecureString& strOldWalletPassphrase, const SecureString& strNewWalletPassphrase)
 {
     bool fWasLocked = IsLocked(); // 获取当前钱包加密状态作为以前加密状态
@@ -151,7 +151,7 @@ bool CWallet::ChangeWalletPassphrase(const SecureString& strOldWalletPassphrase,
 
     return false;
 }
-{% endhighlight %}
+```
 
 ## 参照
 

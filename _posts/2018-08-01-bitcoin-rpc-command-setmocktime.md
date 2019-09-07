@@ -10,9 +10,9 @@ hidden: true
 ---
 ## 提示说明
 
-{% highlight shell %}
+```shell
 setmocktime timestamp # 设置本地时间为给定时间戳（仅限回归测试模式）
-{% endhighlight %}
+```
 
 参数：
 1. timestamp（整型，必备）UNIX 从格林尼治时间 1970-01-01 00:00:00 开始以秒为单位的时间戳，通过 0 返回到使用系统时间。
@@ -25,29 +25,29 @@ setmocktime timestamp # 设置本地时间为给定时间戳（仅限回归测�
 
 设置当前系统时间为核心服务器的 mock 时间。
 
-{% highlight shell %}
+```shell
 $ date +%s
 1530005207
 $ bitcoin-cli -regtest setmocktime 1530005207
-{% endhighlight %}
+```
 
 ### cURL
 
-{% highlight shell %}
+```shell
 $ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "setmocktime", "params": [1530005207] }' -H 'content-type: text/plain;' http://127.0.0.1:18332/
 {"result":null,"error":null,"id":"curltest"}
-{% endhighlight %}
+```
 
 ## 源码剖析
 setmocktime 对应的函数在“rpcserver.h”文件中被引用。
 
-{% highlight C++ %}
+```cpp
 extern UniValue setmocktime(const UniValue& params, bool fHelp); // 设置 mocktime
-{% endhighlight %}
+```
 
 实现在“rpcmisc.cpp”文件中。
 
-{% highlight C++ %}
+```cpp
 UniValue setmocktime(const UniValue& params, bool fHelp)
 {
     if (fHelp || params.size() != 1) // 参数必须为 1 个
@@ -78,7 +78,7 @@ UniValue setmocktime(const UniValue& params, bool fHelp)
 
     return NullUniValue; // 返回空值
 }
-{% endhighlight %}
+```
 
 基本流程：<br>
 1.处理命令帮助和参数个数。<br>
@@ -90,20 +90,20 @@ UniValue setmocktime(const UniValue& params, bool fHelp)
 
 第四步，调用 SetMockTime(params[0].get_int64()) 设置 MockTime，该函数声明在“utiltime.h”文件中。
 
-{% highlight C++ %}
+```cpp
 void SetMockTime(int64_t nMockTimeIn); // 设置 Mock 时间
-{% endhighlight %}
+```
 
 实现在“utiltime.cpp”文件中。
 
-{% highlight C++ %}
+```cpp
 static int64_t nMockTime = 0;  //! For unit testing // 用于单元测试
 ...
 void SetMockTime(int64_t nMockTimeIn)
 {
     nMockTime = nMockTimeIn; // 设置指定的 mocktime
 }
-{% endhighlight %}
+```
 
 ## 参照
 

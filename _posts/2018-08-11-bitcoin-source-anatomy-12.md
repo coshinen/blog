@@ -15,7 +15,7 @@ tags: 区块链 比特币 源码剖析
 <p id="Step06-ref"></p>
 3.11.6.第六步，网络初始化。这部分代码实现在“init.cpp”文件的 AppInit2(...) 函数中。
 
-{% highlight C++ %}
+```cpp
 bool AppInit2(boost::thread_group& threadGroup, CScheduler& scheduler) // 3.11.程序初始化，共 12 步
 {
     ...
@@ -150,7 +150,7 @@ bool AppInit2(boost::thread_group& threadGroup, CScheduler& scheduler) // 3.11.�
     }
     ...
 }
-{% endhighlight %}
+```
 
 1.注册节点信号函数。<br>
 2.处理用户代理字符串，防止出现不安全字符。<br>
@@ -164,28 +164,28 @@ bool AppInit2(boost::thread_group& threadGroup, CScheduler& scheduler) // 3.11.�
 1.调用 RegisterNodeSignals(GetNodeSignals()) 注册节点信号，
 首先调用 GetNodeSignals() 获取节点信号全局对象 g_signals 的引用，该函数声明在“net.h”文件中。
 
-{% highlight C++ %}
+```cpp
 CNodeSignals& GetNodeSignals(); // 获取节点信号全局对象的引用
-{% endhighlight %}
+```
 
 实现在“net.cpp”文件中，没有入参。
 
-{% highlight C++ %}
+```cpp
 // Signals for message handling // 处理消息的全局静态信号对象
 static CNodeSignals g_signals;
 CNodeSignals& GetNodeSignals() { return g_signals; } // 获取节点信号全局对象的引用
-{% endhighlight %}
+```
 
 函数 RegisterNodeSignals(...) 声明在“main.h”文件中。
 
-{% highlight C++ %}
+```cpp
 /** Register with a network node to receive its signals */ // 注册网络节点来接收其信号
 void RegisterNodeSignals(CNodeSignals& nodeSignals);
-{% endhighlight %}
+```
 
 实现在“main.cpp”文件中，入参为：节点信号对象。
 
-{% highlight C++ %}
+```cpp
 void RegisterNodeSignals(CNodeSignals& nodeSignals)
 {
     nodeSignals.GetHeight.connect(&GetHeight); // 获取激活的链高度
@@ -194,19 +194,19 @@ void RegisterNodeSignals(CNodeSignals& nodeSignals)
     nodeSignals.InitializeNode.connect(&InitializeNode); // 初始化节点
     nodeSignals.FinalizeNode.connect(&FinalizeNode); // 终止节点
 }
-{% endhighlight %}
+```
 
 这里连接（注册）的 5 个信号函数先不展开，等调用时在分析。
 
 3.调用 SetLimited(net) 禁用未指定的网络类型，该函数声明在“net.h”文件中。
 
-{% highlight C++ %}
+```cpp
 void SetLimited(enum Network net, bool fLimited = true); // 设置网络类型限制
-{% endhighlight %}
+```
 
 实现在“net.cpp”文件中，入参为：枚举的网络类型。
 
-{% highlight C++ %}
+```cpp
 /** Make a particular network entirely off-limits (no automatic connects to it) */ // 使特定网络完全禁止（不自动连接到该网络）
 void SetLimited(enum Network net, bool fLimited) // fLimited 默认为 true
 {
@@ -215,11 +215,11 @@ void SetLimited(enum Network net, bool fLimited) // fLimited 默认为 true
     LOCK(cs_mapLocalHost); // 上锁
     vfLimited[net] = fLimited; // 把未指定的网络类型设为 true，表示该网络类型被限制
 }
-{% endhighlight %}
+```
 
 网络类型共 4 种，分别为 NET_UNROUTABLE，NET_IPV4，NET_IPV6 和 NET_TOR，其枚举定义在“netbase.h”文件中。
 
-{% highlight C++ %}
+```cpp
 enum Network // 网络类型枚举
 {
     NET_UNROUTABLE = 0,
@@ -229,11 +229,11 @@ enum Network // 网络类型枚举
 
     NET_MAX, // 4
 };
-{% endhighlight %}
+```
 
 4.调用 CNode::AddWhitelistedRange(subnet) 添加子网到白名单，该函数声明在“net.h”文件的 CNode 类中。
 
-{% highlight C++ %}
+```cpp
 /** Information about a peer */ // 关于对端节点的信息
 class CNode // 对端节点信息类
 {
@@ -245,32 +245,32 @@ class CNode // 对端节点信息类
     static void AddWhitelistedRange(const CSubNet &subnet); // 添加子网到白名单
     ...
 };
-{% endhighlight %}
+```
 
 实现在“net.cpp”文件中，入参为：子网对象。
 
-{% highlight C++ %}
+```cpp
 std::vector<CSubNet> CNode::vWhitelistedRange; // 白名单列表
 ...
 void CNode::AddWhitelistedRange(const CSubNet &subnet) {
     LOCK(cs_vWhitelistedRange);
     vWhitelistedRange.push_back(subnet); // 添加到白名单列表中
 }
-{% endhighlight %}
+```
 
 5.调用 SetProxy(NET_IPV4, addrProxy) 设置 IPv4，IPv6 和 TOR 网络代理，
 调用 SetNameProxy(addrProxy) 设置名字代理，
 它们均声明在“netbase.h”文件中。
 
-{% highlight C++ %}
+```cpp
 bool SetProxy(enum Network net, const proxyType &addrProxy); // 设置代理
 ...
 bool SetNameProxy(const proxyType &addrProxy); // 设置名字代理
-{% endhighlight %}
+```
 
 实现在“netbase.cpp”文件中，入参为：枚举的网络类型，代理对象。
 
-{% highlight C++ %}
+```cpp
 // Settings // 设置
 static proxyType proxyInfo[NET_MAX]; // 代理列表（数组）
 static proxyType nameProxy; // 名字代理
@@ -292,17 +292,17 @@ bool SetNameProxy(const proxyType &addrProxy) {
     nameProxy = addrProxy; // 设置名字代理
     return true; // 成功返回 true
 }
-{% endhighlight %}
+```
 
 然后调用 SetReachable(NET_TOR) 设置洋葱路由可达，该函数声明在“net.h”文件中。
 
-{% highlight C++ %}
+```cpp
 void SetReachable(enum Network net, bool fFlag = true); // 设置网络可达
-{% endhighlight %}
+```
 
 实现在“net.cpp”文件中，入参为：枚举的网络类型。
 
-{% highlight C++ %}
+```cpp
 CCriticalSection cs_mapLocalHost; // 本地主机映射锁
 ...
 static bool vfReachable[NET_MAX] = {}; // 网络可达列表
@@ -314,19 +314,19 @@ void SetReachable(enum Network net, bool fFlag)
     if (net == NET_IPV6 && fFlag) // 若指定的是 NET_IPV6
         vfReachable[NET_IPV4] = true; // 则 NET_IPV4 也设置为 true
 }
-{% endhighlight %}
+```
 
 6.调用 Lookup(strBind.c_str(), addrBind, GetListenPort(), false) 解析并获取首个连接节点（地址和端口），
 该函数声明在“netbase.h”文件中。
 
-{% highlight C++ %}
+```cpp
 bool Lookup(const char *pszName, CService& addr, int portDefault = 0, bool fAllowLookup = true); // 转调下面的重载函数
 bool Lookup(const char *pszName, std::vector<CService>& vAddr, int portDefault = 0, bool fAllowLookup = true, unsigned int nMaxSolutions = 0);
-{% endhighlight %}
+```
 
 实现在“netbase.cpp”文件中，入参为：指定待绑定的地址，待获取的链接节点对象，监听的端口号，false。
 
-{% highlight C++ %}
+```cpp
 bool Lookup(const char *pszName, std::vector<CService>& vAddr, int portDefault, bool fAllowLookup, unsigned int nMaxSolutions)
 {
     if (pszName[0] == 0) // IP 不能为空
@@ -354,12 +354,12 @@ bool Lookup(const char *pszName, CService& addr, int portDefault, bool fAllowLoo
     addr = vService[0]; // 取列表中的首个
     return true; // 成功返回 true
 }
-{% endhighlight %}
+```
 
 然后调用 Bind(addrBind, (BF_EXPLICIT | BF_REPORT_ERROR)) 绑定并监听上面获取的节点
 该函数实现在“init.cpp”文件中，入参为：链接节点对象，标志位。
 
-{% highlight C++ %}
+```cpp
 bool static Bind(const CService &addr, unsigned int flags) { // 绑定并获取状态
     if (!(flags & BF_EXPLICIT) && IsLimited(addr))
         return false;
@@ -371,17 +371,17 @@ bool static Bind(const CService &addr, unsigned int flags) { // 绑定并获取�
     }
     return true; // 成功返回 true
 }
-{% endhighlight %}
+```
 
 其中调用 BindListenPort(addr, strError, (flags & BF_WHITELIST) 绑定并监听套接字，该函数声明在“net.h”文件中。
 
-{% highlight C++ %}
+```cpp
 bool BindListenPort(const CService &bindAddr, std::string& strError, bool fWhitelisted = false); // 绑定并监听端口
-{% endhighlight %}
+```
 
 实现在“net.cpp”文件中，入参为：节点对象，待获取的错误信息，标志位。
 
-{% highlight C++ %}
+```cpp
 bool BindListenPort(const CService &addrBind, string& strError, bool fWhitelisted)
 {
     strError = ""; // 错误信息
@@ -479,12 +479,12 @@ bool BindListenPort(const CService &addrBind, string& strError, bool fWhiteliste
 
     return true; // 绑定，监听套接字成功返回 true
 }
-{% endhighlight %}
+```
 
 8.调用 CNode::SetMaxOutboundTarget(GetArg("-maxuploadtarget", DEFAULT_MAX_UPLOAD_TARGET)*1024*1024) 设置向外流量最大值，
 该函数声明在“net.h”文件的 CNode 类中。
 
-{% highlight C++ %}
+```cpp
 class CNode // 对端节点信息类
 {
     ...
@@ -492,11 +492,11 @@ class CNode // 对端节点信息类
     static void SetMaxOutboundTarget(uint64_t limit);
     ...
 };
-{% endhighlight %}
+```
 
 实现在“net.cpp”文件中，入参为：指定的最大值。
 
-{% highlight C++ %}
+```cpp
 uint64_t CNode::nTotalBytesSent = 0; // 发送总字节数最大值
 ...
 CCriticalSection CNode::cs_totalBytesSent; // 发送总字节数锁
@@ -510,7 +510,7 @@ void CNode::SetMaxOutboundTarget(uint64_t limit)
     if (limit > 0 && limit < recommendedMinimum) // 若最大值大于 0，则最大值不能低于最小值
         LogPrintf("Max outbound target is very small (%s bytes) and will be overshot. Recommended minimum is %s bytes.\n", nMaxOutboundLimit, recommendedMinimum);
 }
-{% endhighlight %}
+```
 
 未完待续...<br>
 请看下一篇[比特币源码剖析（十三）](/blog/2018/08/bitcoin-source-anatomy-13.html)。

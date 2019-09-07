@@ -10,23 +10,23 @@ excerpt: $ bitcoin-cli getrawmempool ( verbose )
 ---
 ## 提示说明
 
-{% highlight shell %}
+```shell
 getrawmempool ( verbose ) # 获取内存池中所有交易索引作为一个交易索引字符串的 json 数组
-{% endhighlight %}
+```
 
 参数：<br>
 1.verbose（布尔型，可选，默认为 false）true 返回 json 对象，false 返回交易索引的数组。
 
 结果：（verbose 为 false）<br>
-{% highlight shell %}
+```shell
 [                     （字符串 json 数组）
   "transactionid"     （字符串）交易索引
   ,...
 ]
-{% endhighlight %}
+```
 
 结果：（verbose 为 true）<br>
-{% highlight shell %}
+```shell
 {                           （json 对象）
   "transactionid" : {       （json 对象）
     "size" : n,             （数字）以字节为单位的交易大小
@@ -44,7 +44,7 @@ getrawmempool ( verbose ) # 获取内存池中所有交易索引作为一个交�
        ... ]
   }, ...
 }
-{% endhighlight %}
+```
 
 ## 用法示例
 
@@ -52,24 +52,24 @@ getrawmempool ( verbose ) # 获取内存池中所有交易索引作为一个交�
 
 用法一：获取当前交易内存池中所有交易索引。
 
-{% highlight shell %}
+```shell
 $ bitcoin-cli getrawmempool
 [
   "b797bafd7830774cec4d24d1e649cafb0aa7a67b9f1cc06954102a50b463fa0f", 
   "fb61a61c6cc7b37cd0afd2152a77fa894d82629971c77e11d00e9aed1cd03dfc"
 ]
-{% endhighlight %}
+```
 
 用法二：设置 verbose 为 false，获取当前交易内存池中所有交易索引。
 
-{% highlight shell %}
+```shell
 $ bitcoin-cli getrawmempool false
 ... # 结果同上
-{% endhighlight %}
+```
 
 用法三：设置 verbose 为 true，获取交易内存池中所有交易的详细信息。
 
-{% highlight shell %}
+```shell
 $ bitcoin-cli getrawmempool true
 {
   "b797bafd7830774cec4d24d1e649cafb0aa7a67b9f1cc06954102a50b463fa0f": {
@@ -101,25 +101,25 @@ $ bitcoin-cli getrawmempool true
     ]
   }
 }
-{% endhighlight %}
+```
 
 ### cURL
 
-{% highlight shell %}
+```shell
 $ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "getrawmempool", "params": [false] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
 {"result":{"b797bafd7830774cec4d24d1e649cafb0aa7a67b9f1cc06954102a50b463fa0f", "fb61a61c6cc7b37cd0afd2152a77fa894d82629971c77e11d00e9aed1cd03dfc"},"error":null,"id":"curltest"}
-{% endhighlight %}
+```
 
 ## 源码剖析
 getrawmempool 对应的函数在“rpcserver.h”文件中被引用。
 
-{% highlight C++ %}
+```cpp
 extern UniValue getrawmempool(const UniValue& params, bool fHelp); // 获取交易内存池元信息（交易索引）
-{% endhighlight %}
+```
 
 实现在“rpcblockchain.cpp”文件中。
 
-{% highlight C++ %}
+```cpp
 UniValue getrawmempool(const UniValue& params, bool fHelp)
 {
     if (fHelp || params.size() > 1) // 参数至多为 1 个
@@ -164,7 +164,7 @@ UniValue getrawmempool(const UniValue& params, bool fHelp)
 
     return mempoolToJSON(fVerbose); // 把内存池交易打包为 JSON 格式并返回
 }
-{% endhighlight %}
+```
 
 基本流程：<br>
 1.处理命令帮助和参数个数。<br>
@@ -174,7 +174,7 @@ UniValue getrawmempool(const UniValue& params, bool fHelp)
 
 第四步，调用  函数打包交易内存池内交易数据至 JSON 格式，该函数实现在“rpcblockchain.cpp”文件中。
 
-{% highlight C++ %}
+```cpp
 UniValue mempoolToJSON(bool fVerbose = false)
 {
     if (fVerbose)
@@ -226,23 +226,23 @@ UniValue mempoolToJSON(bool fVerbose = false)
         return a;
     }
 }
-{% endhighlight %}
+```
 
 交易内存池对象 mempool 定义在“main.cpp”文件中。
 
-{% highlight C++ %}
+```cpp
 /** Fees smaller than this (in satoshi) are considered zero fee (for relaying, mining and transaction creation) */ // 小于词费用（单位为 satoshi）被当作 0 费用（用于中继，挖矿和创建交易）
 CFeeRate minRelayTxFee = CFeeRate(DEFAULT_MIN_RELAY_TX_FEE); // 最小中继交易费
 
 CTxMemPool mempool(::minRelayTxFee); // 交易内存池全局对象，通过最小中继交易费创建
-{% endhighlight %}
+```
 
 DEFAULT_MIN_RELAY_TX_FEE 定义在“main.h”文件中，默认为 1000 satoshi。
 
-{% highlight C++ %}
+```cpp
 /** Default for -minrelaytxfee, minimum relay fee for transactions */
 static const unsigned int DEFAULT_MIN_RELAY_TX_FEE = 1000; // 默认最小中继交易费，默认 1000 satoshi
-{% endhighlight %}
+```
 
 ## 参照
 

@@ -10,9 +10,9 @@ excerpt: $ bitcoin-cli importpubkey "pubkey" ( "label" rescan )
 ---
 ## 提示说明
 
-{% highlight shell %}
+```shell
 importpubkey "pubkey" ( "label" rescan ) # 导入一个公钥（16 进制）用来监视
-{% endhighlight %}
+```
 
 最终导入的还是公钥对应的地址。<br>
 该公钥好像在你的钱包，但不能用于花费。
@@ -34,33 +34,33 @@ importpubkey "pubkey" ( "label" rescan ) # 导入一个公钥（16 进制）用�
 
 用法一：导入公钥到钱包并使用再扫描。
 
-{% highlight shell %}
+```shell
 $ bitcoin-cli importpubkey "mypubkey"
-{% endhighlight %}
+```
 
 用法二：导入一个公钥及其关联账户到钱包，不使用再扫描。
 
-{% highlight shell %}
+```shell
 $ bitcoin-cli importpubkey "mypubkey" "testing" false
-{% endhighlight %}
+```
 
 ### cURL
 
-{% highlight shell %}
+```shell
 $ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "importpubkey", "params": ["mypubkey", "testing", flase] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
 暂无。
-{% endhighlight %}
+```
 
 ## 源码剖析
 importpubkey 对应的函数在“rpcserver.h”文件中被引用。
 
-{% highlight C++ %}
+```cpp
 extern UniValue importpubkey(const UniValue& params, bool fHelp); // 导入公钥
-{% endhighlight %}
+```
 
 实现在“wallet/rpcdump.cpp”文件中。
 
-{% highlight C++ %}
+```cpp
 UniValue importpubkey(const UniValue& params, bool fHelp)
 {
     if (!EnsureWalletIsAvailable(fHelp)) // 确保当前钱包可用
@@ -117,7 +117,7 @@ UniValue importpubkey(const UniValue& params, bool fHelp)
 
     return NullUniValue; // 返回空值
 }
-{% endhighlight %}
+```
 
 基本流程：
 1. 确保钱包当前可用（已初始化完成）。

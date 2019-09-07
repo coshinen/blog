@@ -10,9 +10,9 @@ excerpt: $ bitcoin-cli generate numblocks
 ---
 ## 提示说明
 
-{% highlight shell %}
+```shell
 generate numblocks # 立刻挖出区块（在 RPC 调用返回前）
-{% endhighlight %}
+```
 
 **注：此功能仅限回归测试网 regtest 使用。**
 
@@ -27,31 +27,31 @@ generate numblocks # 立刻挖出区块（在 RPC 调用返回前）
 
 在比特币核心服务回归测试模式下产生 2 个区块并上链。
 
-{% highlight shell %}
+```shell
 $ bitcoin-cli -regtest generate 2
 [
   "2d14c7f08a52e24913b4f36b486d0171faed26f978d02656d88efdc0acf2a5f5", 
   "4ad63ef738b9d5da85b21fe84853b1672209ffdfbe914896bb475b523efca628"
 ]
-{% endhighlight %}
+```
 
 ### cURL
 
-{% highlight shell %}
+```shell
 $ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "generate", "params": [2] }' -H 'content-type: text/plain;' http://127.0.0.1:18332/
 {"result":["5f522cf0b746297737f3522e7830657e114f80b1f48504c11b2ebe942ffa8da0","4bcd4c044152135e7523a870ec198947d4d937bcba8857812c5ace77d725b517"],"error":null,"id":"curltest"}
-{% endhighlight %}
+```
 
 ## 源码剖析
 generate 对应的函数在“rpcserver.h”文件中被引用。
 
-{% highlight C++ %}
+```cpp
 extern UniValue generate(const UniValue& params, bool fHelp); // 产生指定数目个区块（回归测试网用）
-{% endhighlight %}
+```
 
 实现在“rpcmining.cpp”文件中。
 
-{% highlight C++ %}
+```cpp
 UniValue generate(const UniValue& params, bool fHelp)
 {
     if (fHelp || params.size() < 1 || params.size() > 1) // 1.参数只能为 1 个（要生成区块的个数）
@@ -121,7 +121,7 @@ UniValue generate(const UniValue& params, bool fHelp)
     }
     return blockHashes; // 9.返回产生所有区块的哈希
 }
-{% endhighlight %}
+```
 
 基本流程：<br>
 1.处理命令帮助和参数个数。<br>
@@ -138,28 +138,28 @@ UniValue generate(const UniValue& params, bool fHelp)
 该标志一般可以表示当前的网络，回归测试网下该标志为 true。<br>
 函数 Params() 声明在“chainparams.h”文件中。
 
-{% highlight C++ %}
+```cpp
 /**
  * Return the currently selected parameters. This won't change after app
  * startup, except for unit tests.
  */ // 返回当前选择的链参数。除了单元测试，在应用程序启动后不会改变。
 const CChainParams &Params();
-{% endhighlight %}
+```
 
 实现在“chainparams.cpp”文件中，用于获取当前区块链的参数。
 
-{% highlight C++ %}
+```cpp
 static CChainParams *pCurrentParams = 0;
 
 const CChainParams &Params() { // 获取链参数，在 3.5.SelectParams() 初始化后，才能调用
     assert(pCurrentParams);
     return *pCurrentParams;
 }
-{% endhighlight %}
+```
 
 然后调用 MineBlocksOnDemand() 函数返回挖矿需求标志。该函数声明在“chainparams.h”文件的 CChainParams 类中。
 
-{% highlight C++ %}
+```cpp
 /**
  * CChainParams defines various tweakable parameters of a given instance of the
  * Bitcoin system. There are three: the main network on which people trade goods
@@ -175,50 +175,50 @@ public:
     ...
     bool fMineBlocksOnDemand; // 挖矿需求标志，只有回归测试网中为 true
 };
-{% endhighlight %}
+```
 
 关于 fMineBlocksOnDemand 变量的初始化，详见[比特币核心服务启动过程]()。
 
 第四步，通过 GetMainSignals().ScriptForMining(coinbaseScript) 信号处理函数获取创币交易的脚本。
 函数 GetMainSignals() 声明在“validationinterface.h”文件中。
 
-{% highlight C++ %}
+```cpp
 CMainSignals& GetMainSignals();
-{% endhighlight %}
+```
 
 实现在“validationinterface.cpp”文件中。
 
-{% highlight C++ %}
+```cpp
 static CMainSignals g_signals; // 静态全局信号对象
 
 CMainSignals& GetMainSignals() // 获取主信号对象的引用
 {
     return g_signals;
 }
-{% endhighlight %}
+```
 
 类 CMainSignals 定义在“validationinterface.h”文件中。
 
-{% highlight C++ %}
+```cpp
 struct CMainSignals { // 主信号类
     ...
     /** Notifies listeners that a key for mining is required (coinbase) */
     boost::signals2::signal<void (boost::shared_ptr<CReserveScript>&)> ScriptForMining;
     ...
 };
-{% endhighlight %}
+```
 
 信号 ScriptForMining 通过函数 RegisterValidationInterface(...) 进行注册。<br>
 该函数声明在“validationinterface.h”文件中。
 
-{% highlight C++ %}
+```cpp
 /** Register a wallet to receive updates from core */
 void RegisterValidationInterface(CValidationInterface* pwalletIn); // 注册一个用来接收内核升级的钱包
-{% endhighlight %}
+```
 
 实现在“validationinterface.cpp”文件中。
 
-{% highlight C++ %}
+```cpp
 void RegisterValidationInterface(CValidationInterface* pwalletIn) {
     g_signals.UpdatedBlockTip.connect(boost::bind(&CValidationInterface::UpdatedBlockTip, pwalletIn, _1));
     g_signals.SyncTransaction.connect(boost::bind(&CValidationInterface::SyncTransaction, pwalletIn, _1, _2));
@@ -230,11 +230,11 @@ void RegisterValidationInterface(CValidationInterface* pwalletIn) {
     g_signals.ScriptForMining.connect(boost::bind(&CValidationInterface::GetScriptForMining, pwalletIn, _1)); // 这里进行的注册
     g_signals.BlockFound.connect(boost::bind(&CValidationInterface::ResetRequestCount, pwalletIn, _1));
 }
-{% endhighlight %}
+```
 
 该函数的调用是在“init.cpp”文件的 AppInit2(...) 函数的 Step 8 中。
 
-{% highlight C++ %}
+```cpp
 /** Initialize bitcoin.
  *  @pre Parameters should be parsed and config file should be read.
  */
@@ -246,22 +246,22 @@ bool AppInit2(boost::thread_group& threadGroup, CScheduler& scheduler) // [P]3.1
         RegisterValidationInterface(pwalletMain); // 注册一个钱包用于接收 bitcoin core 的升级
     ...
 };
-{% endhighlight %}
+```
 
 注册的 CValidationInterface::GetScriptForMining 函数是一个虚函数，在“”文件的 CValidationInterface 类中。
 
-{% highlight C++ %}
+```cpp
 class CValidationInterface { // 验证接口
 protected:
     ...
     virtual void GetScriptForMining(boost::shared_ptr<CReserveScript>&) {};
     ...
 };
-{% endhighlight %}
+```
 
 其具体实现在该类的派生类 CWallet 中，该函数声明在“wallet.h”文件的 CWallet 类中。
 
-{% highlight C++ %}
+```cpp
 ** 
  * A CWallet is an extension of a keystore, which also maintains a set of transactions and balances,
  * and provides the ability to create new transactions.
@@ -272,11 +272,11 @@ class CWallet : public CCryptoKeyStore, public CValidationInterface
     void GetScriptForMining(boost::shared_ptr<CReserveScript> &script);
     ...
 };
-{% endhighlight %}
+```
 
 具体实现在“wallet.cpp”文件中。
 
-{% highlight C++ %}
+```cpp
 void CWallet::GetScriptForMining(boost::shared_ptr<CReserveScript> &script)
 {
     boost::shared_ptr<CReserveKey> rKey(new CReserveKey(this)); // 1.新建一个派生类对象
@@ -287,7 +287,7 @@ void CWallet::GetScriptForMining(boost::shared_ptr<CReserveScript> &script)
     script = rKey; // 3.把派生类对象赋值给基类对象（派生类 -> 基类）
     script->reserveScript = CScript() << ToByteVector(pubkey) << OP_CHECKSIG; // 把公钥加入脚本
 }
-{% endhighlight %}
+```
 
 这里的流程：<br>
 1.新建对象。<br>
@@ -296,7 +296,7 @@ void CWallet::GetScriptForMining(boost::shared_ptr<CReserveScript> &script)
 
 1.创建一个从密钥池中分配的密钥 CReserveKey 对象，该类定义在“wallet.h”文件中。
 
-{% highlight C++ %}
+```cpp
 /** A key allocated from the key pool. */
 class CReserveKey : public CReserveScript // 一个从密钥池分配的密钥
 {
@@ -314,11 +314,11 @@ public:
     bool GetReservedKey(CPubKey &pubkey); // 从密钥池中获取一个公钥
     ...
 };
-{% endhighlight %}
+```
 
 2.调用 rKey->GetReservedKey(pubkey) 函数从密钥池中获取一个公钥，该函数实现在“wallet.cpp”文件中。
 
-{% highlight C++ %}
+```cpp
 bool CReserveKey::GetReservedKey(CPubKey& pubkey) // 从密钥池中取一个公钥
 {
     if (nIndex == -1) // 初始化为 -1
@@ -335,12 +335,12 @@ bool CReserveKey::GetReservedKey(CPubKey& pubkey) // 从密钥池中取一个公
     pubkey = vchPubKey;
     return true;
 }
-{% endhighlight %}
+```
 
 调用 pwallet->ReserveKeyFromKeyPool(nIndex, keypool) 函数真正实现从密钥池中取出一个密钥并获取其公钥。
 其实现也在“wallet.cpp”文件中。
 
-{% highlight C++ %}
+```cpp
 void CWallet::ReserveKeyFromKeyPool(int64_t& nIndex, CKeyPool& keypool)
 {
     nIndex = -1;
@@ -367,11 +367,11 @@ void CWallet::ReserveKeyFromKeyPool(int64_t& nIndex, CKeyPool& keypool)
         LogPrintf("keypool reserve %d\n", nIndex);
     }
 }
-{% endhighlight %}
+```
 
 3.把公钥导入脚本。脚本类 CScript 定义在“script.h”文件中。
 
-{% highlight C++ %}
+```cpp
 typedef prevector<28, unsigned char> CScriptBase;
 
 /** Serialized script, used inside transaction inputs and outputs */
@@ -419,11 +419,11 @@ public:
     }
     ...
 };
-{% endhighlight %}
+```
 
 函数模板 ToByteVector(pubkey) 和 OP_CHECKSIG 均定义在“script.h”文件中。
 
-{% highlight C++ %}
+```cpp
 template <typename T>
 std::vector<unsigned char> ToByteVector(const T& in)
 {
@@ -439,12 +439,12 @@ enum opcodetype
     OP_CHECKSIG = 0xac,
     ...
 };
-{% endhighlight %}
+```
 
 第六步，调用 coinbaseScript->reserveScript.empty() 函数判断脚本是否创建成功。<br>
 该函数定义在“prevector.h”文件的 prevector 类模板中。
 
-{% highlight C++ %}
+```cpp
 ** Implements a drop-in replacement for std::vector<T> which stores up to N
  *  elements directly (without heap allocation). The types Size and Diff are
  *  used to store element counts, and can be any unsigned + signed type.
@@ -482,13 +482,13 @@ private:
     }
     ...
 };
-{% endhighlight %}
+```
 
 第八步，终于进入正题，开始生成区块了。<br>
 8.1.通过调用 CreateNewBlock(Params(), coinbaseScript->reserveScript) 函数把创建的创币脚本传入生成一个区块模板。
 该函数声明在“miner.h”文件中。
 
-{% highlight C++ %}
+```cpp
 struct CBlockTemplate // 区块模板类
 {
     CBlock block; // 区块对象
@@ -498,11 +498,11 @@ struct CBlockTemplate // 区块模板类
 ...
 /** Generate a new block, without valid proof-of-work */
 CBlockTemplate* CreateNewBlock(const CChainParams& chainparams, const CScript& scriptPubKeyIn);
-{% endhighlight %}
+```
 
 实现在“miner.cpp”文件中。
 
-{% highlight C++ %}
+```cpp
 CBlockTemplate* CreateNewBlock(const CChainParams& chainparams, const CScript& scriptPubKeyIn)
 {
     // Create new block
@@ -729,7 +729,7 @@ CBlockTemplate* CreateNewBlock(const CChainParams& chainparams, const CScript& s
 
     return pblocktemplate.release();
 }
-{% endhighlight %}
+```
 
 ## 参照
 

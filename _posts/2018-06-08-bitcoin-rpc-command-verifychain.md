@@ -10,9 +10,9 @@ excerpt: $ bitcoin-cli verifychain ( checklevel numblocks )
 ---
 ## 提示说明
 
-{% highlight shell %}
+```shell
 verifychain ( checklevel numblocks ) # 验证区块链数据库
-{% endhighlight %}
+```
 
 参数：<br>
 1.checklevel（字符串，可选，0-4，默认为 3）区块验证等级。<br>
@@ -31,35 +31,35 @@ verifychain ( checklevel numblocks ) # 验证区块链数据库
 
 方法一：使用默认等级 3 和默认区块数 288 检查区块链。
 
-{% highlight shell %}
+```shell
 $ bitcoin-cli verifychain
 true
-{% endhighlight %}
+```
 
 方法二：使用等级 4 检查区块链全部区块。
 
-{% highlight shell %}
+```shell
 $ bitcoin-cli verifychain 4 0
 true
-{% endhighlight %}
+```
 
 ### cURL
 
-{% highlight shell %}
+```shell
 $ curl --user myusername:userpassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "verifychain", "params": [] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
 {"result":true,"error":null,"id":"curltest"}
-{% endhighlight %}
+```
 
 ## 源码剖析
 verifychain 对应的函数在“rpcserver.h”文件中被引用。
 
-{% highlight C++ %}
+```cpp
 extern UniValue verifychain(const UniValue& params, bool fHelp); // 验证区块链数据库
-{% endhighlight %}
+```
 
 实现在“rpcblockchain.cpp”文件中。
 
-{% highlight C++ %}
+```cpp
 UniValue verifychain(const UniValue& params, bool fHelp)
 {
     int nCheckLevel = GetArg("-checklevel", DEFAULT_CHECKLEVEL); // 检查等级，默认 3
@@ -87,7 +87,7 @@ UniValue verifychain(const UniValue& params, bool fHelp)
 
     return CVerifyDB().VerifyDB(Params(), pcoinsTip, nCheckLevel, nCheckDepth); // 检查区块链数据库
 }
-{% endhighlight %}
+```
 
 基本流程：<br>
 1.设置默认检查等级和默认检查块数。<br>
@@ -99,7 +99,7 @@ UniValue verifychain(const UniValue& params, bool fHelp)
 第五步，创建了一个临时对象然后调用 CVerifyDB().VerifyDB(Params(), pcoinsTip, nCheckLevel, nCheckDepth) 来验证区块链数据库。
 该类定义在“main.h”文件中。
 
-{% highlight C++ %}
+```cpp
 /** RAII wrapper for VerifyDB: Verify consistency of the block and coin databases */
 class CVerifyDB { // VerifyDB 的 RAII 包装器：验证区块和币数据库完整性
 public:
@@ -107,11 +107,11 @@ public:
     ~CVerifyDB();
     bool VerifyDB(const CChainParams& chainparams, CCoinsView *coinsview, int nCheckLevel, int nCheckDepth); // 验证数据库
 };
-{% endhighlight %}
+```
 
 验证函数实现在“main.cpp”文件中。
 
-{% highlight C++ %}
+```cpp
 bool CVerifyDB::VerifyDB(const CChainParams& chainparams, CCoinsView *coinsview, int nCheckLevel, int nCheckDepth)
 {
     LOCK(cs_main); // 上锁
@@ -189,7 +189,7 @@ bool CVerifyDB::VerifyDB(const CChainParams& chainparams, CCoinsView *coinsview,
 
     return true; // 返回 true
 }
-{% endhighlight %}
+```
 
 未完成。
 

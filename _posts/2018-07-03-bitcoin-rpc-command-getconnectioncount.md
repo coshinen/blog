@@ -10,9 +10,9 @@ excerpt: $ bitcoin-cli getconnectioncount
 ---
 ## 提示说明
 
-{% highlight shell %}
+```shell
 getconnectioncount # 获取当前连到其他节点的连接数
-{% endhighlight %}
+```
 
 结果：（整型）连接数。
 
@@ -22,28 +22,28 @@ getconnectioncount # 获取当前连到其他节点的连接数
 
 获取该核心服务节点当前建立的连接数。
 
-{% highlight shell %}
+```shell
 $ bitcoin-cli getconnectioncount
 1
-{% endhighlight %}
+```
 
 ### cURL
 
-{% highlight shell %}
+```shell
 $ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "getconnectioncount", "params": [] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
 {"result":1,"error":null,"id":"curltest"}
-{% endhighlight %}
+```
 
 ## 源码剖析
 getconnectioncount 对应的函数在“rpcserver.h”文件中被引用。
 
-{% highlight C++ %}
+```cpp
 extern UniValue getconnectioncount(const UniValue& params, bool fHelp); // 获取当前的连接数
-{% endhighlight %}
+```
 
 实现在“rpcnet.cpp”文件中。
 
-{% highlight C++ %}
+```cpp
 UniValue getconnectioncount(const UniValue& params, bool fHelp)
 {
     if (fHelp || params.size() != 0) // 没有参数
@@ -61,7 +61,7 @@ UniValue getconnectioncount(const UniValue& params, bool fHelp)
 
     return (int)vNodes.size(); // 返回已建立连接的节点列表的大小
 }
-{% endhighlight %}
+```
 
 基本流程：
 1. 处理命令帮助和参数个数。
@@ -70,15 +70,15 @@ UniValue getconnectioncount(const UniValue& params, bool fHelp)
 
 以建立连接的节点列表 vNodes 在“net.h”文件中被引用。
 
-{% highlight C++ %}
+```cpp
 extern std::vector<CNode*> vNodes; // 已建立连接的节点列表
-{% endhighlight %}
+```
 
 定义在”net.cpp”文件中。
 
-{% highlight C++ %}
+```cpp
 vector<CNode*> vNodes; // 成功建立连接的节点列表
-{% endhighlight %}
+```
 
 ## 参照
 

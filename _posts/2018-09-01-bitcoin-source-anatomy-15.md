@@ -15,7 +15,7 @@ tags: 区块链 比特币 源码剖析
 <p id="Step09-ref"></p>
 3.11.9.第九步，数据目录维护。这部分代码实现在“init.cpp”文件的 AppInit2(...) 函数中。
 
-{% highlight C++ %}
+```cpp
 bool AppInit2(boost::thread_group& threadGroup, CScheduler& scheduler) // 3.11.程序初始化，共 12 步
 {
     ...
@@ -33,22 +33,22 @@ bool AppInit2(boost::thread_group& threadGroup, CScheduler& scheduler) // 3.11.�
     }
     ...
 }
-{% endhighlight %}
+```
 
 若满足条件，开启了裁剪模式且关闭了再索引选项，则进行数据目录中区块的修剪。
 这里调用 PruneAndFlush() 来设置修剪标志并刷新磁盘上的链状态。
 该函数声明在“main.h”文件中。
 
-{% highlight C++ %}
+```cpp
 /** Flush all state, indexes and buffers to disk. */
 void FlushStateToDisk(); // 刷新全部状态，索引和缓冲到磁盘。
 /** Prune block files and flush state to disk. */
 void PruneAndFlush(); // 修建区块文件并刷新状态到磁盘
-{% endhighlight %}
+```
 
 实现在“main.cpp”文件中，没有入参。
 
-{% highlight C++ %}
+```cpp
 /**
  * Update the on-disk chain state.
  * The caches and indexes are flushed depending on the mode we're called with
@@ -162,12 +162,12 @@ void PruneAndFlush() {
     fCheckForPruning = true; // 全局修剪标志置为 true
     FlushStateToDisk(state, FLUSH_STATE_NONE); // 刷新磁盘上的链状态
 }
-{% endhighlight %}
+```
 
 <p id="Step10-ref"></p>
 3.11.10.第九步，数据目录维护。这部分代码实现在“init.cpp”文件的 AppInit2(...) 函数中。
 
-{% highlight C++ %}
+```cpp
 bool AppInit2(boost::thread_group& threadGroup, CScheduler& scheduler) // 3.11.程序初始化，共 12 步
 {
     ...
@@ -196,7 +196,7 @@ bool AppInit2(boost::thread_group& threadGroup, CScheduler& scheduler) // 3.11.�
     }
     ...
 }
-{% endhighlight %}
+```
 
 1.调用区块通知回调函数，注册并运行指定命令。<br>
 2.激活当前最佳区块链，并获取验证状态。<br>
@@ -206,7 +206,7 @@ bool AppInit2(boost::thread_group& threadGroup, CScheduler& scheduler) // 3.11.�
 1.调用 uiInterface.NotifyBlockTip.connect(BlockNotifyCallback) 注册区块通知回调函数 BlockNotifyCallback。
 该函数实现在“init.cpp”文件中，入参为：初始化标志，区块索引。
 
-{% highlight C++ %}
+```cpp
 static void BlockNotifyCallback(bool initialSync, const CBlockIndex *pBlockIndex)
 {
     if (initialSync || !pBlockIndex)
@@ -217,32 +217,32 @@ static void BlockNotifyCallback(bool initialSync, const CBlockIndex *pBlockIndex
     boost::replace_all(strCmd, "%s", pBlockIndex->GetBlockHash().GetHex()); // 替换最佳区块哈希的 16 进制形式
     boost::thread t(runCommand, strCmd); // thread runs free // 传入命令，运行处理命令线程
 }
-{% endhighlight %}
+```
 
 这里创建了一个局部线程对象来执行传入的命令。
 线程函数 runCommand 声明在“util.h”文件中。
 
-{% highlight C++ %}
+```cpp
 void runCommand(const std::string& strCommand); // 运行 shell 命令
-{% endhighlight %}
+```
 
 实现在“util.cpp”文件中，入参为：待执行的命令。
 
-{% highlight C++ %}
+```cpp
 void runCommand(const std::string& strCommand)
 {
     int nErr = ::system(strCommand.c_str()); // 执行命令 bash 命令
     if (nErr)
         LogPrintf("runCommand error: system(%s) returned %d\n", strCommand, nErr);
 }
-{% endhighlight %}
+```
 
 这里直接进行系统调用执行传入的命令。
 
 4.调用 threadGroup.create_thread(boost::bind(&ThreadImport, vImportFiles)) 在线程组中创建一个线程，用于导入指定的区块文件到内存。
 线程函数 ThreadImport 实现在“init.cpp” 文件中，入参为：指定的待导入去快文件路径列表。
 
-{% highlight C++ %}
+```cpp
 void ThreadImport(std::vector<boost::filesystem::path> vImportFiles) // 导入区块线程处理函数
 {
     const CChainParams& chainparams = Params(); // 获取区块链参数
@@ -301,7 +301,7 @@ void ThreadImport(std::vector<boost::filesystem::path> vImportFiles) // 导入�
         StartShutdown(); // 关闭客户端
     }
 }
-{% endhighlight %}
+```
 
 未完待续...<br>
 请看下一篇[比特币源码剖析（十六）](/blog/2018/09/bitcoin-source-anatomy-16.html)。

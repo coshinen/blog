@@ -10,13 +10,13 @@ excerpt: $ bitcoin-cli getreceivedbyaccount "account" ( minconf )
 ---
 ## 提示说明
 
-{% highlight shell %}
+```shell
 getreceivedbyaccount "account" ( minconf ) # （已过时）获取账户 account 下所有地址至少 minconf 个确认的交易接收到的总金额
-{% endhighlight %}
+```
 
-参数：<br>
-1.account（字符串，必备）选择的账户，默认账户使用 ""。<br>
-2.minconf（数字，可选，默认为 1）只包含至少 minconf 次确认的交易。
+参数：
+1. account（字符串，必备）选择的账户，默认账户使用 ""。
+2. minconf（数字，可选，默认为 1）只包含至少 minconf 次确认的交易。
 
 结果：（数字）返回该账户接收到的 BTC 总数。
 
@@ -26,42 +26,42 @@ getreceivedbyaccount "account" ( minconf ) # （已过时）获取账户 account
 
 用法一：获取默认账户下接收的至少 1 次确认的金额。
 
-{% highlight shell %}
+```shell
 $ bitcoin-cli getreceivedbyaccount ""
 105.009878
-{% endhighlight %}
+```
 
 用法二：获取指定账户下接收的包含未确认的金额。
 
-{% highlight shell %}
+```shell
 $ bitcoin-cli getreceivedbyaccount "tabby" 0
 0
-{% endhighlight %}
+```
 
 用法三：获取指定账户下接收的至少 6 次确认的金额，非常安全。
 
-{% highlight shell %}
+```shell
 $ bitcoin-cli getreceivedbyaccount "tabby" 6
 0
-{% endhighlight %}
+```
 
 ### cURL
 
-{% highlight shell %}
+```shell
 $ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "getreceivedbyaccount", "params": ["", 6] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
 {"result":105.009878,"error":null,"id":"curltest"}
-{% endhighlight %}
+```
 
 ## 源码剖析
 getreceivedbyaccount 对应的函数在“rpcserver.h”文件中被引用。
 
-{% highlight C++ %}
+```cpp
 extern UniValue getreceivedbyaccount(const UniValue& params, bool fHelp); // 获取某账户接收到的金额
-{% endhighlight %}
+```
 
 实现在“wallet/rpcwallet.cpp”文件中。
 
-{% highlight C++ %}
+```cpp
 UniValue getreceivedbyaccount(const UniValue& params, bool fHelp)
 {
     if (!EnsureWalletIsAvailable(fHelp)) // 确保当前钱包可用
@@ -117,7 +117,7 @@ UniValue getreceivedbyaccount(const UniValue& params, bool fHelp)
 
     return (double)nAmount / (double)COIN; // 换算单位 Satoshi 为 BTC
 }
-{% endhighlight %}
+```
 
 基本流程：<br>
 1.确保钱包当前可用（已初始化完成）。<br>
@@ -130,7 +130,7 @@ UniValue getreceivedbyaccount(const UniValue& params, bool fHelp)
 第四步，调用 pwalletMain->GetAccountAddresses(strAccount) 函数获取指定账户的地址集，
 该函数声明在“wallet/wallet.h”文件的 CWallet 类中。
 
-{% highlight C++ %}
+```cpp
 /** 
  * A CWallet is an extension of a keystore, which also maintains a set of transactions and balances,
  * and provides the ability to create new transactions.
@@ -141,11 +141,11 @@ class CWallet : public CCryptoKeyStore, public CValidationInterface
     std::set<CTxDestination> GetAccountAddresses(const std::string& strAccount) const; // 根据指定的账户获取相关联的地址集
     ...
 };
-{% endhighlight %}
+```
 
 实现在“wallet/wallet.cpp”文件中。
 
-{% highlight C++ %}
+```cpp
 std::set<CTxDestination> CWallet::GetAccountAddresses(const std::string& strAccount) const
 {
     LOCK(cs_wallet); // 钱包上锁
@@ -159,7 +159,7 @@ std::set<CTxDestination> CWallet::GetAccountAddresses(const std::string& strAcco
     }
     return result; // 返回地址集
 }
-{% endhighlight %}
+```
 
 ## 参照
 

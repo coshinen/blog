@@ -9,9 +9,9 @@ tags: CLI bitcoin-cli 区块链 比特币
 hidden: true
 ---
 ## 提示说明
-{% highlight shell %}
+```shell
 invalidateblock "hash" # 永久标记一个区块无效，就像该块违反了共识规则
-{% endhighlight %}
+```
 
 参数：
 1. hash（字符串，必备）用来标记为无效的区块哈希。
@@ -25,7 +25,7 @@ invalidateblock "hash" # 永久标记一个区块无效，就像该块违反了�
 获取当前最佳区块哈希，记录该区块高度 32723 和当前区块数 32729 和连接数 1，
 无效化该区块后，再次查看...
 
-{% highlight shell %}
+```shell
 $ bitcoin-cli getbestblockhash
 000000ea5bb666e0ab8e837691bbb2a0605c4a82281eecd858ad3ffce917df96
 $ bitocin-cli getblock 000000ea5bb666e0ab8e837691bbb2a0605c4a82281eecd858ad3ffce917df96 | grep height
@@ -39,28 +39,28 @@ $ bitcoin-cli getblockcount
 32722
 $ bitcoin-cli getconnectioncount
 0
-{% endhighlight %}
+```
 
 此时区块数变为 32722，从高度 32723 开始的区块均被标记为无效，但不会影响与其相连的其他节点，
 之后全部连接也会自动断开。
 
 ### cURL
 
-{% highlight shell %}
+```shell
 $ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "invalidateblock", "params": ["000000ea5bb666e0ab8e837691bbb2a0605c4a82281eecd858ad3ffce917df96"] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
 {"result":null,"error":null,"id":"curltest"}
-{% endhighlight %}
+```
 
 ## 源码剖析
 invalidateblock 对应的函数在“rpcserver.h”文件中被引用。
 
-{% highlight C++ %}
+```cpp
 extern UniValue invalidateblock(const UniValue& params, bool fHelp); // 无效化区块
-{% endhighlight %}
+```
 
 实现在“rpcblockchain.cpp”文件中。
 
-{% highlight C++ %}
+```cpp
 UniValue invalidateblock(const UniValue& params, bool fHelp)
 {
     if (fHelp || params.size() != 1) // 参数必须为 1 个
@@ -98,7 +98,7 @@ UniValue invalidateblock(const UniValue& params, bool fHelp)
 
     return NullUniValue; // 返回空值
 }
-{% endhighlight %}
+```
 
 基本流程：<br>
 1.处理命令帮助和参数个数。<br>
@@ -110,7 +110,7 @@ UniValue invalidateblock(const UniValue& params, bool fHelp)
 第三步，调用 InvalidateBlock(state, Params().GetConsensus(), pblockindex) 使指定区块及其后辈无效化，
 该函数定义在“main.cpp”文件中。
 
-{% highlight C++ %}
+```cpp
 /** Disconnect chainActive's tip. You probably want to call mempool.removeForReorg and manually re-limit mempool size after this, with cs_main held. */ // 断开激活的链尖。你可能想要调用 mempool.removeForReorg 并在该操作后手动再次限制内存池大小，同时持有主锁。
 bool static DisconnectTip(CValidationState& state, const Consensus::Params& consensusParams)
 {
@@ -198,7 +198,7 @@ bool InvalidateBlock(CValidationState& state, const Consensus::Params& consensus
     mempool.removeForReorg(pcoinsTip, chainActive.Tip()->nHeight + 1, STANDARD_LOCKTIME_VERIFY_FLAGS);
     return true;
 }
-{% endhighlight %}
+```
 
 ## 参照
 

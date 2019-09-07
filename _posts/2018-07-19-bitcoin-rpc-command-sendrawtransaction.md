@@ -10,9 +10,9 @@ excerpt: $ bitcoin-cli sendrawtransaction "hexstring" ( allowhighfees )
 ---
 ## 提示说明
 
-{% highlight shell %}
+```shell
 sendrawtransaction "hexstring" ( allowhighfees ) # 把（序列化的，16 进制编码的）原始交易提交到本地节点和网络
-{% endhighlight %}
+```
 
 也可以查看 [createrawtransaction](/blog/2018/07/bitcoin-rpc-command-createrawtransaction.html) 和 [signrawtransaction](/blog/2018/07/bitcoin-rpc-command-signrawtransaction.html) 调用。
 
@@ -35,7 +35,7 @@ sendrawtransaction "hexstring" ( allowhighfees ) # 把（序列化的，16 进�
 **使用 [getrawtransaction](/blog/2018/07/bitcoin-rpc-command-getrawtransaction.html) 查看提交到内存池中的原始交易，
 或使用 [gettransaction](/blog/2018/08/bitcoin-rpc-command-gettransaction.html) 查看。**
 
-{% highlight shell %}
+```shell
 $ bitcoin-cli createrawtransaction "[{\"txid\":\"fb9bd2df3cef0abd9f444971dff097790b7bf146843a752cb48461418d3c7e67\",\"vout\":0}]" "{\"1Mcg7MDBD38sSScsX3USbsCnkcMbPnLyTV\":0.01}"
 0100000001677e3c8d416184b42c753a8446f17b0b7997f0df7149449fbd0aef3cdfd29bfb0000000000ffffffff0140420f00000000001976a914e221b8a504199bec7c5fe8081edd011c3653118288ac00000000
 $ bitcoin-cli decoderawtransaction 0100000001677e3c8d416184b42c753a8446f17b0b7997f0df7149449fbd0aef3cdfd29bfb0000000000ffffffff0140420f00000000001976a914e221b8a504199bec7c5fe8081edd011c3653118288ac00000000
@@ -223,27 +223,27 @@ $ bitcoin-cli getrawtransaction 684f6ed5b6e127ba76c07ef4c3fcc02a02c7e2ccef9ed0d2
     }
   ]
 }
-{% endhighlight %}
+```
 
 **注：若未设置找零输出，则会导致交易费过高，所以要设置允许交易费超额。**
 
 ### cURL
 
-{% highlight shell %}
+```shell
 $ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "sendrawtransaction", "params": ["0100000001677e3c8d416184b42c753a8446f17b0b7997f0df7149449fbd0aef3cdfd29bfb000000006b4830450221009b29490f5e1709bc3cce16c6433a0b8895add5a9d3c2fa63da11da065105ad59022022d068337cd3b20be04513e539f0bbbb5319ed1b3a3a8ec6262a30a8bd393b3d012103583eb3acb7f0b9c431d97a4872a270f4e519fbca0ec519adf16764c663e36546ffffffff0140420f00000000001976a914e221b8a504199bec7c5fe8081edd011c3653118288ac00000000", true] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
 {"result":"684f6ed5b6e127ba76c07ef4c3fcc02a02c7e2ccef9ed0d2cc16c2896159c746","error":null,"id":"curltest"}
-{% endhighlight %}
+```
 
 ## 源码剖析
 sendrawtransaction 对应的函数在“rpcserver.h”文件中被引用。
 
-{% highlight C++ %}
+```cpp
 extern UniValue sendrawtransaction(const UniValue& params, bool fHelp); // 发送原始交易
-{% endhighlight %}
+```
 
 实现在“rpcrawtransaction.cpp”文件中。
 
-{% highlight C++ %}
+```cpp
 UniValue sendrawtransaction(const UniValue& params, bool fHelp)
 {
     if (fHelp || params.size() < 1 || params.size() > 2) // 1.参数为 1 或 2 个
@@ -305,7 +305,7 @@ UniValue sendrawtransaction(const UniValue& params, bool fHelp)
 
     return hashTx.GetHex(); // 6.交易哈希转换为 16 进制并返回
 }
-{% endhighlight %}
+```
 
 基本流程：<br>
 1.处理命令帮助和参数个数。<br>
@@ -318,7 +318,7 @@ UniValue sendrawtransaction(const UniValue& params, bool fHelp)
 4.调用 AcceptToMemoryPool(mempool, state, tx, false, &fMissingInputs, false, !fOverrideFees) 函数来尝试添加交易至内存池。
 该函数定义在“main.cpp”文件中。入参为：交易内存池全局对象，待获取的验证状态，该交易，false，丢失输入标志，false，!交易费超额标志。
 
-{% highlight C++ %}
+```cpp
 bool AcceptToMemoryPool(CTxMemPool& pool, CValidationState &state, const CTransaction &tx, bool fLimitFree,
                         bool* pfMissingInputs, bool fOverrideMempoolLimit, bool fRejectAbsurdFee)
 {
@@ -330,21 +330,21 @@ bool AcceptToMemoryPool(CTxMemPool& pool, CValidationState &state, const CTransa
     }
     return res;
 }
-{% endhighlight %}
+```
 
 （未完）
 
 5.调用 RelayTransaction(tx) 中继该交易，该函数声明在“net.h”文件中。
 
-{% highlight C++ %}
+```cpp
 class CTransaction;
 void RelayTransaction(const CTransaction& tx); // 转调下面重载函数
 void RelayTransaction(const CTransaction& tx, const CDataStream& ss); // 中继交易
-{% endhighlight %}
+```
 
 定义在“net.cpp”文件中。入参为：该交易。
 
-{% highlight C++ %}
+```cpp
 void RelayTransaction(const CTransaction& tx)
 {
     CDataStream ss(SER_NETWORK, PROTOCOL_VERSION);
@@ -383,13 +383,13 @@ void RelayTransaction(const CTransaction& tx, const CDataStream& ss)
             pnode->PushInventory(inv); // 直接推送 inv 消息到该节点
     }
 }
-{% endhighlight %}
+```
 
 这里先检查了中继过期队列把过期元素移除，接着把该交易加入中继列表同时设置 15 分钟的过期时间并加入中继过期队列。
 然后遍历了已建立连接的节点链表，调用 pnode->PushInventory(inv) 把 inv 消息发送到对端节点，
 该函数定义在“net.h”文件的 CNode 类中。入参为：该交易的库存条目对象。
 
-{% highlight C++ %}
+```cpp
 /** Information about a peer */ // 关于对端节点的信息
 class CNode // 对端节点信息类
 {
@@ -409,7 +409,7 @@ class CNode // 对端节点信息类
     }
     ...
 };
-{% endhighlight %}
+```
 
 最终只是把库存条目 inv 消息对象加入到发送库存消息列表。
 

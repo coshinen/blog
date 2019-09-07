@@ -10,16 +10,16 @@ excerpt: $ bitcoin-cli getblockheader "hash" ( verbose )
 ---
 ## 提示说明
 
-{% highlight shell %}
+```shell
 getblockheader "hash" ( verbose ) # 通过区块哈希（16 进制形式）获取指定区块头的信息
-{% endhighlight %}
+```
 
 参数：
 1. "hash"（字符串，必备）区块哈希（16 进制形式）。
 2. verbose（布尔型，可选，默认为 true）true 获取区块头信息的 json 格式对象，false 获取 16 进制编码的区块头数据。
 
 结果（verbose 为 true）：
-{% highlight shell %}
+```shell
 {
   "hash" : "hash",     （字符串）区块哈希（和提供的一样）
   "confirmations" : n,   （数字）确认数，若区块不在主链上则为 -1
@@ -35,7 +35,7 @@ getblockheader "hash" ( verbose ) # 通过区块哈希（16 进制形式）获�
   "nextblockhash" : "hash",      （字符串）下一个区块的哈希
   "chainwork" : "0000...1f3"     （字符串）预计生成当前链所需的哈希次数（16 进制）
 }
-{% endhighlight %}
+```
 
 结果（verbose 为 false）：（字符串）返回序列化的字符串，16 进制编码的区块头数据。
 
@@ -45,7 +45,7 @@ getblockheader "hash" ( verbose ) # 通过区块哈希（16 进制形式）获�
 
 用法一：获取最佳区块头的详细信息。
 
-{% highlight shell %}
+```shell
 $ bitcoin-cli getbestblockhash
 000000ee6688672afe26c714e89592d2926eb53dfd8642f0a7412a6c43973a53
 $ bitcoin-cli getblockheader 000000ee6688672afe26c714e89592d2926eb53dfd8642f0a7412a6c43973a53
@@ -64,43 +64,43 @@ $ bitcoin-cli getblockheader 000000ee6688672afe26c714e89592d2926eb53dfd8642f0a74
   "previousblockhash": "000000280142d26678ec5ee733a8bd81325f2cff2a8e7b3beb714e999ffd2fa0",
   "nextblockhash": "000000dce9599ed928a5bf2170629b790b9ebabf5592701bce8f3e783288c62f"
 }
-{% endhighlight %}
+```
 
 用法二：获取最佳区块头的详细信息，显示指定 verbose 为 true。
 
-{% highlight shell %}
+```shell
 $ bitcoin-cli getbestblockhash
 000000ee6688672afe26c714e89592d2926eb53dfd8642f0a7412a6c43973a53
 $ bitcoin-cli getblockheader 000000ee6688672afe26c714e89592d2926eb53dfd8642f0a7412a6c43973a53 true
 ... # 结果同上
-{% endhighlight %}
+```
 
 用法三：设置 verbose 为 false，获取序列化的最佳区块头数据（用途不明）。
 
-{% highlight shell %}
+```shell
 $ bitcoin-cli getbestblockhash
 000000ee6688672afe26c714e89592d2926eb53dfd8642f0a7412a6c43973a53
 $ bitcoin-cli getblockheader 000000ee6688672afe26c714e89592d2926eb53dfd8642f0a7412a6c43973a53 false
 00000020a02ffd9f994e71eb3b7b8e2aff2c5f3281bda833e75eec7866d242012800000020a182fa3c085763dceaa6c0df44ed641aa6562463467c4de957cb4ddc1343eb1b5c305b2a8c021eeca01300
-{% endhighlight %}
+```
 
 ### cURL
 
-{% highlight shell %}
+```shell
 $ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "getblockheader", "params": ["000000ee6688672afe26c714e89592d2926eb53dfd8642f0a7412a6c43973a53"] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
 {"result":{"hash":"000000ee6688672afe26c714e89592d2926eb53dfd8642f0a7412a6c43973a53","confirmations":5117,"height":20034,"version":536870912,"merkleroot":"eb4313dc4dcb57e94d7c46632456a61a64ed44dfc0a6eadc6357083cfa82a120","time":1529895963,"mediantime":1529895953,"nonce":1286380,"bits":"1e028c2a","difficulty":0.001533333096242079,"chainwork":"00000000000000000000000000000000000000000000000000000009bb56ea79","previousblockhash":"000000280142d26678ec5ee733a8bd81325f2cff2a8e7b3beb714e999ffd2fa0","nextblockhash":"000000dce9599ed928a5bf2170629b790b9ebabf5592701bce8f3e783288c62f"},"error":null,"id":"curltest"}
-{% endhighlight %}
+```
 
 ## 源码剖析
 getblockheader 对应的函数在“rpcserver.h”文件中被引用。
 
-{% highlight C++ %}
+```cpp
 extern UniValue getblockheader(const UniValue& params, bool fHelp); // 获取指定区块哈希的区块头信息
-{% endhighlight %}
+```
 
 实现在“rpcblockchain.cpp”文件中。
 
-{% highlight C++ %}
+```cpp
 UniValue getblockheader(const UniValue& params, bool fHelp)
 {
     if (fHelp || params.size() < 1 || params.size() > 2) // 参数至少为 1 个（区块哈希），至多 2 个
@@ -158,7 +158,7 @@ UniValue getblockheader(const UniValue& params, bool fHelp)
 
     return blockheaderToJSON(pblockindex); // 封装区块头信息为 JSON 格式并返回
 }
-{% endhighlight %}
+```
 
 基本流程：<br>
 1.处理命令帮助和参数个数。<br>
@@ -173,7 +173,7 @@ UniValue getblockheader(const UniValue& params, bool fHelp)
 最后调用 blockheaderToJSON(pblockindex) 函数把区块索引信息封装为 JSON 格式。<br>
 该函数实现在“rpcblockchain.cpp”文件中。
 
-{% highlight C++ %}
+```cpp
 UniValue blockheaderToJSON(const CBlockIndex* blockindex)
 {
     UniValue result(UniValue::VOBJ);
@@ -200,7 +200,7 @@ UniValue blockheaderToJSON(const CBlockIndex* blockindex)
         result.push_back(Pair("nextblockhash", pnext->GetBlockHash().GetHex()));
     return result;
 }
-{% endhighlight %}
+```
 
 ## 参照
 

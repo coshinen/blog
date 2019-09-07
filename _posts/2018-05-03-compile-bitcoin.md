@@ -13,25 +13,25 @@ tags: 区块链 比特币 源码构建
 
 使用 git 把 GitHub 上托管的比特币源码克隆到本地，关于 git 的安装和使用详见 [Git 基础命令](/blog/2018/04/git-commands.html)篇。
 
-{% highlight shell %}
+```shell
 $ git clone https://github.com/bitcoin/bitcoin.git # 克隆最新版的比特币源码到本地。
 $ cd bitcoin # 切换至比特币根目录。
 $ git checkout v0.12.1 # 在当前分支上切换至 tag 为 v0.12.1 的版本，或省略此步骤以编译最新版。
 $ git status # 查看当前状态（这里会显示版本信息），此步可省略。
 HEAD detached at v0.12.1
 nothing to commit, working directory clean
-{% endhighlight %}
+```
 
 ## 构建（编译和安装）
 
 **在构建源码之前，应该先安装相关的依赖库。**
 
-{% highlight shell %}
+```shell
 $ ./autogen.sh # 生成 configure
 $ ./configure # 配置生成 Makefile，例：关闭钱包功能，使用静态库链接得到移植后不依赖库文件的可执行文件，指定 boost 库路径等
 $ make # 使用 Makefile 进行比特币源码的编译，编译完成后会生成 4 至 6 个 ELF，分别为 bitcoind、bitcoin-cli、bitcoin-tx、test_bitcoin，若安装了 Qt 图形库，则会增加 bitcoin-qt、test_bitcoin-qt
 $ make install # 该项可选，把编译好的比特币程序拷贝到系统默认的可执行程序目录 /usr/local/bin 下
-{% endhighlight %}
+```
 
 **注：macOS Mojave 无法构建 bitcoin v0.12.1 的可执行文件 bitcoin-qt，因为 macOS Mojave 不支持 bitcoin v0.12.1 对应的 qt5.5 的构建。**
 
@@ -46,9 +46,9 @@ C++ 编译器较吃内存。推荐在编译比特币核心时至少有 1GB 的�
 
 使用 Homebrew 安装依赖。
 
-{% highlight shell %}
+```shell
 $ brew install automake berkeley-db4 libtool boost@1.59 miniupnpc openssl pkg-config protobuf python qt libevent qrencode
-{% endhighlight %}
+```
 
 brew 默认安装指定库的最新版本，可以使用命令`$ brew search <libname>`查看指定库的所有版本。
 **bitcoin v0.12.1 对应的 boost 库的版本为1.59.0，可以从 [bitcoin/depends/packages/boost.mk](https://github.com/bitcoin/bitcoin/blob/v0.12.1/depends/packages/boost.mk) 中获取当前版本比特币对应的 boost 库的版本。**
@@ -57,53 +57,53 @@ brew 默认安装指定库的最新版本，可以使用命令`$ brew search <li
 
 构建必备：
 
-{% highlight shell %}
+```shell
 $ sudo apt-get install build-essential libtool autotools-dev automake pkg-config libssl-dev libevent-dev bsdmainutils python3
-{% endhighlight %}
+```
 
 Boost 库：
 
-{% highlight shell %}
+```shell
 $ sudo apt-get install libboost-system-dev libboost-filesystem-dev libboost-chrono-dev libboost-program-options-dev libboost-test-dev libboost-thread-dev
 $ sudo apt-get install libboost-all-dev # 如果不管用，你可以安装全部的 boost 开发包
-{% endhighlight %}
+```
 
 **ubuntu 16.04.* 默认安装 boost 库的版本为 1.58.0，可满足 bitcoin v0.12.1 对 boost 库的需求。**
 
 BerkeleyDB 钱包所需：
 
-{% highlight shell %}
+```shell
 $ sudo apt-get install software-properties-common
 $ sudo add-apt-repository ppa:bitcoin/bitcoin
 $ sudo apt-get update
 $ sudo apt-get install libdb4.8-dev libdb4.8++-dev
-{% endhighlight %}
+```
 
 UPnP 库：
 
-{% highlight shell %}
+```shell
 $ sudo apt-get install libminiupnpc-dev # 查看 --with-miniupnpc 和 --enable-upnp-default
-{% endhighlight %}
+```
 
 ZMQ 依赖：
 
-{% highlight shell %}
+```shell
 $ sudo apt-get install libzmq3-dev # 提供 ZMQ API 4.x
-{% endhighlight %}
+```
 
 ## GUI 依赖
 
 Qt5 图形库（推荐，若不使用图形化界面可省略此步，同时减少构建时间）：
 
-{% highlight shell %}
+```shell
 $ sudo apt-get install libqt5gui5 libqt5core5a libqt5dbus5 qttools5-dev qttools5-dev-tools libprotobuf-dev protobuf-compiler # Qt 5
-{% endhighlight %}
+```
 
 libqrencode 二维码生成库（可选）：
 
-{% highlight shell %}
+```shell
 $ sudo apt-get install libqrencode-dev
-{% endhighlight %}
+```
 
 **注：发行版是使用 GCC 构建然后使用“strip bitcoind”去掉调试符号，该操作可减少可执行文件大小约 90%。**
 
@@ -111,13 +111,13 @@ $ sudo apt-get install libqrencode-dev
 
 使用下面命令显示额外的配置选项列表：
 
-{% highlight shell %}
+```shell
 $ ./configure --help
-{% endhighlight %}
+```
 
 <details>
 <summary>bitcoin v0.12.1 configure list</summary>
-{% highlight shell %}
+```shell
 `configure' configures Bitcoin Core 0.12.1 to adapt to many kinds of systems.
 
 Usage: ./configure [OPTION]... [VAR=VALUE]...
@@ -370,7 +370,7 @@ Use these variables to override the choices made by `configure' or to help
 it to find libraries and programs with nonstandard names/locations.
 
 Report bugs to <https://github.com/bitcoin/bitcoin/issues>.
-{% endhighlight %}
+```
 </details>
 
 ## 特殊构建（编译得到类似于官方发布的可执行文件）
@@ -379,20 +379,20 @@ Report bugs to <https://github.com/bitcoin/bitcoin/issues>.
 
 首先，安装基本依赖：
 
-{% highlight shell %}
+```shell
 $ sudo apt install build-essential libtool autotools-dev automake pkg-config bsdmainutils curl
-{% endhighlight %}
+```
 
 **注：比特币 v0.12.1 源码需先修改 Qt 包源路径，查看[交叉编译比特币源码](/blog/2018/09/cross-compile-bitcoin.html#Qt-ref)。**
 
-{% highlight shell %}
+```shell
 $ cd depends
 $ make # 这一步会使用 curl 下载并编译相关依赖，确保网络畅通，若某个依赖包请求失败，可多尝试几次，注：miniupnpc 包所在网址可能需要科学上网
 $ cd ..
 $ ./autogen.sh # 若是首次构建，先生成 configure
 $ ./configure --prefix=`pwd`/depends/x86_64-pc-linux-gnu --enable-glibc-back-compat LDFLAGS="-static-libstdc++" # 使用指定位置的依赖安装独立于目录结构的文件，开启 glibc 的向后兼容并使用静态链接选项
 $ make # 若构建过，则先执行 make clean 进行清理
-{% endhighlight %}
+```
 
 ## 参照
 

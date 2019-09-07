@@ -10,9 +10,9 @@ excerpt: $ bitcoin-cli setgenerate generate ( genproclimit )
 ---
 ## 提示说明
 
-{% highlight shell %}
+```shell
 setgenerate generate ( genproclimit ) # 设置打开或关闭挖矿的开关和矿工线程数
-{% endhighlight %}
+```
 
 挖矿受限于 genproclimit 线程数，-1 表示无限制（与 CPU 核数相同）。<br>
 使用 [getgenerate](/blog/2018/06/bitcoin-rpc-command-getgenerate.html) 查看当前设置。
@@ -30,61 +30,61 @@ setgenerate generate ( genproclimit ) # 设置打开或关闭挖矿的开关和�
 
 用法一：开启挖矿功能，使用默认的单线程挖矿。
 
-{% highlight shell %}
+```shell
 $ bitcoin-cli setgenerate true
 $ bitcoin-cli getgenerate
 true
-{% endhighlight %}
+```
 
 或显示指定 1 个线程挖矿，效果同上。
 
-{% highlight shell %}
+```shell
 $ bitcoin-cli setgenerate true 1
 $ bitcoin-cli getgenerate
 true
-{% endhighlight %}
+```
 
 用法二：开启挖矿功能，并指定双线程挖矿。
 
-{% highlight shell %}
+```shell
 $ bitcoin-cli setgenerate true 2
 $ bitcoin-cli getgenerate
 true
-{% endhighlight %}
+```
 
 用法三：关闭挖矿功能。
 
-{% highlight shell %}
+```shell
 $ bitcoin-cli setgenerate false
 $ bitcoin-cli getgenerate
 false
-{% endhighlight %}
+```
 
 用法四：另类关闭挖矿功能。
 
-{% highlight shell %}
+```shell
 $ bitcoin-cli setgenerate true 0
 $ bitcoin-cli getgenerate
 false
-{% endhighlight %}
+```
 
 ### cURL
 
-{% highlight shell %}
+```shell
 $ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "setgenerate", "params": [true, 1] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
 {"result":null,"error":null,"id":"curltest"}
-{% endhighlight %}
+```
 
 ## 源码剖析
 setgenerate 对应的函数在“rpcserver.h”文件中被引用。
 
-{% highlight C++ %}
+```cpp
 extern UniValue setgenerate(const UniValue& params, bool fHelp); // 设置挖矿状态，挖矿开关
-{% endhighlight %}
+```
 
 实现在“rpcmining.cpp”文件中。
 
-{% highlight C++ %}
+```cpp
 UniValue setgenerate(const UniValue& params, bool fHelp)
 {
     if (fHelp || params.size() < 1 || params.size() > 2) // 参数至少为 1 个，至多为 2 个
@@ -128,7 +128,7 @@ UniValue setgenerate(const UniValue& params, bool fHelp)
 
     return NullUniValue; // 返回空值
 }
-{% endhighlight %}
+```
 
 基本流程：<br>
 1.处理命令帮助和参数个数。<br>
@@ -141,14 +141,14 @@ UniValue setgenerate(const UniValue& params, bool fHelp)
 第六步，调用 GenerateBitcoins(fGenerate, nGenProcLimit, Params()) 函数创建指定数目的挖矿线程。
 该函数声明在“miner.h”文件中。
 
-{% highlight C++ %}
+```cpp
 /** Run the miner threads */
 void GenerateBitcoins(bool fGenerate, int nThreads, const CChainParams& chainparams); // 运行矿工线程
-{% endhighlight %}
+```
 
 实现在“miner.cpp”文件中。
 
-{% highlight C++ %}
+```cpp
 void GenerateBitcoins(bool fGenerate, int nThreads, const CChainParams& chainparams)
 {
     static boost::thread_group* minerThreads = NULL; // 矿工线程组指针对象
@@ -170,13 +170,13 @@ void GenerateBitcoins(bool fGenerate, int nThreads, const CChainParams& chainpar
     for (int i = 0; i < nThreads; i++) // 创建指定线程数 nThreads 个比特币矿工线程 BitcoinMiner
         minerThreads->create_thread(boost::bind(&BitcoinMiner, boost::cref(chainparams)));
 }
-{% endhighlight %}
+```
 
 该函数会先杀掉当前存在的比特币矿工线程，然后根据实参 fGenerate 决定直接返回还是创建新的比特币矿工线程。
 比特币矿工线程函数 BitcoinMiner(...)。实现在“miner.h”文件中。<br>
 在最新版的比特币源码中该函数已移除。
 
-{% highlight C++ %}
+```cpp
 void static BitcoinMiner(const CChainParams& chainparams)
 {
     LogPrintf("BitcoinMiner started\n");
@@ -303,7 +303,7 @@ void static BitcoinMiner(const CChainParams& chainparams)
         return;
     }
 }
-{% endhighlight %}
+```
 
 ## 参照
 

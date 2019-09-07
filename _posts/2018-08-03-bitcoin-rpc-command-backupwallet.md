@@ -10,9 +10,9 @@ excerpt: $ bitcoin-cli backupwallet "destination"
 ---
 ## 提示说明
 
-{% highlight shell %}
+```shell
 backupwallet "destination" # 安全复制 wallet.dat 到目标 destination，它可以是一个目录或一个文件名
-{% endhighlight %}
+```
 
 参数：<br>
 1.destination（字符串）目标目录或文件。
@@ -26,47 +26,47 @@ backupwallet "destination" # 安全复制 wallet.dat 到目标 destination，它
 用法一：备份为指定文件名，默认保存在用户首次使用该命令的工作目录下。<br>
 这里在家目录 ~ 下使用该命令。
 
-{% highlight shell %}
+```shell
 $ bitcoin-cli backupwallet backup.dat
 $ ls ~
 ... backup.dat ...
-{% endhighlight %}
+```
 
 用法二：备份为指定全路径名的文件。
 
-{% highlight shell %}
+```shell
 $ ls ~/.bitcoin
 bitcoind.pid blocks chainstate database db.log debug.log wallet.dat
 $ bitcoin-cli backupwallet ~/.bitcoin/backup.dat
 $ ls ~/.bitcoin
 backup.dat bitcoind.pid blocks chainstate database db.log debug.log wallet.dat
-{% endhighlight %}
+```
 
 用法三：备份到指定目录下。
 
-{% highlight shell %}
+```shell
 $ bitcoin-cli backupwallet ~
 $ ls ~
 ... wallet.dat ...
-{% endhighlight %}
+```
 
 ### cURL
 
-{% highlight shell %}
+```shell
 $ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "backupwallet", "params": ["~/.bitcoin/backup.dat"] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
 {"result":null,"error":null,"id":"curltest"}
-{% endhighlight %}
+```
 
 ## 源码剖析
 backupwallet 对应的函数在“rpcserver.h”文件中被引用。
 
-{% highlight C++ %}
+```cpp
 extern UniValue backupwallet(const UniValue& params, bool fHelp); // 备份钱包
-{% endhighlight %}
+```
 
 实现在“rpcwallet.cpp”文件中。
 
-{% highlight C++ %}
+```cpp
 UniValue backupwallet(const UniValue& params, bool fHelp)
 {
     if (!EnsureWalletIsAvailable(fHelp)) // 确保当前钱包可用
@@ -91,7 +91,7 @@ UniValue backupwallet(const UniValue& params, bool fHelp)
 
     return NullUniValue; // 返回空值
 }
-{% endhighlight %}
+```
 
 基本流程：<br>
 1.确保钱包当前可用（已初始化完成）。<br>
@@ -103,13 +103,13 @@ UniValue backupwallet(const UniValue& params, bool fHelp)
 第五步，调用 BackupWallet(*pwalletMain, strDest) 函数复制原钱包数据文件到指定位置，达到备份钱包文件的效果。
 该函数声明在“walletdb.h”文件中。
 
-{% highlight C++ %}
+```cpp
 bool BackupWallet(const CWallet& wallet, const std::string& strDest); // 备份钱包
-{% endhighlight %}
+```
 
 实现在“walletdb.cpp”文件中。
 
-{% highlight C++ %}
+```cpp
 bool BackupWallet(const CWallet& wallet, const string& strDest)
 {
     if (!wallet.fFileBacked) // 备份文件标志为 true
@@ -149,7 +149,7 @@ bool BackupWallet(const CWallet& wallet, const string& strDest)
     }
     return false;
 }
-{% endhighlight %}
+```
 
 ## 参照
 

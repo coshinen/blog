@@ -10,20 +10,20 @@ excerpt: $ bitcoin-cli getaddressesbyaccount "account"
 ---
 ## 提示说明
 
-{% highlight shell %}
+```shell
 getaddressesbyaccount "account" # （已过时）获取指定账户的地址列表
-{% endhighlight %}
+```
 
 参数：
 1. account（字符串，必备）账户名。
 
 结果：
-{% highlight shell %}
+```shell
 [                     （json 字符串数组）
   "bitcoinaddress"  （字符串）一个关联给定账户的比特币地址
   ,...
 ]
-{% endhighlight %}
+```
 
 ## 用法示例
 
@@ -31,32 +31,32 @@ getaddressesbyaccount "account" # （已过时）获取指定账户的地址列�
 
 获取账户 "tabby" 下的所有地址。
 
-{% highlight shell %}
+```shell
 $ bitcoin-cli getaddressesbyaccount "tabby"
 [
   "1N7xDfRbkVwa2Co8q1KbDCVEr9rg8VWsfW", 
   "1QKe82sDGtbBRp1ymRqG5XXFzJCfjUmpsi",
   ...
 ]
-{% endhighlight %}
+```
 
 ### cURL
 
-{% highlight shell %}
+```shell
 $ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "getaddressesbyaccount", "params": ["tabby"] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
 {"result":["1N7xDfRbkVwa2Co8q1KbDCVEr9rg8VWsfW","1QKe82sDGtbBRp1ymRqG5XXFzJCfjUmpsi"],"error":null,"id":"curltest"}
-{% endhighlight %}
+```
 
 ## 源码剖析
 getaddressesbyaccount 对应的函数在“rpcserver.h”文件中被引用。
 
-{% highlight C++ %}
+```cpp
 extern UniValue getaddressesbyaccount(const UniValue& params, bool fHelp); // 获取账户下的所有地址
-{% endhighlight %}
+```
 
 实现在“rpcwallet.cpp”文件中。
 
-{% highlight C++ %}
+```cpp
 UniValue getaddressesbyaccount(const UniValue& params, bool fHelp)
 {
     if (!EnsureWalletIsAvailable(fHelp)) // 确保当前钱包可用
@@ -93,7 +93,7 @@ UniValue getaddressesbyaccount(const UniValue& params, bool fHelp)
     }
     return ret; // 返回结果对象
 }
-{% endhighlight %}
+```
 
 基本流程：
 1. 确保钱包当前可用（已初始化完成）。

@@ -10,9 +10,9 @@ excerpt: $ bitcoin-cli verifytxoutproof "proof"
 ---
 ## 提示说明
 
-{% highlight shell %}
+```shell
 verifytxoutproof "proof" # 验证指向块上的一笔交易的证明，返回它提交的交易，如果该块不在最佳链上则抛出一个 RPC 错误
-{% endhighlight %}
+```
 
 参数：<br>
 1.proof（字符串，必备）通过 [gettxoutproof](/blog/2018/06/bitcoin-rpc-command-gettxoutproof.html) 生成的 16 进制编码的证明。
@@ -26,32 +26,32 @@ verifytxoutproof "proof" # 验证指向块上的一笔交易的证明，返回�
 先使用 [gettxoutproof](/blog/2018/06/bitcoin-rpc-command-gettxoutproof.html) 获取一笔交易的证明，
 然后再验证该证明，通过对比返回的交易索引来验证该交易证明。
 
-{% highlight shell %}
+```shell
 $ bitcoin-cli gettxoutproof [\"b797bafd7830774cec4d24d1e649cafb0aa7a67b9f1cc06954102a50b463fa0f\"]
 00000020a7bdefd4740678bd9e4b6c6c170dd6ebdfb4dabfb237e428bb4a70f3ae000000ea0a02f07f8f8d9e81792b0068341be05dc20a1d7488b0c34a64c6ed1de72d41b7a3305b538c021e7d5952000200000002ba9ac033f860746a4ab907f918192bf412965e414d84aca52d705131f3b47e570ffa63b4502a105469c01c9f7ba6a70afbca49e6d1244dec4c773078fdba97b70105
 $ bitcoin-cli verifytxoutproof 00000020a7bdefd4740678bd9e4b6c6c170dd6ebdfb4dabfb237e428bb4a70f3ae000000ea0a02f07f8f8d9e81792b0068341be05dc20a1d7488b0c34a64c6ed1de72d41b7a3305b538c021e7d5952000200000002ba9ac033f860746a4ab907f918192bf412965e414d84aca52d705131f3b47e570ffa63b4502a105469c01c9f7ba6a70afbca49e6d1244dec4c773078fdba97b70105
 [
   "b797bafd7830774cec4d24d1e649cafb0aa7a67b9f1cc06954102a50b463fa0f"
 ]
-{% endhighlight %}
+```
 
 ### cURL
 
-{% highlight shell %}
+```shell
 $ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "verifytxoutproof", "params": ["00000020a7bdefd4740678bd9e4b6c6c170dd6ebdfb4dabfb237e428bb4a70f3ae000000ea0a02f07f8f8d9e81792b0068341be05dc20a1d7488b0c34a64c6ed1de72d41b7a3305b538c021e7d5952000200000002ba9ac033f860746a4ab907f918192bf412965e414d84aca52d705131f3b47e570ffa63b4502a105469c01c9f7ba6a70afbca49e6d1244dec4c773078fdba97b70105"] }' -H 'content-type: text/plain;' http://127.0.0.1:8331/
 {"result":["b797bafd7830774cec4d24d1e649cafb0aa7a67b9f1cc06954102a50b463fa0f"],"error":null,"id":"curltest"}
-{% endhighlight %}
+```
 
 ## 源码剖析
 verifytxoutproof 对应的函数在“rpcserver.h”文件中被引用。
 
-{% highlight C++ %}
+```cpp
 extern UniValue verifytxoutproof(const UniValue& params, bool fHelp); // 验证交易证明
-{% endhighlight %}
+```
 
 实现在“rpcrawtransaction.cpp”文件中。
 
-{% highlight C++ %}
+```cpp
 UniValue verifytxoutproof(const UniValue& params, bool fHelp)
 {
     if (fHelp || params.size() != 1) // 参数必须为 1 个
@@ -84,7 +84,7 @@ UniValue verifytxoutproof(const UniValue& params, bool fHelp)
         res.push_back(hash.GetHex()); // 加入结果集
     return res; // 返回结果
 }
-{% endhighlight %}
+```
 
 基本流程：
 1. 处理命令帮助和参数个数。

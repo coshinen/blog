@@ -10,9 +10,9 @@ excerpt: $ bitcoin-cli getrawtransaction "txid" ( verbose )
 ---
 ## 提示说明
 
-{% highlight shell %}
+```shell
 getrawtransaction "txid" ( verbose ) # 获取原始交易信息
-{% endhighlight %}
+```
 
 **注：默认情况，此功能只在某些情况下有效。
 这是当交易在交易内存池或在此交易的未花费交易输出集中有一个未花费输出时。
@@ -27,7 +27,7 @@ getrawtransaction "txid" ( verbose ) # 获取原始交易信息
 （字符串）返回交易 txid 序列化的 16 进制编码的数据。
 
 结果：（如果 verbose 大于 0）<br>
-{% highlight shell %}
+```shell
 {
   "hex" : "data",       （字符串）序列化的 16 进制编码的交易 'txid' 数据
   "txid" : "id",        （字符串）交易索引（和提供的一样）
@@ -68,27 +68,27 @@ getrawtransaction "txid" ( verbose ) # 获取原始交易信息
   "time" : ttt,             （数字）从格林尼治时间 1970-01-01 00:00:00 开始以秒为单位的交易时间
   "blocktime" : ttt         （数字）从格林尼治时间 1970-01-01 00:00:00 开始以秒为单位的区块创建时间
 }
-{% endhighlight %}
+```
 
 ## 用法示例
 
 用法一：获取指定原始交易的序列化数据。
 
-{% highlight shell %}
+```shell
 $ bitcoin-cli getrawtransaction 684f6ed5b6e127ba76c07ef4c3fcc02a02c7e2ccef9ed0d2cc16c2896159c746
 0100000001677e3c8d416184b42c753a8446f17b0b7997f0df7149449fbd0aef3cdfd29bfb000000006b4830450221009b29490f5e1709bc3cce16c6433a0b8895add5a9d3c2fa63da11da065105ad59022022d068337cd3b20be04513e539f0bbbb5319ed1b3a3a8ec6262a30a8bd393b3d012103583eb3acb7f0b9c431d97a4872a270f4e519fbca0ec519adf16764c663e36546ffffffff0140420f00000000001976a914e221b8a504199bec7c5fe8081edd011c3653118288ac00000000
-{% endhighlight %}
+```
 
 用法二：设置 verbose 为 0，获取指定原始交易的序列化数据，效果同上。
 
-{% highlight shell %}
+```shell
 $ bitcoin-cli getrawtransaction 684f6ed5b6e127ba76c07ef4c3fcc02a02c7e2ccef9ed0d2cc16c2896159c746
 0100000001677e3c8d416184b42c753a8446f17b0b7997f0df7149449fbd0aef3cdfd29bfb000000006b4830450221009b29490f5e1709bc3cce16c6433a0b8895add5a9d3c2fa63da11da065105ad59022022d068337cd3b20be04513e539f0bbbb5319ed1b3a3a8ec6262a30a8bd393b3d012103583eb3acb7f0b9c431d97a4872a270f4e519fbca0ec519adf16764c663e36546ffffffff0140420f00000000001976a914e221b8a504199bec7c5fe8081edd011c3653118288ac00000000
-{% endhighlight %}
+```
 
 用法三：设置 verbose 为 1，获取指定索引的原始交易信息。
 
-{% highlight shell %}
+```shell
 $ bitcoin-cli getrawtransaction 684f6ed5b6e127ba76c07ef4c3fcc02a02c7e2ccef9ed0d2cc16c2896159c746 1
 {
   "hex": "0100000001677e3c8d416184b42c753a8446f17b0b7997f0df7149449fbd0aef3cdfd29bfb000000006b4830450221009b29490f5e1709bc3cce16c6433a0b8895add5a9d3c2fa63da11da065105ad59022022d068337cd3b20be04513e539f0bbbb5319ed1b3a3a8ec6262a30a8bd393b3d012103583eb3acb7f0b9c431d97a4872a270f4e519fbca0ec519adf16764c663e36546ffffffff0140420f00000000001976a914e221b8a504199bec7c5fe8081edd011c3653118288ac00000000",
@@ -123,27 +123,27 @@ $ bitcoin-cli getrawtransaction 684f6ed5b6e127ba76c07ef4c3fcc02a02c7e2ccef9ed0d2
     }
   ]
 }
-{% endhighlight %}
+```
 
 **注：该交易还未上链，所以没有区块信息。**
 
 ### cURL
 
-{% highlight shell %}
+```shell
 $ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "getrawtransaction", "params": ["684f6ed5b6e127ba76c07ef4c3fcc02a02c7e2ccef9ed0d2cc16c2896159c746", 1] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
 {"result":{"hex":"0100000001677e3c8d416184b42c753a8446f17b0b7997f0df7149449fbd0aef3cdfd29bfb000000006b4830450221009b29490f5e1709bc3cce16c6433a0b8895add5a9d3c2fa63da11da065105ad59022022d068337cd3b20be04513e539f0bbbb5319ed1b3a3a8ec6262a30a8bd393b3d012103583eb3acb7f0b9c431d97a4872a270f4e519fbca0ec519adf16764c663e36546ffffffff0140420f00000000001976a914e221b8a504199bec7c5fe8081edd011c3653118288ac00000000","txid":"684f6ed5b6e127ba76c07ef4c3fcc02a02c7e2ccef9ed0d2cc16c2896159c746","size":192,"version":1,"locktime":0,"vin":[{"txid":"fb9bd2df3cef0abd9f444971dff097790b7bf146843a752cb48461418d3c7e67","vout":0,"scriptSig":{"asm":"30450221009b29490f5e1709bc3cce16c6433a0b8895add5a9d3c2fa63da11da065105ad59022022d068337cd3b20be04513e539f0bbbb5319ed1b3a3a8ec6262a30a8bd393b3d[ALL] 03583eb3acb7f0b9c431d97a4872a270f4e519fbca0ec519adf16764c663e36546","hex":"4830450221009b29490f5e1709bc3cce16c6433a0b8895add5a9d3c2fa63da11da065105ad59022022d068337cd3b20be04513e539f0bbbb5319ed1b3a3a8ec6262a30a8bd393b3d012103583eb3acb7f0b9c431d97a4872a270f4e519fbca0ec519adf16764c663e36546"},"sequence":4294967295}],"vout":[{"value":0.01000000,"n":0,"scriptPubKey":{"asm":"OP_DUP OP_HASH160 e221b8a504199bec7c5fe8081edd011c36531182 OP_EQUALVERIFY OP_CHECKSIG","hex":"76a914e221b8a504199bec7c5fe8081edd011c3653118288ac","reqSigs":1,"type":"pubkeyhash","addresses":["1Mcg7MDBD38sSScsX3USbsCnkcMbPnLyTV"]}}]},"error":null,"id":"curltest"}
-{% endhighlight %}
+```
 
 ## 源码剖析
 getrawtransaction 对应的函数在“rpcserver.h”文件中被引用。
 
-{% highlight C++ %}
+```cpp
 extern UniValue getrawtransaction(const UniValue& params, bool fHelp); // 获取原始交易信息
-{% endhighlight %}
+```
 
 实现在“rpcrawtransaction.cpp”文件中。
 
-{% highlight C++ %}
+```cpp
 UniValue getrawtransaction(const UniValue& params, bool fHelp)
 {
     if (fHelp || params.size() < 1 || params.size() > 2) // 参数为 1 或 2 个
@@ -234,7 +234,7 @@ UniValue getrawtransaction(const UniValue& params, bool fHelp)
     TxToJSON(tx, hashBlock, result); // 交易信息转换为 JSON 格式加入结果
     return result; // 返回结果
 }
-{% endhighlight %}
+```
 
 基本流程：
 1. 处理命令帮助和参数个数。

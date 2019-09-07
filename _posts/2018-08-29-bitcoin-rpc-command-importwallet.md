@@ -10,9 +10,9 @@ excerpt: $ bitcoin-cli importwallet "filename" # 从一个导出的钱包文件�
 ---
 ## 提示说明
 
-{% highlight shell %}
+```shell
 importwallet "filename" # 从一个导出的钱包文件（见 dumpwallet）导入密钥
-{% endhighlight %}
+```
 
 参数：<br>
 1.filename（字符串，必备）钱包文件（使用 [dumpwallet](/blog/2018/08/bitcoin-rpc-command-dumpwallet.html) 导出的）。
@@ -26,34 +26,34 @@ importwallet "filename" # 从一个导出的钱包文件（见 dumpwallet）导�
 导入 [dumpwallet](/blog/2018/08/bitcoin-rpc-command-dumpwallet.html) 导出的钱包文件。<br>
 这里在家目录 ~ 下使用该命令。
 
-{% highlight shell %}
+```shell
 $ bitcoin-cli dumpwallet wallet.txt
 $ ls ~
 ... wallet.txt ...
 $ bitcoin-cli importwallet ~/wallet.txt
 $ bitcoin-cli dumpwallet newwallet.txt
 $ vim newwallet.txt
-{% endhighlight %}
+```
 
 导入后再次导出钱包文件查看导入的密钥。
 
 ### cURL
 
-{% highlight shell %}
+```shell
 $ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "importwallet", "params": ["wallet.txt"] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
 {"result":null,"error":null,"id":"curltest"}
-{% endhighlight %}
+```
 
 ## 源码剖析
 importwallet 对应的函数在“rpcserver.h”文件中被引用。
 
-{% highlight C++ %}
+```cpp
 extern UniValue importwallet(const UniValue& params, bool fHelp); // 导入钱包
-{% endhighlight %}
+```
 
 实现在“rpcwallet.cpp”文件中。
 
-{% highlight C++ %}
+```cpp
 UniValue importwallet(const UniValue& params, bool fHelp)
 {
     if (!EnsureWalletIsAvailable(fHelp)) // 确保当前钱包可用
@@ -160,7 +160,7 @@ UniValue importwallet(const UniValue& params, bool fHelp)
 
     return NullUniValue; // 返回空值
 }
-{% endhighlight %}
+```
 
 基本流程：
 1. 确保钱包当前可用（已初始化完成）。

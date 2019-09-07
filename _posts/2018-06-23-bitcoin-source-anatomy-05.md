@@ -15,7 +15,7 @@ tags: 区块链 比特币 源码剖析
 <p id="Step03-ref"></p>
 3.11.3.第三步，参数转化为内部标志。这部分代码实现在“init.cpp”文件的 AppInit2(...) 函数中。
 
-{% highlight C++ %}
+```cpp
 bool AppInit2(boost::thread_group& threadGroup, CScheduler& scheduler) // 3.11.0.程序初始化，共 12 步
 {
     ...
@@ -185,7 +185,7 @@ bool AppInit2(boost::thread_group& threadGroup, CScheduler& scheduler) // 3.11.0
     }
     ...
 };
-{% endhighlight %}
+```
 
 1.调试选项的相关设置。<br>
 2.一些过时的（现已不支持的）选项检测。<br>
@@ -201,7 +201,7 @@ bool AppInit2(boost::thread_group& threadGroup, CScheduler& scheduler) // 3.11.0
 3.11.4.第四步，应用程序初始化，涉及到椭圆曲线的初始化、数据目录锁、守护进程后台化、进程号文件、调试日志文件。
 这部分代码实现在“init.cpp”文件的 AppInit2(...) 函数中。
 
-{% highlight C++ %}
+```cpp
 bool AppInit2(boost::thread_group& threadGroup, CScheduler& scheduler) // 3.11.0.程序初始化，共 12 步
 {
     ...
@@ -279,7 +279,7 @@ bool AppInit2(boost::thread_group& threadGroup, CScheduler& scheduler) // 3.11.0
     int64_t nStart; // 启动标志
     ...
 };
-{% endhighlight %}
+```
 
 > 1.[初始化椭圆曲线代码。](/blog/2018/06/bitcoin-source-anatomy-06.html#Init-ref)<br>
 > 2.[初始化完整性检查。](/blog/2018/07/bitcoin-source-anatomy-07.html#InitSanityCheck-ref)<br>

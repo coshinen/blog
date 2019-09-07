@@ -10,9 +10,9 @@ excerpt: $ bitcoin-cli listsinceblock ( "blockhash" target-confirmations include
 ---
 ## 提示说明
 
-{% highlight shell %}
+```shell
 listsinceblock ( "blockhash" target-confirmations includeWatchonly ) # 获取从区块 blockhash 开始到最佳区块上的全部交易，如果该参数省略则获取全部区块交易
-{% endhighlight %}
+```
 
 参数：
 1. blockhash（字符串，可选）列出从该区块哈希开始的全部交易。
@@ -20,7 +20,7 @@ listsinceblock ( "blockhash" target-confirmations includeWatchonly ) # 获取从
 3. includeWatchonly（布尔型，可选，默认为 false）包含到 watchonly 地址的交易（见 [importaddress](/blog/2018/08/bitcoin-rpc-command-importaddress.html)）。
 
 结果：
-{% highlight shell %}
+```shell
 {
   "transactions": [
     "account":"accountname",       （字符串，已过时）交易关联的帐户名。默认账户为 ""。
@@ -43,7 +43,7 @@ listsinceblock ( "blockhash" target-confirmations includeWatchonly ) # 获取从
   ],
   "lastblock": "lastblockhash"     （字符串）最新的区块哈希
 }
-{% endhighlight %}
+```
 
 ## 用法示例
 
@@ -51,7 +51,7 @@ listsinceblock ( "blockhash" target-confirmations includeWatchonly ) # 获取从
 
 用法一：列出全部区块的交易。
 
-{% highlight shell %}
+```shell
 $ bitcoin-cli listsinceblock
 {
   "transactions": [
@@ -77,11 +77,11 @@ $ bitcoin-cli listsinceblock
   ],
   "lastblock": "00000071df37848cb6d23425da28d400d0c0b9cd0725b629a0891a14be272083"
 }
-{% endhighlight %}
+```
 
 用法二：列出从当前最佳区块开始的全部交易。
 
-{% highlight shell %}
+```shell
 $ bitcoin-cli getblockcount
 38565
 $ bitcoin-cli getblockhash 38565
@@ -109,24 +109,24 @@ $ bitcoin-cli listsinceblock 0000014c2436b10caba31a8ab61b78b91a3f877d1e00f9995f0
   ],
   "lastblock": "00000125b002c17dea5a3b2139f0277827a84809e17379c10a7c987282144012"
 }
-{% endhighlight %}
+```
 
 ### cURL
 
-{% highlight shell %}
+```shell
 {"result":{"transactions":[{"account":"","address":"1Z99Lsij11ajDEhipZbnifdFkBu8fC1Hb","category":"orphan","amount":50.00000000,"vout":0,"confirmations":0,"generated":true,"trusted":false,"txid":"18955cbce8c776fb6132c0c3a4770965bc5530d896a95c0128920630aa084dfa","walletconflicts":[],"time":1529979442,"timereceived":1529979442,"bip125-replaceable":"unknown"}],"lastblock":"000000796192bdbec7c9d6c540dbbc04a9d8cd24ea6d77c96723f9a093450a70"},"error":null,"id":"curltest"}
-{% endhighlight %}
+```
 
 ## 源码剖析
 listsinceblock 对应的函数在“rpcserver.h”文件中被引用。
 
-{% highlight C++ %}
+```cpp
 extern UniValue listsinceblock(const UniValue& params, bool fHelp); // 列出指定区块开始区块上的全部交易
-{% endhighlight %}
+```
 
 实现在“wallet/rpcwallet.cpp”文件中。
 
-{% highlight C++ %}
+```cpp
 UniValue listsinceblock(const UniValue& params, bool fHelp)
 {
     if (!EnsureWalletIsAvailable(fHelp)) // 确保当前钱包可用
@@ -218,7 +218,7 @@ UniValue listsinceblock(const UniValue& params, bool fHelp)
 
     return ret; // 返回结果对象
 }
-{% endhighlight %}
+```
 
 基本流程：<br>
 1.确保钱包当前可用（已初始化完成）。<br>
@@ -232,7 +232,7 @@ UniValue listsinceblock(const UniValue& params, bool fHelp)
 第六步，调用 ListTransactions(tx, "*", 0, true, transactions, filter) 函数获取一笔交易的相关信息，
 该函数定义在“wallet/rpcwallet.cpp”文件中。
 
-{% highlight C++ %}
+```cpp
 void ListTransactions(const CWalletTx& wtx, const string& strAccount, int nMinDepth, bool fLong, UniValue& ret, const isminefilter& filter)
 {
     CAmount nFee; // 交易费
@@ -307,11 +307,11 @@ void ListTransactions(const CWalletTx& wtx, const string& strAccount, int nMinDe
         }
     }
 }
-{% endhighlight %}
+```
 
 调用 WalletTxToJSON(wtx, entry) 函数把相应钱包信息转化为 JSON 格式，该函数定义在“wallet/rpcwallet.cpp”文件中。
 
-{% highlight C++ %}
+```cpp
 void WalletTxToJSON(const CWalletTx& wtx, UniValue& entry)
 {
     int confirms = wtx.GetDepthInMainChain();
@@ -354,7 +354,7 @@ void WalletTxToJSON(const CWalletTx& wtx, UniValue& entry)
     BOOST_FOREACH(const PAIRTYPE(string,string)& item, wtx.mapValue)
         entry.push_back(Pair(item.first, item.second));
 }
-{% endhighlight %}
+```
 
 ## 参照
 

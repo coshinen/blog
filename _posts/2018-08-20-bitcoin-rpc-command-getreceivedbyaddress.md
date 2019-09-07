@@ -10,9 +10,9 @@ excerpt: $ bitcoin-cli getreceivedbyaddress "bitcoinaddress" ( minconf )
 ---
 ## 提示说明
 
-{% highlight shell %}
+```shell
 getreceivedbyaddress "bitcoinaddress" ( minconf ) # 获取给定比特币地址交易中至少 minconf 次确认接收到的总金额
-{% endhighlight %}
+```
 
 参数：<br>
 1.bitcoinaddress（字符串，必备）交易的比特币地址。<br>
@@ -26,42 +26,42 @@ getreceivedbyaddress "bitcoinaddress" ( minconf ) # 获取给定比特币地址�
 
 用法一：获取指定地址下接收的至少 1 次确认的金额。
 
-{% highlight shell %}
+```shell
 $ bitcoin-cli getreceivedbyaccount "1D1ZrZNe3JUo7ZycKEYQQiQAWd9y54F4XZ"
 0
-{% endhighlight %}
+```
 
 用法二：获取指定地址下接收的包含未确认的金额。
 
-{% highlight shell %}
+```shell
 $ bitcoin-cli getreceivedbyaccount "1D1ZrZNe3JUo7ZycKEYQQiQAWd9y54F4XZ" 0
 0
-{% endhighlight %}
+```
 
 用法三：获取指定地址下接收的至少 6 次确认的金额，非常安全。
 
-{% highlight shell %}
+```shell
 $ bitcoin-cli getreceivedbyaccount "1D1ZrZNe3JUo7ZycKEYQQiQAWd9y54F4XZ" 6
 0
-{% endhighlight %}
+```
 
 ### cURL
 
-{% highlight shell %}
+```shell
 $ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "getreceivedbyaddress", "params": ["1D1ZrZNe3JUo7ZycKEYQQiQAWd9y54F4XZ", 6] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
 {"result":0,"error":null,"id":"curltest"}
-{% endhighlight %}
+```
 
 ## 源码剖析
 getreceivedbyaddress 对应的函数在“rpcserver.h”文件中被引用。
 
-{% highlight C++ %}
+```cpp
 extern UniValue getreceivedbyaddress(const UniValue& params, bool fHelp); // 获取某地址接收到的金额
-{% endhighlight %}
+```
 
 实现在“wallet/rpcwallet.cpp”文件中。
 
-{% highlight C++ %}
+```cpp
 UniValue getreceivedbyaddress(const UniValue& params, bool fHelp)
 {
     if (!EnsureWalletIsAvailable(fHelp)) // 确保当前钱包可用
@@ -118,7 +118,7 @@ UniValue getreceivedbyaddress(const UniValue& params, bool fHelp)
 
     return  ValueFromAmount(nAmount); // 这里直接格式化 Satoshi 返回
 }
-{% endhighlight %}
+```
 
 基本流程：
 1. 确保钱包当前可用（已初始化完成）。

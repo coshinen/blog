@@ -15,7 +15,7 @@ tags: 区块链 比特币 源码剖析
 <p id="Step07-ref"></p>
 3.11.7.第七步，加载区块链到内存。这部分代码实现在“init.cpp”文件的 AppInit2(...) 函数中。
 
-{% highlight C++ %}
+```cpp
 bool AppInit2(boost::thread_group& threadGroup, CScheduler& scheduler) // 3.11.程序初始化，共 12 步
 {
     ...
@@ -191,7 +191,7 @@ bool AppInit2(boost::thread_group& threadGroup, CScheduler& scheduler) // 3.11.�
     fFeeEstimatesInitialized = true; // 费用估计初始化状态标志置为 true
     ...
 }
-{% endhighlight %}
+```
 
 1.兼容旧版客户端，创建区块数据文件的硬链接。<br>
 2.计算各部分缓存大小。<br>
@@ -206,7 +206,7 @@ bool AppInit2(boost::thread_group& threadGroup, CScheduler& scheduler) // 3.11.�
 3.1.先调用 pblocktree->WriteReindexing(true) 把再索引标志写入区块数据库（leveldb），
 该函数声明在“txdb.h”文件的 CblockTreeDB 类中。
 
-{% highlight C++ %}
+```cpp
 /** Access to the block database (blocks/index/) */ // 访问区块数据库（/blocks/index）
 class CBlockTreeDB : public CDBWrapper
 {
@@ -214,11 +214,11 @@ class CBlockTreeDB : public CDBWrapper
     bool WriteReindexing(bool fReindex); // 写入再索引标志
     ...
 };
-{% endhighlight %}
+```
 
 实现在“txdb.cpp”文件中，入参为：true。
 
-{% highlight C++ %}
+```cpp
 static const char DB_REINDEX_FLAG = 'R';
 ...
 bool CBlockTreeDB::WriteReindexing(bool fReindexing) { // true
@@ -227,12 +227,12 @@ bool CBlockTreeDB::WriteReindexing(bool fReindexing) { // true
     else
         return Erase(DB_REINDEX_FLAG);
 }
-{% endhighlight %}
+```
 
 再调用 CleanupBlockRevFiles() 函数删除全部的 rev 文件和无用的区块（blk）文件，
 该函数定义再“init.cpp”文件中。
 
-{% highlight C++ %}
+```cpp
 // If we're using -prune with -reindex, then delete block files that will be ignored by the
 // reindex.  Since reindexing works by starting at block file 0 and looping until a blockfile
 // is missing, do the same here to delete any later block files after a gap.  Also delete all
@@ -274,18 +274,18 @@ void CleanupBlockRevFiles() // 删除某个缺失区块之后的所有区块数�
         remove(item.second); // 从该文件开始删除后面所有的文件
     }
 }
-{% endhighlight %}
+```
 
 3.2.调用 LoadBlockIndex() 加载区块索引，该函数声明在“main.h”文件中。
 
-{% highlight C++ %}
+```cpp
 /** Load the block tree and coins database from disk */
 bool LoadBlockIndex(); // 从磁盘加载区块树和币的数据库
-{% endhighlight %}
+```
 
 实现“main.cpp”文件中，没有入参。
 
-{% highlight C++ %}
+```cpp
 bool static LoadBlockIndexDB()
 {
     const CChainParams& chainparams = Params(); // 获取网络链参数
@@ -403,18 +403,18 @@ bool LoadBlockIndex()
         return false;
     return true; // 加载成功返回 true
 }
-{% endhighlight %}
+```
 
 3.3.调用 InitBlockIndex(chainparams) 初始化区块树/索引数据库到磁盘，该函数声明在“main.h”文件中。
 
-{% highlight C++ %}
+```cpp
 /** Initialize a new block tree database + block data on disk */
 bool InitBlockIndex(const CChainParams& chainparams); // 初始化一个新的区块树数据库+区块数据到磁盘
-{% endhighlight %}
+```
 
 实现在“main.cpp”文件中，入参为：链参数对象的引用。
 
-{% highlight C++ %}
+```cpp
 bool InitBlockIndex(const CChainParams& chainparams) 
 {
     LOCK(cs_main); // 线程安全锁
@@ -457,7 +457,7 @@ bool InitBlockIndex(const CChainParams& chainparams)
 
     return true; // 成功返回 true
 }
-{% endhighlight %}
+```
 
 未完待续...<br>
 请看下一篇[比特币源码剖析（十四）](/blog/2018/08/bitcoin-source-anatomy-14.html)。

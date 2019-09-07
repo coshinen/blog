@@ -10,9 +10,9 @@ excerpt: $ bitcoin-cli getaccountaddress "account"
 ---
 ## 提示说明
 
-{% highlight shell %}
+```shell
 getaccountaddress "account" # （已过时）获取该账户 account 当前用于接收付款的比特币地址
-{% endhighlight %}
+```
 
 参数：<br>
 1.account（字符串，必备）地址所属的账户名。它也可以设置空字符串 "" 来表示默认账户。
@@ -26,18 +26,18 @@ getaccountaddress "account" # （已过时）获取该账户 account 当前用�
 
 用法一：获取已存在账户的收款地址。
 
-{% highlight shell %}
+```shell
 $ bitcoin-cli listaccounts
 {
   "": 0.00000000
 }
 $ bitcoin-cli getaccountaddress ""
 1N7xDfRbkVwa2Co8q1KbDCVEr9rg8VWsfW
-{% endhighlight %}
+```
 
 用法二：获取不存在账户的收款地址，新建账户并在该账户下新建一个地址。
 
-{% highlight shell %}
+```shell
 $ bitcoin-cli listaccounts
 {
   "": 0.00000000
@@ -49,25 +49,25 @@ $ bitcoin-cli listaccounts
   "": 0.00000000,
   "myaccount": 0.00000000
 }
-{% endhighlight %}
+```
 
 ### cURL
 
-{% highlight shell %}
+```shell
 $ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "getaccountaddress", "params": [""] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
 {"result":"1N7xDfRbkVwa2Co8q1KbDCVEr9rg8VWsfW","error":null,"id":"curltest"}
-{% endhighlight %}
+```
 
 ## 源码剖析
 getaccountaddress 对应的函数在“rpcserver.h”文件中被引用。
 
-{% highlight C++ %}
+```cpp
 extern UniValue getaccountaddress(const UniValue& params, bool fHelp); // 获取账户收款地址
-{% endhighlight %}
+```
 
 实现在“rpcwallet.cpp”文件中。
 
-{% highlight C++ %}
+```cpp
 UniValue getaccountaddress(const UniValue& params, bool fHelp)
 {
     if (!EnsureWalletIsAvailable(fHelp)) // 确保当前钱包可用
@@ -98,7 +98,7 @@ UniValue getaccountaddress(const UniValue& params, bool fHelp)
     ret = GetAccountAddress(strAccount).ToString(); // 获取指定账户的收款地址
     return ret; // 返回一个比特币地址
 }
-{% endhighlight %}
+```
 
 基本流程：<br>
 1.确保钱包当前可用（已初始化完成）。<br>
@@ -111,7 +111,7 @@ UniValue getaccountaddress(const UniValue& params, bool fHelp)
 第四步，调用 AccountFromValue(params[0]) 函数获取指定账户，注意这里指定的账户名不能为 *。
 该函数定义在“rpcwallet.cpp”文件中。
 
-{% highlight C++ %}
+```cpp
 string AccountFromValue(const UniValue& value) // 从参数中获取账户名
 {
     string strAccount = value.get_str(); // 把 UniValue 类型的参数转化为 std::string 类型
@@ -119,11 +119,11 @@ string AccountFromValue(const UniValue& value) // 从参数中获取账户名
         throw JSONRPCError(RPC_WALLET_INVALID_ACCOUNT_NAME, "Invalid account name");
     return strAccount; // 返回获取的账户名，可能为空
 }
-{% endhighlight %}
+```
 
 第五步，调用 GetAccountAddress(strAccount) 函数获取指定账户的收款地址，该函数定义在“rpcwallet.cpp”文件中。
 
-{% highlight C++ %}
+```cpp
 CBitcoinAddress GetAccountAddress(string strAccount, bool bForceNew=false)
 {
     CWalletDB walletdb(pwalletMain->strWalletFile); // 创建钱包数据库对象
@@ -160,7 +160,7 @@ CBitcoinAddress GetAccountAddress(string strAccount, bool bForceNew=false)
 
     return CBitcoinAddress(account.vchPubKey.GetID()); // 获取公钥对应的索引并返回
 }
-{% endhighlight %}
+```
 
 ## 参照
 

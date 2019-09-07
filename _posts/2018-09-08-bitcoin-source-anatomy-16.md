@@ -15,7 +15,7 @@ tags: 区块链 比特币 源码剖析
 <p id="Step11-ref"></p>
 3.11.11.第十一步，启动节点服务相关线程。这部分代码实现在“init.cpp”文件的 AppInit2(...) 函数中。
 
-{% highlight C++ %}
+```cpp
 bool AppInit2(boost::thread_group& threadGroup, CScheduler& scheduler) // 3.11.程序初始化，共 12 步
 {
     ...
@@ -60,7 +60,7 @@ bool AppInit2(boost::thread_group& threadGroup, CScheduler& scheduler) // 3.11.�
     GenerateBitcoins(GetBoolArg("-gen", DEFAULT_GENERATE), GetArg("-genproclimit", DEFAULT_GENERATE_THREADS), chainparams); // 创建挖矿线程，默认关闭，线程数默认为 1（0 表示禁止挖矿，-1 表示 CPU 核数）
     ...
 }
-{% endhighlight %}
+```
 
 > 基本流程：<br>
 > 1.检查硬盘可用空间是否充足。<br>
@@ -74,14 +74,14 @@ bool AppInit2(boost::thread_group& threadGroup, CScheduler& scheduler) // 3.11.�
 1.调用 CheckDiskSpace() 检测硬盘剩余空间是否充足（最低 50MB），用于接收并存储新区块。
 该函数声明在“main.h”文件中。
 
-{% highlight C++ %}
+```cpp
 /** Check whether enough disk space is available for an incoming block */
 bool CheckDiskSpace(uint64_t nAdditionalBytes = 0); // 检查硬盘空间接收一个新区块是否充足
-{% endhighlight %}
+```
 
 实现在“main.cpp”文件中，入参为：0。
 
-{% highlight C++ %}
+```cpp
 /** Abort with a message */ // 反馈信息并关闭节点服务
 bool AbortNode(const std::string& strMessage, const std::string& userMessage="")
 {
@@ -104,7 +104,7 @@ bool CheckDiskSpace(uint64_t nAdditionalBytes) // 0
 
     return true; // 若剩余空间充足，则返回 true
 }
-{% endhighlight %}
+```
 
 1.1.获取当前硬盘可用空间。<br>
 1.2.判断空间是否低于最小硬盘空间阈值。
@@ -112,24 +112,24 @@ bool CheckDiskSpace(uint64_t nAdditionalBytes) // 0
 2.调用 InitError(strErrors.str()) 输出错误信息并退出。
 该函数实现在“init.cpp”文件中，入参为：错误信息字符串。
 
-{% highlight C++ %}
+```cpp
 bool static InitError(const std::string &str)
 {
     uiInterface.ThreadSafeMessageBox(str, "", CClientUIInterface::MSG_ERROR); // 弹出消息框，提示用户
     return false;
 }
-{% endhighlight %}
+```
 
 5.调用 StartTorControl(threadGroup, scheduler) 启动洋葱路由服务线程。
 该函数声明在“torcontrol.h”文件中。
 
-{% highlight C++ %}
+```cpp
 void StartTorControl(boost::thread_group& threadGroup, CScheduler& scheduler); // 启动洋葱路由服务
-{% endhighlight %}
+```
 
 实现在“torcontrol.cpp”文件中，入参为：线程组对象，调度器对象。
 
-{% highlight C++ %}
+```cpp
 /****** Thread ********/
 struct event_base *base;
 boost::thread torControlThread;
@@ -157,11 +157,11 @@ void StartTorControl(boost::thread_group& threadGroup, CScheduler& scheduler)
 
     torControlThread = boost::thread(boost::bind(&TraceThread<void (*)()>, "torcontrol", &TorControlThread)); // 创建洋葱路由控制线程
 }
-{% endhighlight %}
+```
 
 类 TorController 定义在“torcontrol.cpp”文件中。
 
-{% highlight C++ %}
+```cpp
 /** Low-level handling for Tor control connection.
  * Speaks the SMTP-like protocol as defined in torspec/control-spec.txt
  */ // 洋葱路由控制连接的低级处理。说出类似 SMTP 的协议。
@@ -360,7 +360,7 @@ std::string TorController::GetPrivateKeyFile()
 {
     return (GetDataDir() / "onion_private_key").string(); // 返回凭借的数据文件名字符串
 }
-{% endhighlight %}
+```
 
 未完待续...<br>
 请看下一篇[比特币源码剖析（十七）](/blog/2018/09/bitcoin-source-anatomy-17.html)。

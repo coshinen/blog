@@ -16,27 +16,27 @@ tags: bitcoind 区块链 比特币
 
 使用命令行客户端启动，自动同步区块链并创建一个钱包的最简单的方法是，只需从包含你的 bitcoind 二进制程序的目录运行这条（不带参数）命令：
 
-{% highlight shell %}
+```shell
 $ ./bitcoind
-{% endhighlight %}
+```
 
 运行标准的图形化界面：
 
-{% highlight shell %}
+```shell
 $ ./bitcoin-qt
-{% endhighlight %}
+```
 
 ## 命令行参数
 
 以下命令来自于比特币核心版本 [v0.12.1](https://github.com/bitcoin/bitcoin/tree/v0.12.1)。
 
-{% highlight shell %}
+```shell
 $ ./bitcoind --help -help-debug # 获取详细帮助信息
-{% endhighlight %}
+```
 
 <details>
 <summary>bitcoind v0.12.1 help info</summary>
-{% highlight shell %}
+```shell
 Bitcoin Core Daemon version v0.12.1.0-61906ac
 比特币核心守护进程版本 v0.12.1.0-意味不明
 
@@ -648,7 +648,7 @@ RPC 服务选项：
   -rpcservertimeout=<n>
        Timeout during HTTP requests (default: 30)
        HTTP 请求的超时时间（默认：30s）
-{% endhighlight %}
+```
 </details>
 
 ## 比特币配置文件
@@ -674,7 +674,7 @@ RPC 服务选项：
 
 来自 [https://github.com/mistydew/blockchain/blob/master/.bitcoin/bitcoin.conf](https://github.com/mistydew/blockchain/blob/master/bitcoin.conf):
 
-{% highlight shell %}
+```shell
 # 打印调试信息到控制台
 #printtoconsole=1
 # 调试信息（IPs、时间戳微秒）
@@ -690,7 +690,7 @@ rpcpassword=passwd
 # RPC 白名单（外网 IP）
 rpcallowip=xxx.xxx.xxx.xxx
 ...
-{% endhighlight %}
+```
 
 ## 参照
 

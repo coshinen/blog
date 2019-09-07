@@ -10,9 +10,9 @@ excerpt: $ bitcoin-cli disconnectnode "node"
 ---
 ## 提示说明
 
-{% highlight shell %}
+```shell
 disconnectnode "node" # 立刻断开与指定节点的连接
-{% endhighlight %}
+```
 
 参数：
 1. node（字符串，必备）节点（见 [getpeerinfo](/blog/2018/05/bitcoin-rpc-command-getpeerinfo.html) 获取的节点信息）。
@@ -25,7 +25,7 @@ disconnectnode "node" # 立刻断开与指定节点的连接
 
 断开与指定节点的连接。
 
-{% highlight shell %}
+```shell
 $ bitcoin-cli getconnectioncount
 1
 $ bitcoin-cli getaddednodeinfo true
@@ -54,25 +54,25 @@ $ bitcoin-cli getaddednodeinfo true
 $ bitcoin-cli disconnectnode 192.168.0.2
 $ bitcoin-cli getconnectioncount
 0
-{% endhighlight %}
+```
 
 ### cURL
 
-{% highlight shell %}
+```shell
 $ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "disconnectnode", "params": ["192.168.0.2:8333"] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
 {"result":null,"error":null,"id":"curltest"}
-{% endhighlight %}
+```
 
 ## 源码剖析
 getaddednodeinfo 对应的函数在“rpcserver.h”文件中被引用。
 
-{% highlight C++ %}
+```cpp
 extern UniValue disconnectnode(const UniValue& params, bool fHelp); // 断开与指定节点的连接
-{% endhighlight %}
+```
 
 实现在“rpcnet.cpp”文件中。
 
-{% highlight C++ %}
+```cpp
 UniValue disconnectnode(const UniValue& params, bool fHelp)
 {
     if (fHelp || params.size() != 1) // 参数必须为 1 个
@@ -94,7 +94,7 @@ UniValue disconnectnode(const UniValue& params, bool fHelp)
 
     return NullUniValue;
 }
-{% endhighlight %}
+```
 
 基本流程：<br>
 1.处理命令帮助和参数个数。<br>
@@ -104,16 +104,16 @@ UniValue disconnectnode(const UniValue& params, bool fHelp)
 第二步，调用 FindNode(params[0].get_str()) 函数在已建立连接的节点列表中查找指定节点。<br>
 该函数声明在“net.h”文件中。
 
-{% highlight C++ %}
+```cpp
 CNode* FindNode(const CNetAddr& ip);
 CNode* FindNode(const CSubNet& subNet);
 CNode* FindNode(const std::string& addrName);
 CNode* FindNode(const CService& ip);
-{% endhighlight %}
+```
 
 实现在“net.cpp”文件中。
 
-{% highlight C++ %}
+```cpp
 CNode* FindNode(const std::string& addrName)
 {
     LOCK(cs_vNodes);
@@ -122,14 +122,14 @@ CNode* FindNode(const std::string& addrName)
             return (pnode); // 返回该节点指针
     return NULL; // 否则返回空
 }
-{% endhighlight %}
+```
 
 已建立连接的节点列表 vNodes 定义在“net.cpp”文件中。
 
-{% highlight C++ %}
+```cpp
 vector<CNode*> vNodes; // 成功建立连接的节点列表
 CCriticalSection cs_vNodes;
-{% endhighlight %}
+```
 
 ## 参照
 

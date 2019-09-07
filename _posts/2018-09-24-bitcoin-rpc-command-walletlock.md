@@ -10,9 +10,9 @@ excerpt: $ bitcoin-cli walletlock
 ---
 ## 提示说明
 
-{% highlight shell %}
+```shell
 walletlock # 从内存中移除钱包密钥，锁定钱包
-{% endhighlight %}
+```
 
 在调用此方法后，在调用任何需要钱包解锁的方法之前
 你将需要再次调用 [walletpassphrase](/blog/2018/09/bitcoin-rpc-command-walletpassphrase.html)。
@@ -25,7 +25,7 @@ walletlock # 从内存中移除钱包密钥，锁定钱包
 
 先解锁钱包 120 秒，然后锁定钱包。
 
-{% highlight shell %}
+```shell
 $ bitcoin-cli getinfo | grep unlocked_until
   "unlocked_until": 0,
 $ bitcoin-cli walletpassphrase "mypasswd" 120
@@ -34,27 +34,27 @@ $ bitcoin-cli getinfo | grep unlocked_until
 $ bitcoin-cli walletlock
 $ bitcoin-cli getinfo | grep unlocked_until
   "unlocked_until": 0,
-{% endhighlight %}
+```
 
 **一般先解锁钱包数秒，在发送比特币之后，使用该命令锁定钱包。**
 
 ### cURL
 
-{% highlight shell %}
+```shell
 $ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "walletlock", "params": [] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
 {"result":null,"error":null,"id":"curltest"}
-{% endhighlight %}
+```
 
 ## 源码剖析
 walletlock 对应的函数在“rpcserver.h”文件中被引用。
 
-{% highlight C++ %}
+```cpp
 extern UniValue walletlock(const UniValue& params, bool fHelp); // 锁定钱包
-{% endhighlight %}
+```
 
 实现在“rpcwallet.cpp”文件中。
 
-{% highlight C++ %}
+```cpp
 UniValue walletlock(const UniValue& params, bool fHelp)
 {
     if (!EnsureWalletIsAvailable(fHelp)) // 确保钱包当前可用
@@ -92,7 +92,7 @@ UniValue walletlock(const UniValue& params, bool fHelp)
 
     return NullUniValue; // 返回空值
 }
-{% endhighlight %}
+```
 
 基本流程：<br>
 1.确保当前钱包可用（已初始化完成）。<br>
@@ -105,7 +105,7 @@ UniValue walletlock(const UniValue& params, bool fHelp)
 
 第六步，调用 pwalletMain->Lock() 函数清空主密钥，锁定钱包。该函数定义在“crypter.cpp”文件中。
 
-{% highlight C++ %}
+```cpp
 bool CCryptoKeyStore::SetCrypted() // 设置加密状态为 true
 {
     LOCK(cs_KeyStore);
@@ -130,7 +130,7 @@ bool CCryptoKeyStore::Lock()
     NotifyStatusChanged(this); // 通知状态改变
     return true;
 }
-{% endhighlight %}
+```
 
 ## 参照
 

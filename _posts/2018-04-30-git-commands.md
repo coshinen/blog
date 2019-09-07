@@ -18,18 +18,18 @@ Git 易于学习且拥有占用空间小和闪电般快速的性能。
 
 ## 安装（Ubuntu 16.04.4）
 
-{% highlight shell %}
+```shell
 $ sudo apt install git # 安装 git。
-{% endhighlight %}
+```
 
 ## 配置
 
 为所有本地仓库配置用户信息。
 
-{% highlight shell %}
+```shell
 $ git config --global user.name "[name]" # 设置你想要附加到你的提交的名字。
 $ git config --global user.email "[email address]" # 设置你想要附加到你的提交的电子邮箱地址。
-{% endhighlight %}
+```
 
 **注：若在 git command 过程中出现错误提示 fatal: unable to auto-detect email address，则重新执行这两句配置命令。**
 
@@ -39,7 +39,7 @@ $ git config --global user.email "[email address]" # 设置你想要附加到你
 
 **注：以下命令必须在某个 git 仓库中输入。**
 
-{% highlight shell %}
+```shell
 $ git init [project-name] # 把指定目录 [project-name] 初始化为 git 管理的仓库，执行该命令后，当前目录下会多出一个名为 .git 数据目录。
 $ git add [file] # 添加文件 [file] 到暂存区。
 $ git status # 列出所有新的或暂存区中待提交的文件。
@@ -53,19 +53,19 @@ $ git checkout -- [flie] # 撤销使用 $ git add [file] 添加到暂存区中�
 $ git reset --hard HEAD^ # 版本回退至上一版。
 $ git reset --hard [version] # 版本回退至指定版本。
 $ git commit --amend # 修改上一次提交的评论，同时按 Ctrl + X 保存，然后按 Y 确认，最后按 Enter 退出。
-{% endhighlight %}
+```
 
 ### 远程仓库 | online (GitHub)
 
 **注：慎用 --force/-f 参数。**
 
-{% highlight shell %}
+```shell
 $ git clone https://github.com/[user/organization]/[repository].git # 克隆 GitHub 上某用户或组织的项目到本地。
 $ git pull # 同步 GitHub 上的项目到本地。
 $ git push # 同步本地的项目到 GitHub 上。
 $ git push origin HEAD --force # 强制同步本地的项目分支到 GitHub 上，用于 $ git commit --amend 之后。
 $ git push origin master -f # 强制同步本地的项目分支到 GitHub 上，用于 $ git reset --hard <version> 修改远程仓库的错误提交。
-{% endhighlight %}
+```
 
 ## 参照
 

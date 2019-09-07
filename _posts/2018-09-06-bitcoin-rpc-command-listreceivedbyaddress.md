@@ -10,9 +10,9 @@ excerpt: $ bitcoin-cli listreceivedbyaddress ( minconf includeempty includeWatch
 ---
 ## 提示说明
 
-{% highlight shell %}
+```shell
 listreceivedbyaddress ( minconf includeempty includeWatchonly ) # 列出接收地址余额
-{% endhighlight %}
+```
 
 参数：
 1. minconf（数字，可选，默认为 1）在被包含到付款前的最低确认数。
@@ -20,7 +20,7 @@ listreceivedbyaddress ( minconf includeempty includeWatchonly ) # 列出接收�
 3. includeWatchonly（布尔型，可选，默认为 false）是否包含 watchonly 地址（见 [importaddress](/blog/2018/06/bitcoin-rpc-command-importaddress.html)）。
 
 结果：
-{% highlight shell %}
+```shell
 [
   {
     "involvesWatchonly" : true,        （布尔型）若被导入的地址包含交易中则只返回此项
@@ -32,7 +32,7 @@ listreceivedbyaddress ( minconf includeempty includeWatchonly ) # 列出接收�
   }
   ,...
 ]
-{% endhighlight %}
+```
 
 ## 用法示例
 
@@ -40,7 +40,7 @@ listreceivedbyaddress ( minconf includeempty includeWatchonly ) # 列出接收�
 
 用法一：列出全部接收到付款的地址信息。
 
-{% highlight shell %}
+```shell
 $ bitcoin-cli listreceivedbyaddress
 [
   ...
@@ -56,11 +56,11 @@ $ bitcoin-cli listreceivedbyaddress
     ]
   }
 ]
-{% endhighlight %}
+```
 
 用法二：列出至少 6 个确认，且包含未收到付款的地址信息。
 
-{% highlight shell %}
+```shell
 $ bitcoin-cli listreceivedbyaddress 6 true
 [
   ...
@@ -85,25 +85,25 @@ $ bitcoin-cli listreceivedbyaddress 6 true
     ]
   }
 ]
-{% endhighlight %}
+```
 
 ### cURL
 
-{% highlight shell %}
+```shell
 $ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "listreceivedbyaddress", "params": [6, true, true] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
 {"result":[{"address":"36cQfr8uciR5svcX5Ge3H3XuWiXTrbtAGQ","account":"","amount":0.00000000,"confirmations":0,"label":"","txids":[]}],"error":null,"id":"curltest"}
-{% endhighlight %}
+```
 
 ## 源码剖析
 listreceivedbyaddress 对应的函数在“rpcserver.h”文件中被引用。
 
-{% highlight C++ %}
+```cpp
 extern UniValue listreceivedbyaddress(const UniValue& params, bool fHelp); // 列出地址余额
-{% endhighlight %}
+```
 
 实现在“rpcwallet.cpp”文件中。
 
-{% highlight C++ %}
+```cpp
 UniValue listreceivedbyaddress(const UniValue& params, bool fHelp)
 {
     if (!EnsureWalletIsAvailable(fHelp)) // 确保当前钱包可用
@@ -141,7 +141,7 @@ UniValue listreceivedbyaddress(const UniValue& params, bool fHelp)
 
     return ListReceived(params, false); // 获取接收金额列表并返回
 }
-{% endhighlight %}
+```
 
 基本流程：
 1. 确保钱包当前可用（已初始化完成）。

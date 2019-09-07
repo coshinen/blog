@@ -10,9 +10,9 @@ excerpt: $ bitcoin-cli setaccount "bitcoinaddress" "account"
 ---
 ## 提示说明
 
-{% highlight shell %}
+```shell
 setaccount "bitcoinaddress" "account" # （已过时）设置给定地址关联的账户
-{% endhighlight %}
+```
 
 参数：
 1. bitcoinaddress（字符串，必备）用于关联一个账户的比特币地址。
@@ -27,32 +27,32 @@ setaccount "bitcoinaddress" "account" # （已过时）设置给定地址关联�
 获取一个新的比特币地址，在默认账户下，
 重新设置该地址关联账户为 tabby。
 
-{% highlight shell %}
+```shell
 $ bitcoin-cli getnewaddress
 1MfmEDut9v3b2MEQG8GB1s5fqRSguMw3fs
 $ bitcoin-cli getaccount 1MfmEDut9v3b2MEQG8GB1s5fqRSguMw3fs
 $ bitcoin-cli setaccount 1MfmEDut9v3b2MEQG8GB1s5fqRSguMw3fs "tabby"
 $ bitcoin-cli getaccount 1MfmEDut9v3b2MEQG8GB1s5fqRSguMw3fs
 tabby
-{% endhighlight %}
+```
 
 ### cURL
 
-{% highlight shell %}
+```shell
 $ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "setaccount", "params": ["1MfmEDut9v3b2MEQG8GB1s5fqRSguMw3fs", "tabby"] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
 {"result":null,"error":null,"id":"curltest"}
-{% endhighlight %}
+```
 
 ## 源码剖析
 setaccount 对应的函数在“rpcserver.h”文件中被引用。
 
-{% highlight C++ %}
+```cpp
 extern UniValue setaccount(const UniValue& params, bool fHelp); // 设置地址关联账户
-{% endhighlight %}
+```
 
 实现在“wallet/rpcwallet.cpp”文件中。
 
-{% highlight C++ %}
+```cpp
 UniValue setaccount(const UniValue& params, bool fHelp)
 {
     if (!EnsureWalletIsAvailable(fHelp)) // 确保钱包当前可用
@@ -97,7 +97,7 @@ UniValue setaccount(const UniValue& params, bool fHelp)
 
     return NullUniValue; // 返回空值
 }
-{% endhighlight %}
+```
 
 基本流程：<br>
 1.确保钱包当前可用（已初始化完成）。<br>
@@ -110,7 +110,7 @@ UniValue setaccount(const UniValue& params, bool fHelp)
 第五步，调用 GetAccountAddress(strOldAccount, true) 函数在旧账户下生成新地址，
 该函数定义在“wallet/rpcwallet.cpp”文件中。
 
-{% highlight C++ %}
+```cpp
 CBitcoinAddress GetAccountAddress(string strAccount, bool bForceNew=false)
 {
     CWalletDB walletdb(pwalletMain->strWalletFile); // 创建钱包数据库对象
@@ -147,7 +147,7 @@ CBitcoinAddress GetAccountAddress(string strAccount, bool bForceNew=false)
 
     return CBitcoinAddress(account.vchPubKey.GetID()); // 获取公钥对应的索引并返回
 }
-{% endhighlight %}
+```
 
 ## 参照
 

@@ -10,9 +10,9 @@ excerpt: $ bitcoin-cli getunconfirmedbalance
 ---
 ## 提示说明
 
-{% highlight shell %}
+```shell
 getunconfirmedbalance # 获取服务器钱包未确认的（未打包交易/内存池中交易）总余额
-{% endhighlight %}
+```
 
 结果：返回服务器钱包未确认的总余额。
 
@@ -22,28 +22,28 @@ getunconfirmedbalance # 获取服务器钱包未确认的（未打包交易/内�
 
 获取服务器钱包未确认的余额。
 
-{% highlight shell %}
+```shell
 $ bitcoin-cli getunconfirmedbalance
 0.00000000
-{% endhighlight %}
+```
 
 ### cURL
 
-{% highlight shell %}
+```shell
 $ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "getunconfirmedbalance", "params": [] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
 {"result":0.00000000,"error":null,"id":"curltest"}
-{% endhighlight %}
+```
 
 ## 源码剖析
 getunconfirmedbalance 对应的函数在“rpcserver.h”文件中被引用。
 
-{% highlight C++ %}
+```cpp
 extern UniValue getunconfirmedbalance(const UniValue& params, bool fHelp); // 获取未确认的余额
-{% endhighlight %}
+```
 
 实现在“rpcwallet.cpp”文件中。
 
-{% highlight C++ %}
+```cpp
 UniValue getunconfirmedbalance(const UniValue &params, bool fHelp)
 {
     if (!EnsureWalletIsAvailable(fHelp)) // 确保当前钱包可用
@@ -58,7 +58,7 @@ UniValue getunconfirmedbalance(const UniValue &params, bool fHelp)
 
     return ValueFromAmount(pwalletMain->GetUnconfirmedBalance()); // 获取未确认的余额并返回
 }
-{% endhighlight %}
+```
 
 基本流程：<br>
 1.确保钱包当前可用（已初始化完成）。<br>
@@ -68,7 +68,7 @@ UniValue getunconfirmedbalance(const UniValue &params, bool fHelp)
 
 第四步，调用 pwalletMain->GetUnconfirmedBalance() 函数获取未确认的金额总和，该函数定义在“wallet.cpp”文件中。
 
-{% highlight C++ %}
+```cpp
 bool CWalletTx::InMempool() const
 {
     LOCK(mempool.cs);
@@ -92,7 +92,7 @@ CAmount CWallet::GetUnconfirmedBalance() const
     }
     return nTotal; // 返回总余额
 }
-{% endhighlight %}
+```
 
 ## 参照
 

@@ -10,9 +10,9 @@ excerpt: $ bitcoin-cli abandontransaction "txid"
 ---
 ## 提示说明
 
-{% highlight shell %}
+```shell
 abandontransaction "txid" # 标记钱包交易 <txid> 为已放弃
-{% endhighlight %}
+```
 
 该操作将标记指定交易和其所有钱包后裔为已放弃，将允许它们的输入被重新花费。<br>
 可用来代替“卡住”或被驱逐的交易。<br>
@@ -28,28 +28,28 @@ abandontransaction "txid" # 标记钱包交易 <txid> 为已放弃
 
 ### 比特币核心客户端
 
-{% highlight shell %}
+```shell
 $ bitcoin-cli abandontransaction <txid>
 暂无。
-{% endhighlight %}
+```
 
 ### cURL
 
-{% highlight shell %}
+```shell
 $ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "abandontransaction", "params": ["txid"] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
 暂无。
-{% endhighlight %}
+```
 
 ## 源码剖析
 abandontransaction 对应的函数在“rpcserver.h”文件中被引用。
 
-{% highlight C++ %}
+```cpp
 extern UniValue abandontransaction(const UniValue& params, bool fHelp); // 抛弃钱包内的交易
-{% endhighlight %}
+```
 
 实现在“rpcwallet.cpp”文件中。
 
-{% highlight C++ %}
+```cpp
 UniValue abandontransaction(const UniValue& params, bool fHelp)
 {
     if (!EnsureWalletIsAvailable(fHelp)) // 确保当前钱包可用
@@ -83,7 +83,7 @@ UniValue abandontransaction(const UniValue& params, bool fHelp)
 
     return NullUniValue; // 返回空
 }
-{% endhighlight %}
+```
 
 基本流程：<br>
 1.确保当前钱包可用（已初始化完成）。<br>
@@ -96,7 +96,7 @@ UniValue abandontransaction(const UniValue& params, bool fHelp)
 第一步，调用 EnsureWalletIsAvailable(fHelp) 函数检查当前钱包是否初始化完成。<br>
 该函数实现在“rpcwallet.cpp”文件中。
 
-{% highlight C++ %}
+```cpp
 bool EnsureWalletIsAvailable(bool avoidException)
 {
     if (!pwalletMain) // 若当前钱包未创建
@@ -108,12 +108,12 @@ bool EnsureWalletIsAvailable(bool avoidException)
     }
     return true; // 钱包创建了直接返回 true
 }
-{% endhighlight %}
+```
 
 第五步，钱包交易映射对象 pwalletMain->mapWallet 定义在“wallet.h”文件的 CWallet 类中。<br>
 第六步，调用 pwalletMain->AbandonTransaction(hash) 函数标记该钱包交易为以抛弃，该函数声明在“wallet.h”文件的 CWallet 类中。
 
-{% highlight C++ %}
+```cpp
 /** 
  * A CWallet is an extension of a keystore, which also maintains a set of transactions and balances,
  * and provides the ability to create new transactions.
@@ -126,11 +126,11 @@ class CWallet : public CCryptoKeyStore, public CValidationInterface
     /* Mark a transaction (and it in-wallet descendants) as abandoned so its inputs may be respent. */
     bool AbandonTransaction(const uint256& hashTx); // 标记一笔交易（及其钱包后裔）为以抛弃，以至于它的输入被重新关注
 };
-{% endhighlight %}
+```
 
 实现在“wallet.cpp”文件中。
 
-{% highlight C++ %}
+```cpp
 bool CWallet::AbandonTransaction(const uint256& hashTx)
 {
     LOCK2(cs_main, cs_wallet); // 上锁
@@ -188,11 +188,11 @@ bool CWallet::AbandonTransaction(const uint256& hashTx)
 
     return true;
 }
-{% endhighlight %}
+```
 
 调用 origtx.GetDepthInMainChain() 和 origtx.InMempool() 函数，它们均实现在“wallet.cpp”文件中。
 
-{% highlight C++ %}
+```cpp
 bool CWalletTx::InMempool() const
 {
     LOCK(mempool.cs);
@@ -220,11 +220,11 @@ int CMerkleTx::GetDepthInMainChain(const CBlockIndex* &pindexRet) const
     pindexRet = pindex;
     return ((nIndex == -1) ? (-1) : 1) * (chainActive.Height() - pindex->nHeight + 1); // 返回深度，链尖的深度为 1
 }
-{% endhighlight %}
+```
 
 函数 mempool.exists(GetHash()) 定义在“txmempool.h”文件的 CTxMemPool 类中。
 
-{% highlight C++ %}
+```cpp
 /**
  * CTxMemPool stores valid-according-to-the-current-best-chain
  * transactions that may be included in the next block.
@@ -312,11 +312,11 @@ class CTxMemPool
     }
     ...
 };
-{% endhighlight %}
+```
 
 下面是一些相关函数的定义，在“wallet.h”文件的 CMerkleTx 类中。
 
-{% highlight C++ %}
+```cpp
 /** A transaction with a merkle branch linking it to the block chain. */
 class CMerkleTx : public CTransaction // 一个连接它到区块链的默克分支交易
 {
@@ -325,7 +325,7 @@ class CMerkleTx : public CTransaction // 一个连接它到区块链的默克分
     bool isAbandoned() const { return (hashBlock == ABANDON_HASH); } // 该交易是否标记为已抛弃
     void setAbandoned() { hashBlock = ABANDON_HASH; } // 标记该交易为已抛弃
 };
-{% endhighlight %}
+```
 
 ## 参照
 

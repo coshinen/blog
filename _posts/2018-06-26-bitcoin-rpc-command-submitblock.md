@@ -10,20 +10,20 @@ excerpt: $ bitcoin-cli submitblock "hexdata" ( "jsonparametersobject" )
 ---
 ## 提示说明
 
-{% highlight shell %}
+```shell
 submitblock "hexdata" ( "jsonparametersobject" ) # 尝试提交一个新区块到网络
-{% endhighlight %}
+```
 
 **注：jsonparametersobject 当前被忽略。详见 [https://en.bitcoin.it/wiki/BIP_0022](https://en.bitcoin.it/wiki/BIP_0022)。**
 
 参数：<br>
 1.hexdata（字符串，必备）用于提交的 16 进制编码的区块数据。<br>
 2.jsonparametersobject（字符串，可选）可选的参数对象。<br>
-{% highlight shell %}
+```shell
 {
   "workid" : "id"  （字符串，可选）如果服务器提供一个工作 id，它必须包含在提交内容中。
 }
-{% endhighlight %}
+```
 
 结果：无返回值。
 
@@ -33,32 +33,32 @@ submitblock "hexdata" ( "jsonparametersobject" ) # 尝试提交一个新区块�
 
 尝试提交最佳区块到链上。
 
-{% highlight shell %}
+```shell
 $ bitcoin-cli getbestblockhash
 00000268eb1f82d7a86f7e3d2db39974933605b36d21b61242bcf8535de8d38c
 $ bitcoin-cli getblock 00000268eb1f82d7a86f7e3d2db39974933605b36d21b61242bcf8535de8d38c false
 0000002083aadc5ca01aeaf98d15b7a0fe04c2a9801c4221a921bb1fb417f329ce010000a677dc9648643da9cf2d013e3cc342a998be81c1d4ce8c41c71a42b8626dbd6eedb6315b538c021ec8e13c000101000000010000000000000000000000000000000000000000000000000000000000000000ffffffff05025c720101ffffffff0100f2052a010000002321029aeb393fdc3360a7c2660487f1955404fbe54f99ad9a80d61686a7b68d08a272ac00000000
 $ bitcoin-cli submitblock 0000002083aadc5ca01aeaf98d15b7a0fe04c2a9801c4221a921bb1fb417f329ce010000a677dc9648643da9cf2d013e3cc342a998be81c1d4ce8c41c71a42b8626dbd6eedb6315b538c021ec8e13c000101000000010000000000000000000000000000000000000000000000000000000000000000ffffffff05025c720101ffffffff0100f2052a010000002321029aeb393fdc3360a7c2660487f1955404fbe54f99ad9a80d61686a7b68d08a272ac00000000
 duplicate
-{% endhighlight %}
+```
 
 ### cURL
 
-{% highlight shell %}
+```shell
 $ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "submitblock", "params": ["0000002083aadc5ca01aeaf98d15b7a0fe04c2a9801c4221a921bb1fb417f329ce010000a677dc9648643da9cf2d013e3cc342a998be81c1d4ce8c41c71a42b8626dbd6eedb6315b538c021ec8e13c000101000000010000000000000000000000000000000000000000000000000000000000000000ffffffff05025c720101ffffffff0100f2052a010000002321029aeb393fdc3360a7c2660487f1955404fbe54f99ad9a80d61686a7b68d08a272ac00000000"] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
 {"result":"duplicate","error":null,"id":"curltest"}
-{% endhighlight %}
+```
 
 ## 源码剖析
 submitblock 对应的函数在“rpcserver.h”文件中被引用。
 
-{% highlight C++ %}
+```cpp
 extern UniValue submitblock(const UniValue& params, bool fHelp); // 提交区块
-{% endhighlight %}
+```
 
 实现在“rpcmining.cpp”文件中。
 
-{% highlight C++ %}
+```cpp
 UniValue submitblock(const UniValue& params, bool fHelp)
 {
     if (fHelp || params.size() < 1 || params.size() > 2) // 参数只有 1 个
@@ -120,7 +120,7 @@ UniValue submitblock(const UniValue& params, bool fHelp)
     return BIP22ValidationResult(state);
 }
 
-{% endhighlight %}
+```
 
 基本流程：
 1. 处理命令帮助和参数个数。

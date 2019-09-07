@@ -15,7 +15,7 @@ tags: 区块链 比特币 源码剖析
 <p id="Step08-ref"></p>
 3.11.8.第八步，加载钱包。这部分代码实现在“init.cpp”文件的 AppInit2(...) 函数中。
 
-{% highlight C++ %}
+```cpp
 bool AppInit2(boost::thread_group& threadGroup, CScheduler& scheduler) // 3.11.程序初始化，共 12 步
 {
     ...
@@ -173,7 +173,7 @@ bool AppInit2(boost::thread_group& threadGroup, CScheduler& scheduler) // 3.11.�
 #endif // !ENABLE_WALLET
     ...
 }
-{% endhighlight %}
+```
 
 1.若开启钱包功能<br>
 1.1.创建并初始化钱包对象，获取钱包交易列表后，删除该钱包对象。<br>
@@ -187,7 +187,7 @@ bool AppInit2(boost::thread_group& threadGroup, CScheduler& scheduler) // 3.11.�
 1.1.调用 pwalletMain->ZapWalletTx(vWtx) 获取钱包数据库中的钱包交易列表。
 该函数声明在“wallet/wallet.h”文件的 CWallet 类中，实现在“wallet/wallet.cpp”文件中。
 
-{% highlight C++ %}
+```cpp
 DBErrors CWallet::ZapWalletTx(std::vector<CWalletTx>& vWtx)
 {
     if (!fFileBacked) // 若钱包未备份
@@ -210,12 +210,12 @@ DBErrors CWallet::ZapWalletTx(std::vector<CWalletTx>& vWtx)
 
     return DB_LOAD_OK;
 }
-{% endhighlight %}
+```
 
 内部调用 CWalletDB(strWalletFile,"cr+").ZapWalletTx(this, vWtx) 实现获取钱包数据库中的钱包交易列表的功能。
 该函数声明在“wallet/walletdb.h”文件的 CWalletDB 类中，实现在“wallet/walletdb.cpp”文件中。
 
-{% highlight C++ %}
+```cpp
 DBErrors CWalletDB::ZapWalletTx(CWallet* pwallet, vector<CWalletTx>& vWtx)
 {
     // build list of wallet TXs // 构建钱包交易列表
@@ -232,22 +232,22 @@ DBErrors CWalletDB::ZapWalletTx(CWallet* pwallet, vector<CWalletTx>& vWtx)
 
     return DB_LOAD_OK;
 }
-{% endhighlight %}
+```
 
 1.2.调用 pwalletMain->LoadWallet(fFirstRun) 从数据库加载钱包到内存中，该函数声明在“wallet.h”文件的 CWallet 中。
 
-{% highlight C++ %}
+```cpp
 class CWallet : public CCryptoKeyStore, public CValidationInterface
 {
     ...
     DBErrors LoadWallet(bool& fFirstRunRet); // 加载钱包到内存
     ...
 };
-{% endhighlight %}
+```
 
 实现在“wallet.cpp”文件中，入参为：首次运行标志（初始为 true）。
 
-{% highlight C++ %}
+```cpp
 DBErrors CWallet::LoadWallet(bool& fFirstRunRet)
 {
     if (!fFileBacked) // 若非首次运行
@@ -274,12 +274,12 @@ DBErrors CWallet::LoadWallet(bool& fFirstRunRet)
 
     return DB_LOAD_OK; // 0
 }
-{% endhighlight %}
+```
 
 1.4.调用 pwalletMain->GetKeyFromPool(newDefaultKey) 从密钥池中获取一个新密钥（公钥）。
 该函数声明在“wallet.h”文件的 CWallet 类中。
 
-{% highlight C++ %}
+```cpp
 class CWallet : public CCryptoKeyStore, public CValidationInterface
 {
     ...
@@ -292,11 +292,11 @@ class CWallet : public CCryptoKeyStore, public CValidationInterface
     bool SetDefaultKey(const CPubKey &vchPubKey); // 设置默认密钥
     ...
 };
-{% endhighlight %}
+```
 
 实现在“wallet.cpp”文件中，入参为：待获取的新密钥（公钥）。
 
-{% highlight C++ %}
+```cpp
 bool CWallet::GetKeyFromPool(CPubKey& result)
 {
     int64_t nIndex = 0;
@@ -315,12 +315,12 @@ bool CWallet::GetKeyFromPool(CPubKey& result)
     }
     return true;
 }
-{% endhighlight %}
+```
 
 然后调用 pwalletMain->SetDefaultKey(newDefaultKey) 把上一步获取的新密钥设置为钱包的默认密钥。
 该函数实现在“wallet.cpp”文件中，入参为：刚从密钥池中取出的密钥对应的公钥。
 
-{% highlight C++ %}
+```cpp
 bool CWallet::SetDefaultKey(const CPubKey &vchPubKey)
 {
     if (fFileBacked)
@@ -331,12 +331,12 @@ bool CWallet::SetDefaultKey(const CPubKey &vchPubKey)
     vchDefaultKey = vchPubKey; // 设置该公钥为默认公钥
     return true;
 }
-{% endhighlight %}
+```
 
 然后调用 pwalletMain->SetAddressBook(pwalletMain->vchDefaultKey.GetID(), "", "receive") 把该默认密钥加入地址簿的默认账户中，用途为接收。
 该函数实现在“wallet.cpp”文件中，入参为：公钥索引，帐户名，用途。
 
-{% highlight C++ %}
+```cpp
 bool CWallet::SetAddressBook(const CTxDestination& address, const string& strName, const string& strPurpose)
 {
     bool fUpdated = false; // 标记钱包地址簿是否更新，指地址已存在更新其用途，新增地址不算
@@ -356,23 +356,23 @@ bool CWallet::SetAddressBook(const CTxDestination& address, const string& strNam
         return false;
     return CWalletDB(strWalletFile).WriteName(CBitcoinAddress(address).ToString(), strName); // 最后写入地址对应的账户名到钱包数据库
 }
-{% endhighlight %}
+```
 
 最后调用 pwalletMain->SetBestChain(chainActive.GetLocator()) 来设置最佳链。
 该函数实现在“wallet.cpp”文件中，入参为：激活的链的区块位置。
 
-{% highlight C++ %}
+```cpp
 void CWallet::SetBestChain(const CBlockLocator& loc)
 {
     CWalletDB walletdb(strWalletFile); // 创建钱包数据库局部对象
     walletdb.WriteBestBlock(loc); // 写入最佳块位置到钱包数据库文件
 }
-{% endhighlight %}
+```
 
 1.6.调用 pwalletMain->SetBroadcastTransactions(GetBoolArg("-walletbroadcast", DEFAULT_WALLETBROADCAST)); 设置钱包交易广播标志。
 该函数实现在“wallet.h”文件的 CWallet 类中。
 
-{% highlight C++ %}
+```cpp
 static const bool DEFAULT_WALLETBROADCAST = true; // 钱包交易广播，默认开启
 ...
 class CWallet : public CCryptoKeyStore, public CValidationInterface
@@ -384,7 +384,7 @@ class CWallet : public CCryptoKeyStore, public CValidationInterface
     void SetBroadcastTransactions(bool broadcast) { fBroadcastTransactions = broadcast; }
     ...
 };
-{% endhighlight %}
+```
 
 未完待续...<br>
 请看下一篇[比特币源码剖析（十五）](/blog/2018/09/bitcoin-source-anatomy-15.html)。

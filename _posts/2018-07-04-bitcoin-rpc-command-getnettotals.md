@@ -10,12 +10,12 @@ excerpt: $ bitcoin-cli getnettotals
 ---
 ## 提示说明
 
-{% highlight shell %}
+```shell
 getnettotals # 获取关于网络流量的信息，包含流入字节，流出字节，和当前时间
-{% endhighlight %}
+```
 
 结果：
-{% highlight shell %}
+```shell
 {
   "totalbytesrecv": n,   （数字）接收的总字节
   "totalbytessent": n,   （数字）发送的总字节
@@ -30,7 +30,7 @@ getnettotals # 获取关于网络流量的信息，包含流入字节，流出�
     "time_left_in_cycle": t                 （数字）当前时间周期剩余的秒数
   }
 }
-{% endhighlight %}
+```
 
 ## 用法示例
 
@@ -38,7 +38,7 @@ getnettotals # 获取关于网络流量的信息，包含流入字节，流出�
 
 获取当前网络总流量信息。
 
-{% highlight shell %}
+```shell
 $ bitcoin-cli getnettotals
 {
   "totalbytesrecv": 46172,
@@ -53,25 +53,25 @@ $ bitcoin-cli getnettotals
     "time_left_in_cycle": 0
   }
 }
-{% endhighlight %}
+```
 
 ### cURL
 
-{% highlight shell %}
+```shell
 $ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "getnettotals", "params": [] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
 {"result":{"totalbytesrecv":46794,"totalbytessent":10818,"timemillis":1529999617779,"uploadtarget":{"timeframe":86400,"target":0,"target_reached":false,"serve_historical_blocks":true,"bytes_left_in_cycle":0,"time_left_in_cycle":0}},"error":null,"id":"curltest"}
-{% endhighlight %}
+```
 
 ## 源码剖析
 getnettotals 对应的函数在“rpcserver.h”文件中被引用。
 
-{% highlight C++ %}
+```cpp
 extern UniValue getnettotals(const UniValue& params, bool fHelp); // 获取网络流量信息
-{% endhighlight %}
+```
 
 实现在“rpcnet.cpp”文件中。
 
-{% highlight C++ %}
+```cpp
 UniValue getnettotals(const UniValue& params, bool fHelp)
 {
     if (fHelp || params.size() > 0) // 没有参数
@@ -114,7 +114,7 @@ UniValue getnettotals(const UniValue& params, bool fHelp)
     obj.push_back(Pair("uploadtarget", outboundLimit));
     return obj;
 }
-{% endhighlight %}
+```
 
 基本流程：
 1. 处理命令帮助和参数个数。

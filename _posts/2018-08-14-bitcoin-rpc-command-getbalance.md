@@ -10,9 +10,9 @@ excerpt: $ bitcoin-cli getbalance ( "account" minconf includeWatchonly )
 ---
 ## 提示说明
 
-{% highlight shell %}
+```shell
 getbalance ( "account" minconf includeWatchonly ) # 获取钱包余额
-{% endhighlight %}
+```
 
 如果未指定账户，返回服务器钱包总可用余额。<br>
 如果指定了账户（已过时），返回账户的余额。<br>
@@ -31,42 +31,42 @@ getbalance ( "account" minconf includeWatchonly ) # 获取钱包余额
 
 用法一：获取当前整个钱包的余额。
 
-{% highlight shell %}
+```shell
 $ bitcoin-cli getbalance
 0.00000000
-{% endhighlight %}
+```
 
 用法二：获取当前整个钱包的余额，结果同上。
 
-{% highlight shell %}
+```shell
 $ bitcoin-cli getbalance * 1 true
 0.00000000
-{% endhighlight %}
+```
 
 用法三：获取当前整个钱包至少确认 6 次交易的余额。
 
-{% highlight shell %}
+```shell
 $ bitcoin-cli getbalance * 6
 0.00000000
-{% endhighlight %}
+```
 
 ### cURL
 
-{% highlight shell %}
+```shell
 $ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "getbalance", "params": [] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
 {"result":0.00000000,"error":null,"id":"curltest"}
-{% endhighlight %}
+```
 
 ## 源码剖析
 getbalance 对应的函数在“rpcserver.h”文件中被引用。
 
-{% highlight C++ %}
+```cpp
 extern UniValue getbalance(const UniValue& params, bool fHelp); // 获取余额
-{% endhighlight %}
+```
 
 实现在“rpcwallet.cpp”文件中。
 
-{% highlight C++ %}
+```cpp
 UniValue getbalance(const UniValue& params, bool fHelp)
 {
     if (!EnsureWalletIsAvailable(fHelp)) // 确保当前钱包可用
@@ -141,7 +141,7 @@ UniValue getbalance(const UniValue& params, bool fHelp)
 
     return ValueFromAmount(nBalance); // 返回账户余额
 }
-{% endhighlight %}
+```
 
 基本流程：
 1. 确保钱包当前可用（已初始化完成）。

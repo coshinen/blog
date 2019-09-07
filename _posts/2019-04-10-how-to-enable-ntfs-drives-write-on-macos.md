@@ -41,9 +41,9 @@ mount 命令在引导时自动读取 fstab 文件以确定整个文件系统结�
 
 使用 root 权限在 /etc/ 目录下创建 fstab 文件。
 
-{% highlight shell %}
+```shell
 $ sudo vim /etc/fstab
-{% endhighlight %}
+```
 
 以硬盘名为 My Passport 为例，在 fstab 文件中键入以下文字并保存。
 
@@ -55,15 +55,15 @@ $ sudo vim /etc/fstab
 
 使用下面命令可打开 GUI 进行操作：
 
-{% highlight shell %}
+```shell
 $ open /Volumes
-{% endhighlight %}
+```
 
 或使用下面命令在桌面建立一个软连接（快捷方式）：
 
-{% highlight shell %}
+```shell
 $ ln -s /Volumes/My\ Passport ~/Desktop/My\ Passport
-{% endhighlight %}
+```
 
 ## 参照
 

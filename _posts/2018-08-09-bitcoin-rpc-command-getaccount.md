@@ -10,9 +10,9 @@ excerpt: $ bitcoin-cli getaccount "bitcoinaddress"
 ---
 ## 提示说明
 
-{% highlight shell %}
+```shell
 getaccount "bitcoinaddress" # （已过时）获取指定地址关联的账户
-{% endhighlight %}
+```
 
 参数：<br>
 1. bitcoinaddress （字符串，必备）用于查询所属账户的比特币地址。
@@ -26,30 +26,30 @@ getaccount "bitcoinaddress" # （已过时）获取指定地址关联的账户
 使用 [getnewaddress](/blog/2018/08/bitcoin-rpc-command-getnewaddress.html) 在指定账户下创建一个地址，
 根据该地址查询账户。
 
-{% highlight shell %}
+```shell
 $ bitcoin-cli getnewaddress "myaccount"
 13CagJ3iVhG1LPSQFD8Yh3TgR4y5zRnbUS
 $ bitcoin-cli 13CagJ3iVhG1LPSQFD8Yh3TgR4y5zRnbUS
 myaccount
-{% endhighlight %}
+```
 
 ### cURL
 
-{% highlight shell %}
+```shell
 $ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "getaccount", "params": ["13CagJ3iVhG1LPSQFD8Yh3TgR4y5zRnbUS"] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
 {"result":"myaccount","error":null,"id":"curltest"}
-{% endhighlight %}
+```
 
 ## 源码剖析
 getaccount 对应的函数在“rpcserver.h”文件中被引用。
 
-{% highlight C++ %}
+```cpp
 extern UniValue getaccount(const UniValue& params, bool fHelp); // 获取地址所属账户
-{% endhighlight %}
+```
 
 实现在“rpcwallet.cpp”文件中。
 
-{% highlight C++ %}
+```cpp
 UniValue getaccount(const UniValue& params, bool fHelp)
 {
     if (!EnsureWalletIsAvailable(fHelp)) // 确保当前钱包可用
@@ -80,7 +80,7 @@ UniValue getaccount(const UniValue& params, bool fHelp)
         strAccount = (*mi).second.name; // 获取账户名
     return strAccount; // 返回所属账户名
 }
-{% endhighlight %}
+```
 
 基本流程：<br>
 1.确保钱包当前可用（已初始化完成）。<br>
@@ -92,7 +92,7 @@ UniValue getaccount(const UniValue& params, bool fHelp)
 
 第四步，类 CBitcoinAddress 定义在“base58.h”文件中，是一个 base58 编码的比特币地址。
 
-{% highlight C++ %}
+```cpp
 /** base58-encoded Bitcoin addresses.
  * Public-key-hash-addresses have version 0 (or 111 testnet).
  * The data vector contains RIPEMD160(SHA256(pubkey)), where pubkey is the serialized public key.
@@ -110,11 +110,11 @@ public:
     CTxDestination Get() const; // 获取公钥索引或脚本索引
     ...
 };
-{% endhighlight %}
+```
 
 相关函数实现在“base58.cpp”文件中。
 
-{% highlight C++ %}
+```cpp
 bool CBitcoinAddress::IsValid() const
 {
     return IsValid(Params()); // 转调有参重载函数
@@ -141,11 +141,11 @@ CTxDestination CBitcoinAddress::Get() const
     else
         return CNoDestination();
 }
-{% endhighlight %}
+```
 
 第五步，对象 mapAddressBook 定义在“wallet.h”文件的 CWallet 类中。
 
-{% highlight C++ %}
+```cpp
 /** 
  * A CWallet is an extension of a keystore, which also maintains a set of transactions and balances,
  * and provides the ability to create new transactions.
@@ -156,7 +156,7 @@ class CWallet : public CCryptoKeyStore, public CValidationInterface
     std::map<CTxDestination, CAddressBookData> mapAddressBook; // 地址簿映射列表
     ...
 };
-{% endhighlight %}
+```
 
 ## 参照
 

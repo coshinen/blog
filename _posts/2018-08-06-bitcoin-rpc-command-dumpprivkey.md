@@ -10,9 +10,9 @@ excerpt: $ bitcoin-cli dumpprivkey "bitcoinaddress"
 ---
 ## 提示说明
 
-{% highlight shell %}
+```shell
 dumpprivkey "bitcoinaddress" # 导出 bitcoinaddress 对应的私钥
-{% endhighlight %}
+```
 
 RPC 命令 [importprivkey](/blog/2018/08/bitcoin-rpc-command-importprivkey.html) 可以使用该输出作为输入。
 
@@ -28,30 +28,30 @@ RPC 命令 [importprivkey](/blog/2018/08/bitcoin-rpc-command-importprivkey.html)
 使用 [getnewaddress](/blog/2018/08/bitcoin-rpc-command-getnewaddress.html) 命令获取一个比特币地址，
 然后以该地址为输入，导出其对应的私钥。
 
-{% highlight shell %}
+```shell
 $ bitcoin-cli getnewaddress
 13m7dqxmjCxTgVTnRHNywcgqp7SCFUtV7X
 $ bitcoin-cli dumpprivkey 13m7dqxmjCxTgVTnRHNywcgqp7SCFUtV7X
 L26dH1T4tfSbmYax7jdGMNPanrLtSvMtKnwrPjyLcD1prmsKBTts
-{% endhighlight %}
+```
 
 ### cURL
 
-{% highlight shell %}
+```shell
 $ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "dumpprivkey", "params": ["13m7dqxmjCxTgVTnRHNywcgqp7SCFUtV7X"] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
 {"result":"L26dH1T4tfSbmYax7jdGMNPanrLtSvMtKnwrPjyLcD1prmsKBTts","error":null,"id":"curltest"}
-{% endhighlight %}
+```
 
 ## 源码剖析
 dumpprivkey 对应的函数在“rpcserver.h”文件中被引用。
 
-{% highlight C++ %}
+```cpp
 extern UniValue dumpprivkey(const UniValue& params, bool fHelp); // 导出私钥
-{% endhighlight %}
+```
 
 实现在“wallet/rpcdump.cpp”文件中。
 
-{% highlight C++ %}
+```cpp
 UniValue dumpprivkey(const UniValue& params, bool fHelp)
 {
     if (!EnsureWalletIsAvailable(fHelp)) // 确保当前钱包可用
@@ -88,7 +88,7 @@ UniValue dumpprivkey(const UniValue& params, bool fHelp)
         throw JSONRPCError(RPC_WALLET_ERROR, "Private key for address " + strAddress + " is not known");
     return CBitcoinSecret(vchSecret).ToString(); // 对私钥进行 Base58 编码并返回结果
 }
-{% endhighlight %}
+```
 
 基本流程：<br>
 1.确保钱包当前可用（已初始化完成）。<br>
@@ -102,7 +102,7 @@ UniValue dumpprivkey(const UniValue& params, bool fHelp)
 
 第五步，调用 address.SetString(strAddress) 函数初始化一个比特币地址对象，该函数声明在“base58.h”文件的 CBitcoinAddress 类中。
 
-{% highlight C++ %}
+```cpp
 /**
  * Base class for all base58-encoded data
  */ // 所有 base58 编码数据的基类
@@ -120,11 +120,11 @@ protected:
     bool SetString(const std::string& str); // 调用上面的重载函数
     ...
 };
-{% endhighlight %}
+```
 
 实现在“base58.cpp”文件中。
 
-{% highlight C++ %}
+```cpp
 bool CBase58Data::SetString(const char* psz, unsigned int nVersionBytes)
 {
     std::vector<unsigned char> vchTemp;
@@ -146,11 +146,11 @@ bool CBase58Data::SetString(const std::string& str)
 {
     return SetString(str.c_str()); // 转调上面的重载函数
 }
-{% endhighlight %}
+```
 
 第六步，调用 address.GetKeyID(keyID) 函数获取地址对应的密钥索引，该函数定义在“base58.cpp”文件中。
 
-{% highlight C++ %}
+```cpp
 bool CBitcoinAddress::GetKeyID(CKeyID& keyID) const
 {
     if (!IsValid() || vchVersion != Params().Base58Prefix(CChainParams::PUBKEY_ADDRESS)) // 地址有效 且 版本号正确
@@ -160,7 +160,7 @@ bool CBitcoinAddress::GetKeyID(CKeyID& keyID) const
     keyID = CKeyID(id); // 初始化公钥索引对象
     return true;
 }
-{% endhighlight %}
+```
 
 ## 参照
 

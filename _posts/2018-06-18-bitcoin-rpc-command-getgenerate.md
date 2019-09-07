@@ -10,9 +10,9 @@ excerpt: $ bitcoin-cli getgenerate
 ---
 ## 提示说明
 
-{% highlight shell %}
+```shell
 getgenerate # 获取比特币核心服务的挖矿状态
-{% endhighlight %}
+```
 
 默认为 false。
 服务器程序设置命令行参数 -gen（或配置文件 bitcoin.conf 中设置 gen），也可以使用 [setgenerate](/blog/2018/06/bitcoin-rpc-command-setgenerate.html) 命令设置。
@@ -25,28 +25,28 @@ getgenerate # 获取比特币核心服务的挖矿状态
 
 获取当前比特币核心服务器 CPU 挖矿状态。
 
-{% highlight shell %}
+```shell
 $ bitcoin-cli getgenerate
 false
-{% endhighlight %}
+```
 
 ### cURL
 
-{% highlight shell %}
+```shell
 $ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "getgenerate", "params": [] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
 {"result":false,"error":null,"id":"curltest"}
-{% endhighlight %}
+```
 
 ## 源码剖析
 getgenerate 对应的函数在“rpcserver.h”文件中被引用。
 
-{% highlight C++ %}
+```cpp
 extern UniValue getgenerate(const UniValue& params, bool fHelp); // 获取挖矿状态
-{% endhighlight %}
+```
 
 实现在“rpcmining.cpp”文件中。
 
-{% highlight C++ %}
+```cpp
 UniValue getgenerate(const UniValue& params, bool fHelp)
 {
     if (fHelp || params.size() != 0) // 没有参数
@@ -65,7 +65,7 @@ UniValue getgenerate(const UniValue& params, bool fHelp)
     LOCK(cs_main);
     return GetBoolArg("-gen", DEFAULT_GENERATE); // 获取 "-gen" 选项的值并返回
 }
-{% endhighlight %}
+```
 
 基本流程：<br>
 1.处理命令帮助和参数个数。<br>
@@ -75,13 +75,13 @@ UniValue getgenerate(const UniValue& params, bool fHelp)
 调用 GetBoolArg("-gen", DEFAULT_GENERATE) 函数获取挖矿状态，即挖矿选项 "-gen" 对应的值。<br>
 DEFAULT_GENERATE 定义在“miner.h”文件中。
 
-{% highlight C++ %}
+```cpp
 static const bool DEFAULT_GENERATE = false; // 挖矿状态，默认关闭
-{% endhighlight %}
+```
 
 该函数声明在“util.h”文件中。
 
-{% highlight C++ %}
+```cpp
 /**
  * Return boolean argument or default value
  *
@@ -90,29 +90,29 @@ static const bool DEFAULT_GENERATE = false; // 挖矿状态，默认关闭
  * @return command-line argument or default value
  */ // 返回布尔型参数或默认值
 bool GetBoolArg(const std::string& strArg, bool fDefault); // 获取指定选项的值
-{% endhighlight %}
+```
 
 实现在“util.cpp”文件中。
 
-{% highlight C++ %}
+```cpp
 bool GetBoolArg(const std::string& strArg, bool fDefault)
 {
     if (mapArgs.count(strArg)) // 若该选项存在
         return InterpretBool(mapArgs[strArg]); // 返回其对应的值（转换为布尔型）
     return fDefault; // 否则返回默认值
 }
-{% endhighlight %}
+```
 
 对象 mapArgs 定义在“”文件中，该对象保存所有用户指定的命令行参数和配置文件中的启动选项。<br>
 其初始化是在比特币核心启动过程 3.1.ParseParameters(argc, argv) 和 3.4.ReadConfigFile(mapArgs, mapMultiArgs) 中完成的。
 
-{% highlight C++ %}
+```cpp
 map<string, string> mapArgs; // 命令行参数（启动选项）映射列表
-{% endhighlight %}
+```
 
 确认指定命令行参数（启动选项）"-gen" 存在，调用 InterpretBool(mapArgs[strArg]) 函数把 "-gen" 对应的值转换为布尔型。
 
-{% highlight C++ %}
+```cpp
 /** Interpret string as boolean, for argument parsing */
 static bool InterpretBool(const std::string& strValue) // 把字符串转换为布尔型，用于参数解析
 {
@@ -120,7 +120,7 @@ static bool InterpretBool(const std::string& strValue) // 把字符串转换为�
         return true; // 返回 true，表示指定的选项未指定值时，该值默认为 true
     return (atoi(strValue) != 0); // 否则，在返回时转换为对应布尔型
 }
-{% endhighlight %}
+```
 
 ## 参照
 

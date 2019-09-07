@@ -15,13 +15,13 @@ tags: 区块链 比特币 源码剖析
 <p id="SetupEnvironment-ref"></p>
 1.调用 SetupEnvironment() 函数设置程序运行环境。该函数声明在“util.h”文件中。
 
-{% highlight C++ %}
+```cpp
 void SetupEnvironment(); // 设置运行环境
-{% endhighlight %}
+```
 
 实现在“util.cpp”文件中，没有入参。
 
-{% highlight C++ %}
+```cpp
 void SetupEnvironment()
 {
     // On most POSIX systems (e.g. Linux, but not BSD) the environment's locale // 在多数系统（例如：Linux，而非 BSD）上，环境的区域设置（场所或地点）可能无效，
@@ -40,7 +40,7 @@ void SetupEnvironment()
     std::locale loc = boost::filesystem::path::imbue(std::locale::classic()); // 2.先设置一个虚假的用于提取出原有设置
     boost::filesystem::path::imbue(loc); // 2.再填充
 }
-{% endhighlight %}
+```
 
 1.1.先尝试调用 std::locale("") 进行本地的区域设置，若因系统使该接口无效，则调用 setenv 改变区域设置为 "C" 环境变量。<br>
 1.2.先用一个虚假的区域设置获取原来内部的区域设置，然后再显示的填充路径区域设置。
@@ -54,13 +54,13 @@ Boost 库中的 imbue 用于嵌入路径区域设置，详见 [Filesystem Refere
 <p id="noui_connect-ref"></p>
 2.调用 noui_connect() 函数连接比特币核心服务的信号处理函数。该函数在“noui.h”文件中被引用。
 
-{% highlight C++ %}
+```cpp
 extern void noui_connect(); // 连接信号处理函数
-{% endhighlight %}
+```
 
 实现在“noui.cpp”文件中，没有入参。
 
-{% highlight C++ %}
+```cpp
 static bool noui_ThreadSafeMessageBox(const std::string& message, const std::string& caption, unsigned int style)
 {
     bool fSecure = style & CClientUIInterface::SECURE; // 通过消息类型获取安全标志
@@ -99,19 +99,19 @@ void noui_connect()
     uiInterface.ThreadSafeMessageBox.connect(noui_ThreadSafeMessageBox); // 1.连接无 UI 线程安全消息框（类型+消息）
     uiInterface.InitMessage.connect(noui_InitMessage); // 2.连接无 UI 初始化消息
 }
-{% endhighlight %}
+```
 
 uiInterface 是一个客户端 UI 通讯信号接口类对象，定义在“init.cpp”文件中。
 
-{% highlight C++ %}
+```cpp
 CClientUIInterface uiInterface; // Declared but not defined in ui_interface.h
-{% endhighlight %}
+```
 
 uiInterface.ThreadSafeMessageBox 和 uiInterface.InitMessage 均为 boost::signals2::signal 信号，类似于 function/bind，它们定义在“ui_interface.h”文件的 CClientUIInterface 类中。
 详见 [Chapter 67. Boost.Signals2 - Signals](https://theboostcpplibraries.com/boost.signals2-signals)。<br>
 关于 function/bind 可以参考孟岩的 [function/bind的救赎（上） - CSDN博客](https://blog.csdn.net/myan/article/details/5928531)。
 
-{% highlight C++ %}
+```cpp
 /** Signals for UI communication. */ // UI 通讯信号
 class CClientUIInterface // 客户端 UI 接口类
 {
@@ -123,14 +123,14 @@ class CClientUIInterface // 客户端 UI 接口类
     boost::signals2::signal<void (const std::string &message)> InitMessage;
     ...
 };
-{% endhighlight %}
+```
 
 2.1.连接无 UI 线程安全消息框（消息类型+内容）函数 noui_ThreadSafeMessageBox。<br>
 2.2.连接无 UI 初始化消息 noui_InitMessage。
 
 其中均调用 LogPrintf 函数进行记录打印，该函数定义在“util.h”文件中，是宏定义函数。
 
-{% highlight C++ %}
+```cpp
 /** Return true if log accepts specified category */ // 如果日志接受特殊的类别返回 true
 bool LogAcceptCategory(const char* category); // category 类似于 printf 中的格式控制
 /** Send a string to the log output */ // 发送一个字符串到日志输出
@@ -147,7 +147,7 @@ static inline int LogPrint(const char* category, const char* format)
     if(!LogAcceptCategory(category)) return 0; // 检验类别，这里类型为空直接返回 true
     return LogPrintStr(format); // 日志输出字符串
 }
-{% endhighlight %}
+```
 
 函数 LogPrint 类似于 C 语言的标准库函数 printf。
 其中第一个参数为类别（用于调试，这里为 NULL），第二个为可变参数的宏 __VA_ARGS__（包含格式控制字符串）。
@@ -156,7 +156,7 @@ static inline int LogPrint(const char* category, const char* format)
 然后调用 LogPrintStr(format) 进行日志输出，即把指定字符串以指定格式进行输出到控制台或日志文件。
 该函数定义在“util.cpp”文件中。
 
-{% highlight C++ %}
+```cpp
 /**
  * LogPrintf() has been broken a couple of times now
  * by well-meaning people adding mutexes in the most straightforward way.
@@ -292,7 +292,7 @@ int LogPrintStr(const std::string &str)
     }
     return ret; // 返回写入调试日志文件的字符总数
 }
-{% endhighlight %}
+```
 
 未完待续...<br>
 请看下一篇[比特币源码剖析（二）](/blog/2018/06/bitcoin-source-anatomy-02.html)。

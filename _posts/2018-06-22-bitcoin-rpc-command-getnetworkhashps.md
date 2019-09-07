@@ -10,9 +10,9 @@ excerpt: $ bitcoin-cli getnetworkhashps ( blocks height )
 ---
 ## 提示说明
 
-{% highlight shell %}
+```shell
 getnetworkhashps ( blocks height ) # 获取基于最后 n 个区块估算的网络算力（每秒网络哈希次数）
-{% endhighlight %}
+```
 
 参数：<br>
 1.blocks（整型，可选，默认为 120）区块的数量，-1 表示从上一次变化的难度开始。<br>
@@ -26,59 +26,59 @@ getnetworkhashps ( blocks height ) # 获取基于最后 n 个区块估算的网�
 
 用法一：未 IBD 时高度为 0，获取此时的网络算力。
 
-{% highlight shell %}
+```shell
 $ bitcoin-cli getnetworkhashps
 0
-{% endhighlight %}
+```
 
 用法二：获取第三个区块产生时的算力。
 
-{% highlight shell %}
+```shell
 $ bitcoin-cli getnetworkhashps 1 3
 10011731.54545454
-{% endhighlight %}
+```
 
 计算方法：用第三块与第二块的工作量之差 / 第三块与第二块产生时间之差。<br>
 公式：(chainwork3 - chainwork(3 - 1) ) / (time3 - time(3 - 1) )。
 
 用法三：获取产生前三个区块的算力。
 
-{% highlight shell %}
+```shell
 $ bitcoin-cli getnetworkhashps 3 3
 27789.49269520433
-{% endhighlight %}
+```
 
 或使 blocks 为 0，效果同上。
 
-{% highlight shell %}
+```shell
 $ bitcoin-cli getnetworkhashps 0 3
 27789.49269520433
-{% endhighlight %}
+```
 
 或使 blocks 为 -1，效果同上。
 
-{% highlight shell %}
+```shell
 $ bitcoin-cli getnetworkhashps -1 3
 27789.49269520433
-{% endhighlight %}
+```
 
 ### cURL
 
-{% highlight shell %}
+```shell
 $ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "getnetworkhashps", "params": [] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
 {"result":1721333.071895425,"error":null,"id":"curltest"}
-{% endhighlight %}
+```
 
 ## 源码剖析
 getnetworkhashps 对应的函数在“rpcserver.h”文件中被引用。
 
-{% highlight C++ %}
+```cpp
 extern UniValue getnetworkhashps(const UniValue& params, bool fHelp); // 获取全网算力
-{% endhighlight %}
+```
 
 实现在“rpcmining.cpp”文件中。
 
-{% highlight C++ %}
+```cpp
 UniValue getnetworkhashps(const UniValue& params, bool fHelp)
 {
     if (fHelp || params.size() > 2) // 参数个数最多为 2 个
@@ -100,7 +100,7 @@ UniValue getnetworkhashps(const UniValue& params, bool fHelp)
     LOCK(cs_main);
     return GetNetworkHashPS(params.size() > 0 ? params[0].get_int() : 120, params.size() > 1 ? params[1].get_int() : -1); // 获取网络算力（哈希次数/秒）并返回
 }
-{% endhighlight %}
+```
 
 基本流程：<br>
 1.处理命令帮助和参数个数。<br>
@@ -110,7 +110,7 @@ UniValue getnetworkhashps(const UniValue& params, bool fHelp)
 第三步，调用 GetNetworkHashPS(params.size() > 0 ? params[0].get_int() : 120, params.size() > 1 ? params[1].get_int() : -1) 函数获取算力，
 该函数实现在“rpcmining.cpp”文件中。
 
-{% highlight C++ %}
+```cpp
 /**
  * Return average network hashes per second based on the last 'lookup' blocks,
  * or from the last difficulty change if 'lookup' is nonpositive.
@@ -152,7 +152,7 @@ UniValue GetNetworkHashPS(int lookup, int height) { // 默认 (120, -1)
 
     return workDiff.getdouble() / timeDiff; // 转换为浮点数求平均值并返回
 }
-{% endhighlight %}
+```
 
 从这里可以看出获取的是某一区块或某一连续区间区块的网络算力即每秒哈希的次数。
 

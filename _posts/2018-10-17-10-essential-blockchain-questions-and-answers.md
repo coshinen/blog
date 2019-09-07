@@ -46,18 +46,18 @@ P2SH 是特殊类型的地址，其中复杂的锁定脚本被其哈希值替换
 
 ## 使用脚本，写一个赎回脚本，允许用户只有当其知道魔数 1234567 时花费输出。
 
-{% highlight shell %}
+```shell
 OP_EQUALVERIFY
 scriptPubKey: 1234567 OP_EQUALVERIFY
 scriptSig: 1234567
-{% endhighlight %}
+```
 
 ## 使用脚本，写一个赎回脚本，允许任何人在其至少 30 天后花费输出。
 
-{% highlight shell %}
+```shell
 scriptPubKey: "30d" OP_CHECKSEQUENCEVERIFY OP_VERIFY
 scriptSig: empty
-{% endhighlight %}
+```
 
 ## 什么是挖矿？
 

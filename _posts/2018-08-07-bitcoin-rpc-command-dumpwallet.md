@@ -10,9 +10,9 @@ excerpt: $ bitcoin-cli dumpwallet "filename"
 ---
 ## 提示说明
 
-{% highlight shell %}
+```shell
 dumpwallet "filename" # 以可读的方式导出全部钱包密钥到指定文件 filename
-{% endhighlight %}
+```
 
 参数：<br>
 1.filename（字符串，必备）文件名。
@@ -26,29 +26,29 @@ dumpwallet "filename" # 以可读的方式导出全部钱包密钥到指定文�
 导出到指定文件，默认保存在用户首次使用该命令的工作目录下。<br>
 这里在家目录 ~ 下使用该命令。
 
-{% highlight shell %}
+```shell
 $ bitcoin-cli backupwallet wallet.txt
 $ ls ~
 ... wallet.txt ...
-{% endhighlight %}
+```
 
 ### cURL
 
-{% highlight shell %}
+```shell
 $ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "dumpwallet", "params": ["./wallet.txt"] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
 {"result":null,"error":null,"id":"curltest"}
-{% endhighlight %}
+```
 
 ## 源码剖析
 dumpwallet 对应的函数在“rpcserver.h”文件中被引用。
 
-{% highlight C++ %}
+```cpp
 extern UniValue dumpwallet(const UniValue& params, bool fHelp); // 导出钱包
-{% endhighlight %}
+```
 
 实现在“rpcwallet.cpp”文件中。
 
-{% highlight C++ %}
+```cpp
 UniValue dumpwallet(const UniValue& params, bool fHelp)
 {
     if (!EnsureWalletIsAvailable(fHelp)) // 确保当前钱包可用
@@ -113,7 +113,7 @@ UniValue dumpwallet(const UniValue& params, bool fHelp)
     file.close(); // 关闭文件输出流
     return NullUniValue; // 返回空值
 }
-{% endhighlight %}
+```
 
 基本流程：<br>
 1.确保钱包当前可用（已初始化完成）。<br>
@@ -128,7 +128,7 @@ UniValue dumpwallet(const UniValue& params, bool fHelp)
 
 第六步，调用 pwalletMain->GetKeyBirthTimes(mapKeyBirth) 和 pwalletMain->GetAllReserveKeys(setKeyPool) 函数声明在“wallet.h”文件的 CWallet 类中。
 
-{% highlight C++ %}
+```cpp
 /** 
  * A CWallet is an extension of a keystore, which also maintains a set of transactions and balances,
  * and provides the ability to create new transactions.
@@ -141,11 +141,11 @@ class CWallet : public CCryptoKeyStore, public CValidationInterface
     void GetAllReserveKeys(std::set<CKeyID>& setAddress) const; // 获取密钥池中全部预创建的密钥
     ...
 };
-{% endhighlight %}
+```
 
 均实现在“wallet.h”文件中。
 
-{% highlight C++ %}
+```cpp
 void CWallet::GetAllReserveKeys(set<CKeyID>& setAddress) const
 {
     setAddress.clear(); // 清空地址集合
@@ -217,11 +217,11 @@ void CWallet::GetKeyBirthTimes(std::map<CKeyID, int64_t> &mapKeyBirth) const {
     for (std::map<CKeyID, CBlockIndex*>::const_iterator it = mapKeyFirstBlock.begin(); it != mapKeyFirstBlock.end(); it++)
         mapKeyBirth[it->first] = it->second->GetBlockTime() - 7200; // block times can be 2h off // 和块时间相差 2h
 }
-{% endhighlight %}
+```
 
 第八步，调用 pwalletMain->GetKey(keyid, key) 函数获取密钥索引对应的私钥，该函数声明在“crypter.h”文件的 CCryptoKeyStore 类中。
 
-{% highlight C++ %}
+```cpp
 /** Keystore which keeps the private keys encrypted.
  * It derives from the basic key store, which is used if no encryption is active.
  */ // 用于存储加密私钥的密钥库。
@@ -233,11 +233,11 @@ private:
     bool GetKey(const CKeyID &address, CKey& keyOut) const; // 通过密钥索引获取私钥
     ...
 };
-{% endhighlight %}
+```
 
 实现在“crypter.cpp”文件中。
 
-{% highlight C++ %}
+```cpp
 bool CCryptoKeyStore::GetKey(const CKeyID &address, CKey& keyOut) const
 {
     {
@@ -255,12 +255,12 @@ bool CCryptoKeyStore::GetKey(const CKeyID &address, CKey& keyOut) const
     }
     return false;
 }
-{% endhighlight %}
+```
 
 若当前钱包未加密，则调用 CBasicKeyStore::GetKey(address, keyOut) 函数获取密钥索引对应的私钥。
 该函数定义在“crypter.h”文件的 CBasicKeyStore 类中。
 
-{% highlight C++ %}
+```cpp
 typedef std::map<CKeyID, CKey> KeyMap; // 密钥索引和私钥的映射
 ...
 /** Basic key store, that keeps keys in an address->secret map */
@@ -284,19 +284,19 @@ protected:
     }
     ...
 };
-{% endhighlight %}
+```
 
 若钱包已加密，且能在密钥索引和公私钥对映射列表 mapCryptedKeys 中找到指定索引，
 则调用  DecryptKey(vMasterKey, vchCryptedSecret, vchPubKey, keyOut) 函数解密并获取私钥。<br>
 对象 mapCryptedKeys 的类型 CryptedKeyMap 定义在“keystore.h”文件中。
 
-{% highlight C++ %}
+```cpp
 typedef std::map<CKeyID, std::pair<CPubKey, std::vector<unsigned char> > > CryptedKeyMap; // 密钥索引对应公钥私钥对映射
-{% endhighlight %}
+```
 
 函数 DecryptKey(vMasterKey, vchCryptedSecret, vchPubKey, keyOut) 定义在“crypter.cpp”文件中。
 
-{% highlight C++ %}
+```cpp
 static bool DecryptKey(const CKeyingMaterial& vMasterKey, const std::vector<unsigned char>& vchCryptedSecret, const CPubKey& vchPubKey, CKey& key)
 {
     CKeyingMaterial vchSecret;
@@ -309,7 +309,7 @@ static bool DecryptKey(const CKeyingMaterial& vMasterKey, const std::vector<unsi
     key.Set(vchSecret.begin(), vchSecret.end(), vchPubKey.IsCompressed()); // 初始化私钥
     return key.VerifyPubKey(vchPubKey); // 验证获取的私钥与公钥是否匹配
 }
-{% endhighlight %}
+```
 
 未完成。
 

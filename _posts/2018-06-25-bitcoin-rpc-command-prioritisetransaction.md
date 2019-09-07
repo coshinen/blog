@@ -10,9 +10,9 @@ excerpt: $ bitcoin-cli prioritisetransaction <txid> <priority delta> <fee delta>
 ---
 ## 提示说明
 
-{% highlight shell %}
+```shell
 prioritisetransaction <txid> <priority delta> <fee delta> # 改变交易内存池中一笔交易的优先级
-{% endhighlight %}
+```
 
 **该优先级用于接收交易进入被挖的区块。**
 
@@ -27,32 +27,32 @@ prioritisetransaction <txid> <priority delta> <fee delta> # 改变交易内存�
 
 ### 比特币核心客户端
 
-{% highlight shell %}
+```shell
 $ bitcoin-cli getrawmempool
 [
   "fb9bd2df3cef0abd9f444971dff097790b7bf146843a752cb48461418d3c7e67"
 ]
 $ bitcoin-cli prioritisetransaction fb9bd2df3cef0abd9f444971dff097790b7bf146843a752cb48461418d3c7e67
 true
-{% endhighlight %}
+```
 
 ### cURL
 
-{% highlight shell %}
+```shell
 $ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "prioritisetransaction", "params": ["fb9bd2df3cef0abd9f444971dff097790b7bf146843a752cb48461418d3c7e67", 0.0, 10000] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
 {"result":true,"error":null,"id":"curltest"}
-{% endhighlight %}
+```
 
 ## 源码剖析
 prioritisetransaction 对应的函数在“rpcserver.h”文件中被引用。
 
-{% highlight C++ %}
+```cpp
 extern UniValue prioritisetransaction(const UniValue& params, bool fHelp); // 设置交易的优先级
-{% endhighlight %}
+```
 
 实现在“rpcmining.cpp”文件中。
 
-{% highlight C++ %}
+```cpp
 // NOTE: Unlike wallet RPC (which use BTC values), mining RPCs follow GBT (BIP 22) in using satoshi amounts
 UniValue prioritisetransaction(const UniValue& params, bool fHelp) // 注：与钱包 RPC （使用 BTC）不同，挖矿 RPC 使用 satoshi 作为单位
 {
@@ -83,7 +83,7 @@ UniValue prioritisetransaction(const UniValue& params, bool fHelp) // 注：与�
     mempool.PrioritiseTransaction(hash, params[0].get_str(), params[1].get_real(), nAmount); // 调整指定交易优先级
     return true;
 }
-{% endhighlight %}
+```
 
 基本流程：<br>
 1.处理命令帮助和参数个数。<br>
@@ -93,7 +93,7 @@ UniValue prioritisetransaction(const UniValue& params, bool fHelp) // 注：与�
 
 第四步，函数 mempool.PrioritiseTransaction(hash, params[0].get_str(), params[1].get_real(), nAmount) 声明在“txmempool.h”文件的 CTxMemPool 类中。
 
-{% highlight C++ %}
+```cpp
 /**
  * CTxMemPool stores valid-according-to-the-current-best-chain
  * transactions that may be included in the next block.
@@ -178,11 +178,11 @@ class CTxMemPool
     void PrioritiseTransaction(const uint256 hash, const std::string strHash, double dPriorityDelta, const CAmount& nFeeDelta);
     ...
 };
-{% endhighlight %}
+```
 
 实现在“txmempool.cpp”文件中。
 
-{% highlight C++ %}
+```cpp
 void CTxMemPool::PrioritiseTransaction(const uint256 hash, const string strHash, double dPriorityDelta, const CAmount& nFeeDelta)
 {
     {
@@ -205,7 +205,7 @@ void CTxMemPool::PrioritiseTransaction(const uint256 hash, const string strHash,
     }
     LogPrintf("PrioritiseTransaction: %s priority += %f, fee += %d\n", strHash, dPriorityDelta, FormatMoney(nFeeDelta));
 }
-{% endhighlight %}
+```
 
 ## 参照
 

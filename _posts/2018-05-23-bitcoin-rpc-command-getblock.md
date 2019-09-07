@@ -10,9 +10,9 @@ excerpt: $ bitcoin-cli getblock "hash" ( verbose )
 ---
 ## 提示说明
 
-{% highlight shell %}
+```shell
 getblock "hash" ( verbose ) # 通过区块哈希（16 进制形式）获取指定区块信息
-{% endhighlight %}
+```
 
 参数：
 1. "hash"（字符串，必备）区块哈希（16 进制形式）。
@@ -20,7 +20,7 @@ getblock "hash" ( verbose ) # 通过区块哈希（16 进制形式）获取指�
 
 结果（verbose 为 true）：
 
-{% highlight shell %}
+```shell
 {
   "hash" : "hash",     （字符串）区块哈希（和提供的一样）
   "confirmations" : n,   （数字）确认数，若指定区块不在主链上则该值为 -1
@@ -41,7 +41,7 @@ getblock "hash" ( verbose ) # 通过区块哈希（16 进制形式）获取指�
   "previousblockhash" : "hash",  （字符串）前一个区块的哈希
   "nextblockhash" : "hash"       （字符串）下一个区块的哈希
 }
-{% endhighlight %}
+```
 
 结果（verbose 为 false）：（字符串）一个序列化的字符串，区块信息的 16 进制编码的数据。
 
@@ -51,7 +51,7 @@ getblock "hash" ( verbose ) # 通过区块哈希（16 进制形式）获取指�
 
 用法一：获取最佳区块的详细信息。
 
-{% highlight shell %}
+```shell
 $ bitcoin-cli getbestblockhash
 000000ee6688672afe26c714e89592d2926eb53dfd8642f0a7412a6c43973a53
 $ bitcoin-cli getblock 000000ee6688672afe26c714e89592d2926eb53dfd8642f0a7412a6c43973a53
@@ -74,44 +74,44 @@ $ bitcoin-cli getblock 000000ee6688672afe26c714e89592d2926eb53dfd8642f0a7412a6c4
   "previousblockhash": "000000280142d26678ec5ee733a8bd81325f2cff2a8e7b3beb714e999ffd2fa0",
   "nextblockhash": "000000dce9599ed928a5bf2170629b790b9ebabf5592701bce8f3e783288c62f"
 }
-{% endhighlight %}
+```
 
 用法二：获取最佳区块的详细信息，显示指定 verbose 为 true。
 
-{% highlight shell %}
+```shell
 $ bitcoin-cli getbestblockhash
 000000ee6688672afe26c714e89592d2926eb53dfd8642f0a7412a6c43973a53
 $ bitcoin-cli getblock 000000ee6688672afe26c714e89592d2926eb53dfd8642f0a7412a6c43973a53 true
 ... # 结果同上
-{% endhighlight %}
+```
 
 用法三：设置 verbose 为 false，获取序列化的最佳区块数据。
 
-{% highlight shell %}
+```shell
 $ bitcoin-cli getbestblockhash
 000000ee6688672afe26c714e89592d2926eb53dfd8642f0a7412a6c43973a53
 $ bitcoin-cli getblock 000000ee6688672afe26c714e89592d2926eb53dfd8642f0a7412a6c43973a53 false
 00000020a02ffd9f994e71eb3b7b8e2aff2c5f3281bda833e75eec7866d242012800000020a182fa3c085763dceaa6c0df44ed641aa6562463467c4de957cb4ddc1343eb1b5c305b2a8c021eeca013000101000000010000000000000000000000000000000000000000000000000000000000000000ffffffff0502424e0101ffffffff0100f2052a0100000023210299727931231540202a3b33c956bf2af144330b731153a2fd9ba194e367ed6414ac00000000
-{% endhighlight %}
+```
 
 ### cURL
 
-{% highlight shell %}
+```shell
 $ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "getblock", "params": ["000000ee6688672afe26c714e89592d2926eb53dfd8642f0a7412a6c43973a53"] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
 {"result":{"hash":"000000ee6688672afe26c714e89592d2926eb53dfd8642f0a7412a6c43973a53","confirmations":5038,"size":181,"height":20034,"version":536870912,"merkleroot":"eb4313dc4dcb57e94d7c46632456a61a64ed44dfc0a6eadc6357083cfa82a120","tx":["eb4313dc4dcb57e94d7c46632456a61a64ed44dfc0a6eadc6357083cfa82a120"],"time":1529895963,"mediantime":1529895953,"nonce":1286380,"bits":"1e028c2a","difficulty":0.001533333096242079,"chainwork":"00000000000000000000000000000000000000000000000000000009bb56ea79","previousblockhash":"000000280142d26678ec5ee733a8bd81325f2cff2a8e7b3beb714e999ffd2fa0","nextblockhash":"000000dce9599ed928a5bf2170629b790b9ebabf5592701bce8f3e783288c62f"},"error":null,"id":"curltest"}
-{% endhighlight %}
+```
 
 ## 源码剖析
 
 getblock 对应的函数在“rpcserver.h”文件中被引用。
 
-{% highlight C++ %}
+```cpp
 extern UniValue getblock(const UniValue& params, bool fHelp); // 获取区块信息
-{% endhighlight %}
+```
 
 实现在“rpcblockchain.cpp”文件中。
 
-{% highlight C++ %}
+```cpp
 UniValue getblock(const UniValue& params, bool fHelp)
 {
     if (fHelp || params.size() < 1 || params.size() > 2) // 1.必须有 1 个参数（某区块的哈希），最多 2 个
@@ -181,7 +181,7 @@ UniValue getblock(const UniValue& params, bool fHelp)
 
     return blockToJSON(block, pblockindex); // 8.打包区块信息为 JSON 格式并返回
 }
-{% endhighlight %}
+```
 
 基本流程：
 1. 处理命令帮助和参数个数。
@@ -195,7 +195,7 @@ UniValue getblock(const UniValue& params, bool fHelp)
 
 第四步，对象 mapBlockIndex 在“main.h”文件中被引用。
 
-{% highlight C++ %}
+```cpp
 struct BlockHasher // 区块哈希的函数对象
 {
     size_t operator()(const uint256& hash) const { return hash.GetCheapHash(); }
@@ -203,32 +203,32 @@ struct BlockHasher // 区块哈希的函数对象
 ...
 typedef boost::unordered_map<uint256, CBlockIndex*, BlockHasher> BlockMap;
 extern BlockMap mapBlockIndex; // 区块索引映射 <区块哈希，区块索引指针，函数对象>
-{% endhighlight %}
+```
 
 在“main.cpp”文件中定义，是一个 boost::unordered_map。
 这里的 BlockHasher 是一个重载了函数调用运算符的函数对象，用于获取区块哈希的 uint256 对象引用。
 
-{% highlight C++ %}
+```cpp
 BlockMap mapBlockIndex; // 保存区块链上区块的索引
-{% endhighlight %}
+```
 
 第五步，检查区块状态。变量 fHavePruned 在“main.h”文件中被引用，
 
-{% highlight C++ %}
+```cpp
 /** True if any block files have ever been pruned. */
 extern bool fHavePruned; // 如果全部区块文件被修剪过则为 true
-{% endhighlight %}
+```
 
 定义在“main.cpp”文件中，初始化为 false，表示默认不修剪，为完整区块。
 
-{% highlight C++ %}
+```cpp
 bool fHavePruned = false;
-{% endhighlight %}
+```
 
 变量 pblockindex->nStatus 和 pblockindex->nTx 定义在“chain.h”文件的 CBlockIndex 类中。
 BLOCK_HAVE_DATA 是一个枚举类型，这里的值为 8，表示在区块文件中是完整的区块。
 
-{% highlight C++ %}
+```cpp
 enum BlockStatus {
     ...
     BLOCK_HAVE_DATA          =    8, //! full block available in blk*.dat
@@ -252,18 +252,18 @@ public:
     unsigned int nStatus; // 验证该区块的状态
     ...
 };
-{% endhighlight %}
+```
 
 第六步，调用 ReadBlockFromDisk(block, pblockindex, Params().GetConsensus()) 函数从磁盘上的文件中读取区块数据到局部对象 block。该函数声明在“main.h”文件中。
 
-{% highlight C++ %}
+```cpp
 bool ReadBlockFromDisk(CBlock& block, const CDiskBlockPos& pos, const Consensus::Params& consensusParams);
 bool ReadBlockFromDisk(CBlock& block, const CBlockIndex* pindex, const Consensus::Params& consensusParams); // 转调上面重载的函数
-{% endhighlight %}
+```
 
 实现在“main.cpp”文件中。
 
-{% highlight C++ %}
+```cpp
 bool ReadBlockFromDisk(CBlock& block, const CDiskBlockPos& pos, const Consensus::Params& consensusParams)
 {
     block.SetNull();
@@ -297,12 +297,12 @@ bool ReadBlockFromDisk(CBlock& block, const CBlockIndex* pindex, const Consensus
                 pindex->ToString(), pindex->GetBlockPos().ToString());
     return true;
 }
-{% endhighlight %}
+```
 
 把数据读到内存中的 block 对象后需验证该区块的哈希是否为指定区块的哈希。
 调用 block.GetHash() 函数获取区块哈希，该函数声明在“block.h”文件的 CBlockHeader 类中。
 
-{% highlight C++ %}
+```cpp
 /** Nodes collect new transactions into a block, hash them into a hash tree,
  * and scan through nonce values to make the block's hash satisfy proof-of-work
  * requirements.  When they solve the proof-of-work, they broadcast the block
@@ -322,16 +322,16 @@ class CBlock : public CBlockHeader
 {
     ...
 };
-{% endhighlight %}
+```
 
 实现在“block.cpp”文件中。
 
-{% highlight C++ %}
+```cpp
 uint256 CBlockHeader::GetHash() const
 {
     return SerializeHash(*this);
 }
-{% endhighlight %}
+```
 
 这里调用 SerializeHash(*this) 这个模板函数进行区块的哈希。
 
@@ -339,7 +339,7 @@ uint256 CBlockHeader::GetHash() const
 先来看第七步，若 verbose 指定为 false，则序列化区块数据，转换为 16 进制并返回。
 类 CDataStream 定义在“streams.h”文件中，重载了输出运算符 <<。
 
-{% highlight C++ %}
+```cpp
 /** Double ended buffer combining vector and stream-like interfaces.
  *
  * >> and << read and write unformatted data using the above serialization templates.
@@ -357,12 +357,12 @@ class CDataStream
     }
     ...
 }；
-{% endhighlight %}
+```
 
 调用模板函数 HexStr(ssBlock.begin(), ssBlock.end()) 把流化的数据转换为 16 进制。
 该模板实现在“utilstrencodings.h”文件中。
 
-{% highlight C++ %}
+```cpp
 template<typename T>
 std::string HexStr(const T itbegin, const T itend, bool fSpaces=false)
 {
@@ -381,7 +381,7 @@ std::string HexStr(const T itbegin, const T itend, bool fSpaces=false)
 
     return rv;
 }
-{% endhighlight %}
+```
 
 把每个字节拆成高 4 位和低 4 位分别转换为 16 进制的字符。
 还可以在每个 16 进制字符中间加入空格，这里使用了默认不加。
@@ -390,7 +390,7 @@ std::string HexStr(const T itbegin, const T itend, bool fSpaces=false)
 把获取到的区块数据调用 blockToJSON(block, pblockindex) 函数打包为 JSON 格式并返回。
 该函数实现在“rpcblockchain.cpp”文件中。
 
-{% highlight C++ %}
+```cpp
 UniValue blockToJSON(const CBlock& block, const CBlockIndex* blockindex, bool txDetails = false)
 {
     UniValue result(UniValue::VOBJ); // 创建对象类型的返回结果
@@ -431,11 +431,11 @@ UniValue blockToJSON(const CBlock& block, const CBlockIndex* blockindex, bool tx
         result.push_back(Pair("nextblockhash", pnext->GetBlockHash().GetHex())); // 加入后一个区块的哈希
     return result; // 返回结果
 }
-{% endhighlight %}
+```
 
 函数 chainActive.Contains(blockindex) 和 chainActive.Next(blockindex) 均声明在“chain.h”文件的 CChain 类中。
 
-{% highlight C++ %}
+```cpp
 /** An in-memory indexed chain of blocks. */
 class CChain { // 一个内存中用于区块索引的链
     ...
@@ -460,7 +460,7 @@ class CChain { // 一个内存中用于区块索引的链
     }
     ...
 };
-{% endhighlight %}
+```
 
 ## 参照
 

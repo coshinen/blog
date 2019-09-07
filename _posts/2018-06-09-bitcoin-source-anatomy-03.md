@@ -12,7 +12,7 @@ tags: 区块链 比特币 源码剖析
 
 ## 源码剖析
 
-{% highlight C++ %}
+```cpp
 bool AppInit(int argc, char* argv[]) // 3.0.应用程序初始化
 {
     ...
@@ -39,19 +39,19 @@ bool AppInit(int argc, char* argv[]) // 3.0.应用程序初始化
     }
     ...
 };
-{% endhighlight %}
+```
 
 <p id="GetDataDir-ref"></p>
 3.3.调用 GetDataDir(false) 函数获取数据目录，并检查该文件是否为目录类型，该函数声明在“util.h”文件中。
 
-{% highlight C++ %}
+```cpp
 boost::filesystem::path GetDefaultDataDir(); // 获取默认数据目录路径
 const boost::filesystem::path &GetDataDir(bool fNetSpecific = true); // 获取数据目录路径
-{% endhighlight %}
+```
 
 定义在“util.cpp”文件中，入参为：false。
 
-{% highlight C++ %}
+```cpp
 boost::filesystem::path GetDefaultDataDir()
 {
     namespace fs = boost::filesystem;
@@ -114,7 +114,7 @@ const boost::filesystem::path &GetDataDir(bool fNetSpecific)
 
     return path; // 7.返回数据目录的路径
 }
-{% endhighlight %}
+```
 
 1.路径缓存上锁。<br>
 2.根据是否指定了网络选取路径缓存，这里未指定。<br>
@@ -127,13 +127,13 @@ const boost::filesystem::path &GetDataDir(bool fNetSpecific)
 <p id="ReadConfigFile-ref"></p>
 3.4.调用 ReadConfigFile(mapArgs, mapMultiArgs) 函数读取配置文件，该函数声明在“util.h”文件中。
 
-{% highlight C++ %}
+```cpp
 void ReadConfigFile(std::map<std::string, std::string>& mapSettingsRet, std::map<std::string, std::vector<std::string> >& mapMultiSettingsRet); // 读取配置文件，加载启动选项
-{% endhighlight %}
+```
 
 实现在“util.cpp”文件中，入参为：启动选项单值映射列表，启动选项多值映射列表。
 
-{% highlight C++ %}
+```cpp
 void ClearDatadirCache()
 {
     pathCached = boost::filesystem::path(); // 路径缓存置空
@@ -172,7 +172,7 @@ void ReadConfigFile(map<string, string>& mapSettingsRet,
     // If datadir is changed in .conf file: // 如果数据目录在配置文件中改变
     ClearDatadirCache(); // 4.清理数据目录缓存
 }
-{% endhighlight %}
+```
 
 1.获取配置文件的路径并创建文件输入流对象，允许首次运行没有配置文件。<br>
 2.构造选择集，并插入字符 '*'。<br>
@@ -186,17 +186,17 @@ void ReadConfigFile(map<string, string>& mapSettingsRet,
 <p id="SelectParams-ref"></p>
 3.5.首先调用 ChainNameFromCommandLine() 函数从命令行获取指定的链名，该函数声明在“chainparamsbase.h”文件中。
 
-{% highlight C++ %}
+```cpp
 /**
  * Looks for -regtest, -testnet and returns the appropriate BIP70 chain name.
  * @return CBaseChainParams::MAX_NETWORK_TYPES if an invalid combination is given. CBaseChainParams::MAIN by default.
  */ // 查看 -regtest，-testnet 选项返回相应的 BIP70 链名。
 std::string ChainNameFromCommandLine();
-{% endhighlight %}
+```
 
 实现在“chainparamsbase.cpp”文件中，没有入参。
 
-{% highlight C++ %}
+```cpp
 const std::string CBaseChainParams::MAIN = "main";
 const std::string CBaseChainParams::TESTNET = "test";
 const std::string CBaseChainParams::REGTEST = "regtest";
@@ -214,41 +214,41 @@ std::string ChainNameFromCommandLine()
         return CBaseChainParams::TESTNET; // 返回测试网名称
     return CBaseChainParams::MAIN; // 否则返回主网名称，默认
 }
-{% endhighlight %}
+```
 
 然后调用 SelectParams(ChainNameFromCommandLine()) 根据链名选择不同网络的链参数，该函数声明在“chainparams.h”文件中。
 
-{% highlight C++ %}
+```cpp
 /**
  * Sets the params returned by Params() to those for the given BIP70 chain name.
  * @throws std::runtime_error when the chain is not supported.
  */ // 将 Params() 返回的参数设置为给定的 BIP70 链名。
 void SelectParams(const std::string& chain);
-{% endhighlight %}
+```
 
 实现在“chainparams.cpp”文件中，入参为：BIP70 链名。
 
-{% highlight C++ %}
+```cpp
 void SelectParams(const std::string& network)
 {
     SelectBaseParams(network); // 1.选择网络基础参数
     pCurrentParams = &Params(network); // 2.获取相应网络参数对象的地址
 }
-{% endhighlight %}
+```
 
 1.选择网络基础参数。<br>
 2.选择网络参数。
 
 1.调用 SelectBaseParams(network) 选择网络基础参数，包含 RPC 端口号，数据目录名（网络名），该函数声明在“chainparamsbase.h”文件中。
 
-{% highlight C++ %}
+```cpp
 /** Sets the params returned by Params() to those for the given network. */ // 将 Params() 返回的参数设置到给定的网络。
 void SelectBaseParams(const std::string& chain);
-{% endhighlight %}
+```
 
 实现在“chainparamsbase.cpp”文件中，入参为：BIP70 链名。
 
-{% highlight C++ %}
+```cpp
 /**
  * Main network // 主网
  */
@@ -308,13 +308,13 @@ void SelectBaseParams(const std::string& chain)
 {
     pCurrentBaseParams = &BaseParams(chain); // 使当前选择的基础链参数全局静态指针指向选择的链基础参数对象
 }
-{% endhighlight %}
+```
 
 这一步是让当前选择的基础链参数对象全局静态指针指向相应的基础链参数全局静态对象，方便以后通过指针进行基础链参数的访问。
 
 2.调用 Params(network) 获取选择网络参数对象的地址，该函数定义在“chainparams.cpp”文件中，入参为：BIP70 链名。
 
-{% highlight C++ %}
+```cpp
 /**
  * Main network // 主网
  */
@@ -369,14 +369,14 @@ CChainParams& Params(const std::string& chain) // 根据网络名字返回相应
     else
         throw std::runtime_error(strprintf("%s: Unknown chain %s.", __func__, chain));
 }
-{% endhighlight %}
+```
 
 这一步是让当前选择的链参数对象全局静态指针指向相应的链参数全局静态对象，方便以后通过指针进行基础链参数的访问。
 
 <p id="Command-line-ref"></p>
 3.6.这部分实现在“bitcoind.cpp”文件的 AppInit(int argc, char* argv[]) 函数中。
 
-{% highlight C++ %}
+```cpp
 bool AppInit(int argc, char* argv[]) // [P]3.0.应用程序初始化
 {
     ...
@@ -403,14 +403,14 @@ bool AppInit(int argc, char* argv[]) // [P]3.0.应用程序初始化
     }
     ...
 }
-{% endhighlight %}
+```
 
 1.遍历指定的命令行参数，检查每个开始是否以 '-' 或 '/' 开头，若不满足以上条件，则标记命令行参数出错。<br>
 2.若命令参数出错，打印错误信息后直接退出程序。
 
 1.调用 IsSwitchChar(argv[i][0]) 函数进行命令行参数首字母的检查，该函数定义在“util.h”文件中。
 
-{% highlight C++ %}
+```cpp
 inline bool IsSwitchChar(char c)
 {
 #ifdef WIN32
@@ -419,12 +419,12 @@ inline bool IsSwitchChar(char c)
     return c == '-';
 #endif
 }
-{% endhighlight %}
+```
 
 <p id="Daemon-ref"></p>
 3.7.这部分只在非 WIN32 平台上有效，实现在“bitcoind.cpp”文件的 AppInit(int argc, char* argv[]) 函数中。
 
-{% highlight C++ %}
+```cpp
 bool AppInit(int argc, char* argv[]) // [P]3.0.应用程序初始化
 {
     ...
@@ -464,7 +464,7 @@ bool AppInit(int argc, char* argv[]) // [P]3.0.应用程序初始化
     }
     ...
 }
-{% endhighlight %}
+```
 
 1.获取守护进程后台化标志，默认为 false。<br>
 2.若开启了后台化选项，是当前进程后台化。<br>
@@ -476,7 +476,7 @@ bool AppInit(int argc, char* argv[]) // [P]3.0.应用程序初始化
 
 1.调用 GetBoolArg("-daemon", false) 获取 "-daemon" 后台化选项的值，该函数声明在“util.h”文件中。
 
-{% highlight C++ %}
+```cpp
 /**
  * Return boolean argument or default value
  *
@@ -485,23 +485,23 @@ bool AppInit(int argc, char* argv[]) // [P]3.0.应用程序初始化
  * @return command-line argument or default value
  */ // 返回命令行参数的值或设置的默认值。
 bool GetBoolArg(const std::string& strArg, bool fDefault); // 获取指定选项的值
-{% endhighlight %}
+```
 
 实现在”util.cpp“文件中，入参为："-daemon"，false。
 
-{% highlight C++ %}
+```cpp
 bool GetBoolArg(const std::string& strArg, bool fDefault)
 {
     if (mapArgs.count(strArg)) // 若该选项存在
         return InterpretBool(mapArgs[strArg]); // 返回其对应的值（转换为布尔型）
     return fDefault; // 否则返回默认值
 }
-{% endhighlight %}
+```
 
 <p id="Server-ref"></p>
 3.7.这部分实现在“bitcoind.cpp”文件的 AppInit(int argc, char* argv[]) 函数中。
 
-{% highlight C++ %}
+```cpp
 bool AppInit(int argc, char* argv[]) // [P]3.0.应用程序初始化
 {
     ...
@@ -518,12 +518,12 @@ bool AppInit(int argc, char* argv[]) // [P]3.0.应用程序初始化
     }
     ...
 }
-{% endhighlight %}
+```
 
 调用 SoftSetBoolArg("-server", true) 对服务选项 "-server" 进行软设置，该函数声明在“util.h”文件中。
 所谓软设置就是若该选项已经设置过，直接返回 false 表示设置失败，若该选项未设置，则设置为指定的值后，返回 true 表示设置成功。
 
-{% highlight C++ %}
+```cpp
 /**
  * Set a boolean argument if it doesn't already have a value
  *
@@ -532,11 +532,11 @@ bool AppInit(int argc, char* argv[]) // [P]3.0.应用程序初始化
  * @return true if argument gets set, false if it already had a value
  */ // 若选项没有设置，就设置一个布尔型参数，并返回 true。否则，直接返回 false。
 bool SoftSetBoolArg(const std::string& strArg, bool fValue);
-{% endhighlight %}
+```
 
 定义在“util.cpp”文件中，入参为："-server"，true。
 
-{% highlight C++ %}
+```cpp
 bool SoftSetArg(const std::string& strArg, const std::string& strValue)
 {
     if (mapArgs.count(strArg)) // 若该选项已经存在（设置）
@@ -552,7 +552,7 @@ bool SoftSetBoolArg(const std::string& strArg, bool fValue)
     else
         return SoftSetArg(strArg, std::string("0"));
 }
-{% endhighlight %}
+```
 
 未完待续...<br>
 请看下一篇[比特币源码剖析（四）](/blog/2018/06/bitcoin-source-anatomy-04.html)。

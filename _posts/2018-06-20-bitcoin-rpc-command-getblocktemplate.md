@@ -10,9 +10,9 @@ excerpt: $ bitcoin-cli getblocktemplate ( "jsonrequestobject" )
 ---
 ## 提示说明
 
-{% highlight shell %}
+```shell
 getblocktemplate ( "jsonrequestobject" ) # 获取一个区块模板
-{% endhighlight %}
+```
 
 如果请求参数包含 mode 关键字，用于在默认的 template 请求或 proposal 间选择。
 返回构建一个区块所需的数据。
@@ -20,7 +20,7 @@ getblocktemplate ( "jsonrequestobject" ) # 获取一个区块模板
 
 参数：<br>
 1.jsonrequestobject（字符串，可选）以下规范中的 json 对象。<br>
-{% highlight shell %}
+```shell
      {
        "mode":"template"    （字符串，可选）该项必须设置 "template" 或省略
        "capabilities":[       （数组，可选）字符串列表
@@ -28,10 +28,10 @@ getblocktemplate ( "jsonrequestobject" ) # 获取一个区块模板
            ,...
          ]
      }
-{% endhighlight %}
+```
 
 结果：<br>
-{% highlight shell %}
+```shell
 {
   "version" : n,                    （数字）区块版本
   "previousblockhash" : "xxxx",    （字符串）当前最高区块哈希
@@ -67,7 +67,7 @@ getblocktemplate ( "jsonrequestobject" ) # 获取一个区块模板
   "bits" : "xxx",                 （字符串）下一个区块的压缩目标
   "height" : n                      （数字）下一个去跨的高度
 }
-{% endhighlight %}
+```
 
 ## 用法示例
 
@@ -75,7 +75,7 @@ getblocktemplate ( "jsonrequestobject" ) # 获取一个区块模板
 
 该命令需要被请求的节点至少建立一条连接。
 
-{% highlight shell %}
+```shell
 $ bitcoin-cli getblocktemplate
 {
   "capabilities": [
@@ -104,25 +104,25 @@ $ bitcoin-cli getblocktemplate
   "bits": "1e0a314c",
   "height": 28217
 }
-{% endhighlight %}
+```
 
 ### cURL
 
-{% highlight shell %}
+```shell
 $ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "getblocktemplate", "params": [] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
 {"result":{"capabilities":["proposal"],"version":536870912,"previousblockhash":"000001f1b79b87f65722af42df4d4e284146e868ba374eda95ef621f70f648a8","transactions":[],"coinbaseaux":{"flags":""},"coinbasevalue":5000000000,"longpollid":"000001f1b79b87f65722af42df4d4e284146e868ba374eda95ef621f70f648a82203","target":"0000028c53000000000000000000000000000000000000000000000000000000","mintime":1529979643,"mutable":["time","transactions","prevblock"],"noncerange":"00000000ffffffff","sigoplimit":20000,"sizelimit":1000000,"curtime":1529979682,"bits":"1e028c53","height":28251},"error":null,"id":"curltest"}
-{% endhighlight %}
+```
 
 ## 源码剖析
 getblocktemplate 对应的函数在“rpcserver.h”文件中被引用。
 
-{% highlight C++ %}
+```cpp
 extern UniValue getblocktemplate(const UniValue& params, bool fHelp); // 获取区块模板
-{% endhighlight %}
+```
 
 实现在“rpcmining.cpp”文件中。
 
-{% highlight C++ %}
+```cpp
 UniValue getblocktemplate(const UniValue& params, bool fHelp)
 {
     if (fHelp || params.size() > 1) // 参数最多为 1 个
@@ -392,7 +392,7 @@ UniValue getblocktemplate(const UniValue& params, bool fHelp)
 
     return result; // 返回结果
 }
-{% endhighlight %}
+```
 
 基本流程：
 1. 处理命令帮助和参数个数。

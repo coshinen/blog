@@ -10,9 +10,9 @@ excerpt: $ bitcoin-cli encryptwallet "passphrase"
 ---
 ## 提示说明
 
-{% highlight shell %}
+```shell
 encryptwallet "passphrase" # 使用 passphrase 加密钱包
-{% endhighlight %}
+```
 
 用于第一次加密。<br>
 在此之后，任何与私钥相关的调用，例如发送或签名，需要在调用前设置密钥解密。<br>
@@ -31,28 +31,28 @@ encryptwallet "passphrase" # 使用 passphrase 加密钱包
 
 使用密码 mypasswd 加密钱包。
 
-{% highlight shell %}
+```shell
 $ bitcoin-cli encryptwallet mypasswd
 wallet encrypted; Bitcoin server stopping, restart to run with encrypted wallet. The keypool has been flushed, you need to make a new backup.
-{% endhighlight %}
+```
 
 ### cURL
 
-{% highlight shell %}
+```shell
 $ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "encryptwallet", "params": ["mypasswd"] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
 {"result":"wallet encrypted; Bitcoin server stopping, restart to run with encrypted wallet. The keypool has been flushed, you need to make a new backup.","error":null,"id":"curltest"}
-{% endhighlight %}
+```
 
 ## 源码剖析
 encryptwallet 对应的函数在“rpcserver.h”文件中被引用。
 
-{% highlight C++ %}
+```cpp
 extern UniValue encryptwallet(const UniValue& params, bool fHelp); // 加密钱包
-{% endhighlight %}
+```
 
 实现在“rpcwallet.cpp”文件中。
 
-{% highlight C++ %}
+```cpp
 UniValue encryptwallet(const UniValue& params, bool fHelp)
 {
     if (!EnsureWalletIsAvailable(fHelp)) // 确保钱包当前可用
@@ -109,7 +109,7 @@ UniValue encryptwallet(const UniValue& params, bool fHelp)
     StartShutdown(); // 关闭核心服务器
     return "wallet encrypted; Bitcoin server stopping, restart to run with encrypted wallet. The keypool has been flushed, you need to make a new backup."; // 返回该信息表示加密成功
 }
-{% endhighlight %}
+```
 
 基本流程：<br>
 1.确保当前钱包可用（已初始化完成）。<br>
@@ -124,7 +124,7 @@ UniValue encryptwallet(const UniValue& params, bool fHelp)
 
 第五步，调用 pwalletMain->IsCrypted() 函数判断钱包当前是否加密，定义在“crypter.h”文件的 CCryptoKeyStore 类中。
 
-{% highlight C++ %}
+```cpp
 /** Keystore which keeps the private keys encrypted.
  * It derives from the basic key store, which is used if no encryption is active.
  */ // 用于存储加密私钥的密钥库。
@@ -141,18 +141,18 @@ class CCryptoKeyStore : public CBasicKeyStore
     }
     ...
 };
-{% endhighlight %}
+```
 
 第六步，类型 SecureString 的定义在“secure.h”文件中。
 
-{% highlight C++ %}
+```cpp
 // This is exactly like std::string, but with a custom allocator. // 这是一个 std::string，但定制了空间配置器。
 typedef std::basic_string<char, std::char_traits<char>, secure_allocator<char> > SecureString; // 安全字符串类型
-{% endhighlight %}
+```
 
 第八步，调用 pwalletMain->EncryptWallet(strWalletPass) 函数加密钱包，该函数声明在“wallet.h”文件的 CWallet 类中。
 
-{% highlight C++ %}
+```cpp
 /** 
  * A CWallet is an extension of a keystore, which also maintains a set of transactions and balances,
  * and provides the ability to create new transactions.
@@ -163,11 +163,11 @@ class CWallet : public CCryptoKeyStore, public CValidationInterface
     bool EncryptWallet(const SecureString& strWalletPassphrase); // 使用用户指定密码加密钱包
     ...
 };
-{% endhighlight %}
+```
 
 实现在“wallet.cpp”文件中。
 
-{% highlight C++ %}
+```cpp
 bool CWallet::EncryptWallet(const SecureString& strWalletPassphrase)
 {
     if (IsCrypted()) // 如果钱包已加密
@@ -260,11 +260,11 @@ bool CWallet::EncryptWallet(const SecureString& strWalletPassphrase)
 
     return true;
 }
-{% endhighlight %}
+```
 
 调用 NewKeyPool() 函数重新创建密钥池，定义在“wallet.h”文件中。
 
-{% highlight C++ %}
+```cpp
 /**
  * Mark old keypool keys as used,
  * and generate all new keys 
@@ -292,24 +292,24 @@ bool CWallet::NewKeyPool()
     }
     return true;
 }
-{% endhighlight %}
+```
 
 第九步，调用 StartShutdown() 函数关闭比特币核心服务，该函数声明在“init.h”文件中。
 
-{% highlight C++ %}
+```cpp
 void StartShutdown(); // 关闭比特币核心服务
-{% endhighlight %}
+```
 
 实现在“init.cpp”文件中。
 
-{% highlight C++ %}
+```cpp
 volatile bool fRequestShutdown = false; // 请求关闭标志，初始为 false
 
 void StartShutdown()
 {
     fRequestShutdown = true; // 把请求关闭标志置为 true
 }
-{% endhighlight %}
+```
 
 ## 参照
 

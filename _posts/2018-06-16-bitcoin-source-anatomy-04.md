@@ -12,7 +12,7 @@ tags: 区块链 比特币 源码剖析
 
 ## 源码剖析
 
-{% highlight C++ %}
+```cpp
 bool AppInit(int argc, char* argv[]) // [P]3.0.应用程序初始化
 {
     ...
@@ -31,19 +31,19 @@ bool AppInit(int argc, char* argv[]) // [P]3.0.应用程序初始化
     }
     ...
 }
-{% endhighlight %}
+```
 
 <p id="InitLogging-ref"></p>
 3.9.调用 InitLogging() 函数初始化日志记录，实际上只是初始化了部分启动选项，该函数声明在“init.h”文件中。
 
-{% highlight C++ %}
+```cpp
 //!Initialize the logging infrastructure // 初始化日志记录基础结构
 void InitLogging();
-{% endhighlight %}
+```
 
 实现在“init.cpp”文件中，没有入参。
 
-{% highlight C++ %}
+```cpp
 void InitLogging()
 {
     fPrintToConsole = GetBoolArg("-printtoconsole", false); // 1.打印到控制台，默认关闭
@@ -54,22 +54,22 @@ void InitLogging()
     LogPrintf("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"); // 2.n 个空行
     LogPrintf("Bitcoin version %s (%s)\n", FormatFullVersion(), CLIENT_DATE); // 记录比特币客户端版本号和构建时间
 }
-{% endhighlight %}
+```
 
 1.对记录日志的相关启动选项进行初始化。<br>
 2.空出 n 行后，记录比特币客户端的版本号和构建时间。
 
 宏定义 DEFAULT_LOGTIMESTAMPS、DEFAULT_LOGTIMEMICROS、DEFAULT_LOGIPS 均定义在“util.h”文件中。
 
-{% highlight C++ %}
+```cpp
 static const bool DEFAULT_LOGTIMEMICROS = false; // 时间戳微秒，默认为 false
 static const bool DEFAULT_LOGIPS        = false; // 记录 IPs，默认关闭
 static const bool DEFAULT_LOGTIMESTAMPS = true; // 记录时间戳，默认为 true
-{% endhighlight %}
+```
 
 CLIENT_DATE 宏定义在“clientversion.cpp”文件中。
 
-{% highlight C++ %}
+```cpp
 #ifndef BUILD_DATE
 #ifdef GIT_COMMIT_DATE
 #define BUILD_DATE GIT_COMMIT_DATE // git 提交日期
@@ -79,19 +79,19 @@ CLIENT_DATE 宏定义在“clientversion.cpp”文件中。
 #endif
 ...
 const std::string CLIENT_DATE(BUILD_DATE); // 客户端日期即构建日期
-{% endhighlight %}
+```
 
 <p id="InitParameterInteraction-ref"></p>
 3.10.调用 InitParameterInteraction() 函数初始化参数交互，该函数声明在“init.h”文件中。
 
-{% highlight C++ %}
+```cpp
 //!Parameter interaction: change current parameters depending on various rules // 参数交互：基于多种规则改变当前参数
 void InitParameterInteraction();
-{% endhighlight %}
+```
 
 实现在“init.cpp”文件中，没有入参。
 
-{% highlight C++ %}
+```cpp
 // Parameter interaction based on rules // 基于规则的参数交互
 void InitParameterInteraction()
 {
@@ -171,20 +171,20 @@ void InitParameterInteraction()
             LogPrintf("%s: parameter interaction: -whitelistforcerelay=1 -> setting -whitelistrelay=1\n", __func__);
     }
 }
-{% endhighlight %}
+```
 
 <p id="AppInit2-ref"></p>
 3.11.调用 AppInit2(threadGroup, scheduler) 函数初始化应用程序，这里才是初始化真正的入口，该函数声明在“init.h”文件中。
 
-{% highlight C++ %}
+```cpp
 bool AppInit2(boost::thread_group& threadGroup, CScheduler& scheduler);
-{% endhighlight %}
+```
 
 <p id="Step01-ref"></p>
 实现在“init.cpp”文件中，入参为：线程组对象，调度器对象。<br>
 3.11.1.第一步：安装。主要初始化网络环境，注册信号处理函数。
 
-{% highlight C++ %}
+```cpp
 /** Initialize bitcoin.
  *  @pre Parameters should be parsed and config file should be read.
  */ // 初始化比特币。前提：参数应该被解析，配置文件应该被读取。
@@ -247,7 +247,7 @@ bool AppInit2(boost::thread_group& threadGroup, CScheduler& scheduler) // 3.11.0
 #endif
     ...
 };
-{% endhighlight %}
+```
 
 1.关闭微软堆转储提示音。<br>
 2.关闭中断提示消息。<br>
@@ -257,13 +257,13 @@ bool AppInit2(boost::thread_group& threadGroup, CScheduler& scheduler) // 3.11.0
 
 4.调用 SetupNetworking() 函数设置网络，该函数声明在“util.h”文件中。
 
-{% highlight C++ %}
+```cpp
 bool SetupNetworking(); // 初始化 Windows 套接字
-{% endhighlight %}
+```
 
 实现在“util.cpp”文件中，没有入参。
 
-{% highlight C++ %}
+```cpp
 bool SetupNetworking()
 {
 #ifdef WIN32
@@ -275,13 +275,13 @@ bool SetupNetworking()
 #endif
     return true; // 非 WIN32 系统直接返回 true
 }
-{% endhighlight %}
+```
 
 <p id="Step02-ref"></p>
 3.11.2.第二步，参数交互。主要进行区块裁剪和交易索引选项的冲突检测，文件描述符限制检测。
 这部分实现在“init.cpp”文件的 AppInit2(...) 函数中。
 
-{% highlight C++ %}
+```cpp
 bool AppInit2(boost::thread_group& threadGroup, CScheduler& scheduler) // 3.11.0.程序初始化，共 12 步
 {
     ...
@@ -317,7 +317,7 @@ bool AppInit2(boost::thread_group& threadGroup, CScheduler& scheduler) // 3.11.0
         InitWarning(strprintf(_("Reducing -maxconnections from %d to %d, because of system limitations."), nUserMaxConnections, nMaxConnections));
     ...
 };
-{% endhighlight %}
+```
 
 1.获取当前选取的区块链参数。<br>
 2.检查区块修剪和交易索引选项设置是否冲突。<br>
@@ -325,26 +325,26 @@ bool AppInit2(boost::thread_group& threadGroup, CScheduler& scheduler) // 3.11.0
 
 DEFAULT_TXINDEX 定义在“main.h”文件中。
 
-{% highlight C++ %}
+```cpp
 static const bool DEFAULT_TXINDEX = false; // 交易索引，默认关闭
-{% endhighlight %}
+```
 
 DEFAULT_MAX_PEER_CONNECTIONS 定义在“net.h”文件中。
 
-{% highlight C++ %}
+```cpp
 /** The maximum number of peer connections to maintain. */ // 要维护的最大对端连接数
 static const unsigned int DEFAULT_MAX_PEER_CONNECTIONS = 125;
-{% endhighlight %}
+```
 
 FD_SETSIZE 定义在“compat.h”文件中。
 
-{% highlight C++ %}
+```cpp
 #define FD_SETSIZE 1024 // max number of fds in fd_set // fd_set 中 fds 的最大数量
-{% endhighlight %}
+```
 
 MIN_CORE_FILEDESCRIPTORS 定义在“init.cpp”文件中。
 
-{% highlight C++ %}
+```cpp
 #ifdef WIN32
 // Win32 LevelDB doesn't use filedescriptors, and the ones used for
 // accessing block files don't count towards the fd_set size limit
@@ -353,7 +353,7 @@ MIN_CORE_FILEDESCRIPTORS 定义在“init.cpp”文件中。
 #else
 #define MIN_CORE_FILEDESCRIPTORS 150 // UNIX/Linux
 #endif
-{% endhighlight %}
+```
 
 未完待续...<br>
 请看下一篇[比特币源码剖析（五）](/blog/2018/06/bitcoin-source-anatomy-05.html)。

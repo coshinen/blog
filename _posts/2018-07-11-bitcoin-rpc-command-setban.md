@@ -10,9 +10,9 @@ excerpt: $ bitcoin-cli setban "ip(/netmask)" "add|remove" (bantime) (absolute)
 ---
 ## 提示说明
 
-{% highlight shell %}
+```shell
 setban "ip(/netmask)" "add|remove" (bantime) (absolute) # 尝试从黑名单添加或移除一个 IP/子网
-{% endhighlight %}
+```
 
 参数：<br>
 1.ip(/netmask)（字符串，必备）IP/子网（见 getpeerinfo 中的节点 ip）拥有可选的子网（默认时 /32 = 单一 ip）。<br>
@@ -28,7 +28,7 @@ setban "ip(/netmask)" "add|remove" (bantime) (absolute) # 尝试从黑名单添�
 
 用法一：使用 add 命令禁止 86400 秒（24h）。
 
-{% highlight shell %}
+```shell
 $ bitcoin-cli setban 192.168.0.6 add 86400
 $ bitcoin-cli listbanned
 [
@@ -39,11 +39,11 @@ $ bitcoin-cli listbanned
     "ban_reason": "manually added"
   }
 ]
-{% endhighlight %}
+```
 
 用法二：使用 add 命令添加，使用默认禁止时间 24h。
 
-{% highlight shell %}
+```shell
 $ bitcoin-cli clearbanned
 $ bitcoin-cli setban 192.168.0.6 add
 $ bitcoin-cli listbanned
@@ -55,11 +55,11 @@ $ bitcoin-cli listbanned
     "ban_reason": "manually added"
   }
 ]
-{% endhighlight %}
+```
 
 用法三：使用 add 命令添加并指定 absolute 选项。
 
-{% highlight shell %}
+```shell
 $ bitcoin-cli clearbanned
 $ bitcoin-cli setban 192.168.0.6 add 1588882233 true
 $ bitcoin-cli listbanned
@@ -71,11 +71,11 @@ $ bitcoin-cli listbanned
     "ban_reason": "manually added"
   }
 ]
-{% endhighlight %}
+```
 
 用法四：使用 remove 命令移除指定 IP。
 
-{% highlight shell %}
+```shell
 $ bitcoin-cli listbanned
 [
   {
@@ -89,25 +89,25 @@ $ bitcoin-cli setban 192.168.0.6 remove
 $ bitcoin-cli listbanned
 [
 ]
-{% endhighlight %}
+```
 
 ### cURL
 
-{% highlight shell %}
+```shell
 $ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "setban", "params": ["192.168.0.6", "add", 86400] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
 {"result":null,"error":null,"id":"curltest"}
-{% endhighlight %}
+```
 
 ## 源码剖析
 setban 对应的函数在“rpcserver.h”文件中被引用。
 
-{% highlight C++ %}
+```cpp
 extern UniValue setban(const UniValue& params, bool fHelp); // 设置黑名单
-{% endhighlight %}
+```
 
 实现在“rpcnet.cpp”文件中。
 
-{% highlight C++ %}
+```cpp
 UniValue setban(const UniValue& params, bool fHelp)
 {
     string strCommand;
@@ -174,7 +174,7 @@ UniValue setban(const UniValue& params, bool fHelp)
 
     return NullUniValue;
 }
-{% endhighlight %}
+```
 
 基本流程：<br>
 1.处理命令帮助和参数个数。<br>
@@ -193,7 +193,7 @@ UniValue setban(const UniValue& params, bool fHelp)
 第四步，调用 CNode::Ban(subNet, BanReasonManuallyAdded, banTime, absolute) 或 CNode::Ban(netAddr, BanReasonManuallyAdded, banTime, absolute) 函数
 添加指定网络到禁止列表。该函数声明在“net.h”文件的 CNode 类中。
 
-{% highlight C++ %}
+```cpp
 /** Information about a peer */
 class CNode // 关于同辈的信息
 {
@@ -204,11 +204,11 @@ class CNode // 关于同辈的信息
     static void Ban(const CSubNet &subNet, const BanReason &banReason, int64_t bantimeoffset = 0, bool sinceUnixEpoch = false);
     ...
 };
-{% endhighlight %}
+```
 
 实现在“net.cpp”文件中。
 
-{% highlight C++ %}
+```cpp
 void CNode::Ban(const CNetAddr& addr, const BanReason &banReason, int64_t bantimeoffset, bool sinceUnixEpoch) {
     CSubNet subNet(addr); // 创建子网对象
     Ban(subNet, banReason, bantimeoffset, sinceUnixEpoch); // 添加禁止列表
@@ -230,12 +230,12 @@ void CNode::Ban(const CSubNet& subNet, const BanReason &banReason, int64_t banti
 
     setBannedIsDirty = true; // 列表改动标志置为 true
 }
-{% endhighlight %}
+```
 
 第五步，调用 CNode::Unban(subNet) 或 CNode::Unban(netAddr) 函数从禁止列表中移除指定网络。
 该函数声明在“net.h”文件的 CNode 类中。
 
-{% highlight C++ %}
+```cpp
 class CNode // 关于同辈的信息
 {
     ...
@@ -243,11 +243,11 @@ class CNode // 关于同辈的信息
     static bool Unban(const CSubNet &ip);
     ...
 };
-{% endhighlight %}
+```
 
 实现在“net.cpp”文件中。
 
-{% highlight C++ %}
+```cpp
 bool CNode::Unban(const CNetAddr &addr) {
     CSubNet subNet(addr); // 创建子网对象
     return Unban(subNet);
@@ -262,7 +262,7 @@ bool CNode::Unban(const CSubNet &subNet) {
     }
     return false;
 }
-{% endhighlight %}
+```
 
 ## 参照
 

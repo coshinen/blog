@@ -10,12 +10,12 @@ excerpt: $ bitcoin-cli getchaintips
 ---
 ## 提示说明
 
-{% highlight shell %}
+```shell
 getchaintips # 获取关于区块树上全部已知的尖部的信息，包括主链和孤儿分支
-{% endhighlight %}
+```
 
 结果：<br>
-{% highlight shell %}
+```shell
 [
   {
     "height": xxxx,         （数字）链尖高度
@@ -30,7 +30,7 @@ getchaintips # 获取关于区块树上全部已知的尖部的信息，包括�
     "status": "xxxx"        （字符串）链状态 (active, valid-fork, valid-headers, headers-only, invalid)
   }
 ]
-{% endhighlight %}
+```
 
 可能的状态取值：<br>
 1.invalid 该分支包含至少一块无效区块。<br>
@@ -45,7 +45,7 @@ getchaintips # 获取关于区块树上全部已知的尖部的信息，包括�
 
 获取当前区块链尖部信息。
 
-{% highlight shell %}
+```shell
 $ bitcoin-cli getchaintips
 [
   {
@@ -55,25 +55,25 @@ $ bitcoin-cli getchaintips
     "status": "active"
   }
 ]
-{% endhighlight %}
+```
 
 ### cURL
 
-{% highlight shell %}
+```shell
 $ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "getchaintips", "params": [] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
 {"result":[{"height":25160,"hash":"0000008475f1530ec67b79ea60e6c1808b55189ed6e7a78d89487b4191cca2ac","branchlen":0,"status":"active"}],"error":null,"id":"curltest"}
-{% endhighlight %}
+```
 
 ## 源码剖析
 getchaintips 对应的函数在“rpcserver.h”文件中被引用。
 
-{% highlight C++ %}
+```cpp
 extern UniValue getchaintips(const UniValue& params, bool fHelp); // 获取链尖信息
-{% endhighlight %}
+```
 
 实现在“rpcblockchain.cpp”文件中。
 
-{% highlight C++ %}
+```cpp
 UniValue getchaintips(const UniValue& params, bool fHelp)
 {
     if (fHelp || params.size() != 0) // 没有参数
@@ -163,7 +163,7 @@ UniValue getchaintips(const UniValue& params, bool fHelp)
 
     return res; // 返回结果数组
 }
-{% endhighlight %}
+```
 
 基本流程：<br>
 1.处理命令帮助和参数个数。<br>
@@ -177,7 +177,7 @@ UniValue getchaintips(const UniValue& params, bool fHelp)
 第三步，创建链尖区块索引集合对象 setTips 使用了函数对象比较器 CompareBlocksByHeight。<br>
 该函数对象定义在“rpcblockchain.cpp”文件中。
 
-{% highlight C++ %}
+```cpp
 /** Comparison function for sorting the getchaintips heads.  */ // 用于 getchaintips 函数排序区块头的比较器
 struct CompareBlocksByHeight // 函数对象，通过高度比较区块
 {
@@ -192,12 +192,12 @@ struct CompareBlocksByHeight // 函数对象，通过高度比较区块
         return a < b;
     }
 };
-{% endhighlight %}
+```
 
 第六步，计算分支长度使，调用 chainActive.FindFork(block) 函数得到分支交点区块索引。<br>
 该函数声明在“chain.h”文件的 CChain 类中。
 
-{% highlight C++ %}
+```cpp
 /** An in-memory indexed chain of blocks. */
 class CChain { // 一个内存中用于区块索引的链
 private:
@@ -205,11 +205,11 @@ private:
     /** Find the last common block between this chain and a block index entry. */
     const CBlockIndex *FindFork(const CBlockIndex *pindex) const; // 在该链和一个区块索引条目间找最近的一个公共区块
 };
-{% endhighlight %}
+```
 
 实现在“chain.cpp”文件中。
 
-{% highlight C++ %}
+```cpp
 const CBlockIndex *CChain::FindFork(const CBlockIndex *pindex) const {
     if (pindex == NULL) {
         return NULL;
@@ -220,12 +220,12 @@ const CBlockIndex *CChain::FindFork(const CBlockIndex *pindex) const {
         pindex = pindex->pprev;
     return pindex;
 }
-{% endhighlight %}
+```
 
 当指定区块的高度大于当前链高度时，调用 pindex->GetAncestor(Height()) 函数获取祖先区块的索引。
 该函数声明在“chain.h”文件的 CBlockIndex 类中。
 
-{% highlight C++ %}
+```cpp
 /** The block chain is a tree shaped structure starting with the
  * genesis block at the root, with each block potentially having multiple
  * candidates to be the next block. A blockindex may have multiple pprev pointing
@@ -238,11 +238,11 @@ class CBlockIndex // 区块索引类
     CBlockIndex* GetAncestor(int height); // 有效找到该块的祖先
     const CBlockIndex* GetAncestor(int height) const;
 };
-{% endhighlight %}
+```
 
 实现在“chain.cpp”文件中。
 
-{% highlight C++ %}
+```cpp
 /** Turn the lowest '1' bit in the binary representation of a number into a '0'. */
 int static inline InvertLowestOne(int n) { return n & (n - 1); } // 把一个数二进制最低位的 '1' 转换为 '0'
 
@@ -286,7 +286,7 @@ const CBlockIndex* CBlockIndex::GetAncestor(int height) const
 {
     return const_cast<CBlockIndex*>(this)->GetAncestor(height); // 转调重载的获取区块祖先函数
 }
-{% endhighlight %}
+```
 
 未完成。
 

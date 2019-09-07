@@ -10,9 +10,9 @@ excerpt: $ bitcoin-cli move "fromaccount" "toaccount" amount ( minconf "comment"
 ---
 ## 提示说明
 
-{% highlight shell %}
+```shell
 move "fromaccount" "toaccount" amount ( minconf "comment" ) # （已过时）从你钱包中一个账户转移指定金额到另一个账户
-{% endhighlight %}
+```
 
 参数：
 1. fromaccount（字符串，必备）从该账户转移资金。默认账户使用 ""。
@@ -29,7 +29,7 @@ move "fromaccount" "toaccount" amount ( minconf "comment" ) # （已过时）从
 
 用法一：从默认账户 "" 转移 0.01 BTC 到账户 "tabby"。
 
-{% highlight shell %}
+```shell
 $ bitcoin-cli listaccounts
 {
   "": 1.00000000,
@@ -61,11 +61,11 @@ $ bitcoin-cli listtransactions
     "comment": ""
   }
 ]
-{% endhighlight %}
+```
 
 用法二：从默认账户 "" 转移至少 6 次确认的 0.01 BTC 到账户 tabby，并附加备注。
 
-{% highlight shell %}
+```shell
 $ bitcoin-cli listaccounts
 {
   "": 0.99000000,
@@ -97,25 +97,25 @@ $ bitcoin-cli listtransactions
     "comment": "happy birthday!"
   }
 ]
-{% endhighlight %}
+```
 
 ### cURL
 
-{% highlight shell %}
+```shell
 $ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "move", "params": ["", "tabby", 0.01, 6, "happy birthday!"] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
 {"result":true,"error":null,"id":"curltest"}
-{% endhighlight %}
+```
 
 ## 源码剖析
 move 对应的函数在“rpcserver.h”文件中被引用。
 
-{% highlight C++ %}
+```cpp
 extern UniValue movecmd(const UniValue& params, bool fHelp); // 账户间转移资金
-{% endhighlight %}
+```
 
 实现在“wallet/rpcwallet.cpp”文件中。
 
-{% highlight C++ %}
+```cpp
 UniValue movecmd(const UniValue& params, bool fHelp)
 {
     if (!EnsureWalletIsAvailable(fHelp)) // 确保当前钱包可用
@@ -187,7 +187,7 @@ UniValue movecmd(const UniValue& params, bool fHelp)
 
     return true; // 成功返回 true
 }
-{% endhighlight %}
+```
 
 基本流程：<br>
 1.确保钱包当前可用（已初始化完成）。<br>
@@ -202,7 +202,7 @@ UniValue movecmd(const UniValue& params, bool fHelp)
 调用 pwalletMain->AddAccountingEntry(credit, walletdb) 把初始化的账户条目加入钱包。
 它们声明在“wallet/wallet.h”文件的 CWallet 类中。
 
-{% highlight C++ %}
+```cpp
 /** 
  * A CWallet is an extension of a keystore, which also maintains a set of transactions and balances,
  * and provides the ability to create new transactions.
@@ -219,11 +219,11 @@ class CWallet : public CCryptoKeyStore, public CValidationInterface
     bool AddAccountingEntry(const CAccountingEntry&, CWalletDB & pwalletdb); // 添加账户条目到钱包数据库
     ...
 };
-{% endhighlight %}
+```
 
 实现在“wallet/wallet.cpp”文件中。
 
-{% highlight C++ %}
+```cpp
 int64_t CWallet::IncOrderPosNext(CWalletDB *pwalletdb)
 {
     AssertLockHeld(cs_wallet); // nOrderPosNext
@@ -247,7 +247,7 @@ bool CWallet::AddAccountingEntry(const CAccountingEntry& acentry, CWalletDB & pw
 
     return true;
 }
-{% endhighlight %}
+```
 
 ## 参照
 

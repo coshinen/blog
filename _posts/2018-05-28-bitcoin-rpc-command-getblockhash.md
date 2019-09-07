@@ -10,9 +10,9 @@ excerpt: $ bitcoin-cli getblockhash index
 ---
 ## 提示说明
 
-{% highlight shell %}
+```shell
 getblockhash index # 获取在最佳区块链上指定索引的区块哈希
-{% endhighlight %}
+```
 
 参数：<br>
 1.index（整型，必备）区块索引（最佳链高度）。
@@ -25,28 +25,28 @@ getblockhash index # 获取在最佳区块链上指定索引的区块哈希
 
 获取索引/高度为 0 的（创世区块）区块哈希。
 
-{% highlight shell %}
+```shell
 $ bitcoin-cli getblockhash 0
 000000000019d6689c085ae165831e934ff763ae46a2a6c172b3f1b60a8ce26f
-{% endhighlight %}
+```
 
 ### cURL
 
-{% highlight shell %}
+```shell
 $ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "getblockhash", "params": [0] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
 {"result":"000000000019d6689c085ae165831e934ff763ae46a2a6c172b3f1b60a8ce26f","error":null,"id":"curltest"}
-{% endhighlight %}
+```
 
 ## 源码剖析
 getblockhash 对应的函数在“rpcserver.h”文件中被引用。
 
-{% highlight C++ %}
+```cpp
 extern UniValue getblockhash(const UniValue& params, bool fHelp); // 获取指定区块索引的区块哈希
-{% endhighlight %}
+```
 
 实现在“rpcblockchain.cpp”文件中。
 
-{% highlight C++ %}
+```cpp
 UniValue getblockhash(const UniValue& params, bool fHelp)
 {
     if (fHelp || params.size() != 1) // 参数只有 1 个
@@ -71,7 +71,7 @@ UniValue getblockhash(const UniValue& params, bool fHelp)
     CBlockIndex* pblockindex = chainActive[nHeight]; // 获取激活链对应高度的区块索引
     return pblockindex->GetBlockHash().GetHex(); // 获取该索引对应区块哈希，转换为 16 进制并返回
 }
-{% endhighlight %}
+```
 
 基本流程：
 1. 处理命令帮助和参数个数。

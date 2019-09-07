@@ -10,14 +10,14 @@ excerpt: $ bitcoin-cli gettxoutsetinfo
 ---
 ## 提示说明
 
-{% highlight shell %}
+```shell
 gettxoutsetinfo # 获取关于未花费交易输出集合的统计信息
-{% endhighlight %}
+```
 
 **注：该调用可能会花费些时间。**
 
 结果：<br>
-{% highlight shell %}
+```shell
 {
   "height":n,     （数字）当前的区块高度（索引）
   "bestblock": "hex",   （字符串）最佳区块 16 进制哈希值
@@ -27,7 +27,7 @@ gettxoutsetinfo # 获取关于未花费交易输出集合的统计信息
   "hash_serialized": "hash",   （字符串）序列化的哈希
   "total_amount": x.xxx          （数字）总金额
 }
-{% endhighlight %}
+```
 
 ## 用法示例
 
@@ -35,7 +35,7 @@ gettxoutsetinfo # 获取关于未花费交易输出集合的统计信息
 
 获取当前钱包内的交易输出集信息。
 
-{% highlight shell %}
+```shell
 $ bitcoin-cli gettxoutsetinfo
 {
   "height": 25350,
@@ -46,25 +46,25 @@ $ bitcoin-cli gettxoutsetinfo
   "hash_serialized": "3f4d4871a2afa2eb1602ab861dfe566520d2d120e26c02704cd71bdf2fa0159f",
   "total_amount": 1267500.00000000
 }
-{% endhighlight %}
+```
 
 ### cURL
 
-{% highlight shell %}
+```shell
 $ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "gettxoutsetinfo", "params": [] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
 {"result":{"height":25337,"bestblock":"0000011d9ae76ab49b2ad035a6c954b6799ea7775fb1d002544a9e004fd13a03","transactions":25337,"txouts":25339,"bytes_serialized":1782325,"hash_serialized":"488680b4d72b1954ec6d78872d27530f71d5e80421c59208894a786cc4e6b009","total_amount":1266850.00000000},"error":null,"id":"curltest"}
-{% endhighlight %}
+```
 
 ## 源码剖析
 gettxoutsetinfo 对应的函数在“rpcserver.h”文件中被引用。
 
-{% highlight C++ %}
+```cpp
 extern UniValue gettxoutsetinfo(const UniValue& params, bool fHelp); // 获取交易输出集合信息
-{% endhighlight %}
+```
 
 实现在“rpcblockchain.cpp”文件中。
 
-{% highlight C++ %}
+```cpp
 UniValue gettxoutsetinfo(const UniValue& params, bool fHelp)
 {
     if (fHelp || params.size() != 0) // 没有参数
@@ -102,7 +102,7 @@ UniValue gettxoutsetinfo(const UniValue& params, bool fHelp)
     }
     return ret; // 返回结果
 }
-{% endhighlight %}
+```
 
 基本流程：
 1. 处理命令帮助和参数个数。

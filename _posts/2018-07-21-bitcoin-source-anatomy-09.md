@@ -15,7 +15,7 @@ tags: 区块链 比特币 源码剖析
 <p id="AppInitServers-ref"></p>
 9.应用程序初始化服务器，这部分代码实现在“init.cpp”文件的 AppInit2(...) 函数的第四步 Step 4: application initialization: dir lock, daemonize, pidfile, debug log。
 
-{% highlight C++ %}
+```cpp
 bool AppInit2(boost::thread_group& threadGroup, CScheduler& scheduler) // 3.11.程序初始化，共 12 步
 {
     ...
@@ -34,7 +34,7 @@ bool AppInit2(boost::thread_group& threadGroup, CScheduler& scheduler) // 3.11.�
     int64_t nStart; // 启动标志
     ...
 }
-{% endhighlight %}
+```
 
 9.1.连接设置 RPC 预热状态函数。<br>
 9.2.应用程序初始化服务（HTTP、RPC）。
@@ -42,17 +42,17 @@ bool AppInit2(boost::thread_group& threadGroup, CScheduler& scheduler) // 3.11.�
 9.1.调用 uiInterface.InitMessage.connect(SetRPCWarmupStatus) 函数把信号连接到处理函数 SetRPCWarmupStatus 上。
 该处理函数声明在“rpcserver.h”文件中。
 
-{% highlight C++ %}
+```cpp
 **
  * Set the RPC warmup status.  When this is done, all RPC calls will error out
  * immediately with RPC_IN_WARMUP.
  */ // 设置 RPC 预热新状态。当这步完成时，全部 RPC 调用将立刻使用 RPC_IN_WARMUP 错误输出。
 void SetRPCWarmupStatus(const std::string& newStatus);
-{% endhighlight %}
+```
 
 实现在“rpcserver.cpp”文件中，入参为：新的 RPC 热身状态。
 
-{% highlight C++ %}
+```cpp
 static std::string rpcWarmupStatus("RPC server started"); // 全局静态 rpc 预热状态字符串
 static CCriticalSection cs_rpcWarmup; // rpc 预热状态锁
 ...
@@ -61,12 +61,12 @@ void SetRPCWarmupStatus(const std::string& newStatus)
     LOCK(cs_rpcWarmup); // rpc 预热状态上锁
     rpcWarmupStatus = newStatus; // 设置新状态
 }
-{% endhighlight %}
+```
 
 9.2.调用 AppInitServers(threadGroup) 函数初始化服务设置，该服务用于和客户端命令行 RPC 通讯。
 该函数定义在“init.cpp”文件中。
 
-{% highlight C++ %}
+```cpp
 bool AppInitServers(boost::thread_group& threadGroup)
 {
     RPCServer::OnStopped(&OnRPCStopped); // 1.连接停止 RPC 信号函数
@@ -83,7 +83,7 @@ bool AppInitServers(boost::thread_group& threadGroup)
         return false;
     return true;
 }
-{% endhighlight %}
+```
 
 9.2.1.连接停止 RPC 信号函数。<br>
 9.2.2.连接监控 RPC 安全模式信号函数。<br>
@@ -97,7 +97,7 @@ bool AppInitServers(boost::thread_group& threadGroup)
 9.2.2.调用 RPCServer::OnPreCommand(&OnRPCPreCommand) 函数设置的回调函数，用于监控 RPC 安全模式。
 OnStopped 和 OnPreCommand 均声明在“rpcserver.h”文件的 RPCServer 命名空间中。
 
-{% highlight C++ %}
+```cpp
 namespace RPCServer // RPC 服务
 {
     void OnStarted(boost::function<void ()> slot);
@@ -105,11 +105,11 @@ namespace RPCServer // RPC 服务
     void OnPreCommand(boost::function<void (const CRPCCommand&)> slot);
     void OnPostCommand(boost::function<void (const CRPCCommand&)> slot);
 }
-{% endhighlight %}
+```
 
 实现在“rpcserver.cpp”文件中，入参为：指定函数标签的函数入口。
 
-{% highlight C++ %}
+```cpp
 static struct CRPCSignals // RPC 信号
 {
     boost::signals2::signal<void ()> Started;
@@ -127,11 +127,11 @@ void RPCServer::OnPreCommand(boost::function<void (const CRPCCommand&)> slot)
 {
     g_rpcSignals.PreCommand.connect(boost::bind(slot, _1));
 }
-{% endhighlight %}
+```
 
 信号函数 OnRPCStopped 和 OnRPCPreCommand 均定义在“init.cpp”文件中。
 
-{% highlight C++ %}
+```cpp
 void OnRPCStopped()
 {
     cvBlockChange.notify_all(); // 通知所有等待条件 cvBlockChange 的线程
@@ -146,24 +146,24 @@ void OnRPCPreCommand(const CRPCCommand& cmd)
         !cmd.okSafeMode) // 若有警告信息 且 未禁用安全模式 且 RPC 命令非安全模式命令
         throw JSONRPCError(RPC_FORBIDDEN_BY_SAFE_MODE, string("Safe mode: ") + strWarning); // 抛出异常
 }
-{% endhighlight %}
+```
 
 cvBlockChange 是一个条件变量，定义在“main.cpp”文件中，在“main.h”文件中引用。
 
-{% highlight C++ %}
+```cpp
 /** Just a typedef for boost::condition_variable, can be wrapped later if desired */
 typedef boost::condition_variable CConditionVariable; // 只是一个定义类型的 boost 条件变量，如果需要可以在稍后包装
-{% endhighlight %}
+```
 
 其类型定义在“sync.h”文件中。
 
-{% highlight C++ %}
+```cpp
 CConditionVariable cvBlockChange; // 区块改变的条件变量
-{% endhighlight %}
+```
 
 类 CRPCCommand 定义在“rpcserver.h”文件中。
 
-{% highlight C++ %}
+```cpp
 typedef UniValue(*rpcfn_type)(const UniValue& params, bool fHelp); // RPC 命令对应函数行为的回调函数
 
 class CRPCCommand // RPC 命令类
@@ -174,20 +174,20 @@ public:
     rpcfn_type actor; // 对应的函数行为
     bool okSafeMode; // 是否开启安全模式
 };
-{% endhighlight %}
+```
 
 9.2.3.调用 InitHTTPServer() 函数初始化 HTTP 服务，声明在“httpserver.h”文件中。
 
-{% highlight C++ %}
+```cpp
 /** Initialize HTTP server.
  * Call this before RegisterHTTPHandler or EventBase().
  */ // 初始化 HTTP 服务。在 RegisterHTTPHandler 或 EventBase() 前调用该函数。
 bool InitHTTPServer();
-{% endhighlight %}
+```
 
 实现在“httpserver.cpp”文件中，没有入参。
 
-{% highlight C++ %}
+```cpp
 /** HTTP module state */ // HTTP 模块状态
 
 //! libevent event loop // libevent 事件循环
@@ -265,7 +265,7 @@ bool InitHTTPServer()
     eventHTTP = http;
     return true; // 成功返回 true
 }
-{% endhighlight %}
+```
 
 **这里用到了 libevent 事件库中的 evhttp 用来初始化 http 的服务端。**
 
@@ -283,7 +283,7 @@ bool InitHTTPServer()
 1.调用 InitHTTPAllowList() 来初始化 ACL 列表（即白名单），在该列表中的 IP 对应的节点才能连入本节点，
 该函数定义在“httpserver.cpp”文件中。
 
-{% highlight C++ %}
+```cpp
 /** Initialize ACL list for HTTP server */ // 初始化 HTTP 服务器的 ACL 访问控制列表
 static bool InitHTTPAllowList() // ACL: Allow Control List
 {
@@ -309,12 +309,12 @@ static bool InitHTTPAllowList() // ACL: Allow Control List
     LogPrint("http", "Allowing HTTP connections from: %s\n", strAllowed); // 记录白名单
     return true; // 成功返回 true
 }
-{% endhighlight %}
+```
 
 2.调用 event_set_log_callback(&libevent_log_cb) 设置回调函数，把 libevent 库中的日志信息重定向（转入）到我们自己的日志系统。
 回调函数 libevent_log_cb 定义在“httpserver.cpp”文件中。
 
-{% highlight C++ %}
+```cpp
 /** libevent event log callback */ // libevent 事件日志回调函数
 static void libevent_log_cb(int severity, const char *msg)
 {
@@ -327,12 +327,12 @@ static void libevent_log_cb(int severity, const char *msg)
     else
         LogPrint("libevent", "libevent: %s\n", msg);
 }
-{% endhighlight %}
+```
 
 3.5.调用 evhttp_set_gencb(http, http_request_cb, NULL) 设置处理 http 请求的回调函数，
 回调函数 http_request_cb 定义在“httpserver.cpp”文件中。
 
-{% highlight C++ %}
+```cpp
 /** HTTP request callback */ // HTTP 请求回调函数
 static void http_request_cb(struct evhttp_request* req, void* arg)
 {
@@ -382,11 +382,11 @@ static void http_request_cb(struct evhttp_request* req, void* arg)
         hreq->WriteReply(HTTP_NOTFOUND);
     }
 }
-{% endhighlight %}
+```
 
 3.6.调用 HTTPBindAddresses(http) 绑定 http 服务端的地址和端口，该函数定义在“httpserver.cpp”文件中。
 
-{% highlight C++ %}
+```cpp
 //! Bound listening sockets // 绑定的用于监听的套接字
 std::vector<evhttp_bound_socket *> boundSockets; // 已绑定的 http socket 列表
 ...
@@ -428,17 +428,17 @@ static bool HTTPBindAddresses(struct evhttp* http)
     }
     return !boundSockets.empty(); // 若绑定成功，返回 true
 }
-{% endhighlight %}
+```
 
 9.2.4.调用 StartRPC() 启动 RPC，该函数声明在“rpcserver.h”文件中。
 
-{% highlight C++ %}
+```cpp
 bool StartRPC(); // 启动 RPC
-{% endhighlight %}
+```
 
 实现在“rpcserver.cpp”文件中，没有入参。
 
-{% highlight C++ %}
+```cpp
 static bool fRPCRunning = false; // RPC 运行状态，默认为 false
 ...
 bool StartRPC()
@@ -448,7 +448,7 @@ bool StartRPC()
     g_rpcSignals.Started(); // 此版本未找到信号注册
     return true; // 成功返回 true
 }
-{% endhighlight %}
+```
 
 **注：这里调用的 g_rpcSignals.Started() 信号函数在该版本中并未注册。**
 

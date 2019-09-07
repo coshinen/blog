@@ -10,9 +10,9 @@ excerpt: $ bitcoin-cli createrawtransaction [{"txid":"id","vout":n},...] {"addre
 ---
 ## 提示说明
 
-{% highlight shell %}
+```shell
 createrawtransaction [{"txid":"id","vout":n},...] {"address":amount,"data":"hex",...} ( locktime ) # 基于输入和创建新的输出创建一笔交易花费
-{% endhighlight %}
+```
 
 **输出可以是地址集或数据。<br>
 返回 16 进制编码的原始交易。<br>
@@ -20,7 +20,7 @@ createrawtransaction [{"txid":"id","vout":n},...] {"address":amount,"data":"hex"
 
 参数：<br>
 1.transactions（字符串，必备）一个由 json 对象构成的 json 数组。<br>
-{% highlight shell %}
+```shell
      [
        {
          "txid":"id",    （字符串，必备）交易索引
@@ -28,15 +28,15 @@ createrawtransaction [{"txid":"id","vout":n},...] {"address":amount,"data":"hex"
        }
        ,...
      ]
-{% endhighlight %}
+```
 2.outputs（字符串，必备）一个输出的 json 对象。<br>
-{% highlight shell %}
+```shell
     {
       "address": x.xxx,  （数字或字符串，必备）比特币地址，以 BTC 为单位的数字类型（可以是字符串）金额
       "data": "hex",     （字符串，必备）“数据”，该值是 16 进制编码的数据
       ...
     }
-{% endhighlight %}
+```
 3.locktime（数字，可选，默认为 0）原始锁定时间。非 0 值也可以激活输入的锁定时间。
 
 结果：（字符串）返回 16 进制编码的交易索引字符串。
@@ -49,7 +49,7 @@ createrawtransaction [{"txid":"id","vout":n},...] {"address":amount,"data":"hex"
 这里的输入即一笔未花费的输出所在的交易索引和输出序号，通过 [listunspent](/blog/2018/09/bitcoin-rpc-command-listunspent.html) 获取 UTXO。<br>
 创建原始交易完成后，通过 [decoderawtransaction](/blog/2018/07/bitcoin-rpc-command-decoderawtransaction.html) 解码获取该原始交易的详细信息。
 
-{% highlight shell %}
+```shell
 $ bitcoin-cli listunspent
 [
   ...
@@ -102,35 +102,35 @@ $ bitcoin-cli decoderawtransaction 0100000001677e3c8d416184b42c753a8446f17b0b799
     }
   ]
 }
-{% endhighlight %}
+```
 
 **注：这里没有指定找零地址和金额，所以输入和输出之差会全部作为交易费。<br>
 使用 [fundrawtransaction](/blog/2018/07/bitcoin-rpc-command-fundrawtransaction.html) 增加找零输出。**
 
 方法二：指定 data 类型的输出，data value 来源暂无，这里使用官方用例 "00010203"。
 
-{% highlight C++ %}
+```cpp
 $ bitcoin-cli createrawtransaction "[{\"txid\":\"fb9bd2df3cef0abd9f444971dff097790b7bf146843a752cb48461418d3c7e67\",\"vout\":0}]" "{\"data\":\"00010203\"}"
 01000000016e913e3ec13124ad5cee842be5b381786f4e2e1c9f54bd34c683540f58a0b09d0000000000ffffffff010000000000000000066a040001020300000000
-{% endhighlight %}
+```
 
 ### cURL
 
-{% highlight C++ %}
+```cpp
 $ curl --user myusername:mypassword  --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "createrawtransaction", "params": [[{"txid":"fb9bd2df3cef0abd9f444971dff097790b7bf146843a752cb48461418d3c7e67","vout":0}], {"1Mcg7MDBD38sSScsX3USbsCnkcMbPnLyTV":0.01}] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
 {"result":"0100000001677e3c8d416184b42c753a8446f17b0b7997f0df7149449fbd0aef3cdfd29bfb0000000000ffffffff0140420f00000000001976a914e221b8a504199bec7c5fe8081edd011c3653118288ac00000000","error":null,"id":"curltest"}
-{% endhighlight %}
+```
 
 ## 源码剖析
 createrawtransaction 对应的函数在“rpcserver.h”文件中被引用。
 
-{% highlight C++ %}
+```cpp
 extern UniValue createrawtransaction(const UniValue& params, bool fHelp); // 创建原始交易
-{% endhighlight %}
+```
 
 实现在“rpcrawtransaction.cpp”文件中。
 
-{% highlight C++ %}
+```cpp
 UniValue createrawtransaction(const UniValue& params, bool fHelp)
 {
     if (fHelp || params.size() < 2 || params.size() > 3) // 1.参数为 2 或 3 个
@@ -232,7 +232,7 @@ UniValue createrawtransaction(const UniValue& params, bool fHelp)
 
     return EncodeHexTx(rawTx); // 5.16 进制编码该原始交易并返回
 }
-{% endhighlight %}
+```
 
 基本流程：<br>
 1.处理命令帮助和参数个数。<br>

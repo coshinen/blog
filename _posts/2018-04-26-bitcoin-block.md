@@ -17,7 +17,7 @@ tags: 区块链 比特币区块
 
 区块头和区块的数据结构定义在“primitives/block.h”文件中，分别为类 CBlockHeader 和 CBlock，CBlock 是 CBlockHeader 的派生类，如下：
 
-{% highlight C++ %}
+```cpp
 /** Nodes collect new transactions into a block, hash them into a hash tree,
  * and scan through nonce values to make the block's hash satisfy proof-of-work
  * requirements.  When they solve the proof-of-work, they broadcast the block
@@ -45,11 +45,11 @@ public:
     std::vector<CTransaction> vtx; // 区块体部分（交易列表，至少有一笔创币交易）
     ...
 };
-{% endhighlight %}
+```
 
 类 CBlock 对象的内存布局（即一个区块的构成）如下：
 
-{% highlight shell %}
+```shell
 +---+-------------------+ # 区块头，80bytes
 |   | h | nVersion      |  # 区块版本号，4bytes
 |   | e | hashPrevBlock |  # 前一个区块的哈希值，32bytes
@@ -63,7 +63,7 @@ public:
 |   | d | ...           |  # ...（普通交易）
 |   | y |               |
 +---+---+---------------+
-{% endhighlight %}
+```
 
 区块头固定 80 个字节，共由 6 个数据成员构成：
 1. nVersion，区块的版本号，一般只有共识改变时，比如提升区块大小限制。

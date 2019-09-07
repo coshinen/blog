@@ -10,14 +10,14 @@ excerpt: $ bitcoin-cli listlockunspent
 ---
 ## 提示说明
 
-{% highlight shell %}
+```shell
 listlockunspent # 获取暂时不能花费（锁定的）交易输出列表
-{% endhighlight %}
+```
 
 查看 [lockunspent](/blog/2018/09/bitcoin-rpc-command-lockunspent.html) 加解锁未花费的交易输出。
 
 结果：<br>
-{% highlight shell %}
+```shell
 [
   {
     "txid" : "transactionid",     （字符串）锁定的交易索引
@@ -25,7 +25,7 @@ listlockunspent # 获取暂时不能花费（锁定的）交易输出列表
   }
   ,...
 ]
-{% endhighlight %}
+```
 
 ## 用法示例
 
@@ -35,7 +35,7 @@ listlockunspent # 获取暂时不能花费（锁定的）交易输出列表
 2. 使用 [lockunspent](/blog/2018/06/bitcoin-rpc-command-lockunspent.html) 锁定该为花费交易输出。<br>
 3. 使用该命令查看锁定的未花费交易输出列表。
 
-{% highlight shell %}
+```shell
 $ bitcoin-cli listunspent
 [
   ...
@@ -58,25 +58,25 @@ $ bitcoin-cli listlockunspent
     "vout": 0
   }
 ]
-{% endhighlight %}
+```
 
 ### cURL
 
-{% highlight shell %}
+```shell
 $ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "listlockunspent", "params": [] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
 {"result":[{"txid":"8d71b6c01c1a3710e1d7d2cfd7aeb827a0e0150579a9840b9ba51bf7a13d8aff","vout":0}],"error":null,"id":"curltest"}
-{% endhighlight %}
+```
 
 ## 源码剖析
 listlockunspent 对应的函数在“rpcserver.h”文件中被引用。
 
-{% highlight C++ %}
+```cpp
 extern UniValue listlockunspent(const UniValue& params, bool fHelp); // 列出锁定的未花费交易输出
-{% endhighlight %}
+```
 
 实现在“rpcwallet.cpp”文件中。
 
-{% highlight C++ %}
+```cpp
 UniValue listlockunspent(const UniValue& params, bool fHelp)
 {
     if (!EnsureWalletIsAvailable(fHelp)) // 确保当前钱包可用
@@ -125,7 +125,7 @@ UniValue listlockunspent(const UniValue& params, bool fHelp)
 
     return ret; // 返回结果集
 }
-{% endhighlight %}
+```
 
 基本流程：<br>
 1.确保钱包当前可用（已初始化完成）。<br>
@@ -136,7 +136,7 @@ UniValue listlockunspent(const UniValue& params, bool fHelp)
 
 相关加解锁函数声明在“wallet.h”文件的 CWallet 类中。
 
-{% highlight C++ %}
+```cpp
 /** 
  * A CWallet is an extension of a keystore, which also maintains a set of transactions and balances,
  * and provides the ability to create new transactions.
@@ -147,11 +147,11 @@ class CWallet : public CCryptoKeyStore, public CValidationInterface
     void ListLockedCoins(std::vector<COutPoint>& vOutpts); // 获取锁定的交易输出集合
     ...
 };
-{% endhighlight %}
+```
 
 实现在“wallet.cpp”文件中。
 
-{% highlight C++ %}
+```cpp
 void CWallet::ListLockedCoins(std::vector<COutPoint>& vOutpts)
 {
     AssertLockHeld(cs_wallet); // setLockedCoins
@@ -161,9 +161,9 @@ void CWallet::ListLockedCoins(std::vector<COutPoint>& vOutpts)
         vOutpts.push_back(outpt);
     }
 }
-{% endhighlight %}
+```
 
-{% highlight C++ %}
+```cpp
 /** An outpoint - a combination of a transaction hash and an index n into its vout */
 class COutPoint // 用于交易的输入 CTxIn 中，确认当前输出的来源
 {
@@ -172,7 +172,7 @@ public:
     uint32_t n; // （前）一笔交易的索引/输出的序列号，即第 n 个输出
     ...
 };
-{% endhighlight %}
+```
 
 ## 参照
 

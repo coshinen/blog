@@ -10,9 +10,9 @@ excerpt: $ bitcoin-cli stop
 ---
 ## 提示说明
 
-{% highlight shell %}
+```shell
 stop # 终止比特币核心服务 bitcoind
-{% endhighlight %}
+```
 
 ## 用法示例
 
@@ -20,22 +20,22 @@ stop # 终止比特币核心服务 bitcoind
 
 关闭比特币核心服务，使其有序退出。
 
-{% highlight shell %}
+```shell
 $ bitcoin-cli stop
 Bitcoin server stopping
-{% endhighlight %}
+```
 
 ### cURL
 
-{% highlight shell %}
+```shell
 $ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "stop", "params": [] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
 {"result":"Bitcoin server stopping","error":null,"id":"curltest"}
-{% endhighlight %}
+```
 
 ## 源码剖析
 stop 对应的函数实现在“rpcserver.cpp”文件中。
 
-{% highlight C++ %}
+```cpp
 UniValue stop(const UniValue& params, bool fHelp)
 {
     // Accept the deprecated and ignored 'detach' boolean argument
@@ -48,7 +48,7 @@ UniValue stop(const UniValue& params, bool fHelp)
     StartShutdown(); // 2.关闭比特币核心服务
     return "Bitcoin server stopping"; // 3.返回停止信息
 }
-{% endhighlight %}
+```
 
 基本流程：<br>
 1.处理命令帮助和参数个数。<br>
@@ -57,20 +57,20 @@ UniValue stop(const UniValue& params, bool fHelp)
 
 调用 StartShutdown() 函数关闭比特币核心服务，该函数声明在“init.h”文件中。
 
-{% highlight C++ %}
+```cpp
 void StartShutdown(); // 关闭比特币核心服务
-{% endhighlight %}
+```
 
 实现在“init.cpp”文件中。
 
-{% highlight C++ %}
+```cpp
 volatile bool fRequestShutdown = false; // 请求关闭标志置，初始为 false
 
 void StartShutdown()
 {
     fRequestShutdown = true; // 把请求关闭标志置为 true
 }
-{% endhighlight %}
+```
 
 更多细节请参考[比特币核心服务启动过程](/blog/2018/05/bitcoin-source-anatomy-00.html)。
 

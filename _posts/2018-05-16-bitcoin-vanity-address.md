@@ -27,7 +27,7 @@ tags: 区块链 比特币 比特币地址
 该函数的作用是生成一个私钥，并返回对应的公钥。
 实现：生成私钥，获取公钥地址，对比地址前缀，不满足则重复以上过程，直至找到指定前缀的地址。
 
-{% highlight C++ %}
+```cpp
 CPubKey CWallet::GenerateNewKey()
 {
     AssertLockHeld(cs_wallet); // mapKeyMetadata
@@ -59,13 +59,13 @@ CPubKey CWallet::GenerateNewKey()
 +       }
 +   }
 }
-{% endhighlight %}
+```
 
 2.RPC 命令 getnewaddress 函数，位于“wallet/rpcwallet.cpp”文件中。
 该函数的作用是通过比特币核心客户端该调用 RPC 命令，获取一个新的公钥地址。
 这里只需要修改第 6 步，实现同上。
 
-{% highlight C++ %}
+```cpp
 UniValue getnewaddress(const UniValue& params, bool fHelp) // 在指定账户下新建一个地址，若不指定账户，默认添加到""空账户下
 {
     if (!EnsureWalletIsAvailable(fHelp)) // 1.确保钱包可用，即钱包已创建成功
@@ -111,12 +111,12 @@ UniValue getnewaddress(const UniValue& params, bool fHelp) // 在指定账户下
 +       }
 +   }
 }
-{% endhighlight %}
+```
 
 3.RPC 命令 validateaddress 函数，位于“rpcmisc.cpp”文件中。
 该函数的作用是通过比特币核心客户端该调用 RPC 命令，验证一个公钥地址是否有效。
 
-{% highlight C++ %}
+```cpp
 UniValue validateaddress(const UniValue& params, bool fHelp)
 {
     if (fHelp || params.size() != 1) // 参数必须为 1 个
@@ -175,7 +175,7 @@ UniValue validateaddress(const UniValue& params, bool fHelp)
     }
     return ret; // 返回结果
 }
-{% endhighlight %}
+```
 
 关于比特币地址前缀 '1' 的修改，可以参考[如何制作一枚山寨数字货币](/blog/2018/05/how-to-make-an-altcoin.html)。
 

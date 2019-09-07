@@ -22,44 +22,44 @@ GitHub Actions 目前处于测试阶段，需要提前注册 beta 版待官方�
 
 name 定义工作流的名称，对该工作流要完成的任务进行简单的描述。
 
-{% highlight yml %}
+```yml
 name: C/C++ CI ## 表示这是一个 C/C++ 项目的 CI 工作流
-{% endhighlight %}
+```
 
 ## 2. 控制工作流的触发时机
 
 on 设置工作流的触发条件，一般指定为 push，表示在每次 git push 操作后自动触发该项目的工作流。
 
-{% highlight yml %}
+```yml
 on: [push]
-{% endhighlight %}
+```
 
 可以让工作流在 master 和 release 分支的 push 事件上运行：
 
-{% highlight yml %}
+```yml
 on:
   push:
     branches:
     - master
     - release/*
-{% endhighlight %}
+```
 
 或只在 master 分支的 pull_request 事件上运行：
 
-{% highlight yml %}
+```yml
 on:
   pull_request:
     branches:
     - master
-{% endhighlight %}
+```
 
 也可以设置定时运行计划，在周一到周五每天的 02:00 运行：
 
-{% highlight yml %}
+```yml
 on:
   schedule:
   - cron: 0 2 * * 1-5
-{% endhighlight %}
+```
 
 ## 3. 在不同的操作系统上运行
 
@@ -68,12 +68,12 @@ GitHub Actions 提供 Linux、Windows 和 macOS 来构建运行。
 
 runs-on 指定运行所在操作系统的类型。
 
-{% highlight yml %}
+```yml
 jobs:
   build:
 
     runs-on: ubuntu-latest # 表示该工作流将在 ubuntu 的最新版本上运行
-{% endhighlight %}
+```
 
 可用的虚拟机类型如下：
 
@@ -88,7 +88,7 @@ jobs:
 steps 用于设置工作流的运行步骤，即在终端中执行的 shell 命令。
 run 设置要执行的命令。
 
-{% highlight yml %}
+```yml
 jobs:
   build:
     
@@ -98,11 +98,11 @@ jobs:
       run: make # 使用 Makefile 来构建项目
     - name: ...
       run: ...
-{% endhighlight %}
+```
 
 ## 5. 一个 C/C++ 项目的工作流模版
 
-{% highlight yml %}
+```yml
 name: C/C++ CI
 
 on: [push]
@@ -122,7 +122,7 @@ jobs:
       run: make check
     - name: make distcheck
       run: make distcheck
-{% endhighlight %}
+```
 
 ## 6. 工作流配置文件的默认路径
 

@@ -10,12 +10,12 @@ excerpt: $ bitcoin-cli listaddressgroupings
 ---
 ## 提示说明
 
-{% highlight shell %}
+```shell
 listaddressgroupings # 列出作为输入公开使用的公共所有权或过去交易导致找零的地址分组
-{% endhighlight %}
+```
 
 结果：<br>
-{% highlight shell %}
+```shell
 [
   [
     [
@@ -27,7 +27,7 @@ listaddressgroupings # 列出作为输入公开使用的公共所有权或过去
   ]
   ,...
 ]
-{% endhighlight %}
+```
 
 ## 用法示例
 
@@ -35,7 +35,7 @@ listaddressgroupings # 列出作为输入公开使用的公共所有权或过去
 
 获取核心服务器上钱包中地址分组（地址，余额，账户），包含找零地址。
 
-{% highlight shell %}
+```shell
 $ bitcoin-cli listaddressgroupings
 [
   [
@@ -46,25 +46,25 @@ $ bitcoin-cli listaddressgroupings
     ]
   ]
 ]
-{% endhighlight %}
+```
 
 ### cURL
 
-{% highlight shell %}
+```shell
 $ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "listaddressgroupings", "params": [] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
 {"result":[[["1kjTv8TKSsbpGEBVZqLTcx1MeA4G8JkCnk", 300.00000000, ""]]],"error":null,"id":"curltest"}
-{% endhighlight %}
+```
 
 ## 源码剖析
 listaddressgroupings 对应的函数在“rpcserver.h”文件中被引用。
 
-{% highlight C++ %}
+```cpp
 extern UniValue listaddressgroupings(const UniValue& params, bool fHelp); // 列出地址分组
-{% endhighlight %}
+```
 
 实现在“rpcwallet.cpp”文件中。
 
-{% highlight C++ %}
+```cpp
 UniValue listaddressgroupings(const UniValue& params, bool fHelp) // 列出地址分组信息（地址、余额、账户）
 {
     if (!EnsureWalletIsAvailable(fHelp)) // 1.确保当前钱包可用
@@ -115,7 +115,7 @@ UniValue listaddressgroupings(const UniValue& params, bool fHelp) // 列出地�
     }
     return jsonGroupings; // 返回地址分组集合
 }
-{% endhighlight %}
+```
 
 基本流程：<br>
 1.确保钱包当前可用。<br>
@@ -127,7 +127,7 @@ UniValue listaddressgroupings(const UniValue& params, bool fHelp) // 列出地�
 
 函数 pwalletMain->GetAddressBalances() 获取地址余额映射列表，定义在“wallet.cpp”文件中。
 
-{% highlight C++ %}
+```cpp
 std::map<CTxDestination, CAmount> CWallet::GetAddressBalances()
 {
     map<CTxDestination, CAmount> balances; // 地址余额映射列表
@@ -167,7 +167,7 @@ std::map<CTxDestination, CAmount> CWallet::GetAddressBalances()
 
     return balances; // 返回地址余额映射列表
 }
-{% endhighlight %}
+```
 
 通过遍历钱包交易映射列表，获取每笔钱包交易的输入和输出列表对应的交易地址。
 

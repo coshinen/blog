@@ -10,9 +10,9 @@ excerpt: $ bitcoin-cli walletpassphrase "passphrase" timeout
 ---
 ## 提示说明
 
-{% highlight shell %}
+```shell
 walletpassphrase "passphrase" timeout # 在内存中存储钱包解密密钥 timeout 秒
-{% endhighlight %}
+```
 
 在执行与私钥相关的交易前需要先执行此操作，比如发送比特币。
 
@@ -30,54 +30,54 @@ walletpassphrase "passphrase" timeout # 在内存中存储钱包解密密钥 tim
 
 用法一：解锁钱包 60 秒。
 
-{% highlight shell %}
+```shell
 $ bitcoin-cli getinfo | grep unlocked_until
   "unlocked_until": 0,
 $ bitcoin-cli walletpassphrase "mypasswd" 60
 $ bitcoin-cli getinfo | grep unlocked_until
   "unlocked_until": 1527753859,
-{% endhighlight %}
+```
 
 [getinfo](/blog/2018/06/bitcoin-rpc-command-getinfo.html) 中 unlocked_until 字段表示钱包解锁的过期时间，0 表示处于锁定状态。
 
 用法二：解锁钱包 60 秒，再次使用此命令解密 20，密钥过期时间被覆盖。
 
-{% highlight shell %}
+```shell
 $ bitcoin-cli walletpassphrase "mypasswd" 60
 $ bitcoin-cli getinfo | grep unlocked_until
   "unlocked_until": 1527753859,
 $ bitcoin-cli walletpassphrase "mypasswd" 20
 $ bitcoin-cli getinfo | grep unlocked_until
   "unlocked_until": 1527753825,
-{% endhighlight %}
+```
 
 用法三：锁定钱包。
 
-{% highlight shell %}
+```shell
 $ bitcoin-cli getinfo | grep unlocked_until
   "unlocked_until": 1527753825,
 $ bitcoin-cli walletpassphrase "mypasswd" 0
 $ bitcoin-cli getinfo | grep unlocked_until
   "unlocked_until": 0
-{% endhighlight %}
+```
 
 ### cURL
 
-{% highlight shell %}
+```shell
 $ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "walletpassphrase", "params": ["mypasswd", 60] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
 {"result":null,"error":null,"id":"curltest"}
-{% endhighlight %}
+```
 
 ## 源码剖析
 walletpassphrase 对应的函数在“rpcserver.h”文件中被引用。
 
-{% highlight C++ %}
+```cpp
 extern UniValue walletpassphrase(const UniValue& params, bool fHelp); // 钱包解锁
-{% endhighlight %}
+```
 
 实现在“rpcwallet.cpp”文件中。
 
-{% highlight C++ %}
+```cpp
 UniValue walletpassphrase(const UniValue& params, bool fHelp)
 {
     if (!EnsureWalletIsAvailable(fHelp)) // 确保钱包可用
@@ -136,7 +136,7 @@ UniValue walletpassphrase(const UniValue& params, bool fHelp)
 
     return NullUniValue;
 }
-{% endhighlight %}
+```
 
 基本流程：<br>
 1.确保当前钱包可用（已初始化完成）。<br>
@@ -151,17 +151,17 @@ UniValue walletpassphrase(const UniValue& params, bool fHelp)
 第八步，调用 RPCRunLater("lockwallet", boost::bind(LockWallet, pwalletMain), nSleepTime) 函数设置定时器，定时执行制定函数功能。
 该函数声明在“rpcserver.h”文件中。
 
-{% highlight C++ %}
+```cpp
 /**
  * Run func nSeconds from now.
  * Overrides previous timer <name> (if any).
  */ // 从现在开始的 nSeconds 秒后运行该函数
 void RPCRunLater(const std::string& name, boost::function<void(void)> func, int64_t nSeconds);
-{% endhighlight %}
+```
 
 定义在“rpcserver.cpp”文件中。
 
-{% highlight C++ %}
+```cpp
 void RPCRunLater(const std::string& name, boost::function<void(void)> func, int64_t nSeconds)
 {
     if (timerInterfaces.empty())
@@ -171,17 +171,17 @@ void RPCRunLater(const std::string& name, boost::function<void(void)> func, int6
     LogPrint("rpc", "queue run of timer %s in %i seconds (using %s)\n", name, nSeconds, timerInterface->Name());
     deadlineTimers.insert(std::make_pair(name, boost::shared_ptr<RPCTimerBase>(timerInterface->NewTimer(func, nSeconds*1000)))); // 和定时器名字配对，插入到截止时间定时器映射列表中
 }
-{% endhighlight %}
+```
 
 定时器接口列表 timerInterfaces 和定时器映射列表 deadlineTimers 的定义在“rpcserver.cpp”文件中。
 
-{% highlight C++ %}
+```cpp
 /* Timer-creating functions */
 static std::vector<RPCTimerInterface*> timerInterfaces; // RPC 定时器接口列表
 /* Map of name to timer.
  * @note Can be changed to std::unique_ptr when C++11 */ // 定时器名字映射
 static std::map<std::string, boost::shared_ptr<RPCTimerBase> > deadlineTimers; // 截止时间定时器
-{% endhighlight %}
+```
 
 ## 参照
 

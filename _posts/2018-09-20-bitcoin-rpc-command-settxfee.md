@@ -10,9 +10,9 @@ excerpt: $ bitcoin-cli settxfee amount
 ---
 ## 提示说明
 
-{% highlight shell %}
+```shell
 settxfee amount # 设置每 kB 的交易费。覆盖 paytxfee 参数的值
-{% endhighlight %}
+```
 
 参数：
 1. amount（数字或字符串，必备）以 BTC/kB 为单位的交易费。
@@ -25,32 +25,32 @@ settxfee amount # 设置每 kB 的交易费。覆盖 paytxfee 参数的值
 
 通过 [getinfo](/blog/2018/06/bitcoin-rpc-command-getinfo.html) 调用反馈中的 paytxfee 字段查看当前交易费。
 
-{% highlight shell %}
+```shell
 $ bitcoin-cli getinfo | grep paytxfee
   "paytxfee": 0.00000000,
 $ bitcoin-cli settxfee 0.00001
 true
 $ bitcoin-cli getinfo | grep paytxfee
   "paytxfee": 0.00001000,
-{% endhighlight %}
+```
 
 ### cURL
 
-{% highlight shell %}
+```shell
 $ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "settxfee", "params": [0.00001] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
 {"result":true,"error":null,"id":"curltest"}
-{% endhighlight %}
+```
 
 ## 源码剖析
 settxfee 对应的函数在“rpcserver.h”文件中被引用。
 
-{% highlight C++ %}
+```cpp
 extern UniValue settxfee(const UniValue& params, bool fHelp); // 设置交易费
-{% endhighlight %}
+```
 
 实现在“rpcwallet.cpp”文件中。
 
-{% highlight C++ %}
+```cpp
 UniValue settxfee(const UniValue& params, bool fHelp)
 {
     if (!EnsureWalletIsAvailable(fHelp)) // 确保当前钱包可用
@@ -77,7 +77,7 @@ UniValue settxfee(const UniValue& params, bool fHelp)
     payTxFee = CFeeRate(nAmount, 1000); // 设置交易费
     return true; // 设置成功返回 true
 }
-{% endhighlight %}
+```
 
 基本流程：<br>
 1.确保钱包当前可用（已初始化完成）。<br>
@@ -88,7 +88,7 @@ UniValue settxfee(const UniValue& params, bool fHelp)
 
 第四步，调用函数 AmountFromValue(params[0]) 获取指定金额作为交易费，该函数定义在“rpcserver.cpp”文件中。
 
-{% highlight C++ %}
+```cpp
 CAmount AmountFromValue(const UniValue& value)
 {
     if (!value.isNum() && !value.isStr()) // 该值必须为数字或字符串类型
@@ -100,17 +100,17 @@ CAmount AmountFromValue(const UniValue& value)
         throw JSONRPCError(RPC_TYPE_ERROR, "Amount out of range");
     return amount; // 返回该金额
 }
-{% endhighlight %}
+```
 
 类型 CAmount 是 int64_t 共 8bytes，定义在“amount.h”文件中。
 
-{% highlight C++ %}
+```cpp
 typedef int64_t CAmount; // 金额，64 位
-{% endhighlight %}
+```
 
 函数 MoneyRange(amount) 检测设置金额的范围，定义在“amount.h”文件中。
 
-{% highlight C++ %}
+```cpp
 /** No amount larger than this (in satoshi) is valid.
  *
  * Note that this constant is *not* the total money supply, which in Bitcoin
@@ -122,11 +122,11 @@ typedef int64_t CAmount; // 金额，64 位
  * */
 static const CAmount MAX_MONEY = 21000000 * COIN; // 最大金额 2100 BTC
 inline bool MoneyRange(const CAmount& nValue) { return (nValue >= 0 && nValue <= MAX_MONEY); } // 金额范围检测
-{% endhighlight %}
+```
 
 第五步，调用 CFeeRate 类的有参构造函数 CFeeRate(nAmount, 1000)，该类定义在“amount.h”文件中。
 
-{% highlight C++ %}
+```cpp
 /** Type-safe wrapper class for fee rates
  * (how much to pay based on transaction size)
  */ // 费率的安全包装类（基于交易的大小需要支付多少交易费）
@@ -139,11 +139,11 @@ public:
     CFeeRate(const CAmount& nFeePaid, size_t nSize);
     ...
 };
-{% endhighlight %}
+```
 
 该有参构造函数实现在“amount.cpp”文件中。
 
-{% highlight C++ %}
+```cpp
 CFeeRate::CFeeRate(const CAmount& nFeePaid, size_t nSize)
 {
     if (nSize > 0)
@@ -151,7 +151,7 @@ CFeeRate::CFeeRate(const CAmount& nFeePaid, size_t nSize)
     else
         nSatoshisPerK = 0;
 }
-{% endhighlight %}
+```
 
 ## 参照
 

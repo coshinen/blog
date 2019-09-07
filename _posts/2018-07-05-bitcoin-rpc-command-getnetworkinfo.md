@@ -10,12 +10,12 @@ excerpt: $ bitcoin-cli getnetworkinfo
 ---
 ## 提示说明
 
-{% highlight shell %}
+```shell
 getnetworkinfo # 获取一个包含 P2P 网络各种状态信息的对象
-{% endhighlight %}
+```
 
 结果：
-{% highlight shell %}
+```shell
 {
   "version": xxxxx,                      （数字）服务器版本
   "subversion": "/Satoshi:x.x.x/",     （字符串）服务器子版本字符串
@@ -43,7 +43,7 @@ getnetworkinfo # 获取一个包含 P2P 网络各种状态信息的对象
   ]
   "warnings": "..."                    （字符串）任何网络警告（例如 alert 消息）
 }
-{% endhighlight %}
+```
 
 ## 用法示例
 
@@ -51,7 +51,7 @@ getnetworkinfo # 获取一个包含 P2P 网络各种状态信息的对象
 
 获取核心服务节点当前的网络信息。
 
-{% highlight shell %}
+```shell
 $ bitcoin-cli getnetworkinfo
 {
   "version": 120100,
@@ -88,25 +88,25 @@ $ bitcoin-cli getnetworkinfo
   ],
   "warnings": ""
 }
-{% endhighlight %}
+```
 
 ### cURL
 
-{% highlight shell %}
+```shell
 $ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "getnetworkinfo", "params": [] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
 {"result":{"version":120100,"subversion":"/Satoshi:0.12.1/","protocolversion":70012,"localservices":"0000000000000005","timeoffset":0,"connections":1,"networks":[{"name":"ipv4","limited":false,"reachable":false,"proxy":"","proxy_randomize_credentials":false},{"name":"ipv6","limited":false,"reachable":false,"proxy":"","proxy_randomize_credentials":false},{"name":"onion","limited":false,"reachable":false,"proxy":"","proxy_randomize_credentials":false}],"relayfee":0.00001000,"localaddresses":[],"warnings":""},"error":null,"id":"curltest"}
-{% endhighlight %}
+```
 
 ## 源码剖析
 getnetworkinfo 对应的函数在“rpcserver.h”文件中被引用。
 
-{% highlight C++ %}
+```cpp
 extern UniValue getnetworkinfo(const UniValue& params, bool fHelp); // 获取网络状态信息
-{% endhighlight %}
+```
 
 实现在“rpcnet.cpp”文件中。
 
-{% highlight C++ %}
+```cpp
 UniValue getnetworkinfo(const UniValue& params, bool fHelp)
 {
     if (fHelp || params.size() != 0) // 没有参数
@@ -173,7 +173,7 @@ UniValue getnetworkinfo(const UniValue& params, bool fHelp)
     obj.push_back(Pair("warnings",       GetWarnings("statusbar"))); // 警告
     return obj;
 }
-{% endhighlight %}
+```
 
 基本流程：<br>
 1.处理命令帮助和参数个数。<br>
@@ -182,7 +182,7 @@ UniValue getnetworkinfo(const UniValue& params, bool fHelp)
 
 第三步，调用 GetNetworksInfo() 函数来获取网络信息，该函数实现在“rpcnet.cpp”文件中。
 
-{% highlight C++ %}
+```cpp
 static UniValue GetNetworksInfo()
 {
     UniValue networks(UniValue::VARR);
@@ -203,7 +203,7 @@ static UniValue GetNetworksInfo()
     }
     return networks;
 }
-{% endhighlight %}
+```
 
 ## 参照
 

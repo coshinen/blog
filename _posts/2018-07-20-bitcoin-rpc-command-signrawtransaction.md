@@ -10,9 +10,9 @@ excerpt: $ bitcoin-cli signrawtransaction "hexstring" ( [{"txid":"id","vout":n,"
 ---
 ## 提示说明
 
-{% highlight shell %}
+```shell
 signrawtransaction "hexstring" ( [{"txid":"id","vout":n,"scriptPubKey":"hex","redeemScript":"hex"},...] ["privatekey1",...] sighashtype ) # 对（序列化的，16 进制编码的）原始交易的输入签名
-{% endhighlight %}
+```
 
 **第二个可选的参数（可能为空）是该交易所依赖的前一笔交易输出数组，但该交易可能还没上链。<br>
 第三个可选的参数（可能为空）是一个 base58 编码的私钥数组，如果指定，它将是签名该交易的唯一私钥。**
@@ -20,7 +20,7 @@ signrawtransaction "hexstring" ( [{"txid":"id","vout":n,"scriptPubKey":"hex","re
 参数：<br>
 1.hexstring（字符串，必备）交易的 16 进制字符串。<br>
 2.prevtxs（字符串，可选）依赖的前一笔交易输出的 json 数组。<br>
-{% highlight shell %}
+```shell
      [               （json 对象的 json 数组，若未提供则为空）
        {
          "txid":"id",             （字符串，必备）交易索引
@@ -30,26 +30,26 @@ signrawtransaction "hexstring" ( [{"txid":"id","vout":n,"scriptPubKey":"hex","re
        }
        ,...
     ]
-{% endhighlight %}
+```
 3.privatekeys（字符串，可选）用于签名的 base58 编码的私钥组成的 json 数组。<br>
-{% highlight shell %}
+```shell
     [                  （字符串 json 数组，若未提供则为空）
       "privatekey"   （字符串）base58 编码的私钥
       ,...
     ]
-{% endhighlight %}
+```
 4.sighashtype（字符串，可选，默认为 ALL）签名哈希类型。必须是下列中的一个：
-{% highlight shell %}
+```shell
        "ALL"
        "NONE"
        "SINGLE"
        "ALL|ANYONECANPAY"
        "NONE|ANYONECANPAY"
        "SINGLE|ANYONECANPAY"
-{% endhighlight %}
+```
 
 结果：<br>
-{% highlight shell %}
+```shell
 {
   "hex" : "value",           （字符串）16 进制编码的带签名的原始交易
   "complete" : true|false,   （布尔型）交易是否有一个完整的签名集
@@ -64,7 +64,7 @@ signrawtransaction "hexstring" ( [{"txid":"id","vout":n,"scriptPubKey":"hex","re
     ,...
   ]
 }
-{% endhighlight %}
+```
 
 ## 用法示例
 
@@ -73,7 +73,7 @@ signrawtransaction "hexstring" ( [{"txid":"id","vout":n,"scriptPubKey":"hex","re
 对已创建的原始交易进行签名。<br>
 原始交易的创建见 [createrawtransaction](/blog/2018/07/bitcoin-rpc-command-createrawtransaction.html)。
 
-{% highlight shell %}
+```shell
 $ bitcoin-cli createrawtransaction "[{\"txid\":\"fb9bd2df3cef0abd9f444971dff097790b7bf146843a752cb48461418d3c7e67\",\"vout\":0}]" "{\"1Mcg7MDBD38sSScsX3USbsCnkcMbPnLyTV\":0.01}"
 0100000001677e3c8d416184b42c753a8446f17b0b7997f0df7149449fbd0aef3cdfd29bfb0000000000ffffffff0140420f00000000001976a914e221b8a504199bec7c5fe8081edd011c3653118288ac00000000
 $ bitcoin-cli signrawtransaction 0100000001677e3c8d416184b42c753a8446f17b0b7997f0df7149449fbd0aef3cdfd29bfb0000000000ffffffff0140420f00000000001976a914e221b8a504199bec7c5fe8081edd011c3653118288ac00000000
@@ -81,25 +81,25 @@ $ bitcoin-cli signrawtransaction 0100000001677e3c8d416184b42c753a8446f17b0b7997f
   "hex": "0100000001677e3c8d416184b42c753a8446f17b0b7997f0df7149449fbd0aef3cdfd29bfb000000006b4830450221009b29490f5e1709bc3cce16c6433a0b8895add5a9d3c2fa63da11da065105ad59022022d068337cd3b20be04513e539f0bbbb5319ed1b3a3a8ec6262a30a8bd393b3d012103583eb3acb7f0b9c431d97a4872a270f4e519fbca0ec519adf16764c663e36546ffffffff0140420f00000000001976a914e221b8a504199bec7c5fe8081edd011c3653118288ac00000000",
   "complete": true
 }
-{% endhighlight %}
+```
 
 ### cURL
 
-{% highlight shell %}
+```shell
 $ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "signrawtransaction", "params": ["0100000001677e3c8d416184b42c753a8446f17b0b7997f0df7149449fbd0aef3cdfd29bfb0000000000ffffffff0140420f00000000001976a914e221b8a504199bec7c5fe8081edd011c3653118288ac00000000"] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
 {"result":{"hex":"0100000001677e3c8d416184b42c753a8446f17b0b7997f0df7149449fbd0aef3cdfd29bfb000000006b4830450221009b29490f5e1709bc3cce16c6433a0b8895add5a9d3c2fa63da11da065105ad59022022d068337cd3b20be04513e539f0bbbb5319ed1b3a3a8ec6262a30a8bd393b3d012103583eb3acb7f0b9c431d97a4872a270f4e519fbca0ec519adf16764c663e36546ffffffff0140420f00000000001976a914e221b8a504199bec7c5fe8081edd011c3653118288ac00000000","complete":true},"error":null,"id":"curltest"}
-{% endhighlight %}
+```
 
 ## 源码剖析
 signrawtransaction 对应的函数在“rpcserver.h”文件中被引用。
 
-{% highlight C++ %}
+```cpp
 extern UniValue signrawtransaction(const UniValue& params, bool fHelp); // 签名原始交易
-{% endhighlight %}
+```
 
 实现在“rpcrawtransaction.cpp”文件中。
 
-{% highlight C++ %}
+```cpp
 UniValue signrawtransaction(const UniValue& params, bool fHelp)
 {
     if (fHelp || params.size() < 1 || params.size() > 4) // 参数最少 1 个，至多 4 个
@@ -341,7 +341,7 @@ UniValue signrawtransaction(const UniValue& params, bool fHelp)
 
     return result; // 返回结果集
 }
-{% endhighlight %}
+```
 
 基本流程：
 1. 处理命令帮助和参数个数。

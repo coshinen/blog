@@ -9,9 +9,9 @@ tags: CLI bitcoin-cli 区块链 比特币
 hidden: true
 ---
 ## 提示说明
-{% highlight shell %}
+```shell
 reconsiderblock "hash" # 移除指定区块及其后代的无效状态，再次考虑它们为激活状态
-{% endhighlight %}
+```
 
 **该操作能够撤销 [invalidateblock](/blog/2018/08/bitcoin-rpc-command-invalidateblock.html) 的效果，但无法恢复连接。**
 
@@ -27,31 +27,31 @@ reconsiderblock "hash" # 移除指定区块及其后代的无效状态，再次�
 参考 [invalidateblock](/blog/2018/08/bitcoin-rpc-command-invalidateblock.html) 命令，
 再次考虑高度为 32723 的区块及其之后的区块。
 
-{% highlight shell %}
+```shell
 $ bitcoin-cli reconsiderblock 000000ea5bb666e0ab8e837691bbb2a0605c4a82281eecd858ad3ffce917df96
 $ bitcoin-cli getblockcount
 32729
 $ bitcoin-cli getconnectioncount
 0
-{% endhighlight %}
+```
 
 ### cURL
 
-{% highlight shell %}
+```shell
 $ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "reconsiderblock", "params": ["000000ea5bb666e0ab8e837691bbb2a0605c4a82281eecd858ad3ffce917df96"] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
 {"result":null,"error":null,"id":"curltest"}
-{% endhighlight %}
+```
 
 ## 源码剖析
 reconsiderblock 对应的函数在“rpcserver.h”文件中被引用。
 
-{% highlight C++ %}
+```cpp
 extern UniValue reconsiderblock(const UniValue& params, bool fHelp); // 再考虑区块
-{% endhighlight %}
+```
 
 实现在“rpcblockchain.cpp”文件中。
 
-{% highlight C++ %}
+```cpp
 UniValue reconsiderblock(const UniValue& params, bool fHelp)
 {
     if (fHelp || params.size() != 1) // 参数必须为 1 个
@@ -90,7 +90,7 @@ UniValue reconsiderblock(const UniValue& params, bool fHelp)
 
     return NullUniValue; // 返回空值
 }
-{% endhighlight %}
+```
 
 基本流程：
 1. 处理命令帮助和参数个数。

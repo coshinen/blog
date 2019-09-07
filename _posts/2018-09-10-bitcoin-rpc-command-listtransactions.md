@@ -10,9 +10,9 @@ excerpt: $ bitcoin-cli listtransactions ( "account" count form includeWatchonly 
 ---
 ## 提示说明
 
-{% highlight shell %}
+```shell
 listtransactions ( "account" count form includeWatchonly ) # 列出跳过账户 account 的 from 笔交易的最近 count 笔交易
-{% endhighlight %}
+```
 
 参数：<br>
 1.account（字符串，可选，已过时）账户名。应该为 "*"，表示全部账户。<br>
@@ -21,7 +21,7 @@ listtransactions ( "account" count form includeWatchonly ) # 列出跳过账户 
 4.includeWatchonly（布尔型，可选，默认为 false）包含到 watchonly 地址集的交易（见 [importaddress](/blog/2018/08/bitcoin-rpc-command-importaddress.html)）。
 
 结果：<br>
-{% highlight shell %}
+```shell
 [
   {
     "account":"accountname",       （字符串，已过时）交易关联的帐户名。默认账户为 ""
@@ -46,7 +46,7 @@ listtransactions ( "account" count form includeWatchonly ) # 列出跳过账户 
     "bip125-replaceable": "yes|no|unknown"  （字符串）该交易是否因 BIP125 （替换交易费）被替换；不在交易内存池中的未确认交易可能是 'unknown'
   }
 ]
-{% endhighlight %}
+```
 
 ## 用法示例
 
@@ -54,7 +54,7 @@ listtransactions ( "account" count form includeWatchonly ) # 列出跳过账户 
 
 用法一：列出系统中最近 10 笔交易。
 
-{% highlight shell %}
+```shell
 $ bitcoin-cli listtransactions
 [
   {
@@ -96,11 +96,11 @@ $ bitcoin-cli listtransactions
     "abandoned": false
   }
 ]
-{% endhighlight %}
+```
 
 用法二：列出从第 100 笔后开始的 1 笔交易。
 
-{% highlight shell %}
+```shell
 $ bitcoin-cli listtransactions "*" 1 100
 [
   {
@@ -122,25 +122,25 @@ $ bitcoin-cli listtransactions "*" 1 100
     "bip125-replaceable": "no"
   }
 ]
-{% endhighlight %}
+```
 
 ### cURL
 
-{% highlight shell %}
+```shell
 $ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "listtransactions", "params": ["*", 1, 100] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
 {"result":[{"account":"","address":"1Z99Lsij11ajDEhipZbnifdFkBu8fC1Hb","category":"generate","amount":50.00000000,"vout":0,"confirmations":5922,"generated":true,"blockhash":"000000fd07cd03d25f2530ade4601d672398bc8ba09efc9a11a4ce580591d4b0","blockindex":0,"blocktime":1529997362,"txid":"16c289710835cbb1b376f56b30f4514f7c6cf9d60003cfec70d30249e4faa494","walletconflicts":[],"time":1529997362,"timereceived":1529997362,"bip125-replaceable":"no"}],"error":null,"id":"curltest"}
-{% endhighlight %}
+```
 
 ## 源码剖析
 listtransactions 对应的函数在“rpcserver.h”文件中被引用。
 
-{% highlight C++ %}
+```cpp
 extern UniValue listtransactions(const UniValue& params, bool fHelp); // 列出最近的交易信息
-{% endhighlight %}
+```
 
 实现在“wallet/rpcwallet.cpp”文件中。
 
-{% highlight C++ %}
+```cpp
 UniValue listtransactions(const UniValue& params, bool fHelp)
 {
     if (!EnsureWalletIsAvailable(fHelp)) // 确保当前钱包可用
@@ -266,7 +266,7 @@ UniValue listtransactions(const UniValue& params, bool fHelp)
 
     return ret; // 返回结果集
 }
-{% endhighlight %}
+```
 
 基本流程：
 1. 确保钱包当前可用（已初始化完成）。

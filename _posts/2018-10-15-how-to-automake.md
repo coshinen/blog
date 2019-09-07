@@ -24,13 +24,13 @@ tags: C/C++ Automake Makefile
 
 头文件 main.h：
 
-{% highlight C++ %}
+```cpp
 #include <iostream>
-{% endhighlight %}
+```
 
 源文件 main.cc（configure.ac 默认只识别 main 关键字命名的文件）：
 
-{% highlight C++ %}
+```cpp
 #include "main.h"
 
 int main(void)
@@ -39,27 +39,27 @@ int main(void)
 
 	return 0;
 }
-{% endhighlight %}
+```
 
 ## 1. 修改 configure.ac（旧版格式为 .in，已过时，新版不兼容）
 
 进入 src 目录，使用 autoscan 扫描源码结构。
 
-{% highlight shell %}
+```shell
 $ cd src
 $ autoscan
-{% endhighlight %}
+```
 
 这里会生成 autoscan.log 和 configure.scan 两个文件，修改 configure.scan 作为 configure.ac。
 
-{% highlight shell %}
+```shell
 $ mv configure.scan configure.ac
 $ vim configure.ac
-{% endhighlight %}
+```
 
 打开 configure.ac 做以下修改。
 
-{% highlight C++ %}
+```cpp
 #                                               -*- Autoconf -*-
 # Process this file with autoconf to produce a configure script.
 
@@ -85,39 +85,39 @@ AC_PROG_CC
 
 -AC_OUTPUT
 +AC_OUTPUT(Makefile) # 指定输出文件名为 Makefile
-{% endhighlight %}
+```
 
 ## 2. 生成 configure, config.h.in, autom4te.cache 等文件
 
 运行以下命令，顺序不固定。
 
-{% highlight shell %}
+```shell
 $ aclocal # 生成 autom4te.cache 目录
 $ autoheader # 生成 config.h.in 文件
 $ autoconf # 生成 configure 文件
-{% endhighlight %}
+```
 
 ## 3. 编写 Makefile.am
 
-{% highlight shell %}
+```shell
 $ vim Makefile.am
-{% endhighlight %}
+```
 
-{% highlight C++ %}
+```cpp
 AUTOMAKE_OPTIONS=foreign
 
 bin_PROGRAMS=main # 指定生成的 ELF 文件名
 
 main_SOURCES=main.cc # 指定 main 函数所在的源文件
-{% endhighlight %}
+```
 
 ## 4. 生成 Makefile.in
 
 使用 automake 生成 Makefile.in 文件。
 
-{% highlight shell %}
+```shell
 $ automake --add-missing
-{% endhighlight %}
+```
 
 **注：--add-missing 选项会添加丢失的必备的文件。**
 
@@ -125,17 +125,17 @@ $ automake --add-missing
 
 执行上面生成的 configure 文件，得到 Makefile。
 
-{% highlight shell %}
+```shell
 $ ./configure
-{% endhighlight %}
+```
 
 ## 6. make 构建源码
 
 使用 make 命令得到可执行程序 main。
 
-{% highlight shell %}
+```shell
 $ make
-{% endhighlight %}
+```
 
 ## 参照
 

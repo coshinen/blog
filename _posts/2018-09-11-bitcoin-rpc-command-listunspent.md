@@ -10,9 +10,9 @@ excerpt: $ bitcoin-cli listunspent ( minconf maxconf  ["address",...] )
 ---
 ## 提示说明
 
-{% highlight shell %}
+```shell
 listunspent ( minconf maxconf  ["address",...] ) # 列出在 minconf（含）和 maxconf（含）之间确认数的未花费交易输出
-{% endhighlight %}
+```
 
 **注：只能查看本钱包内的地址所关联的交易的 UTXO。**
 
@@ -23,15 +23,15 @@ listunspent ( minconf maxconf  ["address",...] ) # 列出在 minconf（含）和
 1.minconf（数字，可选，默认为 1）要过滤的最小确认数。<br>
 2.maxconf（数字，可选，默认为 9999999）要过滤的最大确认数。<br>
 3.addresses（字符串）要过滤的比特币地址的 json 数组。
-{% highlight shell %}
+```shell
     [
       "address" （字符串）比特币地址
       ,...
     ]
-{% endhighlight %}
+```
 
 结果：<br>
-{% highlight shell %}
+```shell
 [                   （json 对象数组）
   {
     "txid" : "txid",        （字符串）交易索引
@@ -44,7 +44,7 @@ listunspent ( minconf maxconf  ["address",...] ) # 列出在 minconf（含）和
   }
   ,...
 ]
-{% endhighlight %}
+```
 
 ## 用法示例
 
@@ -52,7 +52,7 @@ listunspent ( minconf maxconf  ["address",...] ) # 列出在 minconf（含）和
 
 用法一：列出全部未花费的交易输出。
 
-{% highlight shell %}
+```shell
 $ bitcoin-cli listunspent
 [
   ...
@@ -66,11 +66,11 @@ $ bitcoin-cli listunspent
     "spendable": true
   }
 ]
-{% endhighlight %}
+```
 
 方法二：列出至少 6 个确认的未花费交易输出，并指定地址过滤器。
 
-{% highlight shell %}
+```shell
 $ bitcoin-cli listunspent 6 9999999 "[\"1Z99Lsij11ajDEhipZbnifdFkBu8fC1Hb\"]"
 [
   ...
@@ -84,25 +84,25 @@ $ bitcoin-cli listunspent 6 9999999 "[\"1Z99Lsij11ajDEhipZbnifdFkBu8fC1Hb\"]"
     "spendable": true
   }
 ]
-{% endhighlight %}
+```
 
 ### cURL
 
-{% highlight shell %}
+```shell
 curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "listunspent", "params": [6, 9999999, ["1Z99Lsij11ajDEhipZbnifdFkBu8fC1Hb"]] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
 {"result":[{"txid":"69e560109acccf73c6552f5f4f095cd97fde3261a568cc6547a540bcc3e372ff","vout":0,"address":"1Z99Lsij11ajDEhipZbnifdFkBu8fC1Hb","scriptPubKey":"21023d2f5ddafe8a161867bb9a9162aa5c84b0882af4bfca1fa89f4811b651761f10ac","amount":50.00000000,"confirmations":7306,"spendable":true}],"error":null,"id":"curltest"}
-{% endhighlight %}
+```
 
 ## 源码剖析
 listunspent 对应的函数在“rpcserver.h”文件中被引用。
 
-{% highlight C++ %}
+```cpp
 extern UniValue listunspent(const UniValue& params, bool fHelp); // 列出未花费的交易输出
-{% endhighlight %}
+```
 
 实现在“rpcwallet.cpp”文件中。
 
-{% highlight C++ %}
+```cpp
 UniValue listunspent(const UniValue& params, bool fHelp)
 {
     if (!EnsureWalletIsAvailable(fHelp)) // 确保当前钱包可用
@@ -215,7 +215,7 @@ UniValue listunspent(const UniValue& params, bool fHelp)
 
     return results; // 返回结果集
 }
-{% endhighlight %}
+```
 
 基本流程：
 1. 确保钱包当前可用（已初始化完成）。

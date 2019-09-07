@@ -10,9 +10,9 @@ excerpt: $ bitcoin-cli estimatesmartfee nblocks
 ---
 ## 提示说明
 
-{% highlight shell %}
+```shell
 estimatesmartfee nblocks # 估计交易在 nblocks 个区块开始确认的每千字节的大致费用，如果可能则返回估计有效的区块数
-{% endhighlight %}
+```
 
 **警告：该接口不稳定且可能消失或改变！**
 
@@ -20,12 +20,12 @@ estimatesmartfee nblocks # 估计交易在 nblocks 个区块开始确认的每�
 1. nblocks（数字）区块数。
 
 结果：
-{% highlight shell %}
+```shell
 {
   "feerate" : x.x,     （数字）估算每千字节的交易费（以 BTC 为单位）
   "blocks" : n         （数字）估计被找到的区块数
 }
-{% endhighlight %}
+```
 
 **注：如果没有足够的交易和区块用来做估算任意数量的区块，则返回一个负值。<br>
 但是不会返回低于交易内存池拒收费用的值。**
@@ -36,31 +36,31 @@ estimatesmartfee nblocks # 估计交易在 nblocks 个区块开始确认的每�
 
 估算交易经 6 个区块确认所需的每千字节的交易费，并获取估算时找到的区块数。
 
-{% highlight shell %}
+```shell
 $ bitcoin-cli estimatesmartfee 6
 {
   "feerate": -1,
   "blocks": 25
 }
-{% endhighlight %}
+```
 
 ### cURL
 
-{% highlight shell %}
+```shell
 $ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "estimatesmartfee", "params": [6] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
 {"result":{"feerate":-1,"blocks":25},"error":null,"id":"curltest"}
-{% endhighlight %}
+```
 
 ## 源码剖析
 estimatesmartfee 对应的函数在“rpcserver.h”文件中被引用。
 
-{% highlight C++ %}
+```cpp
 extern UniValue estimatesmartfee(const UniValue& params, bool fHelp); // 智能估计交易费
-{% endhighlight %}
+```
 
 实现在“rpcmining.cpp”文件中。
 
-{% highlight C++ %}
+```cpp
 UniValue estimatesmartfee(const UniValue& params, bool fHelp)
 {
     if (fHelp || params.size() != 1) // 参数必须为 1 个
@@ -96,7 +96,7 @@ UniValue estimatesmartfee(const UniValue& params, bool fHelp)
     result.push_back(Pair("blocks", answerFound)); // 有效的区块数
     return result; // 返回结果
 }
-{% endhighlight %}
+```
 
 基本流程：
 1. 处理命令帮助和参数个数。

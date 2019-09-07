@@ -10,9 +10,9 @@ excerpt: $ bitcoin-cli importprivkey "bitcoinprivkey" ( "label" rescan )
 ---
 ## 提示说明
 
-{% highlight shell %}
+```shell
 importprivkey "bitcoinprivkey" ( "label" rescan ) # 导入私钥（通过 dumpprivkey 返回）到你的钱包
-{% endhighlight %}
+```
 
 参数：
 1. bitcoinprivkey（字符串，必备）私钥（见 [dumpprivkey](/blog/2018/06/bitcoin-rpc-command-dumpprivkey.html)）。
@@ -29,7 +29,7 @@ importprivkey "bitcoinprivkey" ( "label" rescan ) # 导入私钥（通过 dumppr
 
 用法一：在钱包默认账户 "" 中生成一个新地址，获取其私钥，再导入私钥到账户 "tabby" 中。
 
-{% highlight shell %}
+```shell
 $ bitcoin-cli getnewaddress
 1HvgGctUMNkHPwvayRFfPePBjke477ZqsH
 $ bitcoin-cli dumpprivkey 1HvgGctUMNkHPwvayRFfPePBjke477ZqsH
@@ -39,35 +39,35 @@ $ bitcoin-cli getaddressesbyaccount "tabby"
 [
   "1HvgGctUMNkHPwvayRFfPePBjke477ZqsH"
 ]
-{% endhighlight %}
+```
 
 用法二：导入私钥到账户 "testing" 中，并关闭再扫描。
 
-{% highlight shell %}
+```shell
 $ bitcoin-cli importprivkey L4fh51n2P8MpNP8hgNc9kLhS2e525GLNu4NGcWNphiLMRpE8rDGH "testing" false
 $ bitcoin-cli getaddressesbyaccount "testing"
 [
   "1HvgGctUMNkHPwvayRFfPePBjke477ZqsH"
 ]
-{% endhighlight %}
+```
 
 ### cURL
 
-{% highlight shell %}
+```shell
 $ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "importprivkey", "params": ["L4fh51n2P8MpNP8hgNc9kLhS2e525GLNu4NGcWNphiLMRpE8rDGH", "testing", false] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
 {"result":null,"error":null,"id":"curltest"}
-{% endhighlight %}
+```
 
 ## 源码剖析
 importprivkey 对应的函数在“rpcserver.h”文件中被引用。
 
-{% highlight C++ %}
+```cpp
 extern UniValue importprivkey(const UniValue& params, bool fHelp); // 导入私钥
-{% endhighlight %}
+```
 
 实现在“wallet/rpcdump.cpp”文件中。
 
-{% highlight C++ %}
+```cpp
 UniValue importprivkey(const UniValue& params, bool fHelp)
 {
     if (!EnsureWalletIsAvailable(fHelp)) // 确保当前钱包可用
@@ -145,7 +145,7 @@ UniValue importprivkey(const UniValue& params, bool fHelp)
 
     return NullUniValue; // 成功返回空值
 }
-{% endhighlight %}
+```
 
 基本流程：<br>
 1.确保钱包当前可用（已初始化完成）。<br>
@@ -162,19 +162,19 @@ UniValue importprivkey(const UniValue& params, bool fHelp)
 第九步，调用 pwalletMain->AddKeyPubKey(key, pubkey) 函数添加公私钥对到钱包，
 该函数定义在“keystore.cpp”文件中。
 
-{% highlight C++ %}
+```cpp
 bool CBasicKeyStore::AddKeyPubKey(const CKey& key, const CPubKey &pubkey)
 {
     LOCK(cs_KeyStore); // 密钥库上锁
     mapKeys[pubkey.GetID()] = key; // 加入公钥索引和私钥的映射列表
     return true;
 }
-{% endhighlight %}
+```
 
 这里只是把公私钥对添加到内存中的 mapKeys 对象，并没有本地化到数据库。
 该对象定义在“keystore.h”文件的 CBasicKeyStore 类中。
 
-{% highlight C++ %}
+```cpp
 typedef std::map<CKeyID, CKey> KeyMap; // 密钥索引和私钥的映射
 ...
 /** Basic key store, that keeps keys in an address->secret map */
@@ -184,11 +184,11 @@ protected:
     KeyMap mapKeys; // 密钥索引和私钥的映射列表
     ...
 };
-{% endhighlight %}
+```
 
 第十步，调用 pwalletMain->ScanForWalletTransactions(chainActive.Genesis(), true) 函数再扫描钱包交易，该函数定义在“wallet.cpp”文件中。
 
-{% highlight C++ %}
+```cpp
 /**
  * Scan the block chain (starting in pindexStart) for transactions
  * from or to us. If fUpdate is true, found transactions that already
@@ -234,7 +234,7 @@ int CWallet::ScanForWalletTransactions(CBlockIndex* pindexStart, bool fUpdate)
     }
     return ret;
 }
-{% endhighlight %}
+```
 
 未完成。更新交易函数 AddToWalletIfInvolvingMe(tx, &block, fUpdate)。
 

@@ -10,15 +10,15 @@ excerpt: $ bitcoin-cli validateaddress "bitcoinaddress"
 ---
 ## 提示说明
 
-{% highlight shell %}
+```shell
 validateaddress "bitcoinaddress" # 获取关于给定比特币地址的信息（不含余额）
-{% endhighlight %}
+```
 
 参数：
 1. bitcoinaddress（字符串，必备）用于验证的比特币地址。
 
 结果：
-{% highlight shell %}
+```shell
 {
   "isvalid" : true|false,       （布尔型）地址是否有效。若无效，则只返回该项
   "address" : "bitcoinaddress", （字符串）验证过的比特币地址
@@ -30,7 +30,7 @@ validateaddress "bitcoinaddress" # 获取关于给定比特币地址的信息（
   "iscompressed" : true|false,  （布尔型）地址是否压缩过
   "account" : "account"         （字符串，已过时）该地址关联的账户，"" 为默认账户
 }
-{% endhighlight %}
+```
 
 ## 用法示例
 
@@ -38,7 +38,7 @@ validateaddress "bitcoinaddress" # 获取关于给定比特币地址的信息（
 
 用法一：验证本钱包中的地址。
 
-{% highlight shell %}
+```shell
 $ bitcoin-cli getnewaddress
 1C5RT9cGsDZwNyaEvUHPj7Qb1SgB5eePG
 $ bitcoin-cli validateaddress 1C5RT9cGsDZwNyaEvUHPj7Qb1SgB5eePG
@@ -53,11 +53,11 @@ $ bitcoin-cli validateaddress 1C5RT9cGsDZwNyaEvUHPj7Qb1SgB5eePG
   "iscompressed": true,
   "account": ""
 }
-{% endhighlight %}
+```
 
 用法二：验证非本钱包中的地址。
 
-{% highlight shell %}
+```shell
 $ bitcoin-cli validateaddress 1PSSGeFHDnKNxiEyFrD1wcEaHr9hrQDDWc
 {
   "isvalid": true,
@@ -67,34 +67,34 @@ $ bitcoin-cli validateaddress 1PSSGeFHDnKNxiEyFrD1wcEaHr9hrQDDWc
   "iswatchonly": false,
   "isscript": false
 }
-{% endhighlight %}
+```
 
 用法三：验证错误地址，这里地址前缀错误。
 
-{% highlight shell %}
+```shell
 $ bitcoin-cli validateaddress 2C5RT9cGsDZwNyaEvUHPj7Qb1SgB5eePG
 {
   "isvalid": false
 }
-{% endhighlight %}
+```
 
 ### cURL
 
-{% highlight shell %}
+```shell
 $ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "validateaddress", "params": ["1C5RT9cGsDZwNyaEvUHPj7Qb1SgB5eePG"] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
 {"result":{"isvalid":true,"address":"1C5RT9cGsDZwNyaEvUHPj7Qb1SgB5eePG","scriptPubKey":"76a9140218443a78a9ed0013efb2332506625dcfdf61b488ac","ismine":true,"iswatchonly":false,"isscript":false,"pubkey":"028a82549a52b0e931d5dceadcf4509d93e45981683896e5c0d106dd802d59034f","iscompressed":true,"account":""},"error":null,"id":"curltest"}
-{% endhighlight %}
+```
 
 ## 源码剖析
 validateaddress 对应的函数在“rpcserver.h”文件中被引用。
 
-{% highlight C++ %}
+```cpp
 extern UniValue validateaddress(const UniValue& params, bool fHelp); // 验证地址
-{% endhighlight %}
+```
 
 实现在“rpcmisc.cpp”文件中。
 
-{% highlight C++ %}
+```cpp
 UniValue validateaddress(const UniValue& params, bool fHelp)
 {
     if (fHelp || params.size() != 1) // 参数必须为 1 个
@@ -152,7 +152,7 @@ UniValue validateaddress(const UniValue& params, bool fHelp)
     }
     return ret; // 返回结果
 }
-{% endhighlight %}
+```
 
 基本流程：
 1. 处理命令帮助和参数个数。

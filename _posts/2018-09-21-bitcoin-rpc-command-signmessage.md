@@ -10,9 +10,9 @@ excerpt: $ bitcoin-cli signmessage "bitcoinaddress" "message"
 ---
 ## 提示说明
 
-{% highlight shell %}
+```shell
 signmessage "bitcoinaddress" "message" # 使用一个地址的私钥签名一个消息
-{% endhighlight %}
+```
 
 参数：
 1. bitcoinaddress（字符串，必备）拥有对应私钥的比特币地址。
@@ -28,7 +28,7 @@ signmessage "bitcoinaddress" "message" # 使用一个地址的私钥签名一个
 2.使用此命令对一条消息进行签名。<br>
 3.使用 [verifymessage](/blog/2018/07/bitcoin-rpc-command-verifymessage.html) 验证消息。
 
-{% highlight shell %}
+```shell
 $ bitcoin-cli walletpassphrase "mypasswd" 60
 $ bitcoin-cli getnewaddress
 1DMEoWsZoJJmaaGfhxRsE9yQmxdn6xSGfE
@@ -36,25 +36,25 @@ $ bitcoin-cli signmessage 1DMEoWsZoJJmaaGfhxRsE9yQmxdn6xSGfE "my message"
 H/iROQoxdpDoQcWwbtd481fUZqyUhf2b/bFCsQqb/NanKrRAJtg9CkvGCFuTL9dn8BDfZULo4uduQi20mZFKDbQ=
 $ bitcoin-cli verifymessage 1DMEoWsZoJJmaaGfhxRsE9yQmxdn6xSGfE H/iROQoxdpDoQcWwbtd481fUZqyUhf2b/bFCsQqb/NanKrRAJtg9CkvGCFuTL9dn8BDfZULo4uduQi20mZFKDbQ= "my message"
 true
-{% endhighlight %}
+```
 
 ### cURL
 
-{% highlight shell %}
+```shell
 $ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "signmessage", "params": ["1DMEoWsZoJJmaaGfhxRsE9yQmxdn6xSGfE", "my message"] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
 {"result":"H/iROQoxdpDoQcWwbtd481fUZqyUhf2b/bFCsQqb/NanKrRAJtg9CkvGCFuTL9dn8BDfZULo4uduQi20mZFKDbQ=","error":null,"id":"curltest"}
-{% endhighlight %}
+```
 
 ## 源码剖析
 signmessage 对应的函数在“rpcserver.h”文件中被引用。
 
-{% highlight C++ %}
+```cpp
 extern UniValue signmessage(const UniValue& params, bool fHelp); // 签名消息
-{% endhighlight %}
+```
 
 实现在“wallet/rpcwallet.cpp”文件中。
 
-{% highlight C++ %}
+```cpp
 UniValue signmessage(const UniValue& params, bool fHelp)
 {
     if (!EnsureWalletIsAvailable(fHelp)) // 确保当前钱包可用
@@ -110,7 +110,7 @@ UniValue signmessage(const UniValue& params, bool fHelp)
 
     return EncodeBase64(&vchSig[0], vchSig.size()); // base64 编码签名并返回
 }
-{% endhighlight %}
+```
 
 基本流程：
 1. 确保当前钱包可用。

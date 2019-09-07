@@ -10,27 +10,27 @@ excerpt: $ bitcoin-cli createmultisig urequired ["key",...]
 ---
 ## 提示说明
 
-{% highlight shell %}
+```shell
 createmultisig urequired ["key",...] # 创建一个需要 m 个密钥的 n 个签名的多重签名地址
-{% endhighlight %}
+```
 
 参数：<br>
 1.nrequired（数字，必备）n 个密钥或地址所需的签名数量。<br>
 2.keys（字符串，必备）一个比特币地址或 16 进制编码的公钥的 json 数组。
-{% highlight shell %}
+```shell
      [
        "key"    （字符串）比特币地址或 16 进制编码的公钥
        ,...
      ]
-{% endhighlight %}
+```
 
 结果：返回一个带有地址和赎回脚本的 json 对象。<br>
-{% highlight shell %}
+```shell
 {
   "address":"multisigaddress",  （字符串）新的多签地址值
   "redeemScript":"script"       （字符串）16 进制编码的赎回脚本的字符串值
 }
-{% endhighlight %}
+```
 
 ## 用法示例
 
@@ -38,7 +38,7 @@ createmultisig urequired ["key",...] # 创建一个需要 m 个密钥的 n 个�
 
 从 2 个地址创建一个需要 2 个签名的多签地址。
 
-{% highlight shell %}
+```shell
 $ bitcoin-cli getnewaddress
 16vpmdSDaX3Nv9UMuk2vSecMrdstjjSP4R
 $ bitcoin-cli getnewaddress
@@ -48,24 +48,24 @@ $ bitcoin-cli createmultisig 2 "[\"16vpmdSDaX3Nv9UMuk2vSecMrdstjjSP4R\",\"1KfU9y
   "address": "3B3ozHj9C7b9nXRypCWJg7s5AdDphUsqHA",
   "redeemScript": "522103da146818f8f3edb975287c53a0de7bd9066153be0818ce1c8fa996e83cd76fca2103abe35a69e0a8eb5e0cb2468b37418e9b9c44d25310a4c3815e3347849c4094c952ae"
 }
-{% endhighlight %}
+```
 
 ### cURL
 
-{% highlight shell %}
+```shell
 暂无。
-{% endhighlight %}
+```
 
 ## 源码剖析
 createmultisig 对应的函数在“rpcserver.h”文件中被引用。
 
-{% highlight C++ %}
+```cpp
 extern UniValue createmultisig(const UniValue& params, bool fHelp); // 创建多重签名
-{% endhighlight %}
+```
 
 实现在“rpcmisc.cpp”文件中。
 
-{% highlight C++ %}
+```cpp
 UniValue createmultisig(const UniValue& params, bool fHelp)
 {
     if (fHelp || params.size() < 2 || params.size() > 2) // 参数必须为 2 个
@@ -108,7 +108,7 @@ UniValue createmultisig(const UniValue& params, bool fHelp)
 
     return result; // 返回结果
 }
-{% endhighlight %}
+```
 
 基本流程：
 1. 处理命令帮助和参数个数。

@@ -10,9 +10,9 @@ excerpt: $ bitcoin-cli listbanned
 ---
 ## 提示说明
 
-{% highlight shell %}
+```shell
 listbanned # 列出所有禁止的 IP/子网
-{% endhighlight %}
+```
 
 结果：以 JSON 数组的形式返回所有被禁止的 IP。
 
@@ -22,7 +22,7 @@ listbanned # 列出所有禁止的 IP/子网
 
 显示服务器黑名单（被禁止的 IP 合集）。
 
-{% highlight shell %}
+```shell
 $ bitcoin-cli listbanned
 [
   {
@@ -32,25 +32,25 @@ $ bitcoin-cli listbanned
     "ban_reason": "manually added"
   }
 ]
-{% endhighlight %}
+```
 
 ### cURL
 
-{% highlight shell %}
+```shell
 $ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "listbanned", "params": [] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
 {"result":[{"address":"192.168.0.2/32","banned_until":1530079566,"ban_created":1529993166,"ban_reason":"manually added"}],"error":null,"id":"curltest"}
-{% endhighlight %}
+```
 
 ## 源码剖析
 listbanned 对应的函数在“rpcserver.h”文件中被引用。
 
-{% highlight C++ %}
+```cpp
 extern UniValue listbanned(const UniValue& params, bool fHelp); // 列出黑名单
-{% endhighlight %}
+```
 
 实现在“rpcnet.cpp”文件中。
 
-{% highlight C++ %}
+```cpp
 UniValue listbanned(const UniValue& params, bool fHelp)
 {
     if (fHelp || params.size() != 0) // 没有参数
@@ -80,7 +80,7 @@ UniValue listbanned(const UniValue& params, bool fHelp)
 
     return bannedAddresses; // 返回禁止列表
 }
-{% endhighlight %}
+```
 
 基本流程：<br>
 1.处理命令帮助和参数个数。<br>
@@ -90,13 +90,13 @@ UniValue listbanned(const UniValue& params, bool fHelp)
 
 类型 banmap_t 的定义在“net.h”文件中。
 
-{% highlight C++ %}
+```cpp
 typedef std::map<CSubNet, CBanEntry> banmap_t; // 禁止列表：子网与禁止条目的映射
-{% endhighlight %}
+```
 
 函数 CNode::GetBanned(banMap) 声明在“net.h”文件的 CNode 类中。
 
-{% highlight C++ %}
+```cpp
 /** Information about a peer */
 class CNode // 关于同辈的信息
 {
@@ -104,21 +104,21 @@ class CNode // 关于同辈的信息
     static void GetBanned(banmap_t &banmap);
     ...
 };
-{% endhighlight %}
+```
 
 实现在“net.cpp”文件中。
 
-{% highlight C++ %}
+```cpp
 void CNode::GetBanned(banmap_t &banMap)
 {
     LOCK(cs_setBanned);
     banMap = setBanned; //create a thread safe copy
 }
-{% endhighlight %}
+```
 
 对象 setBanned 是静态的屏蔽地址列表，所有被禁止的地址会添加到该对象，它定义在“net.h”文件的 CNode 类中。
 
-{% highlight C++ %}
+```cpp
 class CNode // 关于同辈的信息
 {
     ...
@@ -130,14 +130,14 @@ protected:
     static CCriticalSection cs_setBanned;
     ...
 };
-{% endhighlight %}
+```
 
 初始化在“net.cpp”文件中。
 
-{% highlight C++ %}
+```cpp
 banmap_t CNode::setBanned; // 设置屏蔽地址列表
 CCriticalSection CNode::cs_setBanned;
-{% endhighlight %}
+```
 
 ## 参照
 

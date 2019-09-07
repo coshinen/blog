@@ -14,12 +14,12 @@ tags: 区块链 比特币 源码剖析
 
 在 Ubuntu 系统上使用 Git 把比特币官方源码克隆至本地，并切换到 v0.12.1 版本，进入 bitcoin/src 目录，开始比特币源码阅读之旅。
 
-{% highlight shell %}
+```shell
 $ git clone https://github.com/bitcoin/bitcoin.git # 克隆官方源码最新版到本地
 $ cd bitcoin # 进入比特币根目录
 $ git checkout v0.12.1 # 切换到 tag 为 v0.12.1 的版本
 $ cd src # 进入 src 目录，之后未作特殊说明的均以该目录作为比特币源码的根目录
-{% endhighlight %}
+```
 
 ## 源码剖析
 
@@ -27,7 +27,7 @@ $ cd src # 进入 src 目录，之后未作特殊说明的均以该目录作为�
 使用 grep 命令找出 main 函数所在的文件及位置。
 根据比特币核心服务程序 bitcoind，可以确定该程序对应的 main 函数在“bitcoind.cpp”文件中。
 
-{% highlight C++ %}
+```cpp
 int main(int argc, char* argv[]) // 0.程序入口
 {
     SetupEnvironment(); // 1.设置程序运行环境：本地化处理
@@ -37,7 +37,7 @@ int main(int argc, char* argv[]) // 0.程序入口
 
     return (AppInit(argc, argv) ? 0 : 1); // 3.应用程序初始化：初始化并启动
 }
-{% endhighlight %}
+```
 
 下图为比特币核心服务程序启动过程中函数调用的流程：
 

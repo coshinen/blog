@@ -10,9 +10,9 @@ excerpt: $ bitcoin-cli keypoolrefill ( newsize )
 ---
 ## 提示说明
 
-{% highlight shell %}
+```shell
 keypoolrefill ( newsize ) # 填充满密钥池
-{% endhighlight %}
+```
 
 **注：<br>
 1.需要调用 [walletpassphrase](/blog/2018/09/bitcoin-rpc-command-walletpassphrase.html) 设置钱包密码。<br>
@@ -32,7 +32,7 @@ keypoolrefill ( newsize ) # 填充满密钥池
 
 用法一：使用比特币核心服务启动时的 -keypool 选项对应的默认值进行填充，填充大小为默认值 + 1。
 
-{% highlight shell %}
+```shell
 $ bitcoin-cli getinfo | grep keypoolsize
   "keypoolsize": 100
 $ bitcoin-cli getnewaddress
@@ -42,35 +42,35 @@ $ bitcoin-cli getinfo | grep keypoolsize
 $ bitcoin-cli keypoolrefill
 $ bitcoin-cli getinfo | grep keypoolsize
   "keypoolsize": 101
-{% endhighlight %}
+```
 
 用法二：指定大于当前密钥池大小的数字进行填充。
 
-{% highlight shell %}
+```shell
 $ bitcoin-cli getinfo | grep keypoolsize
   "keypoolsize": 101
 $ bitcoin-cli keypoolrefill 200
 $ bitcoin-cli getinfo | grep keypoolsize
   "keypoolsize": 201
-{% endhighlight %}
+```
 
 ### cURL
 
-{% highlight shell %}
+```shell
 $ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "keypoolrefill", "params": [] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
 {"result":null,"error":null,"id":"curltest"}
-{% endhighlight %}
+```
 
 ## 源码剖析
 keypoolrefill 对应的函数在“rpcserver.h”文件中被引用。
 
-{% highlight C++ %}
+```cpp
 extern UniValue keypoolrefill(const UniValue& params, bool fHelp); // 再填充密钥池
-{% endhighlight %}
+```
 
 实现在“rpcwallet.cpp”文件中。
 
-{% highlight C++ %}
+```cpp
 UniValue keypoolrefill(const UniValue& params, bool fHelp)
 {
     if (!EnsureWalletIsAvailable(fHelp)) // 确保钱包当前可用
@@ -106,7 +106,7 @@ UniValue keypoolrefill(const UniValue& params, bool fHelp)
 
     return NullUniValue; // 返回空值
 }
-{% endhighlight %}
+```
 
 基本流程：<br>
 1.确保钱包当前可用（已初始化完成）。<br>
@@ -120,17 +120,17 @@ UniValue keypoolrefill(const UniValue& params, bool fHelp)
 第五步，调用 EnsureWalletIsUnlocked() 函数确保当前钱包未加密，若已加密，先使用 [wallepassphrase](/blog/2018/05/bitcoin-rpc-command-walletpassphrase.html) 解密钱包。
 该函数定义在“rpcwallet.cpp”文件中。
 
-{% highlight C++ %}
+```cpp
 void EnsureWalletIsUnlocked()
 {
     if (pwalletMain->IsLocked()) // 若钱包加密
         throw JSONRPCError(RPC_WALLET_UNLOCK_NEEDED, "Error: Please enter the wallet passphrase with walletpassphrase first."); // 抛出错误信息
 }
-{% endhighlight %}
+```
 
 第六步，调用 pwalletMain->TopUpKeyPool(kpSize) 函数按指定大小填充密钥池，该函数声明在“wallet.h”文件的 CWallet 类中。
 
-{% highlight C++ %}
+```cpp
 /** 
  * A CWallet is an extension of a keystore, which also maintains a set of transactions and balances,
  * and provides the ability to create new transactions.
@@ -141,11 +141,11 @@ class CWallet : public CCryptoKeyStore, public CValidationInterface
     bool TopUpKeyPool(unsigned int kpSize = 0); // 填充满密钥池
     ...
 };
-{% endhighlight %}
+```
 
 实现在“wallet.cpp”文件中。
 
-{% highlight C++ %}
+```cpp
 bool CWallet::TopUpKeyPool(unsigned int kpSize)
 {
     {
@@ -176,11 +176,11 @@ bool CWallet::TopUpKeyPool(unsigned int kpSize)
     }
     return true;
 }
-{% endhighlight %}
+```
 
 第七步，调用 pwalletMain->GetKeyPoolSize() 函数获取当前即填充后密钥池的大小，该函数定义在“wallet.h”文件的 CWallet 类中。
 
-{% highlight C++ %}
+```cpp
 /** 
  * A CWallet is an extension of a keystore, which also maintains a set of transactions and balances,
  * and provides the ability to create new transactions.
@@ -197,7 +197,7 @@ class CWallet : public CCryptoKeyStore, public CValidationInterface
     }
     ...
 };
-{% endhighlight %}
+```
 
 ## 参照
 

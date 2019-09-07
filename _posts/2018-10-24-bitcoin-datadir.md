@@ -41,7 +41,7 @@ tags: 区块链 比特币数据目录 译文
 
 数据目录默认的位置硬编在源码“util.cpp”文件的 GetDefaultDataDir() 函数中。
 
-{% highlight C++ %}
+```cpp
 boost::filesystem::path GetDefaultDataDir()
 {
     namespace fs = boost::filesystem;
@@ -70,7 +70,7 @@ boost::filesystem::path GetDefaultDataDir()
 #endif
 #endif
 }
-{% endhighlight %}
+```
 
 ## 目录结构/层级
 

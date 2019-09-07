@@ -15,7 +15,7 @@ tags: 区块链 比特币 源码剖析
 <p id="Step05-ref"></p>
 3.11.5.第五步，验证钱包数据库的完整性。这部分代码实现在“init.cpp”文件的 AppInit2(...) 函数中。
 
-{% highlight C++ %}
+```cpp
 bool AppInit2(boost::thread_group& threadGroup, CScheduler& scheduler) // 3.11.程序初始化，共 12 步
 {
     ...
@@ -40,12 +40,12 @@ bool AppInit2(boost::thread_group& threadGroup, CScheduler& scheduler) // 3.11.�
 #endif // ENABLE_WALLET
     ...
 };
-{% endhighlight %}
+```
 
 这里调用了 CWallet::Verify(strWalletFile, warningString, errorString) 来验证会恢复钱包数据库，
 该函数声明在“wallet/wallet.h”文件的 CWallet 类中。
 
-{% highlight C++ %}
+```cpp
 /** 
  * A CWallet is an extension of a keystore, which also maintains a set of transactions and balances,
  * and provides the ability to create new transactions.
@@ -57,12 +57,12 @@ class CWallet : public CCryptoKeyStore, public CValidationInterface
     static bool Verify(const std::string& walletFile, std::string& warningString, std::string& errorString);
     ...
 };
-{% endhighlight %}
+```
 
 因为是静态成员函数，不与任何类对象关联（只与所在类相关），所以只能通过“类名::静态成员函数名”的方式调用。<br>
 实现在“wallet/wallet.cpp”文件中，入参为：钱包文件位置，待获取的警告信息，待获取的错误信息。
 
-{% highlight C++ %}
+```cpp
 bool CWallet::Verify(const string& walletFile, string& warningString, string& errorString)
 {
     if (!bitdb.Open(GetDataDir())) // 1.若打开数据库失败
@@ -109,7 +109,7 @@ bool CWallet::Verify(const string& walletFile, string& warningString, string& er
     
     return true; // 4.验证成功，返回 true
 }
-{% endhighlight %}
+```
 
 1.若打开数据库文件失败，尝试重命名后再次打开，得到钱包数据库环境对象。<br>
 2.若 -salvagewallet 选项开启，则恢复可读的密钥对。<br>
@@ -119,7 +119,7 @@ bool CWallet::Verify(const string& walletFile, string& warningString, string& er
 2.调用 CWalletDB::Recover(bitdb, walletFile, true) 尝试恢复钱包可读的密钥对，
 该函数声明在“wallet/walletdb.h”文件的 CWalletDB 类中。
 
-{% highlight C++ %}
+```cpp
 /** Access to the wallet database (wallet.dat) */ // 访问钱包数据库（wallet.dat）
 class CWalletDB : public CDB // 钱包数据库类
 {
@@ -127,11 +127,11 @@ class CWalletDB : public CDB // 钱包数据库类
     static bool Recover(CDBEnv& dbenv, const std::string& filename, bool fOnlyKeys); // 恢复钱包可读的密钥对
     ...
 };
-{% endhighlight %}
+```
 
 实现在“wallet/walletdb.cpp”文件中，入参为：钱包数据库环境对象，钱包文件名，true。
 
-{% highlight C++ %}
+```cpp
 //
 // Try to (very carefully!) recover wallet.dat if there is a problem.
 // // 如果发生问题，尝试（非常小心！）恢复 wallet.dat。
@@ -215,7 +215,7 @@ bool CWalletDB::Recover(CDBEnv& dbenv, const std::string& filename, bool fOnlyKe
 
     return fSuccess; // 成功返回 true
 }
-{% endhighlight %}
+```
 
 2.1.重命名钱包文件。<br>
 2.2.抢救钱包数据，并获取抢救的数据。<br>
@@ -226,7 +226,7 @@ bool CWalletDB::Recover(CDBEnv& dbenv, const std::string& filename, bool fOnlyKe
 2.2.调用 dbenv.Salvage(newFilename, true, salvagedData) 抢救钱包，并获取恢复的数据，
 该函数声明在“wallet/db.h”文件的 CDBEnv 类中。
 
-{% highlight C++ %}
+```cpp
 class CDBEnv // 数据库环境（钱包）
 {
     ...
@@ -241,11 +241,11 @@ class CDBEnv // 数据库环境（钱包）
     bool Salvage(const std::string& strFile, bool fAggressive, std::vector<KeyValPair>& vResult); // 抢救钱包并获取抢救数据
     ...
 };
-{% endhighlight %}
+```
 
 实现在“wallet/db.cpp”文件中，入参为：钱包文件名，true，待获取的恢复的数据。
 
-{% highlight C++ %}
+```cpp
 bool CDBEnv::Salvage(const std::string& strFile, bool fAggressive, std::vector<CDBEnv::KeyValPair>& vResult)
 {
     LOCK(cs_db); // 数据库上锁
@@ -294,18 +294,18 @@ bool CDBEnv::Salvage(const std::string& strFile, bool fAggressive, std::vector<C
 
     return (result == 0); // 若抢救成功，返回 false
 }
-{% endhighlight %}
+```
 
-{% highlight C++ %}
-{% endhighlight %}
+```cpp
+```
 
-{% highlight C++ %}
-{% endhighlight %}
+```cpp
+```
 
 3.调用 bitdb.Verify(walletFile, CWalletDB::Recover) 验证数据库文件，
 该函数声明在“wallet/db.h”文件的 CDBEnv 类中。
 
-{% highlight C++ %}
+```cpp
 class CDBEnv // 数据库环境（钱包）
 {
     ...
@@ -321,11 +321,11 @@ class CDBEnv // 数据库环境（钱包）
     VerifyResult Verify(const std::string& strFile, bool (*recoverFunc)(CDBEnv& dbenv, const std::string& strFile)); // 验证钱包数据库
     ...
 };
-{% endhighlight %}
+```
 
 实现在“wallet/db.cpp”文件中，入参为：钱包文件名，恢复钱包函数入口。
 
-{% highlight C++ %}
+```cpp
 CDBEnv::VerifyResult CDBEnv::Verify(const std::string& strFile, bool (*recoverFunc)(CDBEnv& dbenv, const std::string& strFile))
 {
     LOCK(cs_db); // 1.临界资源，先上锁保护
@@ -342,7 +342,7 @@ CDBEnv::VerifyResult CDBEnv::Verify(const std::string& strFile, bool (*recoverFu
     bool fRecovered = (*recoverFunc)(*this, strFile); // 恢复文件
     return (fRecovered ? RECOVER_OK : RECOVER_FAIL); // 返回恢复的结果
 }
-{% endhighlight %}
+```
 
 3.1.数据库上锁。<br>
 3.2.验证该文件未打开过。<br>

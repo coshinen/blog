@@ -10,9 +10,9 @@ excerpt: $ bitcoin-cli estimatesmartpriority nblocks
 ---
 ## 提示说明
 
-{% highlight shell %}
+```shell
 estimatesmartpriority nblocks # 估计一笔 0 交易费的交易在 nblocks 个区块开始确认的大致优先级，如果可能则返回估计有效的区块数
-{% endhighlight %}
+```
 
 **警告：该接口不稳定且可能消失或改变！**
 
@@ -20,20 +20,20 @@ estimatesmartpriority nblocks # 估计一笔 0 交易费的交易在 nblocks 个
 1. nblocks（数字）区块数。
 
 结果：
-{% highlight shell %}
+```shell
 {
   "priority" : x.x,    （数字）估算的优先级
   "blocks" : n         （数字）估计被找到的区块数
 }
-{% endhighlight %}
+```
 
 **注：如果没有足够的交易和区块用来做估算任意数量的区块，则返回一个负值。<br>
 但是如果交易内存池拒绝费用已设置，则会返回 1e9 * MAX_MONEY。**
 变量 MAX_MONEY 定义在“amount.h”文件中。
 
-{% highlight C++ %}
+```cpp
 static const CAmount MAX_MONEY = 21000000 * COIN; // 2100 万 BTC
-{% endhighlight %}
+```
 
 ## 用法示例
 
@@ -41,31 +41,31 @@ static const CAmount MAX_MONEY = 21000000 * COIN; // 2100 万 BTC
 
 估算交易经 6 个区块确认所需的优先级，并获取估算时找到的区块数。
 
-{% highlight shell %}
+```shell
 $ bitcoin-cli estimatesmartpriority 6
 {
   "priority": -1,
   "blocks": 25
 }
-{% endhighlight %}
+```
 
 ### cURL
 
-{% highlight shell %}
+```shell
 $ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "estimatesmartpriority", "params": [6] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
 {"result":{"priority":-1,"blocks":25},"error":null,"id":"curltest"}
-{% endhighlight %}
+```
 
 ## 源码剖析
 estimatesmartpriority 对应的函数在“rpcserver.h”文件中被引用。
 
-{% highlight C++ %}
+```cpp
 extern UniValue estimatesmartpriority(const UniValue& params, bool fHelp); // 智能估计交易优先级
-{% endhighlight %}
+```
 
 实现在“rpcmining.cpp”文件中。
 
-{% highlight C++ %}
+```cpp
 UniValue estimatesmartpriority(const UniValue& params, bool fHelp)
 {
     if (fHelp || params.size() != 1) // 参数必须为 1 个
@@ -101,7 +101,7 @@ UniValue estimatesmartpriority(const UniValue& params, bool fHelp)
     result.push_back(Pair("blocks", answerFound)); // 有效区块数
     return result; // 返回结果集
 }
-{% endhighlight %}
+```
 
 基本流程：
 1. 处理命令帮助和参数个数。

@@ -15,7 +15,7 @@ tags: 区块链 比特币 源码剖析
 <p id="AppInit-ref"></p>
 3.调用 AppInit(argc, argv) 函数初始化并启动应用程序。该函数定义在“bitcoind.cpp”文件中 main 函数的上面，入参为 main 函数的入参：参数个数，参数。
 
-{% highlight C++ %}
+```cpp
 //////////////////////////////////////////////////////////////////////////////
 //
 // Start // 启动
@@ -34,7 +34,7 @@ bool AppInit(int argc, char* argv[]) // 3.0.应用程序初始化
     ParseParameters(argc, argv); // 3.1.解析命令行（控制台传入）参数
     ...
 };
-{% endhighlight %}
+```
 
 首先创建了一个空的线程组对象，用于管理多线程，内部还未创建线程，子线程的创建在后面进行，这里不再赘述，详见 [Chapter 44. Boost.Thread - Creating and Managing Threads](https://theboostcpplibraries.com/boost.thread-management)。<br>
 接着创建了一个调度器对象，用于定时运行后台任务，具体用途也在后面进行描述。
@@ -42,13 +42,13 @@ bool AppInit(int argc, char* argv[]) // 3.0.应用程序初始化
 <p id="ParseParameters-ref"></p>
 3.1.调用 ParseParameters(argc, argv) 函数解析命令行参数，该函数声明在“util.h”文件中。
 
-{% highlight C++ %}
+```cpp
 void ParseParameters(int argc, const char*const argv[]); // 解析命令行参数（启动选项）
-{% endhighlight %}
+```
 
 实现在“util.cpp”文件中，入参为 main 函数入参：参数个数，指向参数的二级指针（指针数组）。
 
-{% highlight C++ %}
+```cpp
 map<string, string> mapArgs; // 启动选项（命令行参数，配置文件）单值映射列表，map<选项名，选项值>
 map<string, vector<string> > mapMultiArgs; // 启动选项多值映射列表，map<选项名，vector<选项值> >
 ...
@@ -104,7 +104,7 @@ void ParseParameters(int argc, const char* const argv[]) // 3.1.0.解析命令�
         mapMultiArgs[str].push_back(strValue); // 加入启动选项多值映射列表
     } // 循环，直到所有命令行参数解析完毕
 }
-{% endhighlight %}
+```
 
 1.清空 2 个全局的启动选项映射列表对象。<br>
 2.从第 1 个命令行参数开始，遍历命令行参数指针数组。<br>
@@ -117,7 +117,7 @@ void ParseParameters(int argc, const char* const argv[]) // 3.1.0.解析命令�
 <p id="HelpVersionInfo-ref"></p>
 3.2.在处理数据目录前，先处理帮助和版本信息，实现在“bitcoind.cpp”文件的 AppInit(argc, argv) 函数中。
 
-{% highlight C++ %}
+```cpp
 bool AppInit(int argc, char* argv[]) // 3.0.应用程序初始化
 {
     ...
@@ -143,7 +143,7 @@ bool AppInit(int argc, char* argv[]) // 3.0.应用程序初始化
     }
     ...
 };
-{% endhighlight %}
+```
 
 若启动选项单值映射列表中含有 "-?"、"-h"、"-help" 和 "-version" 中的一项，则显示帮助或版本信息。
 **注意此时配置文件还未读取，只解析了命令函参数，所以以上命令只有在控制台输入（作为命令行参数）时才有效。**
@@ -156,13 +156,13 @@ bool AppInit(int argc, char* argv[]) // 3.0.应用程序初始化
 
 1.调用 FormatFullVersion() 函数获取版本信息，该函数声明在“clientversion.h”文件中。
 
-{% highlight C++ %}
+```cpp
 std::string FormatFullVersion(); // 格式化全版本信息
-{% endhighlight %}
+```
 
 实现在“clientversion.cpp”文件中，没有入参。
 
-{% highlight C++ %}
+```cpp
 /**
  * Client version number
  */ // 客户端版本号
@@ -221,12 +221,12 @@ std::string FormatFullVersion()
 {
     return CLIENT_BUILD; // 返回客户端构建版本
 }
-{% endhighlight %}
+```
 
 宏定义 BUILD_SUFFIX 定义在“obj/build.h”文件中，这个文件是构建比特币过程中生成的。<br>
 宏替换函数 DO_STRINGIZE(...) 和版本号的宏定义在“clientversion.h”文件中。
 
-{% highlight C++ %}
+```cpp
 /**
  * client versioning and copyright year // 客户端版本和版权年份
  */
@@ -243,7 +243,7 @@ std::string FormatFullVersion()
  */ // 在执行 X 宏替换后把参数 X 转换为字符串。不要把这些合并为一个宏
 #define STRINGIZE(X) DO_STRINGIZE(X)
 #define DO_STRINGIZE(X) #X
-{% endhighlight %}
+```
 
 #X 中 # 的作用就是把后面跟着的 X 转换为字符串。
 
@@ -251,7 +251,7 @@ std::string FormatFullVersion()
 2.2.调用 HelpMessage(HMM_BITCOIND) 函数获取帮助信息。<br>
 它们均声明在“init.h”文件中。
 
-{% highlight C++ %}
+```cpp
 /** The help message mode determines what help message to show */ // 确定显示什么帮助信息的帮助信息模式
 enum HelpMessageMode { // 帮助信息模式枚举
     HMM_BITCOIND, // 0
@@ -262,11 +262,11 @@ enum HelpMessageMode { // 帮助信息模式枚举
 std::string HelpMessage(HelpMessageMode mode);
 /** Returns licensing information (for -version) */ // 返回许可证信息（用于 -version）
 std::string LicenseInfo();
-{% endhighlight %}
+```
 
 实现在“init.cpp”文件中，LicenseInfo() 没有入参，HelpMessage(...) 入参为 HMM_BITCOIND。
 
-{% highlight C++ %}
+```cpp
 std::string HelpMessage(HelpMessageMode mode)
 {
     const bool showDebug = GetBoolArg("-help-debug", false); // 调试选项，默认关闭
@@ -297,7 +297,7 @@ std::string LicenseInfo() // 许可证信息
            FormatParagraph(_("This product includes software developed by the OpenSSL Project for use in the OpenSSL Toolkit <https://www.openssl.org/> and cryptographic software written by Eric Young and UPnP software written by Thomas Bernard.")) +
            "\n"; // 返回格式化的文本信息
 }
-{% endhighlight %}
+```
 
 未完待续...<br>
 请看下一篇[比特币源码剖析（三）](/blog/2018/06/bitcoin-source-anatomy-03.html)。

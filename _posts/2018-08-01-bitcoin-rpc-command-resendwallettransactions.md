@@ -10,9 +10,9 @@ hidden: true
 ---
 ## 提示说明
 
-{% highlight shell %}
+```shell
 resendwallettransactions # 立即重新广播未确认的（交易内存池中）钱包交易到全部对端
-{% endhighlight %}
+```
 
 **仅用于测试；钱包代码会周期性的自动重新广播交易。**
 
@@ -24,7 +24,7 @@ resendwallettransactions # 立即重新广播未确认的（交易内存池中�
 
 在无连接的情况下，新建 2 笔交易，并确认它们进入内存池，此时建立连接，连接建立后我们在对端节点查看该交易并未被广播，回到该节点重新发送钱包交易，可在对端节点查看到交易以被广播。
 
-{% highlight shell %}
+```shell
 $ bitcoin-cli getconnectioncount
 0
 $ bitcoin-cli getnewaddress
@@ -54,25 +54,25 @@ $ bitcoin-cli resendwallettransactions
   "6e54ab6ac385e19fa4eea08fa985db00512a7084c83a4419179240ce17ee1244", 
   "58ae3bdc2d76457e3e536e7bac3238383b9f1e048feb86f5164aab39ceeac853"
 ]
-{% endhighlight %}
+```
 
 ### cURL
 
-{% highlight shell %}
+```shell
 $ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "resendwallettransactions", "params": [] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
 {"result":{"6e54ab6ac385e19fa4eea08fa985db00512a7084c83a4419179240ce17ee1244", "58ae3bdc2d76457e3e536e7bac3238383b9f1e048feb86f5164aab39ceeac853"},"error":null,"id":"curltest"}
-{% endhighlight %}
+```
 
 ## 源码剖析
 resendwallettransactions 对应的函数在“rpcserver.h”文件中被引用。
 
-{% highlight C++ %}
+```cpp
 extern UniValue resendwallettransactions(const UniValue& params, bool fHelp); // 重新发送钱包交易
-{% endhighlight %}
+```
 
 实现在“wallet/rpcwallet.cpp”文件中。
 
-{% highlight C++ %}
+```cpp
 UniValue resendwallettransactions(const UniValue& params, bool fHelp)
 {
     if (!EnsureWalletIsAvailable(fHelp)) // 确保当前钱包可用
@@ -97,7 +97,7 @@ UniValue resendwallettransactions(const UniValue& params, bool fHelp)
     }
     return result; // 返回结果
 }
-{% endhighlight %}
+```
 
 基本流程：<br>
 1.确保当前钱包可用。<br>
@@ -110,7 +110,7 @@ UniValue resendwallettransactions(const UniValue& params, bool fHelp)
 第四步，调用 pwalletMain->ResendWalletTransactionsBefore(GetTime() 重新广播指定钱包交易，
 该函数定义在“wallet/wallet.cpp”文件中。
 
-{% highlight C++ %}
+```cpp
 std::vector<uint256> CWallet::ResendWalletTransactionsBefore(int64_t nTime)
 {
     std::vector<uint256> result; // 交易索引列表
@@ -134,11 +134,11 @@ std::vector<uint256> CWallet::ResendWalletTransactionsBefore(int64_t nTime)
     }
     return result; // 返回发送的交易索引列表
 }
-{% endhighlight %}
+```
 
 调用 wtx.RelayWalletTransaction() 中继交易，该函数定义在“walle/wallet.cpp”文件中。
 
-{% highlight C++ %}
+```cpp
 bool CWalletTx::RelayWalletTransaction()
 {
     assert(pwallet->GetBroadcastTransactions()); // 验证钱包是否广播交易
@@ -152,7 +152,7 @@ bool CWalletTx::RelayWalletTransaction()
     }
     return false;
 }
-{% endhighlight %}
+```
 
 相关函数调用见 [sendrawtransaction](/blog/2018/07/bitcoin-rpc-command-sendrawtransaction.html)。
 

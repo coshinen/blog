@@ -10,9 +10,9 @@ excerpt: $ bitcoin-cli fundrawtransaction "hexstring" includeWatching
 ---
 ## 提示说明
 
-{% highlight shell %}
+```shell
 fundrawtransaction "hexstring" includeWatching # 把输入添加到交易中，直到它有足够的满足其输出的金额
-{% endhighlight %}
+```
 
 **此操作不会修改现存的输入，并且会添加一个找零输出到输出集中。<br>
 注：因为输入/输出已被添加，所以签名后的输入可能需要在完成此操作后重签。<br>
@@ -26,14 +26,14 @@ watch-only 目前只支持 P2PKH，多签，和 P2SH 版本。**
 2.includeWatching（布尔型，可选，默认为 false）选择 watch-only 的输入。
 
 结果：<br>
-{% highlight shell %}
+```shell
 {
   "hex":       "value", （字符串）产生的原始交易（16 进制编码的字符串）
   "fee":       n,         （数字）由此产生的交易费
   "changepos": n          （数字）添加的找零输出的位置，或为 -1
 }
 "hex"             
-{% endhighlight %}
+```
 
 ## 用法示例
 
@@ -44,7 +44,7 @@ watch-only 目前只支持 P2PKH，多签，和 P2SH 版本。**
 签名交易，<br>
 发送交易。<br>
 
-{% highlight shell %}
+```shell
 $ bitcoin-cli createrawtransaction "[]" "{\"1Mcg7MDBD38sSScsX3USbsCnkcMbPnLyTV\":0.01}"
 01000000000140420f00000000001976a914e221b8a504199bec7c5fe8081edd011c3653118288ac00000000
 $ bitcoin-cli decoderawtransaction 01000000000140420f00000000001976a914e221b8a504199bec7c5fe8081edd011c3653118288ac00000000
@@ -177,27 +177,27 @@ $ bitcoin-cli getrawtransaction cd92e2a951d5624355fff82288d28cd4d213a711f7ddb10f
     }
   ]
 }
-{% endhighlight %}
+```
 
 这里可以看到签名前后交易大小的变化，从 119 到 226 增加了 107 个字节。
 
 ### cURL
 
-{% highlight shell %}
+```shell
 $ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "fundrawtransaction", "params": ["01000000000140420f00000000001976a914e221b8a504199bec7c5fe8081edd011c3653118288ac00000000"] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
 {"result":{"hex":"010000000153c8eace39ab4a16f586eb8f041e9f3b383832ac7b6e533e7e45762ddc3bae580100000000feffffff0240420f00000000001976a914e221b8a504199bec7c5fe8081edd011c3653118288ac186edc0b000000001976a91441068d02c7c981b7a7ac4f4c2f28b480a76a66c188ac00000000","changepos":1,"fee":0.00004520},"error":null,"id":"curltest"}
-{% endhighlight %}
+```
 
 ## 源码剖析
 fundrawtransaction 对应的函数在“rpcserver.h”文件中被引用。
 
-{% highlight C++ %}
+```cpp
 extern UniValue fundrawtransaction(const UniValue& params, bool fHelp); // 资助原始交易
-{% endhighlight %}
+```
 
 实现在“wallet/rpcwallet.cpp”文件中。
 
-{% highlight C++ %}
+```cpp
 UniValue fundrawtransaction(const UniValue& params, bool fHelp)
 {
     if (!EnsureWalletIsAvailable(fHelp)) // 1.确保当前钱包可用
@@ -263,7 +263,7 @@ UniValue fundrawtransaction(const UniValue& params, bool fHelp)
 
     return result; // 返回结果集
 }
-{% endhighlight %}
+```
 
 基本流程：<br>
 1.确保当前钱包可用。<br>
@@ -275,7 +275,7 @@ UniValue fundrawtransaction(const UniValue& params, bool fHelp)
 4.调用 pwalletMain->FundTransaction(tx, nFee, nChangePos, strFailReason, includeWatching) 函数资助指定交易，
 它声明在“wallet/wallet.h”文件的 CWallet 类中。
 
-{% highlight C++ %}
+```cpp
 /** 
  * A CWallet is an extension of a keystore, which also maintains a set of transactions and balances,
  * and provides the ability to create new transactions.
@@ -290,11 +290,11 @@ class CWallet : public CCryptoKeyStore, public CValidationInterface
     bool FundTransaction(CMutableTransaction& tx, CAmount& nFeeRet, int& nChangePosRet, std::string& strFailReason, bool includeWatching);
     ...
 };
-{% endhighlight %}
+```
 
 定义在“wallet/wallet.cpp”文件中。入参为：可变版本的交易，待获取的交易费，改变位置，失败原因，是否包含 watch-only 地址标志。
 
-{% highlight C++ %}
+```cpp
 bool CWallet::FundTransaction(CMutableTransaction& tx, CAmount &nFeeRet, int& nChangePosRet, std::string& strFailReason, bool includeWatching)
 {
     vector<CRecipient> vecSend; // 1.发送列表
@@ -338,7 +338,7 @@ bool CWallet::FundTransaction(CMutableTransaction& tx, CAmount &nFeeRet, int& nC
 
     return true; // 成功返回 true
 }
-{% endhighlight %}
+```
 
 4.1.通过原交易输出列表构建发送（接收者）列表。<br>
 4.2.通过原交易输入列表构建币选择/控制对象。<br>

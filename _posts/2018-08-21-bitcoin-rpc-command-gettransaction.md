@@ -10,16 +10,16 @@ excerpt: $ bitcoin-cli gettransaction "txid" ( includeWatchonly )
 ---
 ## 提示说明
 
-{% highlight shell %}
+```shell
 gettransaction "txid" ( includeWatchonly ) # 获取关于钱包内交易 txid 的详细信息
-{% endhighlight %}
+```
 
 参数：<br>
 1.txid（字符串，必备）交易索引。<br>
 2.includeWatchonly（布尔型，可选，默认为 false）在余额计算和 details[] 是否包含 watchonly 地址。
 
 结果：<br>
-{% highlight shell %}
+```shell
 {
   "amount" : x.xxx,        （数字）以 BTC 为单位的交易金额
   "confirmations" : n,     （数字）确认数
@@ -44,7 +44,7 @@ gettransaction "txid" ( includeWatchonly ) # 获取关于钱包内交易 txid �
   ],
   "hex" : "data"         （字符串）交易原始数据
 }
-{% endhighlight %}
+```
 
 ## 用法示例
 
@@ -53,7 +53,7 @@ gettransaction "txid" ( includeWatchonly ) # 获取关于钱包内交易 txid �
 用法一：获取指定交易的详细信息。<br>
 先使用 [listtransactions](/blog/2018/09/bitcoin-rpc-command-listtransactions.html) 获取钱包交易。
 
-{% highlight shell %}
+```shell
 $ bitcoin-cli listtransactions
 [
   ...
@@ -104,33 +104,33 @@ $ bitcoin-cli gettransaction 705493d021973fd635c9e24880de70c4b002ba3cbd066783d23
   ],
   "hex": "0100000002b03499f612ae5dbea794c5bcddddfb852544b9d9d457f1f84a94fa3002318b0f000000006b483045022100d48191b7f76da6e834c44b83328712ba9b7b7c54c6791331d2452e22d68e59ce022063c656e21e208712cf50ce66085d12e2ed4852dea52f5d4e18aef96932cb212d01210331fcac9ec8ba6114af93b70ea597ee3b7b1ca0fe8c8a2c9109b94e69e25216b5feffffffb03499f612ae5dbea794c5bcddddfb852544b9d9d457f1f84a94fa3002318b0f010000006b483045022100f7a9ded4489a74c771adeddf09a8e23b44d2dd4dd9eeb76626a6a3419f35565c022058478e76ae77ccda4afd3b0e46e77939729c5f12237604697103f7cdc8f1560a012103f32793907cbd21775461028c9b9d0a0947b953d28e500d24b03bf001fbd5dcf6feffffff02dcf91500000000001976a91489cb30247007174e3eb0a33cfcad743494bc9f6a88ac00e40b54020000001976a914f5db4caea89179c63d8870ee2d0ad1d5ebf1235a88ac25880000"
 }
-{% endhighlight %}
+```
 
 用法二：获取包含 watch-only 地址交易的详细信息。
 
 暂无。
 
-{% highlight shell %}
+```shell
 $ bitcoin-cli gettransaction "txid" true
-{% endhighlight %}
+```
 
 ### cURL
 
-{% highlight shell %}
+```shell
 $ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "gettransaction", "params": ["705493d021973fd635c9e24880de70c4b002ba3cbd066783d23bce316fe00a29"] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
 {"result":{"amount":-100.00000000,"fee":-0.00009080,"confirmations":1128,"blockhash":"0000037a1b06a77e7fc0c8812e6e3200b137b4415fb8bcd1c603aa3dbc9c62b1","blockindex":1,"blocktime":1530158339,"txid":"705493d021973fd635c9e24880de70c4b002ba3cbd066783d23bce316fe00a29","walletconflicts":[],"time":1530158343,"timereceived":1530158343,"bip125-replaceable":"no","details":[{"account":"","address":"1PQyGCTohHc7y3MvKjLWk7NZQGyL9Wd6je","category":"send","amount":-100.00000000,"vout":1,"fee":-0.00009080,"abandoned":false}],"hex":"0100000002b03499f612ae5dbea794c5bcddddfb852544b9d9d457f1f84a94fa3002318b0f000000006b483045022100d48191b7f76da6e834c44b83328712ba9b7b7c54c6791331d2452e22d68e59ce022063c656e21e208712cf50ce66085d12e2ed4852dea52f5d4e18aef96932cb212d01210331fcac9ec8ba6114af93b70ea597ee3b7b1ca0fe8c8a2c9109b94e69e25216b5feffffffb03499f612ae5dbea794c5bcddddfb852544b9d9d457f1f84a94fa3002318b0f010000006b483045022100f7a9ded4489a74c771adeddf09a8e23b44d2dd4dd9eeb76626a6a3419f35565c022058478e76ae77ccda4afd3b0e46e77939729c5f12237604697103f7cdc8f1560a012103f32793907cbd21775461028c9b9d0a0947b953d28e500d24b03bf001fbd5dcf6feffffff02dcf91500000000001976a91489cb30247007174e3eb0a33cfcad743494bc9f6a88ac00e40b54020000001976a914f5db4caea89179c63d8870ee2d0ad1d5ebf1235a88ac25880000"},"error":null,"id":"curltest"}
-{% endhighlight %}
+```
 
 ## 源码剖析
 gettransaction 对应的函数在“rpcserver.h”文件中被引用。
 
-{% highlight C++ %}
+```cpp
 extern UniValue gettransaction(const UniValue& params, bool fHelp); // 获取交易详细信息
-{% endhighlight %}
+```
 
 实现在“wallet/rpcwallet.cpp”文件中。
 
-{% highlight C++ %}
+```cpp
 UniValue gettransaction(const UniValue& params, bool fHelp)
 {
     if (!EnsureWalletIsAvailable(fHelp)) // 确保当前钱包可用
@@ -210,7 +210,7 @@ UniValue gettransaction(const UniValue& params, bool fHelp)
 
     return entry; // 返回结果对象
 }
-{% endhighlight %}
+```
 
 基本流程：<br>
 1.确保钱包当前可用（已初始化完成）。<br>
@@ -223,7 +223,7 @@ UniValue gettransaction(const UniValue& params, bool fHelp)
 第六步，调用 WalletTxToJSON(wtx, entry) 函数把钱包交易信息转换为 JSON 格式并加入结果集 entry，
 该函数定义在“wallet/rpcwallet.cpp”文件中。
 
-{% highlight C++ %}
+```cpp
 void WalletTxToJSON(const CWalletTx& wtx, UniValue& entry)
 {
     int confirms = wtx.GetDepthInMainChain();
@@ -266,7 +266,7 @@ void WalletTxToJSON(const CWalletTx& wtx, UniValue& entry)
     BOOST_FOREACH(const PAIRTYPE(string,string)& item, wtx.mapValue)
         entry.push_back(Pair(item.first, item.second));
 }
-{% endhighlight %}
+```
 
 ## 参照
 

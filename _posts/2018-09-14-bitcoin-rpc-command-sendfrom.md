@@ -10,9 +10,9 @@ excerpt: $ bitcoin-cli sendfrom "fromaccount" "tobitcoinaddress" amount ( mincon
 ---
 ## 提示说明
 
-{% highlight shell %}
+```shell
 sendfrom "fromaccount" "tobitcoinaddress" amount ( minconf "comment" "comment-to" ) # （已过时）从一个账户发送金额到一个比特币地址
-{% endhighlight %}
+```
 
 **使用 [sendtoaddress](/blog/2018/09/bitcoin-rpc-command-sendtoaddress.html) 替代该命令。<br>
 使用该命令前需要调用 [walletpassphrase](/blog/2018/09/bitcoin-rpc-command-walletpassphrase.html) 解锁钱包。**
@@ -36,35 +36,35 @@ sendfrom "fromaccount" "tobitcoinaddress" amount ( minconf "comment" "comment-to
 
 用法一：从默认账户发送 0.01 BTC 到指定地址，资金必须至少 1 次确认。
 
-{% highlight shell %}
+```shell
 $ bitcoin-cli sendfrom "" 1M72Sfpbz1BPpXFHz9m3CdqATR44Jvaydd 0.01
 5ef2e350852ac84977fa2bff1a980bb7095046066d17b3a383f3ccd6c091cf1b
-{% endhighlight %}
+```
 
 用法二：从账户 tabby 发送 0.01 BTC 到指定地址，资金必须至少 6 次确认，并增加备注。
 
-{% highlight shell %}
+```shell
 $ bitcoin-cli sendfrom "tabby" 1M72Sfpbz1BPpXFHz9m3CdqATR44Jvaydd 0.01 6 "donation" "seans outpost"
 2165d605c35472ddb84fbacb51b6d7c39d412b58493ef7209503003ad6b79be7
-{% endhighlight %}
+```
 
 ### cURL
 
-{% highlight shell %}
+```shell
 $ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "sendfrom", "params": ["tabby", "1M72Sfpbz1BPpXFHz9m3CdqATR44Jvaydd", 0.01, 6, "donation", "seans outpost"] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
 {"result":"2165d605c35472ddb84fbacb51b6d7c39d412b58493ef7209503003ad6b79be7","error":null,"id":"curltest"}
-{% endhighlight %}
+```
 
 ## 源码剖析
 sendfrom 对应的函数在“rpcserver.h”文件中被引用。
 
-{% highlight C++ %}
+```cpp
 extern UniValue sendfrom(const UniValue& params, bool fHelp); // 从指定账户发送金额
-{% endhighlight %}
+```
 
 实现在“wallet/rpcwallet.cpp”文件中。
 
-{% highlight C++ %}
+```cpp
 UniValue sendfrom(const UniValue& params, bool fHelp)
 {
     if (!EnsureWalletIsAvailable(fHelp)) // 确保当前钱包可用
@@ -127,7 +127,7 @@ UniValue sendfrom(const UniValue& params, bool fHelp)
 
     return wtx.GetHash().GetHex(); // 获取交易哈希，转换为 16 进制并返回
 }
-{% endhighlight %}
+```
 
 基本流程：
 1. 确保钱包当前可用（已初始化完成）。

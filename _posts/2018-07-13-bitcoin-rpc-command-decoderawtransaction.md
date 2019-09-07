@@ -10,15 +10,15 @@ excerpt: $ bitcoin-cli decoderawtransaction "hexstring"
 ---
 ## 提示说明
 
-{% highlight shell %}
+```shell
 decoderawtransaction "hexstring" # 获取一个表示序列化的 16 进制编码交易的 JSON 对象
-{% endhighlight %}
+```
 
 参数：
 1. hex（字符串，必备）交易的 16 进制字符串。
 
 结果：<br>
-{% highlight shell %}
+```shell
 {
   "txid" : "id",        （字符串）交易索引
   "size" : n,             （数字）交易大小
@@ -54,7 +54,7 @@ decoderawtransaction "hexstring" # 获取一个表示序列化的 16 进制编�
      ,...
   ],
 }
-{% endhighlight %}
+```
 
 ## 用法示例
 
@@ -62,7 +62,7 @@ decoderawtransaction "hexstring" # 获取一个表示序列化的 16 进制编�
 
 查看一笔通过 [createrawtransaction](/blog/2018/07/bitcoin-rpc-command-createrawtransaction.html) 创建的原始交易。
 
-{% highlight shell %}
+```shell
 $ bitcoin-cli decoderawtransaction 0100000001677e3c8d416184b42c753a8446f17b0b7997f0df7149449fbd0aef3cdfd29bfb0000000000ffffffff0140420f00000000001976a914e221b8a504199bec7c5fe8081edd011c3653118288ac00000000
 {
   "txid": "6d5ea131dd69b0a04950cfd95b94412c3f3c70ec57f8558d9986946a37b3958e",
@@ -96,25 +96,25 @@ $ bitcoin-cli decoderawtransaction 0100000001677e3c8d416184b42c753a8446f17b0b799
     }
   ]
 }
-{% endhighlight %}
+```
 
 ### cURL
 
-{% highlight shell %}
+```shell
 $ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "decoderawtransaction", "params": ["0100000001677e3c8d416184b42c753a8446f17b0b7997f0df7149449fbd0aef3cdfd29bfb0000000000ffffffff0140420f00000000001976a914e221b8a504199bec7c5fe8081edd011c3653118288ac00000000"] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
 {"result":{"txid":"6d5ea131dd69b0a04950cfd95b94412c3f3c70ec57f8558d9986946a37b3958e","size":85,"version":1,"locktime":0,"vin":[{"txid":"fb9bd2df3cef0abd9f444971dff097790b7bf146843a752cb48461418d3c7e67","vout":0,"scriptSig":{"asm":"","hex":""},"sequence":4294967295}],"vout":[{"value":0.01000000,"n":0,"scriptPubKey":{"asm":"OP_DUP OP_HASH160 e221b8a504199bec7c5fe8081edd011c36531182 OP_EQUALVERIFY OP_CHECKSIG","hex":"76a914e221b8a504199bec7c5fe8081edd011c3653118288ac","reqSigs":1,"type":"pubkeyhash","addresses":["1Mcg7MDBD38sSScsX3USbsCnkcMbPnLyTV"]}}]},"error":null,"id":"curltest"}
-{% endhighlight %}
+```
 
 ## 源码剖析
 decoderawtransaction 对应的函数在“rpcserver.h”文件中被引用。
 
-{% highlight C++ %}
+```cpp
 extern UniValue decoderawtransaction(const UniValue& params, bool fHelp); // 解码原始交易
-{% endhighlight %}
+```
 
 实现在“rpcrawtransaction.cpp”文件中。
 
-{% highlight C++ %}
+```cpp
 UniValue decoderawtransaction(const UniValue& params, bool fHelp)
 {
     if (fHelp || params.size() != 1) // 参数必须为 1 个
@@ -180,7 +180,7 @@ UniValue decoderawtransaction(const UniValue& params, bool fHelp)
 
     return result; // 返回结果对象
 }
-{% endhighlight %}
+```
 
 基本流程：
 1. 处理命令帮助和参数个数。

@@ -10,9 +10,9 @@ excerpt: $ bitcoin-cli estimatefee nblocks
 ---
 ## 提示说明
 
-{% highlight shell %}
+```shell
 estimatefee nblocks # 估算交易在 nblocks 个区块开始确认的每千字节的大致费用
-{% endhighlight %}
+```
 
 参数：
 1. nblocks（数字）区块数。
@@ -26,28 +26,28 @@ estimatefee nblocks # 估算交易在 nblocks 个区块开始确认的每千字�
 
 估算交易经 6 个区块确认所需的每千字节的交易费。
 
-{% highlight shell %}
+```shell
 $ bitcoin-cli estimatefee 6
 -1
-{% endhighlight %}
+```
 
 ### cURL
 
-{% highlight shell %}
+```shell
 $ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "estimatefee", "params": [6] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
 {"result":-1,"error":null,"id":"curltest"}
-{% endhighlight %}
+```
 
 ## 源码剖析
 estimatefee 对应的函数在“rpcserver.h”文件中被引用。
 
-{% highlight C++ %}
+```cpp
 extern UniValue estimatefee(const UniValue& params, bool fHelp); // 估算交易费
-{% endhighlight %}
+```
 
 实现在“rpcmining.cpp”文件中。
 
-{% highlight C++ %}
+```cpp
 UniValue estimatefee(const UniValue& params, bool fHelp)
 {
     if (fHelp || params.size() != 1) // 参数必须为 1 个
@@ -78,7 +78,7 @@ UniValue estimatefee(const UniValue& params, bool fHelp)
 
     return ValueFromAmount(feeRate.GetFeePerK()); // 否则，格式化后返回预估交易费
 }
-{% endhighlight %}
+```
 
 基本流程：
 1. 处理命令帮助和参数个数。

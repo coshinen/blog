@@ -10,9 +10,9 @@ excerpt: $ bitcoin-cli verifymessage "bitcoinaddress" "signature" "message"
 ---
 ## 提示说明
 
-{% highlight shell %}
+```shell
 verifymessage "bitcoinaddress" "signature" "message" # 验证一个签过名的消息
-{% endhighlight %}
+```
 
 参数：
 1. bitcoinaddress（字符串，必备）用于签名的比特币地址。
@@ -27,14 +27,14 @@ verifymessage "bitcoinaddress" "signature" "message" # 验证一个签过名的�
 
 若钱包已加密，需要先进行解密，这里解密了 60 秒。
 
-{% highlight shell %}
+```shell
 $ bitcoin-cli walletpassphrase "passphrase" 60
-{% endhighlight %}
+```
 
 若钱包未加密，可忽略此步，直接进行消息验证。<br>
 使用 [signmessage](/blog/2018/09/bitcoin-rpc-command-signmessage.html) 签名一个消息。
 
-{% highlight shell %}
+```shell
 $ bitcoin-cli getnewaddress
 1EseaaKaGH9HtQunHy46G6FTZCkvU68uqu
 $ bitcoin-cli signmessage 1EseaaKaGH9HtQunHy46G6FTZCkvU68uqu "testmessage"
@@ -43,25 +43,25 @@ $ bitcoin-cli verifymessage 1EseaaKaGH9HtQunHy46G6FTZCkvU68uqu H/v9J/pOJ3zU7tuW2
 true
 $ bitcoin-cli verifymessage 1EseaaKaGH9HtQunHy46G6FTZCkvU68uqu H/v9J/pOJ3zU7tuW2DUcQUphFpCpHzFbSLA62kac2BoIKJEgVOGjwOT+KtwbTJWSwGVCuoQ2ytTGQRdOYYzenvA= "message"
 false
-{% endhighlight %}
+```
 
 ### cURL
 
-{% highlight shell %}
+```shell
 $ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "verifymessage", "params": ["1EseaaKaGH9HtQunHy46G6FTZCkvU68uqu", "H/v9J/pOJ3zU7tuW2DUcQUphFpCpHzFbSLA62kac2BoIKJEgVOGjwOT+KtwbTJWSwGVCuoQ2ytTGQRdOYYzenvA=", "testmessage"] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
 {"result":true,"error":null,"id":"curltest"}
-{% endhighlight %}
+```
 
 ## 源码剖析
 verifymessage 对应的函数在“rpcserver.h”文件中被引用。
 
-{% highlight C++ %}
+```cpp
 extern UniValue verifymessage(const UniValue& params, bool fHelp); // 验证签名消息
-{% endhighlight %}
+```
 
 实现在“rpcmisc.cpp”文件中。
 
-{% highlight C++ %}
+```cpp
 UniValue verifymessage(const UniValue& params, bool fHelp)
 {
     if (fHelp || params.size() != 3) // 参数必须为 3 个
@@ -115,7 +115,7 @@ UniValue verifymessage(const UniValue& params, bool fHelp)
 
     return (pubkey.GetID() == keyID); // 若获取公钥的索引等于指定地址索引，验证成功，返回 true
 }
-{% endhighlight %}
+```
 
 基本流程：
 1. 处理命令帮助和参数个数。

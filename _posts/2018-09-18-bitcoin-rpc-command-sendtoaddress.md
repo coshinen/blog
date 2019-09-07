@@ -10,9 +10,9 @@ excerpt: $ bitcoin-cli sendtoaddress "bitcoinaddress" amount ( "comment" "commen
 ---
 ## 提示说明
 
-{% highlight shell %}
+```shell
 sendtoaddress "bitcoinaddress" amount ( "comment" "comment-to" subtractfeefromamount ) # 发送一笔金额到指定地址
-{% endhighlight %}
+```
 
 参数：
 1. bitcoinaddress（字符串，必备）要发送到的比特币地址。
@@ -33,7 +33,7 @@ sendtoaddress "bitcoinaddress" amount ( "comment" "comment-to" subtractfeefromam
 
 用法一：向指定地址发送 0.1 BTC。
 
-{% highlight shell %}
+```shell
 $ bitcoin-cli sendtoaddress 1M72Sfpbz1BPpXFHz9m3CdqATR44Jvaydd 0.1
 533ac3682be8723cca63f37a75178155c0b6e69d06606010d5cee1c0f7ccba97
 $ bitcoin-cli gettransaction 533ac3682be8723cca63f37a75178155c0b6e69d06606010d5cee1c0f7ccba97
@@ -64,11 +64,11 @@ $ bitcoin-cli gettransaction 533ac3682be8723cca63f37a75178155c0b6e69d06606010d5c
   ],
   "hex": "010000000297baccf7c0e1ced5106060069de6b6c0558117757af363ca3c72e82b68c33a53000000006a4730440220301dd1386f1f17937ecbe62193cf94772ea536cb0f2a1ef0721ace1a3086e945022007c1706db1d282022cf99eb66dde50cdd640dadaaf444fd0627b95dc09c2bfa20121026c992de443610f0775ff4ea7eab3fc2c9cecb1ec61383d1f8b0b54b4fdcc45d5feffffff1625da83e5b868b1bedd69b6579449fb2746416e73cc70fc2a8dc6df8b6863b8000000006a47304402202f1dcd475339b71578941fc10ebe3411f14b40b02d1c9a1e7dbeaa6e63c1c1a4022017b38c7628056a083f49728514b00ae1046e94724e8bea80a61c661af92dc7dc012102ef09fb034dc26337de85e77c6b519bfeb2500f2cd69ca4c0c34e5425144ffaa0feffffff02ef8c9800000000001976a914a2fe6cb25949dc7f1da3da93086c164a1bf72ef888ac80969800000000001976a9149dd5d8f38714a8b07a4e702777d445d388805ebd88acd0150100"
 }
-{% endhighlight %}
+```
 
 用法二：向指定地址发送 0.1 BTC，增加交易备注 donation 和交易组织名 seans outpost。
 
-{% highlight shell %}
+```shell
 $ bitcoin-cli sendtoaddress 1M72Sfpbz1BPpXFHz9m3CdqATR44Jvaydd 0.1 "donation" "seans outpost"
 f3748b3e27f22dbf04eed3d779b54507c839f89dd34c0263f9b4d21928083014
 $ bitcoin-cli gettransaction f3748b3e27f22dbf04eed3d779b54507c839f89dd34c0263f9b4d21928083014
@@ -99,11 +99,11 @@ $ bitcoin-cli gettransaction f3748b3e27f22dbf04eed3d779b54507c839f89dd34c0263f9b
   ],
   "hex": "010000000297baccf7c0e1ced5106060069de6b6c0558117757af363ca3c72e82b68c33a53000000006a4730440220301dd1386f1f17937ecbe62193cf94772ea536cb0f2a1ef0721ace1a3086e945022007c1706db1d282022cf99eb66dde50cdd640dadaaf444fd0627b95dc09c2bfa20121026c992de443610f0775ff4ea7eab3fc2c9cecb1ec61383d1f8b0b54b4fdcc45d5feffffff1625da83e5b868b1bedd69b6579449fb2746416e73cc70fc2a8dc6df8b6863b8000000006a47304402202f1dcd475339b71578941fc10ebe3411f14b40b02d1c9a1e7dbeaa6e63c1c1a4022017b38c7628056a083f49728514b00ae1046e94724e8bea80a61c661af92dc7dc012102ef09fb034dc26337de85e77c6b519bfeb2500f2cd69ca4c0c34e5425144ffaa0feffffff02ef8c9800000000001976a914a2fe6cb25949dc7f1da3da93086c164a1bf72ef888ac80969800000000001976a9149dd5d8f38714a8b07a4e702777d445d388805ebd88acd0150100"
 }
-{% endhighlight %}
+```
 
 用法三：向指定地址发送 0.1 BTC，没有备注，从发送金额中扣掉交易费。
 
-{% highlight shell %}
+```shell
 $ bitcoin-cli sendtoaddress 1M72Sfpbz1BPpXFHz9m3CdqATR44Jvaydd 0.1 "" "" true
 191e845fc0427be5128779cbee8a25b41d2f5cf07eb6df7438c5a67f92104eee
 $ bitcoin-cli gettransaction 191e845fc0427be5128779cbee8a25b41d2f5cf07eb6df7438c5a67f92104eee
@@ -134,25 +134,25 @@ $ bitcoin-cli gettransaction 191e845fc0427be5128779cbee8a25b41d2f5cf07eb6df7438c
   ],
   "hex": "010000000173f50ee4ecd6a810f0177c9ce42a53a7da9579a836d78ded0733397af4d8d72b000000006b483045022100eb59463fd150c1fbc1fd4389e703df7916be15abd4aa294aa40746213f329272022039c089685f4feb23847db90b039a2ba2e41b0c07b63a8d029df46c07d1e0cc61012102ef09fb034dc26337de85e77c6b519bfeb2500f2cd69ca4c0c34e5425144ffaa0feffffff01c0959800000000001976a9149dd5d8f38714a8b07a4e702777d445d388805ebd88ac00160100"
 }
-{% endhighlight %}
+```
 
 ### cURL
 
-{% highlight shell %}
+```shell
 $ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "sendtoaddress", "params": ["1M72Sfpbz1BPpXFHz9m3CdqATR44Jvaydd", 0.1, "donation", "seans outpost"] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
 {"result":"f3748b3e27f22dbf04eed3d779b54507c839f89dd34c0263f9b4d21928083014","error":null,"id":"curltest"}
-{% endhighlight %}
+```
 
 ## 源码剖析
 sendtoaddress 对应的函数在“rpcserver.h”文件中被引用。
 
-{% highlight C++ %}
+```cpp
 extern UniValue sendtoaddress(const UniValue& params, bool fHelp); // 发送比特币到指定地址
-{% endhighlight %}
+```
 
 实现在“wallet/rpcwallet.cpp”文件中。
 
-{% highlight C++ %}
+```cpp
 UniValue sendtoaddress(const UniValue& params, bool fHelp)
 {
     if (!EnsureWalletIsAvailable(fHelp)) // 1.确保钱包当前可用
@@ -210,7 +210,7 @@ UniValue sendtoaddress(const UniValue& params, bool fHelp)
 
     return wtx.GetHash().GetHex(); // 7.获取交易哈希，转化为 16 进制并返回
 }
-{% endhighlight %}
+```
 
 基本流程：<br>
 1.确保钱包当前可用（已初始化完成）。<br>
@@ -224,7 +224,7 @@ UniValue sendtoaddress(const UniValue& params, bool fHelp)
 6.调用 SendMoney(address.Get(), nAmount, fSubtractFeeFromAmount, wtx) 发送指定金额到指定比特币地址，
 该函数定义在“wallet/rpcwallet.cpp”文件中，入参为：交易目的地址，金额，从金额中减去交易费标志，添加了备注的钱包交易。
 
-{% highlight C++ %}
+```cpp
 static void SendMoney(const CTxDestination &address, CAmount nValue, bool fSubtractFeeFromAmount, CWalletTx& wtxNew)
 {
     CAmount curBalance = pwalletMain->GetBalance(); // 1.获取钱包余额
@@ -255,7 +255,7 @@ static void SendMoney(const CTxDestination &address, CAmount nValue, bool fSubtr
     if (!pwalletMain->CommitTransaction(wtxNew, reservekey)) // 3.提交交易
         throw JSONRPCError(RPC_WALLET_ERROR, "Error: The transaction was rejected! This might happen if some of the coins in your wallet were already spent, such as if you used a copy of wallet.dat and coins were spent in the copy but not marked as spent here.");
 }
-{% endhighlight %}
+```
 
 6.1.获取钱包当前余额，检查发送的金额与钱包余额是否冲突。<br>
 6.2.从目的地址中获取脚本公钥，初始化接收者并加入发送列表，创建交易。<br>
@@ -264,7 +264,7 @@ static void SendMoney(const CTxDestination &address, CAmount nValue, bool fSubtr
 6.2.从目的地址中获取脚本公钥，初始化接收者并加入发送列表，调用 pwalletMain->CreateTransaction(vecSend, wtxNew, reservekey, nFeeRequired, nChangePosRet, strError) 创建一笔交易。
 该函数声明在“”文件的CWallet类中。
 
-{% highlight C++ %}
+```cpp
 /** 
  * A CWallet is an extension of a keystore, which also maintains a set of transactions and balances,
  * and provides the ability to create new transactions.
@@ -280,11 +280,11 @@ class CWallet : public CCryptoKeyStore, public CValidationInterface
                            std::string& strFailReason, const CCoinControl *coinControl = NULL, bool sign = true);
     ...
 };
-{% endhighlight %}
+```
 
 定义在“wallet/wallet.cpp”文件中。入参为：发送列表，待创建的新钱包交易，密钥池条目，待计算所需交易费，找零输出的位置，错误信息。
 
-{% highlight C++ %}
+```cpp
 bool CWallet::CreateTransaction(const vector<CRecipient>& vecSend, CWalletTx& wtxNew, CReserveKey& reservekey, CAmount& nFeeRet,
                                 int& nChangePosRet, std::string& strFailReason, const CCoinControl* coinControl, bool sign)
 {
@@ -572,7 +572,7 @@ bool CWallet::CreateTransaction(const vector<CRecipient>& vecSend, CWalletTx& wt
 
     return true; // 创建成功，返回 true
 }
-{% endhighlight %}
+```
 
 6.2.1.遍历发送列表，获取待发送总金额并计算从金额中减去的总交易费。<br>
 6.2.2.创建一个易变交易对象，获取一个相对随机时间作为交易的锁定时间。<br>
@@ -587,7 +587,7 @@ bool CWallet::CreateTransaction(const vector<CRecipient>& vecSend, CWalletTx& wt
 6.3.调用 pwalletMain->CommitTransaction(wtxNew, reservekey) 提交交易，包含广播。
 该函数定义在“wallet/wallet.cpp”文件中。入参为：创建好的新钱包交易（输入、输出、找零、签名），找零密钥。
 
-{% highlight C++ %}
+```cpp
 /**
  * Call after CreateTransaction unless you want to abort
  */ // 除非你想要崩溃，在 CreateTransaction 之后调用
@@ -639,7 +639,7 @@ bool CWallet::CommitTransaction(CWalletTx& wtxNew, CReserveKey& reservekey)
     }
     return true;
 }
-{% endhighlight %}
+```
 
 6.3.1.钱包上锁，打开钱包数据库，移除找零密钥防止该找零地址再次被使用，添加交易到钱包数据库，并把该交易输入列表中所有 UTXO 对应交易绑定到当前钱包。<br>
 6.3.2.把新交易添加到 getdata 消息请求次数映射列表并初始化次数为 0，用于追踪该交易获取的 getdata 请求次数。<br>
@@ -649,7 +649,7 @@ bool CWallet::CommitTransaction(CWalletTx& wtxNew, CReserveKey& reservekey)
 6.3.3.调用 wtxNew.AcceptToMemoryPool(false) 把该交易添加到交易内存池中。
 该函数声明在“wallet/wallet.h”文件的 CMerkleTx 类中。
 
-{% highlight C++ %}
+```cpp
 /** A transaction with a merkle branch linking it to the block chain. */
 class CMerkleTx : public CTransaction // 一个连接它到区块链的默克分支交易
 {
@@ -657,22 +657,22 @@ class CMerkleTx : public CTransaction // 一个连接它到区块链的默克分
     bool AcceptToMemoryPool(bool fLimitFree=true, bool fRejectAbsurdFee=true); // 把当前交易添加到内存池
     ...
 };
-{% endhighlight %}
+```
 
 定义在“wallet/wallet.cpp”文件中。入参为：false，true。
 
-{% highlight C++ %}
+```cpp
 bool CMerkleTx::AcceptToMemoryPool(bool fLimitFree, bool fRejectAbsurdFee)
 {
     CValidationState state;
     return ::AcceptToMemoryPool(mempool, state, *this, fLimitFree, NULL, false, fRejectAbsurdFee); // 添加交易到内存池
 }
-{% endhighlight %}
+```
 
 转调 ::AcceptToMemoryPool(mempool, state, *this, fLimitFree, NULL, false, fRejectAbsurdFee) 函数来尝试添加交易至内存池。
 该函数定义在“main.cpp”文件中。入参为：交易内存池全局对象，待获取的验证状态，该交易，false，NULL，false，true。
 
-{% highlight C++ %}
+```cpp
 bool AcceptToMemoryPool(CTxMemPool& pool, CValidationState &state, const CTransaction &tx, bool fLimitFree,
                         bool* pfMissingInputs, bool fOverrideMempoolLimit, bool fRejectAbsurdFee)
 {
@@ -684,13 +684,13 @@ bool AcceptToMemoryPool(CTxMemPool& pool, CValidationState &state, const CTransa
     }
     return res;
 }
-{% endhighlight %}
+```
 
 6.3.4.调用 wtxNew.RelayWalletTransaction() 进行钱包交易的中继。
 这里中继的意思是两个节点间进行交易的广播（发送和接收）。<br>
 该函数定义在“wallet/wallet.cpp”文件中。
 
-{% highlight C++ %}
+```cpp
 bool CWalletTx::RelayWalletTransaction()
 {
     assert(pwallet->GetBroadcastTransactions()); // 验证钱包广播交易是否开启
@@ -704,19 +704,19 @@ bool CWalletTx::RelayWalletTransaction()
     }
     return false;
 }
-{% endhighlight %}
+```
 
 该函数对交易进行了简单的验证，然后调用 RelayTransaction((CTransaction)*this) 开始中继交易，它声明在“net.h”文件中。
 
-{% highlight C++ %}
+```cpp
 class CTransaction;
 void RelayTransaction(const CTransaction& tx); // 转调下面重载函数
 void RelayTransaction(const CTransaction& tx, const CDataStream& ss); // 中继交易
-{% endhighlight %}
+```
 
 定义在“net.cpp”文件中。入参为：该钱包交易。
 
-{% highlight C++ %}
+```cpp
 void RelayTransaction(const CTransaction& tx)
 {
     CDataStream ss(SER_NETWORK, PROTOCOL_VERSION);
@@ -755,13 +755,13 @@ void RelayTransaction(const CTransaction& tx, const CDataStream& ss)
             pnode->PushInventory(inv); // 直接推送 inv 消息到该节点
     }
 }
-{% endhighlight %}
+```
 
 这里先检查了中继过期队列把过期元素移除，接着把该交易加入中继列表同时设置 15 分钟的过期时间并加入中继过期队列。
 然后遍历了已建立连接的节点链表，调用 pnode->PushInventory(inv) 把 inv 消息发送到对端节点，
 该函数定义在“net.h”文件的 CNode 类中。入参为：该交易的库存条目对象。
 
-{% highlight C++ %}
+```cpp
 /** Information about a peer */ // 关于对端节点的信息
 class CNode // 对端节点信息类
 {
@@ -781,7 +781,7 @@ class CNode // 对端节点信息类
     }
     ...
 };
-{% endhighlight %}
+```
 
 最终只是把库存条目 inv 消息对象加入到发送库存消息列表。
 

@@ -10,12 +10,12 @@ excerpt: $ bitcoin-cli getmininginfo
 ---
 ## 提示说明
 
-{% highlight shell %}
+```shell
 getmininginfo # 获取挖矿信息
-{% endhighlight %}
+```
 
 结果：返回一个包含挖矿相关信息的 json 对象。<br>
-{% highlight shell %}
+```shell
 {
   "blocks": nnn,             （数字）当前区块数
   "currentblocksize": nnn,   （数字）最后一个区块的大小
@@ -28,7 +28,7 @@ getmininginfo # 获取挖矿信息
   "testnet": true|false      （布尔型）使用了测试网或没有使用
   "chain": "xxxx",         （字符串）BIP70 定义的当前的网络名（main, test, regtest）
 }
-{% endhighlight %}
+```
 
 ## 用法示例
 
@@ -36,7 +36,7 @@ getmininginfo # 获取挖矿信息
 
 获取当前比特币核心服务器 CPU 挖矿的信息。
 
-{% highlight shell %}
+```shell
 $ bitcoin-cli getmininginfo
 {
   "blocks": 28404,
@@ -51,25 +51,25 @@ $ bitcoin-cli getmininginfo
   "chain": "main",
   "generate": true
 }
-{% endhighlight %}
+```
 
 ### cURL
 
-{% highlight shell %}
+```shell
 $ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "getmininginfo", "params": [] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
 {"result":{"blocks":28420,"currentblocksize":1000,"currentblocktx":0,"difficulty":0.001532956637923291,"errors":"","genproclimit":1,"networkhashps":1383698.563922942,"pooledtx":0,"testnet":false,"chain":"main","generate":true},"error":null,"id":"curltest"}
-{% endhighlight %}
+```
 
 ## 源码剖析
 getmininginfo 对应的函数在“rpcserver.h”文件中被引用。
 
-{% highlight C++ %}
+```cpp
 extern UniValue getmininginfo(const UniValue& params, bool fHelp); // 获取挖矿信息
-{% endhighlight %}
+```
 
 实现在“rpcmining.cpp”文件中。
 
-{% highlight C++ %}
+```cpp
 UniValue getmininginfo(const UniValue& params, bool fHelp)
 {
     if (fHelp || params.size() != 0) // 没有参数
@@ -111,7 +111,7 @@ UniValue getmininginfo(const UniValue& params, bool fHelp)
     obj.push_back(Pair("generate",         getgenerate(params, false))); // 挖矿状态
     return obj;
 }
-{% endhighlight %}
+```
 
 基本流程：
 1. 处理命令帮助和参数个数。

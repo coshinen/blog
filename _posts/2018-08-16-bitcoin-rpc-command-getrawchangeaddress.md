@@ -10,9 +10,9 @@ excerpt: $ bitcoin-cli getrawchangeaddress
 ---
 ## 提示说明
 
-{% highlight shell %}
+```shell
 getrawchangeaddress # 获取一个新的用于接收找零的比特币地址
-{% endhighlight %}
+```
 
 **这是用于原始交易，而非普通交易。**
 
@@ -24,28 +24,28 @@ getrawchangeaddress # 获取一个新的用于接收找零的比特币地址
 
 获取一个新的用于原始交易的找零地址。
 
-{% highlight shell %}
+```shell
 $ bitcoin-cli getrawchangeaddress
 16h8G5hCrbHKU6ihp3RaBNP4uctzac1S6k
-{% endhighlight %}
+```
 
 ### cURL
 
-{% highlight shell %}
+```shell
 $ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "getrawchangeaddress", "params": [] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
 {"result":"1UtBfdBGyzJjWPe7VYCASooGdkUAVosRg","error":null,"id":"curltest"}
-{% endhighlight %}
+```
 
 ## 源码剖析
 getrawchangeaddress 对应的函数在“rpcserver.h”文件中被引用。
 
-{% highlight C++ %}
+```cpp
 extern UniValue getrawchangeaddress(const UniValue& params, bool fHelp); // 获取元交易找零地址
-{% endhighlight %}
+```
 
 实现在“wallet/rpcwallet.cpp”文件中。
 
-{% highlight C++ %}
+```cpp
 UniValue getrawchangeaddress(const UniValue& params, bool fHelp)
 {
     if (!EnsureWalletIsAvailable(fHelp)) // 确保当前钱包可用
@@ -79,7 +79,7 @@ UniValue getrawchangeaddress(const UniValue& params, bool fHelp)
 
     return CBitcoinAddress(keyID).ToString(); // Base58 编码获取公钥地址并返回
 }
-{% endhighlight %}
+```
 
 基本流程：
 1. 确保钱包当前可用（已初始化完成）。

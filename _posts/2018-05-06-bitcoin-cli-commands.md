@@ -18,7 +18,7 @@ tags: CLI bitcoin-cli 区块链 比特币
 
 ### 基础命令
 
-{% highlight shell %}
+```shell
 $ bitcoin-cli -h # 获取以下帮助信息
 Bitcoin Core RPC client version v0.12.1.0-f61a24e
 比特币核心 RPC 客户端版本 v0.12.1.0-意味不明
@@ -81,13 +81,13 @@ Chain selection options:
   -rpcclienttimeout=<n>
        Timeout during HTTP requests (default: 900)
        HTTP 请求的超时时间（默认：900s）
-{% endhighlight %}
+```
 
 ### RPC 命令（需要 bitcoind 提供相关服务）
 
-{% highlight shell %}
+```shell
 $ bitcoin-cli help # 获取以下 RPC 命令
-{% endhighlight %}
+```
 
 **注：() 内的参数有默认值，可以省略。**
 

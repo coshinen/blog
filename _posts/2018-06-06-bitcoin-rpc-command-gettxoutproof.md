@@ -10,21 +10,21 @@ excerpt: $ bitcoin-cli gettxoutproof ["txid",...] ( blockhash )
 ---
 ## 提示说明
 
-{% highlight shell %}
+```shell
 gettxoutproof ["txid",...] ( blockhash ) # 获取包含在一个区块上的交易 txid 的 16 进制编码的证明
-{% endhighlight %}
+```
 
 **注：默认情况下，此功能仅在有时可用。这是当在该交易的未花费交易输出上有一个未花费的输出时。
 为了使其一直工作，你需要维持一个交易索引，使用 -txindex 命令行选项或手动指定包含该交易的区块（通过区块哈希）。**
 
 参数：<br>
 1.txids（字符串）一个用于过滤器的交易索引 json 数组。<br>
-{% highlight shell %}
+```shell
     [
       "txid"     （字符串）一笔交易哈希
       ,...
     ]
-{% endhighlight %}
+```
 2.block hash（字符串，可选）如果指定了，则在该哈希对应的区块上查询交易。
 
 结果：（字符串）返回原始交易数据。一个序列化的字符串，16 进制编码的证明。
@@ -35,15 +35,15 @@ gettxoutproof ["txid",...] ( blockhash ) # 获取包含在一个区块上的交�
 
 用法一：获取指定索引的交易验证。
 
-{% highlight shell %}
+```shell
 $ bitcoin-cli gettxoutproof [\"b797bafd7830774cec4d24d1e649cafb0aa7a67b9f1cc06954102a50b463fa0f\"]
 00000020a7bdefd4740678bd9e4b6c6c170dd6ebdfb4dabfb237e428bb4a70f3ae000000ea0a02f07f8f8d9e81792b0068341be05dc20a1d7488b0c34a64c6ed1de72d41b7a3305b538c021e7d5952000200000002ba9ac033f860746a4ab907f918192bf412965e414d84aca52d705131f3b47e570ffa63b4502a105469c01c9f7ba6a70afbca49e6d1244dec4c773078fdba97b70105
-{% endhighlight %}
+```
 
 用法二：通过指定交易所在的区块获取指定索引的交易验证。<br>
 先使用 [gettransaction](/blog/2018/08/bitcoin-rpc-command-gettransaction.html) 获取指定交易所在的区块。
 
-{% highlight shell %}
+```shell
 $ bitcoin-cli gettransaction b797bafd7830774cec4d24d1e649cafb0aa7a67b9f1cc06954102a50b463fa0f
 {
   "amount": -1.00000000,
@@ -73,25 +73,25 @@ $ bitcoin-cli gettransaction b797bafd7830774cec4d24d1e649cafb0aa7a67b9f1cc069541
 }
 $ bitcoin-cli gettxoutproof [\"b797bafd7830774cec4d24d1e649cafb0aa7a67b9f1cc06954102a50b463fa0f\"]
 00000020a7bdefd4740678bd9e4b6c6c170dd6ebdfb4dabfb237e428bb4a70f3ae000000ea0a02f07f8f8d9e81792b0068341be05dc20a1d7488b0c34a64c6ed1de72d41b7a3305b538c021e7d5952000200000002ba9ac033f860746a4ab907f918192bf412965e414d84aca52d705131f3b47e570ffa63b4502a105469c01c9f7ba6a70afbca49e6d1244dec4c773078fdba97b70105
-{% endhighlight %}
+```
 
 ### cURL
 
-{% highlight shell %}
+```shell
 $ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "gettxoutproof", "params": [["b797bafd7830774cec4d24d1e649cafb0aa7a67b9f1cc06954102a50b463fa0f"]] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
 {"result":"00000020a7bdefd4740678bd9e4b6c6c170dd6ebdfb4dabfb237e428bb4a70f3ae000000ea0a02f07f8f8d9e81792b0068341be05dc20a1d7488b0c34a64c6ed1de72d41b7a3305b538c021e7d5952000200000002ba9ac033f860746a4ab907f918192bf412965e414d84aca52d705131f3b47e570ffa63b4502a105469c01c9f7ba6a70afbca49e6d1244dec4c773078fdba97b70105","error":null,"id":"curltest"}
-{% endhighlight %}
+```
 
 ## 源码剖析
 gettxoutproof 对应的函数在“rpcserver.h”文件中被引用。
 
-{% highlight C++ %}
+```cpp
 extern UniValue gettxoutproof(const UniValue& params, bool fHelp); // 获取交易输出证明
-{% endhighlight %}
+```
 
 实现在“rpcrawtransaction.cpp”文件中。
 
-{% highlight C++ %}
+```cpp
 UniValue gettxoutproof(const UniValue& params, bool fHelp)
 {
     if (fHelp || (params.size() != 1 && params.size() != 2)) // 参数为 1 个或 2 个
@@ -172,7 +172,7 @@ UniValue gettxoutproof(const UniValue& params, bool fHelp)
     std::string strHex = HexStr(ssMB.begin(), ssMB.end()); // 转换为 16 进制
     return strHex; // 返回结果
 }
-{% endhighlight %}
+```
 
 基本流程：
 1. 处理命令帮助和参数个数。

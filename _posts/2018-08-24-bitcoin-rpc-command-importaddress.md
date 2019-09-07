@@ -10,9 +10,9 @@ excerpt: $ bitcoin-cli importaddress "address" ( "label" rescan p2sh )
 ---
 ## 提示说明
 
-{% highlight shell %}
+```shell
 importaddress "address" ( "label" rescan p2sh ) # 导入一个脚本（16 进制）或地址用于监视
-{% endhighlight %}
+```
 
 该地址好像在你的钱包，但不能用来花费。<br>
 这就是所谓的 Watch-only 地址，在新版本中已经可以花费。<br>
@@ -35,7 +35,7 @@ importaddress "address" ( "label" rescan p2sh ) # 导入一个脚本（16 进制
 
 用法一：导入一个脚本并进行再扫描。
 
-{% highlight shell %}
+```shell
 $ bitcoin-cli getaddressesbyaccount ""
 [
   ...
@@ -46,11 +46,11 @@ $ bitcoin-cli getaddressesbyaccount ""
   ...
   "1HvgGctUMNkHPwvayRFfPePBjke477ZqsH"
 ]
-{% endhighlight %}
+```
 
 用法二：导入地址到钱包账户 "testing" 中，并关闭再扫描。
 
-{% highlight shell %}
+```shell
 $ bitcoin-cli getaddressesbyaccount "testing"
 [
 ]
@@ -59,25 +59,25 @@ $ bitcoin-cli getaddressesbyaccount "testing"
 [
   "1HvgGctUMNkHPwvayRFfPePBjke477ZqsH"
 ]
-{% endhighlight %}
+```
 
 ### cURL
 
-{% highlight shell %}
+```shell
 $ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "importaddress", "params": ["1HvgGctUMNkHPwvayRFfPePBjke477ZqsH", "testing", false] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
 {"result":null,"error":null,"id":"curltest"}
-{% endhighlight %}
+```
 
 ## 源码剖析
 importaddress 对应的函数在“rpcserver.h”文件中被引用。
 
-{% highlight C++ %}
+```cpp
 extern UniValue importaddress(const UniValue& params, bool fHelp); // 导入地址或脚本
-{% endhighlight %}
+```
 
 实现在“wallet/rpcdump.cpp”文件中。
 
-{% highlight C++ %}
+```cpp
 UniValue importaddress(const UniValue& params, bool fHelp)
 {
     if (!EnsureWalletIsAvailable(fHelp)) // 确保当前钱包可用
@@ -143,7 +143,7 @@ UniValue importaddress(const UniValue& params, bool fHelp)
 
     return NullUniValue; // 返回空值
 }
-{% endhighlight %}
+```
 
 基本流程：<br>
 1.确保钱包当前可用（已初始化完成）。<br>
@@ -157,7 +157,7 @@ UniValue importaddress(const UniValue& params, bool fHelp)
 
 第六、七步，调用 ImportAddress(address, strLabel) 和 ImportScript(CScript(data.begin(), data.end()), strLabel, fP2SH) 函数分别导入地址和脚本，它们定义在“wallet/rpcdump.cpp”文件中。
 
-{% highlight C++ %}
+```cpp
 void ImportAddress(const CBitcoinAddress& address, const string& strLabel); // 导入地址到钱包
 void ImportScript(const CScript& script, const string& strLabel, bool isRedeemScript) // 导入脚本
 {
@@ -184,12 +184,12 @@ void ImportAddress(const CBitcoinAddress& address, const string& strLabel)
     if (address.IsValid()) // 若该地址有效
         pwalletMain->SetAddressBook(address.Get(), strLabel, "receive"); // 添加地址及关联账户、用途到地址簿
 }
-{% endhighlight %}
+```
 
 在 ImportScript(...) 函数中，对公钥地址对应脚本进行了验证，若不在 Watch-only 集中则将其添加到该集合中。<br>
 Watch-only 集对象定义在“keystore.h”文件的 CBasicKeyStore 类中，实质上就是一个脚本对象的集合。
 
-{% highlight C++ %}
+```cpp
 typedef std::set<CScript> WatchOnlySet; // watch-only 脚本集合
 
 /** Basic key store, that keeps keys in an address->secret map */
@@ -202,11 +202,11 @@ protected:
     WatchOnlySet setWatchOnly; // watch-only 脚本集合
     ...
 };
-{% endhighlight %}
+```
 
 第八步，调用 pwalletMain->ReacceptWalletTransactions() 函数把交易添加到内存池，该函数定义在“wallet/wallet.cpp”文件中。
 
-{% highlight C++ %}
+```cpp
 void CWallet::ReacceptWalletTransactions()
 {
     // If transactions aren't being broadcasted, don't let them into local mempool either
@@ -244,7 +244,7 @@ bool CMerkleTx::AcceptToMemoryPool(bool fLimitFree, bool fRejectAbsurdFee)
     CValidationState state;
     return ::AcceptToMemoryPool(mempool, state, *this, fLimitFree, NULL, false, fRejectAbsurdFee); // 添加交易到内存池
 }
-{% endhighlight %}
+```
 
 未完成。
 

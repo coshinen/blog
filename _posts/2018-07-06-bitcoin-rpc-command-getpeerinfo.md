@@ -10,12 +10,12 @@ excerpt: $ bitcoin-cli getpeerinfo
 ---
 ## 提示说明
 
-{% highlight shell %}
+```shell
 getpeerinfo # 获取关于每个连接的网络节点的数据的 json 数组对象
-{% endhighlight %}
+```
 
 结果：<br>
-{% highlight shell %}
+```shell
 [
   {
     "id": n,                   （数字）对端索引
@@ -46,7 +46,7 @@ getpeerinfo # 获取关于每个连接的网络节点的数据的 json 数组对
   }
   ,...
 ]
-{% endhighlight %}
+```
 
 ## 用法示例
 
@@ -54,7 +54,7 @@ getpeerinfo # 获取关于每个连接的网络节点的数据的 json 数组对
 
 获取连接的对端的信息。
 
-{% highlight shell %}
+```shell
 $ bitcoin-cli getpeerinfo
 [
   {
@@ -83,25 +83,25 @@ $ bitcoin-cli getpeerinfo
     "whitelisted": false
   }
 ]
-{% endhighlight %}
+```
 
 ### cURL
 
-{% highlight shell %}
+```shell
 $ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "getpeerinfo", "params": [] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
 {"result":[{"id":1,"addr":"192.168.0.2:8333","addrlocal":"192.168.0.6:61196","services":"0000000000000005","relaytxes":true,"lastsend":1529998204,"lastrecv":1529998204,"bytessent":1804,"bytesrecv":3780,"conntime":1529998140,"timeoffset":-16,"pingtime":0.012278,"minping":0.012278,"version":70012,"subver":"/Satoshi:0.12.1/","inbound":false,"startingheight":32318,"banscore":0,"synced_headers":32326,"synced_blocks":32326,"inflight":[],"whitelisted":false}],"error":null,"id":"curltest"}
-{% endhighlight %}
+```
 
 ## 源码剖析
 getpeerinfo 对应的函数在“rpcserver.h”文件中被引用。
 
-{% highlight C++ %}
+```cpp
 extern UniValue getpeerinfo(const UniValue& params, bool fHelp); // 获取同辈节点信息
-{% endhighlight %}
+```
 
 实现在“rpcnet.cpp”文件中。
 
-{% highlight C++ %}
+```cpp
 UniValue getpeerinfo(const UniValue& params, bool fHelp)
 {
     if (fHelp || params.size() != 0) // 没有参数
@@ -195,7 +195,7 @@ UniValue getpeerinfo(const UniValue& params, bool fHelp)
 
     return ret;
 }
-{% endhighlight %}
+```
 
 基本流程：<br>
 1.处理命令帮助和参数个数。<br>
@@ -206,7 +206,7 @@ UniValue getpeerinfo(const UniValue& params, bool fHelp)
 第三步，调用 CopyNodeStats(vstats) 函数把已连接节点列表中节点的相关状态信息复制到 vstats。<br>
 该函数定义在“rpcnet.cpp”文件中。
 
-{% highlight C++ %}
+```cpp
 static void CopyNodeStats(std::vector<CNodeStats>& vstats)
 {
     vstats.clear(); // 清空
@@ -219,12 +219,12 @@ static void CopyNodeStats(std::vector<CNodeStats>& vstats)
         vstats.push_back(stats); // 加入状态列表
     }
 }
-{% endhighlight %}
+```
 
 遍历已建立连接的节点列表，调用 pnode->copyStats(stats) 函数复制节点状态信息。<br>
 该函数定义在“net.h”文件中。
 
-{% highlight C++ %}
+```cpp
 #undef X
 #define X(name) stats.name = name
 void CNode::copyStats(CNodeStats &stats)
@@ -264,7 +264,7 @@ void CNode::copyStats(CNodeStats &stats)
     // Leave string empty if addrLocal invalid (not filled in yet)
     stats.addrLocal = addrLocal.IsValid() ? addrLocal.ToString() : "";
 }
-{% endhighlight %}
+```
 
 ## 参照
 

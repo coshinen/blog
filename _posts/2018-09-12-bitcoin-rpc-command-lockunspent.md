@@ -10,9 +10,9 @@ excerpt: $ bitcoin-cli lockunspent unlock [{"txid":"txid","vout":n},...]
 ---
 ## 提示说明
 
-{% highlight shell %}
+```shell
 lockunspent unlock [{"txid":"txid","vout":n},...] # 临时加锁（unlock=false）或解锁（unlock=true）指定的交易输出
-{% endhighlight %}
+```
 
 更新不可花费的临时输出列表。<br>
 一个锁定的交易输出，当花费比特币时，将不会被自动筛选币选中。<br>
@@ -22,7 +22,7 @@ lockunspent unlock [{"txid":"txid","vout":n},...] # 临时加锁（unlock=false�
 参数：<br>
 1.unlock（布尔型，必备）指定交易是否解锁（true）或上锁（false）。<br>
 2.transactions（字符串，可选，默认为全部交易输出）一个 json 对象数组。每个对象的交易索引（字符串）和交易输出序号（数字）。<br>
-{% highlight shell %}
+```shell
      [           （json 对象的 json 数组）
        {
          "txid":"id",    （字符串）交易索引
@@ -30,7 +30,7 @@ lockunspent unlock [{"txid":"txid","vout":n},...] # 临时加锁（unlock=false�
        }
        ,...
      ]
-{% endhighlight %}
+```
 
 结果：（布尔型）返回 true 表示成功，false 表示失败。
 
@@ -42,7 +42,7 @@ lockunspent unlock [{"txid":"txid","vout":n},...] # 临时加锁（unlock=false�
 2. 使用该命令对其中一个未花费的交易输出加临时锁。<br>
 3. 使用 [listlockunspent](/blog/2018/06/bitcoin-rpc-command-listlockunspent.html) 查看未花费交易输出的临时锁定列表。
 
-{% highlight shell %}
+```shell
 $ bitcoin-cli listunspent
 [
   ...
@@ -65,25 +65,25 @@ $ bitcoin-cli listlockunspent
     "vout": 0
   }
 ]
-{% endhighlight %}
+```
 
 ### cURL
 
-{% highlight shell %}
+```shell
 $ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "lockunspent", "params": [false, "[{\"txid\":\"8d71b6c01c1a3710e1d7d2cfd7aeb827a0e0150579a9840b9ba51bf7a13d8aff\",\"vout\":0}]"] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
 暂无。
-{% endhighlight %}
+```
 
 ## 源码剖析
 lockunspent 对应的函数在“rpcserver.h”文件中被引用。
 
-{% highlight C++ %}
+```cpp
 extern UniValue lockunspent(const UniValue& params, bool fHelp); // 加解锁未花费的交易输出
-{% endhighlight %}
+```
 
 实现在“rpcwallet.cpp”文件中。
 
-{% highlight C++ %}
+```cpp
 UniValue lockunspent(const UniValue& params, bool fHelp)
 {
     if (!EnsureWalletIsAvailable(fHelp)) // 确保当前钱包可用
@@ -167,7 +167,7 @@ UniValue lockunspent(const UniValue& params, bool fHelp)
 
     return true; // 成功返回 true
 }
-{% endhighlight %}
+```
 
 基本流程：<br>
 1.确保钱包当前可用（已初始化完成）。<br>
@@ -179,7 +179,7 @@ UniValue lockunspent(const UniValue& params, bool fHelp)
 
 相关加解锁函数声明在“wallet.h”文件的 CWallet 类中。
 
-{% highlight C++ %}
+```cpp
 /** 
  * A CWallet is an extension of a keystore, which also maintains a set of transactions and balances,
  * and provides the ability to create new transactions.
@@ -192,11 +192,11 @@ class CWallet : public CCryptoKeyStore, public CValidationInterface
     void UnlockAllCoins(); // 解锁全部交易输出
     ...
 };
-{% endhighlight %}
+```
 
 实现在“wallet.cpp”文件中。
 
-{% highlight C++ %}
+```cpp
 void CWallet::LockCoin(COutPoint& output)
 {
     AssertLockHeld(cs_wallet); // setLockedCoins
@@ -214,7 +214,7 @@ void CWallet::UnlockAllCoins()
     AssertLockHeld(cs_wallet); // setLockedCoins
     setLockedCoins.clear(); // 清空锁定的交易输出集合
 }
-{% endhighlight %}
+```
 
 ## 参照
 

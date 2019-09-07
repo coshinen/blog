@@ -10,12 +10,12 @@ excerpt: $ bitcoin-cli getblockchaininfo
 ---
 ## 提示说明
 
-{% highlight shell %}
+```shell
 getblockchaininfo # 获取区块链信息
-{% endhighlight %}
+```
 
 结果：返回一个包含关于区块链处理的变量状态信息的对象。<br>
-{% highlight shell %}
+```shell
 {
   "chain": "xxxx",        （字符串）当前 BIP70 定义的（main, test, regtest）网络名
   "blocks": xxxxxx,         （数字）当前服务器已处理的区块数
@@ -47,7 +47,7 @@ getblockchaininfo # 获取区块链信息
      }
   ]
 }
-{% endhighlight %}
+```
 
 ## 用法示例
 
@@ -55,7 +55,7 @@ getblockchaininfo # 获取区块链信息
 
 获取当前区块链信息。
 
-{% highlight shell %}
+```shell
 $ bitcoin-cli getblockchaininfo
 {
   "chain": "main",
@@ -124,25 +124,25 @@ $ bitcoin-cli getblockchaininfo
     }
   ]
 }
-{% endhighlight %}
+```
 
 ### cURL
 
-{% highlight shell %}
+```shell
 $ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "getblockchaininfo", "params": [] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
 {"result":{"chain":"main","blocks":25094,"headers":25094,"bestblockhash":"000000d3941157a9621e13d7b672e2616a82591e4d7fabfb4d42108d688b03a9","difficulty":0.001532956637923291,"mediantime":1529917586,"verificationprogress":0.9999999861643509,"chainwork":"0000000000000000000000000000000000000000000000000000000f2bfb4635","pruned":false,"softforks":[{"id":"bip34","version":2,"enforce":{"status":true,"found":1000,"required":750,"window":1000},"reject":{"status":true,"found":1000,"required":950,"window":1000}},{"id":"bip66","version":3,"enforce":{"status":true,"found":1000,"required":750,"window":1000},"reject":{"status":true,"found":1000,"required":950,"window":1000}},{"id":"bip65","version":4,"enforce":{"status":true,"found":1000,"required":750,"window":1000},"reject":{"status":true,"found":1000,"required":950,"window":1000}}],"bip9_softforks":[{"id":"csv","status":"failed"}]},"error":null,"id":"curltest"}
-{% endhighlight %}
+```
 
 ## 源码剖析
 getblockchaininfo 对应的函数在“rpcserver.h”文件中被引用。
 
-{% highlight C++ %}
+```cpp
 extern UniValue getblockchaininfo(const UniValue& params, bool fHelp); // 获取区块链信息
-{% endhighlight %}
+```
 
 实现在“rpcblockchain.cpp”文件中。
 
-{% highlight C++ %}
+```cpp
 UniValue getblockchaininfo(const UniValue& params, bool fHelp)
 {
     if (fHelp || params.size() != 0) // 该命令没有参数
@@ -220,7 +220,7 @@ UniValue getblockchaininfo(const UniValue& params, bool fHelp)
     }
     return obj; // 返回目标对象
 }
-{% endhighlight %}
+```
 
 基本流程：
 1. 处理命令帮助和参数个数。

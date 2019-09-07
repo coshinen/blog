@@ -16,14 +16,14 @@ tags: 区块链 比特币 源码剖析
 1.初始化椭圆曲线代码。
 首先调用 ECC_Start() 函数启动椭圆曲线支持。该函数声明在“key.h”文件中。
 
-{% highlight C++ %}
+```cpp
 /** Initialize the elliptic curve support. May not be called twice without calling ECC_Stop first. */
 void ECC_Start(void); // 初始化椭圆曲线支持。如果不先调用 ECC_Stop，可能不会调用 2 次。
-{% endhighlight %}
+```
 
 实现在“key.cpp”文件中，没有入参。
 
-{% highlight C++ %}
+```cpp
 void ECC_Start() {
     assert(secp256k1_context_sign == NULL);
 
@@ -42,7 +42,7 @@ void ECC_Start() {
 
     secp256k1_context_sign = ctx;
 }
-{% endhighlight %}
+```
 
 1.1.创建一个 secp256k1 上下文对象。<br>
 1.2.锁定待生成的随机数种子数组。<br>
@@ -53,7 +53,7 @@ void ECC_Start() {
 1.1.调用 secp256k1_context_create(SECP256K1_CONTEXT_SIGN) 函数创建一个 secp256k1 上下文对象。
 该函数声明在“secp256k1.h”文件中。
 
-{% highlight C++ %}
+```cpp
 /** All flags' lower 8 bits indicate what they're for. Do not use directly. */ // 所有标志的低 8 位表示它们的用途。不要直接使用。
 ...
 #define SECP256K1_FLAGS_TYPE_CONTEXT (1 << 0) // 1
@@ -74,11 +74,11 @@ void ECC_Start() {
 SECP256K1_API secp256k1_context* secp256k1_context_create(
     unsigned int flags
 ) SECP256K1_WARN_UNUSED_RESULT;
-{% endhighlight %}
+```
 
 实现在“secp256k1.c”文件中，入参为：SECP256K1_CONTEXT_SIGN。
 
-{% highlight C++ %}
+```cpp
 secp256k1_context* secp256k1_context_create(unsigned int flags) {
     secp256k1_context* ret = (secp256k1_context*)checked_malloc(&default_error_callback, sizeof(secp256k1_context));
     ret->illegal_callback = default_illegal_callback;
@@ -103,12 +103,12 @@ secp256k1_context* secp256k1_context_create(unsigned int flags) {
 
     return ret;
 }
-{% endhighlight %}
+```
 
 1.2.调用 LockObject(seed) 函数锁定待生成的随机数种子内存栈空间。
 该函数是一个模板函数，其模板定义在“pagelocker.h”文件中。
 
-{% highlight C++ %}
+```cpp
 /**
  * Singleton class to keep track of locked (ie, non-swappable) memory pages, for use in
  * std::allocator templates.
@@ -156,21 +156,21 @@ void LockObject(const T& t)
 {
     LockedPageManager::Instance().LockRange((void*)(&t), sizeof(T)); // 锁定
 }
-{% endhighlight %}
+```
 
 LockedPageManager 是派生于模板类 LockedPageManagerBase<MemoryPageLocker> 的单例类，静态数据成员 _instance 和 init_flag 初始化在“pagelocker.cpp”文件中。<br>
 成员函数 Instance() 内的 boost::call_once(LockedPageManager::CreateInstance, LockedPageManager::init_flag) 确保成员函数 LockedPageManager::CreateInstance 只执行一次，
 以线程安全的方式来初始化数据，详见 [boost:call_once](https://www.boost.org/doc/libs/1_32_0/doc/html/call_once.html)。
 
-{% highlight C++ %}
+```cpp
 LockedPageManager* LockedPageManager::_instance = NULL; // 懒汉式，单独无法保证前程安全
 boost::once_flag LockedPageManager::init_flag = BOOST_ONCE_INIT; // 可保证线程安全
-{% endhighlight %}
+```
 
 先调用 LockedPageManager::Instance() 获取锁定页面管理器单例对象，然后调用其基类成员函数 LockedPageManager::Instance().LockRange((void*)(&t), sizeof(T)) 来进行区域锁定。
 其继承基类传入的类模板类型参数 MemoryPageLocker 是一个依赖操作系统的内存页加解锁类，该类定义在“pagelocker.h”文件中。
 
-{% highlight C++ %}
+```cpp
 /**
  * OS-dependent memory page locking/unlocking.
  * Defined as policy class to make stubbing for test possible.
@@ -187,11 +187,11 @@ public:
      */ // 解锁内存页。地址和长度必须是系统页的倍数
     bool Unlock(const void* addr, size_t len);
 };
-{% endhighlight %}
+```
 
 其成员函数实现在“pagelocker.cpp”文件中。
 
-{% highlight C++ %}
+```cpp
 bool MemoryPageLocker::Lock(const void* addr, size_t len)
 {
 #ifdef WIN32
@@ -209,12 +209,12 @@ bool MemoryPageLocker::Unlock(const void* addr, size_t len)
     return munlock(addr, len) == 0; // 解锁内存页
 #endif
 }
-{% endhighlight %}
+```
 
 <p id="UnlockRange-ref"></p>
 而基类成员函数 LockedPageManager::Instance().LockRange(...) 定义在“pagelocker.cpp”文件的 LockedPageManagerBase 类中。
 
-{% highlight C++ %}
+```cpp
 /**
  * Thread-safe class to keep track of locked (ie, non-swappable) memory pages.
  *
@@ -284,20 +284,20 @@ private:
     typedef std::map<size_t, int> Histogram; // <页面起始地址， 锁定次数>
     Histogram histogram; // 页面基址映射列表
 };
-{% endhighlight %}
+```
 
 1.3.调用 GetRandBytes(seed, 32) 获取 32 个字节的随机数，该函数声明在“random.h”文件中。
 
-{% highlight C++ %}
+```cpp
 /**
  * Functions to gather random data via the OpenSSL PRNG
  */ // 通过 OpenSSL 伪随机数生成器搜集随机数据的函数
 void GetRandBytes(unsigned char* buf, int num); // 获取 num 字节的随机数
-{% endhighlight %}
+```
 
 实现在“random.cpp”文件中，入参为：32 字节的数据（栈空间），待获取随机数的字节数。
 
-{% highlight C++ %}
+```cpp
 void GetRandBytes(unsigned char* buf, int num)
 {
     if (RAND_bytes(buf, num) != 1) { // 通过加密算法生成 num 位随机数，实际还是伪随机数，若提前设定种子，则该随机数无法被预先计算
@@ -305,56 +305,56 @@ void GetRandBytes(unsigned char* buf, int num)
         assert(false);
     }
 }
-{% endhighlight %}
+```
 
 直接调用 OpenSSL 库的 RAND_bytes(buf, num) 函数获取 num 字节的随机数到 buf 中。
 详见[/docs/manmaster/man3/RAND_bytes](https://www.openssl.org/docs/manmaster/man3/RAND_bytes.html)。
 
 1.4.调用 secp256k1_context_randomize(ctx, seed) 函数设置致盲值，该函数实现在“secp256k1.c”文件中。
 
-{% highlight C++ %}
+```cpp
 int secp256k1_context_randomize(secp256k1_context* ctx, const unsigned char *seed32) {
     VERIFY_CHECK(ctx != NULL); // 验证 secp256k1 上下文对象是否创建
     ARG_CHECK(secp256k1_ecmult_gen_context_is_built(&ctx->ecmult_gen_ctx)); // 检查 secp256k1_ecmult_gen_context 对象的数据成员是否为空
     secp256k1_ecmult_gen_blind(&ctx->ecmult_gen_ctx, seed32); // 设置 secp256k1_ecmult_gen 的盲值
     return 1; // 成功返回 1
 }
-{% endhighlight %}
+```
 
 1.5.调用 UnLockObject(seed) 函数解锁已生成的随机数种子内存栈空间。
 该函数是一个模板函数，其模板定义在“pagelocker.h”文件中。
 
-{% highlight C++ %}
+```cpp
 template <typename T>
 void UnlockObject(const T& t)
 {
     memory_cleanse((void*)(&t), sizeof(T)); // 先清空指定区域的数据
     LockedPageManager::Instance().UnlockRange((void*)(&t), sizeof(T)); // 解锁
 }
-{% endhighlight %}
+```
 
 首先调用 memory_cleanse((void*)(&t), sizeof(T)) 函数清空指定区域，该函数声明在“cleanse.h”文件中。
 然后解锁该区域的内存，详见 [1.2](#UnlockRange-ref)。
 
-{% highlight C++ %}
+```cpp
 void memory_cleanse(void *ptr, size_t len); // 清空敏感数据（写入随机数或纯 0）
-{% endhighlight %}
+```
 
 实现在“cleanse.cpp”文件中，入参为：指向某内存空间的指针（地址），长度（字节）。
 
-{% highlight C++ %}
+```cpp
 void memory_cleanse(void *ptr, size_t len)
 {
     OPENSSL_cleanse(ptr, len); // 使用 0 字符串填充从 ptr 指向位置开始 len 大小字节
 }
-{% endhighlight %}
+```
 
 内部调用 OpenSSL 库 OPENSSL_cleanse(ptr, len) 函数把指定空间填充为 0，
 详见 [/docs/manmaster/man3/OPENSSL_cleanse](https://www.openssl.org/docs/manmaster/man3/OPENSSL_cleanse.html)。
 
 然后调用 globalVerifyHandle.reset(new ECCVerifyHandle()) 函数创建椭圆曲线验证对象，类 ECCVerifyHandle 定义在“pubkey.h”文件中。
 
-{% highlight C++ %}
+```cpp
 /** Users of this module must hold an ECCVerifyHandle. The constructor and
  *  destructor of these are not allowed to run in parallel, though. */
 class ECCVerifyHandle // 该模块的用户必须持有 ECCVerifyHandle。但不允许构造函数和析构函数并行执行。
@@ -365,13 +365,13 @@ public:
     ECCVerifyHandle();
     ~ECCVerifyHandle();
 };
-{% endhighlight %}
+```
 
 全局静态智能指针 globalVerifyHandle 定义在“init.cpp”文件中。
 
-{% highlight C++ %}
+```cpp
 static boost::scoped_ptr<ECCVerifyHandle> globalVerifyHandle; // 该智能指针与 STL 的 std::unique_ptr 类似
-{% endhighlight %}
+```
 
 智能指针 boost::scoped_ptr 不能复制或移动，类似于 STL 的 std::unique_ptr，详见 [boost::scoped_ptr](https://theboostcpplibraries.com/boost.smartpointers-sole-ownership){:target="_blank"}。
 

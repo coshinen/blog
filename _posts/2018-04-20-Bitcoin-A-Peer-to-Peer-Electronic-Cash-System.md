@@ -462,7 +462,7 @@ Converting to C code...
 
 > 转换为 C 代码...
 
-{% highlight C %}
+```c
 #include <math.h>
 
 double AttackerSuccessProbability(double q, int z)
@@ -480,13 +480,13 @@ double AttackerSuccessProbability(double q, int z)
 	}
 	return sum;
 }
-{% endhighlight %}
+```
 
 Running some results, we can see the probability drop off exponentially with z.
 
 > 部分运行结果，我们可以看到概率随 z 呈指数下降。
 
-{% highlight shell %}
+```shell
 q=0.1
 z=0    P=1.0000000
 z=1    P=0.2045873
@@ -512,13 +512,13 @@ z=35   P=0.0000379
 z=40   P=0.0000095
 z=45   P=0.0000024
 z=50   P=0.0000006
-{% endhighlight %}
+```
 
 Solving for P less than 0.1%...
 
 > P 小于 0.1% 解决...
 
-{% highlight shell %}
+```shell
 P < 0.001
 q=0.10   z=5
 q=0.15   z=8
@@ -528,7 +528,7 @@ q=0.30   z=24
 q=0.35   z=41
 q=0.40   z=89
 q=0.45   z=340
-{% endhighlight %}
+```
 
 ## 12. Conclusion | 结论
 

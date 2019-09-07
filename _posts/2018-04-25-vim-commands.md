@@ -121,9 +121,9 @@ Vim (Vi IMproved) 是 Vi 文本编辑器的升级版，在 UNIX/Linux 系统中�
 
 **Vim 默认会在行尾添加一个换行符。**
 
-{% highlight shell %}
+```shell
 $ vim -b <file> # -b 选项表示二进制模式。
-{% endhighlight %}
+```
 
 在命令模式使用下面命令去除最后一行行尾的换行符。
 

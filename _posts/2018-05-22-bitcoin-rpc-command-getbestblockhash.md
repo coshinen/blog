@@ -10,9 +10,9 @@ excerpt: $ bitcoin-cli getbestblockhash
 ---
 ## 提示说明
 
-{% highlight shell %}
+```shell
 getbestblockhash # 获取最长区块链上最佳（链尖）区块的哈希
-{% endhighlight %}
+```
 
 结果：（字符串）返回区块哈希 16 进制编码形式。
 
@@ -22,28 +22,28 @@ getbestblockhash # 获取最长区块链上最佳（链尖）区块的哈希
 
 未 IBD(Initial Block Download) 时，查询最佳区块 - 创世区块的哈希值。
 
-{% highlight shell %}
+```shell
 $ bitcoin-cli getbestblockhash
 0000000000019d6689c085ae165831e934ff763ae46a2a6c172b3f1b60a8ce26f
-{% endhighlight %}
+```
 
 ### cURL
 
-{% highlight shell %}
+```shell
 $ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "getbestblockhash", "params": [] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
 {"result":"0000000000019d6689c085ae165831e934ff763ae46a2a6c172b3f1b60a8ce26f","error":null,"id":"curltest"}
-{% endhighlight %}
+```
 
 ## 源码剖析
 getbestblockhash 对应的函数在“rpcserver.h”文件中被引用。
 
-{% highlight C++ %}
+```cpp
 extern UniValue getbestblockhash(const UniValue& params, bool fHelp); // 获取当前最佳块的哈希
-{% endhighlight %}
+```
 
 实现在“rpcserver.cpp”文件中。
 
-{% highlight C++ %}
+```cpp
 UniValue getbestblockhash(const UniValue& params, bool fHelp)
 {
     if (fHelp || params.size() != 0) // 1.该命令没有参数
@@ -60,7 +60,7 @@ UniValue getbestblockhash(const UniValue& params, bool fHelp)
     LOCK(cs_main);
     return chainActive.Tip()->GetBlockHash().GetHex(); // 2.返回激活链尖区块哈希的 16 进制
 }
-{% endhighlight %}
+```
 
 基本流程：<br>
 1.处理命令帮助和参数个数。<br>
@@ -68,20 +68,20 @@ UniValue getbestblockhash(const UniValue& params, bool fHelp)
 
 对象 chainActive 的引用在“main.h”文件中。
 
-{% highlight C++ %}
+```cpp
 /** The currently-connected chain of blocks (protected by cs_main). */
 extern CChain chainActive; // 当前连接的区块链（激活的链）
-{% endhighlight %}
+```
 
 定义在“main.h”文件中。
 
-{% highlight C++ %}
+```cpp
 CChain chainActive; // 当前连接的区块链（激活的链）
-{% endhighlight %}
+```
 
 类 CChain 定义在“chain.h”文件中。
 
-{% highlight C++ %}
+```cpp
 /** An in-memory indexed chain of blocks. */
 class CChain { // 一个内存中用于区块索引的链
 private:
@@ -95,11 +95,11 @@ public:
     }
     ...
 };
-{% endhighlight %}
+```
 
 类 CBlockIndex 也定义在“chain.h”文件中。
 
-{% highlight C++ %}
+```cpp
 /** The block chain is a tree shaped structure starting with the
  * genesis block at the root, with each block potentially having multiple
  * candidates to be the next block. A blockindex may have multiple pprev pointing
@@ -117,7 +117,7 @@ public:
     }
     ...
 };
-{% endhighlight %}
+```
 
 最后把得到区块哈希调用 GetHex() 函数转换为 16 进制返回给客户端。
 

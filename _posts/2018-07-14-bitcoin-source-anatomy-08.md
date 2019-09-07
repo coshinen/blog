@@ -17,21 +17,21 @@ tags: 区块链 比特币 源码剖析
 详见 [create_thread](https://www.boost.org/doc/libs/1_67_0/doc/html/thread/thread_management.html#thread.thread_management.threadgroup)。
 传入的线程行为函数 ThreadScriptCheck 声明在”main.h”文件中。
 
-{% highlight C++ %}
+```cpp
 /** Run an instance of the script checking thread */
 void ThreadScriptCheck(); // 运行一个脚本检查线程的实例
-{% endhighlight %}
+```
 
 实现在“main.cpp”文件中，没有入参。
 
-{% highlight C++ %}
+```cpp
 static CCheckQueue<CScriptCheck> scriptcheckqueue(128); // 脚本检查队列，队列容量为 128
 
 void ThreadScriptCheck() {
     RenameThread("bitcoin-scriptch"); // 1.重命名线程
     scriptcheckqueue.Thread(); // 2.执行线程工作函数
 }
-{% endhighlight %}
+```
 
 7.1.重命名线程。<br>
 7.2.执行线程工作函数。
@@ -39,13 +39,13 @@ void ThreadScriptCheck() {
 7.1.调用 RenameThread("bitcoin-scriptch") 函数重命名线程，3 种不同平台的重命名。
 该函数声明在“util.h”文件中。
 
-{% highlight C++ %}
+```cpp
 void RenameThread(const char* name); // 重命名线程函数
-{% endhighlight %}
+```
 
 实现在“util.cpp”文件中，入参为：线程名字符串常量。
 
-{% highlight C++ %}
+```cpp
 void RenameThread(const char* name)
 {
 #if defined(PR_SET_NAME) // Linux
@@ -61,13 +61,13 @@ void RenameThread(const char* name)
     (void)name; // 转为空
 #endif
 }
-{% endhighlight %}
+```
 
 Linux 下调用 prctl 进行线程的命名，该函数详见 [prctl](http://man7.org/linux/man-pages/man2/prctl.2.html)。
 
 7.2.调用 scriptcheckqueue.Thread() 执行脚本验证线程工作函数，该函数定义在“checkqueue.h”文件的 CCheckQueue 类模板中。
 
-{% highlight C++ %}
+```cpp
 /** 
  * Queue for verifications that have to be performed.
   * The verifications are represented by a type T, which must provide an
@@ -189,7 +189,7 @@ public:
     }
     ...
 };
-{% endhighlight %}
+```
 
 从这里可以看出为什么指定创建 N 个脚本检测线程，实际上只显示创建了 N-1 个。
 有一个主工作线程负责往验证队列中添加元素，完成添加工作后就作为第 N 个普通工作线程加入工作线程池，直到完成工作。
@@ -203,7 +203,7 @@ public:
 
 7.2.6.调用 check() 函数来进行脚本检测，其重载的函数调用运算符声明在“main.h”文件的 CScriptCheck 类中。
 
-{% highlight C++ %}
+```cpp
 /**
  * Closure representing one script verification
  * Note that this stores references to the spending transaction 
@@ -214,11 +214,11 @@ class CScriptCheck // 脚本验证类
     bool operator()(); // 重载的函数调用运算符
     ...
 };
-{% endhighlight %}
+```
 
 实现在“main.cpp”文件中，没有入参。
 
-{% highlight C++ %}
+```cpp
 bool CScriptCheck::operator()() {
     const CScript &scriptSig = ptxTo->vin[nIn].scriptSig; // 获取交易指定输入的脚本签名
     if (!VerifyScript(scriptSig, scriptPubKey, nFlags, CachingTransactionSignatureChecker(ptxTo, nIn, cacheStore), &error)) { // 验证脚本
@@ -226,19 +226,19 @@ bool CScriptCheck::operator()() {
     }
     return true;
 }
-{% endhighlight %}
+```
 
 这里调用 VerifyScript(scriptSig, scriptPubKey, nFlags, CachingTransactionSignatureChecker(ptxTo, nIn, cacheStore), &error) 函数验证交易指定输入的脚本。
 该函数声明在“interpreter.h”文件中。
 
-{% highlight C++ %}
+```cpp
 bool EvalScript(std::vector<std::vector<unsigned char> >& stack, const CScript& script, unsigned int flags, const BaseSignatureChecker& checker, ScriptError* error = NULL); // 评测脚本
 bool VerifyScript(const CScript& scriptSig, const CScript& scriptPubKey, unsigned int flags, const BaseSignatureChecker& checker, ScriptError* error = NULL); // 验证脚本
-{% endhighlight %}
+```
 
 实现在“interpreter.cpp”文件中，入参为：脚本签名，脚本公钥，标志位，缓存交易签名检查对象，待获取的脚本错误信息。
 
-{% highlight C++ %}
+```cpp
 bool VerifyScript(const CScript& scriptSig, const CScript& scriptPubKey, unsigned int flags, const BaseSignatureChecker& checker, ScriptError* serror)
 {
     set_error(serror, SCRIPT_ERR_UNKNOWN_ERROR); // 设置未知类型错误
@@ -303,12 +303,12 @@ bool VerifyScript(const CScript& scriptSig, const CScript& scriptPubKey, unsigne
 
     return set_success(serror); // 返回设置错误信息成功
 }
-{% endhighlight %}
+```
 
 <p id="serviceQueue-ref"></p>
 8.创建轻量级任务调度线程，这部分代码实现在“init.cpp”文件的 AppInit2(...) 函数的第四步 Step 4: application initialization: dir lock, daemonize, pidfile, debug log。
 
-{% highlight C++ %}
+```cpp
 bool AppInit2(boost::thread_group& threadGroup, CScheduler& scheduler) // 3.11.程序初始化，共 12 步
 {
     ...
@@ -317,14 +317,14 @@ bool AppInit2(boost::thread_group& threadGroup, CScheduler& scheduler) // 3.11.�
     threadGroup.create_thread(boost::bind(&TraceThread<CScheduler::Function>, "scheduler", serviceLoop)); // 8.2.线程组 threadGroup 创建一个轻量级任务调度线程
     ...
 }
-{% endhighlight %}
+```
 
 8.1.Function/bind 绑定线程函数 CScheduler::serviceQueue 到函数对象 serviceLoop。<br>
 8.2.创建一个轻量级任务调度线程加入线程组 threadGroup。
 
 线程函数 CScheduler::serviceQueue 声明在“scheduler.h”文件的 CScheduler 类中。
 
-{% highlight C++ %}
+```cpp
 class CScheduler // 调度器类
 {
 public:
@@ -344,11 +344,11 @@ private:
     int nThreadsServicingQueue; // 记录服务队列的线程数
     ...
 }
-{% endhighlight %}
+```
 
 实现在“scheduler.cpp”文件中，没有入参。
 
-{% highlight C++ %}
+```cpp
 void CScheduler::serviceQueue()
 {
     boost::unique_lock<boost::mutex> lock(newTaskMutex); // 1.上锁，保证函数线程安全
@@ -402,7 +402,7 @@ void CScheduler::serviceQueue()
     } // end of loop
     --nThreadsServicingQueue; // 4.使用任务队列的线程数减 1
 }
-{% endhighlight %}
+```
 
 1.任务队列上锁。<br>
 2.使用队列的线程数加 1。<br>

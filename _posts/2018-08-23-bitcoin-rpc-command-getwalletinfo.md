@@ -10,12 +10,12 @@ excerpt: $ bitcoin-cli getwalletinfo
 ---
 ## 提示说明
 
-{% highlight shell %}
+```shell
 getwalletinfo # 获取一个包含各种钱包状态信息的对象
-{% endhighlight %}
+```
 
 结果：<br>
-{% highlight shell %}
+```shell
 {
   "walletversion": xxxxx,     （数字）钱包版本
   "balance": xxxxxxx,         （数字）钱包中以 BTC 为单位已确认的总余额
@@ -27,7 +27,7 @@ getwalletinfo # 获取一个包含各种钱包状态信息的对象
   "unlocked_until": ttt,      （数字）从格林尼治时间（1970-01-01 00:00:00）开始以秒为单位钱包用于转账的解锁截止时间戳，若钱包锁定则为 0
   "paytxfee": x.xxxx,         （数字）交易费配置，以 BTC/kB 为单位
 }
-{% endhighlight %}
+```
 
 ## 用法示例
 
@@ -35,7 +35,7 @@ getwalletinfo # 获取一个包含各种钱包状态信息的对象
 
 获取钱包信息。
 
-{% highlight shell %}
+```shell
 $ bitcoin-cli getwalletinfo
 {
   "walletversion": 60000,
@@ -48,25 +48,25 @@ $ bitcoin-cli getwalletinfo
   "unlocked_until": 0,
   "paytxfee": 0.00000000
 }
-{% endhighlight %}
+```
 
 ### cURL
 
-{% highlight shell %}
+```shell
 $ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "getwalletinfo", "params": [] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
 {"result":{"walletversion":60000,"balance":117697.01429440,"unconfirmed_balance":0.00000000,"immature_balance":0.00000000,"txcount":2413,"keypoololdest":1530153420,"keypoolsize":92,"unlocked_until":0,"paytxfee":0.00000000},"error":null,"id":"curltest"}
-{% endhighlight %}
+```
 
 ## 源码剖析
 getwalletinfo 对应的函数在“rpcserver.h”文件中被引用。
 
-{% highlight C++ %}
+```cpp
 extern UniValue getwalletinfo(const UniValue& params, bool fHelp); // 获取钱包信息
-{% endhighlight %}
+```
 
 实现在“rpcwallet.cpp”文件中。
 
-{% highlight C++ %}
+```cpp
 UniValue getwalletinfo(const UniValue& params, bool fHelp)
 {
     if (!EnsureWalletIsAvailable(fHelp)) // 确保钱包当前可用
@@ -108,7 +108,7 @@ UniValue getwalletinfo(const UniValue& params, bool fHelp)
     obj.push_back(Pair("paytxfee",      ValueFromAmount(payTxFee.GetFeePerK()))); // 交易费
     return obj; // 返回结果
 }
-{% endhighlight %}
+```
 
 基本流程：
 1. 确保当前钱包可用（已初始化完成）。

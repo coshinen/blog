@@ -10,15 +10,15 @@ excerpt: $ bitcoin-cli decodescript "hex"
 ---
 ## 提示说明
 
-{% highlight shell %}
+```shell
 decodescript "hex" # 解码一个 16 进制编码的脚本
-{% endhighlight %}
+```
 
 参数：
 1. hex（字符串，必备）16 进制编码的脚本，可以为空 ""。
 
 结果：
-{% highlight shell %}
+```shell
 {
   "asm":"asm",   （字符串）脚本公钥
   "hex":"hex",   （字符串）16 进制编码的公钥
@@ -30,7 +30,7 @@ decodescript "hex" # 解码一个 16 进制编码的脚本
   ],
   "p2sh","address" （字符串）脚本地址
 }
-{% endhighlight %}
+```
 
 ## 用法示例
 
@@ -38,7 +38,7 @@ decodescript "hex" # 解码一个 16 进制编码的脚本
 
 方法一：解锁指定原始交易的输出的脚本。
 
-{% highlight shell %}
+```shell
 $ bitcoin-cli getrawtransaction 684f6ed5b6e127ba76c07ef4c3fcc02a02c7e2ccef9ed0d2cc16c2896159c746 1
 {
   "hex": "0100000001677e3c8d416184b42c753a8446f17b0b7997f0df7149449fbd0aef3cdfd29bfb000000006b4830450221009b29490f5e1709bc3cce16c6433a0b8895add5a9d3c2fa63da11da065105ad59022022d068337cd3b20be04513e539f0bbbb5319ed1b3a3a8ec6262a30a8bd393b3d012103583eb3acb7f0b9c431d97a4872a270f4e519fbca0ec519adf16764c663e36546ffffffff0140420f00000000001976a914e221b8a504199bec7c5fe8081edd011c3653118288ac00000000",
@@ -83,36 +83,36 @@ $ bitcoin-cli decodescript 76a914e221b8a504199bec7c5fe8081edd011c3653118288ac
   ],
   "p2sh": "37HPRCgvC7gKoVr9zPma7vboRGikgzEoJG"
 }
-{% endhighlight %}
+```
 
 方法二：解锁空脚本。
 
-{% highlight C++ %}
+```cpp
 $ bitcoin-cli decodescript ""
 {
   "asm": "",
   "type": "nonstandard",
   "p2sh": "3J98t1WpEZ73CNmQviecrnyiWrnqRhWNLy"
 }
-{% endhighlight %}
+```
 
 ### cURL
 
-{% highlight C++ %}
+```cpp
 $ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "decodescript", "params": ["76a914e221b8a504199bec7c5fe8081edd011c3653118288ac"] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
 {"result":{"asm":"OP_DUP OP_HASH160 e221b8a504199bec7c5fe8081edd011c36531182 OP_EQUALVERIFY OP_CHECKSIG","reqSigs":1,"type":"pubkeyhash","addresses":["1Mcg7MDBD38sSScsX3USbsCnkcMbPnLyTV"],"p2sh":"37HPRCgvC7gKoVr9zPma7vboRGikgzEoJG"},"error":null,"id":"curltest"}
-{% endhighlight %}
+```
 
 ## 源码剖析
 decodescript 对应的函数在“rpcserver.h”文件中被引用。
 
-{% highlight C++ %}
+```cpp
 extern UniValue decodescript(const UniValue& params, bool fHelp); // 解码脚本
-{% endhighlight %}
+```
 
 实现在“rpcrawtransaction.cpp”文件中。
 
-{% highlight C++ %}
+```cpp
 UniValue decodescript(const UniValue& params, bool fHelp)
 {
     if (fHelp || params.size() != 1) // 参数必须是 1 个
@@ -153,7 +153,7 @@ UniValue decodescript(const UniValue& params, bool fHelp)
     r.push_back(Pair("p2sh", CBitcoinAddress(CScriptID(script)).ToString())); // Base58 编码的脚本哈希
     return r; // 返回结果集
 }
-{% endhighlight %}
+```
 
 基本流程：<br>
 1.处理命令帮助和参数个数。<br>
@@ -165,7 +165,7 @@ UniValue decodescript(const UniValue& params, bool fHelp)
 第四步，调用 ScriptPubKeyToJSON(script, r, false) 把脚本公钥转换为 JSON 格式，
 该函数定义在“rpcrawtransaction.cpp”文件中。
 
-{% highlight C++ %}
+```cpp
 void ScriptPubKeyToJSON(const CScript& scriptPubKey, UniValue& out, bool fIncludeHex)
 {
     txnouttype type;
@@ -189,7 +189,7 @@ void ScriptPubKeyToJSON(const CScript& scriptPubKey, UniValue& out, bool fInclud
         a.push_back(CBitcoinAddress(addr).ToString());
     out.push_back(Pair("addresses", a)); // 输出地址
 }
-{% endhighlight %}
+```
 
 ## 参照
 

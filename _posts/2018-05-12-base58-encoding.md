@@ -43,7 +43,7 @@ Value | Character | Value | Character | Value | Character | Value | Character
 
 比特币中的 Base58 编码使用的是 Base58Check，实现如下：
 
-{% highlight C++ %}
+```cpp
 /** All alphanumeric characters except for "0", "I", "O", and "l" */
 static const char* pszBase58 = "123456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz"; // 10 + 26 * 2 - 4 = 58
 ...
@@ -81,7 +81,7 @@ std::string EncodeBase58(const unsigned char* pbegin, const unsigned char* pend)
         str += pszBase58[*(it++)]; // append *it then ++it
     return str; // 前缀为 0x00 不参与 Base58 运算，地址长度固定为 34 bytes 且前缀位 '1'，其他不为 0x00 的前缀，均参与 Base58 运算，地址长度变换范围 33 - 35 bytes
 }
-{% endhighlight %}
+```
 
 对 25 bytes 的“前缀（Version） + 公钥（PubKeyID） + 校验和（Checksum）”进行 Base58 编码：
 1. 跳过开头的 0 同时统计其个数。zeroes 的取值只有两种情况，当版本号即地址前缀取 “0x00” 时，zeroes 为 1，其它情况 zeroes 为 0。
@@ -93,16 +93,16 @@ std::string EncodeBase58(const unsigned char* pbegin, const unsigned char* pend)
 
 对于第 3 步 Base58 转换的核心算法，256 进制转换为 58 进制，公式 "b58 = b58 * 256 + ch"。
 
-{% highlight C++%}
+```cpp
 carry += 256 * (*it);
 *it = carry % 58;
 carry /= 58;
-{% endhighlight %}
+```
 
 不理解这里的进制转换？
 请看该例：小端模式内存中 0x0102（256 进制）对应 10 进制的 258 转换为大端模式 58 进制的过程。
 
-{% highlight C++ %}
+```cpp
 DEC 258 HEX 0x0102
     +---------+              Step2: 2 + 1 * 256 = 258
 MEM |0x01|0x02+-------------------+ 258 % 58 =[26]
@@ -125,7 +125,7 @@ MEM |0x00|0x01|                   |
 b58 +--v----v-+
 MEM |0x04|0x1A|
     +---------+
-{% endhighlight %}
+```
 
 ## 参照
 

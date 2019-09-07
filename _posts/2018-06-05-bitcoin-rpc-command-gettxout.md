@@ -10,9 +10,9 @@ excerpt: $ bitcoin-cli gettxout "txid" n ( includemempool )
 ---
 ## 提示说明
 
-{% highlight shell %}
+```shell
 gettxout "txid" n ( includemempool ) # 获取关于一笔未花费交易输出的细节
-{% endhighlight %}
+```
 
 参数：<br>
 1.txid（字符串，必备）交易索引。<br>
@@ -20,7 +20,7 @@ gettxout "txid" n ( includemempool ) # 获取关于一笔未花费交易输出�
 3.includemempool（布尔型，可选）是否在交易内存池中。
 
 结果：<br>
-{% highlight shell %}
+```shell
 {
   "bestblock" : "hash",    （字符串）区块哈希
   "confirmations" : n,       （数字）确认数
@@ -38,14 +38,14 @@ gettxout "txid" n ( includemempool ) # 获取关于一笔未花费交易输出�
   "version" : n,            （数字）版本
   "coinbase" : true|false   （布尔型）是创币交易或不是
 }
-{% endhighlight %}
+```
 
 ## 用法示例
 
 先使用 [listunspent](/blog/2018/09/bitcoin-rpc-command-listunspent.html) 命令列出未花费交易输出，
 再通过交易索引和交易输出序号获取该交易输出的详细信息。
 
-{% highlight shell %}
+```shell
 $ bitcoin-cli listunspent
 [
   {
@@ -84,27 +84,27 @@ $ bitcoin-cli gettxout b797bafd7830774cec4d24d1e649cafb0aa7a67b9f1cc06954102a50b
   "version": 1,
   "coinbase": false
 }
-{% endhighlight %}
+```
 
 ### cURL
 
 使用 json rpc 调用。
 
-{% highlight shell %}
+```shell
 $ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "gettxout", "params": ["txid", 1] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
 {"result":{"bestblock":"0000012fa5815cb19a6012d2a42aecd0e6d99df2462cb107d752d5637441b54e","confirmations":656,"value":48.99996160,"scriptPubKey":{"asm":"OP_DUP OP_HASH160 4483dc8ad0a184355b70b2767a832266b4c2df0a OP_EQUALVERIFY OP_CHECKSIG","hex":"76a9144483dc8ad0a184355b70b2767a832266b4c2df0a88ac","reqSigs":1,"type":"pubkeyhash","addresses":["17FGuwcea6vd7GLhBc16Xuwqfk7KFp5cZ3"]},"version":1,"coinbase":false},"error":null,"id":"curltest"}
-{% endhighlight %}
+```
 
 ## 源码剖析
 gettxout 对应的函数在“rpcserver.h”文件中被引用。
 
-{% highlight C++ %}
+```cpp
 extern UniValue gettxout(const UniValue& params, bool fHelp); // 获取一笔交易输出（链上或内存池中）的细节
-{% endhighlight %}
+```
 
 实现在“rpcblockchain.cpp”文件中。
 
-{% highlight C++ %}
+```cpp
 UniValue gettxout(const UniValue& params, bool fHelp)
 {
     if (fHelp || params.size() < 2 || params.size() > 3) // 参数为 2 个或 3 个
@@ -184,7 +184,7 @@ UniValue gettxout(const UniValue& params, bool fHelp)
 
     return ret;
 }
-{% endhighlight %}
+```
 
 基本流程：
 1. 处理命令帮助和参数个数。

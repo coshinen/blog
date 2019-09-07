@@ -10,9 +10,9 @@ excerpt: $ bitcoin-cli listreceivedbyaccount ( minconf includeempty includeWatch
 ---
 ## 提示说明
 
-{% highlight shell %}
+```shell
 listreceivedbyaccount ( minconf includeempty includeWatchonly ) # （已过时）列出账户余额
-{% endhighlight %}
+```
 
 参数：<br>
 1.minconf（数字，可选，默认为 1）在被包含到付款前的最小确认数。<br>
@@ -20,7 +20,7 @@ listreceivedbyaccount ( minconf includeempty includeWatchonly ) # （已过时�
 3.includeWatchonly（布尔型，可选，默认为 false）是否包含 watchonly 地址（见 [importaddress](/blog/2018/06/bitcoin-rpc-command-importaddress.html)）。
 
 结果：<br>
-{% highlight shell %}
+```shell
 [
   {
     "involvesWatchonly" : true,   （布尔型）若导入的地址包含在交易中，只返回该项
@@ -31,7 +31,7 @@ listreceivedbyaccount ( minconf includeempty includeWatchonly ) # （已过时�
   }
   ,...
 ]
-{% endhighlight %}
+```
 
 ## 用法示例
 
@@ -39,7 +39,7 @@ listreceivedbyaccount ( minconf includeempty includeWatchonly ) # （已过时�
 
 用法一：列出钱包全部有接收到付款的账户信息。
 
-{% highlight shell %}
+```shell
 $ bitcoin-cli listreceivedbyaccount
 [
   {
@@ -53,11 +53,11 @@ $ bitcoin-cli listreceivedbyaccount
     "confirmations": 3981
   }
 ]
-{% endhighlight %}
+```
 
 用法二：列出最小 6 个确认，且包含未收到付款的帐户信息。
 
-{% highlight shell %}
+```shell
 $ bitcoin-cli listreceivedbyaccount 6 true
 [
   {
@@ -76,25 +76,25 @@ $ bitcoin-cli listreceivedbyaccount 6 true
     "confirmations": 0
   }
 ]
-{% endhighlight %}
+```
 
 ### cURL
 
-{% highlight shell %}
+```shell
 $ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "listreceivedbyaccount", "params": [6, true, true] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
 {"result":[{"account":"","amount":105.00987800,"confirmations":5561},{"account":"account","amount":100.00000000,"confirmations":4031},{"account":"testing","amount":0.00000000,"confirmations":0}],"error":null,"id":"curltest"}
-{% endhighlight %}
+```
 
 ## 源码剖析
 listreceivedbyaccount 对应的函数在“rpcserver.h”文件中被引用。
 
-{% highlight C++ %}
+```cpp
 extern UniValue listreceivedbyaccount(const UniValue& params, bool fHelp); // 列出账户余额
-{% endhighlight %}
+```
 
 实现在“rpcwallet.cpp”文件中。
 
-{% highlight C++ %}
+```cpp
 UniValue listreceivedbyaccount(const UniValue& params, bool fHelp)
 {
     if (!EnsureWalletIsAvailable(fHelp)) // 确保当前钱包可用
@@ -131,7 +131,7 @@ UniValue listreceivedbyaccount(const UniValue& params, bool fHelp)
 
     return ListReceived(params, true); // 列出账户余额并返回
 }
-{% endhighlight %}
+```
 
 基本流程：<br>
 1.确保钱包当前可用（已初始化完成）。<br>
@@ -141,7 +141,7 @@ UniValue listreceivedbyaccount(const UniValue& params, bool fHelp)
 
 第四步，调用 ListReceived(params, true) 函数获取接收到账户信息列表，定义在“rpcwallet.cpp”文件中。
 
-{% highlight C++ %}
+```cpp
 struct tallyitem // 账目类
 {
     CAmount nAmount; // 金额，默认为 0
@@ -275,7 +275,7 @@ UniValue ListReceived(const UniValue& params, bool fByAccounts) // fByAccounts =
 
     return ret; // 返回结果对象
 }
-{% endhighlight %}
+```
 
 ## 参照
 

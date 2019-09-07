@@ -10,16 +10,16 @@ excerpt: $ bitcoin-cli getaddednodeinfo dns ( "node" )
 ---
 ## 提示说明
 
-{% highlight shell %}
+```shell
 getaddednodeinfo dns ( "node" ) # 获取关于给定或全部添加节点的信息（注意 addnode 命令中 onetry 选项不在这儿列出）
-{% endhighlight %}
+```
 
 参数：<br>
 1.dns（布尔型，必备）如果为 false，只提供一个添加节点的列表，否则显示连接信息。<br>
 2.node（字符串，可选）如果提供，则返回关于指定节点的信息，否则返回所有节点信息。
 
 结果：<br>
-{% highlight shell %}
+```shell
 [
   {
     "addednode" : "192.168.0.201",   （字符串）节点 ip 地址
@@ -34,7 +34,7 @@ getaddednodeinfo dns ( "node" ) # 获取关于给定或全部添加节点的信�
   }
   ,...
 ]
-{% endhighlight %}
+```
 
 ## 用法示例
 
@@ -42,7 +42,7 @@ getaddednodeinfo dns ( "node" ) # 获取关于给定或全部添加节点的信�
 
 用法一：获取所有添加的节点列表。
 
-{% highlight shell %}
+```shell
 $ bitcoin-cli addnode 192.168.0.2 add
 $ bitcoin-cli addnode 192.168.0.6 add
 $ bitcoin-cli getaddednodeinfo false
@@ -54,11 +54,11 @@ $ bitcoin-cli getaddednodeinfo false
     "addednode": "192.168.0.6"
   }
 ]
-{% endhighlight %}
+```
 
 用法二：获取所有添加的节点列表的连接信息。
 
-{% highlight shell %}
+```shell
 $ bitcoin-cli addnode 192.168.0.2 add
 $ bitcoin-cli addnode 192.168.0.6 add
 $ bitcoin-cli getaddednodeinfo true
@@ -84,22 +84,22 @@ $ bitcoin-cli getaddednodeinfo true
     ]
   }
 ]
-{% endhighlight %}
+```
 
 用法三：获取指定添加的节点的信息。
 
-{% highlight shell %}
+```shell
 $ bitcoin-cli getaddednodeinfo false 192.168.0.2
 [
   {
     "addednode": "192.168.0.2"
   }
 ]
-{% endhighlight %}
+```
 
 用法四：获取指定添加的节点的连接信息。
 
-{% highlight shell %}
+```shell
 $ bitcoin-cli getaddednodeinfo true 192.168.0.2
 [
   {
@@ -113,25 +113,25 @@ $ bitcoin-cli getaddednodeinfo true 192.168.0.2
     ]
   }
 ]
-{% endhighlight %}
+```
 
 ### cURL
 
-{% highlight shell %}
+```shell
 $ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "getaddednodeinfo", "params": [false] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
 {"result":[{"addednode":"192.168.0.2"},{"addednode":"192.168.0.6"}],"error":null,"id":"curltest"}
-{% endhighlight %}
+```
 
 ## 源码剖析
 getaddednodeinfo 对应的函数在“rpcserver.h”文件中被引用。
 
-{% highlight C++ %}
+```cpp
 extern UniValue getaddednodeinfo(const UniValue& params, bool fHelp); // 获取添加节点的信息
-{% endhighlight %}
+```
 
 实现在“rpcnet.cpp”文件中。
 
-{% highlight C++ %}
+```cpp
 UniValue getaddednodeinfo(const UniValue& params, bool fHelp)
 {
     if (fHelp || params.size() < 1 || params.size() > 2) // 参数至少为 1 个，至多为 2 个
@@ -247,7 +247,7 @@ UniValue getaddednodeinfo(const UniValue& params, bool fHelp)
 
     return ret; // 返回数组类型的结果
 }
-{% endhighlight %}
+```
 
 基本流程：
 1. 处理命令帮助和参数个数。

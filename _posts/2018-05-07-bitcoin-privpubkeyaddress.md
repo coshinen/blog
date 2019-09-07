@@ -18,19 +18,19 @@ tags: 区块链 比特币 公钥、私钥 比特币地址
 使用 RPC 中的 getnewaddress 命令生成一个新的密钥（私钥、公钥对）。
 为了安全考虑，只显示生成的公钥地址，私钥默认存入本地钱包数据库。例：
 
-{% highlight shell %}
+```shell
 $ ./bitcoin-cli getnewaddress
 12PbLWS4h3qSmQfdu4oEgXCYMGY4TVbL3N
-{% endhighlight %}
+```
 
 然后使用 RPC 中的 dumpprivkey 命令导出公钥地址对应的私钥。
 以 WIF(wallet import format) 钱包导入格式即 Base58 校验和编码进行导出。
 **注：该命令只适用于本地钱包数据库中的私钥。**例：
 
-{% highlight shell %}
+```shell
 $ ./bitcoin-cli dumpprivkey 12PbLWS4h3qSmQfdu4oEgXCYMGY4TVbL3N
 KzCFcgtfrPA2uWmXn4zjVNaKYMEUHbh732XzZ4aZ737545DqZ3V4
-{% endhighlight %}
+```
 
 ## 私钥、公钥、地址之间的转换流程
 
@@ -62,7 +62,7 @@ KzCFcgtfrPA2uWmXn4zjVNaKYMEUHbh732XzZ4aZ737545DqZ3V4
 
 ![public-key-to-btc-address](/assets/images/bitcoin/address/public-key-to-btc-address.png)
 
-{% highlight shell %}
+```shell
 $ cd bitcoin/src # 进入比特币根目录下的 src 目录，之后未作特殊说明的均以该目录作为比特币源码的根目录。
 $ grep "getnewaddress" * -nir # 搜索 RPC 命令 getnewaddress 所出现的文件及位置，grep 是 Linux 下的一个查找字符串命令，其他平台或 IDE 请自行忽略。
 rpcserver.cpp:344:    { "wallet",             "getnewaddress",          &getnewaddress,          true  },
@@ -72,13 +72,13 @@ test/rpc_wallet_tests.cpp:176:    BOOST_CHECK_NO_THROW(CallRPC("getnewaddress"))
 test/rpc_wallet_tests.cpp:177:    BOOST_CHECK_NO_THROW(CallRPC("getnewaddress getnewaddress_demoaccount"));
 Binary file wallet/rpcwallet.cpp matches
 wallet/wallet.h:439:    //! todo: add something to note what created it (user, getnewaddress, change)
-{% endhighlight %}
+```
 
 从结果中我们可以看到出现该命令的文件名以及在该文件中出现的行号。
 分别出现在“rpcserver.cpp”、“rpcserver.h”、“test/rpc_wallet_tests.cpp”、“wallet/rpcwallet.cpp”、“wallet/wallet.h”这 5 个文件中。
 打开“rpcserver.cpp”文件，找到该命令出现的位置。
 
-{% highlight C++ %}
+```cpp
 /**
  * Call Table
  */
@@ -93,11 +93,11 @@ static const CRPCCommand vRPCCommands[] =
                                        ...
 #endif // ENABLE_WALLET
 };
-{% endhighlight %}
+```
 
 vRPCCommands[] 是一个静态常量类对象数组，在“rpcserver.h”文件中找到类 CRPCCommand 的定义如下：
 
-{% highlight C++ %}
+```cpp
 typedef UniValue(*rpcfn_type)(const UniValue& params, bool fHelp); // 回调函数类型定义
 
 class CRPCCommand // 远程过程调用命令类
@@ -108,14 +108,14 @@ public:
     rpcfn_type actor; // 对应的函数行为
     bool okSafeMode; // 是否打开安全模式
 };
-{% endhighlight %}
+```
 
 该类的 4 个成员变量对应注释的 4 个列名。
 rpcfn_type 是一个函数标签为 UniValue(const UniValue&, bool) 的回调函数类型，形参 params 为 RPC 命令的参数，形参 fHelp 为显示该命令帮助的标志，对应[比特币核心客户端基础命令](/blog/2018/05/bitcoin-cli-commands.html)用法的第 3 条。
 
-{% highlight shell %}
+```shell
   bitcoin-cli [options] help <command>      Get help for a command # 获取一条命令的帮助信息（用法示例）
-{% endhighlight %}
+```
 
 详见 [比特币 RCP 命令剖析 getnewaddress](/blog/2018/08/bitcoin-rpc-command-getnewaddress.html)。
 
