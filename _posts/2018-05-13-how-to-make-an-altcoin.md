@@ -15,7 +15,7 @@ tags: 区块链 比特币 山寨币
 
 ### 0.1. 平台和工具
 
-> * 平台：Ubuntu 16.04.* LTS
+> * 平台：Ubuntu 16.04.\* LTS
 > * 工具：Git
 
 ### 0.2. 比特币源码
@@ -189,8 +189,7 @@ public:
 
 ## 3. 修改 DNS 种子
 
-比特币（核心）服务节点启动后会自动连接到区块链网络，
-底层通过 DNS 种子来获取正在运行的节点列表并进行连接。
+比特币（核心）服务节点启动后会自动连接到区块链网络，底层通过 DNS 种子来获取正在运行的节点列表并进行连接。
 
 如果没有该种子可以直接注释掉这部分，修改如下：
 
@@ -220,10 +219,11 @@ public:
 };
 ```
 
+也可以使用官方的 py 工具生成 seeds，具体参考 [bitcoin/contrib/seeds at master · bitcoin/bitcoin · GitHub](https://github.com/bitcoin/bitcoin/tree/master/contrib/seeds){:target="_blank"}。
+
 ## 4. 修改网络协议魔数
 
-所谓协议魔数就是节点在网络中传递信息的消息头，类似于 TCP 协议 20 个字节的报头和 IP 协议 20 个字节的报头，
-这里的消息头共 4 个字节。
+所谓协议魔数就是节点在网络中传递信息的消息头，类似于 TCP 协议 20 个字节的报头和 IP 协议 20 个字节的报头，这里的消息头共 4 个字节。
 
 可随意设置，不同于原魔数即可。修改如下：
 
@@ -391,7 +391,8 @@ public:
 ```
 
 接下来开始挖创世区块，其主要信息有随机数（nNonce）、区块哈希和默尔克树根哈希。
-首先在“miner.cpp”文件中增加以下代码，来寻找创世区块。
+
+首先在“miner.cpp”文件中增加以下代码，用于寻找创世区块。
 
 ```cpp
 +void getGenesisBlock(CBlock *pblock) // 获取创世区块的基本信息（nNonce, hash, merkleroot）
