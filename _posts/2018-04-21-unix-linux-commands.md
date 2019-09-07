@@ -88,6 +88,8 @@ $ find <dir> -type f -print0 | xargs -0 sed -i 's/<from>/<to>/g' # 把 <dir> 下
 $ find <dir> -type f -print0 | xargs -0 sed -i '' 's/<from>/<to>/g' # macOS 下指定一个字符串作为备份文件后缀，若字符串为空，则不备份。
 $ find <dir> -type f -print0 | xargs -0 sed -i 's/\t/    /g' # 把 <dir> 下全部文件中的 tab 全部改为 4 个空格。
 $ find <dir> -type f -print0 | xargs -0 sed -i '/<content>/,+1d' # 把 <dir> 下全部文件中的含 <content> 的行及其下一行移除。
+$ sed -i '/<dist>/i\<new>' <file> # 在文件 <file> 中含字符串 <dist> 的行上面新增一行内容 <new>。
+$ sed -i '/<dist>/a\<new>' <file> # 在文件 <file> 中含字符串 <dist> 的行下面新增一行内容 <new>。
 ```
 
 ## 查看文件 | cat
