@@ -51,9 +51,9 @@ $ vi/vim <file> # 使用 Vi/Vim 编辑器打开指定的文件进行编辑，若
 ## 查找文件 | find
 
 ```shell
-$ find . -name <filename> -type f # 以当前目录 . 为起始目录，查询并显示指定文件名 <filename> 的文件（相对）路径，f 表示文件类型普通文件。
+$ find . -name <file> -type f # 以当前目录 . 为起始目录，查询并显示指定文件名 <file> 的文件（相对）路径，f 表示文件类型普通文件。
 $ find . -empty #  以当前目录 . 为起始目录，查询并显示所有大小为 0 的文件（相对）路径。
-$ find / -name <filename> -print 2>/dev/null # 以根目录 / 为起始目录，查询并显示指定文件名 <filename> 的文件（相对）路径，同时把标准错误缓冲区的内容导入 /dev/null 中，以加快查找速度。
+$ find / -name <file> -print 2>/dev/null # 以根目录 / 为起始目录，查询并显示指定文件名 <file> 的文件（相对）路径，同时把标准错误缓冲区的内容导入 /dev/null 中，以加快查找速度。
 ```
 
 ## 删除文件 | remove
@@ -62,7 +62,7 @@ $ find / -name <filename> -print 2>/dev/null # 以根目录 / 为起始目录，
 $ rm <file> # 删除指定的 <file> 文件。
 $ rmdir <dir> # 只能删除指定的空目录 <dir>。
 $ rm <dir> -rf # 删除指定的目录 <dir> 下包含的所有文件，-r 参数表示循环，-f 参数表示不显示任何信息。
-$ find . -name <filename> | xargs rm # 批量删除当前目录下所有 <filename> 文件，xargs 参数是一个过滤器，把参数列表分段传递给另一个命令，与管道 | 一起使用。
+$ find . -name <file> | xargs rm # 批量删除当前目录下所有 <file> 文件，xargs 参数是一个过滤器，把参数列表分段传递给另一个命令，与管道 | 一起使用。
 ```
 
 **注：慎用 "$ sudo rm / -rf"，详见[多一个空格会发生什么？](https://github.com/MrMEEE/bumblebee-Old-and-abbandoned/commit/6cd6b2485668e8a87485cb34ca8a0a937e73f16d)**
@@ -80,13 +80,14 @@ $ grep <content> <file> -n # 查询并显示指定文件 <file> 出现 <content>
 $ find . -exec rename 's/<from>/<to>/' {} ";" # 批量修改当前目录下的文件名中字符串 <from> 为 <to>。
 ```
 
-## 字符串替换 | find | sed
+## 字符串替换 | sed
 
 ```shell
-$ find <filename> -type f -print0 | xargs -0 sed -i 's/<from>/<to>/g' # 把文件 <filename> 中的字符串 <from> 全部改为 <to>。
-$ find <dirname> -type f -print0 | xargs -0 sed -i 's/\t/    /g' # 把 <dirname> 下全部文件中的 tab 全部改为 4 个空格。
-$ find <dirname> -type f -print0 | xargs -0 sed -i '/<content>/,+1d' # 把 <dirname> 下全部文件中的含 <content> 的行及其下一行。
-$ find <filename> -type f -print0 | xargs -0 sed -i '' 's/<from>/<to>/g' # macOS 下指定一个字符串作为备份文件后缀，若字符串为空，则不备份。
+$ sed -i 's/<from>/<to>/g' <file> # 把文件 <file> 中的字符串 <from> 全部改为 <to>。
+$ find <dir> -type f -print0 | xargs -0 sed -i 's/<from>/<to>/g' # 把 <dir> 下全部文件中的字符串 <from> 全部改为 <to>。
+$ find <dir> -type f -print0 | xargs -0 sed -i '' 's/<from>/<to>/g' # macOS 下指定一个字符串作为备份文件后缀，若字符串为空，则不备份。
+$ find <dir> -type f -print0 | xargs -0 sed -i 's/\t/    /g' # 把 <dir> 下全部文件中的 tab 全部改为 4 个空格。
+$ find <dir> -type f -print0 | xargs -0 sed -i '/<content>/,+1d' # 把 <dir> 下全部文件中的含 <content> 的行及其下一行移除。
 ```
 
 ## 查看文件 | cat
@@ -99,7 +100,7 @@ $ more <file> # 可滚动翻看文件 <file> 的内容，Space 键查看下一�
 ## 统计文件内容 | wc
 
 ```shell
-$ wc -l <filename> # 统计文件 <filename> 的行数。参数 -c 统计字符数即文件大小字节数，-w 统计字数。
+$ wc -l <file> # 统计文件 <file> 的行数。参数 -c 统计字符数即文件大小字节数，-w 统计字数。
 ```
 
 ## 统计文件个数 | ls | wc
@@ -121,10 +122,10 @@ $ ln -s <srcfile> <destfile> # 创建源文件 <srcfile> 的软链接 <destfile>
 ## 解压缩文件 | tar
 
 ```shell
-$ tar zcfv <filename>.tar.gz <filename> # 压缩文件 <filename> 为 gz 格式 <filename>.tar.gz。
-$ tar xfv <filename>.tar.gz # 解压缩 gz 格式的文件 <filename>.tar.gz。
-$ tar Jcfv <filename>.tar.xz <filename> # 压缩文件 <filename> 为 xz 格式 <filename>.tar.xz。
-$ tar Jxfv <filename>.tar.xz # 解压缩 xz 格式的文件 <filename>.tar.xz。
+$ tar zcfv <file>.tar.gz <file> # 压缩文件 <file> 为 gz 格式 <file>.tar.gz。
+$ tar xfv <file>.tar.gz # 解压缩 gz 格式的文件 <file>.tar.gz。
+$ tar Jcfv <file>.tar.xz <file> # 压缩文件 <file> 为 xz 格式 <file>.tar.xz。
+$ tar Jxfv <file>.tar.xz # 解压缩 xz 格式的文件 <file>.tar.xz。
 ```
 
 ## 安装软件 | install
