@@ -5,7 +5,7 @@ permalink: /quotes.html
 excerpt: Here are my favorite quotes from someones that inspire me or make me laugh. I hope you enjoy them.
 ---
 
-> Satoshi Nakamoto, Bitcoin P2P e-cash paper:
+> Satoshi Nakamoto, [Bitcoin P2P e-cash paper](https://www.metzdowd.com/pipermail/cryptography/2008-November/014853.html){:target="_blank"}:
 > * It's very attractive to the libertarian viewpoint if we can explain it properly.
 > I'm better with code than with words though.
 
@@ -74,7 +74,7 @@ excerpt: Here are my favorite quotes from someones that inspire me or make me la
 > Professor Severus Snape, Harry Potter and the Order of the Phoenix:
 > * Sentimental children forever whining about how bitterly unfair your lives have been. Well, it may have escaped your notice, but life isn't fair.
 
-> Harry Potter and the Prisoner of Azkaban:
+> The Marauder's Map, Harry Potter and the Prisoner of Azkaban:
 > * I solemnly swear that I am up to no good.
 
 > Professor Albus Dumbledore, Harry Potter and the Prisoner of Azkaban:
@@ -124,7 +124,8 @@ excerpt: Here are my favorite quotes from someones that inspire me or make me la
 > 新人類だの進化だのと遊んでいる貴様などでは決してここまで辿り着けん。自分で変われるのが人間の強さだ！
 
 > 宇佐美博人「サバイバル ウェデぃング」：
-> * 大切なのは、どんな選択をするかじゃない。自分が選択した人生を強く生きるかどうか。ただそれだけだ！
+> * 大切なのは、どんな選択をするかじゃない。
+> 自分が選択した人生を強く生きるかどうか。ただそれだけだ！
 
 > サリシノハラ：
 > * 人はヒヨリミなんだしょうがない。
@@ -176,14 +177,14 @@ excerpt: Here are my favorite quotes from someones that inspire me or make me la
 > ガーネット・クロウ「夢みたあとで」：
 > * 望まなければ失わないのに、求めずにはいられないよ、どんな未来がこの先にあっても。
 
-> ルパン三世「東方見聞録～アナザーページ～」：
+> ルパン三世「東方見聞録 ～アナザーページ～」：
 > * 分からねぇか？その甘え、そろそろ卒業しなくちゃな。自分で決めなきゃ、明日は開かれねぇんだぜ！
 
-> 怪盗キッド／黒羽盗一「名探偵コナン」：
-> * ポーカーフェイスを忘れるな！
-
 > 江戸川コナン／工藤新一「名探偵コナン 沈黙の15分（クォーター）」：
-> * 言葉は刃物なんだ。使い方を間違えると、厄介な凶器になる。
+> * 一度口から出しちまった言葉は、もう元には戻せねぇんだぞ。
+> 言葉は刃物なんだ。使い方を間違えると、厄介な凶器になる。
+> 言葉のすれ違いで、一生の友達を失うこともあるんだ。
+> 一度すれ違ったら、二度と会えなくなっちまうかもしれないぜ。
 
 > 江戸川コナン／工藤新一「名探偵コナン ベイカー街（ストリート）の亡霊」：
 > * 君を確実に破滅させることができれば、公共の利益のために僕は喜んで死を受け入れよう。
@@ -191,23 +192,28 @@ excerpt: Here are my favorite quotes from someones that inspire me or make me la
 > 江戸川コナン／工藤新一「名探偵コナン コナンとキッドとクリスタル・マザー」：
 > * 木の葉を隠すなら森の中、森がない時は自分で森をつく。
 
-> 工藤新一「名探偵コナン コンビニの落とし穴（後編）」：
+> 工藤新一「名探偵コナン 第344話 コンビニの落とし穴（後編）」：
 > * 不可能なものを除外していって残ったものが、たとえどんなに信じられなくても、それが真相なんだ。
 
-> 工藤新一「名探偵コナン 工藤新一NYの事件（解決編）」：
+> 工藤新一「名探偵コナン 第288話 工藤新一NYの事件（解決編）」：
 > * 理由（わけ）なんているのかよ？人は人を殺す動機なんて知ったこっちゃねぇが、人が人を助ける理由に、論理的な思考を存在しねぇだろう？
 
-> ベルモット「名探偵コナン 謎めいた乗客」：
-> * A secret makes a woman woman. 女は秘密を着飾って美しくなるのよ。
+> ベルモット「名探偵コナン 第230話 謎めいた乗客（前編）」：
+> * A secret makes a woman woman.
+> 女は秘密を着飾って美しくなるのよ。
 
-> 江戸川コナン／工藤新一「名探偵コナン 名家連続変死事件（後編）」：
-> * 犯人を推理で追い詰めて、みすみす自殺させちまう探偵は、殺人者と変わんねーよ…完璧な人間なんてこの世にいやしねーよ、俺だって、たった一人（たった一人だけ）…
+> 怪盗キッド／黒羽快斗「名探偵コナン 第219話 工藤新一vs怪盗キッド」：
+> * いつ何時だりとも、ポーカーフェイスを忘れるな…だろ？
 
-> 工藤新一「名探偵コナン 外交官殺人事件（後編）」：
-> * 推理に勝ったも負けたも、上も下も、ねーよ。だっては、真実はいつもたった一つしかねーんだからな。
+> 江戸川コナン／工藤新一「名探偵コナン 第78話 名家連続変死事件（後編）」：
+> * 犯人を推理で追い詰めて、みすみす自殺させちまう探偵は、殺人者と変わんねーよ…
+> 完璧な人間なんてこの世にいやしねーよ、俺だって、たった一人（たった一人だけ）…
 
-> 怪盗キッド／黒羽快斗「名探偵コナン コナンvs怪盗キッド」：
+> 怪盗キッド／黒羽快斗「名探偵コナン 第76話 コナンvs怪盗キッド」：
 > * よっ！ボウズ、知ってるか？怪盗はあざやかに獲物を盗み出す創造的な芸術家だが、探偵はその跡を見てなんくせつける、ただの批評家に過ぎねぇんだぜ。
+
+> 工藤新一「名探偵コナン 第49話 外交官殺人事件（後編）」：
+> * 推理に勝ったも負けたも、上も下も、ねーよ。だっては、真実はいつもたった一つしかねーんだからな。
 
 > 江戸川コナン／工藤新一「名探偵コナン」：
 > * たった一つの真実見抜く、見た目は子供、頭脳は大人。その名は…
