@@ -63,28 +63,28 @@ A certain percentage of fraud is accepted as unavoidable.  These costs and payme
 can be avoided in person by using physical currency, but no mechanism exists to make payments
 over a communications channel without a trusted party.
 
-> 互联网上的商务几乎完全依赖作为可信的第三方金融机构来处理电子支付。
-> 尽管系统对大部分交易来说运行良好，但它仍然受到基于信任模型的固有缺点的影响。
-> 完全不可逆的交易事实上是不可能的，因为金融机构无法避免调解纠纷。
-> 调解的成本增加了交易成本，限制了最小特殊交易的规模并切断了小型临时交易的可能性，而且不可逆服务进行不可逆支付的能力丧失的成本更高。
-> 虽着逆转的可能性，对信任的需求蔓延。
-> 商家必须警惕他们的顾客，纠缠他们以获取更多不需要的信息。
-> 一定比例的欺诈被认为是不可避免的。
-> 这些成本和支付的不确定性能够通过人为的使用纸币来避免，但是没有机制能够在没有可信任方的情况下通过通讯渠道进行支付。
+> 互联网上的贸易几乎完全依赖金融机构服务作为可信任的第三方来处理电子支付。
+> 尽管对于大多数交易该系统都运行得足够好，但它仍然受到基于信任模型的这个固有缺点的影响。
+> 完全不可逆的交易实际上是不可能的，因为金融机构无法避免调解纠纷。
+> 调解成本增加了交易成本，限制了最小的实际交易规模并切断了小额临时交易的可能性，而且由于不可逆支付能力的缺失对于不可逆服务的支付会产生更大的成本。
+> 有了逆转的可能性，对信任的需求就会扩大。
+> 商家必须警惕他们的客户，麻烦他们以获取更多非必要的信息。
+> 一定比例的欺诈被认为是不可避免要接受的。
+> 这些成本和支付的不确定性可以通过亲自使用纸币来避免，但是没有机制可以在无可信方的情况下通过通信渠道进行支付。
 
-What is needed is an electronic payment system based on cryptographic proof instead of trust, 
-allowing any two willing parties to transact directly with each other without the need for a trusted 
-third party.  Transactions that are computationally impractical to reverse would protect sellers 
-from fraud, and routine escrow mechanisms could easily be implemented to protect buyers.  In 
-this paper, we propose a solution to the double-spending problem using a peer-to-peer distributed 
-timestamp server to generate computational proof of the chronological order of transactions.  The 
-system is secure as long as honest nodes collectively control more CPU power than any 
+What is needed is an electronic payment system based on cryptographic proof instead of trust,
+allowing any two willing parties to transact directly with each other without the need for a trusted
+third party.  Transactions that are computationally impractical to reverse would protect sellers
+from fraud, and routine escrow mechanisms could easily be implemented to protect buyers.  In
+this paper, we propose a solution to the double-spending problem using a peer-to-peer distributed
+timestamp server to generate computational proof of the chronological order of transactions.  The
+system is secure as long as honest nodes collectively control more CPU power than any
 cooperating group of attacker nodes.
 
-> 需要的是一种基于密码学证明而不是信任的电子支付系统，允许任何两个有意愿的当事方直接与对方交易，而不需要可信任的第三方。
-> 在计算上不可逆转的交易可以保护卖家避免欺诈，并且可以轻松实施例行托管机制来保护买家。
-> 在这篇论文中，我们提出了双重花费问题的解决方案，使用点对点分布式时间戳服务器来生成时间顺序的交易的计算量证明。
-> 只要诚实节点一起控制比任何协作的攻击者节点组更多的 CPU 能力，该系统就是安全的。
+> 所需要的是一种基于密码学证明而非信任的电子支付系统，允许任何两个有意愿的当事方直接与对方交易，而不需要一个可信任的第三方。
+> 在计算上不可逆转的交易将保护卖家免受欺诈，而且用于保护买家的常规托管机制可以很容易实现。
+> 在这篇论文中，我们提出了双重花费问题的解决方案，使用一个点对点的分布式时间戳服务器来生成时间顺序交易的计算量证明。
+> 只要诚实节点共同控制比任何攻击者节点协作群体更多的 CPU 算力，该系统就是安全的。
 
 ## 2. Transactions | 交易
 
