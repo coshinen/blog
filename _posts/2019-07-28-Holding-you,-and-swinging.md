@@ -126,7 +126,7 @@ ah- 想活下去<br>
 Holding you, and swinging<br>
 I've been solitary<br>
 When I awoke and felt you<br>
-Holding… hold inside<br>
+Holding... hold inside<br>
 Holding you, and swinging<br>
 nm- What a dream I had<br>
 so I'll continue to<br>
