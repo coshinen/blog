@@ -13,9 +13,9 @@ tags: 区块链 比特币 公钥、私钥 比特币地址
 私钥是一个有固定的范围的 256 位二进制随机数，其作用是生成签名用于证明私钥持有者对相应公钥地址上资金的所有权。
 比特币采用操作系统底层密码学安全的伪随机数生成器 CSPRNG 来产生 256 位随机数，只要保证生成的随机数“不可预测”且“不可重复”这两点即可。
 从编程角度实现随机数，在一个密码学安全的随机源中取一长串随机字节，使用 SHA256 算法运算得到一个 256 位的数字，然后判断是否在指定范围内，若不在就重复上述过程。
-**注：私钥很重要，持有私钥就拥有相应公钥地址上的比特币，一旦私钥丢失，对应的比特币将无法找回。**
+**私钥很重要，持有私钥就拥有相应公钥地址上的比特币，一旦私钥丢失，对应的比特币将无法找回。**
 
-使用 RPC 中的 getnewaddress 命令生成一个新的密钥（私钥、公钥对）。
+使用 RPC 中的 getnewaddress 命令生成一个新的密钥对（含私钥和公钥）。
 为了安全考虑，只显示生成的公钥地址，私钥默认存入本地钱包数据库。例：
 
 ```shell
@@ -24,13 +24,14 @@ $ ./bitcoin-cli getnewaddress
 ```
 
 然后使用 RPC 中的 dumpprivkey 命令导出公钥地址对应的私钥。
-以 WIF(wallet import format) 钱包导入格式即 Base58 校验和编码进行导出。
-**注：该命令只适用于本地钱包数据库中的私钥。**例：
+以 WIF(wallet import format) 钱包导入格式即 Base58 校验和编码进行导出。例：
 
 ```shell
 $ ./bitcoin-cli dumpprivkey 12PbLWS4h3qSmQfdu4oEgXCYMGY4TVbL3N
 KzCFcgtfrPA2uWmXn4zjVNaKYMEUHbh732XzZ4aZ737545DqZ3V4
 ```
+
+**该命令只适用于本地钱包数据库中的私钥。**
 
 ## 私钥、公钥、地址之间的转换流程
 
@@ -127,4 +128,3 @@ rpcfn_type 是一个函数标签为 UniValue(const UniValue&, bool) 的回调函
 * [Base58 - Wikipedia](https://en.wikipedia.org/wiki/Base58){:target="_blank"}
 * [Base58Check encoding - Bitcoin Wiki](https://en.bitcoin.it/wiki/Base58Check_encoding){:target="_blank"}
 * [bitcoin/bitcoin/src/base58.cpp](https://github.com/bitcoin/bitcoin/blob/master/src/base58.cpp){:target="_blank"}
-* [精通比特币（第二版）第四章 密钥和地址 · 巴比特图书](http://book.8btc.com/books/6/masterbitcoin2cn/_book/ch04.html){:target="_blank"}
