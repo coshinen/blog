@@ -2,7 +2,7 @@
 layout: page
 title: Booklog
 permalink: /booklog.html
-excerpt: Reading list.
+excerpt: Here are some books I read.
 ---
 
 > Technology:
