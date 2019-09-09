@@ -71,8 +71,14 @@ excerpt: Here are my favorite quotes from someones that inspire me or make me la
 > Raymond Fowler, The Thin Blue Line, Series 1 Episode 4, Rag Week:
 > * When I was at college I suffered from the curious delusion, that I was there to study.
 
+> [J.K. Rowling](https://www.jkrowling.com){:target="_blank"}:
+> * Print will never die. There's no substitute for the feel of an actual book.
+> I adore physically turning pages, and being able to underline passages and not worrying about dropping them in the bath or running out of power.
+> I also find print books objects of beauty.
+
 > Professor Severus Snape, Harry Potter and the Order of the Phoenix:
-> * Sentimental children forever whining about how bitterly unfair your lives have been. Well, it may have escaped your notice, but life isn't fair.
+> * Sentimental children forever whining about how bitterly unfair your lives have been.
+> Well, it may have escaped your notice, but life isn't fair.
 
 > The Marauder's Map, Harry Potter and the Prisoner of Azkaban:
 > * I solemnly swear that I am up to no good.
