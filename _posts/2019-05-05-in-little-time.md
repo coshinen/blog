@@ -35,12 +35,12 @@ excerpt: 十二月にしては暖かいこんな夜は、思いつきで出か�
 切ない in little time<br>
 <br>
 迷わずに愛する為に<br>
-どれくらい ねぇ 強くなればいい?<br>
+どれくらい ねぇ 強くなればいい？<br>
 いつまでも与え続けて<br>
 決して枯れないくらい<br>
 強く生きてゆきたい<br>
 儚い願いを込めて<br>
-孤独の意味を知ってゆく ah～<br>
+孤独の意味を知ってゆく ah~<br>
 um- I have so little time<br>
 <br>
 地球儀を回して<br>
@@ -61,7 +61,7 @@ in little time<br>
 生きてゆく十字架また一つ増えてゆく<br>
 <br>
 決して枯れない様に<br>
-強く生きてゆきたい ah～<br>
+強く生きてゆきたい ah~<br>
 um- I have so little time×3
 </p>
 </div>
@@ -88,7 +88,7 @@ um- I have so little time×3
 絕對不會枯萎的<br>
 想要堅強地活下去<br>
 注入虛幻的願望<br>
-知曉孤獨的意義 ah～<br>
+知曉孤獨的意義 ah~<br>
 um- I have so little time<br>
 <br>
 轉動地球儀<br>
@@ -109,7 +109,7 @@ in little time<br>
 活下去的十字架又增加了一個<br>
 <br>
 絕對不會枯萎的樣子<br>
-想要堅強地活下去 ah～<br>
+想要堅強地活下去 ah~<br>
 um- I have so little time×3
 </blockquote>
 </div>

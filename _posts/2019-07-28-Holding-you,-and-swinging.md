@@ -48,7 +48,7 @@ ah- 生きたい<br>
 そんな日もあるよ<br>
 <br>
 Holding you, and swinging<br>
-あまりに強く 求めすぎたの?<br>
+あまりに強く 求めすぎたの？<br>
 ah- 彷徨う<br>
 愛されない Jane Doe<br>
 手操り寄せて<br>
@@ -61,14 +61,14 @@ ah- 彷徨う<br>
 Holding you, and swinging<br>
 I've been solitary<br>
 When I awoke and felt you<br>
-Holding… hold inside<br>
+Holding... hold inside<br>
 Holding you, and swinging<br>
 nm- What a dream I had<br>
 so I'll continue to<br>
 continue to tell a lie. baby<br>
 <br>
 Holding you, and swinging<br>
-あまりに強く 求めすぎたの?<br>
+あまりに強く 求めすぎたの？<br>
 ah- 彷徨う<br>
 愛されない Jane Doe<br>
 手操り寄せて<br>

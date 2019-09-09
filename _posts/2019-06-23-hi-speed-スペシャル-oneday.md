@@ -38,7 +38,7 @@ hi-speed スペシャル oneday<br>
 sweet time 現実に戻る<br>
 瞬間がたまらないけど<br>
 hi-speed スペシャル anyway<br>
-いつか忘れちゃうの?<br>
+いつか忘れちゃうの？<br>
 slow time 汚さないで<br>
 溶ける様に 眠る朝を<br>
 He is not trusted darling.<br>
@@ -46,7 +46,7 @@ He is not trusted darling.<br>
 すぐに早トチリして<br>
 繰り返す失敗も愛嬌<br>
 それで許されるって<br>
-自分で思っているんでしょう?<br>
+自分で思っているんでしょう？<br>
 <br>
 嘘をついても知らんぷり<br>
 用意された言い訳<br>
@@ -73,7 +73,7 @@ hi-speed スペシャル oneday<br>
 sweet time 現実に戻る<br>
 瞬間がたまらないけど<br>
 hi-speed スペシャル anyway<br>
-いつか忘れちゃうの?<br>
+いつか忘れちゃうの？<br>
 slow time 汚さないで<br>
 溶ける様に 眠る朝を<br>
 He is not trusted darling.

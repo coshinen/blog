@@ -6,7 +6,7 @@ author: mistydew
 comments: true
 categories: GARNETCROW Lyrics
 tags: ガーネット・クロウ 歌詞翻訳
-excerpt: まっすぐな思いはまっすぐに伝わるの? 唐突な青空 遠ざかる飛行機。
+excerpt: まっすぐな思いはまっすぐに伝わるの？唐突な青空 遠ざかる飛行機。
 ---
 ![Terminus](https://raw.githubusercontent.com/mistydew/gc2/master/cover/album/AL10_Terminus.jpg){:.border}
 
@@ -20,7 +20,7 @@ excerpt: まっすぐな思いはまっすぐに伝わるの? 唐突な青空 �
 
 <div class="lyric-original">
 <p>
-まっすぐな思いはまっすぐに伝わるの?<br>
+まっすぐな思いはまっすぐに伝わるの？<br>
 唐突な青空 遠ざかる飛行機<br>
 <br>
 もしも私が物語を書いたら<br>
@@ -29,11 +29,11 @@ excerpt: まっすぐな思いはまっすぐに伝わるの? 唐突な青空 �
 交わすはずだった言葉が踊る キラキラリ<br>
 集めた花びら庭に咲く花 フワフワリ<br>
 <br>
-大好きな想いはちょっとづつ変わるの?<br>
+大好きな想いはちょっとづつ変わるの？<br>
 金色に忍び寄る宵闇を描いた<br>
 <br>
-旅にでるのは 何かを忘れるため?<br>
-何かを見つけるためかな?ただ流れるの?<br>
+旅にでるのは 何かを忘れるため？<br>
+何かを見つけるためかな？ただ流れるの？<br>
 <br>
 ふれるはずだった温もりさえも ハラハラリ<br>
 ページごとにそっと零れ落ちそう ぎゅっと掴んでいたい<br>

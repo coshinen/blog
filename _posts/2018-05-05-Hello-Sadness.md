@@ -31,8 +31,8 @@ excerpt: 離陸間近の午前1時5分 空を見上げていた。いつかま�
 此処は永い夏のようです メラメラ燃える熱情が<br>
 行ったり来たりそっと試してくる<br>
 ふいに視線が絡まって 心が騒がしくなって<br>
-何かが胸の奥で邪魔したまま tonight…<br>
-Hello Sadness… and I need you<br>
+何かが胸の奥で邪魔したまま tonight...<br>
+Hello Sadness... and I need you<br>
 I'll walk alone with you<br>
 in silence<br>
 <br>
@@ -45,8 +45,8 @@ in silence<br>
 流れる時はただ過ぎて 孤独はただの自由で<br>
 過去も未来もずっと消えないまま<br>
 巡り合わせに戸惑って 心が揺れて手をとって<br>
-波のようにいつかきっと砕け散る tonight…<br>
-Hello Sadness… and I need you<br>
+波のようにいつかきっと砕け散る tonight...<br>
+Hello Sadness... and I need you<br>
 I'll walk alone with you<br>
 In silence<br>
 <br>
@@ -55,16 +55,16 @@ In silence<br>
 流れる時はただ過ぎて 孤独はただの自由で<br>
 過去も未来もずっと消えないまま<br>
 巡り合わせに戸惑って 心が揺れて手をとって<br>
-波のようにいつかきっと砕け散る tonight…<br>
-Hello Sadness… and I need you<br>
+波のようにいつかきっと砕け散る tonight...<br>
+Hello Sadness... and I need you<br>
 I'll walk alone with you<br>
 in silence<br>
 <br>
 此処は永い夏のようです メラメラ燃える熱情が<br>
 行ったり来たりそっと試してくる<br>
 ふいに視線が絡まって 心が騒がしくなって<br>
-何かが胸の奥で邪魔したまま tonight…<br>
-Hello Sadness… and I need you<br>
+何かが胸の奥で邪魔したまま tonight...<br>
+Hello Sadness... and I need you<br>
 I'll walk alone with you<br>
 in silence
 </p>
