@@ -31,7 +31,7 @@ $ ./bitcoin-cli dumpprivkey 12PbLWS4h3qSmQfdu4oEgXCYMGY4TVbL3N
 KzCFcgtfrPA2uWmXn4zjVNaKYMEUHbh732XzZ4aZ737545DqZ3V4
 ```
 
-**该命令只适用于本地钱包数据库中的私钥。**
+**注：该命令只适用于本地钱包数据库中的私钥。**
 
 ## 私钥、公钥、地址之间的转换流程
 
