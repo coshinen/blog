@@ -40,6 +40,7 @@ excerpt: Here are some books I read.
 > * [神奇动物在哪里](https://book.douban.com/subject/27625554){:target="_blank"}，[英] [J.K. Rowling](https://www.jkrowling.com){:target="_blank"}
 > * [神奇的魁地奇球](https://book.douban.com/subject/30193054){:target="_blank"}，[英] [J.K. Rowling](https://www.jkrowling.com){:target="_blank"}
 > * [诗翁彼豆故事集](https://book.douban.com/subject/27594566){:target="_blank"}，[英] [J.K. Rowling](https://www.jkrowling.com){:target="_blank"}
+> * [哈利·波特与阿兹卡班的囚徒](https://book.douban.com/subject/1071241){:target="_blank"}，[英] [J.K. Rowling](https://www.jkrowling.com){:target="_blank"}
 > * [哈利·波特与密室](https://book.douban.com/subject/1039487){:target="_blank"}，[英] [J.K. Rowling](https://www.jkrowling.com){:target="_blank"}
 > * [哈利·波特与魔法石](https://book.douban.com/subject/1041007){:target="_blank"}，[英] [J.K. Rowling](https://www.jkrowling.com){:target="_blank"}
 > * [哈利波特全集（七卷）](https://book.douban.com/subject/27167519){:target="_blank"}，[英] [J.K. Rowling](https://www.jkrowling.com){:target="_blank"}
