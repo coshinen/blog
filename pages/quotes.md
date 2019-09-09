@@ -5,6 +5,9 @@ permalink: /quotes.html
 excerpt: Here are my favorite quotes from someones that inspire me or make me laugh. I hope you enjoy them.
 ---
 
+> Linus Torvalds, [LKML: Linus Torvalds: Re: SCO: "thread creation is about a thousand times faster than onnative](https://lkml.org/lkml/2000/8/25/132){:target="_blank"}:
+> * Talk is cheap. Show me the code.
+
 > Satoshi Nakamoto, [Bitcoin P2P e-cash paper](https://www.metzdowd.com/pipermail/cryptography/2008-November/014853.html){:target="_blank"}:
 > * It's very attractive to the libertarian viewpoint if we can explain it properly.
 > I'm better with code than with words though.
@@ -71,7 +74,7 @@ excerpt: Here are my favorite quotes from someones that inspire me or make me la
 > Raymond Fowler, The Thin Blue Line, Series 1 Episode 4, Rag Week:
 > * When I was at college I suffered from the curious delusion, that I was there to study.
 
-> [J.K. Rowling](https://www.jkrowling.com){:target="_blank"}:
+> J.K. Rowling:
 > * Print will never die. There's no substitute for the feel of an actual book.
 > I adore physically turning pages, and being able to underline passages and not worrying about dropping them in the bath or running out of power.
 > I also find print books objects of beauty.
