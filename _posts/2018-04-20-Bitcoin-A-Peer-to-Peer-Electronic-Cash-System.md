@@ -94,38 +94,38 @@ and adding these to the end of the coin.  A payee can verify the signatures to v
 ownership.
 
 > 我们把一个电子货币定义为一个数字签名链。
-> 每个所有者通过数字签名前一笔交易的哈希和下一个所有者的公钥并把它们添加到币的尾部，转移币到下一个所有者。
+> 每个所有者通过数字签名前一笔交易的哈希和下一个所有者的公钥并把它们添加到货币的尾部，转移货币到下一个所有者。
 > 收款者可以验证该签名以验证链的所有权。
 
 ![transactions](/assets/images/bitcoin/whitepaper/transactions.svg){:.border#center}
 
-The problem of course is the payee can't verify that one of the owners did not double-spend 
-the coin.  A common solution is to introduce a trusted central authority, or mint, that checks every 
-transaction for double spending.  After each transaction, the coin must be returned to the mint to 
-issue a new coin, and only coins issued directly from the mint are trusted not to be double-spent. 
-The problem with this solution is that the fate of the entire money system depends on the 
+The problem of course is the payee can't verify that one of the owners did not double-spend
+the coin.  A common solution is to introduce a trusted central authority, or mint, that checks every
+transaction for double spending.  After each transaction, the coin must be returned to the mint to
+issue a new coin, and only coins issued directly from the mint are trusted not to be double-spent.
+The problem with this solution is that the fate of the entire money system depends on the
 company running the mint, with every transaction having to go through them, just like a bank.
 
-> 当然问题是收款人无法验证所有者之一是否双花了币。
-> 普通的解决方案是引入可信的中央权威机构，或铸币厂，检查每笔交易是否双花。
-> 在每笔交易后，货币必须退还给铸币厂以发行新货币，并且只有从铸币厂直接发行的货币才会被信任不会被双花。
-> 该解决方案的问题在于整个货币系统的命运取决于公司运行的铸币厂，每笔交易都必须经过它们，就像银行。
+> 当然问题是收款人无法核实其中一位所有者没有双重花费货币。
+> 一种常见的解决方案是引入一个可信的中央权威机构，或铸币厂，来检查每笔交易是否存在双重花费。
+> 在每笔交易之后，这枚货币必须退回到铸币厂以发行一枚新货币，并且只有从铸币厂直接发行的货币才可信任没被双重花费。
+> 该解决方案的问题在于整个货币系统的命运取决于运营铸币厂的公司，每笔交易都必须经过它们，就像一个银行。
 
-We need a way for the payee to know that the previous owners did not sign any earlier 
-transactions.  For our purposes, the earliest transaction is the one that counts, so we don't care 
-about later attempts to double-spend.  The only way to confirm the absence of a transaction is to 
-be aware of all transactions.  In the mint based model, the mint was aware of all transactions and 
-decided which arrived first.  To accomplish this without a trusted party, transactions must be 
-publicly announced [1], and we need a system for participants to agree on a single history of the 
-order in which they were received.  The payee needs proof that at the time of each transaction, the 
-majority of nodes agreed it was the first received. 
+We need a way for the payee to know that the previous owners did not sign any earlier
+transactions.  For our purposes, the earliest transaction is the one that counts, so we don't care
+about later attempts to double-spend.  The only way to confirm the absence of a transaction is to
+be aware of all transactions.  In the mint based model, the mint was aware of all transactions and
+decided which arrived first.  To accomplish this without a trusted party, transactions must be
+publicly announced [1], and we need a system for participants to agree on a single history of the
+order in which they were received.  The payee needs proof that at the time of each transaction, the
+majority of nodes agreed it was the first received.
 
-> 我们需要一种方式让收款人知道前一个所有者没有签署任何更早的交易。
-> 就我们的目的而言，最早的交易是算数的，所以我们不关心之后的双花尝试。
-> 确认交易缺席的唯一方法是知道所有的交易。
-> 在基于铸币厂模型中，铸币厂知道所有的交易并且决定哪笔交易是有效的。
-> 为了在没有可信方的情况下实现这一目的，交易必须公开发布，并且我们需要让参与者与其收到的订单历史达成一致的系统。
-> 收款人需要每笔交易的时间以及大多数节点都同意该交易是第一个被收到的证明。
+> 我们需要一种方式让收款人知道前一个所有者没有对任何更早的交易签名。
+> 就我们的目的而言，最早的交易是唯一算数的，所以我们不关心之后尝试的双重花费。
+> 确认一笔交易不存在的唯一方法是知道所有的交易。
+> 在基于铸币厂的模型中，铸币厂知道所有的交易并决定哪笔交易最先到达。
+> 要在没有可信方的情况下实现这一目的，交易必须公开通知，并且我们需要一个让参与者与对他们收到交易顺序的单一历史达成一致的系统。
+> 收款人需要每笔交易时，大多数节点都同意该交易是第一个被收到的证明。
 
 ## 3. Timestamp Server | 时间戳服务器
 
