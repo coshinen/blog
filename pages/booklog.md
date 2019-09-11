@@ -46,6 +46,10 @@ excerpt: Here are some books I read.
 > * [哈利波特全集（七卷）](https://book.douban.com/subject/27167519){:target="_blank"}，[英] [J.K. Rowling](https://www.jkrowling.com){:target="_blank"}
 > * [福尔摩斯](https://book.douban.com/subject/20441264){:target="_blank"}，[英] Arthur Conan Doyle
 
+> Languages:
+> * [新版中日交流标准日本语（中级上、下）](https://book.douban.com/subject/3082741){:target="_blank"}，[中] 人民教育出版社、[日] 光村图书出版株式会社
+> * [新版中日交流标准日本语（初级上、下）](https://book.douban.com/subject/1501873){:target="_blank"}，[中] 人民教育出版社、[日] 光村图书出版株式会社
+
 > Biography:
 > * [只是为了好玩 偶然的革命故事](https://book.douban.com/subject/25930025){:target="_blank"}，[芬] Linus Benedict Torvalds
 > * [史蒂夫·乔布斯传](https://book.douban.com/subject/6798611){:target="_blank"}，[美] Walter Isaacson
