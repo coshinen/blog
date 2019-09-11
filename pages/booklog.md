@@ -7,25 +7,25 @@ excerpt: Here are some books I read.
 
 > Technology:
 > * [区块链启示录 中本聪文集](https://book.douban.com/subject/30338899){:target="_blank"}，[美] Phil Champagne
-> * [Blockchain - Get to know it](/blog/2018/09/get-to-know-the-blockchain.html), Ben Sampson
-> * [区块链开发指南](https://book.douban.com/subject/27081969){:target="_blank"}，申屠青春
-> * [区块链技术指南](https://yeasy.gitbooks.io/blockchain_guide/content){:target="_blank"}，Baohua Yang
-> * [精通比特币（第二版）](https://book.douban.com/subject/30280401){:target="_blank"}，Andreas M. Antonopoulos
-> * [Bitcoin: A Peer-to-Peer Electronic Cash System](/blog/2018/04/Bitcoin-A-Peer-to-Peer-Electronic-Cash-System.html), Satoshi Nakamoto
+> * [Blockchain - Get to know it](/blog/2018/09/get-to-know-the-blockchain.html)，[澳] Ben Sampson
+> * [区块链开发指南](https://book.douban.com/subject/27081969){:target="_blank"}，[中] 申屠青春
+> * [区块链技术指南](https://yeasy.gitbooks.io/blockchain_guide/content){:target="_blank"}，[中] Baohua Yang
+> * [精通比特币（第二版）](https://book.douban.com/subject/30280401){:target="_blank"}，[美] Andreas M. Antonopoulos
+> * [Bitcoin: A Peer-to-Peer Electronic Cash System](/blog/2018/04/Bitcoin-A-Peer-to-Peer-Electronic-Cash-System.html)，[日?] Satoshi Nakamoto
 > * [Pro Git 2nd Edition](https://git-scm.com/book/zh/v2){:target="_blank"}，[美] Scott Chacon and Ben Straub
 > * [TCP/IP 详解 卷1：协议](https://book.douban.com/subject/1088054){:target="_blank"}，[美] [W. Richard Stevens](http://www.kohala.com/start){:target="_blank"}
 > * [Linux/UNIX 系统编程手册（上、下册）](https://book.douban.com/subject/25809330){:target="_blank"}，[德] Michael Kerrisk
 > * [重构 改善既有代码的设计](https://book.douban.com/subject/4262627){:target="_blank"}，[美] Martin Fowler
 > * [代码整洁之道](https://book.douban.com/subject/4199741){:target="_blank"}，[美] Robert C. Martin
-> * [STL 源码剖析](https://book.douban.com/subject/1110934){:target="_blank"}，侯捷
+> * [STL 源码剖析](https://book.douban.com/subject/1110934){:target="_blank"}，[中] 侯捷
 > * [C++ 沉思录](https://book.douban.com/subject/2970056){:target="_blank"}，[美] Andrew Koenig, Barbara Moo
 > * [C++ 编程规范 101条规则、准则与最佳实践](https://book.douban.com/subject/26899830){:target="_blank"}，[加] Herb Sutter [罗] Andrei Alexandrescu
 > * [C++ Primer 中文版（第 5 版）](https://book.douban.com/subject/25708312){:target="_blank"}，[美] Stanley B. Lippman, Josée Lajoie, Barbara E. Moo
 > * [Essential C](http://cslibrary.stanford.edu/101/EssentialC.pdf){:target="_blank"}，[美] Nick Parlante
 
 > Literature:
-> * [前方的路](http://www.ruanyifeng.com/road){:target="_blank"}，阮一峰
-> * [未来世界的幸存者](http://www.ruanyifeng.com/survivor){:target="_blank"}，阮一峰
+> * [前方的路](http://www.ruanyifeng.com/road){:target="_blank"}，[中] 阮一峰
+> * [未来世界的幸存者](http://www.ruanyifeng.com/survivor){:target="_blank"}，[中] 阮一峰
 > * [兔子共和国](https://book.douban.com/subject/22693008){:target="_blank"}，[英] Richard Adams
 > * [冰与火之歌 卷一 权力的游戏](https://book.douban.com/subject/1336330){:target="_blank"}，[美] [George R.R. Martin](http://www.georgerrmartin.com){:target="_blank"}
 > * [冰与火之歌（五卷）](https://book.douban.com/subject/25826936){:target="_blank"}，[美] [George R.R. Martin](http://www.georgerrmartin.com){:target="_blank"}
@@ -46,10 +46,6 @@ excerpt: Here are some books I read.
 > * [哈利波特全集（七卷）](https://book.douban.com/subject/27167519){:target="_blank"}，[英] [J.K. Rowling](https://www.jkrowling.com){:target="_blank"}
 > * [福尔摩斯](https://book.douban.com/subject/20441264){:target="_blank"}，[英] Arthur Conan Doyle
 
-> Languages:
-> * [新版中日交流标准日本语（中级上、下）](https://book.douban.com/subject/3082741){:target="_blank"}，[中] 人民教育出版社、[日] 光村图书出版株式会社
-> * [新版中日交流标准日本语（初级上、下）](https://book.douban.com/subject/1501873){:target="_blank"}，[中] 人民教育出版社、[日] 光村图书出版株式会社
-
 > Biography:
 > * [只是为了好玩 偶然的革命故事](https://book.douban.com/subject/25930025){:target="_blank"}，[芬] Linus Benedict Torvalds
 > * [史蒂夫·乔布斯传](https://book.douban.com/subject/6798611){:target="_blank"}，[美] Walter Isaacson
@@ -57,11 +53,15 @@ excerpt: Here are some books I read.
 > Miscellaneous:
 > * [少有人走的路 心智成熟的旅程](https://book.douban.com/subject/1775691){:target="_blank"}，[美] M. Scott peck
 > * [黑客与画家 硅谷创业之父Paul Graham文集](https://book.douban.com/subject/6021440){:target="_blank"}，[美] Paul Graham
-> * [如何变得有思想](http://www.ruanyifeng.com/blog){:target="_blank"}，阮一峰
+> * [如何变得有思想](http://www.ruanyifeng.com/blog){:target="_blank"}，[中] 阮一峰
 > * [你的灯亮着吗？发现问题的真正所在](https://book.douban.com/subject/1135754){:target="_blank"}，[美] Donald C. Gause, Gerald M. Weinberg
 > * [异类 不一样的成功启示录](https://book.douban.com/subject/3688489){:target="_blank"}，[加] Malcolm Gladwell
 > * [公正 该如何做是好](https://book.douban.com/subject/5408882){:target="_blank"}，[美] Michael J. Sandel
-> * [谁“害”了北大学生](https://book.douban.com/subject/1605954){:target="_blank"}，群言
+> * [谁“害”了北大学生](https://book.douban.com/subject/1605954){:target="_blank"}，[中] 群言
+
+> Languages:
+> * [新版中日交流标准日本语（中级上、下）](https://book.douban.com/subject/3082741){:target="_blank"}，[中] 人民教育出版社、[日] 光村图书出版株式会社
+> * [新版中日交流标准日本语（初级上、下）](https://book.douban.com/subject/1501873){:target="_blank"}，[中] 人民教育出版社、[日] 光村图书出版株式会社
 
 > Free eBooks:
 > * [Standard Ebooks: Free and liberated ebooks, carefully produced for the true book lover.](https://standardebooks.org){:target="_blank"}
