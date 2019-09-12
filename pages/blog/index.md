@@ -39,7 +39,7 @@ excerpt: Welcome to mistydew's blog!
   </ul>
 </div>
 <div class="home-right">
-  <script src='https://www.intensedebate.com/widgets/acctComment/412180/8' defer="defer" type='text/javascript'> </script>
+  <script src='https://www.intensedebate.com/widgets/acctComment/{{ site.site_id }}/4' defer="defer" type='text/javascript'> </script>
   <blockquote class="profile">
     <h2><a href="{{ site.about }}" title="袁子晨">mistydew</a></h2>
     <div>
@@ -50,5 +50,5 @@ excerpt: Welcome to mistydew's blog!
       <li>bio: {{ site.bio }}</li>
     </ul>
   </blockquote>
-  <script type='text/javascript' defer='defer' src='https://www.intensedebate.com/widgets/blogStats/412180'></script>
+  <script type='text/javascript' defer='defer' src='https://www.intensedebate.com/widgets/blogStats/{{ site.site_id }}'></script>
 </div>

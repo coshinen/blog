@@ -49,6 +49,10 @@ tagcloud: "/blog/tags.html"
 feed:     "/blog/feed.html"
 atom:     "/blog/atom.xml"
 
+# Blog IntenseDebate
+site_id: 415414
+site_acct: b051fd1ebb6d822f554a521d0827b1d8
+
 # Build settings
 # Handling Reading
 exclude: [LICENSE, README.md]

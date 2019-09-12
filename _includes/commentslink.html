@@ -1,7 +1,7 @@
 <script>
-var idcomments_acct = 'ac691642dfcf84ebaecaf8ec3ed335e8';
+var idcomments_acct = '{{ site.site_acct }}';
 var idcomments_post_id = '{{ page.url | prepend: site.url }}';
 var idcomments_post_url = '{{ page.url | prepend: site.url }}';
-var idcomments_post_title= '{{ page.title }}';
+var idcomments_post_title= '{{ page.title | xml_escape }}';
 </script>
 <script type="text/javascript" src="https://www.intensedebate.com/js/genericLinkWrapperV2.js"></script>
