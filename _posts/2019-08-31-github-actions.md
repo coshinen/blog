@@ -7,14 +7,14 @@ comments: true
 categories: Git/GitHub CI/CD
 tags: Git/GitHub CI/CD
 ---
-持续集成 CI（Continuous Integration）是指软件开发过程中，进行的一系列自动化测试。
-持续部署 CD（Continuous Deployment）是指项目的部署上线，比如：GitHub Pages，每次提交之后，都会自动进行部署。
+持续集成 CI（Continuous Integration）是软件开发过程中，进行的一系列自动化测试。
+持续部署 CD（Continuous Deployment）是指项目的部署上线，比如 GitHub Pages，每次提交之后都会自动进行部署。
 CI、CD 都属于敏捷开发。
 
 GitHub Actions 可以自动化 GitHub 上托管项目的工作流，从而实现 GitHub 对代码的托管、测试和部署一体化。
-目前 GitHub 上较为流行的持续集成服务是 Travis CI，可能会被 GitHub Actions workflows CI 取代。
+目前 GitHub 上较为流行的持续集成服务是 Travis CI，或将被 GitHub Actions workflows CI 取代。
 
-GitHub Actions 目前处于测试阶段，需要提前注册 beta 版待官方开启后才能使用。
+GitHub Actions 目前处于测试阶段，需要注册 beta 版等待官方开启后才能使用。
 
 ## 0. 关于工作流
 
@@ -24,7 +24,7 @@ GitHub Actions 目前处于测试阶段，需要提前注册 beta 版待官方�
 你可以在一个仓库中创建多个工作流。
 你必须把工作流存储在你仓库根目录下的 .github/workflows 目录中。
 
-工作流至少要有一个作业（job），并且作业（job）包含一组执行单个任务的步骤（step）。
+工作流至少要有一个工作（job），并且工作（job）包含一组执行单个任务的步骤（step）。
 步骤（step）可以运行命令或使用（use）一个操作（action）。
 你可以创建你自己的操作（action）或使用 GitHub 社区共享的操作（action）并根据需要自定义。
 
@@ -37,7 +37,7 @@ GitHub Actions 目前处于测试阶段，需要提前注册 beta 版待官方�
 
 ## 1. 定义工作流的名称
 
-name 定义工作流的名称，对该工作流要完成的任务进行简单的描述。
+名字（name）定义工作流的名称，对该工作流要完成的任务进行简单的描述。
 
 ```yaml
 name: C/C++ CI ## 表示这是一个 C/C++ 项目的 CI 工作流
@@ -89,14 +89,14 @@ runs-on 指定运行所在操作系统的类型。
 jobs:
   build:
 
-    runs-on: ubuntu-latest # 表示该工作流将在 ubuntu 的最新版本上运行
+    runs-on: ubuntu-latest # 表示工作流将在 ubuntu 的最新版本上运行
 ```
 
 可用的虚拟机类型如下：
 
-> * ubuntu-latest, ubuntu-18.04, or ubuntu-16.04
-> * windows-latest, windows-2019, or windows-2016
-> * macOS-latest or macOS-10.14
+> * ubuntu-latest，ubuntu-18.04 或 ubuntu-16.04
+> * windows-latest，windows-2019 或 windows-2016
+> * macOS-latest 或 macOS-10.14
 
 ## 4. 使用签出操作
 
@@ -122,12 +122,14 @@ jobs:
     fetch-depth: 1
 ```
 
+更多内容，查看[签出（checkout）操作的官方仓库](https://github.com/actions/checkout)。
+
 ## 5. 设置运行命令的步骤
 
-每个 jobs 都在 runs-on 指定的一个虚拟环境新实例中运行。
+每个工作（jobs）都在 runs-on 指定的一个虚拟环境新实例中运行。
 
-steps 用于设置工作流的运行步骤，即在终端中执行的 shell 命令。
-run 设置要执行的命令。
+步骤（steps）用于设置工作流的运行步骤，即在终端中执行的 shell 命令。
+运行（run）设置要执行的命令。
 
 ```yaml
 jobs:
@@ -169,7 +171,7 @@ jobs:
 
 每个工作流必须使用 YAML 写入一个扩展名为 .yml 的文件中。
 文件名一般定义为项目主要使用的语言名称。
-比如 c-cpp.yml，默认路径如下：
+比如 c-cpp.yml，路径如下：
 
 > .github/workflows/c-cpp.yml
 
@@ -177,7 +179,7 @@ jobs:
 
 状态标志显示工作流当前是失败（failing）还是通过（passing）。
 通常是在你仓库的 README.md 文件中添加一个状态标志，但是你可以把它添加到任何你想要添加的网页中。
-标志显示你的默认分支的状态（通常是主分支）。
+标志显示的是你的默认分支的状态（通常是主分支）。
 
 ![GitHub Actions workflow status](https://github.com/mistydew/netCloud/workflows/C/C++%20CI/badge.svg)
 
@@ -196,7 +198,7 @@ https://github.com/<OWNER>/<REPOSITORY>/workflows/<WORKFLOW_FILE_PATH>/badge.svg
 
 **使用一个工作流名字（name）的例子**
 
-这个例子给一个名字（name）为“C/C++ CI”的工作流添加一个状态标志。
+这个例子为一个名字（name）为“C/C++ CI”的工作流添加一个状态标志。
 该仓库的所属者（OWNER）是 mistydew 用户，并且仓库（REPOSITORY）的名字是 hello-world。
 
 ```markdown
@@ -205,7 +207,7 @@ https://github.com/<OWNER>/<REPOSITORY>/workflows/<WORKFLOW_FILE_PATH>/badge.svg
 
 **使用一个工作流文件路径的例子**
 
-这个例子给一个文件路径为 .github/workflows/c-cpp.yml 的工作流添加一个状态标志。
+这个例子为一个文件路径为 .github/workflows/c-cpp.yml 的工作流添加一个状态标志。
 该仓库的所属者（OWNER）是 mistydew 用户，并且仓库（REPOSITORY）的名字是 hello-world。
 
 ```markdown
