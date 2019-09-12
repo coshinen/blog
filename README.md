@@ -1,6 +1,6 @@
 # [mistydew's blog](https://mistydew.github.io/blog)
 
-![GitHub Actions workflow status](https://github.com/mistydew/mistydew.github.io/workflows/Jekyll%20site%20CI/badge.svg)
+![](https://github.com/mistydew/mistydew.github.io/workflows/Jekyll%20site%20CI/badge.svg)
 
 ## Todo
 
