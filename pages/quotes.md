@@ -5,7 +5,7 @@ permalink: /quotes.html
 excerpt: Here are my favorite quotes from someones that inspire me or make me laugh. I hope you enjoy them.
 ---
 
-> Linus Torvalds, [LKML: Linus Torvalds: Re: SCO: "thread creation is about a thousand times faster than onnative](https://lkml.org/lkml/2000/8/25/132){:target="_blank"}:
+> Linus Torvalds, [LKML: Re: SCO: "thread creation is about a thousand times faster than onnative](https://lkml.org/lkml/2000/8/25/132){:target="_blank"}:
 > * Talk is cheap. Show me the code.
 
 > Satoshi Nakamoto, [Bitcoin P2P e-cash paper](https://www.metzdowd.com/pipermail/cryptography/2008-November/014853.html){:target="_blank"}:
@@ -195,6 +195,16 @@ excerpt: Here are my favorite quotes from someones that inspire me or make me la
 > 言葉のすれ違いで一生の友達を失うこともあるんだ…
 > 一度すれ違ったら、二度と会えなくなっちまうかもしれないぜ。
 
+> 灰原哀／宮野志保(Sherry)「名探偵コナン 水平線上の陰謀(ストラテジー)」：
+> * 無理ね。人には感情があるもの…
+> 目には見えない上に、とても変わりやすい厄介なしおものがね…
+> それが、友情や愛情ならいいけど…
+> 何かのきっかけで嫉妬や恨みに変われば、殺意が芽生えることだってあるんだから。
+
+> 阿笠博士「名探偵コナン 水平線上の陰謀(ストラテジー)」：
+> * 哀くんの言う通り、人はふとしたことで傷つける側にも傷つけられる側にもなる。
+> そうならないためには、相手のことを思いやる気持ちが必要なんじゃ。
+
 > 工藤新一「名探偵コナン ベイカー街(ストリート)の亡霊」：
 > * 君を確実に破滅させることができれば、公共の利益のために僕は喜んで死を受け入れよう。
 
@@ -264,11 +274,9 @@ excerpt: Here are my favorite quotes from someones that inspire me or make me la
 > 取り引きを見るのに夢中になっていたオレは、背後から近付いて来る、もう一人の仲間に気付かなかった。
 > オレはその男に毒薬を飲まされ、目が覚めたら体が縮んでしまっていた！！
 > 工藤新一が生きていると奴らにバレたら、また命を狙われ、まわりの人間にも危害が及ぶ。
-> 阿笠博士の助言で正体を隠すことにしたオレは、蘭に名前を聞かれて、とっさに江戸川コナンと名のり、奴らの情報をつかむために、父親が探偵をやっている蘭の家に転がり込んだ。
-> …
-> 小さくなっても頭脳は同じ！迷宮なしの名探偵！真実はいつもひとつ！！
+> 阿笠博士の助言で正体を隠すことにしたオレは、蘭に名前を聞かれて、とっさに江戸川コナンと名のり、奴らの情報をつかむために、父親が探偵をやっている蘭の家に転がり込んだ…
+> * 小さくなっても頭脳は同じ！迷宮なしの名探偵！真実はいつもひとつ！！
 > * たった一つの真実見抜く、見た目は子供、頭脳は大人。その名は…
-> * 真実はいつもひとつ！
 
 > Sherlock Holmes, BBC SHERLOCK, Series 4 Episode 2, The Lying Detective:
 > * Must be something comforting about the number three, people always give up after three.
