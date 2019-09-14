@@ -6,7 +6,7 @@ permalink: /
 <div class="home-left">
   <h1 class="page-heading">Latest Post</h1>
   <ul class="post-list">
-    <!-- This loops through the site posts -->{% for post in site.posts %}{% if post.hidden == true %}{% continue %}{% else %}
+    <!-- This loops through the site posts -->{% for post in site.posts %}
     <li>
       <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
       <span style="float:right;">分类：{% for category in post.categories %}<a class="category" href="{{ site.category }}#{{ category }}-ref">{{ category | append: " " }}</a>{% endfor %}</span>
@@ -19,15 +19,15 @@ permalink: /
       <footer>
         <a class="readmore" href="{{ post.url }}">阅读全文 &raquo;</a>
       </footer>
-    </li>{% break %}{% endif %}{% endfor %}
+    </li>{% break %}{% endfor %}
   </ul>
   <h2 class="page-heading">Newer Posts</h2>
   <ul class="post-list-more">
-    <!-- This loops through the site posts -->{% assign idx = 0 %}{% assign maximum = 7 %}{% for post in site.posts %}{% if post.hidden == true %}{% continue %}{% else %}{% assign idx = idx | plus: 1 %}{% if idx == 1 %}{% continue %}{% endif %}
+    <!-- This loops through the site posts -->{% assign idx = 0 %}{% assign maximum = 7 %}{% for post in site.posts %}{% assign idx = idx | plus: 1 %}{% if idx == 1 %}{% continue %}{% endif %}
     <li>
       <span>{{ post.date | date: '%Y年%m月%d日' }} &raquo; </span>
       <a href="{{ post.url }}">{{ post.title }}</a>
-    </li>{% if idx == maximum %}{% break %}{% endif %}{% endif %}{% endfor %}
+    </li>{% if idx == maximum %}{% break %}{% endif %}{% endfor %}
     <li>
       <footer>
         <a class="readmore" href="{{ site.blog }}">更多内容……</a>

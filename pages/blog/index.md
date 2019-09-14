@@ -22,7 +22,7 @@ excerpt: Welcome to mistydew's blog!
         <a class="readmore" href="{{ post.url }}">阅读全文 &raquo;</a>
       </footer>
     </li>{% endif %}{% endfor %}
-    <!-- This loops through the site posts -->{% assign idx = 0 %}{% assign maximum = 7 %}{% for post in site.posts %}{% if post.stickie == true %}{% continue %}{% elsif post.hidden == true %}{% continue %}{% else %}
+    <!-- This loops through the site posts -->{% assign idx = 0 %}{% assign maximum = 7 %}{% for post in site.posts %}{% if post.stickie == true %}{% continue %}{% else %}
     <li>
       <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
       <span style="float:right;">分类：{% for category in post.categories %}<a class="category" href="{{ site.category }}#{{ category }}-ref">{{ category | append: " " }}</a>{% endfor %}</span>

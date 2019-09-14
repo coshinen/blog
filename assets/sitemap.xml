@@ -40,9 +40,9 @@ permalink: /sitemap.xml
 </url>
 <url>
 <loc>{{ site.feed | prepend: site.url }}</loc>
-</url>{% for post in site.posts reversed %}{% if post.hidden == true %}{% else %}
+</url>{% for post in site.posts reversed %}
 <url>
 <loc>{{ post.url | prepend: site.url }}</loc>
 <lastmod>{{ post.date | date_to_xmlschema }}</lastmod>
-</url>{% endif %}{% endfor %}
+</url>{% endfor %}
 </urlset>

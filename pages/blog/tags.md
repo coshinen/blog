@@ -43,10 +43,7 @@ excerpt: Blog tags.
 {% assign count = 0 %}
 {% for tag in site.tags %}
   {% for post in tag.last %}
-    {% if post.hidden == true %}
-    {% else %}
-      {% assign count = count | plus: 1 %}
-    {% endif %}
+    {% assign count = count | plus: 1 %}
   {% endfor %}
   {% assign count = count | append: ', ' %}
   {% assign counts = counts | append: count %}
@@ -62,10 +59,7 @@ excerpt: Blog tags.
     {% assign idx = idx | plus: 1 %}
   <ul class="tag-list">
     {% for post in tag.last %}
-      {% if post.hidden == true %}
-      {% else %}
     <li>{{ post.date | date: "%Y-%m-%d-" }}<a href="{{ post.url }}">{{ post.title }}</a></li>
-      {% endif %}
     {% endfor %}
   </ul>
 </blockquote>

@@ -8,10 +8,7 @@ excerpt: Blog category.
 {% assign count = 0 %}
 {% for category in site.categories %}
   {% for post in category.last %}
-    {% if post.hidden == true %}
-    {% else %}
-      {% assign count = count | plus: 1 %}
-    {% endif %}
+    {% assign count = count | plus: 1 %}
   {% endfor %}
   {% assign count = count | append: ', ' %}
   {% assign counts = counts | append: count %}
@@ -37,10 +34,7 @@ excerpt: Blog category.
     {% assign idx = idx | plus: 1 %}
   <ul class="category-list">
     {% for post in category.last %}
-      {% if post.hidden == true %}
-      {% else %}
     <li>{{ post.date | date: "%Y-%m-%d-" }}<a href="{{ post.url }}">{{ post.title }}</a></li>
-      {% endif %}
     {% endfor %}
   </ul>
 </blockquote>

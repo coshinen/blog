@@ -6,7 +6,7 @@ author: mistydew
 comments: true
 categories: Blockchain Bitcoin
 tags: CLI bitcoin-cli 区块链 比特币
-hidden: true
+excerpt: $ bitcoin-cli resendwallettransactions
 ---
 ## 提示说明
 

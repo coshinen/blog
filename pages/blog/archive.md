@@ -36,8 +36,5 @@ excerpt: Blog archive.
   <ul class="archive-list">
     {% assign i = i | plus: 1 %}
   {% endif %}
-  {% if post.hidden == true %}
-  {% else %}
     <li>{{ post.date | date: "%Y-%m-%d-" }}<a href="{{ post.url }}">{{ post.title }}</a></li>
-  {% endif %}
 {% endfor %}
