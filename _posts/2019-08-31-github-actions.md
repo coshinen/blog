@@ -198,7 +198,7 @@ https://github.com/<OWNER>/<REPOSITORY>/workflows/<WORKFLOW_FILE_PATH>/badge.svg
 
 **使用一个工作流名字（name）的例子**
 
-这个例子为一个名字（name）为“C/C++ CI”的工作流添加一个状态标志。
+这个例子给一个名字（name）为“C/C++ CI”的工作流添加一个状态标志。
 该仓库的所属者（OWNER）是 mistydew 用户，并且仓库（REPOSITORY）的名字是 hello-world。
 
 ```markdown
@@ -207,7 +207,7 @@ https://github.com/<OWNER>/<REPOSITORY>/workflows/<WORKFLOW_FILE_PATH>/badge.svg
 
 **使用一个工作流文件路径的例子**
 
-这个例子为一个文件路径为 .github/workflows/c-cpp.yml 的工作流添加一个状态标志。
+这个例子给一个文件路径为 .github/workflows/c-cpp.yml 的工作流添加一个状态标志。
 该仓库的所属者（OWNER）是 mistydew 用户，并且仓库（REPOSITORY）的名字是 hello-world。
 
 ```markdown
