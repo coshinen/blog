@@ -112,6 +112,10 @@ excerpt: Here are my favorite quotes from someones that inspire me or make me la
 > Mahatma Gandhi:
 > * First they ignore you, then they laugh at you, then they fight you, then you win.
 
+> George Orwell:
+> * The very concept of objective truth is fading out of the world.
+> Lies will pass into history.
+
 > THE SEVEN COMMANDMENTS, Animal Farm:
 > * ALL ANIMALS ARE EQUAL BUT SOME ANIMALS ARE MORE EQUAL THAN OTHERS.
 > * FOUR LEGS GOOD, TWO LEGS BAD.
@@ -126,10 +130,10 @@ excerpt: Here are my favorite quotes from someones that inspire me or make me la
 > 腕立て伏せ100回！上体起こし100回！スクワット100回！そして、ランニング10キロ！これを毎日やる！
 > もちろん、1日3食きちんと食べる、朝はバナナでもいい。
 > 極めつけば精神を鍛える為に夏も冬もエアコンを使わないことだ。最初は死ぬほど辛い。1日くらい休もうかとつい考えてしまう。
-> だが、俺は強いヒーローになる為に、どんなに苦しくても血反吐(ちへど)ぶちまけても毎日続けた。
-> 足が重く動かなくてもスクワットをやり、腕がプチプチと変な音を立てても腕立てを断行(だんこう)した。
+> だが、俺は強いヒーローになる為に、どんなに苦しくても血反吐ぶちまけても毎日続けた。
+> 足が重く動かなくてもスクワットをやり、腕がプチプチと変な音を立てても腕立てを断行した。
 > 変化に気づいたのは一年半後だった。俺はハゲていた。そして、強くなっていた。
-> つまり、禿げるくらい死に物狂いで己(おのれ)を鍛えこむのだ。それが強くなる唯一(ゆいつ)の方法だ。
+> つまり、禿げるくらい死に物狂いで己を鍛えこむのだ。それが強くなる唯一(ゆいつ)の方法だ。
 > 新人類だの進化だのと遊んでいる貴様などでは決してここまで辿り着けん。自分で変われるのが人間の強さだ！
 
 > 宇佐美博人「サバイバル ウェデぃング」：
@@ -195,6 +199,9 @@ excerpt: Here are my favorite quotes from someones that inspire me or make me la
 > 言葉のすれ違いで一生の友達を失うこともあるんだ…
 > 一度すれ違ったら、二度と会えなくなっちまうかもしれないぜ。
 
+> 江戸川コナン／工藤新一「名探偵コナン 漆黒の追跡者(チェイサー)」：
+> * そんなのは勇気じゃない、ただの自我満足だ。
+
 > 江戸川コナン／工藤新一「名探偵コナン 探偵たちの鎮魂歌(レクイエム)」：
 > * 完璧なんてこの世にはねぇよ…
 > 絶対どこかで歯車が噛み合わなくなる…
@@ -228,7 +235,7 @@ excerpt: Here are my favorite quotes from someones that inspire me or make me la
 > * 木の葉を隠すなら森の中、森がない時は自分で森をつく。
 
 > 工藤新一「名探偵コナン 第621話 ホームズの黙示録（0 is Start）」：
-> * 0(ゼロ)は全ての始まり！そこから出発しねぇと何も生まれねぇし…
+> * 0は全ての始まり！そこから出発しねぇと何も生まれねぇし…
 > 何も達成できねぇって…そう言っとけよ！！
 
 > 工藤新一「名探偵コナン 第288話 工藤新一NYの事件（解決編）」：
