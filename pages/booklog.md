@@ -32,21 +32,22 @@ excerpt: Here are some books I read.
 > * [冰与火之歌 卷一 权力的游戏](https://book.douban.com/subject/1336330){:target="_blank"}，[美] [George R.R. Martin](http://www.georgerrmartin.com){:target="_blank"}
 > * [冰与火之歌（五卷）](https://book.douban.com/subject/25826936){:target="_blank"}，[美] [George R.R. Martin](http://www.georgerrmartin.com){:target="_blank"}
 > * [小王子](https://book.douban.com/subject/1084336){:target="_blank"}，[法] [Antoine de Saint Exupéry](https://www.antoinedesaintexupery.com){:target="_blank"}
-> * [动物庄园](https://book.douban.com/subject/25854767){:target="_blank"}，[英] George Orwell
+> * [动物农场](https://book.douban.com/subject/2035179){:target="_blank"}，[英] George Orwell
 > * [百年孤独](https://book.douban.com/subject/6082808){:target="_blank"}，[哥伦比亚] Gabriel José de la Concordia García Márquez
 > * [80,0 AZUKI NANA photo & anthology](https://book.douban.com/subject/2249654){:target="_blank"}，[日] AZUKI 七
 > * [三个火枪手](https://book.douban.com/subject/1203244){:target="_blank"}，[法] dit aussi Alexandre Dumas père
 > * [你的名字](https://book.douban.com/subject/26916709){:target="_blank"}，[日] [新海誠](http://shinkaimakoto.jp){:target="_blank"}
 > * [言叶之庭](https://book.douban.com/subject/26314932){:target="_blank"}，[日] [新海誠](http://shinkaimakoto.jp){:target="_blank"}
 > * [秒速五厘米](https://book.douban.com/subject/21460732){:target="_blank"}，[日] [新海誠](http://shinkaimakoto.jp){:target="_blank"}
-> * [神奇动物在哪里](https://book.douban.com/subject/27625554){:target="_blank"}，[英] [J.K. Rowling](https://www.jkrowling.com){:target="_blank"}
-> * [神奇的魁地奇球](https://book.douban.com/subject/30193054){:target="_blank"}，[英] [J.K. Rowling](https://www.jkrowling.com){:target="_blank"}
-> * [诗翁彼豆故事集](https://book.douban.com/subject/27594566){:target="_blank"}，[英] [J.K. Rowling](https://www.jkrowling.com){:target="_blank"}
+> * [神奇动物在哪里](https://book.douban.com/subject/1028779){:target="_blank"}，[英] [J.K. Rowling](https://www.jkrowling.com){:target="_blank"}
+> * [神奇的魁地奇球](https://book.douban.com/subject/1084341){:target="_blank"}，[英] [J.K. Rowling](https://www.jkrowling.com){:target="_blank"}
+> * [诗翁彼豆故事集 赫敏·格兰杰译自如尼文](https://book.douban.com/subject/3338175){:target="_blank"}，[英] [J.K. Rowling](https://www.jkrowling.com){:target="_blank"}
+> * [哈利·波特与火焰杯](https://book.douban.com/subject/1009257){:target="_blank"}，[英] [J.K. Rowling](https://www.jkrowling.com){:target="_blank"}
 > * [哈利·波特与阿兹卡班的囚徒](https://book.douban.com/subject/1071241){:target="_blank"}，[英] [J.K. Rowling](https://www.jkrowling.com){:target="_blank"}
 > * [哈利·波特与密室](https://book.douban.com/subject/1039487){:target="_blank"}，[英] [J.K. Rowling](https://www.jkrowling.com){:target="_blank"}
 > * [哈利·波特与魔法石](https://book.douban.com/subject/1041007){:target="_blank"}，[英] [J.K. Rowling](https://www.jkrowling.com){:target="_blank"}
 > * [哈利波特全集（七卷）](https://book.douban.com/subject/27167519){:target="_blank"}，[英] [J.K. Rowling](https://www.jkrowling.com){:target="_blank"}
-> * [福尔摩斯](https://book.douban.com/subject/20441264){:target="_blank"}，[英] Arthur Conan Doyle
+> * [福尔摩斯探案全集](https://book.douban.com/subject/20441264){:target="_blank"}，[英] Arthur Conan Doyle
 
 > Biography:
 > * [只是为了好玩 偶然的革命故事](https://book.douban.com/subject/25930025){:target="_blank"}，[芬] Linus Benedict Torvalds
