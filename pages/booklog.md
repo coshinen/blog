@@ -32,7 +32,7 @@ excerpt: Here are some books I read.
 > * [冰与火之歌 卷一 权力的游戏](https://book.douban.com/subject/1336330){:target="_blank"}，[美] [George R.R. Martin](http://www.georgerrmartin.com){:target="_blank"}
 > * [冰与火之歌（五卷）](https://book.douban.com/subject/25826936){:target="_blank"}，[美] [George R.R. Martin](http://www.georgerrmartin.com){:target="_blank"}
 > * [小王子](https://book.douban.com/subject/1084336){:target="_blank"}，[法] [Antoine de Saint Exupéry](https://www.antoinedesaintexupery.com){:target="_blank"}
-> * [动物农场](https://book.douban.com/subject/2035179){:target="_blank"}，[英] George Orwell
+> * [动物农场](https://book.douban.com/subject/2035179){:target="_blank"}，[英] [George Orwell](https://www.george-orwell.com){:target="_blank"}
 > * [百年孤独](https://book.douban.com/subject/6082808){:target="_blank"}，[哥伦比亚] Gabriel José de la Concordia García Márquez
 > * [80,0 AZUKI NANA photo & anthology](https://book.douban.com/subject/2249654){:target="_blank"}，[日] AZUKI 七
 > * [三个火枪手](https://book.douban.com/subject/1203244){:target="_blank"}，[法] dit aussi Alexandre Dumas père
@@ -46,8 +46,8 @@ excerpt: Here are some books I read.
 > * [哈利·波特与阿兹卡班的囚徒](https://book.douban.com/subject/1071241){:target="_blank"}，[英] [J.K. Rowling](https://www.jkrowling.com){:target="_blank"}
 > * [哈利·波特与密室](https://book.douban.com/subject/1039487){:target="_blank"}，[英] [J.K. Rowling](https://www.jkrowling.com){:target="_blank"}
 > * [哈利·波特与魔法石](https://book.douban.com/subject/1041007){:target="_blank"}，[英] [J.K. Rowling](https://www.jkrowling.com){:target="_blank"}
-> * [哈利波特全集（七卷）](https://book.douban.com/subject/27167519){:target="_blank"}，[英] [J.K. Rowling](https://www.jkrowling.com){:target="_blank"}
-> * [福尔摩斯探案全集](https://book.douban.com/subject/20441264){:target="_blank"}，[英] Arthur Conan Doyle
+> * [哈利波特完整系列](https://book.douban.com/subject/27167519){:target="_blank"}，[英] [J.K. Rowling](https://www.jkrowling.com){:target="_blank"}
+> * [福尔摩斯探案全集](https://book.douban.com/subject/20441264){:target="_blank"}，[英] [Arthur Conan Doyle](https://www.arthur-conan-doyle.com){:target="_blank"}
 
 > Biography:
 > * [只是为了好玩 偶然的革命故事](https://book.douban.com/subject/25930025){:target="_blank"}，[芬] Linus Benedict Torvalds
@@ -59,7 +59,7 @@ excerpt: Here are some books I read.
 > * [如何变得有思想](http://www.ruanyifeng.com/blog){:target="_blank"}，[中] 阮一峰
 > * [你的灯亮着吗？发现问题的真正所在](https://book.douban.com/subject/1135754){:target="_blank"}，[美] Donald C. Gause, Gerald M. Weinberg
 > * [异类 不一样的成功启示录](https://book.douban.com/subject/3688489){:target="_blank"}，[加] Malcolm Gladwell
-> * [公正 该如何做是好](https://book.douban.com/subject/5408882){:target="_blank"}，[美] Michael J. Sandel
+> * [公正 该如何做是好](https://book.douban.com/subject/5408882){:target="_blank"}，[美] [Michael J. Sandel](https://scholar.harvard.edu/sandel){:target="_blank"}
 > * [谁“害”了北大学生](https://book.douban.com/subject/1605954){:target="_blank"}，[中] 群言
 
 > Languages:
