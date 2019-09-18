@@ -166,8 +166,8 @@ footer.site-footer a, a.post-link {
     }
 }
 
-/* category page contents, tags page tagcloud: black (underline) */
-blockquote.contents a, blockquote#tagcloud a {
+/* archive page years, category page contents, tags page tagcloud: black (underline) */
+blockquote#years a, blockquote#contents a, blockquote#tagcloud a {
     color: $text-color;
     text-decoration: underline;
 }

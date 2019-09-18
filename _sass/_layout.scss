@@ -283,6 +283,31 @@
     }
 }
 
+/* Archive, Category contents */
+blockquote.archive, blockquote.category {
+    float: right;
+    width: 20%;
+}
+
+@include media-query($on-palm) {
+    blockquote.archive, blockquote.category {
+        float: none;
+        width: 93%;
+    }
+}
+
+blockquote.contents {
+    float: left;
+    width: 74%;
+}
+
+@include media-query($on-palm) {
+    blockquote.contents {
+        float: none;
+        width: 93%;
+    }
+}
+
 /* Tag cloud */
 blockquote#tagcloud {
     width: 512px;
