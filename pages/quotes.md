@@ -12,6 +12,9 @@ excerpt: Here are my favorite quotes from someones that inspire me or make me la
 > * It's very attractive to the libertarian viewpoint if we can explain it properly.
 > I'm better with code than with words though.
 
+> 侯捷，STL 源码剖析：
+> * 源码之前，了无秘密。
+
 > Sansa Stark, Game of Thrones, Season 7 Episode 7:
 > * I'm a slow learner, it's true. But I learn.
 
@@ -44,26 +47,11 @@ excerpt: Here are my favorite quotes from someones that inspire me or make me la
 > * Never forget what you are. The rest of the world will not.
 > Wear it like armor, and it can never be used to hurt you.
 
-> Master Shifu, Kung Fu Panda 3:
-> * If you only do what you can do, you will never be more than you are now.
-
-> Master Oogway, Kung Fu Panda 3:
-> * Inner peace, inner peace. itchy nose. Ah-choo! Finally, inner peace. Now what?
-
-> Master Oogway, Kung Fu Panda:
-> * Yesterday is history, tomorrow is a mystery, but today is a gift. That is why it is called the present.
-> * There are no accidents.
-> * One often meets his destiny on the road he takes to avoid it.
-> * Nothing is impossible.
-
 > Negan, The Walking Dead, Season 9 Episode 16:
 > * It's just that no one ever thinks that they're the evil one.
 
 > Rick Grimes, The Walking Dead, Season 8:
 > * My mercy prevails over my wrath.
-
-> Alan Turing, The imitation game:
-> * Sometimes it is the people no one imagines anything of who do the things that no one can imagine.
 
 > Raymond Fowler, The Thin Blue Line, Series 2 Episode 1, Court in the Act:
 > * Even our greatest and most revered institutions, are mixtures of good and bad.
@@ -73,6 +61,9 @@ excerpt: Here are my favorite quotes from someones that inspire me or make me la
 
 > Raymond Fowler, The Thin Blue Line, Series 1 Episode 4, Rag Week:
 > * When I was at college I suffered from the curious delusion, that I was there to study.
+
+> Alan Turing, The imitation game:
+> * Sometimes it is the people no one imagines anything of who do the things that no one can imagine.
 
 > J.K. Rowling:
 > * Print will never die. There's no substitute for the feel of an actual book.
@@ -106,6 +97,18 @@ excerpt: Here are my favorite quotes from someones that inspire me or make me la
 > Professor Severus Snape, Harry Potter and the Philosopher's Stone:
 > * Clearly, fame isn't everything...
 
+> Master Shifu, Kung Fu Panda 3:
+> * If you only do what you can do, you will never be more than you are now.
+
+> Master Oogway, Kung Fu Panda 3:
+> * Inner peace, inner peace. itchy nose. Ah-choo! Finally, inner peace. Now what?
+
+> Master Oogway, Kung Fu Panda:
+> * Yesterday is history, tomorrow is a mystery, but today is a gift. That is why it is called the present.
+> * There are no accidents.
+> * One often meets his destiny on the road he takes to avoid it.
+> * Nothing is impossible.
+
 > Martin Luther King, Jr.:
 > * In the End, we will remember not the words of our enemies, but the silence of our friends.
 
@@ -119,9 +122,6 @@ excerpt: Here are my favorite quotes from someones that inspire me or make me la
 > THE SEVEN COMMANDMENTS, Animal Farm:
 > * ALL ANIMALS ARE EQUAL BUT SOME ANIMALS ARE MORE EQUAL THAN OTHERS.
 > * FOUR LEGS GOOD, TWO LEGS BAD.
-
-> 侯捷，STL 源码剖析：
-> * 源码之前，了无秘密。
 
 > サイタマ「ワンパンマン 第3話 執念の科学者」：
 > * お前も知りたいのか？いいだろう！ジェノスもよく聞いとけ…えっ、誰？…あ？まぁ、いいだろう。心して聞け…
@@ -208,7 +208,7 @@ excerpt: Here are my favorite quotes from someones that inspire me or make me la
 > そのまま無理やり動かして何もかも無駄にするか、一度リセットして正常に戻し、頑張って遅れた分を取り戻すかはその人次第…
 > あんたは怖かっただけだよ…リセットするのがな！！
 
-> 灰原哀／宮野志保(Sherry)「名探偵コナン 水平線上の陰謀(ストラテジー)」：
+> 灰原哀／宮野志保 (Sherry)「名探偵コナン 水平線上の陰謀(ストラテジー)」：
 > * 無理ね。人には感情があるもの…
 > 目には見えない上に、とても変わりやすい厄介なしおものがね…
 > それが、友情や愛情ならいいけど…
@@ -221,7 +221,7 @@ excerpt: Here are my favorite quotes from someones that inspire me or make me la
 > 工藤新一「名探偵コナン ベイカー街(ストリート)の亡霊」：
 > * 君を確実に破滅させることができれば、公共の利益のために僕は喜んで死を受け入れよう。
 
-> 灰原哀／宮野志保(Sherry)「名探偵コナン ベイカー街(ストリート)の亡霊」：
+> 灰原哀／宮野志保 (Sherry)「名探偵コナン ベイカー街(ストリート)の亡霊」：
 > * まるで、悪しき日本の世襲制が凝縮された光景ね…
 > こうした世襲制と共に、人間の過ちの歴史が繰り返されるわけよ。
 > * 政治家の息子は政治家になる、トウドリの息子はトウドリになる。
@@ -235,7 +235,7 @@ excerpt: Here are my favorite quotes from someones that inspire me or make me la
 > * 木の葉を隠すなら森の中、森がない時は自分で森をつく。
 
 > 工藤新一「名探偵コナン 第621話 ホームズの黙示録（0 is Start）」：
-> * 0は全ての始まり！そこから出発しねぇと何も生まれねぇし…
+> * 0(ゼロ)は全ての始まり！そこから出発しねぇと何も生まれねぇし…
 > 何も達成できねぇって…そう言っとけよ‼︎
 
 > 工藤新一「名探偵コナン 第288話 工藤新一NYの事件（解決編）」：
@@ -243,7 +243,7 @@ excerpt: Here are my favorite quotes from someones that inspire me or make me la
 > 人は人を殺す動機なんて、知ったこっちゃねーが…
 > 人が人を助ける理由に…論理的な思考は存在しねーだろ？
 
-> ベルモット「名探偵コナン 第230話 謎めいた乗客（前編）」：
+> ベルモット (**Verm**o**ut**h)／シャロン・ヴィンヤード (Sharon Vineyard)「名探偵コナン 第230話 謎めいた乗客（前編）」：
 > * A secret makes a woman woman...
 > 女は秘密を着飾って美しくなるのよ…
 
@@ -326,8 +326,8 @@ excerpt: Here are my favorite quotes from someones that inspire me or make me la
 > * Come at once if convenient. If inconvenient come anyway.
 
 > Sherlock Holmes, A Game of Shadows:
-> * Let me pay you one in return, when I said if I were assured of the former eventuality, I will cheerfully accept the latter.
 > * Come at once if convenient, if inconvenient come all the same.
+> * Let me pay you one in return, when I said if I were assured of the former eventuality, I will cheerfully accept the latter.
 
 > Sherlock Holmes, [Memoirs of Sherlock Holmes, The Final Problem](https://www.pagebypagebooks.com/Arthur_Conan_Doyle/Memoirs_of_Sherlock_Holmes/Adventure_XI_The_Final_Problem_p5.html){:target="_blank"}:
 > * Let me pay you one in return when I say that if I were assured of the former eventuality I would, in the interests of the public, cheerfully accept the latter.
