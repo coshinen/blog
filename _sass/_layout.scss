@@ -279,12 +279,12 @@
 /* Archive, Category contents */
 blockquote.archive, blockquote.category {
     float: right;
-    width: calc(20% - #{$spacing-unit});
+    width: calc(22% - #{$spacing-unit});
 }
 
 blockquote.contents {
     float: left;
-    width: calc(80% - #{$spacing-unit});
+    width: calc(78% - #{$spacing-unit});
 }
 
 @include media-query($on-palm) {
