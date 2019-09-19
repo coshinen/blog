@@ -81,7 +81,7 @@ ul, ol, dl, figure,
  * Images
  */
 img {
-    max-width: 100%;
+    max-width: calc(100% - (#{$spacing-unit} / 2));
     vertical-align: middle;
 }
 

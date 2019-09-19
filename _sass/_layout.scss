@@ -261,61 +261,47 @@
 /* Home page */
 .home-left {
     float: left;
-    width: 66%;
-}
-
-@include media-query($on-palm) {
-    .home-left {
-        float: none;
-        width: 100%;
-    }
+    width: calc(68% - (#{$spacing-unit} / 2));
 }
 
 .home-right {
     float: right;
-    width: 32%;
+    width: calc(32% - (#{$spacing-unit} / 2));
 }
 
 @include media-query($on-palm) {
-    .home-right {
+    .home-left, .home-right {
         float: none;
-        width: 100%;
+        width: calc(100%);
     }
 }
 
 /* Archive, Category contents */
 blockquote.archive, blockquote.category {
     float: right;
-    width: 20%;
-}
-
-@include media-query($on-palm) {
-    blockquote.archive, blockquote.category {
-        float: none;
-        width: 93%;
-    }
+    width: calc(20% - #{$spacing-unit});
 }
 
 blockquote.contents {
     float: left;
-    width: 74%;
+    width: calc(80% - #{$spacing-unit});
 }
 
 @include media-query($on-palm) {
-    blockquote.contents {
+    blockquote.archive, blockquote.category, blockquote.contents {
         float: none;
-        width: 93%;
+        width: calc(100% - #{$spacing-unit});
     }
 }
 
 /* Tag cloud */
 blockquote#tagcloud {
-    width: 512px;
+    width: calc(100% - (#{$spacing-unit} * 16));
 }
 
 @include media-query($on-palm) {
     blockquote#tagcloud {
-        width: 256px;
+        width: calc(100% - (#{$spacing-unit} * 2));
     }
 }
 
@@ -367,21 +353,14 @@ blockquote#tagcloud {
 }
 
 /* Lyrics */
-div.lyric-original {
+div.lyric-original, div.lyric-translation {
     float: left;
-    padding-right: 10px;
-    width: calc(50% - (20px / 2));
-}
-
-div.lyric-translation {
-    float: left;
-    padding-right: 10px;
-    width: calc(50% - (20px / 2));
+    width: calc(50%);
 }
 
 @include media-query($on-palm) {
     div.lyric-original, div.lyric-translation {
         float: none;
-        width: calc(100% - (30px / 2));
+        width: calc(100%);
     }
 }
