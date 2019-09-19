@@ -5,7 +5,7 @@ date:   2018-04-28 20:02:04 +0800
 author: mistydew
 comments: true
 categories: GARNETCROW Lyrics
-tags: ガーネット・クロウ 歌詞翻訳
+tags: ガネクロ 歌詞翻訳
 excerpt: 君のいない未来が、ただ大きな闇にみえ。死んでしまえば生きなくていい。そんな事ばかり考えてた、穏やかな月明かりに。
 ---
 ![SPARKLE 〜筋書き通りのスカイブルー〜](https://raw.githubusercontent.com/mistydew/gc2/master/cover/album/AL02_SPARKLE%20〜筋書き通りのスカイブルー〜.jpg){:.border}

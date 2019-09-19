@@ -5,7 +5,7 @@ date:   2019-06-23 20:00:10 +0800
 author: mistydew
 comments: true
 categories: GARNETCROW Lyrics
-tags: ガーネット・クロウ 歌詞翻訳
+tags: ガネクロ 歌詞翻訳
 excerpt: コーヒーは最初の一口、甘いケーキの端っこ、ポテトは揚げたてにして、おいしいトコは少しだけ。
 ---
 ![夏の幻](https://raw.githubusercontent.com/mistydew/gc2/master/cover/single/SG05_夏の幻.jpg){:.border}

@@ -5,7 +5,7 @@ date:   2018-10-07 20:13:03 +0800
 author: mistydew
 comments: true
 categories: GARNETCROW Lyrics
-tags: ガーネット・クロウ 歌詞翻訳
+tags: ガネクロ 歌詞翻訳
 excerpt: まっすぐな思いはまっすぐに伝わるの？唐突な青空 遠ざかる飛行機。
 ---
 ![Terminus](https://raw.githubusercontent.com/mistydew/gc2/master/cover/album/AL10_Terminus.jpg){:.border}

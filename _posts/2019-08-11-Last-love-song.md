@@ -5,7 +5,7 @@ date:   2019-08-11 20:01:05 +0800
 author: mistydew
 comments: true
 categories: GARNETCROW Lyrics
-tags: ガーネット・クロウ 歌詞翻訳
+tags: ガネクロ 歌詞翻訳
 excerpt: 午後になると西陽が射す、部屋の片隅のソファー。海を越えて運んだ、大切な君の場所へ。初めて僕が座る、出会いから半年の今日。
 ---
 ![Last love song](https://raw.githubusercontent.com/mistydew/gc2/master/cover/single/SG07_Last%20love%20song.jpg){:.border}

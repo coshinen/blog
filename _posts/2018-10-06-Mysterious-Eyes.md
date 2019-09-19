@@ -5,7 +5,7 @@ date:   2018-10-06 20:00:03 +0800
 author: mistydew
 comments: true
 categories: CONAN GARNETCROW Lyrics
-tags: コナン ガーネット・クロウ 歌詞翻訳
+tags: コナン ガネクロ 歌詞翻訳
 excerpt: 君と僕とは 別の人間(いきもの)だから、好みが違う 歩く速さも 想いの伝え方も。
 ---
 ![Mysterious Eyes](https://raw.githubusercontent.com/mistydew/gc2/master/cover/single/SG01_Mysterious%20Eyes.jpg){:.border}

@@ -5,7 +5,7 @@ date:   2018-10-14 20:09:05 +0800
 author: mistydew
 comments: true
 categories: CONAN GARNETCROW Lyrics
-tags: コナン ガーネット・クロウ 歌詞翻訳
+tags: コナン ガネクロ 歌詞翻訳
 excerpt: Doing all right!かみしめた君の記憶 木漏れ日の匂い、置いてきた何かはもう 此処にはないけど。
 ---
 ![Doing all right](https://raw.githubusercontent.com/mistydew/gc2/master/cover/single/SG29_Doing%20all%20right.jpg){:.border}

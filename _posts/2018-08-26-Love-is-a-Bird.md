@@ -5,7 +5,7 @@ date:   2018-08-26 20:08:03 +0800
 author: mistydew
 comments: true
 categories: GARNETCROW Lyrics
-tags: ガーネット・クロウ 歌詞翻訳
+tags: ガネクロ 歌詞翻訳
 excerpt: 夕暮れとこの街の匂い 染みついた諦めと希望 雨の中うつむいていた 少年の足取り
 ---
 ![LOCKS](https://raw.githubusercontent.com/mistydew/gc2/master/cover/album/AL06_LOCKS.jpg){:.border}

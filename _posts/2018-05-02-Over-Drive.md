@@ -5,7 +5,7 @@ date:   2018-05-02 20:10:04 +0800
 author: mistydew
 comments: true
 categories: CONAN GARNETCROW Lyrics
-tags: コナン ガーネット・クロウ 歌詞翻訳
+tags: コナン ガネクロ 歌詞翻訳
 excerpt: 風の音だけが、体中を包む。サイレント・Kiss、夢に似た気配。
 ---
 ![Over Drive](https://raw.githubusercontent.com/mistydew/gc2/master/cover/single/SG31_Over%20Drive.jpg){:.border}

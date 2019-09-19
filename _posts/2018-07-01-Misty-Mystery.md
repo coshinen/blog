@@ -5,7 +5,7 @@ date:   2018-07-01 20:11:08 +0800
 author: mistydew
 comments: true
 categories: CONAN GARNETCROW Lyrics
-tags: コナン ガーネット・クロウ 歌詞翻訳
+tags: コナン ガネクロ 歌詞翻訳
 excerpt: why 見えぬ明日へと、期待込め歩いてるの。まだ君を想う、途中みたいにざわめく。
 ---
 ![Misty Mystery](https://raw.githubusercontent.com/mistydew/gc2/master/cover/single/SG33_Misty%20Mystery.jpg){:.border}

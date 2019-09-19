@@ -5,7 +5,7 @@ date:   2019-07-07 20:00:11 +0800
 author: mistydew
 comments: true
 categories: GARNETCROW Lyrics
-tags: ガーネット・クロウ 歌詞翻訳
+tags: ガネクロ 歌詞翻訳
 excerpt: 弱い日差しが揺れるテーブルの上、開いた世界地図に、君のクセのある文字がまだ残る。ah- 現実かなぁ、、
 ---
 ![flying](https://raw.githubusercontent.com/mistydew/gc2/master/cover/single/SG06_flying.jpg){:.border}

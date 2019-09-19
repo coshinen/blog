@@ -5,7 +5,7 @@ date:   2018-05-05 20:09:09 +0800
 author: mistydew
 comments: true
 categories: GARNETCROW Lyrics
-tags: ガーネット・クロウ 歌詞翻訳
+tags: ガネクロ 歌詞翻訳
 excerpt: 離陸間近の午前1時5分 空を見上げていた。いつかまた会えるかなあ 何故かなあ、もう離れてしまったことばかりを思うこと止められず、心がきしんだ。
 ---
 ![STAY 〜夜明けのSoul〜](https://raw.githubusercontent.com/mistydew/gc2/master/cover/album/AL07_STAY%20〜夜明けのSoul〜.jpg){:.border}

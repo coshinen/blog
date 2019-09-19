@@ -5,7 +5,7 @@ date:   2019-08-04 20:01:01 +0800
 author: mistydew
 comments: true
 categories: GARNETCROW Lyrics
-tags: ガーネット・クロウ 歌詞翻訳
+tags: ガネクロ 歌詞翻訳
 excerpt: 雨上がりは ふと 空見上げる、何気ない仕草しみついた毎日。なんで迷子みたいな気持ち、君といても感じちゃうんだろう。
 ---
 ![first soundscope 〜水のない晴れた海へ〜](https://raw.githubusercontent.com/mistydew/gc2/master/cover/album/AL01_first%20soundscope%20〜水のない晴れた海へ〜.jpg){:.border}

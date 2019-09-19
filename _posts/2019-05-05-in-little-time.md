@@ -5,7 +5,7 @@ date:   2019-05-05 20:00:03 +0800
 author: mistydew
 comments: true
 categories: GARNETCROW Lyrics
-tags: ガーネット・クロウ 歌詞翻訳
+tags: ガネクロ 歌詞翻訳
 excerpt: 十二月にしては暖かいこんな夜は、思いつきで出かけた。車の中でずっと手をつないで眠った、朝日が二人を起こすまで。
 ---
 ![君の家に着くまでずっと走ってゆく](https://raw.githubusercontent.com/mistydew/gc2/master/cover/single/SG02_君の家に着くまでずっと走ってゆく.jpg){:.border}
