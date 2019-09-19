@@ -4,7 +4,7 @@ title:  "比特币数据目录"
 date:   2018-10-24 09:28:37 +0800
 author: mistydew
 comments: true
-categories: Blockchain Bitcoin Translation
+categories: Blockchain Bitcoin Translations
 tags: 区块链 比特币数据目录 译文
 ---
 数据目录是存放比特币数据文件的位置，包含区块数据和钱包数据等相关文件。

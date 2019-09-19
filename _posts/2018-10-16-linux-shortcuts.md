@@ -4,7 +4,7 @@ title:  "每个高效的 Linux 用户必须知道的 13 个终端快捷键"
 date:   2018-10-16 13:35:20 +0800
 author: mistydew
 comments: true
-categories: UNIX/Linux Terminal Translation
+categories: UNIX/Linux Terminal Translations
 tags: UNIX/Linux 译文 快捷键 终端
 ---
 **简介：以下是一些每个 Linux 用户必须使用的键盘快捷键。

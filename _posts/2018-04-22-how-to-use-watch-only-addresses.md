@@ -4,7 +4,7 @@ title:  "如何使用 Watch-only 地址"
 date:   2018-04-22 16:20:00 +0800
 author: mistydew
 comments: true
-categories: Blockchain Bitcoin Translation
+categories: Blockchain Bitcoin Translations
 tags: 区块链 比特币地址 译文
 ---
 Watch-only 地址是一个区块链钱包功能，你可以在你的钱包导入地址部分找到它。
