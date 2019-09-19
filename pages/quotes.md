@@ -5,15 +5,15 @@ permalink: /quotes.html
 excerpt: Here are my favorite quotes from someones that inspire me or make me laugh. I hope you enjoy them.
 ---
 
+> 侯捷，STL 源码剖析：
+> * 源码之前，了无秘密。
+
 > Linus Torvalds, [LKML: Re: SCO: "thread creation is about a thousand times faster than onnative](https://lkml.org/lkml/2000/8/25/132){:target="_blank"}:
 > * Talk is cheap. Show me the code.
 
 > Satoshi Nakamoto, [Bitcoin P2P e-cash paper](https://www.metzdowd.com/pipermail/cryptography/2008-November/014853.html){:target="_blank"}:
 > * It's very attractive to the libertarian viewpoint if we can explain it properly.
 > I'm better with code than with words though.
-
-> 侯捷，STL 源码剖析：
-> * 源码之前，了无秘密。
 
 > Sansa Stark, Game of Thrones, Season 7 Episode 7:
 > * I'm a slow learner, it's true. But I learn.
@@ -258,6 +258,10 @@ excerpt: Here are my favorite quotes from someones that inspire me or make me la
 
 > 怪盗キッド／黒羽快斗「名探偵コナン 第219話 工藤新一vs怪盗キッド」：
 > * いつ何時だりとも…ポーカーフェイスを忘れるな…だろ？
+
+> 灰原哀／宮野志保 (Sherry)「名探偵コナン 第131話 競技場無差別脅迫事件（後編）」：
+> * あせっちゃダメ…時の流れに人は逆らえないもの…
+> それを無理矢理ねじ曲げようとすれば…人は罰を受ける…
 
 > 服部平次「名探偵コナン 第118話 浪花の連続殺人事件」：
 > * 人間なんて…いつ死んでしまうかわからへんからな。
