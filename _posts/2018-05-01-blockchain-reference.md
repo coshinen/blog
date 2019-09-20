@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "区块链相关推荐"
+title:  "比特币区块链相关"
 date:   2018-05-01 20:23:17 +0800
 author: mistydew
 comments: true
@@ -8,78 +8,58 @@ categories: Blockchain Bitcoin
 tags: 区块链 比特币
 stickie: true
 ---
-与其说比特币是区块链技术的第一个应用，不如说区块链技术是为了实现数字货币比特币，而出现的一种重组现有技术得到的“新”技术。
-至于除了数字货币之外还能实现什么应用，我想，等比特币落地的那天，一切都会揭晓。
+与其说比特币是区块链技术的第一个应用，不如说区块链技术是为了实现数字货币比特币出现的一种重组现有技术而得到的“新”技术。
+
+比特币是一个创新的支付网络，一种新型的开源 P2P 货币。
+其底层区块链就像数据结构中的一条单链表，链上的每个节点都有**不易更改**的特性。
+该网络通过激励矿工挖矿产生新节点的方式，来维持比特币的正常运行。
 
 ## Bitcoin | 比特币（区块链 v1.0）
 
 比特币是一种试验性的数字货币，能够让世界上任何地方的任何人进行即时支付。
 比特币使用点对点的技术，在没有中央权力的情况下运作：管理交易和发行货币通过网络共同完成。
 
-### White Paper | 白皮书
+## 白皮书
 
-* [Bitcoin: A Peer-to-Peer Electronic Cash System](https://bitcoin.org/bitcoin.pdf){:target="_blank"} - 官方原版
-* [Bitcoin: A Peer-to-Peer Electronic Cash System](https://bitcoin.org/en/bitcoin-paper){:target="_blank"} - 官方多语言版
-* [Bitcoin whitepaper repository on GitHub](https://github.com/wbnns/bitcoinwhitepaper){:target="_blank"}
-* [Bitcoin Whitepaper - Satoshi Nakamoto](http://satoshinakamoto.me/whitepaper){:target="_blank"} - 非官方多语言版
-* [Bitcoin: A Peer-to-Peer Electronic Cash System](https://git.dhimmel.com/bitcoin-whitepaper){:target="_blank"} - 非官方重新排版
-* [比特币白皮书 个人翻译+注解](https://zhuanlan.zhihu.com/p/25039679){:target="_blank"} - 知乎
-* [比特币白皮书中英对照 \| mistydew](/blog/2018/04/Bitcoin-A-Peer-to-Peer-Electronic-Cash-System.html)
+* [比特币白皮书中英对照](/blog/2018/04/Bitcoin-A-Peer-to-Peer-Electronic-Cash-System.html)
 
-### Guide | 指南
+## 术语
 
-* [How Does Bitcoin Work?](https://learnmeabitcoin.com){:target="_blank"}
-* [Blockchain - Get to know it](https://blockchainhandbook.io){:target="_blank"}
-* [Blockchain Demo](https://anders.com/blockchain){:target="_blank"}
-* [区块链技术指南](https://yeasy.gitbooks.io/blockchain_guide/content){:target="_blank"}
-* [bitcoinbook/bitcoinbook: Mastering Bitcoin 2nd Edition - Programming the Open Blockchain](https://github.com/bitcoinbook/bitcoinbook){:target="_blank"}
-* [tianmingyun/MasterBitcoin2CN: 《精通比特币》第二版 区块链研习社 云天明联合出品](https://github.com/tianmingyun/MasterBitcoin2CN){:target="_blank"}
+* [比特币词汇表](/blog/2018/10/some-bitcoin-words-you-might-hear.html)
+* [比特币开发者术语表](/blog/2018/10/bitcoin-developer-glossary.html)
 
-### Official Website | 官方网站
+## 构建源码
 
-* [Bitcoin - Open source P2P money](https://bitcoin.org/en){:target="_blank"}
-* [Bitcoin Core :: Bitcoin](https://bitcoincore.org){:target="_blank"}
+* [编译比特币源码](/blog/2018/05/compile-bitcoin.html)
+* [交叉编译比特币源码](/blog/2018/09/cross-compile-bitcoin.html)
 
-### Wiki and Developer Documentation | 维基和开发者文档
+## bitcoind
 
-* [Bitcoin Wiki](https://en.bitcoin.it/wiki/Main_Page){:target="_blank"}
-* [Developer Documentation - Bitcoin](https://bitcoin.org/en/developer-documentation){:target="_blank"}
+* [启动比特币核心服务 bitcoind](/blog/2018/05/running-bitcoin.html)
+* [比特币源码剖析](/blog/2018/05/bitcoin-source-anatomy-00.html)
 
-### Source Code and BIPs | 源码及改进建议
+## bitcoin-cli
 
-* [Bitcoin source from November 2008.](https://bitcointalk.org/index.php?topic=382374.0){:target="_blank"} - Satoshi Nakamoto wrote pre-release
-* [v0.1](https://bitcointalk.org/index.php?topic=68121.0){:target="_blank"} - Satoshi Nakamoto wrote v0.1.0, v0.1.3
-* [bitcoin/bitcoin at v0.1.5](https://github.com/bitcoin/bitcoin/tree/v0.1.5){:target="_blank"} - very close to what Satoshi initially wrote
-* [bitcoin/bitcoin at v0.12.1](https://github.com/bitcoin/bitcoin/tree/v0.12.1){:target="_blank"} - turning point maybe
-* [bitcoin/bitcoin](https://github.com/bitcoin/bitcoin){:target="_blank"} - the latest release
-* [bitcoin/bips: Bitcoin Improvement Proposals](https://github.com/bitcoin/bips){:target="_blank"}
+* [比特币核心客户端 RPC 命令](/blog/2018/05/bitcoin-cli-commands.html)
 
-### Annotated Sources | 源码剖析
+## 制作一枚山寨币
 
-* [比特币源码解析 - \--Splay\--](https://me.csdn.net/u012183589){:target="_blank"}
-* [比特币源码解读 - ttblack](https://www.jianshu.com/u/ef215107c407){:target="_blank"} - v0.9.5rc2
-* [比特币源码研读 - 菜菜子_forest](https://www.jianshu.com/u/30081a05cf95){:target="_blank"} - 0.14
-* [比特币源码剖析 \| mistydew](/blog/2018/05/bitcoin-source-anatomy-00.html) - v0.12.1
+* [如何制作一枚山寨数字货币](/blog/2018/05/how-to-make-an-altcoin.html)
 
-### Basic Knowledge | 基础知识
+## 私钥、公钥、地址
 
-* [C Programming](http://www.isthe.com/chongo/tech/comp/c/index.html){:target="_blank"}
-* [cppreference.com](https://en.cppreference.com/w){:target="_blank"}
-* [The C++ Annotations](http://www.icce.rug.nl/documents/cplusplus){:target="_blank"}
-* [Reference - C++ Reference](http://www.cplusplus.com/reference){:target="_blank"}
-* [Boost C++ Libraries](https://www.boost.org){:target="_blank"} - 官方
-* [Boost Library Documentaion](https://www.boost.org/doc/libs){:target="_blank"}
-* [The Boost C++ Libraries](https://theboostcpplibraries.com){:target="_blank"}
-* [Boost C++ Libraries](http://boost.ez2learn.com){:target="_blank"} - 中文
-* [Fast portable non-blocking network programming with Libevent](http://www.wangafu.net/~nickm/libevent-book){:target="_blank"}
-* [JSON](http://www.json.org){:target="_blank"}
-* [Remote procedure call - Wikipedia](https://en.wikipedia.org/wiki/Remote_procedure_call){:target="_blank"}
-* [JSON-RPC](https://www.jsonrpc.org){:target="_blank"}
+* [Base58 编码](/blog/2018/05/base58-encoding.html)
+* [比特币源码剖析—私钥、公钥、地址](/blog/2018/05/bitcoin-privpubkeyaddress.html)
+* [比特币“靓号”地址](/blog/2018/05/bitcoin-vanity-address.html)
+* [如何使用 Watch-only 地址](/blog/2018/04/how-to-use-watch-only-addresses.html)
 
-### Miscellaneous | 杂项
+## 杂项
 
-* [Bitcoin Forum - Index](https://bitcointalk.org){:target="_blank"}
-* [Satoshi Nakamoto Institute](https://nakamotoinstitute.org){:target="_blank"}
+* [认识区块链](/blog/2018/09/get-to-know-the-blockchain.html)
+* [10 个区块链的基础知识](/blog/2018/10/10-essential-blockchain-questions-and-answers.html)
+* [比特币源码剖析—区块](/blog/2018/04/bitcoin-block.html)
+* [比特币数据目录](/blog/2018/10/bitcoin-datadir.html)
+* [比特币中的洋葱路由](/blog/2018/10/tor-support-in-bitcoin.html)
 
 ## 参照
 
