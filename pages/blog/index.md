@@ -16,7 +16,7 @@ excerpt: Welcome to mistydew's blog!
         <a class="post-link" href="{{ post.url }}">{{ post.title }}</a>
       </h2>
       <div class="excerpt">
-        <p>{{ post.excerpt | strip_html }}</p>
+        <p>{{ post.excerpt | markdownify }}</p>
       </div>
       <footer>
         <a class="readmore" href="{{ post.url }}">阅读全文 &raquo;</a>
@@ -30,7 +30,7 @@ excerpt: Welcome to mistydew's blog!
         <a class="post-link" href="{{ post.url }}">{{ post.title }}</a>
       </h2>
       <div class="excerpt">
-        <p>{{ post.excerpt | strip_html }}</p>
+        <p>{{ post.excerpt | markdownify }}</p>
       </div>
       <footer>
         <a class="readmore" href="{{ post.url }}">阅读全文 &raquo;</a>
