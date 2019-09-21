@@ -10,7 +10,7 @@ layout: default
               <span>|</span>
               {% if page.author %}<span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{% include posts/icon-user-alt.html %}<a class="author" href="{{ site.url }}{{ site.about }}" title="袁子晨">{{ page.author }}</a></span></span>{% endif %}
               <span>|</span>
-              <span class="post-count">{% include posts/icon-edit.html %}{{ page.content | strip_html | strip_newlines | remove: " " | size }} words</span>
+              <span class="post-count">{% include posts/icon-edit.html %}{% assign count = page.content | strip_html | strip_newlines | remove: " " | size %}{% if count > 1000 %}{{ count | divided_by: 1000 }}.{% assign hundred = count | modulo: 100 %}{% if hundred >= 50 %}{{ count | modulo: 1000 | divided_by: 100 | plus: 1 }}{% else %}{{ count | modulo: 1000 | divided_by: 100 }}{% endif %}k{% else %}{{ count }}{% endif %} words</span>
               <span>|</span>
               <span>{% include posts/icon-book-open.html %}≈ {{ page.content | strip_html | strip_newlines | remove: " " | size | divided_by: 350 | plus: 1 }} min</span>
               <span>|</span>
