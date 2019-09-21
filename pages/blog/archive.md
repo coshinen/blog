@@ -23,15 +23,18 @@ excerpt: Blog archive.
 {% endfor %}
 
 {% assign years = years | split: ', ' | reverse %}
+{% assign counts = counts | split: ', ' | reverse %}
+
+{% assign i = 0 %}
 
 <blockquote class="archive" id="years">
 <h2 align="center">Years</h2>
 {% for year in years %}
-<li><a href="#{{ year }}">{{ year }}</a></li>
+<li><a href="#{{ year }}">{{ year }}（{{ counts[i] }}）</a></li>
+{% assign i = i | plus: 1 %}
 {% endfor %}
 </blockquote>
 
-{% assign counts = counts | split: ', ' | reverse %}
 {% assign i = 0 %}
 
 {% for post in site.posts %}
