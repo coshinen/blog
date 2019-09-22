@@ -11,13 +11,13 @@
 
 ## Timeline
 
-* 2019.09.22 [+] config: future
+* 2019.09.22 [+] config: build future
 
 <details>
 <summary>history</summary>
 
 * 2019.09.19 [+] remake: archive and category page
-* 2019.09.07 [-] post: ~~{% highlight %} code {% endhighlight%}~~; [+] post: ```code```
+* 2019.09.07 [-] post: ~~{% highlight %} code {% endhighlight %}~~; [+] post: ```code```
 * 2019.08.28 [+] site: GitHub Actions workflows CI
 * 2019.08.25 [+] remake: blog page (comments, profile)
 * 2019.08.24 [-] post: ~~Remarkbox Hosted Comments Service (incomplete)~~; [+] post: IntenseDebate comments
