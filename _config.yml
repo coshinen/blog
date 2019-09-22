@@ -55,8 +55,9 @@ site_acct: b051fd1ebb6d822f554a521d0827b1d8
 
 # Build settings
 # Handling Reading
+future: false
 exclude: [LICENSE, README.md]
-encoding : "utf-8"
+encoding : "UTF-8"
 markdown_ext: "markdown,mkdown,mkdn,mkd,md"
 
 # Conversion
