@@ -57,8 +57,8 @@ site_acct: b051fd1ebb6d822f554a521d0827b1d8
 # Handling Reading
 future: false
 exclude: [LICENSE, README.md]
-encoding : "UTF-8"
-markdown_ext: "markdown,mkdown,mkdn,mkd,md"
+encoding : "utf-8"
+markdown_ext: "markdown,mkdown,mkdn,mkd,md" # no spaces
 
 # Conversion
 markdown: kramdown
