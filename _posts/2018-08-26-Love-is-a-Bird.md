@@ -6,7 +6,7 @@ author: mistydew
 comments: true
 categories: GARNETCROW Lyrics
 tags: ガネクロ 歌詞翻訳
-excerpt: 夕暮れとこの街の匂い 染みついた諦めと希望 雨の中うつむいていた 少年の足取り
+excerpt: 夕暮れとこの街の匂い、染みついた諦めと希望。雨の中うつむいていた、少年の足取り。
 ---
 ![LOCKS](https://raw.githubusercontent.com/mistydew/gc2/master/cover/album/AL06_LOCKS.jpg){:.border}
 
@@ -18,6 +18,8 @@ excerpt: 夕暮れとこの街の匂い 染みついた諦めと希望 雨の中
 編曲：古井弘人<br>
 ギター：岡本仁志
 
+<div class="lyric-original">
+<p>
 夕暮れとこの街の匂い<br>
 染みついた諦めと希望<br>
 雨の中うつむいていた<br>
@@ -59,9 +61,60 @@ Love is a Bird...<br>
 ありふれた恋の中でさえ<br>
 人は ね、輝きを放つでしょう<br>
 ささやかに祈り想う気持ちが ほら舞う<br>
-Love is a Bird…<br>
+Love is a Bird...<br>
 愛は自由に踊るものね<br>
 とどまることなど知らぬ様に
+</p>
+</div>
+
+<div class="lyric-translation">
+<blockquote>
+黃昏和這個街道的氣味<br>
+沾染了放棄和希望<br>
+在雨中低著頭<br>
+少年的腳步<br>
+<br>
+像做夢一樣追趕的<br>
+她已經 被歲月推倒<br>
+把思念藏在心裡<br>
+感覺到了吧<br>
+<br>
+是的，吶 只有黑暗<br>
+總是給我祝福<br>
+時而來臨的喜悅的日子<br>
+沒有果敢(變幻無常) 頭暈目眩<br>
+<br>
+就算在平凡的戀愛中<br>
+人 啊，會放出光輝吧<br>
+小小地祈禱思念的心情 看啊飛舞著<br>
+Love is a Bird...<br>
+<br>
+愛是自由跳舞的東西吧<br>
+好像不知道停留的地方<br>
+<br>
+像槍聲一樣的雨聲 <br>
+心慌意亂<br>
+生命的危機已經在那裡<br>
+隨著最初開始<br>
+<br>
+悄悄地在寂靜之中<br>
+即使要委身於你 再次<br>
+甜蜜的誘惑 生存的地方 去往的地方 尋求著<br>
+飛走吧<br>
+<br>
+就算在平凡的戀愛中<br>
+人 啊，會放出光輝吧<br>
+小小地祈禱思念的心情 看啊飛舞著<br>
+Love is a Bird...<br>
+<br>
+就算在平凡的戀愛中<br>
+人 啊，會放出光輝吧<br>
+小小地祈禱思念的心情 看啊飛舞著<br>
+Love is a Bird...<br>
+愛是自由跳舞的東西吧<br>
+好像不知道停留的地方
+</blockquote>
+</div>
 
 ## 参考链接
 
