@@ -215,8 +215,8 @@ excerpt: Here are my favorite quotes from someones that inspire me or make me la
 
 > 灰原哀／宮野志保 (Sherry)「名探偵コナン ベイカー街(ストリート)の亡霊」：
 > * まるで、悪しき日本の世襲制が凝縮された光景ね…
-> こうした世襲制と共に、人間の過ちの歴史が繰り返されるわけよ。
-> * 政治家の息子は政治家になる、トウドリの息子はトウドリになる。
+> こうした世襲制と共に、人間の過ちの歴史が繰り返されるわけよ…
+> 政治家の息子は政治家になる、トウドリの息子はトウドリになる。
 > これじゃいつまで経っても日本は変わらないって事よ。
 
 > 怪盗キッド／黒羽快斗「名探偵コナン 世紀末の魔術師」：
@@ -235,7 +235,7 @@ excerpt: Here are my favorite quotes from someones that inspire me or make me la
 > 人は人を殺す動機なんて、知ったこっちゃねーが…
 > 人が人を助ける理由に…論理的な思考は存在しねーだろ？
 
-> ベルモット (**Verm**o**ut**h)／シャロン・ヴィンヤード (Sharon Vineyard)「名探偵コナン 第230話 謎めいた乗客（前編）」：
+> ベルモット (**Verm**o**ut**h)／Sharon Vineyard「名探偵コナン 第230話 謎めいた乗客（前編）」：
 > * A secret makes a woman woman...
 > 女は秘密を着飾って美しくなるのよ…
 
@@ -249,7 +249,7 @@ excerpt: Here are my favorite quotes from someones that inspire me or make me la
 > それが真相なんだ‼︎
 
 > 怪盗キッド／黒羽快斗「名探偵コナン 第219話 工藤新一vs怪盗キッド」：
-> * いつ何時だりとも…ポーカーフェイスを忘れるな…だろ？
+> * いつ何時(なんどき)だりとも…ポーカーフェイスを忘れるな…だろ？
 
 > 灰原哀／宮野志保 (Sherry)「名探偵コナン 第131話 競技場無差別脅迫事件（後編）」：
 > * あせっちゃダメ…時の流れに人は逆らえないもの…
