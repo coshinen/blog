@@ -228,7 +228,7 @@ UniValue getblockchaininfo(const UniValue& params, bool fHelp)
 3. 追加区块链相关信息到该对象。
 4. 返回结果。
 
-## 参照
+## 参考链接
 
 * [Developer Documentation - Bitcoin](https://bitcoin.org/en/developer-documentation){:target="_blank"}
 * [Bitcoin Developer Reference - Bitcoin](https://bitcoin.org/en/developer-reference#getblockchaininfo){:target="_blank"}

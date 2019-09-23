@@ -302,7 +302,7 @@ https://github.com/<OWNER>/<REPOSITORY>/workflows/<WORKFLOW_FILE_PATH>/badge.svg
 ![](https://github.com/mistydew/hello-world/workflows/.github/workflows/c-cpp.yml/badge.svg)
 ```
 
-## 参照
+## 参考链接
 
 * [GitHub Actions now supports CI/CD, free for public repositories](https://github.blog/2019-08-08-github-actions-now-supports-ci-cd){:target="_blank"}
 * [Features • GitHub Actions](https://github.com/features/actions){:target="_blank"}

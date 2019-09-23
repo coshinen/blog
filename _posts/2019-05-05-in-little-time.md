@@ -114,7 +114,7 @@ um- I have so little time×3
 </blockquote>
 </div>
 
-## 参照
+## 参考链接
 
 * [GARNET CROW official website : ガーネットクロウ オフィシャルサイト](http://www.garnetcrow.com){:target="_blank"}
 * [GARNET CROW in little time 歌詞 - 歌ネット](https://www.uta-net.com/song/20143){:target="_blank"}

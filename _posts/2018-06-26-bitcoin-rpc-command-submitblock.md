@@ -129,7 +129,7 @@ UniValue submitblock(const UniValue& params, bool fHelp)
 4. 查找该区块是否存在，若存在，...
 5. 若不存在，...
 
-## 参照
+## 参考链接
 
 * [Developer Documentation - Bitcoin](https://bitcoin.org/en/developer-documentation){:target="_blank"}
 * [Bitcoin Developer Reference - Bitcoin](https://bitcoin.org/en/developer-reference#submitblock){:target="_blank"}

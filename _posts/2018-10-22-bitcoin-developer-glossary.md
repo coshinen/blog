@@ -766,6 +766,6 @@ Git fork（当一个或多个开发人员与其他开发人员临时分开开发
 
 **不要混淆**：[Output](#TxOut-ref)（任意[输出](#TxOut-ref)，包含花费和未花费的。[输出](#TxOut-ref)是 UTXO 的超集，UTXO 是输出的子集）
 
-## 参照
+## 参考链接
 
 * [Developer Glossary - Bitcoin](https://bitcoin.org/en/developer-glossary){:target="_blank"}

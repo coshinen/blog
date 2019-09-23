@@ -327,7 +327,7 @@ class CMerkleTx : public CTransaction // 一个连接它到区块链的默克分
 };
 ```
 
-## 参照
+## 参考链接
 
 * [Developer Documentation - Bitcoin](https://bitcoin.org/en/developer-documentation){:target="_blank"}
 * [Bitcoin Developer Reference - Bitcoin](https://bitcoin.org/en/developer-reference#abandontransaction){:target="_blank"}

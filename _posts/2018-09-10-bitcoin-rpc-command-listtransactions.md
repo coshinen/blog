@@ -278,7 +278,7 @@ UniValue listtransactions(const UniValue& params, bool fHelp)
 7. 去除首尾多余的元素，并反转临时结果集。
 8. 清空原结果集，把临时结果放入结果集并返回。
 
-## 参照
+## 参考链接
 
 * [Developer Documentation - Bitcoin](https://bitcoin.org/en/developer-documentation){:target="_blank"}
 * [Bitcoin Developer Reference - Bitcoin](https://bitcoin.org/en/developer-reference#listtransactions){:target="_blank"}

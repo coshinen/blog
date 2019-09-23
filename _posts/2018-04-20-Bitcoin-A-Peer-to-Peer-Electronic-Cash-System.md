@@ -572,7 +572,7 @@ on Computer and Communications Security, pages 28-35, April 1997.<br>
 Privacy, IEEE Computer Society, pages 122-133, April 1980.<br>
 [8] W. Feller, "[An introduction to probability theory and its applications](https://archive.org/details/AnIntroductionToProbabilityTheoryAndItsApplicationsVolume1){:target="_blank"}," 1957.
 
-## 参照
+## 参考链接
 
 * [Bitcoin: A Peer-to-Peer Electronic Cash System](https://bitcoin.org/bitcoin.pdf){:target="_blank"} - 官方原版
 * [Bitcoin: A Peer-to-Peer Electronic Cash System](https://git.dhimmel.com/bitcoin-whitepaper){:target="_blank"} - 非官方重新排版

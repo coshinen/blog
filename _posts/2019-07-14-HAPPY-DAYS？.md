@@ -126,7 +126,7 @@ where do you go from it<br>
 </blockquote>
 </div>
 
-## 参照
+## 参考链接
 
 * [GARNET CROW official website : ガーネットクロウ オフィシャルサイト](http://www.garnetcrow.com){:target="_blank"}
 * [GARNET CROW HAPPY DAYS? 歌詞 - 歌ネット](https://www.uta-net.com/song/20139){:target="_blank"}

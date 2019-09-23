@@ -116,7 +116,7 @@ bury at sea for me
 </blockquote>
 </div>
 
-## 参照
+## 参考链接
 
 * [GARNET CROW official website : ガーネットクロウ オフィシャルサイト](http://www.garnetcrow.com){:target="_blank"}
 * [GARNET CROW Jewel Fish 歌詞 - 歌ネット](https://www.uta-net.com/song/20144){:target="_blank"}

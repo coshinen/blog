@@ -94,7 +94,7 @@ class CNode // 关于同辈的信息
 };
 ```
 
-## 参照
+## 参考链接
 
 * [Developer Documentation - Bitcoin](https://bitcoin.org/en/developer-documentation){:target="_blank"}
 * [Bitcoin Developer Reference - Bitcoin](https://bitcoin.org/en/developer-reference#ping){:target="_blank"}

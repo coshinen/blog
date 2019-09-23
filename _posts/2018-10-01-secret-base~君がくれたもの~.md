@@ -118,7 +118,7 @@ excerpt: 君と夏の終わり 将来の夢 大きな希望 忘れない、10年
 </blockquote>
 </div>
 
-## 参照
+## 参考链接
 
 * [ZONE](http://www.sonymusic.co.jp/Music/Info/ZONE){:target="_blank"}
 * [ZONE secret base 〜君がくれたもの〜 歌詞 - 歌ネット](https://www.uta-net.com/song/13699){:target="_blank"}

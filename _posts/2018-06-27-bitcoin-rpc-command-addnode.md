@@ -355,7 +355,7 @@ bool static ConnectSocketDirectly(const CService &addrConnect, SOCKET& hSocketRe
 
 这里可以看到，经过层层封装最终调用 socket 和 connect 系统调用连接到指定 IP 和端口。
 
-## 参照
+## 参考链接
 
 * [Developer Documentation - Bitcoin](https://bitcoin.org/en/developer-documentation){:target="_blank"}
 * [Bitcoin Developer Reference - Bitcoin](https://bitcoin.org/en/developer-reference#addnode){:target="_blank"}

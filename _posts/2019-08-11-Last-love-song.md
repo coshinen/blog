@@ -104,7 +104,7 @@ excerpt: 午後になると西陽が射す、部屋の片隅のソファー。�
 </blockquote>
 </div>
 
-## 参照
+## 参考链接
 
 * [GARNET CROW official website : ガーネットクロウ オフィシャルサイト](http://www.garnetcrow.com){:target="_blank"}
 * [GARNET CROW Last love song 歌詞 - 歌ネット](https://www.uta-net.com/song/20145){:target="_blank"}

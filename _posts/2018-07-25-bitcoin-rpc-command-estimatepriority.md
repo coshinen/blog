@@ -82,7 +82,7 @@ UniValue estimatepriority(const UniValue& params, bool fHelp)
 3. 获取指定的块数，最低为 1 块。
 4. 在交易内存池中通过块数预估交易优先级并返回。
 
-## 参照
+## 参考链接
 
 * [Developer Documentation - Bitcoin](https://bitcoin.org/en/developer-documentation){:target="_blank"}
 * [Bitcoin Developer Reference - Bitcoin](https://bitcoin.org/en/developer-reference#estimatepriority){:target="_blank"}

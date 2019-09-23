@@ -109,7 +109,7 @@ Tor 客户端不直连到权威服务器—它们连接到许多目录镜像中�
 
 如上述相同的攻击也是可能的。
 
-## 参照
+## 参考链接
 
 * [Tor - Bitcoin WiKi](https://en.bitcoin.it/wiki/Tor){:target="_blank"}
 * [Setting up a Tor hidden service - Bitcoin Wiki](https://en.bitcoin.it/wiki/Setting_up_a_Tor_hidden_service){:target="_blank"}

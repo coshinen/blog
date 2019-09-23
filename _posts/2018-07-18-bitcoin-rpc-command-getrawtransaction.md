@@ -245,7 +245,7 @@ UniValue getrawtransaction(const UniValue& params, bool fHelp)
 6. 若 verbose 为 false，直接返回编码后的交易。
 7. 否则把交易相关信息转换为 JSON 格式加入结果对象并返回。
 
-## 参照
+## 参考链接
 
 * [Developer Documentation - Bitcoin](https://bitcoin.org/en/developer-documentation){:target="_blank"}
 * [Bitcoin Developer Reference - Bitcoin](https://bitcoin.org/en/developer-reference#getrawtransaction){:target="_blank"}

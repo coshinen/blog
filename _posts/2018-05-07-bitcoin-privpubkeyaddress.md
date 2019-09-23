@@ -120,7 +120,7 @@ rpcfn_type 是一个函数标签为 UniValue(const UniValue&, bool) 的回调函
 
 详见 [比特币 RCP 命令剖析 getnewaddress](/blog/2018/08/bitcoin-rpc-command-getnewaddress.html)。
 
-## 参照
+## 参考链接
 
 * [Technical background of version 1 Bitcoin addresses - Bitcoin Wiki](https://en.bitcoin.it/wiki/Technical_background_of_version_1_Bitcoin_addresses){:target="_blank"}
 * [List of address prefixes - Bitcoin Wiki](https://en.bitcoin.it/wiki/List_of_address_prefixes){:target="_blank"}

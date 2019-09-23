@@ -120,7 +120,7 @@ UniValue getnettotals(const UniValue& params, bool fHelp)
 1. 处理命令帮助和参数个数。
 2. 创建一个对象类型的结果，追加相关信息到该对象。
 
-## 参照
+## 参考链接
 
 * [Developer Documentation - Bitcoin](https://bitcoin.org/en/developer-documentation){:target="_blank"}
 * [Bitcoin Developer Reference - Bitcoin](https://bitcoin.org/en/developer-reference#getnettotals){:target="_blank"}

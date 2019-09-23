@@ -88,7 +88,7 @@ UniValue estimatefee(const UniValue& params, bool fHelp)
 5. 若预估交易费为 0，则返回 -1。
 6. 否则获取每千字节的交易费并返回。
 
-## 参照
+## 参考链接
 
 * [Developer Documentation - Bitcoin](https://bitcoin.org/en/developer-documentation){:target="_blank"}
 * [Bitcoin Developer Reference - Bitcoin](https://bitcoin.org/en/developer-reference#estimatefee){:target="_blank"}

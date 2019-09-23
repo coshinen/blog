@@ -98,6 +98,6 @@ It's all right
 
 最早聽到這首歌是在動畫電影 Bee Movie 中，是 Sheryl Crow 的翻唱版。
 
-## 参照
+## 参考链接
 
 * [The Beatles – Here Comes the Sun Lyrics \| Genius Lyrics](https://genius.com/The-beatles-here-comes-the-sun-lyrics){:target="_blank"}

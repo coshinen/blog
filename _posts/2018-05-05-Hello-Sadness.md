@@ -125,7 +125,7 @@ in silence
 莎崗指的是法國女作家弗蘭西絲·莎崗（Françoise Sagan），以中產階級的愛情故事聞名。
 據說這首歌詞的靈感來自於其 19 歲時出版的處女作日安憂鬱（Bonjour tristesse）。
 
-## 参照
+## 参考链接
 
 * [GARNET CROW official website : ガーネットクロウ オフィシャルサイト](http://www.garnetcrow.com){:target="_blank"}
 * [GARNET CROW Hello Sadness 歌詞 - 歌ネット](https://www.uta-net.com/song/85223){:target="_blank"}

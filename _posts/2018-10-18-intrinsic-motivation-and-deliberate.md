@@ -19,6 +19,6 @@ excerpt: 内在动机和刻意练习呈螺旋式上升。
 
 证明一万小时理论最简单的方法，亲自验证，每天花上 2 小时，坚持 13 年左右...
 
-## 参照
+## 参考链接
 
 * [The Progress-Focused Approach: Intrinsic motivation and deliberate practice strengthen each other](http://www.progressfocused.com/2016/03/intrinsic-motivation-and-deliberate.html){:target="_blank"}

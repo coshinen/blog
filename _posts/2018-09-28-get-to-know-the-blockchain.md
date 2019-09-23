@@ -156,6 +156,6 @@ tags: 区块链 译文
 
 或许就在此时，又一个以挖矿为生的公司破产了。
 
-## 参照
+## 参考链接
 
 * [Blockchain - Get to know it](https://blockchainhandbook.io){:target="_blank"}, Ben Sampson

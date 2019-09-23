@@ -59,6 +59,6 @@ stickie: true
 * [比特币数据目录](/blog/2018/10/bitcoin-datadir.html)
 * [比特币中的洋葱路由](/blog/2018/10/tor-support-in-bitcoin.html)
 
-## 参照
+## 参考链接
 
 * [mistydew/blockchain](https://github.com/mistydew/blockchain){:target="_blank"}

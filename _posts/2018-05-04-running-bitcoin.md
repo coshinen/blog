@@ -692,7 +692,7 @@ rpcallowip=xxx.xxx.xxx.xxx
 ...
 ```
 
-## 参照
+## 参考链接
 
 * [Running Bitcoin - Bitcoin Wiki](https://en.bitcoin.it/wiki/Running_Bitcoin){:target="_blank"}
 * [bitcoin/bitcoin at v0.12.1](https://github.com/bitcoin/bitcoin/tree/v0.12.1){:target="_blank"}

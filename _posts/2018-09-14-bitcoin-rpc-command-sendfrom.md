@@ -143,7 +143,7 @@ UniValue sendfrom(const UniValue& params, bool fHelp)
 第八步，调用 SendMoney(address.Get(), nAmount, false, wtx) 发送交易，
 见 [比特币 RPC 命令剖析 sendtoaddress](/blog/2018/09/bitcoin-rpc-command-sendtoaddress.html)。
 
-## 参照
+## 参考链接
 
 * [Developer Documentation - Bitcoin](https://bitcoin.org/en/developer-documentation){:target="_blank"}
 * [Bitcoin Developer Reference - Bitcoin](https://bitcoin.org/en/developer-reference#sendfrom){:target="_blank"}

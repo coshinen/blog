@@ -156,7 +156,7 @@ UniValue GetNetworkHashPS(int lookup, int height) { // 默认 (120, -1)
 
 从这里可以看出获取的是某一区块或某一连续区间区块的网络算力即每秒哈希的次数。
 
-## 参照
+## 参考链接
 
 * [Developer Documentation - Bitcoin](https://bitcoin.org/en/developer-documentation){:target="_blank"}
 * [Bitcoin Developer Reference - Bitcoin](https://bitcoin.org/en/developer-reference#getnetworkhashps){:target="_blank"}

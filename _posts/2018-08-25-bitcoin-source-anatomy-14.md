@@ -389,7 +389,7 @@ class CWallet : public CCryptoKeyStore, public CValidationInterface
 未完待续...<br>
 请看下一篇[比特币源码剖析（十五）](/blog/2018/09/bitcoin-source-anatomy-15.html)。
 
-## 参照
+## 参考链接
 
 * [bitcoin/bitcoin v0.12.1](https://github.com/bitcoin/bitcoin/tree/v0.12.1){:target="_blank"}
 * [mistydew/blockchain](https://github.com/mistydew/blockchain){:target="_blank"}

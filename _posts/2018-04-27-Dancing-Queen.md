@@ -108,7 +108,7 @@ Digging the dancing queen
 
 這裡的 digging 是 appreciating 的意思，而 dig in 沒有意義。
 
-## 参照
+## 参考链接
 
 * [ABBA \| Articles](https://abbasite.com){:target="_blank"}
 * [ABBA – Dancing Queen Lyrics \| Genius Lyrics](https://genius.com/Abba-dancing-queen-lyrics){:target="_blank"}

@@ -148,7 +148,7 @@ ah- 想活下去<br>
 </blockquote>
 </div>
 
-## 参照
+## 参考链接
 
 * [GARNET CROW official website : ガーネットクロウ オフィシャルサイト](http://www.garnetcrow.com){:target="_blank"}
 * [GARNET CROW Holding you, and swinging 歌詞 - 歌ネット](https://www.uta-net.com/song/20141){:target="_blank"}

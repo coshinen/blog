@@ -128,7 +128,7 @@ I wish we could stay forever as one
 </blockquote>
 </div>
 
-## 参照
+## 参考链接
 
 * [倉木麻衣公式WEBサイト](http://www.mai-kuraki.com){:target="_blank"}
 * [倉木麻衣 Tonight, I feel close to you 歌詞 - 歌ネット](https://www.uta-net.com/song/17658){:target="_blank"}

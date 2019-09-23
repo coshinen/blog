@@ -244,7 +244,7 @@ DEFAULT_MIN_RELAY_TX_FEE 定义在“main.h”文件中，默认为 1000 satoshi
 static const unsigned int DEFAULT_MIN_RELAY_TX_FEE = 1000; // 默认最小中继交易费，默认 1000 satoshi
 ```
 
-## 参照
+## 参考链接
 
 * [Developer Documentation - Bitcoin](https://bitcoin.org/en/developer-documentation){:target="_blank"}
 * [Bitcoin Developer Reference - Bitcoin](https://bitcoin.org/en/developer-reference#getrawmempool){:target="_blank"}

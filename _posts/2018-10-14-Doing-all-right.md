@@ -96,7 +96,7 @@ Doing all right!
 </blockquote>
 </div>
 
-## 参照
+## 参考链接
 
 * [GARNET CROW official website : ガーネットクロウ オフィシャルサイト](http://www.garnetcrow.com){:target="_blank"}
 * [GARNET CROW Doing all right 歌詞 - 歌ネット](https://www.uta-net.com/song/79833){:target="_blank"}

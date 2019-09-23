@@ -122,7 +122,7 @@ But that was when I ruled the world
 </blockquote>
 </div>
 
-## 参照
+## 参考链接
 
 * [Coldplay official website](https://coldplay.com){:target="_blank"}
 * [Coldplay – Viva la Vida Lyrics \| Genius Lyrics](https://genius.com/Coldplay-viva-la-vida-lyrics){:target="_blank"}

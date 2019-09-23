@@ -219,7 +219,7 @@ LevelDB 数据库，具有所有当前未花费的交易输出的紧凑表达和
 因此，可以把“区块”目录或 blk*.dat 文件的某个自己单独符号链接到磁存储驱动器上而不会造成太大的性能损失（参阅拆分数据目录），
 以及如果两个节点以相同的区块数据库启动（由于前面描述的复制），后续同步运行将非常有效。
 
-## 参照
+## 参考链接
 
 * [bitcoin/files.md at master · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/master/doc/files.md){:target="_blank"}
 * [Data directory - Bitcoin Wiki](https://en.bitcoin.it/wiki/Data_directory){:target="_blank"}

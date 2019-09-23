@@ -205,7 +205,7 @@ $ bitcoin-cli help # 获取以下 RPC 命令
 > [walletpassphrase "passphrase" timeout](/blog/2018/09/bitcoin-rpc-command-walletpassphrase.html) # 解锁钱包数秒<br>
 > [walletpassphrasechange "oldpassphrase" "newpassphrase"](/blog/2018/09/bitcoin-rpc-command-walletpassphrasechange.html) # 更改钱包密码
 
-## 参照
+## 参考链接
 
 * [JSON-RPC - Wikipedia](https://en.wikipedia.org/wiki/JSON-RPC){:target="_blank"}
 * [bitcoin/bitcoin at v0.12.1](https://github.com/bitcoin/bitcoin/tree/v0.12.1){:target="_blank"}

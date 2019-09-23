@@ -127,7 +127,7 @@ MEM |0x04|0x1A|
     +---------+
 ```
 
-## 参照
+## 参考链接
 
 * [Base58 - Wikipedia](https://en.wikipedia.org/wiki/Base58){:target="_blank"}
 * [Base64 - Wikipedia](https://en.wikipedia.org/wiki/Base64){:target="_blank"}

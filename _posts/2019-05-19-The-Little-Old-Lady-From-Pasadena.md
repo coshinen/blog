@@ -92,6 +92,6 @@ She's the terror of Colorado Boulevard<br>
 </blockquote>
 </div>
 
-## 参照
+## 参考链接
 
 * [The Beach Boys – The Little Old Lady From Pasadena Lyrics \| Genius Lyrics](https://genius.com/The-beach-boys-the-little-old-lady-from-pasadena-lyrics){:target="_blank"}

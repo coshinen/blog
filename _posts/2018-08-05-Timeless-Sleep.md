@@ -88,7 +88,7 @@ Timeless Sleep<br>
 </blockquote>
 </div>
 
-## 参照
+## 参考链接
 
 * [GARNET CROW official website : ガーネットクロウ オフィシャルサイト](http://www.garnetcrow.com){:target="_blank"}
 * [GARNET CROW Timeless Sleep 歌詞一覧リスト - 歌ネット](https://www.uta-net.com/song/20123){:target="_blank"}

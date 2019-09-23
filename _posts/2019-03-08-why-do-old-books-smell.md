@@ -26,7 +26,7 @@ tags: 译文
 
 哈利波特的作者 J.K. 罗琳说过“印刷物（纸质书）不会消失。因为没有东西可以替代实体书的感觉。我很喜欢翻页，并且能在文章下面划线（这里指的应该是书写的感觉），不用担心掉在浴缸里或是没电。”
 
-## 参照
+## 参考链接
 
 * [Why Do Old Books Smell? – Flavorwire](http://flavorwire.com/282771/why-do-old-books-smell){:target="_blank"}
 * [bookofjoe: Why do old books smell?](https://www.bookofjoe.com/2019/03/why-do-old-books-smell.html){:target="_blank"}

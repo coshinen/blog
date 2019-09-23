@@ -100,7 +100,7 @@ yah~ 我的話什麼都 不會失去
 </blockquote>
 </div>
 
-## 参照
+## 参考链接
 
 * [GARNET CROW official website : ガーネットクロウ オフィシャルサイト](http://www.garnetcrow.com){:target="_blank"}
 * [GARNET CROW picture of world 歌詞 - 歌ネット](https://www.uta-net.com/song/25836){:target="_blank"}

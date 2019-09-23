@@ -99,7 +99,7 @@ UniValue reconsiderblock(const UniValue& params, bool fHelp)
 4. 检查验证状态，若有效，激活最佳链。
 5. 再次检查激活验证状态，若有效，直接返回空值。
 
-## 参照
+## 参考链接
 
 * [Developer Documentation - Bitcoin](https://bitcoin.org/en/developer-documentation){:target="_blank"}
 * [Bitcoin Developer Reference - Bitcoin](https://bitcoin.org/en/developer-reference#reconsiderblock){:target="_blank"}

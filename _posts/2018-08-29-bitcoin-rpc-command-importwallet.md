@@ -174,7 +174,7 @@ UniValue importwallet(const UniValue& params, bool fHelp)
 9. 关闭文件输入流对象。
 10. 标记钱包已改变。
 
-## 参照
+## 参考链接
 
 * [Developer Documentation - Bitcoin](https://bitcoin.org/en/developer-documentation){:target="_blank"}
 * [Bitcoin Developer Reference - Bitcoin](https://bitcoin.org/en/developer-reference#importwallet){:target="_blank"}

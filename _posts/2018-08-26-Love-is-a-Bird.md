@@ -63,7 +63,7 @@ Love is a Bird…<br>
 愛は自由に踊るものね<br>
 とどまることなど知らぬ様に
 
-## 参照
+## 参考链接
 
 * [GARNET CROW official website : ガーネットクロウ オフィシャルサイト](http://www.garnetcrow.com){:target="_blank"}
 * [GARNET CROW Love is a Bird 歌詞 - 歌ネット](https://www.uta-net.com/song/63136){:target="_blank"}

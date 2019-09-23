@@ -226,7 +226,7 @@ UniValue listunspent(const UniValue& params, bool fHelp)
 6. 获取可花费的输出列表。
 7. 遍历该列表获取所需信息并返回。
 
-## 参照
+## 参考链接
 
 * [Developer Documentation - Bitcoin](https://bitcoin.org/en/developer-documentation){:target="_blank"}
 * [Bitcoin Developer Reference - Bitcoin](https://bitcoin.org/en/developer-reference#listunspent){:target="_blank"}

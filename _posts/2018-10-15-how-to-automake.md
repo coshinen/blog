@@ -137,7 +137,7 @@ $ ./configure
 $ make
 ```
 
-## 参照
+## 参考链接
 
 * [algorithms/automake_help.md at master · luofengmacheng/algorithms](https://github.com/luofengmacheng/algorithms/blob/master/myalgo/automake_help.md){:target="_blank"}
 * [概念：GNU构建系统和Autotool](http://www.pchou.info/linux/2016/09/16/gnu-build-system-1.html){:target="_blank"}

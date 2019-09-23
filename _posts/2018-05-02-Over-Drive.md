@@ -132,7 +132,7 @@ raise up<br>
 
 這首歌是劇場版「名偵探柯南 天空的遇難船」的主題曲，曾獲得 Oricon 週單曲排行榜第 4 位的成績。
 
-## 参照
+## 参考链接
 
 * [GARNET CROW official website : ガーネットクロウ オフィシャルサイト](http://www.garnetcrow.com){:target="_blank"}
 * [GARNET CROW Over Drive 歌詞 - 歌ネット](https://www.uta-net.com/song/93464){:target="_blank"}

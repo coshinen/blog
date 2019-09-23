@@ -70,7 +70,7 @@ One more time ふざけあった 時間よ<br>
 欲しいものなど もう何もない<br>
 君のほかに大切なものなど
 
-## 参照
+## 参考链接
 
 * [秒速5センチメートル](https://www.cwfilms.jp/5cm){:target="_blank"}
 * [山崎まさよし Official Web Site](http://www.office-augusta.com/yama){:target="_blank"}

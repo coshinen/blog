@@ -310,6 +310,6 @@ $ scp username@ip:<file> <dir> # 复制远程主机 username@ip 下的文件 <fi
 $ strip <ELF> # 通过删除可执行文件 <ELF> 中的调试符号等相关信息减少其大小，此操作不可逆。
 ```
 
-## 参照
+## 参考链接
 
 * [Why Penguin is Linux logo? - LinuxScrew: Linux Blog](http://www.linuxscrew.com/2007/11/14/why-penguin-is-linux-logo){:target="_blank"}

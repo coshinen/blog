@@ -462,7 +462,7 @@ class CChain { // 一个内存中用于区块索引的链
 };
 ```
 
-## 参照
+## 参考链接
 
 * [Developer Documentation - Bitcoin](https://bitcoin.org/en/developer-documentation){:target="_blank"}
 * [Bitcoin Developer Reference - Bitcoin](https://bitcoin.org/en/developer-reference#getblock){:target="_blank"}

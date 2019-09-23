@@ -110,7 +110,7 @@ UniValue estimatesmartpriority(const UniValue& params, bool fHelp)
 4. 智能估算优先级，同时获取估算有效的区块数。
 5. 把交易优先级和有效区块数加入结果对象并返回。
 
-## 参照
+## 参考链接
 
 * [Developer Documentation - Bitcoin](https://bitcoin.org/en/developer-documentation){:target="_blank"}
 * [Bitcoin Developer Reference - Bitcoin](https://bitcoin.org/en/developer-reference#estimatesmartpriority){:target="_blank"}

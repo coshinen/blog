@@ -122,7 +122,7 @@ UniValue signmessage(const UniValue& params, bool fHelp)
 7. 使用私钥对该消息进行签名，并获取签名数据。
 8. base64 编码签名数据并返回。
 
-## 参照
+## 参考链接
 
 * [Developer Documentation - Bitcoin](https://bitcoin.org/en/developer-documentation){:target="_blank"}
 * [Bitcoin Developer Reference - Bitcoin](https://bitcoin.org/en/developer-reference#signmessage){:target="_blank"}

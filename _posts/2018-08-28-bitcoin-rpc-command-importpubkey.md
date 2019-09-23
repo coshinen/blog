@@ -130,7 +130,7 @@ UniValue importpubkey(const UniValue& params, bool fHelp)
 
 相关函数调用，见 [importaddress](/blog/2018/08/bitcoin-rpc-command-importaddress.html)。
 
-## 参照
+## 参考链接
 
 * [Developer Documentation - Bitcoin](https://bitcoin.org/en/developer-documentation){:target="_blank"}
 * [Bitcoin Developer Reference - Bitcoin](https://bitcoin.org/en/developer-reference#importpubkey){:target="_blank"}

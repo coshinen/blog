@@ -49,6 +49,6 @@ Google 希望看到**长点击**而非**短点击**。
 现在和将来加权多少还有待观察。
 谷歌的另一种说法就是越长越好。
 
-## 参照
+## 参考链接
 
 * [Short Clicks vs Long Clicks (Why Longer is Better!)](http://www.blindfiveyearold.com/short-clicks-versus-long-clicks){:target="_blank"}

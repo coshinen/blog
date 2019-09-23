@@ -131,6 +131,6 @@ Ctrl+A 送光标到行首，反之 Ctrl+E 移动光标到行尾。
 我分享了我最喜欢的终端快捷键。你最喜欢的 Linux 终端快捷键有哪些？
 如果你有一个（或更多），为什么不在评论区与我们分享？
 
-## 参照
+## 参考链接
 
 * [13 Linux Terminal Shortcuts Every Power Linux User Must Know](https://linuxhandbook.com/linux-shortcuts){:target="_blank"}

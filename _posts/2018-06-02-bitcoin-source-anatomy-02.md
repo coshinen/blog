@@ -302,7 +302,7 @@ std::string LicenseInfo() // 许可证信息
 未完待续...<br>
 请看下一篇[比特币源码剖析（三）](/blog/2018/06/bitcoin-source-anatomy-03.html)。
 
-## 参照
+## 参考链接
 
 * [bitcoin/bitcoin v0.12.1](https://github.com/bitcoin/bitcoin/tree/v0.12.1){:target="_blank"}
 * [mistydew/blockchain](https://github.com/mistydew/blockchain){:target="_blank"}

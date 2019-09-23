@@ -156,7 +156,7 @@ bool CWalletTx::RelayWalletTransaction()
 
 相关函数调用见 [sendrawtransaction](/blog/2018/07/bitcoin-rpc-command-sendrawtransaction.html)。
 
-## 参照
+## 参考链接
 
 * [Developer Documentation - Bitcoin](https://bitcoin.org/en/developer-documentation){:target="_blank"}
 * [Bitcoin Developer Reference - Bitcoin](https://bitcoin.org/en/developer-reference#resendwallettransactions){:target="_blank"}

@@ -320,7 +320,7 @@ UniValue sendmany(const UniValue& params, bool fHelp)
 
 第八步，相关的函数调用，见 [比特币 RPC 命令剖析 sendtoaddress](/blog/2018/09/bitcoin-rpc-command-sendtoaddress.html)。
 
-## 参照
+## 参考链接
 
 * [Developer Documentation - Bitcoin](https://bitcoin.org/en/developer-documentation){:target="_blank"}
 * [Bitcoin Developer Reference - Bitcoin](https://bitcoin.org/en/developer-reference#sendmany){:target="_blank"}

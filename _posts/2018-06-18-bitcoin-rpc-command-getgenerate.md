@@ -122,7 +122,7 @@ static bool InterpretBool(const std::string& strValue) // 把字符串转换为�
 }
 ```
 
-## 参照
+## 参考链接
 
 * [Developer Documentation - Bitcoin](https://bitcoin.org/en/developer-documentation){:target="_blank"}
 * [Bitcoin Developer Reference - Bitcoin](https://bitcoin.org/en/developer-reference#getgenerate){:target="_blank"}

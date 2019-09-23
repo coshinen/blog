@@ -401,7 +401,7 @@ UniValue getblocktemplate(const UniValue& params, bool fHelp)
 4. 根据参数创建新区块模板。
 5. 获取区块模板相关信息并返回。
 
-## 参照
+## 参考链接
 
 * [Developer Documentation - Bitcoin](https://bitcoin.org/en/developer-documentation){:target="_blank"}
 * [Bitcoin Developer Reference - Bitcoin](https://bitcoin.org/en/developer-reference#getblocktemplate){:target="_blank"}

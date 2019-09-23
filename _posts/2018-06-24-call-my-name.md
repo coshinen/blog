@@ -112,7 +112,7 @@ excerpt: 白い壁と Rembrandt、いつまでも眺めていた、日曜の朝�
 
 倫勃朗（Rembrandt）是 17 世紀荷蘭黃金時代的畫家，代表作有《夜巡》、《月亮與狩獵女神》等。
 
-## 参照
+## 参考链接
 * [GARNET CROW official website : ガーネットクロウ オフィシャルサイト](http://www.garnetcrow.com){:target="_blank"}
 * [GARNET CROW call my name 歌詞 - 歌ネット](https://www.uta-net.com/song/14411){:target="_blank"}
 * [call my name Lyrics \| GARNET CROW music diary](https://mistydew.github.io/gc/lyrics/original/call%20my%20name.html){:target="_blank"}

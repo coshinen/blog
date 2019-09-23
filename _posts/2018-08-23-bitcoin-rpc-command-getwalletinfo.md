@@ -116,7 +116,7 @@ UniValue getwalletinfo(const UniValue& params, bool fHelp)
 3. 钱包上锁。
 4. 创建返回对象，追加相关的钱包状态信息并返回。
 
-## 参照
+## 参考链接
 
 * [Developer Documentation - Bitcoin](https://bitcoin.org/en/developer-documentation){:target="_blank"}
 * [Bitcoin Developer Reference - Bitcoin](https://bitcoin.org/en/developer-reference#getwalletinfo){:target="_blank"}

@@ -151,7 +151,7 @@ UniValue listreceivedbyaddress(const UniValue& params, bool fHelp)
 
 第四步，调用 ListReceived(params, false) 函数获取接收地址余额信息列表并返回，见 [listreceivedbyaccount](/blog/2018/06/bitcoin-rpc-command-listreceivedbyaccount.html)。
 
-## 参照
+## 参考链接
 
 * [Developer Documentation - Bitcoin](https://bitcoin.org/en/developer-documentation){:target="_blank"}
 * [Bitcoin Developer Reference - Bitcoin](https://bitcoin.org/en/developer-reference#listreceivedbyaddress){:target="_blank"}

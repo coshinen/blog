@@ -128,7 +128,7 @@ UniValue getreceivedbyaddress(const UniValue& params, bool fHelp)
 5. 遍历钱包交易映射列表，把满足一定条件的交易的金额累加。
 6. 把上步得到的总金额格式化并验证后返回。
 
-## 参照
+## 参考链接
 
 * [Developer Documentation - Bitcoin](https://bitcoin.org/en/developer-documentation){:target="_blank"}
 * [Bitcoin Developer Reference - Bitcoin](https://bitcoin.org/en/developer-reference#getreceivedbyaddress){:target="_blank"}
