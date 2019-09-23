@@ -10,7 +10,7 @@ excerpt: Take me to your best friend's house. Going around this roundabout, oh, 
 ---
 ![NEVER TRUST A HAPPY SONG](/assets/images/cover/misc/NEVER%20TRUST%20A%20HAPPY%20SONG.jpg){:.border}
 
-## Tongue Tied | 口齒不清
+## Tongue Tied | 口齒不清（舌頭打結）
 
 歌手：Grouplove<br>
 作詞：Grouplove<br>
@@ -127,7 +127,7 @@ Ooh, ooh
 </div>
 
 明天就是 Apple 2019 春季發佈會。
-突然想起了這首 N 年前看到的 iPod Touch 宣傳片的 BGM，舌頭打結。
+突然想起了 N 年前看到的 iPod Touch 宣傳片的 BGM，這首 Tongue Tied。
 
 ## 参考链接
 

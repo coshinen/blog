@@ -148,6 +148,8 @@ ah- 想活下去<br>
 </blockquote>
 </div>
 
+「ひらう」是大阪方言，對應標準語的「拾(ひろ)う」。
+
 ## 参考链接
 
 * [GARNET CROW official website : ガーネットクロウ オフィシャルサイト](http://www.garnetcrow.com){:target="_blank"}
