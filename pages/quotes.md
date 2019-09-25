@@ -143,7 +143,7 @@ excerpt: Here are my favorite quotes from someones that inspire me or make me la
 > * 人はヒヨリミなんだしょうがない。
 
 > 松井玲奈「輝きYELL! お母さんから」：
-> * いつ死ねかわからない、好きな事しなさい！
+> * いつ死ぬかわからない、好きな事しなさい！
 
 > ブラック／お天気お姉さん「AKBINGO!」：
 > * 自信があっても、結果にならなきゃダメでしょ！
@@ -176,6 +176,11 @@ excerpt: Here are my favorite quotes from someones that inspire me or make me la
 
 > 中村由利「GARNET CROW livescope 2013 〜Terminus〜」：
 > * GARNET CROWとして、全てのことを出し切りました。
+
+> 中村由利「M+Seg」：
+> * 宝石のGARNET…赤ーのその色がすごく深み上がった赤ってすごく綺麗な色だなと思ってて自分たちの音楽もそういうちょっと深みのある音楽をまあ追求して行きたいというところでちょっとGARNETっていうの絶対入れたいと思ったんですよ。
+> でそこGARNETだけじゃちょっと弱いかなっていうので、後ろにくる何かいいのはないかなと思って色々候補があった中でCROWは一番しっくりくるか…
+> 鴉、でまあ深紅の鴉っていうことでもかっこいいかなと思って…
 
 > 中村由利「GARNET CROW premium live 〜happy 5th anniversary〜」：
 > * 私の好きな詩人にシラーという人がいるんですけれども、ドイツの詩人なんですけれども、その人の言葉に「人生、退屈すれば長く、充実すれば短い」という言葉があるんですけれども…
