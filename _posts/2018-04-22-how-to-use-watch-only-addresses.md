@@ -22,7 +22,9 @@ Watch-only 地址是一个区块链钱包功能，你可以在你的钱包导入
 了解更多关于在你钱包中的地址部分，包括导入的地址，查看该[指南](https://support.blockchain.com/hc/en-us/articles/207746403-Addresses)。
 
 一个 watch-only 地址的交易活动在该交易类型（发送或接收）右侧会有一个 Watch Only 标签。
+
 ![watch-only-example](https://blog.blockchain.com/content/assets/images/2016/05/watch-only-example.png)
+
 在这种情况下，底部的第三笔交易属于 watch-only 地址。
 
 #### Watch-only 地址包含在你的总余额中
@@ -34,7 +36,7 @@ Watch-only 地址是一个区块链钱包功能，你可以在你的钱包导入
 因为现在你的总余额将表示你的钱包中所有比特币地址的总和。
 识别导入地址的好办法是为它们每个创建一个唯一的标签。
 注意，如果你导入了一个你没有私钥的 watch-only 地址，
-那么你的整个钱包余额可能无法准确反映你真正的总比特币数。
+那么你的整个钱包余额可能无法准确反映你的比特币真正的总数。
 
 ## 使用私钥从 Watch-only 地址消费
 
@@ -43,11 +45,8 @@ Watch-only 消费是最近更新的另一个功能。
 那么现在你可以在出现提示时通过提供私钥来花费它们。
 
 当出现提示时通过输入私钥从你的 watch-only 地址发送。
+
 ![Watch-only](https://blog.blockchain.com/content/assets/images/2016/05/Watch-only.png)
-
-#### 这些更新在移动设备上是否可用？
-
-当然，我们钱包的最新版本在 iOS 和 Android 上包含了以上功能。
 
 关于 Watch-only 地址的源码部分，详见[比特币 RPC 命令剖析 "importaddress"](/blog/2018/08/bitcoin-rpc-command-importaddress.html)。
 

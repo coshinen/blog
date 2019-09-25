@@ -14,15 +14,15 @@ excerpt: $ bitcoin-cli importaddress "address" ( "label" rescan p2sh )
 importaddress "address" ( "label" rescan p2sh ) # 导入一个脚本（16 进制）或地址用于监视
 ```
 
-该地址好像在你的钱包，但不能用来花费。<br>
-这就是所谓的 Watch-only 地址，在新版本中已经可以花费。<br>
+该地址好像在你的钱包，但不能用来花费。
+这就是所谓的 Watch-only 地址，在新版本中已经可以花费。
 参考[如何使用 Watch-only 地址](/blog/2018/04/how-to-use-watch-only-addresses.html)。
 
-参数：<br>
-1.script（字符串，必备）16 进制编码的脚本（或地址）。<br>
-2.label（字符串，可选，默认为 ""）一个可选的标签（账户名）。<br>
-3.rescan（布尔型，可选，默认为 true）再扫描钱包交易。<br>
-4.p2sh（布尔型，可选，默认为 true）添加 P2SH 版本的脚本。
+参数：
+1. script（字符串，必备）16 进制编码的脚本（或地址）。
+2. label（字符串，可选，默认为 ""）一个可选的标签（账户名）。
+3. rescan（布尔型，可选，默认为 true）再扫描钱包交易。
+4. p2sh（布尔型，可选，默认为 true）添加 P2SH 版本的脚本。
 
 **注：如果 rescan 为 true，该调用可能需要数分钟来完成。
 如果你有完整的公钥，你应该使用 [importpubkey](/blog/2018/06/bitcoin-rpc-command-importpubkey.html) 代替该命令。**
@@ -145,15 +145,15 @@ UniValue importaddress(const UniValue& params, bool fHelp)
 }
 ```
 
-基本流程：<br>
-1.确保钱包当前可用（已初始化完成）。<br>
-2.处理命令帮助和参数个数。<br>
-3.处理相关参数。<br>
-4.钱包上锁。<br>
-5.使用指定地址或脚本初始化一个比特币地址。<br>
-6.若该地址有效且未开启 P2SH 选项，导入地址及其关联账户。<br>
-7.若该地址无效，表示用户输入的可能是个脚本，导入脚本。<br>
-8.若开启了再扫描选项，进行钱包交易再扫描并把交易放入内存池。
+基本流程：
+1. 确保钱包当前可用（已初始化完成）。
+2. 处理命令帮助和参数个数。
+3. 处理相关参数。
+4. 钱包上锁。
+5. 使用指定地址或脚本初始化一个比特币地址。
+6. 若该地址有效且未开启 P2SH 选项，导入地址及其关联账户。
+7. 若该地址无效，表示用户输入的可能是个脚本，导入脚本。
+8. 若开启了再扫描选项，进行钱包交易再扫描并把交易放入内存池。
 
 第六、七步，调用 ImportAddress(address, strLabel) 和 ImportScript(CScript(data.begin(), data.end()), strLabel, fP2SH) 函数分别导入地址和脚本，它们定义在“wallet/rpcdump.cpp”文件中。
 

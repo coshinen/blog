@@ -7,14 +7,11 @@ comments: true
 categories: UNIX/Linux Terminal
 tags: UNIX/Linux CLI
 ---
-**一般来说 UNIX/Linux 下成功执行命令的标志是没有（错误）提示。**
+**UNIX/Linux 下执行一条命令成功的标志是没有提示，一般出错时才会给出提示。**
 
-Linux mascot: crystal tux and tux(Torvalds linUX?)
+象征着开源的 Linux 吉祥物 tux (Torvalds UniX)。
 
-![penguin](/assets/images/linux/penguin.jpg)
-![tux](/assets/images/linux/tux.jpg)
-
-Childhood and Adult tux :)
+![tux](/assets/images/linux/tux.png)
 
 ## 查看目录下的内容 | list
 
@@ -34,8 +31,6 @@ $ cd .. # 切换工作目录至上一级目录。
 $ cd - # 切换工作目录至上一个工作目录。
 $ cd ~ # 同 $ cd 切换工作目录至当前用户家目录。
 ```
-
-**注：本文出现的 `<dir>` 均为相对路径或绝对路径**
 
 ## 创建文件 | make
 
@@ -65,7 +60,7 @@ $ rm <dir> -rf # 删除指定的目录 <dir> 下包含的所有文件，-r 参�
 $ find . -name <file> | xargs rm # 批量删除当前目录下所有 <file> 文件，xargs 参数是一个过滤器，把参数列表分段传递给另一个命令，与管道 | 一起使用。
 ```
 
-**注：慎用 "$ sudo rm / -rf"，详见[多一个空格会发生什么？](https://github.com/MrMEEE/bumblebee-Old-and-abbandoned/commit/6cd6b2485668e8a87485cb34ca8a0a937e73f16d)**
+**注：慎用 "$ sudo rm / -rf"，详见[多一个空格会发生什么？](https://github.com/MrMEEE/bumblebee-Old-and-abbandoned/commit/6cd6b2485668e8a87485cb34ca8a0a937e73f16d){:target="_blank"}**
 
 ## 搜索内容 | grep
 
@@ -313,3 +308,5 @@ $ strip <ELF> # 通过删除可执行文件 <ELF> 中的调试符号等相关信
 ## 参考链接
 
 * [Why Penguin is Linux logo? - LinuxScrew: Linux Blog](http://www.linuxscrew.com/2007/11/14/why-penguin-is-linux-logo){:target="_blank"}
+* [The Linux Kernel Archives](https://www.kernel.org){:target="_blank"}
+* [Linux.org](https://www.linux.org){:target="_blank"}
