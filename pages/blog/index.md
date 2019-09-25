@@ -41,7 +41,7 @@ excerpt: Welcome to mistydew's blog!
 <div class="home-right">
   <script src='https://www.intensedebate.com/widgets/acctComment/{{ site.site_id }}/4' defer="defer" type='text/javascript'> </script>
   <blockquote class="profile">
-    <h2><a href="{{ site.about }}" title="袁子晨">mistydew</a></h2>
+    <h2><a href="{{ site.about }}" title="{{ site.name }}">mistydew</a></h2>
     <div>
       <a href="https://github.com/{{ site.github }}" target="_blank"><img class="border" height="128" width="128" alt="@mistydew" src="/assets/images/avatar/29818825.png"></a>
     </div>
