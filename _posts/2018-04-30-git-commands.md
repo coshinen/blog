@@ -7,14 +7,12 @@ comments: true
 categories: Git/GitHub Terminal
 tags: Git/GitHub CLI
 ---
-[Git](https://git-scm.com){:target="_blank"} 是一个免费且开源的分布式版本控制系统，旨在处理从小到非常大项目的速度和效率。
-
-Git 易于学习且拥有占用空间小和闪电般快速的性能。
-它远优于像 Subversion、CVS、Perforce 和 ClearCase 这些的 SCM 工具，有像廉价的本地分支、便捷的暂存区，和多种工作流程的特性。
+Git 是一个免费且开源的分布式版本控制系统，旨在处理从小到非常大项目的速度和效率。
 
 ![git](/assets/images/git/git.png)
 
-据传 [GitHub](https://github.com){:target="_blank"} 是全球最大的同性交友网站，Hub 有中心、枢纽之意。
+Git 易于学习且拥有占用空间小和闪电般快速的性能。
+它远优于像 Subversion、CVS、Perforce 和 ClearCase 这些的 SCM 工具，有像廉价的本地分支、便捷的暂存区，和多种工作流程的特性。
 
 ## 安装（Ubuntu 16.04.4）
 
@@ -33,9 +31,18 @@ $ git config --global user.email "[email address]" # 设置你想要附加到你
 
 **注：若在 git command 过程中出现错误提示 fatal: unable to auto-detect email address，则重新执行这两句配置命令。**
 
+该配置文件 .gitconfig 在用户家目录下，格式如下：
+
+```shell
+# This is Git's per-user configuration file.
+[user]
+    name = [name]
+    email = [email address]
+```
+
 ## 命令 | commands
 
-### 本地仓库 | offline
+### 本地仓库 | offline (local)
 
 **注：以下命令必须在某个 git 仓库中输入。**
 
@@ -69,5 +76,5 @@ $ git push origin master -f # 强制同步本地的项目分支到 GitHub 上，
 
 ## 参考链接
 
-* [Git - Documentation](https://git-scm.com/doc){:target="_blank"}
-* [Git教程 - 廖雪峰的官方网站](https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000){:target="_blank"}
+* [Git - Book](https://git-scm.com/book/en/v2){:target="_blank"}
+* [GitHub Cheat Sheet](https://github.github.com/training-kit/downloads/github-git-cheat-sheet.pdf){:target="_blank"}
