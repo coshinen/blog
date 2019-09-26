@@ -21,7 +21,7 @@ Base58Check 是一种 Base58 编码格式，可在前几个字符中明确编码
 
 ## Base58 符号表
 
-Value | Character | Value | Character | Value | Character | Value | Character
+数值  | 字符      | 数值  | 字符      | 数值  | 字符      | 数值  | 字符
 ------|-----------|-------|-----------|-------|-----------|-------|----------
 0     | 1         | 1     | 2         | 2     | 3         | 3     | 4
 4     | 5         | 5     | 6         | 6     | 7         | 7     | 8
@@ -86,7 +86,7 @@ std::string EncodeBase58(const unsigned char* pbegin, const unsigned char* pend)
 对 25 bytes 的“前缀（Version） + 公钥（PubKeyID） + 校验和（Checksum）”进行 Base58 编码：
 1. 跳过开头的 0 同时统计其个数。zeroes 的取值只有两种情况，当版本号即地址前缀取 “0x00” 时，zeroes 为 1，其它情况 zeroes 为 0。
 2. 开辟足够大的空间，34 或 35 个字节，为大端表示的 Base58 编码做准备。
-3. 开始 Base58 编码，把 256 进制转化为 58 进制。这一步是核心。
+3. **进行 Base58 编码，把 256 进制转化为 58 进制。**
 4. 再次跳过开头的 0，这次不统计。
 5. 在字符串填充字符 '1'，个数为 1. 步中跳过 0 的个数 zeroes。
 6. 根据 Base58 字符对照表把数字转换为对应字符，得到地址。

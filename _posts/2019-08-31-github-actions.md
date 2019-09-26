@@ -76,14 +76,14 @@ GitHub Actions 为内置的持续集成（CI）服务提供动力。
 你可以创建自己的操作、使用 GitHub 社区共享操作和自定义公共操作。
 若要在一个工作流中使用一个操作，你必须将其作为一个步骤包含进去。
 
-### 1.7. 持续集成（Continuous integration/CI）
+### 1.7. 持续集成（Continuous integration）
 
 频繁地向一个共享仓库提交少量代码变更的软件开发实践。
 使用 GitHub Actions，可以创建自定义的 CI 工作流，以自动构建并测试你的代码。
 从你的仓库中，你可以查看代码变更的状态和工作流中每个操作的详细日志。
 CI 通过提供代码变更的及时反馈来更快地检测并解决 bugs，从而节省开发人员的时间。
 
-### 1.8. 持续部署（Continuous deployment/CD）
+### 1.8. 持续部署（Continuous deployment）
 
 持续部署建立在持续集成的基础上。
 当提交新代码和通过你的 CI 测试时，代码将自动部署到生产环境中。
@@ -306,7 +306,7 @@ https://github.com/<OWNER>/<REPOSITORY>/workflows/<WORKFLOW_FILE_PATH>/badge.svg
 **使用一个工作流文件路径的例子**
 
 这个例子给一个文件路径为 .github/workflows/c-cpp.yml 的工作流添加一个状态标志。
-该仓库的所属者（OWNER）和仓库（REPOSITORY）名同上。
+该仓库的所属者和仓库名同上。
 
 ```markdown
 ![](https://github.com/mistydew/hello-world/workflows/.github/workflows/c-cpp.yml/badge.svg)
