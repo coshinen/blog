@@ -78,4 +78,5 @@ excerpt: Here are some books I read.
 > * [Free eBooks - Project Gutenberg](http://www.gutenberg.org/wiki/Main_Page){:target="_blank"}
 
 > Open Courses:
+> * [Positive Psychology](https://movie.douban.com/subject/11538023){:target="_blank"}，[美] [Tal Ben-Shahar](http://www.talbenshahar.com){:target="_blank"}
 > * [Harvard Justice](http://justiceharvard.org){:target="_blank"}，[美] [Michael J. Sandel](https://scholar.harvard.edu/sandel){:target="_blank"}
