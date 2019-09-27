@@ -7,20 +7,20 @@ comments: true
 categories: Blockchain Bitcoin
 tags: bitcoind 区块链 比特币
 ---
-原始可用的比特币程序有两个版本；
-一个带有图形化用户界面（通常被称为“比特币”），和一个“无头”版本（被称为 bitcoind，这里的“无头”指的是没有图形化界面，只有命令行）。
-它们完全互相兼容，并使用相同的命令行参数，读取相同的配置文件，且读写相同的数据文件。
-你可以在你的系统上一次运行一个比特币或 bitcoind 的副本（如果你不小心又启动来另一个，该副本会告诉你：比特币或 bitcoind 已经启动并且该程序将退出）。
+原始可用的比特币程序有两个版本：
+一个带有图形化用户界面（通常被称为“比特币”），和一个“无头”版本（被称为 bitcoind，这里的“无头”指的是没有图形化界面）。
+它们完全相互兼容，并使用相同的命令行参数，读取相同的配置文件并读写相同的数据文件。
+你一次可以在系统上运行一个比特币或 bitcoind 的副本（如果你不小心又启动了另一个，该副本会告诉你：比特币或 bitcoind 已经启动并且该程序将退出）。
 
 ## Linux 快速启动
 
-使用命令行客户端启动，自动同步区块链并创建一个钱包的最简单的方法是，只需从包含你的 bitcoind 二进制程序的目录运行这条（不带参数）命令：
+使用命令行客户端启动，自动同步区块链并创建一个钱包的最简单的方法，只需从包含 bitcoind 二进制程序的目录运行这条（不带参数）命令：
 
 ```shell
 $ ./bitcoind
 ```
 
-运行标准的图形化界面：
+或运行标准的图形化界面：
 
 ```shell
 $ ./bitcoin-qt
@@ -28,15 +28,10 @@ $ ./bitcoin-qt
 
 ## 命令行参数
 
-以下命令来自于比特币核心版本 [v0.12.1](https://github.com/bitcoin/bitcoin/tree/v0.12.1)。
+以下命令来自于比特币核心 v0.12.1。
 
 ```shell
 $ ./bitcoind --help -help-debug # 获取详细帮助信息
-```
-
-<details>
-<summary>bitcoind v0.12.1 help info</summary>
-```shell
 Bitcoin Core Daemon version v0.12.1.0-61906ac
 比特币核心守护进程版本 v0.12.1.0-意味不明
 
@@ -649,18 +644,17 @@ RPC 服务选项：
        Timeout during HTTP requests (default: 30)
        HTTP 请求的超时时间（默认：30s）
 ```
-</details>
 
 ## 比特币配置文件
 
-所有的命令行选项（除了 -conf）都可以在配置文件中指定，所有的配置文件选项也都可以在命令行中指定。
+所有的命令行选项（除 -conf）都可以在配置文件中指定，所有的配置文件设置也可以在命令行中指定。
 命令行选项覆盖配置文件中设置的值。
 
-配置文件是一个“设置=值”对的列表，每行一个，可选注释以字符‘#’开头。
+配置文件是一个键值对“设置=值”的列表，每行一个，注释以字符‘#’开头。
 
-配置文件不是自动创建的；你可以使用你最爱的纯文本编辑器创建它。
-一个用户友好的配置文件生成器在[这里](https://jlopp.github.io/bitcoin-core-config-generator)。
-默认情况下，比特币（或 bitcoind）将在比特币数据目录中查找名为“bitcoin.conf”的文件，但数据目录和配置文件路径都可以使用 -datedir 和 -conf 命令行参数改变。
+配置文件不是自动创建的，你可以使用最爱的纯文本编辑器创建它。
+[这里](https://jlopp.github.io/bitcoin-core-config-generator){:target="_blank"}是一个用户友好的配置文件生成器。
+默认情况下，比特币（bitcoind）将在比特币数据目录中查找名为“bitcoin.conf”的文件，但数据目录和配置文件路径都可以使用 -datedir 和 -conf 命令行参数改变。
 
 > Windows: C:\Users\username\AppData\Roaming\Bitcoin\bitcoin.conf
 >
@@ -672,7 +666,7 @@ RPC 服务选项：
 
 ## 比特币配置文件样例
 
-来自 [https://github.com/mistydew/blockchain/blob/master/.bitcoin/bitcoin.conf](https://github.com/mistydew/blockchain/blob/master/bitcoin.conf):
+来自 [https://github.com/mistydew/blockchain/blob/master/.bitcoin/bitcoin.conf](https://github.com/mistydew/blockchain/blob/master/.bitcoin/bitcoin.conf){:target="_blank"}:
 
 ```shell
 # 打印调试信息到控制台
@@ -694,7 +688,5 @@ rpcallowip=xxx.xxx.xxx.xxx
 
 ## 参考链接
 
-* [Running Bitcoin - Bitcoin Wiki](https://en.bitcoin.it/wiki/Running_Bitcoin){:target="_blank"}
 * [bitcoin/bitcoin at v0.12.1](https://github.com/bitcoin/bitcoin/tree/v0.12.1){:target="_blank"}
-* [Bitcoin Core Config Generator](https://jlopp.github.io/bitcoin-core-config-generator){:target="_blank"}
-* [mistydew/blockchain](https://github.com/mistydew/blockchain){:target="_blank"}
+* [Running Bitcoin - Bitcoin Wiki](https://en.bitcoin.it/wiki/Running_Bitcoin){:target="_blank"}
