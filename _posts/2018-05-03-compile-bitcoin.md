@@ -127,7 +127,7 @@ $ ./configure --help
 $ sudo apt install build-essential libtool autotools-dev automake pkg-config bsdmainutils curl
 ```
 
-**注：比特币 v0.12.1 源码需先修改 Qt 包源路径，查看[交叉编译比特币源码](/blog/2018/09/cross-compile-bitcoin.html#Qt-ref)。**
+**注：比特币 v0.12.1 源码需先修改 Qt 包源路径，查看[交叉编译比特币源码](/blog/2018/09/cross-compile-bitcoin.html)。**
 
 ```shell
 $ cd depends

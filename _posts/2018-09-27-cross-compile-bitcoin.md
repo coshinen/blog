@@ -22,7 +22,6 @@ HEAD detached at v0.12.1
 nothing to commit, working directory clean
 ```
 
-<p id="Qt-ref"></p>
 ## 修改 v0.12.1 源码 Qt 包源路径
 
 ```shell
@@ -97,6 +96,5 @@ $ make # 若构建过非 Windows 版的程序，则先执行 make clean 进行�
 
 ## 参考链接
 
-* [bitcoin/build-windows.md at master · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/master/doc/build-windows.md){:target="_blank"}
 * [bitcoin/build-windows.md at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/doc/build-windows.md){:target="_blank"}
 * [Error during build 0.12 · Issue #9629 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/issues/9629){:target="_blank"}
