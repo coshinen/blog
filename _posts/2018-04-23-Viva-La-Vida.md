@@ -10,7 +10,7 @@ excerpt: I used to rule the world. Seas would rise when I gave the word. Now in 
 ---
 ![Viva La Vida](/assets/images/cover/misc/Viva%20La%20Vida.jpg){:.border}
 
-## Viva La Vida | 活在當下（為生命歡呼）
+## Viva La Vida | 生命萬歲
 
 歌手：Coldplay<br>
 作詞：Guy Berryman・Jonny Buckland・Will Champion・Chris Martin<br>
@@ -121,6 +121,9 @@ But that was when I ruled the world
 但那是我曾經統治的世界
 </blockquote>
 </div>
+
+歌曲以法蘭西國王路易十六的視角，敘述了一段悲涼的歷史。
+封面是法國畫家歐仁·德拉克羅瓦為紀念 1830 年法國七月革命創作的一幅名為自由引導人民（La Liberté guidant le peuple）的油畫。
 
 ## 参考链接
 
