@@ -23,9 +23,9 @@ excerpt: Here are some books I read.
 > * C++ 编程规范 101条规则、准则与最佳实践，[加] Herb Sutter [罗] Andrei Alexandrescu
 > * C++ Primer 中文版（第 5 版），[美] Stanley B. Lippman, Josée Lajoie, Barbara E. Moo
 > * [The C++ Annotations](http://www.icce.rug.nl/documents/cplusplus){:target="_blank"}，[荷] Frank B. Brokken
-> * C专家编程，[美] Peter van der Linden
-> * C陷阱与缺陷，[美] Andrew Koening
-> * C和指针，[美] Kenneth A. Reek
+> * C 专家编程，[美] Peter van der Linden
+> * C 陷阱与缺陷，[美] Andrew Koening
+> * C 和指针，[美] Kenneth A. Reek
 > * [Essential C](http://cslibrary.stanford.edu/101/EssentialC.pdf){:target="_blank"}，[美] Nick Parlante
 
 > Literature:
@@ -55,22 +55,22 @@ excerpt: Here are some books I read.
 > * 福尔摩斯探案全集，[英] [Arthur Conan Doyle](https://www.arthur-conan-doyle.com){:target="_blank"}
 
 > Biography:
-> * 只是为了好玩 偶然的革命故事，[芬] Linus Benedict Torvalds
+> * 只是为了好玩 Linux之父林纳斯自传，[芬] Linus Benedict Torvalds, David Diamond
 > * 史蒂夫·乔布斯传，[美] Walter Isaacson
 
 > Miscellaneous:
 > * 亲密关系，[美] Rowland S. Miller, Daniel Perlman
 > * 少有人走的路 心智成熟的旅程，[美] M. Scott peck
 > * 黑客与画家 硅谷创业之父Paul Graham文集，[美] Paul Graham
-> * [如何变得有思想](http://www.ruanyifeng.com/blog){:target="_blank"}，[中] 阮一峰
+> * 如何变得有思想 阮一峰博客文集，[中] [阮一峰](http://www.ruanyifeng.com/blog){:target="_blank"}
 > * 你的灯亮着吗？发现问题的真正所在，[美] Donald C. Gause, Gerald M. Weinberg
 > * 异类 不一样的成功启示录，[加] Malcolm Gladwell
-> * 公正 该如何做是好，[美] Michael J. Sandel
+> * 公正 该如何做是好？，[美] Michael J. Sandel
 > * 谁“害”了北大学生，[中] 群言
 
 > Languages:
-> * 新版中日交流标准日本语（中级上、下），[中] 人民教育出版社、[日] 光村图书出版株式会社
-> * 新版中日交流标准日本语（初级上、下），[中] 人民教育出版社、[日] 光村图书出版株式会社
+> * 新版 中日交流标准日本语（中级上、下），[中] 人民教育出版社、[日] 光村图书出版株式会社
+> * 新版 中日交流标准日本语（初级上、下），[中] 人民教育出版社、[日] 光村图书出版株式会社
 
 > Free eBooks:
 > * [Standard Ebooks: Free and liberated ebooks, carefully produced for the true book lover.](https://standardebooks.org){:target="_blank"}
@@ -78,5 +78,5 @@ excerpt: Here are some books I read.
 > * [Free eBooks - Project Gutenberg](http://www.gutenberg.org/wiki/Main_Page){:target="_blank"}
 
 > Open Courses:
-> * Positive Psychology，[美] [Tal Ben-Shahar](http://www.talbenshahar.com){:target="_blank"}
-> * [Harvard Justice](http://justiceharvard.org){:target="_blank"}，[美] [Michael J. Sandel](https://scholar.harvard.edu/sandel){:target="_blank"}
+> * 哈佛幸福课（Positive Psychology），[美] [Tal Ben-Shahar](http://www.talbenshahar.com){:target="_blank"}
+> * [哈佛公开课公正（Harvard Justice）](http://justiceharvard.org){:target="_blank"}，[美] [Michael J. Sandel](https://scholar.harvard.edu/sandel){:target="_blank"}
