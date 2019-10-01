@@ -14,7 +14,7 @@ excerpt: Here are some books I read.
 > * [Bitcoin: A Peer-to-Peer Electronic Cash System](/blog/2018/04/Bitcoin-A-Peer-to-Peer-Electronic-Cash-System.html)，[日?] Satoshi Nakamoto
 > * [Pro Git 2nd Edition](https://git-scm.com/book/zh/v2){:target="_blank"}，[美] Scott Chacon and Ben Straub
 > * TCP/IP 详解 卷1：协议，[美] [W. Richard Stevens](http://www.kohala.com/start){:target="_blank"}
-> * [Linux: a Portable Operating System](https://www.cs.helsinki.fi/u/kutvonen/index_files/linus.pdf){:target="_blank"}，[芬] Linus Benedict Torvalds
+> * [Linux: a Portable Operating System](https://www.cs.helsinki.fi/u/kutvonen/index_files/linus.pdf){:target="_blank"}，[芬] Linus Torvalds
 > * Linux/UNIX 系统编程手册（上、下册），[德] Michael Kerrisk
 > * 重构 改善既有代码的设计，[美] Martin Fowler
 > * 代码整洁之道，[美] Robert C. Martin
@@ -32,6 +32,7 @@ excerpt: Here are some books I read.
 > * [前方的路](http://www.ruanyifeng.com/road){:target="_blank"}，[中] 阮一峰
 > * [未来世界的幸存者](http://www.ruanyifeng.com/survivor){:target="_blank"}，[中] 阮一峰
 > * 兔子共和国，[英] Richard Adams
+> * 冰与火之歌 卷五 魔龙的狂舞，[美] George R.R. Martin
 > * 冰与火之歌 卷四 群鸦的盛宴，[美] George R.R. Martin
 > * 冰与火之歌 卷三 冰雨的风暴，[美] George R.R. Martin
 > * 冰与火之歌 卷二 列王的纷争，[美] George R.R. Martin
@@ -55,7 +56,7 @@ excerpt: Here are some books I read.
 > * 福尔摩斯探案全集，[英] [Arthur Conan Doyle](https://www.arthur-conan-doyle.com){:target="_blank"}
 
 > Biography:
-> * 只是为了好玩 Linux之父林纳斯自传，[芬] Linus Benedict Torvalds, David Diamond
+> * 只是为了好玩 Linux之父林纳斯自传，[芬] Linus Torvalds [美] David Diamond
 > * 史蒂夫·乔布斯传，[美] Walter Isaacson
 
 > Miscellaneous:
