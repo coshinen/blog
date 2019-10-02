@@ -247,6 +247,11 @@ excerpt: Here are my favorite quotes from someones that inspire me or make me la
 > 人は人を殺す動機なんて、知ったこっちゃねーが…
 > 人が人を助ける理由に…論理的な思考は存在しねーだろ？
 
+> Sharon Vineyard「名探偵コナン 第286話 工藤新一NYの事件（事件編）」：
+> * この世に神様なんているのかしら？
+> もし、本当にそんな存在があるのなら、一生懸命生きてる人間は誰も不幸にはならないじゃない？
+> そう、少なくとも私にエンジェルは微笑みかけてはくれなかったもの…一度もね。
+
 > ベルモット (**Verm**o**ut**h)／Sharon Vineyard「名探偵コナン 第230話 謎めいた乗客（前編）」：
 > * A secret makes a woman woman...
 > 女は秘密を着飾って美しくなるのよ…
