@@ -48,6 +48,7 @@ excerpt: Here are some books I read.
 > * 神奇动物在哪里，[英] J.K. Rowling
 > * 神奇的魁地奇球，[英] J.K. Rowling
 > * 诗翁彼豆故事集 赫敏·格兰杰译自如尼文，[英] J.K. Rowling
+> * 哈利·波特与凤凰社，[英] J.K. Rowling
 > * 哈利·波特与火焰杯，[英] J.K. Rowling
 > * 哈利·波特与阿兹卡班的囚徒，[英] J.K. Rowling
 > * 哈利·波特与密室，[英] J.K. Rowling
