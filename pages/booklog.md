@@ -6,6 +6,7 @@ excerpt: Here are some books I read.
 ---
 
 > Technology:
+> * 程序员健康指南，[美] Joe Kutner
 > * 区块链启示录 中本聪文集，[美] Phil Champagne
 > * [Blockchain - Get to know it](/blog/2018/09/get-to-know-the-blockchain.html)，[澳] Ben Sampson
 > * 区块链开发指南，[中] 申屠青春
