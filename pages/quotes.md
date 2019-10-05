@@ -115,6 +115,9 @@ excerpt: Here are my favorite quotes from someones that inspire me or make me la
 > Mahatma Gandhi:
 > * First they ignore you, then they laugh at you, then they fight you, then you win.
 
+> Evelyn Beatrice Hall:
+> * I do not agree with what you have to say, but I'll defend to the death your right to say it.
+
 > George Orwell:
 > * The very concept of objective truth is fading out of the world.
 > Lies will pass into history.
