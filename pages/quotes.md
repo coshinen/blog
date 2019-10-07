@@ -147,7 +147,6 @@ excerpt: Here are my favorite quotes from someones that inspire me or make me la
 
 > ブラック／お天気お姉さん「AKBINGO!」：
 > * 自信があっても、結果にならなきゃダメでしょ！
-> * 晴れ、曇り、雨、雪。
 
 > ソルト「マジすか学園4、5」：
 > * 怖いなんて感情、忘れてた…人間いつかは死ぬ、それが早いか遅いかの違いだ…時々考えるんだ、私の命は何のためにあるのか？自分のマジのために使えるのなら、本望だ、笑って死ねるよ。
@@ -187,10 +186,10 @@ excerpt: Here are my favorite quotes from someones that inspire me or make me la
 > 中村由利「GARNET CROW premium live 〜happy 5th anniversary〜」：
 > * 私の好きな詩人にシラーという人がいるんですけれども、ドイツの詩人なんですけれども、その人の言葉に「人生、退屈すれば長く、充実すれば短い」という言葉があるんですけれども…
 
-> ガーネット・クロウ「クリスタル・ゲージ」：
+> Azuki 七「GARNET CROW クリスタル・ゲージ」：
 > * 何処にいても揺るがぬ ideology、善悪の基準はすべての人に共通じゃない。
 
-> ガーネット・クロウ「夢みたあとで」：
+> Azuki 七「GARNET CROW 夢みたあとで」：
 > * 望まなければ失わないのに、求めずにはいられないよ、どんな未来がこの先にあっても。
 
 > ルパン三世「東方見聞録 ～アナザーページ～」：
