@@ -72,11 +72,7 @@ excerpt: Here are some books I read.
 > * 史蒂夫·乔布斯传，[美] Walter Isaacson
 
 > ### 小说
-> * 冰与火之歌 卷五 魔龙的狂舞，[美] George R.R. Martin
-> * 冰与火之歌 卷四 群鸦的盛宴，[美] George R.R. Martin
-> * 冰与火之歌 卷三 冰雨的风暴，[美] George R.R. Martin
-> * 冰与火之歌 卷二 列王的纷争，[美] George R.R. Martin
-> * 冰与火之歌 卷一 权力的游戏，[美] [George R.R. Martin](http://www.georgerrmartin.com){:target="_blank"}
+> * 冰与火之歌（五卷），[美] [George R.R. Martin](http://www.georgerrmartin.com){:target="_blank"}
 > * 三个火枪手，[法] dit aussi Alexandre Dumas père
 > * 小王子，[法] [Antoine de Saint Exupéry](https://www.antoinedesaintexupery.com){:target="_blank"}
 > * 兔子共和国，[英] Richard Adams
@@ -88,12 +84,6 @@ excerpt: Here are some books I read.
 > * 神奇动物在哪里，[英] J.K. Rowling
 > * 神奇的魁地奇球，[英] J.K. Rowling
 > * 诗翁彼豆故事集 赫敏·格兰杰译自如尼文，[英] J.K. Rowling
-> * 哈利·波特与混血王子，[英] J.K. Rowling
-> * 哈利·波特与凤凰社，[英] J.K. Rowling
-> * 哈利·波特与火焰杯，[英] J.K. Rowling
-> * 哈利·波特与阿兹卡班的囚徒，[英] J.K. Rowling
-> * 哈利·波特与密室，[英] J.K. Rowling
-> * 哈利·波特与魔法石，[英] J.K. Rowling
 > * 哈利波特完整系列，[英] [J.K. Rowling](https://www.jkrowling.com){:target="_blank"}
 > * 福尔摩斯探案全集，[英] [Arthur Conan Doyle](https://www.arthur-conan-doyle.com){:target="_blank"}
 
