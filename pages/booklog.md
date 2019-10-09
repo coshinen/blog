@@ -5,6 +5,7 @@ permalink: /booklog.html
 excerpt: Here are some books I read.
 ---
 
+> ## 索引
 > * [技术](#技术)
 >   * [区块链](#区块链)
 >   * [协议栈](#协议栈)
@@ -34,6 +35,7 @@ excerpt: Here are some books I read.
 > * [Bitcoin: A Peer-to-Peer Electronic Cash System](/blog/2018/04/Bitcoin-A-Peer-to-Peer-Electronic-Cash-System.html)，[日?] Satoshi Nakamoto
 
 > ### 协议栈
+> * 图解HTTP，[日] 上野宣
 > * TCP/IP 详解 卷1：协议，[美] [W. Richard Stevens](http://www.kohala.com/start){:target="_blank"}
 
 > ### 操作系统
@@ -72,7 +74,7 @@ excerpt: Here are some books I read.
 > * 史蒂夫·乔布斯传，[美] Walter Isaacson
 
 > ### 小说
-> * 冰与火之歌（五卷），[美] [George R.R. Martin](http://www.georgerrmartin.com){:target="_blank"}
+> * 冰与火之歌，[美] [George R.R. Martin](http://www.georgerrmartin.com){:target="_blank"}
 > * 三个火枪手，[法] dit aussi Alexandre Dumas père
 > * 小王子，[法] [Antoine de Saint Exupéry](https://www.antoinedesaintexupery.com){:target="_blank"}
 > * 兔子共和国，[英] Richard Adams
