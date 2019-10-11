@@ -83,7 +83,7 @@ um- I have so little time×3
 難受的 in little time<br>
 <br>
 為了不迷惑地愛<br>
-喂 要變得多強大才好？<br>
+呐 要變得多強大才好？<br>
 永遠持續給予著<br>
 絕對不會枯萎的<br>
 想要堅強地活下去<br>
