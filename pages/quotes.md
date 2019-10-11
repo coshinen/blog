@@ -103,11 +103,9 @@ excerpt: Here are my favorite quotes from someones that inspire me or make me la
 > Master Shifu, Kung Fu Panda 3:
 > * If you only do what you can do, you will never be more than you are now.
 
-> Master Oogway, Kung Fu Panda 3:
+> Master Oogway, Kung Fu Panda, 3:
 > * Inner peace, inner peace. itchy nose. Ah-choo! Finally, inner peace. Now what?
-
-> Master Oogway, Kung Fu Panda:
-> * Yesterday is history, tomorrow is a mystery, but today is a gift. That is why it is called the present.
+> * There's a saying: Yesterday is history, tomorrow is a mystery, but today is a gift. That is why it is called the present.
 > * There are no accidents.
 > * One often meets his destiny on the road he takes to avoid it.
 > * Nothing is impossible.
