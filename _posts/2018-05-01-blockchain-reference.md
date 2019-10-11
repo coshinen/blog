@@ -8,7 +8,7 @@ categories: Blockchain Bitcoin
 tags: 区块链 比特币
 stickie: true
 ---
-与其说比特币是区块链的第一个应用，不如说区块链技术是为了实现数字货币比特币出现的一种组合现有技术而成的“新”技术。
+与其说比特币是区块链的第一个应用，不如说区块链是为了实现数字货币比特币而出现的一种组合现有技术的“新”技术。
 
 ## Bitcoin | 比特币（区块链 v1.0）
 
@@ -51,7 +51,7 @@ stickie: true
 * [比特币“靓号”地址](/blog/2018/05/bitcoin-vanity-address.html)
 * [如何使用 Watch-only 地址](/blog/2018/04/how-to-use-watch-only-addresses.html)
 
-## 杂项
+## 其他
 
 * [认识区块链](/blog/2018/09/get-to-know-the-blockchain.html)
 * [10 个区块链的基础知识](/blog/2018/10/10-essential-blockchain-questions-and-answers.html)
