@@ -48,11 +48,12 @@ excerpt: Here are some books I read.
 > * [The C++ Annotations](http://www.icce.rug.nl/documents/cplusplus){:target="_blank"}，[荷] Frank B. Brokken
 > * C++ 沉思录，[美] Andrew Koenig, Barbara Moo
 > * C++ 编程规范 101条规则、准则与最佳实践，[加] Herb Sutter [罗] Andrei Alexandrescu
-> * C++ Primer 中文版（第 5 版），[美] Stanley B. Lippman, Josée Lajoie, Barbara E. Moo
+> * C++ Primer 中文版（第5版），[美] Stanley B. Lippman, Josée Lajoie, Barbara E. Moo
 > * [Essential C](http://cslibrary.stanford.edu/101/EssentialC.pdf){:target="_blank"}，[美] Nick Parlante
 > * C 专家编程，[美] Peter van der Linden
 > * C 陷阱与缺陷，[美] Andrew Koening
 > * C 和指针，[美] Kenneth A. Reek
+> * C 程序设计语言（第2版），[美] Brian W. Kernighan, Dennis M. Ritchie
 
 > ### 程序人生
 > * 程序员健康指南，[美] Joe Kutner
