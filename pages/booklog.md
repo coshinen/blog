@@ -56,6 +56,7 @@ excerpt: Here are some books I read.
 
 > ### 程序人生
 > * 程序员健康指南，[美] Joe Kutner
+> * GitHub 入门与实践，[日] 大塚弘记
 > * [Pro Git 2nd Edition](https://git-scm.com/book/zh/v2){:target="_blank"}，[美] Scott Chacon and Ben Straub
 > * 重构 改善既有代码的设计，[美] Martin Fowler
 > * 代码整洁之道，[美] Robert C. Martin
