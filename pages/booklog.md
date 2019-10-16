@@ -56,6 +56,7 @@ excerpt: Here are some books I read.
 > * C 程序设计语言（第2版），[美] Brian W. Kernighan, Dennis M. Ritchie
 
 > ### 程序人生
+> * 大话数据结构，[中] 程杰
 > * 大话设计模式，[中] 程杰
 > * 程序员健康指南，[美] Joe Kutner
 > * GitHub 入门与实践，[日] 大塚弘记
