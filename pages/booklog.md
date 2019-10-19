@@ -7,10 +7,11 @@ excerpt: Here are some books I read.
 
 > ## 索引
 > * [技术](#技术)
+>   * [算法](#算法)
 >   * [区块链](#区块链)
->   * [协议栈](#协议栈)
->   * [操作系统](#操作系统)
 >   * [编程语言](#编程语言)
+>   * [网络编程](#网络编程)
+>   * [操作系统](#操作系统)
 >   * [程序人生](#程序人生)
 > * [文学](#文学)
 >   * [文集](#文集)
@@ -26,6 +27,10 @@ excerpt: Here are some books I read.
 
 ## 技术
 
+> ### 算法
+> * 图解密码技术（第3版），[日] [結城浩](http://www.hyuki.com){:target="_blank"}
+> * 大话数据结构，[中] 程杰
+
 > ### 区块链
 > * 区块链启示录 中本聪文集，[美] Phil Champagne
 > * [Blockchain - Get to know it](/blog/2018/09/get-to-know-the-blockchain.html)，[澳] Ben Sampson
@@ -33,14 +38,6 @@ excerpt: Here are some books I read.
 > * [区块链技术指南](https://yeasy.gitbooks.io/blockchain_guide/content){:target="_blank"}，[中] Baohua Yang
 > * 精通比特币（第二版），[美] Andreas M. Antonopoulos
 > * [Bitcoin: A Peer-to-Peer Electronic Cash System](/blog/2018/04/Bitcoin-A-Peer-to-Peer-Electronic-Cash-System.html)，[日?] Satoshi Nakamoto
-
-> ### 协议栈
-> * 图解HTTP，[日] 上野宣
-> * 图解TCP/IP（第5版），[日] 竹下隆史 村山公保 荒井透 苅田幸雄
-> * TCP/IP 详解 卷1：协议，[美] [W. Richard Stevens](http://www.kohala.com/start){:target="_blank"}
-
-> ### 操作系统
-> * [Linux: a Portable Operating System](https://www.cs.helsinki.fi/u/kutvonen/index_files/linus.pdf){:target="_blank"}，[芬] Linus Torvalds
 
 > ### 编程语言
 > * Linux/UNIX 系统编程手册（上、下册），[德] Michael Kerrisk
@@ -56,8 +53,15 @@ excerpt: Here are some books I read.
 > * C 和指针，[美] Kenneth A. Reek
 > * C 程序设计语言（第2版），[美] Brian W. Kernighan, Dennis M. Ritchie
 
+> ### 网络编程
+> * 图解HTTP，[日] 上野宣
+> * 图解TCP/IP（第5版），[日] 竹下隆史 村山公保 荒井透 苅田幸雄
+> * TCP/IP 详解 卷1：协议，[美] [W. Richard Stevens](http://www.kohala.com/start){:target="_blank"}
+
+> ### 操作系统
+> * [Linux: a Portable Operating System](https://www.cs.helsinki.fi/u/kutvonen/index_files/linus.pdf){:target="_blank"}，[芬] Linus Torvalds
+
 > ### 程序人生
-> * 大话数据结构，[中] 程杰
 > * 大话设计模式，[中] 程杰
 > * 程序员健康指南，[美] Joe Kutner
 > * GitHub 入门与实践，[日] 大塚弘记
@@ -81,9 +85,9 @@ excerpt: Here are some books I read.
 
 > ### 小说
 > * 冰与火之歌，[美] [George R.R. Martin](http://www.georgerrmartin.com){:target="_blank"}
+> * 兔子共和国，[英] Richard Adams
 > * 三个火枪手，[法] dit aussi Alexandre Dumas père
 > * 小王子，[法] [Antoine de Saint Exupéry](https://www.antoinedesaintexupery.com){:target="_blank"}
-> * 兔子共和国，[英] Richard Adams
 > * 动物农场，[英] [George Orwell](https://www.george-orwell.com){:target="_blank"}
 > * 百年孤独，[哥伦比亚] Gabriel José de la Concordia García Márquez
 > * 你的名字，[日] 新海誠
