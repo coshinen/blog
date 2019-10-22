@@ -102,7 +102,7 @@ excerpt: Here are some books I read.
 ## 其他
 
 > ### 心理学
-> * 乌合之众，[法] Gustave Le Bon
+> * 乌合之众 大众心理研究，[法] Gustave Le Bon
 > * 亲密关系，[美] Rowland S. Miller, Daniel Perlman
 > * 少有人走的路 心智成熟的旅程，[美] M. Scott peck
 
@@ -110,6 +110,7 @@ excerpt: Here are some books I read.
 > * 公正 该如何做是好？，[美] Michael J. Sandel
 
 > ### 杂类
+> * 富爸爸，穷爸爸，[美] Robert T. Kiyosaki
 > * 异类 不一样的成功启示录，[加] Malcolm Gladwell
 > * 谁“害”了北大学生，[中] 群言
 
