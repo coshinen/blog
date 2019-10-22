@@ -54,8 +54,8 @@ excerpt: Here are some books I read.
 > * C 程序设计语言（第2版），[美] Brian W. Kernighan, Dennis M. Ritchie
 
 > ### 网络编程
-> * 图解HTTP，[日] 上野宣
-> * 图解TCP/IP（第5版），[日] 竹下隆史 村山公保 荒井透 苅田幸雄
+> * 图解 HTTP，[日] 上野宣
+> * 图解 TCP/IP（第5版），[日] 竹下隆史 村山公保 荒井透 苅田幸雄
 > * TCP/IP 详解 卷1：协议，[美] [W. Richard Stevens](http://www.kohala.com/start){:target="_blank"}
 
 > ### 操作系统
@@ -73,14 +73,14 @@ excerpt: Here are some books I read.
 ## 文学
 
 > ### 文集
-> * 黑客与画家 硅谷创业之父Paul Graham文集，[美] Paul Graham
+> * 黑客与画家 硅谷创业之父 Paul Graham 文集，[美] Paul Graham
 > * [前方的路](http://www.ruanyifeng.com/road){:target="_blank"}，[中] 阮一峰
 > * [未来世界的幸存者](http://www.ruanyifeng.com/survivor){:target="_blank"}，[中] 阮一峰
 > * 如何变得有思想 阮一峰博客文集，[中] [阮一峰](http://www.ruanyifeng.com/blog){:target="_blank"}
 > * 80,0 AZUKI NANA photo & anthology，[日] AZUKI 七
 
 > ### 传记
-> * 只是为了好玩 Linux之父林纳斯自传，[芬] Linus Torvalds [美] David Diamond
+> * 只是为了好玩 Linux 之父林纳斯自传，[芬] Linus Torvalds [美] David Diamond
 > * 史蒂夫·乔布斯传，[美] Walter Isaacson
 
 > ### 小说
@@ -102,6 +102,7 @@ excerpt: Here are some books I read.
 ## 其他
 
 > ### 心理学
+> * 乌合之众，[法] Gustave Le Bon
 > * 亲密关系，[美] Rowland S. Miller, Daniel Perlman
 > * 少有人走的路 心智成熟的旅程，[美] M. Scott peck
 
