@@ -324,3 +324,7 @@ excerpt: Here are my favorite quotes from someones that inspire me or make me la
 
 > Sherlock Holmes, [Sign of the Four, The Science of Deduction](https://www.pagebypagebooks.com/Arthur_Conan_Doyle/Sign_of_the_Four/The_Science_of_Deduction_p4.html){:target="_blank"}:
 > * Eliminate all other factors, and the one which remains must be the truth.
+
+> Sherlock Holmes, [Sign of the Four, The Statement of the Case](https://www.pagebypagebooks.com/Arthur_Conan_Doyle/Sign_of_the_Four/The_Statement_of_the_Case_p3.html){:target="_blank"}:
+> * It is of the first importance, not to allow your judgment to be biased by personal qualities.
+> The emotional qualities are antagonistic to clear reasoning.
