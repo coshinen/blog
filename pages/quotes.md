@@ -322,9 +322,15 @@ excerpt: Here are my favorite quotes from someones that inspire me or make me la
 > Sherlock Holmes, [Sign of the Four, Sherlock Holmes Gives a Demonstration](https://www.pagebypagebooks.com/Arthur_Conan_Doyle/Sign_of_the_Four/Sherlock_Holmes_Gives_a_Demonstration_p2.html){:target="_blank"}:
 > * How often have I said to you that when you have eliminated the impossible whatever remains, HOWEVER IMPROBABLE, must be the truth?
 
+> Sherlock Holmes, [Sign of the Four, The Science of Deduction](https://www.pagebypagebooks.com/Arthur_Conan_Doyle/Sign_of_the_Four/The_Science_of_Deduction_p5.html){:target="_blank"}:
+> * I never guess. It is a shocking habit,--destructive to the logical faculty.
+
 > Sherlock Holmes, [Sign of the Four, The Science of Deduction](https://www.pagebypagebooks.com/Arthur_Conan_Doyle/Sign_of_the_Four/The_Science_of_Deduction_p4.html){:target="_blank"}:
 > * Eliminate all other factors, and the one which remains must be the truth.
 
 > Sherlock Holmes, [Sign of the Four, The Statement of the Case](https://www.pagebypagebooks.com/Arthur_Conan_Doyle/Sign_of_the_Four/The_Statement_of_the_Case_p3.html){:target="_blank"}:
 > * It is of the first importance, not to allow your judgment to be biased by personal qualities.
 > The emotional qualities are antagonistic to clear reasoning.
+
+> Sherlock Holmes, [A Study In Scarlet, Our Advertisement Brings A Visitor](https://www.pagebypagebooks.com/Arthur_Conan_Doyle/A_Study_In_Scarlet/Part_I_Being_a_reprint_from_the_reminiscences_of_JOHN_H_WATSON_M_D_late_of_the_Army_Medical_Department_Our_Advertisement_Brings_A_Visitor_p1.html){:target="_blank"}:
+> * There is a mystery about this which stimulates the imagination; where there is no imagination there is no horror.
