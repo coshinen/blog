@@ -11,11 +11,12 @@
 
 ## Timeline
 
-* 2019.09.22 [+] config: build future
+* 2019.10.25 [+] blog page: ClustrMaps.com Globe Widget
 
 <details>
 <summary>history</summary>
 
+* 2019.09.22 [+] config: build future
 * 2019.09.19 [+] remake: archive and category page
 * 2019.09.07 [-] post: ~~{% highlight %} code {% endhighlight %}~~; [+] post: ```code```
 * 2019.08.28 [+] site: GitHub Actions workflows CI
@@ -85,7 +86,7 @@
 
 * Hosted: [GitHub](https://github.com)
 * Powered: [GitHub Pages](https://pages.github.com), [Jekyll](http://www.jekyllrb.com)
-* Analytics: [Google Analytics](https://analytics.google.com/analytics/web), [Busuanzi](https://busuanzi.ibruce.info)
+* Analytics: [Google Analytics](https://analytics.google.com/analytics/web), [Busuanzi](https://busuanzi.ibruce.info), [ClustrMaps](https://clustrmaps.com)
 * Site Search: [Google](https://www.google.com), [DogeDoge](https://dogedoge.com), [Simple Jekyll Search](https://github.com/christian-fei/Simple-Jekyll-Search)
 * Comments System: [IntenseDebate](https://intensedebate.com)
 * Shared Service: [AddToAny](https://www.addtoany.com)
