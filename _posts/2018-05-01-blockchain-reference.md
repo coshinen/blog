@@ -23,7 +23,7 @@ stickie: true
 
 ## 术语
 
-* [比特币词汇表](/blog/2018/10/some-bitcoin-words-you-might-hear.html)
+* [一些你可能会听到的比特币术语](/blog/2018/10/bitcoin-vocabulary.html)
 * [比特币开发者术语表](/blog/2018/10/bitcoin-developer-glossary.html)
 
 ## 构建源码

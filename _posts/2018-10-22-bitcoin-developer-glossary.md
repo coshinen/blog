@@ -7,7 +7,7 @@ comments: true
 categories: Blockchain Bitcoin Translations
 tags: 区块链 比特币术语表 译文
 ---
-这是一个专业术语汇编。普通用户应该使用[词汇表页面](/blog/2018/08/some-bitcoin-words-you-might-hear.html)。
+这是一个专业术语汇编。普通用户应该使用[词汇表页面](/blog/2018/10/bitcoin-vocabulary.html)。
 
 ## 百分之 51 攻击 | 51% Attack
 
