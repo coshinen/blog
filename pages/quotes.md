@@ -5,6 +5,15 @@ permalink: /quotes.html
 excerpt: Here are my favorite quotes from someones that inspire me or make me laugh. I hope you enjoy them.
 ---
 
+> Steve Jobs, Stanford Commencement Speech 2005:
+> * Stay Hungry. Stay Foolish.
+> * Your time is limited, so don't waste it living someone else's life.
+> Don't be trapped by dogma - which is living with the results of other people's thinking.
+> Don't let the noise of others' opinions drown out your own inner voice.
+> And most important, have the courage to follow your heart and intuition.
+> They somehow already know what you truly want to become.
+> Everything else is secondary.
+
 > 侯捷，STL 源码剖析：
 > * 源码之前，了无秘密。
 
