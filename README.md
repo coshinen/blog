@@ -7,11 +7,11 @@
 - [ ] site: replace resume with cv
 - [ ] site: search engine using lunr.js
 - [x] post: categories and tags of all posts
-- [ ] post: file by year, exempli gratia 2018, 2019
+- [ ] post: file by year, exempli gratia 2018
 
 ## Timeline
 
-* 2019.10.25 [+] blog page: ClustrMaps.com Globe Widget
+* 2019.10.25 [+] site: ClustrMaps analytics; blog page: ClustrMaps.com Globe Widget
 
 <details>
 <summary>history</summary>
