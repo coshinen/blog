@@ -341,5 +341,14 @@ excerpt: Here are my favorite quotes from someones that inspire me or make me la
 > * It is of the first importance, not to allow your judgment to be biased by personal qualities.
 > The emotional qualities are antagonistic to clear reasoning.
 
+> Sherlock Holmes, [A Study In Scarlet, The Science Of Deduction](https://www.pagebypagebooks.com/Arthur_Conan_Doyle/A_Study_In_Scarlet/Part_I_Being_a_reprint_from_the_reminiscences_of_JOHN_H_WATSON_M_D_late_of_the_Army_Medical_Department_The_Science_Of_Deduction_p2.html){:target="_blank"}:
+> * You see, I consider that a man's brain originally is like a little empty attic, and you have to stock it with such furniture as you choose.
+> A fool takes in all the lumber of every sort that he comes across, so that the knowledge which might be useful to him gets crowded out, or at best is jumbled up with a lot of other things so that he has a difficulty in laying his hands upon it.
+> Now the skilful workman is very careful indeed as to what he takes into his brain-attic.
+> He will have nothing but the tools which may help him in doing his work, but of these he has a large assortment, and all in the most perfect order.
+> It is a mistake to think that that little room has elastic walls and can distend to any extent.
+> Depend upon it there comes a time when for every addition of knowledge you forget something that you knew before.
+> It is of the highest importance, therefore, not to have useless facts elbowing out the useful ones.
+
 > Sherlock Holmes, [A Study In Scarlet, Our Advertisement Brings A Visitor](https://www.pagebypagebooks.com/Arthur_Conan_Doyle/A_Study_In_Scarlet/Part_I_Being_a_reprint_from_the_reminiscences_of_JOHN_H_WATSON_M_D_late_of_the_Army_Medical_Department_Our_Advertisement_Brings_A_Visitor_p1.html){:target="_blank"}:
 > * There is a mystery about this which stimulates the imagination; where there is no imagination there is no horror.
