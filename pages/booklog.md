@@ -110,7 +110,8 @@ excerpt: Here are some books I read.
 > * 公正 该如何做是好？，[美] Michael J. Sandel
 
 > ### 杂类
-> * [把时间当朋友](https://github.com/xiaolai/time-as-a-friend){:target="_blank"}，[中] 李笑来
+> * [新生 七年就是一辈子](https://b.xinshengdaxue.com){:target="_blank"}，[中] 李笑来
+> * [把时间当作朋友 运用心智 获得解放](https://github.com/xiaolai/time-as-a-friend){:target="_blank"}，[中] 李笑来
 > * 富爸爸，穷爸爸，[美] Robert T. Kiyosaki
 > * 异类 不一样的成功启示录，[加] Malcolm Gladwell
 > * 谁“害”了北大学生，[中] 群言
