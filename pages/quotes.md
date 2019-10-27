@@ -322,14 +322,18 @@ excerpt: Here are my favorite quotes from someones that inspire me or make me la
 > * Come at once if convenient, if inconvenient come all the same.
 > * Let me pay you one in return, when I said if I were assured of the former eventuality, I will cheerfully accept the latter.
 
-> Sherlock Holmes, [Memoirs of Sherlock Holmes, The Final Problem](https://www.pagebypagebooks.com/Arthur_Conan_Doyle/Memoirs_of_Sherlock_Holmes/Adventure_XI_The_Final_Problem_p5.html){:target="_blank"}:
-> * Let me pay you one in return when I say that if I were assured of the former eventuality I would, in the interests of the public, cheerfully accept the latter.
-
 > Sherlock Holmes, [The Adventures of Sherlock Holmes, A Scandal in Bohemia](https://www.pagebypagebooks.com/Arthur_Conan_Doyle/The_Adventures_of_Sherlock_Holmes/ADVENTURE_I_A_SCANDAL_IN_BOHEMIA_p2.html){:target="_blank"}:
 > * You see, but you do not observe. The distinction is clear.
 
+> Sherlock Holmes, [Memoirs of Sherlock Holmes, The Final Problem](https://www.pagebypagebooks.com/Arthur_Conan_Doyle/Memoirs_of_Sherlock_Holmes/Adventure_XI_The_Final_Problem_p5.html){:target="_blank"}:
+> * Let me pay you one in return when I say that if I were assured of the former eventuality I would, in the interests of the public, cheerfully accept the latter.
+
 > Sherlock Holmes, [Sign of the Four, Sherlock Holmes Gives a Demonstration](https://www.pagebypagebooks.com/Arthur_Conan_Doyle/Sign_of_the_Four/Sherlock_Holmes_Gives_a_Demonstration_p2.html){:target="_blank"}:
 > * How often have I said to you that when you have eliminated the impossible whatever remains, HOWEVER IMPROBABLE, must be the truth?
+
+> Sherlock Holmes, [Sign of the Four, The Statement of the Case](https://www.pagebypagebooks.com/Arthur_Conan_Doyle/Sign_of_the_Four/The_Statement_of_the_Case_p3.html){:target="_blank"}:
+> * It is of the first importance, not to allow your judgment to be biased by personal qualities.
+> The emotional qualities are antagonistic to clear reasoning.
 
 > Sherlock Holmes, [Sign of the Four, The Science of Deduction](https://www.pagebypagebooks.com/Arthur_Conan_Doyle/Sign_of_the_Four/The_Science_of_Deduction_p5.html){:target="_blank"}:
 > * I never guess. It is a shocking habit,--destructive to the logical faculty.
@@ -337,9 +341,8 @@ excerpt: Here are my favorite quotes from someones that inspire me or make me la
 > Sherlock Holmes, [Sign of the Four, The Science of Deduction](https://www.pagebypagebooks.com/Arthur_Conan_Doyle/Sign_of_the_Four/The_Science_of_Deduction_p4.html){:target="_blank"}:
 > * Eliminate all other factors, and the one which remains must be the truth.
 
-> Sherlock Holmes, [Sign of the Four, The Statement of the Case](https://www.pagebypagebooks.com/Arthur_Conan_Doyle/Sign_of_the_Four/The_Statement_of_the_Case_p3.html){:target="_blank"}:
-> * It is of the first importance, not to allow your judgment to be biased by personal qualities.
-> The emotional qualities are antagonistic to clear reasoning.
+> Sherlock Holmes, [A Study In Scarlet, Our Advertisement Brings A Visitor](https://www.pagebypagebooks.com/Arthur_Conan_Doyle/A_Study_In_Scarlet/Part_I_Being_a_reprint_from_the_reminiscences_of_JOHN_H_WATSON_M_D_late_of_the_Army_Medical_Department_Our_Advertisement_Brings_A_Visitor_p1.html){:target="_blank"}:
+> * There is a mystery about this which stimulates the imagination; where there is no imagination there is no horror.
 
 > Sherlock Holmes, [A Study In Scarlet, The Science Of Deduction](https://www.pagebypagebooks.com/Arthur_Conan_Doyle/A_Study_In_Scarlet/Part_I_Being_a_reprint_from_the_reminiscences_of_JOHN_H_WATSON_M_D_late_of_the_Army_Medical_Department_The_Science_Of_Deduction_p2.html){:target="_blank"}:
 > * You see, I consider that a man's brain originally is like a little empty attic, and you have to stock it with such furniture as you choose.
@@ -349,6 +352,3 @@ excerpt: Here are my favorite quotes from someones that inspire me or make me la
 > It is a mistake to think that that little room has elastic walls and can distend to any extent.
 > Depend upon it there comes a time when for every addition of knowledge you forget something that you knew before.
 > It is of the highest importance, therefore, not to have useless facts elbowing out the useful ones.
-
-> Sherlock Holmes, [A Study In Scarlet, Our Advertisement Brings A Visitor](https://www.pagebypagebooks.com/Arthur_Conan_Doyle/A_Study_In_Scarlet/Part_I_Being_a_reprint_from_the_reminiscences_of_JOHN_H_WATSON_M_D_late_of_the_Army_Medical_Department_Our_Advertisement_Brings_A_Visitor_p1.html){:target="_blank"}:
-> * There is a mystery about this which stimulates the imagination; where there is no imagination there is no horror.
