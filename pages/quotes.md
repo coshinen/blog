@@ -184,6 +184,9 @@ excerpt: Here are my favorite quotes from someones that inspire me or make me la
 > 秋熊「深秋之葵」：
 > * 学习GC精神，低调中坚持！
 
+> Joan Baez「Garnet Time 02 Azuki's Night」：
+> * 人はどう死ぬか、いつ死ぬか選択できない。どう生きるか、これだけは決められる。さあ決めるのです。
+
 > 中村由利「GARNET CROW livescope 2013 〜Terminus〜」：
 > * GARNET CROWとして、全てのことを出し切りました。
 
