@@ -28,6 +28,7 @@ excerpt: Here are some books I read.
 ## 技术
 
 > ### 算法
+> * 啊哈！算法，[中] 啊哈磊
 > * 图解密码技术（第3版），[日] [結城浩](http://www.hyuki.com){:target="_blank"}
 > * 大话数据结构，[中] 程杰
 
