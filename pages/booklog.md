@@ -17,10 +17,11 @@ excerpt: Here are some books I read.
 >   * [文集](#文集)
 >   * [传记](#传记)
 >   * [小说](#小说)
-> * [其他](#其他)
+> * [科学](#科学)
 >   * [心理学](#心理学)
 >   * [伦理学](#伦理学)
->   * [杂类](#杂类)
+>   * [统计学](#统计学)
+> * [杂类](#杂类)
 > * [语言](#语言)
 > * [电子书](#电子书)
 > * [公开课](#公开课)
@@ -100,7 +101,7 @@ excerpt: Here are some books I read.
 > * 哈利波特完整系列，[英] [J.K. Rowling](https://www.jkrowling.com){:target="_blank"}
 > * 福尔摩斯探案全集，[英] [Arthur Conan Doyle](https://www.arthur-conan-doyle.com){:target="_blank"}
 
-## 其他
+## 科学
 
 > ### 心理学
 > * 人性的弱点，[美] Dale Carnegie
@@ -111,11 +112,14 @@ excerpt: Here are some books I read.
 > ### 伦理学
 > * 公正 该如何做是好？，[美] Michael J. Sandel
 
-> ### 杂类
+> ### 统计学
+> * 异类 不一样的成功启示录，[加] Malcolm Gladwell
+
+## 杂类
+
 > * [新生 七年就是一辈子](https://b.xinshengdaxue.com){:target="_blank"}，[中] 李笑来
 > * [把时间当作朋友 运用心智 获得解放](https://github.com/xiaolai/time-as-a-friend){:target="_blank"}，[中] 李笑来
 > * 富爸爸，穷爸爸，[美] Robert T. Kiyosaki
-> * 异类 不一样的成功启示录，[加] Malcolm Gladwell
 > * 谁“害”了北大学生，[中] 群言
 
 ## 语言
