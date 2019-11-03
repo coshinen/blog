@@ -122,9 +122,6 @@ excerpt: 君のいない未来が、ただ大きな闇にみえ。死んでし�
 </blockquote>
 </div>
 
-黑暗、死、生、病、健康、聖地、偽善者、愛...
-這些詞語體現了七的文學功底。
-
 ## 参考链接
 
 * [GARNET CROW official website : ガーネットクロウ オフィシャルサイト](http://www.garnetcrow.com){:target="_blank"}

@@ -152,6 +152,8 @@ Misty Mystery<br>
 </blockquote>
 </div>
 
+Tie-up 柯南的最後一曲，GC 的倒數第二張單曲。
+
 ## 参考链接
 
 * [GARNET CROW official website : ガーネットクロウ オフィシャルサイト](http://www.garnetcrow.com){:target="_blank"}
