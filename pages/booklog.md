@@ -100,6 +100,7 @@ excerpt: Here are some books I read.
 > * 神奇的魁地奇球，[英] J.K. Rowling
 > * 诗翁彼豆故事集 赫敏·格兰杰译自如尼文，[英] J.K. Rowling
 > * 哈利波特完整系列，[英] [J.K. Rowling](https://www.jkrowling.com){:target="_blank"}
+> * 江户川乱步作品集，[日] 江戸川乱歩
 > * 福尔摩斯探案全集，[英] [Arthur Conan Doyle](https://www.arthur-conan-doyle.com){:target="_blank"}
 
 ## 科学
