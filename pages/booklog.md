@@ -86,6 +86,7 @@ excerpt: Here are some books I read.
 > * 史蒂夫·乔布斯传，[美] Walter Isaacson
 
 > ### 小说
+> * 阿加莎·克里斯蒂作品集，[英] Agatha Christie
 > * 丝之屋，[英] Anthony Horowitz
 > * 冰与火之歌，[美] [George R.R. Martin](http://www.georgerrmartin.com){:target="_blank"}
 > * 兔子共和国，[英] Richard Adams
