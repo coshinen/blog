@@ -15,6 +15,7 @@ excerpt: Here are some books I read.
 >   * [程序人生](#程序人生)
 > * [文学](#文学)
 >   * [文集](#文集)
+>   * [诗歌](#诗歌)
 >   * [传记](#传记)
 >   * [小说](#小说)
 > * [科学](#科学)
@@ -79,6 +80,9 @@ excerpt: Here are some books I read.
 > * [前方的路](http://www.ruanyifeng.com/road){:target="_blank"}，[中] 阮一峰
 > * [未来世界的幸存者](http://www.ruanyifeng.com/survivor){:target="_blank"}，[中] 阮一峰
 > * 如何变得有思想 阮一峰博客文集，[中] [阮一峰](http://www.ruanyifeng.com/blog){:target="_blank"}
+
+> ### 诗歌
+> * 乌鸦，[美] Edgar Allan Poe
 > * 80,0 AZUKI NANA photo & anthology，[日] AZUKI 七
 
 > ### 传记
@@ -86,7 +90,6 @@ excerpt: Here are some books I read.
 > * 史蒂夫·乔布斯传，[美] Walter Isaacson
 
 > ### 小说
-> * 阿加莎·克里斯蒂作品集，[英] Agatha Christie
 > * 丝之屋，[英] Anthony Horowitz
 > * 冰与火之歌，[美] [George R.R. Martin](http://www.georgerrmartin.com){:target="_blank"}
 > * 兔子共和国，[英] Richard Adams
@@ -102,7 +105,9 @@ excerpt: Here are some books I read.
 > * 诗翁彼豆故事集 赫敏·格兰杰译自如尼文，[英] J.K. Rowling
 > * 哈利波特完整系列，[英] [J.K. Rowling](https://www.jkrowling.com){:target="_blank"}
 > * 江户川乱步作品集，[日] 江戸川乱歩
+> * 阿加莎·克里斯蒂作品集，[英] Agatha Christie
 > * 福尔摩斯探案全集，[英] [Arthur Conan Doyle](https://www.arthur-conan-doyle.com){:target="_blank"}
+> * 爱伦·坡短篇小说集，[美] Edgar Allan Poe
 
 ## 科学
 
