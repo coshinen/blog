@@ -40,7 +40,7 @@ excerpt: Here are some books I read.
 > * 区块链开发指南，[中] 申屠青春
 > * [区块链技术指南](https://yeasy.gitbooks.io/blockchain_guide/content){:target="_blank"}，[中] Baohua Yang
 > * 精通比特币（第二版），[美] Andreas M. Antonopoulos
-> * [Bitcoin: A Peer-to-Peer Electronic Cash System](/blog/2018/04/Bitcoin-A-Peer-to-Peer-Electronic-Cash-System.html)，[日?] Satoshi Nakamoto
+> * [Bitcoin: A Peer-to-Peer Electronic Cash System](/blog/2018/04/Bitcoin-A-Peer-to-Peer-Electronic-Cash-System.html)，[?] Satoshi Nakamoto
 
 > ### 编程语言
 > * Linux/UNIX 系统编程手册（上、下册），[德] Michael Kerrisk
@@ -49,7 +49,7 @@ excerpt: Here are some books I read.
 > * C++ 沉思录，[美] Andrew Koenig, Barbara Moo
 > * C++ 编程规范 101条规则、准则与最佳实践，[加] Herb Sutter [罗] Andrei Alexandrescu
 > * C++ Primer 中文版（第5版），[美] Stanley B. Lippman, Josée Lajoie, Barbara E. Moo
-> * [Modern C（第2版）](https://modernc.gforge.inria.fr){:target="_blank"}，[法] Jens Gustedt
+> * [Modern C Second Edition](https://modernc.gforge.inria.fr){:target="_blank"}，[法] Jens Gustedt
 > * [Essential C](http://cslibrary.stanford.edu/101/EssentialC.pdf){:target="_blank"}，[美] Nick Parlante
 > * C 专家编程，[美] Peter van der Linden
 > * C 陷阱与缺陷，[美] Andrew Koening
@@ -68,7 +68,7 @@ excerpt: Here are some books I read.
 > * 大话设计模式，[中] 程杰
 > * 程序员健康指南，[美] Joe Kutner
 > * GitHub 入门与实践，[日] 大塚弘记
-> * [Pro Git 2nd Edition](https://git-scm.com/book/zh/v2){:target="_blank"}，[美] Scott Chacon and Ben Straub
+> * [Pro Git 2nd Edition](https://git-scm.com/book/en/v2){:target="_blank"}，[美] Scott Chacon and Ben Straub
 > * 重构 改善既有代码的设计，[美] Martin Fowler
 > * 代码整洁之道，[美] Robert C. Martin
 > * 你的灯亮着吗？发现问题的真正所在，[美] Donald C. Gause, Gerald M. Weinberg
@@ -107,7 +107,7 @@ excerpt: Here are some books I read.
 > * 江户川乱步作品集，[日] 江戸川乱歩
 > * 阿加莎·克里斯蒂作品集，[英] Agatha Christie
 > * 福尔摩斯探案全集，[英] [Arthur Conan Doyle](https://www.arthur-conan-doyle.com){:target="_blank"}
-> * 爱伦·坡短篇小说集，[美] Edgar Allan Poe
+> * 爱伦·坡短篇小说集，[美] [Edgar Allan Poe](https://poestories.com){:target="_blank"}
 
 ## 科学
 
