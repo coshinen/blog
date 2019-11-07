@@ -49,10 +49,6 @@ excerpt: Welcome to mistydew's blog!
       <li>posts: <a href="{{ site.archive }}">{{ count }}</a></li>
       <li>bio: {{ site.bio }}</li>
     </ul>
-    <details>
-    <summary>Visitor Globe</summary>
-      <script type="text/javascript" id="clstr_globe" src="//cdn.clustrmaps.com/globe.js?d=JrjIqzcv6nkydvFOGDo8JSZsX3CYQGHu4lRaijCeLnI"></script>
-    </details>
   </blockquote>
   <script type='text/javascript' defer='defer' src='https://www.intensedebate.com/widgets/blogStats/{{ site.site_id }}'></script>
 </div>
