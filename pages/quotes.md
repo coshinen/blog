@@ -330,6 +330,9 @@ excerpt: Here are my favorite quotes from someones that inspire me or make me la
 > * Come at once if convenient, if inconvenient come all the same.
 > * Let me pay you one in return, when I said if I were assured of the former eventuality, I will cheerfully accept the latter.
 
+> Sherlock Holmes, A Case of Identity:
+> * It has long been an axiom of mine that the little things are infinitely the most important.
+
 > Sherlock Holmes, [The Adventures of Sherlock Holmes, A Scandal in Bohemia](https://www.pagebypagebooks.com/Arthur_Conan_Doyle/The_Adventures_of_Sherlock_Holmes/ADVENTURE_I_A_SCANDAL_IN_BOHEMIA_p2.html){:target="_blank"}:
 > * You see, but you do not observe. The distinction is clear.
 
