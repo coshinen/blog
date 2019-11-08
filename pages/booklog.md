@@ -86,6 +86,7 @@ excerpt: Here are some books I read.
 > * 80,0 AZUKI NANA photo & anthology，[日] AZUKI 七
 
 > ### 传记
+> * 阿加莎·克里斯蒂自传，[英] Agatha Christie
 > * 只是为了好玩 Linux 之父林纳斯自传，[芬] Linus Torvalds [美] David Diamond
 > * 史蒂夫·乔布斯传，[美] Walter Isaacson
 
@@ -137,6 +138,7 @@ excerpt: Here are some books I read.
 
 ## 电子书
 
+> * [Welcome to Lit2Go ETC - a free online collection of stories and poems in Mp3 (audiobook) format.](https://etc.usf.edu/lit2go){:target="_blank"}
 > * [Standard Ebooks: Free and liberated ebooks, carefully produced for the true book lover.](https://standardebooks.org){:target="_blank"}
 > * [Page By Page Books. Read Classic Books Online, Free.](https://www.pagebypagebooks.com){:target="_blank"}
 > * [Free eBooks - Project Gutenberg](http://www.gutenberg.org/wiki/Main_Page){:target="_blank"}
