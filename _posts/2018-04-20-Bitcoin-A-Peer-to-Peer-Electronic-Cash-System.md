@@ -129,16 +129,16 @@ majority of nodes agreed it was the first received.
 
 ## 3. Timestamp Server | 时间戳服务器
 
-The solution we propose begins with a timestamp server.  A timestamp server works by taking a 
-hash of a block of items to be timestamped and widely publishing the hash, such as in a 
-newspaper or Usenet post [2-5].  The timestamp proves that the data must have existed at the 
-time, obviously, in order to get into the hash.  Each timestamp includes the previous timestamp in 
+The solution we propose begins with a timestamp server.  A timestamp server works by taking a
+hash of a block of items to be timestamped and widely publishing the hash, such as in a
+newspaper or Usenet post [2-5].  The timestamp proves that the data must have existed at the
+time, obviously, in order to get into the hash.  Each timestamp includes the previous timestamp in
 its hash, forming a chain, with each additional timestamp reinforcing the ones before it.
 
-> 我们建议的这个解决方案以时间戳服务器开始。
-> 时间戳服务器的工作原理是对一组项目进行时间戳的散列并广泛发布散列值，诸如报纸或 Usenet 文章。
-> 时间戳证明数据必须在当时存在，显然是为了散列。
-> 每个时间戳在其散列中都包含前一个时间戳，形成一个链，每个附加上的时间戳都会加强它之前的时间戳。
+> 我们提出的解决方案是从一个时间戳服务器开始。
+> 时间戳服务器的工作原理是对一个要加时间戳的区块进行散列并广泛发布其散列值，例如报纸或 Usenet 文章。
+> 时间戳证明数据必须在当时存在，显然是为了进入散列。
+> 每个时间戳在其散列中都包含前一个时间戳，形成一个链，每个附加的时间戳都会加强它前面的时间戳。
 
 ![timestamp-server](/assets/images/bitcoin/whitepaper/timestamp-server.svg){:.border#center}
 
