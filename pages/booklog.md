@@ -75,6 +75,8 @@ excerpt: Here are some books I read.
 > * 你的灯亮着吗？发现问题的真正所在，[美] Donald C. Gause, Gerald M. Weinberg
 
 > ### 参考手册
+> * [Developer Documentation - Bitcoin](https://bitcoin.org/en/developer-documentation){:target="_blank"}
+> * [Boost C++ Libraries](https://www.boost.org/doc){:target="_blank"}
 > * [cppreference.com](https://en.cppreference.com/w){:target="_blank"}
 
 ## 文学
