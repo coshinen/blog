@@ -120,6 +120,7 @@ excerpt: Here are some books I read.
 ## 科学
 
 > ### 心理学
+> * 非暴力沟通，[美] Marshall B.Rosenberg
 > * 人性的弱点，[美] Dale Carnegie
 > * 乌合之众 大众心理研究，[法] Gustave Le Bon
 > * 亲密关系，[美] Rowland S. Miller, Daniel Perlman
