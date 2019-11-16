@@ -17,61 +17,61 @@ tags: 区块链 比特币术语表 译文
 
 ## 区块链 | Block Chain
 
-**定义**：区块链，每个[区块](#区块--block)都引用其前面[区块](#区块--block)。最难重建的链是最佳区块链。
+**定义**：区块链，每个[区块](#区块--Block)都引用其前面[区块](#区块--Block)。最难重建的链是最佳区块链。
 
 **同义词**：Best block chain
 
-**不要混淆**：[Header chain](#区块头链--header-chain)
+**不要混淆**：[Header chain](#区块头链--Header-Chain)
 
 ## 区块头链 | Header Chain
 
-**定义**：区块头链，每个[区块头](#BlockHeader-ref)都链接其前面的[区块头](#BlockHeader-ref)；最难重建的链是最佳区块头链。
+**定义**：区块头链，每个[区块头](#区块头--Block-Header)都链接其前面的[区块头](#区块头--Block-Header)；最难重建的链是最佳区块头链。
 
 **同义词**：Best header chain
 
-**不要混淆**：[Block chain](#BlockChain-ref)
+**不要混淆**：[Block chain](#区块链--Block-Chain)
 
 ## 区块 | Block
 
-**定义**：以[区块头](#BlockHeader-ref)开头并受[工作量证明](#POW-ref)保护的一笔或多笔交易。区块是存储在[区块链](#BlockChain-ref)上的数据。
+**定义**：以[区块头](#区块头--Block-Header)开头并受[工作量证明](#工作量证明--POW)保护的一笔或多笔交易。区块是存储在[区块链](#区块链--Block-Chain)上的数据。
 
 **同义词**：Block of transactions
 
 ## 区块头 | Block Header
 
-**定义**：单个[区块](#Block-ref)的 80 个字节的区块头，被反复地散列以创建[工作量证明](#POW-ref)。
+**定义**：单个[区块](#区块--Block)的 80 个字节的区块头，被反复地散列以创建[工作量证明](#工作量证明--POW)。
 
 **同义词**：Header
 
 ## 序列化区块 | Serialized Block
 
-**定义**：2 进制格式表示的完整的[区块](#Block-ref)—相同的格式用于计算总[区块](#Block-ref)字节大小；常用 16 进制表示。
+**定义**：2 进制格式表示的完整的[区块](#区块--Block)—相同的格式用于计算总[区块](#区块--Block)字节大小；常用 16 进制表示。
 
 **同义词**：Raw block
 
 ## 工作量证明 | Proof Of Work, POW
 
-**定义**：低于[目标值](#Target-ref)的散列，一般只能通过执行一定量的暴力工作获得—因此论证了工作量证明。
+**定义**：低于[目标值](#目标值--Target)的散列，一般只能通过执行一定量的暴力工作获得—因此论证了工作量证明。
 
 ## 难度对应值 | nBits
 
-**定义**：该目标值是低于必须使[区块](#Block-ref)有效的[区块头](#BlockHeader-ref)散列值的阈值，并且难度对应值出现在[区块头](#BlockHeader-ref)中，是目标阈值的编码形式。
+**定义**：该目标值是低于必须使[区块](#区块--Block)有效的[区块头](#区块头--Block-Header)散列值的阈值，并且难度对应值出现在[区块头](#区块头--Block-Header)中，是目标阈值的编码形式。
 
 **同义词**：Target, Target threshold（阈值）
 
-**不要混淆**：[Difficulty](#Difficulty-ref)（一个数字，用于衡量寻找[区块头](#BlockHeader-ref)哈希的[难度](#Difficulty-ref)，相对于最容易目标值寻找[区块头](#BlockHeader-ref)哈希的[难度](#Difficulty-ref)）
+**不要混淆**：[Difficulty](#难度--Difficulty)（一个数字，用于衡量寻找[区块头](#区块头--Block-Header)哈希的[难度](#难度--Difficulty)，相对于最容易目标值寻找[区块头](#区块头--Block-Header)哈希的[难度](#难度--Difficulty)）
 
 ## 难度 | Difficulty
 
-**定义**：相对找到最简单的[区块](#Block-ref)的难度，找到一个[区块](#Block-ref)有多难。最简单[区块](#Block-ref)的工作量证明难度为 1。
+**定义**：相对找到最简单的[区块](#区块--Block)的难度，找到一个[区块](#Block-ref)有多难。最简单[区块](#区块--Block)的工作量证明难度为 1。
 
 **同义词**：Network difficulty
 
-**不要混淆**：[Target threshold](#Target-ref)（目标阈值，计算难度得到的值）
+**不要混淆**：[Target threshold](#目标值--Target)（目标阈值，计算难度得到的值）
 
 ## 区块高度 | Block Height
 
-**定义**：[区块链](#BlockChain-ref)上指定[区块](#Block-ref)前的[区块](#Block-ref)数。例如，因为[创世区块](#GenesisBlock-ref)前面没有[区块](#Block-ref)，所以其高度为 0。
+**定义**：[区块链](#区块链--Block-Chain)上指定[区块](#区块--Block)前的[区块](#区块--Block)数。例如，因为[创世区块](#创世区块--Genesis-Block)前面没有[区块](#区块--Block)，所以其高度为 0。
 
 **同义词**：Height, Block chain height
 
@@ -81,37 +81,37 @@ tags: 区块链 比特币术语表 译文
 
 **同义词**：Block 0（0 号区块，高度为 0 的区块）
 
-**不要混淆**：[Generation transaction](#CoinbaseTransaction-ref)（创币交易，[区块](#Block-ref)上的第一笔交易）
+**不要混淆**：[Generation transaction](#创币交易--Coinbase-Transaction)（创币交易，[区块](#区块--Block)上的第一笔交易）
 
 ## 创币交易 | Coinbase Transaction
 
-**定义**：[区块](#Block-ref)的第一笔交易。该区块总是通过[矿工](#Miner-ref)创建，它包含一个[创币交易字段](#Coinbase-ref)。
+**定义**：[区块](#区块--Block)的第一笔交易。该区块总是通过[矿工](#矿工--Miner)创建，它包含一个[创币交易字段](#创币交易字段--Coinbase)。
 
 **同义词**：Generation Transaction
 
-**不要混淆**：[Coinbase](#Coinbase-ref)（创币交易的一部分）
+**不要混淆**：[Coinbase](#创币交易字段--Coinbase)（创币交易的一部分）
 
 ## 创币交易字段 | Coinbase field
 
-**定义**：一个特殊的字段，作为[创币交易](#CoinbaseTransaction-ref)的唯一[输入](#TxIn-ref)。创币交易字段允许声明[区块奖励](#BlockReward-ref)并提供高达 100 个字节的任意数据。
+**定义**：一个特殊的字段，作为[创币交易](#创币交易--Coinbase-Transaction)的唯一[输入](#输入--TxIn)。创币交易字段允许声明[区块奖励](#区块奖励--Block-Reward)并提供高达 100 个字节的任意数据。
 
 **同义词**：Coinbase
 
-**不要混淆**：[Coinbase transaction](#CoinbaseTransaction-ref), [Coinbase.com](https://www.coinbase.com)
+**不要混淆**：[Coinbase transaction](#创币交易--Coinbase-Transaction), [Coinbase.com](https://www.coinbase.com){:target="_blank"}
 
 ## 挖矿 | Mining
 
-**定义**：挖矿是创建有效的比特币[区块](#Block-ref)的行为，需要验证[工作量证明](#POW-ref)，且矿工是挖矿的设备或拥有那些设备的人。
+**定义**：挖矿是创建有效的比特币[区块](#区块--Block)的行为，需要验证[工作量证明](#工作量证明--POW)，且矿工是挖矿的设备或拥有那些设备的人。
 
 **同义词**：Miner
 
 ## 区块奖励 | Block Reward
 
-**定义**：[矿工](#Miner-ref)可能要求一定金额作为创建[区块](#Block-ref)的奖励。等于[区块](#Block-ref)补贴（新的可用的[聪](#Satoshis-ref)）加[区块](#Block-ref)交易支付的交易费的总和。
+**定义**：[矿工](#矿工--Miner)可能要求一定金额作为创建[区块](#区块--Block)的奖励。等于[区块](#区块--Block)补贴（新的可用的[聪](#聪--Satoshis)）加[区块](#区块--Block)交易支付的交易费的总和。
 
 **同义词**：Block miner reward
 
-**不要混淆**：Block subsidy, [Transaction fees](#TransactionFee-ref)
+**不要混淆**：Block subsidy, [Transaction fees](#Transaction-Fee)
 
 ## 衡量单位 | Denominations
 
@@ -124,19 +124,19 @@ tags: 区块链 比特币术语表 译文
 
 ## 交易费 | Transaction Fee
 
-**定义**：一笔交易的全部[输入](#TxIn-ref)减去全部[输出](#TxOut-ref)值的剩余金额；该费用支付给包含该交易到[区块](#Block-ref)的[矿工](#Miner-ref)。
+**定义**：一笔交易的全部[输入](#输入--TxIn)减去全部[输出](#输出--TxOut)值的剩余金额；该费用支付给包含该交易到[区块](#区块--Block)的[矿工](#矿工--Miner)。
 
 **同义词**：Miners fee
 
-**不要混淆**：[Minimum relay fee](#MinimumRelayFee-ref)（接收一笔交易到内存池并通过比特币核心[节点](#Node-ref)中继必须支付的最低费用）
+**不要混淆**：[Minimum relay fee](#MinimumRelayFee)（接收一笔交易到内存池并通过比特币核心[节点](#节点--Node)中继必须支付的最低费用）
 
 ## 最小中继费 | Minimum Relay Fee
 
-**定义**：最小[交易费](#TransactionFee-ref)，用于中继到其他[节点](#Node-ref)的交易必须支付给[全节点](#Node-ref)的费用（如果它不是[高优先级交易](#FreeTx-ref)）。并没有最低中继费—每个[节点](#Node-ref)选择它自己的决策。
+**定义**：最小[交易费](#交易费--Transaction-Fee)，用于中继到其他[节点](#节点--Node)的交易必须支付给[全节点](#全节点--Node)的费用（如果它不是[高优先级交易](#高优先级交易--FreeTx)）。并没有最低中继费—每个[节点](#节点--Node)选择它自己的决策。
 
 **同义词**：Relay fee
 
-**不要混淆**：[Transaction fee](#TransactionFee-ref)（最小中继费是过滤过低[交易费](#TransactionFee-ref)交易的决策选项）
+**不要混淆**：[Transaction fee](#交易费--Transaction-Fee)（最小中继费是过滤过低[交易费](#交易费--Transaction-Fee)交易的决策选项）
 
 ## 高优先级交易 | High-Priority Transaction
 
