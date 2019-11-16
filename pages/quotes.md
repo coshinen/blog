@@ -113,7 +113,7 @@ excerpt: Here are my favorite quotes from someones that inspire me or make me la
 > * If you only do what you can do, you will never be more than you are now.
 
 > Master Oogway, Kung Fu Panda, 3:
-> * Inner peace, inner peace. itchy nose. Ah-choo! Finally, inner peace. Now what?
+> * Inner peace. Inner peace. Itchy nose. Ah-choo! Finally, inner peace. Now, what?
 > * Quit? Don't quit. Noodles? Don't noodles. You are too concerned with what was and what will be.
 > There's a saying: Yesterday is history, tomorrow is a mystery, but today is a gift. That is why it is called the present.
 > * There are no accidents.
@@ -301,6 +301,7 @@ excerpt: Here are my favorite quotes from someones that inspire me or make me la
 > * オレは高校生探偵、工藤新一。幼なじみで同級生の毛利蘭と遊園地へ遊びに行って…黒ずくめの男の怪しげな取り引き現場を目撃した‼︎取り引きを見るのに夢中になっていたオレは…背後から近ついて来る、もう一人の仲間に気付かなかった…オレはその男に毒薬を飲まされ、目が覚めたら…体が縮んでしまっていた‼︎工藤新一が生きているとヤツらにバレたら、また命を狙われ…まわりの人間にも危害が及ぶ。阿笠博士の助言で正体を隠すことにしたオレは…蘭に名前を聞かれて…とっさに江戸川コナンと名乗り…ヤツらの情報をつかむために、父親が探偵をやっている蘭の家に転がり込んだ…
 > 小さくなっても頭脳は同じ‼︎迷宮なしの名探偵‼︎真実はいつもひとつ‼︎
 > * たった一つの真実見抜く、見た目は子供、頭脳は大人。その名は、名探偵コナン。
+> * 大嫌いと大好きの距離埋める、二人の推理とサスペンス。
 > * Heartの中身はミステリー、二人に輝くStar & Snow。
 > * 運命までも推理のヒント、謎めく事件も明るく見通す。
 > * 強い心に推理のパワー、本質踏み込む鋭いリズム。
