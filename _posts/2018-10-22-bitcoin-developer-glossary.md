@@ -9,39 +9,353 @@ tags: 区块链 比特币术语表 译文
 ---
 这是一个专业术语汇编。普通用户应该使用[词汇表页面](/blog/2018/10/bitcoin-vocabulary.html)。
 
-## 百分之 51 攻击 | 51% Attack
+> * 5
+>   * [百分之 51 攻击（51% Attack）](#百分之-51-攻击--51-percent-attack)
+> * A
+>   * [地址（Payment Addresses）](#地址--address)
+>   * [祖先挖矿（Ancestor mining）](#祖先挖矿--ancestor-mining)
+>   * [归档的节点（Archival node）](#归档的节点--archival-node)
+> * B
+>   * [足够的多签（Bare multisig）](#足够的多签--bare-multisig)
+>   * [Base58 编码（Base58check）](#base58-编码--base58check)
+>   * [最佳区块链（Best block chain）](#区块链--block-chain)
+>   * [最佳区块头链（Best header chain）](#区块头链--header-chain)
+>   * [比特币（Bitcoins）](#比特币--bitcoins)
+>   * [区块（Block）](#区块--block)
+>   * [0 号区块（Block 0）](#0-号区块--block-0)
+>   * [区块链（Block chain）](#区块链--block-chain)
+>   * [区块头（Block header）](#区块头--block-header)
+>   * [区块高度（Block height）](#区块高度--block-height)
+>   * [区块奖励（Block reward）](#区块奖励--block-reward)
+>   * [区块初次同步（Blocks-first sync）](#区块初次同步--blocks-first-sync)
+>   * [布鲁姆过滤器（Bloom filter）](#布鲁姆过滤器--bloom-filter)
+> * C
+>   * [Chain code](#Chain-code)
+>   * [找零地址](#找零地址--Change-address)
+>   * [找零输出](#找零输出--Change-output)
+>   * [子密钥](#子密钥--Child-key)
+>   * [孩子为父母付钱（Child pays for parent）](#祖先挖矿--ancestor-mining)
+>   * [私有子密钥](#私有子密钥--Child-private-key)
+>   * [公共子密钥](#公共子密钥--Child-public-key)
+>   * [创币交易字段](#创币交易字段--Coinbase)
+>   * [创币交易](#创币交易--Coinbase-transaction)
+>   * [CompactSize](#CompactSize)
+>   * [已压缩的公钥](#已压缩的公钥--Compressed-public-key)
+>   * [Confirmation score](#Confirmation-score)
+>   * [确认数](#确认数--Confirmations)
+>   * [已确认的交易](#已确认的交易--Confirmed-transaction)
+>   * [共识](#共识--Consensus)
+>   * [共识规则](#共识规则--Consensus-rules)
+>   * [CPFP](#祖先挖矿--ancestor-mining)
+> * D
+>   * [Data carrier transaction](#Data-carrier-transaction)
+>   * [Data-pushing opcode](#Data-pushing-opcode)
+>   * [衡量单位（Denomination）](#比特币--bitcoins)
+>   * [难度](#难度--Difficulty)
+>   * [DNS 种子](#DNS-种子--DNS-seed)
+>   * [双重花费](#双重花费--Double-spend)
+> * E
+>   * [Escrow contract](#Escrow-contract)
+>   * [Extended key](#Extended-key)
+> * F
+>   * [分叉](#分叉--Fork)
+>   * [免费的交易](#免费的交易--Free-transaction)
+>   * [全节点（Full node）](#归档的节点--archival-node)
+> * G
+>   * [Generation transaction](#Generation-transaction)
+>   * [创世区块（Genesis block）](#0-号区块--block-0)
+> * H
+>   * [硬分叉](#硬分叉--Hard-fork)
+>   * [Hardened extended key](#Hardened-extended-key)
+>   * [HD 协议](#HD-协议--HD-protocol)
+>   * [HD 钱包](#HD-钱包--HD-wallet)
+>   * [HD 钱包种子](#HD-钱包种子--HD-wallet-seed)
+>   * [头部（Header）](#区块头--block-header)
+>   * [区块头链（Header chain）](#区块头链--header-chain)
+>   * [区块头初次同步](#区块头初次同步--Headers-first-sync)
+>   * [高度（Height）](#区块高度--block-height)
+>   * [高优先级交易](#高优先级交易--High-priority-transaction)
+> * I
+>   * [IBD](#IBD)
+>   * [初始区块下载](#初始区块下载--Initial-block-download)
+>   * [输入](#输入--Input)
+>   * [内部字节序](#内部字节序--Internal-byte-order)
+>   * [库存](#库存--Inventory)
+> * L
+>   * [轻量客户端](#轻量客户端--Lightweight-client)
+>   * [Locktime](#Locktime)
+> * M
+>   * [主网](#主网--Mainnet)
+>   * [大多数攻击（Majority attack）](#百分之-51-攻击--51-percent-attack)
+>   * [MASF](#MASF)
+>   * [Master chain code](#Master-chain-code)
+>   * [Master private key](#Master-private-key)
+>   * [最大区块大小](#最大区块大小--Maximum-Block-Size)
+>   * [默克尔区块](#默克尔区块--Merkle-block)
+>   * [默克尔根](#默克尔根--Merkle-root)
+>   * [默克尔树](#默克尔树--Merkle-tree)
+>   * [消息头](#消息头--Message-header)
+>   * [矿工](#矿工--Miner)
+>   * [矿工激活的软分叉](#矿工激活的软分叉--Miner-activated-soft-fork)
+>   * [矿工费](#矿工费--Miners-fee)
+>   * [最小中继费](#最小中继费--Minimum-relay-fee)
+>   * [挖矿](#挖矿--Mining)
+>   * [多签（Multisig）](#足够的多签--bare-multisig)
+> * N
+>   * [难度对应值](#难度对应值--nBits)
+>   * [网络难度](#网络难度--Network-difficulty)
+>   * [网络魔数](#网络魔数--Network-magic)
+>   * [nLockTime](#nLockTime)
+>   * [节点（Node）](#归档的节点--archival-node)
+>   * [Non-data-pushing opcode](#Non-data-pushing-opcode)
+>   * [空数据交易](#空数据交易--Null-data-transaction)
+> * O
+>   * [OP_RETURN transaction](#OP_RETURN transaction)
+>   * [操作码](#操作码--Opcode)
+>   * [Opt-in replace by fee](#Opt-in-replace-by-fee)
+>   * [孤儿区块](#孤儿区块--Orphan-block)
+>   * [Outpoint](#Outpoint)
+>   * [输出](#输出--Output)
+> * P
+>   * [P2PKH 地址](#P2PKH-地址--P2PKH-address)
+>   * [P2PKH 输出](#P2PKH-输出--P2PKH-output)
+>   * [P2SH 地址](#P2SH-地址--P2SH-address)
+>   * [P2SH 多签](#P2SH-多签--P2SH-multisig)
+>   * [P2SH 输出](#P2SH-输出--P2SH-output)
+>   * [父钥](#父钥--Parent-key)
+>   * [私有父钥](#私有父钥--Parent-private-key)
+>   * [公共父钥](#公共父钥--Parent-public-key)
+>   * [支付协议](#支付协议--Payment-protocol)
+>   * [支付请求](#支付请求--Payment-request)
+>   * [对端（Peer）](#归档的节点--archival-node)
+>   * [POW](#POW)
+>   * [Private extended key](#Private-extended-key)
+>   * [私钥](#私钥--Private-key)
+>   * [工作量证明](#工作量证明--Proof-of-work)
+>   * [已修剪的节点（Pruned node）](#归档的节点--archival-node)
+>   * [公钥脚本](#公钥脚本--Pubkey-script)
+>   * [Public extended key](#Public-extended-key)
+>   * [公钥](#公钥--Public-key)
+> * R
+>   * [原始交易](#原始交易--Raw-transaction)
+>   * [RBF](#RBF)
+>   * [Redeem Script](#Redeem-Script)
+>   * [RedeemScript](#RedeemScript)
+>   * [回归测试模式](#回归测试模式--Regression-test-mode)
+>   * [回归测试网](#回归测试网--Regtest)
+>   * [中继费](#中继费--Relay-fee)
+>   * [Replace by fee](#Replace-by-fee)
+>   * [根种子](#根种子--Root-seed)
+>   * [RPC 字节序](#RPC-字节序--RPC-byte-order)
+> * S
+>   * [聪（Satoshis）](#比特币--bitcoins)
+>   * [ScriptPubKey](#ScriptPubKey)
+>   * [ScriptSig](#ScriptSig)
+>   * [序列号](#序列号--Sequence-number)
+>   * [序列化的区块](#序列化的区块--Serialized-transaction)
+>   * [Sighash](#Sighash)
+>   * [SIGHASH_ALL](#SIGHASH_ALL)
+>   * [SIGHASH_ANYONECANPAY](#SIGHASH_ANYONECANPAY)
+>   * [SIGHASH_NONE](#SIGHASH_NONE)
+>   * [SIGHASH_SINGLE](#SIGHASH_SINGLE)
+>   * [签名](#签名--Signature)
+>   * [签名哈希](#签名哈希--Signature-hash)
+>   * [签名脚本](#签名脚本--Signature-script)
+>   * [简单交易验证](#简单交易验证--Simplified-Payment-Verification)
+>   * [软分叉](#软分叉--Soft-fork)
+>   * [SPV](#SPV)
+>   * [Stale block](#Stale-block)
+>   * [标准交易](#标准交易--Standard-Transaction)
+>   * [起始字符串](#起始字符串--Start-string)
+> * T
+>   * [Target](#Target)
+>   * [公共测试网](#公共测试网--Testnet)
+>   * [Thin client](#Thin-client)
+>   * [Token](#Token)
+>   * [交易费](#交易费--Transaction-fee)
+>   * [Transaction malleability](#Transaction-malleability)
+>   * [Transaction mutability](#Transaction-mutability)
+>   * [交易号](#交易号--Txid)
+>   * [交易输入](#交易输入--TxIn)
+>   * [交易输出](#交易输出--TxOut)
+> * U
+>   * [UASF](#UASF)
+>   * [未确认的交易](#未确认的交易--Unconfirmed-transaction)
+>   * [用户激活的软分叉](#用户激活的软分叉--User-activated-soft-fork)
+>   * [未花费输出](#未花费输出--UTXO)
+> * W
+>   * [钱包](#钱包--Wallet)
+>   * [钱包导入格式](#钱包导入格式--Wallet-Import-Format)
+>   * [Watch-only 地址](#Watch-only-地址--Watch-only-address)
+>   * [WIF](#WIF)
 
-**定义**：控制大多数网络哈希率的某人修改交易历史并阻止新交易确认的能力。
+## 百分之 51 攻击 | 51 percent attack
 
-**同义词**：51 percent attack, Majority Hash Rate attack
+**定义：**
+控制大多数网络哈希率的某人修改交易历史并阻止新交易确认的能力。
 
-## 区块链 | Block Chain
+**同义词：**
+51% 攻击（51% Attack），大多数哈希率攻击（Majority Hash Rate attack）
 
-**定义**：区块链，每个[区块](#区块--Block)都引用其前面[区块](#区块--Block)。最难重建的链是最佳区块链。
+## 地址 | Address
 
-**同义词**：Best block chain
+**定义：**
+使用 [Base58 编码](#base58-编码--base58check) 格式化的 20 个字节的哈希值，用来生成 P2PKH 或 P2SH 类型的比特币地址。
+目前用户交换支付信息的最常见方式。
 
-**不要混淆**：[Header chain](#区块头链--Header-Chain)
+**同义词：**
+付款地址（Payment Addresses）
 
-## 区块头链 | Header Chain
+**不要混淆：**
+IP 地址（IP address）
 
-**定义**：区块头链，每个[区块头](#区块头--Block-Header)都链接其前面的[区块头](#区块头--Block-Header)；最难重建的链是最佳区块头链。
+## 祖先挖矿 | Ancestor mining
 
-**同义词**：Best header chain
+**定义：**
+[挖矿](#挖矿--miner)选择的交易不仅基于它们的交易费，还基于它们祖先（父母）交易和后代（孩子）交易的交易费。
 
-**不要混淆**：[Block chain](#区块链--Block-Chain)
+**同义词：**
+孩子为父母付钱（Child Pays For Parent，CPFP）
+
+**不要混淆：**
+通过费用替代（[Replace by Fee](#RBF)，[RBF](#RBF)）
+
+## 归档的节点 | Archival Node
+
+**定义：**
+连接到比特币网络的计算机。
+
+**同义词：**
+节点（Node），全节点（Full node），已修剪的节点（Pruned node），对端（Peer）
+
+**不要混淆：**
+轻量节点（Lightweight node），SPV 节点（[SPV node](#SPV)）
+
+## 足够的多签 | Bare multisig
+
+**定义：**
+[公钥脚本](#ScriptPubKey)提供给 n 个[公钥](#PublicKey)并需要对应的[签名脚本](#ScriptSig)提供对应提供[公钥](#PublicKey)的最少 m 个[签名](#Signature)。
+
+**同义词：**
+多签（Multisig），N 分之 M 多签（M-of-N Multisig），多签输出（Multisig Output）
+
+**不要混淆：**
+包含在 P2SH 里的多签脚本（[P2SH multisig](#P2SH)），需要多个[签名](#Signature)而不用 OP_CHECKMULTISIG 或 OP_CHECKMULTISIGVERIFY 的高级脚本
+
+## Base58 编码 | Base58check
+
+**定义：**
+比特币中用于转换 160 位的哈希值到 P2PKH 和 [P2SH 地址](#P2SH)的方法。
+也用于比特币的其他部分，例如用于 WIP 格式备份编码的[私钥](#PrivateKey)。与其他的 base58 实现不同。
+
+**同义词：**
+比特币地址编码（Bitcoin Address Encoding）
+
+**不要混淆：**
+P2PKH 地址（[P2PKH address](#P2PKH)），P2SH 地址（[P2SH address](#P2SH)），IP 地址（IP address）
+
+## 区块链 | Block chain
+
+**定义：**
+区块链，每个[区块](#区块--block)都引用其前面[区块](#区块--block)。
+最难重建的链是最佳区块链。
+
+**同义词：**
+最佳区块链（Best block chain）
+
+**不要混淆：**
+区块头链（[Header chain](#区块头链--header-chain)）
+
+## 区块头链 | Header chain
+
+**定义：**
+区块头链，每个[区块头](#区块头--Block-Header)都链接其前面的[区块头](#区块头--Block-Header)；
+最难重建的链是最佳区块头链。
+
+**同义词：**
+最佳区块头链（Best header chain）
+
+**不要混淆：**
+区块链（[Block chain](#区块链--block-chain)）
+
+## 比特币 | Bitcoins
+
+**定义：**
+比特币值的衡量单位，通常用一些比特币来衡量，但有时用聪的数倍来衡量。
+一个比特币等于 100,000,000 聪。
+
+**同义词：**
+衡量单位（Denominations），聪（Satoshis）
+
+**不要混淆：**
+二进制位，有两种可能取值的数据单元。
 
 ## 区块 | Block
 
-**定义**：以[区块头](#区块头--Block-Header)开头并受[工作量证明](#工作量证明--POW)保护的一笔或多笔交易。区块是存储在[区块链](#区块链--Block-Chain)上的数据。
+**定义：**
+以[区块头](#区块头--block-header)开头并受[工作量证明](#工作量证明--POW)保护的一笔或多笔交易。
+区块是存储在[区块链](#区块链--block-chain)上的数据。
 
-**同义词**：Block of transactions
+**同义词：**
+交易的区块（Block of transactions）
 
-## 区块头 | Block Header
+## 0 号区块 | Block 0
 
-**定义**：单个[区块](#区块--Block)的 80 个字节的区块头，被反复地散列以创建[工作量证明](#工作量证明--POW)。
+**定义：**
+比特币[区块链](#BlockChain)上的第一个[区块](#Block)。
 
-**同义词**：Header
+**同义词：**
+创世区块（Genesis Block）
+
+**不要混淆：**
+创币交易，[区块](#区块--Block)上的第一笔交易（[Generation transaction](#创币交易--Coinbase-Transaction)）
+
+## 区块头 | Block header
+
+**定义：**
+单个[区块](#区块--Block)的 80 个字节的区块头，被反复地散列以创建[工作量证明](#工作量证明--POW)。
+
+**同义词：**
+头部（Header）
+
+## 区块高度 | Block height
+
+**定义：**
+[区块链](#区块链--block-chain)上指定[区块](#区块--block)前的[区块](#区块--block)数。例如，因为[创世区块](#0-号区块--Block-0)前面没有[区块](#区块--block)，所以其高度为 0。
+
+**同义词：**
+高度（Height），区块链高度（Block chain height）
+
+## 区块奖励 | Block reward
+
+**定义：**
+[矿工](#矿工--miner)可能要求一定金额作为创建[区块](#区块--block)的奖励。
+等于[区块](#区块--block)补贴（新的可用的[聪](#比特币--bitcoins)）加[区块](#区块--block)交易支付的交易费的总和。
+
+**同义词：**
+区块矿工奖励（Block miner reward）
+
+**不要混淆：**
+区块补贴（Block subsidy），交易费（[Transaction fees](#transaction-fee)）
+
+## 区块初次同步 | Blocks-first sync
+
+**定义：**
+通过从[对端](#peer)下载每个[区块](#区块--block)并进行验证来同步[区块链](#BlockChain)。
+
+**同义词：**
+区块首次（Blocks-first）
+
+**不要混淆：**
+区块头初次同步（[Headers-first sync](#headers-first)）
+
+## 布鲁姆过滤器 | Bloom filter
+
+**定义：**
+主要由 [SPV 客户端](#SPV)使用过滤器，用来从全[节点](#node)请求匹配的交易和[默克尔区块](#MerkleBlock)。
+
+**不要混淆：**
+Bloom filter（通用计算机科学条目，比特币的布鲁姆过滤器是一个特定的实现）
 
 ## 序列化区块 | Serialized Block
 
@@ -69,20 +383,6 @@ tags: 区块链 比特币术语表 译文
 
 **不要混淆**：[Target threshold](#目标值--Target)（目标阈值，计算难度得到的值）
 
-## 区块高度 | Block Height
-
-**定义**：[区块链](#区块链--Block-Chain)上指定[区块](#区块--Block)前的[区块](#区块--Block)数。例如，因为[创世区块](#创世区块--Genesis-Block)前面没有[区块](#区块--Block)，所以其高度为 0。
-
-**同义词**：Height, Block chain height
-
-## 创世区块 | Genesis Block
-
-**定义**：比特币[区块链](#BlockChain-ref)上的第一个[区块](#Block-ref)。
-
-**同义词**：Block 0（0 号区块，高度为 0 的区块）
-
-**不要混淆**：[Generation transaction](#创币交易--Coinbase-Transaction)（创币交易，[区块](#区块--Block)上的第一笔交易）
-
 ## 创币交易 | Coinbase Transaction
 
 **定义**：[区块](#区块--Block)的第一笔交易。该区块总是通过[矿工](#矿工--Miner)创建，它包含一个[创币交易字段](#创币交易字段--Coinbase)。
@@ -104,23 +404,6 @@ tags: 区块链 比特币术语表 译文
 **定义**：挖矿是创建有效的比特币[区块](#区块--Block)的行为，需要验证[工作量证明](#工作量证明--POW)，且矿工是挖矿的设备或拥有那些设备的人。
 
 **同义词**：Miner
-
-## 区块奖励 | Block Reward
-
-**定义**：[矿工](#矿工--Miner)可能要求一定金额作为创建[区块](#区块--Block)的奖励。等于[区块](#区块--Block)补贴（新的可用的[聪](#聪--Satoshis)）加[区块](#区块--Block)交易支付的交易费的总和。
-
-**同义词**：Block miner reward
-
-**不要混淆**：Block subsidy, [Transaction fees](#Transaction-Fee)
-
-## 衡量单位 | Denominations
-
-**定义**：比特币值的衡量单位，通常用一些比特币来衡量，但有时用聪的数倍来衡量。
-一个比特币等于 100,000,000 聪。
-
-**同义词**：Bitcoins, Satoshis（聪）
-
-**不要混淆**：二进制位，有两种可能取值的数据单元。
 
 ## 交易费 | Transaction Fee
 
@@ -275,14 +558,6 @@ tags: 区块链 比特币术语表 译文
 
 **不要混淆**：Mnemonic code / mnemonic seed（助记代码/种子，二进制根种子格式化为单词，使人们更容易记录和记忆）
 
-## 节点 | Node
-
-**定义**：连接到比特币网络的计算机。
-
-**同义词**：Full Node（完整/全节点）, Archival Node, Pruned Node（修剪过的节点）, Peer
-
-**不要混淆**：Lightweight node（轻量级节点）, [SPV node](#SPV-ref)
-
 ## 简单支付验证 | SPV, Simplified Payment Verification
 
 **定义**：用于验证某笔交易是否包含在某个未下载完整的[区块](#Block-ref)中。该方法用于一些轻量级比特币客户端。
@@ -408,15 +683,6 @@ Git fork（当一个或多个开发人员与其他开发人员临时分开开发
 
 **不要混淆**：[HD wallet seeds](#RootSeed-ref)
 
-## Base58 编码 | Base58check
-
-**定义**：比特币中用于转换 160 位的哈希值到 P2PKH 和 [P2SH 地址](#P2SH-ref)的方法。
-也用于比特币的其他部分，例如用于 WIP 格式备份编码的[私钥](#PrivateKey-ref)。与其他的 base58 实现不同。
-
-**同义词**：Bitcoin Address Encoding
-
-**不要混淆**：[P2PKH address](#P2PKH-ref), [P2SH address](#P2SH-ref), IP address
-
 ## P2PKH 地址 | 2PKH Address
 
 **定义**：比特币[付款地址](#Address-ref)，包含哈希的[公钥](#PublicKey-ref)，允许付款人创建标准的支付给公钥哈希（P2PKH）的[公钥脚本](#ScriptPubKey-ref)。
@@ -434,15 +700,6 @@ Git fork（当一个或多个开发人员与其他开发人员临时分开开发
 **不要混淆**：[P2PK output](#TxOut-ref)（直接支付到[公钥](#PublicKey-ref)的[输出](#TxOut-ref)）,
 [P2PKH address / output](#P2PKH-ref)（由散列的[公钥](#PublicKey-ref)和其相应的[输出](#TxOut-ref)组成的[地址](#Address-ref)）,
 [P2SH multisig](#P2SHMultisig-ref)（P2SH 特定的实例，其中脚本使用一个[多签操作码](#Opcode-ref)）
-
-## 付款地址 | Payment Addresses
-
-**定义**：使用 [base58check](#Base58check-ref) 格式化的 20 个字节的哈希值，用来生成 P2PKH 或 P2SH 类型的比特币地址。
-目前用户交换支付信息的最常见方式。
-
-**同义词**：Address
-
-**不要混淆**：IP address
 
 ## P2SH 多签 | P2SH Multisig
 
@@ -488,14 +745,6 @@ Git fork（当一个或多个开发人员与其他开发人员临时分开开发
 
 **定义**：使用与已经广播交易相同[输入](#TxIn-ref)的交易。当有一个交易已经记录在[区块链](#BlockChain-ref)上时，将被当作重复，欺骗或转换的尝试。
 
-## 孩子为父母付钱 | Child Pays For Parent, CPFP
-
-**定义**：[挖矿](#Miner-ref)选择的交易不仅基于它们的交易费，还基于它们祖先（父母）交易和后代（孩子）交易的交易费。
-
-**同义词**：Ancestor mining
-
-**不要混淆**：[Replace by Fee](#RBF-ref), [RBF](#RBF-ref)
-
 ## 通过交易费代替 | Replace-by-Fee, RBF
 
 **定义**：使用支付更高[交易费](#TransactionFee-ref)的不同版本的交易代替[未确认交易](#UnconfirmedTransaction-ref)的版本。可以使用 [BIP125](https://github.com/bitcoin/bips/blob/master/bip-0125.mediawiki) 信号。
@@ -503,12 +752,6 @@ Git fork（当一个或多个开发人员与其他开发人员临时分开开发
 **同义词**：Opt-in replace by fee（通过最优交易费代替）
 
 **不要混淆**：[Child pays for parent](#CPFP-ref), [CPFP](#CPFP-ref)
-
-## 布鲁姆过滤器 | Bloom Filter
-
-**定义**：主要由 [SPV 客户端](#SPV-ref)使用过滤器，用来从全[节点](#Node-ref)请求匹配的交易和[默尔克区块](#MerkleBlock-ref)。
-
-**不要混淆**：Bloom filter（通用计算机科学条目，比特币的布鲁姆过滤器是一个特定的实现）
 
 ## 默尔克区块 | Merkle Block
 
@@ -533,14 +776,6 @@ Git fork（当一个或多个开发人员与其他开发人员临时分开开发
 **定义**：用于通过新[节点](#Node-ref)（或长时间离线的[节点](#Node-ref)）下载大量的[区块](#Block-ref)来赶上[最佳区块连](#BlockChain-ref)的链尖的过程。
 
 **不要混淆**：[Blocks-first sync](#Blocks-First-ref)（同步包含获得任意数量的[区块](#Block-ref)；IBD 仅用于大量[区块](#Block-ref)）
-
-## 区块首次同步 | Blocks-First
-
-**定义**：通过从[对端](#Peer-ref)下载每个[区块](#Block-ref)并进行验证来同步[区块链](#BlockChain-ref)。
-
-**同义词**：BLocks-first sync
-
-**不要混淆**：[Headers-first sync](#Headers-First-ref)
 
 ## 区块头优先同步 | Headers-First Sync
 
@@ -619,14 +854,6 @@ Git fork（当一个或多个开发人员与其他开发人员临时分开开发
 ## 托管合同 | Escrow Contract
 
 **定义**：一种交易，付款人和收款人把资金放入 2 比 2（或其他的 [m 比 n](#M-of-N-ref)）的[多签输出](#M-of-N-ref)中，均不会花费资金，直到都满足某些外部条件。
-
-## 多签输出 | M-of-N Multisig, Multisig Output
-
-**定义**：[公钥脚本](#ScriptPubKey-ref)提供给 n 个[公钥](#PublicKey-ref)并需要对应的[签名脚本](#ScriptSig-ref)提供对应提供[公钥](#PublicKey-ref)的最少 m 个[签名](#Signature-ref)。
-
-**同义词**：Multisig, Bare multisig
-
-**不要混淆**：[P2SH multisig](#P2SH-ref)（包含在 P2SH 里的多签脚本）, 需要多个[签名](#Signature-ref)而不用 OP_CHECKMULTISIG 或 OP_CHECKMULTISIGVERIFY 的高级脚本
 
 ## 签名哈希 | Signature Hash
 
