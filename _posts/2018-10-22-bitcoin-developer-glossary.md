@@ -30,39 +30,39 @@ tags: 区块链 比特币术语表 译文
 >   * [区块初次同步（Blocks-first sync）](#区块初次同步--blocks-first-sync)
 >   * [布鲁姆过滤器（Bloom filter）](#布鲁姆过滤器--bloom-filter)
 > * C
->   * [Chain code](#Chain-code)
->   * [找零地址](#找零地址--Change-address)
->   * [找零输出](#找零输出--Change-output)
->   * [子密钥](#子密钥--Child-key)
+>   * [链代码（Chain code）](#链代码--chain-code)
+>   * [找零地址（Change address）](#找零地址--change-address)
+>   * [找零输出（Change output）](#找零地址--change-address)
+>   * [子密钥（Child key）](#子密钥--child-key)
 >   * [孩子为父母付钱（Child pays for parent）](#祖先挖矿--ancestor-mining)
->   * [私有子密钥](#私有子密钥--Child-private-key)
->   * [公共子密钥](#公共子密钥--Child-public-key)
->   * [创币交易字段](#创币交易字段--Coinbase)
->   * [创币交易](#创币交易--Coinbase-transaction)
->   * [CompactSize](#CompactSize)
->   * [已压缩的公钥](#已压缩的公钥--Compressed-public-key)
->   * [Confirmation score](#Confirmation-score)
->   * [确认数](#确认数--Confirmations)
->   * [已确认的交易](#已确认的交易--Confirmed-transaction)
->   * [共识](#共识--Consensus)
->   * [共识规则](#共识规则--Consensus-rules)
+>   * [私有子密钥（Child private key）](#子密钥--child-key)
+>   * [公共子密钥（Child public key）](#子密钥--child-key)
+>   * [创币交易字段（Coinbase）](#创币交易字段--coinbase)
+>   * [创币交易（Coinbase transaction）](#创币交易--coinbase-transaction)
+>   * [压缩大小（CompactSize）](#压缩大小--compactsize)
+>   * [已压缩的公钥（Compressed public key）](#已压缩的公钥--compressed-public-key)
+>   * [确认分数（Confirmation score）](#确认数--confirmations)
+>   * [确认数（Confirmations）](#确认数--confirmations)
+>   * [已确认的交易（Confirmed transaction）](#确认数--confirmations)
+>   * [共识（Consensus）](#共识--consensus)
+>   * [共识规则（Consensus rules）](#共识规则--consensus-rules)
 >   * [CPFP](#祖先挖矿--ancestor-mining)
 > * D
->   * [Data carrier transaction](#Data-carrier-transaction)
->   * [Data-pushing opcode](#Data-pushing-opcode)
+>   * [数据传输交易（Data carrier transaction）](#数据传输交易--data-carrier-transaction)
+>   * [数据推送操作码（Data-pushing opcode）](#操作码--opcode)
 >   * [衡量单位（Denomination）](#比特币--bitcoins)
->   * [难度](#难度--Difficulty)
->   * [DNS 种子](#DNS-种子--DNS-seed)
->   * [双重花费](#双重花费--Double-spend)
+>   * [难度（Difficulty）](#难度--difficulty)
+>   * [DNS 种子（DNS seed）](#dns-种子--dns-seed)
+>   * [双重花费（Double spend）](#双重花费--double-spend)
 > * E
->   * [Escrow contract](#Escrow-contract)
->   * [Extended key](#Extended-key)
+>   * [托管合同（Escrow contract）](#托管合同--escrow-contract)
+>   * [扩展的密钥（Extended key）](#扩展的密钥--extended-key)
 > * F
->   * [分叉](#分叉--Fork)
->   * [免费的交易](#免费的交易--Free-transaction)
+>   * [分叉（Fork）](#分叉--fork)
+>   * [免费的交易（Free transaction）](#免费的交易--free-transaction)
 >   * [全节点（Full node）](#归档的节点--archival-node)
 > * G
->   * [Generation transaction](#Generation-transaction)
+>   * [创造交易（Generation transaction）](#创币交易--coinbase-transaction)
 >   * [创世区块（Genesis block）](#0-号区块--block-0)
 > * H
 >   * [硬分叉](#硬分叉--Hard-fork)
@@ -74,7 +74,7 @@ tags: 区块链 比特币术语表 译文
 >   * [区块头链（Header chain）](#区块头链--header-chain)
 >   * [区块头初次同步](#区块头初次同步--Headers-first-sync)
 >   * [高度（Height）](#区块高度--block-height)
->   * [高优先级交易](#高优先级交易--High-priority-transaction)
+>   * [高优先级交易（High-priority transaction）](#免费的交易--free-transaction)
 > * I
 >   * [IBD](#IBD)
 >   * [初始区块下载](#初始区块下载--Initial-block-download)
@@ -103,15 +103,15 @@ tags: 区块链 比特币术语表 译文
 >   * [多签（Multisig）](#足够的多签--bare-multisig)
 > * N
 >   * [难度对应值](#难度对应值--nBits)
->   * [网络难度](#网络难度--Network-difficulty)
+>   * [网络难度（Network difficulty）](#难度--difficulty)
 >   * [网络魔数](#网络魔数--Network-magic)
 >   * [nLockTime](#nLockTime)
 >   * [节点（Node）](#归档的节点--archival-node)
->   * [Non-data-pushing opcode](#Non-data-pushing-opcode)
->   * [空数据交易](#空数据交易--Null-data-transaction)
+>   * [非数据推送操作码（Non-data-pushing opcode）](#操作码--opcode)
+>   * [空数据交易（Null data transaction）](#数据传输交易--data-carrier-transaction)
 > * O
 >   * [OP_RETURN transaction](#OP_RETURN transaction)
->   * [操作码](#操作码--Opcode)
+>   * [操作码（Opcode）](#操作码--opcode)
 >   * [Opt-in replace by fee](#Opt-in-replace-by-fee)
 >   * [孤儿区块](#孤儿区块--Orphan-block)
 >   * [Outpoint](#Outpoint)
@@ -129,12 +129,12 @@ tags: 区块链 比特币术语表 译文
 >   * [支付请求](#支付请求--Payment-request)
 >   * [对端（Peer）](#归档的节点--archival-node)
 >   * [POW](#POW)
->   * [Private extended key](#Private-extended-key)
+>   * [扩展的私钥（Private extended key）](#扩展的密钥--extended-key)
 >   * [私钥](#私钥--Private-key)
 >   * [工作量证明](#工作量证明--Proof-of-work)
 >   * [已修剪的节点（Pruned node）](#归档的节点--archival-node)
 >   * [公钥脚本](#公钥脚本--Pubkey-script)
->   * [Public extended key](#Public-extended-key)
+>   * [扩展的公钥（Public extended key）](#扩展的密钥--extended-key)
 >   * [公钥](#公钥--Public-key)
 > * R
 >   * [原始交易](#原始交易--Raw-transaction)
@@ -180,7 +180,7 @@ tags: 区块链 比特币术语表 译文
 >   * [交易输出](#交易输出--TxOut)
 > * U
 >   * [UASF](#UASF)
->   * [未确认的交易](#未确认的交易--Unconfirmed-transaction)
+>   * [未确认的交易（Unconfirmed transaction）](#确认数--confirmations)
 >   * [用户激活的软分叉](#用户激活的软分叉--User-activated-soft-fork)
 >   * [未花费输出](#未花费输出--UTXO)
 > * W
@@ -357,6 +357,189 @@ P2PKH 地址（[P2PKH address](#P2PKH)），P2SH 地址（[P2SH address](#P2SH)�
 **不要混淆：**
 Bloom filter（通用计算机科学条目，比特币的布鲁姆过滤器是一个特定的实现）
 
+## 链代码 | Chain code
+
+**定义：**
+在 [HD 钱包](#HDWallet)中，256 位熵被添加到公钥和[私钥](#PrivateKey)中，来帮助它们生成安全的[子密钥](#ChildKey)；
+[主链代码](#MasterChainCode)通常派生自携带[主私钥](#MasterPrivateKey)的种子。
+
+**同义词：**
+HD 钱包链代码（HD wallet chain code）
+
+## 找零地址 | Change address
+
+**定义：**
+交易的[输出](#TxIn)把[聪](#Satoshis)返给付款人，从而防止过多的[输入](#TxIn)转到[交易费](#TransactionFee)中。
+
+**同义词：**
+找零（Change），找零输出（Change output）
+
+**不要混淆：**
+地址重用（Address reuse）
+
+## 子密钥 | Child key
+
+**定义：**
+在 [HD 钱包](#HDWallet)中，从[父密钥](#ParentKey)派生的密钥。
+该密钥可以是[私钥](#PrivateKey)，也可以是[公钥](#PublicKey)，密钥的推导（派生）可能需要[链代码](#ChainCode)。
+
+**同义词：**
+HD 钱包子密钥（HD wallet child key），公共子密钥（Child public key），私有子密钥（Child private key）
+
+**不要混淆：**
+公钥（[Public key](#PublicKey)）（从[私钥](#PrivateKey)派生，非父密钥）
+
+## 创币交易字段 | Coinbase
+
+**定义：**
+一个特殊的字段，作为[创币交易](#创币交易--Coinbase-Transaction)的唯一[输入](#输入--TxIn)。
+创币交易字段允许声明[区块奖励](#区块奖励--Block-Reward)并提供高达 100 个字节的任意数据。
+
+**同义词：**
+创币交易字段（Coinbase field）
+
+**不要混淆：**
+创币交易（[Coinbase transaction](#创币交易--Coinbase-Transaction)），[Coinbase.com](https://www.coinbase.com){:target="_blank"}
+
+## 创币交易 | Coinbase Transaction
+
+**定义：**
+[区块](#区块--block)的第一笔交易。
+该区块总是通过[矿工](#矿工--miner)创建，它包含一个[创币交易字段](#创币交易字段--coinbase)。
+
+**同义词：**
+创造交易（Generation Transaction）
+
+**不要混淆：**
+创币交易字段（[Coinbase](#创币交易字段--coinbase)）（创币交易的一部分）
+
+## 压缩大小 | CompactSize
+
+**定义：**
+一种长度可变的整数，常用于比特币 P2P 协议和比特币序列化的数据结构。
+
+**同义词：**
+压缩大小无符号整数（CompactSize unsigned integer）
+
+**不要混淆：**
+整形变量（VarInt）（比特币核心用于本地数据存储的数据类型），压缩（Compact）（用于[区块头](#BlockHeader)中的[难度对应值 nBits](#Target) 的数据类型）
+
+## 已压缩的公钥 | Compressed public key
+
+**定义：**
+33 字节的[椭圆曲线公钥](#PublicKey)而非 65 字节的未压缩[公钥](#PublicKey)。
+
+## 确认数 | Confirmations
+
+**定义：**
+分数表明在[最佳区块链](#BlockChain)上需要修改的[区块](#Block)数，用来移除或修改特定的交易。
+确认的交易有一个或更高的确认分数。
+
+**同义词：**
+确认分数（Confirmation score），已确认的交易（Confirmed transaction），未确认的交易（Unconfirmed transaction）
+
+## 共识 | Consensus
+
+**定义：**
+当几个[节点](#Node)（通常是网络上的大部分[节点](#Node)）在它们本地验证过的[最佳区块链](#BlockChain)中都有相同的[区块](#Block)。
+
+**不要混淆：**
+Social consensus（社会共识，通常用于开发人员之间的讨论，以表明大多数人同意某个特定的方案）, [Consensus rules](#ConsensusRules)（允许[节点](#Node)维持共识的规则）
+
+## 共识规则 | Consensus rules
+
+**定义：**
+全[节点](#Node)遵循与其他[节点](#Node)相同的[共识](#Consensus)的区块验证规则。
+
+**同义词：**
+验证规则（Validation rules）
+
+**不要混淆：**
+共识（[Consensus](#共识--consensus)）（当[节点](#Node)遵循相同的共识规则就达成了共识）
+
+## 数据传输交易 | Data carrier transaction
+
+**定义：**
+在比特币核心 0.9.0 版或更新的版本中，中继和挖矿的交易类型，添加任意数据到可证明不可花费的[公钥脚本](#ScriptPubKey)，全[节点](#Node)不必存储在它们的 [UTXO](#UTXO) 数据库中。
+
+**同义词：**
+空数据交易（Null Data Transaction）
+
+**不要混淆：**
+[OP_RETURN](#OP_RETURN)（用于 OP_RETURN 交易一个[输出](#TxOut)的[操作码](#Opcode)）
+
+## 操作码 | Opcode
+
+**定义**：
+来自比特币脚本语言的操作码在[公钥脚本](#ScriptPubKey)或[签名脚本](#ScriptSig)内部推送数据或执行函数。
+
+**同义词**：
+数据推送操作码（Data-pushing opcode），非数据推送操作码（Non-data-pushing opcode）
+
+## 难度 | Difficulty
+
+**定义：**
+相对找到最简单的[区块](#区块--Block)的难度，找到一个[区块](#Block)有多难。
+最简单[区块](#区块--Block)的工作量证明难度为 1。
+
+**同义词：**
+网络难度（Network difficulty）
+
+**不要混淆：**
+[Target threshold](#目标值--Target)（目标阈值，计算难度得到的值）
+
+## DNS 种子 | DNS Seed
+
+**定义：**
+DNS 域名解析服务器返回比特币网络上的全[节点](#Node)的 IP 地址集来帮助进行对端的发现。
+
+**不要混淆：**
+HD 钱包种子（[HD wallet seeds](#RootSeed)）
+
+## 双重花费 | Double spend
+
+**定义：**
+使用与已经广播交易相同[输入](#TxIn)的交易。
+当有一个交易已经记录在[区块链](#BlockChain)上时，将被当作重复，欺骗或转换的尝试。
+
+## 托管合同 | Escrow contract
+
+**定义：**
+一种交易，付款人和收款人把资金放入 2 比 2（或其他的 [m 比 n](#M-of-N)）的[多签输出](#M-of-N)中，均不会花费资金，直到都满足某些外部条件。
+
+## 扩展的密钥 | Extended key
+
+**定义：**
+在 [HD 钱包](#HDWallet)的情况中，使用[链编码](#ChainCode)扩展的[公钥](#PublicKey)或[私钥](#PrivateKey)允许它们导出[子密钥](#ChildKey)。
+
+**同义词：**
+HD 钱包扩展的密钥（HD wallet extended key），扩展的公钥（Public extended key），扩展的私钥（Private extended key）
+
+## 分叉 | Fork
+
+**定义：**
+当 2 个或 2 个以上的[区块](#Block)有相同的[高度](#BlockHeight)时，[区块链](#BlockChain)分叉。
+特别是发生在 2 个或 2 个以上的[矿工](#Miner)几乎同时找到[区块](#Block)时。
+也可以用于攻击。
+
+**同义词：**
+意外的分叉（Accidental fork）
+
+**不要混淆：**
+[Hard fork](#HardFork)（[共识规则](#ConsensusRules)的变化会破坏不升级[节点](#Node)的安全性）,
+[Soft fork](#SoftFork)（[共识规则](#ConsensusRules)的变化会削弱不升级[节点](#Node)的安全性）,
+Software fork（当一个或多个开发人员与其他开发人员永久地分开开发一份代码库）,
+Git fork（当一个或多个开发人员与其他开发人员临时分开开发一份代码库）
+
+## 免费的交易 | Free transaction
+
+**定义：**
+没有支付[交易费](#TransactionFee)的交易，因为他们的[输入](#TxIn)空闲时间够长足以积累大量的优先级。
+注：[矿工](#Miner)选择是否接受免费交易。
+
+**同义词：**
+高优先级交易（High-priority transaction），Free Tx（免费的交易，不含交易费）
+
 ## 序列化区块 | Serialized Block
 
 **定义**：2 进制格式表示的完整的[区块](#区块--Block)—相同的格式用于计算总[区块](#区块--Block)字节大小；常用 16 进制表示。
@@ -374,30 +557,6 @@ Bloom filter（通用计算机科学条目，比特币的布鲁姆过滤器是�
 **同义词**：Target, Target threshold（阈值）
 
 **不要混淆**：[Difficulty](#难度--Difficulty)（一个数字，用于衡量寻找[区块头](#区块头--Block-Header)哈希的[难度](#难度--Difficulty)，相对于最容易目标值寻找[区块头](#区块头--Block-Header)哈希的[难度](#难度--Difficulty)）
-
-## 难度 | Difficulty
-
-**定义**：相对找到最简单的[区块](#区块--Block)的难度，找到一个[区块](#Block-ref)有多难。最简单[区块](#区块--Block)的工作量证明难度为 1。
-
-**同义词**：Network difficulty
-
-**不要混淆**：[Target threshold](#目标值--Target)（目标阈值，计算难度得到的值）
-
-## 创币交易 | Coinbase Transaction
-
-**定义**：[区块](#区块--Block)的第一笔交易。该区块总是通过[矿工](#矿工--Miner)创建，它包含一个[创币交易字段](#创币交易字段--Coinbase)。
-
-**同义词**：Generation Transaction
-
-**不要混淆**：[Coinbase](#创币交易字段--Coinbase)（创币交易的一部分）
-
-## 创币交易字段 | Coinbase field
-
-**定义**：一个特殊的字段，作为[创币交易](#创币交易--Coinbase-Transaction)的唯一[输入](#输入--TxIn)。创币交易字段允许声明[区块奖励](#区块奖励--Block-Reward)并提供高达 100 个字节的任意数据。
-
-**同义词**：Coinbase
-
-**不要混淆**：[Coinbase transaction](#创币交易--Coinbase-Transaction), [Coinbase.com](https://www.coinbase.com){:target="_blank"}
 
 ## 挖矿 | Mining
 
@@ -420,12 +579,6 @@ Bloom filter（通用计算机科学条目，比特币的布鲁姆过滤器是�
 **同义词**：Relay fee
 
 **不要混淆**：[Transaction fee](#交易费--Transaction-Fee)（最小中继费是过滤过低[交易费](#交易费--Transaction-Fee)交易的决策选项）
-
-## 高优先级交易 | High-Priority Transaction
-
-**定义**：没有支付[交易费](#TransactionFee-ref)的交易，因为他们的[输入](#TxIn-ref)空闲时间够长足以积累大量的优先级。注：[矿工](#Miner-ref)选择是否接受免费交易。
-
-**同义词**：Free transaction, Free Tx（免费交易，不含交易费）
 
 ## 交易输入 | Transaction Input
 
@@ -466,12 +619,6 @@ Bloom filter（通用计算机科学条目，比特币的布鲁姆过滤器是�
 **定义**：所有交易的一部分。一个数字，旨在允许锁定时间的[未确认的交易](#Confirmations-ref)在序列化前更新；目前尚未使用，除非在交易中禁用[锁定时间](#nLockTime-ref)。
 
 **不要混淆**：Output index number / vout（后面的交易用来引用特定[输出](#TxOut-ref)的交易中的 0 索引号[输出](#TxOut-ref)）
-
-## 确认分数 | Confirmation Score
-
-**定义**：分数表明在[最佳区块链](#BlockChain-ref)上需要修改的[区块](#Block-ref)数，用来移除或修改特定的交易。确认的交易有一个或更高的确认分数。
-
-**同义词**：Confirmations, Confirmed transaction, Unconfirmed transaction
 
 ## 锁定时间 | Locktime
 
@@ -529,21 +676,6 @@ Bloom filter（通用计算机科学条目，比特币的布鲁姆过滤器是�
 
 **不要混淆**：[Public key](#PublicKey-ref)（从[私钥](#PrivateKey-ref)派生，非父密钥）
 
-## 子密钥 | Child Key
-
-**定义**：在 [HD 钱包](#HDWallet-ref)中，从[父密钥](#ParentKey-ref)派生的密钥。该密钥可以是[私钥](#PrivateKey-ref)，也可以是[公钥](#PublicKey-ref)，密钥的推导（派生）可能需要[链编码](#ChainCode-ref)。
-
-**同义词**：HD wallet child key, Child public key, Child private key
-
-**不要混淆**：[Public key](#PublicKey-ref)（从[私钥](#PrivateKey-ref)派生，非父密钥）
-
-## 链编码 | Chain Code
-
-**定义**：在 [HD 钱包](#HDWallet-ref)中，256 位熵被添加到公钥和[私钥](#PrivateKey-ref)中，来帮助它们生成安全的[子密钥](#ChildKey-ref)；
-[主链编码](#MasterChainCode-ref)通常派生自携带[主私钥](#MasterPrivateKey-ref)的种子。
-
-**同义词**：HD wallet chain code
-
 ## 主链代码和主私钥 | Master Chain Code And Private Key
 
 **定义**：在 [HD 钱包](#HDWallet-ref)中，主链代码和主私钥是从[根种子](#RootSeed-ref)派生的 2 个数据。
@@ -563,17 +695,6 @@ Bloom filter（通用计算机科学条目，比特币的布鲁姆过滤器是�
 **定义**：用于验证某笔交易是否包含在某个未下载完整的[区块](#Block-ref)中。该方法用于一些轻量级比特币客户端。
 
 **同义词**：Lightweight client（轻量级客户端）, Thin client
-
-## 分叉 | Fork
-
-**定义**：当 2 个或 2 个以上的[区块](#Block-ref)有相同的[高度](#BlockHeight-ref)时，[区块链](#BlockChain-ref)分叉。特别是发生在 2 个或 2 个以上的[矿工](#Miner-ref)几乎同时找到[区块](#Block-ref)时。也可以用于攻击。
-
-**同义词**：Accidental fork（意外的分叉）
-
-**不要混淆**：[Hard fork](#HardFork-ref)（[共识规则](#ConsensusRules-ref)的变化会破坏不升级[节点](#Node-ref)的安全性）,
-[Soft fork](#SoftFork-ref)（[共识规则](#ConsensusRules-ref)的变化会削弱不升级[节点](#Node-ref)的安全性）,
-Software fork（当一个或多个开发人员与其他开发人员永久地分开开发一份代码库）,
-Git fork（当一个或多个开发人员与其他开发人员临时分开开发一份代码库）
 
 ## 硬分叉 | Hard Fork
 
@@ -619,20 +740,6 @@ Git fork（当一个或多个开发人员与其他开发人员临时分开开发
 Software fork（当一个或多个开发人员与其他开发人员永久地分开开发一份代码库）,
 Git fork（当一个或多个开发人员与其他开发人员临时分开开发一份代码库）
 
-## 共识规则 | Consensus Rules
-
-**定义**：全[节点](#Node-ref)遵循与其他[节点](#Node-ref)相同的[共识](#Consensus-ref)的区块验证规则。
-
-**同义词**：Validation Rules（验证规则）
-
-**不要混淆**：[Consensus](#Consensus-ref)（当[节点](#Node-ref)遵循相同的共识规则就达成了共识）
-
-## 共识 | Consensus
-
-**定义**：当几个[节点](#Node-ref)（通常是网络上的大部分[节点](#Node-ref)）在它们本地验证过的[最佳区块链](#BlockChain-ref)中都有相同的[区块](#Block-ref)。
-
-**不要混淆**：Social consensus（社会共识，通常用于开发人员之间的讨论，以表明大多数人同意某个特定的方案）, [Consensus rules](#ConsensusRules-ref)（允许[节点](#Node-ref)维持共识的规则）
-
 ## 陈旧的区块 | Stale Block
 
 **定义**：成功挖出但没有包含在当前[最佳区块链](#BlockChain-ref)上的[区块](#Block-ref)，可能是因为在相同[高度](#BlockHeight-ref)的其他[区块](#Block-ref)首先扩展链。
@@ -677,12 +784,6 @@ Git fork（当一个或多个开发人员与其他开发人员临时分开开发
 
 **不要混淆**：[Testnet](#Testnet-ref)（模仿[主网](#Mainnet-ref)的全球测试环境）
 
-## DNS 种子 | DNS Seed
-
-**定义**：DNS 域名解析服务器返回比特币网络上的全[节点](#Node-ref)的 IP 地址集来帮助进行对端的发现。
-
-**不要混淆**：[HD wallet seeds](#RootSeed-ref)
-
 ## P2PKH 地址 | 2PKH Address
 
 **定义**：比特币[付款地址](#Address-ref)，包含哈希的[公钥](#PublicKey-ref)，允许付款人创建标准的支付给公钥哈希（P2PKH）的[公钥脚本](#ScriptPubKey-ref)。
@@ -717,12 +818,6 @@ Git fork（当一个或多个开发人员与其他开发人员临时分开开发
 
 **不要混淆**：[Signature script](#ScriptSig-ref)（为[公钥脚本](#ScriptPubKey-ref)提供数据的脚本，在 P2SH [输入](#TxIn-ref)中包含赎回脚本）
 
-## 操作码 | Opcode
-
-**定义**：来自比特币脚本语言的操作码在[公钥脚本](#ScriptPubKey-ref)或[签名脚本](#ScriptSig-ref)内部推送数据或执行函数。
-
-**同义词**：Data-pushing opcode, Non-data-pushing opcode
-
 ## 标准交易 | Standard Transaction
 
 **定义**：传递给比特币核心 IsStandard(-ref) 和 IsStandardTx(-ref) 测试的交易。只有标准交易通过运行默认比特币核心软件的[对端节点](#Node-ref)挖矿或广播。
@@ -736,14 +831,6 @@ Git fork（当一个或多个开发人员与其他开发人员临时分开开发
 **定义**：一种数据交换格式，旨在允许导出和导入单个[私钥](#PrivateKey-ref)，并带有指明其是否使用[压缩公钥](#CompressedPublicKey-ref)的标志。
 
 **不要混淆**：[Extended private keys](#PrivateKey-ref)（允许导入私钥的层次体系）
-
-## 压缩公钥 | Compressed Public Key
-
-**定义**：33 字节的[椭圆曲线公钥](#PublicKey-ref)而非 65 字节的未压缩[公钥](#PublicKey-ref)。
-
-## 双重花费 | Double Spend
-
-**定义**：使用与已经广播交易相同[输入](#TxIn-ref)的交易。当有一个交易已经记录在[区块链](#BlockChain-ref)上时，将被当作重复，欺骗或转换的尝试。
 
 ## 通过交易费代替 | Replace-by-Fee, RBF
 
@@ -829,31 +916,11 @@ Git fork（当一个或多个开发人员与其他开发人员临时分开开发
 
 **不要混淆**：Inv message（传输库存的 P2P 消息）
 
-## 找零 | Change
-
-**定义**：交易的[输出](#TxIn-ref)把[聪](#Satoshis-ref)返给付款人，从而防止过多的[输入](#TxIn-ref)转到[交易费](#TransactionFee-ref)中。
-
-**同义词**：Change address, Change output
-
-**不要混淆**：Address reuse（地址重用）
-
 ## 代币 | Token
 
 **定义**：代币是驻留在现存[区块链](#BlockChain-ref)中的具有其基本代码的可编程数字资产。代币有助于促进去中心化应用的创建。
 
 **不要混淆**：[Bitcoins](#Satoshis-ref), [Satoshis](#Satoshis-ref), Security token, [Denominations](#Satoshis-ref)
-
-## CompactSize 无符号整数 | CompactSize Unsigned Integer
-
-**定义**：一种长度可变的整数，常用于比特币 P2P 协议和比特币序列化的数据结构。
-
-**同义词**：CompactSize
-
-**不要混淆**：VarInt（比特币核心用于本地数据存储的数据类型）, Compact（用于[区块头](#BlockHeader-ref)中的[难度对应值 nBits](#Target-ref) 的数据类型）
-
-## 托管合同 | Escrow Contract
-
-**定义**：一种交易，付款人和收款人把资金放入 2 比 2（或其他的 [m 比 n](#M-of-N-ref)）的[多签输出](#M-of-N-ref)中，均不会花费资金，直到都满足某些外部条件。
 
 ## 签名哈希 | Signature Hash
 
@@ -870,12 +937,6 @@ Git fork（当一个或多个开发人员与其他开发人员临时分开开发
 **同义词**：Transaction malleability（交易延展性）
 
 **不要混淆**：[BIP62](https://github.com/bitcoin/bips/blob/master/bip-0062.mediawiki)（可选的新交易版本的提议，减少了常见交易的已知变化集）
-
-## 扩展的密钥 | Extended Key
-
-**定义**：在 [HD 钱包](#HDWallet-ref)的情况中，使用[链编码](#ChainCode-ref)扩展的[公钥](#PublicKey-ref)或[私钥](#PrivateKey-ref)允许它们导出[子密钥](#ChildKey-ref)。
-
-**同义词**：HD wallet extended key, Public extended key, Private extended key
 
 ## 硬化的扩展密钥 | Hardened Extended Key (HD Wallets-ref)
 
@@ -900,14 +961,6 @@ Git fork（当一个或多个开发人员与其他开发人员临时分开开发
 **定义**：签名对应[输入](#TxIn-ref)（具有相同索引值）的[输出](#TxOut-ref)的[签名哈希](#Sighash-ref)类型，该[输入](#TxIn-ref)，和任意其他[输入](#TxIn-ref)的一部分。允许其他[输出](#TxOut-ref)和其他[输入](#TxIn-ref)[序列号](#Sequence-ref)的修改。
 
 **不要混淆**：[SIGHASH_ANYONECANPAY](#SIGHASH_ANYONECANPAY-ref)（仅签名该单个[输入](#TxIn-ref)的[签名哈希](#Sighash-ref)类型的标志）
-
-## 空数据交易 | Null Data (OP_RETURN-ref) Transaction
-
-**定义**：在比特币核心 0.9.0 版或更新的版本中，中继和挖矿的交易类型，添加任意数据到可证明不可花费的[公钥脚本](#ScriptPubKey-ref)，全[节点](#Node-ref)不必存储在它们的 [UTXO](#UTXO-ref) 数据库中。
-
-**同义词**：Data carrier transaction
-
-**不要混淆**：[OP_RETURN](#OP_RETURN-ref)（用于 OP_RETURN 交易一个[输出](#TxOut-ref)的[操作码](#Opcode-ref)）
 
 ## 未花费的交易输出 | Unspent Transaction Output, UTXO
 
