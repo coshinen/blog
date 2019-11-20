@@ -10,9 +10,9 @@ tags: 区块链 比特币术语表 译文
 这是一个专业术语汇编。普通用户应该使用[词汇表页面](/blog/2018/10/bitcoin-vocabulary.html)。
 
 > * 5
->   * [百分之 51 攻击（51% Attack）](#百分之-51-攻击--51-percent-attack)
+>   * [百分之 51 攻击（51% attack）](#百分之-51-攻击--51-percent-attack)
 > * A
->   * [地址（Payment Addresses）](#地址--address)
+>   * [地址（Payment addresses）](#地址--address)
 >   * [祖先挖矿（Ancestor mining）](#祖先挖矿--ancestor-mining)
 >   * [归档的节点（Archival node）](#归档的节点--archival-node)
 > * B
@@ -46,7 +46,7 @@ tags: 区块链 比特币术语表 译文
 >   * [已确认的交易（Confirmed transaction）](#确认数--confirmations)
 >   * [共识（Consensus）](#共识--consensus)
 >   * [共识规则（Consensus rules）](#共识规则--consensus-rules)
->   * [CPFP](#祖先挖矿--ancestor-mining)
+>   * [CPFP（Child Pays For Parent）](#祖先挖矿--ancestor-mining)
 > * D
 >   * [数据传输交易（Data carrier transaction）](#数据传输交易--data-carrier-transaction)
 >   * [数据推送操作码（Data-pushing opcode）](#操作码--opcode)
@@ -65,47 +65,47 @@ tags: 区块链 比特币术语表 译文
 >   * [创造交易（Generation transaction）](#创币交易--coinbase-transaction)
 >   * [创世区块（Genesis block）](#0-号区块--block-0)
 > * H
->   * [硬分叉](#硬分叉--Hard-fork)
->   * [Hardened extended key](#Hardened-extended-key)
->   * [HD 协议](#HD-协议--HD-protocol)
->   * [HD 钱包](#HD-钱包--HD-wallet)
->   * [HD 钱包种子](#HD-钱包种子--HD-wallet-seed)
+>   * [硬分叉（Hard fork）](#硬分叉--hard-fork)
+>   * [加固的扩展密钥（Hardened extended key）](#加固的扩展密钥--hardened-extended-key)
+>   * [HD 协议（HD protocol）](#hd-协议--hd-protocol)
+>   * [HD 钱包（HD wallet）](#hd-协议--hd-protocol)
+>   * [HD 钱包种子（HD wallet seed）](#hd-钱包种子--hd-wallet-seed)
 >   * [头部（Header）](#区块头--block-header)
 >   * [区块头链（Header chain）](#区块头链--header-chain)
->   * [区块头初次同步](#区块头初次同步--Headers-first-sync)
+>   * [区块头初次同步（Headers-first sync）](#区块头初次同步--headers-first-sync)
 >   * [高度（Height）](#区块高度--block-height)
 >   * [高优先级交易（High-priority transaction）](#免费的交易--free-transaction)
 > * I
->   * [IBD](#IBD)
->   * [初始区块下载](#初始区块下载--Initial-block-download)
->   * [输入](#输入--Input)
->   * [内部字节序](#内部字节序--Internal-byte-order)
->   * [库存](#库存--Inventory)
+>   * [IBD（Initial Block Download）](#初始化区块下载--initial-block-download)
+>   * [初始化区块下载（Initial block download）](#初始化区块下载--initial-block-download)
+>   * [输入（Input）](#交易输入--transaction-input)
+>   * [内部字节序（Internal byte order）](#内部字节序--internal-byte-order)
+>   * [库存（Inventory）](#库存--inventory)
 > * L
->   * [轻量客户端](#轻量客户端--Lightweight-client)
->   * [Locktime](#Locktime)
+>   * [轻量级客户端（Lightweight client）](#简单支付验证--simplified-payment-verification)
+>   * [锁定时间（Locktime）](#锁定时间--locktime)
 > * M
->   * [主网](#主网--Mainnet)
+>   * [主网（Mainnet）](#主网--mainnet)
 >   * [大多数攻击（Majority attack）](#百分之-51-攻击--51-percent-attack)
->   * [MASF](#MASF)
->   * [Master chain code](#Master-chain-code)
->   * [Master private key](#Master-private-key)
->   * [最大区块大小](#最大区块大小--Maximum-Block-Size)
->   * [默克尔区块](#默克尔区块--Merkle-block)
->   * [默克尔根](#默克尔根--Merkle-root)
->   * [默克尔树](#默克尔树--Merkle-tree)
->   * [消息头](#消息头--Message-header)
->   * [矿工](#矿工--Miner)
->   * [矿工激活的软分叉](#矿工激活的软分叉--Miner-activated-soft-fork)
->   * [矿工费](#矿工费--Miners-fee)
->   * [最小中继费](#最小中继费--Minimum-relay-fee)
->   * [挖矿](#挖矿--Mining)
+>   * [MASF（Miner Activated Soft Fork）](#矿工激活的软分叉--miner-activated-soft-fork)
+>   * [主链代码（Master chain code）](#主链代码--master-chain-code)
+>   * [主私钥（Master private key）](#主链代码--master-chain-code)
+>   * [最大区块大小（Maximum block size）](#最大区块大小--maximum-block-size)
+>   * [默克尔区块（Merkle block）](#默克尔区块--merkle-block)
+>   * [默克尔树根（Merkle root）](#默克尔树根--merkle-root)
+>   * [默克尔树（Merkle tree）](#默克尔树--merkle-tree)
+>   * [消息头（Message header）](#消息头--message-header)
+>   * [矿工（Miner）](#矿工--miner)
+>   * [矿工激活的软分叉（Miner activated soft fork）](#矿工激活的软分叉--miner-activated-soft-fork)
+>   * [矿工费（Miners fee）](#交易费--transaction-fee)
+>   * [最小中继费（Minimum relay fee）](#中继费--relay-fee)
+>   * [挖矿（Mining）](#矿工--miner)
 >   * [多签（Multisig）](#足够的多签--bare-multisig)
 > * N
->   * [难度对应值](#难度对应值--nBits)
+>   * [难度对应值（nBits）](#难度对应值--nBits)
 >   * [网络难度（Network difficulty）](#难度--difficulty)
->   * [网络魔数](#网络魔数--Network-magic)
->   * [nLockTime](#nLockTime)
+>   * [网络魔数（Network magic）](#网络魔数--Network-magic)
+>   * [锁定时间（nLockTime）](#锁定时间--locktime)
 >   * [节点（Node）](#归档的节点--archival-node)
 >   * [非数据推送操作码（Non-data-pushing opcode）](#操作码--opcode)
 >   * [空数据交易（Null data transaction）](#数据传输交易--data-carrier-transaction)
@@ -113,9 +113,9 @@ tags: 区块链 比特币术语表 译文
 >   * [OP_RETURN transaction](#OP_RETURN transaction)
 >   * [操作码（Opcode）](#操作码--opcode)
 >   * [Opt-in replace by fee](#Opt-in-replace-by-fee)
->   * [孤儿区块](#孤儿区块--Orphan-block)
+>   * [孤儿区块（Orphan block）](#孤儿区块--Orphan-block)
 >   * [Outpoint](#Outpoint)
->   * [输出](#输出--Output)
+>   * [输出（Output）](#输出--Output)
 > * P
 >   * [P2PKH 地址](#P2PKH-地址--P2PKH-address)
 >   * [P2PKH 输出](#P2PKH-输出--P2PKH-output)
@@ -143,7 +143,7 @@ tags: 区块链 比特币术语表 译文
 >   * [RedeemScript](#RedeemScript)
 >   * [回归测试模式](#回归测试模式--Regression-test-mode)
 >   * [回归测试网](#回归测试网--Regtest)
->   * [中继费](#中继费--Relay-fee)
+>   * [中继费（Relay fee）](#中继费--relay-fee)
 >   * [Replace by fee](#Replace-by-fee)
 >   * [根种子](#根种子--Root-seed)
 >   * [RPC 字节序](#RPC-字节序--RPC-byte-order)
@@ -151,42 +151,42 @@ tags: 区块链 比特币术语表 译文
 >   * [聪（Satoshis）](#比特币--bitcoins)
 >   * [ScriptPubKey](#ScriptPubKey)
 >   * [ScriptSig](#ScriptSig)
->   * [序列号](#序列号--Sequence-number)
->   * [序列化的区块](#序列化的区块--Serialized-transaction)
+>   * [序列号（Sequence number）](#序列号--Sequence-number)
+>   * [序列化的区块（Serialized transaction）](#序列化的区块--Serialized-transaction)
 >   * [Sighash](#Sighash)
 >   * [SIGHASH_ALL](#SIGHASH_ALL)
 >   * [SIGHASH_ANYONECANPAY](#SIGHASH_ANYONECANPAY)
 >   * [SIGHASH_NONE](#SIGHASH_NONE)
 >   * [SIGHASH_SINGLE](#SIGHASH_SINGLE)
->   * [签名](#签名--Signature)
->   * [签名哈希](#签名哈希--Signature-hash)
->   * [签名脚本](#签名脚本--Signature-script)
->   * [简单交易验证](#简单交易验证--Simplified-Payment-Verification)
->   * [软分叉](#软分叉--Soft-fork)
+>   * [签名（Signature）](#签名--Signature)
+>   * [签名哈希（Signature hash）](#签名哈希--Signature-hash)
+>   * [签名脚本（Signature script）](#签名脚本--Signature-script)
+>   * [简单支付验证（Simplified payment verification）](#简单支付验证--simplified-payment-verification)
+>   * [软分叉（Soft fork）](#软分叉--Soft-fork)
 >   * [SPV](#SPV)
 >   * [Stale block](#Stale-block)
->   * [标准交易](#标准交易--Standard-Transaction)
->   * [起始字符串](#起始字符串--Start-string)
+>   * [标准交易（Standard transaction）](#标准交易--Standard-Transaction)
+>   * [起始字符串（Start string）](#起始字符串--Start-string)
 > * T
 >   * [Target](#Target)
->   * [公共测试网](#公共测试网--Testnet)
->   * [Thin client](#Thin-client)
+>   * [公共测试网（Testnet）](#公共测试网--Testnet)
+>   * [瘦客户端（Thin client）](#简单支付验证--simplified-payment-verification)
 >   * [Token](#Token)
->   * [交易费](#交易费--Transaction-fee)
+>   * [交易费（Transaction fee）](#交易费--transaction-fee)
 >   * [Transaction malleability](#Transaction-malleability)
 >   * [Transaction mutability](#Transaction-mutability)
->   * [交易号](#交易号--Txid)
->   * [交易输入](#交易输入--TxIn)
->   * [交易输出](#交易输出--TxOut)
+>   * [交易号（Txid）](#交易号--Txid)
+>   * [交易输入（TxIn）](#交易输入--transaction-input)
+>   * [交易输出（TxOut）](#交易输出--TxOut)
 > * U
 >   * [UASF](#UASF)
 >   * [未确认的交易（Unconfirmed transaction）](#确认数--confirmations)
->   * [用户激活的软分叉](#用户激活的软分叉--User-activated-soft-fork)
->   * [未花费输出](#未花费输出--UTXO)
+>   * [用户激活的软分叉（User activated soft fork）](#用户激活的软分叉--User-activated-soft-fork)
+>   * [未花费输出（UTXO）](#未花费输出--UTXO)
 > * W
->   * [钱包](#钱包--Wallet)
->   * [钱包导入格式](#钱包导入格式--Wallet-Import-Format)
->   * [Watch-only 地址](#Watch-only-地址--Watch-only-address)
+>   * [钱包（Wallet）](#钱包--Wallet)
+>   * [钱包导入格式（Wallet import format）](#钱包导入格式--Wallet-Import-Format)
+>   * [Watch-only 地址（Watch-only address）](#Watch-only-地址--Watch-only-address)
 >   * [WIF](#WIF)
 
 ## 百分之 51 攻击 | 51 percent attack
@@ -195,7 +195,7 @@ tags: 区块链 比特币术语表 译文
 控制大多数网络哈希率的某人修改交易历史并阻止新交易确认的能力。
 
 **同义词：**
-51% 攻击（51% Attack），大多数哈希率攻击（Majority Hash Rate attack）
+51% 攻击（51% attack），大多数哈希率攻击（Majority hash rate attack）
 
 ## 地址 | Address
 
@@ -204,7 +204,7 @@ tags: 区块链 比特币术语表 译文
 目前用户交换支付信息的最常见方式。
 
 **同义词：**
-付款地址（Payment Addresses）
+付款地址（Payment addresses）
 
 **不要混淆：**
 IP 地址（IP address）
@@ -215,7 +215,7 @@ IP 地址（IP address）
 [挖矿](#挖矿--miner)选择的交易不仅基于它们的交易费，还基于它们祖先（父母）交易和后代（孩子）交易的交易费。
 
 **同义词：**
-孩子为父母付钱（Child Pays For Parent，CPFP）
+孩子为父母付钱（Child pays for parent，CPFP）
 
 **不要混淆：**
 通过费用替代（[Replace by Fee](#RBF)，[RBF](#RBF)）
@@ -237,7 +237,7 @@ IP 地址（IP address）
 [公钥脚本](#ScriptPubKey)提供给 n 个[公钥](#PublicKey)并需要对应的[签名脚本](#ScriptSig)提供对应提供[公钥](#PublicKey)的最少 m 个[签名](#Signature)。
 
 **同义词：**
-多签（Multisig），N 分之 M 多签（M-of-N Multisig），多签输出（Multisig Output）
+多签（Multisig），N 分之 M 多签（M-of-N multisig），多签输出（Multisig output）
 
 **不要混淆：**
 包含在 P2SH 里的多签脚本（[P2SH multisig](#P2SH)），需要多个[签名](#Signature)而不用 OP_CHECKMULTISIG 或 OP_CHECKMULTISIGVERIFY 的高级脚本
@@ -249,7 +249,7 @@ IP 地址（IP address）
 也用于比特币的其他部分，例如用于 WIP 格式备份编码的[私钥](#PrivateKey)。与其他的 base58 实现不同。
 
 **同义词：**
-比特币地址编码（Bitcoin Address Encoding）
+比特币地址编码（Bitcoin address encoding）
 
 **不要混淆：**
 P2PKH 地址（[P2PKH address](#P2PKH)），P2SH 地址（[P2SH address](#P2SH)），IP 地址（IP address）
@@ -305,7 +305,7 @@ P2PKH 地址（[P2PKH address](#P2PKH)），P2SH 地址（[P2SH address](#P2SH)�
 比特币[区块链](#BlockChain)上的第一个[区块](#Block)。
 
 **同义词：**
-创世区块（Genesis Block）
+创世区块（Genesis block）
 
 **不要混淆：**
 创币交易，[区块](#区块--Block)上的第一笔交易（[Generation transaction](#创币交易--Coinbase-Transaction)）
@@ -408,7 +408,7 @@ HD 钱包子密钥（HD wallet child key），公共子密钥（Child public key
 该区块总是通过[矿工](#矿工--miner)创建，它包含一个[创币交易字段](#创币交易字段--coinbase)。
 
 **同义词：**
-创造交易（Generation Transaction）
+创造交易（Generation transaction）
 
 **不要混淆：**
 创币交易字段（[Coinbase](#创币交易字段--coinbase)）（创币交易的一部分）
@@ -463,7 +463,7 @@ Social consensus（社会共识，通常用于开发人员之间的讨论，以�
 在比特币核心 0.9.0 版或更新的版本中，中继和挖矿的交易类型，添加任意数据到可证明不可花费的[公钥脚本](#ScriptPubKey)，全[节点](#Node)不必存储在它们的 [UTXO](#UTXO) 数据库中。
 
 **同义词：**
-空数据交易（Null Data Transaction）
+空数据交易（Null data transaction）
 
 **不要混淆：**
 [OP_RETURN](#OP_RETURN)（用于 OP_RETURN 交易一个[输出](#TxOut)的[操作码](#Opcode)）
@@ -540,6 +540,222 @@ Git fork（当一个或多个开发人员与其他开发人员临时分开开发
 **同义词：**
 高优先级交易（High-priority transaction），Free Tx（免费的交易，不含交易费）
 
+## 硬分叉 | Hard fork
+
+**定义：**
+[区块链](#BlockChain)上永久性的分叉，通常发生在未升级的[节点](#Node)不能验证通过遵守新的[共识规则](#ConsensusRules)的升级的[节点](#Node)创建的[区块](#Block)时。
+
+**同义词：**
+硬分叉变化（Hard-forking change）
+
+**不要混淆：**
+[Fork](#Fork)（所有[节点](#Node)遵循相同的[共识规则](#ConsensusRules)的常规的分叉，一旦一条链的[工作量证明](#POW)高于另一条，该分叉被解决）,
+[Soft fork](#SoftFork)（[区块链](#BlockChain)上由未升级的[节点](#Node)不遵循新的[共识规则](#ConsensusRules)导致的临时分叉）,
+Software fork（当一个或多个开发人员与其他开发人员永久地分开开发一份代码库）,
+Git fork（当一个或多个开发人员与其他开发人员临时分开开发一份代码库）
+
+## 加固的扩展密钥 | Hardened extended key
+
+**定义：**
+[HD 钱包扩展密钥](#ExtendedKey)的一个变体，只有硬化的扩展私钥才能生成[子密钥](#ChildKey)。
+防止[链代码](#ChainCode)加任何[私钥](#PrivateKey)的组合使整个[钱包](#Wallet)处于风险中。
+
+## HD 协议 | HD protocol
+
+**定义：**
+分层确定性（HD）密钥创建和传输协议（BIP32），允许从[父密钥](#ParentKey)的层次创建[子密钥](#ChildKey)。
+使用 HD 协议的[钱包](#Wallet)称为 HD 钱包。
+
+**同义词：**
+HD 钱包（HD wallet），BIP32
+
+## HD 钱包种子 | HD wallet seed
+
+**定义：**
+用作为 [HD 钱包](#HDWallet)生成[主私钥](#MasterChainCode)和[主链代码](#MasterChainCode)的种子的潜在短值。
+
+**同义词：**
+根种子（Root seed）
+
+**不要混淆：**
+Mnemonic code / mnemonic seed（助记代码/种子，二进制根种子格式化为单词，使人们更容易记录和记忆）
+
+## 区块头初次同步 | Headers-first sync
+
+**定义：**
+通过在下载整个[区块](#Block)前下载[区块头](#BlockHeader)来同步[区块链](#BlockChain)。
+
+**同义词：**
+头部优先（Headers-first）
+
+**不要混淆：**
+区块初次同步（[Blocks-first sync](#Blocks-First)）（直接下载整个[区块](#Block)，不首先获取它们的[头](#BlockHeader)）
+
+## 初始化区块下载 | Initial block download
+
+**定义：**
+用于通过新[节点](#Node)（或长时间离线的[节点](#Node)）下载大量的[区块](#Block)来赶上[最佳区块连](#BlockChain)的链尖的过程。
+
+**同义词：**
+IBD
+
+**不要混淆：**
+[Blocks-first sync](#Blocks-First)（同步包含获得任意数量的[区块](#Block)；IBD 仅用于大量[区块](#Block)）
+
+## 交易输入 | Transaction input
+
+**定义：**
+一笔交易的输入包含 3 个字段：[输出点](#Outpoint-ref)，[签名脚本](#ScriptSig-ref)，和[序列号](#Sequence-ref)。[输出点](#Outpoint-ref)引用前一笔[交易输出](#TxOut-ref)且[签名脚本](#ScriptSig-ref)允许花费它。
+
+**同义词：**
+输入（Input），TxIn
+
+## 内部字节序 | Internal byte order
+
+**定义：**
+显示为字符串的散列摘要的标准字节序—相同的格式用于[序列化的区块](#SerializedBlock)和交易。
+
+**不要混淆：**
+RPC 字节序（[RPC byte order](#RPCByteOrder)）（反转的字节序）
+
+## 库存 | Inventory
+
+**定义：**
+一种数据类型标识和一个散列值；
+用于识别通过比特币 P2P 网络下载的交易和可用的[区块](#Block)。
+
+**同义词：**
+区块或交易库存（Block or transaction inventory）
+
+**不要混淆：**
+库存消息（Inv message）（传输库存的 P2P 消息）
+
+## 简单支付验证 | Simplified payment verification
+
+**定义：**
+用于验证某笔交易是否包含在某个未下载完整的[区块](#Block)中。
+该方法用于一些轻量级比特币客户端。
+
+**同义词**：
+轻量级客户端（Lightweight client），瘦客户端（Thin client），SPV
+
+## 锁定时间 | Locktime
+
+**定义：**
+交易的一部分用于表明交易可能被添加到[区块链](#BlockChain)的最早时间或最早的[区块](#Block)。
+
+**同义词：**
+锁定时间（nLockTime）
+
+## 主网 | Mainnet
+
+**定义：**
+比特币交易的原始和主要网络，其中的[聪](#Satoshis)有真正经济价值。
+
+**同义词：**
+比特币主网（Bitcoin main network）
+
+**不要混淆：**
+公共测试网（[Testnet](#Testnet)）（非常类似主网的开放网络，其中的[聪](#Satoshis)没有价值），回归测试网（[Regtest](#Regtest)）（类似于[测试网](#Testnet)的私有测试[节点](#Node)）
+
+## 矿工激活的软分叉 | Miner activated soft fork
+
+**定义：**
+通过[矿工](#Miner)信号激活的[软分叉](#SoftFork)。
+
+**同义词：**
+MASF
+
+**不要混淆：**
+[User Activated Soft Fork](#UASF)（通过标记日或[节点](#Node)强制而非[矿工](#Miner)信号激活的i[软分叉](#SoftFork)），
+[Fork](#Fork)（所有[节点](#Node)遵循相同的[共识规则](#ConsensusRules)的常规的分叉，一旦一条链的[工作量证明](#POW)高于另一条，该分叉被解决），
+[Hard fork](#HardFork)（[区块链](#BlockChain)上因未升级的[节点](#Node)不遵循新的[共识规则](#ConsensusRules)导致的永久性的分叉），
+[Soft fork](#SoftFork)（[区块链](#BlockChain)上由未升级的[节点](#Node)不遵循新的[共识规则](#ConsensusRules)导致的临时分叉），
+Software fork（当一个或多个开发人员与其他开发人员永久地分开开发一份代码库），
+Git fork（当一个或多个开发人员与其他开发人员临时分开开发一份代码库）
+
+## 主链代码 | Master chain code
+
+**定义：**
+在 [HD 钱包](#HDWallet)中，主链代码和主私钥是从[根种子](#RootSeed)派生的 2 个数据。
+
+**同义词：**
+主私钥（Master private key）
+
+## 最大区块大小 | Maximum block size
+
+**定义：**
+[共识规则](#ConsensusRules)允许一个[区块](#Block)的以字节为单位的最大尺寸。
+当前[区块](#Block)大小限制是 1,000,000 字节。
+
+**同义词：**
+区块大小限制（Block size limit）
+
+**不要混淆：**
+区块（[Block](#Block)），区块链（[Blockchain](#BlockChain)），区块链大小（Blockchain size）
+
+## 默克尔区块 | Merkle block
+
+**定义：**
+连接匹配[布鲁姆过滤器](#BloomFilter)的交易到区块的[默克尔树根](#MerkleRoot)的部分[默克尔树](#MerkleTree)。
+
+**不要混淆**：
+默克尔区块消息（MerkleBlock message）（传输默尔克区块的 P2P 协议消息）
+
+## 默克尔树根 | Merkle root
+
+**定义**：
+[默克尔树](#MerkleTree)的根节点，树中所有哈希对的后代。
+[区块头](#BlockHeader)必须包含一个该[区块](#Block)中所有交易的有效的默克尔树根。
+
+**不要混淆**：
+默克尔树（[Merkle tree](#MerkleTree)）（默克尔树根是根节点的树），默克尔区块（[Merkle block](#MerkleBlock)）（连接根到一笔或多笔叶子交易的部分默尔克分支）
+
+## 默克尔树 | Merkle tree
+
+**定义：**
+通过散列配对的数据（叶子）构建的树，然后对结果进行配对和散列直到剩余单个散列值，即[默尔克树根](#MerkleRoot)。
+在比特币中，叶子几乎总是来自单个[区块](#Block)的交易。
+
+**不要混淆：**
+部分默克尔分支（Partial merkle branch）（连接一个或多个叶子到根的分支），默克尔区块（[Merkle block](#MerkleBlock)）（连接一笔或多笔交易从单个[区块](#Block)到区块默尔克根的部分默尔克分支）
+
+## 消息头 | Message header
+
+**定义：**
+比特币 P2P 网络上所有消息前缀的 4 个头部字段。
+
+## 矿工 | Miner
+
+**定义：**
+挖矿是创建有效的比特币[区块](#区块--Block)的行为，需要验证[工作量证明](#工作量证明--POW)，且矿工是挖矿的设备或拥有那些设备的人。
+
+**同义词：**
+挖矿（Mining）
+
+## 交易费 | Transaction fee
+
+**定义：**
+一笔交易的全部[输入](#输入--TxIn)减去全部[输出](#输出--TxOut)值的剩余金额；
+该费用支付给包含该交易到[区块](#区块--Block)的[矿工](#矿工--Miner)。
+
+**同义词：**
+矿工费（Miners fee）
+
+**不要混淆：**
+最小中继费（[Minimum relay fee](#MinimumRelayFee)）（接收一笔交易到内存池并通过比特币核心[节点](#节点--Node)中继必须支付的最低费用）
+
+## 中继费 | Relay fee
+
+**定义：**
+最小[交易费](#交易费--Transaction-Fee)，用于中继到其他[节点](#节点--Node)的交易必须支付给[全节点](#全节点--Node)的费用（如果它不是[高优先级交易](#高优先级交易--FreeTx)）。并没有最低中继费—每个[节点](#节点--Node)选择它自己的决策。
+
+**同义词：**
+最小中继费（Minimum relay fee）
+
+**不要混淆：**
+交易费（[Transaction fee](#交易费--Transaction-Fee)）（最小中继费是过滤过低[交易费](#交易费--Transaction-Fee)交易的决策选项）
+
 ## 序列化区块 | Serialized Block
 
 **定义**：2 进制格式表示的完整的[区块](#区块--Block)—相同的格式用于计算总[区块](#区块--Block)字节大小；常用 16 进制表示。
@@ -557,34 +773,6 @@ Git fork（当一个或多个开发人员与其他开发人员临时分开开发
 **同义词**：Target, Target threshold（阈值）
 
 **不要混淆**：[Difficulty](#难度--Difficulty)（一个数字，用于衡量寻找[区块头](#区块头--Block-Header)哈希的[难度](#难度--Difficulty)，相对于最容易目标值寻找[区块头](#区块头--Block-Header)哈希的[难度](#难度--Difficulty)）
-
-## 挖矿 | Mining
-
-**定义**：挖矿是创建有效的比特币[区块](#区块--Block)的行为，需要验证[工作量证明](#工作量证明--POW)，且矿工是挖矿的设备或拥有那些设备的人。
-
-**同义词**：Miner
-
-## 交易费 | Transaction Fee
-
-**定义**：一笔交易的全部[输入](#输入--TxIn)减去全部[输出](#输出--TxOut)值的剩余金额；该费用支付给包含该交易到[区块](#区块--Block)的[矿工](#矿工--Miner)。
-
-**同义词**：Miners fee
-
-**不要混淆**：[Minimum relay fee](#MinimumRelayFee)（接收一笔交易到内存池并通过比特币核心[节点](#节点--Node)中继必须支付的最低费用）
-
-## 最小中继费 | Minimum Relay Fee
-
-**定义**：最小[交易费](#交易费--Transaction-Fee)，用于中继到其他[节点](#节点--Node)的交易必须支付给[全节点](#全节点--Node)的费用（如果它不是[高优先级交易](#高优先级交易--FreeTx)）。并没有最低中继费—每个[节点](#节点--Node)选择它自己的决策。
-
-**同义词**：Relay fee
-
-**不要混淆**：[Transaction fee](#交易费--Transaction-Fee)（最小中继费是过滤过低[交易费](#交易费--Transaction-Fee)交易的决策选项）
-
-## 交易输入 | Transaction Input
-
-**定义**：一笔交易的输入包含 3 个字段：[输出点](#Outpoint-ref)，[签名脚本](#ScriptSig-ref)，和[序列号](#Sequence-ref)。[输出点](#Outpoint-ref)引用前一笔[交易输出](#TxOut-ref)且[签名脚本](#ScriptSig-ref)允许花费它。
-
-**同义词**：Input, TxIn
 
 ## 交易输出 | Transaction Output
 
@@ -620,12 +808,6 @@ Git fork（当一个或多个开发人员与其他开发人员临时分开开发
 
 **不要混淆**：Output index number / vout（后面的交易用来引用特定[输出](#TxOut-ref)的交易中的 0 索引号[输出](#TxOut-ref)）
 
-## 锁定时间 | Locktime
-
-**定义**：交易的一部分用于表明交易可能被添加到[区块链](#BlockChain-ref)的最早时间或最早的[区块](#Block-ref)。
-
-**同义词**：nLockTime
-
 ## 公钥脚本 | Pubkey Script
 
 **定义**：包含在[输出](#TxOut-ref)中的脚本，用于设置必须满足用于花费的[聪](#Satoshis-ref)。在签名脚本中提供满足条件的数据。[公钥脚本](#ScriptPubKey-ref)在代码中被称为[脚本公钥 "scriptPubKey"](#ScriptPubKey-ref)。
@@ -656,12 +838,6 @@ Git fork（当一个或多个开发人员与其他开发人员临时分开开发
 
 **不要混淆**：[Private key](#PrivateKey-ref)（派生出公钥的数据）, [Parent key](#ParentKey-ref)（用于创建[子密钥](#ChildKey-ref)的密钥，不一定是公钥）
 
-## HD 协议 | HD Protocol
-
-**定义**：分层确定性（HD）密钥创建和传输协议（BIP32），允许从[父密钥](#ParentKey-ref)的层次创建[子密钥](#ChildKey-ref)。使用 HD 协议的[钱包](#Wallet-ref)称为 HD 钱包。
-
-**同义词**：HD wallet, BIP32
-
 ## 钱包 | Wallet
 
 **定义**：存储[私钥](#PrivateKey-ref)和[区块链](#BlockChain-ref)镜像的软件（有时作为执行处理的服务器的客户端），允许用户花费和接收[聪](#Satoshis-ref)。
@@ -676,37 +852,6 @@ Git fork（当一个或多个开发人员与其他开发人员临时分开开发
 
 **不要混淆**：[Public key](#PublicKey-ref)（从[私钥](#PrivateKey-ref)派生，非父密钥）
 
-## 主链代码和主私钥 | Master Chain Code And Private Key
-
-**定义**：在 [HD 钱包](#HDWallet-ref)中，主链代码和主私钥是从[根种子](#RootSeed-ref)派生的 2 个数据。
-
-**同义词**：Master chain code, Master private key
-
-## HD 钱包种子 | HD Wallet Seed
-
-**定义**：用作为 [HD 钱包](#HDWallet-ref)生成[主私钥](#MasterChainCode-ref)和[主链代码](#MasterChainCode-ref)的种子的潜在短值。
-
-**同义词**：Root seed
-
-**不要混淆**：Mnemonic code / mnemonic seed（助记代码/种子，二进制根种子格式化为单词，使人们更容易记录和记忆）
-
-## 简单支付验证 | SPV, Simplified Payment Verification
-
-**定义**：用于验证某笔交易是否包含在某个未下载完整的[区块](#Block-ref)中。该方法用于一些轻量级比特币客户端。
-
-**同义词**：Lightweight client（轻量级客户端）, Thin client
-
-## 硬分叉 | Hard Fork
-
-**定义**：[区块链](#BlockChain-ref)上永久性的分叉，通常发生在未升级的[节点](#Node-ref)不能验证通过遵守新的[共识规则](#ConsensusRules-ref)的升级的[节点](#Node-ref)创建的[区块](#Block-ref)时。
-
-**同义词**：Hard-forking change（硬分叉变化）
-
-**不要混淆**：[Fork](#Fork-ref)（所有[节点](#Node-ref)遵循相同的[共识规则](#ConsensusRules-ref)的常规的分叉，一旦一条链的[工作量证明](#POW-ref)高于另一条，该分叉被解决）,
-[Soft fork](#SoftFork-ref)（[区块链](#BlockChain-ref)上由未升级的[节点](#Node-ref)不遵循新的[共识规则](#ConsensusRules-ref)导致的临时分叉）,
-Software fork（当一个或多个开发人员与其他开发人员永久地分开开发一份代码库）,
-Git fork（当一个或多个开发人员与其他开发人员临时分开开发一份代码库）
-
 ## 软分叉 | Soft Fork
 
 **定义**：软分叉是比特币协议的改变，其中只有之前有效的[区块](#Block-ref)/交易变得无效了。因为旧的[节点](#Node-ref)将仍认为新[区块](#Block-ref)是有效的，所以软分叉是向后兼容的。
@@ -717,17 +862,6 @@ Git fork（当一个或多个开发人员与其他开发人员临时分开开发
 [Hard fork](#HardFork-ref)（[区块链](#BlockChain-ref)上因未升级的[节点](#Node-ref)不遵循新的[共识规则](#ConsensusRules-ref)导致的永久性的分叉）,
 Software fork（当一个或多个开发人员与其他开发人员永久性地分开开发一份代码）,
 Git fork（当一个或多个开发人员与其他开发人员临时分开开发一份代码）
-
-## 矿工激活的软分叉 | Miner Activated Soft Fork, MASF
-
-**定义**：通过[矿工](#Miner-ref)信号激活的[软分叉](#SoftFork-ref)。
-
-**不要混淆**：[User Activated Soft Fork](#UASF-ref)（通过标记日或[节点](#Node-ref)强制而非[矿工](#Miner-ref)信号激活的i[软分叉](#SoftFork-ref)）,
-[Fork](#Fork-ref)（所有[节点](#Node-ref)遵循相同的[共识规则](#ConsensusRules-ref)的常规的分叉，一旦一条链的[工作量证明](#POW-ref)高于另一条，该分叉被解决）,
-[Hard fork](#HardFork-ref)（[区块链](#BlockChain-ref)上因未升级的[节点](#Node-ref)不遵循新的[共识规则](#ConsensusRules-ref)导致的永久性的分叉）,
-[Soft fork](#SoftFork-ref)（[区块链](#BlockChain-ref)上由未升级的[节点](#Node-ref)不遵循新的[共识规则](#ConsensusRules-ref)导致的临时分叉）,
-Software fork（当一个或多个开发人员与其他开发人员永久地分开开发一份代码库）,
-Git fork（当一个或多个开发人员与其他开发人员临时分开开发一份代码库）
 
 ## 用户激活的软分叉 | User Activated Soft Fork, UASF
 
@@ -751,22 +885,6 @@ Git fork（当一个或多个开发人员与其他开发人员临时分开开发
 **定义**：父[区块](#Block-ref)没有被本地[节点](#Node-ref)处理的[区块](#Block-ref)，以至于它们还不能被完全验证。
 
 **不要混淆**：[Stale block](#StaleBlock-ref)（陈旧的区块）
-
-## 区块大小限制 | Block Size Limit
-
-**定义**：[共识规则](#ConsensusRules-ref)允许一个[区块](#Block-ref)的以字节为单位的最大尺寸。当前[区块](#Block-ref)大小限制是 1,000,000 字节。
-
-**同义词**：Maximum block size
-
-**不要混淆**：[Block](#Block-ref), [Blockchain](#BlockChain-ref), Blockchain size
-
-## 主网 | Mainnet
-
-**定义**：比特币交易的原始和主要网络，其中的[聪](#Satoshis-ref)有真正经济价值。
-
-**同义词**：Bitcoin main network
-
-**不要混淆**：[Testnet](#Testnet-ref)（非常类似主网的开放网络，其中的[聪](#Satoshis-ref)没有价值）, [Regtest](#Regtest-ref)（类似于[测试网](#Testnet-ref)的私有测试[节点](#Node-ref)）
 
 ## 测试网 | Testnet
 
@@ -840,42 +958,6 @@ Git fork（当一个或多个开发人员与其他开发人员临时分开开发
 
 **不要混淆**：[Child pays for parent](#CPFP-ref), [CPFP](#CPFP-ref)
 
-## 默尔克区块 | Merkle Block
-
-**定义**：连接匹配[布鲁姆过滤器](#BloomFilter-ref)的交易到区块的[默尔克树根](#MerkleRoot-ref)的部分[默尔克树](#MerkleTree-ref)。
-
-**不要混淆**：MerkleBlock message（传输默尔克区块的 P2P 协议消息）
-
-## 默尔克树 | Merkle Tree
-
-**定义**：通过散列配对的数据（叶子）构建的树，然后对结果进行配对和散列直到剩余单个散列值，即[默尔克树根](#MerkleRoot-ref)。在比特币中，叶子几乎总是来自单个[区块](#Block-ref)的交易。
-
-**不要混淆**：Partial merkle branch（连接一个或多个叶子到根的分支）, [Merkle block](#MerkleBlock-ref)（连接一笔或多笔交易从单个[区块](#Block-ref)到区块默尔克根的部分默尔克分支）
-
-## 默尔克树根 | Merkle Root
-
-**定义**：[默尔克树](#MerkleTree-ref)的根节点，树中所有哈希对的后代。[区块头](#BlockHeader-ref)必须包含一个该[区块](#Block-ref)中所有交易的有效的默尔克树根。
-
-**不要混淆**：[Merkle tree](#MerkleTree-ref)（默尔克树根是根节点的树）, [Merkle block](#MerkleBlock-ref)（连接根到一笔或多笔叶子交易的部分默尔克分支）
-
-## 初始化区块下载 | Initial Block Download, IBD
-
-**定义**：用于通过新[节点](#Node-ref)（或长时间离线的[节点](#Node-ref)）下载大量的[区块](#Block-ref)来赶上[最佳区块连](#BlockChain-ref)的链尖的过程。
-
-**不要混淆**：[Blocks-first sync](#Blocks-First-ref)（同步包含获得任意数量的[区块](#Block-ref)；IBD 仅用于大量[区块](#Block-ref)）
-
-## 区块头优先同步 | Headers-First Sync
-
-**定义**：通过在下载整个[区块](#Block-ref)前下载[区块头](#BlockHeader-ref)来同步[区块链](#BlockChain-ref)。
-
-**同义词**：Headers-First
-
-**不要混淆**：[Blocks-first sync](#Blocks-First-ref)（直接下载整个[区块](#Block-ref)，不首先获取它们的[头](#BlockHeader-ref)）
-
-## 消息头 | Message Header
-
-**定义**：比特币 P2P 网络上所有消息前缀的 4 个头部字段。
-
 ## 网络魔数 | Network Magic
 
 **定义**：在比特币 P2P 网络协议中定义的每条消息的 4 个字节的头部，用来寻找下一条消息。
@@ -890,12 +972,6 @@ Git fork（当一个或多个开发人员与其他开发人员临时分开开发
 
 **不要混淆**：IP-to-IP payment protocol（包含在比特币早期版本中的不安全，已停止的协议）
 
-## 内部字节序 | Internal Byte Order
-
-**定义**：显示为字符串的散列摘要的标准字节序—相同的格式用于[序列化的区块](#SerializedBlock-ref)和交易。
-
-**不要混淆**：[RPC byte order](#RPCByteOrder-ref)（反转的字节序）
-
 ## RPC 字节序 | RPC Byte Order
 
 **定义**：逆序显示的哈希摘要；在比特币核心 RPCs，众多[区块](#Block-ref)浏览器，和其他软件中使用。
@@ -907,14 +983,6 @@ Git fork（当一个或多个开发人员与其他开发人员临时分开开发
 **定义**：2 进制格式表示的完整交易；常用 16 进制表示。有时称为原始格式，因为多种比特币核心命令名中都带有 "raw" 字样。
 
 **同义词**：Raw transaction（原始交易）
-
-## 库存 | Inventory
-
-**定义**：一种数据类型标识和一个散列值；用于识别通过比特币 P2P 网络下载的交易和可用的[区块](#Block-ref)。
-
-**同义词**：Block or transaction inventory
-
-**不要混淆**：Inv message（传输库存的 P2P 消息）
 
 ## 代币 | Token
 
@@ -937,10 +1005,6 @@ Git fork（当一个或多个开发人员与其他开发人员临时分开开发
 **同义词**：Transaction malleability（交易延展性）
 
 **不要混淆**：[BIP62](https://github.com/bitcoin/bips/blob/master/bip-0062.mediawiki)（可选的新交易版本的提议，减少了常见交易的已知变化集）
-
-## 硬化的扩展密钥 | Hardened Extended Key (HD Wallets-ref)
-
-**定义**：[HD 钱包扩展密钥](#ExtendedKey-ref)的一个变体，只有硬化的扩展私钥才能生成[子密钥](#ChildKey-ref)。防止[链代码](#ChainCode-ref)加任何[私钥](#PrivateKey-ref)的组合使整个[钱包](#Wallet-ref)处于风险中。
 
 ## SIGHASH_ALL
 
