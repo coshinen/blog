@@ -24,6 +24,7 @@ excerpt: Here are some books I read.
 >   * [伦理学](#伦理学)
 >   * [统计学](#统计学)
 > * [杂类](#杂类)
+> * [漫画](#漫画)
 > * [语言](#语言)
 > * [电子书](#电子书)
 > * [公开课](#公开课)
@@ -138,6 +139,11 @@ excerpt: Here are some books I read.
 > * [把时间当作朋友 运用心智 获得解放](https://github.com/xiaolai/time-as-a-friend){:target="_blank"}，[中] 李笑来
 > * 富爸爸，穷爸爸，[美] Robert T. Kiyosaki
 > * 谁“害”了北大学生，[中] 群言
+
+## 漫画
+
+> * 名探偵コナン，[日] 青山剛昌
+> * まじっく快斗，[日] 青山剛昌
 
 ## 语言
 
