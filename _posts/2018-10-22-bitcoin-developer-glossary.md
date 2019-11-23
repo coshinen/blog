@@ -102,57 +102,57 @@ tags: 区块链 比特币术语表 译文
 >   * [挖矿（Mining）](#矿工--miner)
 >   * [多签（Multisig）](#足够的多签--bare-multisig)
 > * N
->   * [难度对应值（nBits）](#难度对应值--nBits)
+>   * [难度对应值（nBits）](#难度对应值--nbits)
 >   * [网络难度（Network difficulty）](#难度--difficulty)
->   * [网络魔数（Network magic）](#网络魔数--Network-magic)
+>   * [网络魔数（Network magic）](#网络魔数--network-magic)
 >   * [锁定时间（nLockTime）](#锁定时间--locktime)
 >   * [节点（Node）](#归档的节点--archival-node)
 >   * [非数据推送操作码（Non-data-pushing opcode）](#操作码--opcode)
 >   * [空数据交易（Null data transaction）](#数据传输交易--data-carrier-transaction)
 > * O
->   * [OP_RETURN transaction](#OP_RETURN transaction)
+>   * [OP_RETURN transaction](#OP_RETURN-transaction)
 >   * [操作码（Opcode）](#操作码--opcode)
->   * [Opt-in replace by fee](#Opt-in-replace-by-fee)
->   * [孤儿区块（Orphan block）](#孤儿区块--Orphan-block)
->   * [Outpoint](#Outpoint)
->   * [输出（Output）](#输出--Output)
+>   * [通过交易费代替选择（Opt-in replace by fee）](#通过交易费代替选择--opt-in-replace-by-fee)
+>   * [孤儿区块（Orphan block）](#孤儿区块--orphan-block)
+>   * [输出点（Outpoint）](#输出点--outpoint)
+>   * [输出（Output）](#交易输出--transaction-output)
 > * P
->   * [P2PKH 地址](#P2PKH-地址--P2PKH-address)
->   * [P2PKH 输出](#P2PKH-输出--P2PKH-output)
->   * [P2SH 地址](#P2SH-地址--P2SH-address)
->   * [P2SH 多签](#P2SH-多签--P2SH-multisig)
->   * [P2SH 输出](#P2SH-输出--P2SH-output)
->   * [父钥](#父钥--Parent-key)
->   * [私有父钥](#私有父钥--Parent-private-key)
->   * [公共父钥](#公共父钥--Parent-public-key)
->   * [支付协议](#支付协议--Payment-protocol)
->   * [支付请求](#支付请求--Payment-request)
+>   * [P2PKH 地址（P2PKH address）](#p2pkh-地址--p2pkh-address)
+>   * [P2PKH 输出（P2PKH output）](#p2pkh-地址--p2pkh-address)
+>   * [P2SH 地址（P2SH address）](#p2sh-地址--p2sh-address)
+>   * [P2SH 多签（P2SH multisig）](#p2sh-多签--p2sh-multisig)
+>   * [P2SH 输出（P2SH output）](#p2sh-地址--p2sh-address)
+>   * [父钥（Parent key）](#父钥--parent-key)
+>   * [私有父钥（Parent private key）](#父钥--parent-key)
+>   * [公共父钥（Parent public key）](#父钥--parent-key)
+>   * [支付协议（Payment protocol）](#支付协议--payment-protocol)
+>   * [支付请求（Payment request）](#支付协议--payment-protocol)
 >   * [对端（Peer）](#归档的节点--archival-node)
->   * [POW](#POW)
+>   * [POW（Proof of work）](#工作量证明--proof-of-work)
 >   * [扩展的私钥（Private extended key）](#扩展的密钥--extended-key)
->   * [私钥](#私钥--Private-key)
->   * [工作量证明](#工作量证明--Proof-of-work)
+>   * [私钥（Private key）](#私钥--private-key)
+>   * [工作量证明（Proof of work）](#工作量证明--proof-of-work)
 >   * [已修剪的节点（Pruned node）](#归档的节点--archival-node)
->   * [公钥脚本](#公钥脚本--Pubkey-script)
+>   * [公钥脚本（Pubkey script）](#公钥脚本--pubkey-script)
 >   * [扩展的公钥（Public extended key）](#扩展的密钥--extended-key)
->   * [公钥](#公钥--Public-key)
+>   * [公钥（Public key）](#公钥--public-key)
 > * R
->   * [原始交易](#原始交易--Raw-transaction)
->   * [RBF](#RBF)
->   * [Redeem Script](#Redeem-Script)
->   * [RedeemScript](#RedeemScript)
->   * [回归测试模式](#回归测试模式--Regression-test-mode)
->   * [回归测试网](#回归测试网--Regtest)
+>   * [原始交易（Raw transaction）](#序列化的交易--serialized-transaction)
+>   * [RBF（Replace by fee）](#通过交易费代替选择--opt-in-replace-by-fee)
+>   * [赎回脚本（Redeem Script）](#赎回脚本--redeem-script)
+>   * [赎回脚本（RedeemScript）](#赎回脚本--redeem-script)
+>   * [回归测试模式（Regression test mode）](#回归测试网--regtest)
+>   * [回归测试网（Regtest）](#回归测试网--regtest)
 >   * [中继费（Relay fee）](#中继费--relay-fee)
->   * [Replace by fee](#Replace-by-fee)
->   * [根种子](#根种子--Root-seed)
->   * [RPC 字节序](#RPC-字节序--RPC-byte-order)
+>   * [通过交易费代替（Replace by fee）](#通过交易费代替选择--opt-in-replace-by-fee)
+>   * [根种子（Root seed）](#hd-钱包种子--hd-wallet-seed)
+>   * [RPC 字节序（RPC byte order）](#rpc-字节序--rpc-byte-order)
 > * S
 >   * [聪（Satoshis）](#比特币--bitcoins)
 >   * [ScriptPubKey](#ScriptPubKey)
 >   * [ScriptSig](#ScriptSig)
 >   * [序列号（Sequence number）](#序列号--Sequence-number)
->   * [序列化的区块（Serialized transaction）](#序列化的区块--Serialized-transaction)
+>   * [序列化的交易（Serialized transaction）](#序列化的交易--serialized-transaction)
 >   * [Sighash](#Sighash)
 >   * [SIGHASH_ALL](#SIGHASH_ALL)
 >   * [SIGHASH_ANYONECANPAY](#SIGHASH_ANYONECANPAY)
@@ -177,7 +177,7 @@ tags: 区块链 比特币术语表 译文
 >   * [Transaction mutability](#Transaction-mutability)
 >   * [交易号（Txid）](#交易号--Txid)
 >   * [交易输入（TxIn）](#交易输入--transaction-input)
->   * [交易输出（TxOut）](#交易输出--TxOut)
+>   * [交易输出（TxOut）](#交易输出--transaction-output)
 > * U
 >   * [UASF](#UASF)
 >   * [未确认的交易（Unconfirmed transaction）](#确认数--confirmations)
@@ -756,37 +756,212 @@ Git fork（当一个或多个开发人员与其他开发人员临时分开开发
 **不要混淆：**
 交易费（[Transaction fee](#交易费--Transaction-Fee)）（最小中继费是过滤过低[交易费](#交易费--Transaction-Fee)交易的决策选项）
 
+## 难度对应值 | nBits
+
+**定义：**
+该目标值是低于必须使[区块](#区块--Block)有效的[区块头](#区块头--Block-Header)散列值的阈值，并且难度对应值出现在[区块头](#区块头--Block-Header)中，是目标阈值的编码形式。
+
+**同义词：**
+目标值（Target），目标阈值（Target threshold）
+
+**不要混淆：**
+难度（[Difficulty](#难度--Difficulty)）（一个数字，用于衡量寻找[区块头](#区块头--Block-Header)哈希的[难度](#难度--Difficulty)，相对于最容易目标值寻找[区块头](#区块头--Block-Header)哈希的[难度](#难度--Difficulty)）
+
+## 网络魔数 | Network magic
+
+**定义：**
+在比特币 P2P 网络协议中定义的每条消息的 4 个字节的头部，用来寻找下一条消息。
+
+**同义词：**
+起始字符串（Start string）
+
+## 通过交易费代替选择 | Opt-in replace by fee
+
+**定义：**
+使用支付更高[交易费](#TransactionFee)的不同版本的交易代替[未确认交易](#UnconfirmedTransaction)的版本。
+可以使用 [BIP125](https://github.com/bitcoin/bips/blob/master/bip-0125.mediawiki){:target="_blank"} 信号。
+
+**同义词：**
+通过交易费代替（Replace-by-fee），RBF
+
+**不要混淆：**
+孩子为父母付款（[Child pays for parent](#CPFP)），[CPFP](#CPFP)
+
+## 孤儿区块 | Orphan block
+
+**定义：**
+父[区块](#Block)没有被本地[节点](#Node)处理的[区块](#Block)，以至于它们还不能被完全验证。
+
+**不要混淆：**
+陈旧的区块（[Stale block](#StaleBlock)）
+
+## 输出点 | Outpoint
+
+**定义：**
+用于引用特定交易输出的数据结构，由 32 字节的[交易索引](#Txid)和 4 字节的输出索引序号（vout）组成。
+
+**不要混淆：**
+交易输出（[Output](#TxOut)），[TxOut](#TxOut)（和输出一样）
+
+## 交易输出 | Transaction output
+
+**定义：**
+一笔交易的输出包含 2 个字段：转账 0 或更多[聪](#Satoshis)的字段和指明必须满足哪些条件才能进一步使用这些[聪](#Satoshis)的[公钥脚本](#ScriptPubKey)。
+
+**同义词：**
+输出（Output），TxOut
+
+**不要混淆：**
+输出点（[Outpoint](#Outpoint)）（某交易输出的引用）
+
+## P2PKH 地址 | P2PKH address
+
+**定义：**
+比特币[付款地址](#Address)，包含哈希的[公钥](#PublicKey)，允许付款人创建标准的支付给公钥哈希（P2PKH）的[公钥脚本](#ScriptPubKey)。
+
+**同义词：**
+支付到公钥哈希（Pay to pubkey hash），P2PKH 输出（P2PKH output）
+
+**不要混淆：**
+[P2PK output](#TxOut)（直接支付给[公钥](#PublicKey)的[输出](#TxOut)），[P2SH address / output](#P2SH)（包括哈希的脚本和其相应的[输出](#TxOut)的[地址](#Address)）
+
+## P2SH 地址 | P2SH address
+
+**定义：**
+比特币付款[地址](#Address)包含一个哈希的脚本，允许付款人创建一个标准的支付到脚本哈希（P2SH）的[公钥脚本](#ScriptPubKey)。
+该脚本几乎可能是任何有效的[公钥脚本](#ScriptPubKey)。
+
+**同义词：**
+支付到脚本哈希（Pay to script hash），P2SH 输出（P2SH output）
+
+**不要混淆：**
+[P2PK output](#TxOut)（直接支付到[公钥](#PublicKey)的[输出](#TxOut)），
+[P2PKH address / output](#P2PKH)（由散列的[公钥](#PublicKey)和其相应的[输出](#TxOut)组成的[地址](#Address)），
+[P2SH multisig](#P2SHMultisig)（P2SH 特定的实例，其中脚本使用一个[多签操作码](#Opcode)）
+
+## P2SH 多签 | P2SH multisig
+
+**定义：**
+[P2SH 输出](#P2SHAddress)，其中[兑换脚本](#RedeemScript)使用其中一个[多签](#Multisig)[操作码](#Opcode)。
+直到比特币核心 0.10.0 版，[P2SH 多签脚本](#P2SHMultisig)是[标准交易](#StandardTransaction)，但大多数 P2SH 脚本不始。
+
+**同义词：**
+P2SH 多签输出（P2SH multisig output）
+
+**不要混淆：**
+多签公钥脚本（[Multisig pubkey scripts](#ScriptPubKey)）（也称作“[裸多签](#Multisig)”，这些[多签](#Multisig)脚本不使用 P2SH 封装）, P2SH（通用 P2SH，其中 [P2SH 多签](#P2SHMultisig)是比特币核心 0.10.0 版特殊情况下的特定实例）
+
+## 父钥 | Parent key
+
+**定义：**
+在 [HD 钱包](#HDWallet)中，该密钥用于生成[子密钥](#ChildKey)。
+该密钥可能是[私钥](#PrivateKey)或[公钥](#PublicKey)，且密钥的生成可能也需要[链编码](#ChainCode)。
+
+**同义词：**
+HD 钱包父钥（HD wallet parent key），公共父钥（Parent public key），私有服药（Parent private key）
+
+**不要混淆：**
+公钥（[Public key](#PublicKey)）（从[私钥](#PrivateKey)派生，非父密钥）
+
+## 支付协议 | Payment protocol
+
+**定义：**
+该协议在 [BIP70](https://github.com/bitcoin/bips/blob/master/bip-0070.mediawiki){:target="_blank"}（和其他 BIPs）中定义，让付款人从收款人获取签名的支付细节。
+
+**同义词：**
+支付请求（Payment request），BIP70
+
+**不要混淆：**
+IP 到 IP 支付协议（IP-to-IP payment protocol）（包含在比特币早期版本中的不安全，已停止的协议）
+
+## 工作量证明 | Proof of work
+
+**定义：**
+低于[目标值](#目标值--Target)的散列，一般只能通过执行一定量的暴力工作获得—因此论证了工作量证明。
+
+**同义词：**
+POW
+
+## 私钥 | Private key
+
+**定义：**
+密钥对的私有部分，用于创建其他人都能使用[公钥](#PublicKey)验证的[签名](#Signature)。
+
+**同义词：**
+椭圆曲线私钥（ECDSA private key）
+
+**不要混淆：**
+[Public key](#PublicKey)（从私钥派生出的数据），[Parent key](#ParentKey)（用于创建[子密钥](#ChildKey)的密钥，不一定是私钥）
+
+## 公钥脚本 | Pubkey script
+
+**定义**：
+包含在[输出](#TxOut)中的脚本，用于设置必须满足用于花费的[聪](#Satoshis)。
+在签名脚本中提供满足条件的数据。
+[公钥脚本](#ScriptPubKey)在代码中被称为[脚本公钥 "scriptPubKey"](#ScriptPubKey)。
+
+**同义词：**
+脚本公钥（ScriptPubKey）
+
+**不要混淆：**
+[Pubkey](#PublicKey)（[公钥](#PublicKey)，用作公钥脚本的一部分但不提供可编程的身份验证机制），[Signature script](#ScriptSig)（给公钥脚本提供数据的脚本）
+
+## 公钥 | Public key
+
+**定义：**
+密钥对的公共部分，用于验证使用密钥对私有部分进行的[签名](#Signature)。
+
+**同义词：**
+椭圆曲线公钥（ECDSA public key）
+
+**不要混淆：**
+私钥（[Private key](#PrivateKey)）（派生出公钥的数据），[Parent key](#ParentKey)（用于创建[子密钥](#ChildKey)的密钥，不一定是公钥）
+
+## 序列化的交易 | Serialized transaction
+
+**定义：**
+2 进制格式表示的完整交易；常用 16 进制表示。
+有时称为原始格式，因为多种比特币核心命令名中都带有 "raw" 字样。
+
+**同义词：**
+原始交易（Raw transaction）
+
+## 赎回脚本 | Redeem script
+
+**定义**：
+功能上类似于[公钥脚本](#ScriptPubKey)的脚本。
+其中一个副本用于创建 [P2SH 地址](#P2SH)（用于实际的[公钥脚本](#ScriptPubKey)），另一个副本放在支出[签名脚本](#ScriptSig)用来限制其条件。
+
+**同义词**：
+赎回脚本（RedeemScript）
+
+**不要混淆**：
+签名脚本（[Signature script](#ScriptSig)）（为[公钥脚本](#ScriptPubKey)提供数据的脚本，在 P2SH [输入](#TxIn)中包含赎回脚本）
+
+## 回归测试网 | Regtest
+
+**定义：**
+开发人员能够立刻产生测试所需[区块](#Block)的本地测试环境，能够创建没有价值的私有[聪](#Satoshis)。
+
+**同义词：**
+回归测试模式（Regression test mode）
+
+**不要混淆：**
+公共测试网（[Testnet](#Testnet)）（模仿[主网](#Mainnet)的全球测试环境）
+
+## RPC 字节序 | RPC byte order
+
+**定义：**
+逆序显示的哈希摘要；在比特币核心 RPCs，众多[区块](#Block)浏览器，和其他软件中使用。
+
+**不要混淆：**
+内部字节序（[Internal byte order](#InternalByteOrder)）（内部字节序，典型顺序显示的哈希摘要；用于[序列化的区块](#SerializedBlock)和[序列化的交易](#SerializedTransaction)）
+
 ## 序列化区块 | Serialized Block
 
 **定义**：2 进制格式表示的完整的[区块](#区块--Block)—相同的格式用于计算总[区块](#区块--Block)字节大小；常用 16 进制表示。
 
 **同义词**：Raw block
-
-## 工作量证明 | Proof Of Work, POW
-
-**定义**：低于[目标值](#目标值--Target)的散列，一般只能通过执行一定量的暴力工作获得—因此论证了工作量证明。
-
-## 难度对应值 | nBits
-
-**定义**：该目标值是低于必须使[区块](#区块--Block)有效的[区块头](#区块头--Block-Header)散列值的阈值，并且难度对应值出现在[区块头](#区块头--Block-Header)中，是目标阈值的编码形式。
-
-**同义词**：Target, Target threshold（阈值）
-
-**不要混淆**：[Difficulty](#难度--Difficulty)（一个数字，用于衡量寻找[区块头](#区块头--Block-Header)哈希的[难度](#难度--Difficulty)，相对于最容易目标值寻找[区块头](#区块头--Block-Header)哈希的[难度](#难度--Difficulty)）
-
-## 交易输出 | Transaction Output
-
-**定义**：一笔交易的输出包含 2 个字段：转账 0 或更多[聪](#Satoshis-ref)的字段和指明必须满足哪些条件才能进一步使用这些[聪](#Satoshis-ref)的[公钥脚本](#ScriptPubKey-ref)。
-
-**同义词**：Output, TxOut
-
-**不要混淆**：[Outpoint](#Outpoint-ref)（某交易输出的引用）
-
-## 输出点 | Outpoint
-
-**定义**：用于引用特定交易输出的数据结构，由 32 字节的[交易索引](#Txid-ref)和 4 字节的输出索引序号（vout）组成。
-
-**不要混淆**：[Output](#TxOut-ref)（交易的完整输出）, [TxOut](#TxOut-ref)（和输出一样）
 
 ## 交易号 | Txid, Transaction Identifier
 
@@ -800,7 +975,7 @@ Git fork（当一个或多个开发人员与其他开发人员临时分开开发
 
 **同义词**：ScriptSig（脚本签名）
 
-**不要混淆**：[ECDSA signature](#Signature-ref)（一种签名，除了其他数据，能用于公钥脚本的一部分）
+**不要混淆**：[ECDSA signature](#Signature)（一种签名，除了其他数据，能用于公钥脚本的一部分）
 
 ## 交易序列号 | Sequence Number (Transactions-ref)
 
@@ -808,49 +983,17 @@ Git fork（当一个或多个开发人员与其他开发人员临时分开开发
 
 **不要混淆**：Output index number / vout（后面的交易用来引用特定[输出](#TxOut-ref)的交易中的 0 索引号[输出](#TxOut-ref)）
 
-## 公钥脚本 | Pubkey Script
-
-**定义**：包含在[输出](#TxOut-ref)中的脚本，用于设置必须满足用于花费的[聪](#Satoshis-ref)。在签名脚本中提供满足条件的数据。[公钥脚本](#ScriptPubKey-ref)在代码中被称为[脚本公钥 "scriptPubKey"](#ScriptPubKey-ref)。
-
-**同义词**：ScriptPubKey（脚本公钥）
-
-**不要混淆**：[Pubkey](#PublicKey-ref)（[公钥](#PublicKey-ref)，用作公钥脚本的一部分但不提供可编程的身份验证机制）, [Signature script](#ScriptSig-ref)（给公钥脚本提供数据的脚本）
-
 ## 签名 | Signature
 
 **定义**：与[公钥](#PublicKey-ref)相关的值，该公钥只能由拥有创建[公钥](#PublicKey-ref)的[私钥](#PrivateKey-ref)的人来创建。在比特币中用于在发送到[公钥](#PublicKey-ref)前验证花费的[聪](#Satoshis-ref)。
 
 **同义词**：ECDSA signature（椭圆曲线加密签名）
 
-## 私钥 | Private Key
-
-**定义**：密钥对的私有部分，用于创建其他人都能使用[公钥](#PublicKey-ref)验证的[签名](#Signature-ref)。
-
-**同义词**：ECDSA private key（椭圆曲线私钥）
-
-**不要混淆**：[Public key](#PublicKey-ref)（从私钥派生出的数据）, [Parent key](#ParentKey-ref)（用于创建[子密钥](#ChildKey-ref)的密钥，不一定是私钥）
-
-## 公钥 | Public Key
-
-**定义**：密钥对的公共部分，用于验证使用密钥对私有部分进行的[签名](#Signature-ref)。
-
-**同义词**：ECDSA public key（椭圆曲线公钥）
-
-**不要混淆**：[Private key](#PrivateKey-ref)（派生出公钥的数据）, [Parent key](#ParentKey-ref)（用于创建[子密钥](#ChildKey-ref)的密钥，不一定是公钥）
-
 ## 钱包 | Wallet
 
 **定义**：存储[私钥](#PrivateKey-ref)和[区块链](#BlockChain-ref)镜像的软件（有时作为执行处理的服务器的客户端），允许用户花费和接收[聪](#Satoshis-ref)。
 
 **不要混淆**：[HD wallet](#HDWallet-ref)（允许钱包从单个种子创建全部密钥的协议，使用该协议的钱包）
-
-## 父密钥 | Parent Key
-
-**定义**：在 [HD 钱包](#HDWallet-ref)中，该密钥用于生成[子密钥](#ChildKey-ref)。该密钥可能是[私钥](#PrivateKey-ref)或[公钥](#PublicKey-ref)，且密钥的生成可能也需要[链编码](#ChainCode-ref)。
-
-**同义词**：HD wallet parent key, Parent public key, Parent private key
-
-**不要混淆**：[Public key](#PublicKey-ref)（从[私钥](#PrivateKey-ref)派生，非父密钥）
 
 ## 软分叉 | Soft Fork
 
@@ -880,12 +1023,6 @@ Git fork（当一个或多个开发人员与其他开发人员临时分开开发
 
 **不要混淆**：[Orphan block](#OrphanBlock-ref)（该[区块](#Block-ref)的前一个区块哈希域指向一个未知的[区块](#Block-ref)，意味着孤儿块不能被验证）
 
-## 孤儿块 | Orphan Block
-
-**定义**：父[区块](#Block-ref)没有被本地[节点](#Node-ref)处理的[区块](#Block-ref)，以至于它们还不能被完全验证。
-
-**不要混淆**：[Stale block](#StaleBlock-ref)（陈旧的区块）
-
 ## 测试网 | Testnet
 
 **定义**：开发人员能够在类似于比特币[主网](#Mainnet-ref)的网络上获得并花费没有真正价值的[聪](#Satoshis-ref)的全球测试环境。
@@ -893,48 +1030,6 @@ Git fork（当一个或多个开发人员与其他开发人员临时分开开发
 **同义词**：Testing network
 
 **不要混淆**：[Regtest](#Regtest-ref)（开发人员可控制[区块](#Block-ref)生成的本地测试环境）
-
-## 回归测试网 | Regtest
-
-**定义**：开发人员能够立刻产生测试所需[区块](#Block-ref)的本地测试环境，能够创建没有价值的私有[聪](#Satoshis-ref)。
-
-**同义词**：Regression test mode
-
-**不要混淆**：[Testnet](#Testnet-ref)（模仿[主网](#Mainnet-ref)的全球测试环境）
-
-## P2PKH 地址 | 2PKH Address
-
-**定义**：比特币[付款地址](#Address-ref)，包含哈希的[公钥](#PublicKey-ref)，允许付款人创建标准的支付给公钥哈希（P2PKH）的[公钥脚本](#ScriptPubKey-ref)。
-
-**同义词**：Pay to pubkey hash, P2PKH output
-
-**不要混淆**：[P2PK output](#TxOut-ref)（直接支付给[公钥](#PublicKey-ref)的[输出](#TxOut-ref)）, [P2SH address / output](#P2SH-ref)（包括哈希的脚本和其相应的[输出](#TxOut-ref)的[地址](#Address-ref)）
-
-## P2SH 地址 | P2SH Address
-
-**定义**：比特币付款[地址](#Address-ref)包含一个哈希的脚本，允许付款人创建一个标准的支付到脚本哈希（P2SH）的[公钥脚本](#ScriptPubKey-ref)。该脚本几乎可能是任何有效的[公钥脚本](#ScriptPubKey-ref)。
-
-**同义词**：Pay to script hash, P2SH output
-
-**不要混淆**：[P2PK output](#TxOut-ref)（直接支付到[公钥](#PublicKey-ref)的[输出](#TxOut-ref)）,
-[P2PKH address / output](#P2PKH-ref)（由散列的[公钥](#PublicKey-ref)和其相应的[输出](#TxOut-ref)组成的[地址](#Address-ref)）,
-[P2SH multisig](#P2SHMultisig-ref)（P2SH 特定的实例，其中脚本使用一个[多签操作码](#Opcode-ref)）
-
-## P2SH 多签 | P2SH Multisig
-
-**定义**：[P2SH 输出](#P2SHAddress-ref)，其中[兑换脚本](#RedeemScript-ref)使用其中一个[多签](#Multisig-ref)[操作码](#Opcode-ref)。直到比特币核心 0.10.0 版，[P2SH 多签脚本](#P2SHMultisig-ref)是[标准交易](#StandardTransaction-ref)，但大多数 P2SH 脚本不始。
-
-**同义词**：P2SH multisig output
-
-**不要混淆**：[Multisig pubkey scripts](#ScriptPubKey-ref)（也称作“[裸多签](#Multisig-ref)”，这些[多签](#Multisig-ref)脚本不使用 P2SH 封装）, P2SH（通用 P2SH，其中 [P2SH 多签](#P2SHMultisig-ref)是比特币核心 0.10.0 版特殊情况下的特定实例）
-
-## 赎回脚本 | Redeem Script
-
-**定义**：功能上类似于[公钥脚本](#ScriptPubKey-ref)的脚本。其中一个副本用于创建 [P2SH 地址](#P2SH-ref)（用于实际的[公钥脚本](#ScriptPubKey-ref)），另一个副本放在支出[签名脚本](#ScriptSig-ref)用来限制其条件。
-
-**同义词**：RedeemScript
-
-**不要混淆**：[Signature script](#ScriptSig-ref)（为[公钥脚本](#ScriptPubKey-ref)提供数据的脚本，在 P2SH [输入](#TxIn-ref)中包含赎回脚本）
 
 ## 标准交易 | Standard Transaction
 
@@ -949,40 +1044,6 @@ Git fork（当一个或多个开发人员与其他开发人员临时分开开发
 **定义**：一种数据交换格式，旨在允许导出和导入单个[私钥](#PrivateKey-ref)，并带有指明其是否使用[压缩公钥](#CompressedPublicKey-ref)的标志。
 
 **不要混淆**：[Extended private keys](#PrivateKey-ref)（允许导入私钥的层次体系）
-
-## 通过交易费代替 | Replace-by-Fee, RBF
-
-**定义**：使用支付更高[交易费](#TransactionFee-ref)的不同版本的交易代替[未确认交易](#UnconfirmedTransaction-ref)的版本。可以使用 [BIP125](https://github.com/bitcoin/bips/blob/master/bip-0125.mediawiki) 信号。
-
-**同义词**：Opt-in replace by fee（通过最优交易费代替）
-
-**不要混淆**：[Child pays for parent](#CPFP-ref), [CPFP](#CPFP-ref)
-
-## 网络魔数 | Network Magic
-
-**定义**：在比特币 P2P 网络协议中定义的每条消息的 4 个字节的头部，用来寻找下一条消息。
-
-**同义词**：Start String
-
-## 支付协议 | Payment Protocol
-
-**定义**：该协议在 [BIP70](https://github.com/bitcoin/bips/blob/master/bip-0070.mediawiki)（和其他 BIPs）中定义，让付款人从收款人获取签名的支付细节。
-
-**同义词**：Payment request, BIP70
-
-**不要混淆**：IP-to-IP payment protocol（包含在比特币早期版本中的不安全，已停止的协议）
-
-## RPC 字节序 | RPC Byte Order
-
-**定义**：逆序显示的哈希摘要；在比特币核心 RPCs，众多[区块](#Block-ref)浏览器，和其他软件中使用。
-
-**不要混淆**：[Internal byte order](#InternalByteOrder-ref)（内部字节序，典型顺序显示的哈希摘要；用于[序列化的区块](#SerializedBlock-ref)和[序列化的交易](#SerializedTransaction-ref)）
-
-## 序列化的交易 | Serialized Transaction
-
-**定义**：2 进制格式表示的完整交易；常用 16 进制表示。有时称为原始格式，因为多种比特币核心命令名中都带有 "raw" 字样。
-
-**同义词**：Raw transaction（原始交易）
 
 ## 代币 | Token
 
