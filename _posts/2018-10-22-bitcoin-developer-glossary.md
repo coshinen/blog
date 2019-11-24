@@ -149,45 +149,46 @@ tags: 区块链 比特币术语表 译文
 >   * [RPC 字节序（RPC byte order）](#rpc-字节序--rpc-byte-order)
 > * S
 >   * [聪（Satoshis）](#比特币--bitcoins)
->   * [ScriptPubKey](#ScriptPubKey)
->   * [ScriptSig](#ScriptSig)
->   * [序列号（Sequence number）](#序列号--Sequence-number)
+>   * [脚本公钥（ScriptPubKey）](#公钥脚本--pubkey-script)
+>   * [脚本签名（ScriptSig）](#签名脚本--signature-script)
+>   * [序列号（Sequence number）](#序列号--sequence-number)
+>   * [序列化的区块（Serialized block）](#序列化的区块--serialized-block)
 >   * [序列化的交易（Serialized transaction）](#序列化的交易--serialized-transaction)
->   * [Sighash](#Sighash)
->   * [SIGHASH_ALL](#SIGHASH_ALL)
->   * [SIGHASH_ANYONECANPAY](#SIGHASH_ANYONECANPAY)
->   * [SIGHASH_NONE](#SIGHASH_NONE)
->   * [SIGHASH_SINGLE](#SIGHASH_SINGLE)
->   * [签名（Signature）](#签名--Signature)
->   * [签名哈希（Signature hash）](#签名哈希--Signature-hash)
->   * [签名脚本（Signature script）](#签名脚本--Signature-script)
+>   * [签名哈希（Sighash）](#签名哈希--signature-hash)
+>   * [SIGHASH_ALL](#sighash_all)
+>   * [SIGHASH_ANYONECANPAY](#sighash_anyonecanpay)
+>   * [SIGHASH_NONE](#sighash_none)
+>   * [SIGHASH_SINGLE](#sighash_single)
+>   * [签名（Signature）](#签名--signature)
+>   * [签名哈希（Signature hash）](#签名哈希--signature-hash)
+>   * [签名脚本（Signature script）](#签名脚本--signature-script)
 >   * [简单支付验证（Simplified payment verification）](#简单支付验证--simplified-payment-verification)
->   * [软分叉（Soft fork）](#软分叉--Soft-fork)
->   * [SPV](#SPV)
->   * [Stale block](#Stale-block)
->   * [标准交易（Standard transaction）](#标准交易--Standard-Transaction)
->   * [起始字符串（Start string）](#起始字符串--Start-string)
+>   * [软分叉（Soft fork）](#软分叉--soft-fork)
+>   * [SPV（Simplified Payment Verification）](#简单支付验证--simplified-payment-verification)
+>   * [旧的区块（Stale block）](#旧的区块--stale-block)
+>   * [标准交易（Standard transaction）](#标准交易--standard-transaction)
+>   * [起始字符串（Start string）](#网络魔数--network-magic)
 > * T
->   * [Target](#Target)
->   * [公共测试网（Testnet）](#公共测试网--Testnet)
+>   * [Target](#target)
+>   * [公共测试网（Testnet）](#公共测试网--testnet)
 >   * [瘦客户端（Thin client）](#简单支付验证--simplified-payment-verification)
->   * [Token](#Token)
+>   * [代币（Token）](#代币--token)
 >   * [交易费（Transaction fee）](#交易费--transaction-fee)
->   * [Transaction malleability](#Transaction-malleability)
->   * [Transaction mutability](#Transaction-mutability)
->   * [交易号（Txid）](#交易号--Txid)
+>   * [交易延展性（Transaction malleability）](#交易可变性--transaction-mutability)
+>   * [交易可变性（Transaction mutability）](#交易可变性--transaction-mutability)
+>   * [交易号（Txid）](#交易号--txid)
 >   * [交易输入（TxIn）](#交易输入--transaction-input)
 >   * [交易输出（TxOut）](#交易输出--transaction-output)
 > * U
->   * [UASF](#UASF)
+>   * [UASF（User Activated Soft Fork）](#用户激活的软分叉--user-activated-soft-fork)
 >   * [未确认的交易（Unconfirmed transaction）](#确认数--confirmations)
->   * [用户激活的软分叉（User activated soft fork）](#用户激活的软分叉--User-activated-soft-fork)
->   * [未花费输出（UTXO）](#未花费输出--UTXO)
+>   * [用户激活的软分叉（User activated soft fork）](#用户激活的软分叉--user-activated-soft-fork)
+>   * [未花费的交易输出（UTXO）](#未花费的交易输出--utxo)
 > * W
->   * [钱包（Wallet）](#钱包--Wallet)
->   * [钱包导入格式（Wallet import format）](#钱包导入格式--Wallet-Import-Format)
->   * [Watch-only 地址（Watch-only address）](#Watch-only-地址--Watch-only-address)
->   * [WIF](#WIF)
+>   * [钱包（Wallet）](#钱包--wallet)
+>   * [钱包导入格式（Wallet import format）](#钱包导入格式--wallet-import-format)
+>   * [Watch-only 地址（Watch-only address）](#watch-only-地址--watch-only-address)
+>   * [WIF（Wallet Import Format）](#钱包导入格式--wallet-import-format)
 
 ## 百分之 51 攻击 | 51 percent attack
 
@@ -605,7 +606,8 @@ IBD
 ## 交易输入 | Transaction input
 
 **定义：**
-一笔交易的输入包含 3 个字段：[输出点](#Outpoint-ref)，[签名脚本](#ScriptSig-ref)，和[序列号](#Sequence-ref)。[输出点](#Outpoint-ref)引用前一笔[交易输出](#TxOut-ref)且[签名脚本](#ScriptSig-ref)允许花费它。
+一笔交易的输入包含 3 个字段：[输出点](#Outpoint)，[签名脚本](#ScriptSig)，和[序列号](#Sequence)。
+[输出点](#Outpoint)引用前一笔[交易输出](#TxOut)且[签名脚本](#ScriptSig)允许花费它。
 
 **同义词：**
 输入（Input），TxIn
@@ -917,6 +919,14 @@ POW
 **不要混淆：**
 私钥（[Private key](#PrivateKey)）（派生出公钥的数据），[Parent key](#ParentKey)（用于创建[子密钥](#ChildKey)的密钥，不一定是公钥）
 
+## 序列化的区块 | Serialized block
+
+**定义：**
+2 进制格式表示的完整的[区块](#区块--Block)—相同的格式用于计算总[区块](#区块--Block)字节大小；常用 16 进制表示。
+
+**同义词：**
+原始区块（Raw block）
+
 ## 序列化的交易 | Serialized transaction
 
 **定义：**
@@ -957,141 +967,194 @@ POW
 **不要混淆：**
 内部字节序（[Internal byte order](#InternalByteOrder)）（内部字节序，典型顺序显示的哈希摘要；用于[序列化的区块](#SerializedBlock)和[序列化的交易](#SerializedTransaction)）
 
-## 序列化区块 | Serialized Block
+## 签名脚本 | Signature script
 
-**定义**：2 进制格式表示的完整的[区块](#区块--Block)—相同的格式用于计算总[区块](#区块--Block)字节大小；常用 16 进制表示。
+**定义**：
+通过付款人生成的数据，几乎总是用作满足[公钥脚本](#ScriptPubKey)的变量。
+签名脚本在代码中又称为脚本签名。
 
-**同义词**：Raw block
+**同义词：**
+脚本签名（ScriptSig）
 
-## 交易号 | Txid, Transaction Identifier
+**不要混淆：**
+椭圆曲线签名（[ECDSA signature](#Signature)）（一种签名，除了其他数据，能用于公钥脚本的一部分）
 
-**定义**：用于唯一标示特定交易的标识符；具体来说，是交易的双 sha256 散列。
+## 序列号 | Sequence number
 
-**不要混淆**：[Outpoint](#Outpoint-ref)（交易号和输出集的联合体，用于识别指定输出）
+**定义：**
+所有交易的一部分。
+一个数字，旨在允许锁定时间的[未确认的交易](#Confirmations)在序列化前更新；目前尚未使用，除非在交易中禁用[锁定时间](#nLockTime)。
 
-## 签名脚本 | Signature Script
+**不要混淆：**
+输出索引数字（Output index number / vout）（后面的交易用来引用特定[输出](#TxOut)的交易中的 0 索引号[输出](#TxOut)）
 
-**定义**：通过付款人生成的数据，几乎总是用作满足[公钥脚本](#ScriptPubKey-ref)的变量。签名脚本在代码中又称为脚本签名。
+## 签名哈希 | Signature hash
 
-**同义词**：ScriptSig（脚本签名）
+**定义：**
+比特币[签名](#Signature)的标志，表明[签名](#Signature)签署的交易部分。
+（默认是 [SIGHASH_ALL](#SIGHASH_ALL)）交易未签名的部分可能被修改。
 
-**不要混淆**：[ECDSA signature](#Signature)（一种签名，除了其他数据，能用于公钥脚本的一部分）
+**同义词：**
+签名哈希（Sighash）
 
-## 交易序列号 | Sequence Number (Transactions-ref)
-
-**定义**：所有交易的一部分。一个数字，旨在允许锁定时间的[未确认的交易](#Confirmations-ref)在序列化前更新；目前尚未使用，除非在交易中禁用[锁定时间](#nLockTime-ref)。
-
-**不要混淆**：Output index number / vout（后面的交易用来引用特定[输出](#TxOut-ref)的交易中的 0 索引号[输出](#TxOut-ref)）
-
-## 签名 | Signature
-
-**定义**：与[公钥](#PublicKey-ref)相关的值，该公钥只能由拥有创建[公钥](#PublicKey-ref)的[私钥](#PrivateKey-ref)的人来创建。在比特币中用于在发送到[公钥](#PublicKey-ref)前验证花费的[聪](#Satoshis-ref)。
-
-**同义词**：ECDSA signature（椭圆曲线加密签名）
-
-## 钱包 | Wallet
-
-**定义**：存储[私钥](#PrivateKey-ref)和[区块链](#BlockChain-ref)镜像的软件（有时作为执行处理的服务器的客户端），允许用户花费和接收[聪](#Satoshis-ref)。
-
-**不要混淆**：[HD wallet](#HDWallet-ref)（允许钱包从单个种子创建全部密钥的协议，使用该协议的钱包）
-
-## 软分叉 | Soft Fork
-
-**定义**：软分叉是比特币协议的改变，其中只有之前有效的[区块](#Block-ref)/交易变得无效了。因为旧的[节点](#Node-ref)将仍认为新[区块](#Block-ref)是有效的，所以软分叉是向后兼容的。
-
-**同义词**：Soft-forking change（软分叉变化）
-
-**不要混淆**：[Fork](#Fork-ref)（所有[节点](#Node-ref)遵循相同的[共识规则](#ConsensusRules-ref)的常规的分叉，一旦一条链的[工作量证明](#POW-ref)高于另一条，该分叉被解决）,
-[Hard fork](#HardFork-ref)（[区块链](#BlockChain-ref)上因未升级的[节点](#Node-ref)不遵循新的[共识规则](#ConsensusRules-ref)导致的永久性的分叉）,
-Software fork（当一个或多个开发人员与其他开发人员永久性地分开开发一份代码）,
-Git fork（当一个或多个开发人员与其他开发人员临时分开开发一份代码）
-
-## 用户激活的软分叉 | User Activated Soft Fork, UASF
-
-**定义**：通过标志日或[节点](#Node-ref)强制代替[矿工](#Miner-ref)信号激活的[软分叉](#SoftFork-ref)。
-
-**不要混淆**：[Miner activated soft fork](#MASF-ref)（通过[矿工](#Miner-ref)信号激活的[软分叉](#SoftFork-ref)）,
-[Fork](#Fork-ref)（所有[节点](#Node-ref)遵循相同的[共识规则](#ConsensusRules-ref)的常规的分叉，一旦一条链的[工作量证明](#POW-ref)高于另一条，该分叉被解决）,
-[Hard fork](#HardFork-ref)（[区块链](#BlockChain-ref)上因未升级的[节点](#Node-ref)不遵循新的[共识规则](#ConsensusRules-ref)导致的永久性的分叉）,
-[Soft fork](#SoftFork-ref)（[区块链](#BlockChain-ref)上由未升级的[节点](#Node-ref)不遵循新的[共识规则](#ConsensusRules-ref)导致的临时分叉）,
-Software fork（当一个或多个开发人员与其他开发人员永久地分开开发一份代码库）,
-Git fork（当一个或多个开发人员与其他开发人员临时分开开发一份代码库）
-
-## 陈旧的区块 | Stale Block
-
-**定义**：成功挖出但没有包含在当前[最佳区块链](#BlockChain-ref)上的[区块](#Block-ref)，可能是因为在相同[高度](#BlockHeight-ref)的其他[区块](#Block-ref)首先扩展链。
-
-**不要混淆**：[Orphan block](#OrphanBlock-ref)（该[区块](#Block-ref)的前一个区块哈希域指向一个未知的[区块](#Block-ref)，意味着孤儿块不能被验证）
-
-## 测试网 | Testnet
-
-**定义**：开发人员能够在类似于比特币[主网](#Mainnet-ref)的网络上获得并花费没有真正价值的[聪](#Satoshis-ref)的全球测试环境。
-
-**同义词**：Testing network
-
-**不要混淆**：[Regtest](#Regtest-ref)（开发人员可控制[区块](#Block-ref)生成的本地测试环境）
-
-## 标准交易 | Standard Transaction
-
-**定义**：传递给比特币核心 IsStandard(-ref) 和 IsStandardTx(-ref) 测试的交易。只有标准交易通过运行默认比特币核心软件的[对端节点](#Node-ref)挖矿或广播。
-
-## Watch-Only 地址 | Watch-Only Address
-
-**定义**：[钱包](#Wallet-ref)中不带相应[私钥](#PrivateKey-ref)的[地址](#Address-ref)或[公钥脚本](#ScriptPubKey-ref)，允许[钱包](#Wallet-ref)监视其[输出](#TxOut-ref)但不能花费它们。
-
-## 钱包导入格式 | Wallet Import Format, WIF
-
-**定义**：一种数据交换格式，旨在允许导出和导入单个[私钥](#PrivateKey-ref)，并带有指明其是否使用[压缩公钥](#CompressedPublicKey-ref)的标志。
-
-**不要混淆**：[Extended private keys](#PrivateKey-ref)（允许导入私钥的层次体系）
-
-## 代币 | Token
-
-**定义**：代币是驻留在现存[区块链](#BlockChain-ref)中的具有其基本代码的可编程数字资产。代币有助于促进去中心化应用的创建。
-
-**不要混淆**：[Bitcoins](#Satoshis-ref), [Satoshis](#Satoshis-ref), Security token, [Denominations](#Satoshis-ref)
-
-## 签名哈希 | Signature Hash
-
-**定义**：比特币[签名](#Signature-ref)的标志，表明[签名](#Signature-ref)签署的交易部分。（默认是 [SIGHASH_ALL](#SIGHASH_ALL-ref)）交易未签名的部分可能被修改。
-
-**同义词**：Sighash
-
-**不要混淆**：Signed hash（签名的数据哈希）, [Transaction malleability / mutability](#TransactionMutability-ref)（尽管非默认的[签名哈希](#Sighash-ref)标志允许可选的延展性，延展性包含交易可能发生变化的任何方式）
-
-## 交易可变性 | Transaction Mutability
-
-**定义**：某人改变的[未确认交易](#UnconfirmedTransaction-ref)且不使其无效的能力，这会改变[交易号](#Txid-ref)，使子交易无效。
-
-**同义词**：Transaction malleability（交易延展性）
-
-**不要混淆**：[BIP62](https://github.com/bitcoin/bips/blob/master/bip-0062.mediawiki)（可选的新交易版本的提议，减少了常见交易的已知变化集）
+**不要混淆：**已签名的哈希（Signed hash），[Transaction malleability / mutability](#TransactionMutability)（尽管非默认的[签名哈希](#Sighash)标志允许可选的延展性，延展性包含交易可能发生变化的任何方式）
 
 ## SIGHASH_ALL
 
-**定义**：签名除任意[脚本签名](#ScriptSig-ref)的整个交易的默认的[签名哈希](#Sighash-ref)类型，防止签名部分的修改。
+**定义：**
+签名除任意[脚本签名](#ScriptSig)的整个交易的默认的[签名哈希](#Sighash)类型，防止签名部分的修改。
+
+## SIGHASH_ANYONECANPAY
+
+**定义：**
+仅签名当前[输入](#TxIn)的[签名哈希](#Sighash)类型。
+
+**不要混淆：**
+[SIGHASH_SINGLE](#SIGHASH_SINGLE)（签名该[输入](#TxIn)对应的[输出](#TxOut)和其他部分[输入](#TxIn)）
 
 ## SIGHASH_NONE
 
-**定义**：仅签名[输入](#TxIn-ref)的[签名哈希](#Sighash-ref)类型，允许任何人改变他们想改变的[输出](#TxOut-ref)。
-
-## SIGHASH_ANYONECANPAY（任何人都可以支付）
-
-**定义**：仅签名当前[输入](#TxIn-ref)的[签名哈希](#Sighash-ref)类型。
-
-**不要混淆**：[SIGHASH_SINGLE](#SIGHASH_SINGLE-ref)（签名该[输入](#TxIn-ref)对应的[输出](#TxOut-ref)和其他部分[输入](#TxIn-ref)）
+**定义：**
+仅签名[输入](#TxIn)的[签名哈希](#Sighash)类型，允许任何人改变他们想改变的[输出](#TxOut)。
 
 ## SIGHASH_SINGLE
 
-**定义**：签名对应[输入](#TxIn-ref)（具有相同索引值）的[输出](#TxOut-ref)的[签名哈希](#Sighash-ref)类型，该[输入](#TxIn-ref)，和任意其他[输入](#TxIn-ref)的一部分。允许其他[输出](#TxOut-ref)和其他[输入](#TxIn-ref)[序列号](#Sequence-ref)的修改。
+**定义：**
+签名对应[输入](#TxIn)（具有相同索引值）的[输出](#TxOut)的[签名哈希](#Sighash)类型，该[输入](#TxIn)，和任意其他[输入](#TxIn)的一部分。允许其他[输出](#TxOut)和其他[输入](#TxIn)[序列号](#Sequence)的修改。
 
-**不要混淆**：[SIGHASH_ANYONECANPAY](#SIGHASH_ANYONECANPAY-ref)（仅签名该单个[输入](#TxIn-ref)的[签名哈希](#Sighash-ref)类型的标志）
+**不要混淆：**
+[SIGHASH_ANYONECANPAY](#SIGHASH_ANYONECANPAY)（仅签名该单个[输入](#TxIn)的[签名哈希](#Sighash)类型的标志）
 
-## 未花费的交易输出 | Unspent Transaction Output, UTXO
+## 签名 | Signature
 
-**定义**：可作为一笔交易[输入](#TxIn-ref)的可花费的未花费的交易[输出](#TxOut-ref)（UTXO）。
+**定义：**
+与[公钥](#PublicKey)相关的值，该公钥只能由拥有创建[公钥](#PublicKey)的[私钥](#PrivateKey)的人来创建。
+在比特币中用于在发送到[公钥](#PublicKey)前验证花费的[聪](#Satoshis)。
 
-**不要混淆**：[Output](#TxOut-ref)（任意[输出](#TxOut-ref)，包含花费和未花费的。[输出](#TxOut-ref)是 UTXO 的超集，UTXO 是输出的子集）
+**同义词：**
+椭圆曲线签名（ECDSA signature）
+
+## 软分叉 | Soft fork
+
+**定义：**
+软分叉是比特币协议的改变，其中只有之前有效的[区块](#Block)/交易变得无效了。
+因为旧的[节点](#Node)将仍认为新[区块](#Block)是有效的，所以软分叉是向后兼容的。
+
+**同义词：**
+软分叉变化（Soft-forking change）
+
+**不要混淆：**
+[Fork](#Fork)（所有[节点](#Node)遵循相同的[共识规则](#ConsensusRules)的常规的分叉，一旦一条链的[工作量证明](#POW)高于另一条，该分叉被解决）,
+[Hard fork](#HardFork)（[区块链](#BlockChain)上因未升级的[节点](#Node)不遵循新的[共识规则](#ConsensusRules)导致的永久性的分叉）,
+Software fork（当一个或多个开发人员与其他开发人员永久性地分开开发一份代码）,
+Git fork（当一个或多个开发人员与其他开发人员临时分开开发一份代码）
+
+## 旧的区块 | Stale block
+
+**定义：**
+成功挖出但没有包含在当前[最佳区块链](#BlockChain)上的[区块](#Block)，可能是因为在相同[高度](#BlockHeight)的其他[区块](#Block)首先扩展链。
+
+**不要混淆：**
+孤儿区块（[Orphan block](#OrphanBlock)）（该[区块](#Block)的前一个区块哈希域指向一个未知的[区块](#Block)，意味着孤儿块不能被验证）
+
+## 标准交易 | Standard transaction
+
+**定义：**
+传递给比特币核心 IsStandard 和 IsStandardTx 测试的交易。
+只有标准交易通过运行默认比特币核心软件的[对端节点](#Node)挖矿或广播。
+
+## 公共测试网 | Testnet
+
+**定义：**
+开发人员能够在类似于比特币[主网](#Mainnet)的网络上获得并花费没有真正价值的[聪](#Satoshis)的全球测试环境。
+
+**同义词：**
+测试网络（Testing network）
+
+**不要混淆：**
+回归测试网络（[Regtest](#Regtest)）（开发人员可控制[区块](#Block)生成的本地测试环境）
+
+## 代币 | Token
+
+**定义：**
+代币是驻留在现存[区块链](#BlockChain)中的具有其基本代码的可编程数字资产。
+代币有助于促进去中心化应用的创建。
+
+**不要混淆：**
+比特币（[Bitcoins](#Satoshis)），聪（[Satoshis](#Satoshis)），安全代币（Security token），衡量单位（[Denominations](#Satoshis)）
+
+## 交易可变性 | Transaction mutability
+
+**定义：**
+某人改变的[未确认交易](#UnconfirmedTransaction)且不使其无效的能力，这会改变[交易号](#Txid)，使子交易无效。
+
+**同义词：**
+交易延展性（Transaction malleability）
+
+**不要混淆：**
+[BIP62](https://github.com/bitcoin/bips/blob/master/bip-0062.mediawiki){:target="_blank"}（可选的新交易版本的提议，减少了常见交易的已知变化集）
+
+## 交易号 | Txid
+
+**定义：**
+用于唯一标示特定交易的标识符；具体来说，是交易的双 sha256 散列。
+
+**同义词：**
+交易识别码（Transaction Identifier）
+
+**不要混淆**：
+输出点（[Outpoint](#Outpoint)）（交易号和输出集的联合体，用于识别指定输出）
+
+## 用户激活的软分叉 | User activated soft fork
+
+**定义：**
+通过标志日或[节点](#Node)强制代替[矿工](#Miner)信号激活的[软分叉](#SoftFork)。
+
+**同义词：**
+UASF
+
+**不要混淆：**
+[Miner activated soft fork](#MASF)（通过[矿工](#Miner)信号激活的[软分叉](#SoftFork)）,
+[Fork](#Fork)（所有[节点](#Node)遵循相同的[共识规则](#ConsensusRules)的常规的分叉，一旦一条链的[工作量证明](#POW)高于另一条，该分叉被解决）,
+[Hard fork](#HardFork)（[区块链](#BlockChain)上因未升级的[节点](#Node)不遵循新的[共识规则](#ConsensusRules)导致的永久性的分叉）,
+[Soft fork](#SoftFork)（[区块链](#BlockChain)上由未升级的[节点](#Node)不遵循新的[共识规则](#ConsensusRules)导致的临时分叉）,
+Software fork（当一个或多个开发人员与其他开发人员永久地分开开发一份代码库）,
+Git fork（当一个或多个开发人员与其他开发人员临时分开开发一份代码库）
+
+## 未花费的交易输出 | UTXO
+
+**定义：**
+可作为一笔交易[输入](#TxIn)的可花费的未花费的交易[输出](#TxOut)（UTXO）。
+
+**同义词：**
+未花费的交易输出（Unspent transaction output）
+
+**不要混淆：**
+[Output](#TxOut)（任意[输出](#TxOut)，包含花费和未花费的。[输出](#TxOut)是 UTXO 的超集，UTXO 是输出的子集）
+
+## 钱包 | Wallet
+
+**定义：**
+存储[私钥](#PrivateKey)和[区块链](#BlockChain)镜像的软件（有时作为执行处理的服务器的客户端），允许用户花费和接收[聪](#Satoshis)。
+
+**不要混淆：**
+[HD wallet](#HDWallet)（允许钱包从单个种子创建全部密钥的协议，使用该协议的钱包）
+
+## 钱包导入格式 | Wallet import format
+
+**定义：**
+一种数据交换格式，旨在允许导出和导入单个[私钥](#PrivateKey)，并带有指明其是否使用[压缩公钥](#CompressedPublicKey)的标志。
+
+**同义词：**
+WIF
+
+**不要混淆：**
+扩展的私钥（[Extended private keys](#PrivateKey)）（允许导入私钥的层次体系）
+
+## Watch-Only 地址 | Watch-Only address
+
+**定义：**
+[钱包](#Wallet)中不带相应[私钥](#PrivateKey)的[地址](#Address)或[公钥脚本](#ScriptPubKey)，允许[钱包](#Wallet)监视其[输出](#TxOut)但不能花费它们。
 
 ## 参考链接
 
