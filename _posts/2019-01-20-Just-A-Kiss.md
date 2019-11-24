@@ -118,7 +118,7 @@ Kiss goodnight
 </blockquote>
 </div>
 
-這首歌和 GARNET CROW 的「英雄」前奏出奇地像，不過發行時間在前，MV 是一個小故事，很有意思。
+這首歌的 MV 是一個小故事，很有意思。
 
 ## 参考链接
 

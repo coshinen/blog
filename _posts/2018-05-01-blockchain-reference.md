@@ -40,7 +40,7 @@ stickie: true
 
 * [比特币核心客户端 RPC 命令](/blog/2018/05/bitcoin-cli-commands.html)
 
-## 制作一枚山寨币
+## 制作山寨币
 
 * [如何制作一枚山寨数字货币](/blog/2018/05/how-to-make-an-altcoin.html)
 
