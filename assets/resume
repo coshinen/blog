@@ -18,7 +18,7 @@ permalink: /resume
 <p align="center"><font size="6"><strong>Zichen Yuan</strong></font><br>(+86) xxx-xxxx-xxxx | <a target="_blank" href="mailto:mistydew@qq.com">mistydew@qq.com</a> | Shenzhen, China</p>
 <font size="4"><strong>EDUCATION</strong></font>
 -----------------------------------------------------------------------------------------
-<strong>Zhengzhou University</strong><div style="float:right;">Sep 2013 - Jun 2017</div>
+<strong>Zhengzhou University</strong><div style="float:right;">Sep, 2013 - Jun, 2017</div>
 Bachelor of Computer Science<div style="float:right;">Henan, China</div>
 
 <font size="4"><strong>PROFESSIONAL EXPERIENCE</strong></font>
@@ -40,7 +40,7 @@ Bachelor of Computer Science<div style="float:right;">Henan, China</div>
 <strong>Programming Languages:</strong> C/C++, Python
 <strong>Platform:</strong> UNIX/Linux, macOS, Windows
 <strong>Editor:</strong> Vi/Vim
-<strong>DB:</strong> Mysql, Redis, LevelDB, BerkeleyDB
+<strong>Database:</strong> Mysql, Redis, LevelDB, BerkeleyDB
 <strong>Design Pattern:</strong> Reactor, Thread Pool (TCP/IP, Select/Epoll I/O)
 <strong>Open-Source Libraries:</strong> STL, Boost, Libevent, Libssl (OpenSSL)
 
