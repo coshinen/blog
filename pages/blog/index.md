@@ -10,7 +10,7 @@ excerpt: Welcome to mistydew's blog!
   <ul class="post-list">
     <!-- This loops through the site posts for sticky -->{% for post in site.posts %}{% if post.stickie == true %}
     <li>
-      <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }} [Sticky]</span>
+      <span class="post-meta"><abbr title="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%b %-d, %Y" }}</abbr> [Sticky]</span>
       <span style="float:right;">分类：{% for category in post.categories %}<a class="category" href="{{ site.category }}#{{ category }}-ref">{{ category | append: " " }}</a>{% endfor %}</span>
       <h2>
         <a class="post-link" href="{{ post.url }}">{{ post.title }}</a>
@@ -24,7 +24,7 @@ excerpt: Welcome to mistydew's blog!
     </li>{% endif %}{% endfor %}
     <!-- This loops through the site posts -->{% assign idx = 0 %}{% assign maximum = 7 %}{% for post in site.posts %}{% if post.stickie == true %}{% continue %}{% else %}
     <li>
-      <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+      <span class="post-meta"><abbr title="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%b %-d, %Y" }}</abbr></span>
       <span style="float:right;">分类：{% for category in post.categories %}<a class="category" href="{{ site.category }}#{{ category }}-ref">{{ category | append: " " }}</a>{% endfor %}</span>
       <h2>
         <a class="post-link" href="{{ post.url }}">{{ post.title }}</a>

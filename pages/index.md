@@ -8,7 +8,7 @@ permalink: /
   <ul class="post-list">
     <!-- This loops through the site posts -->{% for post in site.posts %}
     <li>
-      <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+      <span class="post-meta"><abbr title="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%b %-d, %Y" }}</abbr></span>
       <span style="float:right;">分类：{% for category in post.categories %}<a class="category" href="{{ site.category }}#{{ category }}-ref">{{ category | append: " " }}</a>{% endfor %}</span>
       <h2>
         <a class="post-link" href="{{ post.url }}">{{ post.title }}</a>
@@ -25,7 +25,7 @@ permalink: /
   <ul class="post-list-more">
     <!-- This loops through the site posts -->{% assign idx = 0 %}{% assign maximum = 7 %}{% for post in site.posts %}{% assign idx = idx | plus: 1 %}{% if idx == 1 %}{% continue %}{% endif %}
     <li>
-      <span>{{ post.date | date: '%Y年%m月%d日' }} &raquo; </span>
+      <span><abbr title="{{ post.date | date_to_xmlschema }}">{{ post.date | date: '%Y年%m月%d日' }}</abbr> &raquo; </span>
       <a href="{{ post.url }}">{{ post.title }}</a>
     </li>{% if idx == maximum %}{% break %}{% endif %}{% endfor %}
     <li>
