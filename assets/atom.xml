@@ -8,16 +8,16 @@ permalink: /blog/atom.xml
   <title>{{ site.title | xml_escape }}</title>
   <subtitle>{{ site.subtitle | xml_escape }}</subtitle>
   <updated>{{ site.time | date_to_xmlschema }}</updated>
-  <id>tag:{{ site.url }}</id>
-  <link rel="alternate" type="text/html" href="{{ site.blog | prepend: site.url }}"/>
-  <link rel="self" type="application/atom+xml" href="{{ site.feed | prepend: site.url }}"/>
-  <rights>Copyright (c) {{ site.time | date: "%Y" }}, {{ site.root }}</rights>
+  <id>tag:{{ site.url | uri_escape }}</id>
+  <link rel="alternate" type="text/html" href="{{ site.blog | prepend: site.url | uri_escape }}"/>
+  <link rel="self" type="application/atom+xml" href="{{ site.feed | prepend: site.url | uri_escape }}"/>
+  <rights>Copyright (c) {{ site.time | date: "%Y" }}, {{ site.root | xml_escape }}</rights>
   <generator uri="https://jekyllrb.com" version="{{ jekyll.version }}">Jekyll v{{ jekyll.version }}</generator>
 {% for post in site.posts limit:7 %}
   <entry>
     <title>{{ post.title | xml_escape }}</title>
-    <link rel="alternate" type="text/html" href="{{ post.url | prepend: site.url | xml_escape }}"/>
-    <id>tag:{{ site.url }},{{ post.id | xml_escape }}</id>
+    <link rel="alternate" type="text/html" href="{{ post.url | prepend: site.url | uri_escape }}"/>
+    <id>tag:{{ site.url }},{{ post.id | uri_escape }}</id>
     <updated>{{ post.date | date_to_xmlschema }}</updated>
     <published>{{ post.date | date_to_xmlschema }}</published>
     <author>
@@ -25,7 +25,7 @@ permalink: /blog/atom.xml
       <uri>{{ site.url | uri_escape }}</uri>
       <email>{{ site.email }}</email>
     </author>
-    <content type="html" xml:lang="en" xml:base="{{ site.blog | prepend: site.url }}">
+    <content type="html" xml:lang="en" xml:base="{{ site.blog | prepend: site.url | uri_escape }}">
 {{ post.content | xml_escape }}
 &lt;h2&gt;文档信息&lt;/h2&gt;
 &lt;ul&gt;
