@@ -22,7 +22,7 @@ excerpt: Here are some books I read.
 > * [科学](#科学)
 >   * [心理学](#心理学)
 >   * [伦理学](#伦理学)
->   * [统计学](#统计学)
+>   * [方法论](#方法论)
 > * [杂类](#杂类)
 > * [漫画](#漫画)
 > * [语言](#语言)
@@ -128,12 +128,13 @@ excerpt: Here are some books I read.
 > * 乌合之众 大众心理研究，[法] Gustave Le Bon
 > * 亲密关系，[美] Rowland S. Miller, Daniel Perlman
 > * 少有人走的路 心智成熟的旅程，[美] M. Scott peck
+> * 异类 不一样的成功启示录，[加] Malcolm Gladwell
 
 > ### 伦理学
 > * 公正 该如何做是好？，[美] Michael J. Sandel
 
-> ### 统计学
-> * 异类 不一样的成功启示录，[加] Malcolm Gladwell
+> ### 方法论
+> * 刻意练习，[美] Anders Ericsson
 
 ## 杂类
 
