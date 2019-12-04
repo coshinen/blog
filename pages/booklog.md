@@ -134,6 +134,7 @@ excerpt: Here are some books I read.
 > * 公正 该如何做是好？，[美] Michael J. Sandel
 
 > ### 方法论
+> * 单核工作法图解，[瑞典] Staffan Nöteberg
 > * 番茄工作法图解，[瑞典] Staffan Nöteberg
 > * 刻意练习，[美] Anders Ericsson
 
