@@ -57,9 +57,9 @@ She's the terror of Colorado Boulevard<br>
 <div class="lyric-translation">
 <blockquote>
 這是來自帕薩迪納的小老太太<br>
-（走奶奶，走奶奶，走奶奶，出發！）<br>
+（衝吧奶奶，衝吧奶奶，衝吧奶奶，衝啊！）<br>
 有一個白色梔子花的小花壇<br>
-（走奶奶，走奶奶，走奶奶，出發！）<br>
+（衝吧奶奶，衝吧奶奶，衝吧奶奶，衝啊！）<br>
 但是停在一個破舊的車庫裡<br>
 是一種全新的亮紅色的超跑道奇<br>
 <br>
@@ -70,9 +70,9 @@ She's the terror of Colorado Boulevard<br>
 （這就是來自帕薩迪納的小老太太）<br>
 <br>
 你始終會看到她不要試圖選擇她<br>
-（走奶奶，走奶奶，走奶奶，出發！）<br>
+（衝吧奶奶，衝吧奶奶，衝吧奶奶，衝啊！）<br>
 你可以開車去但你永遠不會失去她<br>
-（走奶奶，走奶奶，走奶奶，出發！）<br>
+（衝吧奶奶，衝吧奶奶，衝吧奶奶，衝啊！）<br>
 她遲早會得到一張票<br>
 因為她不能把腳踩在油門上<br>
 <br>
@@ -88,7 +88,7 @@ She's the terror of Colorado Boulevard<br>
 他是科羅拉多大道上的恐怖份子<br>
 （這就是來自帕薩迪納的小老太太）<br>
 <br>
-（走奶奶，走奶奶，走奶奶，出發！）
+（衝吧奶奶，衝吧奶奶，衝吧奶奶，衝啊！）
 </blockquote>
 </div>
 
