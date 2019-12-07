@@ -35,7 +35,7 @@ excerpt: Blog tags.
   {% else %}
     {% assign color = 8 | minus: base %}
   {% endif %}
-  <a href="#{{ tag[0] }}-ref" style="font-size: {{ size }}pt; color: #{{ color }}{{ color }}{{ color }};">{{ tag[0] }}</a>
+  <a href="#{{ tag[0] }}" style="font-size: {{ size }}pt; color: #{{ color }}{{ color }}{{ color }};">{{ tag[0] }}</a>
 {% endfor %}
 </blockquote>
 </center>
@@ -55,7 +55,7 @@ excerpt: Blog tags.
 
 {% for tag in site.tags %}
 <blockquote>
-  <h2 id="{{ tag[0] }}-ref">{{ tag | first }}（{{ counts[idx] }}）<a href="#tagcloud">{% include pages/icon-chevron-up.html %}</a></h2>
+  <h2 id="{{ tag[0] }}">{{ tag | first }}（{{ counts[idx] }}）<a href="#tagcloud">{% include pages/icon-chevron-up.html %}</a></h2>
     {% assign idx = idx | plus: 1 %}
   <ul class="tag-list">
     {% for post in tag.last %}
