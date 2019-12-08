@@ -136,6 +136,7 @@ excerpt: Here are some books I read.
 > ### 方法论
 > * 单核工作法图解，[瑞典] Staffan Nöteberg
 > * 番茄工作法图解，[瑞典] Staffan Nöteberg
+> * 一万小时天才理论，[美] Daniel Coyle
 > * 刻意练习，[美] Anders Ericsson
 
 ## 杂类
