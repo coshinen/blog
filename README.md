@@ -5,8 +5,7 @@
 ## Todo
 
 - [ ] site: replace resume with cv
-- [ ] site: search engine using lunr.js
-- [x] post: categories and tags of all posts
+- [ ] site: replace Simple Jekyll Search with lunr.js
 - [ ] post: file by year, exempli gratia 2018
 
 ## Timeline
