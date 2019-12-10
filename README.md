@@ -4,8 +4,8 @@
 
 ## Todo
 
-- [ ] site: replace resume with cv
-- [ ] site: replace Simple Jekyll Search with lunr.js
+- [ ] site: replace resume with CV
+- [ ] site: replace Simple Jekyll Search with FlexSearch
 - [ ] post: file by year, exempli gratia 2018
 
 ## Timeline
