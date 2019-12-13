@@ -83,6 +83,7 @@ excerpt: Here are some books I read.
 ## 文学
 
 > ### 文集
+> * 暗时间，[中] [刘未鹏](http://mindhacks.cn){:target="_blank"}
 > * 黑客与画家 硅谷创业之父 Paul Graham 文集，[美] Paul Graham
 > * [前方的路](http://www.ruanyifeng.com/road){:target="_blank"}，[中] 阮一峰
 > * [未来世界的幸存者](http://www.ruanyifeng.com/survivor){:target="_blank"}，[中] 阮一峰
