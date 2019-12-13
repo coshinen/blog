@@ -132,5 +132,5 @@ $ vim -b <file> # -b 选项表示二进制模式。
 
 ## 参考链接
 
+* [welcome home : vim online](https://www.vim.org){:target="_blank"}
 * [vim/vim: The official Vim repository](https://github.com/vim/vim){:target="_blank"}
-* [Where Vim Came From](https://twobithistory.org/2018/08/05/where-vim-came-from.html){:target="_blank"}
