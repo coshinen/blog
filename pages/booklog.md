@@ -13,7 +13,6 @@ excerpt: Here are some books I read.
 >   * [网络编程](#网络编程)
 >   * [操作系统](#操作系统)
 >   * [程序人生](#程序人生)
->   * [参考手册](#参考手册)
 > * [文学](#文学)
 >   * [文集](#文集)
 >   * [诗歌](#诗歌)
@@ -75,11 +74,6 @@ excerpt: Here are some books I read.
 > * 重构 改善既有代码的设计，[美] Martin Fowler
 > * 代码整洁之道，[美] Robert C. Martin
 > * 你的灯亮着吗？发现问题的真正所在，[美] Donald C. Gause, Gerald M. Weinberg
-
-> ### 参考手册
-> * [Developer Documentation - Bitcoin](https://bitcoin.org/en/developer-documentation){:target="_blank"}
-> * [Boost C++ Libraries](https://www.boost.org/doc){:target="_blank"}
-> * [cppreference.com](https://en.cppreference.com/w){:target="_blank"}
 
 ## 文学
 
