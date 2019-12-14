@@ -17,7 +17,7 @@ excerpt: 内在动机和刻意练习呈螺旋式上升。
 
 ![presentatie](/assets/images/translation/presentatie.jpg){:.border}
 
-证明一万小时理论最简单的方法，亲自验证，每天花上 2 小时，坚持 13 年左右...
+对于一万小时定律，如果每天花上 2 小时，则需坚持 13-14 年。
 
 ## 参考链接
 
