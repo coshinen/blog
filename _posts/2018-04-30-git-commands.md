@@ -77,4 +77,6 @@ $ git push origin master -f # 强制同步本地的项目分支到 GitHub 上，
 ## 参考链接
 
 * [Git - Book](https://git-scm.com/book/en/v2){:target="_blank"}
+* [GitHub Guides](https://guides.github.com){:target="_blank"}
 * [GitHub Cheat Sheet](https://github.github.com/training-kit/downloads/github-git-cheat-sheet.pdf){:target="_blank"}
+* [GitHub.com Help Documentation](https://help.github.com/en){:target="_blank"}
