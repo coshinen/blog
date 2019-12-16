@@ -13,7 +13,7 @@ permalink: /resume
 
 <strong>0 packages can be updated.</strong>
 <span id="a">mistydew</span>@<a href="https://github.com/mistydew" target="_blank">GitHub</a>:~$ ls -a
-<a>. .. </a>.resume
+<a>. .. .git </a>.resume
 <span id="a">mistydew</span>@<a href="https://github.com/mistydew" target="_blank">GitHub</a>:~$ cat .resume
 <p align="center"><font size="6"><strong>Zichen Yuan</strong></font><br>(+86) xxx-xxxx-xxxx | <a target="_blank" href="mailto:mistydew@qq.com">mistydew@qq.com</a> | Shenzhen, China</p>
 <font size="4"><strong>EDUCATION</strong></font>
@@ -30,8 +30,6 @@ Bachelor of Computer Science<div style="float:right;">Henan, China</div>
 * A spell correction system.
 <a href="https://github.com/mistydew/rssSearchEngine" target="_blank">rssSearchEngine</a>
 * A mini search engine with RSS.
-<a href="https://github.com/mistydew/blockchain" target="_blank">crowcoin</a>
-* An altcoin based on Bitcoin.
 <a href="https://github.com/mistydew/asstolrc" target="_blank">asstolrc</a>
 * A command tool to convert complete ass of the Aegisub to lrc.
 
@@ -39,7 +37,7 @@ Bachelor of Computer Science<div style="float:right;">Henan, China</div>
 -----------------------------------------------------------------------------------------
 <strong>Programming Languages:</strong> C/C++, Python
 <strong>Platform:</strong> UNIX/Linux, macOS, Windows
-<strong>Editor:</strong> Vi/Vim
+<strong>Editor:</strong> Vi/Vim, Emacs
 <strong>Database:</strong> Mysql, Redis, LevelDB, BerkeleyDB
 <strong>Design Pattern:</strong> Reactor, Thread Pool (TCP/IP, Select/Epoll I/O)
 <strong>Open-Source Libraries:</strong> STL, Boost, Libevent, Libssl (OpenSSL)
