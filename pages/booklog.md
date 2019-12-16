@@ -37,7 +37,6 @@ excerpt: Here are some books I read.
 
 > ### 区块链
 > * 区块链启示录 中本聪文集，[美] Phil Champagne
-> * [Blockchain - Get to know it](/blog/2018/09/get-to-know-the-blockchain.html)，[澳] Ben Sampson
 > * 区块链开发指南，[中] 申屠青春
 > * [区块链技术指南](https://yeasy.gitbooks.io/blockchain_guide/content){:target="_blank"}，[中] Baohua Yang
 > * [精通比特币（第二版）](https://bitcoinbook.info){:target="_blank"}，[美] Andreas M. Antonopoulos
@@ -131,7 +130,7 @@ excerpt: Here are some books I read.
 
 > ### 方法论
 > * 单核工作法图解，[瑞典] Staffan Nöteberg
-> * 番茄工作法图解，[瑞典] Staffan Nöteberg
+> * 番茄工作法图解，[瑞典] [Staffan Nöteberg](http://staffannoteberg.com){:target="_blank"}
 > * 一万小时天才理论，[美] Daniel Coyle
 > * 刻意练习，[美] Anders Ericsson
 
