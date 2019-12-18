@@ -5,6 +5,14 @@ permalink: /quotes.html
 excerpt: Here are my favorite quotes from someones that inspire me or make me laugh. I hope you enjoy them.
 ---
 
+> Paul Graham, [What You'll Wish You'd Known](http://www.paulgraham.com/hs.html){:target="_blank"}:
+> * Your life doesn't have to be shaped by admissions officers. It could be shaped by your own curiosity. It is for all ambitious adults. And you don't have to wait to start.
+> In fact, you don't have to wait to be an adult. There's no switch inside you that magically flips when you turn a certain age or graduate from some institution.
+> You start being an adult when you decide to take responsibility for your life. You can do that at any age.
+> * Fouls happen. The thing to do when you get fouled is not to lose your cool. Just keep playing.
+> * The best protection is always to be working on hard problems. Writing novels is hard. Reading novels isn't.
+> Hard means worry: if you're not worrying that something you're making will come out badly, or that you won't be able to understand something you're studying, then it isn't hard enough. There has to be suspense.
+
 > Steve Jobs, Stanford Commencement Speech 2005:
 > * Stay Hungry. Stay Foolish.
 > * Your time is limited, so don't waste it living someone else's life.
