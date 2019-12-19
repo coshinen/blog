@@ -10,12 +10,12 @@
 
 ## Timeline
 
-* 2019.11.08 [-] site: ~~ClustrMaps analytics~~ (patriotism); blog page: ~~ClustrMaps.com Globe Widget~~
+* 2019.11.08 [-] site: ~~ClustrMaps analytics~~ (patriotism); blog page: ~~ClustrMaps.com Globe Widget~~ (patriotism)
 
 <details>
 <summary>history</summary>
 
-* 2019.10.25 [+] site: ClustrMaps analytics; blog page: ClustrMaps.com Globe Widget
+* 2019.10.25 [+] site: ~~ClustrMaps analytics~~; blog page: ~~ClustrMaps.com Globe Widget~~
 * 2019.09.22 [+] config: build future
 * 2019.09.19 [+] remake: archive and category page
 * 2019.09.07 [-] post: ~~{% highlight %} code {% endhighlight %}~~; [+] post: ```code```
@@ -95,7 +95,7 @@
 
 ## Licenses
 
-The parallel universe theme is released under the terms of MIT license.
+The theme parallel universe is released under the terms of MIT license.
 See [LICENSE](LICENSE) for more information or see https://opensource.org/licenses/MIT.
 
 All posts are released under the terms of Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0) license.
