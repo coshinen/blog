@@ -145,7 +145,7 @@ excerpt: Here are some books I read.
 ## 漫画
 
 > * 名探偵コナン，[日] 青山剛昌
-> * まじっく快斗，[日] 青山剛昌
+> * まじっく快斗，[日] [青山剛昌](http://www.gamf.jp){:target="_blank"}
 
 ## 语言
 
