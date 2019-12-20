@@ -60,6 +60,7 @@ $ git checkout -- [flie] # 撤销使用 $ git add [file] 添加到暂存区中�
 $ git reset --hard HEAD^ # 版本回退至上一版。
 $ git reset --hard [version] # 版本回退至指定版本。
 $ git commit --amend # 修改上一次提交的评论，同时按 Ctrl + X 保存，然后按 Y 确认，最后按 Enter 退出。
+$ git rebase -i HEAD~n # 修改倒数第 n 条已经提交的 commit，把 pick 改为 edit，保存退出后根据提示进行。
 ```
 
 ### 远程仓库 | GitHub
@@ -80,3 +81,4 @@ $ git push origin master -f # 强制同步本地的项目分支到 GitHub 上，
 * [GitHub Guides](https://guides.github.com){:target="_blank"}
 * [GitHub Cheat Sheet](https://github.github.com/training-kit/downloads/github-git-cheat-sheet.pdf){:target="_blank"}
 * [GitHub.com Help Documentation](https://help.github.com/en){:target="_blank"}
+* [git - the simple guide - no deep shit!](http://rogerdudler.github.io/git-guide){:target="_blank"}
