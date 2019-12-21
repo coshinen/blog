@@ -73,11 +73,11 @@ around the clook<br>
 Crier Girl, Crier Boy<br>
 growin' night<br>
 不變的愛<br>
-如果沒有的話現在 感受（看）到的一切<br>
-變成唯一的事實（寶物）<br>
+如果沒有的話現在 感受到的一切<br>
+變成唯一的事實<br>
 不久就要靠近<br>
 <br>
-就連曖昧的態度（語言）都珍藏在心裡<br>
+就連曖昧的態度都珍藏在心裡<br>
 <br>
 把忍受不了的痛苦 偷換昇華<br>
 不知不覺地動搖了<br>
@@ -94,14 +94,14 @@ Winter night, Ice cold sky<br>
 <br>
 Crier Girl, Crier Boy<br>
 即使是現在<br>
-那一天的我們是美好的（天真）<br>
+那一天的我們是美好的<br>
 閃耀可見<br>
 感覺好像能做的很好<br>
 <br>
 Winter night, Ice cold sky<br>
 around the clook<br>
 想見你<br>
-讓我感受到這雙手毫不懷疑的體溫（溫柔）<br>
+讓我感受到這雙手毫不懷疑的體溫<br>
 連接著不斷消失的東西
 </blockquote>
 </div>
