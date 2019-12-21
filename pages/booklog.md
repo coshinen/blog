@@ -44,7 +44,7 @@ excerpt: Here are some books I read.
 > * [Bitcoin: A Peer-to-Peer Electronic Cash System](/blog/2018/04/Bitcoin-A-Peer-to-Peer-Electronic-Cash-System.html)，[?] Satoshi Nakamoto
 
 > ### 编程语言
-> * Linux/UNIX 系统编程手册（上、下册），[德] Michael Kerrisk
+> * Linux/UNIX 系统编程手册（上、下册），[德] [Michael Kerrisk](http://man7.org){:target="_blank"}
 > * STL 源码剖析，[中] 侯捷
 > * [The C++ Annotations](http://www.icce.rug.nl/documents/cplusplus){:target="_blank"}，[荷] Frank B. Brokken
 > * C++ 沉思录，[美] Andrew Koenig, Barbara Moo
