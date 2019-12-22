@@ -55,7 +55,7 @@ excerpt: Here are some books I read.
 > * C 专家编程，[美] Peter van der Linden
 > * C 陷阱与缺陷，[美] Andrew Koening
 > * C 和指针，[美] Kenneth A. Reek
-> * C 程序设计语言（第2版），[美] Brian W. Kernighan, Dennis M. Ritchie
+> * C 程序设计语言（第2版），[美] [Brian W. Kernighan](https://www.cs.princeton.edu/~bwk){:target="_blank"}, [Dennis M. Ritchie](https://www.bell-labs.com/usr/dmr/www){:target="_blank"}
 
 > ### 网络编程
 > * 图解 HTTP，[日] 上野宣
