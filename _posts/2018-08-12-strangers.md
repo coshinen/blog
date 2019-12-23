@@ -68,7 +68,7 @@ strangers<br>
 客船停泊下來<br>
 <br>
 住慣了的這個城市總是<br>
-因 stranger（陌生人）而熱鬧<br>
+因 stranger 而熱鬧<br>
 100 年以前未變的地方<br>
 <br>
 I'm a traveler<br>
@@ -83,7 +83,7 @@ You're a stranger<br>
 只要有就很棒<br>
 <br>
 雖然記得那份懷念<br>
-我也是 stranger（路過）而已<br>
+我也是 stranger 而已<br>
 100 年以後也不會改變的地方<br>
 <br>
 You're a traveler<br>
