@@ -9,11 +9,9 @@ tags: Git/GitHub CI/CD
 ---
 GitHub Actions 可以让你直接在 GitHub 仓库中创建自定义软件开发生命周期的工作流。
 
-![GitHub Actions workflows](/assets/images/git/hub/44036562_1.png)
-![GitHub Actions workflows](/assets/images/git/hub/44036562_2.png)
+![GitHub Actions workflows](/assets/images/git/hub/44036562.png)
 
-GitHub Actions 目前~~处于测试阶段，需要注册 beta 版等待官方开启后才能使用。~~
-已正式开放。
+GitHub Actions 目前~~处于测试阶段，需要注册 beta 版等待官方开启后才能使用。~~已正式开放。
 
 ![GitHub Actions](/assets/images/git/hub/github-actions.png){:.border}
 
@@ -130,8 +128,6 @@ GitHub 托管 Linux、macOS 和 Windows 虚拟环境来运行你的工作流。
 一旦成功创建了一个 YAML 工作流文件并触发了该工作流，你将会看到工作流每个步骤的构建日志、测试结果、工作和状态。
 
 下面以 C/C++ 项目为例，对其 GitHub Actions 工作流进行基本的设置。
-
-![c-cpp](/assets/images/git/hub/c-cpp.svg)
 
 ### 2.1. 定义工作流的名称（name）
 
