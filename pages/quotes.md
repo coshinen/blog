@@ -82,7 +82,7 @@ excerpt: Here are my favorite quotes from someones that inspire me or make me la
 > Alan Turing, The imitation game:
 > * Sometimes it is the people no one imagines anything of who do the things that no one can imagine.
 
-> J.K. Rowling:
+> J.K. Rowling, [Interview](https://jjmarsh.wordpress.com/2013/08/14/jk-rowling){:target="_blank"}:
 > * Print will never die. There's no substitute for the feel of an actual book.
 > I adore physically turning pages, and being able to underline passages and not worrying about dropping them in the bath or running out of power.
 > I also find print books objects of beauty.
