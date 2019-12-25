@@ -23,7 +23,7 @@ tags: 译文
 <iframe src="https://www.youtube.com/embed/aUaInTfrDnA" frameborder="0" height="360" width="600"></iframe>
 
 比起电子书，我更喜欢实体书，味道就是原因之一，但不得不承认电子书在便携性上的巨大优势。
-我相信纸质书不会消亡，而电子书却是一个里程碑。
+所以纸质书或将像其他材质的书籍一样成为历史。
 
 ## 参考链接
 
