@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "每个高效的 Linux 用户必须知道的 13 个终端快捷键"
+title:  "每个高效的 Linux 用户必须知道的 14 个终端快捷键"
 date:   2018-10-16 13:35:20 +0800
 author: mistydew
 comments: true
@@ -118,18 +118,10 @@ Ctrl+A 送光标到行首，反之 Ctrl+E 移动光标到行尾。
 如果使用 Ctrl+P 查看上一条命令，你可以使用 Ctrl+N 来回导航。
 许多终端都把此快捷键映射到 PgDn 键。
 
-## 14. Ctrl + R（新增）
+## 14. Ctrl + R
 
-你可以使用该快捷键来搜索历史命令。
-
-## 你最喜欢的 Linux 终端快捷键是什么？
-
-如果你想要了解更多 Linux 终端技巧，可以该（YouTube）视频来发掘隐藏的命令行精华：
-
-<div style="position:relative;height:0;padding-bottom:60.54%"><iframe src="https://www.youtube.com/embed/61_gRSCS6AI?ecver=2" style="position:absolute;width:100%;height:100%;left:0" width="595" height="360" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></div>
-
-我分享了我最喜欢的终端快捷键。你最喜欢的 Linux 终端快捷键有哪些？
-如果你有一个（或更多），为什么不在评论区与我们分享？
+你可以使用该快捷键来搜索（快速匹配）历史命令。
+历史命令保存在用户家目录下的 .bash_history 文件中。
 
 ## 参考链接
 
