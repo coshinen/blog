@@ -38,7 +38,7 @@ excerpt: Here are some books I read.
 > ### 区块链
 > * 区块链启示录 中本聪文集，[美] Phil Champagne
 > * 区块链开发指南，[中] 申屠青春
-> * [区块链技术指南](https://yeasy.gitbooks.io/blockchain_guide/content){:target="_blank"}，[中] Baohua Yang
+> * [区块链技术指南](https://yeasy.gitbooks.io/blockchain_guide/content){:target="_blank"}，[中] [Baohua Yang](https://yeasy.github.io){:target="_blank"}
 > * [精通比特币（第二版）](https://bitcoinbook.info){:target="_blank"}，[美] Andreas M. Antonopoulos
 > * [Bitcoin: A Peer-to-Peer Electronic Cash System](/blog/2018/04/Bitcoin-A-Peer-to-Peer-Electronic-Cash-System.html)，[?] Satoshi Nakamoto
 
