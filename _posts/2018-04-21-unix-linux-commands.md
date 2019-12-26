@@ -7,8 +7,6 @@ comments: true
 categories: UNIX/Linux Terminal
 tags: UNIX/Linux CLI
 ---
-**UNIX/Linux 下执行一条命令成功的标志是没有提示，一般出错时才会给出提示。**
-
 象征着开源的 Linux 吉祥物 tux (Torvalds UniX)。
 
 ![tux](/assets/images/linux/tux.png)
@@ -16,20 +14,21 @@ tags: UNIX/Linux CLI
 ## 查看目录下的内容 | list
 
 ```shell
-$ ls # 列出当前所在目录下的所有文件（除隐藏文件，即以 . 开头的文件）的文件名，包含普通文件、目录文件...
-$ ls <dir> # 列出 <dir> 目录下的所有文件（除隐藏文件，即以 . 开头的文件）的文件名，包含普通文件、目录文件...
+$ ls # 列出当前所在目录下的所有文件名，包含普通文件、目录文件...（不含隐藏文件，即以 . 开头的文件）
+$ ls <dir> # 列出 <dir> 目录下的所有文件名，包含普通文件、目录文件...（不含隐藏文件，即以 . 开头的文件）
 $ ls -l # 列出当前所在目录下的所有文件（除隐藏文件）的详细信息，分别是文件属性（类型、权限）、连接数、所属者、所属组、大小（字节）、日期、文件名。
-$ ls -a # 列出当前所在目录下的所有文件的文件名，包含隐藏文件。
-$ ls -R # 列出当前所在目录及其子目录下的所有文件的文件名。
+$ ls -a # 列出当前所在目录下的所有文件名，包含隐藏文件。
+$ ls * # 列出当前所在目录及其子目录下的所有文件名。
+$ ls -R # 递归列出当前所在目录下的所有文件名。
 ```
 
 ## 切换目录 | change directory
 
 ```shell
-$ cd <dir> # 切换工作目录（当前所在目录）至 <dir> 目录。
-$ cd .. # 切换工作目录至上一级目录。
-$ cd - # 切换工作目录至上一个工作目录。
-$ cd ~ # 同 $ cd 切换工作目录至当前用户家目录。
+$ cd <dir> # 切换当前所在目录至 <dir> 目录。
+$ cd .. # 切换至上一级目录。
+$ cd - # 切换至上一个工作目录。
+$ cd [~] # 切换至当前用户家目录。
 ```
 
 ## 创建文件
@@ -126,7 +125,7 @@ $ tar Jxfv <file>.tar.xz # 解压缩 xz 格式的文件 <file>.tar.xz。
 ## 安装软件 | install
 
 ```shell
-$ sudo apt install vim # 安装 vim 软件到系统，一般默认装在 /usr/bin 目录下，所以要使用 root 用户进行安装，或在命令的前面加 sudo 进行权限提升。e.g. $ sudo apt install vim。
+$ sudo apt install <software> # 安装 <software> 到系统，一般默认装在 /usr/bin 目录下，所以要使用 root 用户进行安装，需使用 sudo 进行权限提升。
 $ sudo apt update # 从所有配置的源中下载包信息，用于安装软件时显示没有该软件的情况。
 $ sudo apt upgrade # 从通过 sources.list 配置的源安装在系统上的所有包中安装可用的升级，即通过 update 的结果进行已安装软件的升级。
 ```
@@ -166,7 +165,7 @@ $ sudo visudo # 打开 /etc/sudoers.tmp 文件。
 > root ALL=(ALL:ALL) ALL<br>
 > user ALL=(ALL:ALL) ALL
 
-## 添加/删除用户组 | groupadd/groupdel
+## 添加/删除用户组 | group add/delete
 
 ```shell
 $ sudo groupadd <groupname> # 添加用户组 <groupname>。
@@ -307,4 +306,3 @@ $ strip <ELF> # 通过删除可执行文件 <ELF> 中的调试符号等相关信
 
 * [Why Penguin is Linux logo? - LinuxScrew: Linux Blog](http://www.linuxscrew.com/2007/11/14/why-penguin-is-linux-logo){:target="_blank"}
 * [The Linux Kernel Archives](https://www.kernel.org){:target="_blank"}
-* [Linux.org](https://www.linux.org){:target="_blank"}
