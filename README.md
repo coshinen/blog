@@ -18,7 +18,7 @@
 * 2019.10.25 [+] site: ~~ClustrMaps analytics~~; blog page: ~~ClustrMaps.com Globe Widget~~
 * 2019.09.22 [+] config: build future
 * 2019.09.19 [+] remake: archive and category page
-* 2019.09.07 [-] post: ~~{% highlight %} code {% endhighlight %}~~; [+] post: ```code```
+* 2019.09.07 [-] post: ~~{% highlight %} code {% endhighlight %}~~ (only jekyll); [+] post: ```code``` (markdown)
 * 2019.08.28 [+] site: GitHub Actions workflows CI
 * 2019.08.25 [+] remake: blog page (comments, profile)
 * 2019.08.24 [-] post: ~~Remarkbox Hosted Comments Service~~ (incomplete); [+] post: IntenseDebate comments
@@ -57,7 +57,7 @@
 * 2018.08.15 [-] site: ~~particle background~~ (redundancy)
 * 2018.08.13 [+] site: ~~cPlayer (web music player)~~
 * 2018.08.12 [+] pages: donate page
-* 2018.08.10 [+] site: sitemap; post: IntenseDebate comments
+* 2018.08.10 [+] site: sitemap (~~jekyll-sitemap plugin~~); post: ~~IntenseDebate comments~~
 * 2018.08.08 [+] site: delimiter '|' in html head title; background-color
 * 2018.08.06 [+] pages: resume/CV (Curriculum Vitae) page
 * 2018.08.02 [+] archive page: Google Custom Search; site: ~~Baidu Custom Search~~
@@ -74,7 +74,7 @@
 * 2018.05.18 [+] pages: 404 page (Tencent search lost children)
 * 2018.05.17 [+] footer: ~~slogan~~
 * 2018.05.16 [+] pages: category page; ~~slogan page~~
-* 2018.05.14 [+] site: ~~honehone clock~~; home page: ~~pagination~~
+* 2018.05.14 [+] site: ~~honehone clock~~; home page: ~~pagination (jekyll-paginate plugin)~~
 * 2018.05.02 [+] site: gc favicon
 * 2018.04.27 [-] site: ~~audio directory~~ (redundancy)
 * 2018.04.21 [+] post: images and reference
