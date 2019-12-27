@@ -19,6 +19,7 @@ excerpt: Here are some books I read.
 >   * [传记](#传记)
 >   * [小说](#小说)
 > * [科学](#科学)
+>   * [化学](#化学)
 >   * [心理学](#心理学)
 >   * [伦理学](#伦理学)
 >   * [方法论](#方法论)
@@ -116,6 +117,9 @@ excerpt: Here are some books I read.
 > * 爱伦·坡短篇小说集，[美] [Edgar Allan Poe](https://poestories.com){:target="_blank"}
 
 ## 科学
+
+> ### 化学
+> * 阿加莎的毒药，[英] Kathryn Harkup
 
 > ### 心理学
 > * 原生家庭，[美] Susan Forward
