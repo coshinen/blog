@@ -46,6 +46,9 @@ And days of auld lang syne?
 </blockquote>
 </div>
 
+這首詩歌是由蘇格蘭詩人 Robert Burns 根據當地民歌記錄下的，原文是古蘇格蘭方言。
+Auld Lang Syne 直譯為“old long since”或“days gone by”，大意為“逝去已久的日子”（在中國多譯為“友誼地久天長”），經常在平安夜演唱。
+
 ## 参考链接
 
 * [AULD LANG SYNE Lyrics \| GARNET CROW music diary](https://mistydew.github.io/gc/lyrics/featuring/AULD%20LANG%20SYNE.html){:target="_blank"}
