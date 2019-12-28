@@ -4,8 +4,8 @@ title:  "中村由利 THE LITTLE OLD LADY FROM PASADENA 歌詞翻訳"
 date:   2019-05-19 20:02:07 +0800
 author: mistydew
 comments: true
-categories: GARNETCROW Lyrics
-tags: ガネクロ 歌詞翻訳
+categories: Lyrics
+tags: 歌詞翻訳
 excerpt: It's the little old lady from Pasadena, has a pretty little flower bed of white gardenias. But parked in a rickety old garage, is a brand new shiny red super stocked Dodge.
 ---
 ![HOTROD BEACH PARTY](https://raw.githubusercontent.com/mistydew/gc2/master/cover/featuring/HOTROD%20BEACH%20PARTY.jpg)
