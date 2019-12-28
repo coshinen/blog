@@ -141,6 +141,7 @@ excerpt: Here are some books I read.
 
 ## 杂类
 
+> * 绝对笑喷之弃业医生日志，[英] Adam Kay
 > * [新生 七年就是一辈子](https://b.xinshengdaxue.com){:target="_blank"}，[中] 李笑来
 > * [把时间当作朋友 运用心智 获得解放](https://github.com/xiaolai/time-as-a-friend){:target="_blank"}，[中] [李笑来](http://lixiaolai.com/#/){:target="_blank"}
 > * 富爸爸，穷爸爸，[美] Robert T. Kiyosaki
