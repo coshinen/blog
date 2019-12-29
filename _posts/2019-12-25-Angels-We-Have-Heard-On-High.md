@@ -64,6 +64,9 @@ Gloria, in excelsis Deo!
 </blockquote>
 </div>
 
+“Gloria in excelsis Deo”是拉丁文，對應英文中的“Glory to God in the highest”，是“榮耀歸於至高的上帝”的意思。
+
 ## 参考链接
 
 * [Angels We Have Heard On High Lyrics \| GARNET CROW music diary](https://mistydew.github.io/gc/lyrics/featuring/Angels%20We%20Have%20Heard%20On%20High.html){:target="_blank"}
+* [Gloria in excelsis Deo - Wikipedia](https://en.wikipedia.org/wiki/Gloria_in_excelsis_Deo){:target="_blank"}
