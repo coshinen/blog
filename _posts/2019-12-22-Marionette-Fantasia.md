@@ -125,7 +125,7 @@ knock 的影子<br>
 晃晃 悠悠 跑過去<br>
 <br>
 ah- din da da da<br>
-鐘錶裝置<br>
+計時裝置<br>
 when a young owl hooted 穿過了黑暗<br>
 宣告結束的 bell聲 為何<br>
 帶來 難受的 心情<br>

@@ -10,7 +10,7 @@ excerpt: 暮れゆく空おセンチな気分。海辺のDrive、まだみたこ
 ---
 ![STAY 〜夜明けのSoul〜](https://raw.githubusercontent.com/mistydew/gc2/master/cover/album/AL07_STAY%20〜夜明けのSoul〜.jpg){:.border}
 
-## Fall in Life 〜Hallelujah〜 | 墜入生活～哈利路亞～
+## Fall in Life 〜Hallelujah〜 | 墜入生活～讚美上帝～
 
 歌手：GARNET CROW<br>
 作詞：AZUKI 七<br>
