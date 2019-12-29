@@ -13,7 +13,7 @@ excerpt: Here are my favorite quotes from someones that inspire me or make me la
 > * The best protection is always to be working on hard problems. Writing novels is hard. Reading novels isn't.
 > Hard means worry: if you're not worrying that something you're making will come out badly, or that you won't be able to understand something you're studying, then it isn't hard enough. There has to be suspense.
 
-> Steve Jobs, Stanford Commencement Speech 2005:
+> Steve Jobs, [Stanford Commencement address (2005)](https://news.stanford.edu/2005/06/14/jobs-061505){:target="_blank"}:
 > * Stay Hungry. Stay Foolish.
 > * Your time is limited, so don't waste it living someone else's life.
 > Don't be trapped by dogma - which is living with the results of other people's thinking.
