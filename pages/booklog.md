@@ -122,6 +122,7 @@ excerpt: Here are some books I read.
 > * 阿加莎的毒药，[英] Kathryn Harkup
 
 > ### 心理学
+> * 内向者优势 如何在外向的世界中获得成功，[美] Marti Olsen Laney
 > * 原生家庭，[美] Susan Forward
 > * 非暴力沟通，[美] Marshall B.Rosenberg
 > * 人性的弱点，[美] Dale Carnegie
