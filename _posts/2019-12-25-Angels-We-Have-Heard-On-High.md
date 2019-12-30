@@ -65,8 +65,10 @@ Gloria, in excelsis Deo!
 </div>
 
 “Gloria in excelsis Deo”是拉丁文，對應英文中的“Glory to God in the highest”，是“榮耀歸於至高的上帝”的意思。
+“Bethlehem”伯利恆（白冷）是巴勒斯坦南部的一個小城市，希伯來文原意為麵包之家，是耶穌的出生地。
 
 ## 参考链接
 
+* [Christmas Songs – Angels We Have Heard on High Lyrics \| Genius Lyrics](https://genius.com/Christmas-songs-angels-we-have-heard-on-high-lyrics){:target="_blank"}
 * [Angels We Have Heard On High Lyrics \| GARNET CROW music diary](https://mistydew.github.io/gc/lyrics/featuring/Angels%20We%20Have%20Heard%20On%20High.html){:target="_blank"}
 * [Gloria in excelsis Deo - Wikipedia](https://en.wikipedia.org/wiki/Gloria_in_excelsis_Deo){:target="_blank"}
