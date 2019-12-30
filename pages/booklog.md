@@ -19,6 +19,7 @@ excerpt: Here are some books I read.
 >   * [传记](#传记)
 >   * [小说](#小说)
 > * [科学](#科学)
+>   * [医学](#医学)
 >   * [化学](#化学)
 >   * [心理学](#心理学)
 >   * [伦理学](#伦理学)
@@ -118,18 +119,22 @@ excerpt: Here are some books I read.
 
 ## 科学
 
+> ### 医学
+> * 绝对笑喷之弃业医生日志，[英] Adam Kay
+
 > ### 化学
 > * 阿加莎的毒药，[英] Kathryn Harkup
 
 > ### 心理学
 > * 内向者优势 如何在外向的世界中获得成功，[美] Marti Olsen Laney
+> * 安静：内向性格的竞争力，[美] Susan Cain
 > * 原生家庭，[美] Susan Forward
 > * 非暴力沟通，[美] Marshall B.Rosenberg
 > * 人性的弱点，[美] Dale Carnegie
 > * 乌合之众 大众心理研究，[法] Gustave Le Bon
 > * 亲密关系，[美] Rowland S. Miller, Daniel Perlman
 > * 少有人走的路 心智成熟的旅程，[美] M. Scott peck
-> * 异类 不一样的成功启示录，[加] Malcolm Gladwell
+> * 异类：不一样的成功启示录，[加] Malcolm Gladwell
 
 > ### 伦理学
 > * 公正 该如何做是好？，[美] Michael J. Sandel
@@ -142,7 +147,6 @@ excerpt: Here are some books I read.
 
 ## 杂类
 
-> * 绝对笑喷之弃业医生日志，[英] Adam Kay
 > * [新生 七年就是一辈子](https://b.xinshengdaxue.com){:target="_blank"}，[中] 李笑来
 > * [把时间当作朋友 运用心智 获得解放](https://github.com/xiaolai/time-as-a-friend){:target="_blank"}，[中] [李笑来](http://lixiaolai.com/#/){:target="_blank"}
 > * 富爸爸，穷爸爸，[美] Robert T. Kiyosaki
