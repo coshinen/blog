@@ -40,7 +40,7 @@
 * 2019.03.30 [-] site: ~~cPlayer~~ (redundancy)
 * 2019.02.02 [-] site: ~~honehone clock~~ (unnecessary)
 * 2019.02.01 [+] remake: gc favicon
-* 2019.01.01 [+] subsite: GC music diary home page; [~] LICENSE: update license year range to 2019
+* 2019.01.01 [+] subsite: GC music diary home page
 * 2018.09.25 [+] donate page: Bitcoin address and QR (Quick Response) code
 * 2018.09.24 [-] archive page: ~~GitHub Contribution~~ (unnecessary)
 * 2018.09.20 [+] remake: home page; config: blog permalink; [-] site: ~~jekyll-paginate plugin~~ (no plugin)
