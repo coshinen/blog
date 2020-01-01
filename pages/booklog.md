@@ -120,6 +120,7 @@ excerpt: Here are some books I read.
 ## 科学
 
 > ### 医学
+> * 众病之王：癌症传，[美] Siddhartha Mukherjee
 > * 绝对笑喷之弃业医生日志，[英] Adam Kay
 
 > ### 化学
