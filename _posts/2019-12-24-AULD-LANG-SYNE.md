@@ -10,7 +10,7 @@ excerpt: Should auld acquaintance be forgot, and never brought to mind? Should a
 ---
 ![Christmas Non-Stop Carol](https://raw.githubusercontent.com/mistydew/gc2/master/cover/featuring/Christmas%20Non-Stop%20Carol.jpg){:.border}
 
-## AULD LANG SYNE | 逝去已久的日子（友誼地久天長）
+## AULD LANG SYNE | 逝去已久的日子
 
 歌手：中村由利
 
