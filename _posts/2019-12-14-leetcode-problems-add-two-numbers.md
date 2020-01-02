@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "LeetCode Problems Add Two Numbers"
+title:  "LeetCode 2. Add Two Numbers"
 date:   2019-12-14 14:58:13 +0800
 author: mistydew
 comments: true

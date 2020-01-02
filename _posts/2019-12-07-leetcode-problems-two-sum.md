@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "LeetCode Problems Two Sum"
+title:  "LeetCode 1. Two Sum"
 date:   2019-12-07 12:37:30 +0800
 author: mistydew
 comments: true

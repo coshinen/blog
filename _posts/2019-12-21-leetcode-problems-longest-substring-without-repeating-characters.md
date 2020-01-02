@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "LeetCode Problems Longest Substring Without Repeating Characters"
+title:  "LeetCode 3. Longest Substring Without Repeating Characters"
 date:   2019-12-21 13:32:52 +0800
 author: mistydew
 comments: true
