@@ -34,7 +34,7 @@ excerpt: Here are some books I read.
 > ### 算法
 > * 啊哈！算法，[中] 啊哈磊
 > * 图解密码技术（第3版），[日] [結城浩](http://www.hyuki.com){:target="_blank"}
-> * C++ 数据结构算法（第4版），[美] Adam Drozdek
+> * C++ 数据结构与算法（第4版），[美] Adam Drozdek
 > * 数据结构（C++ 语言版 第3版），[中] [邓俊辉](https://dsa.cs.tsinghua.edu.cn/~deng/index.htm){:target="_blank"}
 > * 大话数据结构，[中] 程杰
 
@@ -80,6 +80,7 @@ excerpt: Here are some books I read.
 ## 文学
 
 > ### 文集
+> * 沉默的大多数 王小波杂文随笔全编，[中] 王小波
 > * 暗时间，[中] [刘未鹏](http://mindhacks.cn){:target="_blank"}
 > * 黑客与画家 硅谷创业之父 Paul Graham 文集，[美] [Paul Graham](http://www.paulgraham.com){:target="_blank"}
 > * [前方的路](http://www.ruanyifeng.com/road){:target="_blank"}，[中] 阮一峰
