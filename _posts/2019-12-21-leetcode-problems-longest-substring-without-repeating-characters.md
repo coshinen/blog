@@ -1,12 +1,12 @@
 ---
 layout: post
-title:  "LeetCode 3. Longest Substring Without Repeating Characters"
+title:  "LeetCode 3. 无重复字符的最长子串"
 date:   2019-12-21 13:32:52 +0800
 author: mistydew
 comments: true
 categories: LeetCode
 tags: LeetCode
-excerpt: Given a string, find the length of the **longest substring** without repeating characters.
+excerpt: 给定一个字符串，找出没有重复字符的**最长子串**的长度。
 ---
 ## 3. Longest Substring Without Repeating Characters (Medium)
 
@@ -33,7 +33,7 @@ excerpt: Given a string, find the length of the **longest substring** without re
 
 ## 问题分析
 
-给定一个字符串，找出没有重复字符的最长字符串的长度。
+给定一个字符串，找出没有重复字符的**最长子串**的长度。
 
 ## 解决方案
 
