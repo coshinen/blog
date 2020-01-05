@@ -8,11 +8,11 @@ excerpt: About parallel universe, me and contact information.
 The **parallel universe** is based on the base Jekyll theme.
 
 I'm **mistydew**.
-I live in Mainland China and hack on Bitcoin.
+And I live in Mainland China now.
 
-You can follow my GitHub account {% include footer/icon-github.html username=site.github %} if you like.
+You can follow my GitHub account {% include footer/icon-github.html username=site.github %}.
 
-Or subscribe my blog [feed]({{ site.feed }}) to get the latest post if you want.
+Or subscribe my blog [feed]({{ site.feed }}) to get the latest post.
 
 **Contact**
 
