@@ -80,7 +80,7 @@ excerpt: Here are some books I read.
 ## 文学
 
 > ### 文集
-> * 沉默的大多数 王小波杂文随笔全编，[中] 王小波
+> * 王小波全集 第一卷 杂文 思维的乐趣，[中] 王小波
 > * 暗时间，[中] [刘未鹏](http://mindhacks.cn){:target="_blank"}
 > * 黑客与画家 硅谷创业之父 Paul Graham 文集，[美] [Paul Graham](http://www.paulgraham.com){:target="_blank"}
 > * [前方的路](http://www.ruanyifeng.com/road){:target="_blank"}，[中] 阮一峰
