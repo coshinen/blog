@@ -80,7 +80,7 @@ excerpt: Here are some books I read.
 ## 文学
 
 > ### 文集
-> * 王小波全集 第一卷 杂文 思维的乐趣，[中] 王小波
+> * 王小波全集 第一、二卷 杂文，[中] 王小波
 > * 暗时间，[中] [刘未鹏](http://mindhacks.cn){:target="_blank"}
 > * 黑客与画家 硅谷创业之父 Paul Graham 文集，[美] [Paul Graham](http://www.paulgraham.com){:target="_blank"}
 > * [前方的路](http://www.ruanyifeng.com/road){:target="_blank"}，[中] 阮一峰
@@ -106,7 +106,7 @@ excerpt: Here are some books I read.
 > * 小王子，[法] [Antoine de Saint Exupéry](https://www.antoinedesaintexupery.com){:target="_blank"}
 > * 动物农场，[英] [George Orwell](https://www.george-orwell.com){:target="_blank"}
 > * 百年孤独，[哥伦比亚] Gabriel José de la Concordia García Márquez
-> * 你的名字，[日] 新海誠
+> * 你的名字。，[日] 新海誠
 > * 言叶之庭，[日] 新海誠
 > * 秒速五厘米，[日] [新海誠](http://shinkaimakoto.jp){:target="_blank"}
 > * 神奇动物在哪里，[英] J.K. Rowling
