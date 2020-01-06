@@ -22,12 +22,12 @@ excerpt: 風の音だけが、体中を包む。サイレント・Kiss、夢に�
 <p>
 風の音だけが<br>
 体中を包む<br>
-(Oh) サイレント・Kiss (Oh yeah)<br>
+サイレント・Kiss<br>
 夢に似た気配<br>
 <br>
 胸がキュッとなること<br>
 君といた季節<br>
-スカイハイ・Blue (Oh yeah)<br>
+スカイハイ・Blue<br>
 遠ざかる<br>
 <br>
 都合いい Happy End<br>
@@ -45,7 +45,7 @@ raise up<br>
 <br>
 波がキラめいたら<br>
 吸い込まれそうね<br>
-スターライト・Night (Oh yeah)<br>
+スターライト・Night<br>
 空高く<br>
 <br>
 近づいた last scene<br>
@@ -76,61 +76,59 @@ raise up<br>
 
 <div class="lyric-translation">
 <blockquote>
-唯有風聲<br>
+只有風的聲音<br>
 包裹著全身<br>
-(Oh) Silent Kiss (Oh yeah)<br>
-似夢的氣息<br>
+無聲的·Kiss<br>
+如夢似的氣息<br>
 <br>
 心中變得忐忑不安<br>
 和你在一起的季節<br>
-Sky High Blue (Oh yeah)<br>
-漸行漸遠<br>
+天高的·Blue<br>
+遠離<br>
 <br>
-美好的 Happy End<br>
-即便找到也無法治愈<br>
-心若自由定會飛翔<br>
+碰巧的 Happy End<br>
+即使尋求也無法治癒<br>
+內心自由的話就飛給你看<br>
 <br>
-與凌空飛舞的它們 Over Drive<br>
-想留在這無盡的藍色世界<br>
-鳥兒如雪花紙屑般飛舞<br>
-真美啊<br>
-乘風而上的刺激感<br>
-想像著尚未知曉的前路<br>
-逐漸化爲珍貴的期待<br>
+上空 與飛舞的它們 Over Drive<br>
+想要待在無盡的藍色世界<br>
+像紙屑一樣的鳥兒飛舞<br>
+好漂亮啊<br>
+乘風而上的緊張感也<br>
+想像尚未看見的前路<br>
+才能逐漸化爲珍貴的期待<br>
 raise up<br>
 <br>
-當波光粼粼時<br>
+波光粼粼的樣子<br>
 仿佛被吸入其中<br>
-Starlight Night (Oh yeah)<br>
-晴空高遠<br>
+星光的·Night<br>
+天空好高<br>
 <br>
-已經接近了的 last scene<br>
-現在依然無法把握<br>
+臨近了的 last scene<br>
+現在還是無法抓住<br>
 連不確定的未來都如此愜意<br>
 <br>
-上升 戀情搖擺不定 Over Drive<br>
-四目相對天真無邪地笑著<br>
-簡直就像風拂過<br>
-心靈<br>
-想要更加靠近你些<br>
-向着無垠的天空祈禱<br>
-與真正的你相遇的那一天<br>
+上昇 戀情搖擺不定 Over Drive<br>
+看著眼睛天真地笑給你看<br>
+好像風兒拂過<br>
+心啊<br>
+想要更加地靠近的和<br>
+祈願天空是 無邊無際<br>
+遇到真正的你的日子<br>
 等待著<br>
 <br>
-與凌空飛舞的它們 Over Drive<br>
-想留在這無盡的藍色世界<br>
-鳥兒如雪花紙屑般飛舞<br>
-真美啊<br>
-乘風而上的刺激感<br>
-想像著尚未知曉的前路<br>
-逐漸化爲珍貴的期待<br>
+上空 與飛舞的它們 Over Drive<br>
+想要待在無盡的藍色世界<br>
+像紙屑一樣的鳥兒飛舞<br>
+好漂亮啊<br>
+乘風而上的緊張感也<br>
+想像尚未看見的前路<br>
+才能逐漸化爲珍貴的期待<br>
 raise up<br>
-與真正的你相遇的那一天<br>
+遇到真正的你的日子<br>
 等待著
 </blockquote>
 </div>
-
-這首歌是劇場版「名偵探柯南 天空的遇難船」的主題曲，曾獲得 Oricon 週單曲排行榜第 4 位的成績。
 
 ## 参考链接
 
