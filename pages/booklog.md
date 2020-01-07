@@ -106,6 +106,7 @@ excerpt: Here are some books I read.
 > * 小王子，[法] [Antoine de Saint Exupéry](https://www.antoinedesaintexupery.com){:target="_blank"}
 > * 动物农场，[英] [George Orwell](https://www.george-orwell.com){:target="_blank"}
 > * 百年孤独，[哥伦比亚] Gabriel José de la Concordia García Márquez
+> * 天气之子，[日] 新海誠
 > * 你的名字。，[日] 新海誠
 > * 言叶之庭，[日] 新海誠
 > * 秒速五厘米，[日] [新海誠](http://shinkaimakoto.jp){:target="_blank"}
