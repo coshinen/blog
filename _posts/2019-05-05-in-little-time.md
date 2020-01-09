@@ -16,7 +16,6 @@ excerpt: 十二月にしては暖かいこんな夜は、思いつきで出か�
 作詞：AZUKI 七<br>
 作曲：中村由利<br>
 編曲：古井弘人<br>
-ギター：岡本仁志
 
 <div class="lyric-original">
 <p>

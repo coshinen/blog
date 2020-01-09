@@ -16,7 +16,6 @@ excerpt: 緑揺れる午後の空、幾つ目の飛行機かな。遠く潮騒�
 作詞：AZUKI 七<br>
 作曲：中村由利<br>
 編曲：古井弘人<br>
-ギター：岡本仁志
 
 <div class="lyric-original">
 <p>

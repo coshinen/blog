@@ -16,7 +16,6 @@ excerpt: 離陸間近の午前1時5分 空を見上げていた。いつかま�
 作詞：AZUKI 七<br>
 作曲：中村由利<br>
 編曲：古井弘人<br>
-ギター：岡本仁志
 
 <div class="lyric-original">
 <p>
