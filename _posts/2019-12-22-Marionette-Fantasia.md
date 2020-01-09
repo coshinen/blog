@@ -15,7 +15,7 @@ excerpt: 薄明かりを灯して、冷たい壁に 頬寄せ。静寂に 耳を
 歌手：GARNET CROW<br>
 作詞：AZUKI 七<br>
 作曲：中村由利<br>
-編曲：古井弘人<br>
+編曲：古井弘人
 
 <div class="lyric-original">
 <p>

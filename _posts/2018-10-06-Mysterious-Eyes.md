@@ -15,7 +15,7 @@ excerpt: 君と僕とは 別の人間(いきもの)だから、好みが違う �
 歌手：GARNET CROW<br>
 作詞：AZUKI 七<br>
 作曲：中村由利<br>
-編曲：古井弘人<br>
+編曲：古井弘人
 
 <div class="lyric-original">
 <p>

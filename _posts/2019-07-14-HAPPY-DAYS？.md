@@ -15,7 +15,7 @@ excerpt: close island、素早く暮れる空に、意味もなく胸が切な�
 歌手：GARNET CROW<br>
 作詞：AZUKI 七<br>
 作曲：中村由利<br>
-編曲：古井弘人<br>
+編曲：古井弘人
 
 <div class="lyric-original">
 <p>

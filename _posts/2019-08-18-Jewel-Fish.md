@@ -15,7 +15,7 @@ excerpt: 走り出したら通り雨、もう一休みしてる。待ちきれ�
 歌手：GARNET CROW<br>
 作詞：AZUKI 七<br>
 作曲：中村由利<br>
-編曲：古井弘人<br>
+編曲：古井弘人
 
 <div class="lyric-original">
 <p>

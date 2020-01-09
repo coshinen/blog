@@ -15,7 +15,7 @@ excerpt: 君のいない未来が、ただ大きな闇にみえ。死んでし�
 歌手：GARNET CROW<br>
 作詞：AZUKI 七<br>
 作曲：中村由利<br>
-編曲：古井弘人<br>
+編曲：古井弘人
 
 <div class="lyric-original">
 <p>
