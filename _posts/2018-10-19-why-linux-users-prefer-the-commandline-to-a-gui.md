@@ -5,7 +5,7 @@ date:   2018-10-19 16:13:39 +0800
 author: mistydew
 comments: true
 categories: Study UNIX/Linux Translations
-tags: Study CLI GUI 译文
+tags: CLI GUI 译文
 ---
 为什么这么多 Linux 用户更喜欢 CLI 而非 GUI？
 

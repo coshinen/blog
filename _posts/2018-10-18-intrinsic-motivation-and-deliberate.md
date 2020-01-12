@@ -5,7 +5,7 @@ date:   2018-10-18 16:40:02 +0800
 author: mistydew
 comments: true
 categories: Study Translations
-tags: Study 译文
+tags: 译文
 excerpt: 内在动机和刻意练习呈螺旋式上升。
 ---
 ![intrinsic-motivation-deliberate-practice](/assets/images/translations/intrinsic-motivation-deliberate-practice.png){:.border}

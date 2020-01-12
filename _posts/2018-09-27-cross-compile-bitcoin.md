@@ -4,7 +4,7 @@ title:  "交叉编译比特币源码"
 date:   2018-09-27 11:01:52 +0800
 author: mistydew
 comments: true
-categories: Blockchain Bitcoin
+categories: Blockchain Bitcoin build
 tags: 区块链 比特币 源码构建 交叉编译
 ---
 在 UNIX/Linux 平台下交叉编译比特币源码，得到 Windows 版本的 bitcoin.exe、bitcoin-cli.exe、bitcoin-qt.exe 等可执行文件。

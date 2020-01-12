@@ -5,7 +5,7 @@ date:   2018-10-16 13:35:20 +0800
 author: mistydew
 comments: true
 categories: UNIX/Linux Terminal Translations
-tags: UNIX/Linux 译文 快捷键 终端
+tags: UNIX/Linux 快捷键 译文
 ---
 **简介：以下是一些每个 Linux 用户必须使用的键盘快捷键。
 使用命令行时，这些 Linux 快捷键将提升你的生产力和效率。**

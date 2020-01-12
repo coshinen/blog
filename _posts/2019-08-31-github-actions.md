@@ -4,7 +4,7 @@ title:  "GitHub Actions 工作流入门"
 date:   2019-08-31 22:56:58 +0800
 author: mistydew
 comments: true
-categories: Git/GitHub CI/CD
+categories: Git/GitHub
 tags: Git/GitHub CI/CD
 ---
 GitHub Actions 可以让你直接在 GitHub 仓库中创建自定义软件开发生命周期的工作流。
