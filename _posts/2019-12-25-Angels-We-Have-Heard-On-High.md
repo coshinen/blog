@@ -8,7 +8,7 @@ categories: Lyrics
 tags: 歌詞翻訳
 excerpt: Angels we have heard on high, sweetly singing o'er the plains, and the mountains in reply, echoing their joyous strains.
 ---
-![livescope 2010+ 〜welcome to the parallel universe!〜](https://raw.githubusercontent.com/mistydew/gc2/master/cover/featuring/livescope%202010%2B%20〜welcome%20to%20the%20parallel%20universe!〜.jpg){:.border}
+![GZBA-8020~1](https://raw.githubusercontent.com/mistydew/gc2/master/cover/other/GZBA-8020~1.jpg){:.border}
 
 ## Angels We Have Heard On High | 我們聽到天使在高處
 

@@ -8,7 +8,7 @@ categories: Lyrics
 tags: 歌詞翻訳
 excerpt: Take me to your best friend's house. Going around this roundabout, oh, yeah. Take me to your best friend's house. I loved you then and I love you now, oh, yeah.
 ---
-![NEVER TRUST A HAPPY SONG](/assets/images/cover/misc/NEVER%20TRUST%20A%20HAPPY%20SONG.jpg){:.border}
+![NEVER TRUST A HAPPY SONG](https://raw.githubusercontent.com/mistydew/misc/master/cover/NEVER%20TRUST%20A%20HAPPY%20SONG.jpg){:.border}
 
 ## Tongue Tied | 口齒不清（舌頭打結）
 

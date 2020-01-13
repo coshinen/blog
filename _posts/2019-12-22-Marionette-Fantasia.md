@@ -8,7 +8,7 @@ categories: GARNETCROW Lyrics
 tags: ガネクロ 歌詞翻訳
 excerpt: 薄明かりを灯して、冷たい壁に 頬寄せ。静寂に 耳をすます、ひっそりと ゆっくりと、惹き返す。
 ---
-![Crytallize 〜君という光〜](https://raw.githubusercontent.com/mistydew/gc2/master/cover/album/AL03_Crytallize%20〜君という光〜.jpg){:.border}
+![GZCA-5038](https://raw.githubusercontent.com/mistydew/gc2/master/cover/album/GZCA-5038.jpg){:.border}
 
 ## Marionette Fantasia | 木偶幻想曲
 

@@ -8,7 +8,7 @@ categories: GARNETCROW Lyrics
 tags: ガネクロ 歌詞翻訳
 excerpt: 暮れゆく空おセンチな気分。海辺のDrive、まだみたことのない場所へ、僕らを乗せて be high yeah、密やかに辿る道。
 ---
-![STAY 〜夜明けのSoul〜](https://raw.githubusercontent.com/mistydew/gc2/master/cover/album/AL07_STAY%20〜夜明けのSoul〜.jpg){:.border}
+![GZCA-5198](https://raw.githubusercontent.com/mistydew/gc2/master/cover/album/GZCA-5198.jpg){:.border}
 
 ## Fall in Life 〜Hallelujah〜 | 墜入生活～讚美上帝～
 

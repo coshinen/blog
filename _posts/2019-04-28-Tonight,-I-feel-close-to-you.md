@@ -8,7 +8,7 @@ categories: Lyrics
 tags: 歌詞翻訳
 excerpt: Close my eyes and feel your mind. Time has passed. I walk like a shadow. Never knew. What I am going through. You touch my heart and take my breath away.
 ---
-![If I Believe](/assets/images/cover/misc/If%20I%20Believe.jpg){:.border}
+![GZCA-5031](https://raw.githubusercontent.com/mistydew/misc/master/cover/GZCA-5031.jpg){:.border}
 
 ## Tonight, I feel close to you | 今晚，我感覺離你很近
 

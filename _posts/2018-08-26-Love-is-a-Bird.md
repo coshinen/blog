@@ -8,7 +8,7 @@ categories: GARNETCROW Lyrics
 tags: ガネクロ 歌詞翻訳
 excerpt: 夕暮れとこの街の匂い、染みついた諦めと希望。雨の中うつむいていた、少年の足取り。
 ---
-![LOCKS](https://raw.githubusercontent.com/mistydew/gc2/master/cover/album/AL06_LOCKS.jpg){:.border}
+![GZCA-5125~6](https://raw.githubusercontent.com/mistydew/gc2/master/cover/album/GZCA-5125~6.jpg){:.border}
 
 ## Love is a Bird | 愛是一隻鳥兒
 

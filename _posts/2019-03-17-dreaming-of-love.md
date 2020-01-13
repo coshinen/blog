@@ -8,7 +8,7 @@ categories: GARNETCROW Lyrics
 tags: ガネクロ 歌詞翻訳
 excerpt: ため息ひとつ落ちた週末の、どうしようもない感じ、絶望より深く堕ちてゆく 夜明け。
 ---
-![first kaleidscope 〜君の家に着くまでずっと走ってゆく〜](https://raw.githubusercontent.com/mistydew/gc2/master/cover/minial/MINIAL_first%20kaleidscope%20〜君の家に着くまでずっと走ってゆく〜.jpg){:.border}
+![TCR-001](https://raw.githubusercontent.com/mistydew/gc2/master/cover/album/TCR-001.jpg){:.border}
 
 ## dreaming of love | 夢見愛情
 

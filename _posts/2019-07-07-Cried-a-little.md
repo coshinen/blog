@@ -8,7 +8,7 @@ categories: GARNETCROW Lyrics
 tags: ガネクロ 歌詞翻訳
 excerpt: 弱い日差しが揺れるテーブルの上、開いた世界地図に、君のクセのある文字がまだ残る。ah- 現実かなぁ、、
 ---
-![flying](https://raw.githubusercontent.com/mistydew/gc2/master/cover/single/SG06_flying.jpg){:.border}
+![GZCA-1029](https://raw.githubusercontent.com/mistydew/gc2/master/cover/single/GZCA-1029.jpg){:.border}
 
 ## Cried a little | 哭了會兒
 

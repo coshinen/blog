@@ -8,7 +8,7 @@ categories: GARNETCROW Lyrics
 tags: ガネクロ 歌詞翻訳
 excerpt: Naked story yeah- 無防備でも飛び出したい、感じるまま stay yeah- We're born in this way.
 ---
-![SPARKLE 〜筋書き通りのスカイブルー〜](https://raw.githubusercontent.com/mistydew/gc2/master/cover/album/AL02_SPARKLE%20〜筋書き通りのスカイブルー〜.jpg){:.border}
+![GZCA-5013](https://raw.githubusercontent.com/mistydew/gc2/master/cover/album/GZCA-5013.jpg){:.border}
 
 ## Naked Story | 赤裸裸的故事
 

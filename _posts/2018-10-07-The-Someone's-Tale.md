@@ -8,7 +8,7 @@ categories: GARNETCROW Lyrics
 tags: ガネクロ 歌詞翻訳
 excerpt: まっすぐな思いはまっすぐに伝わるの？唐突な青空 遠ざかる飛行機。
 ---
-![Terminus](https://raw.githubusercontent.com/mistydew/gc2/master/cover/album/AL10_Terminus.jpg){:.border}
+![GZCA-5251](https://raw.githubusercontent.com/mistydew/gc2/master/cover/album/GZCA-5251.jpg){:.border}
 
 ## The Someone's Tale | 某人的故事
 

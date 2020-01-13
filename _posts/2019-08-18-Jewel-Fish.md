@@ -8,7 +8,7 @@ categories: GARNETCROW Lyrics
 tags: ガネクロ 歌詞翻訳
 excerpt: 走り出したら通り雨、もう一休みしてる。待ちきれない君は飛び出して、振り返りもせずに。
 ---
-![Last love song](https://raw.githubusercontent.com/mistydew/gc2/master/cover/single/SG07_Last%20love%20song.jpg){:.border}
+![GZCA-1072](https://raw.githubusercontent.com/mistydew/gc2/master/cover/single/GZCA-1072.jpg){:.border}
 
 ## Jewel Fish | 寶石魚
 

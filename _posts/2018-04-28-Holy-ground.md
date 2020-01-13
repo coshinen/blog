@@ -8,7 +8,7 @@ categories: GARNETCROW Lyrics
 tags: ガネクロ 歌詞翻訳
 excerpt: 君のいない未来が、ただ大きな闇にみえ。死んでしまえば生きなくていい。そんな事ばかり考えてた、穏やかな月明かりに。
 ---
-![SPARKLE 〜筋書き通りのスカイブルー〜](https://raw.githubusercontent.com/mistydew/gc2/master/cover/album/AL02_SPARKLE%20〜筋書き通りのスカイブルー〜.jpg){:.border}
+![GZCA-5013](https://raw.githubusercontent.com/mistydew/gc2/master/cover/album/GZCA-5013.jpg){:.border}
 
 ## Holy ground | 聖地
 

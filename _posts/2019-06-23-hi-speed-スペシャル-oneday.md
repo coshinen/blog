@@ -8,7 +8,7 @@ categories: GARNETCROW Lyrics
 tags: ガネクロ 歌詞翻訳
 excerpt: コーヒーは最初の一口、甘いケーキの端っこ、ポテトは揚げたてにして、おいしいトコは少しだけ。
 ---
-![夏の幻](https://raw.githubusercontent.com/mistydew/gc2/master/cover/single/SG05_夏の幻.jpg){:.border}
+![GZCA-1050](https://raw.githubusercontent.com/mistydew/gc2/master/cover/single/GZCA-1050.jpg){:.border}
 
 ## hi-speed スペシャル oneday | 高速 特別的 一天
 

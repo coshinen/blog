@@ -6,7 +6,7 @@ excerpt: Buy me a coffee.
 ---
 
 {% if site.btc %}
-![btc-address](/assets/images/donate/btc-address.png){:.border}
+![btc-address](/assets/images/bitcoin/donate/address.png){:.border}
 
 {% include pages/icon-btc.html address=site.btc %}
 {% endif %}
