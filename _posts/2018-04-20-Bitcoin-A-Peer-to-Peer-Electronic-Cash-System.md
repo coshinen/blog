@@ -116,7 +116,7 @@ transactions.  For our purposes, the earliest transaction is the one that counts
 about later attempts to double-spend.  The only way to confirm the absence of a transaction is to
 be aware of all transactions.  In the mint based model, the mint was aware of all transactions and
 decided which arrived first.  To accomplish this without a trusted party, transactions must be
-publicly announced [1], and we need a system for participants to agree on a single history of the
+publicly announced [[1]](#references--参考), and we need a system for participants to agree on a single history of the
 order in which they were received.  The payee needs proof that at the time of each transaction, the
 majority of nodes agreed it was the first received.
 
@@ -131,7 +131,7 @@ majority of nodes agreed it was the first received.
 
 The solution we propose begins with a timestamp server.  A timestamp server works by taking a
 hash of a block of items to be timestamped and widely publishing the hash, such as in a
-newspaper or Usenet post [2-5].  The timestamp proves that the data must have existed at the
+newspaper or Usenet post [[2-5]](#references--参考).  The timestamp proves that the data must have existed at the
 time, obviously, in order to get into the hash.  Each timestamp includes the previous timestamp in
 its hash, forming a chain, with each additional timestamp reinforcing the ones before it.
 
@@ -145,7 +145,7 @@ its hash, forming a chain, with each additional timestamp reinforcing the ones b
 ## 4. Proof-of-Work | 工作量证明
 
 To implement a distributed timestamp server on a peer-to-peer basis, we will need to use a proof-
-of-work system similar to Adam Back's Hashcash [6], rather than newspaper or Usenet posts. 
+of-work system similar to Adam Back's Hashcash [[6]](#references--参考), rather than newspaper or Usenet posts.
 The proof-of-work involves scanning for a value that when hashed, such as with SHA-256, the 
 hash begins with a number of zero bits.  The average work required is exponential in the number 
 of zero bits required and can be verified by executing a single hash.
@@ -270,7 +270,7 @@ everyone else combined, than to undermine the system and the validity of his own
 
 Once the latest transaction in a coin is buried under enough blocks, the spent transactions before 
 it can be discarded to save disk space.  To facilitate this without breaking the block's hash, 
-transactions are hashed in a Merkle Tree [7][2][5], with only the root included in the block's hash. 
+transactions are hashed in a Merkle Tree [[7][2][5]](#references--参考), with only the root included in the block's hash.
 Old blocks can then be compacted by stubbing off branches of the tree.  The interior hashes do 
 not need to be stored.
 
@@ -392,7 +392,7 @@ gap by -1.
 The probability of an attacker catching up from a given deficit is analogous to a Gambler's 
 Ruin problem.  Suppose a gambler with unlimited credit starts at a deficit and plays potentially an 
 infinite number of trials to try to reach breakeven.  We can calculate the probability he ever 
-reaches breakeven, or that an attacker ever catches up with the honest chain, as follows [8]:
+reaches breakeven, or that an attacker ever catches up with the honest chain, as follows [[8]](#references--参考):
 
 &emsp;p = probability an honest node finds the next block<br>
 &emsp;q = probability the attacker finds the next block<br>
