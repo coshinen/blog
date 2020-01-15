@@ -42,7 +42,7 @@ excerpt: Here are some books I read.
 > * 区块链启示录 中本聪文集，[美] Phil Champagne
 > * 区块链开发指南，[中] 申屠青春
 > * [区块链技术指南](https://yeasy.gitbooks.io/blockchain_guide/content){:target="_blank"}，[中] [Baohua Yang](https://yeasy.github.io){:target="_blank"}
-> * [精通比特币（第二版）](https://bitcoinbook.info){:target="_blank"}，[美] Andreas M. Antonopoulos
+> * [精通比特币 第2版](https://bitcoinbook.info){:target="_blank"}，[美] Andreas M. Antonopoulos
 > * [Bitcoin: A Peer-to-Peer Electronic Cash System](/blog/2018/04/Bitcoin-A-Peer-to-Peer-Electronic-Cash-System.html)，[?] Satoshi Nakamoto
 
 > ### 编程语言
@@ -152,14 +152,14 @@ excerpt: Here are some books I read.
 ## 杂类
 
 > * [新生 七年就是一辈子](https://b.xinshengdaxue.com){:target="_blank"}，[中] 李笑来
-> * [把时间当作朋友 运用心智 获得解放](https://github.com/xiaolai/time-as-a-friend){:target="_blank"}，[中] [李笑来](http://lixiaolai.com/#/){:target="_blank"}
+> * [把时间当作朋友 运用心智 获得解放](http://lixiaolai.com/#/befriending-time/){:target="_blank"}，[中] [李笑来](http://lixiaolai.com/#/){:target="_blank"}
 > * 富爸爸，穷爸爸，[美] Robert T. Kiyosaki
 > * 谁“害”了北大学生，[中] 群言
 
 ## 语言
 
-> * 新版 中日交流标准日本语（中级上、下），[中] 人民教育出版社、[日] 光村图书出版株式会社
-> * 新版 中日交流标准日本语（初级上、下），[中] 人民教育出版社、[日] 光村图书出版株式会社
+> * 新版 中日交流 标准日本语 中级 上、下，[中] 人民教育出版社、[日] 光村图书出版株式会社
+> * 新版 中日交流 标准日本语 初级 上、下，[中] 人民教育出版社、[日] 光村图书出版株式会社
 
 ## 电子书
 
