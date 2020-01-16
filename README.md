@@ -79,7 +79,7 @@
 * 2018.04.27 [-] site: ~~audio directory~~ (redundancy)
 * 2018.04.21 [+] post: images and reference
 * 2018.04.19 [+] site: ~~audio directory~~; README: Todo and Timeline list
-* 2018.04.18 [+] site: the base Jekyll theme (jekyll new)
+* 2018.04.18 [+] site: Minima (Jekyll's default theme, run `jekyll new`)
 </details>
 
 ## Dependencies
