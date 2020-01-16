@@ -5,7 +5,7 @@ permalink: /about.html
 excerpt: About parallel universe, me and contact information.
 ---
 
-The **parallel universe** is based on the base Jekyll theme.
+The **parallel universe** is based on jekyll/minima.
 
 I'm **mistydew**.
 And I live in Mainland China now.
