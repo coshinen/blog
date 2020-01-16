@@ -102,6 +102,7 @@ excerpt: Here are some books I read.
 > * 福尔摩斯症候群，[法] J.M.ERRE
 > * 丝之屋，[英] Anthony Horowitz
 > * 失踪的专列，[英] Arthur Conan Doyle
+> * 失落的世界，[英] Arthur Conan Doyle
 > * 冰与火之歌，[美] [George R.R. Martin](http://www.georgerrmartin.com){:target="_blank"}
 > * 兔子共和国，[英] Richard Adams
 > * 三个火枪手，[法] dit aussi Alexandre Dumas père
