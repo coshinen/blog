@@ -8,7 +8,7 @@ categories: LeetCode
 tags: LeetCode
 excerpt: 给了两条**非空**链表，用于表示两个非负整数。数字以**倒序**的方式存储在链表中，每个节点保存**一位**数字。把两数之和保存在一条链表中并返回。
 ---
-## 2. Add Two Numbers (Medium)
+## 2. Add Two Numbers | Medium
 
 > You are given two **non-empty** linked lists representing two non-negative integers. The digits are stored in **reverse order** and each of their nodes contain a single digit. Add the two numbers and return it as a linked list.
 > 
