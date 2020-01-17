@@ -17,24 +17,22 @@ permalink: /resume
 <span id="a">mistydew</span>@<a href="https://github.com/mistydew" target="_blank">GitHub</a>:~$ cat .resume
 <p align="center"><font size="6"><strong>Zichen Yuan</strong></font><br>(+86) xxx-xxxx-xxxx | <a target="_blank" href="mailto:mistydew@qq.com">mistydew@qq.com</a> | Shenzhen, China</p>
 <font size="4"><strong>EDUCATION</strong></font>
------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 <strong>Zhengzhou University</strong><div style="float:right;">Sep, 2013 - Jun, 2017</div>
 Bachelor of Computer Science<div style="float:right;">Henan, China</div>
 
 <font size="4"><strong>PROFESSIONAL EXPERIENCE</strong></font>
------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 <strong>Here are some of my open source repo.</strong>
 <a href="https://github.com/mistydew/netCloud" target="_blank">netCloud</a>
 * A custom cloud storage.
-<a href="https://github.com/mistydew/spellCorrection" target="_blank">spellCorrection</a>
-* A spell correction system.
-<a href="https://github.com/mistydew/rssSearchEngine" target="_blank">rssSearchEngine</a>
-* A mini search engine with RSS.
+<a href="https://github.com/mistydew/RSSearch" target="_blank">RSSearch</a>
+* A RSS search engine with spell correction mechanism.
 <a href="https://github.com/mistydew/asstolrc" target="_blank">asstolrc</a>
 * A command tool to convert complete ass of the Aegisub to lrc.
 
 <font size="4"><strong>PROFESSIONAL SKILLS</strong></font>
------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 <strong>Programming Languages:</strong> C/C++, Python
 <strong>Platform:</strong> UNIX/Linux, macOS, Windows
 <strong>Editor:</strong> Vi/Vim, Emacs
@@ -43,7 +41,7 @@ Bachelor of Computer Science<div style="float:right;">Henan, China</div>
 <strong>Open-Source Libraries:</strong> STL, Boost, Libevent, Libssl (OpenSSL)
 
 <font size="4"><strong>MISCELLANEOUS</strong></font>
------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 <strong>Languages:</strong> Mandarin Chinese, English, Japanese
 <strong>Interests:</strong> Reading/Thinking, Writing/Drawing, Music (Karaoke, Keyboard), Animation (DC), CROWSUB (GC), Cooking/Tasting, Sports (Soccer/Football)
 <span id="a">mistydew</span>@<a href="https://github.com/mistydew" target="_blank">GitHub</a>:~$ 
