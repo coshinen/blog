@@ -98,6 +98,7 @@ excerpt: Here are some books I read.
 > * 史蒂夫·乔布斯传，[美] Walter Isaacson
 
 > ### 小说
+> * 布谷鸟的呼唤，[英] J.K. Rowling
 > * 偶发空缺，[英] J.K. Rowling
 > * 放学后，[日] 東野圭吾
 > * 福尔摩斯症候群，[法] J.M.ERRE
