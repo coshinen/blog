@@ -98,13 +98,6 @@ excerpt: Here are some books I read.
 > * 史蒂夫·乔布斯传，[美] Walter Isaacson
 
 > ### 小说
-> * 布谷鸟的呼唤，[英] J.K. Rowling
-> * 偶发空缺，[英] J.K. Rowling
-> * 放学后，[日] 東野圭吾
-> * 福尔摩斯症候群，[法] J.M.ERRE
-> * 丝之屋，[英] Anthony Horowitz
-> * 失踪的专列，[英] Arthur Conan Doyle
-> * 失落的世界，[英] Arthur Conan Doyle
 > * 冰与火之歌，[美] [George R.R. Martin](http://www.georgerrmartin.com){:target="_blank"}
 > * 兔子共和国，[英] Richard Adams
 > * 三个火枪手，[法] dit aussi Alexandre Dumas père
@@ -115,10 +108,17 @@ excerpt: Here are some books I read.
 > * 你的名字。，[日] 新海誠
 > * 言叶之庭，[日] 新海誠
 > * 秒速五厘米，[日] [新海誠](http://shinkaimakoto.jp){:target="_blank"}
+> * 失落的世界，[英] Arthur Conan Doyle
 > * 神奇动物在哪里，[英] J.K. Rowling
 > * 神奇的魁地奇球，[英] J.K. Rowling
 > * 诗翁彼豆故事集 赫敏·格兰杰译自如尼文，[英] J.K. Rowling
 > * 哈利波特完整系列，[英] [J.K. Rowling](https://www.jkrowling.com){:target="_blank"}
+> * 布谷鸟的呼唤，[英] J.K. Rowling
+> * 偶发空缺，[英] J.K. Rowling
+> * 放学后，[日] 東野圭吾
+> * 福尔摩斯症候群，[法] J.M.ERRE
+> * 丝之屋，[英] Anthony Horowitz
+> * 失踪的专列，[英] Arthur Conan Doyle
 > * 江户川乱步作品集，[日] 江戸川乱歩
 > * 阿加莎·克里斯蒂作品集，[英] Agatha Christie
 > * 福尔摩斯探案全集，[英] [Arthur Conan Doyle](https://www.arthur-conan-doyle.com){:target="_blank"}
