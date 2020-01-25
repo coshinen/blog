@@ -59,7 +59,7 @@ excerpt: Blog tags.
     {% assign idx = idx | plus: 1 %}
   <ul class="tag-list">
     {% for post in tag.last %}
-    <li>{{ post.date | date: "%Y-%m-%d-" }}<a href="{{ post.url }}">{{ post.title }}</a></li>
+    <li><abbr title="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%Y-%m-%d-" }}</abbr><a href="{{ post.url }}">{{ post.title }}</a></li>
     {% endfor %}
   </ul>
 </blockquote>

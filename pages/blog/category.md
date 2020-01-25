@@ -34,7 +34,7 @@ excerpt: Blog category.
     {% assign idx = idx | plus: 1 %}
   <ul class="category-list">
     {% for post in category.last %}
-    <li>{{ post.date | date: "%Y-%m-%d-" }}<a href="{{ post.url }}">{{ post.title }}</a></li>
+    <li><abbr title="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%Y-%m-%d-" }}</abbr><a href="{{ post.url }}">{{ post.title }}</a></li>
     {% endfor %}
   </ul>
 </blockquote>

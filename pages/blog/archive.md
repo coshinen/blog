@@ -50,7 +50,7 @@ excerpt: Blog archive.
   <ul class="archive-list">
     {% assign i = i | plus: 1 %}
   {% endif %}
-    <li>{{ post.date | date: "%Y-%m-%d-" }}<a href="{{ post.url }}">{{ post.title }}</a></li>
+    <li><abbr title="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%Y-%m-%d-" }}</abbr><a href="{{ post.url }}">{{ post.title }}</a></li>
 {% endfor %}
   </ul>
 </blockquote>
