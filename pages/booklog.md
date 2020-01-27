@@ -32,6 +32,7 @@ excerpt: Here are some books I read.
 ## 技术
 
 > ### 算法
+> * 编程之美——微软技术面试心得，[中] 《编程之美》小组
 > * 剑指 Offer 名企面试官精讲典型编程题，[中] 何海涛
 > * 啊哈！算法，[中] 啊哈磊
 > * 图解密码技术（第3版），[日] [結城浩](http://www.hyuki.com){:target="_blank"}
