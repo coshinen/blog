@@ -103,6 +103,7 @@ excerpt: Here are some books I read.
 > * 冰与火之歌，[美] [George R.R. Martin](http://www.georgerrmartin.com){:target="_blank"}
 > * 兔子共和国，[英] Richard Adams
 > * 三个火枪手，[法] dit aussi Alexandre Dumas père
+> * 机械心，[法] Mathias Malzieu
 > * 小王子，[法] [Antoine de Saint Exupéry](https://www.antoinedesaintexupery.com){:target="_blank"}
 > * 动物农场，[英] [George Orwell](https://www.george-orwell.com){:target="_blank"}
 > * 百年孤独，[哥伦比亚] Gabriel José de la Concordia García Márquez
