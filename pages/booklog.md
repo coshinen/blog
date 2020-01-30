@@ -138,7 +138,7 @@ excerpt: Here are some books I read.
 > * 阿加莎的毒药，[英] Kathryn Harkup
 
 > ### 心理学
-> * 被讨厌的勇气 “自我启发之父”阿德勒的哲学课，[日] 岸见一郎 古贺史健
+> * 被讨厌的勇气 “自我启发之父”阿德勒的哲学课，[日] 岸見一郎 古賀史健
 > * 内向者优势 如何在外向的世界中获得成功，[美] Marti Olsen Laney
 > * 安静：内向性格的竞争力，[美] Susan Cain
 > * 原生家庭，[美] Susan Forward
@@ -160,6 +160,7 @@ excerpt: Here are some books I read.
 
 ## 杂类
 
+> * 黑箱 日本之耻，[日] 伊藤詩織
 > * [新生 七年就是一辈子](https://b.xinshengdaxue.com){:target="_blank"}，[中] 李笑来
 > * [把时间当作朋友 运用心智 获得解放](http://lixiaolai.com/#/befriending-time/){:target="_blank"}，[中] [李笑来](http://lixiaolai.com/#/){:target="_blank"}
 > * 富爸爸，穷爸爸，[美] Robert T. Kiyosaki
