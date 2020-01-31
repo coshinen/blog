@@ -16,6 +16,7 @@ excerpt: Here are some books I read.
 > * [文学](#文学)
 >   * [文集](#文集)
 >   * [诗歌](#诗歌)
+>   * [纪实](#纪实)
 >   * [传记](#传记)
 >   * [小说](#小说)
 > * [科学](#科学)
@@ -24,15 +25,15 @@ excerpt: Here are some books I read.
 >   * [心理学](#心理学)
 >   * [伦理学](#伦理学)
 >   * [方法论](#方法论)
-> * [杂类](#杂类)
+>   * [管理](#管理)
 > * [语言](#语言)
-> * [电子书](#电子书)
-> * [公开课](#公开课)
+>   * [日语](#日语)
+>   * [英语](#英语)
 
 ## 技术
 
 > ### 算法
-> * 编程之美——微软技术面试心得，[中] 《编程之美》小组
+> * 编程之美 —微软技术面试心得，[中] 《编程之美》小组
 > * 剑指 Offer 名企面试官精讲典型编程题，[中] 何海涛
 > * 啊哈！算法，[中] 啊哈磊
 > * 图解密码技术（第3版），[日] [結城浩](http://www.hyuki.com){:target="_blank"}
@@ -93,6 +94,10 @@ excerpt: Here are some books I read.
 > * 乌鸦，[美] Edgar Allan Poe
 > * 80,0 AZUKI NANA photo & anthology，[日] AZUKI 七
 
+> ### 纪实
+> * 黑箱 日本之耻，[日] 伊藤詩織
+> * 谁“害”了北大学生，[中] 群言
+
 > ### 传记
 > * 楊潔自述 我的九九八十一难，[中] 杨洁
 > * 阿加莎·克里斯蒂自传，[英] Agatha Christie
@@ -150,7 +155,7 @@ excerpt: Here are some books I read.
 > * 异类：不一样的成功启示录，[加] Malcolm Gladwell
 
 > ### 伦理学
-> * 公正 该如何做是好？，[美] Michael J. Sandel
+> * 公正 该如何做是好？，[美] [Michael J. Sandel](https://scholar.harvard.edu/sandel){:target="_blank"}
 
 > ### 方法论
 > * 单核工作法图解，[瑞典] Staffan Nöteberg
@@ -158,28 +163,21 @@ excerpt: Here are some books I read.
 > * 一万小时天才理论，[美] Daniel Coyle
 > * 刻意练习，[美] Anders Ericsson
 
-## 杂类
-
-> * 黑箱 日本之耻，[日] 伊藤詩織
+> ### 管理
 > * [新生 七年就是一辈子](https://b.xinshengdaxue.com){:target="_blank"}，[中] 李笑来
 > * [把时间当作朋友 运用心智 获得解放](http://lixiaolai.com/#/befriending-time/){:target="_blank"}，[中] [李笑来](http://lixiaolai.com/#/){:target="_blank"}
 > * 富爸爸，穷爸爸，[美] Robert T. Kiyosaki
-> * 谁“害”了北大学生，[中] 群言
 
 ## 语言
 
-> * 日本人也不知道的日本語 量詞、敬語、文化歷史……學會連日本人都會對你說「讚」的正確日語，[日] 蛇藏 海野凪子
+> ### 日语
+> * 名探偵コナン，[日] 青山剛昌
+> * 日本人也不知道的日本語 量詞、敬語、文化歷史……學會連日本人都會對你說「讚」的正確日語，[日] 蛇蔵＆海野凪子
 > * 新版 中日交流 标准日本语 中级 上、下，[中] 人民教育出版社、[日] 光村图书出版株式会社
 > * 新版 中日交流 标准日本语 初级 上、下，[中] 人民教育出版社、[日] 光村图书出版株式会社
 
-## 电子书
-
+> ### 英语
 > * [Welcome to Lit2Go ETC - a free online collection of stories and poems in Mp3 (audiobook) format.](https://etc.usf.edu/lit2go){:target="_blank"}
 > * [Standard Ebooks: Free and liberated ebooks, carefully produced for the true book lover.](https://standardebooks.org){:target="_blank"}
 > * [Page By Page Books. Read Classic Books Online, Free.](https://www.pagebypagebooks.com){:target="_blank"}
 > * [Free eBooks - Project Gutenberg](http://www.gutenberg.org/wiki/Main_Page){:target="_blank"}
-
-## 公开课
-
-> * 哈佛幸福课（Positive Psychology），[美] [Tal Ben-Shahar](http://www.talbenshahar.com){:target="_blank"}
-> * [哈佛公开课公正（Harvard Justice）](http://justiceharvard.org){:target="_blank"}，[美] [Michael J. Sandel](https://scholar.harvard.edu/sandel){:target="_blank"}
