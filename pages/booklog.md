@@ -156,6 +156,7 @@ excerpt: Here are some books I read.
 > * 异类：不一样的成功启示录，[加] Malcolm Gladwell
 
 > ### 伦理学
+> * 最好的告别 关于衰老与死亡，你必须知道的常识，[美] Atul Gawande
 > * 公正 该如何做是好？，[美] [Michael J. Sandel](https://scholar.harvard.edu/sandel){:target="_blank"}
 
 > ### 方法论
