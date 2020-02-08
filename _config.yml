@@ -6,7 +6,6 @@
 # 'jekyll serve'. If you change this file, please restart the server process.
 
 # Site settings
-# Site base
 name: 袁子晨
 root: mistydew
 title: parallel universe
@@ -17,7 +16,6 @@ description: >- # this means to ignore newlines until "baseurl:"
   Powered by Jekyll. Hosted on GitHub.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://mistydew.github.io" # the base hostname & protocol for your site
-bio: blockchain developer
 
 # Site footer
 github: mistydew
@@ -54,12 +52,20 @@ atom:     "/blog/atom.xml"
 site_id: 415414
 site_acct: b051fd1ebb6d822f554a521d0827b1d8
 
-# Build settings
+# Where things are
+source : .
+destination : ./_site
+layouts_dir : _layouts
+includes_dir : _includes
+
 # Handling Reading
-future: false
 exclude: [LICENSE, README.md]
 encoding : "utf-8"
 markdown_ext: "markdown,mkdown,mkdn,mkd,md" # no spaces
+
+# Filtering Content
+limit_posts: 0
+future: false
 
 # Conversion
 markdown: kramdown
