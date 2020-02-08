@@ -18,6 +18,8 @@ excerpt: It's the little old lady from Pasadena, has a pretty little flower bed 
 
 <div class="lyric-original">
 <p>
+(Pasadena)x4<br>
+<br>
 It's the little old lady from Pasadena<br>
 (Go granny, go granny, go granny, go!)<br>
 Has a pretty little flower bed of white gardenias<br>
@@ -44,18 +46,22 @@ Than the little old lady from Pasadena<br>
 She's the terror of Colorado Boulevard<br>
 (It's the little old lady from Pasadena)<br>
 <br>
+(Go granny, go!)x3<br>
+<br>
 And everybody's saying that there's nobody meaner<br>
 Than the little old lady from Pasadena<br>
 (She drives real fast and she drives real hard)<br>
 She's the terror of Colorado Boulevard<br>
 (It's the little old lady from Pasadena)<br>
 <br>
-(Go granny, go granny, go granny, go!)
+(Go granny, go granny, go granny, go!)x8
 </p>
 </div>
 
 <div class="lyric-translation">
 <blockquote>
+（帕薩迪納）x4<br>
+<br>
 這是來自帕薩迪納的小老太太<br>
 （衝吧奶奶，衝吧奶奶，衝吧奶奶，衝啊！）<br>
 有一個白色梔子花的小花壇<br>
@@ -82,13 +88,15 @@ She's the terror of Colorado Boulevard<br>
 他是科羅拉多大道上的恐怖份子<br>
 （這就是來自帕薩迪納的小老太太）<br>
 <br>
+（衝吧奶奶，衝啊！）x3<br>
+<br>
 每個人都說沒有比這更抓狂的了<br>
 比來自帕薩迪納的小老太太<br>
 （她開得真快開得真猛）<br>
 他是科羅拉多大道上的恐怖份子<br>
 （這就是來自帕薩迪納的小老太太）<br>
 <br>
-（衝吧奶奶，衝吧奶奶，衝吧奶奶，衝啊！）
+（衝吧奶奶，衝吧奶奶，衝吧奶奶，衝啊！）x8
 </blockquote>
 </div>
 
