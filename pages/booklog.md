@@ -15,7 +15,6 @@ excerpt: Here are some books I read.
 >   * [程序人生](#程序人生)
 > * [文学](#文学)
 >   * [文集](#文集)
->   * [诗歌](#诗歌)
 >   * [纪实](#纪实)
 >   * [传记](#传记)
 >   * [小说](#小说)
@@ -89,10 +88,6 @@ excerpt: Here are some books I read.
 > * [前方的路](http://www.ruanyifeng.com/road){:target="_blank"}，[中] 阮一峰
 > * [未来世界的幸存者](http://www.ruanyifeng.com/survivor){:target="_blank"}，[中] 阮一峰
 > * 如何变得有思想 阮一峰博客文集，[中] [阮一峰](http://www.ruanyifeng.com/blog){:target="_blank"}
-
-> ### 诗歌
-> * 乌鸦，[美] Edgar Allan Poe
-> * 80,0 AZUKI NANA photo & anthology，[日] AZUKI 七
 
 > ### 纪实
 > * 血疫 埃博拉的故事，[美] Richard Preston
@@ -173,7 +168,9 @@ excerpt: Here are some books I read.
 ## 语言
 
 > ### 日语
+> * 80,0 AZUKI NANA photo & anthology，[日] AZUKI 七
 > * 名探偵コナン，[日] 青山剛昌
+> * まじっく快斗，[日] 青山剛昌
 > * 日本人也不知道的日本語 量詞、敬語、文化歷史……學會連日本人都會對你說「讚」的正確日語，[日] 蛇蔵＆海野凪子
 > * 新版 中日交流 标准日本语 中级 上、下，[中] 人民教育出版社、[日] 光村图书出版株式会社
 > * 新版 中日交流 标准日本语 初级 上、下，[中] 人民教育出版社、[日] 光村图书出版株式会社
