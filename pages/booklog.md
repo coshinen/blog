@@ -155,6 +155,7 @@ excerpt: Here are some books I read.
 > * 公正 该如何做是好？，[美] [Michael J. Sandel](https://scholar.harvard.edu/sandel){:target="_blank"}
 
 > ### 方法论
+> * 子弹笔记术，[日] 杉野干人
 > * 单核工作法图解，[瑞典] Staffan Nöteberg
 > * 番茄工作法图解，[瑞典] [Staffan Nöteberg](http://staffannoteberg.com){:target="_blank"}
 > * 一万小时天才理论，[美] Daniel Coyle
