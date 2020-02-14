@@ -26,10 +26,10 @@
 * 2019.08.14 [+] about page: PGP key and fingerprint
 * 2019.08.02 [+] site: Simple Jekyll Search
 * 2019.07.18 [+] pages: booklog (reading list) page and feed page
-* 2019.07.04 [-] site: ~~Baidu Search~~ (unfriendly); [+] site: DogeDoge Search (Bing?)
+* 2019.07.04 [-] site: ~~Baidu Search~~ (unfriendly); [+] site: DogeDoge Search (Bing-like)
 * 2019.06.21 [-] post: ~~bShare~~ (loading problem); [+] post: AddToAny share system
 * 2019.06.20 [+] post: ~~bShare~~
-* 2019.06.10 [+] home page: Crypto Currencies Price Ticker
+* 2019.06.10 [+] home page: Crypto Currencies Price Widget
 * 2019.05.24 [+] README: Site Dependencies
 * 2019.05.09 [+] site: robots.txt (Allow Bingbot and Yahoo Slurp)
 * 2019.05.03 [-] post: ~~LiveRe City comment~~ (realname); [+] post: ~~Remarkbox Hosted Comments Service~~
