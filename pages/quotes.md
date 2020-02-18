@@ -163,6 +163,9 @@ excerpt: Here are my favorite quotes from someones that inspire me or make me la
 > * 人間は一人なの。一人で生まれて一人で考えて一人で死んで行くの。人は一人じゃ生きられないなんて、だったら私は人じゃなくていい。ミジンコでいい。寄り添わなきゃいけない人間よりもずっとずっと自立してるもの。
 > * 人間は、大きな幸せを前にすると、急に臆病になる。幸せを勝ち取ることは、不幸に耐えることより勇気が要るの。
 
+> 新堂頼子「はんなりギロリの頼子さん」：
+> * 大切なのは、どの道を選ぶかより、選んだ道をどういきるかじゃないの？
+
 > ダー子「コンフィデンスマンJP」：
 > * 目に見えるものが真実とは限らない。何が本当で何が嘘か？
 
@@ -246,6 +249,7 @@ excerpt: Here are my favorite quotes from someones that inspire me or make me la
 
 > Joan Baez「Garnet Time 02 Azuki's Night」：
 > * 人はどう死ぬか、いつ死ぬか選択できない。どう生きるか、これだけは決められる。さあ決めるのです。
+> * You don't get to choose how you're going to die, or when. You can only decide how you're going to live. Now.
 
 > ルパン三世「東方見聞録 ～アナザーページ～」：
 > * 分からねぇか？その甘え、そろそろ卒業しなくちゃな。自分で決めなきゃ、明日は開かれねぇんだぜ！
