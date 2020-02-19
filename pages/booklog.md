@@ -101,6 +101,7 @@ excerpt: Here are some books I read.
 > * 史蒂夫·乔布斯传，[美] Walter Isaacson
 
 > ### 小说
+> * 鼠疫，[法] Albert Camus
 > * 冰与火之歌，[美] [George R.R. Martin](http://www.georgerrmartin.com){:target="_blank"}
 > * 兔子共和国，[英] Richard Adams
 > * 三个火枪手，[法] dit aussi Alexandre Dumas père
