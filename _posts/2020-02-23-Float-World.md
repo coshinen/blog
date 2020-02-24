@@ -8,7 +8,7 @@ categories: GARNETCROW Lyrics
 tags: ガネクロ 歌詞翻訳
 excerpt: 衝動に任して全部(すべて)終わりにしたくなる時ない？愛に満ちた時間(とき)はいつまでも続きやしない。
 ---
-![GZCA-7037](https://raw.githubusercontent.com/mistydew/gc2/master/cover/single/GZCA-7037.jpg){:.border}
+![GZCA-7037](/gc/assets/images/discography/single/GZCA-7037.jpg){:.border}
 
 ## Float World | 浮動世界
 

@@ -8,7 +8,7 @@ categories: GARNETCROW Lyrics
 tags: ガネクロ 歌詞翻訳
 excerpt: 午後になると西陽が射す、部屋の片隅のソファー。海を越えて運んだ、大切な君の場所へ。初めて僕が座る、出会いから半年の今日。
 ---
-![GZCA-1072](https://raw.githubusercontent.com/mistydew/gc2/master/cover/single/GZCA-1072.jpg){:.border}
+![GZCA-1072](/gc/assets/images/discography/single/GZCA-1072.jpg){:.border}
 
 ## Last love song | 最後的戀歌
 

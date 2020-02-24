@@ -8,7 +8,7 @@ categories: GARNETCROW Lyrics
 tags: ガネクロ 歌詞翻訳
 excerpt: そんなに移り気じゃヤダ、正直って便利な言い訳、多様して流れてゆく 生涯(ひととき)。
 ---
-![GZCA-5038](https://raw.githubusercontent.com/mistydew/gc2/master/cover/album/GZCA-5038.jpg){:.border}
+![GZCA-5038](/gc/assets/images/discography/album/GZCA-5038.jpg){:.border}
 
 ## Endless Desire | 無盡的慾望
 

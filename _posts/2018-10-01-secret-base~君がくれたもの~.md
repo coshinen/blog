@@ -8,7 +8,7 @@ categories: Lyrics
 tags: 歌詞翻訳
 excerpt: 君と夏の終わり 将来の夢 大きな希望 忘れない、10年後の8月 また出会えるのを 信じて、最高の思い出を…
 ---
-![SRCL-5120](https://raw.githubusercontent.com/mistydew/misc/master/cover/SRCL-5120.jpg){:.border}
+![SRCL-5120](/assets/images/cover/misc/SRCL-5120.jpg){:.border}
 
 ## secret base 〜君がくれたもの〜 | 秘密基地 ～你贈予我的東西～
 

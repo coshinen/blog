@@ -8,7 +8,7 @@ categories: GARNETCROW Lyrics
 tags: ガネクロ 歌詞翻訳
 excerpt: 雨上がりは ふと 空見上げる、何気ない仕草しみついた毎日。なんで迷子みたいな気持ち、君といても感じちゃうんだろう。
 ---
-![GZCA-1061](https://raw.githubusercontent.com/mistydew/gc2/master/cover/album/GZCA-1061.jpg){:.border}
+![GZCA-1061](/gc/assets/images/discography/album/GZCA-1061.jpg){:.border}
 
 ## wonder land | 仙境
 

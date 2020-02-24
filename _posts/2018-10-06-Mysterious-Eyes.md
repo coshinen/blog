@@ -8,7 +8,7 @@ categories: CONAN GARNETCROW Lyrics
 tags: コナン ガネクロ 歌詞翻訳
 excerpt: 君と僕とは 別の人間(いきもの)だから、好みが違う 歩く速さも 想いの伝え方も。
 ---
-![GZCA-1028](https://raw.githubusercontent.com/mistydew/gc2/master/cover/single/GZCA-1028.jpg){:.border}
+![GZCA-1028](/gc/assets/images/discography/single/GZCA-1028.jpg){:.border}
 
 ## Mysterious Eyes | 神秘的眼睛
 

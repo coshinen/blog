@@ -8,7 +8,7 @@ categories: CONAN GARNETCROW Lyrics
 tags: コナン ガネクロ 歌詞翻訳
 excerpt: 風の音だけが、体中を包む。サイレント・Kiss、夢に似た気配。
 ---
-![GZCA-7156](https://raw.githubusercontent.com/mistydew/gc2/master/cover/single/GZCA-7156.jpg){:.border}
+![GZCA-7156](/gc/assets/images/discography/single/GZCA-7156.jpg){:.border}
 
 ## Over Drive | 凌空駕馭
 

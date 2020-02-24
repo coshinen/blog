@@ -8,7 +8,7 @@ categories: Lyrics
 tags: 歌詞翻訳
 excerpt: Should auld acquaintance be forgot, and never brought to mind? Should auld acquaintance be forgot, and days of auld lang syne?
 ---
-![GZCA-5229](https://raw.githubusercontent.com/mistydew/gc2/master/cover/other/GZCA-5229.jpg){:.border}
+![GZCA-5229](/gc/assets/images/discography/other/GZCA-5229.jpg){:.border}
 
 ## AULD LANG SYNE | 逝去已久的日子
 

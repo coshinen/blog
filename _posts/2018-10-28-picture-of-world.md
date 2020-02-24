@@ -8,7 +8,7 @@ categories: GARNETCROW Lyrics
 tags: ガネクロ 歌詞翻訳
 excerpt: ずっと みてたんだ一枚のポスター、壁の片隅で色褪せた。きっと誰かが 剥がし忘れた、夕ぐれのストーリーは そこにあり。
 ---
-![GZCA-5052](https://raw.githubusercontent.com/mistydew/gc2/master/cover/album/GZCA-5052.jpg){:.border}
+![GZCA-5052](/gc/assets/images/discography/album/GZCA-5052.jpg){:.border}
 
 ## picture of world | 世界的圖畫
 

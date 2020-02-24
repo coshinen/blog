@@ -8,7 +8,7 @@ categories: CONAN GARNETCROW Lyrics
 tags: コナン ガネクロ 歌詞翻訳
 excerpt: Doing all right!かみしめた君の記憶 木漏れ日の匂い、置いてきた何かはもう 此処にはないけど。
 ---
-![GZCA-7141](https://raw.githubusercontent.com/mistydew/gc2/master/cover/single/GZCA-7141.jpg){:.border}
+![GZCA-7141](/gc/assets/images/discography/single/GZCA-7141.jpg){:.border}
 
 ## Doing all right | 做好一切
 

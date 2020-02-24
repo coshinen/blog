@@ -8,7 +8,7 @@ categories: GARNETCROW Lyrics
 tags: ガネクロ 歌詞翻訳
 excerpt: 街の音 人の声 ざわめき、やけに今 躰が音をひらうよ。君一人で世界が変わるなんて、ah- なんて 単純な feel & brain。
 ---
-![GZCA-1061](https://raw.githubusercontent.com/mistydew/gc2/master/cover/album/GZCA-1061.jpg){:.border}
+![GZCA-1061](/gc/assets/images/discography/album/GZCA-1061.jpg){:.border}
 
 ## Holding you, and swinging | 抱著你，搖擺
 

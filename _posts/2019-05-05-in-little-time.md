@@ -8,7 +8,7 @@ categories: GARNETCROW Lyrics
 tags: ガネクロ 歌詞翻訳
 excerpt: 十二月にしては暖かいこんな夜は、思いつきで出かけた。車の中でずっと手をつないで眠った、朝日が二人を起こすまで。
 ---
-![GZCA-1029](https://raw.githubusercontent.com/mistydew/gc2/master/cover/single/GZCA-1029.jpg){:.border}
+![GZCA-1029](/gc/assets/images/discography/single/GZCA-1029.jpg){:.border}
 
 ## in little time | 短時間內
 

@@ -8,7 +8,7 @@ categories: GARNETCROW Lyrics
 tags: ガネクロ 歌詞翻訳
 excerpt: 気づけば温もり求めて心が彷徨うことない？
 ---
-![GZCA-7006](https://raw.githubusercontent.com/mistydew/gc2/master/cover/single/GZCA-7006.jpg){:.border}
+![GZCA-7006](/gc/assets/images/discography/single/GZCA-7006.jpg){:.border}
 
 ## Crier Girl & Crier Boy ~ice cold sky~ | 哭泣的女孩&男孩～冰冷的天空～
 

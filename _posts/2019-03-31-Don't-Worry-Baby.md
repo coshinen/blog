@@ -8,7 +8,7 @@ categories: Lyrics
 tags: 歌詞翻訳
 excerpt: Well its been building up inside of me. For oh I don't know how long. I don't know why. But I keep thinking. Something's bound to go wrong.
 ---
-![SHUT DOWN VOLUME 2](https://raw.githubusercontent.com/mistydew/misc/master/cover/SHUT%20DOWN%20VOLUME%202.jpg){:.border}
+![SHUT DOWN VOLUME 2](/assets/images/cover/misc/SHUT%20DOWN%20VOLUME%202.jpg){:.border}
 
 ## Don't Worry Baby | 別擔心寶貝
 

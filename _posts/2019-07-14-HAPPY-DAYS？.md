@@ -8,7 +8,7 @@ categories: GARNETCROW Lyrics
 tags: ガネクロ 歌詞翻訳
 excerpt: close island、素早く暮れる空に、意味もなく胸が切なくなる。そんな季節、冷えてく体抱きしめてくれる、君の腕がまた恋しくなるから。
 ---
-![GZCA-1061](https://raw.githubusercontent.com/mistydew/gc2/master/cover/album/GZCA-1061.jpg){:.border}
+![GZCA-1061](/gc/assets/images/discography/album/GZCA-1061.jpg){:.border}
 
 ## HAPPY DAYS? | 快樂的日子？
 

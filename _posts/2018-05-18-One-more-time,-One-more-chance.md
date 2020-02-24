@@ -8,7 +8,7 @@ categories: Lyrics
 tags: 歌詞翻訳
 excerpt: これ以上何を失えば 心は許されるの、どれ程の痛みならば もういちど君に会える。One more time 季節よ うつろわないで、One more time ふざけあった 時間よ。
 ---
-![UPCH-80013](https://raw.githubusercontent.com/mistydew/misc/master/cover/UPCH-80013.jpg){:.border}
+![UPCH-80013](/assets/images/cover/misc/UPCH-80013.jpg){:.border}
 
 ## One more time, One more chance | 多一次，多一個機會
 

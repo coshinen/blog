@@ -8,7 +8,7 @@ categories: Lyrics
 tags: 歌詞翻訳
 excerpt: It's the little old lady from Pasadena, has a pretty little flower bed of white gardenias. But parked in a rickety old garage, is a brand new shiny red super stocked Dodge.
 ---
-![GZCA-5017](https://raw.githubusercontent.com/mistydew/gc2/master/cover/other/GZCA-5017.jpg)
+![GZCA-5017](/gc/assets/images/discography/other/GZCA-5017.jpg){:.border}
 
 ## THE LITTLE OLD LADY FROM PASADENA | 來自帕薩迪納的小老太太
 

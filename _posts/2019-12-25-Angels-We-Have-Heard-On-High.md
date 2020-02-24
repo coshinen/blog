@@ -8,7 +8,7 @@ categories: Lyrics
 tags: 歌詞翻訳
 excerpt: Angels we have heard on high, sweetly singing o'er the plains, and the mountains in reply, echoing their joyous strains.
 ---
-![GZBA-8020~1](https://raw.githubusercontent.com/mistydew/gc2/master/cover/other/GZBA-8020~1.jpg){:.border}
+![GZBA-8020~1](/gc/assets/images/discography/dvd/GZBA-8020~1.jpg){:.border}
 
 ## Angels We Have Heard On High | 我們聽到天使在高處
 

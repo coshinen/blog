@@ -8,7 +8,7 @@ categories: GARNETCROW Lyrics
 tags: ガネクロ 歌詞翻訳
 excerpt: 白い壁と Rembrandt、いつまでも眺めていた、日曜の朝君とただ並んでた。開いた窓から差し込む光がほらそこに、ふと思い出したように call my name。
 ---
-![GZCA-2005](https://raw.githubusercontent.com/mistydew/gc2/master/cover/single/GZCA-2005.jpg){:.border}
+![GZCA-2005](/gc/assets/images/discography/single/GZCA-2005.jpg){:.border}
 
 ## call my name | 叫我的名字
 

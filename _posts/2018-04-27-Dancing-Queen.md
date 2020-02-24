@@ -8,7 +8,7 @@ categories: Lyrics
 tags: 歌詞翻訳
 excerpt: Ooh, you can dance, you can jive. Having the time of your life. Ooh, see that girl, watch that scene. Digging the dancing queen.
 ---
-![GOLD GREATEST HITS](https://raw.githubusercontent.com/mistydew/misc/master/cover/GOLD%20GREATEST%20HITS.jpg){:.border}
+![GOLD GREATEST HITS](/assets/images/cover/misc/GOLD%20GREATEST%20HITS.jpg){:.border}
 
 ## Dancing Queen | 舞后
 
