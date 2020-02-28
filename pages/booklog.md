@@ -141,6 +141,7 @@ excerpt: Here are some books I read.
 > * 阿加莎的毒药，[英] Kathryn Harkup
 
 > ### 心理学
+> * 自卑与超越，[奥地利] Alfred Adler
 > * 被讨厌的勇气 “自我启发之父”阿德勒的哲学课，[日] 岸見一郎 古賀史健
 > * 内向者优势 如何在外向的世界中获得成功，[美] Marti Olsen Laney
 > * 安静：内向性格的竞争力，[美] Susan Cain
