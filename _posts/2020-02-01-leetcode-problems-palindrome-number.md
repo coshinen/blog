@@ -71,7 +71,7 @@ public:
 * 时间复杂度：_O_(ln(n))，每次迭代都会把输入除以 10。
 * 空间复杂度：_O_(1)。
 
-### 方法二：偷鸡（STL stringstream + string）
+### 方法二：使用 STL
 
 ```cpp
 class Solution {

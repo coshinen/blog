@@ -96,7 +96,7 @@ public:
 * 时间复杂度：_O_(n)。
 * 空间复杂度：_O_(1)。
 
-### 方法二：偷鸡（STL stringstream）
+### 方法二：使用 STL
 
 ```cpp
 class Solution {
@@ -111,7 +111,7 @@ public:
 ```
 
 复杂度分析：
-* 时间复杂度：_O_(?)，参考 STL stringstream 底层实现。
+* 时间复杂度：_O_(?)，参考 STL 底层实现。
 * 空间复杂度：_O_(1)。
 
 ## 参考链接
