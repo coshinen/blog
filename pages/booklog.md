@@ -25,9 +25,7 @@ excerpt: Here are some books I read.
 >   * [伦理学](#伦理学)
 >   * [方法论](#方法论)
 >   * [管理](#管理)
-> * [语言](#语言)
->   * [日语](#日语)
->   * [英语](#英语)
+> * [漫画](#漫画)
 
 ## 技术
 
@@ -170,17 +168,8 @@ excerpt: Here are some books I read.
 > * [把时间当作朋友 运用心智 获得解放](http://lixiaolai.com/#/befriending-time/){:target="_blank"}，[中] [李笑来](http://lixiaolai.com/#/){:target="_blank"}
 > * 富爸爸，穷爸爸，[美] Robert T. Kiyosaki
 
-## 语言
+## 漫画
 
-> ### 日语
+> * 日本人の知らない日本語，[日] 蛇蔵＆海野凪子
 > * 名探偵コナン，[日] 青山剛昌
 > * まじっく快斗，[日] 青山剛昌
-> * 日本人の知らない日本語，[日] 蛇蔵＆海野凪子
-> * 新版 中日交流 标准日本语 中级 上、下，[中] 人民教育出版社、[日] 光村图书出版株式会社
-> * 新版 中日交流 标准日本语 初级 上、下，[中] 人民教育出版社、[日] 光村图书出版株式会社
-
-> ### 英语
-> * [Welcome to Lit2Go ETC - a free online collection of stories and poems in Mp3 (audiobook) format.](https://etc.usf.edu/lit2go){:target="_blank"}
-> * [Standard Ebooks: Free and liberated ebooks, carefully produced for the true book lover.](https://standardebooks.org){:target="_blank"}
-> * [Page By Page Books. Read Classic Books Online, Free.](https://www.pagebypagebooks.com){:target="_blank"}
-> * [Free eBooks - Project Gutenberg](http://www.gutenberg.org/wiki/Main_Page){:target="_blank"}
