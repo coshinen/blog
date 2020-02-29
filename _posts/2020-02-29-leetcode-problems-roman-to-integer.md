@@ -11,16 +11,18 @@ excerpt: 把给定的罗马数字（包含七种字符：`I`，`V`，`X`，`L`�
 ## 13. Roman to Integer | Easy
 
 > Roman numerals are represented by seven different symbols: `I`, `V`, `X`, `L`, `C`, `D` and `M`.
-```
-Symbol       Value
-I             1
-V             5
-X             10
-L             50
-C             100
-D             500
-M             1000
-```
+> 
+> ```
+> Symbol       Value
+> I             1
+> V             5
+> X             10
+> L             50
+> C             100
+> D             500
+> M             1000
+> ```
+> 
 > For example, two is written as `II` in Roman numeral, just two one's added together. Twelve is written as, `XII`, which is simply `X` + `II`. The number twenty seven is written as `XXVII`, which is `XX` + `V` + `II`.
 > 
 > Roman numerals are usually written largest to smallest from left to right. However, the numeral for four is not `IIII`. Instead, the number four is written as `IV`. Because the one is before the five we subtract it making four. The same principle applies to the number nine, which is written as `IX`. There are six instances where subtraction is used:
@@ -81,7 +83,7 @@ M             1000
 
 ## 解决方案
 
-### 方法一
+### 方法一：使用 STL 哈希表
 
 ```cpp
 class Solution {
@@ -114,7 +116,7 @@ public:
 ```
 
 复杂度分析：
-* 时间复杂度：_O_(n)。
+* 时间复杂度：_O_(n)，STL unordered_map 的查找速度为 _O_(1)，只需遍历字符串一次。
 * 空间复杂度：_O_(1)。
 
 ## 参考链接
