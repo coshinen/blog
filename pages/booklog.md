@@ -24,7 +24,6 @@ excerpt: Here are some books I read.
 >   * [心理学](#心理学)
 >   * [伦理学](#伦理学)
 >   * [方法论](#方法论)
->   * [管理](#管理)
 > * [漫画](#漫画)
 
 ## 技术
@@ -86,10 +85,11 @@ excerpt: Here are some books I read.
 > * [前方的路](http://www.ruanyifeng.com/road){:target="_blank"}，[中] 阮一峰
 > * [未来世界的幸存者](http://www.ruanyifeng.com/survivor){:target="_blank"}，[中] 阮一峰
 > * 如何变得有思想 阮一峰博客文集，[中] [阮一峰](http://www.ruanyifeng.com/blog){:target="_blank"}
+> * [新生 七年就是一辈子](https://b.xinshengdaxue.com){:target="_blank"}，[中] 李笑来
+> * [把时间当作朋友 运用心智 获得解放](http://lixiaolai.com/#/befriending-time/){:target="_blank"}，[中] [李笑来](http://lixiaolai.com/#/){:target="_blank"}
 > * 80,0 AZUKI NANA photo & anthology，[日] AZUKI 七
 
 > ### 纪实
-> * 血疫 埃博拉的故事，[美] Richard Preston
 > * 黑箱 日本之耻，[日] 伊藤詩織
 > * 谁“害”了北大学生，[中] 群言
 
@@ -133,7 +133,8 @@ excerpt: Here are some books I read.
 ## 科学
 
 > ### 医学
-> * 众病之王：癌症传，[美] Siddhartha Mukherjee
+> * 血疫 埃博拉的故事，[美] Richard Preston
+> * 众病之王 癌症传，[美] Siddhartha Mukherjee
 > * 绝对笑喷之弃业医生日志，[英] Adam Kay
 
 > ### 化学
@@ -143,14 +144,14 @@ excerpt: Here are some books I read.
 > * 自卑与超越，[奥地利] Alfred Adler
 > * 被讨厌的勇气 “自我启发之父”阿德勒的哲学课，[日] 岸見一郎 古賀史健
 > * 内向者优势 如何在外向的世界中获得成功，[美] Marti Olsen Laney
-> * 安静：内向性格的竞争力，[美] Susan Cain
+> * 安静 内向性格的竞争力，[美] Susan Cain
 > * 原生家庭，[美] Susan Forward
 > * 非暴力沟通，[美] Marshall B.Rosenberg
 > * 人性的弱点，[美] Dale Carnegie
 > * 乌合之众 大众心理研究，[法] Gustave Le Bon
 > * 亲密关系，[美] Rowland S. Miller, Daniel Perlman
 > * 少有人走的路 心智成熟的旅程，[美] M. Scott peck
-> * 异类：不一样的成功启示录，[加] Malcolm Gladwell
+> * 异类 不一样的成功启示录，[加] Malcolm Gladwell
 
 > ### 伦理学
 > * 最好的告别 关于衰老与死亡，你必须知道的常识，[美] Atul Gawande
@@ -162,11 +163,6 @@ excerpt: Here are some books I read.
 > * 番茄工作法图解，[瑞典] [Staffan Nöteberg](http://staffannoteberg.com){:target="_blank"}
 > * 一万小时天才理论，[美] Daniel Coyle
 > * 刻意练习，[美] Anders Ericsson
-
-> ### 管理
-> * [新生 七年就是一辈子](https://b.xinshengdaxue.com){:target="_blank"}，[中] 李笑来
-> * [把时间当作朋友 运用心智 获得解放](http://lixiaolai.com/#/befriending-time/){:target="_blank"}，[中] [李笑来](http://lixiaolai.com/#/){:target="_blank"}
-> * 富爸爸，穷爸爸，[美] Robert T. Kiyosaki
 
 ## 漫画
 
