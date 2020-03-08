@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "GARNET CROW Mysterious Eyes 歌詞翻訳"
-date:   2018-10-06 20:00:03 +0800
+date:   2018-11-18 20:00:03 +0800
 author: mistydew
 comments: true
 categories: CONAN GARNETCROW Lyrics

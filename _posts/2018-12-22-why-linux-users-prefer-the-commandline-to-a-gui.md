@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "为什么这么多 Linux 用户比起 GUI 更喜欢命令行？"
-date:   2018-10-19 16:13:39 +0800
+date:   2018-12-22 16:13:39 +0800
 author: mistydew
 comments: true
 categories: Study UNIX/Linux Translations

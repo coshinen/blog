@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "比特币 RPC 命令剖析 \"invalidateblock\""
-date:   2018-10-02 09:25:28 +0800
+date:   2018-10-01 09:25:28 +0800
 author: mistydew
 comments: true
 categories: Blockchain Bitcoin

@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "每个高效的 Linux 用户必须知道的 14 个终端快捷键"
-date:   2018-10-16 13:35:20 +0800
+date:   2018-12-15 13:35:20 +0800
 author: mistydew
 comments: true
 categories: UNIX/Linux Terminal Translations

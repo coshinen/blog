@@ -91,7 +91,7 @@ $ bitcoin-cli help # 获取以下 RPC 命令
 
 **注：括号 () 内的参数有默认值，可以省略。**
 
-> == Blockchain ==<br>
+> == Blockchain | 区块链 ==<br>
 > [getbestblockhash](/blog/2018/05/bitcoin-rpc-command-getbestblockhash.html) # 获取最佳块哈希<br>
 > [getblock "hash" ( verbose )](/blog/2018/05/bitcoin-rpc-command-getblock.html) # 获取指定区块信息<br>
 > [getblockchaininfo](/blog/2018/05/bitcoin-rpc-command-getblockchaininfo.html) # 获取区块链信息<br>
@@ -108,24 +108,24 @@ $ bitcoin-cli help # 获取以下 RPC 命令
 > [verifychain ( checklevel numblocks )](/blog/2018/06/bitcoin-rpc-command-verifychain.html) # 验证链<br>
 > [verifytxoutproof "proof"](/blog/2018/06/bitcoin-rpc-command-verifytxoutproof.html) # 验证交易证明
 >
-> == Control ==<br>
+> == Control | 控制 ==<br>
 > [getinfo](/blog/2018/06/bitcoin-rpc-command-getinfo.html) # 获取比特币核心信息<br>
 > [help ( "command" )](/blog/2018/06/bitcoin-rpc-command-help.html) # 获取命令帮助信息<br>
 > [stop](/blog/2018/06/bitcoin-rpc-command-stop.html) # 远程终止比特币核心服务
 >
-> == Generating ==<br>
+> == Generating | 生成 ==<br>
 > [generate numblocks](/blog/2018/06/bitcoin-rpc-command-generate.html) # 生成区块<br>
 > [getgenerate](/blog/2018/06/bitcoin-rpc-command-getgenerate.html) # 获取挖矿状态<br>
 > [setgenerate generate ( genproclimit )](/blog/2018/06/bitcoin-rpc-command-setgenerate.html) # 挖矿开关
 >
-> == Mining ==<br>
+> == Mining | 挖矿 ==<br>
 > [getblocktemplate ( "jsonrequestobject" )](/blog/2018/06/bitcoin-rpc-command-getblocktemplate.html) # 获取区块模板<br>
 > [getmininginfo](/blog/2018/06/bitcoin-rpc-command-getmininginfo.html) # 获取挖矿信息<br>
 > [getnetworkhashps ( blocks height )](/blog/2018/06/bitcoin-rpc-command-getnetworkhashps.html) # 获取网络算力<br>
 > [prioritisetransaction \<txid> \<priority delta> \<fee delta>](/blog/2018/06/bitcoin-rpc-command-prioritisetransaction.html) # 改变交易优先级<br>
 > [submitblock "hexdata" ( "jsonparametersobject" )](/blog/2018/06/bitcoin-rpc-command-submitblock.html) # 提交区块
 >
-> == Network ==<br>
+> == Network | 网络 ==<br>
 > [addnode "node" "add|remove|onetry"](/blog/2018/06/bitcoin-rpc-command-addnode.html) # 添加节点并执行操作<br>
 > [clearbanned](/blog/2018/06/bitcoin-rpc-command-listbanned.html) # 清空黑名单<br>
 > [disconnectnode "node"](/blog/2018/06/bitcoin-rpc-command-disconnectnode.html) # 断开与指定节点的连接<br>
@@ -138,7 +138,7 @@ $ bitcoin-cli help # 获取以下 RPC 命令
 > [ping](/blog/2018/07/bitcoin-rpc-command-ping.html) # ping 连接的节点<br>
 > [setban "ip(/netmask)" "add|remove" (bantime) (absolute)](/blog/2018/07/bitcoin-rpc-command-setban.html) # 设置黑名单
 >
-> == Rawtransactions ==<br>
+> == Rawtransactions | 原始交易 ==<br>
 > [createrawtransaction [{"txid":"id","vout":n},...] {"address":amount,"data":"hex",...} ( locktime )](/blog/2018/07/bitcoin-rpc-command-createrawtransaction.html) # 创建原始交易<br>
 > [decoderawtransaction "hexstring"](/blog/2018/07/bitcoin-rpc-command-decoderawtransaction.html) # 解码原始交易<br>
 > [decodescript "hex"](/blog/2018/07/bitcoin-rpc-command-decodescript.html) # 解码脚本<br>
@@ -147,7 +147,7 @@ $ bitcoin-cli help # 获取以下 RPC 命令
 > [sendrawtransaction "hexstring" ( allowhighfees )](/blog/2018/07/bitcoin-rpc-command-sendrawtransaction.html) # 发送原始交易<br>
 > [signrawtransaction "hexstring" ( [{"txid":"id","vout":n,"scriptPubKey":"hex","redeemScript":"hex"},...] ["privatekey1",...] sighashtype )](/blog/2018/07/bitcoin-rpc-command-signrawtransaction.html) # 签名原始交易
 >
-> == Util ==<br>
+> == Util | 实用 ==<br>
 > [createmultisig nrequired ["key",...]](/blog/2018/07/bitcoin-rpc-command-createmultisig.html) # 创建多重签名<br>
 > [estimatefee nblocks](/blog/2018/07/bitcoin-rpc-command-estimatefee.html) # 估算交易费<br>
 > [estimatepriority nblocks](/blog/2018/07/bitcoin-rpc-command-estimatepriority.html) # 估算交易优先级<br>
@@ -156,13 +156,13 @@ $ bitcoin-cli help # 获取以下 RPC 命令
 > [validateaddress "bitcoinaddress"](/blog/2018/07/bitcoin-rpc-command-validateaddress.html) # 验证地址<br>
 > [verifymessage "bitcoinaddress" "signature" "message"](/blog/2018/07/bitcoin-rpc-command-verifymessage.html) # 验证消息
 >
-> == Hidden ==<br>
+> == Hidden | 隐藏 ==<br>
 > [invalidateblock](/blog/2018/10/bitcoin-rpc-command-invalidateblock.html) # 无效化区块<br>
 > [reconsiderblock](/blog/2018/10/bitcoin-rpc-command-reconsiderblock.html) # 再考虑区块<br>
 > [setmocktime](/blog/2018/10/bitcoin-rpc-command-setmocktime.html) # 设置 mocktime<br>
 > [resendwallettransactions](/blog/2018/10/bitcoin-rpc-command-resendwallettransactions.html) # 再次发送钱包交易
 >
-> == Wallet ==<br>
+> == Wallet | 钱包 ==<br>
 > [abandontransaction "txid"](/blog/2018/08/bitcoin-rpc-command-abandontransaction.html) # 放弃交易<br>
 > [addmultisigaddress nrequired ["key",...] ( "account" )](/blog/2018/08/bitcoin-rpc-command-addmultisigaddress.html) # 添加多签地址<br>
 > [backupwallet "destination"](/blog/2018/08/bitcoin-rpc-command-backupwallet.html) # 备份钱包<br>
@@ -207,7 +207,6 @@ $ bitcoin-cli help # 获取以下 RPC 命令
 
 ## 参考链接
 
-* [JSON-RPC - Wikipedia](https://en.wikipedia.org/wiki/JSON-RPC){:target="_blank"}
 * [bitcoin/bitcoin at v0.12.1](https://github.com/bitcoin/bitcoin/tree/v0.12.1){:target="_blank"}
 * [Developer Documentation - Bitcoin](https://bitcoin.org/en/developer-documentation){:target="_blank"}
 * [mistydew/blockchain](https://github.com/mistydew/blockchain){:target="_blank"}

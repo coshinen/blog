@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "一些你可能会听到的比特币术语"
-date:   2018-10-23 20:43:26 +0800
+date:   2018-10-20 20:43:26 +0800
 author: mistydew
 comments: true
 categories: Blockchain Bitcoin Translations

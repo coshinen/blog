@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "设计模式"
-date:   2018-10-08 20:08:56 +0800
+date:   2018-11-17 20:08:56 +0800
 author: mistydew
 comments: true
 categories: 设计模式
@@ -14,7 +14,7 @@ tags: C/C++ 设计模式
 
 创建模式是创建对象的模式，而非直接实例化对象，为程序提供更多灵活性。
 
-* 单例模式（[Singleton pattern](/blog/2018/10/singleton-pattern.html)）
+* 单例模式（[Singleton pattern](/blog/2018/11/singleton-pattern.html)）
 * 简单工厂模式（Simple Factory pattern）
 * 工厂方法模式（Factory Method pattern）
 * 抽象工厂模式（Abstract pattern）

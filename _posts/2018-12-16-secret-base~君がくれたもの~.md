@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "ZONE secret base 〜君がくれたもの〜 歌詞翻訳"
-date:   2018-10-01 20:01:08 +0800
+date:   2018-12-16 20:01:08 +0800
 author: mistydew
 comments: true
 categories: Lyrics

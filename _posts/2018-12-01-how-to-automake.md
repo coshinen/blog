@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "如何使用 Automake 生成 Makefile"
-date:   2018-10-15 15:10:52 +0800
+date:   2018-12-01 15:10:52 +0800
 author: mistydew
 comments: true
 categories: build

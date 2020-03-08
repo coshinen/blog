@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "设计模式之单例模式"
-date:   2018-10-09 21:31:55 +0800
+date:   2018-11-24 21:31:55 +0800
 author: mistydew
 comments: true
 categories: 设计模式
