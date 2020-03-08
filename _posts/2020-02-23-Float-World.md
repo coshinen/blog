@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "GARNET CROW Float World 歌詞翻訳"
-date:   2020-02-23 20:04:14 +0800
+date:   2020-02-23 20:04:01 +0800
 author: mistydew
 comments: true
 categories: GARNETCROW Lyrics
