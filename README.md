@@ -6,15 +6,15 @@
 
 - [ ] site: replace resume with CV
 - [ ] site: replace Simple Jekyll Search with FlexSearch
-- [ ] post: file by year, exempli gratia 2018
 
 ## Timeline
 
-* 2019.11.08 [-] site: ~~ClustrMaps analytics~~ (patriotism); blog page: ~~ClustrMaps.com Globe Widget~~ (patriotism)
+* 2020.03.08 [+] post: archive by year, exempli gratia 2018
 
 <details>
 <summary>history</summary>
 
+* 2019.11.08 [-] site: ~~ClustrMaps analytics~~ (patriotism); blog page: ~~ClustrMaps.com Globe Widget~~ (patriotism)
 * 2019.10.25 [+] site: ~~ClustrMaps analytics~~; blog page: ~~ClustrMaps.com Globe Widget~~
 * 2019.09.22 [+] config: build future
 * 2019.09.19 [+] remake: archive and category page
