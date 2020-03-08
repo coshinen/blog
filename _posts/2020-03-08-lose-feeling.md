@@ -46,7 +46,7 @@ um-
 
 <div class="lyric-translation">
 <blockquote>
-前往沒有你的 明天的 每天<br>
+面對沒有你的 明天的 每天<br>
 一切 都... 如同消磨時間一般<br>
 <br>
 連那樣喜歡的 碧海<br>
