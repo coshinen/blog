@@ -102,31 +102,31 @@ excerpt: Here are some books I read.
 > ### 小说
 > * 鼠疫，[法] Albert Camus
 > * 局外人，[法] Albert Camus
-> * 冰与火之歌，[美] [George R.R. Martin](http://www.georgerrmartin.com){:target="_blank"}
-> * 兔子共和国，[英] Richard Adams
-> * 三个火枪手，[法] dit aussi Alexandre Dumas père
-> * 机械心，[法] Mathias Malzieu
-> * 小王子，[法] [Antoine de Saint Exupéry](https://www.antoinedesaintexupery.com){:target="_blank"}
-> * 动物农场，[英] [George Orwell](https://www.george-orwell.com){:target="_blank"}
-> * 百年孤独，[哥伦比亚] Gabriel José de la Concordia García Márquez
+> * 偶发空缺，[英] J.K. Rowling
 > * 日安憂鬱，[法] Françoise Sagan
+> * 机械心，[法] Mathias Malzieu
 > * 天气之子，[日] 新海誠
 > * 你的名字。，[日] 新海誠
 > * 言叶之庭，[日] 新海誠
 > * 秒速五厘米，[日] [新海誠](http://shinkaimakoto.jp){:target="_blank"}
+> * 冰与火之歌，[美] [George R.R. Martin](http://www.georgerrmartin.com){:target="_blank"}
 > * 失落的世界，[英] Arthur Conan Doyle
+> * 兔子共和国，[英] Richard Adams
+> * 动物农场，[英] [George Orwell](https://www.george-orwell.com){:target="_blank"}
+> * 小王子，[法] [Antoine de Saint Exupéry](https://www.antoinedesaintexupery.com){:target="_blank"}
+> * 百年孤独，[哥伦比亚] Gabriel José de la Concordia García Márquez
+> * 三个火枪手，[法] dit aussi Alexandre Dumas père
 > * 神奇动物在哪里，[英] J.K. Rowling
 > * 神奇的魁地奇球，[英] J.K. Rowling
 > * 诗翁彼豆故事集 赫敏·格兰杰译自如尼文，[英] J.K. Rowling
 > * 哈利波特完整系列，[英] [J.K. Rowling](https://www.jkrowling.com){:target="_blank"}
 > * 布谷鸟的呼唤，[英] J.K. Rowling
-> * 偶发空缺，[英] J.K. Rowling
-> * 放学后，[日] 東野圭吾
 > * 福尔摩斯症候群，[法] J.M.ERRE
 > * 丝之屋，[英] Anthony Horowitz
-> * 失踪的专列，[英] Arthur Conan Doyle
+> * 放学后，[日] 東野圭吾
 > * 江户川乱步作品集，[日] 江戸川乱歩
 > * 阿加莎·克里斯蒂作品集，[英] Agatha Christie
+> * 失踪的专列，[英] Arthur Conan Doyle
 > * 福尔摩斯探案全集，[英] [Arthur Conan Doyle](https://www.arthur-conan-doyle.com){:target="_blank"}
 > * 爱伦·坡短篇小说集，[美] [Edgar Allan Poe](https://poestories.com){:target="_blank"}
 
