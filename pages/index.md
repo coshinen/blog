@@ -36,5 +36,17 @@ permalink: /
   </ul>
 </div>
 <div class="home-right">
-{% include crypto.html %}
+  <script src='https://www.intensedebate.com/widgets/acctComment/{{ site.site_id }}/2' defer="defer" type='text/javascript'> </script>
+  <blockquote class="profile">
+    <h2>
+      <a href="{{ site.about }}" title="{{ site.name }}">mistydew</a>
+    </h2>
+    <div>
+      <a href="https://github.com/{{ site.github }}" target="_blank"><img class="border" height="128" width="128" alt="@mistydew" src="https://avatars0.githubusercontent.com/u/29818825"></a>
+    </div>
+    <ul>{% assign count = 0 %}{% for post in site.posts %}{% assign count = count | plus: 1 %}{% endfor %}
+      <li>posts: <a href="{{ site.archive }}">{{ count }}</a></li>
+      <li><script type='text/javascript' defer='defer' src='https://www.intensedebate.com/widgets/blogStats/{{ site.site_id }}'></script></li>
+    </ul>
+  </blockquote>
 </div>
