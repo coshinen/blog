@@ -134,7 +134,7 @@ excerpt: Here are some books I read.
 ## 科学
 
 > ### 医学
-> * 阿图医生 第1季，[美] Atul Gawande
+> * 医生的修炼 在不完美中探索行医的真相，[美] Atul Gawande
 > * 血疫 埃博拉的故事，[美] Richard Preston
 > * 众病之王 癌症传，[美] Siddhartha Mukherjee
 > * 绝对笑喷之弃业医生日志，[英] Adam Kay
