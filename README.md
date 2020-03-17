@@ -9,18 +9,19 @@
 
 ## Timeline
 
-* 2020.03.08 [+] post: archive by year, exempli gratia 2018
+* 2020.03.18 [-] home page: ~~Crypto Currencies Price Widget~~; [+] home page: comments, profile
 
 <details>
 <summary>history</summary>
 
+* 2020.03.08 [+] post: archive by year, exempli gratia 2018
 * 2019.11.08 [-] site: ~~ClustrMaps analytics~~ (patriotism); blog page: ~~ClustrMaps.com Globe Widget~~ (patriotism)
 * 2019.10.25 [+] site: ~~ClustrMaps analytics~~; blog page: ~~ClustrMaps.com Globe Widget~~
 * 2019.09.22 [+] config: build future
 * 2019.09.19 [+] remake: archive and category page
 * 2019.09.07 [-] post: ~~{% highlight %} code {% endhighlight %}~~ (only jekyll); [+] post: ```code``` (markdown)
 * 2019.08.28 [+] site: GitHub Actions workflows CI
-* 2019.08.25 [+] remake: blog page (comments, profile)
+* 2019.08.25 [+] blog page: comments, profile
 * 2019.08.24 [-] post: ~~Remarkbox Hosted Comments Service~~ (incomplete); [+] post: IntenseDebate comments
 * 2019.08.18 [+] assets: css, fonts, images and js
 * 2019.08.14 [+] about page: PGP key and fingerprint
@@ -29,7 +30,7 @@
 * 2019.07.04 [-] site: ~~Baidu Search~~ (unfriendly); [+] site: DogeDoge Search (Bing-like)
 * 2019.06.21 [-] post: ~~bShare~~ (loading problem); [+] post: AddToAny share system
 * 2019.06.20 [+] post: ~~bShare~~
-* 2019.06.10 [+] home page: Crypto Currencies Price Widget
+* 2019.06.10 [+] home page: ~~Crypto Currencies Price Widget~~
 * 2019.05.24 [+] README: Site Dependencies
 * 2019.05.09 [+] site: robots.txt (Allow Bingbot and Yahoo Slurp)
 * 2019.05.03 [-] post: ~~LiveRe City comment~~ (realname); [+] post: ~~Remarkbox Hosted Comments Service~~
@@ -90,7 +91,6 @@
 * Site Search: [Google](https://www.google.com), [DogeDoge](https://dogedoge.com), [Simple Jekyll Search](https://github.com/christian-fei/Simple-Jekyll-Search)
 * Comments System: [IntenseDebate](https://intensedebate.com)
 * Shared Service: [AddToAny](https://www.addtoany.com)
-* Crypto Widget: [Coinlib](https://coinlib.io)
 * 404 Page: [Tencent 404](https://www.qq.com/404)
 
 ## Licenses
