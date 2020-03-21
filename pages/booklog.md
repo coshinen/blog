@@ -134,6 +134,7 @@ excerpt: Here are some books I read.
 ## 科学
 
 > ### 医学
+> * 医生的精进 从仁心仁术到追求卓越，[美] Atul Gawande
 > * 医生的修炼 在不完美中探索行医的真相，[美] Atul Gawande
 > * 血疫 埃博拉的故事，[美] Richard Preston
 > * 众病之王 癌症传，[美] Siddhartha Mukherjee
@@ -169,6 +170,4 @@ excerpt: Here are some books I read.
 ## 漫画
 
 > * 日本人の知らない日本語，[日] 蛇蔵＆海野凪子
-> * 青山剛昌短編集，[日] 青山剛昌
 > * 名探偵コナン，[日] 青山剛昌
-> * まじっく快斗，[日] 青山剛昌
