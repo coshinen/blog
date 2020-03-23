@@ -124,10 +124,10 @@ excerpt: Here are some books I read.
 > * 布谷鸟的呼唤，[英] J.K. Rowling
 > * 福尔摩斯症候群，[法] J.M.ERRE
 > * 丝之屋，[英] Anthony Horowitz
-> * 放学后，[日] 東野圭吾
-> * 江户川乱步作品集，[日] 江戸川乱歩
-> * 阿加莎·克里斯蒂作品集，[英] Agatha Christie
 > * 失踪的专列，[英] Arthur Conan Doyle
+> * 东野圭吾作品集，[日] 東野圭吾
+> * 江户川乱步作品集，[日] 江戸川乱歩
+> * 阿加莎·克里斯蒂侦探作品集，[英] Agatha Christie
 > * 福尔摩斯探案全集，[英] [Arthur Conan Doyle](https://www.arthur-conan-doyle.com){:target="_blank"}
 > * 爱伦·坡短篇小说集，[美] [Edgar Allan Poe](https://poestories.com){:target="_blank"}
 
