@@ -19,10 +19,9 @@ url: "https://mistydew.github.io" # the base hostname & protocol for your site
 
 # Site footer
 github: mistydew
-cv: Curriculum Vitae
 email: mistydew@qq.com
-crowsub: GC music diary
 rss: Subscribe Feed
+cv: Curriculum Vitae
 feedburner: mistydew
 btc: 1GC1iAZz9Wroy99bwJUzuLrqpmayUhjYbZ
 
@@ -32,7 +31,6 @@ booklog: "/booklog.html"
 quotes:  "/quotes.html"
 about:   "/about.html"
 resume:  "/resume.html"
-gc:      "/gc/"
 
 # About page
 pgpkey: "/public_key.asc"
