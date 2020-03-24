@@ -4,16 +4,17 @@
 
 ## Todo
 
-- [ ] site: replace resume with CV
+- [ ] site: merge resume into about
 - [ ] site: replace Simple Jekyll Search with FlexSearch
 
 ## Timeline
 
-* 2020.03.18 [-] home page: ~~Crypto Currencies Price Widget~~ (unnecessary); [+] home page: comments, profile
+* 2020.03.24 [-] site: ~~Busuanzi analytics~~ (incompatible Safari)
 
 <details>
 <summary>history</summary>
 
+* 2020.03.18 [-] home page: ~~Crypto Currencies Price Widget~~ (unnecessary); [+] home page: comments, profile
 * 2020.03.08 [+] post: archive by year, exempli gratia 2018
 * 2019.11.08 [-] site: ~~ClustrMaps analytics~~; blog page: ~~ClustrMaps.com Globe Widget~~ (patriotism)
 * 2019.10.25 [+] site: ~~ClustrMaps analytics~~; blog page: ~~ClustrMaps.com Globe Widget~~
@@ -69,7 +70,7 @@
 * 2018.06.15 [+] site: ~~particle background~~
 * 2018.06.07 [+] site: Google Analytics and Search Console; ~~Baidu Analytics~~
 * 2018.06.06 [+] blog page: sticky post
-* 2018.06.04 [+] site: Busuanzi analytics (hits, visitors and pageviews)
+* 2018.06.04 [+] site: ~~Busuanzi analytics (hits, visitors and pageviews)~~
 * 2018.05.22 [+] site: robots.txt (Allow Googlebot and Baiduspider)
 * 2018.05.21 [+] pages: archive page
 * 2018.05.18 [+] pages: 404 page (Tencent search lost children)
@@ -87,7 +88,7 @@
 
 * Hosted: [GitHub](https://github.com)
 * Powered: [GitHub Pages](https://pages.github.com), [Jekyll](http://www.jekyllrb.com)
-* Analytics: [Google Analytics](https://analytics.google.com/analytics/web), [Busuanzi](https://busuanzi.ibruce.info)
+* Analytics: [Google Analytics](https://analytics.google.com/analytics/web)
 * Site Search: [Google Custom Search Engine](https://cse.google.com), [DogeDoge](https://dogedoge.com), [Simple Jekyll Search](https://github.com/christian-fei/Simple-Jekyll-Search)
 * Comments System: [IntenseDebate](https://intensedebate.com)
 * Shared Service: [AddToAny](https://www.addtoany.com)
