@@ -21,12 +21,6 @@ permalink: /sitemap.xml
 <loc>{{ site.resume | prepend: site.url }}</loc>
 </url>
 <url>
-<loc>{{ site.gc | prepend: site.url }}</loc>
-</url>
-<url>
-<loc>{{ site.donate | prepend: site.url }}</loc>
-</url>
-<url>
 <loc>{{ site.blog | prepend: site.url }}</loc>
 </url>
 <url>
