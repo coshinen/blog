@@ -20,3 +20,9 @@ Drop me a line if you will, send email to {% include footer/icon-envelope.html e
 
 My current **PGP key** is [here]({{ site.pgpkey }}).<br>
 The fingerprint is: {{ site.fingerprint }}
+
+**Donate**
+
+{% if site.btc %}
+Bitcoin: {{ site.btc }}
+{% endif %}

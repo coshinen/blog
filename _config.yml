@@ -24,7 +24,6 @@ email: mistydew@qq.com
 crowsub: GC music diary
 rss: Subscribe Feed
 feedburner: mistydew
-coffee: Buy me a coffee
 btc: 1GC1iAZz9Wroy99bwJUzuLrqpmayUhjYbZ
 
 # Site page baseurl
@@ -34,7 +33,6 @@ quotes:  "/quotes.html"
 about:   "/about.html"
 resume:  "/resume.html"
 gc:      "/gc/"
-donate:  "/donate.html"
 
 # About page
 pgpkey: "/public_key.asc"
