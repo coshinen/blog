@@ -4,8 +4,8 @@ title:  "GARNET CROW Marionette Fantasia 歌詞翻訳"
 date:   2019-12-22 20:03:11 +0800
 author: mistydew
 comments: true
-categories: GARNETCROW Lyrics
-tags: ガネクロ 歌詞翻訳
+categories: 译文集
+tags: ガネクロ Lyrics
 excerpt: 薄明かりを灯して、冷たい壁に 頬寄せ。静寂に 耳をすます、ひっそりと ゆっくりと、惹き返す。
 ---
 ![GZCA-5038](/gc/assets/images/discography/album/GZCA-5038.jpg){:.border}

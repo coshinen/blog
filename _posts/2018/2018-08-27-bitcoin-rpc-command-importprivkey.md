@@ -4,8 +4,8 @@ title:  "比特币 RPC 命令剖析 \"importprivkey\""
 date:   2018-08-27 15:10:01 +0800
 author: mistydew
 comments: true
-categories: Blockchain Bitcoin
-tags: CLI bitcoin-cli 区块链 比特币
+categories: 区块链
+tags: CLI bitcoin-cli Blockchain Bitcoin
 excerpt: $ bitcoin-cli importprivkey "bitcoinprivkey" ( "label" rescan )
 ---
 ## 提示说明

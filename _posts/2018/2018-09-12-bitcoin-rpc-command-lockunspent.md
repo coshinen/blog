@@ -4,8 +4,8 @@ title:  "比特币 RPC 命令剖析 \"lockunspent\""
 date:   2018-09-12 16:40:29 +0800
 author: mistydew
 comments: true
-categories: Blockchain Bitcoin
-tags: CLI bitcoin-cli 区块链 比特币
+categories: 区块链
+tags: CLI bitcoin-cli Blockchain Bitcoin
 excerpt: $ bitcoin-cli lockunspent unlock [{"txid":"txid","vout":n},...]
 ---
 ## 提示说明

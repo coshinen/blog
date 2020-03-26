@@ -4,8 +4,8 @@ title:  "GARNET CROW The Someone's Tale 歌詞翻訳"
 date:   2018-10-07 20:13:03 +0800
 author: mistydew
 comments: true
-categories: GARNETCROW Lyrics
-tags: ガネクロ 歌詞翻訳
+categories: 译文集
+tags: ガネクロ Lyrics
 excerpt: まっすぐな思いはまっすぐに伝わるの？唐突な青空 遠ざかる飛行機。
 ---
 ![GZCA-5251](/gc/assets/images/discography/album/GZCA-5251.jpg){:.border}

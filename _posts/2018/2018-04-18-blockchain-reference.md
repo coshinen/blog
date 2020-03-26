@@ -4,8 +4,8 @@ title:  "区块链比特币相关"
 date:   2018-04-18 20:23:17 +0800
 author: mistydew
 comments: true
-categories: Blockchain Bitcoin
-tags: 区块链 比特币
+categories: 区块链
+tags: Blockchain Bitcoin
 stickie: true
 ---
 与其说比特币是区块链的第一个应用，不如说区块链是为了实现数字货币比特币而出现的一种组合现有技术的“新”技术。
@@ -34,7 +34,7 @@ stickie: true
 ## bitcoind
 
 * [启动比特币核心服务 bitcoind](/blog/2018/05/running-bitcoin.html)
-* [比特币源码剖析](/blog/2018/05/bitcoin-source-anatomy-00.html)
+* [比特币源码剖析](/blog/2018/05/the-annotated-bitcoin-sources.html)
 
 ## bitcoin-cli
 

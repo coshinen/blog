@@ -4,7 +4,7 @@ title:  "LeetCode 7. 整数反转 简单"
 date:   2020-01-18 19:10:18 +0800
 author: mistydew
 comments: true
-categories: LeetCode
+categories: 力扣题解
 tags: LeetCode
 excerpt: 给定一个 32 位的有符号整数，反转该整数每个位上的数字。
 ---

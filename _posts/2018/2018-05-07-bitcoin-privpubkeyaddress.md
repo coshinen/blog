@@ -4,8 +4,8 @@ title:  "比特币源码剖析—私钥、公钥、地址"
 date:   2018-05-07 20:22:21 +0800
 author: mistydew
 comments: true
-categories: Blockchain Bitcoin
-tags: 区块链 比特币 非对称加密 比特币地址
+categories: 区块链
+tags: Blockchain Bitcoin Address ECC
 ---
 私钥使用单向的椭圆曲线乘法加密函数得到对应的公钥。
 公钥经过一系列的哈希函数运算生成相应地址，这一过程涉及到 Base58 编码。

@@ -4,8 +4,8 @@ title:  "中村由利 AULD LANG SYNE 歌詞翻訳"
 date:   2019-12-24 20:10:11 +0800
 author: mistydew
 comments: true
-categories: Lyrics
-tags: 歌詞翻訳
+categories: 译文集
+tags: Lyrics
 excerpt: Should auld acquaintance be forgot, and never brought to mind? Should auld acquaintance be forgot, and days of auld lang syne?
 ---
 ![GZCA-5229](/gc/assets/images/discography/other/GZCA-5229.jpg){:.border}

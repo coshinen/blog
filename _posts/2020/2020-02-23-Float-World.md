@@ -4,8 +4,8 @@ title:  "GARNET CROW Float World 歌詞翻訳"
 date:   2020-02-23 20:04:01 +0800
 author: mistydew
 comments: true
-categories: GARNETCROW Lyrics
-tags: ガネクロ 歌詞翻訳
+categories: 译文集
+tags: ガネクロ Lyrics
 excerpt: 衝動に任して全部(すべて)終わりにしたくなる時ない？愛に満ちた時間(とき)はいつまでも続きやしない。
 ---
 ![GZCA-7037](/gc/assets/images/discography/single/GZCA-7037.jpg){:.border}

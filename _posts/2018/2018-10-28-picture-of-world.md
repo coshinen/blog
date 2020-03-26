@@ -4,8 +4,8 @@ title:  "GARNET CROW picture of world 歌詞翻訳"
 date:   2018-10-28 20:04:12 +0800
 author: mistydew
 comments: true
-categories: GARNETCROW Lyrics
-tags: ガネクロ 歌詞翻訳
+categories: 译文集
+tags: ガネクロ Lyrics
 excerpt: ずっと みてたんだ一枚のポスター、壁の片隅で色褪せた。きっと誰かが 剥がし忘れた、夕ぐれのストーリーは そこにあり。
 ---
 ![GZCA-5052](/gc/assets/images/discography/album/GZCA-5052.jpg){:.border}

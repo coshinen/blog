@@ -4,8 +4,8 @@ title:  "Coldplay Viva La Vida 歌詞翻訳"
 date:   2018-04-23 20:08:05 +0800
 author: mistydew
 comments: true
-categories: Lyrics
-tags: 歌詞翻訳
+categories: 译文集
+tags: Lyrics
 excerpt: I used to rule the world. Seas would rise when I gave the word. Now in the morning I sleep alone. Sweep the streets I used to own.
 ---
 ![Viva La Vida](/assets/images/cover/misc/Viva%20La%20Vida.jpg){:.border}

@@ -4,8 +4,8 @@ title:  "GARNET CROW Hello Sadness 歌詞翻訳"
 date:   2018-05-05 20:09:09 +0800
 author: mistydew
 comments: true
-categories: GARNETCROW Lyrics
-tags: ガネクロ 歌詞翻訳
+categories: 译文集
+tags: ガネクロ Lyrics
 excerpt: 離陸間近の午前1時5分 空を見上げていた。いつかまた会えるかなあ 何故かなあ、もう離れてしまったことばかりを思うこと止められず、心がきしんだ。
 ---
 ![GZCA-5198](/gc/assets/images/discography/album/GZCA-5198.jpg){:.border}

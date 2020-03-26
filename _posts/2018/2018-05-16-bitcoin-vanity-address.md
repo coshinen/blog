@@ -4,8 +4,8 @@ title:  "比特币“靓号”地址"
 date:   2018-05-16 18:56:51 +0800
 author: mistydew
 comments: true
-categories: Blockchain Bitcoin
-tags: 区块链 比特币 比特币地址
+categories: 区块链
+tags: Blockchain Bitcoin Address
 ---
 比特币“靓号”地址是拥有个性化（自定义）前缀的公钥地址。
 例如以 1kid 开头的公钥地址 1kidyp7EFY3xUdMGSTWpkEmLcfKu9yvoq。

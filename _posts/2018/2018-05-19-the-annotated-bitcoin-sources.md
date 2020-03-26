@@ -4,8 +4,8 @@ title:  "比特币源码剖析（零）"
 date:   2018-05-19 14:52:16 +0800
 author: mistydew
 comments: true
-categories: Blockchain Bitcoin
-tags: 区块链 比特币 源码剖析
+categories: 区块链
+tags: Blockchain Bitcoin src-annotated
 ---
 以 bitcoin v0.12.1 为例进行解读，这是官方内置挖矿功能的最后一个版本。
 当前比特币的最新版本为 bitcoin v0.16.0。
@@ -45,55 +45,55 @@ int main(int argc, char* argv[]) // 0.程序入口
 ![bitcoind-startup](https://raw.githubusercontent.com/mistydew/blockchain/master/images/bitcoind-startup-v0.12.1.png)
 
 > 比特币核心服务程序启动流程：
-> 1. [SetupEnvironment()](/blog/2018/05/bitcoin-source-anatomy-01.html#SetupEnvironment-ref)<br>
+> 1. [SetupEnvironment()](/blog/2018/05/the-annotated-bitcoin-sources-01.html#SetupEnvironment-ref)<br>
 >    设置程序运行环境：本地化处理
-> 2. [noui_connect()](/blog/2018/05/bitcoin-source-anatomy-01.html#noui_connect-ref)<br>
+> 2. [noui_connect()](/blog/2018/05/the-annotated-bitcoin-sources-01.html#noui_connect-ref)<br>
 >    无 UI 连接：连接信号处理函数
-> 3. [AppInit(argc, argv)](/blog/2018/06/bitcoin-source-anatomy-02.html#AppInit-ref)<br>
+> 3. [AppInit(argc, argv)](/blog/2018/06/the-annotated-bitcoin-sources-02.html#AppInit-ref)<br>
 >    应用程序初始化：初始化并启动
-> > 1. [ParseParameters(argc, argv)](/blog/2018/06/bitcoin-source-anatomy-02.html#ParseParameters-ref)<br>
+> > 1. [ParseParameters(argc, argv)](/blog/2018/06/the-annotated-bitcoin-sources-02.html#ParseParameters-ref)<br>
 > >    解析命令行（控制台传入）参数
-> > 2. [help and version info](/blog/2018/06/bitcoin-source-anatomy-02.html#HelpVersionInfo-ref)<br>
+> > 2. [help and version info](/blog/2018/06/the-annotated-bitcoin-sources-02.html#HelpVersionInfo-ref)<br>
 > >    版本和帮助信息
-> > 3. [GetDataDir(false)](/blog/2018/06/bitcoin-source-anatomy-03.html#GetDataDir-ref)<br>
+> > 3. [GetDataDir(false)](/blog/2018/06/the-annotated-bitcoin-sources-03.html#GetDataDir-ref)<br>
 > >    获取数据目录
-> > 4. [ReadConfigFile(mapArgs, mapMultiArgs)](/blog/2018/06/bitcoin-source-anatomy-03.html#ReadConfigFile-ref)<br>
+> > 4. [ReadConfigFile(mapArgs, mapMultiArgs)](/blog/2018/06/the-annotated-bitcoin-sources-03.html#ReadConfigFile-ref)<br>
 > >    读取配置文件
-> > 5. [SelectParams(ChainNameFromCommandLine())](/blog/2018/06/bitcoin-source-anatomy-03.html#SelectParams-ref)<br>
+> > 5. [SelectParams(ChainNameFromCommandLine())](/blog/2018/06/the-annotated-bitcoin-sources-03.html#SelectParams-ref)<br>
 > >    选择区块链（网络）参数
-> > 6. [command-line arguments sanity check](/blog/2018/06/bitcoin-source-anatomy-03.html#Command-line-ref)<br>
+> > 6. [command-line arguments sanity check](/blog/2018/06/the-annotated-bitcoin-sources-03.html#Command-line-ref)<br>
 > >    命令行参数完整性检查
-> > 7. [daemonization](/blog/2018/06/bitcoin-source-anatomy-03.html#Daemon-ref)<br>
+> > 7. [daemonization](/blog/2018/06/the-annotated-bitcoin-sources-03.html#Daemon-ref)<br>
 > >    守护进程化
-> > 8. [setup server](/blog/2018/06/bitcoin-source-anatomy-03.html#Server-ref)<br>
+> > 8. [setup server](/blog/2018/06/the-annotated-bitcoin-sources-03.html#Server-ref)<br>
 > >    设置服务选项
-> > 9. [InitLogging()](/blog/2018/06/bitcoin-source-anatomy-04.html#InitLogging-ref)<br>
+> > 9. [InitLogging()](/blog/2018/06/the-annotated-bitcoin-sources-04.html#InitLogging-ref)<br>
 > >    初始化日志记录
-> > 10. [InitParameterInteraction()](/blog/2018/06/bitcoin-source-anatomy-04.html#InitParameterInteraction-ref)<br>
+> > 10. [InitParameterInteraction()](/blog/2018/06/the-annotated-bitcoin-sources-04.html#InitParameterInteraction-ref)<br>
 > >     初始化参数交互
-> > 11. [AppInit2(threadGroup, scheduler)](/blog/2018/06/bitcoin-source-anatomy-04.html#AppInit2-ref)<br>
+> > 11. [AppInit2(threadGroup, scheduler)](/blog/2018/06/the-annotated-bitcoin-sources-04.html#AppInit2-ref)<br>
 > >     应用程序初始化 2（本物入口）
-> > > 1. [Step 1: setup](/blog/2018/06/bitcoin-source-anatomy-04.html#Step01-ref)<br>
+> > > 1. [Step 1: setup](/blog/2018/06/the-annotated-bitcoin-sources-04.html#Step01-ref)<br>
 > > >    步骤 1：安装
-> > > 2. [Step 2: parameter interactions](/blog/2018/06/bitcoin-source-anatomy-04.html#Step02-ref)<br>
+> > > 2. [Step 2: parameter interactions](/blog/2018/06/the-annotated-bitcoin-sources-04.html#Step02-ref)<br>
 > > >    步骤 2：参数交互
-> > > 3. [Step 3: parameter-to-internal-flags](/blog/2018/06/bitcoin-source-anatomy-05.html#Step03-ref)<br>
+> > > 3. [Step 3: parameter-to-internal-flags](/blog/2018/06/the-annotated-bitcoin-sources-05.html#Step03-ref)<br>
 > > >    步骤 3：参数转换为内部标志
-> > > 4. [Step 4: application initialization: dir lock, daemonize, pidfile, debug log](/blog/2018/06/bitcoin-source-anatomy-05.html#Step04-ref)<br>
+> > > 4. [Step 4: application initialization: dir lock, daemonize, pidfile, debug log](/blog/2018/06/the-annotated-bitcoin-sources-05.html#Step04-ref)<br>
 > > >    步骤 4：应用程序初始化：目录锁，守护进程化，进程号文件，调试日志
-> > > 5. [Step 5: verify wallet database integrity](/blog/2018/08/bitcoin-source-anatomy-11.html#Step05-ref)<br>
+> > > 5. [Step 5: verify wallet database integrity](/blog/2018/08/the-annotated-bitcoin-sources-11.html#Step05-ref)<br>
 > > >    步骤 5：验证钱包数据库的完整性
-> > > 6. [Step 6: network initialization](/blog/2018/08/bitcoin-source-anatomy-12.html#Step06-ref)<br>
+> > > 6. [Step 6: network initialization](/blog/2018/08/the-annotated-bitcoin-sources-12.html#Step06-ref)<br>
 > > >    步骤 6：网络初始化
-> > > 7. [Step 7: load block chain](/blog/2018/08/bitcoin-source-anatomy-13.html#Step07-ref)<br>
+> > > 7. [Step 7: load block chain](/blog/2018/08/the-annotated-bitcoin-sources-13.html#Step07-ref)<br>
 > > >    步骤 7：加载区块链
-> > > 8. [Step 8: load wallet](/blog/2018/08/bitcoin-source-anatomy-14.html#Step08-ref)<br>
+> > > 8. [Step 8: load wallet](/blog/2018/08/the-annotated-bitcoin-sources-14.html#Step08-ref)<br>
 > > >    步骤 8：加载钱包
-> > > 9. [Step 9: data directory maintenance](/blog/2018/09/bitcoin-source-anatomy-15.html#Step09-ref)<br>
+> > > 9. [Step 9: data directory maintenance](/blog/2018/09/the-annotated-bitcoin-sources-15.html#Step09-ref)<br>
 > > >    步骤 9：数据目录维护
-> > > 10. [Step 10: import blocks](/blog/2018/09/bitcoin-source-anatomy-15.html#Step10-ref)<br>
+> > > 10. [Step 10: import blocks](/blog/2018/09/the-annotated-bitcoin-sources-15.html#Step10-ref)<br>
 > > >     步骤 10：导入区块
-> > > 11. [Step 11: start node](/blog/2018/09/bitcoin-source-anatomy-16.html#Step11-ref)<br>
+> > > 11. [Step 11: start node](/blog/2018/09/the-annotated-bitcoin-sources-16.html#Step11-ref)<br>
 > > >     步骤 11：启动节点
 > > > 12. [Step 12: finished]()<br>
 > > >     步骤 12：完成

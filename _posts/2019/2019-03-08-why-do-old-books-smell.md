@@ -4,8 +4,8 @@ title:  "为什么旧书有味道？"
 date:   2019-03-08 20:48:00 +0800
 author: mistydew
 comments: true
-categories: Translations Study
-tags: 译文
+categories: 译文集
+tags: Translations
 ---
 你是否钟爱于旧书的气味即所谓的书香呢？是否思考过旧书为什么会有气味？
 

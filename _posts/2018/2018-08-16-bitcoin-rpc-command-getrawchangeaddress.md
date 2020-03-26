@@ -4,8 +4,8 @@ title:  "比特币 RPC 命令剖析 \"getrawchangeaddress\""
 date:   2018-08-16 14:28:37 +0800
 author: mistydew
 comments: true
-categories: Blockchain Bitcoin
-tags: CLI bitcoin-cli 区块链 比特币
+categories: 区块链
+tags: CLI bitcoin-cli Blockchain Bitcoin
 excerpt: $ bitcoin-cli getrawchangeaddress
 ---
 ## 提示说明

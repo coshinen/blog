@@ -4,8 +4,8 @@ title:  "10 个区块链的基础知识"
 date:   2018-10-05 09:23:37 +0800
 author: mistydew
 comments: true
-categories: Blockchain Bitcoin Translations
-tags: 区块链 比特币 译文
+categories: 译文集 区块链
+tags: Translations Blockchain Bitcoin
 excerpt: 关于区块链的 10 个基础问答。
 ---
 ## 什么是陷门函数，为什么在区块链开发中需要它？

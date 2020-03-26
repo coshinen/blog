@@ -4,8 +4,8 @@ title:  "比特币核心客户端 RPC 命令"
 date:   2018-05-06 14:02:51 +0800
 author: mistydew
 comments: true
-categories: Blockchain Bitcoin
-tags: CLI bitcoin-cli 区块链 比特币
+categories: 区块链
+tags: CLI bitcoin-cli Blockchain Bitcoin
 ---
 本文列出了 bitcoin v0.12.1 客户端 bitcoin-cli 所有（含隐藏分类）的 RPC 命令。
 

@@ -4,8 +4,8 @@ title:  "如何使用 Automake 生成 Makefile"
 date:   2018-12-01 15:10:52 +0800
 author: mistydew
 comments: true
-categories: build
-tags: C/C++ Automake Makefile 源码构建
+categories: 程序人生
+tags: C/C++ Automake Makefile src-build
 ---
 使用 make 编译工具链构建项目的简单过程。
 

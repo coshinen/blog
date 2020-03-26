@@ -5,7 +5,7 @@ date:   2018-11-17 20:08:56 +0800
 author: mistydew
 comments: true
 categories: 设计模式
-tags: C/C++ 设计模式
+tags: DP C/C++
 ---
 设计模式是一套为增加代码可读性、可靠性、可复用性的代码设计模板。
 共分 3 大类，23 种。

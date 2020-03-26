@@ -4,8 +4,8 @@ title:  "GARNET CROW Please, forgive me 歌詞翻訳"
 date:   2019-11-10 20:02:04 +0800
 author: mistydew
 comments: true
-categories: GARNETCROW Lyrics
-tags: ガネクロ 歌詞翻訳
+categories: 译文集
+tags: ガネクロ Lyrics
 excerpt: 優しく触れる君の手に戸惑った、痛みが消えて置き去りの罪だけ、私を責める 逃げること許さない、今目の前の光(あい)を求めていいのかな。
 ---
 ![GZCA-5013](/gc/assets/images/discography/album/GZCA-5013.jpg){:.border}

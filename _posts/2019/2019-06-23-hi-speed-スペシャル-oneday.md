@@ -4,8 +4,8 @@ title:  "GARNET CROW hi-speed スペシャル oneday 歌詞翻訳"
 date:   2019-06-23 20:00:10 +0800
 author: mistydew
 comments: true
-categories: GARNETCROW Lyrics
-tags: ガネクロ 歌詞翻訳
+categories: 译文集
+tags: ガネクロ Lyrics
 excerpt: コーヒーは最初の一口、甘いケーキの端っこ、ポテトは揚げたてにして、おいしいトコは少しだけ。
 ---
 ![GZCA-1050](/gc/assets/images/discography/single/GZCA-1050.jpg){:.border}

@@ -4,8 +4,8 @@ title:  "山崎まさよし One more time, One more chance 歌詞翻訳"
 date:   2018-05-18 20:37:01 +0800
 author: mistydew
 comments: true
-categories: Lyrics
-tags: 歌詞翻訳
+categories: 译文集
+tags: Lyrics
 excerpt: これ以上何を失えば 心は許されるの、どれ程の痛みならば もういちど君に会える。One more time 季節よ うつろわないで、One more time ふざけあった 時間よ。
 ---
 ![UPCH-80013](/assets/images/cover/misc/UPCH-80013.jpg){:.border}

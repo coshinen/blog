@@ -4,8 +4,8 @@ title:  "比特币 RPC 命令剖析 \"createmultisig\""
 date:   2018-07-23 10:48:50 +0800
 author: mistydew
 comments: true
-categories: Blockchain Bitcoin
-tags: CLI bitcoin-cli 区块链 比特币
+categories: 区块链
+tags: CLI bitcoin-cli Blockchain Bitcoin
 excerpt: $ bitcoin-cli createmultisig urequired ["key",...]
 ---
 ## 提示说明

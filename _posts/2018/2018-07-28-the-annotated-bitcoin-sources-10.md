@@ -4,10 +4,10 @@ title:  "比特币源码剖析（十）"
 date:   2018-07-28 10:30:02 +0800
 author: mistydew
 comments: true
-categories: Blockchain Bitcoin
-tags: 区块链 比特币 源码剖析
+categories: 区块链
+tags: Blockchain Bitcoin src-annotated
 ---
-上一篇分析了应用程序初始化中初始化 HTTP 服务器的详细过程，详见[比特币源码剖析（九）](/blog/2018/07/bitcoin-source-anatomy-09.html)。
+上一篇分析了应用程序初始化中初始化 HTTP 服务器的详细过程，详见[比特币源码剖析（九）](/blog/2018/07/the-annotated-bitcoin-sources-09.html)。
 本篇主要分析 Step 4: application initialization: dir lock, daemonize, pidfile, debug log 第四步应用程序初始化服务器中启动 RPC 的详细过程。
 
 ## 源码剖析
@@ -836,7 +836,7 @@ public:
 至此，第四步应用程序初始化服务器（HTTP、RPC）完成。
 
 未完待续...<br>
-请看下一篇[比特币源码剖析（十一）](/blog/2018/08/bitcoin-source-anatomy-11.html)。
+请看下一篇[比特币源码剖析（十一）](/blog/2018/08/the-annotated-bitcoin-sources-11.html)。
 
 ## 参考链接
 

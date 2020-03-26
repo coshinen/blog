@@ -4,8 +4,8 @@ title:  "如何制作一枚山寨数字货币"
 date:   2018-05-13 16:02:28 +0800
 author: mistydew
 comments: true
-categories: Blockchain Bitcoin
-tags: 区块链 比特币 山寨币
+categories: 区块链
+tags: Blockchain Bitcoin Altcoin
 ---
 **基于比特币制作一枚山寨币是了解数字货币比特币及其底层区块链技术的最好方式。**
 在了解比特币及区块链的相关概念后，要开始接触源码了，侯捷说过“源码之前，了无秘密”。

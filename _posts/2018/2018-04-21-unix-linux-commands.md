@@ -4,8 +4,8 @@ title:  "UNIX/Linux 常用命令"
 date:   2018-04-21 18:58:02 +0800
 author: mistydew
 comments: true
-categories: UNIX/Linux Terminal
-tags: UNIX/Linux CLI
+categories: 程序人生
+tags: UNIX/Linux CLI Terminal
 ---
 象征着开源的 Linux 吉祥物 tux (Torvalds UniX)。
 

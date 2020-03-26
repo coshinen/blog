@@ -4,7 +4,7 @@ title:  "如何在 macOS 上开启 NTFS 硬盘的写权限"
 date:   2019-04-10 20:54:36 +0800
 author: mistydew
 comments: true
-categories: macOS
+categories: 程序人生
 tags: macOS fstab NTFS
 ---
 macOS 对 NTFS 格式的硬盘默认只支持读操作，据说是版权原因。

@@ -4,10 +4,10 @@ title:  "比特币源码剖析（一）"
 date:   2018-05-26 10:06:52 +0800
 author: mistydew
 comments: true
-categories: Blockchain Bitcoin
-tags: 区块链 比特币 源码剖析
+categories: 区块链
+tags: Blockchain Bitcoin src-annotated
 ---
-第一篇主要列出比特币核心服务程序 bitcoind 的启动流程及其入口函数，详见[比特币源码剖析](/blog/2018/05/bitcoin-source-anatomy-00.html)。
+第一篇主要列出比特币核心服务程序 bitcoind 的启动流程及其入口函数，详见[比特币源码剖析](/blog/2018/05/the-annotated-bitcoin-sources-00.html)。
 该篇主要分析 SetupEnvironment() 和 noui_connect() 函数。
 
 ## 源码剖析
@@ -295,7 +295,7 @@ int LogPrintStr(const std::string &str)
 ```
 
 未完待续...<br>
-请看下一篇[比特币源码剖析（二）](/blog/2018/06/bitcoin-source-anatomy-02.html)。
+请看下一篇[比特币源码剖析（二）](/blog/2018/06/the-annotated-bitcoin-sources-02.html)。
 
 ## 参考链接
 

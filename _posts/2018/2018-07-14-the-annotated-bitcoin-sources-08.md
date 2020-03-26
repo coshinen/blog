@@ -4,10 +4,10 @@ title:  "比特币源码剖析（八）"
 date:   2018-07-14 22:11:45 +0800
 author: mistydew
 comments: true
-categories: Blockchain Bitcoin
-tags: 区块链 比特币 源码剖析
+categories: 区块链
+tags: Blockchain Bitcoin src-annotated
 ---
-上一篇分析了应用程序初始化中初始化完整性检查和数据目录锁的过程，详见[比特币源码剖析（七）](/blog/2018/07/bitcoin-source-anatomy-07.html)。
+上一篇分析了应用程序初始化中初始化完整性检查和数据目录锁的过程，详见[比特币源码剖析（七）](/blog/2018/07/the-annotated-bitcoin-sources-07.html)。
 本篇主要分析 Step 4: application initialization: dir lock, daemonize, pidfile, debug log 第四步应用程序初始化中创建脚本验证线程和轻量级任务调度线程的详细过程。
 
 ## 源码剖析
@@ -418,7 +418,7 @@ void CScheduler::serviceQueue()
 另外，它会临时转移所有权，所以互斥锁不能用该锁锁定。其实例永远不会持有锁。详见 [reverse_lock](https://www.boost.org/doc/libs/1_65_0/doc/html/thread/synchronization.html#thread.synchronization.other_locks.reverse_lock){:target="_blank"}。
 
 未完待续...<br>
-请看下一篇[比特币源码剖析（九）](/blog/2018/07/bitcoin-source-anatomy-09.html)。
+请看下一篇[比特币源码剖析（九）](/blog/2018/07/the-annotated-bitcoin-sources-09.html)。
 
 ## 参考链接
 

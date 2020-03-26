@@ -4,8 +4,8 @@ title:  "比特币 RPC 命令剖析 \"signmessage\""
 date:   2018-09-21 09:51:33 +0800
 author: mistydew
 comments: true
-categories: Blockchain Bitcoin
-tags: CLI bitcoin-cli 区块链 比特币
+categories: 区块链
+tags: CLI bitcoin-cli Blockchain Bitcoin
 excerpt: $ bitcoin-cli signmessage "bitcoinaddress" "message"
 ---
 ## 提示说明

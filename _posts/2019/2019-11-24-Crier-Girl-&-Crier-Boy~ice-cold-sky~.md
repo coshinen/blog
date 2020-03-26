@@ -4,8 +4,8 @@ title:  "GARNET CROW Crier Girl & Crier Boy ~ice cold sky~ 歌詞翻訳"
 date:   2019-11-24 20:02:12 +0800
 author: mistydew
 comments: true
-categories: GARNETCROW Lyrics
-tags: ガネクロ 歌詞翻訳
+categories: 译文集
+tags: ガネクロ Lyrics
 excerpt: 気づけば温もり求めて心が彷徨うことない？
 ---
 ![GZCA-7006](/gc/assets/images/discography/single/GZCA-7006.jpg){:.border}

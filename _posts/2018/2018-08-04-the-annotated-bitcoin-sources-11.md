@@ -4,10 +4,10 @@ title:  "比特币源码剖析（十一）"
 date:   2018-08-04 10:25:26 +0800
 author: mistydew
 comments: true
-categories: Blockchain Bitcoin
-tags: 区块链 比特币 源码剖析
+categories: 区块链
+tags: Blockchain Bitcoin src-annotated
 ---
-上一篇分析了应用程序初始化中启动 RPC 的详细过程，详见[比特币源码剖析（十）](/blog/2018/07/bitcoin-source-anatomy-10.html)。
+上一篇分析了应用程序初始化中启动 RPC 的详细过程，详见[比特币源码剖析（十）](/blog/2018/07/the-annotated-bitcoin-sources-10.html)。
 本篇主要分析 Step 5: verify wallet database integrity 第五步验证钱包数据库的完整性的详细过程。
 
 ## 源码剖析
@@ -350,7 +350,7 @@ CDBEnv::VerifyResult CDBEnv::Verify(const std::string& strFile, bool (*recoverFu
 3.4.若出现异常，则尝试恢复。
 
 未完待续...<br>
-请看下一篇[比特币源码剖析（十二）](/blog/2018/08/bitcoin-source-anatomy-12.html)。
+请看下一篇[比特币源码剖析（十二）](/blog/2018/08/the-annotated-bitcoin-sources-12.html)。
 
 ## 参考链接
 

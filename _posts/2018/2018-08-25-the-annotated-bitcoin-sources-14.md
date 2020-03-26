@@ -4,10 +4,10 @@ title:  "比特币源码剖析（十四）"
 date:   2018-08-25 15:07:02 +0800
 author: mistydew
 comments: true
-categories: Blockchain Bitcoin
-tags: 区块链 比特币 源码剖析
+categories: 区块链
+tags: Blockchain Bitcoin src-annotated
 ---
-上一篇分析了第七步加载区块链的详细过程，详见[比特币源码剖析（十三）](/blog/2018/08/bitcoin-source-anatomy-13.html)。
+上一篇分析了第七步加载区块链的详细过程，详见[比特币源码剖析（十三）](/blog/2018/08/the-annotated-bitcoin-sources-13.html)。
 本篇主要分析 Step 8: load wallet 第八步加载钱包的详细过程。
 
 ## 源码剖析
@@ -387,7 +387,7 @@ class CWallet : public CCryptoKeyStore, public CValidationInterface
 ```
 
 未完待续...<br>
-请看下一篇[比特币源码剖析（十五）](/blog/2018/09/bitcoin-source-anatomy-15.html)。
+请看下一篇[比特币源码剖析（十五）](/blog/2018/09/the-annotated-bitcoin-sources-15.html)。
 
 ## 参考链接
 

@@ -4,7 +4,7 @@ title:  "LeetCode 6. Z 字形变换 中等"
 date:   2020-01-11 14:57:51 +0800
 author: mistydew
 comments: true
-categories: LeetCode
+categories: 力扣题解
 tags: LeetCode
 excerpt: 给定一个字符串，根据给定的行数，以从上到下、从左到右的 Z 字形排列，再以从左到右、从上到下的顺序读取，产生一个新字符串并返回。
 ---

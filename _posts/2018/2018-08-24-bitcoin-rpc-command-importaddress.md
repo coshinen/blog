@@ -4,8 +4,8 @@ title:  "比特币 RPC 命令剖析 \"importaddress\""
 date:   2018-08-24 08:55:46 +0800
 author: mistydew
 comments: true
-categories: Blockchain Bitcoin
-tags: CLI bitcoin-cli 区块链 比特币
+categories: 区块链
+tags: CLI bitcoin-cli Blockchain Bitcoin
 excerpt: $ bitcoin-cli importaddress "address" ( "label" rescan p2sh )
 ---
 ## 提示说明

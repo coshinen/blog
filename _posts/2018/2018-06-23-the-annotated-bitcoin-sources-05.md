@@ -4,10 +4,10 @@ title:  "比特币源码剖析（五）"
 date:   2018-06-23 22:08:33 +0800
 author: mistydew
 comments: true
-categories: Blockchain Bitcoin
-tags: 区块链 比特币 源码剖析
+categories: 区块链
+tags: Blockchain Bitcoin src-annotated
 ---
-上一篇分析了日志记录的初始化，参数交互的初始化，应用程序初始化真正入口的前两步：安装和参数交互，详见[比特币源码剖析（四）](/blog/2018/06/bitcoin-source-anatomy-04.html)。
+上一篇分析了日志记录的初始化，参数交互的初始化，应用程序初始化真正入口的前两步：安装和参数交互，详见[比特币源码剖析（四）](/blog/2018/06/the-annotated-bitcoin-sources-04.html)。
 本篇主要分析 Step 3: parameter-to-internal-flags 第三步参数转化为内部标志，Step 4: application initialization: dir lock, daemonize, pidfile, debug log 第四步应用程序初始化。
 
 ## 源码剖析
@@ -281,18 +281,18 @@ bool AppInit2(boost::thread_group& threadGroup, CScheduler& scheduler) // 3.11.0
 };
 ```
 
-> 1.[初始化椭圆曲线代码。](/blog/2018/06/bitcoin-source-anatomy-06.html#Init-ref)<br>
-> 2.[初始化完整性检查。](/blog/2018/07/bitcoin-source-anatomy-07.html#InitSanityCheck-ref)<br>
-> 3.[数据目录上锁。](/blog/2018/07/bitcoin-source-anatomy-07.html#DataDirLock-ref)<br>
-> 4.[非 WIN32 环境，创建进程号文件。](/blog/2018/07/bitcoin-source-anatomy-07.html#CreatePidFile-ref)<br>
-> 5.[处理调试日志文件。](/blog/2018/07/bitcoin-source-anatomy-07.html#ShrinkOrOpenDebugLogFile-ref)<br>
+> 1.[初始化椭圆曲线代码。](/blog/2018/06/the-annotated-bitcoin-sources-06.html#Init-ref)<br>
+> 2.[初始化完整性检查。](/blog/2018/07/the-annotated-bitcoin-sources-07.html#InitSanityCheck-ref)<br>
+> 3.[数据目录上锁。](/blog/2018/07/the-annotated-bitcoin-sources-07.html#DataDirLock-ref)<br>
+> 4.[非 WIN32 环境，创建进程号文件。](/blog/2018/07/the-annotated-bitcoin-sources-07.html#CreatePidFile-ref)<br>
+> 5.[处理调试日志文件。](/blog/2018/07/the-annotated-bitcoin-sources-07.html#ShrinkOrOpenDebugLogFile-ref)<br>
 > 6.记录相关初始化信息到日志输出。<br>
-> 7.[创建脚本验证线程。](/blog/2018/07/bitcoin-source-anatomy-08.html#ThreadScriptCheck-ref)<br>
-> 8.[创建轻量级任务调度线程。](/blog/2018/07/bitcoin-source-anatomy-08.html#serviceQueue-ref)<br>
-> 9.[启动 RPC 服务。](/blog/2018/07/bitcoin-source-anatomy-09.html#AppInitServers-ref)
+> 7.[创建脚本验证线程。](/blog/2018/07/the-annotated-bitcoin-sources-08.html#ThreadScriptCheck-ref)<br>
+> 8.[创建轻量级任务调度线程。](/blog/2018/07/the-annotated-bitcoin-sources-08.html#serviceQueue-ref)<br>
+> 9.[启动 RPC 服务。](/blog/2018/07/the-annotated-bitcoin-sources-09.html#AppInitServers-ref)
 
 未完待续...<br>
-请看下一篇[比特币源码剖析（六）](/blog/2018/06/bitcoin-source-anatomy-06.html)。
+请看下一篇[比特币源码剖析（六）](/blog/2018/06/the-annotated-bitcoin-sources-06.html)。
 
 ## 参考链接
 

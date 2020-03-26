@@ -4,8 +4,8 @@ title:  "短点击 vs. 长点击"
 date:   2018-12-29 14:30:23 +0800
 author: mistydew
 comments: true
-categories: Translations
-tags: 搜索引擎优化 搜索权重 译文
+categories: 译文集
+tags: Translations SEO
 ---
 ![short-clicks-vs-long-clicks](/assets/images/translations/short-clicks-vs-long-clicks.png){:.border}<br>
 Google 希望看到**长点击**而非**短点击**。

@@ -4,8 +4,8 @@ title:  "Base58 编码"
 date:   2018-05-12 16:02:28 +0800
 author: mistydew
 comments: true
-categories: Blockchain Bitcoin
-tags: 区块链 比特币 base58编码
+categories: 区块链
+tags: Blockchain Bitcoin base58-encoding
 ---
 Base58 是一组二进制文本编码方案，用于把大整数表示为含有字母和数字的文本。
 它与 Base64 类似，但被修改过以避免打印输出时看起来有歧义的非字母数字和字母。

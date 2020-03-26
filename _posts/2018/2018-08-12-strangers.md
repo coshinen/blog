@@ -4,8 +4,8 @@ title:  "GARNET CROW strangers 歌詞翻訳"
 date:   2018-08-12 20:10:12 +0800
 author: mistydew
 comments: true
-categories: GARNETCROW Lyrics
-tags: ガネクロ 歌詞翻訳
+categories: 译文集
+tags: ガネクロ Lyrics
 excerpt: 緑揺れる午後の空、幾つ目の飛行機かな。遠く潮騒が届いて、客船が泊まった。
 ---
 ![GZCA-5231](/gc/assets/images/discography/album/GZCA-5231.jpg){:.border}

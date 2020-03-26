@@ -4,10 +4,10 @@ title:  "比特币源码剖析（四）"
 date:   2018-06-16 16:21:35 +0800
 author: mistydew
 comments: true
-categories: Blockchain Bitcoin
-tags: 区块链 比特币 源码剖析
+categories: 区块链
+tags: Blockchain Bitcoin src-annotated
 ---
-上一篇分析了数据目录路径的获取、配置文件中设置的启动选项的读取、不同网络链参数（包含创世区块信息）的选择、命令行参数完整性检测、Linux 下守护进程的后台化以及服务选项的设置，详见[比特币源码剖析（三）](/blog/2018/06/bitcoin-source-anatomy-03.html)。
+上一篇分析了数据目录路径的获取、配置文件中设置的启动选项的读取、不同网络链参数（包含创世区块信息）的选择、命令行参数完整性检测、Linux 下守护进程的后台化以及服务选项的设置，详见[比特币源码剖析（三）](/blog/2018/06/the-annotated-bitcoin-sources-03.html)。
 本篇主要分析 InitLogging() 初始化日志记录函数，InitParameterInteraction() 初始化参数交互函数，AppInit2(threadGroup, scheduler) 真正地初始化应用程序函数。
 
 ## 源码剖析
@@ -356,7 +356,7 @@ MIN_CORE_FILEDESCRIPTORS 定义在“init.cpp”文件中。
 ```
 
 未完待续...<br>
-请看下一篇[比特币源码剖析（五）](/blog/2018/06/bitcoin-source-anatomy-05.html)。
+请看下一篇[比特币源码剖析（五）](/blog/2018/06/the-annotated-bitcoin-sources-05.html)。
 
 ## 参考链接
 

@@ -4,8 +4,8 @@ title:  "GARNET CROW Holding you, and swinging 歌詞翻訳"
 date:   2019-07-28 20:01:01 +0800
 author: mistydew
 comments: true
-categories: GARNETCROW Lyrics
-tags: ガネクロ 歌詞翻訳
+categories: 译文集
+tags: ガネクロ Lyrics
 excerpt: 街の音 人の声 ざわめき、やけに今 躰が音をひらうよ。君一人で世界が変わるなんて、ah- なんて 単純な feel & brain。
 ---
 ![GZCA-1061](/gc/assets/images/discography/album/GZCA-1061.jpg){:.border}

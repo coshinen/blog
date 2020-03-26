@@ -4,8 +4,8 @@ title:  "The Beatles Here Comes the Sun 歌詞翻訳"
 date:   2019-03-10 20:09:09 +0800
 author: mistydew
 comments: true
-categories: Lyrics
-tags: 歌詞翻訳
+categories: 译文集
+tags: Lyrics
 excerpt: Here comes the sun, doo doo doo doo. Here comes the sun, and I say. It's all right.
 ---
 ![Abbey Road](/assets/images/cover/misc/Abbey%20Road.jpg){:.border}

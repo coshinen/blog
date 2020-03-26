@@ -4,8 +4,8 @@ title:  "比特币 RPC 命令剖析 \"getblockchaininfo\""
 date:   2018-05-24 11:27:13 +0800
 author: mistydew
 comments: true
-categories: Blockchain Bitcoin
-tags: CLI bitcoin-cli 区块链 比特币
+categories: 区块链
+tags: CLI bitcoin-cli Blockchain Bitcoin
 excerpt: $ bitcoin-cli getblockchaininfo
 ---
 ## 提示说明

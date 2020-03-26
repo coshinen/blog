@@ -4,8 +4,8 @@ title:  "GARNET CROW Over Drive 歌詞翻訳"
 date:   2018-05-02 20:10:04 +0800
 author: mistydew
 comments: true
-categories: CONAN GARNETCROW Lyrics
-tags: コナン ガネクロ 歌詞翻訳
+categories: 译文集
+tags: コナン ガネクロ Lyrics
 excerpt: 風の音だけが、体中を包む。サイレント・Kiss、夢に似た気配。
 ---
 ![GZCA-7156](/gc/assets/images/discography/single/GZCA-7156.jpg){:.border}

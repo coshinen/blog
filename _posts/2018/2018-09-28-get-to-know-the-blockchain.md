@@ -4,8 +4,8 @@ title:  "认识区块链"
 date:   2018-09-28 15:19:08 +0800
 author: mistydew
 comments: true
-categories: Blockchain Translations
-tags: 区块链 译文
+categories: 译文集 区块链
+tags: Translations Blockchain
 ---
 我认为首先要澄清区块链实际上解决了什么问题。
 目前，我们依靠一个单一实体来管理通过通信渠道（计算机网络）发生的支付，我们也依靠这些第三方来存储文件、医疗记录、或是我们想要存储的任何东西。

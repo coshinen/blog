@@ -4,8 +4,8 @@ title:  "比特币 RPC 命令剖析 \"sendfrom\""
 date:   2018-09-14 15:59:43 +0800
 author: mistydew
 comments: true
-categories: Blockchain Bitcoin
-tags: CLI bitcoin-cli 区块链 比特币
+categories: 区块链
+tags: CLI bitcoin-cli Blockchain Bitcoin
 excerpt: $ bitcoin-cli sendfrom "fromaccount" "tobitcoinaddress" amount ( minconf "comment" "comment-to" )
 ---
 ## 提示说明

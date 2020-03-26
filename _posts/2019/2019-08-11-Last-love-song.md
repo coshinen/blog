@@ -4,8 +4,8 @@ title:  "GARNET CROW Last love song 歌詞翻訳"
 date:   2019-08-11 20:01:05 +0800
 author: mistydew
 comments: true
-categories: GARNETCROW Lyrics
-tags: ガネクロ 歌詞翻訳
+categories: 译文集
+tags: ガネクロ Lyrics
 excerpt: 午後になると西陽が射す、部屋の片隅のソファー。海を越えて運んだ、大切な君の場所へ。初めて僕が座る、出会いから半年の今日。
 ---
 ![GZCA-1072](/gc/assets/images/discography/single/GZCA-1072.jpg){:.border}

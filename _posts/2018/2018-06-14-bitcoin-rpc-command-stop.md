@@ -4,8 +4,8 @@ title:  "比特币 RPC 命令剖析 \"stop\""
 date:   2018-06-14 16:19:52 +0800
 author: mistydew
 comments: true
-categories: Blockchain Bitcoin
-tags: CLI bitcoin-cli 区块链 比特币
+categories: 区块链
+tags: CLI bitcoin-cli Blockchain Bitcoin
 excerpt: $ bitcoin-cli stop
 ---
 ## 提示说明
@@ -72,7 +72,7 @@ void StartShutdown()
 }
 ```
 
-更多细节请参考[比特币核心服务启动过程](/blog/2018/05/bitcoin-source-anatomy-00.html)。
+更多细节请参考[比特币核心服务启动过程](/blog/2018/05/the-annotated-bitcoin-sources-00.html)。
 
 ## 参考链接
 

@@ -4,8 +4,8 @@ title:  "GARNET CROW Endless Desire 歌詞翻訳"
 date:   2020-01-12 20:03:11 +0800
 author: mistydew
 comments: true
-categories: GARNETCROW Lyrics
-tags: ガネクロ 歌詞翻訳
+categories: 译文集
+tags: ガネクロ Lyrics
 excerpt: そんなに移り気じゃヤダ、正直って便利な言い訳、多様して流れてゆく 生涯(ひととき)。
 ---
 ![GZCA-5038](/gc/assets/images/discography/album/GZCA-5038.jpg){:.border}

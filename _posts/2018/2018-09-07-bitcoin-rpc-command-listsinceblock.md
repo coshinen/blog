@@ -4,8 +4,8 @@ title:  "比特币 RPC 命令剖析 \"listsinceblock\""
 date:   2018-09-07 09:09:08 +0800
 author: mistydew
 comments: true
-categories: Blockchain Bitcoin
-tags: CLI bitcoin-cli 区块链 比特币
+categories: 区块链
+tags: CLI bitcoin-cli Blockchain Bitcoin
 excerpt: $ bitcoin-cli listsinceblock ( "blockhash" target-confirmations includeWatchonly )
 ---
 ## 提示说明

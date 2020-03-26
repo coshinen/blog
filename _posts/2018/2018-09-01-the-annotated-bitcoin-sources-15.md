@@ -4,10 +4,10 @@ title:  "比特币源码剖析（十五）"
 date:   2018-09-01 14:03:37 +0800
 author: mistydew
 comments: true
-categories: Blockchain Bitcoin
-tags: 区块链 比特币 源码剖析
+categories: 区块链
+tags: Blockchain Bitcoin src-annotated
 ---
-上一篇分析了第八步加载钱包的详细过程，详见[比特币源码剖析（十四）](/blog/2018/08/bitcoin-source-anatomy-14.html)。
+上一篇分析了第八步加载钱包的详细过程，详见[比特币源码剖析（十四）](/blog/2018/08/the-annotated-bitcoin-sources-14.html)。
 本篇主要分析 Step 9: data directory maintenance 第九步数据目录维护的详细过程。
 
 ## 源码剖析
@@ -304,7 +304,7 @@ void ThreadImport(std::vector<boost::filesystem::path> vImportFiles) // 导入�
 ```
 
 未完待续...<br>
-请看下一篇[比特币源码剖析（十六）](/blog/2018/09/bitcoin-source-anatomy-16.html)。
+请看下一篇[比特币源码剖析（十六）](/blog/2018/09/the-annotated-bitcoin-sources-16.html)。
 
 ## 参考链接
 

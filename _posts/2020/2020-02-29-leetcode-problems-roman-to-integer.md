@@ -4,7 +4,7 @@ title:  "LeetCode 13. 罗马数字转整数 简单"
 date:   2020-02-29 19:48:34 +0800
 author: mistydew
 comments: true
-categories: LeetCode
+categories: 力扣题解
 tags: LeetCode
 excerpt: 把给定的罗马数字（包含七种字符：`I`，`V`，`X`，`L`，`C`，`D`和`M`）转换为整数。
 ---

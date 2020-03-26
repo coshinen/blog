@@ -4,8 +4,8 @@ title:  "GARNET CROW HAPPY DAYS? 歌詞翻訳"
 date:   2019-07-14 20:01:01 +0800
 author: mistydew
 comments: true
-categories: GARNETCROW Lyrics
-tags: ガネクロ 歌詞翻訳
+categories: 译文集
+tags: ガネクロ Lyrics
 excerpt: close island、素早く暮れる空に、意味もなく胸が切なくなる。そんな季節、冷えてく体抱きしめてくれる、君の腕がまた恋しくなるから。
 ---
 ![GZCA-1061](/gc/assets/images/discography/album/GZCA-1061.jpg){:.border}

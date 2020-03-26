@@ -4,8 +4,8 @@ title:  "GARNET CROW in little time 歌詞翻訳"
 date:   2019-05-05 20:00:03 +0800
 author: mistydew
 comments: true
-categories: GARNETCROW Lyrics
-tags: ガネクロ 歌詞翻訳
+categories: 译文集
+tags: ガネクロ Lyrics
 excerpt: 十二月にしては暖かいこんな夜は、思いつきで出かけた。車の中でずっと手をつないで眠った、朝日が二人を起こすまで。
 ---
 ![GZCA-1029](/gc/assets/images/discography/single/GZCA-1029.jpg){:.border}

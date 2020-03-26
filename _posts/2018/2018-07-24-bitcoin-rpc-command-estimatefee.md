@@ -4,8 +4,8 @@ title:  "比特币 RPC 命令剖析 \"estimatefee\""
 date:   2018-07-24 13:28:47 +0800
 author: mistydew
 comments: true
-categories: Blockchain Bitcoin
-tags: CLI bitcoin-cli 区块链 比特币
+categories: 区块链
+tags: CLI bitcoin-cli Blockchain Bitcoin
 excerpt: $ bitcoin-cli estimatefee nblocks
 ---
 ## 提示说明

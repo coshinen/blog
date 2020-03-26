@@ -4,8 +4,8 @@ title:  "比特币 RPC 命令剖析 \"getbestblockhash\""
 date:   2018-05-22 10:02:28 +0800
 author: mistydew
 comments: true
-categories: Blockchain Bitcoin
-tags: CLI bitcoin-cli 区块链 比特币
+categories: 区块链
+tags: CLI bitcoin-cli Blockchain Bitcoin
 excerpt: $ bitcoin-cli getbestblockhash
 ---
 ## 提示说明
