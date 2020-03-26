@@ -276,8 +276,8 @@
     }
 }
 
-/* Archive, Category contents */
-blockquote.archive, blockquote.category {
+/* Archive, Category */
+.post-content blockquote#archive, .post-content blockquote#category {
     float: right;
     width: calc(22% - #{$spacing-unit});
 }
@@ -288,19 +288,19 @@ blockquote.contents {
 }
 
 @include media-query($on-palm) {
-    blockquote.archive, blockquote.category, blockquote.contents {
+    .post-content blockquote#archive, .post-content blockquote#category, blockquote.contents {
         float: none;
         width: calc(100% - #{$spacing-unit});
     }
 }
 
 /* Tag cloud */
-blockquote#tagcloud {
+.post-content blockquote#tagcloud {
     width: calc(100% - (#{$spacing-unit} * 16));
 }
 
 @include media-query($on-palm) {
-    blockquote#tagcloud {
+    .post-content blockquote#tagcloud {
         width: calc(100% - (#{$spacing-unit} * 2));
     }
 }

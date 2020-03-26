@@ -27,8 +27,8 @@ excerpt: Blog archive.
 
 {% assign i = 0 %}
 
-<blockquote class="archive" id="years">
-<h2 align="center">Years</h2>
+<blockquote id="archive">
+<h2>年份</h2>
 {% for year in years %}
 <li><a href="#{{ year }}">{{ year }}（{{ counts[i] }}）</a></li>
 {% assign i = i | plus: 1 %}
@@ -46,7 +46,7 @@ excerpt: Blog archive.
 </blockquote>
     {% endif %}
 <blockquote class="contents">
-  <h2 id="{{ post.date | date: '%Y' }}">{{ post.date | date: '%Y' }}（{{ counts[i] }}）<a href="#years">{% include pages/icon-chevron-up.html %}</a></h2>
+  <h2 id="{{ post.date | date: '%Y' }}">{{ post.date | date: '%Y' }}（{{ counts[i] }}）<a href="#archive">{% include pages/icon-chevron-up.html %}</a></h2>
   <ul class="archive-list">
     {% assign i = i | plus: 1 %}
   {% endif %}

@@ -18,8 +18,8 @@ excerpt: Blog category.
 {% assign counts = counts | split: ', ' %}
 {% assign idx = 0 %}
 
-<blockquote class="category" id="contents">
-<h2 align="center">Contents</h2>
+<blockquote id="category">
+<h2>分类</h2>
 {% for category in site.categories %}
   <div><li><a href="#{{ category[0] }}">{{ category | first }}</a>（{{ counts[idx] }}）</li></div>
   {% assign idx = idx | plus: 1 %}
@@ -30,7 +30,7 @@ excerpt: Blog category.
 
 {% for category in site.categories %}
 <blockquote class="contents">
-  <h2 id="{{ category[0] }}">{{ category | first }}（{{ counts[idx] }}）<a href="#contents">{% include pages/icon-chevron-up.html %}</a></h2>
+  <h2 id="{{ category[0] }}">{{ category | first }}（{{ counts[idx] }}）<a href="#category">{% include pages/icon-chevron-up.html %}</a></h2>
     {% assign idx = idx | plus: 1 %}
   <ul class="category-list">
     {% for post in category.last %}
