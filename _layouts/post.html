@@ -6,23 +6,21 @@ layout: default
           <header class="post-header">
             <h1 class="post-title" itemprop="name headline">{{ page.title }}<span>{% include share.html %}</span></h1>
             <p class="post-meta">
-              <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished"><abbr title="{{ page.date | date_to_xmlschema }}">{% include posts/icon-calendar.html %}{{ page.date | date: "%b %-d, %Y" }}</abbr></time>
+              <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished"><abbr title="{{ page.date | date_to_xmlschema }}">{% include post/icon-calendar.html %}{{ page.date | date: "%b %-d, %Y" }}</abbr></time>
               <span>|</span>
-              {% if page.author %}<span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{% include posts/icon-user-alt.html %}<a class="author" href="{{ site.url }}{{ site.about }}" title="{{ site.name }}">{{ page.author }}</a></span></span>{% endif %}
+              {% if page.author %}<span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{% include post/icon-user-alt.html %}<a class="author" href="{{ site.url }}{{ site.about }}" title="{{ site.name }}">{{ page.author }}</a></span></span>{% endif %}
               <span>|</span>
-              <span class="post-count">{% include posts/icon-edit.html %}{% assign count = page.content | strip_html | strip_newlines | remove: " " | size %}{% if count >= 1000 %}{% assign thousands = count | divided_by: 1000 %}{% assign hundreds = count | modulo: 1000 | divided_by: 100 %}{% assign tensones = count | modulo: 100 %}{% if hundreds == 0 %}{% if tensones >= 50 %}{{ thousands }}.{{ hundreds | plus: 1 }}{% else %}{{ thousands }}{% endif %}{% elsif hundreds == 9 %}{% if tensones >= 50 %}{{ thousands | plus: 1 }}{% else %}{{ thousands }}.{{ hundreds }}{% endif %}{% else %}{{ thousands }}.{% if tensones >= 50 %}{{ hundreds | plus: 1 }}{% else %}{{ hundreds }}{% endif %}{% endif %}k{% else %}{{ count }}{% endif %} words</span>
+              <span class="post-count">{% include post/icon-edit.html %}{% assign count = page.content | strip_html | strip_newlines | remove: " " | size %}{% if count >= 1000 %}{% assign thousands = count | divided_by: 1000 %}{% assign hundreds = count | modulo: 1000 | divided_by: 100 %}{% assign tensones = count | modulo: 100 %}{% if hundreds == 0 %}{% if tensones >= 50 %}{{ thousands }}.{{ hundreds | plus: 1 }}{% else %}{{ thousands }}{% endif %}{% elsif hundreds == 9 %}{% if tensones >= 50 %}{{ thousands | plus: 1 }}{% else %}{{ thousands }}.{{ hundreds }}{% endif %}{% else %}{{ thousands }}.{% if tensones >= 50 %}{{ hundreds | plus: 1 }}{% else %}{{ hundreds }}{% endif %}{% endif %}k{% else %}{{ count }}{% endif %} words</span>
               <span>|</span>
-              <span>{% include posts/icon-book-open.html %}≈ {{ page.content | strip_html | strip_newlines | remove: " " | size | divided_by: 350 | plus: 1 }} min</span>
+              <span>{% include post/icon-book-open.html %}≈ {{ page.content | strip_html | strip_newlines | remove: " " | size | divided_by: 350 | plus: 1 }} min</span>
               <span>|</span>
-              <span>{% include posts/icon-tags.html %}{% for tag in page.tags %}<a class="tag" href="{{ site.tagcloud }}#{{ tag }}">{{ tag | append: " " }}</a>{% endfor %}</span>
+              <span>{% include post/icon-tags.html %}{% for tag in page.tags %}<a class="tag" href="{{ site.tagcloud }}#{{ tag }}">{{ tag | append: " " }}</a>{% endfor %}</span>
               <span>|</span>
-              <span>{% include posts/icon-copyright.html %}<a target="_blank" rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh"><img alt="(CC) BY-NC-ND" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/4.0/80x15.png" /></a></span>
-              <span>|</span>
-              <span>{% include posts/icon-comments.html %}{% include commentslink.html %}</span>
+              <span>{% include post/icon-comments.html %}{% include commentslink.html %}</span>
             </p>
           </header>
           <div class="post-content" itemprop="articleBody">
 {{ content }}
           </div>
-{% include docinfo.html %}{% if page.comments == true %}{% include comments.html %}{% endif %}
+{% include postinfo.html %}{% if page.comments == true %}{% include comments.html %}{% endif %}
         </article>
