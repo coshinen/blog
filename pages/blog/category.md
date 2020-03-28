@@ -32,7 +32,7 @@ excerpt: Blog category.
 <blockquote class="contents">
   <h2 id="{{ category[0] }}">{{ category | first }}（{{ counts[idx] }}）<a href="#category" style="float:right;">{% include post/icon-chevron-up.svg %}</a></h2>
     {% assign idx = idx | plus: 1 %}
-  <ul class="category-list">
+  <ul>
     {% for post in category.last %}
     <li><abbr title="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%Y-%m-%d-" }}</abbr><a href="{{ post.url }}">{{ post.title }}</a></li>
     {% endfor %}

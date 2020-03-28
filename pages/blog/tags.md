@@ -57,7 +57,7 @@ excerpt: Blog tags.
 <blockquote>
   <h2 id="{{ tag[0] }}">{{ tag | first }}（{{ counts[idx] }}）<a href="#tagcloud" style="float:right;">{% include post/icon-chevron-up.svg %}</a></h2>
     {% assign idx = idx | plus: 1 %}
-  <ul class="tag-list">
+  <ul>
     {% for post in tag.last %}
     <li><abbr title="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%Y-%m-%d-" }}</abbr><a href="{{ post.url }}">{{ post.title }}</a></li>
     {% endfor %}
