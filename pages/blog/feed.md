@@ -5,10 +5,10 @@ permalink: /blog/feed.html
 excerpt: Subscribe me? Feed me!
 ---
 
-Welcome to subscribe the following feed for keep track of my updates in time:
+欢迎订阅我的网络日志 Feed 以及时获取更新：
 
-> Formal Feed: (Shielding in Mainland China)
+> 正式 Feed（大陆地区被屏蔽）
 > * [https://feeds.feedburner.com/{{ site.feedburner }}](https://feeds.feedburner.com/{{ site.feedburner }}){:target="_blank"}
 
-> Alternative Feed: (Normal access)
+> 备用 Feed（托管于 GitHub）
 > * [{{ site.atom | prepend: site.url }}]({{ site.atom | prepend: site.url }})
