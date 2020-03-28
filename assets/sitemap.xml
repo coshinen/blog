@@ -9,34 +9,34 @@ permalink: /sitemap.xml
 <loc>{{ site.url }}</loc>
 </url>
 <url>
-<loc>{{ site.booklog | prepend: site.url }}</loc>
+<loc>{{ site.url | append: site.about }}</loc>
 </url>
 <url>
-<loc>{{ site.quotes | prepend: site.url }}</loc>
+<loc>{{ site.url | append: site.booklog }}</loc>
 </url>
 <url>
-<loc>{{ site.about | prepend: site.url }}</loc>
+<loc>{{ site.url | append: site.quotes }}</loc>
 </url>
 <url>
-<loc>{{ site.resume | prepend: site.url }}</loc>
+<loc>{{ site.url | append: site.resume }}</loc>
 </url>
 <url>
-<loc>{{ site.blog | prepend: site.url }}</loc>
+<loc>{{ site.url | append: site.blog }}</loc>
 </url>
 <url>
-<loc>{{ site.archive | prepend: site.url }}</loc>
+<loc>{{ site.url | append: site.archive }}</loc>
 </url>
 <url>
-<loc>{{ site.category | prepend: site.url }}</loc>
+<loc>{{ site.url | append: site.category }}</loc>
 </url>
 <url>
-<loc>{{ site.tagcloud | prepend: site.url }}</loc>
+<loc>{{ site.url | append: site.feed }}</loc>
 </url>
 <url>
-<loc>{{ site.feed | prepend: site.url }}</loc>
+<loc>{{ site.url | append: site.tagcloud }}</loc>
 </url>{% for post in site.posts reversed %}
 <url>
-<loc>{{ post.url | prepend: site.url }}</loc>
+<loc>{{ site.url | append: post.url | xml_escape }}</loc>
 <lastmod>{{ post.date | date_to_xmlschema }}</lastmod>
 </url>{% endfor %}
 </urlset>
