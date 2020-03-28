@@ -9,40 +9,43 @@
 name: 袁子晨
 root: mistydew
 title: parallel universe
-quote: 無理は一番の退屈しのぎだ
+quote: 無理は一番の退屈しのぎだ。
 subtitle: mistydew's blog
 description: >- # this means to ignore newlines until "baseurl:"
   Welcome to the parallel universe ❤ mistydew's blog!
   Powered by Jekyll. Hosted from GitHub.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://mistydew.github.io" # the base hostname & protocol for your site
+crow: "https://corwsub.github.io"
 
 # Site footer
 github: mistydew
 email: mistydew@qq.com
-rss: Subscribe Feed
+gc: GC music diary
 cv: Curriculum Vitae
-feedburner: mistydew
-btc: 1GC1iAZz9Wroy99bwJUzuLrqpmayUhjYbZ
 
 # Site page baseurl
-sitemap: "/sitemap.xml"
+about:   "/about.html"
 booklog: "/booklog.html"
 quotes:  "/quotes.html"
-about:   "/about.html"
 resume:  "/resume.html"
+sitemap: "/sitemap.xml"
 
 # About page
 pgpkey: "/public_key.asc"
 fingerprint: 7752 D418 D94C 33FB 8F6F 9197 44D9 CCA7 F81A 1FB3
+btc: 1GC1iAZz9Wroy99bwJUzuLrqpmayUhjYbZ
 
 # Blog page baseurl
 blog:     "/blog/"
 archive:  "/blog/archive.html"
 category: "/blog/category.html"
-tagcloud: "/blog/tags.html"
 feed:     "/blog/feed.html"
+tagcloud: "/blog/tags.html"
 atom:     "/blog/atom.xml"
+
+# Feed page
+feedburner: mistydew
 
 # Blog IntenseDebate
 site_id: 415414
@@ -66,11 +69,11 @@ future: false
 # Conversion
 markdown: kramdown
 highlighter: rouge
-excerpt_separator: "\n\n" # Abstract / Summary
+excerpt_separator: "\n\n"
 incremental: false
 
 # Serving
-port: 4000
+port: 8000
 host: 127.0.0.1
 
 # Outputting

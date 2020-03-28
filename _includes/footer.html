@@ -1,6 +1,6 @@
     <footer class="site-footer">
       <div class="wrapper">
-        <h2 class="footer-heading">{{ site.quote }}</h2>
+        <h2 class="footer-heading"><a href="{{ site.quotes }}">{{ site.quote }}</a></h2>
         <div class="footer-col-wrapper">
           <div class="footer-col footer-col-1">
             <ul class="contact-list">
@@ -10,7 +10,7 @@
           </div>
           <div class="footer-col footer-col-2">
             <ul class="social-media-list">
-              {% if site.feed %}<li>{% include footer/icon-rss-square.html title=site.rss %}</li>{% endif %}
+              {% if site.crow %}<li>{% include footer/icon-crow.html title=site.gc %}</li>{% endif %}
               {% if site.resume %}<li>{% include footer/icon-terminal.html title=site.cv %}</li>{% endif %}
             </ul>
           </div>
