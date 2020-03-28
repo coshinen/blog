@@ -18,7 +18,7 @@ $text-color:       #111; // kuro
 $background-color: #fff1e0; // #fdfdfd // shiro
 $brand-color:      #2a7ae2; // aoiro
 
-$garnet-color:     #651e1a;
+$garnet-color:     darken(#8B0000, 8%); // DarkRed
 $grey-color:       #828282;
 $grey-color-light: lighten($grey-color, 40%);
 $grey-color-dark:  darken($grey-color, 25%);
