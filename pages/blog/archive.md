@@ -12,31 +12,25 @@ excerpt: Blog archive.
   {% assign year = post.date | date: '%Y' %}
   {% assign nyear = post.next.date | date: '%Y' %}
   {% if year != nyear %}
-    {% assign year = year | append: ', ' %}
-    {% assign years = years | append: year %}
-    {% assign count = count | append: ', ' %}
-    {% assign counts = counts | append: count %}
+    {% assign years = years | append: year | append: ', ' %}
+    {% assign counts = counts | append: count | append: ', ' %}
     {% assign count = 1 %}
   {% else %}
     {% assign count = count | plus: 1 %}
   {% endif %}
 {% endfor %}
-
 {% assign years = years | split: ', ' | reverse %}
 {% assign counts = counts | split: ', ' | reverse %}
-
-{% assign i = 0 %}
-
+{% assign idx = 0 %}
 <blockquote id="archive">
-<h2>年份</h2>
+  <h2>日期</h2>
 {% for year in years %}
-<li><a href="#{{ year }}">{{ year }}（{{ counts[i] }}）</a></li>
-{% assign i = i | plus: 1 %}
+  <li><a href="#{{ year }}">{{ year }}（{{ counts[idx] }}）</a></li>
+{% assign idx = idx | plus: 1 %}
 {% endfor %}
 </blockquote>
 
 {% assign i = 0 %}
-
 {% for post in site.posts %}
   {% assign year = post.date | date: '%Y' %}
   {% assign nyear = post.next.date | date: '%Y' %}

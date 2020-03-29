@@ -16,7 +16,6 @@ excerpt: Blog tags.
   {% endif %}
 {% endfor %}
 {% assign diff = max | minus: min %}
-
 <center>
 <blockquote id="tagcloud">
 {% for tag in site.tags %}
@@ -49,10 +48,8 @@ excerpt: Blog tags.
   {% assign counts = counts | append: count %}
   {% assign count = 0 %}
 {% endfor %}
-
 {% assign counts = counts | split: ', ' %}
 {% assign idx = 0 %}
-
 {% for tag in site.tags %}
 <blockquote>
   <h2 id="{{ tag[0] }}">{{ tag | first }}（{{ counts[idx] }}）<a href="#tagcloud" style="float:right;">{% include post/icon-chevron-up.svg %}</a></h2>

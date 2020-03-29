@@ -10,24 +10,20 @@ excerpt: Blog category.
   {% for post in category.last %}
     {% assign count = count | plus: 1 %}
   {% endfor %}
-  {% assign count = count | append: ', ' %}
-  {% assign counts = counts | append: count %}
+  {% assign counts = counts | append: count | append: ', ' %}
   {% assign count = 0 %}
 {% endfor %}
-
 {% assign counts = counts | split: ', ' %}
 {% assign idx = 0 %}
-
 <blockquote id="category">
-<h2>分类</h2>
+  <h2>目录</h2>
 {% for category in site.categories %}
-  <div><li><a href="#{{ category[0] }}">{{ category | first }}</a>（{{ counts[idx] }}）</li></div>
+  <li><a href="#{{ category[0] }}">{{ category | first }}</a>（{{ counts[idx] }}）</li>
   {% assign idx = idx | plus: 1 %}
 {% endfor %}
 </blockquote>
 
 {% assign idx = 0 %}
-
 {% for category in site.categories %}
 <blockquote class="contents">
   <h2 id="{{ category[0] }}">{{ category | first }}（{{ counts[idx] }}）<a href="#category" style="float:right;">{% include post/icon-chevron-up.svg %}</a></h2>
