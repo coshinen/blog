@@ -5,7 +5,7 @@ date:   2018-08-04 10:25:26 +0800
 author: mistydew
 comments: true
 categories: 区块链
-tags: Blockchain Bitcoin src-annotated
+tags: Blockchain Bitcoin bitcoind
 ---
 上一篇分析了应用程序初始化中启动 RPC 的详细过程，详见[比特币源码剖析（十）](/blog/2018/07/the-annotated-bitcoin-sources-10.html)。
 本篇主要分析 Step 5: verify wallet database integrity 第五步验证钱包数据库的完整性的详细过程。

@@ -5,7 +5,7 @@ date:   2018-08-28 10:40:03 +0800
 author: mistydew
 comments: true
 categories: 区块链
-tags: CLI bitcoin-cli Blockchain Bitcoin
+tags: Blockchain Bitcoin bitcoin-cli
 excerpt: $ bitcoin-cli importpubkey "pubkey" ( "label" rescan )
 ---
 ## 提示说明

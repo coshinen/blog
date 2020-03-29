@@ -5,7 +5,7 @@ date:   2018-07-16 09:03:39 +0800
 author: mistydew
 comments: true
 categories: 区块链
-tags: CLI bitcoin-cli Blockchain Bitcoin
+tags: Blockchain Bitcoin bitcoin-cli
 excerpt: $ bitcoin-cli decodescript "hex"
 ---
 ## 提示说明

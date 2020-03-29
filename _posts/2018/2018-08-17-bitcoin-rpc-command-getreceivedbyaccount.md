@@ -5,7 +5,7 @@ date:   2018-08-17 15:14:02 +0800
 author: mistydew
 comments: true
 categories: 区块链
-tags: CLI bitcoin-cli Blockchain Bitcoin
+tags: Blockchain Bitcoin bitcoin-cli
 excerpt: $ bitcoin-cli getreceivedbyaccount "account" ( minconf )
 ---
 ## 提示说明

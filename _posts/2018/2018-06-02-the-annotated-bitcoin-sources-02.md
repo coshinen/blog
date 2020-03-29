@@ -5,7 +5,7 @@ date:   2018-06-02 08:02:56 +0800
 author: mistydew
 comments: true
 categories: 区块链
-tags: Blockchain Bitcoin src-annotated
+tags: Blockchain Bitcoin bitcoind
 ---
 上一篇分析了应用程序启动前运行环境的设置和信号处理函数的连接，详见[比特币源码剖析（一）](/blog/2018/05/the-annotated-bitcoin-sources-01.html)。
 本篇开始分析 AppInit(argc, argv) 应用程序初始化函数。

@@ -5,7 +5,7 @@ date:   2018-09-12 16:40:29 +0800
 author: mistydew
 comments: true
 categories: 区块链
-tags: CLI bitcoin-cli Blockchain Bitcoin
+tags: Blockchain Bitcoin bitcoin-cli
 excerpt: $ bitcoin-cli lockunspent unlock [{"txid":"txid","vout":n},...]
 ---
 ## 提示说明

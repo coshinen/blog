@@ -5,7 +5,7 @@ date:   2018-05-28 14:48:05 +0800
 author: mistydew
 comments: true
 categories: 区块链
-tags: CLI bitcoin-cli Blockchain Bitcoin
+tags: Blockchain Bitcoin bitcoin-cli
 excerpt: $ bitcoin-cli getblockhash index
 ---
 ## 提示说明

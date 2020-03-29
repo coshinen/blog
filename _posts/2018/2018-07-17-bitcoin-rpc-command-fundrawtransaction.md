@@ -5,7 +5,7 @@ date:   2018-07-17 22:21:44 +0800
 author: mistydew
 comments: true
 categories: 区块链
-tags: CLI bitcoin-cli Blockchain Bitcoin
+tags: Blockchain Bitcoin bitcoin-cli
 excerpt: $ bitcoin-cli fundrawtransaction "hexstring" includeWatching
 ---
 ## 提示说明

@@ -5,7 +5,7 @@ date:   2018-06-26 10:46:23 +0800
 author: mistydew
 comments: true
 categories: 区块链
-tags: CLI bitcoin-cli Blockchain Bitcoin
+tags: Blockchain Bitcoin bitcoin-cli
 excerpt: $ bitcoin-cli submitblock "hexdata" ( "jsonparametersobject" )
 ---
 ## 提示说明

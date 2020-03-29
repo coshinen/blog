@@ -5,7 +5,7 @@ date:   2018-07-18 11:23:30 +0800
 author: mistydew
 comments: true
 categories: 区块链
-tags: CLI bitcoin-cli Blockchain Bitcoin
+tags: Blockchain Bitcoin bitcoin-cli
 excerpt: $ bitcoin-cli getrawtransaction "txid" ( verbose )
 ---
 ## 提示说明

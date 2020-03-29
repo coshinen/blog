@@ -5,7 +5,7 @@ date:   2018-05-25 14:06:42 +0800
 author: mistydew
 comments: true
 categories: 区块链
-tags: CLI bitcoin-cli Blockchain Bitcoin
+tags: Blockchain Bitcoin bitcoin-cli
 excerpt: $ bitcoin-cli getblockcount
 ---
 ## 提示说明

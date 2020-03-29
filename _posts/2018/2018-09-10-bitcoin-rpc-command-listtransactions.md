@@ -5,7 +5,7 @@ date:   2018-09-10 11:04:40 +0800
 author: mistydew
 comments: true
 categories: 区块链
-tags: CLI bitcoin-cli Blockchain Bitcoin
+tags: Blockchain Bitcoin bitcoin-cli
 excerpt: $ bitcoin-cli listtransactions ( "account" count form includeWatchonly )
 ---
 ## 提示说明

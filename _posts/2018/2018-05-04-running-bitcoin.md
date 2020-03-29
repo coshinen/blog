@@ -5,7 +5,7 @@ date:   2018-05-04 13:08:22 +0800
 author: mistydew
 comments: true
 categories: 区块链
-tags: bitcoind Blockchain Bitcoin
+tags: Blockchain Bitcoin bitcoind
 ---
 原始可用的比特币程序有两个版本：
 一个带有图形化用户界面（通常被称为“比特币”），和一个“无头”版本（被称为 bitcoind，这里的“无头”指的是没有图形化界面）。

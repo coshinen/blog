@@ -5,7 +5,7 @@ date:   2018-06-07 13:59:06 +0800
 author: mistydew
 comments: true
 categories: 区块链
-tags: CLI bitcoin-cli Blockchain Bitcoin
+tags: Blockchain Bitcoin bitcoin-cli
 excerpt: $ bitcoin-cli gettxoutsetinfo
 ---
 ## 提示说明

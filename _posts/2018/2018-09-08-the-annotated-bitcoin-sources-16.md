@@ -5,7 +5,7 @@ date:   2018-09-08 15:56:20 +0800
 author: mistydew
 comments: true
 categories: 区块链
-tags: Blockchain Bitcoin src-annotated
+tags: Blockchain Bitcoin bitcoind
 ---
 上一篇分析了第九步数据目录维护和第十步导入区块文件的详细过程，详见[比特币源码剖析（十五）](/blog/2018/09/the-annotated-bitcoin-sources-15.html)。
 本篇主要分析 Step 11: start node 第十一步启动节点服务的详细过程。

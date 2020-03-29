@@ -5,7 +5,7 @@ date:   2018-05-19 14:52:16 +0800
 author: mistydew
 comments: true
 categories: 区块链
-tags: Blockchain Bitcoin src-annotated
+tags: Blockchain Bitcoin bitcoind
 ---
 以 bitcoin v0.12.1 为例进行解读，这是官方内置挖矿功能的最后一个版本。
 当前比特币的最新版本为 bitcoin v0.16.0。

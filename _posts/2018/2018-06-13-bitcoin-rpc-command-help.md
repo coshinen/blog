@@ -5,7 +5,7 @@ date:   2018-06-13 13:38:36 +0800
 author: mistydew
 comments: true
 categories: 区块链
-tags: CLI bitcoin-cli Blockchain Bitcoin
+tags: Blockchain Bitcoin bitcoin-cli
 excerpt: $ bitcoin-cli help ( "command" )
 ---
 ## 提示说明

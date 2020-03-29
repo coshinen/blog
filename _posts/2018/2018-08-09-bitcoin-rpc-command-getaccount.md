@@ -5,7 +5,7 @@ date:   2018-08-09 09:22:55 +0800
 author: mistydew
 comments: true
 categories: 区块链
-tags: CLI bitcoin-cli Blockchain Bitcoin
+tags: Blockchain Bitcoin bitcoin-cli
 excerpt: $ bitcoin-cli getaccount "bitcoinaddress"
 ---
 ## 提示说明

@@ -5,7 +5,7 @@ date:   2018-06-19 10:19:21 +0800
 author: mistydew
 comments: true
 categories: 区块链
-tags: CLI bitcoin-cli Blockchain Bitcoin
+tags: Blockchain Bitcoin bitcoin-cli
 excerpt: $ bitcoin-cli setgenerate generate ( genproclimit )
 ---
 ## 提示说明

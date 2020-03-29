@@ -5,7 +5,7 @@ date:   2018-09-24 16:52:09 +0800
 author: mistydew
 comments: true
 categories: 区块链
-tags: CLI bitcoin-cli Blockchain Bitcoin
+tags: Blockchain Bitcoin bitcoin-cli
 excerpt: $ bitcoin-cli walletlock
 ---
 ## 提示说明

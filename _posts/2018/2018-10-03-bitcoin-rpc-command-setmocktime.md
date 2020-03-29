@@ -5,7 +5,7 @@ date:   2018-10-03 11:02:08 +0800
 author: mistydew
 comments: true
 categories: 区块链
-tags: CLI bitcoin-cli Blockchain Bitcoin
+tags: Blockchain Bitcoin bitcoin-cli
 excerpt: $ bitcoin-cli setmocktime timestamp
 ---
 ## 提示说明

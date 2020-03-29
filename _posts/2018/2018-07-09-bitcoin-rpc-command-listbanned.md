@@ -5,7 +5,7 @@ date:   2018-07-09 08:52:09 +0800
 author: mistydew
 comments: true
 categories: 区块链
-tags: CLI bitcoin-cli Blockchain Bitcoin
+tags: Blockchain Bitcoin bitcoin-cli
 excerpt: $ bitcoin-cli listbanned
 ---
 ## 提示说明

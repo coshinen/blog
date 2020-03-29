@@ -5,7 +5,7 @@ date:   2018-09-05 08:56:26 +0800
 author: mistydew
 comments: true
 categories: 区块链
-tags: CLI bitcoin-cli Blockchain Bitcoin
+tags: Blockchain Bitcoin bitcoin-cli
 excerpt: $ bitcoin-cli listreceivedbyaccount ( minconf includeempty includeWatchonly )
 ---
 ## 提示说明

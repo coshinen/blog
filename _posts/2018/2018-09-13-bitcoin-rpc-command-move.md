@@ -5,7 +5,7 @@ date:   2018-09-13 10:03:06 +0800
 author: mistydew
 comments: true
 categories: 区块链
-tags: CLI bitcoin-cli Blockchain Bitcoin
+tags: Blockchain Bitcoin bitcoin-cli
 excerpt: $ bitcoin-cli move "fromaccount" "toaccount" amount ( minconf "comment" )
 ---
 ## 提示说明
