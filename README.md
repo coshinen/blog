@@ -9,11 +9,12 @@
 
 ## Timeline
 
-* 2020.03.26 [+] blog page: category, tag cloud
+* 2020.03.29 [-] blog page: ~~comments, profile~~; [+] blog page: archive
 
 <details>
 <summary>history</summary>
 
+* 2020.03.26 [+] blog page: category, tag cloud
 * 2020.03.24 [-] site: ~~Busuanzi analytics~~ (incompatible Safari); pages: ~~donate page~~
 * 2020.03.18 [-] home page: ~~Crypto Currencies Price Widget~~ (unnecessary); [+] home page: comments, profile
 * 2020.03.08 [+] post: archive by year, exempli gratia 2018
@@ -23,7 +24,7 @@
 * 2019.09.19 [+] remake: archive and category page
 * 2019.09.07 [-] post: ~~{% highlight %} code {% endhighlight %}~~ (only jekyll); [+] post: ```code``` (markdown)
 * 2019.08.28 [+] site: GitHub Actions workflows CI
-* 2019.08.25 [+] blog page: comments, profile
+* 2019.08.25 [+] blog page: ~~comments, profile~~
 * 2019.08.24 [-] post: ~~Remarkbox Hosted Comments Service~~ (incomplete); [+] post: IntenseDebate comments
 * 2019.08.18 [+] assets: css, fonts, images and js
 * 2019.08.14 [+] about page: PGP key and fingerprint
