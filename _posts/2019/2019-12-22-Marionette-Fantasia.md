@@ -8,7 +8,7 @@ categories: 译文集
 tags: ガネクロ Lyrics
 excerpt: 薄明かりを灯して、冷たい壁に 頬寄せ。静寂に 耳をすます、ひっそりと ゆっくりと、惹き返す。
 ---
-![GZCA-5038](/gc/assets/images/discography/album/GZCA-5038.jpg){:.border}
+![GZCA-5038](https://crowsub.github.io/assets/images/discography/album/GZCA-5038.jpg){:.border}
 
 ## Marionette Fantasia | 木偶幻想曲
 
@@ -153,4 +153,3 @@ la- la- la- la- Marionette Fantasia
 
 * [GARNET CROW official website : ガーネットクロウ オフィシャルサイト](http://www.garnetcrow.com){:target="_blank"}
 * [GARNET CROW Marionette Fantasia 歌詞 - 歌ネット](https://www.uta-net.com/song/20214){:target="_blank"}
-* [Marionette Fantasia Lyrics \| GARNET CROW music diary](https://mistydew.github.io/gc/lyrics/original/Marionette%20Fantasia.html){:target="_blank"}

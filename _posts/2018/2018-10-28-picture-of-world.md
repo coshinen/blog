@@ -8,7 +8,7 @@ categories: 译文集
 tags: ガネクロ Lyrics
 excerpt: ずっと みてたんだ一枚のポスター、壁の片隅で色褪せた。きっと誰かが 剥がし忘れた、夕ぐれのストーリーは そこにあり。
 ---
-![GZCA-5052](/gc/assets/images/discography/album/GZCA-5052.jpg){:.border}
+![GZCA-5052](https://crowsub.github.io/assets/images/discography/album/GZCA-5052.jpg){:.border}
 
 ## picture of world | 世界的圖畫
 
@@ -103,4 +103,3 @@ yah~ 我的話什麼都 不會失去
 
 * [GARNET CROW official website : ガーネットクロウ オフィシャルサイト](http://www.garnetcrow.com){:target="_blank"}
 * [GARNET CROW picture of world 歌詞 - 歌ネット](https://www.uta-net.com/song/25836){:target="_blank"}
-* [picture of world Lyrics \| GARNET CROW music diary](https://mistydew.github.io/gc/lyrics/original/picture%20of%20world.html){:target="_blank"}

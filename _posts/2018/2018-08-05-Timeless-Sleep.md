@@ -8,7 +8,7 @@ categories: 译文集
 tags: ガネクロ Lyrics
 excerpt: 君がいなくなってから、何度朝日迎えたかしれない。急に地平線をみたくなって ふらり、始発に飛び乗る。
 ---
-![GZCA-2020](/gc/assets/images/discography/single/GZCA-2020.jpg){:.border}
+![GZCA-2020](https://crowsub.github.io/assets/images/discography/single/GZCA-2020.jpg){:.border}
 
 ## Timeless Sleep | 永眠
 
@@ -91,4 +91,3 @@ Timeless Sleep<br>
 
 * [GARNET CROW official website : ガーネットクロウ オフィシャルサイト](http://www.garnetcrow.com){:target="_blank"}
 * [GARNET CROW Timeless Sleep 歌詞一覧リスト - 歌ネット](https://www.uta-net.com/song/20123){:target="_blank"}
-* [Timeless Sleep Lyrics \| GARNET CROW music diary](https://mistydew.github.io/gc/lyrics/original/Timeless%20Sleep.html){:target="_blank"}

@@ -8,7 +8,7 @@ categories: 译文集
 tags: ガネクロ Lyrics
 excerpt: 衝動に任して全部(すべて)終わりにしたくなる時ない？愛に満ちた時間(とき)はいつまでも続きやしない。
 ---
-![GZCA-7037](/gc/assets/images/discography/single/GZCA-7037.jpg){:.border}
+![GZCA-7037](https://crowsub.github.io/assets/images/discography/single/GZCA-7037.jpg){:.border}
 
 ## Float World | 浮動世界
 
@@ -99,4 +99,3 @@ Float World
 
 * [GARNET CROW official website : ガーネットクロウ オフィシャルサイト](http://www.garnetcrow.com){:target="_blank"}
 * [GARNET CROW Float World 歌詞 - 歌ネット](https://www.uta-net.com/song/59991){:target="_blank"}
-* [Float World Lyrics \| GARNET CROW music diary](https://mistydew.github.io/gc/lyrics/original/Float%20World.html){:target="_blank"}

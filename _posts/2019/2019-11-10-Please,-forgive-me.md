@@ -8,7 +8,7 @@ categories: 译文集
 tags: ガネクロ Lyrics
 excerpt: 優しく触れる君の手に戸惑った、痛みが消えて置き去りの罪だけ、私を責める 逃げること許さない、今目の前の光(あい)を求めていいのかな。
 ---
-![GZCA-5013](/gc/assets/images/discography/album/GZCA-5013.jpg){:.border}
+![GZCA-5013](https://crowsub.github.io/assets/images/discography/album/GZCA-5013.jpg){:.border}
 
 ## Please, forgive me | 請，原諒我
 
@@ -141,4 +141,3 @@ ah- 擾亂了內心<br>
 
 * [GARNET CROW official website : ガーネットクロウ オフィシャルサイト](http://www.garnetcrow.com){:target="_blank"}
 * [GARNET CROW Please, forgive me 歌詞 - 歌ネット](https://www.uta-net.com/song/20140){:target="_blank"}
-* [Please, forgive me Lyrics \| GARNET CROW music diary](https://mistydew.github.io/gc/lyrics/original/Please,%20forgive%20me.html){:target="_blank"}

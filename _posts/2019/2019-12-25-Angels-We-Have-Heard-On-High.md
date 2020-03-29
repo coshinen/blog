@@ -8,7 +8,7 @@ categories: 译文集
 tags: Lyrics
 excerpt: Angels we have heard on high, sweetly singing o'er the plains, and the mountains in reply, echoing their joyous strains.
 ---
-![GZBA-8020~1](/gc/assets/images/discography/dvd/GZBA-8020~1.jpg){:.border}
+![GZBA-8020~1](https://crowsub.github.io/assets/images/discography/dvd/GZBA-8020~1.jpg){:.border}
 
 ## Angels We Have Heard On High | 我們聽到天使在高處
 
@@ -70,5 +70,4 @@ Gloria, in excelsis Deo!
 ## 参考链接
 
 * [Christmas Songs – Angels We Have Heard on High Lyrics \| Genius Lyrics](https://genius.com/Christmas-songs-angels-we-have-heard-on-high-lyrics){:target="_blank"}
-* [Angels We Have Heard On High Lyrics \| GARNET CROW music diary](https://mistydew.github.io/gc/lyrics/featuring/Angels%20We%20Have%20Heard%20On%20High.html){:target="_blank"}
 * [Gloria in excelsis Deo - Wikipedia](https://en.wikipedia.org/wiki/Gloria_in_excelsis_Deo){:target="_blank"}

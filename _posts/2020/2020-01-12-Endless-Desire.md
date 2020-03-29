@@ -8,7 +8,7 @@ categories: 译文集
 tags: ガネクロ Lyrics
 excerpt: そんなに移り気じゃヤダ、正直って便利な言い訳、多様して流れてゆく 生涯(ひととき)。
 ---
-![GZCA-5038](/gc/assets/images/discography/album/GZCA-5038.jpg){:.border}
+![GZCA-5038](https://crowsub.github.io/assets/images/discography/album/GZCA-5038.jpg){:.border}
 
 ## Endless Desire | 無盡的慾望
 
@@ -141,4 +141,3 @@ destiny...? or personal...?<br>
 
 * [GARNET CROW official website : ガーネットクロウ オフィシャルサイト](http://www.garnetcrow.com){:target="_blank"}
 * [GARNET CROW Endless Desire 歌詞 - 歌ネット](https://www.uta-net.com/song/20211){:target="_blank"}
-* [Endless Desire Lyrics \| GARNET CROW music diary](https://mistydew.github.io/gc/lyrics/original/Endless%20Desire.html){:target="_blank"}

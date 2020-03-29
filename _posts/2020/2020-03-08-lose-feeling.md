@@ -8,7 +8,7 @@ categories: 译文集
 tags: ガネクロ Lyrics
 excerpt: 君のいない 明日へ向かう 日々なら、すべてが もう… 暇つぶしのようで。
 ---
-![GZCA-7037](/gc/assets/images/discography/single/GZCA-7037.jpg){:.border}
+![GZCA-7037](https://crowsub.github.io/assets/images/discography/single/GZCA-7037.jpg){:.border}
 
 ## lose feeling | 失去感覺
 
@@ -75,4 +75,3 @@ um-
 
 * [GARNET CROW official website : ガーネットクロウ オフィシャルサイト](http://www.garnetcrow.com){:target="_blank"}
 * [GARNET CROW lose feeling 歌詞 - 歌ネット](https://www.uta-net.com/song/59993){:target="_blank"}
-* [lose feeling Lyrics \| GARNET CROW music diary](https://mistydew.github.io/gc/lyrics/original/lose%20feeling.html){:target="_blank"}

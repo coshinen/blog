@@ -8,7 +8,7 @@ categories: 译文集
 tags: コナン ガネクロ Lyrics
 excerpt: 君と僕とは 別の人間(いきもの)だから、好みが違う 歩く速さも 想いの伝え方も。
 ---
-![GZCA-1028](/gc/assets/images/discography/single/GZCA-1028.jpg){:.border}
+![GZCA-1028](https://crowsub.github.io/assets/images/discography/single/GZCA-1028.jpg){:.border}
 
 ## Mysterious Eyes | 神秘的眼睛
 
@@ -143,4 +143,3 @@ I feel so all in secret life
 
 * [GARNET CROW official website : ガーネットクロウ オフィシャルサイト](http://www.garnetcrow.com){:target="_blank"}
 * [GARNET CROW Mysterious Eyes 歌詞 - 歌ネット](https://www.uta-net.com/song/14347){:target="_blank"}
-* [Mysterious Eyes Lyrics \| GARNET CROW music diary](https://mistydew.github.io/gc/lyrics/original/Mysterious%20Eyes.html){:target="_blank"}

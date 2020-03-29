@@ -8,7 +8,7 @@ categories: 译文集
 tags: ガネクロ Lyrics
 excerpt: 夕暮れとこの街の匂い、染みついた諦めと希望。雨の中うつむいていた、少年の足取り。
 ---
-![GZCA-5125~6](/gc/assets/images/discography/album/GZCA-5125~6.jpg){:.border}
+![GZCA-5125~6](https://crowsub.github.io/assets/images/discography/album/GZCA-5125~6.jpg){:.border}
 
 ## Love is a Bird | 愛是一隻鳥兒
 
@@ -119,4 +119,3 @@ Love is a Bird...<br>
 
 * [GARNET CROW official website : ガーネットクロウ オフィシャルサイト](http://www.garnetcrow.com){:target="_blank"}
 * [GARNET CROW Love is a Bird 歌詞 - 歌ネット](https://www.uta-net.com/song/63136){:target="_blank"}
-* [Love is a Bird Lyrics \| GARNET CROW music diary](https://mistydew.github.io/gc/lyrics/original/Love%20is%20a%20Bird.html){:target="_blank"}

@@ -8,7 +8,7 @@ categories: 译文集
 tags: ガネクロ Lyrics
 excerpt: 雨上がりは ふと 空見上げる、何気ない仕草しみついた毎日。なんで迷子みたいな気持ち、君といても感じちゃうんだろう。
 ---
-![GZCA-1061](/gc/assets/images/discography/album/GZCA-1061.jpg){:.border}
+![GZCA-1061](https://crowsub.github.io/assets/images/discography/album/GZCA-1061.jpg){:.border}
 
 ## wonder land | 仙境
 
@@ -123,4 +123,3 @@ I have little wonder land<br>
 
 * [GARNET CROW official website : ガーネットクロウ オフィシャルサイト](http://www.garnetcrow.com){:target="_blank"}
 * [GARNET CROW wonder land 歌詞 - 歌ネット](https://www.uta-net.com/song/20126){:target="_blank"}
-* [wonder land Lyrics \| GARNET CROW music diary](https://mistydew.github.io/gc/lyrics/original/wonder%20land.html){:target="_blank"}

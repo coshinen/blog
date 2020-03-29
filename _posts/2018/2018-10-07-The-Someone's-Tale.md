@@ -8,7 +8,7 @@ categories: 译文集
 tags: ガネクロ Lyrics
 excerpt: まっすぐな思いはまっすぐに伝わるの？唐突な青空 遠ざかる飛行機。
 ---
-![GZCA-5251](/gc/assets/images/discography/album/GZCA-5251.jpg){:.border}
+![GZCA-5251](https://crowsub.github.io/assets/images/discography/album/GZCA-5251.jpg){:.border}
 
 ## The Someone's Tale | 某人的故事
 
@@ -81,4 +81,3 @@ excerpt: まっすぐな思いはまっすぐに伝わるの？唐突な青空 �
 
 * [GARNET CROW official website : ガーネットクロウ オフィシャルサイト](http://www.garnetcrow.com){:target="_blank"}
 * [GARNET CROW The Someone's Tale 歌詞 - 歌ネット](https://www.uta-net.com/song/143806){:target="_blank"}
-* [The Someone's Tale Lyrics \| GARNET CROW music diary](https://mistydew.github.io/gc/lyrics/original/The%20Someone's%20Tale.html){:target="_blank"}

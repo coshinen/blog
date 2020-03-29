@@ -8,7 +8,7 @@ categories: 译文集
 tags: ガネクロ Lyrics
 excerpt: 気づけば温もり求めて心が彷徨うことない？
 ---
-![GZCA-7006](/gc/assets/images/discography/single/GZCA-7006.jpg){:.border}
+![GZCA-7006](https://crowsub.github.io/assets/images/discography/single/GZCA-7006.jpg){:.border}
 
 ## Crier Girl & Crier Boy ~ice cold sky~ | 哭泣的女孩&男孩～冰冷的天空～
 
@@ -109,4 +109,3 @@ around the clook<br>
 
 * [GARNET CROW official website : ガーネットクロウ オフィシャルサイト](http://www.garnetcrow.com){:target="_blank"}
 * [GARNET CROW Crier Girl & Crier Boy 〜ice cold sky〜 歌詞 - 歌ネット](https://www.uta-net.com/song/20137){:target="_blank"}
-* [Crier Girl & Crier Boy 〜ice cold sky〜 Lyrics \| GARNET CROW music diary](https://mistydew.github.io/gc/lyrics/original/Crier%20Girl%20&%20Crier%20Boy%20〜ice%20cold%20sky〜.html){:target="_blank"}

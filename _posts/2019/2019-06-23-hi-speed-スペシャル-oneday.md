@@ -8,7 +8,7 @@ categories: 译文集
 tags: ガネクロ Lyrics
 excerpt: コーヒーは最初の一口、甘いケーキの端っこ、ポテトは揚げたてにして、おいしいトコは少しだけ。
 ---
-![GZCA-1050](/gc/assets/images/discography/single/GZCA-1050.jpg){:.border}
+![GZCA-1050](https://crowsub.github.io/assets/images/discography/single/GZCA-1050.jpg){:.border}
 
 ## hi-speed スペシャル oneday | 高速 特別的 一天
 
@@ -145,4 +145,3 @@ He is not trusted darling.
 
 * [GARNET CROW official website : ガーネットクロウ オフィシャルサイト](http://www.garnetcrow.com){:target="_blank"}
 * [GARNET CROW hi-speed スペシャル oneday 歌詞 - 歌ネット](https://www.uta-net.com/song/20133){:target="_blank"}
-* [hi-speed スペシャル oneday Lyrics \| GARNET CROW music diary](https://mistydew.github.io/gc/lyrics/original/hi-speed%20スペシャル%20oneday.html){:target="_blank"}

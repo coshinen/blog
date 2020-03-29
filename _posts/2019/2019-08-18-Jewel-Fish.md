@@ -8,7 +8,7 @@ categories: 译文集
 tags: ガネクロ Lyrics
 excerpt: 走り出したら通り雨、もう一休みしてる。待ちきれない君は飛び出して、振り返りもせずに。
 ---
-![GZCA-1072](/gc/assets/images/discography/single/GZCA-1072.jpg){:.border}
+![GZCA-1072](https://crowsub.github.io/assets/images/discography/single/GZCA-1072.jpg){:.border}
 
 ## Jewel Fish | 寶石魚
 
@@ -119,4 +119,3 @@ bury at sea for me
 
 * [GARNET CROW official website : ガーネットクロウ オフィシャルサイト](http://www.garnetcrow.com){:target="_blank"}
 * [GARNET CROW Jewel Fish 歌詞 - 歌ネット](https://www.uta-net.com/song/20144){:target="_blank"}
-* [Jewel Fish Lyrics \| GARNET CROW music diary](https://mistydew.github.io/gc/lyrics/original/Jewel%20Fish.html){:target="_blank"}

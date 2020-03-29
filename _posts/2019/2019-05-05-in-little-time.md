@@ -8,7 +8,7 @@ categories: 译文集
 tags: ガネクロ Lyrics
 excerpt: 十二月にしては暖かいこんな夜は、思いつきで出かけた。車の中でずっと手をつないで眠った、朝日が二人を起こすまで。
 ---
-![GZCA-1029](/gc/assets/images/discography/single/GZCA-1029.jpg){:.border}
+![GZCA-1029](https://crowsub.github.io/assets/images/discography/single/GZCA-1029.jpg){:.border}
 
 ## in little time | 短時間內
 
@@ -117,4 +117,3 @@ um- I have so little time×3
 
 * [GARNET CROW official website : ガーネットクロウ オフィシャルサイト](http://www.garnetcrow.com){:target="_blank"}
 * [GARNET CROW in little time 歌詞 - 歌ネット](https://www.uta-net.com/song/20143){:target="_blank"}
-* [in little time Lyrics \| GARNET CROW music diary](https://mistydew.github.io/gc/lyrics/original/in%20little%20time.html){:target="_blank"}

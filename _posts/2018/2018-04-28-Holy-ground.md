@@ -8,7 +8,7 @@ categories: 译文集
 tags: ガネクロ Lyrics
 excerpt: 君のいない未来が、ただ大きな闇にみえ。死んでしまえば生きなくていい。そんな事ばかり考えてた、穏やかな月明かりに。
 ---
-![GZCA-5013](/gc/assets/images/discography/album/GZCA-5013.jpg){:.border}
+![GZCA-5013](https://crowsub.github.io/assets/images/discography/album/GZCA-5013.jpg){:.border}
 
 ## Holy ground | 聖地
 
@@ -125,4 +125,3 @@ excerpt: 君のいない未来が、ただ大きな闇にみえ。死んでし�
 
 * [GARNET CROW official website : ガーネットクロウ オフィシャルサイト](http://www.garnetcrow.com){:target="_blank"}
 * [GARNET CROW Holy ground 歌詞 - 歌ネット](https://www.uta-net.com/song/20142){:target="_blank"}
-* [Holy ground Lyrics \| GARNET CROW music diary](https://mistydew.github.io/gc/lyrics/original/Holy%20ground.html){:target="_blank"}

@@ -8,7 +8,7 @@ categories: 译文集
 tags: ガネクロ Lyrics
 excerpt: Naked story yeah- 無防備でも飛び出したい、感じるまま stay yeah- We're born in this way.
 ---
-![GZCA-5013](/gc/assets/images/discography/album/GZCA-5013.jpg){:.border}
+![GZCA-5013](https://crowsub.github.io/assets/images/discography/album/GZCA-5013.jpg){:.border}
 
 ## Naked Story | 赤裸裸的故事
 
@@ -115,4 +115,3 @@ Naked story lai-la...<br>
 
 * [GARNET CROW official website : ガーネットクロウ オフィシャルサイト](http://www.garnetcrow.com){:target="_blank"}
 * [GARNET CROW Naked Story 歌詞 - 歌ネット](https://www.uta-net.com/song/20127){:target="_blank"}
-* [Naked Story Lyrics \| GARNET CROW music diary](https://mistydew.github.io/gc/lyrics/original/Naked%20Story.html){:target="_blank"}

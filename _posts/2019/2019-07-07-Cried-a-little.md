@@ -8,7 +8,7 @@ categories: 译文集
 tags: ガネクロ Lyrics
 excerpt: 弱い日差しが揺れるテーブルの上、開いた世界地図に、君のクセのある文字がまだ残る。ah- 現実かなぁ、、
 ---
-![GZCA-1029](/gc/assets/images/discography/single/GZCA-1029.jpg){:.border}
+![GZCA-1029](https://crowsub.github.io/assets/images/discography/single/GZCA-1029.jpg){:.border}
 
 ## Cried a little | 哭了會兒
 
@@ -115,4 +115,3 @@ Why 失去後才意識到<br>
 
 * [GARNET CROW official website : ガーネットクロウ オフィシャルサイト](http://www.garnetcrow.com){:target="_blank"}
 * [GARNET CROW Cried a little 歌詞 - 歌ネット](https://www.uta-net.com/song/20136){:target="_blank"}
-* [Cried a little Lyrics \| GARNET CROW music diary](https://mistydew.github.io/gc/lyrics/original/Cried%20a%20little.html){:target="_blank"}

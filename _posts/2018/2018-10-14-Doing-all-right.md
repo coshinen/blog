@@ -8,7 +8,7 @@ categories: 译文集
 tags: コナン ガネクロ Lyrics
 excerpt: Doing all right!かみしめた君の記憶 木漏れ日の匂い、置いてきた何かはもう 此処にはないけど。
 ---
-![GZCA-7141](/gc/assets/images/discography/single/GZCA-7141.jpg){:.border}
+![GZCA-7141](https://crowsub.github.io/assets/images/discography/single/GZCA-7141.jpg){:.border}
 
 ## Doing all right | 做好一切
 
@@ -99,4 +99,3 @@ Doing all right!
 
 * [GARNET CROW official website : ガーネットクロウ オフィシャルサイト](http://www.garnetcrow.com){:target="_blank"}
 * [GARNET CROW Doing all right 歌詞 - 歌ネット](https://www.uta-net.com/song/79833){:target="_blank"}
-* [Doing all right Lyrics \| GARNET CROW music diary](https://mistydew.github.io/gc/lyrics/original/Doing%20all%20right.html){:target="_blank"}

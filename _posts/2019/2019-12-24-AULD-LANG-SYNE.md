@@ -8,7 +8,7 @@ categories: 译文集
 tags: Lyrics
 excerpt: Should auld acquaintance be forgot, and never brought to mind? Should auld acquaintance be forgot, and days of auld lang syne?
 ---
-![GZCA-5229](/gc/assets/images/discography/other/GZCA-5229.jpg){:.border}
+![GZCA-5229](https://crowsub.github.io/assets/images/discography/other/GZCA-5229.jpg){:.border}
 
 ## AULD LANG SYNE | 逝去已久的日子
 
@@ -51,4 +51,5 @@ Auld Lang Syne 直譯為“old long since”或“days gone by”，大意為“
 
 ## 参考链接
 
-* [AULD LANG SYNE Lyrics \| GARNET CROW music diary](https://mistydew.github.io/gc/lyrics/featuring/AULD%20LANG%20SYNE.html){:target="_blank"}
+* [Auld Lang Syne - Wikipedia](https://en.wikipedia.org/wiki/Auld_Lang_Syne){:target="_blank"}
+* [Lea Michele – Auld Lang Syne Lyrics \| Genius Lyrics](https://genius.com/Lea-michele-auld-lang-syne-lyrics){:target="_blank"}

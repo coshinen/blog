@@ -8,7 +8,7 @@ categories: 译文集
 tags: ガネクロ Lyrics
 excerpt: close island、素早く暮れる空に、意味もなく胸が切なくなる。そんな季節、冷えてく体抱きしめてくれる、君の腕がまた恋しくなるから。
 ---
-![GZCA-1061](/gc/assets/images/discography/album/GZCA-1061.jpg){:.border}
+![GZCA-1061](https://crowsub.github.io/assets/images/discography/album/GZCA-1061.jpg){:.border}
 
 ## HAPPY DAYS? | 快樂的日子？
 
@@ -129,4 +129,3 @@ where do you go from it<br>
 
 * [GARNET CROW official website : ガーネットクロウ オフィシャルサイト](http://www.garnetcrow.com){:target="_blank"}
 * [GARNET CROW HAPPY DAYS? 歌詞 - 歌ネット](https://www.uta-net.com/song/20139){:target="_blank"}
-* [HAPPY DAYS? Lyrics \| GARNET CROW music diary](https://mistydew.github.io/gc/lyrics/original/HAPPY%20DAYS%3F.html){:target="_blank"}

@@ -8,7 +8,7 @@ categories: 译文集
 tags: ガネクロ Lyrics
 excerpt: ため息ひとつ落ちた週末の、どうしようもない感じ、絶望より深く堕ちてゆく 夜明け。
 ---
-![TCR-001](/gc/assets/images/discography/album/TCR-001.jpg){:.border}
+![TCR-001](https://crowsub.github.io/assets/images/discography/album/TCR-001.jpg){:.border}
 
 ## dreaming of love | 夢見愛情
 
@@ -137,4 +137,3 @@ I'm dreaming of love<br>
 
 * [GARNET CROW official website : ガーネットクロウ オフィシャルサイト](http://www.garnetcrow.com){:target="_blank"}
 * [GARNET CROW dreaming of love 歌詞 - 歌ネット](https://www.uta-net.com/song/20147){:target="_blank"}
-* [dreaming of love Lyrics \| GARNET CROW music diary](https://mistydew.github.io/gc/lyrics/original/dreaming%20of%20love.html){:target="_blank"}

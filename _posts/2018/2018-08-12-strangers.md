@@ -8,7 +8,7 @@ categories: 译文集
 tags: ガネクロ Lyrics
 excerpt: 緑揺れる午後の空、幾つ目の飛行機かな。遠く潮騒が届いて、客船が泊まった。
 ---
-![GZCA-5231](/gc/assets/images/discography/album/GZCA-5231.jpg){:.border}
+![GZCA-5231](https://crowsub.github.io/assets/images/discography/album/GZCA-5231.jpg){:.border}
 
 ## strangers | 異鄉人
 
@@ -105,4 +105,3 @@ strangers<br>
 
 * [GARNET CROW official website : ガーネットクロウ オフィシャルサイト](http://www.garnetcrow.com){:target="_blank"}
 * [GARNET CROW strangers 歌詞 - 歌ネット](https://www.uta-net.com/song/105961){:target="_blank"}
-* [strangers Lyrics \| GARNET CROW music diary](https://mistydew.github.io/gc/lyrics/original/strangers.html){:target="_blank"}

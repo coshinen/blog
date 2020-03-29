@@ -8,7 +8,7 @@ categories: 译文集
 tags: ガネクロ Lyrics
 excerpt: 暮れゆく空おセンチな気分。海辺のDrive、まだみたことのない場所へ、僕らを乗せて be high yeah、密やかに辿る道。
 ---
-![GZCA-5198](/gc/assets/images/discography/album/GZCA-5198.jpg){:.border}
+![GZCA-5198](https://crowsub.github.io/assets/images/discography/album/GZCA-5198.jpg){:.border}
 
 ## Fall in Life 〜Hallelujah〜 | 墜入生活～讚美上帝～
 
@@ -154,6 +154,5 @@ Hallelijah!
 
 * [GARNET CROW official website : ガーネットクロウ オフィシャルサイト](http://www.garnetcrow.com){:target="_blank"}
 * [GARNET CROW Fall in Life 〜Hallelujah〜 歌詞 - 歌ネット](https://www.uta-net.com/song/85218){:target="_blank"}
-* [Fall in Life 〜Hallelujah〜 Lyrics \| GARNET CROW music diary](https://mistydew.github.io/gc/lyrics/original/Fall%20in%20Life%20〜Hallelujah〜.html){:target="_blank"}
 * [「おセンチ」の意味や使い方 Weblio辞書](https://www.weblio.jp/content/おセンチ){:target="_blank"}
 * [Hallelujah (disambiguation) - Wikipedia](https://en.wikipedia.org/wiki/Hallelujah_(disambiguation)){:target="_blank"}

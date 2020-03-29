@@ -8,7 +8,7 @@ categories: 译文集
 tags: ガネクロ Lyrics
 excerpt: 離陸間近の午前1時5分 空を見上げていた。いつかまた会えるかなあ 何故かなあ、もう離れてしまったことばかりを思うこと止められず、心がきしんだ。
 ---
-![GZCA-5198](/gc/assets/images/discography/album/GZCA-5198.jpg){:.border}
+![GZCA-5198](https://crowsub.github.io/assets/images/discography/album/GZCA-5198.jpg){:.border}
 
 ## Hello Sadness | 你好悲傷
 
@@ -128,4 +128,3 @@ in silence
 
 * [GARNET CROW official website : ガーネットクロウ オフィシャルサイト](http://www.garnetcrow.com){:target="_blank"}
 * [GARNET CROW Hello Sadness 歌詞 - 歌ネット](https://www.uta-net.com/song/85223){:target="_blank"}
-* [Hello Sadness Lyrics \| GARNET CROW music diary](https://mistydew.github.io/gc/lyrics/original/Hello%20Sadness.html){:target="_blank"}
