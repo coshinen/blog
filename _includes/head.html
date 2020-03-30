@@ -4,7 +4,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>{% if page.url == "/" %}{{ site.title | append: " | " | append: site.root }}{% elsif page.url == site.about or page.url == site.booklog or page.url == site.quotes %}{{ page.title | append: " | " | append: site.root }}{% elsif page.url == site.blog %}{{ site.subtitle }}{% else %}{{ page.title | append: " | " | append: site.subtitle }}{% endif %}</title>
-    <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+    <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}Welcome to the {% if page.url == "/" or page.url == site.about or page.url == site.booklog or page.url == site.quotes %}{{ site.title }}{% else %}{{ site.subtitle }}{% endif %}! {{ site.description }} Copyright &copy;{{ site.time | date: " %Y " | append: site.root }}.{% endif %}">
 
     <link rel="stylesheet" href="/assets/css/main.css">
     <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.url }}">

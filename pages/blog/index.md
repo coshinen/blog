@@ -1,8 +1,6 @@
 ---
 layout: default
-title: mistydew's blog
 permalink: /blog/
-excerpt: Welcome to mistydew's blog!
 ---
 
 <div class="home-left">

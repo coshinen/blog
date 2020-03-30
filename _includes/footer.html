@@ -15,7 +15,7 @@
             </ul>
           </div>
           <div class="footer-col footer-col-3">
-            <p>{{ site.description }} Copyright &copy; {{ site.time | date: "%Y " | append: site.root }}.</p>
+            <p>Welcome to the {% if page.url == "/" or page.url == site.about or page.url == site.booklog or page.url == site.quotes %}{{ site.title }}{% else %}{{ site.subtitle }}{% endif %}! {{ site.description }} Copyright &copy;{{ site.time | date: " %Y " | append: site.root }}.</p>
           </div>
         </div>
       </div>
