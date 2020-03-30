@@ -14,11 +14,11 @@ $base-line-height: 1.5;
 
 $spacing-unit:     30px;
 
-$text-color:       #111; // kuro
-$background-color: #fff1e0; // #fdfdfd // shiro
-$brand-color:      #2a7ae2; // aoiro
+$text-color:       #111;
+$background-color: #fff1e0; // #fdfdfd
+$brand-color:      #2a7ae2;
 
-$garnet-color:     darken(#8B0000, 8%); // DarkRed
+$garnet-color:     darken(DarkRed, 8%);
 $grey-color:       #828282;
 $grey-color-light: lighten($grey-color, 40%);
 $grey-color-dark:  darken($grey-color, 25%);
@@ -27,7 +27,7 @@ $grey-color-dark:  darken($grey-color, 25%);
 $content-width:    1080px; // 800px
 
 $on-palm:          600px;
-$on-laptop:        880px; // 800px
+$on-laptop:        800px;
 
 
 

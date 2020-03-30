@@ -272,7 +272,7 @@
 @include media-query($on-palm) {
     .home-left, .home-right {
         float: none;
-        width: calc(100%);
+        width: 100%;
     }
 }
 
@@ -308,7 +308,7 @@ blockquote.contents {
 
 
 /**
- * Posts
+ * Post
  */
 .post-header {
     margin-bottom: $spacing-unit;
@@ -361,6 +361,6 @@ div.lyric-original, div.lyric-translation {
 @include media-query($on-palm) {
     div.lyric-original, div.lyric-translation {
         float: none;
-        width: calc(100%);
+        width: 100%;
     }
 }
