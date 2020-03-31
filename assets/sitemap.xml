@@ -15,7 +15,7 @@ permalink: /sitemap.xml
 <loc>{{ site.url | append: site.booklog }}</loc>
 </url>
 <url>
-<loc>{{ site.url | append: site.quote }}</loc>
+<loc>{{ site.url | append: site.quotes }}</loc>
 </url>
 <url>
 <loc>{{ site.url | append: site.blog }}</loc>

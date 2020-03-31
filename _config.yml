@@ -25,7 +25,7 @@ crow: "https://crowsub.github.io"
 # Site page baseurl
 about:   "/about.html"
 booklog: "/booklog.html"
-quote:   "/quote.html"
+quotes:  "/quotes.html"
 sitemap: "/sitemap.xml"
 
 # About page
