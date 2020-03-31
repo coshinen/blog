@@ -47,6 +47,6 @@ permalink: /blog/
   </blockquote>
   <blockquote id="archive">
     <h2>归档</h2>{% assign counts = null %}{% assign count = 1 %}{% for post in site.posts reversed %}{% assign year = post.date | date: '%Y' %}{% assign nyear = post.next.date | date: '%Y' %}{% if year != nyear %}{% assign years = years | append: year | append: ', ' %}{% assign counts = counts | append: count | append: ', ' %}{% assign count = 1 %}{% else %}{% assign count = count | plus: 1 %}{% endif %}{% endfor %}{% assign years = years | split: ', ' | reverse %}{% assign counts = counts | split: ', ' | reverse %}{% assign idx = 0 %}{% for year in years %}
-    <li><a href="{{ site.archive }}#{{ year }}">{{ year }}（{{ counts[idx] }}）</a></li>{% assign idx = idx | plus: 1 %}{% endfor %}
+    <li><a href="{{ site.archive }}#{{ year }}">{{ year }}</a>（{{ counts[idx] }}）</li>{% assign idx = idx | plus: 1 %}{% endfor %}
   </blockquote>
 </div>

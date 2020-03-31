@@ -25,7 +25,7 @@ excerpt: Blog archive.
 <blockquote id="archive">
   <h2>日期</h2>
 {% for year in years %}
-  <li><a href="#{{ year }}">{{ year }}（{{ counts[idx] }}）</a></li>
+  <li><a href="#{{ year }}">{{ year }}</a>（{{ counts[idx] }}）</li>
 {% assign idx = idx | plus: 1 %}
 {% endfor %}
 </blockquote>
