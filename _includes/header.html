@@ -1,7 +1,7 @@
     <header class="site-header">
       <div class="wrapper">
         {% if page.url == "/" or page.url == site.about or page.url == site.booklog or page.url == site.quotes %}<a class="site-title" href="/" title="平行宇宙">{{ site.title }}</a>{% else %}<a class="blog-title" href="{{ site.blog }}" title="袁子晨的网络日志">{{ site.subtitle }}</a>{% endif %}
-        <a class="page-link" href="{{ site.feed }}" title="订阅">{% include post/icon-rss.svg %}</a>
+        <a class="page-link" href="{{ site.feed }}" title="订阅">{% include icon/feed.svg %}</a>
         <nav class="site-nav">
           <a href="#" class="menu-icon">
             <svg viewBox="0 0 18 15">

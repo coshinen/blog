@@ -26,7 +26,7 @@ excerpt: Blog category.
 {% assign idx = 0 %}
 {% for category in site.categories %}
 <blockquote class="contents">
-  <h2 id="{{ category[0] }}">{{ category | first }}（{{ counts[idx] }}）<a href="#category" style="float:right;">{% include post/icon-chevron-up.svg %}</a></h2>
+  <h2 id="{{ category[0] }}">{{ category | first }}（{{ counts[idx] }}）<a href="#category" style="float:right;">{% include icon/chevron-up.svg %}</a></h2>
     {% assign idx = idx | plus: 1 %}
   <ul>
     {% for post in category.last %}

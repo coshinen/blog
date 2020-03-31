@@ -40,7 +40,7 @@ excerpt: Blog archive.
 </blockquote>
     {% endif %}
 <blockquote class="contents">
-  <h2 id="{{ post.date | date: '%Y' }}">{{ post.date | date: '%Y' }}（{{ counts[i] }}）<a href="#archive" style="float:right;">{% include post/icon-chevron-up.svg %}</a></h2>
+  <h2 id="{{ post.date | date: '%Y' }}">{{ post.date | date: '%Y' }}（{{ counts[i] }}）<a href="#archive" style="float:right;">{% include icon/chevron-up.svg %}</a></h2>
   <ul>
     {% assign i = i | plus: 1 %}
   {% endif %}

@@ -6,17 +6,17 @@ layout: default
           <header class="post-header">
             <h1 class="post-title" itemprop="name headline">{{ page.title }}<span>{% include share.html %}</span></h1>
             <p class="post-meta">
-              <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished"><abbr title="{{ page.date | date_to_xmlschema }}">{% include post/icon-calendar.html %}{{ page.date | date: "%b %-d, %Y" }}</abbr></time>
+              <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished"><abbr title="{{ page.date | date_to_xmlschema }}">{% include icon/calendar.html %}{{ page.date | date: "%b %-d, %Y" }}</abbr></time>
               <span>|</span>
-              {% if page.author %}<span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{% include post/icon-user-circle.html %}<a class="author" href="{{ site.url }}{{ site.about }}" title="{{ site.name }}">{{ page.author }}</a></span></span>{% endif %}
+              {% if page.author %}<span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{% include icon/user-circle.html %}<a class="author" href="{{ site.url }}{{ site.about }}" title="{{ site.name }}">{{ page.author }}</a></span></span>{% endif %}
               <span>|</span>
-              <span>{% include post/icon-edit.html %}{% assign count = page.content | strip_html | strip_newlines | remove: " " | size %}{% if count >= 1000 %}{% assign thousands = count | divided_by: 1000 %}{% assign hundreds = count | modulo: 1000 | divided_by: 100 %}{% assign tensones = count | modulo: 100 %}{% if hundreds == 0 %}{% if tensones >= 50 %}{{ thousands }}.{{ hundreds | plus: 1 }}{% else %}{{ thousands }}{% endif %}{% elsif hundreds == 9 %}{% if tensones >= 50 %}{{ thousands | plus: 1 }}{% else %}{{ thousands }}.{{ hundreds }}{% endif %}{% else %}{{ thousands }}.{% if tensones >= 50 %}{{ hundreds | plus: 1 }}{% else %}{{ hundreds }}{% endif %}{% endif %}k{% else %}{{ count }}{% endif %}</span>
+              <span>{% include icon/edit.html %}{% assign count = page.content | strip_html | strip_newlines | remove: " " | size %}{% if count >= 1000 %}{% assign thousands = count | divided_by: 1000 %}{% assign hundreds = count | modulo: 1000 | divided_by: 100 %}{% assign tensones = count | modulo: 100 %}{% if hundreds == 0 %}{% if tensones >= 50 %}{{ thousands }}.{{ hundreds | plus: 1 }}{% else %}{{ thousands }}{% endif %}{% elsif hundreds == 9 %}{% if tensones >= 50 %}{{ thousands | plus: 1 }}{% else %}{{ thousands }}.{{ hundreds }}{% endif %}{% else %}{{ thousands }}.{% if tensones >= 50 %}{{ hundreds | plus: 1 }}{% else %}{{ hundreds }}{% endif %}{% endif %}k{% else %}{{ count }}{% endif %}</span>
               <span>|</span>
-              <span>{% include post/icon-clock.html %}{{ page.content | strip_html | strip_newlines | remove: " " | size | divided_by: 350 | plus: 1 }}min</span>
+              <span>{% include icon/clock.html %}{{ page.content | strip_html | strip_newlines | remove: " " | size | divided_by: 350 | plus: 1 }}min</span>
               <span>|</span>
-              <span>{% include post/icon-tags.html %}{% for tag in page.tags %}<a class="tag" href="{{ site.tagcloud }}#{{ tag }}">{{ tag | append: " " }}</a>{% endfor %}</span>
+              <span>{% include icon/tags.html %}{% for tag in page.tags %}<a class="tag" href="{{ site.tagcloud }}#{{ tag }}">{{ tag | append: " " }}</a>{% endfor %}</span>
               <span>|</span>
-              <span>{% include post/icon-comments.html %}{% include commentslink.html %}</span>
+              <span>{% include icon/comments.html %}{% include commentslink.html %}</span>
             </p>
           </header>
           <div class="post-content" itemprop="articleBody">

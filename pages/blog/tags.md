@@ -52,7 +52,7 @@ excerpt: Blog tags.
 {% assign idx = 0 %}
 {% for tag in site.tags %}
 <blockquote>
-  <h2 id="{{ tag[0] }}">{{ tag | first }}（{{ counts[idx] }}）<a href="#tagcloud" style="float:right;">{% include post/icon-chevron-up.svg %}</a></h2>
+  <h2 id="{{ tag[0] }}">{{ tag | first }}（{{ counts[idx] }}）<a href="#tagcloud" style="float:right;">{% include icon/chevron-up.svg %}</a></h2>
     {% assign idx = idx | plus: 1 %}
   <ul>
     {% for post in tag.last %}
