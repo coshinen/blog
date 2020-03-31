@@ -4,16 +4,16 @@
 
 ## Todo
 
-- [ ] site: merge resume into about
 - [ ] site: replace Simple Jekyll Search with FlexSearch
 
 ## Timeline
 
-* 2020.03.29 [-] blog page: ~~comments, profile~~; [+] blog page: archive
+* 2020.04.01 [-] pages: ~~resume page~~
 
 <details>
 <summary>history</summary>
 
+* 2020.03.29 [-] blog page: ~~comments, profile~~; [+] blog page: archive
 * 2020.03.26 [+] blog page: category, tag cloud
 * 2020.03.24 [-] site: ~~Busuanzi analytics~~ (incompatible Safari); pages: ~~donate page~~
 * 2020.03.18 [-] home page: ~~Crypto Currencies Price Widget~~ (unnecessary); [+] home page: comments, profile
@@ -61,10 +61,10 @@
 * 2018.08.12 [+] pages: ~~donate page~~
 * 2018.08.10 [+] site: sitemap (~~jekyll-sitemap plugin~~); post: ~~IntenseDebate comments~~
 * 2018.08.08 [+] site: delimiter '|' in html head title; background-color
-* 2018.08.06 [+] pages: resume/CV (Curriculum Vitae) page
+* 2018.08.06 [+] pages: ~~resume page~~
 * 2018.08.02 [+] archive page: Google Custom Search; site: ~~Baidu Custom Search~~
-* 2018.08.01 [+] tags page: tag cloud
-* 2018.07.10 [+] pages: tags page
+* 2018.08.01 [+] tag page: tag cloud
+* 2018.07.10 [+] pages: tag page
 * 2018.07.03 [+] archive page: ~~GitHub Contribution~~
 * 2018.06.19 [+] post: word statistics and reading time
 * 2018.06.15 [+] site: ~~particle background~~
