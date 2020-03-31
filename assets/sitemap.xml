@@ -18,9 +18,6 @@ permalink: /sitemap.xml
 <loc>{{ site.url | append: site.quotes }}</loc>
 </url>
 <url>
-<loc>{{ site.url | append: site.resume }}</loc>
-</url>
-<url>
 <loc>{{ site.url | append: site.blog }}</loc>
 </url>
 <url>

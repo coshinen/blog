@@ -15,19 +15,17 @@ description: >- # this means to ignore newlines until "baseurl:"
   Powered by Jekyll. Hosted from GitHub.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://mistydew.github.io" # the base hostname & protocol for your site
-crow: "https://crowsub.github.io"
 
 # Site footer
 github: mistydew
 email: mistydew@qq.com
 gc: GC music diary
-cv: Curriculum Vitae
+crow: "https://crowsub.github.io"
 
 # Site page baseurl
 about:   "/about.html"
 booklog: "/booklog.html"
 quotes:  "/quotes.html"
-resume:  "/resume.html"
 sitemap: "/sitemap.xml"
 
 # About page
