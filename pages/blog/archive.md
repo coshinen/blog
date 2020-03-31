@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Archive
+title: "归档"
 permalink: /blog/archive.html
 excerpt: Blog archive.
 ---

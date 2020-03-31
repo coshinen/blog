@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Quotes
+title: "引言"
 permalink: /quotes.html
 excerpt: Here are my favorite quotes from someones that inspire me or make me laugh. I hope you enjoy them.
 ---

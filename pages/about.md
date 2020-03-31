@@ -1,6 +1,6 @@
 ---
 layout: page
-title: About
+title: "关于"
 permalink: /about.html
 excerpt: About parallel universe, me and contact information.
 ---

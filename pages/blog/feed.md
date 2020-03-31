@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "Feed me!"
+title: "Feed 订阅"
 permalink: /blog/feed.html
 excerpt: Subscribe me? Feed me!
 ---

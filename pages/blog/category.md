@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Category
+title: "分类"
 permalink: /blog/category.html
 excerpt: Blog category.
 ---
