@@ -25,7 +25,7 @@ crow: "https://crowsub.github.io"
 # Site page baseurl
 about:   "/about.html"
 booklog: "/booklog.html"
-quotes:  "/quotes.html"
+quote:   "/quote.html"
 sitemap: "/sitemap.xml"
 
 # About page
@@ -38,7 +38,7 @@ blog:     "/blog/"
 archive:  "/blog/archive.html"
 category: "/blog/category.html"
 feed:     "/blog/feed.html"
-tagcloud: "/blog/tags.html"
+tag:      "/blog/tag.html"
 atom:     "/blog/atom.xml"
 
 # Feed page

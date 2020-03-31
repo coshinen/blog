@@ -15,7 +15,7 @@ permalink: /sitemap.xml
 <loc>{{ site.url | append: site.booklog }}</loc>
 </url>
 <url>
-<loc>{{ site.url | append: site.quotes }}</loc>
+<loc>{{ site.url | append: site.quote }}</loc>
 </url>
 <url>
 <loc>{{ site.url | append: site.blog }}</loc>
@@ -30,7 +30,7 @@ permalink: /sitemap.xml
 <loc>{{ site.url | append: site.feed }}</loc>
 </url>
 <url>
-<loc>{{ site.url | append: site.tagcloud }}</loc>
+<loc>{{ site.url | append: site.tag }}</loc>
 </url>{% for post in site.posts reversed %}
 <url>
 <loc>{{ site.url | append: post.url | xml_escape }}</loc>

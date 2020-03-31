@@ -1,6 +1,6 @@
     <footer class="site-footer">
       <div class="wrapper">
-        <h2 class="footer-heading"><a href="{{ site.quotes }}">{{ site.quote }}</a></h2>
+        <h2 class="footer-heading"><a href="{{ site.quote }}">{{ site.quote }}</a></h2>
         <div class="footer-col-wrapper">
           <div class="footer-col footer-col-1">
             <ul class="contact-list">
@@ -15,7 +15,7 @@
             </ul>
           </div>
           <div class="footer-col footer-col-3">
-            <p>Welcome to the {% if page.url == "/" or page.url == site.about or page.url == site.booklog or page.url == site.quotes %}{{ site.title }}{% else %}{{ site.subtitle }}{% endif %}! {{ site.description }} Copyright &copy;{{ site.time | date: " %Y " | append: site.root }}.</p>
+            <p>Welcome to the {% if page.url == "/" or page.url == site.about or page.url == site.booklog or page.url == site.quote %}{{ site.title }}{% else %}{{ site.subtitle }}{% endif %}! {{ site.description }} Copyright &copy;{{ site.time | date: " %Y " | append: site.root }}.</p>
           </div>
         </div>
       </div>

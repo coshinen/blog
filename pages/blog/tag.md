@@ -1,8 +1,8 @@
 ---
 layout: page
 title: "标签"
-permalink: /blog/tags.html
-excerpt: Blog tags.
+permalink: /blog/tag.html
+excerpt: Blog tag.
 ---
 
 {% assign first = site.tags.first %}
