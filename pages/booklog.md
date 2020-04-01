@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Booklog
+title: "书单"
 permalink: /booklog.html
 excerpt: Here are some books I read.
 ---
