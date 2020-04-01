@@ -23,105 +23,41 @@
     }
 }
 
-.site-nav {
-    float: right;
-    line-height: 56px;
-
-    .menu-icon {
-        display: none;
-    }
-
-    .page-link {
-        color: $text-color;
-        line-height: $base-line-height;
-
-        // Gaps between nav items, but not on the last one
-        &:not(:last-child) {
-            margin-right: 20px;
-        }
-    }
-
-    @include media-query($on-palm) {
-        position: absolute;
-        top: 9px;
-        right: $spacing-unit / 2;
-        background-color: $background-color;
-        border: 1px solid $grey-color-light;
-        border-radius: 5px;
-        text-align: right;
-
-        .menu-icon {
-            display: block;
-            float: right;
-            width: 36px;
-            height: 26px;
-            line-height: 0;
-            padding-top: 10px;
-            text-align: center;
-
-            > svg {
-                width: 18px;
-                height: 15px;
-
-                path {
-                    fill: $grey-color-dark;
-                }
-            }
-        }
-
-        .trigger {
-            clear: both;
-            display: none;
-        }
-
-        &:hover .trigger {
-            display: block;
-            padding-bottom: 5px;
-        }
-
-        .page-link {
-            display: block;
-            padding: 5px 10px;
-
-            &:not(:last-child) {
-                margin-right: 0;
-            }
-            margin-left: 20px;
-        }
-    }
-}
-
 .site-search {
     float: right;
     line-height: 56px;
-    margin-right: 20px;
 
     .search-icon {
         display: none;
     }
 
+    input {
+        padding-left: 8px;
+    }
+
     #search-box .searchbox {
-        height: 24px;
-        font-size: 1em;
+        position: relative;
+        left: 38px;
+        height: 32px;
+        width: 256px;
+        font-size: 16px;
         border: 1px solid #d3d3d3;
         border-radius: 2px;
         background-color: transparent;
-        outline: none;
-        padding-left: .2em;
 	}
 
     #search-box .searchbox_submit {
         position: relative;
         top: 6px;
-        right: 32px;
-        outline: none;
 	}
 
     @include media-query($on-palm) {
         position: absolute;
         top: 9px;
-        right: 32px;
+        right: $spacing-unit / 2;
         background-color: transparent;
+        border: 1px solid $grey-color-light;
+        border-radius: 5px;
 
         .search-icon {
             display: block;
@@ -131,8 +67,6 @@
             line-height: 0;
             padding-top: 10px;
             text-align: center;
-            border: 1px solid $grey-color-light;
-            border-radius: 5px;
 
             > svg {
                 width: 18px;
