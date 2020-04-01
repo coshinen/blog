@@ -19,8 +19,6 @@ url: "https://mistydew.github.io" # the base hostname & protocol for your site
 # Site footer
 github: mistydew
 email: mistydew@qq.com
-gc: GC music diary
-crow: "https://crowsub.github.io"
 
 # Site page baseurl
 about:   "/about.html"
