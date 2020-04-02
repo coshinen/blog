@@ -1,20 +1,16 @@
-<!-- Google Custom Search - Start -->
-<script>
-  (function() {
-    var cx = '006876503075423847270:ocqjnw72zf4';
-    var gcse = document.createElement('script');
-    gcse.type = 'text/javascript';
-    gcse.async = true;
-    gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
-    var s = document.getElementsByTagName('script')[0];
-    s.parentNode.insertBefore(gcse, s);
-  })();
-</script>
-<gcse:search></gcse:search>
-<style>
-.gsc-control-cse {
-    border-color: #fff1e0;
-    background-color: #fff1e0;
-}
-</style>
-<!-- Google Custom Search - End -->
+        <div class="search-results">
+          <div id="results-container"></div>
+          <script src="/assets/js/simple-jekyll-search.min.js" type="text/javascript"></script>
+          <script type="text/javascript">
+            SimpleJekyllSearch({
+              searchInput: document.getElementById('search-input'),
+              resultsContainer: document.getElementById('results-container'),
+              json: '/search.json',
+              searchResultTemplate: '<li><a href="{url}">{title}</a></li>',
+              noResultsText: 'Oops, no relevant article.',
+              limit: 4,
+              fuzzy: false,
+              exclude: ['Now what?']
+            })
+          </script>
+        </div>

@@ -4,7 +4,7 @@ layout: default
 
         <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
           <header class="post-header">
-            <h1 class="post-title" itemprop="name headline">{{ page.title }}<span>{% include share.html %}</span></h1>
+            <h1 class="post-title" itemprop="name headline">{{ page.title }}<span>{% include post/share.html %}</span></h1>
             <p class="post-meta">
               <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished"><abbr title="{{ page.date | date_to_xmlschema }}">{% include icon/calendar.html %}{{ page.date | date: "%b %-d, %Y" }}</abbr></time>
               <span>|</span>
@@ -16,11 +16,11 @@ layout: default
               <span>|</span>
               <span>{% include icon/tags.html %}{% for tag in page.tags %}<a class="tag" href="{{ site.tag }}#{{ tag }}">{{ tag | append: " " }}</a>{% endfor %}</span>
               <span>|</span>
-              <span>{% include icon/comments.html %}{% include commentslink.html %}</span>
+              <span>{% include icon/comments.html %}{% include post/link.html %}</span>
             </p>
           </header>
           <div class="post-content" itemprop="articleBody">
 {{ content }}
           </div>
-{% include postinfo.html %}{% if page.comments == true %}{% include comments.html %}{% endif %}
+{% include post/info.html %}{% if page.comments == true %}{% include post/comments.html %}{% endif %}
         </article>
