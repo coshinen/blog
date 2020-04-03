@@ -8,11 +8,12 @@
 
 ## Timeline
 
-* 2020.04.01 [-] pages: ~~resume page~~
+* 2020.04.04 [-] archive page: ~~Google Custom Search Engine~~
 
 <details>
 <summary>history</summary>
 
+* 2020.04.01 [-] pages: ~~resume page~~
 * 2020.03.29 [-] blog page: ~~comments, profile~~; [+] blog page: archive
 * 2020.03.26 [+] blog page: category, tag cloud
 * 2020.03.24 [-] site: ~~Busuanzi analytics~~ (incompatible Safari); pages: ~~donate page~~
@@ -62,7 +63,7 @@
 * 2018.08.10 [+] site: sitemap (~~jekyll-sitemap plugin~~); post: ~~IntenseDebate comments~~
 * 2018.08.08 [+] site: delimiter '|' in html head title; background-color
 * 2018.08.06 [+] pages: ~~resume page~~
-* 2018.08.02 [+] archive page: Google Custom Search; site: ~~Baidu Custom Search~~
+* 2018.08.02 [+] archive page: ~~Google Custom Search Engine~~; site: ~~Baidu Search~~
 * 2018.08.01 [+] tag page: tag cloud
 * 2018.07.10 [+] pages: tag page
 * 2018.07.03 [+] archive page: ~~GitHub Contribution~~
@@ -86,10 +87,10 @@
 
 ## Dependencies
 
-* Hosted: [GitHub](https://github.com)
-* Powered: [GitHub Pages](https://pages.github.com), [Jekyll](http://www.jekyllrb.com)
+* Powered: [Jekyll](http://www.jekyllrb.com)
+* Hosted: [GitHub Pages](https://pages.github.com)
 * Analytics: [Google Analytics](https://analytics.google.com/analytics/web)
-* Site Search: [Google Custom Search Engine](https://cse.google.com), [DogeDoge](https://dogedoge.com), [Simple Jekyll Search](https://github.com/christian-fei/Simple-Jekyll-Search)
+* Site Search: [DogeDoge](https://dogedoge.com), [Simple Jekyll Search](https://github.com/christian-fei/Simple-Jekyll-Search)
 * Comments System: [IntenseDebate](https://intensedebate.com)
 * Shared Service: [AddToAny](https://www.addtoany.com)
 * 404 Page: [Tencent 404](https://www.qq.com/404)
