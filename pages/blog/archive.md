@@ -5,8 +5,6 @@ permalink: /blog/archive.html
 excerpt: Blog archive.
 ---
 
-{% include search.html %}
-
 {% assign count = 1 %}
 {% for post in site.posts reversed %}
   {% assign year = post.date | date: '%Y' %}
