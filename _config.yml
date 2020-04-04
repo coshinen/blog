@@ -36,7 +36,7 @@ blog:     "/blog/"
 archive:  "/blog/archive.html"
 category: "/blog/category.html"
 feed:     "/blog/feed.html"
-tag:      "/blog/tag.html"
+tag:      "/blog/tags.html"
 atom:     "/blog/atom.xml"
 
 # Feed page
