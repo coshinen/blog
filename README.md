@@ -64,8 +64,8 @@
 * 2018.08.08 [+] site: delimiter '|' in html head title; background-color
 * 2018.08.06 [+] pages: ~~resume page~~
 * 2018.08.02 [+] archive page: ~~Google Custom Search Engine~~; site: ~~Baidu Search~~
-* 2018.08.01 [+] tag page: tag cloud
-* 2018.07.10 [+] pages: tag page
+* 2018.08.01 [+] tags page: tag cloud
+* 2018.07.10 [+] pages: tags page
 * 2018.07.03 [+] archive page: ~~GitHub Contribution~~
 * 2018.06.19 [+] post: word statistics and reading time
 * 2018.06.15 [+] site: ~~particle background~~
