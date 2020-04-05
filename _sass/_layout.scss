@@ -210,8 +210,8 @@
     }
 }
 
-/* Archive, Category */
-.post-content blockquote#archive, .post-content blockquote#category {
+/* Archive, Category, Tags page */
+.post-content blockquote#archive, .post-content blockquote#category, .post-content blockquote#tagcloud {
     float: right;
     width: calc(22% - #{$spacing-unit});
 }
@@ -222,20 +222,9 @@ blockquote.contents {
 }
 
 @include media-query($on-palm) {
-    .post-content blockquote#archive, .post-content blockquote#category, blockquote.contents {
+    .post-content blockquote#archive, .post-content blockquote#category, .post-content blockquote#tagcloud, blockquote.contents {
         float: none;
         width: calc(100% - #{$spacing-unit});
-    }
-}
-
-/* Tag cloud */
-.post-content blockquote#tagcloud {
-    width: calc(100% - (#{$spacing-unit} * 16));
-}
-
-@include media-query($on-palm) {
-    .post-content blockquote#tagcloud {
-        width: calc(100% - (#{$spacing-unit} * 2));
     }
 }
 
