@@ -9,16 +9,16 @@ permalink: /blog/atom.xml
   <subtitle>{{ site.subtitle | xml_escape }}</subtitle>
   <updated>{{ site.time | date_to_xmlschema }}</updated>
   <id>tag:{{ site.url | uri_escape }}</id>
-  <link rel="alternate" type="text/html" href="{{ site.blog | prepend: site.url | uri_escape }}"/>
-  <link rel="self" type="application/atom+xml" href="{{ site.atom | prepend: site.url | uri_escape }}"/>
+  <link rel="alternate" type="text/html" href="{{ site.blog | absolute_url | uri_escape }}"/>
+  <link rel="self" type="application/atom+xml" href="{{ site.atom | absolute_url | uri_escape }}"/>
   <icon>/assets/images/favicon.ico</icon>
   <rights>Copyright (c) {{ site.time | date: "%Y" }}, {{ site.root | xml_escape }}</rights>
   <generator uri="https://jekyllrb.com" version="{{ jekyll.version }}">Jekyll v{{ jekyll.version }}</generator>
 {% for post in site.posts limit:7 %}
   <entry>
     <title>{{ post.title | xml_escape }}</title>
-    <link rel="alternate" type="text/html" href="{{ post.url | prepend: site.url | xml_escape }}"/>
-    <id>tag:{{ site.url }},{{ post.id | xml_escape }}</id>
+    <link rel="alternate" type="text/html" href="{{ post.url | absolute_url | xml_escape }}"/>
+    <id>tag:{{ site.url | uri_escape }},{{ post.id | xml_escape }}</id>
     <updated>{{ post.date | date_to_xmlschema }}</updated>
     <published>{{ post.date | date_to_xmlschema }}</published>
     <summary>{{ post.excerpt | xml_escape }}</summary>
@@ -27,14 +27,14 @@ permalink: /blog/atom.xml
       <uri>{{ site.url | uri_escape }}</uri>
       <email>{{ site.email }}</email>
     </author>
-    <content type="html" xml:lang="en" xml:base="{{ site.blog | prepend: site.url | uri_escape }}">
+    <content type="html" xml:lang="en" xml:base="{{ site.blog | absolute_url | uri_escape }}">
 {{ post.content | xml_escape }}
 &lt;h2&gt;文档信息&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;本文作者：&lt;/strong&gt;&lt;a href=&quot;{{ site.url }}{{ site.about }}&quot; target=&quot;_blank&quot;&gt;{{ site.root | xml_escape }}&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;本文作者：&lt;/strong&gt;&lt;a href=&quot;{{ site.about | absolute_url }}&quot; target=&quot;_blank&quot;&gt;{{ site.root | xml_escape }}&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;发表日期：&lt;/strong&gt;{{ post.date | date: "%Y年%m月%d日" }}&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;版权声明：&lt;/strong&gt;&lt;a href=&quot;http://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh&quot; target=&quot;_blank&quot;&gt;知识共享 署名-非商业性使用-禁止演绎 4.0 国际 许可协议&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;更多内容：&lt;/strong&gt;{% for category in post.categories %}&lt;a href=&quot;{{ site.category | prepend: site.url }}#{{ category }}&quot; target=&quot;_blank&quot;&gt;{{ category | append: " " }}&lt;/a&gt;{% endfor %}&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;更多内容：&lt;/strong&gt;{% for category in post.categories %}&lt;a href=&quot;{{ site.category | absolute_url }}#{{ category }}&quot; target=&quot;_blank&quot;&gt;{{ category | append: " " }}&lt;/a&gt;{% endfor %}&lt;/li&gt;
 &lt;/ul&gt;
     </content>
   </entry>

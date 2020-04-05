@@ -9,31 +9,31 @@ permalink: /sitemap.xml
 <loc>{{ site.url }}</loc>
 </url>
 <url>
-<loc>{{ site.url | append: site.about }}</loc>
+<loc>{{ site.about | absolute_url }}</loc>
 </url>
 <url>
-<loc>{{ site.url | append: site.booklog }}</loc>
+<loc>{{ site.booklog | absolute_url }}</loc>
 </url>
 <url>
-<loc>{{ site.url | append: site.quotes }}</loc>
+<loc>{{ site.quotes | absolute_url }}</loc>
 </url>
 <url>
-<loc>{{ site.url | append: site.blog }}</loc>
+<loc>{{ site.blog | absolute_url }}</loc>
 </url>
 <url>
-<loc>{{ site.url | append: site.archive }}</loc>
+<loc>{{ site.archive | absolute_url }}</loc>
 </url>
 <url>
-<loc>{{ site.url | append: site.category }}</loc>
+<loc>{{ site.category | absolute_url }}</loc>
 </url>
 <url>
-<loc>{{ site.url | append: site.feed }}</loc>
+<loc>{{ site.feed | absolute_url }}</loc>
 </url>
 <url>
-<loc>{{ site.url | append: site.tag }}</loc>
+<loc>{{ site.tag | absolute_url }}</loc>
 </url>{% for post in site.posts reversed %}
 <url>
-<loc>{{ site.url | append: post.url | xml_escape }}</loc>
+<loc>{{ post.url | absolute_url | xml_escape }}</loc>
 <lastmod>{{ post.date | date_to_xmlschema }}</lastmod>
 </url>{% endfor %}
 </urlset>

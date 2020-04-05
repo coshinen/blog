@@ -11,4 +11,4 @@ excerpt: Subscribe me? Feed me!
 > * [https://feeds.feedburner.com/{{ site.feedburner }}](https://feeds.feedburner.com/{{ site.feedburner }}){:target="_blank"}
 
 > 备用 Feed（托管于 GitHub）
-> * [{{ site.atom | prepend: site.url }}]({{ site.atom | prepend: site.url }})
+> * [{{ site.atom | absolute_url }}]({{ site.atom | absolute_url }})

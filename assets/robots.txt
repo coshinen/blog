@@ -18,4 +18,4 @@ Allow: /
 User-agent: *
 Disallow: /
 
-Sitemap: {{ site.sitemap | prepend: site.url }}
+Sitemap: {{ site.sitemap | absolute_url }}
