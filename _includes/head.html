@@ -6,7 +6,7 @@
     <title>{% if page.url == "/" %}{{ site.title | append: " | " | append: site.root }}{% elsif page.url == site.about or page.url == site.booklog or page.url == site.quotes %}{{ page.title | append: " | " | append: site.root }}{% elsif page.url == site.blog %}{{ site.subtitle }}{% else %}{{ page.title | append: " | " | append: site.subtitle }}{% endif %}</title>
     <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}Welcome to the {% if page.url == "/" %}{{ site.title }}{% else %}{{ site.subtitle }}{% endif %}! {{ site.description }} Copyright &copy;{{ site.time | date: " %Y " | append: site.root }}.{% endif %}">
 
-    <link rel="stylesheet" href="/assets/css/main.css">
+    <link rel="stylesheet" href="{{ "/assets/css/style.css" | relative_url }}">
     <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.url }}">
     <link rel="alternate" type="application/atom+xml" title="{{ site.title }}" href="{{ site.atom | prepend: site.url }}">
     <link rel="shortcut icon" href="/assets/images/favicon.ico">
