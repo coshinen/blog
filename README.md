@@ -8,11 +8,12 @@
 
 ## Timeline
 
-* 2020.04.04 [-] archive page: ~~Google Custom Search Engine~~
+* 2020.04.06 [+] site: SEO tag
 
 <details>
 <summary>history</summary>
 
+* 2020.04.04 [-] archive page: ~~Google Custom Search Engine~~
 * 2020.04.01 [-] pages: ~~resume page~~
 * 2020.03.29 [-] blog page: ~~comments, profile~~; [+] blog page: archive
 * 2020.03.26 [+] blog page: category, tag cloud
