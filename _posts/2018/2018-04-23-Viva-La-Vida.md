@@ -8,7 +8,7 @@ categories: 译文集
 tags: Lyrics
 excerpt: I used to rule the world. Seas would rise when I gave the word. Now in the morning I sleep alone. Sweep the streets I used to own.
 ---
-![Viva La Vida](/assets/images/cover/misc/Viva%20La%20Vida.jpg){:.border}
+![Viva La Vida](https://mistydew.github.io/assets/images/cover/misc/Viva%20La%20Vida.jpg){:.border}
 
 ## Viva La Vida | 生命萬歲
 

@@ -9,7 +9,7 @@ tags: UNIX/Linux CLI Terminal
 ---
 象征着开源的 Linux 吉祥物 tux (Torvalds UniX)。
 
-![tux](/assets/images/linux/tux.png)
+![tux](https://mistydew.github.io/assets/images/linux/tux.png)
 
 ## 查看目录下的内容 | list
 

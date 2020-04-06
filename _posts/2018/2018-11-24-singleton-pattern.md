@@ -24,7 +24,7 @@ tags: DP C/C++
 
 基础类图：
 
-![singleton](/assets/images/designpatterns/singleton.svg)
+![singleton](https://mistydew.github.io/assets/images/designpatterns/singleton.svg)
 
 ## 基础实现
 

@@ -9,7 +9,7 @@ tags: Vi/Vim CLI Terminal
 ---
 Vim(Vi IMproved)是 Vi 编辑器的升级版，在 UNIX/Linux 系统中作为“编辑器之神”与“神之编辑器” Emacs 并驾齐驱。
 
-![vi-emacs-learning-curves](/assets/images/vim/vi-emacs-learning-curves.jpg){:.border}
+![vi-emacs-learning-curves](https://mistydew.github.io/assets/images/vim/vi-emacs-learning-curves.jpg){:.border}
 
 （Vi/Vim 和 Emacs 的学习曲线：横坐标对应熟练度，纵坐标对应技能）
 
