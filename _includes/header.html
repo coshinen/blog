@@ -1,6 +1,6 @@
     <header class="site-header">
       <div class="wrapper">
-        {% if page.url == "/" or page.url == site.about or page.url == site.booklog or page.url == site.quotes %}<a class="site-title" href="/" title="平行宇宙">{{ site.title }}</a>{% else %}<a class="blog-title" href="{{ site.blog }}" title="袁子晨的网络日志">{{ site.subtitle }}</a>{% endif %}
+        {% if page.url == "/" or page.url == site.about or page.url == site.booklog or page.url == site.quotes %}<a class="site-title" href="/" title="{{ site.name }}">{{ site.title }}</a>{% else %}<a class="blog-title" href="{{ site.blog }}" title="{{ site.blogname }}">{{ site.subtitle }}</a>{% endif %}
         <a href="{{ site.feed }}" title="订阅">{% include icon/feed.svg %}</a>
         <nav class="site-search">
           <a href="#" class="search-icon">

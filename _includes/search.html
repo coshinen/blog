@@ -5,7 +5,7 @@
             SimpleJekyllSearch({
               searchInput: document.getElementById('search-input'),
               resultsContainer: document.getElementById('results-container'),
-              json: '/search.json',
+              json: '{{ site.search }}',
               searchResultTemplate: '<li><a href="{url}">{title}</a></li>',
               noResultsText: 'Oops, no relevant article.',
               limit: 4,

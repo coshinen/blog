@@ -6,32 +6,25 @@
 # 'jekyll serve'. If you change this file, please restart the server process.
 
 # Site settings
-name: 袁子晨
+author: 袁子晨
 root: mistydew
+name: 平行宇宙
 title: parallel universe
-quote: 無理は一番の退屈しのぎだ。
 subtitle: mistydew's blog
+blogname: 袁子晨的网络日志
 description: >- # this means to ignore newlines until "baseurl:"
   Powered by Jekyll. Hosted from GitHub.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://mistydew.github.io" # the base hostname & protocol for your site
-
-# Site footer
-github: mistydew
+quote: 無理は一番の退屈しのぎだ。
 email: mistydew@qq.com
 
-# Site page baseurl
-about:   "/about.html"
-booklog: "/booklog.html"
-quotes:  "/quotes.html"
-sitemap: "/sitemap.xml"
-
-# About page
-pgpkey: "/public_key.asc"
-fingerprint: 7752 D418 D94C 33FB 8F6F 9197 44D9 CCA7 F81A 1FB3
-btc: 1GC1iAZz9Wroy99bwJUzuLrqpmayUhjYbZ
-
-# Blog page baseurl
+# Pages baseurl
+about:    "/about.html"
+booklog:  "/booklog.html"
+quotes:   "/quotes.html"
+search:   "/search.json"
+sitemap:  "/sitemap.xml"
 blog:     "/blog/"
 archive:  "/blog/archive.html"
 category: "/blog/category.html"
@@ -39,33 +32,37 @@ feed:     "/blog/feed.html"
 tag:      "/blog/tags.html"
 atom:     "/blog/atom.xml"
 
-# Feed page
-feedburner: mistydew
+# About page
+pgpkey:      "/public_key.asc"
+fingerprint: 7752 D418 D94C 33FB 8F6F 9197 44D9 CCA7 F81A 1FB3
+bitcoinaddr: 1GC1iAZz9Wroy99bwJUzuLrqpmayUhjYbZ
 
 # Blog IntenseDebate
-site_id: 415414
+site_id:   415414
 site_acct: b051fd1ebb6d822f554a521d0827b1d8
 
 # Where things are
-source : .
+source      : .
 destination : ./_site
 layouts_dir : _layouts
-includes_dir : _includes
+includes_dir: _includes
+sass:
+    sass_dir: _sass
 
 # Handling Reading
-exclude: [LICENSE, README.md]
-encoding : "utf-8"
+exclude     : [LICENSE, README.md]
+encoding    : "utf-8"
 markdown_ext: "markdown,mkdown,mkdn,mkd,md" # no spaces
 
 # Filtering Content
 limit_posts: 0
-future: false
+future     : false
 
 # Conversion
-markdown: kramdown
-highlighter: rouge
+markdown         : kramdown
+highlighter      : rouge
 excerpt_separator: "\n\n"
-incremental: false
+incremental      : false
 
 # Serving
 port: 8000
@@ -73,4 +70,4 @@ host: 127.0.0.1
 
 # Outputting
 permalink: /blog/:year/:month/:title.html
-timezone: Asia/Shanghai # Beijing Time
+timezone : Asia/Shanghai # Beijing Time

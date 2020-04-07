@@ -8,7 +8,7 @@ layout: default
             <p class="post-meta">
               <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished"><abbr title="{{ page.date | date_to_xmlschema }}">{% include icon/calendar.html %}{{ page.date | date: "%b %-d, %Y" }}</abbr></time>
               <span>|</span>
-              {% if page.author %}<span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{% include icon/user.html %}<a class="author" href="{{ site.about }}" title="{{ site.name }}">{{ page.author }}</a></span></span>{% endif %}
+              {% if page.author %}<span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{% include icon/user.html %}<a class="author" href="{{ site.about }}" title="{{ site.author }}">{{ page.author }}</a></span></span>{% endif %}
               <span>|</span>
               <span>{% include icon/edit.html %}{% assign count = page.content | strip_html | strip_newlines | remove: " " | size %}{% if count >= 1000 %}{% assign thousands = count | divided_by: 1000 %}{% assign hundreds = count | modulo: 1000 | divided_by: 100 %}{% assign tensones = count | modulo: 100 %}{% if hundreds == 0 %}{% if tensones >= 50 %}{{ thousands }}.{{ hundreds | plus: 1 }}{% else %}{{ thousands }}{% endif %}{% elsif hundreds == 9 %}{% if tensones >= 50 %}{{ thousands | plus: 1 }}{% else %}{{ thousands }}.{{ hundreds }}{% endif %}{% else %}{{ thousands }}.{% if tensones >= 50 %}{{ hundreds | plus: 1 }}{% else %}{{ hundreds }}{% endif %}{% endif %}k{% else %}{{ count }}{% endif %}</span>
               <span>|</span>

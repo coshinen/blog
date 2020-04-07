@@ -10,7 +10,7 @@ The **parallel universe** is based on jekyll/minima.
 I'm **mistydew**.
 And I live in Mainland China now.
 
-You can follow my GitHub account {% include icon/github.html username=site.github %}.
+You can follow my GitHub account {% include icon/github.html username=site.root %}.
 
 Or subscribe my blog [feed]({{ site.feed }}) to get the latest post.
 
@@ -23,6 +23,4 @@ The fingerprint is: {{ site.fingerprint }}
 
 **Donate**
 
-{% if site.btc %}
-Bitcoin: {{ site.btc }}
-{% endif %}
+Bitcoin: {{ site.bitcoinaddr }}
