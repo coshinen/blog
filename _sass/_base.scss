@@ -8,6 +8,11 @@ dl, dd, ol, ul, figure {
   padding: 0;
 }
 
+/* Remove border-bottom dotted (for Google Chrome) */
+abbr {
+  text-decoration: none;
+}
+
 
 
 /**
@@ -218,22 +223,13 @@ div.home-right blockquote.profile, div.home-right blockquote#category, div.home-
 
 
 /**
- * Document information
+ * Post information
  */
 div.post-information {
   background-color: #eef;
   border: 0.2em solid #e0dfcc;
   border-radius: 0.8em;
   padding: 10px 10px;
-}
-
-
-
-/**
- * Remove abbr border-bottom dotted: Document information post-date
- */
-abbr {
-  text-decoration: none;
 }
 
 

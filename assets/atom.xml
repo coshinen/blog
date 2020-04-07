@@ -22,7 +22,7 @@ permalink: /blog/atom.xml
     <published>{{ post.date | date_to_xmlschema }}</published>
     <summary>{{ post.excerpt | xml_escape }}</summary>
     <author>
-      <name>{{ site.root | xml_escape }}</name>
+      <name>{{ site.author | xml_escape }}</name>
       <uri>{{ site.url | uri_escape }}</uri>
       <email>{{ site.email }}</email>
     </author>
@@ -31,7 +31,7 @@ permalink: /blog/atom.xml
 &lt;h2&gt;文档信息&lt;/h2&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;本文作者：&lt;/strong&gt;&lt;a href=&quot;{{ site.about | absolute_url }}&quot; target=&quot;_blank&quot;&gt;{{ site.root | xml_escape }}&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;本文作者：&lt;/strong&gt;&lt;a href=&quot;{{ site.about | absolute_url }}&quot; target=&quot;_blank&quot;&gt;{{ site.author | xml_escape }}&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;strong&gt;发表日期：&lt;/strong&gt;{{ post.date | date: "%Y年%m月%d日" }}&lt;/li&gt;
   &lt;li&gt;&lt;strong&gt;版权声明：&lt;/strong&gt;&lt;a href=&quot;http://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh&quot; target=&quot;_blank&quot;&gt;知识共享 署名-非商业性使用-禁止演绎 4.0 国际 许可协议&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;strong&gt;更多内容：&lt;/strong&gt;{% for category in post.categories %}&lt;a href=&quot;{{ site.category | absolute_url }}#{{ category }}&quot; target=&quot;_blank&quot;&gt;{{ category | append: " " }}&lt;/a&gt;{% endfor %}&lt;/li&gt;

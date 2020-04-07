@@ -10,8 +10,8 @@ author: 袁子晨
 root: mistydew
 name: 平行宇宙
 title: parallel universe
-subtitle: mistydew's blog
 blogname: 袁子晨的网络日志
+subtitle: mistydew's blog
 description: >- # this means to ignore newlines until "baseurl:"
   Powered by Jekyll. Hosted from GitHub.
 baseurl: "" # the subpath of your site, e.g. /blog
