@@ -1,6 +1,6 @@
     <header class="site-header">
       <div class="wrapper">
-        {% if page.url == "/" or page.url == site.about or page.url == site.booklog or page.url == site.quotes %}<a class="site-title" href="/" title="{{ site.name }}">{{ site.title }}</a>{% else %}<a class="blog-title" href="{{ site.blog }}" title="{{ site.blogname }}">{{ site.subtitle }}</a>{% endif %}
+        {% if page.url == "/" or page.url == site.about or page.url == site.booklog or page.url == site.quotes %}<a class="site-title" href="/" title="{{ site.name }}">{{ site.title }}</a>{% else %}<a class="site-title" href="{{ site.blog }}" title="{{ site.blogname }}">{{ site.subtitle }}</a>{% endif %}
         <a href="{{ site.feed }}" title="订阅">{% include icon/feed.svg %}</a>
         <nav class="site-search">
           <a href="#" class="search-icon">
@@ -9,7 +9,7 @@
             </svg>
           </a>
           <form class="cse-search-box" action="https://dogedoge.com/results" method="get" target="_blank">
-            <input id="search-input" type="text" name="origin" title="To search, start typing a word or phrase" placeholder="Now, what?" value>
+            <input id="search-input" type="text" name="origin" title="To search, start typing a word or phrase" placeholder="Now, what?" size="16" value>
             <input type="hidden" name="q" value>
             <input class="submit-button" type="image" src="/assets/images/search.svg" onclick="this.form.q.value = this.form.origin.value + ' site:mistydew.github.io'">
           </form>
