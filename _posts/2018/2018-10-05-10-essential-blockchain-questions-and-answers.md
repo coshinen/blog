@@ -4,7 +4,7 @@ title:  "10 个区块链的基础知识"
 date:   2018-10-05 09:23:37 +0800
 author: mistydew
 comments: true
-categories: 译文集 区块链
+category: 区块链
 tags: Translations Blockchain Bitcoin
 excerpt: 关于区块链的 10 个基础问答。
 ---

@@ -4,7 +4,7 @@ title:  "比特币 RPC 命令剖析 \"walletpassphrase\""
 date:   2018-09-25 15:47:22 +0800
 author: mistydew
 comments: true
-categories: 区块链
+category: 区块链
 tags: Blockchain Bitcoin bitcoin-cli
 excerpt: $ bitcoin-cli walletpassphrase "passphrase" timeout
 ---

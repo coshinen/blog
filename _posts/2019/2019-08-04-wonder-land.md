@@ -1,10 +1,10 @@
 ---
 layout: post
-title:  "GARNET CROW wonder land 歌詞翻訳"
+title:  "GARNET CROW wonder land 歌词翻译"
 date:   2019-08-04 20:01:01 +0800
 author: mistydew
 comments: true
-categories: 译文集
+category: 译文集
 tags: ガネクロ Lyrics
 excerpt: 雨上がりは ふと 空見上げる、何気ない仕草しみついた毎日。なんで迷子みたいな気持ち、君といても感じちゃうんだろう。
 ---

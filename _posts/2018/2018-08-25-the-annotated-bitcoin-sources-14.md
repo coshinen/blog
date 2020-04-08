@@ -4,7 +4,7 @@ title:  "比特币源码剖析（十四）"
 date:   2018-08-25 15:07:02 +0800
 author: mistydew
 comments: true
-categories: 区块链
+category: 区块链
 tags: Blockchain Bitcoin bitcoind
 ---
 上一篇分析了第七步加载区块链的详细过程，详见[比特币源码剖析（十三）](/blog/2018/08/the-annotated-bitcoin-sources-13.html)。

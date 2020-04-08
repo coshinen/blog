@@ -1,10 +1,10 @@
 ---
 layout: post
-title:  "Grouplove Tongue Tied 歌詞翻訳"
+title:  "Grouplove Tongue Tied 歌词翻译"
 date:   2019-03-24 20:11:09 +0800
 author: mistydew
 comments: true
-categories: 译文集
+category: 译文集
 tags: Lyrics
 excerpt: Take me to your best friend's house. Going around this roundabout, oh, yeah. Take me to your best friend's house. I loved you then and I love you now, oh, yeah.
 ---

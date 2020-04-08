@@ -1,10 +1,10 @@
 ---
 layout: post
-title:  "The Beach Boys Don't Worry Baby 歌詞翻訳"
+title:  "The Beach Boys Don't Worry Baby 歌词翻译"
 date:   2019-03-31 20:04:03 +0800
 author: mistydew
 comments: true
-categories: 译文集
+category: 译文集
 tags: Lyrics
 excerpt: Well its been building up inside of me. For oh I don't know how long. I don't know why. But I keep thinking. Something's bound to go wrong.
 ---

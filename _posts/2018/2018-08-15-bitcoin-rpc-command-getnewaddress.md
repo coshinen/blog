@@ -4,7 +4,7 @@ title:  "比特币 RPC 命令剖析 \"getnewaddress\""
 date:   2018-08-15 14:45:40 +0800
 author: mistydew
 comments: true
-categories: 区块链
+category: 区块链
 tags: Blockchain Bitcoin bitcoin-cli
 excerpt: $ bitcoin-cli getnewaddress ( "account" )
 ---

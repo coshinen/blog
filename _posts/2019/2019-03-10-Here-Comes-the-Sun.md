@@ -1,10 +1,10 @@
 ---
 layout: post
-title:  "The Beatles Here Comes the Sun 歌詞翻訳"
+title:  "The Beatles Here Comes the Sun 歌词翻译"
 date:   2019-03-10 20:09:09 +0800
 author: mistydew
 comments: true
-categories: 译文集
+category: 译文集
 tags: Lyrics
 excerpt: Here comes the sun, doo doo doo doo. Here comes the sun, and I say. It's all right.
 ---

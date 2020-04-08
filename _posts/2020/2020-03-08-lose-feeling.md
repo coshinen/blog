@@ -1,10 +1,10 @@
 ---
 layout: post
-title:  "GARNET CROW lose feeling 歌詞翻訳"
+title:  "GARNET CROW lose feeling 歌词翻译"
 date:   2020-03-08 20:04:01 +0800
 author: mistydew
 comments: true
-categories: 译文集
+category: 译文集
 tags: ガネクロ Lyrics
 excerpt: 君のいない 明日へ向かう 日々なら、すべてが もう… 暇つぶしのようで。
 ---

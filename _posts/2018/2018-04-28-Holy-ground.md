@@ -1,10 +1,10 @@
 ---
 layout: post
-title:  "GARNET CROW Holy ground 歌詞翻訳"
+title:  "GARNET CROW Holy ground 歌词翻译"
 date:   2018-04-28 20:02:04 +0800
 author: mistydew
 comments: true
-categories: 译文集
+category: 译文集
 tags: ガネクロ Lyrics
 excerpt: 君のいない未来が、ただ大きな闇にみえ。死んでしまえば生きなくていい。そんな事ばかり考えてた、穏やかな月明かりに。
 ---

@@ -4,7 +4,7 @@ title:  "libevent evhttp c/s"
 date:   2018-11-10 15:32:02 +0800
 author: mistydew
 comments: true
-categories: Libevent
+category: Libevent
 tags: C/C++ libevent evhttp
 excerpt: Libevent 提供了一个非常简单的事件驱动的 HTTP 服务器，可以嵌入到你的程序中并用来为 HTTP 请求提供服务。
 ---

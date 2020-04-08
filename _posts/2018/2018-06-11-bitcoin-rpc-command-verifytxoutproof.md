@@ -4,7 +4,7 @@ title:  "比特币 RPC 命令剖析 \"verifytxoutproof\""
 date:   2018-06-11 11:43:35 +0800
 author: mistydew
 comments: true
-categories: 区块链
+category: 区块链
 tags: Blockchain Bitcoin bitcoin-cli
 excerpt: $ bitcoin-cli verifytxoutproof "proof"
 ---

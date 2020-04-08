@@ -4,7 +4,7 @@ title:  "LeetCode 2. 两数相加 中等"
 date:   2019-12-14 14:58:13 +0800
 author: mistydew
 comments: true
-categories: 力扣题解
+category: 力扣题解
 tags: LeetCode
 excerpt: 给了两条**非空**链表，用于表示两个非负整数。数字以**倒序**的方式存储在链表中，每个节点保存**一位**数字。把两数之和保存在一条链表中并返回。
 ---

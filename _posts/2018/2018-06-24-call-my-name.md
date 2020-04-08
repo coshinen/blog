@@ -1,10 +1,10 @@
 ---
 layout: post
-title:  "GARNET CROW call my name 歌詞翻訳"
+title:  "GARNET CROW call my name 歌词翻译"
 date:   2018-06-24 20:01:08 +0800
 author: mistydew
 comments: true
-categories: 译文集
+category: 译文集
 tags: ガネクロ Lyrics
 excerpt: 白い壁と Rembrandt、いつまでも眺めていた、日曜の朝君とただ並んでた。開いた窓から差し込む光がほらそこに、ふと思い出したように call my name。
 ---

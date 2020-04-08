@@ -8,7 +8,7 @@ permalink: /
     <!-- This loops through the site posts -->{% for post in site.posts %}
     <li>
       <span class="post-meta"><abbr title="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%Y年%m月%d日 %H:%M" }}</abbr></span>
-      <span style="float:right;">分类：{% for category in post.categories %}<a class="category" href="{{ site.category }}#{{ category }}">{{ category | append: " " }}</a>{% endfor %}</span>
+      <span style="float:right;">分类：<a class="category" href="{{ site.category }}#{{ post.category }}">{{ post.category }}</a></span>
       <h2>
         <a class="post-link" href="{{ post.url }}">{{ post.title }}</a>
       </h2>

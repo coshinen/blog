@@ -1,10 +1,10 @@
 ---
 layout: post
-title:  "GARNET CROW Jewel Fish 歌詞翻訳"
+title:  "GARNET CROW Jewel Fish 歌词翻译"
 date:   2019-08-18 20:01:05 +0800
 author: mistydew
 comments: true
-categories: 译文集
+category: 译文集
 tags: ガネクロ Lyrics
 excerpt: 走り出したら通り雨、もう一休みしてる。待ちきれない君は飛び出して、振り返りもせずに。
 ---

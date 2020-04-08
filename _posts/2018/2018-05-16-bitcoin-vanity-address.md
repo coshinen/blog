@@ -4,7 +4,7 @@ title:  "比特币“靓号”地址"
 date:   2018-05-16 18:56:51 +0800
 author: mistydew
 comments: true
-categories: 区块链
+category: 区块链
 tags: Blockchain Bitcoin Address
 ---
 比特币“靓号”地址是拥有个性化（自定义）前缀的公钥地址。

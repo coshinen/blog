@@ -4,7 +4,7 @@ title:  "比特币源码剖析（三）"
 date:   2018-06-09 10:58:07 +0800
 author: mistydew
 comments: true
-categories: 区块链
+category: 区块链
 tags: Blockchain Bitcoin bitcoind
 ---
 上一篇分析了命令行参数解析以及帮助和版本信息的获取，详见[比特币源码剖析（二）](/blog/2018/06/the-annotated-bitcoin-sources-02.html)。

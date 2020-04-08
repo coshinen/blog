@@ -1,10 +1,10 @@
 ---
 layout: post
-title:  "GARNET CROW Timeless Sleep 歌詞翻訳"
+title:  "GARNET CROW Timeless Sleep 歌词翻译"
 date:   2018-08-05 20:01:11 +0800
 author: mistydew
 comments: true
-categories: 译文集
+category: 译文集
 tags: ガネクロ Lyrics
 excerpt: 君がいなくなってから、何度朝日迎えたかしれない。急に地平線をみたくなって ふらり、始発に飛び乗る。
 ---

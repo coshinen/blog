@@ -4,7 +4,7 @@ title:  "LeetCode 12. 整数转罗马数字 中等"
 date:   2020-02-22 20:23:04 +0800
 author: mistydew
 comments: true
-categories: 力扣题解
+category: 力扣题解
 tags: LeetCode
 excerpt: 把给定的整数转换为罗马数字（包含七种字符：`I`，`V`，`X`，`L`，`C`，`D`和`M`）。
 ---

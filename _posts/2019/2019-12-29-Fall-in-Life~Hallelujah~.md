@@ -1,10 +1,10 @@
 ---
 layout: post
-title:  "GARNET CROW Fall in Life 〜Hallelujah〜 歌詞翻訳"
+title:  "GARNET CROW Fall in Life 〜Hallelujah〜 歌词翻译"
 date:   2019-12-29 20:09:09 +0800
 author: mistydew
 comments: true
-categories: 译文集
+category: 译文集
 tags: ガネクロ Lyrics
 excerpt: 暮れゆく空おセンチな気分。海辺のDrive、まだみたことのない場所へ、僕らを乗せて be high yeah、密やかに辿る道。
 ---

@@ -1,10 +1,10 @@
 ---
 layout: post
-title:  "中村由利 Angels We Have Heard On High 歌詞翻訳"
+title:  "中村由利 Angels We Have Heard On High 歌词翻译"
 date:   2019-12-25 20:11:06 +0800
 author: mistydew
 comments: true
-categories: 译文集
+category: 译文集
 tags: Lyrics
 excerpt: Angels we have heard on high, sweetly singing o'er the plains, and the mountains in reply, echoing their joyous strains.
 ---

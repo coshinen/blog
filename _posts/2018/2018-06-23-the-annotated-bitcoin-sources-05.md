@@ -4,7 +4,7 @@ title:  "比特币源码剖析（五）"
 date:   2018-06-23 22:08:33 +0800
 author: mistydew
 comments: true
-categories: 区块链
+category: 区块链
 tags: Blockchain Bitcoin bitcoind
 ---
 上一篇分析了日志记录的初始化，参数交互的初始化，应用程序初始化真正入口的前两步：安装和参数交互，详见[比特币源码剖析（四）](/blog/2018/06/the-annotated-bitcoin-sources-04.html)。

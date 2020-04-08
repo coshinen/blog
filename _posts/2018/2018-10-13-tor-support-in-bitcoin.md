@@ -4,7 +4,7 @@ title:  "比特币中的洋葱路由"
 date:   2018-10-13 16:50:30 +0800
 author: mistydew
 comments: true
-categories: 译文集 区块链
+category: 区块链
 tags: Translations Blockchain Bitcoin Tor
 ---
 洋葱路由 Tor(The onion router) 是一个分布式的“洋葱”网络，它使追踪网络上任何一个对端节点变得更加困难。

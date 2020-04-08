@@ -1,10 +1,10 @@
 ---
 layout: post
-title:  "GARNET CROW Cried a little 歌詞翻訳"
+title:  "GARNET CROW Cried a little 歌词翻译"
 date:   2019-07-07 20:00:11 +0800
 author: mistydew
 comments: true
-categories: 译文集
+category: 译文集
 tags: ガネクロ Lyrics
 excerpt: 弱い日差しが揺れるテーブルの上、開いた世界地図に、君のクセのある文字がまだ残る。ah- 現実かなぁ、、
 ---

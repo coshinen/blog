@@ -4,7 +4,7 @@ title:  "比特币源码剖析—区块"
 date:   2018-04-26 21:02:10 +0800
 author: mistydew
 comments: true
-categories: 区块链
+category: 区块链
 tags: Blockchain Bitcoin Block
 ---
 交易数据永久记录在区块中。

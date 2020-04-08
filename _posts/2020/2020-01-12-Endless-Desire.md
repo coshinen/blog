@@ -1,10 +1,10 @@
 ---
 layout: post
-title:  "GARNET CROW Endless Desire 歌詞翻訳"
+title:  "GARNET CROW Endless Desire 歌词翻译"
 date:   2020-01-12 20:03:11 +0800
 author: mistydew
 comments: true
-categories: 译文集
+category: 译文集
 tags: ガネクロ Lyrics
 excerpt: そんなに移り気じゃヤダ、正直って便利な言い訳、多様して流れてゆく 生涯(ひととき)。
 ---

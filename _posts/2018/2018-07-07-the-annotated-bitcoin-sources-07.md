@@ -4,7 +4,7 @@ title:  "比特币源码剖析（七）"
 date:   2018-07-07 11:43:10 +0800
 author: mistydew
 comments: true
-categories: 区块链
+category: 区块链
 tags: Blockchain Bitcoin bitcoind
 ---
 上一篇分析了应用程序初始化中椭圆曲线初始化的详细过程，详见[比特币源码剖析（六）](/blog/2018/06/the-annotated-bitcoin-sources-06.html)。

@@ -4,7 +4,7 @@ title:  "LeetCode 1. 两数之和 简单"
 date:   2019-12-07 12:37:30 +0800
 author: mistydew
 comments: true
-categories: 力扣题解
+category: 力扣题解
 tags: LeetCode
 excerpt: 从一个整型数组中找出两个数，满足两数之和等于给定的目标值，并返回它们的下标。
 ---

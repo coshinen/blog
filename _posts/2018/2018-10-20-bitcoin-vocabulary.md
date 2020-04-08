@@ -4,7 +4,7 @@ title:  "一些你可能会听到的比特币术语"
 date:   2018-10-20 20:43:26 +0800
 author: mistydew
 comments: true
-categories: 译文集 区块链
+category: 区块链
 tags: Translations Blockchain Bitcoin
 ---
 比特币提供了一种全新的支付方式，因此你可能需要了解一些新词语。

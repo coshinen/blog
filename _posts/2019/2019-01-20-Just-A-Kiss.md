@@ -1,10 +1,10 @@
 ---
 layout: post
-title:  "Lady Antebellum Just A Kiss 歌詞翻訳"
+title:  "Lady Antebellum Just A Kiss 歌词翻译"
 date:   2019-01-20 20:11:09 +0800
 author: mistydew
 comments: true
-categories: 译文集
+category: 译文集
 tags: Lyrics
 excerpt: Lying here with you so close to me. It's hard to fight these feelings when it feels so hard to breathe. I'm caught up in this moment. I'm caught up in your smile.
 ---

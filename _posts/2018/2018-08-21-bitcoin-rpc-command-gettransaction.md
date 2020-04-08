@@ -4,7 +4,7 @@ title:  "比特币 RPC 命令剖析 \"gettransaction\""
 date:   2018-08-21 16:41:59 +0800
 author: mistydew
 comments: true
-categories: 区块链
+category: 区块链
 tags: Blockchain Bitcoin bitcoin-cli
 excerpt: $ bitcoin-cli gettransaction "txid" ( includeWatchonly )
 ---

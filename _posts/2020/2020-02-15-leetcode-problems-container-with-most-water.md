@@ -4,7 +4,7 @@ title:  "LeetCode 11. 盛水最多的容器 中等"
 date:   2020-02-15 21:45:18 +0800
 author: mistydew
 comments: true
-categories: 力扣题解
+category: 力扣题解
 tags: LeetCode
 excerpt: 给定 n (n >= 2) 个非负整数用于表示坐标系中垂线的高，在其中找出任意两条，使它们与 x 轴构成的容器可以容纳最多的水。
 ---

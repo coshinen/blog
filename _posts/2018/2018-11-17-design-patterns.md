@@ -4,7 +4,7 @@ title:  "设计模式"
 date:   2018-11-17 20:08:56 +0800
 author: mistydew
 comments: true
-categories: 设计模式
+category: 设计模式
 tags: DP C/C++
 ---
 设计模式是一套为增加代码可读性、可靠性、可复用性的代码设计模板。
@@ -52,4 +52,3 @@ tags: DP C/C++
 ## 参考链接
 
 * [Design Patterns - Wikipedia](https://en.wikipedia.org/wiki/Design_Patterns){:target="_blank"}
-* [mistydew/DesignPatterns](https://github.com/mistydew/DesignPatterns){:target="_blank"}

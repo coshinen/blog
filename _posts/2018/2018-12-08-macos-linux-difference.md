@@ -4,7 +4,7 @@ title:  "macOS 和 Linux 内核之间有什么不同？"
 date:   2018-12-08 15:46:38 +0800
 author: mistydew
 comments: true
-categories: 译文集
+category: 译文集
 tags: Translations macOS UNIX/Linux
 ---
 有些人可能会认为在 macOS 和 Linux 内核之间存在相似之处，因为它们可以处理类似的命令并运行类似的软件。

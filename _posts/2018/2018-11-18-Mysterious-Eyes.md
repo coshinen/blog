@@ -1,10 +1,10 @@
 ---
 layout: post
-title:  "GARNET CROW Mysterious Eyes 歌詞翻訳"
+title:  "GARNET CROW Mysterious Eyes 歌词翻译"
 date:   2018-11-18 20:00:03 +0800
 author: mistydew
 comments: true
-categories: 译文集
+category: 译文集
 tags: コナン ガネクロ Lyrics
 excerpt: 君と僕とは 別の人間(いきもの)だから、好みが違う 歩く速さも 想いの伝え方も。
 ---

@@ -1,10 +1,10 @@
 ---
 layout: post
-title:  "倉木麻衣・孫燕姿 Tonight, I feel close to you 歌詞翻訳"
+title:  "倉木麻衣・孫燕姿 Tonight, I feel close to you 歌词翻译"
 date:   2019-04-28 20:03:07 +0800
 author: mistydew
 comments: true
-categories: 译文集
+category: 译文集
 tags: Lyrics
 excerpt: Close my eyes and feel your mind. Time has passed. I walk like a shadow. Never knew. What I am going through. You touch my heart and take my breath away.
 ---

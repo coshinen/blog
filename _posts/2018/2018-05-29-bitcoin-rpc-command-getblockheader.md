@@ -4,7 +4,7 @@ title:  "比特币 RPC 命令剖析 \"getblockheader\""
 date:   2018-05-29 15:11:12 +0800
 author: mistydew
 comments: true
-categories: 区块链
+category: 区块链
 tags: Blockchain Bitcoin bitcoin-cli
 excerpt: $ bitcoin-cli getblockheader "hash" ( verbose )
 ---

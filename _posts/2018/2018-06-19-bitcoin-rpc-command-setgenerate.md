@@ -4,7 +4,7 @@ title:  "比特币 RPC 命令剖析 \"setgenerate\""
 date:   2018-06-19 10:19:21 +0800
 author: mistydew
 comments: true
-categories: 区块链
+category: 区块链
 tags: Blockchain Bitcoin bitcoin-cli
 excerpt: $ bitcoin-cli setgenerate generate ( genproclimit )
 ---

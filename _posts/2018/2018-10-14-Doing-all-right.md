@@ -1,10 +1,10 @@
 ---
 layout: post
-title:  "GARNET CROW Doing all right 歌詞翻訳"
+title:  "GARNET CROW Doing all right 歌词翻译"
 date:   2018-10-14 20:09:05 +0800
 author: mistydew
 comments: true
-categories: 译文集
+category: 译文集
 tags: コナン ガネクロ Lyrics
 excerpt: Doing all right!かみしめた君の記憶 木漏れ日の匂い、置いてきた何かはもう 此処にはないけど。
 ---

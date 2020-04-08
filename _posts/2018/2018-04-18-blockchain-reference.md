@@ -4,7 +4,7 @@ title:  "区块链比特币相关"
 date:   2018-04-18 20:23:17 +0800
 author: mistydew
 comments: true
-categories: 区块链
+category: 区块链
 tags: Blockchain Bitcoin
 stickie: true
 ---

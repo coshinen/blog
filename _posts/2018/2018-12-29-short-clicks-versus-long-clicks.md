@@ -4,7 +4,7 @@ title:  "短点击 vs. 长点击"
 date:   2018-12-29 14:30:23 +0800
 author: mistydew
 comments: true
-categories: 译文集
+category: 译文集
 tags: Translations SEO
 ---
 ![short-clicks-vs-long-clicks](https://mistydew.github.io/assets/images/translations/short-clicks-vs-long-clicks.png){:.border}<br>

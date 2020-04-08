@@ -4,7 +4,7 @@ title:  "比特币源码剖析（十二）"
 date:   2018-08-11 13:07:25 +0800
 author: mistydew
 comments: true
-categories: 区块链
+category: 区块链
 tags: Blockchain Bitcoin bitcoind
 ---
 上一篇分析了第五步验证钱包数据库的完整性的详细过程，详见[比特币源码剖析（十一）](/blog/2018/08/the-annotated-bitcoin-sources-11.html)。

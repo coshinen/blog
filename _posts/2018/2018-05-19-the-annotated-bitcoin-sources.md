@@ -4,7 +4,7 @@ title:  "比特币源码剖析（零）"
 date:   2018-05-19 14:52:16 +0800
 author: mistydew
 comments: true
-categories: 区块链
+category: 区块链
 tags: Blockchain Bitcoin bitcoind
 ---
 以 bitcoin v0.12.1 为例进行解读，这是官方内置挖矿功能的最后一个版本。

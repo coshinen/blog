@@ -1,10 +1,10 @@
 ---
 layout: post
-title:  "GARNET CROW Naked Story 歌詞翻訳"
+title:  "GARNET CROW Naked Story 歌词翻译"
 date:   2019-10-20 20:02:04 +0800
 author: mistydew
 comments: true
-categories: 译文集
+category: 译文集
 tags: ガネクロ Lyrics
 excerpt: Naked story yeah- 無防備でも飛び出したい、感じるまま stay yeah- We're born in this way.
 ---

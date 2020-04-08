@@ -4,7 +4,7 @@ title:  "比特币源码剖析（十）"
 date:   2018-07-28 10:30:02 +0800
 author: mistydew
 comments: true
-categories: 区块链
+category: 区块链
 tags: Blockchain Bitcoin bitcoind
 ---
 上一篇分析了应用程序初始化中初始化 HTTP 服务器的详细过程，详见[比特币源码剖析（九）](/blog/2018/07/the-annotated-bitcoin-sources-09.html)。

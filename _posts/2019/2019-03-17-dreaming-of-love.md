@@ -1,10 +1,10 @@
 ---
 layout: post
-title:  "GARNET CROW dreaming of love 歌詞翻訳"
+title:  "GARNET CROW dreaming of love 歌词翻译"
 date:   2019-03-17 20:39:12 +0800
 author: mistydew
 comments: true
-categories: 译文集
+category: 译文集
 tags: ガネクロ Lyrics
 excerpt: ため息ひとつ落ちた週末の、どうしようもない感じ、絶望より深く堕ちてゆく 夜明け。
 ---

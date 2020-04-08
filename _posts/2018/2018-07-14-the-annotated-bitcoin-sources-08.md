@@ -4,7 +4,7 @@ title:  "比特币源码剖析（八）"
 date:   2018-07-14 22:11:45 +0800
 author: mistydew
 comments: true
-categories: 区块链
+category: 区块链
 tags: Blockchain Bitcoin bitcoind
 ---
 上一篇分析了应用程序初始化中初始化完整性检查和数据目录锁的过程，详见[比特币源码剖析（七）](/blog/2018/07/the-annotated-bitcoin-sources-07.html)。

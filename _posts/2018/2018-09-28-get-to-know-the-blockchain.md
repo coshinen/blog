@@ -4,7 +4,7 @@ title:  "认识区块链"
 date:   2018-09-28 15:19:08 +0800
 author: mistydew
 comments: true
-categories: 译文集 区块链
+category: 区块链
 tags: Translations Blockchain
 ---
 我认为首先要澄清区块链实际上解决了什么问题。

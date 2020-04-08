@@ -4,7 +4,7 @@ title:  "比特币白皮书中英对照"
 date:   2018-04-20 09:07:06 +0800
 author: mistydew
 comments: true
-categories: 译文集 区块链
+category: 区块链
 tags: Translations Blockchain Bitcoin Whitepaper
 excerpt: 比特币：一种点对点的电子现金系统，一个电子现金的纯点对点版本允许在线支付从一方直接发送到另一方，而不通过一个金融机构。
 ---

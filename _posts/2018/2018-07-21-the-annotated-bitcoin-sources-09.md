@@ -4,7 +4,7 @@ title:  "比特币源码剖析（九）"
 date:   2018-07-21 23:05:28 +0800
 author: mistydew
 comments: true
-categories: 区块链
+category: 区块链
 tags: Blockchain Bitcoin bitcoind
 ---
 上一篇分析了应用程序初始化中创建脚本验证的线程函数和创建轻量级任务调度线程函数，详见[比特币源码剖析（八）](/blog/2018/07/the-annotated-bitcoin-sources-08.html)。

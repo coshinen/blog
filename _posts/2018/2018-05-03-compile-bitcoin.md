@@ -4,7 +4,7 @@ title:  "编译比特币源码"
 date:   2018-05-03 18:57:36 +0800
 author: mistydew
 comments: true
-categories: 区块链
+category: 区块链
 tags: Blockchain Bitcoin src-build
 ---
 在 macOS、UNIX/Linux 平台下构建比特币源码，得到对应版本的 bitcoind、bitcoin-cli、bitcoin-qt 等可执行文件。

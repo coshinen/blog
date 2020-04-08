@@ -1,10 +1,10 @@
 ---
 layout: post
-title:  "GARNET CROW Misty Mystery 歌詞翻訳"
+title:  "GARNET CROW Misty Mystery 歌词翻译"
 date:   2018-07-01 20:11:08 +0800
 author: mistydew
 comments: true
-categories: 译文集
+category: 译文集
 tags: コナン ガネクロ Lyrics
 excerpt: why 見えぬ明日へと、期待込め歩いてるの。まだ君を想う、途中みたいにざわめく。
 ---

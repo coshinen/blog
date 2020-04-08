@@ -4,7 +4,7 @@ title:  "比特币源码剖析（一）"
 date:   2018-05-26 10:06:52 +0800
 author: mistydew
 comments: true
-categories: 区块链
+category: 区块链
 tags: Blockchain Bitcoin bitcoind
 ---
 第一篇主要列出比特币核心服务程序 bitcoind 的启动流程及其入口函数，详见[比特币源码剖析](/blog/2018/05/the-annotated-bitcoin-sources-00.html)。

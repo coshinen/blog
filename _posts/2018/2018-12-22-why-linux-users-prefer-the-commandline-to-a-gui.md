@@ -4,7 +4,7 @@ title:  "为什么这么多 Linux 用户比起 GUI 更喜欢命令行？"
 date:   2018-12-22 16:13:39 +0800
 author: mistydew
 comments: true
-categories: 译文集
+category: 译文集
 tags: Translations UNIX/Linux CLI GUI
 ---
 为什么这么多 Linux 用户更喜欢 CLI 而非 GUI？
