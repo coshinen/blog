@@ -4,8 +4,7 @@ permalink: /blog/
 ---
 
 <div class="home-left">
-  <ul class="post-list">
-    <!-- This loops through the site posts for sticky -->{% for post in site.posts %}{% if post.stickie == true %}
+  <ul class="post-list">{% for post in site.posts %}{% if post.stickie == true %}
     <li>
       <span class="post-meta"><abbr title="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%Y年%m月%d日" }}</abbr>【置顶】</span>
       <span style="float:right;">分类：<a class="category" href="{{ site.category }}#{{ post.category }}">{{ post.category }}</a></span>
@@ -17,8 +16,7 @@ permalink: /blog/
       </div>
       <span><a class="readmore" href="{{ post.url }}">阅读全文 &raquo;</a></span>
     </li>{% endif %}{% endfor %}
-    <h2 class="page-heading">最新文章</h2>
-    <!-- This loops through the site posts -->{% assign idx = 0 %}{% assign maximum = 7 %}{% for post in site.posts %}{% if post.stickie == true %}{% continue %}{% else %}
+    <h2 class="page-heading">最新文章</h2>{% for post in site.posts limit:7 %}
     <li>
       <span class="post-meta"><abbr title="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%Y年%m月%d日" }}</abbr></span>
       <span style="float:right;">分类：<a class="category" href="{{ site.category }}#{{ post.category }}">{{ post.category }}</a></span>
@@ -29,7 +27,7 @@ permalink: /blog/
         {{ post.excerpt | markdownify }}
       </div>
       <span><a class="readmore" href="{{ post.url }}">阅读全文 &raquo;</a></span>
-    </li>{% assign idx = idx | plus: 1 %}{% if idx == maximum %}{% break %}{% endif %}{% endif %}{% endfor %}
+    </li>{% endfor %}
   </ul>
 </div>
 <div class="home-right">

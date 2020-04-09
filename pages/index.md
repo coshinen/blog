@@ -4,8 +4,7 @@ permalink: /
 ---
 
 <div class="home-left">
-  <ul class="post-list">
-    <!-- This loops through the site posts -->{% for post in site.posts %}
+  <ul class="post-list">{% for post in site.posts limit:1 %}
     <li>
       <span class="post-meta"><abbr title="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%Y年%m月%d日 %H:%M" }}</abbr></span>
       <span style="float:right;">分类：<a class="category" href="{{ site.category }}#{{ post.category }}">{{ post.category }}</a></span>
@@ -16,15 +15,14 @@ permalink: /
         {{ post.excerpt | markdownify }}
       </div>
       <span><a class="readmore" href="{{ post.url }}">阅读全文 &raquo;</a></span>
-    </li>{% break %}{% endfor %}
+    </li>{% endfor %}
   </ul>
   <h2 class="page-heading">最新文章</h2>
-  <ul class="post-list-more">
-    <!-- This loops through the site posts -->{% assign idx = 0 %}{% assign maximum = 7 %}{% for post in site.posts %}{% assign idx = idx | plus: 1 %}{% if idx == 1 %}{% continue %}{% endif %}
+  <ul class="post-list-more">{% for post in site.posts offset:1 limit:6 %}
     <li>
       <span><abbr title="{{ post.date | date_to_xmlschema }}">{{ post.date | date: '%Y年%m月%d日' }}</abbr> &raquo; </span>
       <a href="{{ post.url }}">{{ post.title }}</a>
-    </li>{% if idx == maximum %}{% break %}{% endif %}{% endfor %}
+    </li>{% endfor %}
     <li><a class="readmore" href="{{ site.blog }}">更多内容……</a></li>
   </ul>
 </div>
