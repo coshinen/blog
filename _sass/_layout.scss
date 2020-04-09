@@ -10,12 +10,12 @@
 }
 
 .site-title {
-  float: left;
-  font-size: 22px;
-  font-weight: normal;
+  @include relative-font-size(1.425);
+  font-weight: 300;
   letter-spacing: 0;
-  line-height: 56px;
   margin-bottom: 0;
+  float: left;
+  line-height: 56px;
 
   &,
   &:visited {
@@ -109,7 +109,7 @@
 }
 
 .footer-heading {
-  font-size: 18px;
+  @include relative-font-size(1.125);
   margin-bottom: $spacing-unit / 2;
 }
 
@@ -120,10 +120,9 @@
 }
 
 .footer-col-wrapper {
-  font-size: 15px;
+  @include relative-font-size(0.9375);
   color: $grey-color;
   margin-left: -$spacing-unit / 2;
-  @extend %clearfix;
 }
 
 .footer-col {
@@ -133,38 +132,32 @@
 }
 
 .footer-col-1 {
-  width: -webkit-calc(25% - (#{$spacing-unit} / 2));
-  width:         calc(25% - (#{$spacing-unit} / 2));
+  width: calc(25% - (#{$spacing-unit} / 2));
 }
 
 .footer-col-2 {
-  width: -webkit-calc(25% - (#{$spacing-unit} / 2));
-  width:         calc(25% - (#{$spacing-unit} / 2));
+  width: calc(25% - (#{$spacing-unit} / 2));
 }
 
 .footer-col-3 {
-  width: -webkit-calc(50% - (#{$spacing-unit} / 2));
-  width:         calc(50% - (#{$spacing-unit} / 2));
+  width: calc(50% - (#{$spacing-unit} / 2));
 }
 
 @include media-query($on-laptop) {
   .footer-col-1,
   .footer-col-2 {
-    width: -webkit-calc(50% - (#{$spacing-unit} / 2));
-    width:         calc(50% - (#{$spacing-unit} / 2));
+    width: calc(50% - (#{$spacing-unit} / 2));
   }
 
   .footer-col-3 {
-    width: -webkit-calc(100% - (#{$spacing-unit} / 2));
-    width:         calc(100% - (#{$spacing-unit} / 2));
+    width: calc(100% - (#{$spacing-unit} / 2));
   }
 }
 
 @include media-query($on-palm) {
   .footer-col {
     float: none;
-    width: -webkit-calc(100% - (#{$spacing-unit} / 2));
-    width:         calc(100% - (#{$spacing-unit} / 2));
+    width: calc(100% - (#{$spacing-unit} / 2));
   }
 }
 
@@ -175,10 +168,11 @@
  */
 .page-content {
   padding: $spacing-unit 0;
+  flex: 1 0 auto;
 }
 
 .page-heading {
-  font-size: 20px;
+  @include relative-font-size(1.225);
 }
 
 .post-list {
@@ -197,10 +191,10 @@
 
 .post-link {
   display: block;
-  font-size: 24px;
+  @include relative-font-size(1.5);
 }
 
-/* Home page */
+// Home page
 .home-left {
   float: left;
   width: calc(68% - (#{$spacing-unit} / 2));
@@ -212,25 +206,31 @@
 }
 
 @include media-query($on-palm) {
-  .home-left, .home-right {
+  .home-left,
+  .home-right {
     float: none;
     width: 100%;
   }
 }
 
-/* Archive, Category, Tags page */
-.post-content blockquote#archive, .post-content blockquote#category, .post-content blockquote#tagcloud {
+// Archive, Category and Tags page
+article blockquote#archive,
+article blockquote#category,
+article blockquote#tagcloud {
   float: right;
   width: calc(22% - #{$spacing-unit});
 }
 
-blockquote.contents {
+article blockquote.contents {
   float: left;
   width: calc(78% - #{$spacing-unit});
 }
 
 @include media-query($on-palm) {
-  .post-content blockquote#archive, .post-content blockquote#category, .post-content blockquote#tagcloud, blockquote.contents {
+  article blockquote#archive,
+  article blockquote#category,
+  article blockquote#tagcloud,
+  article blockquote.contents {
     float: none;
     width: calc(100% - #{$spacing-unit});
   }
@@ -239,19 +239,19 @@ blockquote.contents {
 
 
 /**
- * Post
+ * Posts
  */
 .post-header {
   margin-bottom: $spacing-unit;
 }
 
 .post-title {
-  font-size: 42px;
+  @include relative-font-size(2.625);
   letter-spacing: 0;
-  line-height: 1;
+  line-height: 1.15;
 
   @include media-query($on-laptop) {
-    font-size: 36px;
+    @include relative-font-size(2.625);
   }
 }
 
@@ -259,38 +259,40 @@ blockquote.contents {
   margin-bottom: $spacing-unit;
 
   h2 {
-    font-size: 32px;
+    @include relative-font-size(1.75);
 
     @include media-query($on-laptop) {
-      font-size: 28px;
+      @include relative-font-size(2);
     }
   }
 
   h3 {
-    font-size: 26px;
+    @include relative-font-size(1.375);
 
     @include media-query($on-laptop) {
-      font-size: 22px;
+      @include relative-font-size(1.625);
     }
   }
 
   h4 {
-    font-size: 20px;
+    @include relative-font-size(1.25);
 
     @include media-query($on-laptop) {
-      font-size: 18px;
+      @include relative-font-size(1.5);
     }
   }
 }
 
-/* Lyrics */
-div.lyric-original, div.lyric-translation {
+// Lyrics
+.lyric-original,
+.lyric-translation {
   float: left;
   width: 50%;
 }
 
 @include media-query($on-palm) {
-  div.lyric-original, div.lyric-translation {
+  .lyric-original,
+  .lyric-translation {
     float: none;
     width: 100%;
   }

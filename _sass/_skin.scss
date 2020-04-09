@@ -1,14 +1,28 @@
-/**
- * Syntax highlighting styles
- */
+@charset "utf-8";
+
+$brand-color:           #2a7ae2 !default;
+$brand-color-light:     lighten($brand-color, 40%) !default;
+
+$text-color:            #111 !default;
+$background-color:      #fff1e0 !default;
+$code-background-color: #f7f2f0 !default;
+
+$garnet-color:          darken(DarkRed, 8%) !default;
+
+$grey-color:            #828282 !default;
+$grey-color-light:      lighten($grey-color, 40%) !default;
+$grey-color-dark:       darken($grey-color, 25%) !default;
+
+$table-text-color:      lighten($text-color, 18%) !default;
+$table-zebra-color:     lighten($brand-color, 46%) !default;
+$table-header-bg-color: lighten($brand-color, 43%) !default;
+$table-header-border:   lighten($brand-color, 36%) !default;
+$table-border-color:    $brand-color-light !default;
+
+// Syntax highlighting styles
+// --------------------------
+
 .highlight {
-  background: #fff; // White
-  @extend %vertical-rhythm;
-
-  .highlighter-rouge & {
-    background: #f7f2f0; // #eef
-  }
-
   .c     { color: #998; font-style: italic } // Comment
   .err   { color: #a61717; background-color: #e3d2d2 } // Error
   .k     { font-weight: bold } // Keyword

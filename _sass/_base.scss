@@ -1,3 +1,7 @@
+html {
+  font-size: $base-font-size;
+}
+
 /**
  * Reset some basic elements
  */
@@ -8,8 +12,8 @@ dl, dd, ol, ul, figure {
   padding: 0;
 }
 
-/* Remove border-bottom dotted (for Google Chrome) */
 abbr {
+  // Remove border-bottom dotted (for Google Chrome)
   text-decoration: none;
 }
 
@@ -24,37 +28,14 @@ body {
   background-color: $background-color;
   -webkit-text-size-adjust: 100%;
   -webkit-font-feature-settings: "kern" 1;
-  -moz-font-feature-settings: "kern" 1;
-  -o-font-feature-settings: "kern" 1;
-  font-feature-settings: "kern" 1;
+     -moz-font-feature-settings: "kern" 1;
+       -o-font-feature-settings: "kern" 1;
+          font-feature-settings: "kern" 1;
   font-kerning: normal;
-}
-
-
-
-/**
- * Border-bottom
- */
-h1, h2, h3, h4 {
-  color: #000;
-  border-bottom: 1px solid #d3d3d3;
-}
-
-
-
-/**
- * Font: site-title
- */
-@font-face {
-  font-family: 'Underwater Love';
-  font-style: normal;
-  font-weight: 400;
-  font-display: fallback;src: local('Underwater Love'), url(/assets/font/underwaterlove.woff2) format('woff2');
-}
-
-.site-title {
-  font-family: 'Underwater Love', sans-serif;
-  font-display: fallback;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  overflow-wrap: break-word;
 }
 
 
@@ -67,6 +48,11 @@ p, blockquote, pre,
 ul, ol, dl, figure,
 %vertical-rhythm {
   margin-bottom: $spacing-unit / 2;
+}
+
+hr {
+  margin-top: $spacing-unit;
+  margin-bottom: $spacing-unit;
 }
 
 
@@ -130,20 +116,19 @@ h1, h2, h3, h4, h5, h6 {
 
 
 /**
- * Links: blue, gray
+ * Links
  */
 a {
   color: darken($brand-color, 20%);
   text-decoration: none;
 
   &:hover {
-    color: darken($grey-color, 20%); // $text-color
-    text-decoration: none; // underline
+    color: $grey-color-dark;
+    text-decoration: none;
   }
 }
 
-/* header, blog page profile title: gray, garnet */
-header.site-header a, blockquote.profile h2 a {
+a.site-title {
   color: $grey-color-dark;
 
   &:hover {
@@ -151,8 +136,8 @@ header.site-header a, blockquote.profile h2 a {
   }
 }
 
-/* footer, home page post title: black, garnet */
-footer.site-footer a, a.post-link {
+footer a,
+a.post-link {
   color: $text-color;
 
   &:hover {
@@ -160,49 +145,44 @@ footer.site-footer a, a.post-link {
   }
 }
 
-/* archive, category, tagcloud: black (underline) */
-blockquote#archive a, blockquote#category a, blockquote#tagcloud a {
-  color: $text-color;
-  text-decoration: underline;
-}
-
-/* post attribute: garnet, gray */
-a.category, a.readmore, a.tag, a.author, a.license, blockquote.profile a {
-  color: $garnet-color;
-
-  &:hover {
-    color: darken($grey-color, 20%);
-  }
-}
-
-/* post content: black (underline), gray (underline) */
-article.post div.post-content a {
+blockquote#archive a,
+blockquote#category a,
+blockquote#tagcloud a {
   color: $text-color;
   text-decoration: underline;
 
   &:hover {
-    color: darken($grey-color, 20%);
+    color: $garnet-color;
     text-decoration: underline;
   }
 }
 
-/* post blockquote: black (dotted), garnet (solid) */
-article.post div.post-content blockquote a {
-  color: $text-color;
-  text-decoration: none;
-  border-bottom: 1px dotted;
+a.category,
+a.readmore,
+a.tag,
+a.author,
+a.license {
+  color: $garnet-color;
 
   &:hover {
-    color: $garnet-color;
-    text-decoration: none;
-    border-bottom: 1px solid;
+    color: $grey-color-dark;
+  }
+}
+
+article.post .post-content a {
+  color: $text-color;
+  text-decoration: underline;
+
+  &:hover {
+    color: $grey-color-dark;
+    text-decoration: underline;
   }
 }
 
 
 
 /**
- * Blockquote
+ * Blockquotes
  */
 blockquote {
   background-color: #f5f2f0;
@@ -215,21 +195,9 @@ blockquote {
   }
 }
 
-div.home-right blockquote.profile, div.home-right blockquote#category, div.home-right blockquote#tagcloud, div.home-right blockquote#archive {
+.home-right blockquote {
   background-color: transparent;
   border: 2px solid #e0dfcc;
-}
-
-
-
-/**
- * Post information
- */
-div.post-information {
-  background-color: #eef;
-  border: 0.2em solid #e0dfcc;
-  border-radius: 0.8em;
-  padding: 10px 10px;
 }
 
 
@@ -239,10 +207,11 @@ div.post-information {
  */
 pre,
 code {
-  font-size: 15px;
+  font-family: $code-font-family;
+  font-size: 0.9375em;
   border: 1px solid $grey-color-light;
   border-radius: 3px;
-  background-color: #f7f2f0; // #eef
+  background-color: $code-background-color;
 }
 
 code {
@@ -260,14 +229,23 @@ pre {
   }
 }
 
+.highlight {
+  border-radius: 3px;
+  background: $code-background-color;
+  @extend %vertical-rhythm;
+
+  .highlighter-rouge & {
+    background: $code-background-color;
+  }
+}
+
 
 
 /**
  * Wrapper
  */
 .wrapper {
-  max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit} * 2));
-  max-width:         calc(#{$content-width} - (#{$spacing-unit} * 2));
+  max-width: calc(#{$content-width} - (#{$spacing-unit} * 2));
   margin-right: auto;
   margin-left: auto;
   padding-right: $spacing-unit;
@@ -275,8 +253,7 @@ pre {
   @extend %clearfix;
 
   @include media-query($on-laptop) {
-    max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit}));
-    max-width:         calc(#{$content-width} - (#{$spacing-unit}));
+    max-width: calc(#{$content-width} - (#{$spacing-unit}));
     padding-right: $spacing-unit / 2;
     padding-left: $spacing-unit / 2;
   }
@@ -287,13 +264,10 @@ pre {
 /**
  * Clearfix
  */
-%clearfix {
-
-  &:after {
-    content: "";
-    display: table;
-    clear: both;
-  }
+%clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
 }
 
 
@@ -304,10 +278,10 @@ pre {
 .icon {
 
   > svg {
-    display: inline-block;
     width: 16px;
     height: 16px;
-    vertical-align: middle;
+    display: inline-block;
+    vertical-align: text-bottom;
 
     path {
       fill: $grey-color;
@@ -318,10 +292,74 @@ pre {
 
 
 /**
- * Table
+ * Tables
  */
-table, th, article.post td {
+table {
+  margin-bottom: $spacing-unit;
+  width: 100%;
+  text-align: $table-text-align;
+  color: $table-text-color;
   border-collapse: collapse;
-  border: 1px solid black;
-  padding: 2px;
+  border: 1px solid $table-border-color;
+  tr {
+    &:nth-child(even) {
+      background-color: $table-zebra-color;
+    }
+  }
+  th, td {
+    padding: ($spacing-unit / 3) ($spacing-unit / 2);
+  }
+  th {
+    background-color: $table-header-bg-color;
+    border: 1px solid $table-header-border;
+  }
+  td {
+    border: 1px solid $table-border-color;
+  }
+
+  @include media-query($on-laptop) {
+    display: block;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+            -ms-overflow-style: -ms-autohiding-scrollbar;
+  }
+}
+
+
+
+/**
+ * Site-title font
+ */
+@font-face {
+  font-family: 'Underwater Love';
+  font-weight: 400;
+  font-style: normal;
+  src: url(/assets/font/underwaterlove.woff2);
+  font-display: fallback;
+}
+
+.site-title {
+  font-family: 'Underwater Love', sans-serif;
+}
+
+
+
+/**
+ * Border-bottom
+ */
+h1, h2, h3, h4 {
+  color: #000;
+  border-bottom: 1px solid #d3d3d3;
+}
+
+
+
+/**
+ * Post information
+ */
+div.post-information {
+  background-color: #eef;
+  border: 0.2em solid #e0dfcc;
+  border-radius: 0.8em;
+  padding: 10px 10px;
 }
