@@ -10,6 +10,7 @@
 }
 
 .site-title {
+  font-family: 'Underwater Love', $base-font-family;
   @include relative-font-size(1.425);
   font-weight: 300;
   letter-spacing: 0;
@@ -17,9 +18,12 @@
   float: left;
   line-height: 56px;
 
-  &,
-  &:visited {
+  & {
     color: $grey-color-dark;
+  }
+
+  &:hover {
+    color: $garnet-color;
   }
 }
 
@@ -35,7 +39,7 @@
     padding-left: 8px;
   }
 
-  input#search-input {
+  #search-input {
     position: relative;
     left: 38px;
     height: 32px;
@@ -46,7 +50,7 @@
     background-color: transparent;
   }
 
-  input.submit-button {
+  .submit-button {
     position: relative;
     top: 6px;
   }
@@ -214,23 +218,23 @@
 }
 
 // Archive, Category and Tags page
-article blockquote#archive,
-article blockquote#category,
-article blockquote#tagcloud {
+#archive,
+#category,
+#tagcloud {
   float: right;
   width: calc(22% - #{$spacing-unit});
 }
 
-article blockquote.contents {
+.contents {
   float: left;
   width: calc(78% - #{$spacing-unit});
 }
 
 @include media-query($on-palm) {
-  article blockquote#archive,
-  article blockquote#category,
-  article blockquote#tagcloud,
-  article blockquote.contents {
+  #archive,
+  #category,
+  #tagcloud,
+  .contents {
     float: none;
     width: calc(100% - #{$spacing-unit});
   }

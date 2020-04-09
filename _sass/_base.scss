@@ -12,6 +12,10 @@ dl, dd, ol, ul, figure {
   padding: 0;
 }
 
+h1, h2, h3, h4 {
+  border-bottom: 1px solid #d3d3d3;
+}
+
 abbr {
   // Remove border-bottom dotted (for Google Chrome)
   text-decoration: none;
@@ -66,8 +70,8 @@ img {
 }
 
 img.border {
-  border: 0.2em solid #e0dfcc;
-  border-radius: 0.8em;
+  border: 3px solid #e0dfcc;
+  border-radius: 16px;
 }
 
 img#center {
@@ -119,7 +123,7 @@ h1, h2, h3, h4, h5, h6 {
  * Links
  */
 a {
-  color: darken($brand-color, 20%);
+  color: $brand-color-dark;
   text-decoration: none;
 
   &:hover {
@@ -128,40 +132,19 @@ a {
   }
 }
 
-a.site-title {
-  color: $grey-color-dark;
-
-  &:hover {
-    color: $garnet-color;
-  }
-}
-
-footer a,
-a.post-link {
+a.post-link,
+.site-footer a {
   color: $text-color;
 
   &:hover {
     color: $garnet-color;
-  }
-}
-
-blockquote#archive a,
-blockquote#category a,
-blockquote#tagcloud a {
-  color: $text-color;
-  text-decoration: underline;
-
-  &:hover {
-    color: $garnet-color;
-    text-decoration: underline;
   }
 }
 
 a.category,
 a.readmore,
-a.tag,
-a.author,
-a.license {
+.post-meta a,
+.post-information a {
   color: $garnet-color;
 
   &:hover {
@@ -169,12 +152,16 @@ a.license {
   }
 }
 
-article.post .post-content a {
+.home-right blockquote a,
+#archive a,
+#category a,
+#tagcloud a,
+.post .post-content a {
   color: $text-color;
   text-decoration: underline;
 
   &:hover {
-    color: $grey-color-dark;
+    color: $garnet-color;
     text-decoration: underline;
   }
 }
@@ -185,9 +172,9 @@ article.post .post-content a {
  * Blockquotes
  */
 blockquote {
-  background-color: #f5f2f0;
-  border: 0.2em solid #e0dfcc;
-  border-radius: 0.8em;
+  background-color: $code-background-color;
+  border: 3px solid #e0dfcc;
+  border-radius: 16px;
   padding: 10px 10px;
 
   > :last-child {
@@ -198,6 +185,10 @@ blockquote {
 .home-right blockquote {
   background-color: transparent;
   border: 2px solid #e0dfcc;
+}
+
+.post-information {
+  background-color: #eef;
 }
 
 
@@ -323,43 +314,4 @@ table {
     -webkit-overflow-scrolling: touch;
             -ms-overflow-style: -ms-autohiding-scrollbar;
   }
-}
-
-
-
-/**
- * Site-title font
- */
-@font-face {
-  font-family: 'Underwater Love';
-  font-weight: 400;
-  font-style: normal;
-  src: url(/assets/font/underwaterlove.woff2);
-  font-display: fallback;
-}
-
-.site-title {
-  font-family: 'Underwater Love', sans-serif;
-}
-
-
-
-/**
- * Border-bottom
- */
-h1, h2, h3, h4 {
-  color: #000;
-  border-bottom: 1px solid #d3d3d3;
-}
-
-
-
-/**
- * Post information
- */
-div.post-information {
-  background-color: #eef;
-  border: 0.2em solid #e0dfcc;
-  border-radius: 0.8em;
-  padding: 10px 10px;
 }

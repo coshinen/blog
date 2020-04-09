@@ -15,9 +15,7 @@ permalink: /
       <div class="excerpt">
         {{ post.excerpt | markdownify }}
       </div>
-      <footer>
-        <a class="readmore" href="{{ post.url }}">阅读全文 &raquo;</a>
-      </footer>
+      <span><a class="readmore" href="{{ post.url }}">阅读全文 &raquo;</a></span>
     </li>{% break %}{% endfor %}
   </ul>
   <h2 class="page-heading">最新文章</h2>
@@ -27,16 +25,12 @@ permalink: /
       <span><abbr title="{{ post.date | date_to_xmlschema }}">{{ post.date | date: '%Y年%m月%d日' }}</abbr> &raquo; </span>
       <a href="{{ post.url }}">{{ post.title }}</a>
     </li>{% if idx == maximum %}{% break %}{% endif %}{% endfor %}
-    <li>
-      <footer>
-        <a class="readmore" href="{{ site.blog }}">更多内容……</a>
-      </footer>
-    </li>
+    <li><a class="readmore" href="{{ site.blog }}">更多内容……</a></li>
   </ul>
 </div>
 <div class="home-right">
   <script src='https://www.intensedebate.com/widgets/acctComment/{{ site.site_id }}/2' defer="defer" type='text/javascript'> </script>
-  <blockquote class="profile">
+  <blockquote>
     <h2>关于</h2>
     <div>
       <a href="https://github.com/{{ site.root }}" target="_blank"><img class="border" height="128" width="128" alt="@mistydew" src="https://avatars0.githubusercontent.com/u/29818825"></a>
