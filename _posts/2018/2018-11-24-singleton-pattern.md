@@ -5,7 +5,7 @@ date:   2018-11-24 21:31:55 +0800
 author: mistydew
 comments: true
 category: 设计模式
-tags: DP C/C++
+tags: DesignPatterns C/C++
 ---
 单例模式是一种软件设计模式，它限制类的实例化为一个对象。
 
@@ -75,4 +75,3 @@ private:
 ## 参考链接
 
 * [Singleton pattern - Wikipedia](https://en.wikipedia.org/wiki/Singleton_pattern){:target="_blank"}
-* [bitcoin/bitcoin at v0.12.1](https://github.com/bitcoin/bitcoin/tree/v0.12.1){:target="_blank"}

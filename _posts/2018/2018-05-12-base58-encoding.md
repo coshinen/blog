@@ -99,38 +99,9 @@ carry += 256 * (*it);
 carry /= 58;
 ```
 
-不理解这里的进制转换？
-请看该例：小端模式内存中 0x0102（256 进制）对应 10 进制的 258 转换为大端模式 58 进制的过程。
-
-```cpp
-DEC 258 HEX 0x0102
-    +---------+              Step2: 2 + 1 * 256 = 258
-MEM |0x01|0x02+-------------------+ 258 % 58 =[26]
-   L+--+------+B                  | 258 / 58 = 4
-       |   Step1: 1 + 0 * 256 = 1 |
-       +--------+ 1 % 58 =[1]     | 4 + 0 * 256 = 4
-                | 1 % 58 = 0      | 4 % 58 =[4]
-b58 +---------+ |                 | 4 / 58 = 0
-MEM |0x00|0x00| | 0 + 0 * 256 = 0 |
-    +-------+-+ | 0 % 58 =[0]     |
-            |   | 0 % 58 = 0      |
-       +--------+                 |
-       |    |                     |
-b58 +--v----v-+                   |
-MEM |0x00|0x01|                   |
-    +-------+-+                   |
-            |                     |
-       +--------------------------+
-       |    |
-b58 +--v----v-+
-MEM |0x04|0x1A|
-    +---------+
-```
-
 ## 参考链接
 
 * [Base58 - Wikipedia](https://en.wikipedia.org/wiki/Base58){:target="_blank"}
 * [Base64 - Wikipedia](https://en.wikipedia.org/wiki/Base64){:target="_blank"}
 * [Base58Check encoding - Bitcoin Wiki](https://en.bitcoin.it/wiki/Base58Check_encoding){:target="_blank"}
-* [bitcoin/bitcoin/src/base58.cpp](https://github.com/bitcoin/bitcoin/blob/master/src/base58.cpp){:target="_blank"}
-* [Bitcoin Base58 Encoder, Decoder, and Validator](http://lenschulwitz.com/base58){:target="_blank"}
+* [bitcoin/base58.cpp at v0.12.1](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/base58.cpp){:target="_blank"}
