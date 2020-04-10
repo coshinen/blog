@@ -41,7 +41,7 @@
 
   #search-input {
     position: relative;
-    left: 38px;
+    left: 36px;
     height: 32px;
     width: 292px;
     font-size: 16px;
@@ -65,6 +65,7 @@
 
     &:hover {
       border: 0;
+      line-height: 0;
     }
 
     .search-icon {
@@ -100,6 +101,10 @@
       padding-bottom: 5px;
     }
   }
+}
+
+#search-results {
+  margin-top: $spacing-unit;
 }
 
 
