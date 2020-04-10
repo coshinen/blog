@@ -31,8 +31,6 @@ permalink: /blog/atom.xml
 &lt;h2&gt;文档信息&lt;/h2&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;本文作者：&lt;a href=&quot;{{ site.about | absolute_url }}&quot;&gt;{{ site.author | xml_escape }}&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;发表日期：{{ post.date | date: "%Y年%m月%d日" }}&lt;/li&gt;
   &lt;li&gt;版权声明：&lt;a href=&quot;http://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh&quot;&gt;知识共享 署名-非商业性使用-禁止演绎 4.0 国际 许可协议&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;更多内容：&lt;a href=&quot;{{ site.category | absolute_url }}#{{ post.category }}&quot;&gt;{{ post.category }}&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
