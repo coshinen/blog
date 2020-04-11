@@ -10,19 +10,20 @@ layout: default
               <span>|</span>
               {% if page.author %}<span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{% include icon/user.html %}<a href="{{ site.about }}" title="{{ site.author }}">{{ page.author }}</a></span></span>{% endif %}
               <span>|</span>
+              <span>{% include icon/copyright.html %}<a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh" title="知识共享 署名-非商业性使用-禁止演绎 4.0 国际 许可协议" target="_blank">CC BY-NC-ND 4.0</a></span>
+              <span>|</span>
               <span>{% include icon/edit.html %}{% assign words = page.content | strip_html | strip_newlines | remove: " " | size %}{% if words >= 1000 %}{% assign thousands = words | divided_by: 1000 %}{% assign hundreds = words | modulo: 1000 | divided_by: 100 %}{% assign tensones = words | modulo: 100 %}{% if hundreds == 0 %}{% if tensones >= 50 %}{{ thousands }}.{{ hundreds | plus: 1 }}{% else %}{{ thousands }}{% endif %}{% elsif hundreds == 9 %}{% if tensones >= 50 %}{{ thousands | plus: 1 }}{% else %}{{ thousands }}.{{ hundreds }}{% endif %}{% else %}{{ thousands }}.{% if tensones >= 50 %}{{ hundreds | plus: 1 }}{% else %}{{ hundreds }}{% endif %}{% endif %}k{% else %}{{ words }}{% endif %}</span>
               <span>|</span>
               <span>{% include icon/clock.html %}{{ words | divided_by: 350 | plus: 1 }}min</span>
               <span>|</span>
               <span>{% include icon/tags.html %}{% for tag in page.tags %}
-              <a href="{{ site.tag }}#{{ tag }}">{{ tag }}</a>{% endfor %}</span>
+              <a href="{{ site.tag }}#{{ tag }}">{{ tag }}</a>{% endfor %}</span>{% if page.comments == true %}
               <span>|</span>
-              <span>{% include icon/comments.html %}{% include post/link.html %}</span>
+              <span>{% include icon/comments.html %}{% include post/link.html %}</span>{% endif %}
             </p>
           </header>
           <div class="post-content" itemprop="articleBody">
 {{ content }}
-          </div>
-{% include post/info.html %}{% if page.comments == true %}
+          </div>{% if page.comments == true %}
 {% include post/comments.html %}{% endif %}
         </article>
