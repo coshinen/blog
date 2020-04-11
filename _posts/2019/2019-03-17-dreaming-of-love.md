@@ -10,7 +10,7 @@ excerpt: ため息ひとつ落ちた週末の、どうしようもない感じ�
 ---
 ![TCR-001](https://crowsub.github.io/assets/images/discography/album/TCR-001.jpg){:.border}
 
-## dreaming of love | 夢見愛情
+## dreaming of love | 梦见爱情
 
 歌手：GARNET CROW<br>
 作詞：AZUKI 七<br>
@@ -77,63 +77,63 @@ I'm dreaming of love<br>
 
 <div class="lyric-translation">
 <blockquote>
-嘆息一聲落下的週末的<br>
-無可奈何的感覺<br>
-比起絕望更深地墮落 拂曉<br>
+叹息一声落下的周末的<br>
+无可奈何的感觉<br>
+比起绝望更深地堕落 拂晓<br>
 <br>
-鮮紅色的～花的去向<br>
-被拋棄了<br>
-在無人的山丘的角落 氣息斷絕了<br>
+鲜红色的～花的去向<br>
+被抛弃了<br>
+在无人的山丘的角落 气息断绝了<br>
 <br>
-吶 總有一天 比起得到<br>
-失去東西會變多吧？<br>
+呐 总有一天 比起得到<br>
+失去东西会变多吧？<br>
 <br>
-最後的一滴落下了<br>
-那個瞬間 你<br>
-看到了什麼呢？ 祈禱他的未來......<br>
+最后的一滴落下了<br>
+那个瞬间 你<br>
+看到了什么呢？ 祈祷他的未来......<br>
 <br>
-ah 其實已經 知道了吧<br>
-逐漸終結的 一切 永遠的存在<br>
+ah 其实已经 知道了吧<br>
+逐渐终结的 一切 永远的存在<br>
 in your die<br>
 <br>
 I'm dreaming of rain<br>
-過去和未來都 完全消失的你<br>
+过去和未来都 完全消失的你<br>
 I'm dreaming of rose<br>
 全部 被看到的 那一天 please please<br>
 I'm dreaming of night<br>
-未來不再醒來滿懷祈禱<br>
+未来不再醒来满怀祈祷<br>
 I'm dreaming of love<br>
-甜蜜 閃耀的印象 please please yhe-<br>
+甜蜜 闪耀的印象 please please yhe-<br>
 <br>
-窗戶對面進行的派對和<br>
-被關閉的 door<br>
-在對著背後的你的軌跡中 低聲私語<br>
+窗户对面进行的派对和<br>
+被关闭的 door<br>
+在对着背后的你的轨迹中 低声私语<br>
 <br>
-吶 總有一天要啟程的人<br>
-殘存者的心情<br>
-不知不覺中振翅高飛 in your game<br>
+呐 总有一天要启程的人<br>
+残存者的心情<br>
+不知不觉中振翅高飞 in your game<br>
 <br>
 I'm dreaming of wake<br>
-總有一天會給予平靜 飛翔的樣子<br>
+总有一天会给予平静 飞翔的样子<br>
 I'm dreaming of pain<br>
-留下愛的碎片 freeze freeze<br>
+留下爱的碎片 freeze freeze<br>
 I'm dreaming of rail<br>
-誰也不曾交錯的世界的意義<br>
+谁也不曾交错的世界的意义<br>
 I'm dreaming of love<br>
-強烈 放縱的印象 freeze freeze<br>
+强烈 放纵的印象 freeze freeze<br>
 <br>
 I'm dreaming of rain<br>
-過去和未來都 完全消失的你<br>
+过去和未来都 完全消失的你<br>
 I'm dreaming of rose<br>
 全部 被看到的 那一天 please please<br>
 I'm dreaming of night<br>
-未來不再醒來滿懷祈禱<br>
+未来不再醒来满怀祈祷<br>
 I'm dreaming of love<br>
-甜蜜 閃耀的印象 please please yhe-
+甜蜜 闪耀的印象 please please yhe-
 </blockquote>
 </div>
 
 ## 参考链接
 
-* [GARNET CROW official website : ガーネットクロウ オフィシャルサイト](http://www.garnetcrow.com){:target="_blank"}
 * [GARNET CROW dreaming of love 歌詞 - 歌ネット](https://www.uta-net.com/song/20147){:target="_blank"}
+* [dreaming of love Lyrics \| GARNET CROW music diary](https://crowsub.github.io/lyrics/original/dreaming%20of%20love.html){:target="_blank"}

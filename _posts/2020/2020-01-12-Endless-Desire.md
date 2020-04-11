@@ -10,7 +10,7 @@ excerpt: そんなに移り気じゃヤダ、正直って便利な言い訳、�
 ---
 ![GZCA-5038](https://crowsub.github.io/assets/images/discography/album/GZCA-5038.jpg){:.border}
 
-## Endless Desire | 無盡的慾望
+## Endless Desire | 无尽的欲望
 
 歌手：GARNET CROW<br>
 作詞：AZUKI 七<br>
@@ -79,65 +79,65 @@ destiny...? or personal...?<br>
 
 <div class="lyric-translation">
 <blockquote>
-那麼見異思遷不好<br>
-說實話方便的藉口<br>
-多樣不斷流逝的 一生<br>
+那么见异思迁不好<br>
+说实话方便的借口<br>
+多样不断流逝的 一生<br>
 <br>
 百年不到 啊<br>
-結束的話 轉眼之間<br>
-華麗的電影明星 孤獨的神話化<br>
+结束的话 转眼之间<br>
+华丽的电影明星 孤独的神话化<br>
 <br>
-只為自己活著就好<br>
-有確切的溫柔和思念的話<br>
+只为自己活着就好<br>
+有确切的温柔和思念的话<br>
 <br>
 Mistery...awake night<br>
-想要去愛<br>
-無法逃脫的悲哀般地纏繞的<br>
+想要去爱<br>
+无法逃脱的悲哀般地缠绕的<br>
 Endless Desire<br>
 <br>
 History...over again<br>
-飼養衝動的是<br>
+饲养冲动的是<br>
 destiny...? or personal...?<br>
 渴望的 out of blue<br>
-現在還是 endless way<br>
+现在还是 endless way<br>
 <br>
-逐漸分散的時候誰都<br>
-只是一瞬間的事情<br>
-連鎖起來一樣的飛機飛舞<br>
+逐渐分散的时候谁都<br>
+只是一瞬间的事情<br>
+连锁起来一样的飞机飞舞<br>
 <br>
-車的目的地<br>
-那個女孩消失在何處？<br>
-一個人的房間裡...一起留下？<br>
+车的目的地<br>
+那个女孩消失在何处？<br>
+一个人的房间里...一起留下？<br>
 <br>
-只是 一味地追求著<br>
-什麼是可以交換的<br>
+只是 一味地追求着<br>
+什么是可以交换的<br>
 仍然不明白<br>
 <br>
 Mistery...awake night<br>
-想要被愛<br>
-被囚禁的悲哀般地纏繞的<br>
+想要被爱<br>
+被囚禁的悲哀般地缠绕的<br>
 Endless Desire<br>
 <br>
 History...over again<br>
-最終 逐漸充滿謎團<br>
+最终 逐渐充满谜团<br>
 destiny...? or personal...?<br>
 渴望的 out of blue<br>
-現在還是 endless way<br>
+现在还是 endless way<br>
 <br>
 Mistery...awake night<br>
-想要去愛<br>
-無法逃脫的悲哀般地纏繞的<br>
+想要去爱<br>
+无法逃脱的悲哀般地缠绕的<br>
 Endless Desire<br>
 <br>
 History...over again<br>
-飼養衝動的是<br>
+饲养冲动的是<br>
 destiny...? or personal...?<br>
 渴望的 out of blue<br>
-現在還是 endless way
+现在还是 endless way
 </blockquote>
 </div>
 
 ## 参考链接
 
-* [GARNET CROW official website : ガーネットクロウ オフィシャルサイト](http://www.garnetcrow.com){:target="_blank"}
 * [GARNET CROW Endless Desire 歌詞 - 歌ネット](https://www.uta-net.com/song/20211){:target="_blank"}
+* [Endless Desire Lyrics \| GARNET CROW music diary](https://crowsub.github.io/lyrics/original/Endless%20Desire.html){:target="_blank"}

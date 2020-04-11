@@ -10,7 +10,7 @@ excerpt: Well its been building up inside of me. For oh I don't know how long. I
 ---
 ![SHUT DOWN VOLUME 2](https://mistydew.github.io/assets/images/cover/misc/SHUT%20DOWN%20VOLUME%202.jpg){:.border}
 
-## Don't Worry Baby | 別擔心寶貝
+## Don't Worry Baby | 别担心宝贝
 
 歌手：The Beach Boys<br>
 作詞：Brian Wilson・Roger Christian<br>
@@ -68,51 +68,51 @@ Don't worry baby
 
 <div class="lyric-translation">
 <blockquote>
-好吧它已經存在於我心裏<br>
-因為 哦 我不知道多久了<br>
-我不知道為什麼<br>
+好吧它已经存在于我心里<br>
+因为 哦 我不知道多久了<br>
+我不知道为什么<br>
 但我一直在思考<br>
-某些東西一定會出問題<br>
-但她看著我的眼睛<br>
-並讓我意識到<br>
-她說“別擔心寶貝”<br>
-別擔心寶貝<br>
-別擔心寶貝<br>
-一切都會好起來的<br>
+某些东西一定会出问题<br>
+但她看着我的眼睛<br>
+并让我意识到<br>
+她说“别担心宝贝”<br>
+别担心宝贝<br>
+别担心宝贝<br>
+一切都会好起来的<br>
 <br>
-別擔心寶貝<br>
-別擔心寶貝<br>
-別擔心寶貝<br>
+别担心宝贝<br>
+别担心宝贝<br>
+别担心宝贝<br>
 <br>
-我想我應該閉上我的嘴<br>
-當我開始吹噓我的汽車時<br>
-但我現在不能回去因為<br>
-我已經甩掉其他人很遠了<br>
-她讓我活著<br>
-並讓我想要兜風<br>
-當她說“別擔心寶貝”<br>
-別擔心寶貝<br>
-別擔心寶貝<br>
-一切都會好起來的<br>
+我想我应该闭上我的嘴<br>
+当我开始吹嘘我的汽车时<br>
+但我现在不能回去因为<br>
+我已经甩掉其他人很远了<br>
+她让我活着<br>
+并让我想要兜风<br>
+当她说“别担心宝贝”<br>
+别担心宝贝<br>
+别担心宝贝<br>
+一切都会好起来的<br>
 <br>
-別擔心寶貝<br>
-別擔心寶貝<br>
-別擔心寶貝<br>
+别担心宝贝<br>
+别担心宝贝<br>
+别担心宝贝<br>
 <br>
-她告訴我“寶貝，在你今天參賽時<br>
-帶上我對你的愛<br>
-如果你知道我有多愛你<br>
-寶貝你不會出任何問題”<br>
-哦 她對我做了什麼<br>
-當她愛上我時<br>
-她說“別擔心寶貝”<br>
-別擔心寶貝<br>
-別擔心寶貝<br>
-一切都會好起來的<br>
+她告诉我“宝贝，在你今天参赛时<br>
+带上我对你的爱<br>
+如果你知道我有多爱你<br>
+宝贝你不会出任何问题”<br>
+哦 她对我做了什么<br>
+当她爱上我时<br>
+她说“别担心宝贝”<br>
+别担心宝贝<br>
+别担心宝贝<br>
+一切都会好起来的<br>
 <br>
-別擔心寶貝<br>
-別擔心寶貝<br>
-別擔心寶貝
+别担心宝贝<br>
+别担心宝贝<br>
+别担心宝贝
 </blockquote>
 </div>
 

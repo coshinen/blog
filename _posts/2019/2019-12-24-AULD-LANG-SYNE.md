@@ -32,24 +32,25 @@ And days of auld lang syne?
 
 <div class="lyric-translation">
 <blockquote>
-應該忘記以前的相識<br>
-並不再回想嗎？<br>
-應該忘記以前的相識<br>
-和逝去已久的日子嗎？<br>
+应该忘记以前的相识<br>
+并不再回想吗？<br>
+应该忘记以前的相识<br>
+和逝去已久的日子吗？<br>
 <br>
-為了逝去已久的日子，我的朋友<br>
-為了逝去已久的日子<br>
-為了逝去已久的日子<br>
+为了逝去已久的日子，我的朋友<br>
+为了逝去已久的日子<br>
+为了逝去已久的日子<br>
 <br>
-能夠忘記以前的相識<br>
-和逝去已久的日子嗎？
+能够忘记以前的相识<br>
+和逝去已久的日子吗？
 </blockquote>
 </div>
 
-這首詩歌是由蘇格蘭詩人 Robert Burns 根據當地民歌記錄下的，原文是古蘇格蘭方言。
-Auld Lang Syne 直譯為“old long since”或“days gone by”，大意為“逝去已久的日子”（在中國多譯為“友誼地久天長”），經常在平安夜演唱。
+这首诗歌是由苏格兰诗人 Robert Burns 根据当地民歌记录下的，原文是古苏格兰方言。
+Auld Lang Syne 直译为“old long since”或“days gone by”，大意为“逝去已久的日子”（在中国多译为“友谊地久天长”），经常在平安夜演唱。
 
 ## 参考链接
 
 * [Auld Lang Syne - Wikipedia](https://en.wikipedia.org/wiki/Auld_Lang_Syne){:target="_blank"}
 * [Lea Michele – Auld Lang Syne Lyrics \| Genius Lyrics](https://genius.com/Lea-michele-auld-lang-syne-lyrics){:target="_blank"}
+* [AULD LANG SYNE Lyrics \| GARNET CROW music diary](https://crowsub.github.io/lyrics/featuring/AULD%20LANG%20SYNE.html){:target="_blank"}

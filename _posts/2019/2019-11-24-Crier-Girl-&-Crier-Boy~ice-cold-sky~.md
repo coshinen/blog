@@ -63,49 +63,49 @@ around the clook<br>
 
 <div class="lyric-translation">
 <blockquote>
-如果注意到的話追求溫暖的心不會徬徨嗎？<br>
+如果注意到的话追求温暖的心不会徬徨吗？<br>
 <br>
-依靠著對你的思念活著的現在也<br>
-一直注視著無法實現的願望<br>
-突然 墜入那樣的無力感中<br>
+依靠着对你的思念活着的现在也<br>
+一直注视着无法实现的愿望<br>
+突然 坠入那样的无力感中<br>
 <br>
 Crier Girl, Crier Boy<br>
 growin' night<br>
-不變的愛<br>
-如果沒有的話現在 感受到的一切<br>
-變成唯一的事實<br>
+不变的爱<br>
+如果没有的话现在 感受到的一切<br>
+变成唯一的事实<br>
 不久就要靠近<br>
 <br>
-就連曖昧的態度都珍藏在心裡<br>
+就连暧昧的态度都珍藏在心里<br>
 <br>
-把忍受不了的痛苦 偷換昇華<br>
-不知不覺地動搖了<br>
-強迫的漂亮的事凝固的日子<br>
+把忍受不了的痛苦 偷换升华<br>
+不知不觉地动摇了<br>
+强迫的漂亮的事凝固的日子<br>
 <br>
 Winter night, Ice cold sky<br>
-星空 嚴冬的煙花<br>
-像綻放的銀幕一樣<br>
-現在也快要消失了<br>
-變化的東西多麼地漂亮...<br>
+星空 严冬的烟花<br>
+像绽放的银幕一样<br>
+现在也快要消失了<br>
+变化的东西多么地漂亮...<br>
 <br>
-我們到底有多少<br>
-守護重要東西的力量呢？<br>
+我们到底有多少<br>
+守护重要东西的力量呢？<br>
 <br>
 Crier Girl, Crier Boy<br>
-即使是現在<br>
-那一天的我們是美好的<br>
-閃耀可見<br>
-感覺好像能做的很好<br>
+即使是现在<br>
+那一天的我们是美好的<br>
+闪耀可见<br>
+感觉好像能做的很好<br>
 <br>
 Winter night, Ice cold sky<br>
 around the clook<br>
-想見你<br>
-讓我感受到這雙手毫不懷疑的體溫<br>
-連接著不斷消失的東西
+想见你<br>
+让我感受到这双手毫不怀疑的体温<br>
+连接着不断消失的东西
 </blockquote>
 </div>
 
 ## 参考链接
 
-* [GARNET CROW official website : ガーネットクロウ オフィシャルサイト](http://www.garnetcrow.com){:target="_blank"}
 * [GARNET CROW Crier Girl & Crier Boy 〜ice cold sky〜 歌詞 - 歌ネット](https://www.uta-net.com/song/20137){:target="_blank"}
+* [Crier Girl & Crier Boy 〜ice cold sky〜 Lyrics \| GARNET CROW music diary](https://crowsub.github.io/lyrics/original/Crier%20Girl%20&%20Crier%20Boy%20〜ice%20cold%20sky〜.html){:target="_blank"}

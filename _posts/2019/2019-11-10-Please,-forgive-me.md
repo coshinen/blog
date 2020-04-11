@@ -10,7 +10,7 @@ excerpt: 優しく触れる君の手に戸惑った、痛みが消えて置き�
 ---
 ![GZCA-5013](https://crowsub.github.io/assets/images/discography/album/GZCA-5013.jpg){:.border}
 
-## Please, forgive me | 請，原諒我
+## Please, forgive me | 请，原谅我
 
 歌手：GARNET CROW<br>
 作詞：AZUKI 七<br>
@@ -78,66 +78,66 @@ ah- 胸を掻き乱すけれど<br>
 
 <div class="lyric-translation">
 <blockquote>
-對溫柔地觸碰的你的手不知所措<br>
-只有痛苦消失後留下的罪孽<br>
-責備我 不允許逃避<br>
-現在追求眼前的光芒可以嗎<br>
+对温柔地触碰的你的手不知所措<br>
+只有痛苦消失后留下的罪孽<br>
+责备我 不允许逃避<br>
+现在追求眼前的光芒可以吗<br>
 <br>
-如果所有發生的事都是命運的話<br>
-那麼只會遇到應該遇到的對吧？<br>
+如果所有发生的事都是命运的话<br>
+那么只会遇到应该遇到的对吧？<br>
 <br>
-簡直就是差勁的偽紀錄片<br>
-堵住耳朵想現在馬上結束<br>
-一切都過去後全部都成為回憶<br>
-改變的日子會來嗎？<br>
-但是 一定會重演吧<br>
+简直就是差劲的伪纪录片<br>
+堵住耳朵想现在马上结束<br>
+一切都过去后全部都成为回忆<br>
+改变的日子会来吗？<br>
+但是 一定会重演吧<br>
 <br>
-怎樣償還才好呢？<br>
+怎样偿还才好呢？<br>
 I sayl love you & that's forever<br>
-沈默也好謊言也罷都是一樣的<br>
+沉默也好谎言也罢都是一样的<br>
 although this is a life I can lose.<br>
 <br>
-Please...forgive me 不要再離開我了<br>
-為了填補空白的過去<br>
-只是 僅僅注視著你...Cause I am free<br>
-描繪的夢想的全部現在也<br>
-擾亂了內心<br>
-無止境的時間不斷流逝<br>
+Please...forgive me 不要再离开我了<br>
+为了填补空白的过去<br>
+只是 仅仅注视着你...Cause I am free<br>
+描绘的梦想的全部现在也<br>
+扰乱了内心<br>
+无止境的时间不断流逝<br>
 <br>
-吶 摸索著想念著你<br>
-誰也無法代替誰<br>
-捨棄不想回去的黑暗<br>
-手握著面對你的堅強啊<br>
+呐 摸索着想念着你<br>
+谁也无法代替谁<br>
+舍弃不想回去的黑暗<br>
+手握着面对你的坚强啊<br>
 <br>
-為了連傷痕也能守護你<br>
+为了连伤痕也能守护你<br>
 Haven't had a dream in a long time<br>
-也能認為是存在的<br>
+也能认为是存在的<br>
 If there's a chance of resurrecting a love<br>
 <br>
-Please...forgive me 祈禱是募集<br>
-不知不覺在那一天來臨的時候<br>
+Please...forgive me 祈祷是募集<br>
+不知不觉在那一天来临的时候<br>
 用更深更大的力量...<br>
 so Lovin' that'll last forever<br>
-解放的相連的心<br>
-到處奔跑的鮮明的視野 感覺<br>
-想永遠保持寂靜<br>
+解放的相连的心<br>
+到处奔跑的鲜明的视野 感觉<br>
+想永远保持寂静<br>
 <br>
-Please...forgive me 永遠不要離開我<br>
-為了填補空白的過去<br>
-只是僅僅注視著你<br>
-描繪的夢想的全部現在也<br>
-ah- 擾亂了內心<br>
-無止境的時間不斷流逝<br>
+Please...forgive me 永远不要离开我<br>
+为了填补空白的过去<br>
+只是仅仅注视着你<br>
+描绘的梦想的全部现在也<br>
+ah- 扰乱了内心<br>
+无止境的时间不断流逝<br>
 <br>
-使內心迷惑的熱情幻想<br>
-邊甩開邊繼續尋找真相<br>
-一定...現在也是...
+使内心迷惑的热情幻想<br>
+边甩开边继续寻找真相<br>
+一定...现在也是...
 </blockquote>
 </div>
 
-「質(タチ)」表示品質，性質。
+「質(タチ)」表示品质，性质。
 
 ## 参考链接
 
-* [GARNET CROW official website : ガーネットクロウ オフィシャルサイト](http://www.garnetcrow.com){:target="_blank"}
 * [GARNET CROW Please, forgive me 歌詞 - 歌ネット](https://www.uta-net.com/song/20140){:target="_blank"}
+* [Please, forgive me Lyrics \| GARNET CROW music diary](https://crowsub.github.io/lyrics/original/Please,%20forgive%20me.html){:target="_blank"}

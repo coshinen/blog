@@ -67,51 +67,51 @@ Naked story lai-la...<br>
 <div class="lyric-translation">
 <blockquote>
 Naked story yeah-<br>
-就算沒有防備也想衝出去<br>
-就這樣感受著 stay yeah-<br>
+就算没有防备也想冲出去<br>
+就这样感受着 stay yeah-<br>
 We're born in this way.<br>
 <br>
 比起任何生物<br>
-人類都是不安定的物種<br>
-在不斷降臨的日子裡<br>
-尋找著什麼<br>
-飛舞吧！高興起來！走向現實<br>
+人类都是不安定的物种<br>
+在不断降临的日子里<br>
+寻找着什么<br>
+飞舞吧！高兴起来！走向现实<br>
 <br>
-偶然抬頭看到的月亮看的入迷<br>
-想要傳達給你<br>
-有人給了我溫柔衝動的記憶<br>
+偶然抬头看到的月亮看的入迷<br>
+想要传达给你<br>
+有人给了我温柔冲动的记忆<br>
 <br>
-像是醉了一樣前進著<br>
-一鼓作氣<br>
-只要跑過去就好了<br>
-所謂幸福！？<br>
+像是醉了一样前进着<br>
+一鼓作气<br>
+只要跑过去就好了<br>
+所谓幸福！？<br>
 <br>
 Naked story yeah-<br>
-不斷減少的章節<br>
-想象中無限的故事<br>
+不断减少的章节<br>
+想象中无限的故事<br>
 宏大的浪漫<br>
 <br>
-在突然放晴的日子裡<br>
-沐浴著陽光走在街上<br>
-乘上1號車輛的電車<br>
-像是要出遠門<br>
-把過往的愛也封閉起來...<br>
+在突然放晴的日子里<br>
+沐浴着阳光走在街上<br>
+乘上1号车辆的电车<br>
+像是要出远门<br>
+把过往的爱也封闭起来...<br>
 <br>
-受傷 背叛 無論碰到多少次<br>
-相互原諒 那是深深地堅強地<br>
-接近愛...<br>
+受伤 背叛 无论碰到多少次<br>
+相互原谅 那是深深地坚强地<br>
+接近爱...<br>
 <br>
 Naked story lai-la...<br>
 直到下次遭遇 steer la-<br>
-目標地點 steer la-<br>
-因為想要感受同一個宇宙<br>
-睜開眼睛<br>
+目标地点 steer la-<br>
+因为想要感受同一个宇宙<br>
+睁开眼睛<br>
 只能看到的明天<br>
-做著夢
+做着梦
 </blockquote>
 </div>
 
 ## 参考链接
 
-* [GARNET CROW official website : ガーネットクロウ オフィシャルサイト](http://www.garnetcrow.com){:target="_blank"}
 * [GARNET CROW Naked Story 歌詞 - 歌ネット](https://www.uta-net.com/song/20127){:target="_blank"}
+* [Naked Story Lyrics \| GARNET CROW music diary](https://crowsub.github.io/lyrics/original/Naked%20Story.html){:target="_blank"}

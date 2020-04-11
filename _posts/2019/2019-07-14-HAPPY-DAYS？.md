@@ -10,7 +10,7 @@ excerpt: close island、素早く暮れる空に、意味もなく胸が切な�
 ---
 ![GZCA-1061](https://crowsub.github.io/assets/images/discography/album/GZCA-1061.jpg){:.border}
 
-## HAPPY DAYS? | 快樂的日子？
+## HAPPY DAYS? | 快乐的日子？
 
 歌手：GARNET CROW<br>
 作詞：AZUKI 七<br>
@@ -74,38 +74,38 @@ where do you go from it<br>
 <div class="lyric-translation">
 <blockquote>
 close island<br>
-在快速變黑天空中<br>
-內心也沒有意義地變得難受<br>
-那樣的季節<br>
-緊緊抱住變冷的身体<br>
+在快速变黑天空中<br>
+内心也没有意义地变得难受<br>
+那样的季节<br>
+紧紧抱住变冷的身体<br>
 因为又怀念你的臂膀<br>
 <br>
-有人只注視著我<br>
-在心中瘋了似地渴望著<br>
+有人只注视着我<br>
+在心中疯了似地渴望着<br>
 <br>
 In the morning, how to start<br>
 where do you go from it<br>
-比起尋找幽默的言語<br>
-總之先緊緊地抱住你<br>
-想感受 反復無常的愛<br>
+比起寻找幽默的言语<br>
+总之先紧紧地抱住你<br>
+想感受 反复无常的爱<br>
 <br>
-放鬆你溫暖的心<br>
-睡著了哦 雖然還早<br>
-如果明天醒來能見到你的話<br>
-開始又是 making happy days<br>
+放松你温暖的心<br>
+睡着了哦 虽然还早<br>
+如果明天醒来能见到你的话<br>
+开始又是 making happy days<br>
 <br>
-你不在的時候 只想著你的時間<br>
-只是一點點奢侈的生活方式<br>
+你不在的时候 只想着你的时间<br>
+只是一点点奢侈的生活方式<br>
 <br>
 In the morning, how to start<br>
 where do you go from it<br>
-如果你在尋求某人的話<br>
-我在這裡一直不變<br>
-什麼時候能再次相逢呢<br>
+如果你在寻求某人的话<br>
+我在这里一直不变<br>
+什么时候能再次相逢呢<br>
 <br>
-在宇宙中漂浮的大樓的窗戶<br>
-消失在夜裡<br>
-就像小小的幻影一樣<br>
+在宇宙中漂浮的大楼的窗户<br>
+消失在夜里<br>
+就像小小的幻影一样<br>
 <br>
 In the morning, how to start<br>
 when I awoke and felt you warm<br>
@@ -114,18 +114,18 @@ please keep um- close to me<br>
 <br>
 In the morning, how to start<br>
 where do you go from it<br>
-比起尋找幽默的言語<br>
-總之先緊緊地抱住你<br>
-想感受 反復無常的愛<br>
+比起寻找幽默的言语<br>
+总之先紧紧地抱住你<br>
+想感受 反复无常的爱<br>
 <br>
-完全無法理解的故事<br>
-能成為重要的人就好了<br>
-在能互相接觸的距離裡靜靜地注視著<br>
-總之現在一定是 Happy days?
+完全无法理解的故事<br>
+能成为重要的人就好了<br>
+在能互相接触的距离里静静地注视着<br>
+总之现在一定是 Happy days?
 </blockquote>
 </div>
 
 ## 参考链接
 
-* [GARNET CROW official website : ガーネットクロウ オフィシャルサイト](http://www.garnetcrow.com){:target="_blank"}
 * [GARNET CROW HAPPY DAYS? 歌詞 - 歌ネット](https://www.uta-net.com/song/20139){:target="_blank"}
+* [HAPPY DAYS? Lyrics \| GARNET CROW music diary](https://crowsub.github.io/lyrics/original/HAPPY%20DAYS%3F.html){:target="_blank"}

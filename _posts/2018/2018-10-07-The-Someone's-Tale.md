@@ -49,35 +49,35 @@ excerpt: まっすぐな思いはまっすぐに伝わるの？唐突な青空 �
 
 <div class="lyric-translation">
 <blockquote>
-直率的想法能直接傳達嗎？<br>
-唐突的青空 遠去的飛機<br>
+直率的想法能直接传达吗？<br>
+唐突的青空 远去的飞机<br>
 <br>
-如果我寫下故事<br>
-希望委託你自由地描繪<br>
+如果我写下故事<br>
+希望委托你自由地描绘<br>
 <br>
-本應交換的話語舞動 閃閃發光<br>
-收集的花瓣在庭院中綻放的花 輕飄飄地<br>
+本应交换的话语舞动 闪闪发光<br>
+收集的花瓣在庭院中绽放的花 轻飘飘地<br>
 <br>
-最喜歡的感情會一點點改變嗎？<br>
-描繪出悄悄到來的金色黃昏<br>
+最喜欢的感情会一点点改变吗？<br>
+描绘出悄悄到来的金色黄昏<br>
 <br>
-外出旅行是 為了忘記什麼？<br>
-為了尋找什麼啊？僅僅是流浪嗎？<br>
+外出旅行是 为了忘记什么？<br>
+为了寻找什么啊？仅仅是流浪吗？<br>
 <br>
-連本應觸碰的溫暖也 不斷落下<br>
-每頁都悄悄地零落 想要緊緊地抓住<br>
+连本应触碰的温暖也 不断落下<br>
+每页都悄悄地零落 想要紧紧地抓住<br>
 <br>
-為了面影不哭泣 星空就讓我來守護<br>
+为了面影不哭泣 星空就让我来守护<br>
 <br>
-本應交換的話語舞動 閃閃發光<br>
-收集的花瓣在庭院中綻放的花 輕飄飄地<br>
+本应交换的话语舞动 闪闪发光<br>
+收集的花瓣在庭院中绽放的花 轻飘飘地<br>
 <br>
-連本應觸碰的溫暖也 不斷落下<br>
-每頁都悄悄地零落 像要緊緊地抓住
+连本应触碰的温暖也 不断落下<br>
+每页都悄悄地零落 像要紧紧地抓住
 </blockquote>
 </div>
 
 ## 参考链接
 
-* [GARNET CROW official website : ガーネットクロウ オフィシャルサイト](http://www.garnetcrow.com){:target="_blank"}
 * [GARNET CROW The Someone's Tale 歌詞 - 歌ネット](https://www.uta-net.com/song/143806){:target="_blank"}
+* [The Someone's Tale Lyrics \| GARNET CROW music diary](https://crowsub.github.io/lyrics/original/The%20Someone's%20Tale.html){:target="_blank"}

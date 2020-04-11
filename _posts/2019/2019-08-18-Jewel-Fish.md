@@ -10,7 +10,7 @@ excerpt: 走り出したら通り雨、もう一休みしてる。待ちきれ�
 ---
 ![GZCA-1072](https://crowsub.github.io/assets/images/discography/single/GZCA-1072.jpg){:.border}
 
-## Jewel Fish | 寶石魚
+## Jewel Fish | 宝石鱼
 
 歌手：GARNET CROW<br>
 作詞：AZUKI 七<br>
@@ -68,48 +68,48 @@ bury at sea for me
 
 <div class="lyric-translation">
 <blockquote>
-一跑起來就下起了陣雨<br>
-已經休息了一會兒<br>
-等不及的你飛奔而出<br>
-不再回頭<br>
+一跑起来就下起了阵雨<br>
+已经休息了一会儿<br>
+等不及的你飞奔而出<br>
+不再回头<br>
 <br>
-在信號變化的一瞬間<br>
-已經四散而開<br>
+在信号变化的一瞬间<br>
+已经四散而开<br>
 <br>
-柔軟的愛能傳達到你嗎<br>
-隱藏著淚水游下去的 Jewel Fish<br>
-世界人口 60億 好討厭啊<br>
-無論戀上你多少次<br>
-描繪夢想的話兩個人就好了<br>
-在波浪的那邊約會 see you again<br>
+柔软的爱能传达到你吗<br>
+隐藏着泪水游下去的 Jewel Fish<br>
+世界人口 60亿 好讨厌啊<br>
+无论恋上你多少次<br>
+描绘梦想的话两个人就好了<br>
+在波浪的那边约会 see you again<br>
 <br>
-實際相遇時彼此<br>
-應該感受到了什麼<br>
-即使逃避現實也看不到的<br>
-心中浮現的面貌 沒有成長<br>
+实际相遇时彼此<br>
+应该感受到了什么<br>
+即使逃避现实也看不到的<br>
+心中浮现的面貌 没有成长<br>
 <br>
-總有一天會回到出生的故鄉 jewel fish也<br>
+总有一天会回到出生的故乡 jewel fish也<br>
 出海生活<br>
 <br>
 雨天是雨的晴天是晴的<br>
-過得不錯地游下去的 Jewel Fish<br>
-不管在世界的什麼地方我們<br>
-比群星還要小<br>
-然後也能看到超大的夢想<br>
-沙漠中逐漸消失的你的輪廓 so cute<br>
+过得不错地游下去的 Jewel Fish<br>
+不管在世界的什么地方我们<br>
+比群星还要小<br>
+然后也能看到超大的梦想<br>
+沙漠中逐渐消失的你的轮廓 so cute<br>
 <br>
-開端在臂彎中<br>
+开端在臂弯中<br>
 <br>
-在常見的絕望感中變形<br>
-蒙著眼睛被雨擊打著<br>
-在誰也不知道的未來<br>
-因為在這裡所以能懷抱希望<br>
+在常见的绝望感中变形<br>
+蒙着眼睛被雨击打着<br>
+在谁也不知道的未来<br>
+因为在这里所以能怀抱希望<br>
 <br>
-懷抱著無法傳達的愛<br>
-能變成活下來的證明嗎？<br>
-總有一天即使只有一點兒<br>
-在沒有你的今後的日子裡<br>
-好像能變得溫柔<br>
+怀抱着无法传达的爱<br>
+能变成活下来的证明吗？<br>
+总有一天即使只有一点儿<br>
+在没有你的今后的日子里<br>
+好像能变得温柔<br>
 bury at sea<br>
 bury at sea for me
 </blockquote>
@@ -117,5 +117,5 @@ bury at sea for me
 
 ## 参考链接
 
-* [GARNET CROW official website : ガーネットクロウ オフィシャルサイト](http://www.garnetcrow.com){:target="_blank"}
 * [GARNET CROW Jewel Fish 歌詞 - 歌ネット](https://www.uta-net.com/song/20144){:target="_blank"}
+* [Jewel Fish Lyrics \| GARNET CROW music diary](https://crowsub.github.io/lyrics/original/Jewel%20Fish.html){:target="_blank"}

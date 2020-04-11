@@ -60,36 +60,36 @@ Doing all right!
 <blockquote>
 Doing all right!<br>
 <br>
-仔細回憶的你的記憶 透過樹葉的陽光的氣味<br>
-放下的什麼雖然已經 不在這裡了<br>
+仔细回忆的你的记忆 透过树叶的阳光的气味<br>
+放下的什么虽然已经 不在这里了<br>
 <br>
-循環往復得思念 一下子 穿越過往人的眷戀<br>
+循环往复得思念 一下子 穿越过往人的眷恋<br>
 <br>
 Doing all right!<br>
-內心被動搖 不回頭就無法活下去<br>
+内心被动摇 不回头就无法活下去<br>
 Doing all right!<br>
-摸索著 常常做夢不是很好嗎<br>
+摸索着 常常做梦不是很好吗<br>
 <br>
-風停的午後 少許的自由 沒有答案的提問<br>
-輕輕地像振翅一樣綻開<br>
+风停的午后 少许的自由 没有答案的提问<br>
+轻轻地像振翅一样绽开<br>
 <br>
-如果有開始 也會有結束<br>
+如果有开始 也会有结束<br>
 在不熟悉的街道也 突然看到了明天哦<br>
 <br>
-改變主意的本領 哭了？ 生氣了？ 還是一笑了之了呢？<br>
+改变主意的本领 哭了？ 生气了？ 还是一笑了之了呢？<br>
 <br>
 Doing all right!<br>
-走過的 不回去時沒關係<br>
+走过的 不回去时没关系<br>
 Doing all right!<br>
-無法消失的地方 遙遠的未來還未知曉<br>
+无法消失的地方 遥远的未来还未知晓<br>
 <br>
-被釋放的生命只是 想感受當下<br>
-穿透 興奮的天空吧<br>
+被释放的生命只是 想感受当下<br>
+穿透 兴奋的天空吧<br>
 <br>
 Doing all right!<br>
-心連心 不可思議的命運<br>
+心连心 不可思议的命运<br>
 Doing all right!<br>
-重疊的時候 想要收集美好的預感<br>
+重叠的时候 想要收集美好的预感<br>
 <br>
 Doing all right!
 </blockquote>
@@ -97,5 +97,5 @@ Doing all right!
 
 ## 参考链接
 
-* [GARNET CROW official website : ガーネットクロウ オフィシャルサイト](http://www.garnetcrow.com){:target="_blank"}
 * [GARNET CROW Doing all right 歌詞 - 歌ネット](https://www.uta-net.com/song/79833){:target="_blank"}
+* [Doing all right Lyrics \| GARNET CROW music diary](https://crowsub.github.io/lyrics/original/Doing%20all%20right.html){:target="_blank"}

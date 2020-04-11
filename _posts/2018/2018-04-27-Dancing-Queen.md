@@ -63,52 +63,52 @@ Digging the dancing queen
 
 <div class="lyric-translation">
 <blockquote>
-哦，你能跳舞，你能搖擺<br>
-享受你生命中的時光<br>
+哦，你能跳舞，你能摇摆<br>
+享受你生命中的时光<br>
 哦，看那女孩，看那一幕<br>
-欣賞這個舞后<br>
+欣赏这个舞后<br>
 <br>
-周五晚上燈光昏暗<br>
-尋找要去的地方<br>
-播放著美妙音樂的地方，盡情搖擺<br>
-你走進來尋找舞王<br>
+周五晚上灯光昏暗<br>
+寻找要去的地方<br>
+播放着美妙音乐的地方，尽情摇摆<br>
+你走进来寻找舞王<br>
 任何人都可能是那家伙<br>
-夜還早音樂正嗨<br>
-伴隨著一點搖滾，一切都很棒<br>
-你跳舞正在興頭上<br>
-當你把握住機會<br>
+夜还早音乐正嗨<br>
+伴随着一点摇滚，一切都很棒<br>
+你跳舞正在兴头上<br>
+当你把握住机会<br>
 <br>
 你就是舞后<br>
-年輕又可愛，只有十七嵗<br>
+年轻又可爱，只有十七岁<br>
 舞后<br>
-感受著來自手鼓的節奏，哦耶<br>
-你能跳舞，你能搖擺<br>
-享受你生命中的時光<br>
+感受着来自手鼓的节奏，哦耶<br>
+你能跳舞，你能摇摆<br>
+享受你生命中的时光<br>
 哦，看那女孩，看那一幕<br>
-欣賞這個舞后<br>
+欣赏这个舞后<br>
 <br>
-你是個淘氣鬼，挑逗著他們<br>
-使他們興致勃勃然後你便離開<br>
-尋找下一個，任何人都有可能<br>
-你跳舞正在興頭上<br>
-當你把握住機會<br>
+你是个淘气鬼，挑逗着他们<br>
+使他们兴致勃勃然后你便离开<br>
+寻找下一个，任何人都有可能<br>
+你跳舞正在兴头上<br>
+当你把握住机会<br>
 <br>
 你就是舞后<br>
-年輕又可愛，只有十七嵗<br>
+年轻又可爱，只有十七岁<br>
 舞后<br>
-感受著來自手鼓的節奏，哦耶<br>
-你能跳舞，你能搖擺<br>
-享受你生命中的時光<br>
+感受着来自手鼓的节奏，哦耶<br>
+你能跳舞，你能摇摆<br>
+享受你生命中的时光<br>
 哦，看那女孩，看那一幕<br>
-欣賞這個舞后<br>
+欣赏这个舞后<br>
 <br>
-欣賞這個舞后
+欣赏这个舞后
 </blockquote>
 </div>
 
-這裡的 digging 是 appreciating 的意思，而 dig in 沒有意義。
+这里的 digging 是 appreciating 的意思，而 dig in 没有意义。
 
 ## 参考链接
 
-* [ABBA \| Articles](https://abbasite.com){:target="_blank"}
 * [ABBA – Dancing Queen Lyrics \| Genius Lyrics](https://genius.com/Abba-dancing-queen-lyrics){:target="_blank"}
+* [Dancing Queen Lyrics \| GARNET CROW music diary](https://crowsub.github.io/lyrics/featuring/Dancing%20Queen.html){:target="_blank"}

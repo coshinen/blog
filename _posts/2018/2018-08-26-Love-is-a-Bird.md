@@ -8,9 +8,9 @@ category: 译文集
 tags: ガネクロ Lyrics
 excerpt: 夕暮れとこの街の匂い、染みついた諦めと希望。雨の中うつむいていた、少年の足取り。
 ---
-![GZCA-5125~6](https://crowsub.github.io/assets/images/discography/album/GZCA-5125~6.jpg){:.border}
+![GZCA-5126](https://crowsub.github.io/assets/images/discography/album/GZCA-5126.jpg){:.border}
 
-## Love is a Bird | 愛是一隻鳥兒
+## Love is a Bird | 爱是一只鸟儿
 
 歌手：GARNET CROW<br>
 作詞：AZUKI 七<br>
@@ -68,54 +68,54 @@ Love is a Bird...<br>
 
 <div class="lyric-translation">
 <blockquote>
-黃昏和這個街道的氣味<br>
-沾染了放棄和希望<br>
-在雨中低著頭<br>
-少年的腳步<br>
+黄昏和这个街道的气味<br>
+沾染了放弃和希望<br>
+在雨中低着头<br>
+少年的脚步<br>
 <br>
-像做夢一樣追趕的<br>
-她已經 被歲月推倒<br>
-把思念藏在心裡<br>
-感覺到了吧<br>
+像做梦一样追赶的<br>
+她已经 被岁月推倒<br>
+把思念藏在心里<br>
+感觉到了吧<br>
 <br>
-是的，吶 只有黑暗<br>
-總是給我祝福<br>
-時而來臨的喜悅的日子<br>
-沒有果敢 頭暈目眩<br>
+是的，呐 只有黑暗<br>
+总是给我祝福<br>
+时而来临的喜悦的日子<br>
+没有果敢 头晕目眩<br>
 <br>
-就算在平凡的戀愛中<br>
-人 啊，會放出光輝吧<br>
-小小地祈禱思念的心情 看啊飛舞著<br>
+就算在平凡的恋爱中<br>
+人 啊，会放出光辉吧<br>
+小小地祈祷思念的心情 看啊飞舞着<br>
 Love is a Bird...<br>
 <br>
-愛是自由跳舞的東西吧<br>
+爱是自由跳舞的东西吧<br>
 好像不知道停留的地方<br>
 <br>
-像槍聲一樣的雨聲 <br>
-心慌意亂<br>
-生命的危機已經在那裡<br>
-隨著最初開始<br>
+像枪声一样的雨声 <br>
+心慌意乱<br>
+生命的危机已经在那里<br>
+随着最初开始<br>
 <br>
-悄悄地在寂靜之中<br>
-即使要委身於你 再次<br>
-甜蜜的誘惑 生存的地方 去往的地方 尋求著<br>
-飛走吧<br>
+悄悄地在寂静之中<br>
+即使要委身于你 再次<br>
+甜蜜的诱惑 生存的地方 去往的地方 寻求着<br>
+飞走吧<br>
 <br>
-就算在平凡的戀愛中<br>
-人 啊，會放出光輝吧<br>
-小小地祈禱思念的心情 看啊飛舞著<br>
+就算在平凡的恋爱中<br>
+人 啊，会放出光辉吧<br>
+小小地祈祷思念的心情 看啊飞舞着<br>
 Love is a Bird...<br>
 <br>
-就算在平凡的戀愛中<br>
-人 啊，會放出光輝吧<br>
-小小地祈禱思念的心情 看啊飛舞著<br>
+就算在平凡的恋爱中<br>
+人 啊，会放出光辉吧<br>
+小小地祈祷思念的心情 看啊飞舞着<br>
 Love is a Bird...<br>
-愛是自由跳舞的東西吧<br>
+爱是自由跳舞的东西吧<br>
 好像不知道停留的地方
 </blockquote>
 </div>
 
 ## 参考链接
 
-* [GARNET CROW official website : ガーネットクロウ オフィシャルサイト](http://www.garnetcrow.com){:target="_blank"}
 * [GARNET CROW Love is a Bird 歌詞 - 歌ネット](https://www.uta-net.com/song/63136){:target="_blank"}
+* [Love is a Bird Lyrics \| GARNET CROW music diary](https://crowsub.github.io/lyrics/original/Love%20is%20a%20Bird.html){:target="_blank"}

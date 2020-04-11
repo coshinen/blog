@@ -10,7 +10,7 @@ excerpt: It's the little old lady from Pasadena, has a pretty little flower bed 
 ---
 ![GZCA-5017](https://crowsub.github.io/assets/images/discography/other/GZCA-5017.jpg){:.border}
 
-## THE LITTLE OLD LADY FROM PASADENA | 來自帕薩迪納的小老太太
+## THE LITTLE OLD LADY FROM PASADENA | 来自帕萨迪纳的小老太太
 
 歌手：中村由利<br>
 作詞：Roger Christian, Don Altfeld & Jan Berry<br>
@@ -60,46 +60,47 @@ She's the terror of Colorado Boulevard<br>
 
 <div class="lyric-translation">
 <blockquote>
-（帕薩迪納）x4<br>
+（帕萨迪纳）x4<br>
 <br>
-這是來自帕薩迪納的小老太太<br>
-（衝吧奶奶，衝吧奶奶，衝吧奶奶，衝啊！）<br>
-有一個白色梔子花的小花壇<br>
-（衝吧奶奶，衝吧奶奶，衝吧奶奶，衝啊！）<br>
-但是停在一個破舊的車庫裡<br>
-是一種全新的亮紅色的超跑道奇<br>
+这是来自帕萨迪纳的小老太太<br>
+（冲吧奶奶，冲吧奶奶，冲吧奶奶，冲啊！）<br>
+有一个白色栀子花的小花坛<br>
+（冲吧奶奶，冲吧奶奶，冲吧奶奶，冲啊！）<br>
+但是停在一个破旧的车库里<br>
+是一种全新的亮红色的超跑道奇<br>
 <br>
-每個人都說沒有比這更抓狂的了<br>
-比來自帕薩迪納的小老太太<br>
-（她開得真快開得真猛）<br>
-他是科羅拉多大道上的恐怖份子<br>
-（這就是來自帕薩迪納的小老太太）<br>
+每个人都说没有比这更抓狂的了<br>
+比来自帕萨迪纳的小老太太<br>
+（她开得真快开得真猛）<br>
+他是科罗拉多大道上的恐怖份子<br>
+（这就是来自帕萨迪纳的小老太太）<br>
 <br>
-你始終會看到她不要試圖選擇她<br>
-（衝吧奶奶，衝吧奶奶，衝吧奶奶，衝啊！）<br>
-你可以開車去但你永遠不會失去她<br>
-（衝吧奶奶，衝吧奶奶，衝吧奶奶，衝啊！）<br>
-她遲早會得到一張票<br>
-因為她不能把腳踩在油門上<br>
+你始终会看到她不要试图选择她<br>
+（冲吧奶奶，冲吧奶奶，冲吧奶奶，冲啊！）<br>
+你可以开车去但你永远不会失去她<br>
+（冲吧奶奶，冲吧奶奶，冲吧奶奶，冲啊！）<br>
+她迟早会得到一张票<br>
+因为她不能把脚踩在油门上<br>
 <br>
-每個人都說沒有比這更抓狂的了<br>
-比來自帕薩迪納的小老太太<br>
-（她開得真快開得真猛）<br>
-他是科羅拉多大道上的恐怖份子<br>
-（這就是來自帕薩迪納的小老太太）<br>
+每个人都说没有比这更抓狂的了<br>
+比来自帕萨迪纳的小老太太<br>
+（她开得真快开得真猛）<br>
+他是科罗拉多大道上的恐怖份子<br>
+（这就是来自帕萨迪纳的小老太太）<br>
 <br>
-（衝吧奶奶，衝啊！）x3<br>
+（冲吧奶奶，冲啊！）x3<br>
 <br>
-每個人都說沒有比這更抓狂的了<br>
-比來自帕薩迪納的小老太太<br>
-（她開得真快開得真猛）<br>
-他是科羅拉多大道上的恐怖份子<br>
-（這就是來自帕薩迪納的小老太太）<br>
+每个人都说没有比这更抓狂的了<br>
+比来自帕萨迪纳的小老太太<br>
+（她开得真快开得真猛）<br>
+他是科罗拉多大道上的恐怖份子<br>
+（这就是来自帕萨迪纳的小老太太）<br>
 <br>
-（衝吧奶奶，衝吧奶奶，衝吧奶奶，衝啊！）x8
+（冲吧奶奶，冲吧奶奶，冲吧奶奶，冲啊！）x8
 </blockquote>
 </div>
 
 ## 参考链接
 
 * [The Beach Boys – The Little Old Lady From Pasadena Lyrics \| Genius Lyrics](https://genius.com/The-beach-boys-the-little-old-lady-from-pasadena-lyrics){:target="_blank"}
+* [THE LITTLE OLD LADY FROM PASADENA Lyrics \| GARNET CROW music diary](https://crowsub.github.io/lyrics/featuring/THE%20LITTLE%20OLD%20LADY%20FROM%20PASADENA.html){:target="_blank"}

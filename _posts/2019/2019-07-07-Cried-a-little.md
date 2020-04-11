@@ -10,7 +10,7 @@ excerpt: 弱い日差しが揺れるテーブルの上、開いた世界地図�
 ---
 ![GZCA-1029](https://crowsub.github.io/assets/images/discography/single/GZCA-1029.jpg){:.border}
 
-## Cried a little | 哭了會兒
+## Cried a little | 哭了会儿
 
 歌手：GARNET CROW<br>
 作詞：AZUKI 七<br>
@@ -68,7 +68,7 @@ Why なくしてから気づく<br>
 <blockquote>
 微弱的陽光在桌面上搖晃<br>
 在打開的世界地圖上<br>
-還殘留著你習慣的文字<br>
+還殘留着你習慣的文字<br>
 ah- 是現實嗎、、<br>
 <br>
 溫柔是為了什麼？<br>
@@ -99,7 +99,7 @@ cloud 在銘刻的一瞬間<br>
 現在好像也被捕獲了<br>
 <br>
 投身於晴朗的天空<br>
-等待著今天流逝<br>
+等待着今天流逝<br>
 ha- 在虛幻的夢中<br>
 一定會活下去的吧<br>
 <br>
@@ -113,5 +113,5 @@ Why 失去後才意識到<br>
 
 ## 参考链接
 
-* [GARNET CROW official website : ガーネットクロウ オフィシャルサイト](http://www.garnetcrow.com){:target="_blank"}
 * [GARNET CROW Cried a little 歌詞 - 歌ネット](https://www.uta-net.com/song/20136){:target="_blank"}
+* [Cried a little Lyrics \| GARNET CROW music diary](https://crowsub.github.io/lyrics/original/Cried%20a%20little.html){:target="_blank"}

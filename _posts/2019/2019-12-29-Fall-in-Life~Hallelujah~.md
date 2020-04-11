@@ -10,7 +10,7 @@ excerpt: 暮れゆく空おセンチな気分。海辺のDrive、まだみたこ
 ---
 ![GZCA-5198](https://crowsub.github.io/assets/images/discography/album/GZCA-5198.jpg){:.border}
 
-## Fall in Life 〜Hallelujah〜 | 墜入生活～讚美上帝～
+## Fall in Life 〜Hallelujah〜 | 坠入生活～赞美上帝～
 
 歌手：GARNET CROW<br>
 作詞：AZUKI 七<br>
@@ -84,75 +84,75 @@ Hallelijah!
 
 <div class="lyric-translation">
 <blockquote>
-暮色漸濃的天空有點傷感的心情<br>
-海邊的Dirve<br>
-前往未曾見過的地方<br>
-載著我們 be high yeah<br>
-靜悄悄地前進的道路<br>
+暮色渐浓的天空有点伤感的心情<br>
+海边的Dirve<br>
+前往未曾见过的地方<br>
+载着我们 be high yeah<br>
+静悄悄地前进的道路<br>
 <br>
-‘想要改變，什麼的 ‘無法改變，之類的<br>
-沒有結果的話 在再次重複的期間<br>
-好像隱藏了呼吸一樣<br>
-真心的感動 好奇心<br>
+‘想要改变，什么的 ‘无法改变，之类的<br>
+没有结果的话 在再次重复的期间<br>
+好像隐藏了呼吸一样<br>
+真心的感动 好奇心<br>
 <br>
-困難有時<br>
-關係 ‘緊緊地，和強烈地<br>
-為了連繫 那樣<br>
-因為什麼！<br>
+困难有时<br>
+关系 ‘紧紧地，和强烈地<br>
+为了连系 那样<br>
+因为什么！<br>
 <br>
 一下子跳出<br>
-現在和你在這個世界暢遊吧<br>
-讓奔跑的心感受著<br>
+现在和你在这个世界畅游吧<br>
+让奔跑的心感受着<br>
 Hallelujah<br>
-還能再見 笑著再次相見<br>
-那一天一定 已經正在等著<br>
+还能再见 笑着再次相见<br>
+那一天一定 已经正在等着<br>
 <br>
 被安排的事全部<br>
-變得開心了<br>
+变得开心了<br>
 Fall in Life, and so,<br>
 Hallelijah!<br>
 <br>
-全部捨棄的 去擁抱什麼的<br>
-沒有太大差別的問題 還在糾結的話<br>
+全部舍弃的 去拥抱什么的<br>
+没有太大差别的问题 还在纠结的话<br>
 把我也忘掉就行了<br>
-因為 ‘開始，的話 還會有哦<br>
+因为 ‘开始，的话 还会有哦<br>
 <br>
-說後悔的話<br>
-時間什麼的 更加遙遠<br>
-盡頭的盡頭 ‘打發時間，變成這樣<br>
+说后悔的话<br>
+时间什么的 更加遥远<br>
+尽头的尽头 ‘打发时间，变成这样<br>
 <br>
-已經可以了 放手吧<br>
-夜裡的吵鬧<br>
-想就這樣更多地感受現在<br>
+已经可以了 放手吧<br>
+夜里的吵闹<br>
+想就这样更多地感受现在<br>
 <br>
 Hallelujah<br>
-還能再見 笑著再次相見<br>
-那一天一定 已經正在等著<br>
+还能再见 笑着再次相见<br>
+那一天一定 已经正在等着<br>
 <br>
 被安排的事全部<br>
-變得開心了<br>
+变得开心了<br>
 Fall in Life, and so,<br>
 Hallelijah!<br>
 <br>
-現在和你在這個世界暢遊吧<br>
-讓奔跑的心感受著<br>
+现在和你在这个世界畅游吧<br>
+让奔跑的心感受着<br>
 Hallelujah<br>
-還能再見 笑著再次相見<br>
-那一天一定 已經正在等著<br>
+还能再见 笑着再次相见<br>
+那一天一定 已经正在等着<br>
 <br>
 被安排的事全部<br>
-變得開心了<br>
+变得开心了<br>
 Fall in Life, and so,<br>
 Hallelijah!
 </blockquote>
 </div>
 
-「おセンチ」表示稍微有點傷感的表現。
-“Hallelujah”是一個希伯來語單詞，意思是“Praise ye, Yah”，使用希伯來語“you”（英語是“ye”）複數祈使形式和希伯來語“Yah”的縮寫形式翻譯而成。對應“Praise you, Jehovah”。
+「おセンチ」表示稍微有点伤感的表现。
+“Hallelujah”是一个希伯来语单词，意思是“Praise ye, Yah”，使用希伯来语“you”（英语是“ye”）复数祈使形式和希伯来语“Yah”的缩写形式翻译而成。对应“Praise you, Jehovah”。
 
 ## 参考链接
 
-* [GARNET CROW official website : ガーネットクロウ オフィシャルサイト](http://www.garnetcrow.com){:target="_blank"}
 * [GARNET CROW Fall in Life 〜Hallelujah〜 歌詞 - 歌ネット](https://www.uta-net.com/song/85218){:target="_blank"}
+* [Fall in Life 〜Hallelujah〜 Lyrics \| GARNET CROW music diary](https://crowsub.github.io/lyrics/original/Fall%20in%20Life%20〜Hallelujah〜.html){:target="_blank"}
 * [「おセンチ」の意味や使い方 Weblio辞書](https://www.weblio.jp/content/おセンチ){:target="_blank"}
 * [Hallelujah (disambiguation) - Wikipedia](https://en.wikipedia.org/wiki/Hallelujah_(disambiguation)){:target="_blank"}

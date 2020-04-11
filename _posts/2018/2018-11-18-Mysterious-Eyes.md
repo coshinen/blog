@@ -81,65 +81,65 @@ I feel so all in secret life
 <div class="lyric-translation">
 <blockquote>
 正因你和我是 不同的人<br>
-喜好不同 走路的速度和 傳達想法的方式也是<br>
+喜好不同 走路的速度和 传达想法的方式也是<br>
 <br>
-逐漸褪色的<br>
-兩人的記憶中 現在 我們<br>
-雖然摸索著<br>
-尋找著 某個人的 未來<br>
+逐渐褪色的<br>
+两人的记忆中 现在 我们<br>
+虽然摸索着<br>
+寻找着 某个人的 未来<br>
 <br>
-比想像中還堅強地活著<br>
-尋求著 特別的 愛<br>
-為確定的日子煩惱著<br>
+比想像中还坚强地活着<br>
+寻求着 特别的 爱<br>
+为确定的日子烦恼着<br>
 <br>
-為了不再迷惑<br>
-不要放開 你的手<br>
-互相傷害的 那個時候也是<br>
+为了不再迷惑<br>
+不要放开 你的手<br>
+互相伤害的 那个时候也是<br>
 <br>
-只是一直 在尋找答案<br>
-在迷失的 時空中<br>
-到下一個地方 you take your way<br>
+只是一直 在寻找答案<br>
+在迷失的 时空中<br>
+到下一个地方 you take your way<br>
 <br>
-映入眼簾的東西<br>
-用手觸摸 感受到的東西<br>
-那是我們世界的全部<br>
-不管夢境如何<br>
+映入眼帘的东西<br>
+用手触摸 感受到的东西<br>
+那是我们世界的全部<br>
+不管梦境如何<br>
 <br>
 年幼的日子的<br>
-在雙手中溢出的小小的 a pebble<br>
-誰也看不到<br>
-在像寶石般閃耀的時間裡<br>
+在双手中溢出的小小的 a pebble<br>
+谁也看不到<br>
+在像宝石般闪耀的时间里<br>
 <br>
-注意到的話 尋求著<br>
-不同的 愛 擦肩而過<br>
-渴望無形的東西<br>
+注意到的话 寻求着<br>
+不同的 爱 擦肩而过<br>
+渴望无形的东西<br>
 true heart for mystery eyes<br>
 <br>
 去能看到海的街道吧<br>
 只有你能看到的那天<br>
-邀請我並帶我去吧<br>
+邀请我并带我去吧<br>
 <br>
-無邊無際的天空的<br>
-一切 雖然已經 看不見了<br>
-到下一個地方 you take your way<br>
+无边无际的天空的<br>
+一切 虽然已经 看不见了<br>
+到下一个地方 you take your way<br>
 <br>
-緊緊擁抱<br>
+紧紧拥抱<br>
 I'd like to be in your love<br>
 <br>
-為了不再迷惑<br>
-不要放開 你的手<br>
-互相傷害的 那個時候也是<br>
+为了不再迷惑<br>
+不要放开 你的手<br>
+互相伤害的 那个时候也是<br>
 <br>
-只是一直 在尋找答案<br>
-在迷失的 時空中<br>
-到下一個地方 you take your way<br>
+只是一直 在寻找答案<br>
+在迷失的 时空中<br>
+到下一个地方 you take your way<br>
 <br>
-悄悄地 重複著 迷惑之中<br>
+悄悄地 重复着 迷惑之中<br>
 I feel so all in secret life
 </blockquote>
 </div>
 
 ## 参考链接
 
-* [GARNET CROW official website : ガーネットクロウ オフィシャルサイト](http://www.garnetcrow.com){:target="_blank"}
 * [GARNET CROW Mysterious Eyes 歌詞 - 歌ネット](https://www.uta-net.com/song/14347){:target="_blank"}
+* [Mysterious Eyes Lyrics \| GARNET CROW music diary](https://crowsub.github.io/lyrics/original/Mysterious%20Eyes.html){:target="_blank"}

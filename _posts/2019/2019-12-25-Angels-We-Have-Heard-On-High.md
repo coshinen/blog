@@ -10,7 +10,7 @@ excerpt: Angels we have heard on high, sweetly singing o'er the plains, and the 
 ---
 ![GZBA-8020~1](https://crowsub.github.io/assets/images/discography/dvd/GZBA-8020~1.jpg){:.border}
 
-## Angels We Have Heard On High | 我們聽到天使在高處
+## Angels We Have Heard On High | 我们听到天使在高处
 
 歌手：中村由利
 
@@ -41,33 +41,34 @@ Gloria, in excelsis Deo!
 
 <div class="lyric-translation">
 <blockquote>
-我們聽到天使在高處<br>
-甜美地歌唱越過平原，<br>
-接著群山回應<br>
-迴響著他們的歡樂頌。<br>
-榮耀，歸於上帝！<br>
-榮耀，歸於上帝！<br>
+我们听到天使在高处<br>
+甜美地歌唱越过平原，<br>
+接着群山回应<br>
+回响着他们的欢乐颂。<br>
+荣耀，归于上帝！<br>
+荣耀，归于上帝！<br>
 <br>
-牧羊人，為什麼這個週年慶祝？<br>
-為什麼你要延長歡樂頌？<br>
-什麼可喜的消息<br>
-哪條激發了你的天堂曲？<br>
-榮耀，歸於上帝！<br>
-榮耀，歸於上帝！<br>
+牧羊人，为什么这个周年庆祝？<br>
+为什么你要延长欢乐颂？<br>
+什么可喜的消息<br>
+哪条激发了你的天堂曲？<br>
+荣耀，归于上帝！<br>
+荣耀，归于上帝！<br>
 <br>
-來伯利恆看看<br>
-天使歌唱在他出生時；<br>
-來吧，屈膝崇拜，<br>
+来伯利恒看看<br>
+天使歌唱在他出生时；<br>
+来吧，屈膝崇拜，<br>
 上帝，新生的王。<br>
-榮耀，歸於上帝！<br>
-榮耀，歸於上帝！
+荣耀，归于上帝！<br>
+荣耀，归于上帝！
 </blockquote>
 </div>
 
-“Gloria in excelsis Deo”是拉丁文，對應英文中的“Glory to God in the highest”，是“榮耀歸於至高的上帝”的意思。
-“Bethlehem”伯利恆（白冷）是巴勒斯坦南部的一個小城市，希伯來文原意為麵包之家，是耶穌的出生地。
+“Gloria in excelsis Deo”是拉丁文，对应英文中的“Glory to God in the highest”，是“荣耀归于至高的上帝”的意思。
+“Bethlehem”伯利恒（白冷）是巴勒斯坦南部的一个小城市，希伯来文原意为面包之家，是耶稣的出生地。
 
 ## 参考链接
 
 * [Christmas Songs – Angels We Have Heard on High Lyrics \| Genius Lyrics](https://genius.com/Christmas-songs-angels-we-have-heard-on-high-lyrics){:target="_blank"}
+* [Angels We Have Heard on High Lyrics \| GARNET CROW music diary](https://crowsub.github.io/lyrics/featuring/Angels%20We%20Have%20Heard%20On%20High.html){:target="_blank"}
 * [Gloria in excelsis Deo - Wikipedia](https://en.wikipedia.org/wiki/Gloria_in_excelsis_Deo){:target="_blank"}

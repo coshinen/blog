@@ -10,7 +10,7 @@ excerpt: 離陸間近の午前1時5分 空を見上げていた。いつかま�
 ---
 ![GZCA-5198](https://crowsub.github.io/assets/images/discography/album/GZCA-5198.jpg){:.border}
 
-## Hello Sadness | 你好悲傷
+## Hello Sadness | 你好悲伤
 
 歌手：GARNET CROW<br>
 作詞：AZUKI 七<br>
@@ -71,60 +71,60 @@ in silence
 
 <div class="lyric-translation">
 <blockquote>
-臨近起飛的午前1點5分 抬頭看著天空<br>
-總有一天能再次見面吧 為什麼啊<br>
-淨是想著已經離開的事無法停止<br>
-內心是回家的念頭<br>
+临近起飞的午前1点5分 抬头看著天空<br>
+总有一天能再次见面吧 为什么啊<br>
+净是想著已经离开的事无法停止<br>
+内心是回家的念头<br>
 <br>
-在你的身旁沈睡的每天 遠行後講述的未來<br>
-現在也是每次讀到莎岡 好像還能聽到波浪的聲音<br>
+在你的身旁沉睡的每天 远行后讲述的未来<br>
+现在也是每次读到莎冈 好像还能听到波浪的声音<br>
 <br>
-這兒好像是永遠的夏天 熊熊燃燒的熱情<br>
-來來回回悄悄地嘗試過來<br>
-突然視線纏繞 內心變得動蕩不安<br>
-什麼在內心深處妨礙因而 tonight...<br>
+这儿好像是永远的夏天 熊熊燃烧的热情<br>
+来来回回悄悄地尝试过来<br>
+突然视线缠绕 内心变得动荡不安<br>
+什么在内心深处妨碍因而 tonight...<br>
 Hello Sadness... and I need you<br>
 I'll walk alone with you<br>
 in silence<br>
 <br>
-炙熱的陽光 委身閉上眼睛睡覺的午後<br>
+炙热的阳光 委身闭上眼睛睡觉的午后<br>
 融入地球<br>
 <br>
-幸福之中 有著不安 躊躇的對面隱藏著期待<br>
-來自生命中存在的 沈溺於悲哀的眩光<br>
+幸福之中 有著不安 踌躇的对面隐藏著期待<br>
+来自生命中存在的 沉溺于悲哀的眩光<br>
 <br>
-流逝的時光只是消逝 孤獨不過是自由<br>
-過去未來都一直不會消失因而<br>
-對機緣不知所措 內心動搖地牽著手<br>
-像波浪一樣不久必定會破碎 tonight...<br>
+流逝的时光只是消逝 孤独不过是自由<br>
+过去未来都一直不会消失因而<br>
+对机缘不知所措 内心动摇地牵著手<br>
+像波浪一样不久必定会破碎 tonight...<br>
 Hello Sadness... and I need you<br>
 I'll walk alone with you<br>
 In silence<br>
 <br>
-只有放出色彩的罪孽不動搖地照耀著現在<br>
+只有放出色彩的罪孽不动摇地照耀著现在<br>
 <br>
-流逝的時光只是消逝 孤獨不過是自由<br>
-過去未來都一直不會消失因而<br>
-對機緣不知所措 內心動搖地牽著手<br>
-像波浪一樣不久必定會破碎 tonight...<br>
+流逝的时光只是消逝 孤独不过是自由<br>
+过去未来都一直不会消失因而<br>
+对机缘不知所措 内心动摇地牵著手<br>
+像波浪一样不久必定会破碎 tonight...<br>
 Hello Sadness... and I need you<br>
 I'll walk alone with you<br>
 in silence<br>
 <br>
-這兒好像是永遠的夏天 熊熊燃燒的熱情<br>
-來來回回悄悄地嘗試過來<br>
-突然視線纏繞 內心變得動蕩不安<br>
-什麼在內心深處妨礙因而 tonight...<br>
+这儿好像是永远的夏天 熊熊燃烧的热情<br>
+来来回回悄悄地尝试过来<br>
+突然视线缠绕 内心变得动荡不安<br>
+什么在内心深处妨碍因而 tonight...<br>
 Hello Sadness... and I need you<br>
 I'll walk alone with you<br>
 in silence
 </blockquote>
 </div>
 
-莎崗指的是法國女作家弗蘭西絲·莎崗（Françoise Sagan），以中產階級的愛情故事聞名。
-據說這首歌詞的靈感來自於其 19 歲時出版的處女作日安憂鬱（Bonjour tristesse）。
+莎岗指的是法国女作家弗兰西丝·莎岗（Françoise Sagan），以中产阶级的爱情故事闻名。
+据说这首歌词的灵感来自于其 19 岁时出版的处女作日安忧郁（Bonjour tristesse）。
 
 ## 参考链接
 
-* [GARNET CROW official website : ガーネットクロウ オフィシャルサイト](http://www.garnetcrow.com){:target="_blank"}
 * [GARNET CROW Hello Sadness 歌詞 - 歌ネット](https://www.uta-net.com/song/85223){:target="_blank"}
+* [Hello Sadness Lyrics \| GARNET CROW music diary](https://crowsub.github.io/lyrics/original/Hello%20Sadness.html){:target="_blank"}

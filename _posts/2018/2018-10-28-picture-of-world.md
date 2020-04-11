@@ -10,7 +10,7 @@ excerpt: ずっと みてたんだ一枚のポスター、壁の片隅で色褪�
 ---
 ![GZCA-5052](https://crowsub.github.io/assets/images/discography/album/GZCA-5052.jpg){:.border}
 
-## picture of world | 世界的圖畫
+## picture of world | 世界的图画
 
 歌手：GARNET CROW<br>
 作詞：AZUKI 七<br>
@@ -60,46 +60,46 @@ yah~ 私なら何一つ なくしはしない
 
 <div class="lyric-translation">
 <blockquote>
-一直 看著的一張海報<br>
-在牆角的褪色了<br>
-一定是誰 忘了揭下<br>
-黃昏的故事 就在那裡<br>
+一直 看着的一张海报<br>
+在墙角的褪色了<br>
+一定是谁 忘了揭下<br>
+黄昏的故事 就在那里<br>
 <br>
-用彷彿在訴說的目光<br>
-一個人坐著抬頭看的那個前方是...<br>
+用仿佛在诉说的目光<br>
+一个人坐着抬头看的那个前方是...<br>
 <br>
-來吧 yeah- 拿走就好了<br>
-對你來說 所謂未來<br>
-yah~ 我的話什麼都 不會失去<br>
+来吧 yeah- 拿走就好了<br>
+对你来说 所谓未来<br>
+yah~ 我的话什么都 不会失去<br>
 <br>
-眼睛 看不到的東西 筑就的<br>
-雖然不確定 但全部都有<br>
-不管在那個 時代 都是相似的<br>
-在自己所站的 地方 正當化<br>
+眼睛 看不到的东西 筑就的<br>
+虽然不确定 但全部都有<br>
+不管在那个 时代 都是相似的<br>
+在自己所站的 地方 正当化<br>
 <br>
-如果太陽落下 無論是誰若沒有燈光<br>
-都連腳下也看不見<br>
+如果太阳落下 无论是谁若没有灯光<br>
+都连脚下也看不见<br>
 <br>
-對了 yeah- 想要就給你吧<br>
-如果你擁有了 一切<br>
-yah~ 我的話一點都 不會難過<br>
+对了 yeah- 想要就给你吧<br>
+如果你拥有了 一切<br>
+yah~ 我的话一点都 不会难过<br>
 <br>
-如果已經 下了 幾次的雨<br>
-在快要流下的那個中<br>
+如果已经 下了 几次的雨<br>
+在快要流下的那个中<br>
 陌生的 woman in picture of world 悄悄地<br>
-用盡力氣<br>
+用尽力气<br>
 <br>
-吶 你是 何時開始在那裡的<br>
+呐 你是 何时开始在那里的<br>
 在我心中 定居<br>
-yah~ 啊這樣啊<br>
-連今天也 能聽到哦<br>
-來吧 yeah- 拿走就好了<br>
-對你來說所謂未來<br>
-yah~ 我的話什麼都 不會失去
+yah~ 啊这样啊<br>
+连今天也 能听到哦<br>
+来吧 yeah- 拿走就好了<br>
+对你来说所谓未来<br>
+yah~ 我的话什么都 不会失去
 </blockquote>
 </div>
 
 ## 参考链接
 
-* [GARNET CROW official website : ガーネットクロウ オフィシャルサイト](http://www.garnetcrow.com){:target="_blank"}
 * [GARNET CROW picture of world 歌詞 - 歌ネット](https://www.uta-net.com/song/25836){:target="_blank"}
+* [picture of world Lyrics \| GARNET CROW music diary](https://crowsub.github.io/lyrics/original/picture%20of%20world.html){:target="_blank"}

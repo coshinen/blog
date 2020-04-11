@@ -10,7 +10,7 @@ excerpt: 街の音 人の声 ざわめき、やけに今 躰が音をひらう�
 ---
 ![GZCA-1061](https://crowsub.github.io/assets/images/discography/album/GZCA-1061.jpg){:.border}
 
-## Holding you, and swinging | 抱著你，搖擺
+## Holding you, and swinging | 抱着你，摇摆
 
 歌手：GARNET CROW<br>
 作詞：AZUKI 七<br>
@@ -84,43 +84,43 @@ ah- 生きたい<br>
 
 <div class="lyric-translation">
 <blockquote>
-街道的聲音 人的聲音 嘈雜<br>
-特別是現在 身體撿起聲音<br>
-你一個人改變世界什麼的<br>
-ah- 多麼 單純的 feel & brain<br>
+街道的声音 人的声音 嘈杂<br>
+特别是现在 身体捡起声音<br>
+你一个人改变世界什么的<br>
+ah- 多么 单纯的 feel & brain<br>
 <br>
-輕快的節奏也沒有意義<br>
-如果相視而笑是幸福的話<br>
+轻快的节奏也没有意义<br>
+如果相视而笑是幸福的话<br>
 黑暗中也是孤身一人<br>
-只能夢想著奇跡<br>
+只能梦想着奇迹<br>
 <br>
 Holding you, and swinging<br>
-太過強烈地 過於追求了嗎？<br>
+太过强烈地 过于追求了吗？<br>
 ah- 彷徨<br>
-不被愛的 Jane Doe<br>
-拉過來<br>
-擁抱著思念<br>
+不被爱的 Jane Doe<br>
+拉过来<br>
+拥抱着思念<br>
 <br>
-突然說話的你的聲音像機械一樣<br>
-我也 以習慣了的樣子回應了<br>
-好像是有 想要傳達的重要感情<br>
-想不起來<br>
+突然说话的你的声音像机械一样<br>
+我也 以习惯了的样子回应了<br>
+好像是有 想要传达的重要感情<br>
+想不起来<br>
 <br>
-如果能相互信任的話就會變得堅強<br>
-在簡單地說的 光的彼岸<br>
-只是懷疑 無法保護自身<br>
-那樣的日子也有哦<br>
+如果能相互信任的话就会变得坚强<br>
+在简单地说的 光的彼岸<br>
+只是怀疑 无法保护自身<br>
+那样的日子也有哦<br>
 <br>
 Holding you, and swinging<br>
-變的溫柔 在你所在的地方<br>
+变的温柔 在你所在的地方<br>
 ah- 想活下去<br>
-過於喜愛的 John Doe<br>
-去哪裡呢...<br>
+过于喜爱的 John Doe<br>
+去哪里呢...<br>
 高傲地消失了<br>
 <br>
-即使還殘留著悲傷<br>
-注意到的話正站在不同的位置上所以<br>
-比起忘記的方式請告訴我愛的方式<br>
+即使还残留着悲伤<br>
+注意到的话正站在不同的位置上所以<br>
+比起忘记的方式请告诉我爱的方式<br>
 <br>
 Holding you, and swinging<br>
 I've been solitary<br>
@@ -132,25 +132,25 @@ so I'll continue to<br>
 continue to tell a lie. baby<br>
 <br>
 Holding you, and swinging<br>
-太過強烈地 過於追求了嗎？<br>
+太过强烈地 过于追求了吗？<br>
 ah- 彷徨<br>
-不被愛的 Jane Doe<br>
-拉過來<br>
-擁抱著思念<br>
+不被爱的 Jane Doe<br>
+拉过来<br>
+拥抱着思念<br>
 <br>
 Holding you, and swinging<br>
-變的溫柔 在你所在的地方<br>
+变的温柔 在你所在的地方<br>
 ah- 想活下去<br>
-過於喜愛的 John Doe<br>
-去哪裡呢...<br>
+过于喜爱的 John Doe<br>
+去哪里呢...<br>
 想要高傲地消失
 </blockquote>
 </div>
 
-「ひらう」是大阪方言，對應標準語的「拾(ひろ)う」。
+「ひらう」是大阪方言，对应标准语的「拾(ひろ)う」。
 
 ## 参考链接
 
-* [GARNET CROW official website : ガーネットクロウ オフィシャルサイト](http://www.garnetcrow.com){:target="_blank"}
 * [GARNET CROW Holding you, and swinging 歌詞 - 歌ネット](https://www.uta-net.com/song/20141){:target="_blank"}
+* [Holding you, and swinging Lyrics \| GARNET CROW music diary](https://crowsub.github.io/lyrics/original/Holding%20you,%20and%20swinging.html){:target="_blank"}
 * [ひらうの意味や使い方 Weblio辞書](https://www.weblio.jp/content/ひらう){:target="_blank"}

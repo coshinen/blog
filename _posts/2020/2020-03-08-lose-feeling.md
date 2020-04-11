@@ -10,7 +10,7 @@ excerpt: 君のいない 明日へ向かう 日々なら、すべてが もう�
 ---
 ![GZCA-7037](https://crowsub.github.io/assets/images/discography/single/GZCA-7037.jpg){:.border}
 
-## lose feeling | 失去感覺
+## lose feeling | 失去感觉
 
 歌手：GARNET CROW<br>
 作詞：AZUKI 七<br>
@@ -46,32 +46,32 @@ um-
 
 <div class="lyric-translation">
 <blockquote>
-面對沒有你的 明天的 每天<br>
-一切 都... 如同消磨時間一般<br>
+面对没有你的 明天的 每天<br>
+一切 都... 如同消磨时间一般<br>
 <br>
-連那樣喜歡的 碧海<br>
-都不再閃耀了<br>
+连那样喜欢的 碧海<br>
+都不再闪耀了<br>
 <br>
-人們啊 在短暫的一生中<br>
-雖然到處 尋找著 什麼<br>
+人们啊 在短暂的一生中<br>
+虽然到处 寻找着 什么<br>
 <br>
-像感受不到溫暖的 春天的太陽一樣<br>
-會這麼想。沒有你的話<br>
+像感受不到温暖的 春天的太阳一样<br>
+会这么想。没有你的话<br>
 <br>
-如此深深地受傷<br>
-原諒我的心 深愛 之後 能去哪裡<br>
+如此深深地受伤<br>
+原谅我的心 深爱 之后 能去哪里<br>
 but everybody's got to live their life......<br>
 <br>
-漂亮話也可以 勸說著<br>
-嘟囔著那是命運...<br>
+漂亮话也可以 劝说着<br>
+嘟囔着那是命运...<br>
 <br>
-只是 接受這樣的事 在平靜中<br>
-傾瀉下來的光 像月亮一樣...<br>
+只是 接受这样的事 在平静中<br>
+倾泻下来的光 像月亮一样...<br>
 um-
 </blockquote>
 </div>
 
 ## 参考链接
 
-* [GARNET CROW official website : ガーネットクロウ オフィシャルサイト](http://www.garnetcrow.com){:target="_blank"}
 * [GARNET CROW lose feeling 歌詞 - 歌ネット](https://www.uta-net.com/song/59993){:target="_blank"}
+* [lose feeling Lyrics \| GARNET CROW music diary](https://crowsub.github.io/lyrics/original/lose%20feeling.html){:target="_blank"}

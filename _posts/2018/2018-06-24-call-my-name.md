@@ -65,52 +65,53 @@ excerpt: 白い壁と Rembrandt、いつまでも眺めていた、日曜の朝�
 
 <div class="lyric-translation">
 <blockquote>
-白色的牆壁和 Rembrandt<br>
-永遠地注視著<br>
-星期天早晨和你只是並排著<br>
-從打開的窗戶照進來的陽光看啊在那裡<br>
-像是突然想起一樣 call my name<br>
+白色的墙壁和 Rembrandt<br>
+永远地注视着<br>
+星期天早晨和你只是并排着<br>
+从打开的窗户照进来的阳光看啊在那里<br>
+像是突然想起一样 call my name<br>
 <br>
-可以一起度過什麼都沒有的時光<br>
-多麼奢侈的存在<br>
-試著收集廉價的贗品<br>
-每週更換一張<br>
+可以一起度过什么都没有的时光<br>
+多么奢侈的存在<br>
+试着收集廉价的赝品<br>
+每周更换一张<br>
 <br>
-明明害怕 變得孤獨<br>
-卻一個人是最沉著的<br>
-那樣的彼此的心中<br>
-理所當然地存在著吧<br>
+明明害怕 变得孤独<br>
+却一个人是最沉着的<br>
+那样的彼此的心中<br>
+理所当然地存在着吧<br>
 <br>
-叫慣了的名字多次<br>
-在只有兩個人的房間裡<br>
+叫惯了的名字多次<br>
+在只有两个人的房间里<br>
 要好好地叫我<br>
-只是 那樣的事情<br>
-溫暖的迴響<br>
-比什麼都甜 be aware<br>
-像是要相信看不到的感覺<br>
+只是 那样的事情<br>
+温暖的回响<br>
+比什么都甜 be aware<br>
+像是要相信看不到的感觉<br>
 <br>
 一天到晚你的事<br>
-並不是凈想著<br>
-雖然每天都很開心<br>
-但不想失去的東西只有一個<br>
+并不是净想着<br>
+虽然每天都很开心<br>
+但不想失去的东西只有一个<br>
 <br>
-一個答案對應新的問題<br>
-那個疑問又對應下一個答案<br>
-不管到什麼時候都是起點<br>
-好像不能動彈般的緩慢步伐<br>
+一个答案对应新的问题<br>
+那个疑问又对应下一个答案<br>
+不管到什么时候都是起点<br>
+好像不能动弹般的缓慢步伐<br>
 <br>
-在和你一起走下去的日子裡<br>
-不斷偶然重疊成為命運之輪<br>
-描繪出那樣的印象<br>
-一邊搖晃一邊不褪色地<br>
-用不變的聲音 please call my name<br>
-像是突然想起一樣 call my name<br>
-像是要相信看不到的感覺
+在和你一起走下去的日子里<br>
+不断偶然重叠成为命运之轮<br>
+描绘出那样的印象<br>
+一边摇晃一边不褪色地<br>
+用不变的声音 please call my name<br>
+像是突然想起一样 call my name<br>
+像是要相信看不到的感觉
 </blockquote>
 </div>
 
-倫勃朗（Rembrandt）是 17 世紀荷蘭黃金時代的畫家，代表作有《夜巡》、《月亮與狩獵女神》等。
+伦勃朗（Rembrandt）是 17 世纪荷兰黄金时代的画家，代表作有《夜巡》、《月亮与狩猎女神》等。
 
 ## 参考链接
-* [GARNET CROW official website : ガーネットクロウ オフィシャルサイト](http://www.garnetcrow.com){:target="_blank"}
+
 * [GARNET CROW call my name 歌詞 - 歌ネット](https://www.uta-net.com/song/14411){:target="_blank"}
+* [call my name Lyrics \| GARNET CROW music diary](https://crowsub.github.io/lyrics/original/call%20my%20name.html){:target="_blank"}

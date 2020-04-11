@@ -10,7 +10,7 @@ excerpt: why 見えぬ明日へと、期待込め歩いてるの。まだ君を�
 ---
 ![GZCA-4135](https://crowsub.github.io/assets/images/discography/single/GZCA-4135.jpg){:.border}
 
-## Misty Mystery | 朦朧的神秘
+## Misty Mystery | 朦胧的神秘
 
 歌手：GARNET CROW<br>
 作詞：AZUKI 七<br>
@@ -86,74 +86,72 @@ Misty Mystery<br>
 
 <div class="lyric-translation">
 <blockquote>
-why 朝著看不見的明天<br>
-充滿期待地走著呢<br>
-還想著你<br>
-像中途一樣吵鬧<br>
+why 朝着看不见的明天<br>
+充满期待地走着呢<br>
+还想着你<br>
+像中途一样吵闹<br>
 <br>
-用離別和淚水交換<br>
-得到了什麼呢<br>
-只有祈禱傳到給你這樣說著<br>
-在陰曆十六夜晚的月亮出現時相遇<br>
+用离别和泪水交换<br>
+得到了什么呢<br>
+只有祈祷传到给你这样说着<br>
+在阴历十六夜晚的月亮出现时相遇<br>
 <br>
-那是遙遠街道的殘像<br>
-周圍循環的甜蜜的回憶<br>
-宛如夏天的暴風雨般的 scene<br>
-只給你看<br>
+那是遥远街道的残像<br>
+周围循环的甜蜜的回忆<br>
+宛如夏天的暴风雨般的 scene<br>
+只给你看<br>
 <br>
-悲哀是自然現象<br>
-安穩只是種印象<br>
-說明內心模樣的 keyword<br>
-啊尋找著<br>
-草原的光 彷彿消失在風中<br>
+悲哀是自然现象<br>
+安稳只是种印象<br>
+说明内心模样的 keyword<br>
+啊寻找着<br>
+草原的光 仿佛消失在风中<br>
 Misty Mystery<br>
 <br>
-why 愛的強大<br>
-試驗般的每一天<br>
-現在溫柔什麼的<br>
-如同遠方吹拂的風<br>
+why 爱的强大<br>
+试验般的每一天<br>
+现在温柔什么的<br>
+如同远方吹拂的风<br>
 <br>
-每當承受寂寞孤獨<br>
-什麼留在了這裡呢<br>
-祈願停止了在那之後<br>
-察覺到天空沒有盡頭<br>
+每当承受寂寞孤独<br>
+什么留在了这里呢<br>
+祈愿停止了在那之后<br>
+察觉到天空没有尽头<br>
 <br>
-做著同樣的夢的想像<br>
-痛苦有時是必須的<br>
-強烈的陽光眩目般的 shade<br>
-只是看著<br>
+做着同样的梦的想像<br>
+痛苦有时是必须的<br>
+强烈的阳光眩目般的 shade<br>
+只是看着<br>
 <br>
-如果痛苦只是種反應<br>
-熱情是過度的心象<br>
-動搖內心模樣的 take it<br>
-啊尋求著<br>
-在黃昏中悄悄地被吞沒<br>
+如果痛苦只是种反应<br>
+热情是过度的心象<br>
+动摇内心模样的 take it<br>
+啊寻求着<br>
+在黄昏中悄悄地被吞没<br>
 Misty Mystery<br>
 <br>
-愛像愛一樣 不斷變化著形狀<br>
-如果還不知道有什麼的話<br>
+爱像爱一样 不断变化着形状<br>
+如果还不知道有什么的话<br>
 I'll keep to stay<br>
 <br>
-那是遙遠街道的殘像<br>
-周圍循環的甜蜜的回憶<br>
-宛如夏天的暴風雨般的 scene<br>
-只給你看<br>
+那是遥远街道的残像<br>
+周围循环的甜蜜的回忆<br>
+宛如夏天的暴风雨般的 scene<br>
+只给你看<br>
 <br>
-悲哀是自然現象<br>
-安穩只是種印象<br>
-說明內心模樣的 keyword<br>
-反覆搖曳的幻想<br>
-超越夜晚的長久的感傷<br>
-啊 草原的光 彷彿消失在風中<br>
+悲哀是自然现象<br>
+安稳只是种印象<br>
+说明内心模样的 keyword<br>
+反复摇曳的幻想<br>
+超越夜晚的长久的感伤<br>
+啊 草原的光 仿佛消失在风中<br>
 Misty Mystery<br>
 <br>
-解放無謀的衝動
+解放无谋的冲动
 </blockquote>
 </div>
 
-Tie-up 柯南的最後一曲，GC 的倒數第二張單曲。
-
 ## 参考链接
 
-* [GARNET CROW official website : ガーネットクロウ オフィシャルサイト](http://www.garnetcrow.com){:target="_blank"}
 * [GARNET CROW Misty Mystery 歌詞 - 歌ネット](https://www.uta-net.com/song/117216){:target="_blank"}
+* [Misty Mystery Lyrics \| GARNET CROW music diary](https://crowsub.github.io/lyrics/original/Misty%20Mystery.html){:target="_blank"}

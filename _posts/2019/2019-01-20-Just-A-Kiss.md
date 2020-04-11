@@ -10,7 +10,7 @@ excerpt: Lying here with you so close to me. It's hard to fight these feelings w
 ---
 ![own the night](https://mistydew.github.io/assets/images/cover/misc/own%20the%20night.jpg){:.border}
 
-## Just A Kiss | 只是個吻
+## Just A Kiss | 只是个吻
 
 歌手：Lady Antebellum<br>
 作詞：Hillary Scott・Charles Kelley・Dave Haywood・Dallas Davidson<br>
@@ -69,58 +69,57 @@ Kiss goodnight
 
 <div class="lyric-translation">
 <blockquote>
-當你如此的靠近我時<br>
-這些感覺難以抗拒以至於我無法呼吸<br>
-我停留在這個時刻<br>
-沉溺於你的笑容<br>
+当你如此的靠近我时<br>
+这些感觉难以抗拒以至于我无法呼吸<br>
+我停留在这个时刻<br>
+沉溺于你的笑容<br>
 <br>
-我從未向任何人敞開過心扉<br>
-所以情不自禁把妳擁入懷中<br>
-我們不需要過於著急<br>
-就讓我們慢慢來吧<br>
+我从未向任何人敞开过心扉<br>
+所以情不自禁把妳拥入怀中<br>
+我们不需要过于着急<br>
+就让我们慢慢来吧<br>
 <br>
-只是在月光下親吻你的嘴唇<br>
-只是觸碰到這火焰燃燒般的明亮<br>
+只是在月光下亲吻你的嘴唇<br>
+只是触碰到这火焰燃烧般的明亮<br>
 不我不想搞砸它<br>
-不我不想太過著急<br>
-黑暗中就一個瞬間猜想你可能<br>
-是那個我等待一生的人<br>
-所以寶貝我很好，只需一個晚安吻<br>
+不我不想太过着急<br>
+黑暗中就一个瞬间猜想你可能<br>
+是那个我等待一生的人<br>
+所以宝贝我很好，只需一个晚安吻<br>
 <br>
-我知道如果我們給它一點時間<br>
-就會使我們更接近我們想要的愛情<br>
-從來沒有感覺如此真實，不，是從來沒有感覺如此好<br>
+我知道如果我们给它一点时间<br>
+就会使我们更接近我们想要的爱情<br>
+从来没有感觉如此真实，不，是从来没有感觉如此好<br>
 <br>
-只是在月光下親吻你的嘴唇<br>
-只是觸碰到這火焰燃燒般的明亮<br>
+只是在月光下亲吻你的嘴唇<br>
+只是触碰到这火焰燃烧般的明亮<br>
 不我不想搞砸它<br>
-不我不想太過著急<br>
-黑暗中就一個瞬間猜想你可能<br>
-是那個我等待一生的人<br>
-所以寶貝我很好，只需一個晚安吻<br>
+不我不想太过着急<br>
+黑暗中就一个瞬间猜想你可能<br>
+是那个我等待一生的人<br>
+所以宝贝我很好，只需一个晚安吻<br>
 <br>
-不，我還不想說晚安<br>
-我知道是時候離開了，但你會出現在我的夢裡<br>
+不，我还不想说晚安<br>
+我知道是时候离开了，但你会出现在我的梦里<br>
 就在今晚<br>
 就在今夜<br>
 就在今宵<br>
 <br>
-只是在月光下親吻你的嘴唇<br>
-只是觸碰到這火焰燃燒般的明亮<br>
+只是在月光下亲吻你的嘴唇<br>
+只是触碰到这火焰燃烧般的明亮<br>
 不我不想搞砸它<br>
-不我不想太過著急<br>
-黑暗中就一個瞬間猜想你可能<br>
-是那個我等待一生的人<br>
-所以寶貝我很好，哦<br>
-讓我們好好地，只需一個晚安吻<br>
-一個晚安吻<br>
+不我不想太过着急<br>
+黑暗中就一个瞬间猜想你可能<br>
+是那个我等待一生的人<br>
+所以宝贝我很好，哦<br>
+让我们好好地，只需一个晚安吻<br>
+一个晚安吻<br>
 晚安吻
 </blockquote>
 </div>
 
-這首歌的 MV 是一個小故事，很有意思。
+这首歌的 MV 是一个小故事，很有意思。
 
 ## 参考链接
 
-* [Lady Antebellum](https://www.ladyantebellum.com){:target="_blank"}
 * [Lady Antebellum – Just a Kiss Lyrics \| Genius Lyrics](https://genius.com/Lady-antebellum-just-a-kiss-lyrics){:target="_blank"}

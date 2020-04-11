@@ -10,7 +10,7 @@ excerpt: コーヒーは最初の一口、甘いケーキの端っこ、ポテ�
 ---
 ![GZCA-1050](https://crowsub.github.io/assets/images/discography/single/GZCA-1050.jpg){:.border}
 
-## hi-speed スペシャル oneday | 高速 特別的 一天
+## hi-speed スペシャル oneday | 高速 特别的 一天
 
 歌手：GARNET CROW<br>
 作詞：AZUKI 七<br>
@@ -82,66 +82,66 @@ He is not trusted darling.
 <div class="lyric-translation">
 <blockquote>
 咖啡是最初的一口<br>
-甜的蛋糕的邊上<br>
-土豆是剛炸好<br>
-美味的地方只有一點<br>
+甜的蛋糕的边上<br>
+土豆是刚炸好<br>
+美味的地方只有一点<br>
 <br>
-最近味覺麻痹了<br>
-冷湯也是調味品<br>
-胡亂等待風波<br>
-總覺得 無聊的感覺<br>
+最近味觉麻痹了<br>
+冷汤也是调味品<br>
+胡乱等待风波<br>
+总觉得 无聊的感觉<br>
 <br>
-即使萬一犯了罪<br>
-對人來說是有原因的<br>
+即使万一犯了罪<br>
+对人来说是有原因的<br>
 <br>
-hi-speed 特別的 oneday<br>
-想再品嚐一下啊<br>
-sweet time 回到現實<br>
-雖然瞬間難以忍受<br>
-hi-speed 特別的 anyway<br>
-總有一天會忘記吧？<br>
-slow time 不要弄髒<br>
-像融化一樣 沈睡的早晨<br>
+hi-speed 特别的 oneday<br>
+想再品尝一下啊<br>
+sweet time 回到现实<br>
+虽然瞬间难以忍受<br>
+hi-speed 特别的 anyway<br>
+总有一天会忘记吧？<br>
+slow time 不要弄脏<br>
+像融化一样 沉睡的早晨<br>
 He is not trusted darling.<br>
 <br>
-快點搞錯<br>
-反覆失敗也很可愛<br>
-所以被允許<br>
+快点搞错<br>
+反复失败也很可爱<br>
+所以被允许<br>
 自己在想吧？<br>
 <br>
-即使說謊也裝作不知道的樣子<br>
-準備好的辯解<br>
-雖然特別堅強的地方<br>
-也是非常喜歡<br>
+即使说谎也装作不知道的样子<br>
+准备好的辩解<br>
+虽然特别坚强的地方<br>
+也是非常喜欢<br>
 <br>
-裝作沒有什麼的樣子<br>
-這些日子 也累了<br>
+装作没有什么的样子<br>
+这些日子 也累了<br>
 <br>
-hi-speed 特別的 oneday<br>
+hi-speed 特别的 oneday<br>
 是玩笑啊 很抱歉哦<br>
 sweet time 魔法解除<br>
-到那時讓展現溫柔<br>
-hi-speed 特別的 anyway<br>
+到那时让展现温柔<br>
+hi-speed 特别的 anyway<br>
 希望感受更多<br>
 slow time 不要犯傻<br>
-我 不是普通的機器<br>
+我 不是普通的机器<br>
 <br>
-和吵架次數相同的和好次數<br>
-變成環狀正閃閃發光 yha-<br>
+和吵架次数相同的和好次数<br>
+变成环状正闪闪发光 yha-<br>
 <br>
-hi-speed 特別的 oneday<br>
-想再品嚐一下啊<br>
-sweet time 回到現實<br>
-雖然瞬間難以忍受<br>
-hi-speed 特別的 anyway<br>
-總有一天會忘記吧？<br>
-slow time 不要弄髒<br>
-像融化一樣 沈睡的早晨<br>
+hi-speed 特别的 oneday<br>
+想再品尝一下啊<br>
+sweet time 回到现实<br>
+虽然瞬间难以忍受<br>
+hi-speed 特别的 anyway<br>
+总有一天会忘记吧？<br>
+slow time 不要弄脏<br>
+像融化一样 沉睡的早晨<br>
 He is not trusted darling.
 </blockquote>
 </div>
 
 ## 参考链接
 
-* [GARNET CROW official website : ガーネットクロウ オフィシャルサイト](http://www.garnetcrow.com){:target="_blank"}
 * [GARNET CROW hi-speed スペシャル oneday 歌詞 - 歌ネット](https://www.uta-net.com/song/20133){:target="_blank"}
+* [hi-speed スペシャル oneday Lyrics \| GARNET CROW music diary](https://crowsub.github.io/lyrics/original/hi-speed%20スペシャル%20oneday.html){:target="_blank"}

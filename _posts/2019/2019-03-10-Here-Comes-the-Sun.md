@@ -10,7 +10,7 @@ excerpt: Here comes the sun, doo doo doo doo. Here comes the sun, and I say. It'
 ---
 ![Abbey Road](https://mistydew.github.io/assets/images/cover/misc/Abbey%20Road.jpg){:.border}
 
-## Here Comes the Sun | 太陽從這兒升起
+## Here Comes the Sun | 太阳从这儿升起
 
 歌手：The Beatles<br>
 作詞：George Harrison<br>
@@ -58,45 +58,45 @@ It's all right
 
 <div class="lyric-translation">
 <blockquote>
-太陽從這兒升起，嘟 嘟 嘟 嘟<br>
-太陽從這兒升起，我說<br>
-沒關係的<br>
+太阳从这儿升起，嘟 嘟 嘟 嘟<br>
+太阳从这儿升起，我说<br>
+没关系的<br>
 <br>
-小可愛，這是一個漫長寒冷又孤獨的春天<br>
-小可愛，感覺像是在這裡幾年了<br>
+小可爱，这是一个漫长寒冷又孤独的春天<br>
+小可爱，感觉像是在这里几年了<br>
 <br>
-太陽從這兒升起<br>
-太陽從這兒升起，我說<br>
-沒關係的<br>
+太阳从这儿升起<br>
+太阳从这儿升起，我说<br>
+没关系的<br>
 <br>
-小可愛，微笑再次出現在你的臉上<br>
-小可愛，似乎像是這樣幾年了<br>
+小可爱，微笑再次出现在你的脸上<br>
+小可爱，似乎像是这样几年了<br>
 <br>
-太陽從這兒升起<br>
-太陽從這兒升起，我說<br>
-沒關係的<br>
+太阳从这儿升起<br>
+太阳从这儿升起，我说<br>
+没关系的<br>
 <br>
-太陽，太陽，太陽，它來了<br>
-太陽，太陽，太陽，它來了<br>
-太陽，太陽，太陽，它來了<br>
-太陽，太陽，太陽，它來了<br>
-太陽，太陽，太陽，它來了<br>
+太阳，太阳，太阳，它来了<br>
+太阳，太阳，太阳，它来了<br>
+太阳，太阳，太阳，它来了<br>
+太阳，太阳，太阳，它来了<br>
+太阳，太阳，太阳，它来了<br>
 <br>
-小可愛，我感到冰在慢慢地融化<br>
-小可愛，似乎這樣明顯幾年了<br>
+小可爱，我感到冰在慢慢地融化<br>
+小可爱，似乎这样明显几年了<br>
 <br>
-太陽從這兒升起<br>
-太陽從這兒升起，我說<br>
-沒關係的<br>
+太阳从这儿升起<br>
+太阳从这儿升起，我说<br>
+没关系的<br>
 <br>
-太陽從這兒升起<br>
-太陽從這兒升起，我說<br>
-沒關係的<br>
-沒關係的
+太阳从这儿升起<br>
+太阳从这儿升起，我说<br>
+没关系的<br>
+没关系的
 </blockquote>
 </div>
 
-最早聽到這首歌是在動畫電影 Bee Movie 中，是 Sheryl Crow 的翻唱版。
+最早听到这首歌是在动画电影 Bee Movie 中，是 Sheryl Crow 的翻唱版。
 
 ## 参考链接
 

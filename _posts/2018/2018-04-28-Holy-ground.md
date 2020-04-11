@@ -10,7 +10,7 @@ excerpt: 君のいない未来が、ただ大きな闇にみえ。死んでし�
 ---
 ![GZCA-5013](https://crowsub.github.io/assets/images/discography/album/GZCA-5013.jpg){:.border}
 
-## Holy ground | 聖地
+## Holy ground | 圣地
 
 歌手：GARNET CROW<br>
 作詞：AZUKI 七<br>
@@ -71,57 +71,57 @@ excerpt: 君のいない未来が、ただ大きな闇にみえ。死んでし�
 
 <div class="lyric-translation">
 <blockquote>
-沒有你的未來<br>
+没有你的未来<br>
 只能看到一片黑暗<br>
-如果能夠死去不活就好了<br>
-總是想著這樣的事情<br>
+如果能够死去不活就好了<br>
+总是想着这样的事情<br>
 在柔和的月光下<br>
 <br>
-對充滿了全身的 如此强烈的情感<br>
-因能相遇 已經什麽都不重要了<br>
-縱然沒有貪婪之術現在也<br>
-能活下去嗎？<br>
+对充满了全身的 如此强烈的情感<br>
+因能相遇 已经什么都不重要了<br>
+纵然没有贪婪之术现在也<br>
+能活下去吗？<br>
 <br>
-過去的幸福的時光<br>
-現在起變得毫無意義<br>
-患病的身軀<br>
-不會對昨天為止健康喜悅<br>
+过去的幸福的时光<br>
+现在起变得毫无意义<br>
+患病的身躯<br>
+不会对昨天为止健康喜悦<br>
 <br>
-只不過渴望似地請求著的<br>
-每一天 順流 前往海市蜃樓的那邊<br>
-今天能夠結束的話今天<br>
-做無法遇到的夢<br>
-還能度日的話<br>
+只不过渴望似地请求着的<br>
+每一天 顺流 前往海市蜃楼的那边<br>
+今天能够结束的话今天<br>
+做无法遇到的梦<br>
+还能度日的话<br>
 <br>
-只有不斷給予才能被滿足<br>
-掙扎著抵達聖地吧<br>
-無處可去的熱情<br>
-逐漸冷卻<br>
+只有不断给予才能被满足<br>
+挣扎着抵达圣地吧<br>
+无处可去的热情<br>
+逐渐冷却<br>
 <br>
-邊懷著不安的心情<br>
-邊尋求歸路不斷昇華<br>
-必須守護的東西沒有帶著的話<br>
-祈禱什麼呢<br>
+边怀着不安的心情<br>
+边寻求归路不断升华<br>
+必须守护的东西没有带着的话<br>
+祈祷什么呢<br>
 <br>
-好像世界有一天會被柔和的光所包圍...<br>
-說出多麼像偽善者一樣的願望<br>
-真的能改變的話就好了<br>
+好像世界有一天会被柔和的光所包围...<br>
+说出多么像伪善者一样的愿望<br>
+真的能改变的话就好了<br>
 <br>
-比深深的傷痕 總有一天<br>
-像殘留著愛的感覺一樣<br>
-明天能夠來臨的話還是明天<br>
-好像逐漸跌入溫柔的一邊...<br>
+比深深的伤痕 总有一天<br>
+像残留着爱的感觉一样<br>
+明天能够来临的话还是明天<br>
+好像逐渐跌入温柔的一边...<br>
 <br>
-有朝一日憑藉那雙腿不斷行走的時刻到來的話<br>
-能夠掙扎著抵達聖地嗎？<br>
-無處可去的內心<br>
-總有一天會醒來<br>
-隨著不斷搖動的波瀾<br>
-一定會誕生的
+有朝一日凭借那双腿不断行走的时刻到来的话<br>
+能够挣扎着抵达圣地吗？<br>
+无处可去的内心<br>
+总有一天会醒来<br>
+随着不断摇动的波澜<br>
+一定会诞生的
 </blockquote>
 </div>
 
 ## 参考链接
 
-* [GARNET CROW official website : ガーネットクロウ オフィシャルサイト](http://www.garnetcrow.com){:target="_blank"}
 * [GARNET CROW Holy ground 歌詞 - 歌ネット](https://www.uta-net.com/song/20142){:target="_blank"}
+* [Holy ground Lyrics \| GARNET CROW music diary](https://crowsub.github.io/lyrics/original/Holy%20ground.html){:target="_blank"}

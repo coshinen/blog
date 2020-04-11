@@ -85,71 +85,71 @@ la- la- la- la- Marionette Fantasia
 
 <div class="lyric-translation">
 <blockquote>
-點亮微弱的光<br>
-冰冷的牆壁 靠近臉頰<br>
-在寂靜中 側耳傾聽<br>
+点亮微弱的光<br>
+冰冷的墙壁 靠近脸颊<br>
+在寂静中 侧耳倾听<br>
 悄悄地 慢慢地<br>
 再次吸引<br>
 <br>
-沒有刻畫時間的聲音<br>
-只有不高興的擺子<br>
-搖曳 房間裡的腳步聲<br>
-契機是 唐突的<br>
-鐘聲<br>
+没有刻画时间的声音<br>
+只有不高兴的摆子<br>
+摇曳 房间里的脚步声<br>
+契机是 唐突的<br>
+钟声<br>
 <br>
-依然疼痛的右腕 把可愛的你<br>
-回想起 循環吧<br>
-追求劍 徬徨<br>
+依然疼痛的右腕 把可爱的你<br>
+回想起 循环吧<br>
+追求剑 徬徨<br>
 <br>
 深夜 din don din dan<br>
 knock 的影子<br>
-期望的聲音 撕裂了胸口<br>
+期望的声音 撕裂了胸口<br>
 月光下 fourteen eyes were bright<br>
-輕輕 搖動 he's abuse selfish<br>
+轻轻 摇动 he's abuse selfish<br>
 <br>
 看啊 ti ta ta ta<br>
-玻璃針<br>
-敲十二次鐘的話<br>
-神聖夜晚的 七頭影子<br>
-對無力的人偶 伸出手<br>
+玻璃针<br>
+敲十二次钟的话<br>
+神圣夜晚的 七头影子<br>
+对无力的人偶 伸出手<br>
 <br>
-淚滴 在手中傳遞<br>
-看啊 溫暖 蘇醒<br>
-預言的時刻來臨<br>
+泪滴 在手中传递<br>
+看啊 温暖 苏醒<br>
+预言的时刻来临<br>
 <br>
 前往森林 ri ra ra ra<br>
 敲 door<br>
-飛散的風 悲痛的叫聲<br>
-邊祈禱著 不要聽到<br>
-晃晃 悠悠 跑過去<br>
+飞散的风 悲痛的叫声<br>
+边祈祷着 不要听到<br>
+晃晃 悠悠 跑过去<br>
 <br>
 ah- din da da da<br>
-計時裝置<br>
-when a young owl hooted 穿過了黑暗<br>
-宣告結束的 bell聲 為何<br>
-帶來 難受的 心情<br>
+计时装置<br>
+when a young owl hooted 穿过了黑暗<br>
+宣告结束的 bell声 为何<br>
+带来 难受的 心情<br>
 <br>
 la- la- la- la- la<br>
-向與我相似的 那個人<br>
-伸出手 想著你<br>
+向与我相似的 那个人<br>
+伸出手 想着你<br>
 在交叉的世界中 ah-<br>
 <br>
-溫柔的音色<br>
+温柔的音色<br>
 耀眼的光芒<br>
-在心中 被隱藏的<br>
-可愛的人 在眼前笑<br>
-確實的 marionett fantasia<br>
+在心中 被隐藏的<br>
+可爱的人 在眼前笑<br>
+确实的 marionett fantasia<br>
 <br>
 la la la- la- la-<br>
-我們的世界<br>
-夢 空洞的 烏托邦<br>
-硬殼的 核桃裂開的話<br>
-現實 在不經意間 流出<br>
+我们的世界<br>
+梦 空洞的 乌托邦<br>
+硬壳的 核桃裂开的话<br>
+现实 在不经意间 流出<br>
 la- la- la- la- Marionette Fantasia
 </blockquote>
 </div>
 
 ## 参考链接
 
-* [GARNET CROW official website : ガーネットクロウ オフィシャルサイト](http://www.garnetcrow.com){:target="_blank"}
 * [GARNET CROW Marionette Fantasia 歌詞 - 歌ネット](https://www.uta-net.com/song/20214){:target="_blank"}
+* [Marionette Fantasia Lyrics \| GARNET CROW music diary](https://crowsub.github.io/lyrics/original/Marionette%20Fantasia.html){:target="_blank"}

@@ -8,9 +8,9 @@ category: 译文集
 tags: Lyrics
 excerpt: I used to rule the world. Seas would rise when I gave the word. Now in the morning I sleep alone. Sweep the streets I used to own.
 ---
-![Viva La Vida](https://mistydew.github.io/assets/images/cover/misc/Viva%20La%20Vida.jpg){:.border}
+![VIVA LA VIDA](https://mistydew.github.io/assets/images/cover/misc/VIVA%20LA%20VIDA.jpg){:.border}
 
-## Viva La Vida | 生命萬歲
+## Viva La Vida | 生命万岁
 
 歌手：Coldplay<br>
 作詞：Guy Berryman・Jonny Buckland・Will Champion・Chris Martin<br>
@@ -71,61 +71,60 @@ But that was when I ruled the world
 
 <div class="lyric-translation">
 <blockquote>
-我曾經統治這世界<br>
-當我說出這句話時大海就會上升<br>
-現在早晨我一個人睡<br>
-清掃我曾經擁有的街道<br>
-我曾經常擲骰子<br>
-感受我敵人眼中的恐懼<br>
-聽群眾歌唱<br>
-現在老國王死了，國王萬歲<br>
-有一分鐘我拿著鑰匙<br>
-接下來我被牆關住了<br>
-並且我發現我的城堡屹立<br>
-在鹽柱和沙柱上<br>
+我曾经统治这世界<br>
+当我说出这句话时大海就会上升<br>
+现在早晨我一个人睡<br>
+清扫我曾经拥有的街道<br>
+我曾经常掷骰子<br>
+感受我敌人眼中的恐惧<br>
+听群众歌唱<br>
+现在老国王死了，国王万岁<br>
+有一分钟我拿着钥匙<br>
+接下来我被墙关住了<br>
+并且我发现我的城堡屹立<br>
+在盐柱和沙柱上<br>
 <br>
-我聽到耶路撒冷的鐘聲<br>
-羅馬騎兵唱詩班在歌唱<br>
-做我的鏡子，我的劍和盾<br>
-我在國外的傳教士<br>
-因為一些原因我無法解釋<br>
-一旦你走了就再也沒了<br>
-沒有一句誠實的話<br>
-那是我曾經統治的世界<br>
+我听到耶路撒冷的钟声<br>
+罗马骑兵唱诗班在歌唱<br>
+做我的镜子，我的剑和盾<br>
+我在国外的传教士<br>
+因为一些原因我无法解释<br>
+一旦你走了就再也没了<br>
+没有一句诚实的话<br>
+那是我曾经统治的世界<br>
 <br>
-那是邪惡狂野的風<br>
-把門吹倒讓我進去<br>
-破碎的窗戶和鼓聲<br>
-人們不敢相信我會變成什麼樣<br>
+那是邪恶狂野的风<br>
+把门吹倒让我进去<br>
+破碎的窗户和鼓声<br>
+人们不敢相信我会变成什么样<br>
 革命者在等待<br>
-因為我的腦袋在銀盤上<br>
-只是一個一條線的木偶<br>
-哦誰曾想要成為國王？<br>
+因为我的脑袋在银盘上<br>
+只是一个一条线的木偶<br>
+哦谁曾想要成为国王？<br>
 <br>
-我聽到耶路撒冷的鐘聲<br>
-羅馬騎兵唱詩班在歌唱<br>
-做我的鏡子，我的劍和盾<br>
-我在國外的傳教士<br>
-因為一些原因我無法解釋<br>
-我知道聖彼得不會叫我的名字<br>
-沒有一句誠實的話<br>
-但那是我曾經統治的世界<br>
+我听到耶路撒冷的钟声<br>
+罗马骑兵唱诗班在歌唱<br>
+做我的镜子，我的剑和盾<br>
+我在国外的传教士<br>
+因为一些原因我无法解释<br>
+我知道圣彼得不会叫我的名字<br>
+没有一句诚实的话<br>
+但那是我曾经统治的世界<br>
 <br>
-我聽到耶路撒冷的鐘聲<br>
-羅馬騎兵唱詩班在歌唱<br>
-做我的鏡子，我的劍和盾<br>
-我在國外的傳教士<br>
-因為一些原因我無法解釋<br>
-我知道聖彼得不會叫我的名字<br>
-沒有一句誠實的話<br>
-但那是我曾經統治的世界
+我听到耶路撒冷的钟声<br>
+罗马骑兵唱诗班在歌唱<br>
+做我的镜子，我的剑和盾<br>
+我在国外的传教士<br>
+因为一些原因我无法解释<br>
+我知道圣彼得不会叫我的名字<br>
+没有一句诚实的话<br>
+但那是我曾经统治的世界
 </blockquote>
 </div>
 
-歌曲以法蘭西國王路易十六的視角，敘述了一段悲涼的歷史。
-封面是法國畫家歐仁·德拉克羅瓦為紀念 1830 年法國七月革命創作的一幅名為自由引導人民（La Liberté guidant le peuple）的油畫。
+歌曲以法兰西国王路易十六的视角，叙述了一段悲凉的历史。
+封面是法国画家欧仁·德拉克罗瓦为纪念 1830 年法国七月革命创作的一幅名为自由引导人民（La Liberté guidant le peuple）的油画。
 
 ## 参考链接
 
-* [Coldplay official website](https://coldplay.com){:target="_blank"}
 * [Coldplay – Viva la Vida Lyrics \| Genius Lyrics](https://genius.com/Coldplay-viva-la-vida-lyrics){:target="_blank"}

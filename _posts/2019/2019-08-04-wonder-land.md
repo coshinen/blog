@@ -70,56 +70,56 @@ I have little wonder land<br>
 
 <div class="lyric-translation">
 <blockquote>
-雨後 偶然 仰望天空<br>
-每天無意的動作<br>
-為什麼會有像迷路孩子般的心情<br>
+雨后 偶然 仰望天空<br>
+每天无意的动作<br>
+为什么会有像迷路孩子般的心情<br>
 即使和你在一起也能感受到<br>
 <br>
-眼睛看不到的強大羈絆什麼的<br>
-因竭力尋找 一定 會變得很辛苦吧？<br>
-愛是無法被別人守護的<br>
-縱使能夠破壞 Can I fell now<br>
+眼睛看不到的强大羁绊什么的<br>
+因竭力寻找 一定 会变得很辛苦吧？<br>
+爱是无法被别人守护的<br>
+纵使能够破坏 Can I fell now<br>
 <br>
-在不斷變化的幸福中<br>
-有你在的話<br>
-什麼樣的形式都好 ah-<br>
+在不断变化的幸福中<br>
+有你在的话<br>
+什么样的形式都好 ah-<br>
 We live on wonder land<br>
 <br>
-無論是非常高興時<br>
-還是被謊言扭曲的愛<br>
-總有一天會重生對吧...<br>
+无论是非常高兴时<br>
+还是被谎言扭曲的爱<br>
+总有一天会重生对吧...<br>
 <br>
-什麼時候在宇宙自由旅行的日子<br>
-同樣的事果然 會遭遇挫折吧<br>
-時而內心變得痛苦不安<br>
-時而過於懷念過去 Can you fell it me<br>
+什么时候在宇宙自由旅行的日子<br>
+同样的事果然 会遭遇挫折吧<br>
+时而内心变得痛苦不安<br>
+时而过于怀念过去 Can you fell it me<br>
 <br>
-想要比任何人都直率地注視<br>
-現在確實感受到的只有你哦<br>
+想要比任何人都直率地注视<br>
+现在确实感受到的只有你哦<br>
 小小的 wonder land<br>
 <br>
-不管是出現裂痕的心情<br>
-還是變得模糊的明天的去向<br>
-今天的我的一部分逐漸融入其中哦<br>
+不管是出现裂痕的心情<br>
+还是变得模糊的明天的去向<br>
+今天的我的一部分逐渐融入其中哦<br>
 <br>
-能夠相信想要相信的東西<br>
-尋求那樣的堅強<br>
-搖曳著哦 ah-<br>
+能够相信想要相信的东西<br>
+寻求那样的坚强<br>
+摇曳着哦 ah-<br>
 walking on wonder land<br>
 <br>
-在不斷變化的幸福中<br>
-有你在的話<br>
-什麼樣的形式都好 ah-<br>
+在不断变化的幸福中<br>
+有你在的话<br>
+什么样的形式都好 ah-<br>
 I have little wonder land<br>
 <br>
-無論是非常高興時<br>
-還是被謊言扭曲的愛<br>
+无论是非常高兴时<br>
+还是被谎言扭曲的爱<br>
 今天的我的一部分<br>
-逐漸融入其中哦
+逐渐融入其中哦
 </blockquote>
 </div>
 
 ## 参考链接
 
-* [GARNET CROW official website : ガーネットクロウ オフィシャルサイト](http://www.garnetcrow.com){:target="_blank"}
 * [GARNET CROW wonder land 歌詞 - 歌ネット](https://www.uta-net.com/song/20126){:target="_blank"}
+* [wonder land Lyrics \| GARNET CROW music diary](https://crowsub.github.io/lyrics/original/wonder%20land.html){:target="_blank"}

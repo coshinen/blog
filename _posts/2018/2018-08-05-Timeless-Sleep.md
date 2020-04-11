@@ -54,40 +54,40 @@ Timeless Sleep<br>
 
 <div class="lyric-translation">
 <blockquote>
-從你不在開始<br>
-不知道迎接了多少次朝陽<br>
-想去看看地平線 突然<br>
-跳上首班車<br>
+从你不在开始<br>
+不知道迎接了多少次朝阳<br>
+想去看看地平线 突然<br>
+跳上首班车<br>
 <br>
-在陶醉的朝霧中 微微發光<br>
-天空過於虛幻地 fade away<br>
-勉強尋求著未來情不自禁地笑了<br>
-<br>
-Timeless Sleep<br>
-不會再想起你的溫暖 ah-<br>
-即使身體無力依靠<br>
-人還是能夠活下去<br>
-<br>
-好不容易才沒變成憎恨<br>
-我努力了對吧？<br>
-<br>
-如果存在連接他人之間的東西<br>
-就像甜甜的希望一樣<br>
-fade out 醜陋的傷口<br>
-纏繞著愛 die away<br>
+在陶醉的朝雾中 微微发光<br>
+天空过于虚幻地 fade away<br>
+勉强寻求着未来情不自禁地笑了<br>
 <br>
 Timeless Sleep<br>
-被溫柔的睡衣包圍什麼都不期望<br>
-總有一天你悲傷的時候<br>
-一定緊緊地擁抱你哦<br>
+不会再想起你的温暖 ah-<br>
+即使身体无力依靠<br>
+人还是能够活下去<br>
+<br>
+好不容易才没变成憎恨<br>
+我努力了对吧？<br>
+<br>
+如果存在连接他人之间的东西<br>
+就像甜甜的希望一样<br>
+fade out 丑陋的伤口<br>
+缠绕着爱 die away<br>
+<br>
 Timeless Sleep<br>
-在我創造的這個地方給你治癒吧<br>
-無法忘記的快樂的記憶<br>
+被温柔的睡衣包围什么都不期望<br>
+总有一天你悲伤的时候<br>
+一定紧紧地拥抱你哦<br>
+Timeless Sleep<br>
+在我创造的这个地方给你治愈吧<br>
+无法忘记的快乐的记忆<br>
 注入生命吧 out live
 </blockquote>
 </div>
 
 ## 参考链接
 
-* [GARNET CROW official website : ガーネットクロウ オフィシャルサイト](http://www.garnetcrow.com){:target="_blank"}
 * [GARNET CROW Timeless Sleep 歌詞一覧リスト - 歌ネット](https://www.uta-net.com/song/20123){:target="_blank"}
+* [Timeless Sleep Lyrics \| GARNET CROW music diary](https://crowsub.github.io/lyrics/original/Timeless%20Sleep.html){:target="_blank"}

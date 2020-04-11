@@ -10,7 +10,7 @@ excerpt: 十二月にしては暖かいこんな夜は、思いつきで出か�
 ---
 ![GZCA-1029](https://crowsub.github.io/assets/images/discography/single/GZCA-1029.jpg){:.border}
 
-## in little time | 短時間內
+## in little time | 短时间内
 
 歌手：GARNET CROW<br>
 作詞：AZUKI 七<br>
@@ -67,53 +67,53 @@ um- I have so little time×3
 
 <div class="lyric-translation">
 <blockquote>
-儘管是在十二月但如此暖和的夜晚<br>
-一時興起出門了<br>
-在車中一直牽著手睡著了<br>
-直到朝陽把兩人喚醒<br>
+尽管是在十二月但如此暖和的夜晚<br>
+一时兴起出门了<br>
+在车中一直牵着手睡着了<br>
+直到朝阳把两人唤醒<br>
 <br>
-簡直就像天堂一樣<br>
-在充滿陽光的海邊<br>
-如此幸福的瞬間<br>
-為什麼眼淚會流出來呢<br>
+简直就像天堂一样<br>
+在充满阳光的海边<br>
+如此幸福的瞬间<br>
+为什么眼泪会流出来呢<br>
 <br>
-不知不覺時光飛逝<br>
-為了治癒破裂的兩人回憶著<br>
-難受的 in little time<br>
+不知不觉时光飞逝<br>
+为了治愈破裂的两人回忆着<br>
+难受的 in little time<br>
 <br>
-為了不迷惑地愛<br>
-呐 要變得多強大才好？<br>
-永遠持續給予著<br>
-絕對不會枯萎的<br>
-想要堅強地活下去<br>
-注入虛幻的願望<br>
-知曉孤獨的意義 ah~<br>
+为了不迷惑地爱<br>
+呐 要变得多强大才好？<br>
+永远持续给予着<br>
+绝对不会枯萎的<br>
+想要坚强地活下去<br>
+注入虚幻的愿望<br>
+知晓孤独的意义 ah~<br>
 um- I have so little time<br>
 <br>
-轉動地球儀<br>
-想起了從未見過的國度<br>
-儘管如此 你總是在我的身邊對吧<br>
-十年後 在那遙遠的彼方<br>
+转动地球仪<br>
+想起了从未见过的国度<br>
+尽管如此 你总是在我的身边对吧<br>
+十年后 在那遥远的彼方<br>
 <br>
-如果內心被滿足就會害怕<br>
+如果内心被满足就会害怕<br>
 回想起 Mathilde<br>
 在投身的河中<br>
-永遠地活著<br>
-一定會在某一天終結<br>
+永远地活着<br>
+一定会在某一天终结<br>
 in little time<br>
 <br>
-站在無人的街角<br>
-沈浸在尋找你的夢中<br>
-找到了無可替代的人<br>
-活下去的十字架又增加了一個<br>
+站在无人的街角<br>
+沉浸在寻找你的梦中<br>
+找到了无可替代的人<br>
+活下去的十字架又增加了一个<br>
 <br>
-絕對不會枯萎的樣子<br>
-想要堅強地活下去 ah~<br>
+绝对不会枯萎的样子<br>
+想要坚强地活下去 ah~<br>
 um- I have so little time×3
 </blockquote>
 </div>
 
 ## 参考链接
 
-* [GARNET CROW official website : ガーネットクロウ オフィシャルサイト](http://www.garnetcrow.com){:target="_blank"}
 * [GARNET CROW in little time 歌詞 - 歌ネット](https://www.uta-net.com/song/20143){:target="_blank"}
+* [in little time Lyrics \| GARNET CROW music diary](https://crowsub.github.io/lyrics/original/in%20little%20time.html){:target="_blank"}
