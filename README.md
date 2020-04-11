@@ -8,11 +8,12 @@
 
 ## Timeline
 
-* 2020.04.06 [+] site: SEO tag
+* 2020.04.12 [-] post: ~~info (license and more)~~
 
 <details>
 <summary>history</summary>
 
+* 2020.04.06 [+] site: SEO tag
 * 2020.04.04 [-] archive page: ~~Google Custom Search Engine~~
 * 2020.04.01 [-] pages: ~~resume page~~
 * 2020.03.29 [-] blog page: ~~comments, profile~~; [+] blog page: archive
@@ -28,12 +29,12 @@
 * 2019.08.28 [+] site: GitHub Actions workflows CI
 * 2019.08.25 [+] blog page: ~~comments, profile~~
 * 2019.08.24 [-] post: ~~Remarkbox Hosted Comments Service~~ (incomplete); [+] post: IntenseDebate comments
-* 2019.08.18 [+] assets: css, fonts, images and js
+* 2019.08.18 [+] assets: css, font, images and js
 * 2019.08.14 [+] about page: PGP key and fingerprint
 * 2019.08.02 [+] site: Simple Jekyll Search
 * 2019.07.18 [+] pages: booklog (reading list) page and feed page
 * 2019.07.04 [-] site: ~~Baidu Search~~ (unfriendly); [+] site: DogeDoge Search (Bing-like)
-* 2019.06.21 [-] post: ~~bShare~~ (loading problem); [+] post: AddToAny share system
+* 2019.06.21 [-] post: ~~bShare~~ (loading problem); [+] post: AddToAny Share Button
 * 2019.06.20 [+] post: ~~bShare~~
 * 2019.06.10 [+] home page: ~~Crypto Currencies Price Widget~~
 * 2019.05.24 [+] README: Site Dependencies
@@ -52,12 +53,12 @@
 * 2018.09.14 [-] post: ~~IntenseDebate comments~~ (slow loading); [+] post: ~~Widget Pack Comments System~~
 * 2018.09.12 [+] site: page content-width; [-] site: ~~DaoVoice web chat tool~~ (redundancy, bugs)
 * 2018.09.06 [+] site: robots.txt (Sitemap URL)
-* 2018.08.29 [+] fonts: Underwater Love (site and blog title) and Gloria Hallelujah (post information and blog profile)
+* 2018.08.29 [+] font: Underwater Love (site and blog title)
 * 2018.08.28 [-] footer: ~~slogan~~; pages: ~~slogan page~~; [+] footer: quote; pages: quotes page
 * 2018.08.27 [+] config: excerpt separator
 * 2018.08.23 [-] site: ~~Baidu Analytics~~ (unfriendly)
 * 2018.08.22 [+] site: ~~DaoVoice web chat tool~~
-* 2018.08.20 [+] post: document info (author, date, license and more)
+* 2018.08.20 [+] post: ~~info (license and more)~~
 * 2018.08.15 [-] site: ~~particle background~~ (redundancy)
 * 2018.08.13 [+] site: ~~cPlayer (web music player)~~
 * 2018.08.12 [+] pages: ~~donate page~~
@@ -92,9 +93,9 @@
 * Hosted: [GitHub Pages](https://pages.github.com)
 * Analytics: [Google Analytics](https://analytics.google.com/analytics/web)
 * Site Search: [DogeDoge](https://dogedoge.com), [Simple Jekyll Search](https://github.com/christian-fei/Simple-Jekyll-Search)
-* Comments System: [IntenseDebate](https://intensedebate.com)
-* Shared Service: [AddToAny](https://www.addtoany.com)
 * 404 Page: [Tencent 404](https://www.qq.com/404)
+* Share Button: [AddToAny](https://www.addtoany.com)
+* Comments System: [IntenseDebate](https://intensedebate.com)
 
 ## Licenses
 
