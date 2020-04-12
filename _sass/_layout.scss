@@ -47,7 +47,7 @@
     font-size: 16px;
     border: 1px solid #d3d3d3;
     border-radius: 2px;
-    background-color: transparent;
+    background-color: $background-color;
   }
 
   .submit-button {
@@ -59,7 +59,7 @@
     position: absolute;
     top: 9px;
     right: $spacing-unit / 2;
-    background-color: $background-color;
+    background-color: transparent;
     border: 1px solid $grey-color-light;
     border-radius: 5px;
 
