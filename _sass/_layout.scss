@@ -206,12 +206,12 @@
 // Home page
 .home-left {
   float: left;
-  width: calc(68% - (#{$spacing-unit} / 2));
+  width: calc(70% - (#{$spacing-unit} / 2));
 }
 
 .home-right {
   float: right;
-  width: calc(32% - (#{$spacing-unit} / 2));
+  width: calc(30% - (#{$spacing-unit} / 2));
 }
 
 @include media-query($on-palm) {
