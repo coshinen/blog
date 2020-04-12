@@ -10,7 +10,7 @@ excerpt: 暮れゆく空おセンチな気分。海辺のDrive、まだみたこ
 ---
 ![GZCA-5198](https://crowsub.github.io/assets/images/discography/album/GZCA-5198.jpg){:.border}
 
-## Fall in Life 〜Hallelujah〜 | 坠入生活～赞美上帝～
+## Fall in Life 〜Hallelujah〜 | 坠入生活 ～赞美上帝～
 
 歌手：GARNET CROW<br>
 作詞：AZUKI 七<br>
@@ -148,11 +148,11 @@ Hallelijah!
 </div>
 
 「おセンチ」表示稍微有点伤感的表现。
-“Hallelujah”是一个希伯来语单词，意思是“Praise ye, Yah”，使用希伯来语“you”（英语是“ye”）复数祈使形式和希伯来语“Yah”的缩写形式翻译而成。对应“Praise you, Jehovah”。
+
+「Hallelujah」是希伯来语，意思是「Praise you, Jehovah（赞美你，耶和华）」。
 
 ## 参考链接
 
 * [GARNET CROW Fall in Life 〜Hallelujah〜 歌詞 - 歌ネット](https://www.uta-net.com/song/85218){:target="_blank"}
 * [Fall in Life 〜Hallelujah〜 Lyrics \| GARNET CROW music diary](https://crowsub.github.io/lyrics/original/Fall%20in%20Life%20〜Hallelujah〜.html){:target="_blank"}
 * [「おセンチ」の意味や使い方 Weblio辞書](https://www.weblio.jp/content/おセンチ){:target="_blank"}
-* [Hallelujah (disambiguation) - Wikipedia](https://en.wikipedia.org/wiki/Hallelujah_(disambiguation)){:target="_blank"}

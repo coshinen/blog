@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "GARNET CROW Crier Girl & Crier Boy ~ice cold sky~ 歌词翻译"
+title:  "GARNET CROW Crier Girl & Crier Boy 〜ice cold sky〜 歌词翻译"
 date:   2019-11-24 20:02:12 +0800
 author: mistydew
 comments: true
@@ -10,7 +10,7 @@ excerpt: 気づけば温もり求めて心が彷徨うことない？
 ---
 ![GZCA-7006](https://crowsub.github.io/assets/images/discography/single/GZCA-7006.jpg){:.border}
 
-## Crier Girl & Crier Boy ~ice cold sky~ | 哭泣的女孩&男孩～冰冷的天空～
+## Crier Girl & Crier Boy 〜ice cold sky〜 | 哭泣的女孩&男孩～冰冷的天空～
 
 歌手：GARNET CROW<br>
 作詞：AZUKI 七<br>

@@ -9,9 +9,9 @@ tags: Git/GitHub CI/CD
 ---
 GitHub Actions 可以让你直接在 GitHub 仓库中创建自定义软件开发生命周期的工作流。
 
-![GitHub Actions](https://avatars0.githubusercontent.com/u/44036562)
+![GitHub Actions](https://mistydew.github.io/assets/images/github/44036562.png){:.border}
 
-GitHub Actions 目前~~处于测试阶段，需要注册 beta 版等待官方开启后才能使用。~~已正式开放。
+GitHub Actions 目前~~处于测试阶段，需要注册 beta 版等待官方开启后才能使用~~已正式开放。
 
 ![GitHub Actions](https://mistydew.github.io/assets/images/github/actions.png){:.border}
 
@@ -275,7 +275,7 @@ jobs:
 通常是在你仓库的 README.md 文件中添加一个状态标志，但是你可以把它添加到任何你想要添加的网页中。
 标志显示的是你的默认分支的状态（通常是主分支）。
 
-![GitHub Actions workflow status](https://github.com/mistydew/netCloud/workflows/C/C++%20CI/badge.svg)
+![](https://github.com/mistydew/netCloud/workflows/C/C++%20CI/badge.svg)
 
 如果你的工作流使用了 name 关键字，你可以通过 name 引用工作流。
 如果你工作流的 name 中包含空格，你需要使用 URL 编码字符串 %20 替换空格。

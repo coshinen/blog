@@ -121,8 +121,7 @@ in silence
 </blockquote>
 </div>
 
-莎岗指的是法国女作家弗兰西丝·莎岗（Françoise Sagan），以中产阶级的爱情故事闻名。
-据说这首歌词的灵感来自于其 19 岁时出版的处女作日安忧郁（Bonjour tristesse）。
+莎岗指的是法国女作家「Françoise Sagan（弗兰西丝·莎岗）」，代表作「Bonjour tristesse（日安忧郁）」。
 
 ## 参考链接
 

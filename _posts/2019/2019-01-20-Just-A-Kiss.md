@@ -118,7 +118,7 @@ Kiss goodnight
 </blockquote>
 </div>
 
-这首歌的 MV 是一个小故事，很有意思。
+MV 是一个小故事，很有意思。
 
 ## 参考链接
 

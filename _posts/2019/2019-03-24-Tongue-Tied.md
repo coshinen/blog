@@ -126,8 +126,8 @@ Ooh, ooh
 </blockquote>
 </div>
 
-明天就是 Apple 2019 春季发布会。
-突然想起了 N 年前看到的 iPod Touch 宣传片的 BGM，这首 Tongue Tied。
+明天就是 Apple 2019 春季发布会了。
+突然想起了多年前看到的 iPod Touch 宣传片的这首 BGM。
 
 ## 参考链接
 

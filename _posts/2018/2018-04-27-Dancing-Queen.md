@@ -106,7 +106,7 @@ Digging the dancing queen
 </blockquote>
 </div>
 
-这里的 digging 是 appreciating 的意思，而 dig in 没有意义。
+「digging」意思是「appreciating（欣赏）」，「dig in」没有意义。
 
 ## 参考链接
 

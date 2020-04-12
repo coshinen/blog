@@ -96,7 +96,7 @@ It's all right
 </blockquote>
 </div>
 
-最早听到这首歌是在动画电影 Bee Movie 中，是 Sheryl Crow 的翻唱版。
+最早听到这首歌是动画电影「Bee Movie」中的主题曲，Sheryl Crow 的翻唱版。
 
 ## 参考链接
 

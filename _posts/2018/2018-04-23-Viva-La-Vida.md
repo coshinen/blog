@@ -122,8 +122,9 @@ But that was when I ruled the world
 </blockquote>
 </div>
 
-歌曲以法兰西国王路易十六的视角，叙述了一段悲凉的历史。
-封面是法国画家欧仁·德拉克罗瓦为纪念 1830 年法国七月革命创作的一幅名为自由引导人民（La Liberté guidant le peuple）的油画。
+封面是法国画家欧仁·德拉克罗瓦为纪念 1830 年法国七月革命创作的一幅名为「La Liberté guidant le peuple（自由引导人民）」的油画。
+
+歌词以法兰西国王路易十六的视角，叙述了一段悲凉的历史。
 
 ## 参考链接
 
