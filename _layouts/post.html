@@ -4,7 +4,7 @@ layout: default
 
         <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
           <header class="post-header">
-            <h1 class="post-title" itemprop="name headline">{{ page.title | escape }}<span>{% include post/share.html %}</span></h1>
+            <h1 class="post-title" itemprop="name headline">{{ page.title | escape }}</h1>
             <p class="post-meta">
               <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished"><abbr title="{{ page.date | date_to_xmlschema }}">{% include icon/calendar.html %}{{ page.date | date: "%b %-d, %Y" }}</abbr></time>
               <span>|</span>
@@ -17,11 +17,20 @@ layout: default
               <span>{% include icon/tags.html %}{% for tag in page.tags %}
               <a href="{{ site.tag }}#{{ tag }}">{{ tag }}</a>{% endfor %}</span>{% if page.comments == true %}
               <span>|</span>
-              <span>{% include icon/comments.html %}{% include post/link.html %}</span>{% endif %}
+              <span>{% include icon/comments.html %}
+              <script>
+                var idcomments_acct = '{{ site.site_acct }}';
+                var idcomments_post_id = '{{ page.url | absolute_url }}';
+                var idcomments_post_url = '{{ page.url | absolute_url }}';
+                var idcomments_post_title= '{{ page.title | escape }}';
+              </script>
+              <script type="text/javascript" src="https://www.intensedebate.com/js/genericLinkWrapperV2.js"></script></span>{% endif %}
             </p>
           </header>
           <div class="post-content" itemprop="articleBody">
 {{ content }}
           </div>{% if page.comments == true %}
-{% include post/comments.html %}{% endif %}
+          <!-- IntenseDebate Imagine better comments. -->
+          <span id="IDCommentsPostTitle" style="display:none"></span>
+          <script type='text/javascript' src='https://www.intensedebate.com/js/genericCommentWrapperV2.js'></script>{% endif %}
         </article>
