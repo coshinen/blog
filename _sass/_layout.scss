@@ -206,12 +206,12 @@
 // Home page
 .home-left {
   float: left;
-  width: calc(70% - (#{$spacing-unit} / 2));
+  width: calc(72% - (#{$spacing-unit} / 2));
 }
 
 .home-right {
   float: right;
-  width: calc(30% - (#{$spacing-unit} / 2));
+  width: calc(28% - (#{$spacing-unit} / 2));
 }
 
 @include media-query($on-palm) {
@@ -227,12 +227,12 @@
 #category,
 #tagcloud {
   float: right;
-  width: calc(22% - #{$spacing-unit});
+  width: calc(28% - #{$spacing-unit});
 }
 
 .contents {
   float: left;
-  width: calc(78% - #{$spacing-unit});
+  width: calc(72% - #{$spacing-unit});
 }
 
 @include media-query($on-palm) {
