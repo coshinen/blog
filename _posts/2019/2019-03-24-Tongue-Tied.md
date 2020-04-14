@@ -12,9 +12,8 @@ excerpt: Take me to your best friend's house. Going around this roundabout, oh, 
 
 ## Tongue Tied | 舌头打结
 
-歌手：Grouplove<br>
-作詞：Grouplove<br>
-作曲：Grouplove
+Singer: Grouplove<br>
+Songwriter: Grouplove
 
 <div class="lyric-original">
 <p>

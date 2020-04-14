@@ -57,10 +57,8 @@ macOS 内核官方称为 XNU。该[缩写](https://github.com/apple/darwin-xnu){
 macOS 内核（XNU）比 Linux 时间更长，是基于 2 个很早的代码库的组合。
 另一方面，Linux 更新，从头开始编写，并在更多设备上使用。
 
-如果您发现这篇文章很有趣，请花些时间在社交媒体，骇客新闻或 [Reddit](http://reddit.com/r/linuxusersgroup){:target="_blank"} 上分享。
-
 ## 参考链接
 
-* [macOS Mojave - Apple](https://www.apple.com/macos/mojave){:target="_blank"}
-* [The Linux Kernel Archives](https://www.kernel.org){:target="_blank"}
 * [What is the Difference Between the macOS and Linux Kernels \| It's FOSS](https://itsfoss.com/mac-linux-difference){:target="_blank"}
+* [torvalds/linux: Linux kernel source tree](https://github.com/torvalds/linux){:target="_blank"}
+* [The Linux Kernel Archives](https://www.kernel.org){:target="_blank"}

@@ -12,9 +12,8 @@ excerpt: Here comes the sun, doo doo doo doo. Here comes the sun, and I say. It'
 
 ## Here Comes the Sun | 太阳从这儿升起
 
-歌手：The Beatles<br>
-作詞：George Harrison<br>
-作曲：George Harrison
+Singer: The Beatles<br>
+Songwriter: George Harrison
 
 <div class="lyric-original">
 <p>

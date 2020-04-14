@@ -13,8 +13,8 @@ excerpt: Close my eyes and feel your mind. Time has passed. I walk like a shadow
 ## Tonight, I feel close to you | 今晚，我感觉离你很近
 
 歌手：倉木麻衣・孫燕姿<br>
-作詞：Mai Kuraki・Tokiko Nishimuro<br>
-作曲：Aika Ohno
+作詞：倉木麻衣・西室斗紀子<br>
+作曲：大野愛果
 
 <div class="lyric-original">
 <p>

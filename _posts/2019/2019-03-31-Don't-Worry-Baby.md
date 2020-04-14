@@ -12,9 +12,8 @@ excerpt: Well its been building up inside of me. For oh I don't know how long. I
 
 ## Don't Worry Baby | 别担心宝贝
 
-歌手：The Beach Boys<br>
-作詞：Brian Wilson・Roger Christian<br>
-作曲：Brian Wilson・Roger Christian
+Singer: The Beach Boys<br>
+Songwriters: Brian Wilson & Roger Christian
 
 <div class="lyric-original">
 <p>

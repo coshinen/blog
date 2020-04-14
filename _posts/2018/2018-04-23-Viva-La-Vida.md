@@ -12,9 +12,8 @@ excerpt: I used to rule the world. Seas would rise when I gave the word. Now in 
 
 ## Viva La Vida | 生命万岁
 
-歌手：Coldplay<br>
-作詞：Guy Berryman・Jonny Buckland・Will Champion・Chris Martin<br>
-作曲：Guy Berryman・Jonny Buckland・Will Champion・Chris Martin
+Singer: Coldplay<br>
+Songwriters: Guy Berryman, Jonny Buckland, Will Champion & Chris Martin
 
 <div class="lyric-original">
 <p>

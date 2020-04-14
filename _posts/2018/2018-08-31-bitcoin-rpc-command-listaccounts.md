@@ -14,11 +14,11 @@ excerpt: $ bitcoin-cli listaccounts ( minconf includeWatchonly )
 listaccounts ( minconf includeWatchonly ) # （已过时）列出以账户名为关键字，账户余额为值的对象
 ```
 
-参数：<br>
-1.minconf（数字，可选，默认为 1）只包含至少有 minconf 次确认的交易。<br>
-2.includeWatchonly（布尔型，可选，默认为 false）包含在 watchonly 地址上的余额（见 [importaddress](/blog/2018/06/bitcoin-rpc-command-importaddress.html)）。
+参数：
+1. minconf（数字，可选，默认为 1）只包含至少有 minconf 次确认的交易。
+2. includeWatchonly（布尔型，可选，默认为 false）包含在 watchonly 地址上的余额（见 [importaddress](/blog/2018/06/bitcoin-rpc-command-importaddress.html)）。
 
-结果：<br>
+结果：
 ```shell
 {                      （键为账户名，值为数字型余额的 json 对象）
   "account": x.xxx,  （数字）属性名为账户名，值为该账户的总余额。

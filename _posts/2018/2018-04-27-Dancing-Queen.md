@@ -12,9 +12,8 @@ excerpt: Ooh, you can dance, you can jive. Having the time of your life. Ooh, se
 
 ## Dancing Queen | 舞后
 
-歌手：ABBA<br>
-作詞：Benny Andersson・Björn Ulvaeus・Stig Anderson<br>
-作曲：Benny Andersson・Björn Ulvaeus・Stig Anderson
+Singer: ABBA<br>
+Songwriters: Benny Andersson, Björn Ulvaeus & Stig Anderson
 
 <div class="lyric-original">
 <p>
