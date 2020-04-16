@@ -75,6 +75,10 @@ excerpt: Here are some books I read.
 > * 重构 改善既有代码的设计，[美] Martin Fowler
 > * 代码整洁之道，[美] Robert C. Martin
 > * 你的灯亮着吗？发现问题的真正所在，[美] Donald C. Gause, Gerald M. Weinberg
+> * [How To Ask Questions The Smart Way](http://www.catb.org/~esr/faqs/smart-questions.html){:target="_blank"}，[美] Eric S. Raymond, Rick Moen
+> * [快乐的 Linux 命令行](http://billie66.github.com/TLCL){:target="_blank"}，[美] William Shotts
+> * [中文文案排案指北](https://github.com/sparanoid/chinese-copywriting-guidelines){:target="_blank"}，[中] Tunghsiao Liu
+> * [中文技术文档的写作规范](https://github.com/ruanyf/document-style-guide){:target="_blank"}，[中] 阮一峰
 
 ## 文学
 

@@ -231,7 +231,7 @@ excerpt: Here are my favorite quotes from someones that inspire me or make me la
 > 中村由利「GARNET CROW premium live 〜happy 5th anniversary〜」：
 > * 私の好きな詩人にシラーという人がいるんですけれども、ドイツの詩人なんですけれども、その人の言葉に「人生、退屈すれば長く、充実すれば短い」という言葉があるんですけれども、今日のこのライブは本当にまだ始まったばかりなんじゃないかなって、もう終わってしまうのが信じられないくらいな一日になりました…
 
-> 中村由利「GARNET CROW “le 5 ème anniversaire” L'Histoire de 2000 à 2005」：
+> 中村由利「GARNET CROW "le 5 ème anniversaire" L'Histoire de 2000 à 2005」：
 > * 流されていうことは簡単だけれど、変わらないっていうのは一番難しい。
 
 > AZUKI 七「GARNET CROW クリスタル・ゲージ」：
