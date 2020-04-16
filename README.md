@@ -4,7 +4,7 @@
 
 ## Todo
 
-- [ ] site: replace Simple Jekyll Search with FlexSearch
+- [ ] archive page: archive by month, year
 
 ## Timeline
 
