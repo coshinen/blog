@@ -22,18 +22,18 @@ email: mistydew@qq.com
 # Pages baseurl
 about:    "/about.html"
 booklog:  "/booklog.html"
+pgpkey:   "/public_key.asc"
 quotes:   "/quotes.html"
-search:   "/search.json"
 sitemap:  "/sitemap.xml"
 blog:     "/blog/"
 archive:  "/blog/archive.html"
+atom:     "/blog/atom.xml"
 category: "/blog/category.html"
 feed:     "/blog/feed.html"
+search:   "/blog/search.json"
 tag:      "/blog/tags.html"
-atom:     "/blog/atom.xml"
 
 # About page
-pgpkey:      "/public_key.asc"
 fingerprint: 7752 D418 D94C 33FB 8F6F 9197 44D9 CCA7 F81A 1FB3
 bitcoinaddr: 1GC1iAZz9Wroy99bwJUzuLrqpmayUhjYbZ
 

@@ -1,12 +1,12 @@
 ---
 layout: null
-permalink: /search.json
+permalink: /blog/search.json
 ---
 
 [{% for post in site.posts %}
     {
       "title"    : "{{ post.title | escape }}",
-      "category" : "{{ post.categories | join: ', ' }}",
+      "category" : "{{ post.category }}",
       "tags"     : "{{ post.tags | join: ', ' }}",
       "url"      : "{{ post.url }}",
       "date"     : "{{ post.date }}"
