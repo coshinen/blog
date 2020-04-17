@@ -41,31 +41,33 @@
 
   #search-input {
     position: relative;
-    left: 36px;
+    left: 32px;
     height: 32px;
-    width: 292px;
+    width: 300px;
     font-size: 16px;
     border: 1px solid #d3d3d3;
-    border-radius: 2px;
+    border-radius: 4px;
     background-color: $background-color;
   }
 
   .submit-button {
     position: relative;
     top: 4px;
+    right: 8px;
   }
 
   @include media-query($on-palm) {
     position: absolute;
     top: 9px;
     right: $spacing-unit / 2;
-    background-color: transparent;
+    background-color: $background-color;
     border: 1px solid $grey-color-light;
     border-radius: 5px;
 
     &:hover {
       border: 0;
       line-height: 0;
+      background-color: transparent;
     }
 
     .search-icon {
