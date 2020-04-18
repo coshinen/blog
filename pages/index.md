@@ -11,9 +11,7 @@ permalink: /
       <h2>
         <a class="post-link" href="{{ post.url }}">{{ post.title }}</a>
       </h2>
-      <div class="excerpt">
-        {{ post.excerpt | markdownify }}
-      </div>
+      <p>{{ post.excerpt }}</p>
       <span><a class="readmore" href="{{ post.url }}">阅读全文 &raquo;</a></span>
     </li>{% endfor %}
   </ul>
