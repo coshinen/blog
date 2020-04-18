@@ -13,7 +13,8 @@ title: parallel universe
 blogname: 袁子晨的网络日志
 subtitle: mistydew's blog
 description: >- # this means to ignore newlines until "baseurl:"
-  Powered by Jekyll. Hosted from GitHub.
+  Powered by Jekyll.
+  Hosted from GitHub.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://mistydew.github.io" # the base hostname & protocol for your site
 quote: 無理は一番の退屈しのぎだ。
@@ -22,24 +23,12 @@ email: mistydew@qq.com
 # Pages baseurl
 about:    "/about.html"
 booklog:  "/booklog.html"
-pgpkey:   "/public_key.asc"
 quotes:   "/quotes.html"
-sitemap:  "/sitemap.xml"
 blog:     "/blog/"
 archive:  "/blog/archive.html"
-atom:     "/blog/atom.xml"
 category: "/blog/category.html"
 feed:     "/blog/feed.html"
-search:   "/blog/search.json"
 tag:      "/blog/tags.html"
-
-# About page
-fingerprint: 7752 D418 D94C 33FB 8F6F 9197 44D9 CCA7 F81A 1FB3
-bitcoinaddr: 1GC1iAZz9Wroy99bwJUzuLrqpmayUhjYbZ
-
-# Blog IntenseDebate
-site_id:   415414
-site_acct: b051fd1ebb6d822f554a521d0827b1d8
 
 # Where things are
 source      : .

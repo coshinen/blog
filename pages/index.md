@@ -27,7 +27,7 @@ permalink: /
   </ul>
 </div>
 <div class="home-right">
-  <script src='https://www.intensedebate.com/widgets/acctComment/{{ site.site_id }}/2' defer="defer" type='text/javascript'> </script>
+  <script src='https://www.intensedebate.com/widgets/acctComment/415414/2' defer="defer" type='text/javascript'></script>
   <blockquote>
     <h2>关于</h2>
     <div>
