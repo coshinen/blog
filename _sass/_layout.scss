@@ -36,24 +36,23 @@
   }
 
   input {
-    padding-left: 8px;
+    position: relative;
+    padding-left: 32px;
+    outline: none;
+  }
+
+  #submit-button {
+    top: 2px;
+    left: 30px;
   }
 
   #search-input {
-    position: relative;
-    left: 32px;
     height: 32px;
-    width: 300px;
+    width: 256px;
     font-size: 16px;
     border: 1px solid #d3d3d3;
     border-radius: 4px;
-    background-color: $background-color;
-  }
-
-  .submit-button {
-    position: relative;
-    top: 4px;
-    right: 8px;
+    background-color: transparent;
   }
 
   @include media-query($on-palm) {
@@ -67,7 +66,6 @@
     &:hover {
       border: 0;
       line-height: 0;
-      background-color: transparent;
     }
 
     .search-icon {
