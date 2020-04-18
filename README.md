@@ -8,11 +8,12 @@
 
 ## Timeline
 
-* 2020.04.14 [-] post: ~~AddToAny Share Button~~
+* 2020.04.18 [+] remake: site search box
 
 <details>
 <summary>history</summary>
 
+* 2020.04.14 [-] post: ~~AddToAny Share Button~~
 * 2020.04.12 [-] post: ~~info (license and more)~~; ~~reading time~~
 * 2020.04.06 [+] site: SEO tag
 * 2020.04.04 [-] archive page: ~~Google Custom Search Engine~~
@@ -42,9 +43,9 @@
 * 2019.05.09 [+] site: robots.txt (Allow Bingbot and Yahoo Slurp)
 * 2019.05.03 [-] post: ~~LiveRe City comment~~ (realname); [+] post: ~~Remarkbox Hosted Comments Service~~
 * 2019.04.28 [-] post: ~~Widget Pack Comment System~~ (realname); [+] post: ~~LiveRe City comment~~
-* 2019.04.23 [+] site: searchbox submit icon
+* 2019.04.23 [+] site: search box submit icon
 * 2019.04.19 [+] config: site timezone
-* 2019.04.01 [+] site: searchbox position
+* 2019.04.01 [+] site: search box position
 * 2019.03.30 [-] site: ~~cPlayer~~ (redundancy)
 * 2019.02.02 [-] site: ~~honehone clock~~ (unnecessary)
 * 2019.02.01 [+] remake: gc favicon
