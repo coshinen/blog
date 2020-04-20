@@ -6,7 +6,7 @@ author: mistydew
 comments: true
 category: 力扣题解
 tags: LeetCode
-excerpt: 把给定的整数转换为罗马数字（包含七种字符：`I`，`V`，`X`，`L`，`C`，`D`和`M`）。
+excerpt: 把给定的整数转换为罗马数字（包含七种字符：`I`，`V`，`X`，`L`，`C`，`D` 和 `M`）。
 ---
 ## 12. Integer to Roman | Medium
 
@@ -62,7 +62,7 @@ excerpt: 把给定的整数转换为罗马数字（包含七种字符：`I`，`V
 
 ## 问题分析
 
-把给定的整数转换为罗马数字（包含七种字符：`I`，`V`，`X`，`L`，`C`，`D`和`M`）。
+把给定的整数转换为罗马数字（包含七种字符：`I`，`V`，`X`，`L`，`C`，`D` 和 `M`）。
 
 ## 解决方案
 
@@ -113,4 +113,3 @@ public:
 ## 参考链接
 
 * [Integer to Roman - LeetCode](https://leetcode.com/problems/integer-to-roman/){:target="_blank"}
-* [mistydew/leetcode](https://github.com/mistydew/leetcode){:target="_blank"}

@@ -99,4 +99,3 @@ public:
 ## 参考链接
 
 * [Palindrome Number - LeetCode](https://leetcode.com/problems/palindrome-number/){:target="_blank"}
-* [mistydew/leetcode](https://github.com/mistydew/leetcode){:target="_blank"}

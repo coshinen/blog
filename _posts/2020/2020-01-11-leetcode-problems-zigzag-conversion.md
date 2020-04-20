@@ -128,4 +128,3 @@ public:
 ## 参考链接
 
 * [ZigZag Conversion - LeetCode](https://leetcode.com/problems/zigzag-conversion/){:target="_blank"}
-* [mistydew/leetcode](https://github.com/mistydew/leetcode){:target="_blank"}

@@ -82,4 +82,3 @@ public:
 ## 参考链接
 
 * [Reverse Integer - LeetCode](https://leetcode.com/problems/reverse-integer/){:target="_blank"}
-* [mistydew/leetcode](https://github.com/mistydew/leetcode){:target="_blank"}

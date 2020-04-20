@@ -76,4 +76,3 @@ public:
 ## 参考链接
 
 * [Longest Substring Without Repeating Characters - LeetCode](https://leetcode.com/problems/longest-substring-without-repeating-characters/){:target="_blank"}
-* [mistydew/leetcode](https://github.com/mistydew/leetcode){:target="_blank"}

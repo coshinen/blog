@@ -97,4 +97,3 @@ public:
 ## 参考链接
 
 * [Container With Most Water - LeetCode](https://leetcode.com/problems/container-with-most-water/){:target="_blank"}
-* [mistydew/leetcode](https://github.com/mistydew/leetcode){:target="_blank"}

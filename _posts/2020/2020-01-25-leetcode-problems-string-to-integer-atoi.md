@@ -117,4 +117,3 @@ public:
 ## 参考链接
 
 * [String to Integer (atoi) - LeetCode](https://leetcode.com/problems/string-to-integer-atoi/){:target="_blank"}
-* [mistydew/leetcode](https://github.com/mistydew/leetcode){:target="_blank"}

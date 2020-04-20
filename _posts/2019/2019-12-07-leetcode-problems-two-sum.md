@@ -102,4 +102,3 @@ public:
 ## 参考链接
 
 * [Two Sum - LeetCode](https://leetcode.com/problems/two-sum/){:target="_blank"}
-* [mistydew/leetcode](https://github.com/mistydew/leetcode){:target="_blank"}
