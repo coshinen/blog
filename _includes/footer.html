@@ -15,7 +15,7 @@
             </ul>
           </div>
           <div class="footer-col footer-col-3">
-            <p>{% if page.url == "/" or page.url == site.about or page.url == site.booklog or page.url == site.quotes %}{{ site.description }}{% else %}{{ site.description | replace_first: site.title, site.subtitle }}{% endif %}</p>
+            <p>{% if page.url contains "blog" %}{{ site.description | replace_first: site.title, site.subtitle }}{% else %}{{ site.description }}{% endif %}</p>
           </div>
         </div>
       </div>

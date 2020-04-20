@@ -8,7 +8,7 @@ permalink: /blog/atom.xml
   <title>{{ site.blogname | xml_escape }}</title>
   <subtitle>{{ site.subtitle | xml_escape }}</subtitle>
   <updated>{{ site.time | date_to_xmlschema }}</updated>
-  <id>tag:{{ site.url | replace: "https://", "" | uri_escape }},{{ site.blog | uri_escape }}</id>
+  <id>tag:{{ site.url | replace_first: "https://", "" | uri_escape }},{{ site.blog | uri_escape }}</id>
   <link rel="alternate" type="text/html" href="{{ site.blog | absolute_url | uri_escape }}"/>
   <link rel="self" type="application/atom+xml" href="{{ "/blog/atom.xml" | absolute_url | uri_escape }}"/>
   <icon>{{ "/assets/images/favicon.ico" | absolute_url | uri_escape }}</icon>
@@ -17,7 +17,7 @@ permalink: /blog/atom.xml
   <entry>
     <title>{{ post.title | xml_escape }}</title>
     <link rel="alternate" type="text/html" href="{{ post.url | absolute_url | xml_escape }}"/>
-    <id>tag:{{ site.url | replace: "https://", "" | uri_escape }},{{ post.id | xml_escape }}</id>
+    <id>tag:{{ site.url | replace_first: "https://", "" | uri_escape }},{{ post.id | xml_escape }}</id>
     <updated>{{ post.date | date_to_xmlschema }}</updated>
     <published>{{ post.date | date_to_xmlschema }}</published>
     <summary>{{ post.excerpt | xml_escape }}</summary>
