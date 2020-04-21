@@ -24,7 +24,9 @@ excerpt: Here are some books I read.
 >   * [心理学](#心理学)
 >   * [伦理学](#伦理学)
 >   * [方法论](#方法论)
-> * [漫画](#漫画)
+> * [其他](#其他)
+>   * [语言](#语言)
+>   * [漫画](#漫画)
 
 ## 技术
 
@@ -74,6 +76,7 @@ excerpt: Here are some books I read.
 > * [Pro Git 2nd Edition](https://git-scm.com/book/en/v2){:target="_blank"}，[美] Scott Chacon and Ben Straub
 > * 重构 改善既有代码的设计，[美] Martin Fowler
 > * 代码整洁之道，[美] Robert C. Martin
+> * [Google C++ Style Guide](https://google.github.io/styleguide/cppguide.html){:target="_blank"}，[美] Google
 > * 你的灯亮着吗？发现问题的真正所在，[美] Donald C. Gause, Gerald M. Weinberg
 > * [How To Ask Questions The Smart Way](http://www.catb.org/~esr/faqs/smart-questions.html){:target="_blank"}，[美] Eric S. Raymond, Rick Moen
 > * [快乐的 Linux 命令行](http://billie66.github.com/TLCL){:target="_blank"}，[美] William Shotts
@@ -90,7 +93,7 @@ excerpt: Here are some books I read.
 > * [未来世界的幸存者](http://www.ruanyifeng.com/survivor){:target="_blank"}，[中] 阮一峰
 > * 如何变得有思想 阮一峰博客文集，[中] [阮一峰](http://www.ruanyifeng.com/blog){:target="_blank"}
 > * [新生 七年就是一辈子](https://b.xinshengdaxue.com){:target="_blank"}，[中] 李笑来
-> * [把时间当作朋友 运用心智 获得解放](http://lixiaolai.com/#/befriending-time/){:target="_blank"}，[中] [李笑来](http://lixiaolai.com/#/){:target="_blank"}
+> * [把时间当作朋友 运用心智 获得解放](http://lixiaolai.com/#/befriending-time/){:target="_blank"}，[中] 李笑来
 > * 80,0 AZUKI NANA photo & anthology，[日] AZUKI 七
 
 > ### 纪实
@@ -172,7 +175,12 @@ excerpt: Here are some books I read.
 > * 一万小时天才理论，[美] Daniel Coyle
 > * 刻意练习 如何从新手到大师，[美] Anders Ericsson, Robert Pool
 
-## 漫画
+## 其他
 
+> ### 语言
+> * [英语进阶指南](https://byoungd.gitbook.io/english-level-up-tips/){:target="_blank"}，[中] byoungd
+> * [人人都能用英语](http://lixiaolai.com/#/everyone-can-use-english/){:target="_blank"}，[中] [李笑来](http://lixiaolai.com/#/){:target="_blank"}
+
+> ### 漫画
 > * 日本人の知らない日本語，[日] 蛇蔵＆海野凪子
 > * 名探偵コナン，[日] 青山剛昌
