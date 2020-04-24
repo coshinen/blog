@@ -128,3 +128,4 @@ rpcfn_type 是一个函数标签为 UniValue(const UniValue&, bool) 的回调函
 * [Base58 - Wikipedia](https://en.wikipedia.org/wiki/Base58){:target="_blank"}
 * [Base58Check encoding - Bitcoin Wiki](https://en.bitcoin.it/wiki/Base58Check_encoding){:target="_blank"}
 * [bitcoin/bitcoin/src/base58.cpp](https://github.com/bitcoin/bitcoin/blob/master/src/base58.cpp){:target="_blank"}
+* [bitaddress.org](https://www.bitaddress.org){:target="_blank"}

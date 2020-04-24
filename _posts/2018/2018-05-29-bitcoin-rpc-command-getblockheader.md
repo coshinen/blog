@@ -19,6 +19,7 @@ getblockheader "hash" ( verbose ) # 通过区块哈希（16 进制形式）获�
 2. verbose（布尔型，可选，默认为 true）true 获取区块头信息的 json 格式对象，false 获取 16 进制编码的区块头数据。
 
 结果（verbose 为 true）：
+
 ```shell
 {
   "hash" : "hash",     （字符串）区块哈希（和提供的一样）

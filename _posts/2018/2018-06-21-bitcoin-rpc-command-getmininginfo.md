@@ -14,7 +14,8 @@ excerpt: $ bitcoin-cli getmininginfo
 getmininginfo # 获取挖矿信息
 ```
 
-结果：返回一个包含挖矿相关信息的 json 对象。<br>
+结果：返回一个包含挖矿相关信息的 json 对象。
+
 ```shell
 {
   "blocks": nnn,             （数字）当前区块数
@@ -61,6 +62,7 @@ $ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curl
 ```
 
 ## 源码剖析
+
 getmininginfo 对应的函数在“rpcserver.h”文件中被引用。
 
 ```cpp

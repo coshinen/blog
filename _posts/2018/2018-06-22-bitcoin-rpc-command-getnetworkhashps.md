@@ -14,9 +14,9 @@ excerpt: $ bitcoin-cli getnetworkhashps ( blocks height )
 getnetworkhashps ( blocks height ) # 获取基于最后 n 个区块估算的网络算力（每秒网络哈希次数）
 ```
 
-参数：<br>
-1.blocks（整型，可选，默认为 120）区块的数量，-1 表示从上一次变化的难度开始。<br>
-2.height（整型，可选，默认为 -1 表示当前高度）给定区块链高度用于评估当某个块被找到时的网络速度。
+参数：
+1. blocks（整型，可选，默认为 120）区块的数量，-1 表示从上一次变化的难度开始。
+2. height（整型，可选，默认为 -1 表示当前高度）给定区块链高度用于评估当某个块被找到时的网络速度。
 
 结果：（数字）返回估算的每秒网络哈希的次数（链工作量 chainwork 之差 / 时间 time 之差）。
 
@@ -38,7 +38,8 @@ $ bitcoin-cli getnetworkhashps 1 3
 10011731.54545454
 ```
 
-计算方法：用第三块与第二块的工作量之差 / 第三块与第二块产生时间之差。<br>
+计算方法：用第三块与第二块的工作量之差 / 第三块与第二块产生时间之差。
+
 公式：(chainwork3 - chainwork(3 - 1) ) / (time3 - time(3 - 1) )。
 
 用法三：获取产生前三个区块的算力。
@@ -70,6 +71,7 @@ $ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curl
 ```
 
 ## 源码剖析
+
 getnetworkhashps 对应的函数在“rpcserver.h”文件中被引用。
 
 ```cpp

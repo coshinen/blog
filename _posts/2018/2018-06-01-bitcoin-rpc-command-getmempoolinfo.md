@@ -15,6 +15,7 @@ getmempoolinfo # 获取交易内存池激活状态的细节
 ```
 
 结果：
+
 ```shell
 {
   "size": xxxxx,               （数字）当前的交易数
@@ -50,6 +51,7 @@ $ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curl
 ```
 
 ## 源码剖析
+
 getmempoolinfo 对应的函数在“rpcserver.h”文件中被引用。
 
 ```cpp

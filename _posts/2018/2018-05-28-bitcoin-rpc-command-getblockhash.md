@@ -14,8 +14,8 @@ excerpt: $ bitcoin-cli getblockhash index
 getblockhash index # 获取在最佳区块链上指定索引的区块哈希
 ```
 
-参数：<br>
-1.index（整型，必备）区块索引（最佳链高度）。
+参数：
+1. index（整型，必备）区块索引（最佳链高度）。
 
 结果：（字符串）区块哈希（16 进制形式）。
 

@@ -14,10 +14,11 @@ excerpt: $ bitcoin-cli getrawmempool ( verbose )
 getrawmempool ( verbose ) # 获取内存池中所有交易索引作为一个交易索引字符串的 json 数组
 ```
 
-参数：<br>
-1.verbose（布尔型，可选，默认为 false）true 返回 json 对象，false 返回交易索引的数组。
+参数：
+1. verbose（布尔型，可选，默认为 false）true 返回 json 对象，false 返回交易索引的数组。
 
-结果：（verbose 为 false）<br>
+结果：（verbose 为 false）
+
 ```shell
 [                     （字符串 json 数组）
   "transactionid"     （字符串）交易索引
@@ -25,7 +26,8 @@ getrawmempool ( verbose ) # 获取内存池中所有交易索引作为一个交�
 ]
 ```
 
-结果：（verbose 为 true）<br>
+结果：（verbose 为 true）
+
 ```shell
 {                           （json 对象）
   "transactionid" : {       （json 对象）

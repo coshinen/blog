@@ -62,9 +62,9 @@ UniValue getbestblockhash(const UniValue& params, bool fHelp)
 }
 ```
 
-基本流程：<br>
-1.处理命令帮助和参数个数。<br>
-2.获取链尖区块哈希，转换为 16 进制并返回。
+基本流程：
+1. 处理命令帮助和参数个数。
+2. 获取链尖区块哈希，转换为 16 进制并返回。
 
 对象 chainActive 的引用在“main.h”文件中。
 

@@ -14,7 +14,7 @@ excerpt: $ bitcoin-cli getblockcount
 getblockcount # 获取当前最长区块链的区块总数（不包含创世区块）
 ```
 
-结果：（数字）当前的区块数。<br>
+结果：（数字）当前的区块数。
 
 ## 用法示例
 
@@ -35,6 +35,7 @@ $ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curl
 ```
 
 ## 源码剖析
+
 getblockcount 对应的函数在“rpcserver.h”文件中被引用。
 
 ```cpp

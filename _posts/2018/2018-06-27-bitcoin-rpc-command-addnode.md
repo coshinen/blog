@@ -14,9 +14,9 @@ excerpt: $ bitcoin-cli addnode "node" "add|remove|onetry"
 addnode "node" "add|remove|onetry" # 尝试从 addnode 列表中添加或移除一个节点，或尝试连接某节点一次
 ```
 
-参数：<br>
-1.node（字符串，必备）节点（见 [getpeerinfo](/blog/2018/07/bitcoin-rpc-command-getpeerinfo.html) 获取的节点）。<br>
-2.add|remove|onetry（字符串，必备）add 添加一个节点到列表（不会主动连接），remove 从列表移除一个节点，onetry 尝试连接到节点一次。<br>
+参数：
+1. node（字符串，必备）节点（见 [getpeerinfo](/blog/2018/07/bitcoin-rpc-command-getpeerinfo.html) 获取的节点）。
+2. add|remove|onetry（字符串，必备）add 添加一个节点到列表（不会主动连接），remove 从列表移除一个节点，onetry 尝试连接到节点一次。
 
 结果：无返回值。
 
@@ -61,6 +61,7 @@ $ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curl
 ```
 
 ## 源码剖析
+
 addnode 对应的函数在“rpcserver.h”文件中被引用。
 
 ```cpp

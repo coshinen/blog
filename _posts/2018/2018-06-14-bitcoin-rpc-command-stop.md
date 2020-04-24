@@ -33,6 +33,7 @@ $ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curl
 ```
 
 ## 源码剖析
+
 stop 对应的函数实现在“rpcserver.cpp”文件中。
 
 ```cpp

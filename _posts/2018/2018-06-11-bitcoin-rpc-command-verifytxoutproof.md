@@ -14,8 +14,8 @@ excerpt: $ bitcoin-cli verifytxoutproof "proof"
 verifytxoutproof "proof" # 验证指向块上的一笔交易的证明，返回它提交的交易，如果该块不在最佳链上则抛出一个 RPC 错误
 ```
 
-参数：<br>
-1.proof（字符串，必备）通过 [gettxoutproof](/blog/2018/06/bitcoin-rpc-command-gettxoutproof.html) 生成的 16 进制编码的证明。
+参数：
+1. proof（字符串，必备）通过 [gettxoutproof](/blog/2018/06/bitcoin-rpc-command-gettxoutproof.html) 生成的 16 进制编码的证明。
 
 结果：（数组，字符串）返回证明提交的交易索引集，如果证明无效则为空数组。
 
@@ -43,6 +43,7 @@ $ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curl
 ```
 
 ## 源码剖析
+
 verifytxoutproof 对应的函数在“rpcserver.h”文件中被引用。
 
 ```cpp

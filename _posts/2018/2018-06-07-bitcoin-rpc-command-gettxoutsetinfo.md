@@ -16,7 +16,8 @@ gettxoutsetinfo # 获取关于未花费交易输出集合的统计信息
 
 **注：该调用可能会花费些时间。**
 
-结果：<br>
+结果：
+
 ```shell
 {
   "height":n,     （数字）当前的区块高度（索引）
@@ -56,6 +57,7 @@ $ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curl
 ```
 
 ## 源码剖析
+
 gettxoutsetinfo 对应的函数在“rpcserver.h”文件中被引用。
 
 ```cpp

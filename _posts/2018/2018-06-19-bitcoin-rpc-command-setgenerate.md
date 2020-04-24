@@ -14,12 +14,13 @@ excerpt: $ bitcoin-cli setgenerate generate ( genproclimit )
 setgenerate generate ( genproclimit ) # 设置打开或关闭挖矿的开关和矿工线程数
 ```
 
-挖矿受限于 genproclimit 线程数，-1 表示无限制（与 CPU 核数相同）。<br>
+挖矿受限于 genproclimit 线程数，-1 表示无限制（与 CPU 核数相同）。
 使用 [getgenerate](/blog/2018/06/bitcoin-rpc-command-getgenerate.html) 查看当前设置。
 
-参数：<br>
-1.generate（布尔型，必备）默认为 false，true 表示开启挖矿，false 表示关闭。<br>
-2.genproclimit（整型，可选）设置开启挖矿时的线程数，默认为 1，-1 表示无限制（同 CPU 核数）。<br>
+参数：
+1. generate（布尔型，必备）默认为 false，true 表示开启挖矿，false 表示关闭。
+2. genproclimit（整型，可选）设置开启挖矿时的线程数，默认为 1，-1 表示无限制（同 CPU 核数）。
+
 **注：此方法不适用于 regtest 回归测试模式，在该模式下使用 RPC 命令 [generate](/blog/2018/05/bitcoin-rpc-command-generate.html)。**
 
 ## 用法示例
@@ -76,6 +77,7 @@ $ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curl
 ```
 
 ## 源码剖析
+
 setgenerate 对应的函数在“rpcserver.h”文件中被引用。
 
 ```cpp

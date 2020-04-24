@@ -14,7 +14,8 @@ excerpt: $ bitcoin-cli getinfo
 getinfo # 获取比特币核心信息
 ```
 
-结果：返回一个包含变量状态信息的对象。<br>
+结果：返回一个包含变量状态信息的对象。
+
 ```shell
 {
   "version": xxxxx,           （数字）服务器版本
@@ -71,6 +72,7 @@ $ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curl
 ```
 
 ## 源码剖析
+
 getinfo 对应的函数在“rpcserver.h”文件中被引用。
 
 ```cpp

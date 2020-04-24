@@ -690,3 +690,4 @@ rpcallowip=xxx.xxx.xxx.xxx
 
 * [bitcoin/bitcoin at v0.12.1](https://github.com/bitcoin/bitcoin/tree/v0.12.1){:target="_blank"}
 * [Running Bitcoin - Bitcoin Wiki](https://en.bitcoin.it/wiki/Running_Bitcoin){:target="_blank"}
+* [Bitcoin Core Config Generator](https://jlopp.github.io/bitcoin-core-config-generator/){:target="_blank"}

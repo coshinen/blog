@@ -14,12 +14,13 @@ excerpt: $ bitcoin-cli gettxout "txid" n ( includemempool )
 gettxout "txid" n ( includemempool ) # 获取关于一笔未花费交易输出的细节
 ```
 
-参数：<br>
-1.txid（字符串，必备）交易索引。<br>
-2.n（数字，必备）输出序号（索引）。<br>
-3.includemempool（布尔型，可选）是否在交易内存池中。
+参数：
+1. txid（字符串，必备）交易索引。
+2. n（数字，必备）输出序号（索引）。
+3. includemempool（布尔型，可选）是否在交易内存池中。
 
-结果：<br>
+结果：
+
 ```shell
 {
   "bestblock" : "hash",    （字符串）区块哈希
