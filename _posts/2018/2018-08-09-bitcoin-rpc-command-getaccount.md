@@ -14,7 +14,7 @@ excerpt: $ bitcoin-cli getaccount "bitcoinaddress"
 getaccount "bitcoinaddress" # （已过时）获取指定地址关联的账户
 ```
 
-参数：<br>
+参数：
 1. bitcoinaddress （字符串，必备）用于查询所属账户的比特币地址。
 
 结果：（字符串）返回地址所属的账户名。
@@ -41,6 +41,7 @@ $ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curl
 ```
 
 ## 源码剖析
+
 getaccount 对应的函数在“rpcserver.h”文件中被引用。
 
 ```cpp

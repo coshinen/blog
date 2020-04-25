@@ -14,8 +14,8 @@ excerpt: $ bitcoin-cli getaccountaddress "account"
 getaccountaddress "account" # （已过时）获取该账户 account 当前用于接收付款的比特币地址
 ```
 
-参数：<br>
-1.account（字符串，必备）地址所属的账户名。它也可以设置空字符串 "" 来表示默认账户。
+参数：
+1. account（字符串，必备）地址所属的账户名。它也可以设置空字符串 "" 来表示默认账户。
 该账户不需要存在，若给定的账户不存在，则它将被创建并新建一个地址。
 
 结果：（字符串）返回该账户的比特币地址。
@@ -59,6 +59,7 @@ $ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curl
 ```
 
 ## 源码剖析
+
 getaccountaddress 对应的函数在“rpcserver.h”文件中被引用。
 
 ```cpp

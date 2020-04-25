@@ -17,9 +17,9 @@ signrawtransaction "hexstring" ( [{"txid":"id","vout":n,"scriptPubKey":"hex","re
 **第二个可选的参数（可能为空）是该交易所依赖的前一笔交易输出数组，但该交易可能还没上链。<br>
 第三个可选的参数（可能为空）是一个 base58 编码的私钥数组，如果指定，它将是签名该交易的唯一私钥。**
 
-参数：<br>
-1.hexstring（字符串，必备）交易的 16 进制字符串。<br>
-2.prevtxs（字符串，可选）依赖的前一笔交易输出的 json 数组。<br>
+参数：
+1. hexstring（字符串，必备）交易的 16 进制字符串。
+2. prevtxs（字符串，可选）依赖的前一笔交易输出的 json 数组。
 ```shell
      [               （json 对象的 json 数组，若未提供则为空）
        {
@@ -31,14 +31,14 @@ signrawtransaction "hexstring" ( [{"txid":"id","vout":n,"scriptPubKey":"hex","re
        ,...
     ]
 ```
-3.privatekeys（字符串，可选）用于签名的 base58 编码的私钥组成的 json 数组。<br>
+3. privatekeys（字符串，可选）用于签名的 base58 编码的私钥组成的 json 数组。<br>
 ```shell
     [                  （字符串 json 数组，若未提供则为空）
       "privatekey"   （字符串）base58 编码的私钥
       ,...
     ]
 ```
-4.sighashtype（字符串，可选，默认为 ALL）签名哈希类型。必须是下列中的一个：
+4. sighashtype（字符串，可选，默认为 ALL）签名哈希类型。必须是下列中的一个：
 ```shell
        "ALL"
        "NONE"
@@ -48,7 +48,7 @@ signrawtransaction "hexstring" ( [{"txid":"id","vout":n,"scriptPubKey":"hex","re
        "SINGLE|ANYONECANPAY"
 ```
 
-结果：<br>
+结果：
 ```shell
 {
   "hex" : "value",           （字符串）16 进制编码的带签名的原始交易
@@ -91,6 +91,7 @@ $ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curl
 ```
 
 ## 源码剖析
+
 signrawtransaction 对应的函数在“rpcserver.h”文件中被引用。
 
 ```cpp

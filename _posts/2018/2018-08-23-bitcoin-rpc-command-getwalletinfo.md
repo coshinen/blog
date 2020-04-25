@@ -14,7 +14,7 @@ excerpt: $ bitcoin-cli getwalletinfo
 getwalletinfo # 获取一个包含各种钱包状态信息的对象
 ```
 
-结果：<br>
+结果：
 ```shell
 {
   "walletversion": xxxxx,     （数字）钱包版本
@@ -58,6 +58,7 @@ $ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curl
 ```
 
 ## 源码剖析
+
 getwalletinfo 对应的函数在“rpcserver.h”文件中被引用。
 
 ```cpp

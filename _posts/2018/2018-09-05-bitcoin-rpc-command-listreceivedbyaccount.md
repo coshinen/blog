@@ -14,12 +14,12 @@ excerpt: $ bitcoin-cli listreceivedbyaccount ( minconf includeempty includeWatch
 listreceivedbyaccount ( minconf includeempty includeWatchonly ) # （已过时）列出账户余额
 ```
 
-参数：<br>
-1.minconf（数字，可选，默认为 1）在被包含到付款前的最小确认数。<br>
-2.includeempty（布尔型，可选，默认为 false）是否包括还未收到任何付款的账户。<br>
-3.includeWatchonly（布尔型，可选，默认为 false）是否包含 watchonly 地址（见 [importaddress](/blog/2018/06/bitcoin-rpc-command-importaddress.html)）。
+参数：
+1. minconf（数字，可选，默认为 1）在被包含到付款前的最小确认数。
+2. includeempty（布尔型，可选，默认为 false）是否包括还未收到任何付款的账户。
+3. includeWatchonly（布尔型，可选，默认为 false）是否包含 watchonly 地址（见 [importaddress](/blog/2018/06/bitcoin-rpc-command-importaddress.html)）。
 
-结果：<br>
+结果：
 ```shell
 [
   {
@@ -86,6 +86,7 @@ $ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curl
 ```
 
 ## 源码剖析
+
 listreceivedbyaccount 对应的函数在“rpcserver.h”文件中被引用。
 
 ```cpp

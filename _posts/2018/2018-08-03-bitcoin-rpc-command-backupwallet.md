@@ -14,8 +14,8 @@ excerpt: $ bitcoin-cli backupwallet "destination"
 backupwallet "destination" # 安全复制 wallet.dat 到目标 destination，它可以是一个目录或一个文件名
 ```
 
-参数：<br>
-1.destination（字符串）目标目录或文件。
+参数：
+1. destination（字符串）目标目录或文件。
 
 结果：无返回值。
 
@@ -58,6 +58,7 @@ $ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curl
 ```
 
 ## 源码剖析
+
 backupwallet 对应的函数在“rpcserver.h”文件中被引用。
 
 ```cpp

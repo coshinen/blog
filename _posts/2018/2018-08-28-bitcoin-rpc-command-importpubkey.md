@@ -14,7 +14,7 @@ excerpt: $ bitcoin-cli importpubkey "pubkey" ( "label" rescan )
 importpubkey "pubkey" ( "label" rescan ) # 导入一个公钥（16 进制）用来监视
 ```
 
-最终导入的还是公钥对应的地址。<br>
+最终导入的还是公钥对应的地址。
 该公钥好像在你的钱包，但不能用于花费。
 
 参数：
@@ -52,6 +52,7 @@ $ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curl
 ```
 
 ## 源码剖析
+
 importpubkey 对应的函数在“rpcserver.h”文件中被引用。
 
 ```cpp

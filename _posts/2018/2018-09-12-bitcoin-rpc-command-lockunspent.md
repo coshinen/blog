@@ -19,9 +19,9 @@ lockunspent unlock [{"txid":"txid","vout":n},...] # 临时加锁（unlock=false�
 该锁只存储在内存中。节点启动时零个锁定的输出，且当一个节点停止或崩溃时，锁定的输出列表总会被清空。<br>
 也可以查看 [listunspent](/blog/2018/09/bitcoin-rpc-command-listunspent.html)。
 
-参数：<br>
-1.unlock（布尔型，必备）指定交易是否解锁（true）或上锁（false）。<br>
-2.transactions（字符串，可选，默认为全部交易输出）一个 json 对象数组。每个对象的交易索引（字符串）和交易输出序号（数字）。<br>
+参数：
+1. unlock（布尔型，必备）指定交易是否解锁（true）或上锁（false）。
+2. transactions（字符串，可选，默认为全部交易输出）一个 json 对象数组。每个对象的交易索引（字符串）和交易输出序号（数字）。
 ```shell
      [           （json 对象的 json 数组）
        {
@@ -75,6 +75,7 @@ $ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curl
 ```
 
 ## 源码剖析
+
 lockunspent 对应的函数在“rpcserver.h”文件中被引用。
 
 ```cpp

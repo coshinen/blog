@@ -99,7 +99,7 @@ although this is a life I can lose.<br>
 <br>
 Please...forgive me 不要再离开我了<br>
 为了填补空白的过去<br>
-只是 仅仅注视着你...Cause I am free<br>
+只是 仅仅注视着你…Cause I am free<br>
 描绘的梦想的全部现在也<br>
 扰乱了内心<br>
 无止境的时间不断流逝<br>
@@ -116,7 +116,7 @@ If there's a chance of resurrecting a love<br>
 <br>
 Please...forgive me 祈祷是募集<br>
 不知不觉在那一天来临的时候<br>
-用更深更大的力量...<br>
+用更深更大的力量…<br>
 so Lovin' that'll last forever<br>
 解放的相连的心<br>
 到处奔跑的鲜明的视野 感觉<br>
@@ -131,7 +131,7 @@ ah- 扰乱了内心<br>
 <br>
 使内心迷惑的热情幻想<br>
 边甩开边继续寻找真相<br>
-一定...现在也是...
+一定…现在也是…
 </blockquote>
 </div>
 

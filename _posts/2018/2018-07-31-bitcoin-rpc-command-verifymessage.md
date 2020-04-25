@@ -53,6 +53,7 @@ $ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curl
 ```
 
 ## 源码剖析
+
 verifymessage 对应的函数在“rpcserver.h”文件中被引用。
 
 ```cpp

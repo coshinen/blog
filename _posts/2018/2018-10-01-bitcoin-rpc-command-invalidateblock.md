@@ -9,6 +9,7 @@ tags: Blockchain Bitcoin bitcoin-cli
 excerpt: $ bitcoin-cli invalidateblock "hash"
 ---
 ## 提示说明
+
 ```shell
 invalidateblock "hash" # 永久标记一个区块无效，就像该块违反了共识规则
 ```
@@ -22,8 +23,7 @@ invalidateblock "hash" # 永久标记一个区块无效，就像该块违反了�
 
 ### 比特币核心服务程序
 
-获取当前最佳区块哈希，记录该区块高度 32723 和当前区块数 32729 和连接数 1，
-无效化该区块后，再次查看...
+获取当前最佳区块哈希，记录该区块高度 32723 和当前区块数 32729 和连接数 1，无效化该区块后，再次查看...
 
 ```shell
 $ bitcoin-cli getbestblockhash
@@ -41,8 +41,7 @@ $ bitcoin-cli getconnectioncount
 0
 ```
 
-此时区块数变为 32722，从高度 32723 开始的区块均被标记为无效，但不会影响与其相连的其他节点，
-之后全部连接也会自动断开。
+此时区块数变为 32722，从高度 32723 开始的区块均被标记为无效，但不会影响与其相连的其他节点，之后全部连接也会自动断开。
 
 ### cURL
 
@@ -52,6 +51,7 @@ $ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curl
 ```
 
 ## 源码剖析
+
 invalidateblock 对应的函数在“rpcserver.h”文件中被引用。
 
 ```cpp

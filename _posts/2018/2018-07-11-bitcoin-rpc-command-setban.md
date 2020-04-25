@@ -14,11 +14,11 @@ excerpt: $ bitcoin-cli setban "ip(/netmask)" "add|remove" (bantime) (absolute)
 setban "ip(/netmask)" "add|remove" (bantime) (absolute) # 尝试从黑名单添加或移除一个 IP/子网
 ```
 
-参数：<br>
-1.ip(/netmask)（字符串，必备）IP/子网（见 getpeerinfo 中的节点 ip）拥有可选的子网（默认时 /32 = 单一 ip）。<br>
-2.command（字符串，必备）add 添加一个 IP/子网 到屏蔽列表，remove 从屏蔽列表移除一个 IP/子网。<br>
-3.bantime（数字，可选）ip 被禁止（0 或空意味着使用默认 24h 时间，也可以通过 -bantime 参数在核心服务启动时修改该值）的时间以秒为单位（或若 [absolute] 设置了则为截止时间）<br>
-4.absolute（布尔型，可选）如果设置该项，禁止时间必须是一个（从格林尼治时间 1970-01-01 00:00:00 开始）绝对时间戳。默认为相对时间，true 表示绝对时间。
+参数：
+1. ip(/netmask)（字符串，必备）IP/子网（见 getpeerinfo 中的节点 ip）拥有可选的子网（默认时 /32 = 单一 ip）。
+2. command（字符串，必备）add 添加一个 IP/子网 到屏蔽列表，remove 从屏蔽列表移除一个 IP/子网。
+3. bantime（数字，可选）ip 被禁止（0 或空意味着使用默认 24h 时间，也可以通过 -bantime 参数在核心服务启动时修改该值）的时间以秒为单位（或若 [absolute] 设置了则为截止时间）
+4. absolute（布尔型，可选）如果设置该项，禁止时间必须是一个（从格林尼治时间 1970-01-01 00:00:00 开始）绝对时间戳。默认为相对时间，true 表示绝对时间。
 
 结果：无返回值。
 
@@ -99,6 +99,7 @@ $ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curl
 ```
 
 ## 源码剖析
+
 setban 对应的函数在“rpcserver.h”文件中被引用。
 
 ```cpp

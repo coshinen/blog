@@ -16,9 +16,9 @@ sendrawtransaction "hexstring" ( allowhighfees ) # 把（序列化的，16 进�
 
 也可以查看 [createrawtransaction](/blog/2018/07/bitcoin-rpc-command-createrawtransaction.html) 和 [signrawtransaction](/blog/2018/07/bitcoin-rpc-command-signrawtransaction.html) 调用。
 
-参数：<br>
-1.hexstring（字符串，必备）原始交易的 16 进制字符串。<br>
-2.allowhighfees（布尔型，可选，默认为 false）允许交易费超额。
+参数：
+1. hexstring（字符串，必备）原始交易的 16 进制字符串。
+2. allowhighfees（布尔型，可选，默认为 false）允许交易费超额。
 
 结果：（字符串）返回 16 进制编码的交易。
 
@@ -235,6 +235,7 @@ $ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curl
 ```
 
 ## 源码剖析
+
 sendrawtransaction 对应的函数在“rpcserver.h”文件中被引用。
 
 ```cpp

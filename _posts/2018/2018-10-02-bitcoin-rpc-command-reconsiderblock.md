@@ -9,6 +9,7 @@ tags: Blockchain Bitcoin bitcoin-cli
 excerpt: $ bitcoin-cli reconsiderblock "hash"
 ---
 ## 提示说明
+
 ```shell
 reconsiderblock "hash" # 移除指定区块及其后代的无效状态，再次考虑它们为激活状态
 ```
@@ -43,6 +44,7 @@ $ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curl
 ```
 
 ## 源码剖析
+
 reconsiderblock 对应的函数在“rpcserver.h”文件中被引用。
 
 ```cpp

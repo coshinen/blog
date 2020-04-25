@@ -21,11 +21,11 @@ fundrawtransaction "hexstring" includeWatching # 把输入添加到交易中，�
 注意所选的全部输入必须是标准格式，且在钱包中的 P2SH 脚本必须使用 [importaddress](/blog/2018/08/bitcoin-rpc-command-importaddress.html) 和 [addmultisigaddress](/blog/2018/08/bitcoin-rpc-command-addmultisigaddress.html)（用来计算交易费）。<br>
 watch-only 目前只支持 P2PKH，多签，和 P2SH 版本。**
 
-参数：<br>
-1.hexstring（字符串，必备）原始交易的 16 进制字符串。<br>
-2.includeWatching（布尔型，可选，默认为 false）选择 watch-only 的输入。
+参数：
+1. hexstring（字符串，必备）原始交易的 16 进制字符串。
+2. includeWatching（布尔型，可选，默认为 false）选择 watch-only 的输入。
 
-结果：<br>
+结果：
 ```shell
 {
   "hex":       "value", （字符串）产生的原始交易（16 进制编码的字符串）
@@ -189,6 +189,7 @@ $ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curl
 ```
 
 ## 源码剖析
+
 fundrawtransaction 对应的函数在“rpcserver.h”文件中被引用。
 
 ```cpp

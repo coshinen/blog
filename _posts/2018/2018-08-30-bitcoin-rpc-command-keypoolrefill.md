@@ -14,13 +14,13 @@ excerpt: $ bitcoin-cli keypoolrefill ( newsize )
 keypoolrefill ( newsize ) # 填充满密钥池
 ```
 
-**注：<br>
+**注：
 1.需要调用 [walletpassphrase](/blog/2018/09/bitcoin-rpc-command-walletpassphrase.html) 设置钱包密码。<br>
 2.填充后大小必定比填充前大。<br>
 3.填充后密钥池大小为指定或默认值 + 1。**
 
-参数：<br>
-1.newsize（整型，可选，默认为 100）新密钥池大小。
+参数：
+1. newsize（整型，可选，默认为 100）新密钥池大小。
 
 结果：无返回值。
 
@@ -62,6 +62,7 @@ $ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curl
 ```
 
 ## 源码剖析
+
 keypoolrefill 对应的函数在“rpcserver.h”文件中被引用。
 
 ```cpp

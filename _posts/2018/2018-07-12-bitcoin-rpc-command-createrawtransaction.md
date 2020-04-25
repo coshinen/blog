@@ -18,8 +18,8 @@ createrawtransaction [{"txid":"id","vout":n},...] {"address":amount,"data":"hex"
 返回 16 进制编码的原始交易。<br>
 注：交易的输入没有签名，且该交易不会存储在钱包或传输到网络中。**
 
-参数：<br>
-1.transactions（字符串，必备）一个由 json 对象构成的 json 数组。<br>
+参数：
+1. transactions（字符串，必备）一个由 json 对象构成的 json 数组。
 ```shell
      [
        {
@@ -29,7 +29,7 @@ createrawtransaction [{"txid":"id","vout":n},...] {"address":amount,"data":"hex"
        ,...
      ]
 ```
-2.outputs（字符串，必备）一个输出的 json 对象。<br>
+2. outputs（字符串，必备）一个输出的 json 对象。
 ```shell
     {
       "address": x.xxx,  （数字或字符串，必备）比特币地址，以 BTC 为单位的数字类型（可以是字符串）金额
@@ -37,7 +37,7 @@ createrawtransaction [{"txid":"id","vout":n},...] {"address":amount,"data":"hex"
       ...
     }
 ```
-3.locktime（数字，可选，默认为 0）原始锁定时间。非 0 值也可以激活输入的锁定时间。
+3. locktime（数字，可选，默认为 0）原始锁定时间。非 0 值也可以激活输入的锁定时间。
 
 结果：（字符串）返回 16 进制编码的交易索引字符串。
 
@@ -122,6 +122,7 @@ $ curl --user myusername:mypassword  --data-binary '{"jsonrpc": "1.0", "id":"cur
 ```
 
 ## 源码剖析
+
 createrawtransaction 对应的函数在“rpcserver.h”文件中被引用。
 
 ```cpp

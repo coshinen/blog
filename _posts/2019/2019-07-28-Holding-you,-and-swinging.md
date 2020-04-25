@@ -115,7 +115,7 @@ Holding you, and swinging<br>
 变的温柔 在你所在的地方<br>
 ah- 想活下去<br>
 过于喜爱的 John Doe<br>
-去哪里呢...<br>
+去哪里呢…<br>
 高傲地消失了<br>
 <br>
 即使还残留着悲伤<br>
@@ -142,7 +142,7 @@ Holding you, and swinging<br>
 变的温柔 在你所在的地方<br>
 ah- 想活下去<br>
 过于喜爱的 John Doe<br>
-去哪里呢...<br>
+去哪里呢…<br>
 想要高傲地消失
 </blockquote>
 </div>

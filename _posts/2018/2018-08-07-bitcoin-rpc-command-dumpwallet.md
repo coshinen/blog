@@ -14,8 +14,8 @@ excerpt: $ bitcoin-cli dumpwallet "filename"
 dumpwallet "filename" # 以可读的方式导出全部钱包密钥到指定文件 filename
 ```
 
-参数：<br>
-1.filename（字符串，必备）文件名。
+参数：
+1. filename（字符串，必备）文件名。
 
 结果：无返回值。
 
@@ -40,6 +40,7 @@ $ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curl
 ```
 
 ## 源码剖析
+
 dumpwallet 对应的函数在“rpcserver.h”文件中被引用。
 
 ```cpp

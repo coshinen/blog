@@ -97,7 +97,7 @@ strangers<br>
 想着要回到哪里<br>
 在不会停止的时间里<br>
 一切都在不断流逝<br>
-夕阳很美...sky...
+夕阳很美…sky...
 </blockquote>
 </div>
 

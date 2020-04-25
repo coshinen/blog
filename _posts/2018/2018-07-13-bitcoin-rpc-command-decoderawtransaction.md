@@ -17,7 +17,7 @@ decoderawtransaction "hexstring" # 获取一个表示序列化的 16 进制编�
 参数：
 1. hex（字符串，必备）交易的 16 进制字符串。
 
-结果：<br>
+结果：
 ```shell
 {
   "txid" : "id",        （字符串）交易索引
@@ -106,6 +106,7 @@ $ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curl
 ```
 
 ## 源码剖析
+
 decoderawtransaction 对应的函数在“rpcserver.h”文件中被引用。
 
 ```cpp

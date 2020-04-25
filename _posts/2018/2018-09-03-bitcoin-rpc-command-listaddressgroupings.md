@@ -14,7 +14,7 @@ excerpt: $ bitcoin-cli listaddressgroupings
 listaddressgroupings # 列出作为输入公开使用的公共所有权或过去交易导致找零的地址分组
 ```
 
-结果：<br>
+结果：
 ```shell
 [
   [
@@ -56,6 +56,7 @@ $ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curl
 ```
 
 ## 源码剖析
+
 listaddressgroupings 对应的函数在“rpcserver.h”文件中被引用。
 
 ```cpp

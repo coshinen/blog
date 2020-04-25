@@ -47,7 +47,7 @@ um-
 <div class="lyric-translation">
 <blockquote>
 面对没有你的 明天的 每天<br>
-一切 都... 如同消磨时间一般<br>
+一切 都… 如同消磨时间一般<br>
 <br>
 连那样喜欢的 碧海<br>
 都不再闪耀了<br>
@@ -63,10 +63,10 @@ um-
 but everybody's got to live their life......<br>
 <br>
 漂亮话也可以 劝说着<br>
-嘟囔着那是命运...<br>
+嘟囔着那是命运…<br>
 <br>
 只是 接受这样的事 在平静中<br>
-倾泻下来的光 像月亮一样...<br>
+倾泻下来的光 像月亮一样…<br>
 um-
 </blockquote>
 </div>

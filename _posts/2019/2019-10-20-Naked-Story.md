@@ -95,11 +95,11 @@ Naked story yeah-<br>
 沐浴着阳光走在街上<br>
 乘上1号车辆的电车<br>
 像是要出远门<br>
-把过往的爱也封闭起来...<br>
+把过往的爱也封闭起来…<br>
 <br>
 受伤 背叛 无论碰到多少次<br>
 相互原谅 那是深深地坚强地<br>
-接近爱...<br>
+接近爱…<br>
 <br>
 Naked story lai-la...<br>
 直到下次遭遇 steer la-<br>
