@@ -1,18 +1,17 @@
 # [mistydew's blog](https://mistydew.github.io/blog)
 
-![](https://github.com/mistydew/mistydew.github.io/workflows/Jekyll%20site%20CI/badge.svg)
-
 ## Todo
 
 - [ ] archive page: archive by month, year
 
 ## Timeline
 
-* 2020.04.18 [+] remake: site search box
+* 2020.04.26 [-] site: ~~GitHub Actions workflows CI~~
 
 <details>
 <summary>history</summary>
 
+* 2020.04.18 [+] remake: site search box
 * 2020.04.14 [-] post: ~~AddToAny Share Button~~
 * 2020.04.12 [-] post: ~~info (license and more)~~; ~~reading time~~
 * 2020.04.06 [+] site: SEO tag
@@ -28,7 +27,7 @@
 * 2019.09.22 [+] config: build future
 * 2019.09.19 [+] remake: archive and category page
 * 2019.09.07 [-] post: ~~{% highlight %} code {% endhighlight %}~~ (only jekyll); [+] post: ```code``` (markdown)
-* 2019.08.28 [+] site: GitHub Actions workflows CI
+* 2019.08.28 [+] site: ~~GitHub Actions workflows CI~~
 * 2019.08.25 [+] blog page: ~~comments, profile~~
 * 2019.08.24 [-] post: ~~Remarkbox Hosted Comments Service~~ (incomplete); [+] post: IntenseDebate comments
 * 2019.08.18 [+] assets: css, font, images and js
