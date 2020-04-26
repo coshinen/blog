@@ -8,7 +8,7 @@ category: 译文集
 tags: Lyrics
 excerpt: Close my eyes and feel your mind. Time has passed. I walk like a shadow. Never knew. What I am going through. You touch my heart and take my breath away.
 ---
-![GZCA-5031](https://mistydew.github.io/assets/images/cover/misc/GZCA-5031.jpg){:.border}
+![GZCA-5031](https://is5-ssl.mzstatic.com/image/thumb/Music/v4/f3/5f/ae/f35faedc-03ed-1509-0684-35ba290a5704/source/600x600bb.jpg){:.border}
 
 ## Tonight, I feel close to you | 今晚，我感觉离你很近
 

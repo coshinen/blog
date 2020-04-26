@@ -8,13 +8,13 @@ category: 译文集
 tags: Lyrics
 excerpt: 君と夏の終わり 将来の夢 大きな希望 忘れない、10年後の8月 また出会えるのを 信じて、最高の思い出を…
 ---
-![SRCL-5120](https://mistydew.github.io/assets/images/cover/misc/SRCL-5120.jpg){:.border}
+![SRCL-5120](https://is2-ssl.mzstatic.com/image/thumb/Music/v4/fe/d1/8c/fed18cbe-f573-af02-88ac-4606b772fb01/source/600x600bb.jpg){:.border}
 
 ## secret base 〜君がくれたもの〜 | 秘密基地 ～你赠予我的东西～
 
 歌手：ZONE<br>
 作詞：町田紀彦<br>
-作曲：町田紀彦<br>
+作曲：町田紀彦
 
 <div class="lyric-original">
 <p>

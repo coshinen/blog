@@ -8,7 +8,7 @@ category: 译文集
 tags: Lyrics
 excerpt: Well its been building up inside of me. For oh I don't know how long. I don't know why. But I keep thinking. Something's bound to go wrong.
 ---
-![SHUT DOWN VOLUME 2](https://mistydew.github.io/assets/images/cover/misc/SHUT%20DOWN%20VOLUME%202.jpg){:.border}
+![SHUT DOWN VOLUME 2](https://is1-ssl.mzstatic.com/image/thumb/Music128/v4/77/a5/89/77a589d0-282a-da0d-089e-a5a376b2ec49/source/600x600bb.jpg){:.border}
 
 ## Don't Worry Baby | 别担心宝贝
 

@@ -6,11 +6,8 @@ author: mistydew
 comments: true
 category: 程序人生
 tags: UNIX/Linux CLI Terminal
+excerpt: 一些常用的 UNIX/Linux 命令。
 ---
-象征着开源的 Linux 吉祥物 tux (Torvalds UniX)。
-
-![tux](https://mistydew.github.io/assets/images/linux/tux.png)
-
 ## 查看目录下的内容 | list
 
 ```shell

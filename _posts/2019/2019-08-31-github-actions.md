@@ -7,11 +7,7 @@ comments: true
 category: 程序人生
 tags: Git/GitHub CI/CD
 ---
-GitHub Actions 可以让你直接在 GitHub 仓库中创建自定义软件开发生命周期的工作流。
-
-![GitHub Actions](https://mistydew.github.io/assets/images/github/44036562.png)
-
-GitHub Actions 目前~~处于测试阶段，需要注册 beta 版等待官方开启后才能使用~~已正式开放。
+GitHub Actions 可以直接在 GitHub 仓库中创建自定义软件开发生命周期的工作流，目前~~处于测试阶段，需要注册 beta 版等待官方开启后才能使用~~已正式开放。
 
 ![GitHub Actions](https://mistydew.github.io/assets/images/github/actions.png){:.border}
 

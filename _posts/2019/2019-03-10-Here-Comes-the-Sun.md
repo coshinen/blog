@@ -8,7 +8,7 @@ category: 译文集
 tags: Lyrics
 excerpt: Here comes the sun, doo doo doo doo. Here comes the sun, and I say. It's all right.
 ---
-![Abbey Road](https://mistydew.github.io/assets/images/cover/misc/Abbey%20Road.jpg){:.border}
+![Abbey Road](https://is4-ssl.mzstatic.com/image/thumb/Music128/v4/0a/91/ba/0a91bafc-8a02-202e-e604-9d920f0d7e1b/source/600x600bb.jpg){:.border}
 
 ## Here Comes the Sun | 太阳从这儿升起
 
