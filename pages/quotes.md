@@ -148,6 +148,9 @@ excerpt: Here are my favorite quotes from someones that inspire me or make me la
 > * ALL ANIMALS ARE EQUAL BUT SOME ANIMALS ARE MORE EQUAL THAN OTHERS.
 > * FOUR LEGS GOOD, TWO LEGS BAD.
 
+> 松井玲奈のお母さんから「輝きYELL!」：
+> * いつ死ぬかわからない、好きな事しなさい！
+
 > 緑のお父さん「パパのお弁当は世界一」：
 > * 人生はいろいろある、苦しい時も悲しい時も自分を信じていれば楽しい事がやってくるよ。
 
@@ -161,9 +164,6 @@ excerpt: Here are my favorite quotes from someones that inspire me or make me la
 
 > ダー子「コンフィデンスマンJP」：
 > * 目に見えるものが真実とは限らない。何が本当で何が嘘か？
-
-> 松井玲奈のお母さんから「輝きYELL!」：
-> * いつ死ぬかわからない、好きな事しなさい！
 
 > ソルト「マジすか学園4、5」：
 > * 怖いなんて感情、忘れてた…人間いつかは死ぬ、それが早いか遅いかの違いだ…時々考えるんだ、私の命は何のためにあるのか？自分のマジのために使えるのなら、本望だ、笑って死ねるよ。
@@ -196,8 +196,15 @@ excerpt: Here are my favorite quotes from someones that inspire me or make me la
 > みきとP「りぶ サリシノハラ」：
 > * 戯言なんて無視しなよ。人はヒヨリミなんだしょうがない。
 
-> 秋熊「深秋之葵」：
-> * 学习GC精神，低调中坚持！
+> AZUKI 七「GARNET CROW クリスタル・ゲージ」：
+> * 何処にいても揺るがぬ ideology、善悪の基準はすべての人に共通じゃない。
+
+> AZUKI 七「GARNET CROW 夢みたあとで」：
+> * 望まなければ失わないのに、求めずにはいられないよ、どんな未来がこの先にあっても。
+
+> Joan Baez「Garnet Time 02 AZUKI'S NIGHT」：
+> * 人はどう死ぬか、いつ死ぬか選択できない。どう生きるか、これだけは決められる。さあ決めるのです。
+> * You don't get to choose how you're going to die, or when. You can only decide how you're going to live. Now.
 
 > 中村由利「GARNET CROW livescope 〜The Final〜」：
 > * 本当に今日は皆さん、楽しい時間を本当に本当にどうもありがとうございました。
@@ -230,15 +237,8 @@ excerpt: Here are my favorite quotes from someones that inspire me or make me la
 > 中村由利「GARNET CROW "le 5 ème anniversaire" L'Histoire de 2000 à 2005」：
 > * 流されていくのは簡単だけれど、変わらないっていうのは一番難しい。
 
-> AZUKI 七「GARNET CROW クリスタル・ゲージ」：
-> * 何処にいても揺るがぬ ideology、善悪の基準はすべての人に共通じゃない。
-
-> AZUKI 七「GARNET CROW 夢みたあとで」：
-> * 望まなければ失わないのに、求めずにはいられないよ、どんな未来がこの先にあっても。
-
-> Joan Baez「Garnet Time 02 AZUKI'S NIGHT」：
-> * 人はどう死ぬか、いつ死ぬか選択できない。どう生きるか、これだけは決められる。さあ決めるのです。
-> * You don't get to choose how you're going to die, or when. You can only decide how you're going to live. Now.
+> 秋熊「深秋之葵」：
+> * 学习 GC 精神，低调中坚持！
 
 > サイタマ「ワンパンマン 第3話 執念の科学者」：
 > * お前も知りたいのか？いいだろう！ジェノスもよく聞いとけ…
