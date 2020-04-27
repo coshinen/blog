@@ -8,7 +8,7 @@ category: 译文集
 tags: コナン Lyrics
 excerpt: もしも君に巡り逢えたら 二度と君の手を離さない 春の終わり告げる 花御堂 霞む花 一枚(ひとひら) 蘇る 思い出の歌 この胸に 今も優しく
 ---
-![倉木麻衣×名探偵コナン COLLABORATION BEST 21 -真実はいつも歌にある!-](https://is1-ssl.mzstatic.com/image/thumb/Music118/v4/25/91/16/25911686-da30-bcd2-6c3a-4c0c6c77a49d/source/600x600bb.jpg){:.border}
+![GZCA-7011](https://www.generasia.com/w/images/c/c1/Kuraki_Mai_-_Time_after_time_~Hana_Mau_Machi_de~.jpg){:.border}
 
 ## Time after time 〜花舞う街で〜 | 一次又一次 ～在落花纷飞的街道上～
 
