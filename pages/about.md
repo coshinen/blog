@@ -2,12 +2,12 @@
 layout: page
 title: "关于"
 permalink: /about.html
-excerpt: About parallel universe, me and contact information.
+excerpt: About parallel universe, mistydew, contact and donate information.
 ---
 
 The **parallel universe** is based on jekyll/minima.
 
-I'm **mistydew**. And I live in Mainland China now.
+I'm **mistydew**. And now I live in Mainland China.
 
 You can follow my GitHub account {% include icon/github.html username=site.root %}.
 
