@@ -8,7 +8,7 @@ category: 译文集
 tags: コナン Lyrics
 excerpt: 引き金を引いた途端立ち現わる白く空虚な時よ。掻き乱せ目眩ませ煙に巻け 果て無き闇の洗礼。
 ---
-![UPCH-29360](https://is4-ssl.mzstatic.com/image/thumb/Music114/v4/8f/81/98/8f8198c6-6082-4671-46b8-c44befbdc857/source/600x600bb.jpg){:.border}
+![UPCH-29360](https://www.generasia.com/w/images/thumb/a/a9/News_-_Tokyo_Jihen.jpg/600px-News_-_Tokyo_Jihen.jpg){:.border}
 
 ## 永遠の不在証明 | 永远的不在场证明
 

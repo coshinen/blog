@@ -8,7 +8,7 @@ category: 译文集
 tags: コナン Lyrics
 excerpt: 明日あった時は きっと言える素直になれるよ、今まであった誰よりも 特別に考えてる あなたを。
 ---
-![Tamura_Yukari_-_Kitto_Ieru](https://www.generasia.com/w/images/a/a8/Tamura_Yukari_-_Kitto_Ieru.jpg){:.border}
+![PODX-1042](https://www.generasia.com/w/images/a/a8/Tamura_Yukari_-_Kitto_Ieru.jpg){:.border}
 
 ## きっと言える | 一定能说出口
 
