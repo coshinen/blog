@@ -37,22 +37,22 @@
 
   input {
     position: relative;
-    padding-left: 32px;
     outline: none;
   }
 
-  #submit-button {
-    top: 2px;
-    left: 30px;
+  #search-submit {
+    top: 6px;
+    left: 34px;
   }
 
   #search-input {
     height: 32px;
-    width: 256px;
+    width: 275px;
     font-size: 16px;
     border: 1px solid #d3d3d3;
     border-radius: 4px;
     background-color: transparent;
+    padding-left: 32px;
   }
 
   @include media-query($on-palm) {
