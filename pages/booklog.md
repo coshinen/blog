@@ -66,7 +66,7 @@ excerpt: Here are some books I read.
 > * TCP/IP 详解 卷1：协议，[美] [W. Richard Stevens](http://www.kohala.com/start){:target="_blank"}
 
 > ### 操作系统
-> * [Linux: a Portable Operating System](https://www.cs.helsinki.fi/u/kutvonen/index_files/linus.pdf){:target="_blank"}，[芬] Linus Torvalds
+> * [Linux: a Portable Operating System](https://www.cs.helsinki.fi/u/kutvonen/index_files/linus.pdf){:target="_blank"}，[芬] [Linus Torvalds](https://github.com/torvalds){:target="_blank"}
 
 > ### 程序人生
 > * Vim 实用技巧，[英] Drew Neil
