@@ -10,40 +10,40 @@ excerpt: Should auld acquaintance be forgot, and never brought to mind? Should a
 ---
 ![GZCA-5229](https://crowsub.github.io/assets/images/discography/other/GZCA-5229.jpg){:.border}
 
-## AULD LANG SYNE | 逝去已久的日子
-
 歌手：中村由利
 
 <div class="lyric-original">
-<p>
-Should auld acquaintance be forgot<br>
-And never brought to mind?<br>
-Should auld acquaintance be forgot<br>
-And days of auld lang syne?<br>
-<br>
-For auld lang syne, my dear<br>
-For auld lang syne<br>
-For auld lang syne<br>
-<br>
-May auld acquaintance be forgot<br>
-And days of auld lang syne?
-</p>
+  <h2>AULD LANG SYNE</h2>
+  <p>
+    Should auld acquaintance be forgot<br>
+    And never brought to mind?<br>
+    Should auld acquaintance be forgot<br>
+    And days of auld lang syne?<br>
+    <br>
+    For auld lang syne, my dear<br>
+    For auld lang syne<br>
+    For auld lang syne<br>
+    <br>
+    May auld acquaintance be forgot<br>
+    And days of auld lang syne?
+  </p>
 </div>
 
 <div class="lyric-translation">
-<blockquote>
-应该忘记以前的相识<br>
-并不再回想吗？<br>
-应该忘记以前的相识<br>
-和逝去已久的日子吗？<br>
-<br>
-为了逝去已久的日子，我的朋友<br>
-为了逝去已久的日子<br>
-为了逝去已久的日子<br>
-<br>
-能够忘记以前的相识<br>
-和逝去已久的日子吗？
-</blockquote>
+  <h2>逝去已久的日子</h2>
+  <p>
+    应该忘记以前的相识<br>
+    并不再回想吗？<br>
+    应该忘记以前的相识<br>
+    和逝去已久的日子吗？<br>
+    <br>
+    为了逝去已久的日子，我的朋友<br>
+    为了逝去已久的日子<br>
+    为了逝去已久的日子<br>
+    <br>
+    能够忘记以前的相识<br>
+    和逝去已久的日子吗？
+  </p>
 </div>
 
 这首诗歌是由苏格兰诗人 Robert Burns 根据当地民歌记录下的，原文是古苏格兰方言。

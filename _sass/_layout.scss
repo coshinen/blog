@@ -293,16 +293,28 @@
 }
 
 // Lyrics
-.lyric-original,
-.lyric-translation {
+.lyric-original {
   float: left;
-  width: 50%;
+  padding: 0 $spacing-unit / 2 0 0;
+  width: calc(50% - (#{$spacing-unit} / 2));
+}
+
+.lyric-translation {
+  float: right;
+  background-color: $code-background-color;
+  border-left: 3px solid #e0dfcc;
+  padding: 0 0 0 $spacing-unit / 2;
+  width: calc(50% - (#{$spacing-unit} / 2) - 3px);
 }
 
 @include media-query($on-palm) {
-  .lyric-original,
-  .lyric-translation {
+  .lyric-original {
     float: none;
     width: 100%;
+  }
+
+  .lyric-translation {
+    float: none;
+    width: calc(100% - (#{$spacing-unit} / 2) - 3px);
   }
 }
