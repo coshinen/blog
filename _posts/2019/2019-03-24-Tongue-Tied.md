@@ -13,7 +13,7 @@ excerpt: Take me to your best friend's house. Going around this roundabout, oh, 
 Singer: Grouplove<br>
 Songwriter: Grouplove
 
-<div class="lyric-original">
+<blockquote class="lyric-original">
   <h2>Tongue Tied</h2>
   <p>
     Take me to your best friend's house<br>
@@ -67,7 +67,7 @@ Songwriter: Grouplove
     Yeah, yeah<br>
     Ooh, ooh
   </p>
-</div>
+</blockquote>
 
 <div class="lyric-translation">
   <h2>舌头打结</h2>

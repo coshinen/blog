@@ -15,7 +15,7 @@ excerpt: 君のいない未来が、ただ大きな闇にみえ。死んでし�
 作曲：中村由利<br>
 編曲：古井弘人
 
-<div class="lyric-original">
+<blockquote class="lyric-original">
   <h2>Holy ground</h2>
   <p>
     君のいない未来が<br>
@@ -66,7 +66,7 @@ excerpt: 君のいない未来が、ただ大きな闇にみえ。死んでし�
     揺れ動く波にのって<br>
     きっと生まれるよ
   </p>
-</div>
+</blockquote>
 
 <div class="lyric-translation">
   <h2>圣地</h2>

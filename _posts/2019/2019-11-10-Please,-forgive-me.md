@@ -15,7 +15,7 @@ excerpt: 優しく触れる君の手に戸惑った、痛みが消えて置き�
 作曲：中村由利<br>
 編曲：古井弘人
 
-<div class="lyric-original">
+<blockquote class="lyric-original">
   <h2>Please, forgive me</h2>
   <p>
     優しく触れる君の手に戸惑った<br>
@@ -73,7 +73,7 @@ excerpt: 優しく触れる君の手に戸惑った、痛みが消えて置き�
     振り払いながら真実を探し続けてた<br>
     きっと…今も…
   </p>
-</div>
+</blockquote>
 
 <div class="lyric-translation">
   <h2>请，原谅我</h2>

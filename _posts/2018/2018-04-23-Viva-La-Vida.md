@@ -13,7 +13,7 @@ excerpt: I used to rule the world. Seas would rise when I gave the word. Now in 
 Singer: Coldplay<br>
 Songwriters: Guy Berryman, Jonny Buckland, Will Champion & Chris Martin
 
-<div class="lyric-original">
+<blockquote class="lyric-original">
   <h2>Viva La Vida</h2>
   <p>
     I used to rule the world<br>
@@ -65,7 +65,7 @@ Songwriters: Guy Berryman, Jonny Buckland, Will Champion & Chris Martin
     Never an honest word<br>
     But that was when I ruled the world
   </p>
-</div>
+</blockquote>
 
 <div class="lyric-translation">
   <h2>生命万岁</h2>

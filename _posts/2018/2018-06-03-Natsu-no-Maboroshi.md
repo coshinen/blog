@@ -15,7 +15,7 @@ excerpt: 部屋の窓の向こうに、飛行機雲を なぞって。今日ケ�
 作曲：中村由利<br>
 編曲：古井弘人
 
-<div class="lyric-original">
+<blockquote class="lyric-original">
   <h2>夏の幻</h2>
   <p>
     部屋の窓の向こうに<br>
@@ -71,7 +71,7 @@ excerpt: 部屋の窓の向こうに、飛行機雲を なぞって。今日ケ�
     海の底のような手のひらの中の街並<br>
     I like a dream. I'm calling out to you
   </p>
-</div>
+</blockquote>
 
 <div class="lyric-translation">
   <h2>夏之幻</h2>

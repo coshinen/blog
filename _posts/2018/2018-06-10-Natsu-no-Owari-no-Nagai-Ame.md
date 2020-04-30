@@ -15,7 +15,7 @@ excerpt: ほんの少し軽い眠りをとったって満たされやしない�
 作曲：中村由利<br>
 編曲：古井弘人
 
-<div class="lyric-original">
+<blockquote class="lyric-original">
   <h2>夏の終わりの長い雨</h2>
   <p>
     ほんの少し軽い眠りをとったって満たされやしない<br>
@@ -55,7 +55,7 @@ excerpt: ほんの少し軽い眠りをとったって満たされやしない�
     いつだって夢中になれるなら<br>
     成り行き任せでもいいんじゃない
   </p>
-</div>
+</blockquote>
 
 <div class="lyric-translation">
   <h2>夏末长雨</h2>

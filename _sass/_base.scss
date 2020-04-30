@@ -70,7 +70,7 @@ img {
 }
 
 img.border {
-  border: 3px solid #e0dfcc;
+  border: 3px solid $border-color;
   border-radius: 16px;
 }
 
@@ -178,7 +178,7 @@ a.readmore,
  */
 blockquote {
   background-color: $code-background-color;
-  border: 3px solid #e0dfcc;
+  border: 3px solid $border-color;
   border-radius: 16px;
   padding: 10px;
 
@@ -189,7 +189,7 @@ blockquote {
 
 .home-right blockquote {
   background-color: transparent;
-  border: 2px solid #e0dfcc;
+  border: 2px solid $border-color;
 }
 
 

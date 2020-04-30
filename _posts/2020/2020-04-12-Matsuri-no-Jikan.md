@@ -15,7 +15,7 @@ excerpt: 夕焼けのオレンジ色残すような明りを灯しだす。秋�
 作曲：中村由利<br>
 編曲：古井弘人
 
-<div class="lyric-original">
+<blockquote class="lyric-original">
   <h2>祭りのじかん</h2>
   <p>
     夕焼けのオレンジ色残すような明りを灯しだす<br>
@@ -41,7 +41,7 @@ excerpt: 夕焼けのオレンジ色残すような明りを灯しだす。秋�
     夕焼けのオレンジ色残すような明りを灯しだす<br>
     流れてる賑やかな寂しさ祭りの時間
   </p>
-</div>
+</blockquote>
 
 <div class="lyric-translation">
   <h2>祭典的时间</h2>

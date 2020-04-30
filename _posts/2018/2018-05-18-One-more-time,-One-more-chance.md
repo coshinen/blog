@@ -15,7 +15,7 @@ excerpt: これ以上何を失えば 心は許されるの、どれ程の痛み�
 作曲：山崎将義<br>
 編曲：森俊之
 
-<div class="lyric-original">
+<blockquote class="lyric-original">
   <h2>One more time, One more chance</h2>
   <p>
     これ以上何を失えば 心は許されるの<br>
@@ -71,7 +71,7 @@ excerpt: これ以上何を失えば 心は許されるの、どれ程の痛み�
     欲しいものなど もう何もない<br>
     君のほかに大切なものなど
   </p>
-</div>
+</blockquote>
 
 <div class="lyric-translation">
   <h2>多一次，多一个机会</h2>

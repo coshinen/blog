@@ -15,7 +15,7 @@ excerpt: 今日買ったばかりのレコードを、抱えたままでいつ�
 作曲：中村由利<br>
 編曲：古井弘人
 
-<div class="lyric-original">
+<blockquote class="lyric-original">
   <h2>夕立の庭</h2>
   <p>
     今日買ったばかりのレコードを<br>
@@ -58,7 +58,7 @@ excerpt: 今日買ったばかりのレコードを、抱えたままでいつ�
     限られた空間(トキ)の中<br>
     何を残せるだろう…
   </p>
-</div>
+</blockquote>
 
 <div class="lyric-translation">
   <h2>骤雨的庭院</h2>

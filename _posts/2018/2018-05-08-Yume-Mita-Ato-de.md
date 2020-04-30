@@ -15,7 +15,7 @@ excerpt: 朝が来るたび君のことを想う、一日の始まりさえも�
 作曲：中村由利<br>
 編曲：古井弘人
 
-<div class="lyric-original">
+<blockquote class="lyric-original">
   <h2>夢みたあとで</h2>
   <p>
     朝が来るたび君のことを想う<br>
@@ -64,7 +64,7 @@ excerpt: 朝が来るたび君のことを想う、一日の始まりさえも�
     and yet...<br>
     There will still be love in this world.
   </p>
-</div>
+</blockquote>
 
 <div class="lyric-translation">
   <h2>梦醒之后</h2>

@@ -15,7 +15,7 @@ excerpt: 君のいない 明日へ向かう 日々なら、すべてが もう�
 作曲：中村由利<br>
 編曲：古井弘人
 
-<div class="lyric-original">
+<blockquote class="lyric-original">
   <h2>lose feeling</h2>
   <p>
     君のいない 明日へ向かう 日々なら<br>
@@ -41,7 +41,7 @@ excerpt: 君のいない 明日へ向かう 日々なら、すべてが もう�
     降り注ぐ光は 月のよう…<br>
     um-
   </p>
-</div>
+</blockquote>
 
 <div class="lyric-translation">
   <h2>失去感觉</h2>

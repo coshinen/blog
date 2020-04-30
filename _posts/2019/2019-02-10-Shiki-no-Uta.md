@@ -14,7 +14,7 @@ excerpt: 春を愛する人は、心清き人。すみれの花のような、�
 作詞：荒木とよひさ<br>
 作曲：荒木とよひさ
 
-<div class="lyric-original">
+<blockquote class="lyric-original">
   <h2>四季の歌</h2>
   <p>
     春を愛する人は 心清き人<br>
@@ -30,7 +30,7 @@ excerpt: 春を愛する人は、心清き人。すみれの花のような、�
     根雪をとかす大地のような 僕の母親<br>
     ララララ………………………
   </p>
-</div>
+</blockquote>
 
 <div class="lyric-translation">
   <h2>四季的歌</h2>

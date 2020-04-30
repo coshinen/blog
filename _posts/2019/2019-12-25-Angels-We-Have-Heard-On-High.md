@@ -12,7 +12,7 @@ excerpt: Angels we have heard on high, sweetly singing o'er the plains, and the 
 
 歌手：中村由利
 
-<div class="lyric-original">
+<blockquote class="lyric-original">
   <h2>Angels We Have Heard On High</h2>
   <p>
     Angels we have heard on high<br>
@@ -36,7 +36,7 @@ excerpt: Angels we have heard on high, sweetly singing o'er the plains, and the 
     Gloria, in excelsis Deo!<br>
     Gloria, in excelsis Deo!
   </p>
-</div>
+</blockquote>
 
 <div class="lyric-translation">
   <h2>我们听到天使在高处</h2>

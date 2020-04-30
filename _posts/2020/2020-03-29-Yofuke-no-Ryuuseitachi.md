@@ -15,7 +15,7 @@ excerpt: 夜深けの流星達 眺めていたよね。言葉にならない 感
 作曲：中村由利<br>
 編曲：古井弘人
 
-<div class="lyric-original">
+<blockquote class="lyric-original">
   <h2>夜深けの流星達</h2>
   <p>
     夜深けの流星達 眺めていたよね<br>
@@ -51,7 +51,7 @@ excerpt: 夜深けの流星達 眺めていたよね。言葉にならない 感
     通り抜ける 木漏れ日のような<br>
     ほら… 愛に満ちた 美しき 世界を…
   </p>
-</div>
+</blockquote>
 
 <div class="lyric-translation">
   <h2>深夜的流星们</h2>

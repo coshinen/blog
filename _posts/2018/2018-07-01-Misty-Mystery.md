@@ -15,7 +15,7 @@ excerpt: why 見えぬ明日へと、期待込め歩いてるの。まだ君を�
 作曲：中村由利<br>
 編曲：古井弘人
 
-<div class="lyric-original">
+<blockquote class="lyric-original">
   <h2>Misty Mystery</h2>
   <p>
     why 見えぬ明日へと<br>
@@ -81,7 +81,7 @@ excerpt: why 見えぬ明日へと、期待込め歩いてるの。まだ君を�
     <br>
     解き放て無謀な衝動
   </p>
-</div>
+</blockquote>
 
 <div class="lyric-translation">
   <h2>朦胧的神秘</h2>

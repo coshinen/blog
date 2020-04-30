@@ -15,7 +15,7 @@ excerpt: 流星がこぼれた夏の空、願いこめた。いつもあの人�
 作曲：中村由利<br>
 編曲：古井弘人
 
-<div class="lyric-original">
+<blockquote class="lyric-original">
   <h2>涙のイエスタデー</h2>
   <p>
     流星がこぼれた夏の空<br>
@@ -65,7 +65,7 @@ excerpt: 流星がこぼれた夏の空、願いこめた。いつもあの人�
     続きのない夢をみても<br>
     目覚めたら また時は流れて
   </p>
-</div>
+</blockquote>
 
 <div class="lyric-translation">
   <h2>泪之往昔</h2>

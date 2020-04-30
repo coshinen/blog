@@ -15,7 +15,7 @@ excerpt: La La tu lu Rah Ta、緑の木漏れ日。目を閉じたら、スベ�
 作曲：中村由利<br>
 編曲：古井弘人
 
-<div class="lyric-original">
+<blockquote class="lyric-original">
   <h2>クリスタル・ゲージ</h2>
   <p>
     La La tu lu Rah Ta<br>
@@ -67,7 +67,7 @@ excerpt: La La tu lu Rah Ta、緑の木漏れ日。目を閉じたら、スベ�
     God, will you lead me...<br>
     tu ta la ta ta ta ti la la ti la-La
   </p>
-</div>
+</blockquote>
 
 <div class="lyric-translation">
   <h2>水晶・量尺</h2>

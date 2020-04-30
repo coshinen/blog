@@ -15,7 +15,7 @@ excerpt: 緑揺れる午後の空、幾つ目の飛行機かな。遠く潮騒�
 作曲：中村由利<br>
 編曲：古井弘人
 
-<div class="lyric-original">
+<blockquote class="lyric-original">
   <h2>strangers</h2>
   <p>
     緑揺れる午後の空<br>
@@ -56,7 +56,7 @@ excerpt: 緑揺れる午後の空、幾つ目の飛行機かな。遠く潮騒�
     すべてが流れゆく<br>
     落陽(おちてゆくひ)が綺麗…sky...
   </p>
-</div>
+</blockquote>
 
 <div class="lyric-translation">
   <h2>异乡人</h2>

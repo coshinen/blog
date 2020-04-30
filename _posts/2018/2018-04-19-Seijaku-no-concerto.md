@@ -15,7 +15,7 @@ excerpt: 太陽が色彩(いろ)を連れて、この町を照らしはじめる
 作曲：中村由利<br>
 編曲：古井弘人
 
-<div class="lyric-original">
+<blockquote class="lyric-original">
   <h2>静寂の concerto</h2>
   <p>
     太陽が色彩(いろ)を連れて<br>
@@ -43,7 +43,7 @@ excerpt: 太陽が色彩(いろ)を連れて、この町を照らしはじめる
     祈り 踊る 命はまだかきたてる術がある<br>
     すべてに息づく躍動と静寂の concerto
   </p>
-</div>
+</blockquote>
 
 <div class="lyric-translation">
   <h2>寂静的协奏曲</h2>

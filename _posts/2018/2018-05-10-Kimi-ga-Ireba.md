@@ -14,7 +14,7 @@ excerpt: うつむくその背中に、痛い雨がつき刺さる。祈る想�
 作詞：高柳恋<br>
 作曲：大野克夫
 
-<div class="lyric-original">
+<blockquote class="lyric-original">
   <h2>キミがいれば</h2>
   <p>
     うつむくその背中に<br>
@@ -47,7 +47,7 @@ excerpt: うつむくその背中に、痛い雨がつき刺さる。祈る想�
     もうすぐ その心に<br>
     きれいな虹が架かるから
   </p>
-</div>
+</blockquote>
 
 <div class="lyric-translation">
   <h2>如果有你在</h2>

@@ -14,7 +14,7 @@ excerpt: 川の水面に映った月を、手のひら差し出しすくい上�
 作詞：秋元康<br>
 作曲：石井健太郎
 
-<div class="lyric-original">
+<blockquote class="lyric-original">
   <h2>月と水鏡</h2>
   <p>
     川の水面に映った月を<br>
@@ -56,7 +56,7 @@ excerpt: 川の水面に映った月を、手のひら差し出しすくい上�
     流れる時間(とき)にこの身投げ出そうとも<br>
     思いだせるくらい遠くから愛している
   </p>
-</div>
+</blockquote>
 
 <div class="lyric-translation">
   <h2>月亮和水中的倒影</h2>

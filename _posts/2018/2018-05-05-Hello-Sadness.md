@@ -15,7 +15,7 @@ excerpt: 離陸間近の午前1時5分 空を見上げていた。いつかま�
 作曲：中村由利<br>
 編曲：古井弘人
 
-<div class="lyric-original">
+<blockquote class="lyric-original">
   <h2>Hello Sadness</h2>
   <p>
     離陸間近の午前1時5分 空を見上げていた<br>
@@ -66,7 +66,7 @@ excerpt: 離陸間近の午前1時5分 空を見上げていた。いつかま�
     I'll walk alone with you<br>
     in silence
   </p>
-</div>
+</blockquote>
 
 <div class="lyric-translation">
   <h2>你好悲伤</h2>

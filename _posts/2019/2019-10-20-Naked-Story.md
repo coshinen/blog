@@ -15,7 +15,7 @@ excerpt: Naked story yeah- 無防備でも飛び出したい、感じるまま s
 作曲：中村由利<br>
 編曲：古井弘人
 
-<div class="lyric-original">
+<blockquote class="lyric-original">
   <h2>Naked Story</h2>
   <p>
     Naked story yeah-<br>
@@ -61,7 +61,7 @@ excerpt: Naked story yeah- 無防備でも飛び出したい、感じるまま s
     見れるだけの明日を<br>
     夢みてゆくよ
   </p>
-</div>
+</blockquote>
 
 <div class="lyric-translation">
   <h2>赤裸裸的故事</h2>

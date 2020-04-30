@@ -14,7 +14,7 @@ excerpt: あまりに悲しいことばかりで、どこか遠くへ旅にで�
 作詞：Maki Annette Lovelace<br>
 作曲：春日博文
 
-<div class="lyric-original">
+<blockquote class="lyric-original">
   <h2>私は風</h2>
   <p>
     あまりに悲しいことばかりで<br>
@@ -48,7 +48,7 @@ excerpt: あまりに悲しいことばかりで、どこか遠くへ旅にで�
     人波の中漂う私 明日はどこへ<br>
     終わりのない旅
   </p>
-</div>
+</blockquote>
 
 <div class="lyric-translation">
   <h2>我是风</h2>

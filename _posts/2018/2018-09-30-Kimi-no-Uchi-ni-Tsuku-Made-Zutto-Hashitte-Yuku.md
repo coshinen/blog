@@ -16,7 +16,7 @@ excerpt: 新しいコートに着替えて、気分を変えて飛び出した�
 作曲：中村由利<br>
 編曲：古井弘人
 
-<div class="lyric-original">
+<blockquote class="lyric-original">
   <h2>君の家に着くまでずっと走ってゆく</h2>
   <p>
     新しいコートに着替えて<br>
@@ -71,7 +71,7 @@ excerpt: 新しいコートに着替えて、気分を変えて飛び出した�
     good night good night for you<br>
     ......
   </p>
-</div>
+</blockquote>
 
 <div class="lyric-translation">
   <h2>一直奔跑到你的家</h2>

@@ -14,7 +14,7 @@ excerpt: Close my eyes and feel your mind. Time has passed. I walk like a shadow
 作詞：倉木麻衣・西室斗紀子<br>
 作曲：大野愛果
 
-<div class="lyric-original">
+<blockquote class="lyric-original">
   <h2>Tonight, I feel close to you</h2>
   <p>
     Close my eyes and feel your mind<br>
@@ -69,7 +69,7 @@ excerpt: Close my eyes and feel your mind. Time has passed. I walk like a shadow
     I wish we could stay as one<br>
     I wish we could stay forever as one
   </p>
-</div>
+</blockquote>
 
 <div class="lyric-translation">
   <h2>今晚，我感觉离你很近</h2>

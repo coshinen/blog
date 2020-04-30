@@ -15,7 +15,7 @@ excerpt: 雨上がりは ふと 空見上げる、何気ない仕草しみつい
 作曲：中村由利<br>
 編曲：古井弘人
 
-<div class="lyric-original">
+<blockquote class="lyric-original">
   <h2>wonder land</h2>
   <p>
     雨上がりは ふと 空見上げる<br>
@@ -65,7 +65,7 @@ excerpt: 雨上がりは ふと 空見上げる、何気ない仕草しみつい
     今日の私の一部に<br>
     溶け込んでゆくよ
   </p>
-</div>
+</blockquote>
 
 <div class="lyric-translation">
   <h2>仙境</h2>

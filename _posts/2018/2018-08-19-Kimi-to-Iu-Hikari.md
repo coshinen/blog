@@ -15,7 +15,7 @@ excerpt: 波の上漂う海月をみるのが好きで、いつまでもどこ�
 作曲：中村由利<br>
 編曲：古井弘人
 
-<div class="lyric-original">
+<blockquote class="lyric-original">
   <h2>君という光</h2>
   <p>
     波の上漂う海月をみるのが好きで<br>
@@ -51,7 +51,7 @@ excerpt: 波の上漂う海月をみるのが好きで、いつまでもどこ�
     繰り返し昇り落ちる太陽の下<br>
     まわるこの星で ほらユラリ流れる海の月
   </p>
-</div>
+</blockquote>
 
 <div class="lyric-translation">
   <h2>以你为名的光芒</h2>

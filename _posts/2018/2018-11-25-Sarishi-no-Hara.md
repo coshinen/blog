@@ -14,7 +14,7 @@ excerpt: 大抵の事じゃ挫けない 僕は君と共にある、週末改札�
 作詞：みきとP<br>
 作曲：みきとP
 
-<div class="lyric-original">
+<blockquote class="lyric-original">
   <h2>サリシノハラ</h2>
   <p>
     大抵の事じゃ挫けない 僕は君と共にある<br>
@@ -52,7 +52,7 @@ excerpt: 大抵の事じゃ挫けない 僕は君と共にある、週末改札�
     <br>
     ここにいるからね
   </p>
-</div>
+</blockquote>
 
 <div class="lyric-translation">
   <h2>离去之原</h2>

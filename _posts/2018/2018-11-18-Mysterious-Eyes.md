@@ -15,7 +15,7 @@ excerpt: 君と僕とは 別の人間(いきもの)だから、好みが違う �
 作曲：中村由利<br>
 編曲：古井弘人
 
-<div class="lyric-original">
+<blockquote class="lyric-original">
   <h2>Mysterious Eyes</h2>
   <p>
     君と僕とは 別の人間(いきもの)だから<br>
@@ -75,7 +75,7 @@ excerpt: 君と僕とは 別の人間(いきもの)だから、好みが違う �
     密やかに 繰り返してゆく 迷いの中<br>
     I feel so all in secret life
   </p>
-</div>
+</blockquote>
 
 <div class="lyric-translation">
   <h2>神秘的眼睛</h2>

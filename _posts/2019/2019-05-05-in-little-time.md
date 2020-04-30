@@ -15,7 +15,7 @@ excerpt: 十二月にしては暖かいこんな夜は、思いつきで出か�
 作曲：中村由利<br>
 編曲：古井弘人
 
-<div class="lyric-original">
+<blockquote class="lyric-original">
   <h2>in little time</h2>
   <p>
     十二月にしては暖かいこんな夜は<br>
@@ -62,7 +62,7 @@ excerpt: 十二月にしては暖かいこんな夜は、思いつきで出か�
     強く生きてゆきたい ah~<br>
     um- I have so little time×3
   </p>
-</div>
+</blockquote>
 
 <div class="lyric-translation">
   <h2>短时间内</h2>

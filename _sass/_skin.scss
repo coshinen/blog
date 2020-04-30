@@ -1,5 +1,7 @@
 @charset "utf-8";
 
+$border-color:          #e0dfcc !default;
+
 $brand-color:           #2a7ae2 !default;
 $brand-color-light:     lighten($brand-color, 40%) !default;
 $brand-color-dark:      darken($brand-color, 25%) !default;
@@ -8,11 +10,11 @@ $text-color:            #111 !default;
 $background-color:      #fff1e0 !default;
 $code-background-color: #f7f2f0 !default;
 
+$garnet-color:          darken(DarkRed, 8%) !default;
+
 $grey-color:            #828282 !default;
 $grey-color-light:      lighten($grey-color, 40%) !default;
 $grey-color-dark:       darken($grey-color, 25%) !default;
-
-$garnet-color:          darken(DarkRed, 8%) !default;
 
 $table-text-color:      lighten($text-color, 18%) !default;
 $table-zebra-color:     lighten($brand-color, 46%) !default;

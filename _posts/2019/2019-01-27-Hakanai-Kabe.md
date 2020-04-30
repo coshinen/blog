@@ -14,7 +14,7 @@ excerpt: 華やぐ心(人を) 見つけ出したら、大切に守りぬく。�
 作詞：桐崎栄二<br>
 作曲：takai
 
-<div class="lyric-original">
+<blockquote class="lyric-original">
   <h2>果敢ない壁</h2>
   <p>
     華やぐ心(人を) 見つけ出したら<br>
@@ -37,7 +37,7 @@ excerpt: 華やぐ心(人を) 見つけ出したら、大切に守りぬく。�
     果敢ない壁にぶつかっても何度でも立ち上がる<br>
     栄華の先に希望の光満ち溢れてるはず
   </p>
-</div>
+</blockquote>
 
 <div class="lyric-translation">
   <h2>虚幻之壁</h2>

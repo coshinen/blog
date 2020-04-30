@@ -15,7 +15,7 @@ excerpt: コーヒーは最初の一口、甘いケーキの端っこ、ポテ�
 作曲：中村由利<br>
 編曲：古井弘人
 
-<div class="lyric-original">
+<blockquote class="lyric-original">
   <h2>hi-speed スペシャル oneday</h2>
   <p>
     コーヒーは最初の一口<br>
@@ -76,7 +76,7 @@ excerpt: コーヒーは最初の一口、甘いケーキの端っこ、ポテ�
     溶ける様に 眠る朝を<br>
     He is not trusted darling.
   </p>
-</div>
+</blockquote>
 
 <div class="lyric-translation">
   <h2>高速 特别的 一天</h2>

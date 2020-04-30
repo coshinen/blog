@@ -14,7 +14,7 @@ excerpt: 明日あった時は きっと言える素直になれるよ、今ま�
 作詞：三枝翔<br>
 作曲：山口一久
 
-<div class="lyric-original">
+<blockquote class="lyric-original">
   <h2>きっと言える</h2>
   <p>
     明日あった時は きっと言える素直になれるよ<br>
@@ -38,7 +38,7 @@ excerpt: 明日あった時は きっと言える素直になれるよ、今ま�
     偶然始まったこの恋でも もう今は戻れない気持ち<br>
     あなたに伝えたい 特別に考えてる あなたを
   </p>
-</div>
+</blockquote>
 
 <div class="lyric-translation">
   <h2>一定能说出口</h2>

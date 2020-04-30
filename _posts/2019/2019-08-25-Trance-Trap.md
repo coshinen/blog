@@ -15,7 +15,7 @@ excerpt: 君の手の内で トランス、偶然に見せかけられた トラ
 作曲：中村由利<br>
 編曲：古井弘人
 
-<div class="lyric-original">
+<blockquote class="lyric-original">
   <h2>トランス・トラップ</h2>
   <p>
     君の手の内で トランス<br>
@@ -67,7 +67,7 @@ excerpt: 君の手の内で トランス、偶然に見せかけられた トラ
     立ち止まるくらいなら<br>
     深く堕ちてく方がイイ
   </p>
-</div>
+</blockquote>
 
 <div class="lyric-translation">
   <h2>昏睡・陷阱</h2>

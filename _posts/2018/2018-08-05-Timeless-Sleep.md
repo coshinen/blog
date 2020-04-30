@@ -15,7 +15,7 @@ excerpt: 君がいなくなってから、何度朝日迎えたかしれない�
 作曲：中村由利<br>
 編曲：古井弘人
 
-<div class="lyric-original">
+<blockquote class="lyric-original">
   <h2>Timeless Sleep</h2>
   <p>
     君がいなくなってから<br>
@@ -49,7 +49,7 @@ excerpt: 君がいなくなってから、何度朝日迎えたかしれない�
     忘れえぬ喜びの記憶が<br>
     生命(いき)を吹き込むでしょう out live
   </p>
-</div>
+</blockquote>
 
 <div class="lyric-translation">
   <h2>永眠</h2>

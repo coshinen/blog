@@ -15,7 +15,7 @@ excerpt: 街中冷えだして again, new fallen snow、君の体温(ぬくも�
 作曲：中村由利<br>
 編曲：古井弘人
 
-<div class="lyric-original">
+<blockquote class="lyric-original">
   <h2>今日の君と明日を待つ</h2>
     <p>
     街中冷えだして again, new fallen snow<br>
@@ -56,7 +56,7 @@ excerpt: 街中冷えだして again, new fallen snow、君の体温(ぬくも�
     変わらぬまま 君といたい何度でも<br>
     その体温(ぬくもり)を繋いでいようね…
   </p>
-</div>
+</blockquote>
 
 <div class="lyric-translation">
   <h2>和今天的你等待明天</h2>

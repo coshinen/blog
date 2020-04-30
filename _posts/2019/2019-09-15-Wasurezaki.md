@@ -15,7 +15,7 @@ excerpt: 気づけば懐かしい川原に来てみたり、昨日みた夢の�
 作曲：中村由利<br>
 編曲：古井弘人
 
-<div class="lyric-original">
+<blockquote class="lyric-original">
   <h2>忘れ咲き</h2>
   <p>
     気づけば懐かしい川原に来てみたり<br>
@@ -48,7 +48,7 @@ excerpt: 気づけば懐かしい川原に来てみたり、昨日みた夢の�
     孤独や躊躇い弱気が押しよせる夜に忘れ咲いた<br>
     思い出そっと枯れゆくまで今宵まだ身をまかせて
   </p>
-</div>
+</blockquote>
 
 <div class="lyric-translation">
   <h2>不合时令地盛开</h2>

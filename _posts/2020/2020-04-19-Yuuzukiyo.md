@@ -15,7 +15,7 @@ excerpt: 夕月の光とならぬ空、そっと寄り添う。人影にも惑�
 作曲：中村由利<br>
 編曲：古井弘人
 
-<div class="lyric-original">
+<blockquote class="lyric-original">
   <h2>夕月夜</h2>
   <p>
     夕月の光とならぬ空<br>
@@ -58,7 +58,7 @@ excerpt: 夕月の光とならぬ空、そっと寄り添う。人影にも惑�
     何処までも遠く yeah-<br>
     また空ながめ
   </p>
-</div>
+</blockquote>
 
 <div class="lyric-translation">
   <h2>有月亮的傍晚</h2>

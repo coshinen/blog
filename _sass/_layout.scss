@@ -209,7 +209,7 @@
 #tagcloud,
 .contents {
   background-color: transparent;
-  border: 2px solid #e0dfcc;
+  border: 2px solid $border-color;
   border-radius: 16px;
   padding: 10px;
   margin-bottom: $spacing-unit / 2;
@@ -246,7 +246,7 @@ article #tagcloud {
   width: calc(28% - #{$spacing-unit});
 }
 
-.contents {
+article .contents {
   float: left;
   width: calc(72% - #{$spacing-unit});
 }
@@ -255,7 +255,7 @@ article #tagcloud {
   article #archive,
   article #category,
   article #tagcloud,
-  .contents {
+  article .contents {
     float: none;
     width: calc(100% - #{$spacing-unit});
   }
@@ -266,7 +266,7 @@ article #category,
 article #tagcloud,
 article .contents {
   background-color: $code-background-color;
-  border: 3px solid #e0dfcc;
+  border: 3px solid $border-color;
 }
 
 
@@ -319,26 +319,30 @@ article .contents {
 // Lyrics
 .lyric-original {
   float: left;
+  border: 0;
+  border-radius: 0;
+  border-right: 3px solid $border-color;
   padding: 0 $spacing-unit / 2 0 0;
-  width: calc(50% - (#{$spacing-unit} / 2));
+  width: calc(50% - (#{$spacing-unit} / 2) - 3px);
 }
 
 .lyric-translation {
   float: right;
-  background-color: $code-background-color;
-  border-left: 3px solid #e0dfcc;
   padding: 0 0 0 $spacing-unit / 2;
-  width: calc(50% - (#{$spacing-unit} / 2) - 3px);
+  width: calc(50% - (#{$spacing-unit} / 2));
 }
 
 @include media-query($on-palm) {
   .lyric-original {
     float: none;
+    border: 0;
+    padding: 0;
     width: 100%;
   }
 
   .lyric-translation {
     float: none;
-    width: calc(100% - (#{$spacing-unit} / 2) - 3px);
+    padding: 0;
+    width: 100%;
   }
 }

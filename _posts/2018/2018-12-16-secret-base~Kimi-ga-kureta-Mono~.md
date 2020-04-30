@@ -14,7 +14,7 @@ excerpt: 君と夏の終わり 将来の夢 大きな希望 忘れない、10年
 作詞：町田紀彦<br>
 作曲：町田紀彦
 
-<div class="lyric-original">
+<blockquote class="lyric-original">
   <h2>secret base 〜君がくれたもの〜</h2>
   <p>
     君と夏の終わり 将来の夢 大きな希望 忘れない<br>
@@ -64,7 +64,7 @@ excerpt: 君と夏の終わり 将来の夢 大きな希望 忘れない、10年
     最高の思い出を…<br>
     最高の思い出を…
   </p>
-</div>
+</blockquote>
 
 <div class="lyric-translation">
   <h2>秘密基地 ～你赠予我的东西～</h2>

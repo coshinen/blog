@@ -15,7 +15,7 @@ excerpt: 白い壁と Rembrandt、いつまでも眺めていた、日曜の朝�
 作曲：中村由利<br>
 編曲：古井弘人
 
-<div class="lyric-original">
+<blockquote class="lyric-original">
   <h2>call my name</h2>
   <p>
     白い壁と Rembrandt<br>
@@ -60,7 +60,7 @@ excerpt: 白い壁と Rembrandt、いつまでも眺めていた、日曜の朝�
     ふと思い出したように call my name<br>
     見えない気持ち信じてしまいそう
   </p>
-</div>
+</blockquote>
 
 <div class="lyric-translation">
   <h2>叫我的名字</h2>

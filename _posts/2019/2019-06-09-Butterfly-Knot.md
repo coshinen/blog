@@ -15,7 +15,7 @@ excerpt: ねぇ何を話そうか…もう夜が来てしまう、遠い道の�
 作曲：中村由利<br>
 編曲：古井弘人
 
-<div class="lyric-original">
+<blockquote class="lyric-original">
   <h2>バタフライ・ノット</h2>
   <p>
     ねぇ何を話そうか… もう夜が来てしまう<br>
@@ -50,7 +50,7 @@ excerpt: ねぇ何を話そうか…もう夜が来てしまう、遠い道の�
     太陽と共に去りゆく海の向こう<br>
     飛び立つ幾千の蝶が舞うよ
   </p>
-</div>
+</blockquote>
 
 <div class="lyric-translation">
   <h2>蝴蝶・结</h2>

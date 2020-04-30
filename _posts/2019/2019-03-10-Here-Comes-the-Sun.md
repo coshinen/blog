@@ -13,7 +13,7 @@ excerpt: Here comes the sun, doo doo doo doo. Here comes the sun, and I say. It'
 Singer: The Beatles<br>
 Songwriter: George Harrison
 
-<div class="lyric-original">
+<blockquote class="lyric-original">
   <h2>Here Comes the Sun</h2>
   <p>
     Here comes the sun, doo doo doo doo<br>
@@ -52,7 +52,7 @@ Songwriter: George Harrison
     It's all right<br>
     It's all right
   </p>
-</div>
+</blockquote>
 
 <div class="lyric-translation">
   <h2>太阳从这儿升起</h2>

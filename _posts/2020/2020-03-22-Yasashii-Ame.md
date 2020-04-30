@@ -15,7 +15,7 @@ excerpt: 全速力でも かけ抜けた、あの路地は今とても狭く。�
 作曲：中村由利<br>
 編曲：古井弘人
 
-<div class="lyric-original">
+<blockquote class="lyric-original">
   <h2>やさしい雨</h2>
   <p>
     全速力でも かけ抜けた<br>
@@ -47,7 +47,7 @@ excerpt: 全速力でも かけ抜けた、あの路地は今とても狭く。�
     どちらを選んでも今は<br>
     切ない気持ち 残すよ やさしい雨のよう
   </p>
-</div>
+</blockquote>
 
 <div class="lyric-translation">
   <h2>温和的雨</h2>

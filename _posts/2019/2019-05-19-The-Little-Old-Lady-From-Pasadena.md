@@ -14,7 +14,7 @@ excerpt: It's the little old lady from Pasadena, has a pretty little flower bed 
 作詞：Roger Christian, Don Altfeld & Jan Berry<br>
 作曲：Roger Christian, Don Altfeld & Jan Berry
 
-<div class="lyric-original">
+<blockquote class="lyric-original">
   <h2>THE LITTLE OLD LADY FROM PASADENA</h2>
   <p>
     (Pasadena)x4<br>
@@ -55,7 +55,7 @@ excerpt: It's the little old lady from Pasadena, has a pretty little flower bed 
     <br>
     (Go granny, go granny, go granny, go!)x8
   </p>
-</div>
+</blockquote>
 
 <div class="lyric-translation">
   <h2>来自帕萨迪纳的小老太太</h2>

@@ -14,7 +14,7 @@ excerpt: 明日になれば、涙が乾く、心も色づいて来る。笑顔�
 作詞：阿久悠<br>
 作曲：大野克夫
 
-<div class="lyric-original">
+<blockquote class="lyric-original">
   <h2>ぼくがいる</h2>
   <p>
     明日になれば 涙が乾く<br>
@@ -43,7 +43,7 @@ excerpt: 明日になれば、涙が乾く、心も色づいて来る。笑顔�
     <br>
     LA LA LA...... コナン
   </p>
-</div>
+</blockquote>
 
 <div class="lyric-translation">
   <h2>有我在</h2>

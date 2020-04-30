@@ -12,7 +12,7 @@ excerpt: おいでやす うちの故郷は お寺や 神社だけじゃない�
 
 歌手：横山由依
 
-<div class="lyric-original">
+<blockquote class="lyric-original">
   <h2>気まぐれロマンティック 京都Ver.</h2>
   <p>
     おいでやす うちの故郷は お寺や 神社だけじゃない<br>
@@ -39,7 +39,7 @@ excerpt: おいでやす うちの故郷は お寺や 神社だけじゃない�
     黑七味 西湖(せいこ) 漬物 お食べやす<br>
     ええとこ ぎょうさん あるでしょ？ 京都
   </p>
-</div>
+</blockquote>
 
 <div class="lyric-translation">
   <h2>摇摆不定的浪漫 京都版</h2>

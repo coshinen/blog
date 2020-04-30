@@ -15,7 +15,7 @@ excerpt: 暮れゆく空おセンチな気分。海辺のDrive、まだみたこ
 作曲：中村由利<br>
 編曲：古井弘人
 
-<div class="lyric-original">
+<blockquote class="lyric-original">
   <h2>Fall in Life 〜Hallelujah〜</h2>
   <p>
     暮れゆく空おセンチな気分<br>
@@ -79,7 +79,7 @@ excerpt: 暮れゆく空おセンチな気分。海辺のDrive、まだみたこ
     Fall in Life, and so,<br>
     Hallelijah!
   </p>
-</div>
+</blockquote>
 
 <div class="lyric-translation">
   <h2>坠入生活 ～赞美上帝～</h2>

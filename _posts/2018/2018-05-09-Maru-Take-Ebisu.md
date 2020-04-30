@@ -10,9 +10,7 @@ excerpt: 京都には東西と南北に碁盤の目のように通りが通っ�
 ---
 京都有著东西和南北走向的像棋盘一样的街道，每条街道都有名字。在京都从以前开始为了更容易记住街道，便有了这首「数道路歌」。
 
-歌手：横山由依
-
-<div class="lyric-original">
+<blockquote class="lyric-original">
   <h2>丸竹夷「通り数え歌(東西編)」</h2>
   <p>
     丸 竹 夷 二 押 御池<br>
@@ -23,7 +21,7 @@ excerpt: 京都には東西と南北に碁盤の目のように通りが通っ�
     七条 越えれば 八 九条<br>
     十条 東寺で 止めさす
   </p>
-</div>
+</blockquote>
 
 <div class="lyric-translation">
   <h2>丸竹夷「数道路歌（东西篇）」</h2>
@@ -52,9 +50,7 @@ excerpt: 京都には東西と南北に碁盤の目のように通りが通っ�
 
 ![UPCH-1239](https://www.generasia.com/w/images/5/5f/MC_M7_OS_F.jpg){:.border}
 
-歌手：遠山和葉
-
-<div class="lyric-original">
+<blockquote class="lyric-original">
   <h2>丸竹夷「通り数え歌(東西編)」〜コナンのテーマ〜</h2>
   <p>
     丸竹夷二押御池<br>
@@ -65,7 +61,7 @@ excerpt: 京都には東西と南北に碁盤の目のように通りが通っ�
     八条こえれば東寺道<br>
     九条大路でとどめさす
   </p>
-</div>
+</blockquote>
 
 <div class="lyric-translation">
   <h2>丸竹夷「数道路歌（东西篇）」～柯南主题曲～</h2>

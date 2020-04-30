@@ -14,7 +14,7 @@ excerpt: やっと眼を覚ましたかい それなのになぜ眼も合わせ�
 作詞：野田洋次郎<br>
 作曲：野田洋次郎
 
-<div class="lyric-original">
+<blockquote class="lyric-original">
   <h2>前前前世</h2>
   <p>
     やっと眼を覚ましたかい それなのになぜ眼も合わせやしないんだい？<br>
@@ -60,7 +60,7 @@ excerpt: やっと眼を覚ましたかい それなのになぜ眼も合わせ�
     もう迷わない また1から探しはじめるさ<br>
     何光年でも この歌を口ずさみながら
   </p>
-</div>
+</blockquote>
 
 <div class="lyric-translation">
   <h2>前前前世</h2>

@@ -15,7 +15,7 @@ excerpt: そんなに移り気じゃヤダ、正直って便利な言い訳、�
 作曲：中村由利<br>
 編曲：古井弘人
 
-<div class="lyric-original">
+<blockquote class="lyric-original">
   <h2>Endless Desire</h2>
   <p>
     そんなに移り気じゃヤダ<br>
@@ -74,7 +74,7 @@ excerpt: そんなに移り気じゃヤダ、正直って便利な言い訳、�
     焦がれた out of blue<br>
     今まだ endless way
   </p>
-</div>
+</blockquote>
 
 <div class="lyric-translation">
   <h2>无尽的欲望</h2>

@@ -14,7 +14,7 @@ excerpt: 突然のその成り行きに、街の灯りと心が揺れている�
 作詞：秋元康<br>
 作曲：川浦正大
 
-<div class="lyric-original">
+<blockquote class="lyric-original">
   <h2>ナシゴレン道玄坂</h2>
   <p>
     「ウォンチュー！」<br>
@@ -73,7 +73,7 @@ excerpt: 突然のその成り行きに、街の灯りと心が揺れている�
     「ウォンチュー！」<br>
     「ウォンチュー！」
   </p>
-</div>
+</blockquote>
 
 <div class="lyric-translation">
   <h2>印尼炒饭道玄坂</h2>

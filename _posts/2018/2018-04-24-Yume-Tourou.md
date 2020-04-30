@@ -14,7 +14,7 @@ excerpt: あぁ、このまま僕たちの声が 世界の端っこまで消え�
 作詞：野田洋次郎<br>
 作曲：野田洋次郎
 
-<div class="lyric-original">
+<blockquote class="lyric-original">
   <h2>夢灯籠</h2>
   <p>
     あぁ このまま僕たちの声が 世界の端っこまで消えることなく<br>
@@ -36,7 +36,7 @@ excerpt: あぁ、このまま僕たちの声が 世界の端っこまで消え�
     また「はじめまして」の合図を 決めよう<br>
     君の名を 今追いかけるよ
   </p>
-</div>
+</blockquote>
 
 <div class="lyric-translation">
   <h2>梦灯笼</h2>

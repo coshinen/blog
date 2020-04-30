@@ -13,7 +13,7 @@ excerpt: Ooh, you can dance, you can jive. Having the time of your life. Ooh, se
 Singer: ABBA<br>
 Songwriters: Benny Andersson, Björn Ulvaeus & Stig Anderson
 
-<div class="lyric-original">
+<blockquote class="lyric-original">
   <h2>Dancing Queen</h2>
   <p>
     Ooh, you can dance, you can jive<br>
@@ -57,7 +57,7 @@ Songwriters: Benny Andersson, Björn Ulvaeus & Stig Anderson
     <br>
     Digging the dancing queen
   </p>
-</div>
+</blockquote>
 
 <div class="lyric-translation">
   <h2>舞后</h2>

@@ -15,7 +15,7 @@ excerpt: まっすぐな思いはまっすぐに伝わるの？唐突な青空 �
 作曲：中村由利<br>
 編曲：古井弘人
 
-<div class="lyric-original">
+<blockquote class="lyric-original">
   <h2>The Someone's Tale</h2>
   <p>
     まっすぐな思いはまっすぐに伝わるの？<br>
@@ -44,7 +44,7 @@ excerpt: まっすぐな思いはまっすぐに伝わるの？唐突な青空 �
     ふれるはずだった温もりさえも ハラハラリ<br>
     ページごとにそっと零れ落ちそう ぎゅっと掴んでみたい
   </p>
-</div>
+</blockquote>
 
 <div class="lyric-translation">
   <h2>某人的故事</h2>

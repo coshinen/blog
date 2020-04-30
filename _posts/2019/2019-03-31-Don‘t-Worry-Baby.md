@@ -13,7 +13,7 @@ excerpt: Well its been building up inside of me. For oh I don't know how long. I
 Singer: The Beach Boys<br>
 Songwriters: Brian Wilson & Roger Christian
 
-<div class="lyric-original">
+<blockquote class="lyric-original">
   <h2>Don't Worry Baby</h2>
   <p>
     Well its been building up inside of me<br>
@@ -62,7 +62,7 @@ Songwriters: Brian Wilson & Roger Christian
     Don't worry baby<br>
     Don't worry baby
   </p>
-</div>
+</blockquote>
 
 <div class="lyric-translation">
   <h2>别担心宝贝</h2>

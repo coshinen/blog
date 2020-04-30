@@ -15,7 +15,7 @@ excerpt: 運命のルーレット廻して、ずっと 君を見ていた。
 作曲：栗林誠一郎<br>
 編曲：池田大介
 
-<div class="lyric-original">
+<blockquote class="lyric-original">
   <h2>運命のルーレット廻して</h2>
   <p>
     運命のルーレット廻して<br>
@@ -47,7 +47,7 @@ excerpt: 運命のルーレット廻して、ずっと 君を見ていた。
     <br>
     ずっと 君を見ていた
   </p>
-</div>
+</blockquote>
 
 <div class="lyric-translation">
   <h2>转动命运之轮</h2>

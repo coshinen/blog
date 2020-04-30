@@ -16,7 +16,7 @@ excerpt: あの日見渡した渚を 今も思い出すんだ。砂の上に刻�
 作曲：米津玄師<br>
 編曲：米津玄師、田中隼人
 
-<div class="lyric-original">
+<blockquote class="lyric-original">
   <h2>打上花火</h2>
   <p>
     あの日見渡した渚を 今も思い出すんだ<br>
@@ -77,7 +77,7 @@ excerpt: あの日見渡した渚を 今も思い出すんだ。砂の上に刻�
     もう少しだけ<br>
     もう少しだけ
   </p>
-</div>
+</blockquote>
 
 <div class="lyric-translation">
   <h2>升空的烟花</h2>

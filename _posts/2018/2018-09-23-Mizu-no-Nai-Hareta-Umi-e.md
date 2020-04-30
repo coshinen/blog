@@ -15,7 +15,7 @@ excerpt: 水のない晴れた海へ、たどり着いた white mermaid。夢に
 作曲：中村由利<br>
 編曲：古井弘人
 
-<div class="lyric-original">
+<blockquote class="lyric-original">
   <h2>水のない晴れた海へ</h2>
   <p>
     水のない晴れた海へ<br>
@@ -53,7 +53,7 @@ excerpt: 水のない晴れた海へ、たどり着いた white mermaid。夢に
     夢にまでみていた<br>
     地上の天国は silence×3
   </p>
-</div>
+</blockquote>
 
 <div class="lyric-translation">
   <h2>前往无水的晴朗海洋</h2>

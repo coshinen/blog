@@ -14,7 +14,7 @@ excerpt: もう少しだけでいい あと少しだけでいい もう少しだ
 作詞：野田洋次郎<br>
 作曲：野田洋次郎
 
-<div class="lyric-original">
+<blockquote class="lyric-original">
   <h2>なんでもないや</h2>
   <p>
     もう少しだけでいい あと少しだけでいい もう少しだけでいいから<br>
@@ -87,7 +87,7 @@ excerpt: もう少しだけでいい あと少しだけでいい もう少しだ
     嬉しくて泣くのは 悲しくて 笑うのは<br>
     僕の心が 僕を追い越したんだよ
   </p>
-</div>
+</blockquote>
 
 <div class="lyric-translation">
   <h2>没有什么大不了</h2>

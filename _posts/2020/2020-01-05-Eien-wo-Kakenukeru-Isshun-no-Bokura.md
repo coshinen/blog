@@ -15,7 +15,7 @@ excerpt: まるで異国の知らない場所へ来たみたい、懐かしい�
 作曲：中村由利<br>
 編曲：古井弘人
 
-<div class="lyric-original">
+<blockquote class="lyric-original">
   <h2>永遠を駆け抜ける一瞬の僕ら</h2>
   <p>
     まるで異国の知らない場所へ来たみたい<br>
@@ -45,7 +45,7 @@ excerpt: まるで異国の知らない場所へ来たみたい、懐かしい�
     遥か 彼方悪戯に舞い降りた意味さえ<br>
     君の声がきこえたら また解き放てる
   </p>
-</div>
+</blockquote>
 
 <div class="lyric-translation">
   <h2>穿越永远的一瞬间的我们</h2>

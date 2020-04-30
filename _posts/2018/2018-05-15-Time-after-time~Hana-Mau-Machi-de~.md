@@ -15,7 +15,7 @@ excerpt: もしも君に巡り逢えたら 二度と君の手を離さない 春
 作曲：大野愛果<br>
 編曲：Cybersound
 
-<div class="lyric-original">
+<blockquote class="lyric-original">
   <h2>Time after time 〜花舞う街で〜</h2>
   <p>
     もしも君に巡り逢えたら<br>
@@ -58,7 +58,7 @@ excerpt: もしも君に巡り逢えたら 二度と君の手を離さない 春
     誰よりもずっと 傷付きやすい君の<br>
     そばにいたい今度は きっと
   </p>
-</div>
+</blockquote>
 
 <div class="lyric-translation">
   <h2>一次又一次 ～在落花纷飞的街道上～</h2>
