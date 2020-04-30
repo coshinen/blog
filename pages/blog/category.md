@@ -15,17 +15,17 @@ excerpt: Blog category.
 {% endfor %}
 {% assign counts = counts | split: ', ' %}
 {% assign idx = 0 %}
-<blockquote id="category">
+<div id="category">
   <h2>目录</h2>
 {% for category in site.categories %}
   <li><a href="#{{ category[0] }}">{{ category | first }}</a>（{{ counts[idx] }}）</li>
   {% assign idx = idx | plus: 1 %}
 {% endfor %}
-</blockquote>
+</div>
 
 {% assign idx = 0 %}
 {% for category in site.categories %}
-<blockquote class="contents">
+<div class="contents">
   <h2 id="{{ category[0] }}">{{ category | first }}（{{ counts[idx] }}）<a href="#category" style="float:right;">{% include icon/chevron-up.svg %}</a></h2>
     {% assign idx = idx | plus: 1 %}
   <ul>
@@ -33,5 +33,5 @@ excerpt: Blog category.
     <li><abbr title="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%Y-%m-%d-" }}</abbr><a href="{{ post.url }}">{{ post.title }}</a></li>
     {% endfor %}
   </ul>
-</blockquote>
+</div>
 {% endfor %}

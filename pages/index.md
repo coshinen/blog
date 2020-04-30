@@ -26,7 +26,7 @@ permalink: /
 </div>
 <div class="home-right">
   <script src='https://www.intensedebate.com/widgets/acctComment/415414/2' defer="defer" type='text/javascript'></script>
-  <blockquote>
+  <div id="profile">
     <h2>关于</h2>
     <div>
       <a href="https://github.com/{{ site.root }}" target="_blank"><img class="border" height="128" width="128" alt="@mistydew" src="https://avatars0.githubusercontent.com/u/29818825"></a>
@@ -34,5 +34,5 @@ permalink: /
     <ul>{% assign count = 0 %}{% for post in site.posts %}{% assign count = count | plus: 1 %}{% endfor %}
       <li>文章：<a href="{{ site.archive }}">{{ count }}</a></li>
     </ul>
-  </blockquote>
+  </div>
 </div>

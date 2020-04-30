@@ -16,7 +16,7 @@ excerpt: Blog tags.
   {% endif %}
 {% endfor %}
 {% assign diff = max | minus: min %}
-<blockquote id="tagcloud">
+<div id="tagcloud">
 {% for tag in site.tags %}
   {% assign temp = tag[1].size | minus: min | times: 36 | divided_by: diff %}
   {% assign base = temp | divided_by: 4 %}
@@ -35,7 +35,7 @@ excerpt: Blog tags.
   {% endif %}
   <a href="#{{ tag[0] }}" style="font-size: {{ size }}pt; color: #{{ color }}{{ color }}{{ color }};">{{ tag[0] }}</a>
 {% endfor %}
-</blockquote>
+</div>
 
 {% assign count = 0 %}
 {% for tag in site.tags %}
@@ -49,7 +49,7 @@ excerpt: Blog tags.
 {% assign counts = counts | split: ', ' %}
 {% assign idx = 0 %}
 {% for tag in site.tags %}
-<blockquote class="contents">
+<div class="contents">
   <h2 id="{{ tag[0] }}">{{ tag | first }}（{{ counts[idx] }}）<a href="#tagcloud" style="float:right;">{% include icon/chevron-up.svg %}</a></h2>
     {% assign idx = idx | plus: 1 %}
   <ul>
@@ -57,5 +57,5 @@ excerpt: Blog tags.
     <li><abbr title="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%Y-%m-%d-" }}</abbr><a href="{{ post.url }}">{{ post.title }}</a></li>
     {% endfor %}
   </ul>
-</blockquote>
+</div>
 {% endfor %}

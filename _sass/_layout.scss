@@ -203,6 +203,22 @@
   @include relative-font-size(1.5);
 }
 
+#profile,
+#archive,
+#category,
+#tagcloud,
+.contents {
+  background-color: transparent;
+  border: 2px solid #e0dfcc;
+  border-radius: 16px;
+  padding: 10px;
+  margin-bottom: $spacing-unit / 2;
+
+  > :last-child {
+    margin-bottom: 0;
+  }
+}
+
 // Home page
 .home-left {
   float: left;
@@ -223,9 +239,9 @@
 }
 
 // Archive, Category and Tags page
-#archive,
-#category,
-#tagcloud {
+article #archive,
+article #category,
+article #tagcloud {
   float: right;
   width: calc(28% - #{$spacing-unit});
 }
@@ -236,13 +252,21 @@
 }
 
 @include media-query($on-palm) {
-  #archive,
-  #category,
-  #tagcloud,
+  article #archive,
+  article #category,
+  article #tagcloud,
   .contents {
     float: none;
     width: calc(100% - #{$spacing-unit});
   }
+}
+
+article #archive,
+article #category,
+article #tagcloud,
+article .contents {
+  background-color: $code-background-color;
+  border: 3px solid #e0dfcc;
 }
 
 
