@@ -47,9 +47,9 @@
 
   #search-input {
     height: 32px;
-    width: 275px;
+    width: 205px;
     font-size: 16px;
-    border: 1px solid #d3d3d3;
+    border: 1px solid $border-color;
     border-radius: 4px;
     background-color: transparent;
     padding-left: 32px;
@@ -60,7 +60,7 @@
     top: 9px;
     right: $spacing-unit / 2;
     background-color: $background-color;
-    border: 1px solid $grey-color-light;
+    border: 1px solid $border-color;
     border-radius: 5px;
 
     &:hover {
@@ -98,7 +98,10 @@
 
     &:hover .cse-search-box {
       display: block;
-      padding-bottom: 5px;
+    }
+
+    #search-input {
+      width: 285px;
     }
   }
 }
@@ -141,15 +144,15 @@
 }
 
 .footer-col-1 {
-  width: calc(25% - (#{$spacing-unit} / 2));
+  width: calc(28% - (#{$spacing-unit} / 2));
 }
 
 .footer-col-2 {
-  width: calc(25% - (#{$spacing-unit} / 2));
+  width: calc(28% - (#{$spacing-unit} / 2));
 }
 
 .footer-col-3 {
-  width: calc(50% - (#{$spacing-unit} / 2));
+  width: calc(44% - (#{$spacing-unit} / 2));
 }
 
 @include media-query($on-laptop) {
@@ -333,15 +336,10 @@ article .contents {
 }
 
 @include media-query($on-palm) {
-  .lyric-original {
-    float: none;
-    border: 0;
-    padding: 0;
-    width: 100%;
-  }
-
+  .lyric-original,
   .lyric-translation {
     float: none;
+    border: 0;
     padding: 0;
     width: 100%;
   }

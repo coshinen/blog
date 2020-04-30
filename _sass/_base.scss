@@ -13,7 +13,7 @@ dl, dd, ol, ul, figure {
 }
 
 h1, h2, h3, h4 {
-  border-bottom: 1px solid #d3d3d3;
+  border-bottom: 1px solid $border-color;
 }
 
 abbr {
@@ -80,7 +80,7 @@ img#center {
 }
 
 @include media-query($on-palm) {
-  img.border {
+  article img.border {
     width: calc(100% - 6px);
   }
 }
@@ -201,7 +201,7 @@ pre,
 code {
   font-family: $code-font-family;
   font-size: 0.9375em;
-  border: 1px solid $grey-color-light;
+  border: 1px solid $border-color;
   border-radius: 3px;
   background-color: $code-background-color;
 }
