@@ -79,6 +79,12 @@ img#center {
   margin: auto;
 }
 
+@include media-query($on-palm) {
+  img.border {
+    width: calc(100% - 6px);
+  }
+}
+
 
 
 /**
