@@ -5,8 +5,8 @@ permalink: /blog/atom.xml
 
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>{{ site.blogname | xml_escape }}</title>
-  <subtitle>{{ site.subtitle | xml_escape }}</subtitle>
+  <title>{{ site.blogname }}</title>
+  <subtitle>{{ site.subtitle }}</subtitle>
   <updated>{{ site.time | date_to_xmlschema }}</updated>
   <id>tag:{{ site.url | replace_first: "https://", "" }},{{ site.blog }}</id>
   <link rel="alternate" type="text/html" href="{{ site.blog | absolute_url }}"/>
