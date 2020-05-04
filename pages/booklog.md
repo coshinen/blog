@@ -44,17 +44,15 @@ excerpt: Here are some books I read.
 > * 区块链开发指南，[中] 申屠青春
 > * [区块链技术指南](https://yeasy.gitbooks.io/blockchain_guide/content){:target="_blank"}，[中] [Baohua Yang](https://yeasy.github.io){:target="_blank"}
 > * [精通比特币 第2版](https://bitcoinbook.info){:target="_blank"}，[美] Andreas M. Antonopoulos
-> * [Bitcoin: A Peer-to-Peer Electronic Cash System](https://mistydew.github.io/blog/2018/04/Bitcoin-A-Peer-to-Peer-Electronic-Cash-System.html)，[?] Satoshi Nakamoto
+> * [Bitcoin: A Peer-to-Peer Electronic Cash System](/blog/2018/04/Bitcoin-A-Peer-to-Peer-Electronic-Cash-System.html)，[?] Satoshi Nakamoto
 
 > ### 编程语言
 > * Linux/UNIX 系统编程手册（上、下册），[德] [Michael Kerrisk](http://man7.org){:target="_blank"}
 > * STL 源码剖析，[中] 侯捷
-> * [The C++ Annotations](http://www.icce.rug.nl/documents/cplusplus){:target="_blank"}，[荷] Frank B. Brokken
+> * C++ 标准程序库，[德] Nicolai M.Josuttis
 > * C++ 沉思录，[美] Andrew Koenig, Barbara Moo
 > * C++ 编程规范 101条规则、准则与最佳实践，[加] Herb Sutter [罗] Andrei Alexandrescu
 > * C++ Primer 中文版（第5版），[美] Stanley B. Lippman, Josée Lajoie, Barbara E. Moo
-> * [Modern C Second Edition](https://modernc.gforge.inria.fr){:target="_blank"}，[法] Jens Gustedt
-> * [Essential C](http://cslibrary.stanford.edu/101/EssentialC.pdf){:target="_blank"}，[美] Nick Parlante
 > * C 专家编程，[美] Peter van der Linden
 > * C 陷阱与缺陷，[美] Andrew Koening
 > * C 和指针，[美] Kenneth A. Reek
