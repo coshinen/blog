@@ -11,7 +11,7 @@ permalink: /blog/
       <h2>
         <a class="post-link" href="{{ post.url }}">{{ post.title }}</a>
       </h2>
-      {{ post.excerpt | markdownify }}
+      {{ post.excerpt | markdownify | strip_newlines }}
       <span><a class="readmore" href="{{ post.url }}">阅读全文 &raquo;</a></span>
     </li>{% endif %}{% endfor %}
     <h2 class="page-heading">最新文章</h2>{% for post in site.posts limit:7 %}
@@ -21,7 +21,7 @@ permalink: /blog/
       <h2>
         <a class="post-link" href="{{ post.url }}">{{ post.title }}</a>
       </h2>
-      {{ post.excerpt | markdownify }}
+      {{ post.excerpt | markdownify | strip_newlines }}
       <span><a class="readmore" href="{{ post.url }}">阅读全文 &raquo;</a></span>
     </li>{% endfor %}
   </ul>
