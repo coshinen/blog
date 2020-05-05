@@ -12,7 +12,7 @@ excerpt: 把给定的整数转换为罗马数字（包含七种字符：`I`，`V
 
 > Roman numerals are represented by seven different symbols: `I`, `V`, `X`, `L`, `C`, `D` and `M`.
 > 
-> ```
+> <pre>
 > Symbol       Value
 > I             1
 > V             5
@@ -21,7 +21,7 @@ excerpt: 把给定的整数转换为罗马数字（包含七种字符：`I`，`V
 > C             100
 > D             500
 > M             1000
-> ```
+> </pre>
 > 
 > For example, two is written as `II` in Roman numeral, just two one's added together. Twelve is written as, `XII`, which is simply `X` + `II`. The number twenty seven is written as `XXVII`, which is `XX` + `V` + `II`.
 > 
@@ -35,30 +35,40 @@ excerpt: 把给定的整数转换为罗马数字（包含七种字符：`I`，`V
 > 
 > **Example 1:**
 > 
-> **Input:** 3<br>
-> **Output:** "III"
+> <pre>
+> <strong>Input:</strong> 3
+> <strong>Output:</strong> "III"
+> </pre>
 > 
 > **Example 2:**
 > 
-> **Input:** 4<br>
-> **Output:** "IV"
+> <pre>
+> <strong>Input:</strong> 4
+> <strong>Output:</strong> "IV"
+> </pre>
 > 
 > **Example 3:**
 > 
-> **Input:** 9<br>
-> **Output:** "IX"
+> <pre>
+> <strong>Input:</strong> 9
+> <strong>Output:</strong> "IX"
+> </pre>
 > 
 > **Example 4:**
 > 
-> **Input:** 58<br>
-> **Output:** "LVIII"<br>
-> **Explanation:** L = 50, V = 5, III = 3.
+> <pre>
+> <strong>Input:</strong> 58
+> <strong>Output:</strong> "LVIII"
+> <strong>Explanation:</strong> L = 50, V = 5, III = 3.
+> </pre>
 > 
 > **Example 5:**
 > 
-> **Input:** 1994<br>
-> **Output:** "MCMXCIV"<br>
-> **Explanation:** M = 1000, CM = 900, XC = 90 and IV = 4.
+> <pre>
+> <strong>Input:</strong> 1994
+> <strong>Output:</strong> "MCMXCIV"
+> <strong>Explanation:</strong> M = 1000, CM = 900, XC = 90 and IV = 4.
+> </pre>
 
 ## 问题分析
 

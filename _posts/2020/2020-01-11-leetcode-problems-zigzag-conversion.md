@@ -6,42 +6,49 @@ author: mistydew
 comments: true
 category: 力扣题解
 tags: LeetCode
-excerpt: 给定一个字符串，根据给定的行数，以从上到下、从左到右的 Z 字形排列，再以从左到右、从上到下的顺序读取，产生一个新字符串并返回。
+excerpt: 给定一个字符串 `"PAYPALISHIRING"`，根据给定的行数，以从上到下、从左到右的 Z 字形排列，再以从左到右、从上到下的顺序读取，产生一个新字符串并返回。
 ---
 ## 6. ZigZag Conversion | Medium
 
-> The string "PAYPALISHIRING" is written in a zigzag pattern on a given number of rows like this: (you may want to display this pattern in a fixed font for better legibility)
-```
-P   A   H   N
-A P L S I I G
-Y   I   R
-```
-> And then read line by line: "PAHNAPLSIIGYIR"
+> The string `"PAYPALISHIRING"` is written in a zigzag pattern on a given number of rows like this: (you may want to display this pattern in a fixed font for better legibility)
+> 
+> <pre>
+> P   A   H   N
+> A P L S I I G
+> Y   I   R
+> </pre>
+> 
+> And then read line by line: `"PAHNAPLSIIGYIR"`
 > 
 > Write the code that will take a string and make this conversion given a number of rows:
-```
-string convert(string s, int numRows);
-```
+> 
+> <pre>
+> string convert(string s, int numRows);
+> </pre>
+> 
 > **Example 1:**
 > 
-> **Input:** s = "PAYPALISHIRING", numRows = 3<br>
-> **Output:** "PAHNAPLSIIGYIR"
+> <pre>
+> <strong>Input:</strong> s = "PAYPALISHIRING", numRows = 3
+> <strong>Output:</strong> "PAHNAPLSIIGYIR"
+> </pre>
 > 
 > **Example 2:**
 > 
-> **Input:** s = "PAYPALISHIRING", numRows = 4<br>
-> **Output:** "PINALSIGYAHRPI"<br>
-> **Explanation:**
-```
-P     I    N
-A   L S  I G
-Y A   H R
-P     I
-```
+> <pre>
+> <strong>Input:</strong> s = "PAYPALISHIRING", numRows = 4
+> <strong>Output:</strong> "PINALSIGYAHRPI"
+> <strong>Explanation:</strong>
+> 
+> P     I    N
+> A   L S  I G
+> Y A   H R
+> P     I
+> </pre>
 
 ## 问题分析
 
-给定一个字符串，根据给定的行数，以从上到下、从左到右的 Z 字形排列，再以从左到右、从上到下的顺序读取，产生一个新字符串并返回。
+给定一个字符串 `"PAYPALISHIRING"`，根据给定的行数，以从上到下、从左到右的 Z 字形排列，再以从左到右、从上到下的顺序读取，产生一个新字符串并返回。
 
 ## 解决方案
 

@@ -12,7 +12,7 @@ excerpt: 把给定的罗马数字（包含七种字符：`I`，`V`，`X`，`L`�
 
 > Roman numerals are represented by seven different symbols: `I`, `V`, `X`, `L`, `C`, `D` and `M`.
 > 
-> ```
+> <pre>
 > Symbol       Value
 > I             1
 > V             5
@@ -21,7 +21,7 @@ excerpt: 把给定的罗马数字（包含七种字符：`I`，`V`，`X`，`L`�
 > C             100
 > D             500
 > M             1000
-> ```
+> </pre>
 > 
 > For example, two is written as `II` in Roman numeral, just two one's added together. Twelve is written as, `XII`, which is simply `X` + `II`. The number twenty seven is written as `XXVII`, which is `XX` + `V` + `II`.
 > 
@@ -35,33 +35,43 @@ excerpt: 把给定的罗马数字（包含七种字符：`I`，`V`，`X`，`L`�
 > 
 > **Example 1:**
 > 
-> **Input:** "III"<br>
-> **Output:** 3
+> <pre>
+> <strong>Input:</strong> "III"
+> <strong>Output:</strong> 3
+> </pre>
 > 
 > **Example 2:**
 > 
-> **Input:** "IV"<br>
-> **Output:** 4
+> <pre>
+> <strong>Input:</strong> "IV"
+> <strong>Output:</strong> 4
+> </pre>
 > 
 > **Example 3:**
 > 
-> **Input:** "IX"<br>
-> **Output:** 9
+> <pre>
+> <strong>Input:</strong> "IX"
+> <strong>Output:</strong> 9
+> </pre>
 > 
 > **Example 4:**
 > 
-> **Input:** "LVIII"<br>
-> **Output:** 58<br>
-> **Explanation:** L = 50, V= 5, III = 3.
+> <pre>
+> <strong>Input:</strong> "LVIII"
+> <strong>Output:</strong> 58
+> <strong>Explanation:</strong> L = 50, V= 5, III = 3.
+> </pre>
 > 
 > **Example 5:**
 > 
-> **Input:** "MCMXCIV"<br>
-> **Output:** 1994<br>
-> **Explanation:** M = 1000, CM = 900, XC = 90 and IV = 4.
+> <pre>
+> <strong>Input:</strong> "MCMXCIV"
+> <strong>Output:</strong> 1994
+> <strong>Explanation:</strong> M = 1000, CM = 900, XC = 90 and IV = 4.
+> </pre>
 > 
-> Hint 1
-> 
+> <details>
+> <summary>Hint 1</summary>
 > I - 1<br>
 > V - 5<br>
 > X - 10<br>
@@ -69,13 +79,15 @@ excerpt: 把给定的罗马数字（包含七种字符：`I`，`V`，`X`，`L`�
 > C - 100<br>
 > D - 500<br>
 > M - 1000
+> </details>
 > 
-> Hint 2
-> 
-> **Rules:**
-> * If I comes before V or X, subtract 1 eg: IV = 4 and IX = 9
-> * If X comes before L or C, subtract 10 eg: XL = 40 and XC = 90
+> <details>
+> <summary>Hint 2</summary>
+> <b>Rules:</b><br>
+> * If I comes before V or X, subtract 1 eg: IV = 4 and IX = 9<br>
+> * If X comes before L or C, subtract 10 eg: XL = 40 and XC = 90<br>
 > * If C comes before D or M, subtract 100 eg: CD = 400 and CM = 900
+> </details>
 
 ## 问题分析
 

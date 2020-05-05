@@ -14,18 +14,24 @@ excerpt: 给定一个 32 位的有符号整数，反转该整数每个位上的�
 > 
 > **Example 1:**
 > 
-> **Input:** 123<br>
-> **Output:** 321
+> <pre>
+> <strong>Input:</strong> 123
+> <strong>Output:</strong> 321
+> </pre>
 > 
 > **Example 2:**
 > 
-> **Input:** -123<br>
-> **Output:** -321
+> <pre>
+> <strong>Input:</strong> -123<br>
+> <strong>Output:</strong> -321
+> </pre>
 > 
 > **Example 3:**
 > 
-> **Input:** 120<br>
-> **Output:** 21
+> <pre>
+> <strong>Input:</strong> 120<br>
+> <strong>Output:</strong> 21
+> </pre>
 > 
 > **Note:**<br>
 > Assume we are dealing with an environment which could only store integers within the 32-bit signed integer range: [−2^31,  2^31 − 1]. For the purpose of this problem, assume that your function returns 0 when the reversed integer overflows.

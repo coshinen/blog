@@ -14,28 +14,35 @@ excerpt: 判断一个整数是否为回文数。
 > 
 > **Example 1:**
 > 
-> **Input:** 121<br>
-> **Output:** true
+> <pre>
+> <strong>Input:</strong> 121
+> <strong>Output:</strong> true
+> </pre>
 > 
 > **Example 2:**
 > 
-> **Input:** -121<br>
-> **Output:** false<br>
-> **Explanation:** From left to right, it reads -121. From right to left, it becomes 121-. Therefore it is not a palindrome.
+> <pre>
+> <strong>Input:</strong> -121
+> <strong>Output:</strong> false
+> <strong>Explanation:</strong> From left to right, it reads -121. From right to left, it becomes 121-. Therefore it is not a palindrome.
+> </pre>
 > 
 > **Example 3:**
 > 
-> **Input:** 10<br>
-> **Output:** false<br>
-> **Explanation:** Reads 01 from right to left. Therefore it is not a palindrome.
+> <pre>
+> <strong>Input:</strong> 10
+> <strong>Output:</strong> false
+> <strong>Explanation:</strong> Reads 01 from right to left. Therefore it is not a palindrome.
+> </pre>
 > 
 > **Follow up:**
 > 
 > Coud you solve it without converting the integer to a string?
 > 
-> Hint 1:
-> 
+> <details>
+> <summary>Hint 1</summary>
 > Beware of overflow when you reverse the integer.
+> </details>
 
 ## 问题分析
 

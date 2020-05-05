@@ -27,35 +27,45 @@ excerpt: 实现一个 `atoi` 函数，把字符串转换为整数。
 > 
 > **Example 1:**
 > 
-> **Input:** "42"<br>
-> **Output:** 42
+> <pre>
+> <strong>Input:</strong> "42"
+> <strong>Output:</strong> 42
+> </pre>
 > 
 > **Example 2:**
 > 
-> **Input:** "   -42"<br>
-> **Output:** -42<br>
-> **Explanation:** The first non-whitespace character is '-', which is the minus sign.
+> <pre>
+> <strong>Input:</strong> "   -42"
+> <strong>Output:</strong> -42
+> <strong>Explanation:</strong> The first non-whitespace character is '-', which is the minus sign.
 >              Then take as many numerical digits as possible, which gets 42.
+> </pre>
 > 
 > **Example 3:**
 > 
-> **Input:** "4193 with words"<br>
-> **Output:** 4193<br>
-> **Explanation:** Conversion stops at digit '3' as the next character is not a numerical digit.
+> <pre>
+> <strong>Input:</strong> "4193 with words"
+> <strong>Output:</strong> 4193
+> <strong>Explanation:</strong> Conversion stops at digit '3' as the next character is not a numerical digit.
+> </pre>
 > 
 > **Example 4:**
 > 
-> **Input:** "words and 987"<br>
-> **Output:** 0<br>
-> **Explanation:** The first non-whitespace character is 'w', which is not a numerical 
+> <pre>
+> <strong>Input:</strong> "words and 987"
+> <strong>Output:</strong> 0
+> <strong>Explanation:</strong> The first non-whitespace character is 'w', which is not a numerical 
 >              digit or a +/- sign. Therefore no valid conversion could be performed.
+> </pre>
 > 
 > **Example 5:**
 > 
-> **Input:** "-91283472332"<br>
-> **Output:** -2147483648<br>
-> **Explanation:** The number "-91283472332" is out of the range of a 32-bit signed integer.
+> <pre>
+> <strong>Input:</strong> "-91283472332"
+> <strong>Output:</strong> -2147483648
+> <strong>Explanation:</strong> The number "-91283472332" is out of the range of a 32-bit signed integer.
 >              Thefore INT_MIN (−2^31) is returned.
+> </pre>
 
 ## 问题分析
 

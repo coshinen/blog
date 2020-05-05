@@ -16,9 +16,11 @@ excerpt: 给了两条**非空**链表，用于表示两个非负整数。数字�
 > 
 > **Example:**
 > 
-> **Input:** (2 -> 4 -> 3) + (5 -> 6 -> 4)<br>
-> **Output:** 7 -> 0 -> 8<br>
-> **Explanation:** 342 + 465 = 807.
+> <pre>
+> <strong>Input:</strong> (2 -> 4 -> 3) + (5 -> 6 -> 4)
+> <strong>Output:</strong> 7 -> 0 -> 8
+> <strong>Explanation:</strong> 342 + 465 = 807.
+> </pre>
 
 ## 问题分析
 
