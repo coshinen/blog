@@ -38,7 +38,7 @@
             </ul>
           </div>
           <div class="footer-col footer-col-3">
-            <p>{% if page.url contains "blog" %}{{ site.description | replace_first: site.title, site.subtitle }}{% else %}{{ site.description }}{% endif %}</p>
+            <p>{% if page.url contains site.blog %}{{ site.description | replace_first: site.title, site.subtitle }}{% else %}{{ site.description }}{% endif %}</p>
           </div>
         </div>
       </div>

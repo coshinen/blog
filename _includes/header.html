@@ -1,6 +1,6 @@
     <header class="site-header">
       <div class="wrapper">
-        <a class="site-title" href="{% if page.url contains "blog" %}{{ site.blog }}" title="{{ site.blogname }}">{{ site.subtitle }}{% else %}/" title="{{ site.name }}">{{ site.title }}{% endif %}</a>
+        <a class="site-title" href="{% if page.url contains site.blog %}{{ site.blog }}" title="{{ site.blogname }}">{{ site.subtitle }}{% else %}/" title="{{ site.name }}">{{ site.title }}{% endif %}</a>
         <a href="{{ site.feed }}" title="订阅">{% include icon/feed.svg %}</a>
         <nav class="site-search">
           <a href="#" class="search-icon">
