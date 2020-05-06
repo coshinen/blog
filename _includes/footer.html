@@ -1,17 +1,40 @@
     <footer class="site-footer">
       <div class="wrapper">
-        <h2 class="footer-heading"><a href="https://crowsub.github.io" title="深紅の鴉音楽日記" target="_blank">{% include icon/crow.svg %}</a><a href="{{ site.quotes }}">{{ site.quote }}</a></h2>
+        <h2 class="footer-heading">
+          <a href="https://crowsub.github.io" title="深紅の鴉音楽日記" target="_blank">{% include icon/crow.svg %}</a>
+          <a href="{{ site.quotes }}">{{ site.quote }}</a>
+        </h2>
         <div class="footer-col-wrapper">
           <div class="footer-col footer-col-1">
-            <ul class="contact-list">
-              {% if site.root %}<li>{% include icon/github.html username=site.root %}</li>{% endif %}
-              {% if site.email %}<li>{% include icon/envelope.html email=site.email %}</li>{% endif %}
+            <ul class="contact-list">{% if site.root %}
+              <li>
+                <a href="https://github.com/{{ site.root }}" target="_blank">
+                  <span class="icon">{% include icon/github.svg %}</span>
+                  <span>{{ site.root }}</span>
+                </a>
+              </li>{% endif %}{% if site.email %}
+              <li>
+                <a href="mailto:{{ site.email }}">
+                  <span class="icon">{% include icon/envelope.svg %}</span>
+                  <span>{{ site.email }}</span>
+                </a>
+              </li>{% endif %}
             </ul>
           </div>
           <div class="footer-col footer-col-2">
-            <ul class="social-media-list">
-              {% if site.about %}<li>{% include icon/info.html title="About" %}</li>{% endif %}
-              {% if site.booklog %}<li>{% include icon/book.html title="Booklog" %}</li>{% endif %}
+            <ul class="social-media-list">{% if site.about %}
+              <li>
+                <a href="{{ site.about }}">
+                  <span class="icon">{% include icon/info.svg %}</span>
+                  <span>About</span>
+                </a>
+              </li>{% endif %}{% if site.booklog %}
+              <li>
+                <a href="{{ site.booklog }}">
+                  <span class="icon">{% include icon/book.svg %}</span>
+                  <span>Booklog</span>
+                </a>
+              </li>{% endif %}
             </ul>
           </div>
           <div class="footer-col footer-col-3">
