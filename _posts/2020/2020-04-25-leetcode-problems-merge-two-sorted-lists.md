@@ -98,4 +98,4 @@ public:
 
 ## 参考链接
 
-* [Merge Two Sorted Lists](https://leetcode.com/problems/merge-two-sorted-lists/){:target="_blank"}
+* [Merge Two Sorted Lists - LeetCode](https://leetcode.com/problems/merge-two-sorted-lists/){:target="_blank"}

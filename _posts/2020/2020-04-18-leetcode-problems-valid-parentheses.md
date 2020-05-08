@@ -132,4 +132,4 @@ public:
 
 ## 参考链接
 
-* [Valid Parentheses](https://leetcode.com/problems/valid-parentheses/){:target="_blank"}
+* [Valid Parentheses - LeetCode](https://leetcode.com/problems/valid-parentheses/){:target="_blank"}
