@@ -206,22 +206,6 @@
   @include relative-font-size(1.5);
 }
 
-#profile,
-#archive,
-#category,
-#tagcloud,
-.contents {
-  background-color: transparent;
-  border: 2px solid $border-color;
-  border-radius: 16px;
-  padding: 10px;
-  margin-bottom: $spacing-unit / 2;
-
-  > :last-child {
-    margin-bottom: 0;
-  }
-}
-
 // Home page
 .home-left {
   float: left;
@@ -241,6 +225,22 @@
   }
 }
 
+#profile,
+#archive,
+#category,
+#tagcloud,
+.contents {
+  background-color: transparent;
+  border: 2px solid $border-color;
+  border-radius: 16px;
+  padding: 10px;
+  margin-bottom: $spacing-unit / 2;
+
+  > :last-child {
+    margin-bottom: 0;
+  }
+}
+
 // Archive, Category and Tags page
 article #archive,
 article #category,
@@ -254,22 +254,22 @@ article .contents {
   width: calc(72% - #{$spacing-unit});
 }
 
-@include media-query($on-palm) {
-  article #archive,
-  article #category,
-  article #tagcloud,
-  article .contents {
-    float: none;
-    width: calc(100% - #{$spacing-unit});
-  }
-}
-
 article #archive,
 article #category,
 article #tagcloud,
 article .contents {
   background-color: $code-background-color;
   border: 3px solid $border-color;
+}
+
+@include media-query($on-palm) {
+  article #archive,
+  article #category,
+  article #tagcloud,
+  article .contents {
+    float: none;
+    width: calc(100% - (10px + 3px) * 2);
+  }
 }
 
 
