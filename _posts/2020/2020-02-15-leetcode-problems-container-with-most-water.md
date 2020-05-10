@@ -45,10 +45,6 @@ excerpt: 给定 n (n >= 2) 个非负整数用于表示坐标系中垂线的高�
 > Start with the maximum width container and go to a shorter width container if there is a vertical line longer than the current containers shorter line. This way we are compromising on the width but we are looking forward to a longer length container.
 > </details>
 
-## 问题分析
-
-给定 n (n >= 2) 个非负整数用于表示坐标系中垂线的高，在其中找出任意两条，使它们与 x 轴构成的容器可以容纳最多的水。
-
 ## 解决方案
 
 ### 方法一：暴力法（Brute Force）

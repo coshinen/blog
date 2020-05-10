@@ -89,10 +89,6 @@ excerpt: 把给定的罗马数字（包含七种字符：`I`，`V`，`X`，`L`�
 > * If C comes before D or M, subtract 100 eg: CD = 400 and CM = 900
 > </details>
 
-## 问题分析
-
-把给定的罗马数字（包含七种字符：`I`，`V`，`X`，`L`，`C`，`D` 和 `M`）转换为整数。
-
 ## 解决方案
 
 ### 方法一：使用 STL 哈希表

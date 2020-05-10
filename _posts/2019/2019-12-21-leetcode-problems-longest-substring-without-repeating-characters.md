@@ -37,10 +37,6 @@ excerpt: 给定一个字符串，找出没有重复字符的**最长子串**的�
 >              Note that the answer must be a <strong>substring</strong>, "pwke" is a subsequence and not a substring.
 > </pre>
 
-## 问题分析
-
-给定一个字符串，找出没有重复字符的**最长子串**的长度。
-
 ## 解决方案
 
 ### 方法一：滑动窗口（Sliding Window）

@@ -89,10 +89,6 @@ excerpt: 给定一个只包含字符 `'('`, `')'`, `'{'`, `'}'`, `'['` 和 `']'`
 > The <b>stack</b> data structure can come in handy here in representing this recursive structure of the problem. We can't really process this from the inside out because we don't have an idea about the overall structure. But, the stack can help us process this recursively i.e. from outside to inwards.
 > </details>
 
-## 问题分析
-
-给定一个只包含字符 `'('`, `')'`, `'{'`, `'}'`, `'['` 和 `']'` 的字符串，判断字符串是否有效。
-
 ## 解决方案
 
 ### 方法一：栈（Stack）

@@ -44,10 +44,6 @@ excerpt: 从一个整型数组中找出两个数，满足两数之和等于给�
 > The second train of thought is, without changing the array, can we use additional space somehow? Like maybe a hash map to speed up the search?
 > </details>
 
-## 问题分析
-
-从一个整型数组中找出两个数，满足两数之和等于给定的目标值，并返回它们的下标。
-
 ## 解决方案
 
 ### 方法一：暴力（Brute Force）
