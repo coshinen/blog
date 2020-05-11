@@ -132,6 +132,7 @@ excerpt: Here are some books I read.
 > * 失踪的专列，[英] Arthur Conan Doyle
 > * 东野圭吾作品集，[日] 東野圭吾
 > * 江户川乱步作品集，[日] 江戸川乱歩
+> * 埃勒里·奎因作品合集，[美] Ellery Queen
 > * 阿加莎·克里斯蒂侦探作品集，[英] Agatha Christie
 > * 福尔摩斯探案全集，[英] [Arthur Conan Doyle](https://www.arthur-conan-doyle.com){:target="_blank"}
 > * 爱伦·坡短篇小说集，[美] [Edgar Allan Poe](https://poestories.com){:target="_blank"}
