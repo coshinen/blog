@@ -24,7 +24,11 @@ excerpt: 给定两条**非空**链表用于表示两个非负整数。数字以*
 
 ## 解决方案
 
-### 方法一：初等数学+哑节点（Elementary Math + dummy node）
+### 方法一：初等数学（Elementary Math）
+
+添加一个哑节点作为新链表的表头节点，用于简化代码。
+
+若没有哑节点，则必须编写额外的条件语句来初始化表头节点。
 
 ```cpp
 /**
@@ -32,14 +36,15 @@ excerpt: 给定两条**非空**链表用于表示两个非负整数。数字以*
  * struct ListNode {
  *     int val;
  *     ListNode *next;
- *     ListNode(int x) : val(x), next(NULL) {}
+ *     ListNode() : val(0), next(nullptr) {}
+ *     ListNode(int x) : val(x), next(nullptr) {}
+ *     ListNode(int x, ListNode *next) : val(x), next(next) {}
  * };
  */
 class Solution {
 public:
     ListNode* addTwoNumbers(ListNode* l1, ListNode* l2) {
-        ListNode *l3 = new ListNode(0); // dummy node
-        ListNode *p = l3;
+        ListNode head, *l3 = &head;
         int sum = 0;
         while (l1 != NULL || l2 != NULL || sum > 0) {
             if (l1 != NULL) {
@@ -50,57 +55,18 @@ public:
                 sum += l2->val;
                 l2 = l2->next;
             }
-            p->next = new ListNode(sum % 10);
+            l3->next = new ListNode(sum % 10);
+            l3 = l3->next;
             sum /= 10;
-            p = p->next;
         }
-        return l3->next;
+        return head.next;
     }
 };
 ```
 
 复杂度分析：
-* 时间复杂度：_O_(max(m, n))。设 m 和 n 分别为 l1 和 l2 的长度。
+* 时间复杂度：_O_(max(m, n))。m 和 n 分别代表链表 l1 和 l2 的长度。
 * 空间复杂度：_O_(max(m, n))。新链表的长度最大为 max(m, n) + 1。
-
-### 方法二：初等数学+双指针（Elementary Math + **）
-
-```cpp
-/**
- * Definition for singly-linked list.
- * struct ListNode {
- *     int val;
- *     ListNode *next;
- *     ListNode(int x) : val(x), next(NULL) {}
- * };
- */
-class Solution {
-public:
-    ListNode* addTwoNumbers(ListNode* l1, ListNode* l2) {
-        ListNode *l3 = NULL;
-        ListNode **p = &l3;
-        int sum = 0;
-        while (l1 != NULL || l2 != NULL || sum > 0) {
-            if (l1 != NULL) {
-                sum += l1->val;
-                l1 = l1->next;
-            }
-            if (l2 != NULL) {
-                sum += l2->val;
-                l2 = l2->next;
-            }
-            *p = new ListNode(sum % 10);
-            sum /= 10;
-            p = &((*p)->next);
-        }
-        return l3;
-    }
-};
-```
-
-复杂度分析：
-* 时间复杂度：_O_(max(m, n))。
-* 空间复杂度：_O_(max(m, n))。
 
 ## 参考链接
 
