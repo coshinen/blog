@@ -35,17 +35,15 @@
     display: none;
   }
 
-  input {
+  #search-icon {
     position: relative;
-    outline: none;
-  }
-
-  #search-submit {
     top: 6px;
     left: 34px;
   }
 
   #search-input {
+    position: relative;
+    outline: none;
     height: 32px;
     width: 205px;
     font-size: 16px;
