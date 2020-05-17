@@ -99,6 +99,7 @@ excerpt: Here are some books I read.
 > * 谁“害”了北大学生，[中] 群言
 
 > ### 传记
+> * 本杰明·富兰克林自传，[美] Benjamin Franklin
 > * 永久记录 美国政府监控全世界网络信息的真相，[美] Edward Snowden
 > * 楊潔自述 我的九九八十一难，[中] 杨洁
 > * 阿加莎·克里斯蒂自传，[英] Agatha Christie
