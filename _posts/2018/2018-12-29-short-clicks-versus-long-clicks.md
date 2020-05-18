@@ -7,9 +7,9 @@ comments: true
 category: 译文集
 tags: Translations SEO
 ---
-![short-clicks-vs-long-clicks](https://mistydew.github.io/assets/images/translations/short-clicks-vs-long-clicks.png){:.border}<br>
 Google 希望看到**长点击**而非**短点击**。
 这是来自谷歌的新的搜索引擎优化（SEO, Search Engine Optimization）术语。
+![short-clicks-vs-long-clicks](http://www.blindfiveyearold.com/wp-content/uploads/2009/09/short-clicks-vs-long-clicks.png){:.border}
 
 ## 什么是长点击？
 

@@ -14,7 +14,7 @@ excerpt: 给定 n (n >= 2) 个非负整数用于表示坐标系中垂线的高�
 > 
 > **Note:** You may not slant the container and n is at least 2.
 > 
-> ![](https://mistydew.github.io/assets/images/leetcode/question_11.jpg)
+> ![](https://s3-lc-upload.s3.amazonaws.com/uploads/2018/07/17/question_11.jpg)
 > 
 > The above vertical lines are represented by array [1,8,6,2,5,4,8,3,7]. In this case, the max area of water (blue section) the container can contain is 49.
 > 
@@ -27,17 +27,14 @@ excerpt: 给定 n (n >= 2) 个非负整数用于表示坐标系中垂线的高�
 >
 > <details>
 > <summary>Hint 1</summary>
-> The aim is to maximize the area formed between the vertical lines. The area of any container is calculated using the shorter line as length and the distance between the lines as the width of the rectangle.<br>
-> 
+> The aim is to maximize the area formed between the vertical lines. The area of any container is calculated using the shorter line as length and the distance between the lines as the width of the rectangle.
 > <pre>
 > Area = length of shorter vertical line * distance between lines
 > </pre>
-> 
-> We can definitely get the maximum width container as the outermost lines have the maximum distance between them. However, this container <b>might not be the maximum in size</b> as one of the vertical lines of this container could be really short. 
-> 
-> <img src="https://mistydew.github.io/assets/images/leetcode/hint_water_trap_1.png">
-> 
-> <img src="https://mistydew.github.io/assets/images/leetcode/hint_water_trap_2.png">
+> We can definitely get the maximum width container as the outermost lines have the maximum distance between them. However, this container <b>might not be the maximum in size</b> as one of the vertical lines of this container could be really short.
+> <br>
+> <img src="https://assets.leetcode.com/uploads/2019/10/20/hint_water_trap_1.png" width="500">
+> <img src="https://assets.leetcode.com/uploads/2019/10/20/hint_water_trap_2.png" width="500">
 > </details>
 > 
 > <details>

@@ -11,7 +11,7 @@ tags: Translations macOS UNIX/Linux
 一些人甚至认为 Apple 的 macOS 是基于 Linux。事实上，两个内核有着不同的历史和特性。
 今天，我们就来看看 macOS 和 Linux 内核之间的差异。
 
-![macos-vs-linux-kernels](https://mistydew.github.io/assets/images/translations/macos-vs-linux-kernels.jpeg){:.border}
+![macos-vs-linux-kernels](https://i2.wp.com/itsfoss.com/wp-content/uploads/2018/07/macos-vs-linux-kernels.jpeg){:.border}
 
 ## macOS 内核的历史
 
