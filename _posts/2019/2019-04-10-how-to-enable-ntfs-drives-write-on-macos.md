@@ -10,6 +10,8 @@ tags: macOS fstab NTFS
 macOS 对 NTFS 格式的硬盘默认只支持读操作，据说是版权原因。
 事实上可以通过编辑系统配置文件 fstab 开启 NTFS 硬盘的写权限。
 
+![ntfs-write-mac-osx](https://cdn.osxdaily.com/wp-content/uploads/2013/10/ntfs-write-mac-osx.jpeg){:.border}
+
 fstab 全称 file system table，即文件系统表，用于描述文件系统的静态信息，是 UNIX 和类 UNIX 计算机系统上常见的系统配置文件。
 该文件通常列出所有可用磁盘分区，并指明如何初始化它们。
 mount 命令在引导时自动读取 fstab 文件以确定整个文件系统结构，直至当用户执行 mount 命令修改该结构。

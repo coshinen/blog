@@ -6,9 +6,9 @@ author: mistydew
 comments: true
 category: 力扣题解
 tags: LeetCode
-excerpt: 给定一个含 n 个正数的数组 `num`，数组 `num` 是否存在元素 a，b，c 使得 a + b + c = 0？找出给定数组中和为零的所有不重复的三元组。
+excerpt: 给定一个含 n 个整数的数组 `nums`，数组 `nums` 是否存在元素 a，b，c 使得 a + b + c = 0？找出给定数组中和为零的所有不重复的三元组。
 ---
-## 14. 3Sum | Medium
+## 15. 3Sum | Medium
 
 > Given an array `nums` of n integers, are there elements a, b, c in `nums` such that a + b + c = 0? Find all unique triplets in the array which gives the sum of zero.
 > 
@@ -51,7 +51,7 @@ excerpt: 给定一个含 n 个正数的数组 `num`，数组 `num` 是否存在�
 
 ## 解决方案
 
-### 方法一：暴力（Brute Force）
+### 方法一：排序和双指针（Sort + Two Pointers）
 
 与求两数之和类似，把三个数之和转换为三个数中的两个数的和等于负的第三个数。
 
@@ -72,10 +72,10 @@ public:
             if (i > 0 && nums[i] == nums[i - 1]) continue;
             while (left < right) {
                 int sum = nums[i] + nums[left] + nums[right];
-                if (sum > 0) {
-                    right--;
-                } else if (sum < 0) {
+                if (sum < 0) {
                     left++;
+                } else if (sum > 0) {
+                    right--;
                 } else {
                     result.push_back({nums[i], nums[left], nums[right]});
                     while (left < right && nums[left] == nums[++left]);

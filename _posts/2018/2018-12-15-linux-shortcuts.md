@@ -1,35 +1,18 @@
 ---
 layout: post
-title:  "每个高效的 Linux 用户必须知道的 14 个终端快捷键"
+title:  "每个高效的 Linux 用户必须知道的 14 个 Bash 快捷键"
 date:   2018-12-15 13:35:20 +0800
 author: mistydew
 comments: true
-category: 译文集
-tags: Translations UNIX/Linux Terminal Shortcuts
+category: 程序人生
+tags: UNIX/Linux Terminal CLI Bash Shortcuts
 ---
-**简介：以下是一些每个 Linux 用户必须使用的键盘快捷键。
-使用命令行时，这些 Linux 快捷键将提升你的生产力和效率。**
-
-你知道什么把专业用户和普通用户分开的吗？掌握键盘快捷键。
-
-好的！这虽不是唯一的要素，但毋庸置疑是一个因素。
-
-不论你使用什么工具，快捷键都能帮助你提高生产力和效率。
-考虑一下。如果有人完全使用鼠标来复制整个文本而不是 Ctrl+A，你会怎么想？
-
-Linux 终端也不例外。这里是一些每个用户必须直到并练习的 Linux 终端快捷键。
-
-相信我；一旦你掌握了这些快捷键，你将发现使用 Linux 命令行有多么好。
-
-## 必须知道的 Linux 快捷键
+下面是一些每个 Linux 用户都应该使用的键盘快捷键。
+使用命令行时，这些快捷键可以提升你的生产力和效率。
 
 ![linux-terminal-shortcuts](https://i0.wp.com/linuxhandbook.com/wp-content/uploads/2018/06/linux-terminal-shortcuts.jpeg){:.border}
 
-我想提一下一些快捷键可能依赖于你使用的 Shell。
-Bash 是最受欢迎的 shell，所以列出的快捷键集中在 Bash。
-如果你愿意，你也可以称其为 Bash 快捷键列表。
-
-**注意我在键盘快捷键中使用了大写字母，但这并不意味着你在使用快捷键时必须按下 shift 键。**
+**注：键盘快捷键中使用了大写字母，并不意味着你在使用时必须按下 shift 键。**
 
 ## 1. Tab
 

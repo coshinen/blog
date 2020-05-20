@@ -285,7 +285,7 @@ excerpt: 比特币：一种点对点的电子现金系统，一个电子现金�
 然后通过除去树枝来压缩旧的区块。
 树内部（树枝）哈希不需要存储（在区块中）。
 
-![reclaiming-disk-space](https://mistydew.github.io/assets/images/bitcoin/whitepaper/reclaiming-disk-space.svg){:.border#center}
+![reclaiming-disk-space](https://mistydew.github.io/assets/images/bitcoin/whitepaper/reclaiming-disk-space.svg){:#center}
 
 > A block header with no transactions would be about 80 bytes.  If we suppose blocks are 
 > generated every 10 minutes, 80 bytes * 6 * 24 * 365 = 4.2MB per year.  With computer systems 
