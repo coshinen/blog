@@ -112,7 +112,6 @@ excerpt: Here are some books I read.
 > * 偶发空缺，[英] J.K. Rowling
 > * 日安憂鬱，[法] Françoise Sagan
 > * 机械心，[法] Mathias Malzieu
-> * 天气之子，[日] 新海誠
 > * 你的名字。，[日] 新海誠
 > * 言叶之庭，[日] 新海誠
 > * 秒速五厘米，[日] [新海誠](http://shinkaimakoto.jp){:target="_blank"}
