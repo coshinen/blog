@@ -31,8 +31,8 @@ permalink: /
     <div>
       <a href="https://github.com/{{ site.root }}" target="_blank"><img class="border" height="128" width="128" alt="@mistydew" src="https://avatars0.githubusercontent.com/u/29818825"></a>
     </div>
-    <ul>{% assign count = 0 %}{% for post in site.posts %}{% assign count = count | plus: 1 %}{% endfor %}
-      <li>文章：<a href="{{ site.archive }}">{{ count }}</a></li>
+    <ul>
+      <li>文章：<a href="{{ site.archive }}">{{ site.posts.size }}</a></li>
     </ul>
   </div>
 </div>

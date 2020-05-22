@@ -4,7 +4,6 @@ title: "引言"
 permalink: /quotes.html
 excerpt: Here are my favorite quotes from someones that inspire me or make me laugh. I hope you enjoy them.
 ---
-
 > Paul Graham, [What You'll Wish You'd Known](http://www.paulgraham.com/hs.html){:target="_blank"}:
 > * Your life doesn't have to be shaped by admissions officers. It could be shaped by your own curiosity. It is for all ambitious adults. And you don't have to wait to start.
 > In fact, you don't have to wait to be an adult. There's no switch inside you that magically flips when you turn a certain age or graduate from some institution.

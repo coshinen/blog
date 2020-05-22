@@ -4,7 +4,6 @@ title: "书单"
 permalink: /booklog.html
 excerpt: Here are some books I read.
 ---
-
 > ## 索引
 > * [技术](#技术)
 >   * [算法](#算法)

@@ -4,7 +4,6 @@ title: "标签"
 permalink: /blog/tags.html
 excerpt: Blog tags.
 ---
-
 {% assign first = site.tags.first %}
 {% assign max = first[1].size %}
 {% assign min = max %}
@@ -37,23 +36,11 @@ excerpt: Blog tags.
 {% endfor %}
 </div>
 
-{% assign count = 0 %}
-{% for tag in site.tags %}
-  {% for post in tag.last %}
-    {% assign count = count | plus: 1 %}
-  {% endfor %}
-  {% assign count = count | append: ', ' %}
-  {% assign counts = counts | append: count %}
-  {% assign count = 0 %}
-{% endfor %}
-{% assign counts = counts | split: ', ' %}
-{% assign idx = 0 %}
 {% for tag in site.tags %}
 <div class="contents">
-  <h2 id="{{ tag[0] }}">{{ tag | first }}（{{ counts[idx] }}）<a href="#tagcloud" style="float:right;">{% include icon/chevron-up.svg %}</a></h2>
-    {% assign idx = idx | plus: 1 %}
+  <h2 id="{{ tag[0] }}">{{ tag[0] }}（{{ tag[1].size }}）<a href="#tagcloud" style="float:right;">{% include icon/chevron-up.svg %}</a></h2>
   <ul>
-    {% for post in tag.last %}
+    {% for post in tag[1] %}
     <li><abbr title="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%Y-%m-%d-" }}</abbr><a href="{{ post.url }}">{{ post.title }}</a></li>
     {% endfor %}
   </ul>
