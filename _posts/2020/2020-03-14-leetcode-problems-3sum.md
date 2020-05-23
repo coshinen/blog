@@ -53,9 +53,9 @@ excerpt: 给定一个含 n 个整数的数组 `nums`，数组 `nums` 是否存�
 
 ### 方法一：排序和双指针（Sort + Two Pointers）
 
-与求两数之和类似，把三个数之和转换为三个数中的两个数的和等于负的第三个数。
+与求两数之和类似。
 
-先固定一个数，然后在数组的剩余元素中求余下的两数之和即可。
+先固定一个数，然后使用首尾两个指针遍历数组。
 
 ```cpp
 class Solution {
@@ -73,9 +73,9 @@ public:
             while (left < right) {
                 int sum = nums[i] + nums[left] + nums[right];
                 if (sum < 0) {
-                    left++;
+                    while (left < right && nums[left] == nums[++left]);
                 } else if (sum > 0) {
-                    right--;
+                    while (left < right && nums[right] == nums[--right]);
                 } else {
                     result.push_back({nums[i], nums[left], nums[right]});
                     while (left < right && nums[left] == nums[++left]);

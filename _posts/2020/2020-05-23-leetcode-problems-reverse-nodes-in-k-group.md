@@ -6,7 +6,7 @@ author: mistydew
 comments: true
 category: 力扣题解
 tags: LeetCode
-excerpt: 给定一条链表，每次反转链表的 k 个节点并返回修改后的链表。
+excerpt: 给定一条链表，每次反转 k 个节点的子链表并返回修改后的链表。
 ---
 ## 25. Reverse Nodes in k-Group | Hard
 
