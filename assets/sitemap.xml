@@ -4,36 +4,15 @@ permalink: /sitemap.xml
 ---
 
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-<url>
-<loc>{{ site.url }}</loc>
-</url>
-<url>
-<loc>{{ site.about | absolute_url }}</loc>
-</url>
-<url>
-<loc>{{ site.booklog | absolute_url }}</loc>
-</url>
-<url>
-<loc>{{ site.quotes | absolute_url }}</loc>
-</url>
-<url>
-<loc>{{ site.blog | absolute_url }}</loc>
-</url>
-<url>
-<loc>{{ site.archive | absolute_url }}</loc>
-</url>
-<url>
-<loc>{{ site.category | absolute_url }}</loc>
-</url>
-<url>
-<loc>{{ site.feed | absolute_url }}</loc>
-</url>
-<url>
-<loc>{{ site.tag | absolute_url }}</loc>
-</url>{% for post in site.posts reversed %}
-<url>
-<loc>{{ post.url | absolute_url | xml_escape }}</loc>
-<lastmod>{{ post.date | date_to_xmlschema }}</lastmod>
-</url>{% endfor %}
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+                    http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">{% for page in site.html_pages %}{% unless page.url == "/404.html" %}
+  <url>
+    <loc>{{ page.url | absolute_url }}</loc>
+  </url>{% endunless %}{% endfor %}{% for post in site.posts %}
+  <url>
+    <loc>{{ post.url | absolute_url | xml_escape }}</loc>
+    <lastmod>{{ post.date | date_to_xmlschema }}</lastmod>
+  </url>{% endfor %}
 </urlset>
