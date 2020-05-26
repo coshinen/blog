@@ -51,7 +51,7 @@ excerpt: 给定一个含 n 个整数的数组 `nums`，数组 `nums` 是否存�
 
 ## 解决方案
 
-### 方法一：排序和双指针（Sort + Two Pointers）
+### 方法一：排序和三指针（Sort + Three Pointers）
 
 与求两数之和类似。
 
