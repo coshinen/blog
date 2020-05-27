@@ -4,8 +4,7 @@ title: "标签"
 permalink: /blog/tags.html
 excerpt: Blog tags.
 ---
-{% assign first = site.tags.first %}
-{% assign max = first[1].size %}
+{% assign max = site.tags.first[1].size %}
 {% assign min = max %}
 {% for tag in site.tags offset:1 %}
   {% if tag[1].size > max %}

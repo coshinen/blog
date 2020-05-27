@@ -6,9 +6,11 @@ excerpt: Blog category.
 ---
 <div id="category">
   <h2>目录</h2>
+  <ul>
 {% for category in site.categories %}
-  <li><a href="#{{ category[0] }}">{{ category[0] }}</a>（{{ category[1].size }}）</li>
+    <li><a href="#{{ category[0] }}">{{ category[0] }}</a>（{{ category[1].size }}）</li>
 {% endfor %}
+  </ul>
 </div>
 
 {% for category in site.categories %}
