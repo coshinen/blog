@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Git 基础命令"
+title:  "Git/GitHub 命令行"
 date:   2018-04-30 16:20:08 +0800
 author: mistydew
 comments: true

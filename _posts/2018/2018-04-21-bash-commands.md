@@ -1,12 +1,12 @@
 ---
 layout: post
-title:  "UNIX/Linux 常用命令"
+title:  "UNIX/Linux 用户常用的 Bash 命令"
 date:   2018-04-21 18:58:02 +0800
 author: mistydew
 comments: true
 category: 程序人生
 tags: UNIX/Linux CLI Terminal
-excerpt: 一些常用的 UNIX/Linux 命令。
+excerpt: 一些 UNIX/Linux 下常用的 Bash 命令。
 ---
 ## 查看目录下的内容 | list
 

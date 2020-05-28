@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "七种单例模式"
+title:  "设计模式之单例模式"
 date:   2018-11-24 21:31:55 +0800
 author: mistydew
 comments: true
