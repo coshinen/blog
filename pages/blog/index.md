@@ -4,16 +4,16 @@ permalink: /blog/
 ---
 
 <div class="home-left">
-  <ul class="post-list">{% for post in site.posts %}{% if post.stickie == true %}
+  <ul class="post-list">
     <li>
-      <span class="post-meta"><abbr title="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%Y年%m月%d日" }}</abbr>【置顶】</span>
-      <span style="float:right;">分类：<a class="category" href="{{ site.category }}#{{ post.category }}">{{ post.category }}</a></span>
+      <span class="post-meta"><abbr title="{{ site.posts.last.date | date_to_xmlschema }}">{{ site.posts.last.date | date: "%Y年%m月%d日" }}</abbr>【置顶】</span>
+      <span style="float:right;">分类：<a class="category" href="{{ site.category }}#{{ site.posts.last.category }}">{{ site.posts.last.category }}</a></span>
       <h2>
-        <a class="post-link" href="{{ post.url }}">{{ post.title }}</a>
+        <a class="post-link" href="{{ site.posts.last.url }}">{{ site.posts.last.title }}</a>
       </h2>
-      {{ post.excerpt | markdownify | strip_newlines }}
-      <span><a class="readmore" href="{{ post.url }}">阅读全文 &raquo;</a></span>
-    </li>{% endif %}{% endfor %}
+      {{ site.posts.last.excerpt | markdownify | strip_newlines }}
+      <span><a class="readmore" href="{{ site.posts.last.url }}">阅读全文 &raquo;</a></span>
+    </li>
     <h2 class="page-heading">最新文章</h2>{% for post in site.posts limit:7 %}
     <li>
       <span class="post-meta"><abbr title="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%Y年%m月%d日" }}</abbr></span>
@@ -39,8 +39,8 @@ permalink: /blog/
   </div>
   <div id="archive">
     <h2>归档</h2>
-    <ul>{% assign count = 1 %}{% for post in site.posts %}{% assign year = post.date | date: '%Y' %}{% assign prevyear = post.previous.date | date: '%Y' %}{% if year == prevyear %}{% assign count = count | plus: 1 %}{% else %}
-      <li><a href="{{ site.archive }}#{{ year }}">{{ year }}</a>（{{ count }}）</li>{% assign count = 1 %}{% endif %}{% endfor %}
+    <ul>{% assign count = 1 %}{% for post in site.posts %}{% assign yearmonth = post.date | date: '%Y年%m月' %}{% assign prevyearmonth = post.previous.date | date: '%Y年%m月' %}{% if yearmonth == prevyearmonth %}{% assign count = count | plus: 1 %}{% else %}
+      <li><a href="{{ site.archive }}#{{ yearmonth }}">{{ yearmonth }}</a>（{{ count }}）</li>{% assign count = 1 %}{% endif %}{% endfor %}
     </ul>
   </div>
 </div>

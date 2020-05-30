@@ -2,15 +2,16 @@
 
 ## Todo
 
-- [ ] archive page: archive by month, year
+- [x] archive page: archive by month, year
 
 ## Timeline
 
-* 2020.05.02 [+] site: favicon for all browsers and platforms
+* 2020.05.30 [+] archive page: archive by month, year
 
 <details>
 <summary>history</summary>
 
+* 2020.05.02 [+] site: favicon for all browsers and platforms
 * 2020.04.26 [-] site: ~~GitHub Actions workflows CI~~
 * 2020.04.18 [+] remake: site search box
 * 2020.04.14 [-] post: ~~AddToAny Share Button~~
