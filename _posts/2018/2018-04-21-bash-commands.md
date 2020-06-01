@@ -110,15 +110,6 @@ $ ln <srcfile> <destfile> # 创建源文件 <srcfile> 的硬链接 <destfile>，
 $ ln -s <srcfile> <destfile> # 创建源文件 <srcfile> 的软链接 <destfile>，类似于 Windows 下的快捷方式，删除源文件后其软链接文件失效。
 ```
 
-## 解压缩文件 | tar
-
-```shell
-$ tar zcfv <file>.tar.gz <file> # 压缩文件 <file> 为 gz 格式 <file>.tar.gz。
-$ tar xfv <file>.tar.gz # 解压缩 gz 格式的文件 <file>.tar.gz。
-$ tar Jcfv <file>.tar.xz <file> # 压缩文件 <file> 为 xz 格式 <file>.tar.xz。
-$ tar Jxfv <file>.tar.xz # 解压缩 xz 格式的文件 <file>.tar.xz。
-```
-
 ## 安装软件 | install
 
 ```shell
@@ -253,20 +244,6 @@ $ fdisk -l # 查看当前磁盘及其分区的详细信息。注：若不显示�
 
 ```shell
 $ w # 显示当前登陆的用户及其正在执行的命令。
-```
-
-## 查看内核参数 | sysctl
-
-```shell
-$ sysctl -a # 查看 Linux 系统内核的全部参数。
-```
-
-## 查看系统版本信息 | release
-
-```shell
-$ uname -a # 打印当前系统相关信息，-a 表示全部信息。
-$ lsb_release -a # 显示 LSB 和版本信息，-a 表示全部信息。
-$ cat /etc/issue # 查看系统版本信息。
 ```
 
 ## 关机 | shutdown
