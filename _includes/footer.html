@@ -1,22 +1,27 @@
     <footer class="site-footer">
       <div class="wrapper">
         <h2 class="footer-heading">
-          <a href="https://crowsub.github.io" title="深紅の鴉音楽日記" target="_blank">{% include icon/crow.svg %}</a>
-          <a href="{{ site.quotes }}">{% if page.url contains site.blog %}{{ site.bquote }}{% else %}{{ site.squote }}{% endif %}</a>
+          <a href="https://crowsub.github.io" title="深紅の鴉音楽日記" target="_blank">
+            <svg width="20" height="16" viewBox="0 0 640 512" fill="darkred">
+              <use xlink:href="/assets/images/icons/misc.svg#crow"></use>
+            </svg>
+          </a><a href="{{ site.quotes }}">{% if page.url contains site.blog %}{{ site.bquote }}{% else %}{{ site.squote }}{% endif %}</a>
         </h2>
         <div class="footer-col-wrapper">
           <div class="footer-col footer-col-1">
             <ul class="contact-list">{% if site.root %}
               <li>
                 <a href="https://github.com/{{ site.root }}" target="_blank">
-                  <span class="icon">{% include icon/github.svg %}</span>
-                  <span>{{ site.root }}</span>
+                  <svg class="icon">
+                    <use xlink:href="/assets/images/icons/misc.svg#github"></use>
+                  </svg><span>{{ site.root }}</span>
                 </a>
               </li>{% endif %}{% if site.email %}
               <li>
                 <a href="mailto:{{ site.email }}">
-                  <span class="icon">{% include icon/envelope.svg %}</span>
-                  <span>{{ site.email }}</span>
+                  <svg class="icon" viewBox="0 0 512 512">
+                    <use xlink:href="/assets/images/icons/misc.svg#envelope"></use>
+                  </svg><span>{{ site.email }}</span>
                 </a>
               </li>{% endif %}
             </ul>
@@ -25,14 +30,16 @@
             <ul class="social-media-list">{% if site.about %}
               <li>
                 <a href="{{ site.about }}">
-                  <span class="icon">{% include icon/info.svg %}</span>
-                  <span>About</span>
+                  <svg class="icon" viewBox="0 0 512 512">
+                    <use xlink:href="/assets/images/icons/misc.svg#info"></use>
+                  </svg><span>About</span>
                 </a>
               </li>{% endif %}{% if site.booklog %}
               <li>
                 <a href="{{ site.booklog }}">
-                  <span class="icon">{% include icon/book.svg %}</span>
-                  <span>Booklog</span>
+                  <svg class="icon" viewBox="0 0 448 512">
+                    <use xlink:href="/assets/images/icons/misc.svg#book"></use>
+                  </svg><span>Booklog</span>
                 </a>
               </li>{% endif %}
             </ul>

@@ -33,7 +33,10 @@ excerpt: Blog archive.
 </div>
     {% endif %}
 <div class="contents">
-  <h2 id="{{ post.date | date: '%Y年%m月' }}">{{ post.date | date: '%Y年%m月' }}（{{ counts[idx] }}）<a href="#archive" style="float:right;">{% include icon/chevron-up.svg %}</a></h2>
+  <h2 id="{{ post.date | date: '%Y年%m月' }}">
+    {{ post.date | date: '%Y年%m月' }}（{{ counts[idx] }}）
+    <a href="#archive" style="float:right;">🔝</a>
+  </h2>
   <ul>
     {% assign idx = idx | plus: 1 %}
   {% endif %}

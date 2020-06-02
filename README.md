@@ -1,4 +1,4 @@
-# [mistydew's blog](https://mistydew.github.io/blog)
+# [mistydew's blog](https://mistydew.github.io/blog/)
 
 ## Todo
 
@@ -6,11 +6,12 @@
 
 ## Timeline
 
-* 2020.05.30 [+] archive page: archive by month, year
+* 2020.06.02 [+] site: svg icons use symbol
 
 <details>
 <summary>history</summary>
 
+* 2020.05.30 [+] archive page: archive by month, year
 * 2020.05.02 [+] site: favicon for all browsers and platforms
 * 2020.04.26 [-] site: ~~GitHub Actions workflows CI~~
 * 2020.04.18 [+] remake: site search box
@@ -99,6 +100,7 @@
 * Comments: [IntenseDebate](https://intensedebate.com)
 * Error Page: [Tencent 404](https://www.qq.com/404)
 * Favicon: [RealFaviconGenerator](https://realfavicongenerator.net)
+* Icon Library: [Font Awesome](https://fontawesome.com)
 
 ## Licenses
 

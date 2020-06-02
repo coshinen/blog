@@ -8,42 +8,48 @@ layout: default
             <p class="post-meta">
               <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
                 <abbr title="{{ page.date | date_to_xmlschema }}">
-                  <span class="icon">{% include icon/calendar.svg %}</span>
-                  {{ page.date | date: "%b %-d, %Y" }}
+                  <svg class="icon" viewBox="0 0 448 512">
+                    <use xlink:href="/assets/images/icons/misc.svg#calendar"></use>
+                  </svg>{{ page.date | date: "%b %-d, %Y" }}
                 </abbr>
               </time>
               <span>|</span>{% if page.author %}
               <span itemprop="author" itemscope itemtype="http://schema.org/Person">
                 <span itemprop="name">
-                  <span class="icon">{% include icon/user.svg %}</span>
-                  <a href="{{ site.about }}" title="{{ site.author }}">{{ page.author }}</a>
+                  <svg class="icon" viewBox="0 0 448 512">
+                    <use xlink:href="/assets/images/icons/misc.svg#user"></use>
+                  </svg><a href="{{ site.about }}" title="{{ site.author }}">{{ page.author }}</a>
                 </span>
               </span>{% endif %}
               <span>|</span>
               <span>
-                <span class="icon">{% include icon/copyright.svg %}</span>
-                <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh" title="知识共享 署名-非商业性使用-禁止演绎 4.0 国际 许可协议" target="_blank">CC BY-NC-ND</a>
+                <svg class="icon" viewBox="0 0 512 512">
+                  <use xlink:href="/assets/images/icons/misc.svg#copyright"></use>
+                </svg><a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh" title="知识共享 署名-非商业性使用-禁止演绎 4.0 国际 许可协议" target="_blank">CC BY-NC-ND</a>
               </span>
               <span>|</span>
               <span>
-                <span class="icon">{% include icon/words.svg %}</span>
-                {% assign words = page.content | strip_html | strip_newlines | remove: " " | size %}{% if words >= 1000 %}{% assign thousands = words | divided_by: 1000 %}{% assign hundreds = words | modulo: 1000 | divided_by: 100 %}{% assign tensones = words | modulo: 100 %}{% if hundreds == 0 %}{% if tensones >= 50 %}{{ thousands }}.{{ hundreds | plus: 1 }}{% else %}{{ thousands }}{% endif %}{% elsif hundreds == 9 %}{% if tensones >= 50 %}{{ thousands | plus: 1 }}{% else %}{{ thousands }}.{{ hundreds }}{% endif %}{% else %}{{ thousands }}.{% if tensones >= 50 %}{{ hundreds | plus: 1 }}{% else %}{{ hundreds }}{% endif %}{% endif %}k{% else %}{{ words }}{% endif %}
+                <svg class="icon" viewBox="0 0 384 512">
+                  <use xlink:href="/assets/images/icons/misc.svg#words"></use>
+                </svg>{% assign words = page.content | strip_html | strip_newlines | remove: " " | size %}{% if words >= 1000 %}{% assign thousands = words | divided_by: 1000 %}{% assign hundreds = words | modulo: 1000 | divided_by: 100 %}{% assign tensones = words | modulo: 100 %}{% if hundreds == 0 %}{% if tensones >= 50 %}{{ thousands }}.{{ hundreds | plus: 1 }}{% else %}{{ thousands }}{% endif %}{% elsif hundreds == 9 %}{% if tensones >= 50 %}{{ thousands | plus: 1 }}{% else %}{{ thousands }}.{{ hundreds }}{% endif %}{% else %}{{ thousands }}.{% if tensones >= 50 %}{{ hundreds | plus: 1 }}{% else %}{{ hundreds }}{% endif %}{% endif %}k{% else %}{{ words }}{% endif %}
               </span>
               <span>|</span>
               <span>
-                <span class="icon">{% include icon/tags.svg %}</span>{% for tag in page.tags %}
-                <a href="{{ site.tag }}#{{ tag }}">{{ tag }}</a>{% endfor %}
+                <svg class="icon" viewBox="0 0 640 512">
+                  <use xlink:href="/assets/images/icons/misc.svg#tags"></use>
+                </svg>{% for tag in page.tags %}<a href="{{ site.tag }}#{{ tag }}">{{ tag }}</a>{% endfor %}
               </span>{% if page.comments == true %}
               <span>|</span>
               <span>
-                <span class="icon">{% include icon/comments.svg %}</span>
                 <script>
                   var idcomments_acct = 'b051fd1ebb6d822f554a521d0827b1d8';
                   var idcomments_post_id = '{{ page.url | absolute_url }}';
                   var idcomments_post_url = '{{ page.url | absolute_url }}';
                   var idcomments_post_title= '{{ page.title | escape }}';
                 </script>
-                <script type="text/javascript" src="https://www.intensedebate.com/js/genericLinkWrapperV2.js"></script>
+                <svg class="icon" viewBox="0 0 576 512">
+                  <use xlink:href="/assets/images/icons/misc.svg#comments"></use>
+                </svg><script type="text/javascript" src="https://www.intensedebate.com/js/genericLinkWrapperV2.js"></script>
               </span>{% endif %}
             </p>
           </header>
