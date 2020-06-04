@@ -2,12 +2,11 @@
 layout: default
 permalink: /blog/
 ---
-
 <div class="home-left">
   <ul class="post-list">
     <li>
       <span class="post-meta"><abbr title="{{ site.posts.last.date | date_to_xmlschema }}">{{ site.posts.last.date | date: "%Y年%m月%d日" }}</abbr>【置顶】</span>
-      <span style="float:right;">分类：<a class="category" href="{{ site.category }}#{{ site.posts.last.category }}">{{ site.posts.last.category }}</a></span>
+      <span style="float:right">分类：<a class="category" href="{{ site.category }}#{{ site.posts.last.category }}">{{ site.posts.last.category }}</a></span>
       <h2>
         <a class="post-link" href="{{ site.posts.last.url }}">{{ site.posts.last.title }}</a>
       </h2>
@@ -17,7 +16,7 @@ permalink: /blog/
     <h2 class="page-heading">最新文章</h2>{% for post in site.posts limit:7 %}
     <li>
       <span class="post-meta"><abbr title="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%Y年%m月%d日" }}</abbr></span>
-      <span style="float:right;">分类：<a class="category" href="{{ site.category }}#{{ post.category }}">{{ post.category }}</a></span>
+      <span style="float:right">分类：<a class="category" href="{{ site.category }}#{{ post.category }}">{{ post.category }}</a></span>
       <h2>
         <a class="post-link" href="{{ post.url }}">{{ post.title }}</a>
       </h2>
@@ -26,6 +25,7 @@ permalink: /blog/
     </li>{% endfor %}
   </ul>
 </div>
+
 <div class="home-right">
   <div id="category">
     <h2>分类</h2>
@@ -35,7 +35,7 @@ permalink: /blog/
   </div>
   <div id="tagcloud">
     <h2>标签</h2>{% assign max = site.tags.first[1].size %}{% assign min = max %}{% for tag in site.tags offset:1 %}{% if tag[1].size > max %}{% assign max = tag[1].size %}{% elsif tag[1].size < min %}{% assign min = tag[1].size %}{% endif %}{% endfor %}{% assign diff = max | minus: min %}{% for tag in site.tags %}{% assign temp = tag[1].size | minus: min | times: 36 | divided_by: diff %}{% assign base = temp | divided_by: 4 %}{% assign remain = temp | modulo: 4 %}{% if remain == 0 %}{% assign size = base | plus: 9 %}{% elsif remain == 1 or remain == 2 %}{% assign size = base | plus: 9 | append: '.5' %}{% else %}{% assign size = base | plus: 10 %}{% endif %}{% if remain == 0 or remain == 1 %}{% assign color = 9 | minus: base %}{% else %}{% assign color = 8 | minus: base %}{% endif %}
-    <a href="{{ site.tag }}#{{ tag[0] }}" style="font-size: {{ size }}pt; color: #{{ color }}{{ color }}{{ color }};">{{ tag[0] }}</a>{% endfor %}
+    <a href="{{ site.tag }}#{{ tag[0] }}" style="font-size:{{ size }}pt;color:#{{ color }}{{ color }}{{ color }}">{{ tag[0] }}</a>{% endfor %}
   </div>
   <div id="archive">
     <h2>归档</h2>

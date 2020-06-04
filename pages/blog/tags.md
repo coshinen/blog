@@ -31,7 +31,7 @@ excerpt: Blog tags.
   {% else %}
     {% assign color = 8 | minus: base %}
   {% endif %}
-  <a href="#{{ tag[0] }}" style="font-size: {{ size }}pt; color: #{{ color }}{{ color }}{{ color }};">{{ tag[0] }}</a>
+  <a href="#{{ tag[0] }}" style="font-size:{{ size }}pt;color:#{{ color }}{{ color }}{{ color }}">{{ tag[0] }}</a>
 {% endfor %}
 </div>
 
@@ -39,7 +39,7 @@ excerpt: Blog tags.
 <div class="contents">
   <h2 id="{{ tag[0] }}">
     {{ tag[0] }}（{{ tag[1].size }}）
-    <a href="#tagcloud" style="float:right;">🔝</a>
+    <a href="#tagcloud" style="float:right">🔝</a>
   </h2>
   <ul>
     {% for post in tag[1] %}

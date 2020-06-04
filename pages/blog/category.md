@@ -17,7 +17,7 @@ excerpt: Blog category.
 <div class="contents">
   <h2 id="{{ category[0] }}">
     {{ category[0] }}（{{ category[1].size }}）
-    <a href="#category" style="float:right;">🔝</a>
+    <a href="#category" style="float:right">🔝</a>
   </h2>
   <ul>
     {% for post in category[1] %}

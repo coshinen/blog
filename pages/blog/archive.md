@@ -35,7 +35,7 @@ excerpt: Blog archive.
 <div class="contents">
   <h2 id="{{ post.date | date: '%Y年%m月' }}">
     {{ post.date | date: '%Y年%m月' }}（{{ counts[idx] }}）
-    <a href="#archive" style="float:right;">🔝</a>
+    <a href="#archive" style="float:right">🔝</a>
   </h2>
   <ul>
     {% assign idx = idx | plus: 1 %}
