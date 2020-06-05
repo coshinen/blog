@@ -48,12 +48,12 @@
     position: relative;
     outline: none;
     height: 32px;
-    width: 205px;
+    width: 204px;
     font-size: 16px;
     border: 1px solid $border-color;
     border-radius: 4px;
     background-color: transparent;
-    padding-left: 32px;
+    padding: 1px 2px 1px 32px;
   }
 
   @include media-query($on-palm) {

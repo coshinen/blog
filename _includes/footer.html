@@ -4,8 +4,8 @@
           <a href="https://crowsub.github.io" title="深紅の鴉音楽日記" target="_blank">
             <svg width="20" height="16" viewBox="0 0 640 512" fill="darkred">
               <use xlink:href="/assets/images/icons/misc.svg#crow"></use>
-            </svg>
-          </a><a href="{{ site.quotes }}">{% if page.url contains site.blog %}{{ site.bquote }}{% else %}{{ site.squote }}{% endif %}</a>
+            </svg></a>
+          <a href="{{ site.quotes }}">{% if page.url contains site.blog %}{{ site.bquote }}{% else %}{{ site.squote }}{% endif %}</a>
         </h2>
         <div class="footer-col-wrapper">
           <div class="footer-col footer-col-1">
@@ -14,14 +14,16 @@
                 <a href="https://github.com/{{ site.root }}" target="_blank">
                   <svg class="icon">
                     <use xlink:href="/assets/images/icons/misc.svg#github"></use>
-                  </svg><span>{{ site.root }}</span>
+                  </svg>
+                  <span>{{ site.root }}</span>
                 </a>
               </li>{% endif %}{% if site.email %}
               <li>
                 <a href="mailto:{{ site.email }}">
                   <svg class="icon" viewBox="0 0 512 512">
                     <use xlink:href="/assets/images/icons/misc.svg#envelope"></use>
-                  </svg><span>{{ site.email }}</span>
+                  </svg>
+                  <span>{{ site.email }}</span>
                 </a>
               </li>{% endif %}
             </ul>
@@ -32,14 +34,16 @@
                 <a href="{{ site.about }}">
                   <svg class="icon" viewBox="0 0 512 512">
                     <use xlink:href="/assets/images/icons/misc.svg#info"></use>
-                  </svg><span>About</span>
+                  </svg>
+                  <span>About</span>
                 </a>
               </li>{% endif %}{% if site.booklog %}
               <li>
                 <a href="{{ site.booklog }}">
                   <svg class="icon" viewBox="0 0 448 512">
                     <use xlink:href="/assets/images/icons/misc.svg#book"></use>
-                  </svg><span>Booklog</span>
+                  </svg>
+                  <span>Booklog</span>
                 </a>
               </li>{% endif %}
             </ul>
