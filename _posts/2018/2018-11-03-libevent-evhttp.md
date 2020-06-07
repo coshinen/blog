@@ -1,11 +1,11 @@
 ---
 layout: post
-title:  "libevent evhttp c/s"
-date:   2018-11-10 15:32:02 +0800
+title:  "Libevent 事件驱动的 HTTP 服务器"
+date:   2018-11-03 15:32:02 +0800
 author: mistydew
 comments: true
 category: 程序人生
-tags: C/C++ libevent evhttp
+tags: C/C++ libevent evhttp C/S
 ---
 Libevent 提供了一个非常简单的事件驱动的 HTTP 服务器，可以嵌入到你的程序中并用来为 HTTP 请求提供服务。
 要使用此功能，你需要包含 <[event2/http.h](http://www.wangafu.net/~nickm/libevent-2.1/doxygen/html/http_8h.html){:target="_blank"}> 头文件到你的程序中。了解更多信息，请查看其头文件。
