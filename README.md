@@ -2,7 +2,7 @@
 
 ## Todo
 
-- [x] archive page: archive by month, year
+- [ ] ...
 
 ## Timeline
 
@@ -96,7 +96,7 @@
 * Powered: [Jekyll](http://www.jekyllrb.com)
 * Hosted: [GitHub Pages](https://pages.github.com)
 * Analytics: [Google Analytics](https://analytics.google.com/analytics/web)
-* Search: [DogeDoge](https://dogedoge.com), [Simple Jekyll Search](https://github.com/christian-fei/Simple-Jekyll-Search)
+* Search: [Simple Jekyll Search](https://github.com/christian-fei/Simple-Jekyll-Search)
 * Comments: [IntenseDebate](https://intensedebate.com)
 * Error Page: [Tencent 404](https://www.qq.com/404)
 * Favicon: [RealFaviconGenerator](https://realfavicongenerator.net)
