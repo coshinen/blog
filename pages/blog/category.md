@@ -6,10 +6,8 @@ excerpt: Blog category.
 ---
 <div id="category">
   <h2>目录</h2>
-  <ul>
-{% for category in site.categories %}
-    <li><a href="#{{ category[0] }}">{{ category[0] }}</a>（{{ category[1].size }}）</li>
-{% endfor %}
+  <ul>{% for category in site.categories %}
+    <li><a href="#{{ category[0] }}">{{ category[0] }}</a>（{{ category[1].size }}）</li>{% endfor %}
   </ul>
 </div>
 
@@ -19,10 +17,8 @@ excerpt: Blog category.
     {{ category[0] }}（{{ category[1].size }}）
     <a href="#category" style="float:right">🔝</a>
   </h2>
-  <ul>
-    {% for post in category[1] %}
-    <li><abbr title="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%Y-%m-%d-" }}</abbr><a href="{{ post.url }}">{{ post.title }}</a></li>
-    {% endfor %}
+  <ul>{% for post in category[1] %}
+    <li><abbr title="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%Y-%m-%d-" }}</abbr><a href="{{ post.url }}">{{ post.title }}</a></li>{% endfor %}
   </ul>
 </div>
 {% endfor %}
