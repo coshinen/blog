@@ -36,7 +36,7 @@ layout: default
                   <use xlink:href="/assets/images/icons/misc.svg#tags"></use>
                 </svg>{% for tag in page.tags %}
                 <a href="{{ site.tag }}#{{ tag }}">{{ tag }}</a>{% endfor %}
-              </span>{% if page.comments == true %}
+              </span>{% if page.comments %}
               <span>|
                 <svg class="icon" viewBox="0 0 576 512">
                   <use xlink:href="/assets/images/icons/misc.svg#comments"></use>
@@ -53,7 +53,7 @@ layout: default
           </header>
           <div class="post-content" itemprop="articleBody">
 {{ content }}
-          </div>{% if page.comments == true %}
+          </div>{% if page.comments %}
           <!-- IntenseDebate Imagine better comments. -->
           <span id="IDCommentsPostTitle" style="display:none"></span>
           <script type='text/javascript' src='https://www.intensedebate.com/js/genericCommentWrapperV2.js'></script>{% endif %}

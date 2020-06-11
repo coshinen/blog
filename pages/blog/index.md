@@ -8,7 +8,7 @@ permalink: /blog/
       <span class="post-meta"><abbr title="{{ site.posts.last.date | date_to_xmlschema }}">{{ site.posts.last.date | date: "%Y年%m月%d日" }}</abbr>【置顶】</span>
       <span style="float:right">分类：<a class="category" href="{{ site.category }}#{{ site.posts.last.category }}">{{ site.posts.last.category }}</a></span>
       <h2>
-        <a class="post-link" href="{{ site.posts.last.url }}">{{ site.posts.last.title }}</a>
+        <a class="post-link" href="{{ site.posts.last.url }}">{{ site.posts.last.title | escape }}</a>
       </h2>
       {{ site.posts.last.excerpt | markdownify | strip_newlines }}
       <span><a class="readmore" href="{{ site.posts.last.url }}">阅读全文 &raquo;</a></span>
@@ -18,7 +18,7 @@ permalink: /blog/
       <span class="post-meta"><abbr title="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%Y年%m月%d日" }}</abbr></span>
       <span style="float:right">分类：<a class="category" href="{{ site.category }}#{{ post.category }}">{{ post.category }}</a></span>
       <h2>
-        <a class="post-link" href="{{ post.url }}">{{ post.title }}</a>
+        <a class="post-link" href="{{ post.url }}">{{ post.title | escape }}</a>
       </h2>
       {{ post.excerpt | markdownify | strip_newlines }}
       <span><a class="readmore" href="{{ post.url }}">阅读全文 &raquo;</a></span>
