@@ -123,12 +123,12 @@ Libevent 旨在代替事件驱动的网络服务器中的事件循环。
 因此，Libevent 允许便携式应用程序开发，并提供操作系统上可用的最可扩展的事件通知机制。
 Libevent 也可用于多线程的程序。Libevent 应该在 Linux, *BSD, Mac OS X, Solaris 和 Windows 上编译。
 
-## 标准用法
+### 3.1. 标准用法
 
 每个使用 Libevent 的程序必须包含 <[event2/event.h](http://www.wangafu.net/~nickm/libevent-2.1/doxygen/html/event_8h.html){:target="_blank"}> 头文件，
 并把 -levent 标志传递给链接器。（如果你只想要主事件和基于 IO 的缓冲代码，而不想链接任何协议代码，则可以使用链接 -levent_core 代替。）
 
-## 库设置
+### 3.2. 库设置
 
 在调用任何其它 Libevent 函数前，你需要设置库。
 如果你要在一个多线程的应用程序中从多个线程使用 Libevent，你需要初始化线程支持 -
@@ -137,20 +137,20 @@ Libevent 也可用于多线程的程序。Libevent 应该在 Linux, *BSD, Mac OS
 
 这也是你能够使用 event_set_mem_functions 替换 Libevent 的内存管理函数，使用 [event_enable_debug_mode()](http://www.wangafu.net/~nickm/libevent-2.1/doxygen/html/event_8h.html#a37441a3defac55b5d2513521964b2af5){:target="_blank"} 开启调试模式的地方。
 
-## 创建事件库
+### 3.3. 创建事件库
 
 接下来，你需要使用 [event_base_new()](http://www.wangafu.net/~nickm/libevent-2.1/doxygen/html/event_8h.html#af34c025430d445427a2a5661082405c3){:target="_blank"} 或 [event_base_new_with_config()](http://www.wangafu.net/~nickm/libevent-2.1/doxygen/html/event_8h.html#a925410b1d145c85849882dd220beb9d5){:target="_blank"} 来创建一个 [event_base](http://www.wangafu.net/~nickm/libevent-2.1/doxygen/html/structevent__base.html){:target="_blank"} 结构。
 该 [event_base](http://www.wangafu.net/~nickm/libevent-2.1/doxygen/html/structevent__base.html){:target="_blank"} 是负责跟踪（即被监控是否被激活） "pending" 和 "active" 的事件。
 每个事件都与一个 [event_base](http://www.wangafu.net/~nickm/libevent-2.1/doxygen/html/structevent__base.html){:target="_blank"} 相关联。
 
-## 事件通知
+### 3.4. 事件通知
 
 对于每个希望监控的文件描述符，你必须要使用 [event_new()](http://www.wangafu.net/~nickm/libevent-2.1/doxygen/html/event_8h.html#ad60bb980e309993205a3880de41e3ec8){:target="_blank"} 创建事件结构。
 （你还可以声明一个事件结构并调用 [event_assign()](http://www.wangafu.net/~nickm/libevent-2.1/doxygen/html/event_8h.html#a71cbaa3e99d66d788985b25c7f53237d){:target="_blank"} 来初始化该结构的成员。）
 要开启通知，你需要通过调用 [event_add()](http://www.wangafu.net/~nickm/libevent-2.1/doxygen/html/event_8h.html#ab0c85ebe9cf057be1aa17724c701b0c8){:target="_blank"} 把该结构添加到受监控的事件列表中。
 只要该事件结构是激活的，它就必须保持分配状态，因此通常应在堆上分配。
 
-## 调度事件
+### 3.5. 调度事件
 
 最终，你调用 [event_base_dispatch()](http://www.wangafu.net/~nickm/libevent-2.1/doxygen/html/event_8h.html#a3b0096ff22ff56eae9cbbda8907183d1){:target="_blank"} 来循环和调度事件。
 你还可以使用 [event_base_loop()](http://www.wangafu.net/~nickm/libevent-2.1/doxygen/html/event_8h.html#a76e311cff042dab77125e309315a0617){:target="_blank"} 进行更细粒度的控制。
@@ -159,7 +159,7 @@ Libevent 也可用于多线程的程序。Libevent 应该在 Linux, *BSD, Mac OS
 如果想同时在多个线程中运行事件，你也可以拥有一个 [event_base](http://www.wangafu.net/~nickm/libevent-2.1/doxygen/html/structevent__base.html){:target="_blank"}，该事件可以把工作添加到工作队列。
 或者也可以创建多个 [event_base](http://www.wangafu.net/~nickm/libevent-2.1/doxygen/html/structevent__base.html){:target="_blank"} 对象。
 
-## I/O 缓冲区
+### 3.6. I/O 缓冲区
 
 Libevent 提供了一个在常规事件回调上缓冲的 I/O 抽象。
 这种抽象被称为 bufferevent。一个 bufferevent 提供了可自动填充和清空的的输入和输出缓冲区。
@@ -174,7 +174,7 @@ bufferevent 结构亦可以使用 [bufferevent_enable()](http://www.wangafu.net/
 
 了解更多相关信息，查看 <event2/bufferevent*.h>。
 
-## 定时器
+### 3.7. 定时器
 
 Libevent 还可以创建在一定时间过期后调用回调的定时器。
 evtimer_new() 宏返回一个用于定时器的事件结构。
@@ -182,21 +182,21 @@ evtimer_new() 宏返回一个用于定时器的事件结构。
 可以通过调用 evtimer_del() 停用定时器。
 （这些宏是 [event_new()](http://www.wangafu.net/~nickm/libevent-2.1/doxygen/html/event_8h.html#ad60bb980e309993205a3880de41e3ec8){:target="_blank"}, [event_add()](http://www.wangafu.net/~nickm/libevent-2.1/doxygen/html/event_8h.html#ab0c85ebe9cf057be1aa17724c701b0c8){:target="_blank"}, [event_del()](http://www.wangafu.net/~nickm/libevent-2.1/doxygen/html/event_8h.html#a8d6f0f479b2b2b5c13854b7efae7b243){:target="_blank"} 的简易包装器；你也可以直接使用它们。）
 
-## 异步 DNS 解析
+### 3.8. 异步 DNS 解析
 
 Libevent 提供了一个异步的 DNS 解析器，应该使用这个代替标准的 DNS 解析函数。
 查看 <[event2/dns.h](http://www.wangafu.net/~nickm/libevent-2.1/doxygen/html/dns_8h.html){:target="_blank"}> 函数了解更多细节。
 
-## 事件驱动的 HTTP 服务器
+### 3.9. 事件驱动的 HTTP 服务器
 
 Libevent 提供了一个非常简单的事件驱动的 HTTP 服务器，可以嵌入到你的程序中并用来为 HTTP 请求提供服务。<br>
 要使用此功能，你需要包含 <[event2/http.h](http://www.wangafu.net/~nickm/libevent-2.1/doxygen/html/http_8h.html){:target="_blank"}> 头文件到你的程序中。了解更多信息，请查看其头文件。
 
-## RPC 服务器和客户端的框架
+### 3.10. RPC 服务器和客户端的框架
 
 Libevent 提供了一个用于创建 RPC 服务器和客户端的框架。它负责编组（调度）和解组全部数据结构。
 
-## API 参考
+### 3.11. API 参考
 
 要浏览 libevent API 的完整文档，单击以下任意链接。
 

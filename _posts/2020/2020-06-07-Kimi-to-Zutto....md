@@ -13,7 +13,8 @@ excerpt: 想い出してごらん 萌ゆる草木 散る花ビラ。共に笑い
 
 歌手：yu-yu<br>
 作詞：rockco.<br>
-作曲：Koma2 Kaz
+作曲：Koma2 Kaz<br>
+編曲：Koma2 Kaz
 
 <blockquote class="lyric-original">
   <h2>君とずっと…</h2>

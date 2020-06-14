@@ -125,5 +125,4 @@ $ vim -b <file> # -b 选项表示二进制模式
 
 ## 参考链接
 
-* [welcome home : vim online](https://www.vim.org){:target="_blank"}
-* [vim/vim: The official Vim repository](https://github.com/vim/vim){:target="_blank"}
+* [Vim documentation : vim online](https://www.vim.org/docs.php){:target="_blank"}
