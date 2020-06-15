@@ -42,7 +42,7 @@ int main(int argc, char* argv[]) // 0.程序入口
 
 下图为比特币核心服务程序启动过程中函数调用的流程：
 
-![bitcoind-startup](https://mistydew.github.io/assets/images/bitcoin/bitcoind-v0.12.1.png)
+![bitcoind-startup](https://mistydew.github.io/assets/images/bitcoin/daemon/v0.12.1.png)
 
 > 比特币核心服务程序启动流程：
 > 1. [SetupEnvironment()](/blog/2018/05/the-annotated-bitcoin-sources-01.html#SetupEnvironment-ref)<br>

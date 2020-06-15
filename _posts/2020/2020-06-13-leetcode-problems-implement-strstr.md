@@ -46,7 +46,6 @@ public:
     int strStr(string haystack, string needle) {
         int n = haystack.size();
         int len = needle.size();
-        if (len == 0) return 0;
         for (int begin = 0; begin < n - len + 1; begin++) {
             if (haystack.substr(begin, len) == needle) {
                 return begin;
@@ -75,7 +74,8 @@ public:
         int pn = 0;
         while (pn < n - len + 1) {
             while (pn < n - len + 1 && haystack[pn] != needle[0]) ++pn;
-            int plen = 0, curlen = 0;
+            int plen = 0;
+            int curlen = 0;
             while (plen < len && pn < n && haystack[pn] == needle[plen]) {
                 ++pn;
                 ++plen;

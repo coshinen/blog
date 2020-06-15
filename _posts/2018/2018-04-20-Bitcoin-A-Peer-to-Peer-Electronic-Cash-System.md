@@ -9,11 +9,13 @@ tags: Translations Blockchain Bitcoin Whitepaper
 excerpt: 比特币：一种点对点的电子现金系统，一个电子现金的纯点对点版本允许在线支付从一方直接发送到另一方，而不通过一个金融机构。
 ---
 > <h2 align="center">Bitcoin: A Peer-to-Peer Electronic Cash System</h2>
+> 
 > <p align="center">
 > Satoshi Nakamoto<br>
 > satoshin@gmx.com<br>
 > www.bitcoin.org
 > </p>
+> 
 > **Abstract.**  A purely peer-to-peer version of electronic cash would allow online
 > payments to be sent directly from one party to another without going through a
 > financial institution.  Digital signatures provide part of the solution, but the main
@@ -30,7 +32,9 @@ excerpt: 比特币：一种点对点的电子现金系统，一个电子现金�
 > proof-of-work chain as proof of what happened while they were gone.
 
 <h2 align="center">比特币：一种点对点的电子现金系统</h2>
+
 <p align="center">中本聪</p>
+
 **概要.** 一个电子现金的纯点对点版本允许在线支付从一方直接发送到另一方，而不通过一个金融机构。
 数字签名提供了部分解决方案，但如果仍需要一个可信的第三方来防止双重花费，其主要优势就丧失了。
 我们提出一个使用点对点网络解决双重花费问题的方案。
@@ -410,7 +414,7 @@ excerpt: 比特币：一种点对点的电子现金系统，一个电子现金�
 > 
 > &emsp;p = probability an honest node finds the next block<br>
 > &emsp;q = probability the attacker finds the next block<br>
-> &emsp;q<font size="2" style="position:relative;top:2.8px;left:0.8px;">z</font> = probability the attacker will ever catch up from z blocks behind
+> &emsp;![math](https://latex.codecogs.com/svg.latex?q_{z}) = probability the attacker will ever catch up from z blocks behind
 
 攻击者从给定的赤字中追赶的可能性类似于赌徒破产问题（Gambler's Ruin problem）。
 假设一个拥有无限信用的赌徒从赤字开始，并可能进行无限次尝试以达到收支平衡。
@@ -418,9 +422,9 @@ excerpt: 比特币：一种点对点的电子现金系统，一个电子现金�
 
 &emsp;p = 诚实节点找到下一个块的概率<br>
 &emsp;q = 攻击者找到下一个块的概率<br>
-&emsp;q<font size="2" style="position:relative;top:2.8px;left:0.8px;">z</font> = 攻击者将从后面 z 个块追赶上的概率
+&emsp;![math](https://latex.codecogs.com/svg.latex?q_{z}) = 攻击者将从后面 z 个块追赶上的概率
 
-![math](https://mistydew.github.io/assets/images/bitcoin/whitepaper/math.png){:.border}
+![math](https://latex.codecogs.com/svg.latex?\large%20q_{z}%20=%20\begin{Bmatrix}%201%20&%20if%20p%20\leqslant%20q%20\\%20\left%20(%20q%20/%20p%20\right%20)^{z}%20&%20if%20p%20%3E%20q%20\end{Bmatrix})
 
 > Given our assumption that p > q, the probability drops exponentially as the number of blocks the 
 > attacker has to catch up with increases.  With the odds against him, if he doesn't make a lucky 
@@ -457,20 +461,20 @@ excerpt: 比特币：一种点对点的电子现金系统，一个电子现金�
 收款人等到交易添加到区块上且 z 个块被链接在该块后面。
 他不知道攻击者进展的具体数量，但假设诚实的区块花费了每个区块被挖出的平均时间，攻击者的潜在进度将是具有预期值的泊松分布（Poisson distribution）：
 
-![math2](https://mistydew.github.io/assets/images/bitcoin/whitepaper/math2.png){:.border}
+![math](https://latex.codecogs.com/svg.latex?\large%20\lambda%20=%20z%20\frac{q}{p})
 
 > To get the probability the attacker could still catch up now, we multiply the Poisson density for 
 > each amount of progress he could have made by the probability he could catch up from that point:
 
 为了获得攻击者现在可能仍在追赶的概率，我们将泊松密度乘以他从那个点赶上额概率所取得的进步量：
 
-![math3](https://mistydew.github.io/assets/images/bitcoin/whitepaper/math3.png){:.border}
+![math](https://latex.codecogs.com/svg.latex?\large%20\sum_{k%20=%200}^{\infty}%20\frac{\lambda^{k}%20e^{-%20\lambda}}{k!}%20\cdot%20\begin{Bmatrix}%20\left%20(%20q%20/%20p%20\right%20)^{\left%20(%20z%20-%20k%20\right%20)}%20&%20if%20k%20\leqslant%20z%20\\%201%20&%20if%20k%20>%20z%20\end{Bmatrix})
 
 > Rearranging to avoid summing the infinite tail of the distribution...
 
 重新排列以避免对分布的无穷尾数求和...
 
-![math4](https://mistydew.github.io/assets/images/bitcoin/whitepaper/math4.png){:.border}
+![math](https://latex.codecogs.com/svg.latex?\large%201%20-%20\sum_{k=0}^{z}%20\frac{\lambda^{k}%20e^{-%20\lambda}}{k!}%20\left%20(%201%20-%20\left%20(%20q%20/%20p%20\right%20)^{\left%20(%20z%20-%20k%20\right%20)}%20\right%20))
 
 > Converting to C code...
 

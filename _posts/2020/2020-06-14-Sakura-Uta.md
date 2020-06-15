@@ -48,7 +48,11 @@ excerpt: 桜の花びら 風の中に舞う。一片散るたび 目に射す頬
 
 名侦探柯南真人版特别篇「工藤新一～京都新撰組殺人事件～」的主题曲。
 
+最新的剧场版『名探偵コナン 緋色の弾丸』在延期近 2 个月后，官方再次发布公告，于 2021 年 4 月上映，具体时间未定。
+
+这是柯南史上首部延期一年的剧场版，打破了每年一部的节奏。
+
 ## 参考链接
 
-* [yu-yu / 桜唄](https://www.youtube.com/watch?v=sseNdNrPe3A){:target="_blank"} - YouTube
 * [yu-yu / 桜唄](https://www.nicovideo.jp/watch/sm21354397){:target="_blank"} - ニコニコ動画
+* [『名探偵コナン 緋色の弾丸』公開時期に関するお知らせ](https://www.conan-movie.jp/news24/1591255096.html){:target="_blank"}
