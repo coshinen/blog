@@ -101,6 +101,7 @@
 * Error Page: [Tencent 404](https://www.qq.com/404)
 * Favicon: [RealFaviconGenerator](https://realfavicongenerator.net)
 * Icon Library: [Font Awesome](https://fontawesome.com)
+* Math Equation: [EqnEditor Render](https://latex.codecogs.com)
 
 ## Licenses
 
