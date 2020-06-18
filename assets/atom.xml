@@ -19,7 +19,7 @@ permalink: /blog/atom.xml
     <id>tag:{{ site.url | replace_first: "https://", "" }},{{ post.id | xml_escape }}</id>
     <updated>{{ post.date | date_to_xmlschema }}</updated>
     <published>{{ post.date | date_to_xmlschema }}</published>
-    <summary>{{ post.excerpt | xml_escape }}</summary>
+    <summary>{{ post.excerpt | markdownify | strip_newlines | strip_html | xml_escape }}</summary>
     <author>
       <name>{{ site.author }}</name>
       <uri>{{ site.url }}</uri>

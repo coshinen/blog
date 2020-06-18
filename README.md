@@ -6,11 +6,12 @@
 
 ## Timeline
 
-* 2020.06.02 [+] site: svg icons use symbol
+* 2020.06.18 [+] feed page: Email Subscriptions
 
 <details>
 <summary>history</summary>
 
+* 2020.06.02 [+] site: svg icons use symbol
 * 2020.05.30 [+] archive page: archive by month, year
 * 2020.05.02 [+] site: favicon for all browsers and platforms
 * 2020.04.26 [-] site: ~~GitHub Actions workflows CI~~
@@ -102,6 +103,7 @@
 * Favicon: [RealFaviconGenerator](https://realfavicongenerator.net)
 * Icon Library: [Font Awesome](https://fontawesome.com)
 * Math Equation: [EqnEditor Render](https://latex.codecogs.com)
+* Web Feed: [Google FeedBurner](https://www.feedburner.com)
 
 ## Licenses
 
