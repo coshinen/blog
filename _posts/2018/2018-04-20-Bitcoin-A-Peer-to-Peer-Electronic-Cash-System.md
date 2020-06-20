@@ -369,7 +369,7 @@ excerpt: 比特币：一种点对点的电子现金系统，一个电子现金�
 传统的银行模式通过限制访问信息相关方和可信任的第三方来实现一定程度的隐私。
 公开公布全部交易的必要性排除了这种方法，但隐私仍然可以通过打破另一个地方的信息流来维持：通过保持公钥匿名。
 公众能够看到某人向某人发送一笔金额，但没有交易与任何人相关联的信息。
-这和证券交易所发布的信息类似，其中个别交易的时间和大小（the "tape"）是公开的，但没有告知双方是谁。
+这和证券交易所发布的信息类似，其中个别交易的时间和大小的记录是公开的，但没有告知双方是谁。
 
 ![privacy](https://mistydew.github.io/assets/images/bitcoin/whitepaper/privacy.svg){:.border#center}
 
@@ -405,7 +405,7 @@ excerpt: 比特币：一种点对点的电子现金系统，一个电子现金�
 > gap by -1.
 
 诚实链和攻击者链之间的竞争可以描述为二项式随机游走。
-成功的情况使诚实链延申一个区块，+1领先，而失败的情况是攻击者链延申一个区块，间距-1。
+成功的情况使诚实链延申一个区块，+1 领先，而失败的情况是攻击者链延申一个区块，间距 -1。
 
 > The probability of an attacker catching up from a given deficit is analogous to a Gambler's 
 > Ruin problem.  Suppose a gambler with unlimited credit starts at a deficit and plays potentially an 
@@ -414,15 +414,15 @@ excerpt: 比特币：一种点对点的电子现金系统，一个电子现金�
 > 
 > &emsp;p = probability an honest node finds the next block<br>
 > &emsp;q = probability the attacker finds the next block<br>
-> &emsp;![math](https://latex.codecogs.com/svg.latex?q_{z}) = probability the attacker will ever catch up from z blocks behind
+> &emsp;q<sub>z</sub> = probability the attacker will ever catch up from z blocks behind
 
-攻击者从给定的赤字中追赶的可能性类似于赌徒破产问题（Gambler's Ruin problem）。
+攻击者从给定的赤字中追赶的可能性类似于赌徒破产问题。
 假设一个拥有无限信用的赌徒从赤字开始，并可能进行无限次尝试以达到收支平衡。
 我们可以计算出他达到收支平衡的可能性，或攻击者追赶上诚实的链，如下：
 
 &emsp;p = 诚实节点找到下一个块的概率<br>
 &emsp;q = 攻击者找到下一个块的概率<br>
-&emsp;![math](https://latex.codecogs.com/svg.latex?q_{z}) = 攻击者将从后面 z 个块追赶上的概率
+&emsp;q<sub>z</sub> = 攻击者将从后面 z 个块追赶上的概率
 
 ![math](https://latex.codecogs.com/svg.latex?\large%20q_{z}%20=%20\begin{Bmatrix}%201%20&%20if%20p%20\leqslant%20q%20\\%20\left%20(%20q%20/%20p%20\right%20)^{z}%20&%20if%20p%20%3E%20q%20\end{Bmatrix})
 
@@ -459,7 +459,7 @@ excerpt: 比特币：一种点对点的电子现金系统，一个电子现金�
 > progress will be a Poisson distribution with expected value:
 
 收款人等到交易添加到区块上且 z 个块被链接在该块后面。
-他不知道攻击者进展的具体数量，但假设诚实的区块花费了每个区块被挖出的平均时间，攻击者的潜在进度将是具有预期值的泊松分布（Poisson distribution）：
+他不知道攻击者进展的具体数量，但假设诚实的区块花费了每个区块被挖出的平均时间，攻击者的潜在进度将是具有预期值的泊松分布：
 
 ![math](https://latex.codecogs.com/svg.latex?\large%20\lambda%20=%20z%20\frac{q}{p})
 

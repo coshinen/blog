@@ -40,7 +40,7 @@ excerpt: 给定一个字符串 **s**，找到 **s** 中最长的回文子串。�
 > <details>
 > <summary>Hint 3</summary>
 > Complexity based hint:<br>
-> If we use brute-force and check whether for every start and end position a substring is a palindrome we have O(n^2) start - end pairs and O(n) palindromic checks. Can we reduce the time for palindromic checks to O(1) by reusing some previous computation.
+> If we use brute-force and check whether for every start and end position a substring is a palindrome we have O(n<sup>2</sup>) start - end pairs and O(n) palindromic checks. Can we reduce the time for palindromic checks to O(1) by reusing some previous computation.
 > </details>
 
 ## 解决方案
@@ -85,7 +85,7 @@ public:
 ```
 
 复杂度分析：
-* 时间复杂度：_O_(n^2)。
+* 时间复杂度：_O_(n<sup>2</sup>)。
 * 空间复杂度：_O_(1)。
 
 ## 参考链接
