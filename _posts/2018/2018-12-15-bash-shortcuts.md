@@ -5,7 +5,7 @@ date:   2018-12-15 13:35:20 +0800
 author: mistydew
 comments: true
 category: 程序人生
-tags: UNIX/Linux Terminal CLI Bash Shortcuts
+tags: UNIX/Linux CLI Bash Shortcuts
 ---
 下面是一些每个 Linux 用户都应该使用的键盘快捷键。
 使用命令行时，这些快捷键可以提升你的生产力和效率。

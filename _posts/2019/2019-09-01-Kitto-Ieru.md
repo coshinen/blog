@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "田村ゆかり きっと言える 歌词翻译"
-date:   2019-09-01 20:38:12 +0800
+date:   2019-09-01 20:39:01 +0800
 author: mistydew
 comments: true
 category: 译文集
