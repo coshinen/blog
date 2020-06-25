@@ -5,7 +5,7 @@ date:   2020-06-20 08:41:50 +0800
 author: mistydew
 comments: true
 category: 力扣题解
-tags: LeetCode
+tags: LeetCode Math Binary-Search
 excerpt: 给定被除数 `dividend` 和除数 `divisor` 两个整数，不使用乘法、除法和 mod 运算符使两数相除。
 ---
 ## 29. Divide Two Integers | Medium

@@ -5,7 +5,7 @@ date:   2020-05-23 08:37:46 +0800
 author: mistydew
 comments: true
 category: 力扣题解
-tags: LeetCode
+tags: LeetCode Linked-List
 excerpt: 给定一条链表，每次反转 k 个节点的子链表并返回修改后的链表。
 ---
 ## 25. Reverse Nodes in k-Group | Hard

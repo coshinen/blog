@@ -5,7 +5,7 @@ date:   2020-05-16 17:10:58 +0800
 author: mistydew
 comments: true
 category: 力扣题解
-tags: LeetCode
+tags: LeetCode Linked-List
 excerpt: 给定一条链表，交换每两个相邻的节点并返回它的头。
 ---
 ## 24. Swap Nodes in Pairs | Medium

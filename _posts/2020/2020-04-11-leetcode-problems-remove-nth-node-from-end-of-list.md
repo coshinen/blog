@@ -5,7 +5,7 @@ date:   2020-04-11 19:27:35 +0800
 author: mistydew
 comments: true
 category: 力扣题解
-tags: LeetCode
+tags: LeetCode Linked-List Two-Pointers
 excerpt: 给定一条链表，移除链表末尾的第 n 个节点并返回它的头。
 ---
 ## 19. Remove Nth Node From End of List | Medium

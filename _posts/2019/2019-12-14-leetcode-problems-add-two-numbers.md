@@ -5,7 +5,7 @@ date:   2019-12-14 14:58:13 +0800
 author: mistydew
 comments: true
 category: 力扣题解
-tags: LeetCode
+tags: LeetCode Linked-List Math
 excerpt: 给定两条**非空**链表用于表示两个非负整数。数字以**倒序**的方式存储在链表中，每个节点保存**一位**数字。把两数之和保存在一条链表中并返回。
 ---
 ## 2. Add Two Numbers | Medium

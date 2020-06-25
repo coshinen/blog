@@ -5,7 +5,7 @@ date:   2020-02-22 20:23:04 +0800
 author: mistydew
 comments: true
 category: 力扣题解
-tags: LeetCode
+tags: LeetCode Math String
 excerpt: 把给定的整数转换为罗马数字（包含七种字符：`I`，`V`，`X`，`L`，`C`，`D` 和 `M`）。
 ---
 ## 12. Integer to Roman | Medium

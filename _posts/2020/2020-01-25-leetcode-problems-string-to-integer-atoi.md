@@ -5,7 +5,7 @@ date:   2020-01-25 07:50:53 +0800
 author: mistydew
 comments: true
 category: 力扣题解
-tags: LeetCode
+tags: LeetCode Math String
 excerpt: 实现一个 `atoi` 函数，把字符串转换为整数。
 ---
 ## 8. String to Integer (atoi) | Medium

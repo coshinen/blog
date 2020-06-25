@@ -5,7 +5,7 @@ date:   2020-05-30 08:09:21 +0800
 author: mistydew
 comments: true
 category: 力扣题解
-tags: LeetCode
+tags: LeetCode Array Two-Pointers
 excerpt: 给定一个有序数组，[原地](https://en.wikipedia.org/wiki/In-place_algorithm){:target="_blank"}移除重复元素使每个元素只出现一次并返回新数组的长度。
 ---
 ## 26. Remove Duplicates from Sorted Array | Easy

@@ -5,7 +5,7 @@ date:   2020-06-06 14:27:46 +0800
 author: mistydew
 comments: true
 category: 力扣题解
-tags: LeetCode
+tags: LeetCode Array Two-Pointers
 excerpt: 给定一个数组 _nums_ 和一个值 _val_，[原地](https://en.wikipedia.org/wiki/In-place_algorithm){:target="_blank"}移除所有该数值的实例并返回新数组的长度。
 ---
 ## 27. Remove Element | Easy

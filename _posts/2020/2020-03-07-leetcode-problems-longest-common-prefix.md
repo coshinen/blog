@@ -5,7 +5,7 @@ date:   2020-03-07 19:00:29 +0800
 author: mistydew
 comments: true
 category: 力扣题解
-tags: LeetCode
+tags: LeetCode String
 excerpt: 写一个函数来查找字符串数组的最长公共前缀。
 ---
 ## 14. Longest Common Prefix | Easy

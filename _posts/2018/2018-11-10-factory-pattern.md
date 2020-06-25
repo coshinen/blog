@@ -5,7 +5,7 @@ date:   2018-11-10 17:16:10 +0800
 author: mistydew
 comments: true
 category: 程序人生
-tags: DesignPatterns C/C++
+tags: Design-Patterns C/C++
 ---
 工厂模式是 23 种设计模式之一，属于创建型模式，用于批量实例化对象。
 

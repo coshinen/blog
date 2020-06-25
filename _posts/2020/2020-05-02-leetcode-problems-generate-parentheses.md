@@ -5,7 +5,7 @@ date:   2020-05-02 11:25:16 +0800
 author: mistydew
 comments: true
 category: 力扣题解
-tags: LeetCode
+tags: LeetCode String Backtracking
 excerpt: 给定括号的对数 n，写一个函数用于生成所有括号的有效组合。
 ---
 ## 22. Generate Parentheses | Medium

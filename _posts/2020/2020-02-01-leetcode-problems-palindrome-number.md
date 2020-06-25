@@ -5,7 +5,7 @@ date:   2020-02-01 10:09:21 +0800
 author: mistydew
 comments: true
 category: 力扣题解
-tags: LeetCode
+tags: LeetCode Math
 excerpt: 判断一个整数是否为回文数。
 ---
 ## 9. Palindrome Number | Easy
