@@ -133,14 +133,8 @@ excerpt: Here are my favorite quotes from someones that inspire me or make me la
 > * One often meets his destiny on the road he takes to avoid it.
 > * Nothing is impossible.
 
-> Martin Luther King, Jr.:
-> * In the End, we will remember not the words of our enemies, but the silence of our friends.
-
-> Mahatma Gandhi:
-> * First they ignore you, then they laugh at you, then they fight you, then you win.
-
-> Evelyn Beatrice Hall:
-> * I do not agree with what you have to say, but I'll defend to the death your right to say it.
+> Socrates:
+> * The unexamined life is not worth living.
 
 > Thirteen Virtues, The Autobiography of Benjamin Franklin:
 > * Temperance. Eat not to dullness; drink not to elevation.
@@ -156,6 +150,15 @@ excerpt: Here are my favorite quotes from someones that inspire me or make me la
 > * Tranquility. Be not disturbed at trifles, or at accidents common or unavoidable.
 > * Chastity. Rarely use venery but for health or offspring, never to dullness, weakness, or the injury of your own or another's peace or reputation.
 > * Humility. Imitate Jesus and Socrates.
+
+> Martin Luther King, Jr.:
+> * In the End, we will remember not the words of our enemies, but the silence of our friends.
+
+> Mahatma Gandhi:
+> * First they ignore you, then they laugh at you, then they fight you, then you win.
+
+> Evelyn Beatrice Hall:
+> * I do not agree with what you have to say, but I'll defend to the death your right to say it.
 
 > George Orwell:
 > * The very concept of objective truth is fading out of the world.
@@ -229,7 +232,7 @@ excerpt: Here are my favorite quotes from someones that inspire me or make me la
 > 私たちは、詰め詰め、皆さんの心に残る歌曲を妥協せずに作れ続けていきたい。そういう一心で今まで制作をしてきました。私たちは解散しますけれども、歌曲は生きています。皆さんの心の中で、ふとした瞬間、また皆さんの人生の不思議の瞬間に、私たちの歌曲がまた流れて、そして皆さんの人生がもっともっと実り多いものであるように、そう願っています。これからも私たちの作り上げてきた作品をどうぞ大切に聴いてください、よろしくお願いします。
 > そして、今日はラストライブですけれども、最後にこのような大きな春舞台を用意してくださいましたスタッフ、関係者の皆さんにもここで改めて感謝を致したいと思います。そして何より、今まで些細でくださいましたファンの皆さんにもう一度心からお礼を申し上げます。15年間とありがとうございました。13年間とありがとうございました。ちょっと2歳差は呼んちゃいました。
 > では本当に皆さんには感謝と、そして感動ありがとうと、言ったいんですけれども、本当にありがとうという言葉以外に、感謝をお伝えする言葉が見つかれなくて、本当にもっと感心ですけれども、最後に、聞いていただこうと思う曲は、私たちがこの曲で皆さんに知ってもらえるきっかけになった。大切な曲を聞いていただこうと思います。15年間の感謝を込めて、13年間の、感謝…
-> なんで15年になっちゃったのかな？(おかもっち：下積みやね。)下積みと…下積みも数えて…(古井：下積みも数えて15年、いいじゃないすか。)
+> なんで15年になっちゃったのかな？（おかもっち：下積みやね。）下積みと…下積みも数えて…（古井：下積みも数えて15年、いいじゃないすか。）
 > 最後に、お聞きいただこうと思う曲は、この曲で私たちも、皆さんとお会えできるように、ライブをそれきっかけになったり、メディアに出るきっかけになったり、夜奥の皆さんにGARNET CROWの名前を知ってもらえるきっかけになった。大切な曲を聞いてお別れしたいと思います。13年間の感謝を込めて歌いたいと思います。皆さん、本日はどうもありがとうございました。そしてどうぞお元気で。今までありがとうございました。
 > * では、終わりに近ついて参りましたけれども、最後の曲は、私たちから皆さんへ13年間の感謝の気持ちを込めまして、ここで未発表曲を一曲聞いていただこうと思います。今日は本当に楽しい時間をどうもありがとうございました。それでは、聞いてください、バタフライ・ノット。
 
