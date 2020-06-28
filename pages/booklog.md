@@ -99,6 +99,7 @@ excerpt: Here are some books I read.
 > * 谁“害”了北大学生，[中] 群言
 
 > ### 传记
+> * 歌舞伎町案内人，[中] 李小牧
 > * 天生有罪 特雷弗·诺亚的变色人生，[南非] Trevor Noah
 > * 本杰明·富兰克林自传，[美] Benjamin Franklin
 > * 永久记录 美国政府监控全世界网络信息的真相，[美] Edward Snowden
