@@ -219,9 +219,6 @@ excerpt: Here are my favorite quotes from someones that inspire me or make me la
 > AZUKI 七「GARNET CROW クリスタル・ゲージ」：
 > * 何処にいても揺るがぬ ideology、善悪の基準はすべての人に共通じゃない。
 
-> AZUKI 七「GARNET CROW 夢みたあとで」：
-> * 望まなければ失わないのに、求めずにはいられないよ、どんな未来がこの先にあっても。
-
 > Joan Baez「Garnet Time 02 AZUKI'S NIGHT」：
 > * 人はどう死ぬか、いつ死ぬか選択できない。どう生きるか、これだけは決められる。さあ決めるのです。
 > * You don't get to choose how you're going to die, or when. You can only decide how you're going to live. Now.
