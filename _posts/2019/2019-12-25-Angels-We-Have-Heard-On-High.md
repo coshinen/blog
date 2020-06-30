@@ -64,9 +64,9 @@ excerpt: Angels we have heard on high, sweetly singing o'er the plains, and the 
   </p>
 </div>
 
-「Gloria in excelsis Deo」是拉丁语，意思是「Glory to God in the highest（荣耀归于至高的上帝）」。
+「Gloria in excelsis Deo」是拉丁语，意思是荣耀归于至高的上帝（Glory to God in the highest）。
 
-「Bethlehem（伯利恒、白冷）」是巴勒斯坦南部的一个小城市，希伯来语原意为面包之家，是耶稣的出生地。
+伯利恒（Bethlehem），又叫白冷是巴勒斯坦南部的一个小城市，希伯来语原意为面包之家，是耶稣的出生地。
 
 ## 参考链接
 

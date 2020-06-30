@@ -12,7 +12,8 @@ excerpt: 明日になれば、涙が乾く、心も色づいて来る。笑顔�
 
 歌手：伊織<br>
 作詞：阿久悠<br>
-作曲：大野克夫
+作曲：大野克夫<br>
+編曲：大野克夫
 
 <blockquote class="lyric-original">
   <h2>ぼくがいる</h2>

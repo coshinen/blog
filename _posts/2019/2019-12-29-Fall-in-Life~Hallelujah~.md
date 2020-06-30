@@ -149,7 +149,7 @@ excerpt: 暮れゆく空おセンチな気分。海辺のDrive、まだみたこ
 
 「おセンチ」表示稍微有点伤感的表现。
 
-「Hallelujah」是希伯来语，意思是「Praise you, Jehovah（赞美你，耶和华）」。
+「Hallelujah」是希伯来语，意思是赞美你，耶和华（Praise you, Jehovah）。
 
 ## 参考链接
 

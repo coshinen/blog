@@ -75,9 +75,9 @@ excerpt: 太陽が色彩(いろ)を連れて、この町を照らしはじめる
   </p>
 </div>
 
-「Aranjuez（阿兰胡埃斯）」是西班牙一个地方。
+阿兰胡埃斯（Aranjuez）是西班牙一个地方。
 
-「Concierto de Aranjuez（阿兰胡埃斯协奏曲）」是西班牙盲人作曲家「Joaquin Rodrigo」创作的吉他曲。
+阿兰胡埃斯协奏曲（Concierto de Aranjuez）是西班牙盲人作曲家「Joaquin Rodrigo」创作的吉他曲。
 
 ## 参考链接
 

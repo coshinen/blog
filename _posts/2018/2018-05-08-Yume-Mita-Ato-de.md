@@ -117,8 +117,6 @@ excerpt: 朝が来るたび君のことを想う、一日の始まりさえも�
   </p>
 </div>
 
-曲子是中村由利学生时代的处女作。
-
 ## 参考链接
 
 * [GARNET CROW 夢みたあとで 歌詞 - 歌ネット](https://www.uta-net.com/song/15314){:target="_blank"}

@@ -75,4 +75,3 @@ excerpt: おいでやす うちの故郷は お寺や 神社だけじゃない�
 * [120402横山由依ご当地替え歌 - YouTube](https://youtu.be/G4ngewwE50w){:target="_blank"}
 * [京都銘菓「おたべ」公式ブランドサイト](http://otabe.kyoto.jp){:target="_blank"}
 * [kyobaum kyoto japan 京ばあむ](http://kyobaum.shop){:target="_blank"}
-* [国産大豆100％ 京ゆば・上田湯葉店](http://www.ueda-yuba.co.jp){:target="_blank"}
