@@ -105,7 +105,7 @@ Songwriters: Benny Andersson, Björn Ulvaeus & Stig Anderson
   </p>
 </div>
 
-「digging」意思是「appreciating（欣赏）」，「dig in」没有意义。
+「digging」是欣赏（appreciating）的意思，而「dig in」没有意义。
 
 ## 参考链接
 

@@ -22,8 +22,9 @@ tags: Blockchain Bitcoin Bitcoin-Address
 ## 源码剖析
 
 要想让比特币启动时就生成指定地址前缀（长度大于 1）的公钥地址，就需要修改源码了。
-共需要修改 3 个函数：<br>
-1.GenerateNewKey 函数，位于“wallet/wallet.cpp”文件中。
+共需要修改 3 个函数：
+
+第一步，GenerateNewKey 函数，位于“wallet/wallet.cpp”文件中。
 该函数的作用是生成一个私钥，并返回对应的公钥。
 实现：生成私钥，获取公钥地址，对比地址前缀，不满足则重复以上过程，直至找到指定前缀的地址。
 
@@ -61,7 +62,7 @@ CPubKey CWallet::GenerateNewKey()
 }
 ```
 
-2.RPC 命令 getnewaddress 函数，位于“wallet/rpcwallet.cpp”文件中。
+第二步，RPC 命令 getnewaddress 函数，位于“wallet/rpcwallet.cpp”文件中。
 该函数的作用是通过比特币核心客户端该调用 RPC 命令，获取一个新的公钥地址。
 这里只需要修改第 6 步，实现同上。
 
@@ -113,7 +114,7 @@ UniValue getnewaddress(const UniValue& params, bool fHelp) // 在指定账户下
 }
 ```
 
-3.RPC 命令 validateaddress 函数，位于“rpcmisc.cpp”文件中。
+第三步，RPC 命令 validateaddress 函数，位于“rpcmisc.cpp”文件中。
 该函数的作用是通过比特币核心客户端该调用 RPC 命令，验证一个公钥地址是否有效。
 
 ```cpp

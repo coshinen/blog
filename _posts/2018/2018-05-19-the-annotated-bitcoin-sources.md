@@ -42,7 +42,7 @@ int main(int argc, char* argv[]) // 0.程序入口
 
 下图为比特币核心服务程序启动过程中函数调用的流程：
 
-![bitcoind-startup](https://mistydew.github.io/assets/images/bitcoin/daemon/v0.12.1.png)
+![bitcoind-startup](https://www.plantuml.com/plantuml/svg/ZLHDJzn03Btlhx3sK6NHHYhqEmS4uWCXqQhgLke1eSeaJjPYuebc713zzVLaTo7XK7g9alUU_JnsF4THCMZVkbcsju0yFxnU9O2bWIxuacAyWNcBB1cB0eQcN4Avnh2Ntk-lRnRpMHwuMMj-2FCLQT-ToJq7Bos9PebDXFYUVvTUXCfdyBZhBeKr6v8EwIR9lcE8P0ziIId45xAaM9Fh0AM2U-FP2x3KVijTa9wYuYc7h4ONQHVpWx0wyL9pSywEiXQxuz349TZBrzuffw-TTaNEwXrAYDd96bc-OKldmRSdlctD-8g5iiLENcx0t1cQwknJ2o945DP7QngLTrjbXTHwuJ-ex6MBnTGxY1JiC5ieTUVADmrBaor6s5DJBiKUMAOiBxjwaEaw45ONmVVT4gBPLxsZC9sNKWVx1GpUHZnX1mLqEnFWPvSu5hqRYNBr-Q0JT7dji9aetnU0NUUuHDsCYPNHRSzVGCK1d2_lbh1h32sXuwfcHuRHRTyOtumpVYZIqBb-X0TqZjGY5Mynqb1j4wpZO_d70eJqmOUx5-PZqQV2NB22srHB-ibvGd_Uq5l3CVEb6EpJEQXK7nwXnLI6e9Gq5kw_BO3RpWVTcCG9cGQXQ9puQXfcuwXPEDeC_tlAN5kqRmb-KjGvw9fa1iE2Q-Z9bleNifxxi5htMla7oTwCKbaym63qH1j4BfBXbYAjLCen_82XxpHxFLWghl-n-CQyUj6OyvbKaxl9RgtPaUNkM_SN)
 
 > 比特币核心服务程序启动流程：
 > 1. [SetupEnvironment()](/blog/2018/05/the-annotated-bitcoin-sources-01.html#SetupEnvironment-ref)<br>
@@ -97,9 +97,9 @@ int main(int argc, char* argv[]) // 0.程序入口
 > > >     步骤 11：启动节点
 > > > 12. [Step 12: finished]()<br>
 > > >     步骤 12：完成
-> > 12. [WaitForShutdown]()<br>
+> > 12. [WaitForShutdown(&threadGroup)]()<br>
 > >     等待关闭：根据启动标志做出相应处理
-> > 13. [Shutdown]()<br>
+> > 13. [Shutdown()]()<br>
 > >     关闭
 
 ## 参考链接

@@ -16,13 +16,13 @@ tags: Design-Patterns C/C++ GC
 
 ## 实现方法
 
-0. 声明该类的默认构造函数为私有，防止在类外实例化。
-1. 使用 static 关键字保证只实例化一次。
-2. 提供一个静态方法，返回对实例的引用。
+1. 声明该类的默认构造函数为私有，防止在类外实例化。
+2. 使用 static 关键字保证只实例化一次。
+3. 提供一个静态方法，返回对实例的引用。
 
 基础类图：
 
-![singleton](https://mistydew.github.io/assets/images/designpatterns/singleton.svg)
+![singleton](https://www.plantuml.com/plantuml/svg/JOwnoi90383tF4Mcd_QNmWrEJdNit2Suqr23rrGkAOAbx-uXg1s_vFj2MlEOVPaI6CN4U0m17pBu5UmcUeyvJaWfcftTirmMvuvcxUN96E2zm5vqJEophe2ubdikj65Zdp6UVif_KPelLVM-E8pidHPIughULt-mGSiwb3TV)
 
 ## 实现一（饱/懒汉式 + 栈空间/自动销毁 + 非线程安全）
 
