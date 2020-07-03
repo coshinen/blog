@@ -33,7 +33,7 @@ excerpt: Here are some books I read.
 > * 编程之美 —微软技术面试心得，[中] 《编程之美》小组
 > * 剑指 Offer 名企面试官精讲典型编程题，[中] 何海涛
 > * 啊哈！算法，[中] 啊哈磊
-> * 图解密码技术（第3版），[日] [結城浩](http://www.hyuki.com){:target="_blank"}
+> * 图解密码技术（第3版），[日] [結城浩](https://www.hyuki.com){:target="_blank"}
 > * C++ 数据结构与算法（第4版），[美] Adam Drozdek
 > * 数据结构（C++ 语言版 第3版），[中] [邓俊辉](https://dsa.cs.tsinghua.edu.cn/~deng/index.htm){:target="_blank"}
 > * 大话数据结构，[中] 程杰
@@ -46,7 +46,7 @@ excerpt: Here are some books I read.
 > * [Bitcoin: A Peer-to-Peer Electronic Cash System](/blog/2018/04/Bitcoin-A-Peer-to-Peer-Electronic-Cash-System.html)，[?] Satoshi Nakamoto
 
 > ### 编程语言
-> * Linux/UNIX 系统编程手册（上、下册），[德] [Michael Kerrisk](http://man7.org){:target="_blank"}
+> * Linux/UNIX 系统编程手册（上、下册），[德] [Michael Kerrisk](https://man7.org){:target="_blank"}
 > * STL 源码剖析，[中] 侯捷
 > * C++ 标准程序库，[德] Nicolai M.Josuttis
 > * C++ 沉思录，[美] Andrew Koenig, Barbara Moo
@@ -76,7 +76,7 @@ excerpt: Here are some books I read.
 > * [Google Style Guides](https://google.github.io/styleguide){:target="_blank"}，[美] Google
 > * 你的灯亮着吗？发现问题的真正所在，[美] Donald C. Gause, Gerald M. Weinberg
 > * [How To Ask Questions The Smart Way](http://www.catb.org/~esr/faqs/smart-questions.html){:target="_blank"}，[美] Eric S. Raymond, Rick Moen
-> * [快乐的 Linux 命令行](http://billie66.github.com/TLCL){:target="_blank"}，[美] William Shotts
+> * [快乐的 Linux 命令行](https://billie66.github.io/TLCL/){:target="_blank"}，[美] William Shotts
 > * [中文文案排案指北](https://github.com/sparanoid/chinese-copywriting-guidelines){:target="_blank"}，[中] Tunghsiao Liu
 > * [中文技术文档的写作规范](https://github.com/ruanyf/document-style-guide){:target="_blank"}，[中] 阮一峰
 
@@ -84,11 +84,11 @@ excerpt: Here are some books I read.
 
 > ### 文集
 > * 王小波全集 第一、二卷 杂文，[中] 王小波
-> * 暗时间，[中] [刘未鹏](http://mindhacks.cn){:target="_blank"}
+> * 暗时间，[中] [刘未鹏](https://mindhacks.cn){:target="_blank"}
 > * 黑客与画家 硅谷创业之父 Paul Graham 文集，[美] [Paul Graham](http://www.paulgraham.com){:target="_blank"}
-> * [前方的路](http://www.ruanyifeng.com/road){:target="_blank"}，[中] 阮一峰
-> * [未来世界的幸存者](http://www.ruanyifeng.com/survivor){:target="_blank"}，[中] 阮一峰
-> * 如何变得有思想 阮一峰博客文集，[中] [阮一峰](http://www.ruanyifeng.com/blog){:target="_blank"}
+> * [前方的路](https://www.ruanyifeng.com/road/){:target="_blank"}，[中] 阮一峰
+> * [未来世界的幸存者](https://www.ruanyifeng.com/survivor/){:target="_blank"}，[中] 阮一峰
+> * 如何变得有思想 阮一峰博客文集，[中] [阮一峰](https://www.ruanyifeng.com/blog/){:target="_blank"}
 > * [新生 七年就是一辈子](https://b.xinshengdaxue.com){:target="_blank"}，[中] 李笑来
 > * [把时间当作朋友 运用心智 获得解放](http://lixiaolai.com/#/befriending-time/){:target="_blank"}，[中] 李笑来
 > * 80,0 AZUKI NANA photo & anthology，[日] AZUKI 七
@@ -117,7 +117,7 @@ excerpt: Here are some books I read.
 > * 你的名字。，[日] 新海誠
 > * 言叶之庭，[日] 新海誠
 > * 秒速五厘米，[日] [新海誠](http://shinkaimakoto.jp){:target="_blank"}
-> * 冰与火之歌，[美] [George R.R. Martin](http://www.georgerrmartin.com){:target="_blank"}
+> * 冰与火之歌，[美] [George R.R. Martin](https://www.georgerrmartin.com){:target="_blank"}
 > * 失落的世界，[英] Arthur Conan Doyle
 > * 兔子共和国，[英] Richard Adams
 > * 动物农场，[英] [George Orwell](https://www.george-orwell.com){:target="_blank"}
@@ -172,7 +172,7 @@ excerpt: Here are some books I read.
 > ### 方法论
 > * 子弹笔记术，[日] 杉野干人
 > * 单核工作法图解 事多到事少，拖延变高效，[瑞典] Staffan Nöteberg
-> * 番茄工作法图解 简单易行的时间管理方法，[瑞典] [Staffan Nöteberg](http://staffannoteberg.com){:target="_blank"}
+> * 番茄工作法图解 简单易行的时间管理方法，[瑞典] [Staffan Nöteberg](https://staffannoteberg.com){:target="_blank"}
 > * 一万小时天才理论，[美] Daniel Coyle
 > * 刻意练习 如何从新手到大师，[美] Anders Ericsson, Robert Pool
 
