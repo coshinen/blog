@@ -213,10 +213,7 @@ excerpt: Here are my favorite quotes from someones that inspire me or make me la
 > 葉子先生酱「新标日 初级课堂 第二季」：
 > * 葉子先生の、日本語教室へようこそ！君、力が欲しいか？あっ、チャンネル間違いだ。
 
-> みきとP「りぶ サリシノハラ」：
-> * 戯言なんて無視しなよ。人はヒヨリミなんだしょうがない。
-
-> AZUKI 七「GARNET CROW クリスタル・ゲージ」：
+> AZUKI 七「[GARNET CROW クリスタル・ゲージ](/blog/2018/09/Crystal-Gauge.html)」：
 > * 何処にいても揺るがぬ ideology、善悪の基準はすべての人に共通じゃない。
 
 > Joan Baez「Garnet Time 02 AZUKI'S NIGHT」：
@@ -468,7 +465,7 @@ excerpt: Here are my favorite quotes from someones that inspire me or make me la
 > The emotional qualities are antagonistic to clear reasoning.
 
 > Sherlock Holmes, [Sign of the Four, The Science of Deduction](https://www.pagebypagebooks.com/Arthur_Conan_Doyle/Sign_of_the_Four/The_Science_of_Deduction_p5.html){:target="_blank"}:
-> * I never guess. It is a shocking habit,--destructive to the logical faculty.
+> * I never guess. It is a shocking habit,\--destructive to the logical faculty.
 
 > Sherlock Holmes, [Sign of the Four, The Science of Deduction](https://www.pagebypagebooks.com/Arthur_Conan_Doyle/Sign_of_the_Four/The_Science_of_Deduction_p4.html){:target="_blank"}:
 > * Eliminate all other factors, and the one which remains must be the truth.
