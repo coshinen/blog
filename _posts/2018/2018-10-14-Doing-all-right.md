@@ -97,5 +97,5 @@ excerpt: Doing all right!かみしめた君の記憶 木漏れ日の匂い、置
 
 ## 参考链接
 
-* [GARNET CROW Doing all right 歌詞 - 歌ネット](https://www.uta-net.com/song/79833){:target="_blank"}
+* [GARNET CROW Doing all right 歌詞 - 歌ネット](https://www.uta-net.com/song/79833/){:target="_blank"}
 * [Doing all right Lyrics \| GARNET CROW music diary](https://crowsub.github.io/lyrics/original/Doing%20all%20right.html){:target="_blank"}

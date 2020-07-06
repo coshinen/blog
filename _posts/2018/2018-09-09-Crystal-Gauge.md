@@ -125,5 +125,5 @@ excerpt: La La tu lu Rah Ta、緑の木漏れ日。目を閉じたら、スベ�
 
 ## 参考链接
 
-* [GARNET CROW クリスタル・ゲージ 歌詞 - 歌ネット](https://www.uta-net.com/song/16488){:target="_blank"}
+* [GARNET CROW クリスタル・ゲージ 歌詞 - 歌ネット](https://www.uta-net.com/song/16488/){:target="_blank"}
 * [クリスタル・ゲージ Lyrics \| GARNET CROW music diary](https://crowsub.github.io/lyrics/original/クリスタル・ゲージ.html){:target="_blank"}

@@ -101,5 +101,5 @@ excerpt: ほんの少し軽い眠りをとったって満たされやしない�
 
 ## 参考链接
 
-* [GARNET CROW 夏の終わりの長い雨 歌詞 - 歌ネット](https://www.uta-net.com/song/20150){:target="_blank"}
+* [GARNET CROW 夏の終わりの長い雨 歌詞 - 歌ネット](https://www.uta-net.com/song/20150/){:target="_blank"}
 * [夏の終わりの長い雨 Lyrics \| GARNET CROW music diary](https://crowsub.github.io/lyrics/original/夏の終わりの長い雨.html){:target="_blank"}

@@ -131,5 +131,5 @@ excerpt: 風の音だけが、体中を包む。サイレント・Kiss、夢に�
 
 ## 参考链接
 
-* [GARNET CROW Over Drive 歌詞 - 歌ネット](https://www.uta-net.com/song/93464){:target="_blank"}
+* [GARNET CROW Over Drive 歌詞 - 歌ネット](https://www.uta-net.com/song/93464/){:target="_blank"}
 * [Over Drive Lyrics \| GARNET CROW music diary](https://crowsub.github.io/lyrics/original/Over%20Drive.html){:target="_blank"}

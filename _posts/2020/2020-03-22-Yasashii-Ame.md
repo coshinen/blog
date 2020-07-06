@@ -85,5 +85,5 @@ excerpt: 全速力でも かけ抜けた、あの路地は今とても狭く。�
 
 ## 参考链接
 
-* [GARNET CROW やさしい雨 歌詞 - 歌ネット](https://www.uta-net.com/song/45945){:target="_blank"}
+* [GARNET CROW やさしい雨 歌詞 - 歌ネット](https://www.uta-net.com/song/45945/){:target="_blank"}
 * [やさしい雨 Lyrics \| GARNET CROW music diary](https://crowsub.github.io/lyrics/original/やさしい雨.html){:target="_blank"}

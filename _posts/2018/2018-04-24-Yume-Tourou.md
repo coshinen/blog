@@ -64,4 +64,4 @@ excerpt: あぁ、このまま僕たちの声が 世界の端っこまで消え�
 
 ## 参考链接
 
-* [RADWIMPS 夢灯籠 歌詞 - 歌ネット](https://www.uta-net.com/song/213758){:target="_blank"}
+* [RADWIMPS 夢灯籠 歌詞 - 歌ネット](https://www.uta-net.com/song/213758/){:target="_blank"}

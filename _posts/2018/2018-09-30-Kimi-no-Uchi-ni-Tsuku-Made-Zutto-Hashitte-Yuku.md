@@ -132,5 +132,5 @@ excerpt: 新しいコートに着替えて、気分を変えて飛び出した�
 
 ## 参考链接
 
-* [GARNET CROW 君の家に着くまでずっと走ってゆく 歌詞 - 歌ネット](https://www.uta-net.com/song/20130){:target="_blank"}
+* [GARNET CROW 君の家に着くまでずっと走ってゆく 歌詞 - 歌ネット](https://www.uta-net.com/song/20130/){:target="_blank"}
 * [君の家に着くまでずっと走ってゆく Lyrics \| GARNET CROW music diary](https://crowsub.github.io/lyrics/original/君の家に着くまでずっと走ってゆく.html){:target="_blank"}

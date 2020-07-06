@@ -107,5 +107,5 @@ excerpt: 気づけば温もり求めて心が彷徨うことない？
 
 ## 参考链接
 
-* [GARNET CROW Crier Girl & Crier Boy 〜ice cold sky〜 歌詞 - 歌ネット](https://www.uta-net.com/song/20137){:target="_blank"}
+* [GARNET CROW Crier Girl & Crier Boy 〜ice cold sky〜 歌詞 - 歌ネット](https://www.uta-net.com/song/20137/){:target="_blank"}
 * [Crier Girl & Crier Boy 〜ice cold sky〜 Lyrics \| GARNET CROW music diary](https://crowsub.github.io/lyrics/original/Crier%20Girl%20&%20Crier%20Boy%20〜ice%20cold%20sky〜.html){:target="_blank"}

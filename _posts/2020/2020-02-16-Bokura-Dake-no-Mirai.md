@@ -119,5 +119,5 @@ excerpt: 生まれ変われるなら、早く君にあいたい。通り過ぎ�
 
 ## 参考链接
 
-* [GARNET CROW 僕らだけの未来 歌詞 - 歌ネット](https://www.uta-net.com/song/18459){:target="_blank"}
+* [GARNET CROW 僕らだけの未来 歌詞 - 歌ネット](https://www.uta-net.com/song/18459/){:target="_blank"}
 * [僕らだけの未来 Lyrics \| GARNET CROW music diary](https://crowsub.github.io/lyrics/original/僕らだけの未来.html){:target="_blank"}

@@ -91,5 +91,5 @@ excerpt: 冷えた 空から 溶け込む 淡い雪、すべては この大地�
 
 ## 参考链接
 
-* [GARNET CROW 冷たい影 歌詞 - 歌ネット](https://www.uta-net.com/song/25896){:target="_blank"}
+* [GARNET CROW 冷たい影 歌詞 - 歌ネット](https://www.uta-net.com/song/25896/){:target="_blank"}
 * [冷たい影 Lyrics \| GARNET CROW music diary](https://crowsub.github.io/lyrics/original/冷たい影.html){:target="_blank"}

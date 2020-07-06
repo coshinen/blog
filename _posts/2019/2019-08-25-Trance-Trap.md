@@ -125,5 +125,5 @@ excerpt: 君の手の内で トランス、偶然に見せかけられた トラ
 
 ## 参考链接
 
-* [GARNET CROW トランス・トラップ 歌詞 - 歌ネット](https://www.uta-net.com/song/20128){:target="_blank"}
+* [GARNET CROW トランス・トラップ 歌詞 - 歌ネット](https://www.uta-net.com/song/20128/){:target="_blank"}
 * [トランス・トラップ Lyrics \| GARNET CROW music diary](https://crowsub.github.io/lyrics/original/トランス・トラップ.html){:target="_blank"}

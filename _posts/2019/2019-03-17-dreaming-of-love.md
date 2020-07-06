@@ -135,5 +135,5 @@ excerpt: ため息ひとつ落ちた週末の、どうしようもない感じ�
 
 ## 参考链接
 
-* [GARNET CROW dreaming of love 歌詞 - 歌ネット](https://www.uta-net.com/song/20147){:target="_blank"}
+* [GARNET CROW dreaming of love 歌詞 - 歌ネット](https://www.uta-net.com/song/20147/){:target="_blank"}
 * [dreaming of love Lyrics \| GARNET CROW music diary](https://crowsub.github.io/lyrics/original/dreaming%20of%20love.html){:target="_blank"}

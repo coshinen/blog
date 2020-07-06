@@ -123,5 +123,5 @@ excerpt: 君のいない未来が、ただ大きな闇にみえ。死んでし�
 
 ## 参考链接
 
-* [GARNET CROW Holy ground 歌詞 - 歌ネット](https://www.uta-net.com/song/20142){:target="_blank"}
+* [GARNET CROW Holy ground 歌詞 - 歌ネット](https://www.uta-net.com/song/20142/){:target="_blank"}
 * [Holy ground Lyrics \| GARNET CROW music diary](https://crowsub.github.io/lyrics/original/Holy%20ground.html){:target="_blank"}

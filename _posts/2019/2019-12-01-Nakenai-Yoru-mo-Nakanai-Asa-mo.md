@@ -101,5 +101,5 @@ excerpt: 無防備に求めることに線を引いた 愛しさだけなら、�
 
 ## 参考链接
 
-* [GARNET CROW 泣けない夜も 泣かない朝も 歌詞 - 歌ネット](https://www.uta-net.com/song/17628){:target="_blank"}
+* [GARNET CROW 泣けない夜も 泣かない朝も 歌詞 - 歌ネット](https://www.uta-net.com/song/17628/){:target="_blank"}
 * [泣けない夜も 泣かない朝も Lyrics \| GARNET CROW music diary](https://crowsub.github.io/lyrics/original/泣けない夜も%20泣かない朝も.html){:target="_blank"}

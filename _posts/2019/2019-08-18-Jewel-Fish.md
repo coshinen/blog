@@ -117,5 +117,5 @@ excerpt: 走り出したら通り雨、もう一休みしてる。待ちきれ�
 
 ## 参考链接
 
-* [GARNET CROW Jewel Fish 歌詞 - 歌ネット](https://www.uta-net.com/song/20144){:target="_blank"}
+* [GARNET CROW Jewel Fish 歌詞 - 歌ネット](https://www.uta-net.com/song/20144/){:target="_blank"}
 * [Jewel Fish Lyrics \| GARNET CROW music diary](https://crowsub.github.io/lyrics/original/Jewel%20Fish.html){:target="_blank"}

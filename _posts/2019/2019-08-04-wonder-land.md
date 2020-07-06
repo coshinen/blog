@@ -121,5 +121,5 @@ excerpt: 雨上がりは ふと 空見上げる、何気ない仕草しみつい
 
 ## 参考链接
 
-* [GARNET CROW wonder land 歌詞 - 歌ネット](https://www.uta-net.com/song/20126){:target="_blank"}
+* [GARNET CROW wonder land 歌詞 - 歌ネット](https://www.uta-net.com/song/20126/){:target="_blank"}
 * [wonder land Lyrics \| GARNET CROW music diary](https://crowsub.github.io/lyrics/original/wonder%20land.html){:target="_blank"}

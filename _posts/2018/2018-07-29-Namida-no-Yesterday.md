@@ -121,5 +121,5 @@ excerpt: 流星がこぼれた夏の空、願いこめた。いつもあの人�
 
 ## 参考链接
 
-* [GARNET CROW 涙のイエスタデー 歌詞 - 歌ネット](https://www.uta-net.com/song/55020){:target="_blank"}
+* [GARNET CROW 涙のイエスタデー 歌詞 - 歌ネット](https://www.uta-net.com/song/55020/){:target="_blank"}
 * [涙のイエスタデー Lyrics \| GARNET CROW music diary](https://crowsub.github.io/lyrics/original/涙のイエスタデー.html){:target="_blank"}

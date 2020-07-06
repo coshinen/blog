@@ -151,5 +151,5 @@ excerpt: 薄明かりを灯して、冷たい壁に 頬寄せ。静寂に 耳を
 
 ## 参考链接
 
-* [GARNET CROW Marionette Fantasia 歌詞 - 歌ネット](https://www.uta-net.com/song/20214){:target="_blank"}
+* [GARNET CROW Marionette Fantasia 歌詞 - 歌ネット](https://www.uta-net.com/song/20214/){:target="_blank"}
 * [Marionette Fantasia Lyrics \| GARNET CROW music diary](https://crowsub.github.io/lyrics/original/Marionette%20Fantasia.html){:target="_blank"}

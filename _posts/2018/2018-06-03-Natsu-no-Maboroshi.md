@@ -133,5 +133,5 @@ excerpt: 部屋の窓の向こうに、飛行機雲を なぞって。今日ケ�
 
 ## 参考链接
 
-* [GARNET CROW 夏の幻 歌詞 - 歌ネット](https://www.uta-net.com/song/12675){:target="_blank"}
+* [GARNET CROW 夏の幻 歌詞 - 歌ネット](https://www.uta-net.com/song/12675/){:target="_blank"}
 * [夏の幻 Lyrics \| GARNET CROW music diary](https://crowsub.github.io/lyrics/original/夏の幻.html){:target="_blank"}

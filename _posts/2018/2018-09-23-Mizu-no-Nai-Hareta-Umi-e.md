@@ -97,5 +97,5 @@ excerpt: 水のない晴れた海へ、たどり着いた white mermaid。夢に
 
 ## 参考链接
 
-* [GARNET CROW 水のない晴れた海へ 歌詞 - 歌ネット](https://www.uta-net.com/song/20148){:target="_blank"}
+* [GARNET CROW 水のない晴れた海へ 歌詞 - 歌ネット](https://www.uta-net.com/song/20148/){:target="_blank"}
 * [水のない晴れた海へ Lyrics \| GARNET CROW music diary](https://crowsub.github.io/lyrics/original/水のない晴れた海へ.html){:target="_blank"}

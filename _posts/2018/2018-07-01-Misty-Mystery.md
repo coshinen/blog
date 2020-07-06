@@ -153,5 +153,5 @@ excerpt: why 見えぬ明日へと、期待込め歩いてるの。まだ君を�
 
 ## 参考链接
 
-* [GARNET CROW Misty Mystery 歌詞 - 歌ネット](https://www.uta-net.com/song/117216){:target="_blank"}
+* [GARNET CROW Misty Mystery 歌詞 - 歌ネット](https://www.uta-net.com/song/117216/){:target="_blank"}
 * [Misty Mystery Lyrics \| GARNET CROW music diary](https://crowsub.github.io/lyrics/original/Misty%20Mystery.html){:target="_blank"}

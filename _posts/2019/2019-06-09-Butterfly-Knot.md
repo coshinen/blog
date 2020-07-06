@@ -93,5 +93,5 @@ excerpt: ねぇ何を話そうか…もう夜が来てしまう、遠い道の�
 
 ## 参考链接
 
-* [GARNET CROW バタフライ・ノット 歌詞 - 歌ネット](https://www.uta-net.com/song/153420){:target="_blank"}
+* [GARNET CROW バタフライ・ノット 歌詞 - 歌ネット](https://www.uta-net.com/song/153420/){:target="_blank"}
 * [バタフライ・ノット Lyrics \| GARNET CROW music diary](https://crowsub.github.io/lyrics/original/バタフライ・ノット.html){:target="_blank"}

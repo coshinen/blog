@@ -99,5 +99,5 @@ excerpt: 永い夜が朝が昼が すべてのらりくらり流れゆくよ、�
 
 ## 参考链接
 
-* [GARNET CROW 世界はまわると言うけれど 歌詞 - 歌ネット](https://www.uta-net.com/song/58595){:target="_blank"}
+* [GARNET CROW 世界はまわると言うけれど 歌詞 - 歌ネット](https://www.uta-net.com/song/58595/){:target="_blank"}
 * [世界はまわると言うけれど Lyrics \| GARNET CROW music diary](https://crowsub.github.io/lyrics/original/世界はまわると言うけれど.html){:target="_blank"}

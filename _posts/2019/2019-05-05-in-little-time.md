@@ -115,5 +115,5 @@ excerpt: 十二月にしては暖かいこんな夜は、思いつきで出か�
 
 ## 参考链接
 
-* [GARNET CROW in little time 歌詞 - 歌ネット](https://www.uta-net.com/song/20143){:target="_blank"}
+* [GARNET CROW in little time 歌詞 - 歌ネット](https://www.uta-net.com/song/20143/){:target="_blank"}
 * [in little time Lyrics \| GARNET CROW music diary](https://crowsub.github.io/lyrics/original/in%20little%20time.html){:target="_blank"}

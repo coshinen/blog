@@ -113,5 +113,5 @@ excerpt: Naked story yeah- 無防備でも飛び出したい、感じるまま s
 
 ## 参考链接
 
-* [GARNET CROW Naked Story 歌詞 - 歌ネット](https://www.uta-net.com/song/20127){:target="_blank"}
+* [GARNET CROW Naked Story 歌詞 - 歌ネット](https://www.uta-net.com/song/20127/){:target="_blank"}
 * [Naked Story Lyrics \| GARNET CROW music diary](https://crowsub.github.io/lyrics/original/Naked%20Story.html){:target="_blank"}

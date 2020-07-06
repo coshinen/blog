@@ -166,4 +166,4 @@ excerpt: もう少しだけでいい あと少しだけでいい もう少しだ
 
 ## 参考链接
 
-* [RADWIMPS なんでもないや (movie edit. + movie ver.) 歌詞 - 歌ネット](https://www.uta-net.com/song/213756){:target="_blank"}
+* [RADWIMPS なんでもないや (movie edit. + movie ver.) 歌詞 - 歌ネット](https://www.uta-net.com/song/213756/){:target="_blank"}

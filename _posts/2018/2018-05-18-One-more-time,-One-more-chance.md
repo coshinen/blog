@@ -133,4 +133,4 @@ excerpt: これ以上何を失えば 心は許されるの、どれ程の痛み�
 
 ## 参考链接
 
-* [山崎まさよし One more time, One more chance 歌詞 - 歌ネット](https://www.uta-net.com/song/9778){:target="_blank"}
+* [山崎まさよし One more time, One more chance 歌詞 - 歌ネット](https://www.uta-net.com/song/9778/){:target="_blank"}

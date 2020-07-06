@@ -97,5 +97,5 @@ excerpt: 衝動に任して全部(すべて)終わりにしたくなる時ない
 
 ## 参考链接
 
-* [GARNET CROW Float World 歌詞 - 歌ネット](https://www.uta-net.com/song/59991){:target="_blank"}
+* [GARNET CROW Float World 歌詞 - 歌ネット](https://www.uta-net.com/song/59991/){:target="_blank"}
 * [Float World Lyrics \| GARNET CROW music diary](https://crowsub.github.io/lyrics/original/Float%20World.html){:target="_blank"}

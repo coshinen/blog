@@ -95,5 +95,5 @@ excerpt: 君を飾る花を咲かそう。心をこめて育ててゆくよ、�
 
 ## 参考链接
 
-* [GARNET CROW 君を飾る花を咲かそう 歌詞 - 歌ネット](https://www.uta-net.com/song/19180){:target="_blank"}
+* [GARNET CROW 君を飾る花を咲かそう 歌詞 - 歌ネット](https://www.uta-net.com/song/19180/){:target="_blank"}
 * [君を飾る花を咲かそう Lyrics \| GARNET CROW music diary](https://crowsub.github.io/lyrics/original/君を飾る花を咲かそう.html){:target="_blank"}

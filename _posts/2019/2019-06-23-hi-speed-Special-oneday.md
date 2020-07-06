@@ -143,5 +143,5 @@ excerpt: コーヒーは最初の一口、甘いケーキの端っこ、ポテ�
 
 ## 参考链接
 
-* [GARNET CROW hi-speed スペシャル oneday 歌詞 - 歌ネット](https://www.uta-net.com/song/20133){:target="_blank"}
+* [GARNET CROW hi-speed スペシャル oneday 歌詞 - 歌ネット](https://www.uta-net.com/song/20133/){:target="_blank"}
 * [hi-speed スペシャル oneday Lyrics \| GARNET CROW music diary](https://crowsub.github.io/lyrics/original/hi-speed%20スペシャル%20oneday.html){:target="_blank"}

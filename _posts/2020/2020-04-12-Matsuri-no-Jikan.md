@@ -73,5 +73,5 @@ excerpt: 夕焼けのオレンジ色残すような明りを灯しだす。秋�
 
 ## 参考链接
 
-* [GARNET CROW 祭りのじかん 歌詞 - 歌ネット](https://www.uta-net.com/song/21026){:target="_blank"}
+* [GARNET CROW 祭りのじかん 歌詞 - 歌ネット](https://www.uta-net.com/song/21026/){:target="_blank"}
 * [祭りのじかん Lyrics \| GARNET CROW music diary](https://crowsub.github.io/lyrics/original/祭りのじかん.html){:target="_blank"}

@@ -109,4 +109,4 @@ excerpt: もしも君に巡り逢えたら 二度と君の手を離さない 春
 
 ## 参考链接
 
-* [倉木麻衣 Time after time 〜花舞う街で〜 歌詞 - 歌ネット](https://www.uta-net.com/song/16899){:target="_blank"}
+* [倉木麻衣 Time after time 〜花舞う街で〜 歌詞 - 歌ネット](https://www.uta-net.com/song/16899/){:target="_blank"}

@@ -89,5 +89,5 @@ excerpt: 君がいなくなってから、何度朝日迎えたかしれない�
 
 ## 参考链接
 
-* [GARNET CROW Timeless Sleep 歌詞一覧リスト - 歌ネット](https://www.uta-net.com/song/20123){:target="_blank"}
+* [GARNET CROW Timeless Sleep 歌詞一覧リスト - 歌ネット](https://www.uta-net.com/song/20123/){:target="_blank"}
 * [Timeless Sleep Lyrics \| GARNET CROW music diary](https://crowsub.github.io/lyrics/original/Timeless%20Sleep.html){:target="_blank"}

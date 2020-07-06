@@ -68,5 +68,5 @@ excerpt: 引き金を引いた途端立ち現わる白く空虚な時よ。掻�
 
 ## 参考链接
 
-* [東京事変 永遠の不在証明 歌詞 - 歌ネット](https://www.uta-net.com/song/284079){:target="_blank"}
+* [東京事変 永遠の不在証明 歌詞 - 歌ネット](https://www.uta-net.com/song/284079/){:target="_blank"}
 * [『名探偵コナン 緋色の弾丸』公開延期のお知らせ](https://www.conan-movie.jp/news24/1585724120.html){:target="_blank"}

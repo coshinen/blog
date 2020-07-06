@@ -127,5 +127,5 @@ excerpt: close island、素早く暮れる空に、意味もなく胸が切な�
 
 ## 参考链接
 
-* [GARNET CROW HAPPY DAYS? 歌詞 - 歌ネット](https://www.uta-net.com/song/20139){:target="_blank"}
+* [GARNET CROW HAPPY DAYS? 歌詞 - 歌ネット](https://www.uta-net.com/song/20139/){:target="_blank"}
 * [HAPPY DAYS? Lyrics \| GARNET CROW music diary](https://crowsub.github.io/lyrics/original/HAPPY%20DAYS%3F.html){:target="_blank"}

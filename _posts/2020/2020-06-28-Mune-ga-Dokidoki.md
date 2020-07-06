@@ -89,4 +89,4 @@ excerpt: 百年ぶりの世紀末 泣けといわれて僕は笑った。ひさ�
 
 ## 参考链接
 
-* [ザ・ハイロウズ 胸がドキドキ 歌詞 - 歌ネット](https://www.uta-net.com/song/8958){:target="_blank"}
+* [ザ・ハイロウズ 胸がドキドキ 歌詞 - 歌ネット](https://www.uta-net.com/song/8958/){:target="_blank"}

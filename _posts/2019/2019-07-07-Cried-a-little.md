@@ -113,5 +113,5 @@ excerpt: 弱い日差しが揺れるテーブルの上、開いた世界地図�
 
 ## 参考链接
 
-* [GARNET CROW Cried a little 歌詞 - 歌ネット](https://www.uta-net.com/song/20136){:target="_blank"}
+* [GARNET CROW Cried a little 歌詞 - 歌ネット](https://www.uta-net.com/song/20136/){:target="_blank"}
 * [Cried a little Lyrics \| GARNET CROW music diary](https://crowsub.github.io/lyrics/original/Cried%20a%20little.html){:target="_blank"}

@@ -119,5 +119,5 @@ excerpt: 朝が来るたび君のことを想う、一日の始まりさえも�
 
 ## 参考链接
 
-* [GARNET CROW 夢みたあとで 歌詞 - 歌ネット](https://www.uta-net.com/song/15314){:target="_blank"}
+* [GARNET CROW 夢みたあとで 歌詞 - 歌ネット](https://www.uta-net.com/song/15314/){:target="_blank"}
 * [夢みたあとで Lyrics \| GARNET CROW music diary](https://crowsub.github.io/lyrics/original/夢みたあとで.html){:target="_blank"}

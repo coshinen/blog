@@ -103,5 +103,5 @@ excerpt: 追いかけ合う月と太陽、決して同じ朝は来なくて。�
 
 ## 参考链接
 
-* [GARNET CROW 永遠に葬れ 歌詞 - 歌ネット](https://www.uta-net.com/song/20129){:target="_blank"}
+* [GARNET CROW 永遠に葬れ 歌詞 - 歌ネット](https://www.uta-net.com/song/20129/){:target="_blank"}
 * [永遠に葬れ Lyrics \| GARNET CROW music diary](https://crowsub.github.io/lyrics/original/永遠に葬れ.html){:target="_blank"}

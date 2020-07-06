@@ -139,5 +139,5 @@ excerpt: 優しく触れる君の手に戸惑った、痛みが消えて置き�
 
 ## 参考链接
 
-* [GARNET CROW Please, forgive me 歌詞 - 歌ネット](https://www.uta-net.com/song/20140){:target="_blank"}
+* [GARNET CROW Please, forgive me 歌詞 - 歌ネット](https://www.uta-net.com/song/20140/){:target="_blank"}
 * [Please, forgive me Lyrics \| GARNET CROW music diary](https://crowsub.github.io/lyrics/original/Please,%20forgive%20me.html){:target="_blank"}

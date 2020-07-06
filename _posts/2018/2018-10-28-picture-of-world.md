@@ -101,5 +101,5 @@ excerpt: ずっと みてたんだ一枚のポスター、壁の片隅で色褪�
 
 ## 参考链接
 
-* [GARNET CROW picture of world 歌詞 - 歌ネット](https://www.uta-net.com/song/25836){:target="_blank"}
+* [GARNET CROW picture of world 歌詞 - 歌ネット](https://www.uta-net.com/song/25836/){:target="_blank"}
 * [picture of world Lyrics \| GARNET CROW music diary](https://crowsub.github.io/lyrics/original/picture%20of%20world.html){:target="_blank"}

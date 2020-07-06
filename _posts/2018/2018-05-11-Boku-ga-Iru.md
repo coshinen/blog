@@ -81,4 +81,4 @@ excerpt: 明日になれば、涙が乾く、心も色づいて来る。笑顔�
 
 ## 参考链接
 
-* [伊織 ぼくがいる 歌詞 - 歌ネット](https://www.uta-net.com/song/14305){:target="_blank"}
+* [伊織 ぼくがいる 歌詞 - 歌ネット](https://www.uta-net.com/song/14305/){:target="_blank"}

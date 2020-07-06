@@ -151,6 +151,6 @@ excerpt: 街の音 人の声 ざわめき、やけに今 躰が音をひらう�
 
 ## 参考链接
 
-* [GARNET CROW Holding you, and swinging 歌詞 - 歌ネット](https://www.uta-net.com/song/20141){:target="_blank"}
+* [GARNET CROW Holding you, and swinging 歌詞 - 歌ネット](https://www.uta-net.com/song/20141/){:target="_blank"}
 * [Holding you, and swinging Lyrics \| GARNET CROW music diary](https://crowsub.github.io/lyrics/original/Holding%20you,%20and%20swinging.html){:target="_blank"}
 * [ひらうの意味や使い方 Weblio辞書](https://www.weblio.jp/content/ひらう){:target="_blank"}

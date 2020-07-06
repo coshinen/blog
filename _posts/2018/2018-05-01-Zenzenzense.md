@@ -112,5 +112,5 @@ excerpt: やっと眼を覚ましたかい それなのになぜ眼も合わせ�
 
 ## 参考链接
 
-* [RADWIMPS 前前前世 (movie ver.) 歌詞 - 歌ネット](https://www.uta-net.com/song/211495){:target="_blank"}
+* [RADWIMPS 前前前世 (movie ver.) 歌詞 - 歌ネット](https://www.uta-net.com/song/211495/){:target="_blank"}
 * [RADWIMPS 前前前世 (original ver.) 歌詞 - 歌ネット](https://www.uta-net.com/song/211993){:target="_blank"}

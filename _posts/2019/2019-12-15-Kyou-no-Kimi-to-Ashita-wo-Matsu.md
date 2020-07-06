@@ -103,5 +103,5 @@ excerpt: 街中冷えだして again, new fallen snow、君の体温(ぬくも�
 
 ## 参考链接
 
-* [GARNET CROW 今日の君と明日を待つ 歌詞 - 歌ネット](https://www.uta-net.com/song/20213){:target="_blank"}
+* [GARNET CROW 今日の君と明日を待つ 歌詞 - 歌ネット](https://www.uta-net.com/song/20213/){:target="_blank"}
 * [今日の君と明日を待つ Lyrics \| GARNET CROW music diary](https://crowsub.github.io/lyrics/original/今日の君と明日を待つ.html){:target="_blank"}

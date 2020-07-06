@@ -95,5 +95,5 @@ excerpt: じゃれ合う日曜の午後 (oh- yeah Why do I love you ~)、まだ�
 
 ## 参考链接
 
-* [GARNET CROW 幸福なペット 歌詞 - 歌ネット](https://www.uta-net.com/song/20152){:target="_blank"}
+* [GARNET CROW 幸福なペット 歌詞 - 歌ネット](https://www.uta-net.com/song/20152/){:target="_blank"}
 * [幸福なペット Lyrics \| GARNET CROW music diary](https://crowsub.github.io/lyrics/original/幸福なペット.html){:target="_blank"}

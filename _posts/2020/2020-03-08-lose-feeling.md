@@ -73,5 +73,5 @@ excerpt: 君のいない 明日へ向かう 日々なら、すべてが もう�
 
 ## 参考链接
 
-* [GARNET CROW lose feeling 歌詞 - 歌ネット](https://www.uta-net.com/song/59993){:target="_blank"}
+* [GARNET CROW lose feeling 歌詞 - 歌ネット](https://www.uta-net.com/song/59993/){:target="_blank"}
 * [lose feeling Lyrics \| GARNET CROW music diary](https://crowsub.github.io/lyrics/original/lose%20feeling.html){:target="_blank"}

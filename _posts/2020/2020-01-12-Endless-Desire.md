@@ -139,5 +139,5 @@ excerpt: そんなに移り気じゃヤダ、正直って便利な言い訳、�
 
 ## 参考链接
 
-* [GARNET CROW Endless Desire 歌詞 - 歌ネット](https://www.uta-net.com/song/20211){:target="_blank"}
+* [GARNET CROW Endless Desire 歌詞 - 歌ネット](https://www.uta-net.com/song/20211/){:target="_blank"}
 * [Endless Desire Lyrics \| GARNET CROW music diary](https://crowsub.github.io/lyrics/original/Endless%20Desire.html){:target="_blank"}

@@ -54,4 +54,4 @@ excerpt: 春を愛する人は、心清き人。すみれの花のような、�
 
 ## 参考链接
 
-* [芹洋子 四季の歌 歌詞 - 歌ネット](https://www.uta-net.com/song/2406){:target="_blank"}
+* [芹洋子 四季の歌 歌詞 - 歌ネット](https://www.uta-net.com/song/2406/){:target="_blank"}

@@ -141,5 +141,5 @@ excerpt: 一晩中考えても 解けなかった問題が、今日 目覚めた
 
 ## 参考链接
 
-* [GARNET CROW 二人のロケット 歌詞 - 歌ネット](https://www.uta-net.com/song/20153){:target="_blank"}
+* [GARNET CROW 二人のロケット 歌詞 - 歌ネット](https://www.uta-net.com/song/20153/){:target="_blank"}
 * [二人のロケット Lyrics \| GARNET CROW music diary](https://crowsub.github.io/lyrics/original/二人のロケット.html){:target="_blank"}

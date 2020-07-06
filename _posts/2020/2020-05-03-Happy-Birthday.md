@@ -76,4 +76,4 @@ excerpt: うまく話ができなくて 本当はすまないと思ってる。�
 
 ## 参考链接
 
-* [杏子 Happy Birthday 歌詞 - 歌ネット](https://www.uta-net.com/song/57574){:target="_blank"}
+* [杏子 Happy Birthday 歌詞 - 歌ネット](https://www.uta-net.com/song/57574/){:target="_blank"}

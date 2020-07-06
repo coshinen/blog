@@ -129,4 +129,4 @@ excerpt: 寄り添う二人に 君がオーバーラップ。色なき風に 思
 
 ## 参考链接
 
-* [倉木麻衣 渡月橋 〜君 想ふ〜 歌詞 - 歌ネット](https://www.uta-net.com/song/227640){:target="_blank"}
+* [倉木麻衣 渡月橋 〜君 想ふ〜 歌詞 - 歌ネット](https://www.uta-net.com/song/227640/){:target="_blank"}

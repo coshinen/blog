@@ -89,4 +89,4 @@ excerpt: うつむくその背中に、痛い雨がつき刺さる。祈る想�
 
 ## 参考链接
 
-* [伊織 キミがいれば 歌詞 - 歌ネット](https://www.uta-net.com/song/34909){:target="_blank"}
+* [伊織 キミがいれば 歌詞 - 歌ネット](https://www.uta-net.com/song/34909/){:target="_blank"}

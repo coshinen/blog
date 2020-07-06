@@ -97,6 +97,6 @@ excerpt: 夜深けの流星達 眺めていたよね。言葉にならない 感
 
 ## 参考链接
 
-* [GARNET CROW 夜深けの流星達 歌詞 - 歌ネット](https://www.uta-net.com/song/50834){:target="_blank"}
+* [GARNET CROW 夜深けの流星達 歌詞 - 歌ネット](https://www.uta-net.com/song/50834/){:target="_blank"}
 * [夜深けの流星達 Lyrics \| GARNET CROW music diary](https://crowsub.github.io/lyrics/original/夜深けの流星達.html){:target="_blank"}
 * [◆GARNET CROW 20th Anniversary企画スタート！](http://www.garnetcrow.com/news/#info20200329){:target="_blank"}

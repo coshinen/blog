@@ -117,5 +117,5 @@ excerpt: 夕暮れとこの街の匂い、染みついた諦めと希望。雨�
 
 ## 参考链接
 
-* [GARNET CROW Love is a Bird 歌詞 - 歌ネット](https://www.uta-net.com/song/63136){:target="_blank"}
+* [GARNET CROW Love is a Bird 歌詞 - 歌ネット](https://www.uta-net.com/song/63136/){:target="_blank"}
 * [Love is a Bird Lyrics \| GARNET CROW music diary](https://crowsub.github.io/lyrics/original/Love%20is%20a%20Bird.html){:target="_blank"}

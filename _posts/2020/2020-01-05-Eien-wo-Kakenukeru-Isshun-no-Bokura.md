@@ -81,5 +81,5 @@ excerpt: まるで異国の知らない場所へ来たみたい、懐かしい�
 
 ## 参考链接
 
-* [GARNET CROW 永遠を駆け抜ける一瞬の僕ら 歌詞 - 歌ネット](https://www.uta-net.com/song/20212){:target="_blank"}
+* [GARNET CROW 永遠を駆け抜ける一瞬の僕ら 歌詞 - 歌ネット](https://www.uta-net.com/song/20212/){:target="_blank"}
 * [永遠を駆け抜ける一瞬の僕ら Lyrics \| GARNET CROW music diary](https://crowsub.github.io/lyrics/original/永遠を駆け抜ける一瞬の僕ら.html){:target="_blank"}

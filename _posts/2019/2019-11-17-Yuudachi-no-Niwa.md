@@ -107,5 +107,5 @@ excerpt: 今日買ったばかりのレコードを、抱えたままでいつ�
 
 ## 参考链接
 
-* [GARNET CROW 夕立の庭 歌詞 - 歌ネット](https://www.uta-net.com/song/20149){:target="_blank"}
+* [GARNET CROW 夕立の庭 歌詞 - 歌ネット](https://www.uta-net.com/song/20149/){:target="_blank"}
 * [夕立の庭 Lyrics \| GARNET CROW music diary](https://crowsub.github.io/lyrics/original/夕立の庭.html){:target="_blank"}

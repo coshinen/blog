@@ -85,4 +85,4 @@ excerpt: 運命のルーレット廻して、ずっと 君を見ていた。
 
 ## 参考链接
 
-* [ZARD 運命のルーレット廻して 歌詞 - 歌ネット](https://www.uta-net.com/song/10497){:target="_blank"}
+* [ZARD 運命のルーレット廻して 歌詞 - 歌ネット](https://www.uta-net.com/song/10497/){:target="_blank"}

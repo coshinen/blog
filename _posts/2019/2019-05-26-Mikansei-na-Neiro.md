@@ -113,5 +113,5 @@ GARNET CROW 主唱中村由利最喜欢的一首曲子。
 
 ## 参考链接
 
-* [GARNET CROW 未完成な音色 歌詞 - 歌ネット](https://www.uta-net.com/song/20146){:target="_blank"}
+* [GARNET CROW 未完成な音色 歌詞 - 歌ネット](https://www.uta-net.com/song/20146/){:target="_blank"}
 * [未完成な音色 Lyrics \| GARNET CROW music diary](https://crowsub.github.io/lyrics/original/未完成な音色.html){:target="_blank"}

@@ -103,5 +103,5 @@ excerpt: 緑揺れる午後の空、幾つ目の飛行機かな。遠く潮騒�
 
 ## 参考链接
 
-* [GARNET CROW strangers 歌詞 - 歌ネット](https://www.uta-net.com/song/105961){:target="_blank"}
+* [GARNET CROW strangers 歌詞 - 歌ネット](https://www.uta-net.com/song/105961/){:target="_blank"}
 * [strangers Lyrics \| GARNET CROW music diary](https://crowsub.github.io/lyrics/original/strangers.html){:target="_blank"}

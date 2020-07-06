@@ -70,4 +70,4 @@ excerpt: 明日あった時は きっと言える素直になれるよ、今ま�
 
 ## 参考链接
 
-* [田村ゆかり きっと言える 歌詞 - 歌ネット](https://www.uta-net.com/song/60563){:target="_blank"}
+* [田村ゆかり きっと言える 歌詞 - 歌ネット](https://www.uta-net.com/song/60563/){:target="_blank"}

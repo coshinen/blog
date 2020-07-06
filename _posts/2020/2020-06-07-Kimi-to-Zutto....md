@@ -118,4 +118,4 @@ excerpt: 想い出してごらん 萌ゆる草木 散る花ビラ。共に笑い
 
 ## 参考链接
 
-* [yu-yu 君とずっと… 歌詞 - 歌ネット](https://www.uta-net.com/song/117551){:target="_blank"}
+* [yu-yu 君とずっと… 歌詞 - 歌ネット](https://www.uta-net.com/song/117551/){:target="_blank"}

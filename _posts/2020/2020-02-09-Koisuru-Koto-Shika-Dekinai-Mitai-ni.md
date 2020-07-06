@@ -125,5 +125,5 @@ excerpt: 町中オレンジ色に染める、秋空 加速してゆくサイク�
 
 ## 参考链接
 
-* [GARNET CROW 恋することしか出来ないみたいに 歌詞 - 歌ネット](https://www.uta-net.com/song/20208){:target="_blank"}
+* [GARNET CROW 恋することしか出来ないみたいに 歌詞 - 歌ネット](https://www.uta-net.com/song/20208/){:target="_blank"}
 * [恋することしか出来ないみたいに Lyrics \| GARNET CROW music diary](https://crowsub.github.io/lyrics/original/恋することしか出来ないみたいに.html){:target="_blank"}

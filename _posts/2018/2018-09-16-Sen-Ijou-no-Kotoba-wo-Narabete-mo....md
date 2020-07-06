@@ -113,5 +113,5 @@ excerpt: 公園で髪を切る、落ちてゆく毛先を払う。君が笑う �
 
 ## 参考链接
 
-* [GARNET CROW 千以上の言葉を並べても… 歌詞 - 歌ネット](https://www.uta-net.com/song/12650){:target="_blank"}
+* [GARNET CROW 千以上の言葉を並べても… 歌詞 - 歌ネット](https://www.uta-net.com/song/12650/){:target="_blank"}
 * [千以上の言葉を並べても… Lyrics \| GARNET CROW music diary](https://crowsub.github.io/lyrics/original/千以上の言葉を並べても….html){:target="_blank"}

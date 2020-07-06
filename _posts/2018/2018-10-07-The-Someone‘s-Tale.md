@@ -79,5 +79,5 @@ excerpt: まっすぐな思いはまっすぐに伝わるの？唐突な青空 �
 
 ## 参考链接
 
-* [GARNET CROW The Someone's Tale 歌詞 - 歌ネット](https://www.uta-net.com/song/143806){:target="_blank"}
+* [GARNET CROW The Someone's Tale 歌詞 - 歌ネット](https://www.uta-net.com/song/143806/){:target="_blank"}
 * [The Someone's Tale Lyrics \| GARNET CROW music diary](https://crowsub.github.io/lyrics/original/The%20Someone's%20Tale.html){:target="_blank"}

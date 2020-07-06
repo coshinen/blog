@@ -141,5 +141,5 @@ excerpt: 君と僕とは 別の人間(いきもの)だから、好みが違う �
 
 ## 参考链接
 
-* [GARNET CROW Mysterious Eyes 歌詞 - 歌ネット](https://www.uta-net.com/song/14347){:target="_blank"}
+* [GARNET CROW Mysterious Eyes 歌詞 - 歌ネット](https://www.uta-net.com/song/14347/){:target="_blank"}
 * [Mysterious Eyes Lyrics \| GARNET CROW music diary](https://crowsub.github.io/lyrics/original/Mysterious%20Eyes.html){:target="_blank"}

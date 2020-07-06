@@ -81,5 +81,5 @@ excerpt: 太陽が色彩(いろ)を連れて、この町を照らしはじめる
 
 ## 参考链接
 
-* [GARNET CROW 静寂のconcerto 歌詞 - 歌ネット](https://www.uta-net.com/song/122963){:target="_blank"}
+* [GARNET CROW 静寂のconcerto 歌詞 - 歌ネット](https://www.uta-net.com/song/122963/){:target="_blank"}
 * [静寂の concerto Lyrics \| GARNET CROW music diary](https://crowsub.github.io/lyrics/original/静寂の%20concerto.html){:target="_blank"}
