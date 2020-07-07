@@ -129,6 +129,7 @@ excerpt: Here are some books I read.
 > * 诗翁彼豆故事集 赫敏·格兰杰译自如尼文，[英] J.K. Rowling
 > * 哈利波特完整系列，[英] [J.K. Rowling](https://www.jkrowling.com){:target="_blank"}
 > * 布谷鸟的呼唤，[英] J.K. Rowling
+> * 尸人庄谜案，[日] 今村昌弘
 > * 福尔摩斯症候群，[法] J.M.ERRE
 > * 丝之屋，[英] Anthony Horowitz
 > * 失踪的专列，[英] Arthur Conan Doyle
