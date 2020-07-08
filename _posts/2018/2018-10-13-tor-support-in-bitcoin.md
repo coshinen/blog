@@ -5,9 +5,9 @@ date:   2018-10-13 16:50:30 +0800
 author: mistydew
 comments: true
 category: 区块链
-tags: Translations Blockchain Bitcoin Tor
+tags: Blockchain Bitcoin Tor
 ---
-洋葱路由 Tor(The onion router) 是一个分布式的“洋葱”网络，它使追踪网络上任何一个对端节点变得更加困难。
+洋葱路由 Tor (The onion router) 是一个分布式的“洋葱”网络，它使追踪网络上任何一个对端节点变得更加困难。
 同时，Tor 对于访问中国和伊朗等国家的“未经审查的”网络非常有用。
 保护隐私不仅意味着隐藏消息内容，而且还隐藏交流对象（流量分析）。
 Tor 提供匿名连接，对窃听和流量分析都有很强的抵抗力。

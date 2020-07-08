@@ -24,7 +24,7 @@ $ ./bitcoin-cli getnewaddress
 ```
 
 然后使用 RPC 中的 dumpprivkey 命令导出公钥地址对应的私钥。
-以 WIF(wallet import format) 钱包导入格式即 Base58 校验和编码进行导出。例：
+以 WIF (wallet import format) 钱包导入格式即 Base58 校验和编码进行导出。例：
 
 ```shell
 $ ./bitcoin-cli dumpprivkey 12PbLWS4h3qSmQfdu4oEgXCYMGY4TVbL3N
@@ -35,7 +35,7 @@ KzCFcgtfrPA2uWmXn4zjVNaKYMEUHbh732XzZ4aZ737545DqZ3V4
 
 ## 私钥、公钥、地址之间的转换流程
 
-![private-public-key-address](https://mistydew.github.io/assets/images/bitcoin/address/private-public-key-address.png){:.border}
+![mbc2_0401](https://raw.githubusercontent.com/bitcoinbook/bitcoinbook/develop/images/mbc2_0401.png){:.border}
 
 **注：“私钥->公钥”、“公钥->地址”这两步是单向不可逆的。**
 
@@ -44,13 +44,13 @@ KzCFcgtfrPA2uWmXn4zjVNaKYMEUHbh732XzZ4aZ737545DqZ3V4
 1.使用伪随机数生成器 PRNG 生成一个给定范围内的 256 位随机数作为私钥 PrivKey。<br>
 2.使用 OpenSSL 加密库中 secp256k1 标准的椭圆曲线相乘加密算法计算上一步生成私钥 PrivKey 得到相应的公钥 PubKey。
 
-![public-key-to-bitcoin-address](https://mistydew.github.io/assets/images/bitcoin/address/public-key-to-bitcoin-address.png){:.border}
+![mbc2_0405](https://raw.githubusercontent.com/bitcoinbook/bitcoinbook/develop/images/mbc2_0405.png){:.border}
 
 3.使用 "Double Hash" 或 "Hash160" 运算上一步生成的公钥 PubKey 得到公钥地址 PubKeyAddress，用户看到的是该地址经过 Base58Check 编码后得到地址 address。<br>
 3.1."Hash160" 是先后经过了 SHA256 和 RIPEMD160 两步运算得到 160 位及 20 个字节的公钥地址，PubKeyAddress = RIPEMD160(SHA256(PubKey))。<br>
 3.2.最后经过 Base58 编码得到最后的地址，address = Base58Check(PubKeyAddress)。
 
-![base58check-encoding](https://mistydew.github.io/assets/images/bitcoin/address/base58check-encoding.png){:.border}
+![mbc2_0406](https://raw.githubusercontent.com/bitcoinbook/bitcoinbook/develop/images/mbc2_0406.png){:.border}
 
 3.2.1.在 20 个字节的公钥地址前附加 1 个字节的版本前缀，比特币主网的版本号为 "0x00" 对应前缀为 "1"，VersionPrefix + PubKeyAddress。<br>
 3.2.2.对上步得到的 21bytes 进行两次哈希 SHA256，SHA256(SHA256(VersionPrefix + PubKeyAddress))。<br>
@@ -61,11 +61,11 @@ KzCFcgtfrPA2uWmXn4zjVNaKYMEUHbh732XzZ4aZ737545DqZ3V4
 
 从公钥到地址转换的流程图：
 
-![public-key-to-btc-address](https://mistydew.github.io/assets/images/bitcoin/address/public-key-to-btc-address.png)
+![PubKeyToAddr](https://en.bitcoin.it/w/images/en/9/9b/PubKeyToAddr.png)
 
 ```shell
-$ cd bitcoin/src # 进入比特币根目录下的 src 目录，之后未作特殊说明的均以该目录作为比特币源码的根目录。
-$ grep "getnewaddress" * -nir # 搜索 RPC 命令 getnewaddress 所出现的文件及位置，grep 是 Linux 下的一个查找字符串命令，其他平台或 IDE 请自行忽略。
+$ cd bitcoin/src # 切换至比特币源码目录
+$ grep "getnewaddress" * -nir # 搜索 RPC 命令 getnewaddress 所出现的文件及位置
 rpcserver.cpp:344:    { "wallet",             "getnewaddress",          &getnewaddress,          true  },
 rpcserver.h:199:extern UniValue getnewaddress(const UniValue& params, bool fHelp); // in rpcwallet.cpp
 test/rpc_wallet_tests.cpp:174:     * 		getnewaddress
@@ -112,20 +112,19 @@ public:
 ```
 
 该类的 4 个成员变量对应注释的 4 个列名。
-rpcfn_type 是一个函数标签为 UniValue(const UniValue&, bool) 的回调函数类型，形参 params 为 RPC 命令的参数，形参 fHelp 为显示该命令帮助的标志，对应[比特币核心客户端基础命令](/blog/2018/05/bitcoin-cli-commands.html)用法的第 3 条。
+rpcfn_type 是一个函数标签为 UniValue(const UniValue&, bool) 的回调函数类型，形参 params 为 RPC 命令的参数，形参 fHelp 为显示该命令帮助的标志，对应[比特币核心客户端 RPC 命令](/blog/2018/05/bitcoin-cli-commands.html)用法的第 3 条。
 
 ```shell
   bitcoin-cli [options] help <command>      Get help for a command # 获取一条命令的帮助信息（用法示例）
 ```
 
-详见 [比特币 RCP 命令剖析 getnewaddress](/blog/2018/08/bitcoin-rpc-command-getnewaddress.html)。
+详见[比特币 RCP 命令剖析 "getnewaddress"](/blog/2018/08/bitcoin-rpc-command-getnewaddress.html)。
 
 ## 参考链接
 
-* [Technical background of version 1 Bitcoin addresses - Bitcoin Wiki](https://en.bitcoin.it/wiki/Technical_background_of_version_1_Bitcoin_addresses){:target="_blank"}
-* [List of address prefixes - Bitcoin Wiki](https://en.bitcoin.it/wiki/List_of_address_prefixes){:target="_blank"}
 * [Address - Bitcoin Wiki](https://en.bitcoin.it/wiki/Address){:target="_blank"}
-* [Base58 - Wikipedia](https://en.wikipedia.org/wiki/Base58){:target="_blank"}
+* [List of address prefixes - Bitcoin Wiki](https://en.bitcoin.it/wiki/List_of_address_prefixes){:target="_blank"}
 * [Base58Check encoding - Bitcoin Wiki](https://en.bitcoin.it/wiki/Base58Check_encoding){:target="_blank"}
-* [bitcoin/bitcoin/src/base58.cpp](https://github.com/bitcoin/bitcoin/blob/master/src/base58.cpp){:target="_blank"}
-* [bitaddress.org](https://www.bitaddress.org){:target="_blank"}
+* [bitcoin/base58.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/base58.cpp){:target="_blank"}
+* [Technical background of version 1 Bitcoin addresses - Bitcoin Wiki](https://en.bitcoin.it/wiki/Technical_background_of_version_1_Bitcoin_addresses){:target="_blank"}
+* [bitcoinbook/bitcoinbook: Mastering Bitcoin 2nd Edition - Programming the Open Blockchain](https://github.com/bitcoinbook/bitcoinbook){:target="_blank"}
