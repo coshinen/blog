@@ -8,7 +8,7 @@ category: 译文集
 tags: Lyrics
 excerpt: おいでやす うちの故郷は お寺や 神社だけじゃない。嘘みたい カラフル八ツ橋、町家でイタリアン 京 ばあむが今人気。
 ---
-![Yuihan](https://mistydew.github.io/assets/images/translations/Yuihan.jpg){:.border}
+![yuihan](https://i.loli.net/2020/07/12/a2ReAIGnztryN83.jpg){:.border}
 
 歌手：横山由依
 
