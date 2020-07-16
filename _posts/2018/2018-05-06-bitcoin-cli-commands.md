@@ -209,4 +209,3 @@ $ bitcoin-cli help # 获取以下 RPC 命令
 
 * [bitcoin/bitcoin at v0.12.1](https://github.com/bitcoin/bitcoin/tree/v0.12.1){:target="_blank"}
 * [Developer Documentation - Bitcoin](https://bitcoin.org/en/developer-documentation){:target="_blank"}
-* [mistydew/blockchain](https://github.com/mistydew/blockchain){:target="_blank"}

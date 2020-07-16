@@ -281,15 +281,15 @@ bool AppInit2(boost::thread_group& threadGroup, CScheduler& scheduler) // 3.11.0
 };
 ```
 
-> 1.[初始化椭圆曲线代码。](/blog/2018/06/the-annotated-bitcoin-sources-06.html#Init-ref)<br>
-> 2.[初始化完整性检查。](/blog/2018/07/the-annotated-bitcoin-sources-07.html#InitSanityCheck-ref)<br>
-> 3.[数据目录上锁。](/blog/2018/07/the-annotated-bitcoin-sources-07.html#DataDirLock-ref)<br>
-> 4.[非 WIN32 环境，创建进程号文件。](/blog/2018/07/the-annotated-bitcoin-sources-07.html#CreatePidFile-ref)<br>
-> 5.[处理调试日志文件。](/blog/2018/07/the-annotated-bitcoin-sources-07.html#ShrinkOrOpenDebugLogFile-ref)<br>
-> 6.记录相关初始化信息到日志输出。<br>
-> 7.[创建脚本验证线程。](/blog/2018/07/the-annotated-bitcoin-sources-08.html#ThreadScriptCheck-ref)<br>
-> 8.[创建轻量级任务调度线程。](/blog/2018/07/the-annotated-bitcoin-sources-08.html#serviceQueue-ref)<br>
-> 9.[启动 RPC 服务。](/blog/2018/07/the-annotated-bitcoin-sources-09.html#AppInitServers-ref)
+1. [初始化椭圆曲线代码。](/blog/2018/06/the-annotated-bitcoin-sources-06.html#Init-ref)<br>
+2. [初始化完整性检查。](/blog/2018/07/the-annotated-bitcoin-sources-07.html#InitSanityCheck-ref)<br>
+3. [数据目录上锁。](/blog/2018/07/the-annotated-bitcoin-sources-07.html#DataDirLock-ref)<br>
+4. [非 WIN32 环境，创建进程号文件。](/blog/2018/07/the-annotated-bitcoin-sources-07.html#CreatePidFile-ref)<br>
+5. [处理调试日志文件。](/blog/2018/07/the-annotated-bitcoin-sources-07.html#ShrinkOrOpenDebugLogFile-ref)<br>
+6. 记录相关初始化信息到日志输出。<br>
+7. [创建脚本验证线程。](/blog/2018/07/the-annotated-bitcoin-sources-08.html#ThreadScriptCheck-ref)<br>
+8. [创建轻量级任务调度线程。](/blog/2018/07/the-annotated-bitcoin-sources-08.html#serviceQueue-ref)<br>
+9. [启动 RPC 服务。](/blog/2018/07/the-annotated-bitcoin-sources-09.html#AppInitServers-ref)
 
 未完待续...<br>
 请看下一篇[比特币源码剖析（六）](/blog/2018/06/the-annotated-bitcoin-sources-06.html)。
@@ -297,4 +297,3 @@ bool AppInit2(boost::thread_group& threadGroup, CScheduler& scheduler) // 3.11.0
 ## 参考链接
 
 * [bitcoin/bitcoin v0.12.1](https://github.com/bitcoin/bitcoin/tree/v0.12.1){:target="_blank"}
-* [mistydew/blockchain](https://github.com/mistydew/blockchain){:target="_blank"}
