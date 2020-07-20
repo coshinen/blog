@@ -19,26 +19,6 @@ Base58 是一组二进制文本编码方案，用于把大整数表示为含有�
 
 Base58Check 是一种 Base58 编码格式，可在前几个字符中明确编码的数据类型（即版本号），并在最后几个字符中包含一个错误检测代码（即校验和）。
 
-## Base58 符号表
-
-数值 | 字符 | 数值 | 字符 | 数值 | 字符 | 数值 | 字符
------|------|------|------|------|------|------|------
-0    | 1    | 1    | 2    | 2    | 3    | 3    | 4
-4    | 5    | 5    | 6    | 6    | 7    | 7    | 8
-8    | 9    | 9    | A    | 10   | B    | 11   | C
-12   | D    | 13   | E    | 14   | F    | 15   | G
-16   | H    | 17   | J    | 18   | K    | 19   | L
-20   | M    | 21   | N    | 22   | P    | 23   | Q
-24   | R    | 25   | S    | 26   | T    | 27   | U
-28   | V    | 29   | W    | 30   | X    | 31   | Y
-32   | Z    | 33   | a    | 34   | b    | 35   | c
-36   | d    | 37   | e    | 38   | f    | 39   | g
-40   | h    | 41   | i    | 42   | j    | 43   | k
-44   | m    | 45   | n    | 46   | o    | 47   | p
-48   | q    | 49   | r    | 50   | s    | 51   | t
-52   | u    | 53   | v    | 54   | w    | 55   | x
-56   | y    | 57   | z
-
 ## 源码剖析
 
 比特币中的 Base58 编码使用的是 Base58Check，实现如下：
@@ -104,4 +84,4 @@ carry /= 58;
 * [Base58 - Wikipedia](https://en.wikipedia.org/wiki/Base58){:target="_blank"}
 * [Base64 - Wikipedia](https://en.wikipedia.org/wiki/Base64){:target="_blank"}
 * [Base58Check encoding - Bitcoin Wiki](https://en.bitcoin.it/wiki/Base58Check_encoding){:target="_blank"}
-* [bitcoin/base58.cpp at v0.12.1](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/base58.cpp){:target="_blank"}
+* [bitcoin/base58.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/base58.cpp){:target="_blank"}

@@ -20,7 +20,7 @@ getbestblockhash # 获取最长区块链上最佳（链尖）区块的哈希
 
 ### 比特币核心客户端
 
-未 IBD(Initial Block Download) 时，查询最佳区块 - 创世区块的哈希值。
+未 IBD (Initial Block Download) 时，查询最佳区块 - 创世区块的哈希值。
 
 ```shell
 $ bitcoin-cli getbestblockhash

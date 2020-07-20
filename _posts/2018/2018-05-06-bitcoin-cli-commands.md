@@ -21,7 +21,7 @@ tags: Blockchain Bitcoin bitcoin-cli
 ```shell
 $ bitcoin-cli -h # 获取以下帮助信息
 Bitcoin Core RPC client version v0.12.1.0-f61a24e
-比特币核心 RPC 客户端版本 v0.12.1.0-意味不明
+比特币核心 RPC 客户端版本 v0.12.1.0-未知
 
 Usage:
 用法：共 3 种，[] 表示可以省略，单纯的使用 Options 选项不需要 bitcoind，而 help 和 <command> 都需要 bitcoind
@@ -208,4 +208,4 @@ $ bitcoin-cli help # 获取以下 RPC 命令
 ## 参考链接
 
 * [bitcoin/bitcoin at v0.12.1](https://github.com/bitcoin/bitcoin/tree/v0.12.1){:target="_blank"}
-* [Developer Documentation - Bitcoin](https://bitcoin.org/en/developer-documentation){:target="_blank"}
+* [Getting Started — Bitcoin](https://developer.bitcoin.org){:target="_blank"}

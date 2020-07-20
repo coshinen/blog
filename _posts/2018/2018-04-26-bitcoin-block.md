@@ -25,16 +25,16 @@ tags: Blockchain Bitcoin Block
  * in the block is a special one that creates a new coin owned by the creator
  * of the block.
  */ // 节点收集新交易到一个区块，把它们散列至哈希树中，并扫描 nonce 来满足所需的工作量证明要求。
-class CBlockHeader // 区块头部分（包含区块版本、前一个区块的哈希、默尔克树根哈希、创建区块的时间、难度对应值和随机数）共 80 bytes
+class CBlockHeader // 区块头部分（包含区块版本、前一个区块的哈希、默尔克树根哈希、创建区块的时间、难度对应值和随机数）
 {
 public:
-    // header // Size: 80 Bytes
-    int32_t nVersion; // 4 Bytes
-    uint256 hashPrevBlock; // 32 Bytes
-    uint256 hashMerkleRoot; // 32 Bytes
-    uint32_t nTime; // 4 Bytes
-    uint32_t nBits; // 4 Bytes
-    uint32_t nNonce; // 4 Bytes, Number used once/Number once
+    // header // 区块头（80 Bytes）
+    int32_t nVersion; // 区块版本号（4 Bytes）
+    uint256 hashPrevBlock; // 前一个区块的哈希值（32 Bytes）
+    uint256 hashMerkleRoot; // 默克尔树根哈希值（32 Bytes）
+    uint32_t nTime; // 区块创建时间（4 Bytes）
+    uint32_t nBits; // 难度对应值，与难度呈反比（4 Bytes）
+    uint32_t nNonce; // 随机数（4 Bytes, Number used once/Number once）
     ...
 };
 
@@ -42,27 +42,9 @@ class CBlock : public CBlockHeader
 {
 public:
     // network and disk
-    std::vector<CTransaction> vtx; // 区块体部分（交易列表，至少有一笔创币交易）
+    std::vector<CTransaction> vtx; // 区块体部分（交易列表，至少有一笔交易，即第一笔创币交易 coinbase）
     ...
 };
-```
-
-类 CBlock 对象的内存布局（即一个区块的构成）如下：
-
-```shell
-+---+-------------------+ # 区块头，80bytes
-|   | h | nVersion      |  # 区块版本号，4bytes
-|   | e | hashPrevBlock |  # 前一个区块的哈希值，32bytes
-|   | a | hashMerkleRoot|  # 默克尔树根哈希值，32bytes
-| b | d | nTime         |  # 区块创建时间（从格林尼治时间 1970-01-01 00:00:00 开始以秒为单位），4bytes
-| l | e | nBits         |  # 难度对应值（与难度呈反比），4bytes
-| o | r | nNonce        |  # 随机数，4bytes
-| c +-------------------+ # 区块体，nbytes
-| k | b | CTransaction0 |  # 第一笔交易，coinbase 创币交易
-|   | o | CTransaction1 |  # 第二笔，普通交易
-|   | d | ...           |  # ...（普通交易）
-|   | y |               |
-+---+---+---------------+
 ```
 
 区块头固定 80 个字节，共由 6 个数据成员构成：
@@ -75,6 +57,6 @@ public:
 
 ## 参考链接
 
-* [GitHub - bitcoin/bitcoin at v0.12.1](https://github.com/bitcoin/bitcoin/tree/v0.12.1){:target="_blank"}
-* [DEFAULT_BLOCK_MAX_SIZE](https://github.com/bitcoin/bitcoin/search?q=DEFAULT_BLOCK_MAX_SIZE&type=Issues){:target="_blank"}
 * [Block - Bitcoin Wiki](https://en.bitcoin.it/wiki/Block){:target="_blank"}
+* [DEFAULT_BLOCK_MAX_SIZE](https://github.com/bitcoin/bitcoin/search?q=DEFAULT_BLOCK_MAX_SIZE&type=Issues){:target="_blank"}
+* [bitcoin/block.h at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/primitives/block.h){:target="_blank"}

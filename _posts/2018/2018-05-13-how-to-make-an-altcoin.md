@@ -11,17 +11,9 @@ tags: Blockchain Bitcoin Altcoin
 在了解比特币及区块链的相关概念后，要开始接触源码了，侯捷说过“源码之前，了无秘密”。
 现在，让我们来一探比特币源码的世界。
 
-## 0. 准备
+## 源码准备
 
-### 0.1. 平台和工具
-
-> * 平台：Ubuntu 16.04.\* LTS
-> * 工具：Git
-
-### 0.2. 比特币源码
-
-这里使用 [bitcoin v0.12.1](https://github.com/bitcoin/bitcoin/tree/v0.12.1) 版本的源码，
-因为这是比特币含 CPU 挖矿代码的最后一版。
+这里使用比特币 [v0.12.1](https://github.com/bitcoin/bitcoin/tree/v0.12.1) 的源码，这是官方内置 CPU 挖矿的最后一版。
 
 ```shell
 $ git clone https://github.com/bitcoin/bitcoin.git
@@ -550,5 +542,3 @@ public:
 
 * [How to make an altcoin \| Bear's Den](http://dillingers.com/blog/2015/04/18/how-to-make-an-altcoin/){:target="_blank"}
 * [如何仿照比特币创造自己的山寨币 \| Sunny's Blog](http://shusunny.github.io/2016/04/How-to-make-altcoin-1){:target="_blank"}
-* [从 0 到 1 建立自己的区块链 \| 巴比特](http://www.8btc.com/build-your-own-blockchain){:target="_blank"}
-* [mistydew/blockchain](https://github.com/mistydew/blockchain){:target="_blank"}

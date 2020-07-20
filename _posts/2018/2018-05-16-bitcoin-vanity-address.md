@@ -24,7 +24,7 @@ tags: Blockchain Bitcoin Bitcoin-Address
 要想让比特币启动时就生成指定地址前缀（长度大于 1）的公钥地址，就需要修改源码了。
 共需要修改 3 个函数：
 
-第一步，GenerateNewKey 函数，位于“wallet/wallet.cpp”文件中。
+第一步，函数 GenerateNewKey 位于“wallet/wallet.cpp”文件中。
 该函数的作用是生成一个私钥，并返回对应的公钥。
 实现：生成私钥，获取公钥地址，对比地址前缀，不满足则重复以上过程，直至找到指定前缀的地址。
 
@@ -182,9 +182,9 @@ UniValue validateaddress(const UniValue& params, bool fHelp)
 
 ## 参考链接
 
-* [bitcoin/bitcoin v0.12.1](https://github.com/bitcoin/bitcoin/tree/v0.12.1){:target="_blank"}
 * [Address - Bitcoin Wiki](https://en.bitcoin.it/wiki/Address){:target="_blank"}
 * [List of address prefixes - Bitcoin Wiki](https://en.bitcoin.it/wiki/List_of_address_prefixes){:target="_blank"}
 * [Technical background of version 1 Bitcoin addresses - Bitcoin Wiki](https://en.bitcoin.it/wiki/Technical_background_of_version_1_Bitcoin_addresses){:target="_blank"}
-* [samr7/vanitygen](https://github.com/samr7/vanitygen){:target="_blank"} - a standalone command line vanity address generator
-* [BitcoinVanityGen.com - Bitcoin Vanity Address Generator Online, Free Bicoin Vanity Address Generation](http://bitcoinvanitygen.com){:target="_blank"}
+* [bitcoin/wallet.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/wallet/wallet.cpp){:target="_blank"}
+* [bitcoin/rpcwallet.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/wallet/rpcwallet.cpp){:target="_blank"}
+* [bitcoin/rpcmisc.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/rpcmisc.cpp){:target="_blank"}

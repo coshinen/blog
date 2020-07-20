@@ -11,7 +11,7 @@ tags: Blockchain Bitcoin bitcoind
 
 ## 1. 准备
 
-### 1.1. 克隆源码到本地
+### 1.1. 获取源码
 
 ```shell
 $ git clone https://github.com/bitcoin/bitcoin.git
