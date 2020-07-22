@@ -167,16 +167,16 @@ UniValue getchaintips(const UniValue& params, bool fHelp)
 }
 ```
 
-基本流程：<br>
-1.处理命令帮助和参数个数。<br>
-2.上锁。<br>
-3.创建链尖区块索引集合，遍历区块索引映射，把所有区块索引加入该集合。<br>
-4.遍历区块索引映射，把所有区块的前一个区块索引从该集合中擦除。<br>
-5.把当前激活链的链尖区块索引插入该集合。<br>
-6.遍历链尖区块索引集合，获取相应信息并加入输出数组。<br>
-7.返回该数组对象。
+基本流程：
+1. 处理命令帮助和参数个数。
+2. 上锁。
+3. 创建链尖区块索引集合，遍历区块索引映射，把所有区块索引加入该集合。
+4. 遍历区块索引映射，把所有区块的前一个区块索引从该集合中擦除。
+5. 把当前激活链的链尖区块索引插入该集合。
+6. 遍历链尖区块索引集合，获取相应信息并加入输出数组。
+7. 返回该数组对象。
 
-第三步，创建链尖区块索引集合对象 setTips 使用了函数对象比较器 CompareBlocksByHeight。<br>
+第三步，创建链尖区块索引集合对象 setTips 使用了函数对象比较器 CompareBlocksByHeight。
 该函数对象定义在“rpcblockchain.cpp”文件中。
 
 ```cpp
@@ -196,7 +196,7 @@ struct CompareBlocksByHeight // 函数对象，通过高度比较区块
 };
 ```
 
-第六步，计算分支长度使，调用 chainActive.FindFork(block) 函数得到分支交点区块索引。<br>
+第六步，计算分支长度使，调用 chainActive.FindFork(block) 函数得到分支交点区块索引。
 该函数声明在“chain.h”文件的 CChain 类中。
 
 ```cpp
@@ -294,5 +294,7 @@ const CBlockIndex* CBlockIndex::GetAncestor(int height) const
 
 ## 参考链接
 
-* [Developer Documentation - Bitcoin](https://bitcoin.org/en/developer-documentation){:target="_blank"}
-* [Bitcoin Developer Reference - Bitcoin](https://bitcoin.org/en/developer-reference#getchaintips){:target="_blank"}
+* [bitcoin/rpcserver.h at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/rpcserver.h){:target="_blank"}
+* [bitcoin/rpcblockchain.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/rpcblockchain.cpp){:target="_blank"}
+* [bitcoin/chain.h at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/chain.h){:target="_blank"}
+* [bitcoin/chain.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/chain.cpp){:target="_blank"}

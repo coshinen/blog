@@ -169,11 +169,11 @@ UniValue getrawmempool(const UniValue& params, bool fHelp)
 }
 ```
 
-基本流程：<br>
-1.处理命令帮助和参数个数。<br>
-2.上锁。<br>
-3.获取指定的详细标志。<br>
-4.打包交易内存池交易信息为 JSON 格式并返回。
+基本流程：
+1. 处理命令帮助和参数个数。
+2. 上锁。
+3. 获取指定的详细标志。
+4. 打包交易内存池交易信息为 JSON 格式并返回。
 
 第四步，调用  函数打包交易内存池内交易数据至 JSON 格式，该函数实现在“rpcblockchain.cpp”文件中。
 
@@ -249,5 +249,7 @@ static const unsigned int DEFAULT_MIN_RELAY_TX_FEE = 1000; // 默认最小中继
 
 ## 参考链接
 
-* [Developer Documentation - Bitcoin](https://bitcoin.org/en/developer-documentation){:target="_blank"}
-* [Bitcoin Developer Reference - Bitcoin](https://bitcoin.org/en/developer-reference#getrawmempool){:target="_blank"}
+* [bitcoin/rpcserver.h at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/rpcserver.h){:target="_blank"}
+* [bitcoin/rpcblockchain.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/rpcblockchain.cpp){:target="_blank"}
+* [bitcoin/main.h at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/main.h){:target="_blank"}
+* [bitcoin/main.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/main.cpp){:target="_blank"}

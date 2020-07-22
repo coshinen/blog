@@ -300,7 +300,7 @@ bool ReadBlockFromDisk(CBlock& block, const CBlockIndex* pindex, const Consensus
 ```
 
 把数据读到内存中的 block 对象后需验证该区块的哈希是否为指定区块的哈希。
-调用 block.GetHash() 函数获取区块哈希，该函数声明在“block.h”文件的 CBlockHeader 类中。
+调用 block.GetHash() 函数获取区块哈希，该函数声明在“primitives/block.h”文件的 CBlockHeader 类中。
 
 ```cpp
 /** Nodes collect new transactions into a block, hash them into a hash tree,
@@ -324,7 +324,7 @@ class CBlock : public CBlockHeader
 };
 ```
 
-实现在“block.cpp”文件中。
+实现在“primitives/block.cpp”文件中。
 
 ```cpp
 uint256 CBlockHeader::GetHash() const
@@ -464,5 +464,12 @@ class CChain { // 一个内存中用于区块索引的链
 
 ## 参考链接
 
-* [Developer Documentation - Bitcoin](https://bitcoin.org/en/developer-documentation){:target="_blank"}
-* [Bitcoin Developer Reference - Bitcoin](https://bitcoin.org/en/developer-reference#getblock){:target="_blank"}
+* [bitcoin/rpcserver.h at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/rpcserver.h){:target="_blank"}
+* [bitcoin/rpcblockchain.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/rpcblockchain.cpp){:target="_blank"}
+* [bitcoin/main.h at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/main.h){:target="_blank"}
+* [bitcoin/main.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/main.cpp){:target="_blank"}
+* [bitcoin/chain.h at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/chain.h){:target="_blank"}
+* [bitcoin/block.h at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/primitives/block.h){:target="_blank"}
+* [bitcoin/block.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/primitives/block.cpp){:target="_blank"}
+* [bitcoin/streams.h at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/streams.h){:target="_blank"}
+* [bitcoin/utilstrencodings.h at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/utilstrencodings.h){:target="_blank"}

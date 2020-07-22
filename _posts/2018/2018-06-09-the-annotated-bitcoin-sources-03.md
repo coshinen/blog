@@ -116,13 +116,13 @@ const boost::filesystem::path &GetDataDir(bool fNetSpecific)
 }
 ```
 
-1.路径缓存上锁。<br>
-2.根据是否指定了网络选取路径缓存，这里未指定。<br>
-3.若路径存在，直接返回。<br>
-4.否则，若指定了数据目录，则获取并检测是否为目录；若未指定，则使用默认的数据目录路径。<br>
-5.若指定了网络，进行路径拼接，获取不用网络的数据目录。<br>
-6.根据路径创建该目录。<br>
-7.返回数据目录的路径。
+1. 路径缓存上锁。
+2. 根据是否指定了网络选取路径缓存，这里未指定。
+3. 若路径存在，直接返回。
+4. 否则，若指定了数据目录，则获取并检测是否为目录；若未指定，则使用默认的数据目录路径。
+5. 若指定了网络，进行路径拼接，获取不用网络的数据目录。
+6. 根据路径创建该目录。
+7. 返回数据目录的路径。
 
 <p id="ReadConfigFile-ref"></p>
 3.4.调用 ReadConfigFile(mapArgs, mapMultiArgs) 函数读取配置文件，该函数声明在“util.h”文件中。
@@ -559,4 +559,10 @@ bool SoftSetBoolArg(const std::string& strArg, bool fValue)
 
 ## 参考链接
 
-* [bitcoin/bitcoin v0.12.1](https://github.com/bitcoin/bitcoin/tree/v0.12.1){:target="_blank"}
+* [bitcoin/util.h at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/util.h){:target="_blank"}
+* [bitcoin/util.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/util.cpp){:target="_blank"}
+* [bitcoin/chainparamsbase.h at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/chainparamsbase.h){:target="_blank"}
+* [bitcoin/chainparamsbase.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/chainparamsbase.cpp){:target="_blank"}
+* [bitcoin/chainparams.h at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/chainparams.h){:target="_blank"}
+* [bitcoin/chainparams.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/chainparams.cpp){:target="_blank"}
+* [bitcoin/bitcoind.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/bitcoind.cpp){:target="_blank"}

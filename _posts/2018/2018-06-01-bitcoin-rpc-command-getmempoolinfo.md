@@ -84,9 +84,9 @@ UniValue getmempoolinfo(const UniValue& params, bool fHelp)
 }
 ```
 
-基本流程：<br>
-1.处理命令帮助和参数个数。<br>
-2.打包交易内存池信息为 JSON 格式并返回。
+基本流程：
+1. 处理命令帮助和参数个数。
+2. 打包交易内存池信息为 JSON 格式并返回。
 
 第二步，调用 mempoolInfoToJSON() 函数打包交易池信息至 JSON 格式的目标对象，该函数实现在“rpcblockchain.cpp”文件中。
 
@@ -107,5 +107,5 @@ UniValue mempoolInfoToJSON()
 
 ## 参考链接
 
-* [Developer Documentation - Bitcoin](https://bitcoin.org/en/developer-documentation){:target="_blank"}
-* [Bitcoin Developer Reference - Bitcoin](https://bitcoin.org/en/developer-reference#getmempoolinfo){:target="_blank"}
+* [bitcoin/rpcserver.h at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/rpcserver.h){:target="_blank"}
+* [bitcoin/rpcblockchain.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/rpcblockchain.cpp){:target="_blank"}

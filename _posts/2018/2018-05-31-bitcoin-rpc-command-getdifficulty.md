@@ -61,10 +61,10 @@ UniValue getdifficulty(const UniValue& params, bool fHelp)
 }
 ```
 
-基本流程：<br>
-1.处理命令帮助和参数个数。<br>
-2.上锁。<br>
-3.获取当前难度并返回。
+基本流程：
+1. 处理命令帮助和参数个数。
+2. 上锁。
+3. 获取当前难度并返回。
 
 第三步，调用 GetDifficulty() 函数获取当前难度，该函数实现在“rpcblockchain.cpp”文件中。
 
@@ -103,5 +103,5 @@ double GetDifficulty(const CBlockIndex* blockindex)
 
 ## 参考链接
 
-* [Developer Documentation - Bitcoin](https://bitcoin.org/en/developer-documentation){:target="_blank"}
-* [Bitcoin Developer Reference - Bitcoin](https://bitcoin.org/en/developer-reference#getdifficulty){:target="_blank"}
+* [bitcoin/rpcserver.h at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/rpcserver.h){:target="_blank"}
+* [bitcoin/rpcblockchain.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/rpcblockchain.cpp){:target="_blank"}

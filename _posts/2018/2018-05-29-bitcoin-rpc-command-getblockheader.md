@@ -162,17 +162,17 @@ UniValue getblockheader(const UniValue& params, bool fHelp)
 }
 ```
 
-基本流程：<br>
-1.处理命令帮助和参数个数。<br>
-2.上锁。<br>
-3.获取指定区块哈希并创建 uint256 对象。<br>
-4.设置显示详细信息标志。<br>
-5.检查指定区块哈希的区块是否存在于区块索引映射。<br>
-6.获取指定区块哈希对应的区块索引。<br>
-7.若详细标志为 false，则序列化区块数据，转换为 16 进制并返回。<br>
-8.否则把区块头信息打包为 JSON 格式并返回。
+基本流程：
+1. 处理命令帮助和参数个数。
+2. 上锁。
+3. 获取指定区块哈希并创建 uint256 对象。
+4. 设置显示详细信息标志。
+5. 检查指定区块哈希的区块是否存在于区块索引映射。
+6. 获取指定区块哈希对应的区块索引。
+7. 若详细标志为 false，则序列化区块数据，转换为 16 进制并返回。
+8. 否则把区块头信息打包为 JSON 格式并返回。
 
-最后调用 blockheaderToJSON(pblockindex) 函数把区块索引信息封装为 JSON 格式。<br>
+最后调用 blockheaderToJSON(pblockindex) 函数把区块索引信息封装为 JSON 格式。
 该函数实现在“rpcblockchain.cpp”文件中。
 
 ```cpp
@@ -206,5 +206,5 @@ UniValue blockheaderToJSON(const CBlockIndex* blockindex)
 
 ## 参考链接
 
-* [Developer Documentation - Bitcoin](https://bitcoin.org/en/developer-documentation){:target="_blank"}
-* [Bitcoin Developer Reference - Bitcoin](https://bitcoin.org/en/developer-reference#getblockheader){:target="_blank"}
+* [bitcoin/rpcserver.h at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/rpcserver.h){:target="_blank"}
+* [bitcoin/rpcblockchain.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/rpcblockchain.cpp){:target="_blank"}
