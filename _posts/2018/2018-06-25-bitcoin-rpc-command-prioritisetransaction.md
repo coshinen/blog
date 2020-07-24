@@ -86,11 +86,11 @@ UniValue prioritisetransaction(const UniValue& params, bool fHelp) // 注：与�
 }
 ```
 
-基本流程：<br>
-1.处理命令帮助和参数个数。<br>
-2.上锁。<br>
-3.获取交易索引和指定交易费，创建相应对象。<br>
-4.改变交易内存池中交易的优先级。
+基本流程：
+1. 处理命令帮助和参数个数。
+2. 上锁。
+3. 获取交易索引和指定交易费，创建相应对象。
+4. 改变交易内存池中交易的优先级。
 
 第四步，函数 mempool.PrioritiseTransaction(hash, params[0].get_str(), params[1].get_real(), nAmount) 声明在“txmempool.h”文件的 CTxMemPool 类中。
 
@@ -210,5 +210,7 @@ void CTxMemPool::PrioritiseTransaction(const uint256 hash, const string strHash,
 
 ## 参考链接
 
-* [Developer Documentation - Bitcoin](https://bitcoin.org/en/developer-documentation){:target="_blank"}
-* [Bitcoin Developer Reference - Bitcoin](https://bitcoin.org/en/developer-reference#prioritisetransaction){:target="_blank"}
+* [bitcoin/rpcserver.h at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/rpcserver.h){:target="_blank"}
+* [bitcoin/rpcmining.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/rpcmining.cpp){:target="_blank"}
+* [bitcoin/txmempool.h at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/txmempool.h){:target="_blank"}
+* [bitcoin/txmempool.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/txmempool.cpp){:target="_blank"}

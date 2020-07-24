@@ -380,4 +380,13 @@ static boost::scoped_ptr<ECCVerifyHandle> globalVerifyHandle; // 该智能指针
 
 ## 参考链接
 
-* [bitcoin/bitcoin v0.12.1](https://github.com/bitcoin/bitcoin/tree/v0.12.1{:target="_blank"})
+* [bitcoin/key.h at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/key.h){:target="_blank"}
+* [bitcoin/key.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/key.cpp){:target="_blank"}
+* [bitcoin/secp256k1.h at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/secp256k1/include/secp256k1.h){:target="_blank"}
+* [bitcoin/secp256k1.c at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/secp256k1/src/secp256k1.c){:target="_blank"}
+* [bitcoin/pagelocker.h at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/support/pagelocker.h){:target="_blank"}
+* [bitcoin/pagelocker.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/support/pagelocker.cpp){:target="_blank"}
+* [bitcoin/random.h at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/random.h){:target="_blank"}
+* [bitcoin/random.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/random.cpp){:target="_blank"}
+* [bitcoin/pubkey.h at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/pubkey.h){:target="_blank"}
+* [bitcoin/init.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/init.cpp){:target="_blank"}

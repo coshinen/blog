@@ -199,10 +199,10 @@ UniValue help(const UniValue& params, bool fHelp)
 }
 ```
 
-基本流程：<br>
-1.处理命令帮助和参数个数。<br>
-2.获取首个参数并转换为字符串。<br>
-3.把参数传入 tableRPC.help(strCommand)，这个是 help 命令的核心。
+基本流程：
+1. 处理命令帮助和参数个数。
+2. 获取首个参数并转换为字符串。
+3. 把参数传入 tableRPC.help(strCommand)，这个是 help 命令的核心。
 
 这里我们可以看到传参的方式，可以指定某个 RPC 命令作为 help 参数，或不带参数。<br>
 调用 tableRPC.help(strCommand) 函数来完成 help 命令的主要功能。对象 tableRPC 定义在“rpcserver.cpp”文件最后面。
@@ -336,5 +336,6 @@ std::string CRPCTable::help(const std::string& strCommand) const
 
 ## 参考链接
 
-* [Developer Documentation - Bitcoin](https://bitcoin.org/en/developer-documentation){:target="_blank"}
-* [Bitcoin Developer Reference - Bitcoin](https://bitcoin.org/en/developer-reference#help){:target="_blank"}
+* [bitcoin/rpcmisc.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/rpcmisc.cpp){:target="_blank"}
+* [bitcoin/rpcserver.h at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/rpcserver.h){:target="_blank"}
+* [bitcoin/rpcserver.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/rpcserver.cpp){:target="_blank"}

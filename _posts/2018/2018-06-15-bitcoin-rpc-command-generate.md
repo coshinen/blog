@@ -124,19 +124,20 @@ UniValue generate(const UniValue& params, bool fHelp)
 }
 ```
 
-基本流程：<br>
-1.处理命令帮助和参数个数。<br>
-2.检测当前网络类型，是否为回归测试网。<br>
-3.获取指定的要生成区块的数目。<br>
-4.创建创币脚本，每个区块必有一笔交易（创币交易）。<br>
-5.检测密钥池中密钥数量。<br>
-6.检测产生的脚本是否为空。<br>
-7.获取当前链高度并计算生成区块后的链高度，为生成区块做准备。<br>
-8.循环生成指定数目的区块，并记录每个上链区块的哈希。<br>
-9.返回打包好的区块哈希。
+基本流程：
+1. 处理命令帮助和参数个数。
+2. 检测当前网络类型，是否为回归测试网。
+3. 获取指定的要生成区块的数目。
+4. 创建创币脚本，每个区块必有一笔交易（创币交易）。
+5. 检测密钥池中密钥数量。
+6. 检测产生的脚本是否为空。
+7. 获取当前链高度并计算生成区块后的链高度，为生成区块做准备。
+8. 循环生成指定数目的区块，并记录每个上链区块的哈希。
+9. 返回打包好的区块哈希。
 
 第二步，首先调用 Params().MineBlocksOnDemand() 函数获取挖矿需求标志。
-该标志一般可以表示当前的网络，回归测试网下该标志为 true。<br>
+该标志一般可以表示当前的网络，回归测试网下该标志为 true。
+
 函数 Params() 声明在“chainparams.h”文件中。
 
 ```cpp
@@ -209,7 +210,7 @@ struct CMainSignals { // 主信号类
 };
 ```
 
-信号 ScriptForMining 通过函数 RegisterValidationInterface(...) 进行注册。<br>
+信号 ScriptForMining 通过函数 RegisterValidationInterface(...) 进行注册。
 该函数声明在“validationinterface.h”文件中。
 
 ```cpp
@@ -290,10 +291,10 @@ void CWallet::GetScriptForMining(boost::shared_ptr<CReserveScript> &script)
 }
 ```
 
-这里的流程：<br>
-1.新建对象。<br>
-2.通过该对象从密钥池获取一个公钥。<br>
-3.获取脚本。
+这里的流程：
+1. 新建对象。
+2. 通过该对象从密钥池获取一个公钥。
+3. 获取脚本。
 
 1.创建一个从密钥池中分配的密钥 CReserveKey 对象，该类定义在“wallet.h”文件中。
 
@@ -442,7 +443,7 @@ enum opcodetype
 };
 ```
 
-第六步，调用 coinbaseScript->reserveScript.empty() 函数判断脚本是否创建成功。<br>
+第六步，调用 coinbaseScript->reserveScript.empty() 函数判断脚本是否创建成功。
 该函数定义在“prevector.h”文件的 prevector 类模板中。
 
 ```cpp
@@ -485,7 +486,8 @@ private:
 };
 ```
 
-第八步，终于进入正题，开始生成区块了。<br>
+第八步，终于进入正题，开始生成区块了。
+
 8.1.通过调用 CreateNewBlock(Params(), coinbaseScript->reserveScript) 函数把创建的创币脚本传入生成一个区块模板。
 该函数声明在“miner.h”文件中。
 
@@ -734,5 +736,16 @@ CBlockTemplate* CreateNewBlock(const CChainParams& chainparams, const CScript& s
 
 ## 参考链接
 
-* [Developer Documentation - Bitcoin](https://bitcoin.org/en/developer-documentation){:target="_blank"}
-* [Bitcoin Developer Reference - Bitcoin](https://bitcoin.org/en/developer-reference#generate){:target="_blank"}
+* [bitcoin/rpcserver.h at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/rpcserver.h){:target="_blank"}
+* [bitcoin/rpcmining.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/rpcmining.cpp){:target="_blank"}
+* [bitcoin/chainparams.h at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/chainparams.h){:target="_blank"}
+* [bitcoin/chainparams.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/chainparams.cpp){:target="_blank"}
+* [bitcoin/validationinterface.h at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/validationinterface.h){:target="_blank"}
+* [bitcoin/validationinterface.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/validationinterface.cpp){:target="_blank"}
+* [bitcoin/init.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/init.cpp){:target="_blank"}
+* [bitcoin/wallet.h at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/wallet/wallet.h){:target="_blank"}
+* [bitcoin/wallet.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/wallet/wallet.cpp){:target="_blank"}
+* [bitcoin/script.h at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/script/script.h){:target="_blank"}
+* [bitcoin/prevector.h at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/prevector.h){:target="_blank"}
+* [bitcoin/miner.h at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/miner.h){:target="_blank"}
+* [bitcoin/miner.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/miner.cpp){:target="_blank"}

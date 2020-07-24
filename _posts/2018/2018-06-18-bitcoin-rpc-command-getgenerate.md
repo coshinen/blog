@@ -68,10 +68,10 @@ UniValue getgenerate(const UniValue& params, bool fHelp)
 }
 ```
 
-基本流程：<br>
-1.处理命令帮助和参数个数。<br>
-2.上锁。<br>
-3.获取启动选项 "-gen" 对应的值，转换为布尔型并返回。
+基本流程：
+1. 处理命令帮助和参数个数。
+2. 上锁。
+3. 获取启动选项 "-gen" 对应的值，转换为布尔型并返回。
 
 调用 GetBoolArg("-gen", DEFAULT_GENERATE) 函数获取挖矿状态，即挖矿选项 "-gen" 对应的值。<br>
 DEFAULT_GENERATE 定义在“miner.h”文件中。
@@ -125,5 +125,7 @@ static bool InterpretBool(const std::string& strValue) // 把字符串转换为�
 
 ## 参考链接
 
-* [Developer Documentation - Bitcoin](https://bitcoin.org/en/developer-documentation){:target="_blank"}
-* [Bitcoin Developer Reference - Bitcoin](https://bitcoin.org/en/developer-reference#getgenerate){:target="_blank"}
+* [bitcoin/rpcserver.h at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/rpcserver.h){:target="_blank"}
+* [bitcoin/rpcmining.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/rpcmining.cpp){:target="_blank"}
+* [bitcoin/util.h at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/util.h){:target="_blank"}
+* [bitcoin/util.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/util.cpp){:target="_blank"}

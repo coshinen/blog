@@ -122,5 +122,5 @@ UniValue getmininginfo(const UniValue& params, bool fHelp)
 
 ## 参考链接
 
-* [Developer Documentation - Bitcoin](https://bitcoin.org/en/developer-documentation){:target="_blank"}
-* [Bitcoin Developer Reference - Bitcoin](https://bitcoin.org/en/developer-reference#getmininginfo){:target="_blank"}
+* [bitcoin/rpcserver.h at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/rpcserver.h){:target="_blank"}
+* [bitcoin/rpcmining.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/rpcmining.cpp){:target="_blank"}

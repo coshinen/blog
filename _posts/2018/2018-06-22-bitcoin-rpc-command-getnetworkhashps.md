@@ -104,10 +104,10 @@ UniValue getnetworkhashps(const UniValue& params, bool fHelp)
 }
 ```
 
-基本流程：<br>
-1.处理命令帮助和参数个数。<br>
-2.上锁。<br>
-3.获取指定高度及块数的算力（网络哈希/秒），并返回。
+基本流程：
+1. 处理命令帮助和参数个数。
+2. 上锁。
+3. 获取指定高度及块数的算力（网络哈希/秒），并返回。
 
 第三步，调用 GetNetworkHashPS(params.size() > 0 ? params[0].get_int() : 120, params.size() > 1 ? params[1].get_int() : -1) 函数获取算力，
 该函数实现在“rpcmining.cpp”文件中。
@@ -160,5 +160,5 @@ UniValue GetNetworkHashPS(int lookup, int height) { // 默认 (120, -1)
 
 ## 参考链接
 
-* [Developer Documentation - Bitcoin](https://bitcoin.org/en/developer-documentation){:target="_blank"}
-* [Bitcoin Developer Reference - Bitcoin](https://bitcoin.org/en/developer-reference#getnetworkhashps){:target="_blank"}
+* [bitcoin/rpcserver.h at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/rpcserver.h){:target="_blank"}
+* [bitcoin/rpcmining.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/rpcmining.cpp){:target="_blank"}

@@ -51,10 +51,10 @@ UniValue stop(const UniValue& params, bool fHelp)
 }
 ```
 
-基本流程：<br>
-1.处理命令帮助和参数个数。<br>
-2.关闭比特币核心服务。<br>
-3.完全关闭前返回客端相关信息。
+基本流程：
+1. 处理命令帮助和参数个数。
+2. 关闭比特币核心服务。
+3. 完全关闭前返回客端相关信息。
 
 调用 StartShutdown() 函数关闭比特币核心服务，该函数声明在“init.h”文件中。
 
@@ -77,5 +77,5 @@ void StartShutdown()
 
 ## 参考链接
 
-* [Developer Documentation - Bitcoin](https://bitcoin.org/en/developer-documentation){:target="_blank"}
-* [Bitcoin Developer Reference - Bitcoin](https://bitcoin.org/en/developer-reference#stop){:target="_blank"}
+* [bitcoin/rpcserver.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/rpcserver.cpp){:target="_blank"}
+* [bitcoin/init.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/init.cpp){:target="_blank"}
