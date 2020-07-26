@@ -177,19 +177,19 @@ UniValue setban(const UniValue& params, bool fHelp)
 }
 ```
 
-基本流程：<br>
-1.处理命令帮助和参数个数。<br>
-2.检查指定的 ip 中是否含有子网。<br>
-3.创建对应的对象并检查网络的有效性。<br>
-4.add 添加到网络禁止列表。<br>
-4.1.检查列表中是否已存在该地址。<br>
-4.2.获取禁止的到期时间。<br>
-4.3.获取绝对时间标志。<br>
-4.4.禁止指定的网络。<br>
-4.5.查看建立连接的节点是否存在该网络，有则断开连接。<br>
-5.或 remove 移除指定网络。<br>
-6.导出禁止列表到磁盘文件“banlist.dat”。<br>
-7.发送信号，黑名单已改变。
+基本流程：
+1. 处理命令帮助和参数个数。
+2. 检查指定的 ip 中是否含有子网。
+3. 创建对应的对象并检查网络的有效性。
+4. add 添加到网络禁止列表。
+   41. 检查列表中是否已存在该地址。
+   42. 获取禁止的到期时间。
+   43. 获取绝对时间标志。
+   44. 禁止指定的网络。
+   45. 查看建立连接的节点是否存在该网络，有则断开连接。
+5. 或 remove 移除指定网络。
+6. 导出禁止列表到磁盘文件“banlist.dat”。
+7. 发送信号，黑名单已改变。
 
 第四步，调用 CNode::Ban(subNet, BanReasonManuallyAdded, banTime, absolute) 或 CNode::Ban(netAddr, BanReasonManuallyAdded, banTime, absolute) 函数
 添加指定网络到禁止列表。该函数声明在“net.h”文件的 CNode 类中。
@@ -267,5 +267,7 @@ bool CNode::Unban(const CSubNet &subNet) {
 
 ## 参考链接
 
-* [Developer Documentation - Bitcoin](https://bitcoin.org/en/developer-documentation){:target="_blank"}
-* [Bitcoin Developer Reference - Bitcoin](https://bitcoin.org/en/developer-reference#setban){:target="_blank"}
+* [bitcoin/rpcserver.h at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/rpcserver.h){:target="_blank"}
+* [bitcoin/rpcnet.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/rpcnet.cpp){:target="_blank"}
+* [bitcoin/net.h at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/net.h){:target="_blank"}
+* [bitcoin/net.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/net.cpp){:target="_blank"}

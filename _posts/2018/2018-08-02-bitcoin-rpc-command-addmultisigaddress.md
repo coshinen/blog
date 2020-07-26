@@ -14,8 +14,7 @@ excerpt: $ bitcoin-cli addmultisigaddress urequired ["key",...] ( "account" )
 addmultisigaddress urequired ["key",...] ( "account" ) # 添加一个需要 nrequired 个签名的多重签名地址到钱包
 ```
 
-**每个密钥都是一个比特币地址或 16 进制编码公钥。<br>
-如果指定了账户（已过时），则分配地址到该账户。**
+**每个密钥都是一个比特币地址或 16 进制编码公钥。如果指定了账户（已过时），则分配地址到该账户。**
 
 参数：
 1. nrequired（数字，必备）n 个密钥或地址所需的签名数量。
@@ -120,5 +119,5 @@ UniValue addmultisigaddress(const UniValue& params, bool fHelp)
 
 ## 参考链接
 
-* [Developer Documentation - Bitcoin](https://bitcoin.org/en/developer-documentation){:target="_blank"}
-* [Bitcoin Developer Reference - Bitcoin](https://bitcoin.org/en/developer-reference#addmultisigaddress){:target="_blank"}
+* [bitcoin/rpcserver.h at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/rpcserver.h){:target="_blank"}
+* [bitcoin/rpcwallet.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/wallet/rpcwallet.cpp){:target="_blank"}

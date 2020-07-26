@@ -86,16 +86,15 @@ UniValue abandontransaction(const UniValue& params, bool fHelp)
 }
 ```
 
-基本流程：<br>
-1.确保当前钱包可用（已初始化完成）。<br>
-2.处理命令帮助和参数个数。<br>
-3.钱包上锁。<br>
-4.获取指定交易索引构建 uint256 对象。<br>
-5.检查指定交易是否在钱包中。<br>
-6.标记指定交易为已抛弃。
+基本流程：
+1. 确保当前钱包可用（已初始化完成）。
+2. 处理命令帮助和参数个数。
+3. 钱包上锁。
+4. 获取指定交易索引构建 uint256 对象。
+5. 检查指定交易是否在钱包中。
+6. 标记指定交易为已抛弃。
 
-第一步，调用 EnsureWalletIsAvailable(fHelp) 函数检查当前钱包是否初始化完成。<br>
-该函数实现在“rpcwallet.cpp”文件中。
+第一步，调用 EnsureWalletIsAvailable(fHelp) 函数检查当前钱包是否初始化完成。该函数实现在“rpcwallet.cpp”文件中。
 
 ```cpp
 bool EnsureWalletIsAvailable(bool avoidException)
@@ -111,7 +110,8 @@ bool EnsureWalletIsAvailable(bool avoidException)
 }
 ```
 
-第五步，钱包交易映射对象 pwalletMain->mapWallet 定义在“wallet.h”文件的 CWallet 类中。<br>
+第五步，钱包交易映射对象 pwalletMain->mapWallet 定义在“wallet.h”文件的 CWallet 类中。
+
 第六步，调用 pwalletMain->AbandonTransaction(hash) 函数标记该钱包交易为以抛弃，该函数声明在“wallet.h”文件的 CWallet 类中。
 
 ```cpp
@@ -330,5 +330,8 @@ class CMerkleTx : public CTransaction // 一个连接它到区块链的默克分
 
 ## 参考链接
 
-* [Developer Documentation - Bitcoin](https://bitcoin.org/en/developer-documentation){:target="_blank"}
-* [Bitcoin Developer Reference - Bitcoin](https://bitcoin.org/en/developer-reference#abandontransaction){:target="_blank"}
+* [bitcoin/rpcserver.h at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/rpcserver.h){:target="_blank"}
+* [bitcoin/rpcwallet.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/wallet/rpcwallet.cpp){:target="_blank"}
+* [bitcoin/wallet.h at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/wallet/wallet.h){:target="_blank"}
+* [bitcoin/wallet.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/wallet/wallet.cpp){:target="_blank"}
+* [bitcoin/txmempool.h at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/txmempool.h){:target="_blank"}

@@ -39,9 +39,9 @@ bool StartHTTPRPC()
 }
 ```
 
-1.初始化 RPC 身份验证，用于验证 RPC 用户名和密码。<br>
-2.注册 HTTP 处理函数。<br>
-3.创建 HTTP 定时器接口对象，并注册定时器接口。
+1. 初始化 RPC 身份验证，用于验证 RPC 用户名和密码。
+2. 注册 HTTP 处理函数。
+3. 创建 HTTP 定时器接口对象，并注册定时器接口。
 
 1.调用 InitRPCAuthentication() 初始化 RPC 验证（"用户名:密码"），该函数实现在“httprpc.cpp”文件中。
 
@@ -724,9 +724,9 @@ bool StartHTTPServer()
 }
 ```
 
-1.获取 RPC 线程数，可通过启动选项 -rpcthreads 设置，默认为 4。<br>
-2.创建 HTTP 线程。<br>
-3.创建 HTTP 工作队列处理线程。
+1. 获取 RPC 线程数，可通过启动选项 -rpcthreads 设置，默认为 4。
+2. 创建 HTTP 线程。
+3. 创建 HTTP 工作队列处理线程。
 
 2.调用 boost::thread(boost::bind(&ThreadHTTP, eventBase, eventHTTP)) 创建 HTTP 线程，进入 http 事件循环，
 线程函数 ThreadHTTP 定义在“httpserver.cpp”文件中。
@@ -840,4 +840,12 @@ public:
 
 ## 参考链接
 
-* [bitcoin/bitcoin v0.12.1](https://github.com/bitcoin/bitcoin/tree/v0.12.1){:target="_blank"}
+* [bitcoin/httprpc.h at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/httprpc.h){:target="_blank"}
+* [bitcoin/httprpc.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/httprpc.cpp){:target="_blank"}
+* [bitcoin/rpcprotocol.h at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/rpcprotocol.h){:target="_blank"}
+* [bitcoin/rpcprotocol.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/rpcprotocol.cpp){:target="_blank"}
+* [bitcoin/httpserver.h at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/httpserver.h){:target="_blank"}
+* [bitcoin/httpserver.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/httpserver.cpp){:target="_blank"}
+* [bitcoin/rpcserver.h at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/rpcserver.h){:target="_blank"}
+* [bitcoin/rpcserver.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/rpcserver.cpp){:target="_blank"}
+* [bitcoin/rest.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/rest.cpp){:target="_blank"}

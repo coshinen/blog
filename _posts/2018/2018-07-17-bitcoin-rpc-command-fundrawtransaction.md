@@ -266,15 +266,14 @@ UniValue fundrawtransaction(const UniValue& params, bool fHelp)
 }
 ```
 
-基本流程：<br>
-1.确保当前钱包可用。<br>
-2.处理命令帮助和参数个数。<br>
-3.检验参数类型并获取指定参数。<br>
-4.构建可变版本的交易，资助该交易使输入大于等于输出，同时如果有找零的话，追加找零到输出列表。<br>
-5.追加相关信息到对象类型的结果集并返回。
+基本流程：
+1. 确保当前钱包可用。
+2. 处理命令帮助和参数个数。
+3. 检验参数类型并获取指定参数。
+4. 构建可变版本的交易，资助该交易使输入大于等于输出，同时如果有找零的话，追加找零到输出列表。
+5. 追加相关信息到对象类型的结果集并返回。
 
-4.调用 pwalletMain->FundTransaction(tx, nFee, nChangePos, strFailReason, includeWatching) 函数资助指定交易，
-它声明在“wallet/wallet.h”文件的 CWallet 类中。
+4.调用 pwalletMain->FundTransaction(tx, nFee, nChangePos, strFailReason, includeWatching) 函数资助指定交易，它声明在“wallet/wallet.h”文件的 CWallet 类中。
 
 ```cpp
 /** 
@@ -352,5 +351,7 @@ bool CWallet::FundTransaction(CMutableTransaction& tx, CAmount &nFeeRet, int& nC
 
 ## 参考链接
 
-* [Developer Documentation - Bitcoin](https://bitcoin.org/en/developer-documentation){:target="_blank"}
-* [Bitcoin Developer Reference - Bitcoin](https://bitcoin.org/en/developer-reference#fundrawtransaction){:target="_blank"}
+* [bitcoin/rpcserver.h at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/rpcserver.h){:target="_blank"}
+* [bitcoin/rpcwallet.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/wallet/rpcwallet.cpp){:target="_blank"}
+* [bitcoin/wallet.h at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/wallet/wallet.h){:target="_blank"}
+* [bitcoin/wallet.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/wallet/wallet.cpp){:target="_blank"}

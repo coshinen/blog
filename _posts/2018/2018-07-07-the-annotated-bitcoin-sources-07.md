@@ -61,7 +61,7 @@ bool glibc_sanity_test(); // glibc 完整性测试
 bool glibcxx_sanity_test(); // glibcxx 完整性测试
 ```
 
-首先调用 glibc_sanity_test() 测试 glibc 的完整性，该函数实现在“glib_sanity.cpp”文件中，没有入参。
+首先调用 glibc_sanity_test() 测试 glibc 的完整性，该函数实现在“glibc_sanity.cpp”文件中，没有入参。
 
 ```cpp
 namespace
@@ -376,4 +376,11 @@ void OpenDebugLog()
 
 ## 参考链接
 
-* [bitcoin/bitcoin v0.12.1](https://github.com/bitcoin/bitcoin/tree/v0.12.1){:target="_blank"}
+* [bitcoin/key.h at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/key.h){:target="_blank"}
+* [bitcoin/key.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/key.cpp){:target="_blank"}
+* [bitcoin/sanity.h at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/compat/sanity.h){:target="_blank"}
+* [bitcoin/glibc_sanity.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/compat/glibc_sanity.cpp){:target="_blank"}
+* [bitcoin/glibcxx_sanity.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/compat/glibcxx_sanity.cpp){:target="_blank"}
+* [bitcoin/util.h at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/util.h){:target="_blank"}
+* [bitcoin/util.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/util.cpp){:target="_blank"}
+* [bitcoin/serialize.h at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/serialize.h){:target="_blank"}

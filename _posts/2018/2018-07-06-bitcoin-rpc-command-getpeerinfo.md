@@ -14,7 +14,7 @@ excerpt: $ bitcoin-cli getpeerinfo
 getpeerinfo # 获取关于每个连接的网络节点的数据的 json 数组对象
 ```
 
-结果：<br>
+结果：
 ```shell
 [
   {
@@ -197,14 +197,13 @@ UniValue getpeerinfo(const UniValue& params, bool fHelp)
 }
 ```
 
-基本流程：<br>
-1.处理命令帮助和参数个数。<br>
-2.上锁。<br>
-3.复制节点状态到局部节点状态列表对象 vstats。<br>
-4.依次遍历该列表，追加节点相关信息。
+基本流程：
+1. 处理命令帮助和参数个数。
+2. 上锁。
+3. 复制节点状态到局部节点状态列表对象 vstats。
+4. 依次遍历该列表，追加节点相关信息。
 
-第三步，调用 CopyNodeStats(vstats) 函数把已连接节点列表中节点的相关状态信息复制到 vstats。<br>
-该函数定义在“rpcnet.cpp”文件中。
+第三步，调用 CopyNodeStats(vstats) 函数把已连接节点列表中节点的相关状态信息复制到 vstats。该函数定义在“rpcnet.cpp”文件中。
 
 ```cpp
 static void CopyNodeStats(std::vector<CNodeStats>& vstats)
@@ -221,8 +220,7 @@ static void CopyNodeStats(std::vector<CNodeStats>& vstats)
 }
 ```
 
-遍历已建立连接的节点列表，调用 pnode->copyStats(stats) 函数复制节点状态信息。<br>
-该函数定义在“net.h”文件中。
+遍历已建立连接的节点列表，调用 pnode->copyStats(stats) 函数复制节点状态信息。该函数定义在“net.h”文件中。
 
 ```cpp
 #undef X
@@ -268,5 +266,7 @@ void CNode::copyStats(CNodeStats &stats)
 
 ## 参考链接
 
-* [Developer Documentation - Bitcoin](https://bitcoin.org/en/developer-documentation){:target="_blank"}
-* [Bitcoin Developer Reference - Bitcoin](https://bitcoin.org/en/developer-reference#getpeerinfo){:target="_blank"}
+* [bitcoin/rpcserver.h at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/rpcserver.h){:target="_blank"}
+* [bitcoin/rpcnet.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/rpcnet.cpp){:target="_blank"}
+* [bitcoin/net.h at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/net.h){:target="_blank"}
+* [bitcoin/net.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/net.cpp){:target="_blank"}

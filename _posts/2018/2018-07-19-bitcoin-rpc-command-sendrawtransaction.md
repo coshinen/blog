@@ -308,13 +308,13 @@ UniValue sendrawtransaction(const UniValue& params, bool fHelp)
 }
 ```
 
-基本流程：<br>
-1.处理命令帮助和参数个数。<br>
-2.上锁。<br>
-3.检验参数类型并获取指定参数。<br>
-4.验证该交易是否上链（在内存池中是否存在、是否符合交易高度限制），若未上链则先把该交易加入内存池。<br>
-5.中继（发送）该交易。<br>
-6.返回交易的 16 进制形式。
+基本流程：
+1. 处理命令帮助和参数个数。
+2. 上锁。
+3. 检验参数类型并获取指定参数。
+4. 验证该交易是否上链（在内存池中是否存在、是否符合交易高度限制），若未上链则先把该交易加入内存池。
+5. 中继（发送）该交易。
+6. 返回交易的 16 进制形式。
 
 4.调用 AcceptToMemoryPool(mempool, state, tx, false, &fMissingInputs, false, !fOverrideFees) 函数来尝试添加交易至内存池。
 该函数定义在“main.cpp”文件中。入参为：交易内存池全局对象，待获取的验证状态，该交易，false，丢失输入标志，false，!交易费超额标志。
@@ -416,5 +416,8 @@ class CNode // 对端节点信息类
 
 ## 参考链接
 
-* [Developer Documentation - Bitcoin](https://bitcoin.org/en/developer-documentation){:target="_blank"}
-* [Bitcoin Developer Reference - Bitcoin](https://bitcoin.org/en/developer-reference#sendrawtransaction){:target="_blank"}
+* [bitcoin/rpcserver.h at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/rpcserver.h){:target="_blank"}
+* [bitcoin/rpcrawtransaction.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/rpcrawtransaction.cpp){:target="_blank"}
+* [bitcoin/main.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/main.cpp){:target="_blank"}
+* [bitcoin/net.h at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/net.h){:target="_blank"}
+* [bitcoin/net.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/net.cpp){:target="_blank"}

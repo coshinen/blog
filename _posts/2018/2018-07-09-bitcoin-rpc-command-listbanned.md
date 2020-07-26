@@ -83,11 +83,11 @@ UniValue listbanned(const UniValue& params, bool fHelp)
 }
 ```
 
-基本流程：<br>
-1.处理命令帮助和参数个数。<br>
-2.获取禁止列表。<br>
-3.遍历该列表获取需要的信息。<br>
-4.返回获取的信息。
+基本流程：
+1. 处理命令帮助和参数个数。
+2. 获取禁止列表。
+3. 遍历该列表获取需要的信息。
+4. 返回获取的信息。
 
 类型 banmap_t 的定义在“net.h”文件中。
 
@@ -142,6 +142,7 @@ CCriticalSection CNode::cs_setBanned;
 
 ## 参考链接
 
-* [Developer Documentation - Bitcoin](https://bitcoin.org/en/developer-documentation){:target="_blank"}
-* [Bitcoin Developer Reference - Bitcoin](https://bitcoin.org/en/developer-reference#listbanned){:target="_blank"}
-* [JSON 数组 \| 菜鸟教程](http://www.runoob.com/json/js-json-arrays.html){:target="_blank"}
+* [bitcoin/rpcserver.h at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/rpcserver.h){:target="_blank"}
+* [bitcoin/rpcnet.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/rpcnet.cpp){:target="_blank"}
+* [bitcoin/net.h at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/net.h){:target="_blank"}
+* [bitcoin/net.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/net.cpp){:target="_blank"}

@@ -14,8 +14,7 @@ excerpt: $ bitcoin-cli createrawtransaction [{"txid":"id","vout":n},...] {"addre
 createrawtransaction [{"txid":"id","vout":n},...] {"address":amount,"data":"hex",...} ( locktime ) # 基于输入和创建新的输出创建一笔交易花费
 ```
 
-**输出可以是地址集或数据。<br>
-返回 16 进制编码的原始交易。<br>
+**输出可以是地址集或数据。返回 16 进制编码的原始交易。
 注：交易的输入没有签名，且该交易不会存储在钱包或传输到网络中。**
 
 参数：
@@ -235,17 +234,17 @@ UniValue createrawtransaction(const UniValue& params, bool fHelp)
 }
 ```
 
-基本流程：<br>
-1.处理命令帮助和参数个数。<br>
-2.上锁。<br>
-3.检验参数类型并获取指定参数。<br>
-4.构建一笔原始交易。<br>
-4.1.初始化原始交易锁定时间。<br>
-4.2.构建交易输入列表。<br>
-4.3.构建交易输出列表。<br>
-5.返回原始交易的 16 进制编码形式。
+基本流程：
+1. 处理命令帮助和参数个数。
+2. 上锁。
+3. 检验参数类型并获取指定参数。
+4. 构建一笔原始交易。
+   41. 初始化原始交易锁定时间。
+   42. 构建交易输入列表。
+   43. 构建交易输出列表。
+5. 返回原始交易的 16 进制编码形式。
 
 ## 参考链接
 
-* [Developer Documentation - Bitcoin](https://bitcoin.org/en/developer-documentation){:target="_blank"}
-* [Bitcoin Developer Reference - Bitcoin](https://bitcoin.org/en/developer-reference#createrawtransaction){:target="_blank"}
+* [bitcoin/rpcserver.h at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/rpcserver.h){:target="_blank"}
+* [bitcoin/rpcrawtransaction.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/rpcrawtransaction.cpp){:target="_blank"}

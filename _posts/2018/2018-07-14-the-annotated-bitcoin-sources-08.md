@@ -404,17 +404,17 @@ void CScheduler::serviceQueue()
 }
 ```
 
-1.任务队列上锁。<br>
-2.使用队列的线程数加 1。<br>
-3.线程函数循环体。<br>
-3.1.当任务队列为空时，等待条件满足。<br>
-3.2.超时等待。<br>
-3.3.若任务队列被清空，跳过本次循环。<br>
-3.4.取出队列中第一个任务。<br>
-3.5.解锁并执行该任务。<br>
-4.使用任务队列的线程数减 1。
+1. 任务队列上锁。
+2. 使用队列的线程数加 1。
+3. 线程函数循环体。
+   31. 当任务队列为空时，等待条件满足。
+   32. 超时等待。
+   33. 若任务队列被清空，跳过本次循环。
+   34. 取出队列中第一个任务。
+   35. 解锁并执行该任务。
+4. 使用任务队列的线程数减 1。
 
-3.5.调用模板类 reverse_lock 创建对象，执行反转锁操作：它提供 RAII 功能，在构造时解锁并在析构时上锁。
+3.5. 调用模板类 reverse_lock 创建对象，执行反转锁操作：它提供 RAII 功能，在构造时解锁并在析构时上锁。
 另外，它会临时转移所有权，所以互斥锁不能用该锁锁定。其实例永远不会持有锁。详见 [reverse_lock](https://www.boost.org/doc/libs/1_65_0/doc/html/thread/synchronization.html#thread.synchronization.other_locks.reverse_lock){:target="_blank"}。
 
 未完待续...<br>
@@ -422,4 +422,12 @@ void CScheduler::serviceQueue()
 
 ## 参考链接
 
-* [bitcoin/bitcoin v0.12.1](https://github.com/bitcoin/bitcoin/tree/v0.12.1){:target="_blank"}
+* [bitcoin/main.h at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/main.h){:target="_blank"}
+* [bitcoin/main.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/main.cpp){:target="_blank"}
+* [bitcoin/util.h at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/util.h){:target="_blank"}
+* [bitcoin/util.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/util.cpp){:target="_blank"}
+* [bitcoin/checkqueue.h at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/checkqueue.h){:target="_blank"}
+* [bitcoin/interpreter.h at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/script/interpreter.h){:target="_blank"}
+* [bitcoin/interpreter.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/script/interpreter.cpp){:target="_blank"}
+* [bitcoin/init.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/init.cpp){:target="_blank"}
+* [bitcoin/scheduler.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/scheduler.cpp){:target="_blank"}

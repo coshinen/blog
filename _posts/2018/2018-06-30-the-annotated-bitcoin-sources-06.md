@@ -373,7 +373,7 @@ public:
 static boost::scoped_ptr<ECCVerifyHandle> globalVerifyHandle; // 该智能指针与 STL 的 std::unique_ptr 类似
 ```
 
-智能指针 boost::scoped_ptr 不能复制或移动，类似于 STL 的 std::unique_ptr，详见 [boost::scoped_ptr](https://theboostcpplibraries.com/boost.smartpointers-sole-ownership){:target="_blank"}。
+智能指针 boost::scoped_ptr 不能复制或移动，类似于 STL 的 std::unique_ptr。
 
 未完待续...<br>
 请看下一篇[比特币源码剖析（七）](/blog/2018/07/the-annotated-bitcoin-sources-07.html)。
@@ -390,3 +390,4 @@ static boost::scoped_ptr<ECCVerifyHandle> globalVerifyHandle; // 该智能指针
 * [bitcoin/random.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/random.cpp){:target="_blank"}
 * [bitcoin/pubkey.h at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/pubkey.h){:target="_blank"}
 * [bitcoin/init.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/init.cpp){:target="_blank"}
+* [Boost.SmartPtr: The Smart Pointer Library - 1.73.0](https://www.boost.org/doc/libs/1_73_0/libs/smart_ptr/doc/html/smart_ptr.html#scoped_ptr){:target="_blank"}

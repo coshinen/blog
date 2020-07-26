@@ -176,10 +176,10 @@ UniValue getnetworkinfo(const UniValue& params, bool fHelp)
 }
 ```
 
-基本流程：<br>
-1.处理命令帮助和参数个数。<br>
-2.上锁。<br>
-3.创建一个对象类型的结果，追加相关信息到该对象。
+基本流程：
+1. 处理命令帮助和参数个数。
+2. 上锁。
+3. 创建一个对象类型的结果，追加相关信息到该对象。
 
 第三步，调用 GetNetworksInfo() 函数来获取网络信息，该函数实现在“rpcnet.cpp”文件中。
 
@@ -208,5 +208,5 @@ static UniValue GetNetworksInfo()
 
 ## 参考链接
 
-* [Developer Documentation - Bitcoin](https://bitcoin.org/en/developer-documentation){:target="_blank"}
-* [Bitcoin Developer Reference - Bitcoin](https://bitcoin.org/en/developer-reference#getnetworkinfo){:target="_blank"}
+* [bitcoin/rpcserver.h at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/rpcserver.h){:target="_blank"}
+* [bitcoin/rpcnet.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/rpcnet.cpp){:target="_blank"}

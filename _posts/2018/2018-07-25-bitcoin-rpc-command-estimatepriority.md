@@ -17,7 +17,8 @@ estimatepriority nblocks # 估算一笔 0 交易费的交易在 nblocks 个区�
 参数：
 1. nblocks（数字）区块数。
 
-结果：（数字）返回预估的交易优先级。<br>
+结果：（数字）返回预估的交易优先级。
+
 如果没有足够的交易和区块用来估算则会返回一个负值，-1 表示交易优先级为 0。
 
 ## 用法示例
@@ -85,5 +86,5 @@ UniValue estimatepriority(const UniValue& params, bool fHelp)
 
 ## 参考链接
 
-* [Developer Documentation - Bitcoin](https://bitcoin.org/en/developer-documentation){:target="_blank"}
-* [Bitcoin Developer Reference - Bitcoin](https://bitcoin.org/en/developer-reference#estimatepriority){:target="_blank"}
+* [bitcoin/rpcserver.h at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/rpcserver.h){:target="_blank"}
+* [bitcoin/rpcmining.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/rpcmining.cpp){:target="_blank"}

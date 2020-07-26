@@ -156,15 +156,14 @@ UniValue decodescript(const UniValue& params, bool fHelp)
 }
 ```
 
-基本流程：<br>
-1.处理命令帮助和参数个数。<br>
-2.检验参数类型，是否为字符串类型。<br>
-3.构建序列化脚本对象，可为空。<br>
-4.脚本公钥转换为 JSON 格式加入结果集。<br>
-5.把 Base58 编码的脚本哈希加入结果集并返回。
+基本流程：
+1. 处理命令帮助和参数个数。
+2. 检验参数类型，是否为字符串类型。
+3. 构建序列化脚本对象，可为空。
+4. 脚本公钥转换为 JSON 格式加入结果集。
+5. 把 Base58 编码的脚本哈希加入结果集并返回。
 
-第四步，调用 ScriptPubKeyToJSON(script, r, false) 把脚本公钥转换为 JSON 格式，
-该函数定义在“rpcrawtransaction.cpp”文件中。
+第四步，调用 ScriptPubKeyToJSON(script, r, false) 把脚本公钥转换为 JSON 格式，该函数定义在“rpcrawtransaction.cpp”文件中。
 
 ```cpp
 void ScriptPubKeyToJSON(const CScript& scriptPubKey, UniValue& out, bool fIncludeHex)
@@ -194,5 +193,5 @@ void ScriptPubKeyToJSON(const CScript& scriptPubKey, UniValue& out, bool fInclud
 
 ## 参考链接
 
-* [Developer Documentation - Bitcoin](https://bitcoin.org/en/developer-documentation){:target="_blank"}
-* [Bitcoin Developer Reference - Bitcoin](https://bitcoin.org/en/developer-reference#decodescript){:target="_blank"}
+* [bitcoin/rpcserver.h at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/rpcserver.h){:target="_blank"}
+* [bitcoin/rpcrawtransaction.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/rpcrawtransaction.cpp){:target="_blank"}

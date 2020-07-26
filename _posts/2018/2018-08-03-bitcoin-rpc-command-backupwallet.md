@@ -94,15 +94,14 @@ UniValue backupwallet(const UniValue& params, bool fHelp)
 }
 ```
 
-基本流程：<br>
-1.确保钱包当前可用（已初始化完成）。<br>
-2.处理命令帮助和参数个数。<br>
-3.钱包上锁。<br>
-4.获取指定的备份位置。<br>
-5.备份文件（复制原 wallet.dat 文件到指定位置）。
+基本流程：
+1. 确保钱包当前可用（已初始化完成）。
+2. 处理命令帮助和参数个数。
+3. 钱包上锁。
+4. 获取指定的备份位置。
+5. 备份文件（复制原 wallet.dat 文件到指定位置）。
 
-第五步，调用 BackupWallet(*pwalletMain, strDest) 函数复制原钱包数据文件到指定位置，达到备份钱包文件的效果。
-该函数声明在“walletdb.h”文件中。
+第五步，调用 BackupWallet(*pwalletMain, strDest) 函数复制原钱包数据文件到指定位置，达到备份钱包文件的效果。该函数声明在“walletdb.h”文件中。
 
 ```cpp
 bool BackupWallet(const CWallet& wallet, const std::string& strDest); // 备份钱包
@@ -154,5 +153,7 @@ bool BackupWallet(const CWallet& wallet, const string& strDest)
 
 ## 参考链接
 
-* [Developer Documentation - Bitcoin](https://bitcoin.org/en/developer-documentation){:target="_blank"}
-* [Bitcoin Developer Reference - Bitcoin](https://bitcoin.org/en/developer-reference#backupwallet){:target="_blank"}
+* [bitcoin/rpcserver.h at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/rpcserver.h){:target="_blank"}
+* [bitcoin/rpcwallet.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/wallet/rpcwallet.cpp){:target="_blank"}
+* [bitcoin/walletdb.h at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/wallet/walletdb.h){:target="_blank"}
+* [bitcoin/walletdb.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/wallet/walletdb.cpp){:target="_blank"}

@@ -17,7 +17,8 @@ estimatefee nblocks # 估算交易在 nblocks 个区块开始确认的每千字�
 参数：
 1. nblocks（数字）区块数。
 
-结果：（数字型）返回预估的每千字节的交易费。<br>
+结果：（数字型）返回预估的每千字节的交易费。
+
 如果没有足够的交易和区块用来估算则会返回一个负值，-1 表示交易费为 0。
 
 ## 用法示例
@@ -91,5 +92,5 @@ UniValue estimatefee(const UniValue& params, bool fHelp)
 
 ## 参考链接
 
-* [Developer Documentation - Bitcoin](https://bitcoin.org/en/developer-documentation){:target="_blank"}
-* [Bitcoin Developer Reference - Bitcoin](https://bitcoin.org/en/developer-reference#estimatefee){:target="_blank"}
+* [bitcoin/rpcserver.h at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/rpcserver.h){:target="_blank"}
+* [bitcoin/rpcmining.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/rpcmining.cpp){:target="_blank"}
