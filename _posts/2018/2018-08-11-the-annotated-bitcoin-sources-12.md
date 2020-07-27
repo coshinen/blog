@@ -152,17 +152,16 @@ bool AppInit2(boost::thread_group& threadGroup, CScheduler& scheduler) // 3.11.�
 }
 ```
 
-1.注册节点信号函数。<br>
-2.处理用户代理字符串，防止出现不安全字符。<br>
-3.禁用未指定的网络类型。<br>
-4.构建白名单列表。<br>
-5.设置代理，洋葱网络。<br>
-6.部分参数交互。<br>
-7.设置 ZMQ。<br>
-8.设置最大向外流量阈值。
+1. 注册节点信号函数。
+2. 处理用户代理字符串，防止出现不安全字符。
+3. 禁用未指定的网络类型。
+4. 构建白名单列表。
+5. 设置代理，洋葱网络。
+6. 部分参数交互。
+7. 设置 ZMQ。
+8. 设置最大向外流量阈值。
 
-1.调用 RegisterNodeSignals(GetNodeSignals()) 注册节点信号，
-首先调用 GetNodeSignals() 获取节点信号全局对象 g_signals 的引用，该函数声明在“net.h”文件中。
+1.调用 RegisterNodeSignals(GetNodeSignals()) 注册节点信号，首先调用 GetNodeSignals() 获取节点信号全局对象 g_signals 的引用，该函数声明在“net.h”文件中。
 
 ```cpp
 CNodeSignals& GetNodeSignals(); // 获取节点信号全局对象的引用
@@ -517,4 +516,10 @@ void CNode::SetMaxOutboundTarget(uint64_t limit)
 
 ## 参考链接
 
-* [bitcoin/bitcoin v0.12.1](https://github.com/bitcoin/bitcoin/tree/v0.12.1){:target="_blank"}
+* [bitcoin/init.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/init.cpp){:target="_blank"}
+* [bitcoin/net.h at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/net.h){:target="_blank"}
+* [bitcoin/net.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/net.cpp){:target="_blank"}
+* [bitcoin/main.h at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/main.h){:target="_blank"}
+* [bitcoin/main.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/main.cpp){:target="_blank"}
+* [bitcoin/netbase.h at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/netbase.h){:target="_blank"}
+* [bitcoin/netbase.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/netbase.cpp){:target="_blank"}

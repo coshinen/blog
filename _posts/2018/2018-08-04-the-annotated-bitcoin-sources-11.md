@@ -42,8 +42,7 @@ bool AppInit2(boost::thread_group& threadGroup, CScheduler& scheduler) // 3.11.�
 };
 ```
 
-这里调用了 CWallet::Verify(strWalletFile, warningString, errorString) 来验证会恢复钱包数据库，
-该函数声明在“wallet/wallet.h”文件的 CWallet 类中。
+这里调用了 CWallet::Verify(strWalletFile, warningString, errorString) 来验证会恢复钱包数据库，该函数声明在“wallet/wallet.h”文件的 CWallet 类中。
 
 ```cpp
 /** 
@@ -59,7 +58,7 @@ class CWallet : public CCryptoKeyStore, public CValidationInterface
 };
 ```
 
-因为是静态成员函数，不与任何类对象关联（只与所在类相关），所以只能通过“类名::静态成员函数名”的方式调用。<br>
+因为是静态成员函数，不与任何类对象关联（只与所在类相关），所以只能通过“类名::静态成员函数名”的方式调用。
 实现在“wallet/wallet.cpp”文件中，入参为：钱包文件位置，待获取的警告信息，待获取的错误信息。
 
 ```cpp
@@ -111,13 +110,12 @@ bool CWallet::Verify(const string& walletFile, string& warningString, string& er
 }
 ```
 
-1.若打开数据库文件失败，尝试重命名后再次打开，得到钱包数据库环境对象。<br>
-2.若 -salvagewallet 选项开启，则恢复可读的密钥对。<br>
-3.若钱包文件存在，则验证钱包数据库文件，若文件异常，则尝试恢复。<br>
-4.验证成功返回 true。
+1. 若打开数据库文件失败，尝试重命名后再次打开，得到钱包数据库环境对象。
+2. 若 -salvagewallet 选项开启，则恢复可读的密钥对。
+3. 若钱包文件存在，则验证钱包数据库文件，若文件异常，则尝试恢复。
+4. 验证成功返回 true。
 
-2.调用 CWalletDB::Recover(bitdb, walletFile, true) 尝试恢复钱包可读的密钥对，
-该函数声明在“wallet/walletdb.h”文件的 CWalletDB 类中。
+2.调用 CWalletDB::Recover(bitdb, walletFile, true) 尝试恢复钱包可读的密钥对，该函数声明在“wallet/walletdb.h”文件的 CWalletDB 类中。
 
 ```cpp
 /** Access to the wallet database (wallet.dat) */ // 访问钱包数据库（wallet.dat）
@@ -354,4 +352,10 @@ CDBEnv::VerifyResult CDBEnv::Verify(const std::string& strFile, bool (*recoverFu
 
 ## 参考链接
 
-* [bitcoin/bitcoin v0.12.1](https://github.com/bitcoin/bitcoin/tree/v0.12.1){:target="_blank"}
+* [bitcoin/init.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/init.cpp){:target="_blank"}
+* [bitcoin/wallet.h at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/wallet/wallet.h){:target="_blank"}
+* [bitcoin/wallet.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/wallet/wallet.cpp){:target="_blank"}
+* [bitcoin/walletdb.h at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/wallet/walletdb.h){:target="_blank"}
+* [bitcoin/walletdb.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/wallet/walletdb.cpp){:target="_blank"}
+* [bitcoin/db.h at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/wallet/db.h){:target="_blank"}
+* [bitcoin/db.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/wallet/db.cpp){:target="_blank"}

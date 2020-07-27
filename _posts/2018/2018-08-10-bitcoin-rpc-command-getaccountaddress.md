@@ -101,13 +101,13 @@ UniValue getaccountaddress(const UniValue& params, bool fHelp)
 }
 ```
 
-基本流程：<br>
-1.确保钱包当前可用（已初始化完成）。<br>
-2.处理命令帮助和参数个数。<br>
-3.钱包上锁。<br>
-4.获取指定账户，账户名不能为 *。<br>
-5.获取指定账户的收款地址，若该账户不存在，则创建一个同时新建一个地址。<br>
-6.返回指定账户的收款地址。
+基本流程：
+1. 确保钱包当前可用（已初始化完成）。
+2. 处理命令帮助和参数个数。
+3. 钱包上锁。
+4. 获取指定账户，账户名不能为 *。
+5. 获取指定账户的收款地址，若该账户不存在，则创建一个同时新建一个地址。
+6. 返回指定账户的收款地址。
 
 第四步，调用 AccountFromValue(params[0]) 函数获取指定账户，注意这里指定的账户名不能为 *。
 该函数定义在“rpcwallet.cpp”文件中。
@@ -165,5 +165,5 @@ CBitcoinAddress GetAccountAddress(string strAccount, bool bForceNew=false)
 
 ## 参考链接
 
-* [Developer Documentation - Bitcoin](https://bitcoin.org/en/developer-documentation){:target="_blank"}
-* [Bitcoin Developer Reference - Bitcoin](https://bitcoin.org/en/developer-reference#getaccountaddress){:target="_blank"}
+* [bitcoin/rpcserver.h at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/rpcserver.h){:target="_blank"}
+* [bitcoin/rpcwallet.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/wallet/rpcwallet.cpp){:target="_blank"}

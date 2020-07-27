@@ -62,14 +62,14 @@ bool AppInit2(boost::thread_group& threadGroup, CScheduler& scheduler) // 3.11.�
 }
 ```
 
-> 基本流程：<br>
-> 1.检查硬盘可用空间是否充足。<br>
-> 2.检查前面 10 步初始化过程是否存在错误。<br>
-> 3.设置随机数种子，用于钱包生成私钥。<br>
-> 4.记录区块链、钱包的相关数据大小。<br>
-> 5.创建洋葱路由监听线程。<br>
-> 6.启动比特币节点相关线程。<br>
-> 7.创建比特币 CPU 挖矿线程。
+基本流程：
+1. 检查硬盘可用空间是否充足。
+2. 检查前面 10 步初始化过程是否存在错误。
+3. 设置随机数种子，用于钱包生成私钥。
+4. 记录区块链、钱包的相关数据大小。
+5. 创建洋葱路由监听线程。
+6. 启动比特币节点相关线程。
+7. 创建比特币 CPU 挖矿线程。
 
 1.调用 CheckDiskSpace() 检测硬盘剩余空间是否充足（最低 50MB），用于接收并存储新区块。
 该函数声明在“main.h”文件中。
@@ -367,4 +367,8 @@ std::string TorController::GetPrivateKeyFile()
 
 ## 参考链接
 
-* [bitcoin/bitcoin v0.12.1](https://github.com/bitcoin/bitcoin/tree/v0.12.1){:target="_blank"}
+* [bitcoin/init.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/init.cpp){:target="_blank"}
+* [bitcoin/main.h at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/main.h){:target="_blank"}
+* [bitcoin/main.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/main.cpp){:target="_blank"}
+* [bitcoin/torcontrol.h at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/torcontrol.h){:target="_blank"}
+* [bitcoin/torcontrol.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/torcontrol.cpp){:target="_blank"}

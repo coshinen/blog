@@ -112,16 +112,16 @@ UniValue encryptwallet(const UniValue& params, bool fHelp)
 }
 ```
 
-基本流程：<br>
-1.确保当前钱包可用（已初始化完成）。<br>
-2.处理命令帮助和参数个数。<br>
-3.钱包上锁。<br>
-4.钱包加密时查看命令帮助，不返回任何信息。<br>
-5.钱包已加密，再次加密直接返回提示信息。<br>
-6.获取用户指定密码。<br>
-7.密码长度检查，不能少于 1 个字符。<br>
-8.加密钱包。<br>
-9.关闭核心服务器。
+基本流程：
+1. 确保当前钱包可用（已初始化完成）。
+2. 处理命令帮助和参数个数。
+3. 钱包上锁。
+4. 钱包加密时查看命令帮助，不返回任何信息。
+5. 钱包已加密，再次加密直接返回提示信息。
+6. 获取用户指定密码。
+7. 密码长度检查，不能少于 1 个字符。
+8. 加密钱包。
+9. 关闭核心服务器。
 
 第五步，调用 pwalletMain->IsCrypted() 函数判断钱包当前是否加密，定义在“crypter.h”文件的 CCryptoKeyStore 类中。
 
@@ -314,5 +314,11 @@ void StartShutdown()
 
 ## 参考链接
 
-* [Developer Documentation - Bitcoin](https://bitcoin.org/en/developer-documentation){:target="_blank"}
-* [Bitcoin Developer Reference - Bitcoin](https://bitcoin.org/en/developer-reference#encryptwallet){:target="_blank"}
+* [bitcoin/rpcserver.h at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/rpcserver.h){:target="_blank"}
+* [bitcoin/rpcwallet.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/wallet/rpcwallet.cpp){:target="_blank"}
+* [bitcoin/crypter.h at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/wallet/crypter.h){:target="_blank"}
+* [bitcoin/secure.h at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/support/allocators/secure.h){:target="_blank"}
+* [bitcoin/wallet.h at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/wallet/wallet.h){:target="_blank"}
+* [bitcoin/wallet.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/wallet/wallet.cpp){:target="_blank"}
+* [bitcoin/init.h at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/init.h){:target="_blank"}
+* [bitcoin/init.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/init.cpp){:target="_blank"}

@@ -148,17 +148,17 @@ UniValue importprivkey(const UniValue& params, bool fHelp)
 }
 ```
 
-基本流程：<br>
-1.确保钱包当前可用（已初始化完成）。<br>
-2.处理命令帮助和参数个数。<br>
-3.钱包上锁。<br>
-4.确保当前钱包处于解密状态。<br>
-5.获取指定的参数。<br>
-6.初始化比特币密钥对象，并通过密钥获取私钥。<br>
-7.通过是私钥计算公钥，并验证公私钥是否配对。<br>
-8.获取公钥索引，并查询该密钥是否存在，若存在直接返回空值。<br>
-9.若不存在，添加公私钥到钱包。<br>
-10.从创世区块开始再扫描钱包交易。
+基本流程：
+1. 确保钱包当前可用（已初始化完成）。
+2. 处理命令帮助和参数个数。
+3. 钱包上锁。
+4. 确保当前钱包处于解密状态。
+5. 获取指定的参数。
+6. 初始化比特币密钥对象，并通过密钥获取私钥。
+7. 通过是私钥计算公钥，并验证公私钥是否配对。
+8. 获取公钥索引，并查询该密钥是否存在，若存在直接返回空值。
+9. 若不存在，添加公私钥到钱包。
+10. 从创世区块开始再扫描钱包交易。
 
 第九步，调用 pwalletMain->AddKeyPubKey(key, pubkey) 函数添加公私钥对到钱包，
 该函数定义在“keystore.cpp”文件中。
@@ -241,5 +241,8 @@ int CWallet::ScanForWalletTransactions(CBlockIndex* pindexStart, bool fUpdate)
 
 ## 参考链接
 
-* [Developer Documentation - Bitcoin](https://bitcoin.org/en/developer-documentation){:target="_blank"}
-* [Bitcoin Developer Reference - Bitcoin](https://bitcoin.org/en/developer-reference#importprivkey){:target="_blank"}
+* [bitcoin/rpcserver.h at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/rpcserver.h){:target="_blank"}
+* [bitcoin/rpcdump.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/wallet/rpcdump.cpp){:target="_blank"}
+* [bitcoin/keystore.h at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/keystore.h){:target="_blank"}
+* [bitcoin/keystore.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/keystore.cpp){:target="_blank"}
+* [bitcoin/wallet.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/wallet/wallet.cpp){:target="_blank"}

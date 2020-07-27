@@ -116,16 +116,16 @@ UniValue dumpwallet(const UniValue& params, bool fHelp)
 }
 ```
 
-基本流程：<br>
-1.确保钱包当前可用（已初始化完成）。<br>
-2.处理命令帮助和参数个数。<br>
-3.钱包上锁。<br>
-4.确保钱包当前未加密。<br>
-5.创建文件输出流对象打开指定文件。<br>
-6.获取钱包密钥创建时间映射，和密钥池中预创建的密钥索引。<br>
-7.根据密钥创建时间对密钥列表进行排序。<br>
-8.按一定格式输出密钥到指定文件。<br>
-9.关闭文件输出流对象。
+基本流程：
+1. 确保钱包当前可用（已初始化完成）。
+2. 处理命令帮助和参数个数。
+3. 钱包上锁。
+4. 确保钱包当前未加密。
+5. 创建文件输出流对象打开指定文件。
+6. 获取钱包密钥创建时间映射，和密钥池中预创建的密钥索引。
+7. 根据密钥创建时间对密钥列表进行排序。
+8. 按一定格式输出密钥到指定文件。
+9. 关闭文件输出流对象。
 
 第六步，调用 pwalletMain->GetKeyBirthTimes(mapKeyBirth) 和 pwalletMain->GetAllReserveKeys(setKeyPool) 函数声明在“wallet.h”文件的 CWallet 类中。
 
@@ -287,8 +287,7 @@ protected:
 };
 ```
 
-若钱包已加密，且能在密钥索引和公私钥对映射列表 mapCryptedKeys 中找到指定索引，
-则调用  DecryptKey(vMasterKey, vchCryptedSecret, vchPubKey, keyOut) 函数解密并获取私钥。<br>
+若钱包已加密，且能在密钥索引和公私钥对映射列表 mapCryptedKeys 中找到指定索引，则调用 DecryptKey(vMasterKey, vchCryptedSecret, vchPubKey, keyOut) 函数解密并获取私钥。
 对象 mapCryptedKeys 的类型 CryptedKeyMap 定义在“keystore.h”文件中。
 
 ```cpp
@@ -316,5 +315,9 @@ static bool DecryptKey(const CKeyingMaterial& vMasterKey, const std::vector<unsi
 
 ## 参考链接
 
-* [Developer Documentation - Bitcoin](https://bitcoin.org/en/developer-documentation){:target="_blank"}
-* [Bitcoin Developer Reference - Bitcoin](https://bitcoin.org/en/developer-reference#dumpwallet){:target="_blank"}
+* [bitcoin/rpcserver.h at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/rpcserver.h){:target="_blank"}
+* [bitcoin/rpcwallet.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/wallet/rpcwallet.cpp){:target="_blank"}
+* [bitcoin/wallet.h at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/wallet/wallet.h){:target="_blank"}
+* [bitcoin/wallet.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/wallet/wallet.cpp){:target="_blank"}
+* [bitcoin/crypter.h at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/wallet/crypter.h){:target="_blank"}
+* [bitcoin/crypter.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/wallet/crypter.cpp){:target="_blank"}

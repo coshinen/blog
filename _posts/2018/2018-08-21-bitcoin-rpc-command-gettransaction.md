@@ -213,16 +213,15 @@ UniValue gettransaction(const UniValue& params, bool fHelp)
 }
 ```
 
-基本流程：<br>
-1.确保钱包当前可用（已初始化完成）。<br>
-2.处理命令帮助和参数个数。<br>
-3.钱包上锁。<br>
-4.获取相关参数：交易索引和 watch-only 设置。<br>
-5.验证钱包中是否含指定交易，并获取该交易。<br>
-6.计算余额及其他相关信息加入结果集并返回。
+基本流程：
+1. 确保钱包当前可用（已初始化完成）。
+2. 处理命令帮助和参数个数。
+3. 钱包上锁。
+4. 获取相关参数：交易索引和 watch-only 设置。
+5. 验证钱包中是否含指定交易，并获取该交易。
+6. 计算余额及其他相关信息加入结果集并返回。
 
-第六步，调用 WalletTxToJSON(wtx, entry) 函数把钱包交易信息转换为 JSON 格式并加入结果集 entry，
-该函数定义在“wallet/rpcwallet.cpp”文件中。
+第六步，调用 WalletTxToJSON(wtx, entry) 函数把钱包交易信息转换为 JSON 格式并加入结果集 entry，该函数定义在“wallet/rpcwallet.cpp”文件中。
 
 ```cpp
 void WalletTxToJSON(const CWalletTx& wtx, UniValue& entry)
@@ -271,5 +270,5 @@ void WalletTxToJSON(const CWalletTx& wtx, UniValue& entry)
 
 ## 参考链接
 
-* [Developer Documentation - Bitcoin](https://bitcoin.org/en/developer-documentation){:target="_blank"}
-* [Bitcoin Developer Reference - Bitcoin](https://bitcoin.org/en/developer-reference#gettransaction){:target="_blank"}
+* [bitcoin/rpcserver.h at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/rpcserver.h){:target="_blank"}
+* [bitcoin/rpcwallet.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/wallet/rpcwallet.cpp){:target="_blank"}

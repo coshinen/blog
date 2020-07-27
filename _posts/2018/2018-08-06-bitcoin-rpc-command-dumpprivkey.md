@@ -91,15 +91,15 @@ UniValue dumpprivkey(const UniValue& params, bool fHelp)
 }
 ```
 
-基本流程：<br>
-1.确保钱包当前可用（已初始化完成）。<br>
-2.处理命令帮助和参数个数。<br>
-3.钱包上锁。<br>
-4.确保当前钱包处于解密状态。<br>
-5.获取用户指定的公钥地址并初始化一个比特币地址对象。<br>
-6.获取该地址的索引。<br>
-7.通过密钥索引获取对应的私钥数据。<br>
-8.对私钥进行 base58 编码并返回结果。
+基本流程：
+1. 确保钱包当前可用（已初始化完成）。
+2. 处理命令帮助和参数个数。
+3. 钱包上锁。
+4. 确保当前钱包处于解密状态。
+5. 获取用户指定的公钥地址并初始化一个比特币地址对象。
+6. 获取该地址的索引。
+7. 通过密钥索引获取对应的私钥数据。
+8. 对私钥进行 base58 编码并返回结果。
 
 第五步，调用 address.SetString(strAddress) 函数初始化一个比特币地址对象，该函数声明在“base58.h”文件的 CBitcoinAddress 类中。
 
@@ -165,5 +165,7 @@ bool CBitcoinAddress::GetKeyID(CKeyID& keyID) const
 
 ## 参考链接
 
-* [Developer Documentation - Bitcoin](https://bitcoin.org/en/developer-documentation){:target="_blank"}
-* [Bitcoin Developer Reference - Bitcoin](https://bitcoin.org/en/developer-reference#dumpprivkey){:target="_blank"}
+* [bitcoin/rpcserver.h at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/rpcserver.h){:target="_blank"}
+* [bitcoin/rpcdump.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/wallet/rpcdump.cpp){:target="_blank"}
+* [bitcoin/base58.h at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/base58.h){:target="_blank"}
+* [bitcoin/base58.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/base58.cpp){:target="_blank"}
