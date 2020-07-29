@@ -100,16 +100,15 @@ UniValue resendwallettransactions(const UniValue& params, bool fHelp)
 }
 ```
 
-基本流程：<br>
-1.确保当前钱包可用。<br>
-2.处理命令帮助和参数个数。<br>
-3.钱包上锁。<br>
-4.重新发送当前时间点之前的钱包交易并获取所有被发送交易的索引。<br>
-5.构造数组类型结果集，遍历交易索引列表，加入结果集。<br>
-6.返回结果。
+基本流程：
+1. 确保当前钱包可用。
+2. 处理命令帮助和参数个数。
+3. 钱包上锁。
+4. 重新发送当前时间点之前的钱包交易并获取所有被发送交易的索引。
+5. 构造数组类型结果集，遍历交易索引列表，加入结果集。
+6. 返回结果。
 
-第四步，调用 pwalletMain->ResendWalletTransactionsBefore(GetTime() 重新广播指定钱包交易，
-该函数定义在“wallet/wallet.cpp”文件中。
+第四步，调用 pwalletMain->ResendWalletTransactionsBefore(GetTime() 重新广播指定钱包交易，该函数定义在“wallet/wallet.cpp”文件中。
 
 ```cpp
 std::vector<uint256> CWallet::ResendWalletTransactionsBefore(int64_t nTime)
@@ -159,5 +158,6 @@ bool CWalletTx::RelayWalletTransaction()
 
 ## 参考链接
 
-* [Developer Documentation - Bitcoin](https://bitcoin.org/en/developer-documentation){:target="_blank"}
-* [Bitcoin Developer Reference - Bitcoin](https://bitcoin.org/en/developer-reference#resendwallettransactions){:target="_blank"}
+* [bitcoin/rpcserver.h at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/rpcserver.h){:target="_blank"}
+* [bitcoin/rpcwallet.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/wallet/rpcwallet.cpp){:target="_blank"}
+* [bitcoin/wallet.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/wallet/wallet.cpp){:target="_blank"}

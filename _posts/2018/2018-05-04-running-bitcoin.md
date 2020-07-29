@@ -666,11 +666,9 @@ RPC 服务选项：
 
 ## 比特币配置文件样例
 
-来自 [https://github.com/mistydew/blockchain/blob/master/.bitcoin/bitcoin.conf](https://github.com/mistydew/blockchain/blob/master/.bitcoin/bitcoin.conf){:target="_blank"}:
-
 ```shell
 # 打印调试信息到控制台
-#printtoconsole=1
+printtoconsole=1
 # 调试信息（IPs、时间戳微秒）
 logips=1
 logtimemicros=1
@@ -683,7 +681,6 @@ rpcuser=username
 rpcpassword=passwd
 # RPC 白名单（外网 IP）
 rpcallowip=xxx.xxx.xxx.xxx
-...
 ```
 
 ## 参考链接

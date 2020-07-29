@@ -213,14 +213,14 @@ UniValue sendtoaddress(const UniValue& params, bool fHelp)
 }
 ```
 
-基本流程：<br>
-1.确保钱包当前可用（已初始化完成）。<br>
-2.处理命令帮助和参数个数。<br>
-3.钱包上锁。<br>
-4.获取相关参数：目标地址，发送金额，交易备注和是否扣除交易费标志。<br>
-5.确保钱包当前处于解密状态。<br>
-6.发送金额到指定的地址。<br>
-7.获取交易哈希，转化为 16 进制并返回。
+基本流程：
+1. 确保钱包当前可用（已初始化完成）。
+2. 处理命令帮助和参数个数。
+3. 钱包上锁。
+4. 获取相关参数：目标地址，发送金额，交易备注和是否扣除交易费标志。
+5. 确保钱包当前处于解密状态。
+6. 发送金额到指定的地址。
+7. 获取交易哈希，转化为 16 进制并返回。
 
 6.调用 SendMoney(address.Get(), nAmount, fSubtractFeeFromAmount, wtx) 发送指定金额到指定比特币地址，
 该函数定义在“wallet/rpcwallet.cpp”文件中，入参为：交易目的地址，金额，从金额中减去交易费标志，添加了备注的钱包交易。
@@ -263,7 +263,7 @@ static void SendMoney(const CTxDestination &address, CAmount nValue, bool fSubtr
 6.3.提交交易。
 
 6.2.从目的地址中获取脚本公钥，初始化接收者并加入发送列表，调用 pwalletMain->CreateTransaction(vecSend, wtxNew, reservekey, nFeeRequired, nChangePosRet, strError) 创建一笔交易。
-该函数声明在“”文件的CWallet类中。
+该函数声明在“wallet/wallet.h”文件的CWallet类中。
 
 ```cpp
 /** 
@@ -788,5 +788,9 @@ class CNode // 对端节点信息类
 
 ## 参考链接
 
-* [Developer Documentation - Bitcoin](https://bitcoin.org/en/developer-documentation){:target="_blank"}
-* [Bitcoin Developer Reference - Bitcoin](https://bitcoin.org/en/developer-reference#sendtoaddress){:target="_blank"}
+* [bitcoin/rpcserver.h at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/rpcserver.h){:target="_blank"}
+* [bitcoin/rpcwallet.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/wallet/rpcwallet.cpp){:target="_blank"}
+* [bitcoin/wallet.h at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/wallet/wallet.h){:target="_blank"}
+* [bitcoin/wallet.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/wallet/wallet.cpp){:target="_blank"}
+* [bitcoin/net.h at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/net.h){:target="_blank"}
+* [bitcoin/net.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/net.cpp){:target="_blank"}

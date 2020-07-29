@@ -221,17 +221,16 @@ UniValue listsinceblock(const UniValue& params, bool fHelp)
 }
 ```
 
-基本流程：<br>
-1.确保钱包当前可用（已初始化完成）。<br>
-2.处理命令帮助。<br>
-3.钱包上锁。<br>
-4.处理参数。<br>
-5.获取指定区块深度。<br>
-6.遍历钱包交易映射列表，获取每笔交易的相关信息并加入交易信息集。<br>
-7.若确认数为 1，则获取最佳区块哈希，加入交易信息集并返回。
+基本流程：
+1. 确保钱包当前可用（已初始化完成）。
+2. 处理命令帮助。
+3. 钱包上锁。
+4. 处理参数。
+5. 获取指定区块深度。
+6. 遍历钱包交易映射列表，获取每笔交易的相关信息并加入交易信息集。
+7. 若确认数为 1，则获取最佳区块哈希，加入交易信息集并返回。
 
-第六步，调用 ListTransactions(tx, "*", 0, true, transactions, filter) 函数获取一笔交易的相关信息，
-该函数定义在“wallet/rpcwallet.cpp”文件中。
+第六步，调用 ListTransactions(tx, "*", 0, true, transactions, filter) 函数获取一笔交易的相关信息，该函数定义在“wallet/rpcwallet.cpp”文件中。
 
 ```cpp
 void ListTransactions(const CWalletTx& wtx, const string& strAccount, int nMinDepth, bool fLong, UniValue& ret, const isminefilter& filter)
@@ -359,5 +358,5 @@ void WalletTxToJSON(const CWalletTx& wtx, UniValue& entry)
 
 ## 参考链接
 
-* [Developer Documentation - Bitcoin](https://bitcoin.org/en/developer-documentation){:target="_blank"}
-* [Bitcoin Developer Reference - Bitcoin](https://bitcoin.org/en/developer-reference#listsinceblock){:target="_blank"}
+* [bitcoin/rpcserver.h at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/rpcserver.h){:target="_blank"}
+* [bitcoin/rpcwallet.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/wallet/rpcwallet.cpp){:target="_blank"}

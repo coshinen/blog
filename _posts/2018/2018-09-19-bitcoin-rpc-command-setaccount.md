@@ -100,16 +100,15 @@ UniValue setaccount(const UniValue& params, bool fHelp)
 }
 ```
 
-基本流程：<br>
-1.确保钱包当前可用（已初始化完成）。<br>
-2.处理命令帮助和参数个数。<br>
-3.钱包上锁。<br>
-4.获取相关参数：指定的地址和账户，并验证地址是否有效。<br>
-5.若该地址属于自己，只需在原账户下新建地址并改变指定地址关联的账户，否则报错。<br>
-6.返回空值。
+基本流程：
+1. 确保钱包当前可用（已初始化完成）。
+2. 处理命令帮助和参数个数。
+3. 钱包上锁。
+4. 获取相关参数：指定的地址和账户，并验证地址是否有效。
+5. 若该地址属于自己，只需在原账户下新建地址并改变指定地址关联的账户，否则报错。
+6. 返回空值。
 
-第五步，调用 GetAccountAddress(strOldAccount, true) 函数在旧账户下生成新地址，
-该函数定义在“wallet/rpcwallet.cpp”文件中。
+第五步，调用 GetAccountAddress(strOldAccount, true) 函数在旧账户下生成新地址，该函数定义在“wallet/rpcwallet.cpp”文件中。
 
 ```cpp
 CBitcoinAddress GetAccountAddress(string strAccount, bool bForceNew=false)
@@ -152,5 +151,5 @@ CBitcoinAddress GetAccountAddress(string strAccount, bool bForceNew=false)
 
 ## 参考链接
 
-* [Developer Documentation - Bitcoin](https://bitcoin.org/en/developer-documentation){:target="_blank"}
-* [Bitcoin Developer Reference - Bitcoin](https://bitcoin.org/en/developer-reference#setaccount){:target="_blank"}
+* [bitcoin/rpcserver.h at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/rpcserver.h){:target="_blank"}
+* [bitcoin/rpcwallet.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/wallet/rpcwallet.cpp){:target="_blank"}

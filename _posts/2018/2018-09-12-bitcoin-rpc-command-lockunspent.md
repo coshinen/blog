@@ -170,13 +170,13 @@ UniValue lockunspent(const UniValue& params, bool fHelp)
 }
 ```
 
-基本流程：<br>
-1.确保钱包当前可用（已初始化完成）。<br>
-2.处理命令帮助和参数个数。<br>
-3.钱包上锁。<br>
-3.检查参数类型。<br>
-4.若只用一个参数，且为 true，则解锁全部交易输出并返回 true。<br>
-5.若指定了交易输出索引，获取并遍历该数组，把指定交易输出加/解锁后返回 true。
+基本流程：
+1. 确保钱包当前可用（已初始化完成）。
+2. 处理命令帮助和参数个数。
+3. 钱包上锁。
+3. 检查参数类型。
+4. 若只用一个参数，且为 true，则解锁全部交易输出并返回 true。
+5. 若指定了交易输出索引，获取并遍历该数组，把指定交易输出加/解锁后返回 true。
 
 相关加解锁函数声明在“wallet.h”文件的 CWallet 类中。
 
@@ -219,5 +219,7 @@ void CWallet::UnlockAllCoins()
 
 ## 参考链接
 
-* [Developer Documentation - Bitcoin](https://bitcoin.org/en/developer-documentation){:target="_blank"}
-* [Bitcoin Developer Reference - Bitcoin](https://bitcoin.org/en/developer-reference#lockunspent){:target="_blank"}
+* [bitcoin/rpcserver.h at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/rpcserver.h){:target="_blank"}
+* [bitcoin/rpcwallet.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/wallet/rpcwallet.cpp){:target="_blank"}
+* [bitcoin/wallet.h at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/wallet/wallet.h){:target="_blank"}
+* [bitcoin/wallet.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/wallet/wallet.cpp){:target="_blank"}

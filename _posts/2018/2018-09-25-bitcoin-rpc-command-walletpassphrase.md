@@ -139,15 +139,15 @@ UniValue walletpassphrase(const UniValue& params, bool fHelp)
 }
 ```
 
-基本流程：<br>
-1.确保当前钱包可用（已初始化完成）。<br>
-2.处理命令帮助和参数个数。<br>
-3.钱包上锁。<br>
-4.获取用户指定密码。<br>
-5.密码长度检查，必须大于 0 个字符。<br>
-6.充满密钥池。<br>
-7.获取指定过期秒数，并计算绝对过期时间。<br>
-8.设置锁定钱包定时器，之后运行锁定钱包函数。
+基本流程：
+1. 确保当前钱包可用（已初始化完成）。
+2. 处理命令帮助和参数个数。
+3. 钱包上锁。
+4. 获取用户指定密码。
+5. 密码长度检查，必须大于 0 个字符。
+6. 充满密钥池。
+7. 获取指定过期秒数，并计算绝对过期时间。
+8. 设置锁定钱包定时器，之后运行锁定钱包函数。
 
 第八步，调用 RPCRunLater("lockwallet", boost::bind(LockWallet, pwalletMain), nSleepTime) 函数设置定时器，定时执行制定函数功能。
 该函数声明在“rpcserver.h”文件中。
@@ -186,5 +186,6 @@ static std::map<std::string, boost::shared_ptr<RPCTimerBase> > deadlineTimers; /
 
 ## 参考链接
 
-* [Developer Documentation - Bitcoin](https://bitcoin.org/en/developer-documentation){:target="_blank"}
-* [Bitcoin Developer Reference - Bitcoin](https://bitcoin.org/en/developer-reference#walletpassphrase){:target="_blank"}
+* [bitcoin/rpcserver.h at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/rpcserver.h){:target="_blank"}
+* [bitcoin/rpcserver.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/rpcserver.cpp){:target="_blank"}
+* [bitcoin/rpcwallet.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/wallet/rpcwallet.cpp){:target="_blank"}

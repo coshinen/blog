@@ -81,13 +81,13 @@ UniValue setmocktime(const UniValue& params, bool fHelp)
 }
 ```
 
-基本流程：<br>
-1.处理命令帮助和参数个数。<br>
-2.检查网络模式，必须为回归测试模式。<br>
-3.已建立连接的节点上锁。<br>
-4.检查参数类型，获取该参数并设置本地 Mock 时间。<br>
-5.获取当前时间，并遍历已建立连接的节点列表，设置最后一次发送和接收的时间为当前时间。<br>
-6.返回空值。
+基本流程：
+1. 处理命令帮助和参数个数。
+2. 检查网络模式，必须为回归测试模式。
+3. 已建立连接的节点上锁。
+4. 检查参数类型，获取该参数并设置本地 Mock 时间。
+5. 获取当前时间，并遍历已建立连接的节点列表，设置最后一次发送和接收的时间为当前时间。
+6. 返回空值。
 
 第四步，调用 SetMockTime(params[0].get_int64()) 设置 MockTime，该函数声明在“utiltime.h”文件中。
 
@@ -108,5 +108,7 @@ void SetMockTime(int64_t nMockTimeIn)
 
 ## 参考链接
 
-* [Developer Documentation - Bitcoin](https://bitcoin.org/en/developer-documentation){:target="_blank"}
-* [Bitcoin Developer Reference - Bitcoin](https://bitcoin.org/en/developer-reference#setmocktime){:target="_blank"}
+* [bitcoin/rpcserver.h at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/rpcserver.h){:target="_blank"}
+* [bitcoin/rpcmisc.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/rpcmisc.cpp){:target="_blank"}
+* [bitcoin/utiltime.h at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/utiltime.h){:target="_blank"}
+* [bitcoin/utiltime.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/utiltime.cpp){:target="_blank"}

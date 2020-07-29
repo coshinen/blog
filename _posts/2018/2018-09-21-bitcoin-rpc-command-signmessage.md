@@ -24,9 +24,9 @@ signmessage "bitcoinaddress" "message" # 使用一个地址的私钥签名一个
 
 ### 比特币核心客户端
 
-1.若钱包加密了，需使用 [walletpassphrase](/blog/2018/09/bitcoin-rpc-command-walletpassphrase.html) 解锁钱包数秒。<br>
-2.使用此命令对一条消息进行签名。<br>
-3.使用 [verifymessage](/blog/2018/07/bitcoin-rpc-command-verifymessage.html) 验证消息。
+1. 若钱包加密了，需使用 [walletpassphrase](/blog/2018/09/bitcoin-rpc-command-walletpassphrase.html) 解锁钱包数秒。
+2. 使用此命令对一条消息进行签名。
+3. 使用 [verifymessage](/blog/2018/07/bitcoin-rpc-command-verifymessage.html) 验证消息。
 
 ```shell
 $ bitcoin-cli walletpassphrase "mypasswd" 60
@@ -125,5 +125,5 @@ UniValue signmessage(const UniValue& params, bool fHelp)
 
 ## 参考链接
 
-* [Developer Documentation - Bitcoin](https://bitcoin.org/en/developer-documentation){:target="_blank"}
-* [Bitcoin Developer Reference - Bitcoin](https://bitcoin.org/en/developer-reference#signmessage){:target="_blank"}
+* [bitcoin/rpcserver.h at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/rpcserver.h){:target="_blank"}
+* [bitcoin/rpcwallet.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/wallet/rpcwallet.cpp){:target="_blank"}

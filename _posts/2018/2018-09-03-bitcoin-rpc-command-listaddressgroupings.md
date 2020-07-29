@@ -118,13 +118,13 @@ UniValue listaddressgroupings(const UniValue& params, bool fHelp) // 列出地�
 }
 ```
 
-基本流程：<br>
-1.确保钱包当前可用。<br>
-2.处理命令帮助和参数个数。<br>
-3.钱包上锁。<br>
-4.遍历地址分组集合，获取每个地址，把相关信息加入结果集并返回。<br>
-4.1.获取地址余额映射列表。<br>
-4.2.获取并遍历地址分组集合，把每个地址的相关信息加入结果集。<br>
+基本流程：
+1. 确保钱包当前可用。
+2. 处理命令帮助和参数个数。
+3. 钱包上锁。
+4. 遍历地址分组集合，获取每个地址，把相关信息加入结果集并返回。
+   41. 获取地址余额映射列表。
+   42. 获取并遍历地址分组集合，把每个地址的相关信息加入结果集。
 
 函数 pwalletMain->GetAddressBalances() 获取地址余额映射列表，定义在“wallet.cpp”文件中。
 
@@ -174,5 +174,5 @@ std::map<CTxDestination, CAmount> CWallet::GetAddressBalances()
 
 ## 参考链接
 
-* [Developer Documentation - Bitcoin](https://bitcoin.org/en/developer-documentation){:target="_blank"}
-* [Bitcoin Developer Reference - Bitcoin](https://bitcoin.org/en/developer-reference#listaddressgroupings){:target="_blank"}
+* [bitcoin/rpcserver.h at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/rpcserver.h){:target="_blank"}
+* [bitcoin/rpcwallet.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/wallet/rpcwallet.cpp){:target="_blank"}

@@ -100,15 +100,14 @@ UniValue invalidateblock(const UniValue& params, bool fHelp)
 }
 ```
 
-基本流程：<br>
-1.处理命令帮助和参数个数。<br>
-2.获取指定区块哈希，构造 uint256 对象。<br>
-3.验证指定区块是否存在，若存在，使该区块无效化。<br>
-4.检查验证状态，若有效，激活最佳链。<br>
-5.再次检查激活验证状态，若有效，直接返回空值。
+基本流程：
+1. 处理命令帮助和参数个数。
+2. 获取指定区块哈希，构造 uint256 对象。
+3. 验证指定区块是否存在，若存在，使该区块无效化。
+4. 检查验证状态，若有效，激活最佳链。
+5. 再次检查激活验证状态，若有效，直接返回空值。
 
-第三步，调用 InvalidateBlock(state, Params().GetConsensus(), pblockindex) 使指定区块及其后辈无效化，
-该函数定义在“main.cpp”文件中。
+第三步，调用 InvalidateBlock(state, Params().GetConsensus(), pblockindex) 使指定区块及其后辈无效化，该函数定义在“main.cpp”文件中。
 
 ```cpp
 /** Disconnect chainActive's tip. You probably want to call mempool.removeForReorg and manually re-limit mempool size after this, with cs_main held. */ // 断开激活的链尖。你可能想要调用 mempool.removeForReorg 并在该操作后手动再次限制内存池大小，同时持有主锁。
@@ -202,5 +201,6 @@ bool InvalidateBlock(CValidationState& state, const Consensus::Params& consensus
 
 ## 参考链接
 
-* [Developer Documentation - Bitcoin](https://bitcoin.org/en/developer-documentation){:target="_blank"}
-* [Bitcoin Developer Reference - Bitcoin](https://bitcoin.org/en/developer-reference#invalidateblock){:target="_blank"}
+* [bitcoin/rpcserver.h at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/rpcserver.h){:target="_blank"}
+* [bitcoin/rpcblockchain.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/rpcblockchain.cpp){:target="_blank"}
+* [bitcoin/main.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/main.cpp){:target="_blank"}
