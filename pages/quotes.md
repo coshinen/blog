@@ -168,7 +168,7 @@ excerpt: Here are my favorite quotes from someones that inspire me or make me la
 > * ALL ANIMALS ARE EQUAL BUT SOME ANIMALS ARE MORE EQUAL THAN OTHERS.
 > * FOUR LEGS GOOD, TWO LEGS BAD.
 
-> 松井玲奈のお母さんから「輝きYELL!」：
+> 松井玲奈のお母さん「[輝きYELL!](http://www.ntv.co.jp/yell/206.html){:target="_blank"}」：
 > * いつ死ぬかわからない、好きな事しなさい！
 
 > 緑のお父さん「パパのお弁当は世界一」：
