@@ -8,8 +8,8 @@ category: 力扣题解
 tags: LeetCode Array Binary-Search
 excerpt: 假设一个升序数组在你预先未知的某个点上进行了旋转。
 ---
-## 33. Search in Rotated Sorted Array | Medium
-
+> ## 33. Search in Rotated Sorted Array | Medium
+> 
 > Suppose an array sorted in ascending order is rotated at some pivot unknown to you beforehand.
 > 
 > (i.e., `[0,1,2,4,5,6,7]` might become `[4,5,6,7,0,1,2]`).

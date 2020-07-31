@@ -8,8 +8,8 @@ category: 力扣题解
 tags: LeetCode Math
 excerpt: 判断一个整数是否为回文数。
 ---
-## 9. Palindrome Number | Easy
-
+> ## 9. Palindrome Number | Easy
+> 
 > Determine whether an integer is a palindrome. An integer is a palindrome when it reads the same backward as forward.
 > 
 > **Example 1:**

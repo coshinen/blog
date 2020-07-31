@@ -8,8 +8,8 @@ category: 力扣题解
 tags: LeetCode String
 excerpt: 写一个函数来查找字符串数组的最长公共前缀。
 ---
-## 14. Longest Common Prefix | Easy
-
+> ## 14. Longest Common Prefix | Easy
+> 
 > Write a function to find the longest common prefix string amongst an array of strings.
 > 
 > If there is no common prefix, return an empty string `""`.

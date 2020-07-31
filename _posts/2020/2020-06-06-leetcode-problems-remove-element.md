@@ -8,8 +8,8 @@ category: 力扣题解
 tags: LeetCode Array Two-Pointers
 excerpt: 给定一个数组 _nums_ 和一个值 _val_，[原地](https://en.wikipedia.org/wiki/In-place_algorithm){:target="_blank"}移除所有该数值的实例并返回新数组的长度。
 ---
-## 27. Remove Element | Easy
-
+> ## 27. Remove Element | Easy
+> 
 > Given an array _nums_ and a value _val_, remove all instances of that value [in-place](https://en.wikipedia.org/wiki/In-place_algorithm){:target="_blank"} and return the new length.
 > 
 > Do not allocate extra space for another array, you must do this by **modifying the input array** [in-place](https://en.wikipedia.org/wiki/In-place_algorithm){:target="_blank"} with O(1) extra memory.

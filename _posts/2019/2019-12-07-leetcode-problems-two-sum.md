@@ -8,8 +8,8 @@ category: 力扣题解
 tags: LeetCode Array Hash-Table
 excerpt: 从一个整型数组中找出两个数，满足两数之和等于给定的目标值，并返回它们的下标。
 ---
-## 1. Two Sum | Easy
-
+> ## 1. Two Sum | Easy
+> 
 > Given an array of integers, return **indices** of the two numbers such that they add up to a specific target.
 > 
 > You may assume that each input would have **exactly** one solution, and you may not use the same element twice.

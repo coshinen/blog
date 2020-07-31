@@ -8,8 +8,8 @@ category: 力扣题解
 tags: LeetCode Array Hash-Table Two-Pointers
 excerpt: 给定一个含 n 个整数的数组 `nums` 和一个整数 `target`，`nums` 中是否存在 a、b、c 和 d 使 a + b + c + d = `target`？找出数组中所有不重复且和为 `target` 的四元组。
 ---
-## 18. 4Sum | Medium
-
+> ## 18. 4Sum | Medium
+> 
 > Given an array `nums` of n integers and an integer `target`, are there elements a, b, c, and d in `nums` such that a + b + c + d = `target`? Find all unique quadruplets in the array which gives the sum of `target`.
 > 
 > **Note:**

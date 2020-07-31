@@ -8,8 +8,8 @@ category: 力扣题解
 tags: LeetCode String Dynamic-Programming
 excerpt: 给定一个只包含 `'('` 和 `')'` 的字符串，找出最长的有效（格式正确的）括号子串的长度。
 ---
-## 32. Longest Valid Parentheses | Hard
-
+> ## 32. Longest Valid Parentheses | Hard
+> 
 > Given a string containing just the characters `'('` and `')'`, find the length of the longest valid (well-formed) parentheses substring.
 > 
 > **Example 1:**

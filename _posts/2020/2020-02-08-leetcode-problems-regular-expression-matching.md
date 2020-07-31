@@ -8,8 +8,8 @@ category: 力扣题解
 tags: LeetCode String Dynamic-Programming Backtracking
 excerpt: 给定一个字符串（`s`）和一个模式串（`p`），实现支持 `'.'` 和 `'*'` 的正则表达式匹配。
 ---
-## 10. Regular Expression Matching | Hard
-
+> ## 10. Regular Expression Matching | Hard
+> 
 > Given an input string (`s`) and a pattern (`p`), implement regular expression matching with support for `'.'` and `'*'`.
 > 
 > ```

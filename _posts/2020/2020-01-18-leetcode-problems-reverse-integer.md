@@ -8,8 +8,8 @@ category: 力扣题解
 tags: LeetCode Math
 excerpt: 给定一个 32 位的有符号整数，反转该整数每个位上的数字。
 ---
-## 7. Reverse Integer | Easy
-
+> ## 7. Reverse Integer | Easy
+> 
 > Given a 32-bit signed integer, reverse digits of an integer.
 > 
 > **Example 1:**

@@ -8,8 +8,8 @@ category: 力扣题解
 tags: LeetCode Array Two-Pointers
 excerpt: 给定一个有序数组，[原地](https://en.wikipedia.org/wiki/In-place_algorithm){:target="_blank"}移除重复元素使每个元素只出现一次并返回新数组的长度。
 ---
-## 26. Remove Duplicates from Sorted Array | Easy
-
+> ## 26. Remove Duplicates from Sorted Array | Easy
+> 
 > Given a sorted array nums, remove the duplicates [in-place](https://en.wikipedia.org/wiki/In-place_algorithm){:target="_blank"} such that each element appear only once and return the new length.
 > 
 > Do not allocate extra space for another array, you must do this by **modifying the input array** [in-place](https://en.wikipedia.org/wiki/In-place_algorithm){:target="_blank"} with O(1) extra memory.

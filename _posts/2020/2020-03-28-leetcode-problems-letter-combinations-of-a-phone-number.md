@@ -8,8 +8,8 @@ category: 力扣题解
 tags: LeetCode String Backtracking
 excerpt: 给定一个包含数字 `2-9` 范围内的字符串，返回它能表示的所有可能的字母组合。
 ---
-## 17. Letter Combinations of a Phone Number | Medium
-
+> ## 17. Letter Combinations of a Phone Number | Medium
+> 
 > Given a string containing digits from `2-9` inclusive, return all possible letter combinations that the number could represent.
 > 
 > A mapping of digit to letters (just like on the telephone buttons) is given below. Note that 1 does not map to any letters.

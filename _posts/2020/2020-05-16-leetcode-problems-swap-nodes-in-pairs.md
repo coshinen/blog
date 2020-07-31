@@ -8,8 +8,8 @@ category: 力扣题解
 tags: LeetCode Linked-List
 excerpt: 给定一条链表，交换每两个相邻的节点并返回它的头。
 ---
-## 24. Swap Nodes in Pairs | Medium
-
+> ## 24. Swap Nodes in Pairs | Medium
+> 
 > Given a linked list, swap every two adjacent nodes and return its head.
 > 
 > You may **not** modify the values in the list's nodes, only nodes itself may be changed.

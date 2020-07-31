@@ -8,8 +8,8 @@ category: 力扣题解
 tags: LeetCode Linked-List
 excerpt: 合并两条有序链表并返回一条新链表。新链表通过拼接两条链表的节点组成。
 ---
-## 21. Merge Two Sorted Lists | Easy
-
+> ## 21. Merge Two Sorted Lists | Easy
+> 
 > Merge two sorted linked lists and return it as a new list. The new list should be made by splicing together the nodes of the first two lists.
 > 
 > **Example:**

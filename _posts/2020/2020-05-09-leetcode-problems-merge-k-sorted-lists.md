@@ -8,8 +8,8 @@ category: 力扣题解
 tags: LeetCode Linked-List Divide-and-Conquer Heap
 excerpt: 合并 k 条有序链表为一条并返回。分析并描述它的复杂度。
 ---
-## 23. Merge k Sorted Lists | Hard
-
+> ## 23. Merge k Sorted Lists | Hard
+> 
 > Merge k sorted linked lists and return it as one sorted list. Analyze and describe its complexity.
 > 
 > **Example:**

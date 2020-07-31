@@ -8,8 +8,8 @@ category: 力扣题解
 tags: LeetCode String Stack
 excerpt: 给定一个只包含字符 `'('`, `')'`, `'{'`, `'}'`, `'['` 和 `']'` 的字符串，判断字符串是否有效。
 ---
-## 20. Valid Parentheses | Easy
-
+> ## 20. Valid Parentheses | Easy
+> 
 > Given a string containing just the characters `'('`, `')'`, `'{'`, `'}'`, `'['` and `']'`, determine if the input string is valid.
 > 
 > An input string is valid if:

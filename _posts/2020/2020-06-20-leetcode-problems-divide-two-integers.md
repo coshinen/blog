@@ -8,8 +8,8 @@ category: 力扣题解
 tags: LeetCode Math Binary-Search
 excerpt: 给定被除数 `dividend` 和除数 `divisor` 两个整数，不使用乘法、除法和 mod 运算符使两数相除。
 ---
-## 29. Divide Two Integers | Medium
-
+> ## 29. Divide Two Integers | Medium
+> 
 > Given two integers `dividend` and `divisor`, divide two integers without using multiplication, division and mod operator.
 > 
 > Return the quotient after dividing `dividend` by `divisor`.

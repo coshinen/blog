@@ -8,8 +8,8 @@ category: 力扣题解
 tags: LeetCode Array
 excerpt: 实现**下一个排列**，把数字重排成字典序中下一个更大的数字排列。
 ---
-## 31. Next Permutation | Medium
-
+> ## 31. Next Permutation | Medium
+> 
 > Implement **next permutation**, which rearranges numbers into the lexicographically next greater permutation of numbers.
 > 
 > If such arrangement is not possible, it must rearrange it as the lowest possible order (ie, sorted in ascending order).

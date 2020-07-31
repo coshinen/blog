@@ -8,8 +8,8 @@ category: 力扣题解
 tags: LeetCode String Backtracking
 excerpt: 给定括号的对数 n，写一个函数用于生成所有括号的有效组合。
 ---
-## 22. Generate Parentheses | Medium
-
+> ## 22. Generate Parentheses | Medium
+> 
 > Given n pairs of parentheses, write a function to generate all combinations of well-formed parentheses.
 > 
 > For example, given n = 3, a solution set is:
