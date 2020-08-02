@@ -248,9 +248,6 @@ excerpt: Here are my favorite quotes from someones that inspire me or make me la
 > 中村由利「GARNET CROW "le 5 ème anniversaire" L'Histoire de 2000 à 2005」：
 > * 流されていくのは簡単だけれど、変わらないっていうのは一番難しい。
 
-> 秋熊「深秋之葵」：
-> * 学习 GC 精神，低调中坚持！
-
 > サイタマ「ワンパンマン 第3話 執念の科学者」：
 > * お前も知りたいのか？いいだろう！ジェノスもよく聞いとけ…
 > えっ、誰？…
