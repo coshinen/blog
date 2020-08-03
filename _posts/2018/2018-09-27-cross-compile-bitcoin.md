@@ -7,11 +7,11 @@ comments: true
 category: 区块链
 tags: Blockchain Bitcoin src-build Cross-compilation
 ---
-在 UNIX/Linux 平台下交叉编译比特币源码，得到 Windows 版本的 bitcoin.exe、bitcoin-cli.exe、bitcoin-qt.exe 等可执行文件。
-
-**以比特币 v0.12.1 为例，进行交叉编译。**
+在 UNIX/Linux 平台下交叉编译比特币源码，得到 Windows 下的可执行文件 `bitcoin.exe`、`bitcoin-cli.exe`、`bitcoin-qt.exe` 等。
 
 ## 获取比特币源码（Ubuntu 18.04.1）
+
+以比特币 v0.12.1 为例，进行交叉编译。
 
 ```shell
 $ git clone https://github.com/bitcoin/bitcoin.git # 克隆最新版的比特币源码到本地。

@@ -7,9 +7,7 @@ comments: true
 category: 区块链
 tags: Blockchain Bitcoin Altcoin
 ---
-**基于比特币制作一枚山寨币是了解数字货币比特币及其底层区块链技术的最好方式。**
-在了解比特币及区块链的相关概念后，要开始接触源码了，侯捷说过“源码之前，了无秘密”。
-现在，让我们来一探比特币源码的世界。
+基于比特币制作一枚山寨币是了解数字货币比特币及其底层区块链技术的最好方式。
 
 ## 源码准备
 
@@ -499,10 +497,11 @@ public:
 };
 ```
 
-> 1. 把检测点列表删除，增加创世区块检测点到该列表，创世区块的哈希由第六步得到。
-> 2. 填入创世区块的创建时间。
-> 3. 交易数为 0。
-> 4. 估计交易数为 500（这个值随意填）。
+具体步骤：
+1. 把检测点列表删除，增加创世区块检测点到该列表，创世区块的哈希由第六步得到。
+2. 填入创世区块的创建时间。
+3. 交易数为 0。
+4. 估计交易数为 500（这个值随意填）。
 
 **注：检测点的信息可随区块链的延伸不断更新。**
 
@@ -535,10 +534,13 @@ public:
 
 该值一开始置零（0x00），和检测点一样，随着区块链的延伸不断增加（更新），可通过 RPC 命令 [getbestblockhash](/blog/2018/05/bitcoin-rpc-command-getbestblockhash.html) 和 [getblock](/blog/2018/05/bitcoin-rpc-command-getblock.html) 获取最佳区块信息的链工作量（chainwork）值获取。
 
-现在第三次编译源码，一枚基于比特币的山寨币就制作完成了。
-通过这个过程，可以了解比特币源码的一小部分，为深入比特币底层区块链技术做铺垫。
+现在第三次编译源码，一枚基于比特币的山寨币就初步完成了。
 
 ## 参考链接
 
 * [How to make an altcoin \| Bear's Den](http://dillingers.com/blog/2015/04/18/how-to-make-an-altcoin/){:target="_blank"}
 * [如何仿照比特币创造自己的山寨币 \| Sunny's Blog](http://shusunny.github.io/2016/04/How-to-make-altcoin-1){:target="_blank"}
+* [bitcoin/chainparams.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/chainparams.cpp){:target="_blank"}
+* [bitcoin/chainparamsbase.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/chainparamsbase.cpp){:target="_blank"}
+* [bitcoin/miner.h at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/miner.h){:target="_blank"}
+* [bitcoin/miner.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/miner.cpp){:target="_blank"}

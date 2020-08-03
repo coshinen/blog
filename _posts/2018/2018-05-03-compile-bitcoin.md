@@ -7,7 +7,7 @@ comments: true
 category: 区块链
 tags: Blockchain Bitcoin src-build
 ---
-在 macOS、UNIX/Linux 平台下构建比特币源码，得到对应版本的 bitcoind、bitcoin-cli、bitcoin-qt 等可执行文件。
+在 macOS、UNIX/Linux 平台下构建比特币源码，得到可执行文件 `bitcoind`、`bitcoin-cli`、`bitcoin-qt` 等。
 
 ## 获取比特币源码
 

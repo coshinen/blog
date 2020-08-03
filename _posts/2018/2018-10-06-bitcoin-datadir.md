@@ -9,37 +9,37 @@ tags: Blockchain Bitcoin
 ---
 比特币数据目录是存放数据文件的位置，包含区块和钱包等数据。
 
-## 默认位置
+## 1. 默认位置
 
-数据目录的默认存放位置与操作系统相关，下面列出 3 种常用的操作系统中比特币数据目录的默认位置：
+数据目录的默认存放位置与操作系统相关，下面列出 3 种常用的操作系统中比特币数据目录的默认位置。
 
-### macOSX
+### 1.1. Windows
 
-> ~/Library/Application Support/Bitcoin
-
-### UNIX/Linux
-
-> ~/.bitcoin
-
-### Windows
-
-> C:\Documents and Settings\Username\Application Data\Bitcoin (XP)
-> 
 > C:\Users\Username\AppData\Roaming\Bitcoin (Vista, 7, 8 and 10)
+> 
+> C:\Documents and Settings\Username\Application Data\Bitcoin (XP)
 
-目录 `AppData` 和 `Application data` 默认是隐藏的。
+目录 `AppData` 和 `Application Data` 默认是隐藏的。
 
 也可以使用参数 `-datadir` 把比特币数据目录存储到指定位置。
 
-例如：存储到指定目录 `D:\BitcoinData`。
+例如：存储到目录 `D:\BitcoinData`。
 
-在 bitcoin-qt.exe 快捷方式、属性、目标后面添加字符串 `-datadir=D:\BitcoinData`，用空格作为分隔符，具体如下：
+在 `bitcoin-qt.exe` 快捷方式、属性、目标后面添加字符串 `-datadir=D:\BitcoinData`，用空格作为分隔符，具体如下：
 
-> "C:\Program Files (x86)\Bitcoin\bitcoin-qt.ext" -datadir=D:\BitcoinData
+> "C:\Program Files (x86)\Bitcoin\bitcoin-qt.exe" -datadir=D:\BitcoinData
 
-## 源码剖析（v0.12.1）
+### 1.2. macOSX
 
-数据目录的默认位置硬编在源码文件 `util.cpp` 的函数 `GetDefaultDataDir()` 中。
+> ~/Library/Application Support/Bitcoin
+
+### 1.3. UNIX/Linux
+
+> ~/.bitcoin
+
+## 2. 源码剖析
+
+数据目录的默认位置硬编在源码文件 `util.cpp` 中的函数 `GetDefaultDataDir()` 里。
 
 ```cpp
 boost::filesystem::path GetDefaultDataDir()
@@ -72,9 +72,7 @@ boost::filesystem::path GetDefaultDataDir()
 }
 ```
 
-## 目录内容（v0.12.1）
-
-### 文件
+## 3. 数据文件
 
 > * banlist.dat: 存储禁用节点的 IPs/子网
 > * bitcoin.conf: 包含用于 bitcoind 或 bitcoin-qt 的[配置选项](/blog/2018/05/running-bitcoin.html)
@@ -106,23 +104,23 @@ boost::filesystem::path GetDefaultDataDir()
 
 > * addr.dat: 对端 IP 地址数据库（BDB）；0.7.0 中用 peers.dat 替代
 
-## 转让
+## 4. 可转移性
 
-**区块**和**链状态**目录中的数据库文件是**跨平台的**，可以在不同的平台间进行复制安装。
-这些文件统称为节点的**区块数据库**，表示节点在同步过程中下载的所有信息。
+“区块（blocks）”和“链状态（chainstate）”目录中的数据库文件是**跨平台的**，可以在不同的平台间进行复制安装。
+这些文件统称为节点的“区块数据库”，表示节点在同步过程中下载的所有信息。
 换句话说，如果将 A 节点数据目录的区块数据库复制到 B 节点的数据目录，B 节点将具有与 A 节点一样的同步百分比。
 这通常比再次进行普通初始化同步快得多。
-但是，当你以这种方式复制某人的数据库，你必须绝对信任他。
+但是，当你以这种方式复制某人的数据库，你必须**绝对信任**他。
 比特币核心将其区块数据库文件当作 100% 准确且值得信赖，而在正常初始化同步期间，它将对端提供的每个区块视为无效，直到另有证明为止。
 如果攻击者能够修改你的区块数据文件，那么他们可以做各种导致你丢失比特币的邪恶事件。
 
 每个节点都有一个唯一的区块数据库，并且所有文件都是高可连接的。
-所以，如果你把一个数据目录中的**区块**或**链状态**目录中的几个文件复制到另一个数据目录中，这几乎肯定会导致第二个节点崩溃或在未来的某个随机点卡住。
+所以，如果你把一个数据目录中的“区块（blocks）”或“链状态（chainstate）”目录中的几个文件复制到另一个数据目录中，这几乎肯定会导致第二个节点崩溃或在未来的某个随机点卡住。
 如果你想把区块数据库从一个数据目录复制到另一个数据目录，必须删除旧数据库并一次复制全部文件。
 复制时必须关闭两个节点。
 
 ## 参考链接
 
 * [Data directory - Bitcoin Wiki](https://en.bitcoin.it/wiki/Data_directory){:target="_blank"}
-* [Splitting the data directory - Bitcoin Wiki](https://en.bitcoin.it/wiki/Splitting_the_data_directory){:target="_blank"}
+* [bitcoin/util.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/util.cpp){:target="_blank"}
 * [bitcoin/files.md at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/doc/files.md){:target="_blank"}

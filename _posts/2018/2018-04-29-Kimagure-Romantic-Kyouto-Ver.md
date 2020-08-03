@@ -8,9 +8,12 @@ category: 译文集
 tags: Lyrics
 excerpt: おいでやす うちの故郷は お寺や 神社だけじゃない。嘘みたい カラフル八ツ橋、町家でイタリアン 京 ばあむが今人気。
 ---
-![yuihan](https://i.loli.net/2020/07/12/a2ReAIGnztryN83.jpg){:.border}
+![yuihan](https://e40yqg.dm.files.1drv.com/y4m5sh8jFBBG7XVAESxYkdJUKtGW3iHaa6m3q6asfoL6A4qPwwAuOrNLhIfrA4AAUNFqbOIaNj53GQuDIPEIzN00Txx5v77_V8CNtxEaOYX_y5bM2W3In_HXIEc4CvoF_bs2Ldh7bxTCjAto74NIjr0TSfuhl7oQlUyTAmA0jrbaxztNogMlW2JREvXd6-7Egaa4EokIuCW1iNcqjo72yV-og/yuihan.jpg){:.border}
 
-歌手：横山由依
+歌手：横山由依<br>
+作曲：水野良樹<br>
+編曲：江口亮<br>
+弦編曲：クラッシャー木村
 
 <blockquote class="lyric-original">
   <h2>気まぐれロマンティック 京都Ver.</h2>
