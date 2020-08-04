@@ -13,7 +13,7 @@
 * Math Equation: [EqnEditor Render](https://latex.codecogs.com)
 * Web Feed: [Google FeedBurner](https://www.feedburner.com)
 * Diagrams: [PlantUML](https://plantuml.com)
-* Image Upload: [SM.MS](https://sm.ms)
+* Cloud Storage: [OneDrive](https://onedrive.live.com)
 
 ## Licenses
 
