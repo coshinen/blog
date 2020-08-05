@@ -43,7 +43,7 @@ excerpt: Here are some books I read.
 > * [精通以太坊](https://github.com/ethereumbook/ethereumbook){:target="_blank"}，[希-英] Andreas M. Antonopoulos [英] Gavin Wood
 > * 区块链启示录 中本聪文集，[美] Phil Champagne
 > * 区块链开发指南，[中] 申屠青春
-> * [区块链技术指南](https://yeasy.gitbooks.io/blockchain_guide/content){:target="_blank"}，[中] [Baohua Yang](https://yeasy.github.io){:target="_blank"}
+> * [区块链技术指南](https://yeasy.gitbook.io/blockchain_guide/){:target="_blank"}，[中] [杨保华](https://yeasy.github.io){:target="_blank"} 陈昌
 > * [精通比特币 第2版](https://bitcoinbook.info){:target="_blank"}，[希-英] Andreas M. Antonopoulos
 > * [Bitcoin: A Peer-to-Peer Electronic Cash System](/blog/2018/04/Bitcoin-A-Peer-to-Peer-Electronic-Cash-System.html)，[?] Satoshi Nakamoto
 
