@@ -21,9 +21,6 @@ excerpt: Here are my favorite quotes from someones that inspire me or make me la
 > They somehow already know what you truly want to become.
 > Everything else is secondary.
 
-> 侯捷，STL 源码剖析：
-> * 源码之前，了无秘密。
-
 > Linus Torvalds, [Re: log-buf-len dynamic](https://lkml.org/lkml/2003/9/23/215){:target="_blank"}, [Reference](https://shlomif.livejournal.com/39215.html){:target="_blank"}:
 > * Those that can, do. Those that can't, complain.
 
