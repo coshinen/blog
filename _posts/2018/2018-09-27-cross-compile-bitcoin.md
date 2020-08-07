@@ -9,7 +9,7 @@ tags: Blockchain Bitcoin src-build Cross-compilation
 ---
 在 UNIX/Linux 平台下交叉编译比特币源码，得到 Windows 下的可执行文件 `bitcoin.exe`、`bitcoin-cli.exe`、`bitcoin-qt.exe` 等。
 
-## 获取比特币源码（Ubuntu 18.04.1）
+## 1. 获取源码（Ubuntu 18.04.1）
 
 以比特币 v0.12.1 为例，进行交叉编译。
 
@@ -22,7 +22,7 @@ HEAD detached at v0.12.1
 nothing to commit, working directory clean
 ```
 
-## 修改 v0.12.1 源码 Qt 包源路径
+## 2. 修改 v0.12.1 源码 Qt 包源路径
 
 ```shell
 $ vim depends/packages/qt.mk # Line 3: 把 official_releases 改为 archive，其他不变
@@ -35,7 +35,7 @@ $ vim depends/packages/qt.mk # Line 3: 把 official_releases 改为 archive，�
 +$(package)_download_path=http://download.qt.io/archive/qt/5.5/$($(package)_version)/submodules
 ```
 
-## 安装基本依赖
+## 3. 安装基本依赖
 
 ```shell
 $ sudo apt update
@@ -45,9 +45,9 @@ $ sudo apt install build-essential libtool autotools-dev automake pkg-config bsd
 
 主机工具链（build-essential）是必需的，因为某些依赖包（例如：protobuf）需要构建用于构建过程中的主机实用程序。
 
-## 构建 Windows 64 位版
+## 4. 构建 Windows 64 位版
 
-### 安装 mingw-w64 交叉编译工具链
+### 4.1. 安装 mingw-w64 交叉编译工具链
 
 ```shell
 $ sudo apt install g++-mingw-w64-x86-64
@@ -83,7 +83,7 @@ There are 2 choices for the alternative x86_64-w64-mingw32-g++ (providing /usr/b
 Press <enter> to keep the current choice[*], or type selection number: # 直接按回车即可
 ```
 
-### 构建
+### 4.2. 构建
 
 ```shell
 $ cd depends
@@ -96,5 +96,6 @@ $ make # 若构建过非 Windows 版的程序，则先执行 make clean 进行�
 
 ## 参考链接
 
+* [bitcoin/bitcoin: Bitcoin Core integration/staging tree](https://github.com/bitcoin/bitcoin){:target="_blank"}
 * [bitcoin/build-windows.md at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/doc/build-windows.md){:target="_blank"}
 * [Error during build 0.12 · Issue #9629 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/issues/9629){:target="_blank"}

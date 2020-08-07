@@ -8,7 +8,7 @@ category: 译文集
 tags: Lyrics
 excerpt: 華やぐ心(人を) 見つけ出したら、大切に守りぬく。烈しい事に遭逢しても 立ち向かえばいいさ。
 ---
-![hakanaikabe](https://e43pnw.dm.files.1drv.com/y4mazWVjWLJbY861FHmmtOVFB5QJ5A9_9s39ynqqyjPgrT5y2PzXCaF-WrJboh5XEdNc9F4hH09wXtTKG1oB3N5jZ-JZsd8VJSv7YkXHgk1yr2eJWvzvqchJ8VZ7OC_yf6rxcbrdZe9knN1N2jnrQzEJd9mC6OMsT4LRGD5_GHd7KI7YI9D3bvirGGuupvZYPn6tqZ8an_fSUH9j65o7UiLkQ/hakanaikabe.jpg){:.border}
+![hakanaikabe](https://e43pnw.dm.files.1drv.com/y4mB69BcRWysB5gu0frcZcQ2UvG3a3ZnkWFPbEVm3X-acmbpf5RHhNTggot5ppyVV3AG85Zt5qSIw9sumMXs5y1rvPGmROZYeMCX4Fojpx8hoJVEodlmPk6qmrRp4QJV3aADsChpnBmFvl-1LSFF0osxkBQUaaX1-F0IaTpK7Wt82U9OfZu972uRrDS9GfFwn5p5DaWuQbxpqDfqipPRy5bUg){:.border}
 
 歌手：桐崎栄二<br>
 作詞：桐崎栄二<br>

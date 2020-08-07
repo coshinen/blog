@@ -8,7 +8,7 @@ category: 译文集
 tags: Lyrics
 excerpt: おいでやす うちの故郷は お寺や 神社だけじゃない。嘘みたい カラフル八ツ橋、町家でイタリアン 京 ばあむが今人気。
 ---
-![yuihan](https://e40yqg.dm.files.1drv.com/y4m5sh8jFBBG7XVAESxYkdJUKtGW3iHaa6m3q6asfoL6A4qPwwAuOrNLhIfrA4AAUNFqbOIaNj53GQuDIPEIzN00Txx5v77_V8CNtxEaOYX_y5bM2W3In_HXIEc4CvoF_bs2Ldh7bxTCjAto74NIjr0TSfuhl7oQlUyTAmA0jrbaxztNogMlW2JREvXd6-7Egaa4EokIuCW1iNcqjo72yV-og/yuihan.jpg){:.border}
+![yuihan](https://e40yqg.dm.files.1drv.com/y4mqHBTKlD-7t-qW8Eas1qeldzSdIAWao7_69WuUjE62ZtxJ6bnSiZLh-uF2GeONR2AfiV2U62M0K7fCbUisOFrlMFcJlAFwOLPGpnDMI-Pe6wtQBThgWw-_9HQvPUDWYpGJw7O0TDTV7iqoeRl5_O0Ey-2D1vTn_BLmqyssj5TND8G3ZJYhq5E5ntkOloVftKGrwANDplYWd9sPDYvkCLGAQ){:.border}
 
 歌手：横山由依<br>
 作曲：水野良樹<br>
