@@ -3,18 +3,18 @@
         <a class="site-title" href="{% if page.url contains site.blog %}{{ site.blog }}" title="{{ site.blogname }}">{{ site.subtitle }}{% else %}/" title="{{ site.name }}">{{ site.title }}{% endif %}</a>
         <a href="{{ site.feed }}" title="订阅">
           <svg width="21" height="24" viewBox="0 0 448 512" fill="orange">
-            <use xlink:href="/assets/images/icons/misc.svg#feed"></use>
+            <use xlink:href="/assets/icons/misc.svg#feed"></use>
           </svg>
         </a>
         <nav class="site-search">
           <a href="#" class="search-icon">
             <svg viewBox="0 0 24 24">
-              <use xlink:href="/assets/images/icons/misc.svg#search"></use>
+              <use xlink:href="/assets/icons/misc.svg#search"></use>
             </svg>
           </a>
           <form class="cse-search-box" action="https://dogedoge.com/results" method="get" target="_blank" onsubmit="this.q.value = this.origin.value + ' site:mistydew.github.io'">
             <svg id="search-icon" viewBox="0 0 24 24">
-              <use xlink:href="/assets/images/icons/misc.svg#search"></use>
+              <use xlink:href="/assets/icons/misc.svg#search"></use>
             </svg>
             <input id="search-input" type="text" name="origin" title="To search, start typing a word or phrase" placeholder="Now, what?" size="16" value>
             <input type="hidden" name="q" value>

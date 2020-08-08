@@ -23,11 +23,12 @@ All posts are released under a [Creative Commons Attribution-NonCommercial-NoDer
 
 ## Timeline
 
-* 2020.06.18 [+] feed page: Email Subscriptions
+* 2020.08.08 [-] assets: ~~images~~; [+] assets: icons
 
 <details>
 <summary>history</summary>
 
+* 2020.06.18 [+] feed page: Email Subscriptions
 * 2020.06.02 [+] site: svg icons use symbol
 * 2020.05.30 [+] archive page: archive by month, year
 * 2020.05.02 [+] site: favicon for all browsers and platforms
@@ -51,7 +52,7 @@ All posts are released under a [Creative Commons Attribution-NonCommercial-NoDer
 * 2019.08.28 [+] site: ~~GitHub Actions workflows CI~~
 * 2019.08.25 [+] blog page: ~~comments, profile~~
 * 2019.08.24 [-] post: ~~Remarkbox Hosted Comments Service~~ (incomplete); [+] post: IntenseDebate comments
-* 2019.08.18 [+] assets: css, font, images and js
+* 2019.08.18 [+] assets: css, font, ~~images~~ and js
 * 2019.08.14 [+] about page: PGP key and fingerprint
 * 2019.08.02 [+] site: Simple Jekyll Search
 * 2019.07.18 [+] pages: booklog (reading list) page and feed page
