@@ -439,6 +439,9 @@ excerpt: Here are my favorite quotes from someones that inspire me or make me la
 > * Come at once if convenient, if inconvenient come all the same.
 > * Let me pay you one in return, when I said if I were assured of the former eventuality, I will cheerfully accept the latter.
 
+> Sherlock Holmes, [The Adventures of Sherlock Holmes, The Man with the Twisted Lip](https://www.pagebypagebooks.com/Arthur_Conan_Doyle/The_Adventures_of_Sherlock_Holmes/ADVENTURE_VI_THE_MAN_WITH_THE_TWISTED_LIP_p11.html){:target="_blank"}:
+> * It is, of course, a trifle, but there is nothing so important as trifles.
+
 > Sherlock Holmes, [The Adventures of Sherlock Holmes, A Case of Identity](https://www.pagebypagebooks.com/Arthur_Conan_Doyle/The_Adventures_of_Sherlock_Holmes/ADVENTURE_III_A_CASE_OF_IDENTITY_p5.html){:target="_blank"}:
 > * It has long been an axiom of mine that the little things are infinitely the most important.
 
