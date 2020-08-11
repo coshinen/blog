@@ -96,6 +96,7 @@ excerpt: Here are some books I read.
 > * 80,0 AZUKI NANA photo & anthology，[日] AZUKI 七
 
 > ### 纪实
+> * 敢问路在何方 我的30年西游路，[中] 杨洁
 > * 最后的熊猫，[美] George B. Schaller
 > * 黑箱 日本之耻，[日] 伊藤詩織
 > * 谁“害”了北大学生，[中] 群言
