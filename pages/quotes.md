@@ -297,6 +297,10 @@ excerpt: Here are my favorite quotes from someones that inspire me or make me la
 > 工藤新一「名探偵コナン 第344話 コンビニの落とし穴（後編）」：
 > * バーロ…探偵っつったってただの人間、全知全能の神様じゃねーよ…探偵は大概、自分の推理を話す時、心のどこかに不安を抱えてるもんさ…もしかしたら、どこかに見逃した何かの可能性が残っているんじゃないかって…だから、自分の推理が的中した時の快感は人一倍！
 
+> ジョディ・スターリング(Jodie Starling)「名探偵コナン 第344話 コンビニの落とし穴（後編）」：
+> * When you have eliminated the impossible, whatever remains, however improbable, must be the truth.
+> 不可能な物を除外していって残った物がー…いかにありそうになくてもー…それが真相でーす！
+
 > 工藤新一「名探偵コナン 第288話 工藤新一NYの事件（解決編）」：
 > * わけなんているのかよ？人は人を殺す動機なんて、知ったこっちゃねーが…人が人を助ける理由に…論理的な思考は存在しねーだろ？
 
