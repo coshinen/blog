@@ -57,7 +57,7 @@ excerpt: Here are some books I read.
 > * C 专家编程，[美] Peter van der Linden
 > * C 陷阱与缺陷，[美] Andrew Koening
 > * C 和指针，[美] Kenneth A. Reek
-> * C 程序设计语言（第2版），[美] [Brian W. Kernighan](https://www.cs.princeton.edu/~bwk){:target="_blank"}, [Dennis M. Ritchie](https://www.bell-labs.com/usr/dmr/www){:target="_blank"}
+> * C 程序设计语言（第2版），[加] [Brian W. Kernighan](https://www.cs.princeton.edu/~bwk){:target="_blank"} [美] [Dennis M. Ritchie](https://www.bell-labs.com/usr/dmr/www){:target="_blank"}
 
 > ### 网络编程
 > * 图解 HTTP，[日] 上野宣
@@ -79,7 +79,7 @@ excerpt: Here are some books I read.
 > * 你的灯亮着吗？发现问题的真正所在，[美] Donald C. Gause, Gerald M. Weinberg
 > * [How To Ask Questions The Smart Way](http://www.catb.org/~esr/faqs/smart-questions.html){:target="_blank"}，[美] Eric S. Raymond, Rick Moen
 > * [快乐的 Linux 命令行](https://billie66.github.io/TLCL/){:target="_blank"}，[美] William Shotts
-> * [中文文案排案指北](https://github.com/sparanoid/chinese-copywriting-guidelines){:target="_blank"}，[中] Tunghsiao Liu
+> * [中文文案排案指北](https://sparanoid.com/note/chinese-copywriting-guidelines/){:target="_blank"}，[中] Tunghsiao Liu
 > * [中文技术文档的写作规范](https://github.com/ruanyf/document-style-guide){:target="_blank"}，[中] 阮一峰
 
 ## 文学
