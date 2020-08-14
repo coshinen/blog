@@ -12,7 +12,7 @@ excerpt: Here are my favorite quotes from someones that inspire me or make me la
 > * The best protection is always to be working on hard problems. Writing novels is hard. Reading novels isn't.
 > Hard means worry: if you're not worrying that something you're making will come out badly, or that you won't be able to understand something you're studying, then it isn't hard enough. There has to be suspense.
 
-> Steve Jobs, [Stanford Commencement address (2005)](https://news.stanford.edu/2005/06/14/jobs-061505){:target="_blank"}:
+> Steve Jobs, [Text of Steve Jobs' Commencement address (2005)](https://news.stanford.edu/2005/06/14/jobs-061505){:target="_blank"}:
 > * Stay Hungry. Stay Foolish.
 > * Your time is limited, so don't waste it living someone else's life.
 > Don't be trapped by dogma - which is living with the results of other people's thinking.
@@ -455,20 +455,20 @@ excerpt: Here are my favorite quotes from someones that inspire me or make me la
 > Sherlock Holmes, [The Adventures of Sherlock Holmes, A Scandal in Bohemia](https://www.pagebypagebooks.com/Arthur_Conan_Doyle/The_Adventures_of_Sherlock_Holmes/ADVENTURE_I_A_SCANDAL_IN_BOHEMIA_p2.html){:target="_blank"}:
 > * You see, but you do not observe. The distinction is clear.
 
-> Sherlock Holmes, [Memoirs of Sherlock Holmes, The Final Problem](https://www.pagebypagebooks.com/Arthur_Conan_Doyle/Memoirs_of_Sherlock_Holmes/Adventure_XI_The_Final_Problem_p5.html){:target="_blank"}:
+> Sherlock Holmes, [The Memoirs of Sherlock Holmes, The Final Problem](https://www.pagebypagebooks.com/Arthur_Conan_Doyle/Memoirs_of_Sherlock_Holmes/Adventure_XI_The_Final_Problem_p5.html){:target="_blank"}:
 > * Let me pay you one in return when I say that if I were assured of the former eventuality I would, in the interests of the public, cheerfully accept the latter.
 
-> Sherlock Holmes, [Sign of the Four, Sherlock Holmes Gives a Demonstration](https://www.pagebypagebooks.com/Arthur_Conan_Doyle/Sign_of_the_Four/Sherlock_Holmes_Gives_a_Demonstration_p2.html){:target="_blank"}:
+> Sherlock Holmes, [The Sign of the Four, Sherlock Holmes Gives a Demonstration](https://www.pagebypagebooks.com/Arthur_Conan_Doyle/Sign_of_the_Four/Sherlock_Holmes_Gives_a_Demonstration_p2.html){:target="_blank"}:
 > * How often have I said to you that when you have eliminated the impossible whatever remains, HOWEVER IMPROBABLE, must be the truth?
 
-> Sherlock Holmes, [Sign of the Four, The Statement of the Case](https://www.pagebypagebooks.com/Arthur_Conan_Doyle/Sign_of_the_Four/The_Statement_of_the_Case_p3.html){:target="_blank"}:
+> Sherlock Holmes, [The Sign of the Four, The Statement of the Case](https://www.pagebypagebooks.com/Arthur_Conan_Doyle/Sign_of_the_Four/The_Statement_of_the_Case_p3.html){:target="_blank"}:
 > * It is of the first importance, not to allow your judgment to be biased by personal qualities.
 > The emotional qualities are antagonistic to clear reasoning.
 
-> Sherlock Holmes, [Sign of the Four, The Science of Deduction](https://www.pagebypagebooks.com/Arthur_Conan_Doyle/Sign_of_the_Four/The_Science_of_Deduction_p5.html){:target="_blank"}:
+> Sherlock Holmes, [The Sign of the Four, The Science of Deduction](https://www.pagebypagebooks.com/Arthur_Conan_Doyle/Sign_of_the_Four/The_Science_of_Deduction_p5.html){:target="_blank"}:
 > * I never guess. It is a shocking habit,\--destructive to the logical faculty.
 
-> Sherlock Holmes, [Sign of the Four, The Science of Deduction](https://www.pagebypagebooks.com/Arthur_Conan_Doyle/Sign_of_the_Four/The_Science_of_Deduction_p4.html){:target="_blank"}:
+> Sherlock Holmes, [The Sign of the Four, The Science of Deduction](https://www.pagebypagebooks.com/Arthur_Conan_Doyle/Sign_of_the_Four/The_Science_of_Deduction_p4.html){:target="_blank"}:
 > * Eliminate all other factors, and the one which remains must be the truth.
 
 > Sherlock Holmes, [A Study In Scarlet, Our Advertisement Brings A Visitor](https://www.pagebypagebooks.com/Arthur_Conan_Doyle/A_Study_In_Scarlet/Part_I_Being_a_reprint_from_the_reminiscences_of_JOHN_H_WATSON_M_D_late_of_the_Army_Medical_Department_Our_Advertisement_Brings_A_Visitor_p1.html){:target="_blank"}:
