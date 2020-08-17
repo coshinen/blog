@@ -14,9 +14,7 @@ excerpt: $ bitcoin-cli importaddress "address" ( "label" rescan p2sh )
 importaddress "address" ( "label" rescan p2sh ) # 导入一个脚本（16 进制）或地址用于监视
 ```
 
-该地址好像在你的钱包，但不能用来花费。
-这就是所谓的 Watch-only 地址，在新版本中已经可以花费。
-参考[如何使用 Watch-only 地址](/blog/2018/04/how-to-use-watch-only-addresses.html)。
+即 Watch-only 地址，就好像它在你的钱包里，但不能用来花费（新版本中已经可以花费）。
 
 参数：
 1. script（字符串，必备）16 进制编码的脚本（或地址）。

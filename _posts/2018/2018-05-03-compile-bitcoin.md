@@ -27,7 +27,7 @@ nothing to commit, working directory clean
 C++ 编译器较吃内存。推荐在编译比特币核心时至少有 1GB 的空闲内存。
 使用 512MB 或更少的内存编译由于内存交换将花费更长的时间。
 
-## 3. 依赖构建说明：macOS & Ubuntu
+## 3. 依赖构建指南：macOS & Ubuntu
 
 ### 3.1. macOS Mojave
 

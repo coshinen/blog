@@ -8,7 +8,7 @@ category: 译文集
 tags: コナン Lyrics
 excerpt: 明日になれば、涙が乾く、心も色づいて来る。笑顔が似合う、あなたのために、いつでもこのぼくがいる。
 ---
-![POCX-1081](https://www.generasia.com/w/images/5/58/IORI_BGI_A.jpg){:.border}
+![PODX-1031](https://www.generasia.com/w/images/6/6f/IORI_BGI_S.jpg){:.border}
 
 歌手：伊織<br>
 作詞：阿久悠<br>
@@ -81,4 +81,4 @@ excerpt: 明日になれば、涙が乾く、心も色づいて来る。笑顔�
 
 ## 参考链接
 
-* [伊織 ぼくがいる 歌詞 - 歌ネット](https://www.uta-net.com/song/14305/){:target="_blank"}
+* [伊織 ぼくがいる 〜コナンのテーマ〜 歌詞 - 歌ネット](https://www.uta-net.com/song/14305/){:target="_blank"}

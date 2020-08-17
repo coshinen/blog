@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "GARNET CROW 静寂の concerto 歌词翻译"
-date:   2018-04-19 20:11:12 +0800
+date:   2018-04-22 20:11:12 +0800
 author: mistydew
 comments: true
 category: 译文集

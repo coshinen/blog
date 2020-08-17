@@ -69,7 +69,7 @@ excerpt: 判断一个 9x9 的数独是否有效。只需**根据以下规则**�
 
 ## 解决方案
 
-### 方法一：一次迭代
+### 方法一：一次迭代（One-pass Iteration）
 
 ```cpp
 class Solution {
