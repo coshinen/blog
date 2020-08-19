@@ -1,11 +1,11 @@
 ---
 layout: post
-title:  "比特币源码剖析—私钥、公钥、地址"
+title:  "私钥到公钥到比特币地址的转换"
 date:   2018-05-07 20:22:21 +0800
 author: mistydew
 comments: true
 category: 区块链
-tags: Blockchain Bitcoin Bitcoin-Address ECC
+tags: Blockchain Bitcoin Address ECC
 ---
 私钥使用单向的椭圆曲线乘法加密函数得到对应的公钥。
 公钥经过一系列的哈希函数运算生成相应地址，这一过程涉及到 Base58 编码。
@@ -33,38 +33,34 @@ KzCFcgtfrPA2uWmXn4zjVNaKYMEUHbh732XzZ4aZ737545DqZ3V4
 
 **注：该命令只适用于本地钱包数据库中的私钥。**
 
-## 私钥、公钥、地址之间的转换流程
+## 1. 私钥到地址的转换流程
 
 ![mbc2_0401](https://raw.githubusercontent.com/bitcoinbook/bitcoinbook/develop/images/mbc2_0401.png){:.border}
 
 **注：“私钥->公钥”、“公钥->地址”这两步是单向不可逆的。**
 
-## 从私钥到公钥地址的详细步骤
+## 2. 私钥到公钥地址的转换步骤
 
-1.使用伪随机数生成器 PRNG 生成一个给定范围内的 256 位随机数作为私钥 PrivKey。<br>
-2.使用 OpenSSL 加密库中 secp256k1 标准的椭圆曲线相乘加密算法计算上一步生成私钥 PrivKey 得到相应的公钥 PubKey。
-
+1. 使用伪随机数生成器 PRNG 生成一个给定范围内的 256 位随机数作为私钥 PrivKey。
+2. 使用 OpenSSL 加密库中 secp256k1 标准的椭圆曲线相乘加密算法计算上一步生成私钥 PrivKey 得到相应的公钥 PubKey。
 ![mbc2_0405](https://raw.githubusercontent.com/bitcoinbook/bitcoinbook/develop/images/mbc2_0405.png){:.border}
-
-3.使用 "Double Hash" 或 "Hash160" 运算上一步生成的公钥 PubKey 得到公钥地址 PubKeyAddress，用户看到的是该地址经过 Base58Check 编码后得到地址 address。<br>
-3.1."Hash160" 是先后经过了 SHA256 和 RIPEMD160 两步运算得到 160 位及 20 个字节的公钥地址，PubKeyAddress = RIPEMD160(SHA256(PubKey))。<br>
-3.2.最后经过 Base58 编码得到最后的地址，address = Base58Check(PubKeyAddress)。
-
+3. 使用 "Double Hash" 或 "Hash160" 运算上一步生成的公钥 PubKey 得到公钥地址 PubKeyAddress，用户看到的是该地址经过 Base58Check 编码后得到地址 address。
+   31. "Hash160" 是先后经过了 SHA256 和 RIPEMD160 两步运算得到 160 位及 20 个字节的公钥地址，PubKeyAddress = RIPEMD160(SHA256(PubKey))。
+   32. 最后经过 Base58 编码得到最后的地址，address = Base58Check(PubKeyAddress)。
 ![mbc2_0406](https://raw.githubusercontent.com/bitcoinbook/bitcoinbook/develop/images/mbc2_0406.png){:.border}
+       321. 在 20 个字节的公钥地址前附加 1 个字节的版本前缀，比特币主网的版本号为 "0x00" 对应前缀为 "1"，VersionPrefix + PubKeyAddress。
+       322. 对上步得到的 21bytes 进行两次哈希 SHA256，SHA256(SHA256(VersionPrefix + PubKeyAddress))。
+       323. 取上步结果的前 4 个字节作为校验和 Checksum 追加到 3.2.1 结果的后面，VersionPrefix + PubKeyAddress + Checksum。
+       324. 对上步得到的 25bytes 进行 Base58 编码得到最终的地址，address = Base58(VersionPrefix + PubKeyAddress + Checksum)。
 
-3.2.1.在 20 个字节的公钥地址前附加 1 个字节的版本前缀，比特币主网的版本号为 "0x00" 对应前缀为 "1"，VersionPrefix + PubKeyAddress。<br>
-3.2.2.对上步得到的 21bytes 进行两次哈希 SHA256，SHA256(SHA256(VersionPrefix + PubKeyAddress))。<br>
-3.2.3.取上步结果的前 4 个字节作为校验和 Checksum 追加到 3.2.1 结果的后面，VersionPrefix + PubKeyAddress + Checksum。<br>
-3.2.4.对上步得到的 25bytes 进行 Base58 编码得到最终的地址，address = Base58(VersionPrefix + PubKeyAddress + Checksum)。
+## 3. 源码剖析
 
-## 源码剖析
-
-从公钥到地址转换的流程图：
+椭圆曲线公钥到比特币地址转换：
 
 ![PubKeyToAddr](https://en.bitcoin.it/w/images/en/9/9b/PubKeyToAddr.png)
 
 ```shell
-$ cd bitcoin/src # 切换至比特币源码目录
+$ cd bitcoin/src # 进入比特币源码目录
 $ grep "getnewaddress" * -nir # 搜索 RPC 命令 getnewaddress 所出现的文件及位置
 rpcserver.cpp:344:    { "wallet",             "getnewaddress",          &getnewaddress,          true  },
 rpcserver.h:199:extern UniValue getnewaddress(const UniValue& params, bool fHelp); // in rpcwallet.cpp

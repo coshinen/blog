@@ -504,7 +504,7 @@ double AttackerSuccessProbability(double q, int z)
 
 部分运行结果，我们可以看到概率随 z 呈指数下降。
 
-```shell
+```
 q=0.1
 z=0    P=1.0000000
 z=1    P=0.2045873
@@ -536,7 +536,7 @@ z=50   P=0.0000006
 
 P 小于 0.1% 解决...
 
-```shell
+```
 P < 0.001
 q=0.10   z=5
 q=0.15   z=8

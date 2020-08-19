@@ -1,21 +1,20 @@
 ---
 layout: post
-title:  "比特币源码剖析—区块"
+title:  "比特币区块构造"
 date:   2018-04-26 21:02:10 +0800
 author: mistydew
 comments: true
 category: 区块链
 tags: Blockchain Bitcoin Block
 ---
-交易数据永久记录在区块中。
-它们可以被当作城市记录器记录簿中的单个页面（记录房地产所有权的变更）或股票交易的分类账。
-区块按时间组成一条线性序列（也称为区块链）。
-矿工不断地处理新交易到新的区块，并将其添加到区块链末端。
+交易数据永久记录在区块中，它们可以被当作账本中的单个页面。
+区块按时间组成一条线性序列，又称为区块链。
+矿工不断地处理新交易到新的区块，并将其添加到区块链的末端。
 随着区块被埋入区块链越来越深，它们变得越来越难以改变或移除，这就产生了比特币的不可逆交易。
 
 ## 源码剖析
 
-区块头和区块的数据结构定义在“primitives/block.h”文件中，分别为类 CBlockHeader 和 CBlock，CBlock 是 CBlockHeader 的派生类，如下：
+区块头和区块的数据结构都定义在源文件“primitives/block.h”中，分别为类 CBlockHeader 和其派生类 CBlock，如下：
 
 ```cpp
 /** Nodes collect new transactions into a block, hash them into a hash tree,
