@@ -8,7 +8,7 @@ category: 译文集
 tags: ガネクロ Lyrics
 excerpt: 今日買ったばかりのレコードを、抱えたままでいつものカフェ。先送りした小さな幸福、上昇気流の淡い日々。無いものねだりの毎日が、振り返れば今 愛しくさえ思う。
 ---
-![GZCA-2044](https://crowsub.github.io/assets/images/discography/single/GZCA-2044.jpg){:.border}
+![GZCA-2044](https://crowsub.github.io/images/discography/single/GZCA-2044.jpg){:.border}
 
 歌手：GARNET CROW<br>
 作詞：AZUKI 七<br>

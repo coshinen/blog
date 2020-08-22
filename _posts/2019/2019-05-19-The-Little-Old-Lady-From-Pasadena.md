@@ -8,7 +8,7 @@ category: 译文集
 tags: Lyrics
 excerpt: It's the little old lady from Pasadena, has a pretty little flower bed of white gardenias. But parked in a rickety old garage, is a brand new shiny red super stocked Dodge.
 ---
-![GZCA-5017](https://crowsub.github.io/assets/images/discography/other/GZCA-5017.jpg){:.border}
+![GZCA-5017](https://crowsub.github.io/images/discography/other/GZCA-5017.jpg){:.border}
 
 歌手：中村由利<br>
 作詞：Roger Christian, Don Altfeld & Jan Berry<br>

@@ -8,7 +8,7 @@ category: 译文集
 tags: ガネクロ Lyrics
 excerpt: 君を飾る花を咲かそう。心をこめて育ててゆくよ、数え切れない やさしい想い出を。包み込むほどの甘い香りに、見送られてゆけるように。
 ---
-![GZCA-7054](https://crowsub.github.io/assets/images/discography/single/GZCA-7054.jpg){:.border}
+![GZCA-7054](https://crowsub.github.io/images/discography/single/GZCA-7054.jpg){:.border}
 
 歌手：GARNET CROW<br>
 作詞：AZUKI 七<br>

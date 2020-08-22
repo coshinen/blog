@@ -8,7 +8,7 @@ category: 译文集
 tags: ガネクロ Lyrics
 excerpt: 君のいない未来が、ただ大きな闇にみえ。死んでしまえば生きなくていい。そんな事ばかり考えてた、穏やかな月明かりに。
 ---
-![GZCA-5013](https://crowsub.github.io/assets/images/discography/album/GZCA-5013.jpg){:.border}
+![GZCA-5013](https://crowsub.github.io/images/discography/album/GZCA-5013.jpg){:.border}
 
 歌手：GARNET CROW<br>
 作詞：AZUKI 七<br>

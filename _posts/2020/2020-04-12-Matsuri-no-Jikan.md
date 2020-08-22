@@ -8,7 +8,7 @@ category: 译文集
 tags: ガネクロ Lyrics
 excerpt: 夕焼けのオレンジ色残すような明りを灯しだす。秋風にざわめく足音が祭りをつれて。
 ---
-![GZCA-4028](https://crowsub.github.io/assets/images/discography/single/GZCA-4028.jpg){:.border}
+![GZCA-4028](https://crowsub.github.io/images/discography/single/GZCA-4028.jpg){:.border}
 
 歌手：GARNET CROW<br>
 作詞：AZUKI 七<br>

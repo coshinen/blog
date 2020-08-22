@@ -8,7 +8,7 @@ category: 译文集
 tags: ガネクロ Lyrics
 excerpt: 君の手の内で トランス、偶然に見せかけられた トラップ。変に格好つけた関係なんて要らない、ただ触れて欲しいの。傷は癒えて強くなってゆく、立ち止まるくらいなら、深く堕ちてく方がイイ。
 ---
-![GZCA-2005](https://crowsub.github.io/assets/images/discography/single/GZCA-2005.jpg){:.border}
+![GZCA-2005](https://crowsub.github.io/images/discography/single/GZCA-2005.jpg){:.border}
 
 歌手：GARNET CROW<br>
 作詞：AZUKI 七<br>

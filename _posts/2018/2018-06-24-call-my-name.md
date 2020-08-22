@@ -8,7 +8,7 @@ category: 译文集
 tags: ガネクロ Lyrics
 excerpt: 白い壁と Rembrandt、いつまでも眺めていた、日曜の朝君とただ並んでた。開いた窓から差し込む光がほらそこに、ふと思い出したように call my name。
 ---
-![GZCA-2005](https://crowsub.github.io/assets/images/discography/single/GZCA-2005.jpg){:.border}
+![GZCA-2005](https://crowsub.github.io/images/discography/single/GZCA-2005.jpg){:.border}
 
 歌手：GARNET CROW<br>
 作詞：AZUKI 七<br>

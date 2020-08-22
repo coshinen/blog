@@ -6,11 +6,11 @@ author: mistydew
 comments: true
 category: 力扣题解
 tags: LeetCode Array Two-Pointers
-excerpt: 给定一个数组 _nums_ 和一个值 _val_，[原地](https://en.wikipedia.org/wiki/In-place_algorithm){:target="_blank"}移除所有该数值的实例并返回新数组的长度。
+excerpt: 给定一个数组 *nums* 和一个值 *val*，[原地](https://en.wikipedia.org/wiki/In-place_algorithm){:target="_blank"}移除所有该数值的实例并返回新数组的长度。
 ---
 > ## 27. Remove Element | Easy
 > 
-> Given an array _nums_ and a value _val_, remove all instances of that value [in-place](https://en.wikipedia.org/wiki/In-place_algorithm){:target="_blank"} and return the new length.
+> Given an array *nums* and a value *val*, remove all instances of that value [in-place](https://en.wikipedia.org/wiki/In-place_algorithm){:target="_blank"} and return the new length.
 > 
 > Do not allocate extra space for another array, you must do this by **modifying the input array** [in-place](https://en.wikipedia.org/wiki/In-place_algorithm){:target="_blank"} with O(1) extra memory.
 > 
@@ -94,8 +94,8 @@ public:
 ```
 
 复杂度分析：
-* 时间复杂度：_O_(n)，假设数组共有 n 个元素，i 和 j 最多共移动 2n 步。
-* 空间复杂度：_O_(1)。
+* 时间复杂度：*O*(n)，假设数组共有 n 个元素，i 和 j 最多共移动 2n 步。
+* 空间复杂度：*O*(1)。
 
 ### 方法二：双指针—当要删除的元素很少时（Two Pointers - when elements to remove are rare）
 
@@ -119,8 +119,8 @@ public:
 ```
 
 复杂度分析：
-* 时间复杂度：_O_(n)，i 和 n 最多共移动 n 步。在该方法中，赋值操作的次数等于待删除元素的数量。所以如果待删除元素很少时效率会更高。
-* 空间复杂度：_O_(1)。
+* 时间复杂度：*O*(n)，i 和 n 最多共移动 n 步。在该方法中，赋值操作的次数等于待删除元素的数量。所以如果待删除元素很少时效率会更高。
+* 空间复杂度：*O*(1)。
 
 ## 参考链接
 

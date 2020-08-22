@@ -18,7 +18,7 @@ excerpt: 假设一个升序数组在你预先未知的某个点上进行了旋�
 > 
 > You may assume no duplicate exists in the array.
 > 
-> Your algorithm's runtime complexity must be in the order of _O_(log n).
+> Your algorithm's runtime complexity must be in the order of *O*(log n).
 > 
 > **Example 1:**
 > 
@@ -38,7 +38,7 @@ excerpt: 假设一个升序数组在你预先未知的某个点上进行了旋�
 
 ### 方法一：二分搜索（Binary Search）
 
-要求时间复杂度为 _O_(log n)，所以要使用二分法进行搜索。
+要求时间复杂度为 *O*(log n)，所以要使用二分法进行搜索。
 
 ```cpp
 class Solution {
@@ -71,8 +71,8 @@ public:
 ```
 
 复杂度分析：
-* 时间复杂度：_O_(log n)，n 为数组 nums 的大小。
-* 空间复杂度：_O_(1)。
+* 时间复杂度：*O*(log n)，n 为数组 nums 的大小。
+* 空间复杂度：*O*(1)。
 
 ## 参考链接
 

@@ -8,7 +8,7 @@ category: 译文集
 tags: コナン ガネクロ Lyrics
 excerpt: Doing all right!かみしめた君の記憶 木漏れ日の匂い、置いてきた何かはもう 此処にはないけど。
 ---
-![GZCA-7141](https://crowsub.github.io/assets/images/discography/single/GZCA-7141.jpg){:.border}
+![GZCA-7141](https://crowsub.github.io/images/discography/single/GZCA-7141.jpg){:.border}
 
 歌手：GARNET CROW<br>
 作詞：AZUKI 七<br>

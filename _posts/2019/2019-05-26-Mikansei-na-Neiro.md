@@ -8,7 +8,7 @@ category: 译文集
 tags: ガネクロ Lyrics
 excerpt: 決してその手を離さずに、振り返らないでいて。願うだけしか出来ない私を、いつの日か裁くでしょう。
 ---
-![GZCA-1032](https://crowsub.github.io/assets/images/discography/single/GZCA-1032.jpg){:.border}
+![GZCA-1032](https://crowsub.github.io/images/discography/single/GZCA-1032.jpg){:.border}
 
 歌手：GARNET CROW<br>
 作詞：AZUKI 七<br>

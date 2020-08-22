@@ -8,7 +8,7 @@ category: 译文集
 tags: ガネクロ Lyrics
 excerpt: 君がいなくなってから、何度朝日迎えたかしれない。急に地平線をみたくなって ふらり、始発に飛び乗る。
 ---
-![GZCA-2020](https://crowsub.github.io/assets/images/discography/single/GZCA-2020.jpg){:.border}
+![GZCA-2020](https://crowsub.github.io/images/discography/single/GZCA-2020.jpg){:.border}
 
 歌手：GARNET CROW<br>
 作詞：AZUKI 七<br>

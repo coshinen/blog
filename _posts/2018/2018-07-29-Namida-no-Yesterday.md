@@ -8,7 +8,7 @@ category: 译文集
 tags: コナン ガネクロ Lyrics
 excerpt: 流星がこぼれた夏の空、願いこめた。いつもあの人の傍にいさせて、朝になり街中人が溢れゆく度に。
 ---
-![GZCA-4096](https://crowsub.github.io/assets/images/discography/single/GZCA-4096.jpg){:.border}
+![GZCA-4096](https://crowsub.github.io/images/discography/single/GZCA-4096.jpg){:.border}
 
 歌手：GARNET CROW<br>
 作詞：AZUKI 七<br>

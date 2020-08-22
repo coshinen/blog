@@ -8,7 +8,7 @@ category: 译文集
 tags: ガネクロ Lyrics
 excerpt: ほんの少し軽い眠りをとったって満たされやしない、きっとまた同じとこで悩んじゃって動けないままで。
 ---
-![GZCA-7031](https://crowsub.github.io/assets/images/discography/single/GZCA-7031.jpg){:.border}
+![GZCA-7031](https://crowsub.github.io/images/discography/single/GZCA-7031.jpg){:.border}
 
 歌手：GARNET CROW<br>
 作詞：AZUKI 七<br>

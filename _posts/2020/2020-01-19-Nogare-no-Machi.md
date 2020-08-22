@@ -8,7 +8,7 @@ category: 译文集
 tags: ガネクロ Lyrics
 excerpt: 深い森に身をひそめて、逃れの町さがしてる。
 ---
-![GZCA-5038](https://crowsub.github.io/assets/images/discography/album/GZCA-5038.jpg){:.border}
+![GZCA-5038](https://crowsub.github.io/images/discography/album/GZCA-5038.jpg){:.border}
 
 歌手：GARNET CROW<br>
 作詞：AZUKI 七<br>

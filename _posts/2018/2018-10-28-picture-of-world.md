@@ -8,7 +8,7 @@ category: 译文集
 tags: ガネクロ Lyrics
 excerpt: ずっと みてたんだ一枚のポスター、壁の片隅で色褪せた。きっと誰かが 剥がし忘れた、夕ぐれのストーリーは そこにあり。
 ---
-![GZCA-5052](https://crowsub.github.io/assets/images/discography/album/GZCA-5052.jpg){:.border}
+![GZCA-5052](https://crowsub.github.io/images/discography/album/GZCA-5052.jpg){:.border}
 
 歌手：GARNET CROW<br>
 作詞：AZUKI 七<br>

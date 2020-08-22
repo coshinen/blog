@@ -8,7 +8,7 @@ category: 译文集
 tags: ガネクロ Lyrics
 excerpt: まっすぐな思いはまっすぐに伝わるの？唐突な青空 遠ざかる飛行機。
 ---
-![GZCA-5251](https://crowsub.github.io/assets/images/discography/album/GZCA-5251.jpg){:.border}
+![GZCA-5251](https://crowsub.github.io/images/discography/album/GZCA-5251.jpg){:.border}
 
 歌手：GARNET CROW<br>
 作詞：AZUKI 七<br>

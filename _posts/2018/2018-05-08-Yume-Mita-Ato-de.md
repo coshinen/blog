@@ -8,7 +8,7 @@ category: 译文集
 tags: コナン ガネクロ Lyrics
 excerpt: 朝が来るたび君のことを想う、一日の始まりさえも切なくて。二度と戻れない？無邪気な二人、ただ傍にいれば幸せだった。
 ---
-![GZCA-2031](https://crowsub.github.io/assets/images/discography/single/GZCA-2031.jpg){:.border}
+![GZCA-2031](https://crowsub.github.io/images/discography/single/GZCA-2031.jpg){:.border}
 
 歌手：GARNET CROW<br>
 作詞：AZUKI 七<br>

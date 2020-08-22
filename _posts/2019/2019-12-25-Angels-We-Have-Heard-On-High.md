@@ -8,7 +8,7 @@ category: 译文集
 tags: Lyrics
 excerpt: Angels we have heard on high, sweetly singing o'er the plains, and the mountains in reply, echoing their joyous strains.
 ---
-![GZBA-8020~1](https://crowsub.github.io/assets/images/discography/dvd/GZBA-8020~1.jpg){:.border}
+![GZBA-8020~1](https://crowsub.github.io/images/discography/dvd/GZBA-8020~1.jpg){:.border}
 
 歌手：中村由利
 

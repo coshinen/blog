@@ -7,19 +7,15 @@ comments: true
 category: 区块链
 tags: Blockchain Bitcoin bitcoin-cli
 ---
-本文列出了 bitcoin v0.12.1 客户端 bitcoin-cli 所有（含隐藏分类）的 RPC 命令。
+带有 JSON-RPC 接口的基于命令行的守护进程 `bitcoind` 与比特币核心（Bicoin Core）绑定在一起。
+一个允许用户发送 RPC 命令到 `bitcoind` 的简单程序 `bitcoin-cli` 也包含在比特币核心。
 
-## bitcoin-cli 命令行参数
+下面列出了 bitcoin v0.12.1 客户端 bitcoin-cli 所有（含隐藏分类）的 RPC 命令。
 
-带有 JSON-RPC 接口的基于命令行的守护进程 bitcoind 与 Bicoin Core 绑定在一起。
-它也提供访问公共测试网 testnet，一个全球的测试环境，使用一个使用无价值的“测试比特币”替代区块链模仿比特币主网。
-回归测试网 regtest 或回归测试模式 Regression Test Mode 创建了一个用作本地测试环境的私有区块链。
-最终，一个允许用户发送 RPC 命令到 bitcoind 的简单程序 bitcoin-cli 也包含在比特币核心内。
-
-### 基础命令
+## 1. bitcoin-cli 帮助信息
 
 ```shell
-$ bitcoin-cli -h # 获取以下帮助信息
+$ bitcoin-cli -h # 显示帮助信息
 Bitcoin Core RPC client version v0.12.1.0-f61a24e
 比特币核心 RPC 客户端版本 v0.12.1.0-未知
 
@@ -27,7 +23,7 @@ Usage:
 用法：共 3 种，[] 表示可以省略，单纯的使用 Options 选项不需要 bitcoind，而 help 和 <command> 都需要 bitcoind
   bitcoin-cli [options] <command> [params]  Send command to Bitcoin Core # 发送 RPC 命令到比特币核心 bitcoind
   bitcoin-cli [options] help                List commands # 列出 RPC 命令
-  bitcoin-cli [options] help <command>      Get help for a command # 获取一条命令的帮助信息（用法示例）
+  bitcoin-cli [options] help <command>      Get help for a command # 获取一条命令的帮助信息
 
 Options:
 选项：
@@ -83,10 +79,10 @@ Chain selection options:
        HTTP 请求的超时时间（默认：900s）
 ```
 
-### RPC 命令（需要 bitcoind 提供相关服务）
+## 2. bitcoin-cli RPC 命令（需要 bitcoind 提供相关服务）
 
 ```shell
-$ bitcoin-cli help # 获取以下 RPC 命令
+$ bitcoin-cli help # 列出 RPC 命令
 ```
 
 **注：括号 () 内的参数有默认值，可以省略。**

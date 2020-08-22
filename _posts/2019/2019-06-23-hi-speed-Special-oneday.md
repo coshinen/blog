@@ -8,7 +8,7 @@ category: 译文集
 tags: ガネクロ Lyrics
 excerpt: コーヒーは最初の一口、甘いケーキの端っこ、ポテトは揚げたてにして、おいしいトコは少しだけ。
 ---
-![GZCA-1050](https://crowsub.github.io/assets/images/discography/single/GZCA-1050.jpg){:.border}
+![GZCA-1050](https://crowsub.github.io/images/discography/single/GZCA-1050.jpg){:.border}
 
 歌手：GARNET CROW<br>
 作詞：AZUKI 七<br>

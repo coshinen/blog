@@ -8,7 +8,7 @@ category: 译文集
 tags: コナン ガネクロ Lyrics
 excerpt: 永い夜が朝が昼が すべてのらりくらり流れゆくよ、日々をつないでゆくにも そうね 意思というものが必要？
 ---
-![GZCA-4100](https://crowsub.github.io/assets/images/discography/single/GZCA-4100.jpg){:.border}
+![GZCA-4100](https://crowsub.github.io/images/discography/single/GZCA-4100.jpg){:.border}
 
 歌手：GARNET CROW<br>
 作詞：AZUKI 七<br>

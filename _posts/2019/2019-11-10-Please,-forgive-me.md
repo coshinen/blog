@@ -8,7 +8,7 @@ category: 译文集
 tags: ガネクロ Lyrics
 excerpt: 優しく触れる君の手に戸惑った、痛みが消えて置き去りの罪だけ、私を責める 逃げること許さない、今目の前の光(あい)を求めていいのかな。
 ---
-![GZCA-5013](https://crowsub.github.io/assets/images/discography/album/GZCA-5013.jpg){:.border}
+![GZCA-5013](https://crowsub.github.io/images/discography/album/GZCA-5013.jpg){:.border}
 
 歌手：GARNET CROW<br>
 作詞：AZUKI 七<br>

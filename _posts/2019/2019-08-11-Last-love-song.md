@@ -8,7 +8,7 @@ category: 译文集
 tags: ガネクロ Lyrics
 excerpt: 午後になると西陽が射す、部屋の片隅のソファー。海を越えて運んだ、大切な君の場所へ。初めて僕が座る、出会いから半年の今日。
 ---
-![GZCA-1072](https://crowsub.github.io/assets/images/discography/single/GZCA-1072.jpg){:.border}
+![GZCA-1072](https://crowsub.github.io/images/discography/single/GZCA-1072.jpg){:.border}
 
 歌手：GARNET CROW<br>
 作詞：AZUKI 七<br>

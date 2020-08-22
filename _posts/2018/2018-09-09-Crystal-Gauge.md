@@ -8,7 +8,7 @@ category: 译文集
 tags: ガネクロ Lyrics
 excerpt: La La tu lu Rah Ta、緑の木漏れ日。目を閉じたら、スベテの繋がりを感じられる？まるで遺伝子の様な cosmic world、tu ta la ta...wave。
 ---
-![GZCA-7006](https://crowsub.github.io/assets/images/discography/single/GZCA-7006.jpg){:.border}
+![GZCA-7006](https://crowsub.github.io/images/discography/single/GZCA-7006.jpg){:.border}
 
 歌手：GARNET CROW<br>
 作詞：AZUKI 七<br>

@@ -8,7 +8,7 @@ category: 译文集
 tags: ガネクロ Lyrics
 excerpt: 夜深けの流星達 眺めていたよね。言葉にならない 感覚(きもち)を共有してた。
 ---
-![GZCA-7054](https://crowsub.github.io/assets/images/discography/single/GZCA-7054.jpg){:.border}
+![GZCA-7054](https://crowsub.github.io/images/discography/single/GZCA-7054.jpg){:.border}
 
 歌手：GARNET CROW<br>
 作詞：AZUKI 七<br>

@@ -8,7 +8,7 @@ category: 译文集
 tags: コナン ガネクロ Lyrics
 excerpt: 風の音だけが、体中を包む。サイレント・Kiss、夢に似た気配。
 ---
-![GZCA-7156](https://crowsub.github.io/assets/images/discography/single/GZCA-7156.jpg){:.border}
+![GZCA-7156](https://crowsub.github.io/images/discography/single/GZCA-7156.jpg){:.border}
 
 歌手：GARNET CROW<br>
 作詞：AZUKI 七<br>

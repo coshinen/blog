@@ -8,7 +8,7 @@ category: 译文集
 tags: ガネクロ Lyrics
 excerpt: ため息ひとつ落ちた週末の、どうしようもない感じ、絶望より深く堕ちてゆく 夜明け。
 ---
-![TCR-001](https://crowsub.github.io/assets/images/discography/album/TCR-001.jpg){:.border}
+![TCR-001](https://crowsub.github.io/images/discography/album/TCR-001.jpg){:.border}
 
 歌手：GARNET CROW<br>
 作詞：AZUKI 七<br>

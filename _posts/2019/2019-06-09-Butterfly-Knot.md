@@ -8,7 +8,7 @@ category: 译文集
 tags: ガネクロ Lyrics
 excerpt: ねぇ何を話そうか…もう夜が来てしまう、遠い道のりを歩いてきた。
 ---
-![GZCA-5256~7](https://crowsub.github.io/assets/images/discography/album/GZCA-5256~7.jpg){:.border}
+![GZCA-5256~7](https://crowsub.github.io/images/discography/album/GZCA-5256~7.jpg){:.border}
 
 歌手：GARNET CROW<br>
 作詞：AZUKI 七<br>

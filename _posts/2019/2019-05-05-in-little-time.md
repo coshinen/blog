@@ -8,7 +8,7 @@ category: 译文集
 tags: ガネクロ Lyrics
 excerpt: 十二月にしては暖かいこんな夜は、思いつきで出かけた。車の中でずっと手をつないで眠った、朝日が二人を起こすまで。
 ---
-![GZCA-1029](https://crowsub.github.io/assets/images/discography/single/GZCA-1029.jpg){:.border}
+![GZCA-1029](https://crowsub.github.io/images/discography/single/GZCA-1029.jpg){:.border}
 
 歌手：GARNET CROW<br>
 作詞：AZUKI 七<br>

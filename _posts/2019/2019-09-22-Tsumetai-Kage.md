@@ -8,7 +8,7 @@ category: 译文集
 tags: ガネクロ Lyrics
 excerpt: 冷えた 空から 溶け込む 淡い雪、すべては この大地の中 すい込まれ ゆくのですね。
 ---
-![GZCA-5052](https://crowsub.github.io/assets/images/discography/album/GZCA-5052.jpg){:.border}
+![GZCA-5052](https://crowsub.github.io/images/discography/album/GZCA-5052.jpg){:.border}
 
 歌手：GARNET CROW<br>
 作詞：AZUKI 七<br>

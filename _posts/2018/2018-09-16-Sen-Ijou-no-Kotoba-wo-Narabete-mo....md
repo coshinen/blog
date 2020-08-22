@@ -8,7 +8,7 @@ category: 译文集
 tags: ガネクロ Lyrics
 excerpt: 公園で髪を切る、落ちてゆく毛先を払う。君が笑う 頬に触れる、見上げれば飛行機雲。
 ---
-![GZCA-1044](https://crowsub.github.io/assets/images/discography/single/GZCA-1044.jpg){:.border}
+![GZCA-1044](https://crowsub.github.io/images/discography/single/GZCA-1044.jpg){:.border}
 
 歌手：GARNET CROW<br>
 作詞：AZUKI 七<br>

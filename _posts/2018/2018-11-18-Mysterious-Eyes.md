@@ -8,7 +8,7 @@ category: 译文集
 tags: コナン ガネクロ Lyrics
 excerpt: 君と僕とは 別の人間(いきもの)だから、好みが違う 歩く速さも 想いの伝え方も。
 ---
-![GZCA-1028](https://crowsub.github.io/assets/images/discography/single/GZCA-1028.jpg){:.border}
+![GZCA-1028](https://crowsub.github.io/images/discography/single/GZCA-1028.jpg){:.border}
 
 歌手：GARNET CROW<br>
 作詞：AZUKI 七<br>

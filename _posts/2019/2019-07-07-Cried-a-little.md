@@ -8,7 +8,7 @@ category: 译文集
 tags: ガネクロ Lyrics
 excerpt: 弱い日差しが揺れるテーブルの上、開いた世界地図に、君のクセのある文字がまだ残る。ah- 現実かなぁ、、
 ---
-![GZCA-1029](https://crowsub.github.io/assets/images/discography/single/GZCA-1029.jpg){:.border}
+![GZCA-1029](https://crowsub.github.io/images/discography/single/GZCA-1029.jpg){:.border}
 
 歌手：GARNET CROW<br>
 作詞：AZUKI 七<br>

@@ -8,7 +8,7 @@ category: 译文集
 tags: ガネクロ Lyrics
 excerpt: 追いかけ合う月と太陽、決して同じ朝は来なくて。二人を重ねて見ていたよ、空っぽの部屋で。
 ---
-![TCR-001](https://crowsub.github.io/assets/images/discography/album/TCR-001.jpg){:.border}
+![TCR-001](https://crowsub.github.io/images/discography/album/TCR-001.jpg){:.border}
 
 歌手：GARNET CROW<br>
 作詞：AZUKI 七<br>

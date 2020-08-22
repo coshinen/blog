@@ -8,7 +8,7 @@ category: 译文集
 tags: ガネクロ Lyrics
 excerpt: 街の音 人の声 ざわめき、やけに今 躰が音をひらうよ。君一人で世界が変わるなんて、ah- なんて 単純な feel & brain。
 ---
-![GZCA-1061](https://crowsub.github.io/assets/images/discography/album/GZCA-1061.jpg){:.border}
+![GZCA-1061](https://crowsub.github.io/images/discography/album/GZCA-1061.jpg){:.border}
 
 歌手：GARNET CROW<br>
 作詞：AZUKI 七<br>

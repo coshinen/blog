@@ -8,7 +8,7 @@ category: 译文集
 tags: ガネクロ Lyrics
 excerpt: Naked story yeah- 無防備でも飛び出したい、感じるまま stay yeah- We're born in this way.
 ---
-![GZCA-5013](https://crowsub.github.io/assets/images/discography/album/GZCA-5013.jpg){:.border}
+![GZCA-5013](https://crowsub.github.io/images/discography/album/GZCA-5013.jpg){:.border}
 
 歌手：GARNET CROW<br>
 作詞：AZUKI 七<br>

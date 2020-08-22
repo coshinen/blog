@@ -8,7 +8,7 @@ category: 译文集
 tags: ガネクロ Lyrics
 excerpt: じゃれ合う日曜の午後 (oh- yeah Why do I love you ~)、まだ眠い？ 話しかける (Let's step on out today)。
 ---
-![GZCA-2031](https://crowsub.github.io/assets/images/discography/single/GZCA-2031.jpg){:.border}
+![GZCA-2031](https://crowsub.github.io/images/discography/single/GZCA-2031.jpg){:.border}
 
 歌手：GARNET CROW<br>
 作詞：AZUKI 七<br>

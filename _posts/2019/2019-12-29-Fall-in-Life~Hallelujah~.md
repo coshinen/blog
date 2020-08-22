@@ -8,7 +8,7 @@ category: 译文集
 tags: ガネクロ Lyrics
 excerpt: 暮れゆく空おセンチな気分。海辺のDrive、まだみたことのない場所へ、僕らを乗せて be high yeah、密やかに辿る道。
 ---
-![GZCA-5198](https://crowsub.github.io/assets/images/discography/album/GZCA-5198.jpg){:.border}
+![GZCA-5198](https://crowsub.github.io/images/discography/album/GZCA-5198.jpg){:.border}
 
 歌手：GARNET CROW<br>
 作詞：AZUKI 七<br>

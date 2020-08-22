@@ -8,7 +8,7 @@ category: 译文集
 tags: ガネクロ Lyrics
 excerpt: 夢去りし 数えきれぬ、幼い優しさに守られていた日々。眠れずに 叫ぶように、君を想うもどかしさ 駆け巡る。
 ---
-![GZCA-1061](https://crowsub.github.io/assets/images/discography/album/GZCA-1061.jpg){:.border}
+![GZCA-1061](https://crowsub.github.io/images/discography/album/GZCA-1061.jpg){:.border}
 
 歌手：GARNET CROW<br>
 作詞：AZUKI 七<br>

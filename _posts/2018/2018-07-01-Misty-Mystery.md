@@ -8,7 +8,7 @@ category: 译文集
 tags: コナン ガネクロ Lyrics
 excerpt: why 見えぬ明日へと、期待込め歩いてるの。まだ君を想う、途中みたいにざわめく。
 ---
-![GZCA-4135](https://crowsub.github.io/assets/images/discography/single/GZCA-4135.jpg){:.border}
+![GZCA-4135](https://crowsub.github.io/images/discography/single/GZCA-4135.jpg){:.border}
 
 歌手：GARNET CROW<br>
 作詞：AZUKI 七<br>

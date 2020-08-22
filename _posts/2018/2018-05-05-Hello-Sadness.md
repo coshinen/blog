@@ -8,7 +8,7 @@ category: 译文集
 tags: ガネクロ Lyrics
 excerpt: 離陸間近の午前1時5分 空を見上げていた。いつかまた会えるかなあ 何故かなあ、もう離れてしまったことばかりを思うこと止められず、心がきしんだ。
 ---
-![GZCA-5198](https://crowsub.github.io/assets/images/discography/album/GZCA-5198.jpg){:.border}
+![GZCA-5198](https://crowsub.github.io/images/discography/album/GZCA-5198.jpg){:.border}
 
 歌手：GARNET CROW<br>
 作詞：AZUKI 七<br>

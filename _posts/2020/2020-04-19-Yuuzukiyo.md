@@ -8,7 +8,7 @@ category: 译文集
 tags: ガネクロ Lyrics
 excerpt: 夕月の光とならぬ空、そっと寄り添う。人影にも惑う。
 ---
-![GZCA-5052](https://crowsub.github.io/assets/images/discography/album/GZCA-5052.jpg){:.border}
+![GZCA-5052](https://crowsub.github.io/images/discography/album/GZCA-5052.jpg){:.border}
 
 歌手：GARNET CROW<br>
 作詞：AZUKI 七<br>

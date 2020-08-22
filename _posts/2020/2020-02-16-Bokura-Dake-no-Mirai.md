@@ -8,7 +8,7 @@ category: 译文集
 tags: ガネクロ Lyrics
 excerpt: 生まれ変われるなら、早く君にあいたい。通り過ぎたときに、君だけが足りない。
 ---
-![GZCA-7037](https://crowsub.github.io/assets/images/discography/single/GZCA-7037.jpg){:.border}
+![GZCA-7037](https://crowsub.github.io/images/discography/single/GZCA-7037.jpg){:.border}
 
 歌手：GARNET CROW<br>
 作詞：AZUKI 七<br>

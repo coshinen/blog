@@ -8,7 +8,7 @@ category: 译文集
 tags: Lyrics
 excerpt: Should auld acquaintance be forgot, and never brought to mind? Should auld acquaintance be forgot, and days of auld lang syne?
 ---
-![GZCA-5229](https://crowsub.github.io/assets/images/discography/other/GZCA-5229.jpg){:.border}
+![GZCA-5229](https://crowsub.github.io/images/discography/other/GZCA-5229.jpg){:.border}
 
 歌手：中村由利
 

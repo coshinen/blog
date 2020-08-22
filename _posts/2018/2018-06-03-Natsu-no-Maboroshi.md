@@ -8,7 +8,7 @@ category: 译文集
 tags: コナン ガネクロ Lyrics
 excerpt: 部屋の窓の向こうに、飛行機雲を なぞって。今日ケンカした君の事ばかり、考えてた。
 ---
-![GZCA-1050](https://crowsub.github.io/assets/images/discography/single/GZCA-1050.jpg){:.border}
+![GZCA-1050](https://crowsub.github.io/images/discography/single/GZCA-1050.jpg){:.border}
 
 歌手：GARNET CROW<br>
 作詞：AZUKI 七<br>

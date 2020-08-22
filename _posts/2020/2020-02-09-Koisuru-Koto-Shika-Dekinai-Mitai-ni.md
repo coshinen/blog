@@ -8,7 +8,7 @@ category: 译文集
 tags: ガネクロ Lyrics
 excerpt: 町中オレンジ色に染める、秋空 加速してゆくサイクリング。上空 小さく 色とりどりのハングライダー舞う、風が冷えてゆく。
 ---
-![GZCA-5038](https://crowsub.github.io/assets/images/discography/album/GZCA-5038.jpg){:.border}
+![GZCA-5038](https://crowsub.github.io/images/discography/album/GZCA-5038.jpg){:.border}
 
 歌手：GARNET CROW<br>
 作詞：AZUKI 七<br>
