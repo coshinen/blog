@@ -5,7 +5,7 @@ date:   2019-11-24 20:02:12 +0800
 author: mistydew
 comments: true
 category: 译文集
-tags: ガネクロ Lyrics
+tags: Lyrics Garnet
 excerpt: 気づけば温もり求めて心が彷徨うことない？
 ---
 ![GZCA-7006](https://crowsub.github.io/images/discography/single/GZCA-7006.jpg){:.border}

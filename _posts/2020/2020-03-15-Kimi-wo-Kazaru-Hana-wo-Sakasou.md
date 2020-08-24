@@ -5,7 +5,7 @@ date:   2020-03-15 20:04:06 +0800
 author: mistydew
 comments: true
 category: 译文集
-tags: ガネクロ Lyrics
+tags: Lyrics Garnet
 excerpt: 君を飾る花を咲かそう。心をこめて育ててゆくよ、数え切れない やさしい想い出を。包み込むほどの甘い香りに、見送られてゆけるように。
 ---
 ![GZCA-7054](https://crowsub.github.io/images/discography/single/GZCA-7054.jpg){:.border}

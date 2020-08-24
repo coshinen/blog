@@ -5,7 +5,7 @@ date:   2018-09-18 20:10:38 +0800
 author: mistydew
 comments: true
 category: 区块链
-tags: Blockchain Bitcoin bitcoin-cli
+tags: Bitcoin bitcoin-cli
 excerpt: $ bitcoin-cli sendtoaddress "bitcoinaddress" amount ( "comment" "comment-to" subtractfeefromamount )
 ---
 ## 提示说明

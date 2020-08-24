@@ -5,7 +5,7 @@ date:   2018-08-19 20:03:09 +0800
 author: mistydew
 comments: true
 category: 译文集
-tags: コナン ガネクロ Lyrics
+tags: Lyrics Conan Garnet
 excerpt: 波の上漂う海月をみるのが好きで、いつまでもどこか遠い世界想い馳せるよう。
 ---
 ![GZCA-7031](https://crowsub.github.io/images/discography/single/GZCA-7031.jpg){:.border}

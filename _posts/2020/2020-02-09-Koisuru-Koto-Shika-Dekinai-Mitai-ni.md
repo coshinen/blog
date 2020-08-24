@@ -5,7 +5,7 @@ date:   2020-02-09 20:03:11 +0800
 author: mistydew
 comments: true
 category: 译文集
-tags: ガネクロ Lyrics
+tags: Lyrics Garnet
 excerpt: 町中オレンジ色に染める、秋空 加速してゆくサイクリング。上空 小さく 色とりどりのハングライダー舞う、風が冷えてゆく。
 ---
 ![GZCA-5038](https://crowsub.github.io/images/discography/album/GZCA-5038.jpg){:.border}

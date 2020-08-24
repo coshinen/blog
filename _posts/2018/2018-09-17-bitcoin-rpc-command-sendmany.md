@@ -5,7 +5,7 @@ date:   2018-09-17 16:45:05 +0800
 author: mistydew
 comments: true
 category: 区块链
-tags: Blockchain Bitcoin bitcoin-cli
+tags: Bitcoin bitcoin-cli
 excerpt: $ bitcoin-cli sendmany "fromaccount" {"address":amount,...} ( minconf "comment" ["address",...] )
 ---
 ## 提示说明

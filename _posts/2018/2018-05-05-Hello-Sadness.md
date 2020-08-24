@@ -5,7 +5,7 @@ date:   2018-05-05 20:09:09 +0800
 author: mistydew
 comments: true
 category: 译文集
-tags: ガネクロ Lyrics
+tags: Lyrics Garnet
 excerpt: 離陸間近の午前1時5分 空を見上げていた。いつかまた会えるかなあ 何故かなあ、もう離れてしまったことばかりを思うこと止められず、心がきしんだ。
 ---
 ![GZCA-5198](https://crowsub.github.io/images/discography/album/GZCA-5198.jpg){:.border}

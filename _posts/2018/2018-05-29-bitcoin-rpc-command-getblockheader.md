@@ -5,7 +5,7 @@ date:   2018-05-29 15:11:12 +0800
 author: mistydew
 comments: true
 category: 区块链
-tags: Blockchain Bitcoin bitcoin-cli
+tags: Bitcoin bitcoin-cli
 excerpt: $ bitcoin-cli getblockheader "hash" ( verbose )
 ---
 ## 提示说明

@@ -5,7 +5,7 @@ date:   2019-12-22 20:03:11 +0800
 author: mistydew
 comments: true
 category: 译文集
-tags: ガネクロ Lyrics
+tags: Lyrics Garnet
 excerpt: 薄明かりを灯して、冷たい壁に 頬寄せ。静寂に 耳をすます、ひっそりと ゆっくりと、惹き返す。
 ---
 ![GZCA-5038](https://crowsub.github.io/images/discography/album/GZCA-5038.jpg){:.border}

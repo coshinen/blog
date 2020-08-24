@@ -5,7 +5,7 @@ date:   2018-08-05 20:01:11 +0800
 author: mistydew
 comments: true
 category: 译文集
-tags: ガネクロ Lyrics
+tags: Lyrics Garnet
 excerpt: 君がいなくなってから、何度朝日迎えたかしれない。急に地平線をみたくなって ふらり、始発に飛び乗る。
 ---
 ![GZCA-2020](https://crowsub.github.io/images/discography/single/GZCA-2020.jpg){:.border}

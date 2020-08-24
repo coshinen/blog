@@ -5,7 +5,7 @@ date:   2018-11-11 20:39:12 +0800
 author: mistydew
 comments: true
 category: 译文集
-tags: ガネクロ Lyrics
+tags: Lyrics Garnet
 excerpt: 一晩中考えても 解けなかった問題が、今日 目覚めたら ひらめく。夢見て 泣いて起きた、起きたら 忘れていた。どこか遠くで鳴るベルに、目を覚ます君のいる一日が 始まる。
 ---
 ![TCR-001](https://crowsub.github.io/images/discography/album/TCR-001.jpg){:.border}

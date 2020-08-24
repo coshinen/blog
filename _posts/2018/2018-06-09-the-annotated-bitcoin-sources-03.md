@@ -5,7 +5,7 @@ date:   2018-06-09 10:58:07 +0800
 author: mistydew
 comments: true
 category: 区块链
-tags: Blockchain Bitcoin bitcoind
+tags: Bitcoin bitcoind
 ---
 上一篇分析了命令行参数解析以及帮助和版本信息的获取，详见[比特币源码剖析（二）](/blog/2018/06/the-annotated-bitcoin-sources-02.html)。
 本篇主要分析 GetDataDir(false) 获取数据目录函数，ReadConfigFile(mapArgs, mapMultiArgs) 读取配置文件函数，SelectParams(ChainNameFromCommandLine()) 选择链参数（含创世区块信息）函数，检测命令行参数完整性，Linux 下守护进程的后台化以及服务选项的设置。

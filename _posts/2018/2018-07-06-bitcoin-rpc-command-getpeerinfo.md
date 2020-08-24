@@ -5,7 +5,7 @@ date:   2018-07-06 15:21:20 +0800
 author: mistydew
 comments: true
 category: 区块链
-tags: Blockchain Bitcoin bitcoin-cli
+tags: Bitcoin bitcoin-cli
 excerpt: $ bitcoin-cli getpeerinfo
 ---
 ## 提示说明

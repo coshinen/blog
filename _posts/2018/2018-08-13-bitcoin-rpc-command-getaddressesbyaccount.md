@@ -5,7 +5,7 @@ date:   2018-08-13 11:07:06 +0800
 author: mistydew
 comments: true
 category: 区块链
-tags: Blockchain Bitcoin bitcoin-cli
+tags: Bitcoin bitcoin-cli
 excerpt: $ bitcoin-cli getaddressesbyaccount "account"
 ---
 ## 提示说明

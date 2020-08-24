@@ -5,7 +5,7 @@ date:   2018-06-14 16:19:52 +0800
 author: mistydew
 comments: true
 category: 区块链
-tags: Blockchain Bitcoin bitcoin-cli
+tags: Bitcoin bitcoin-cli
 excerpt: $ bitcoin-cli stop
 ---
 ## 提示说明

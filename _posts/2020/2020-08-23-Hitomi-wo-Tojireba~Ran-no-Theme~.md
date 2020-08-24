@@ -5,12 +5,12 @@ date:   2020-08-23 20:37:10 +0800
 author: mistydew
 comments: true
 category: 译文集
-tags: Lyrics conan
+tags: Lyrics Conan
 excerpt: どうしたの？（蘭姉ちゃんこそ、どうしたの？）元気なの？（はあ、元気ないなあ）さみしいの？（なんわけねえよ）逢いたいな。（いつも、そばにいるだっけ）
 ---
 ![POCX-1081](https://www.generasia.com/w/images/5/58/IORI_BGI_A.jpg){:.border}
 
-歌手：伊織<br>
+歌手：伊織、江戸川コナン<br>
 作詞：及川眠子<br>
 作曲：大野克夫<br>
 編曲：大野克夫
@@ -44,7 +44,7 @@ excerpt: どうしたの？（蘭姉ちゃんこそ、どうしたの？）元�
     怎么啦？（小兰姐姐才是，怎么啦？）<br>
     还好吗？（哈，没什么精神嘛）<br>
     寂寞吗？（怎么可能啊）<br>
-    好想见你啊（一直，在你身边来着）<br>
+    好想见你啊（一直都，在你身边来着）<br>
     <br>
     从听筒里传来的你的声音<br>
     温暖不断传到心里<br>

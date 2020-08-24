@@ -5,7 +5,7 @@ date:   2020-07-05 20:12:02 +0800
 author: mistydew
 comments: true
 category: 译文集
-tags: コナン Lyrics
+tags: Lyrics Conan
 excerpt: いくら待っていたって この店は、誰も何も 持って来てはくれないんだよね。セルフサービスなんだから、この町も この国も。無防備にただ 生きてきてしまったね。
 ---
 ![Digital](https://is3-ssl.mzstatic.com/image/thumb/Music/v4/f6/7d/b7/f67db7d6-540f-7fec-8dd3-9a907b3f0a8a/source/600x600bb.jpg){:.border}

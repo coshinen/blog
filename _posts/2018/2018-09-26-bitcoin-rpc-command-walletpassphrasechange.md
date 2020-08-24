@@ -5,7 +5,7 @@ date:   2018-09-26 17:24:02 +0800
 author: mistydew
 comments: true
 category: 区块链
-tags: Blockchain Bitcoin bitcoin-cli
+tags: Bitcoin bitcoin-cli
 excerpt: $ bitcoin-cli walletpassphrasechange "oldpassphrase" "newpassphrase"
 ---
 ## 提示说明

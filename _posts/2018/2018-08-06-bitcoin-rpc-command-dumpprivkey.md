@@ -5,7 +5,7 @@ date:   2018-08-06 14:06:23 +0800
 author: mistydew
 comments: true
 category: 区块链
-tags: Blockchain Bitcoin bitcoin-cli
+tags: Bitcoin bitcoin-cli
 excerpt: $ bitcoin-cli dumpprivkey "bitcoinaddress"
 ---
 ## 提示说明

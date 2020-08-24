@@ -5,7 +5,7 @@ date:   2018-05-12 16:02:28 +0800
 author: mistydew
 comments: true
 category: 区块链
-tags: Blockchain Bitcoin base58-encoding
+tags: Bitcoin Base58Check-encoding
 ---
 一种改进的 Base 58 [二进制到文本的编码](https://en.wikipedia.org/wiki/Binary-to-text_encoding){:target="_blank"}称为 Base58Check，用于编码[比特币地址](/blog/2018/05/bitcoin-address)。
 

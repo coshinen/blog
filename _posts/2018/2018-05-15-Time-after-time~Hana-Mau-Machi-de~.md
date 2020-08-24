@@ -5,7 +5,7 @@ date:   2018-05-15 20:03:03 +0800
 author: mistydew
 comments: true
 category: 译文集
-tags: コナン Lyrics
+tags: Lyrics Conan
 excerpt: もしも君に巡り逢えたら 二度と君の手を離さない 春の終わり告げる 花御堂 霞む花 一枚(ひとひら) 蘇る 思い出の歌 この胸に 今も優しく
 ---
 ![GZCA-7011](https://www.generasia.com/w/images/c/c1/Kuraki_Mai_-_Time_after_time_~Hana_Mau_Machi_de~.jpg){:.border}

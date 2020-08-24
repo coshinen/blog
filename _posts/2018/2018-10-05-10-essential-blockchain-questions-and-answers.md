@@ -5,7 +5,7 @@ date:   2018-10-05 09:23:37 +0800
 author: mistydew
 comments: true
 category: 区块链
-tags: Blockchain Bitcoin Translations
+tags: Bitcoin Translations
 excerpt: 关于区块链的 10 个基础问答。
 ---
 ## 什么是陷门函数，为什么在区块链开发中需要它？

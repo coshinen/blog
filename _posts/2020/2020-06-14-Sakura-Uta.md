@@ -5,7 +5,7 @@ date:   2020-06-14 20:12:04 +0800
 author: mistydew
 comments: true
 category: 译文集
-tags: コナン Lyrics
+tags: Lyrics Conan
 excerpt: 桜の花びら 風の中に舞う。一片散るたび 目に射す頬よ。
 ---
 ![Melody of yu-yu -spring 2-](https://is3-ssl.mzstatic.com/image/thumb/Music/v4/6b/52/29/6b52292e-374f-ed46-5e55-b4ac180c735d/source/600x600bb.jpg){:.border}

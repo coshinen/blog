@@ -5,7 +5,7 @@ date:   2018-07-07 11:43:10 +0800
 author: mistydew
 comments: true
 category: 区块链
-tags: Blockchain Bitcoin bitcoind
+tags: Bitcoin bitcoind
 ---
 上一篇分析了应用程序初始化中椭圆曲线初始化的详细过程，详见[比特币源码剖析（六）](/blog/2018/06/the-annotated-bitcoin-sources-06.html)。
 本篇主要分析 Step 4: application initialization: dir lock, daemonize, pidfile, debug log 第四步应用程序初始化中 InitSanityCheck() 初始化完整性检查和数据目录上锁的详细过程。

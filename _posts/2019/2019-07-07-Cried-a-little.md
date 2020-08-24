@@ -5,7 +5,7 @@ date:   2019-07-07 20:00:11 +0800
 author: mistydew
 comments: true
 category: 译文集
-tags: ガネクロ Lyrics
+tags: Lyrics Garnet
 excerpt: 弱い日差しが揺れるテーブルの上、開いた世界地図に、君のクセのある文字がまだ残る。ah- 現実かなぁ、、
 ---
 ![GZCA-1029](https://crowsub.github.io/images/discography/single/GZCA-1029.jpg){:.border}

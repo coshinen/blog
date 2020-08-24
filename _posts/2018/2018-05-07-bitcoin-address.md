@@ -5,7 +5,7 @@ date:   2018-05-07 20:22:21 +0800
 author: mistydew
 comments: true
 category: 区块链
-tags: Blockchain Bitcoin Address ECC
+tags: Bitcoin Address ECC
 ---
 私钥使用单向的椭圆曲线乘法加密函数得到对应的公钥。
 公钥经过一系列的哈希函数运算生成相应地址，这一过程涉及到 Base58 编码。

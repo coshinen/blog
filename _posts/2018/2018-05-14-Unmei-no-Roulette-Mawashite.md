@@ -5,7 +5,7 @@ date:   2018-05-14 20:38:09 +0800
 author: mistydew
 comments: true
 category: 译文集
-tags: コナン Lyrics
+tags: Lyrics Conan
 excerpt: 運命のルーレット廻して、ずっと 君を見ていた。
 ---
 ![JBDJ-1041](https://www.generasia.com/w/images/thumb/2/2f/Unmei_no_Roulette_Mawashite.jpg/299px-Unmei_no_Roulette_Mawashite.jpg){:.border}

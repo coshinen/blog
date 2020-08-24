@@ -5,7 +5,7 @@ date:   2018-09-19 09:30:12 +0800
 author: mistydew
 comments: true
 category: 区块链
-tags: Blockchain Bitcoin bitcoin-cli
+tags: Bitcoin bitcoin-cli
 excerpt: $ bitcoin-cli setaccount "bitcoinaddress" "account"
 ---
 ## 提示说明

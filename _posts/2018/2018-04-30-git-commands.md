@@ -5,7 +5,7 @@ date:   2018-04-30 16:20:08 +0800
 author: mistydew
 comments: true
 category: 程序人生
-tags: Git/GitHub CLI
+tags: Git(Hub) CLI
 excerpt: Git 是一个免费且开源的分布式版本控制系统。
 ---
 ![git](https://git-scm.com/images/logo@2x.png)

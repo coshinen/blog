@@ -5,7 +5,7 @@ date:   2020-01-05 20:03:11 +0800
 author: mistydew
 comments: true
 category: 译文集
-tags: ガネクロ Lyrics
+tags: Lyrics Garnet
 excerpt: まるで異国の知らない場所へ来たみたい、懐かしいこの街の匂い 記憶。洪水みたいに溢れてくる五感(きもち)が、あった事思い出す 夕波の音。
 ---
 ![GZCA-5038](https://crowsub.github.io/images/discography/album/GZCA-5038.jpg){:.border}

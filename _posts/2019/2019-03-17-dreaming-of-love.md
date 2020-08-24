@@ -5,7 +5,7 @@ date:   2019-03-17 20:39:12 +0800
 author: mistydew
 comments: true
 category: 译文集
-tags: ガネクロ Lyrics
+tags: Lyrics Garnet
 excerpt: ため息ひとつ落ちた週末の、どうしようもない感じ、絶望より深く堕ちてゆく 夜明け。
 ---
 ![TCR-001](https://crowsub.github.io/images/discography/album/TCR-001.jpg){:.border}

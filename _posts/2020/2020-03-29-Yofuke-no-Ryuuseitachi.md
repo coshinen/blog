@@ -5,7 +5,7 @@ date:   2020-03-29 20:04:06 +0800
 author: mistydew
 comments: true
 category: 译文集
-tags: ガネクロ Lyrics
+tags: Lyrics Garnet
 excerpt: 夜深けの流星達 眺めていたよね。言葉にならない 感覚(きもち)を共有してた。
 ---
 ![GZCA-7054](https://crowsub.github.io/images/discography/single/GZCA-7054.jpg){:.border}

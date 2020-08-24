@@ -5,7 +5,7 @@ date:   2018-05-06 14:02:51 +0800
 author: mistydew
 comments: true
 category: 区块链
-tags: Blockchain Bitcoin bitcoin-cli
+tags: Bitcoin bitcoin-cli
 ---
 带有 JSON-RPC 接口的基于命令行的守护进程 `bitcoind` 与比特币核心（Bicoin Core）绑定在一起。
 一个允许用户发送 RPC 命令到 `bitcoind` 的简单程序 `bitcoin-cli` 也包含在比特币核心。

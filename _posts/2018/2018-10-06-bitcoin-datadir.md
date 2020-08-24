@@ -5,7 +5,7 @@ date:   2018-10-06 09:28:37 +0800
 author: mistydew
 comments: true
 category: 区块链
-tags: Blockchain Bitcoin
+tags: Bitcoin
 ---
 比特币数据目录是存放数据文件的位置，包含区块和钱包等数据。
 

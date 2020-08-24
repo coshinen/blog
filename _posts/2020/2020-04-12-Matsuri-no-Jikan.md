@@ -5,7 +5,7 @@ date:   2020-04-12 20:04:11 +0800
 author: mistydew
 comments: true
 category: 译文集
-tags: ガネクロ Lyrics
+tags: Lyrics Garnet
 excerpt: 夕焼けのオレンジ色残すような明りを灯しだす。秋風にざわめく足音が祭りをつれて。
 ---
 ![GZCA-4028](https://crowsub.github.io/images/discography/single/GZCA-4028.jpg){:.border}

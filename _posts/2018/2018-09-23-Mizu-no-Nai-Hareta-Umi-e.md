@@ -5,7 +5,7 @@ date:   2018-09-23 20:01:01 +0800
 author: mistydew
 comments: true
 category: 译文集
-tags: ガネクロ Lyrics
+tags: Lyrics Garnet
 excerpt: 水のない晴れた海へ、たどり着いた white mermaid。夢にまでみていた、地上の天国は silence×3。
 ---
 ![GZCA-1061](https://crowsub.github.io/images/discography/album/GZCA-1061.jpg){:.border}

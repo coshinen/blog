@@ -5,7 +5,7 @@ date:   2018-08-24 08:55:46 +0800
 author: mistydew
 comments: true
 category: 区块链
-tags: Blockchain Bitcoin bitcoin-cli
+tags: Bitcoin bitcoin-cli
 excerpt: $ bitcoin-cli importaddress "address" ( "label" rescan p2sh )
 ---
 ## 提示说明

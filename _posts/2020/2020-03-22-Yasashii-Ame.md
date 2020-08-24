@@ -5,7 +5,7 @@ date:   2020-03-22 20:04:06 +0800
 author: mistydew
 comments: true
 category: 译文集
-tags: ガネクロ Lyrics
+tags: Lyrics Garnet
 excerpt: 全速力でも かけ抜けた、あの路地は今とても狭く。記憶の曖昧さにホロリとくる。
 ---
 ![GZCA-7054](https://crowsub.github.io/images/discography/single/GZCA-7054.jpg){:.border}

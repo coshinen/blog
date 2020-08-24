@@ -5,7 +5,7 @@ date:   2019-08-18 20:01:05 +0800
 author: mistydew
 comments: true
 category: 译文集
-tags: ガネクロ Lyrics
+tags: Lyrics Garnet
 excerpt: 走り出したら通り雨、もう一休みしてる。待ちきれない君は飛び出して、振り返りもせずに。
 ---
 ![GZCA-1072](https://crowsub.github.io/images/discography/single/GZCA-1072.jpg){:.border}

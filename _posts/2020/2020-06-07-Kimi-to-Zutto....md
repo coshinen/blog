@@ -5,7 +5,7 @@ date:   2020-06-07 20:11:08 +0800
 author: mistydew
 comments: true
 category: 译文集
-tags: コナン Lyrics
+tags: Lyrics Conan
 excerpt: 想い出してごらん 萌ゆる草木 散る花ビラ。共に笑い 手を繋いで 歩いた並木道に。
 ---
 ![Shinichi-Conan](https://is4-ssl.mzstatic.com/image/thumb/Music/v4/b2/f7/a8/b2f7a84f-becf-fe06-1a2f-74ff6d767a30/source/600x600bb.jpg){:.border}

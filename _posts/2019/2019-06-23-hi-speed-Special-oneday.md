@@ -5,7 +5,7 @@ date:   2019-06-23 20:00:10 +0800
 author: mistydew
 comments: true
 category: 译文集
-tags: ガネクロ Lyrics
+tags: Lyrics Garnet
 excerpt: コーヒーは最初の一口、甘いケーキの端っこ、ポテトは揚げたてにして、おいしいトコは少しだけ。
 ---
 ![GZCA-1050](https://crowsub.github.io/images/discography/single/GZCA-1050.jpg){:.border}

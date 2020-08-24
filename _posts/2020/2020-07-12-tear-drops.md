@@ -5,7 +5,7 @@ date:   2020-07-12 20:11:02 +0800
 author: mistydew
 comments: true
 category: 译文集
-tags: コナン Lyrics
+tags: Lyrics Conan
 excerpt: tear drops そうでしょ 気付いているんじゃない？tear drops そうでしょ 泣いているんじゃない。tear drops そうでしょ ずっと忘れない愛。tear drops tear drops この謎解いてtear drops。
 ---
 ![GZCA-7160](https://is1-ssl.mzstatic.com/image/thumb/Music/v4/07/05/a5/0705a58a-eda4-d5e3-51dd-7fc17df9f10c/source/600x600bb.jpg){:.border}

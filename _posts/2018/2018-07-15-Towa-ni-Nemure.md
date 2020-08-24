@@ -5,7 +5,7 @@ date:   2018-07-15 20:39:12 +0800
 author: mistydew
 comments: true
 category: 译文集
-tags: ガネクロ Lyrics
+tags: Lyrics Garnet
 excerpt: 追いかけ合う月と太陽、決して同じ朝は来なくて。二人を重ねて見ていたよ、空っぽの部屋で。
 ---
 ![TCR-001](https://crowsub.github.io/images/discography/album/TCR-001.jpg){:.border}

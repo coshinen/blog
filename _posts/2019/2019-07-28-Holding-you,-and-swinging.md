@@ -5,7 +5,7 @@ date:   2019-07-28 20:01:01 +0800
 author: mistydew
 comments: true
 category: 译文集
-tags: ガネクロ Lyrics
+tags: Lyrics Garnet
 excerpt: 街の音 人の声 ざわめき、やけに今 躰が音をひらうよ。君一人で世界が変わるなんて、ah- なんて 単純な feel & brain。
 ---
 ![GZCA-1061](https://crowsub.github.io/images/discography/album/GZCA-1061.jpg){:.border}

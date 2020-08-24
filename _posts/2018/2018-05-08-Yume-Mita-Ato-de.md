@@ -5,7 +5,7 @@ date:   2018-05-08 20:02:03 +0800
 author: mistydew
 comments: true
 category: 译文集
-tags: コナン ガネクロ Lyrics
+tags: Lyrics Conan Garnet
 excerpt: 朝が来るたび君のことを想う、一日の始まりさえも切なくて。二度と戻れない？無邪気な二人、ただ傍にいれば幸せだった。
 ---
 ![GZCA-2031](https://crowsub.github.io/images/discography/single/GZCA-2031.jpg){:.border}

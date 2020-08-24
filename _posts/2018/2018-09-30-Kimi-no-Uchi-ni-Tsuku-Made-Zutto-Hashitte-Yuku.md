@@ -5,7 +5,7 @@ date:   2018-09-30 20:39:12 +0800
 author: mistydew
 comments: true
 category: 译文集
-tags: ガネクロ Lyrics
+tags: Lyrics Garnet
 excerpt: 新しいコートに着替えて、気分を変えて飛び出した。離れて過ごしている時間はすぐに、blueな気分に襲われてゆく。
 ---
 ![TCR-001](https://crowsub.github.io/images/discography/album/TCR-001.jpg){:.border}

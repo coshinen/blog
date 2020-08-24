@@ -5,7 +5,7 @@ date:   2018-08-31 13:29:08 +0800
 author: mistydew
 comments: true
 category: 区块链
-tags: Blockchain Bitcoin bitcoin-cli
+tags: Bitcoin bitcoin-cli
 excerpt: $ bitcoin-cli listaccounts ( minconf includeWatchonly )
 ---
 ## 提示说明

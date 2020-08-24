@@ -5,7 +5,7 @@ date:   2018-04-26 21:02:10 +0800
 author: mistydew
 comments: true
 category: 区块链
-tags: Blockchain Bitcoin Block
+tags: Bitcoin Block
 ---
 交易数据永久记录在区块中，它们可以被当作账本中的单个页面。
 区块按时间组成一条线性序列，又称为区块链。

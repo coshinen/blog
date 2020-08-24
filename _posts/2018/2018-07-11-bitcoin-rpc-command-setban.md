@@ -5,7 +5,7 @@ date:   2018-07-11 10:29:55 +0800
 author: mistydew
 comments: true
 category: 区块链
-tags: Blockchain Bitcoin bitcoin-cli
+tags: Bitcoin bitcoin-cli
 excerpt: $ bitcoin-cli setban "ip(/netmask)" "add|remove" (bantime) (absolute)
 ---
 ## 提示说明

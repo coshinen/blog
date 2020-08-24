@@ -5,7 +5,7 @@ date:   2018-10-14 20:09:05 +0800
 author: mistydew
 comments: true
 category: 译文集
-tags: コナン ガネクロ Lyrics
+tags: Lyrics Conan Garnet
 excerpt: Doing all right!かみしめた君の記憶 木漏れ日の匂い、置いてきた何かはもう 此処にはないけど。
 ---
 ![GZCA-7141](https://crowsub.github.io/images/discography/single/GZCA-7141.jpg){:.border}

@@ -5,7 +5,7 @@ date:   2018-09-09 20:02:12 +0800
 author: mistydew
 comments: true
 category: 译文集
-tags: ガネクロ Lyrics
+tags: Lyrics Garnet
 excerpt: La La tu lu Rah Ta、緑の木漏れ日。目を閉じたら、スベテの繋がりを感じられる？まるで遺伝子の様な cosmic world、tu ta la ta...wave。
 ---
 ![GZCA-7006](https://crowsub.github.io/images/discography/single/GZCA-7006.jpg){:.border}

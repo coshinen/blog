@@ -5,7 +5,7 @@ date:   2018-09-14 15:59:43 +0800
 author: mistydew
 comments: true
 category: 区块链
-tags: Blockchain Bitcoin bitcoin-cli
+tags: Bitcoin bitcoin-cli
 excerpt: $ bitcoin-cli sendfrom "fromaccount" "tobitcoinaddress" amount ( minconf "comment" "comment-to" )
 ---
 ## 提示说明

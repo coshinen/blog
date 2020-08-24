@@ -5,7 +5,7 @@ date:   2018-08-18 08:34:08 +0800
 author: mistydew
 comments: true
 category: 区块链
-tags: Blockchain Bitcoin bitcoind
+tags: Bitcoin bitcoind
 ---
 上一篇分析了第六步初始化网络的详细过程，详见[比特币源码剖析（十二）](/blog/2018/08/the-annotated-bitcoin-sources-12.html)。
 本篇主要分析 Step 7: load block chain 第七步加载区块链的详细过程。

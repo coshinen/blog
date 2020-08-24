@@ -5,7 +5,7 @@ date:   2019-11-10 20:02:04 +0800
 author: mistydew
 comments: true
 category: 译文集
-tags: ガネクロ Lyrics
+tags: Lyrics Garnet
 excerpt: 優しく触れる君の手に戸惑った、痛みが消えて置き去りの罪だけ、私を責める 逃げること許さない、今目の前の光(あい)を求めていいのかな。
 ---
 ![GZCA-5013](https://crowsub.github.io/images/discography/album/GZCA-5013.jpg){:.border}

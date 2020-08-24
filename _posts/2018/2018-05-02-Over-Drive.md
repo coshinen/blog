@@ -5,7 +5,7 @@ date:   2018-05-02 20:10:04 +0800
 author: mistydew
 comments: true
 category: 译文集
-tags: コナン ガネクロ Lyrics
+tags: Lyrics Conan Garnet
 excerpt: 風の音だけが、体中を包む。サイレント・Kiss、夢に似た気配。
 ---
 ![GZCA-7156](https://crowsub.github.io/images/discography/single/GZCA-7156.jpg){:.border}

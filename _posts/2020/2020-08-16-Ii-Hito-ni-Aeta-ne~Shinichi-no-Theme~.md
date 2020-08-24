@@ -5,7 +5,7 @@ date:   2020-08-16 20:37:10 +0800
 author: mistydew
 comments: true
 category: 译文集
-tags: コナン Lyrics
+tags: Lyrics Conan
 excerpt: バスケットシューズが飛切りお似合い。いいひとに逢えたね 神様に感謝を。またどこかですれ違うことがあるかも。その日まで胸にしまって、夢でときどき話してみる。
 ---
 ![POCX-1081](https://www.generasia.com/w/images/5/58/IORI_BGI_A.jpg){:.border}

@@ -5,7 +5,7 @@ date:   2018-06-24 20:01:08 +0800
 author: mistydew
 comments: true
 category: 译文集
-tags: ガネクロ Lyrics
+tags: Lyrics Garnet
 excerpt: 白い壁と Rembrandt、いつまでも眺めていた、日曜の朝君とただ並んでた。開いた窓から差し込む光がほらそこに、ふと思い出したように call my name。
 ---
 ![GZCA-2005](https://crowsub.github.io/images/discography/single/GZCA-2005.jpg){:.border}

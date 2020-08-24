@@ -5,7 +5,7 @@ date:   2020-03-08 20:04:01 +0800
 author: mistydew
 comments: true
 category: 译文集
-tags: ガネクロ Lyrics
+tags: Lyrics Garnet
 excerpt: 君のいない 明日へ向かう 日々なら、すべてが もう… 暇つぶしのようで。
 ---
 ![GZCA-7037](https://crowsub.github.io/images/discography/single/GZCA-7037.jpg){:.border}

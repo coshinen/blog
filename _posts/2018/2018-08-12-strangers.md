@@ -5,7 +5,7 @@ date:   2018-08-12 20:10:12 +0800
 author: mistydew
 comments: true
 category: 译文集
-tags: ガネクロ Lyrics
+tags: Lyrics Garnet
 excerpt: 緑揺れる午後の空、幾つ目の飛行機かな。遠く潮騒が届いて、客船が泊まった。
 ---
 ![GZCA-5231](https://crowsub.github.io/images/discography/album/GZCA-5231.jpg){:.border}

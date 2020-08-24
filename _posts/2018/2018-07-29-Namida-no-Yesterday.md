@@ -5,7 +5,7 @@ date:   2018-07-29 20:07:07 +0800
 author: mistydew
 comments: true
 category: 译文集
-tags: コナン ガネクロ Lyrics
+tags: Lyrics Conan Garnet
 excerpt: 流星がこぼれた夏の空、願いこめた。いつもあの人の傍にいさせて、朝になり街中人が溢れゆく度に。
 ---
 ![GZCA-4096](https://crowsub.github.io/images/discography/single/GZCA-4096.jpg){:.border}

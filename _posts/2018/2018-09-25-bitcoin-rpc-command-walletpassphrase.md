@@ -5,7 +5,7 @@ date:   2018-09-25 15:47:22 +0800
 author: mistydew
 comments: true
 category: 区块链
-tags: Blockchain Bitcoin bitcoin-cli
+tags: Bitcoin bitcoin-cli
 excerpt: $ bitcoin-cli walletpassphrase "passphrase" timeout
 ---
 ## 提示说明

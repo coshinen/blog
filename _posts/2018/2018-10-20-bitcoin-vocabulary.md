@@ -5,7 +5,7 @@ date:   2018-10-20 20:43:26 +0800
 author: mistydew
 comments: true
 category: 区块链
-tags: Blockchain Bitcoin Translations
+tags: Bitcoin Translations
 ---
 比特币提供了一种全新的支付方式，因此你可能需要了解一些新词语。
 

@@ -5,7 +5,7 @@ date:   2019-10-20 20:02:04 +0800
 author: mistydew
 comments: true
 category: 译文集
-tags: ガネクロ Lyrics
+tags: Lyrics Garnet
 excerpt: Naked story yeah- 無防備でも飛び出したい、感じるまま stay yeah- We're born in this way.
 ---
 ![GZCA-5013](https://crowsub.github.io/images/discography/album/GZCA-5013.jpg){:.border}

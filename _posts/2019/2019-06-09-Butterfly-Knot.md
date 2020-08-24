@@ -5,7 +5,7 @@ date:   2019-06-09 20:13:10 +0800
 author: mistydew
 comments: true
 category: 译文集
-tags: ガネクロ Lyrics
+tags: Lyrics Garnet
 excerpt: ねぇ何を話そうか…もう夜が来てしまう、遠い道のりを歩いてきた。
 ---
 ![GZCA-5256~7](https://crowsub.github.io/images/discography/album/GZCA-5256~7.jpg){:.border}

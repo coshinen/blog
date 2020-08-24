@@ -5,7 +5,7 @@ date:   2019-09-01 20:39:01 +0800
 author: mistydew
 comments: true
 category: 译文集
-tags: コナン Lyrics
+tags: Lyrics Conan
 excerpt: 明日あった時は きっと言える素直になれるよ、今まであった誰よりも 特別に考えてる あなたを。
 ---
 ![PODX-1042](https://www.generasia.com/w/images/a/a8/Tamura_Yukari_-_Kitto_Ieru.jpg){:.border}

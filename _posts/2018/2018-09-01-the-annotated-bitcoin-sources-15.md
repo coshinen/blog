@@ -5,7 +5,7 @@ date:   2018-09-01 14:03:37 +0800
 author: mistydew
 comments: true
 category: 区块链
-tags: Blockchain Bitcoin bitcoind
+tags: Bitcoin bitcoind
 ---
 上一篇分析了第八步加载钱包的详细过程，详见[比特币源码剖析（十四）](/blog/2018/08/the-annotated-bitcoin-sources-14.html)。
 本篇主要分析 Step 9: data directory maintenance 第九步数据目录维护的详细过程。

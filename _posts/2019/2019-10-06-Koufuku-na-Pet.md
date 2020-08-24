@@ -5,7 +5,7 @@ date:   2019-10-06 20:02:03 +0800
 author: mistydew
 comments: true
 category: 译文集
-tags: ガネクロ Lyrics
+tags: Lyrics Garnet
 excerpt: じゃれ合う日曜の午後 (oh- yeah Why do I love you ~)、まだ眠い？ 話しかける (Let's step on out today)。
 ---
 ![GZCA-2031](https://crowsub.github.io/images/discography/single/GZCA-2031.jpg){:.border}

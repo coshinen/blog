@@ -5,7 +5,7 @@ date:   2018-06-25 09:25:05 +0800
 author: mistydew
 comments: true
 category: 区块链
-tags: Blockchain Bitcoin bitcoin-cli
+tags: Bitcoin bitcoin-cli
 excerpt: $ bitcoin-cli prioritisetransaction <txid> <priority delta> <fee delta>
 ---
 ## 提示说明

@@ -5,11 +5,11 @@ date:   2018-05-13 16:02:28 +0800
 author: mistydew
 comments: true
 category: 区块链
-tags: Blockchain Bitcoin Altcoin
+tags: Bitcoin Altcoin
 ---
 基于比特币制作一枚山寨币是了解数字货币比特币及其底层区块链技术的最好方式。
 
-## 源码准备
+## 0. 源码准备
 
 这里使用比特币 [v0.12.1](https://github.com/bitcoin/bitcoin/tree/v0.12.1) 的源码，这是官方内置 CPU 挖矿的最后一版。
 
@@ -19,8 +19,7 @@ $ cd bitcoin
 $ git checkout v0.12.1
 ```
 
-尝试构建比特币源码，确保其在当前平台正常工作。
-关于比特币源码的编译详见[编译比特币源码](/blog/2018/05/compile-bitcoin.html)篇。
+首次构建源码，参考[编译比特币源码](/blog/2018/05/compile-bitcoin.html)篇。
 
 ## 1. 修改币名
 

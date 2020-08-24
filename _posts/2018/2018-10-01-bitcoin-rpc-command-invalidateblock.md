@@ -5,7 +5,7 @@ date:   2018-10-01 09:25:28 +0800
 author: mistydew
 comments: true
 category: 区块链
-tags: Blockchain Bitcoin bitcoin-cli
+tags: Bitcoin bitcoin-cli
 excerpt: $ bitcoin-cli invalidateblock "hash"
 ---
 ## 提示说明

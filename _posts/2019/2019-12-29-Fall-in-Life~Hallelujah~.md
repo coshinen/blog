@@ -5,7 +5,7 @@ date:   2019-12-29 20:09:09 +0800
 author: mistydew
 comments: true
 category: 译文集
-tags: ガネクロ Lyrics
+tags: Lyrics Garnet
 excerpt: 暮れゆく空おセンチな気分。海辺のDrive、まだみたことのない場所へ、僕らを乗せて be high yeah、密やかに辿る道。
 ---
 ![GZCA-5198](https://crowsub.github.io/images/discography/album/GZCA-5198.jpg){:.border}

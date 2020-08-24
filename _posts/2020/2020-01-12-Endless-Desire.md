@@ -5,7 +5,7 @@ date:   2020-01-12 20:03:11 +0800
 author: mistydew
 comments: true
 category: 译文集
-tags: ガネクロ Lyrics
+tags: Lyrics Garnet
 excerpt: そんなに移り気じゃヤダ、正直って便利な言い訳、多様して流れてゆく 生涯(ひととき)。
 ---
 ![GZCA-5038](https://crowsub.github.io/images/discography/album/GZCA-5038.jpg){:.border}

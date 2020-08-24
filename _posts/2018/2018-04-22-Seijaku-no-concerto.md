@@ -5,7 +5,7 @@ date:   2018-04-22 20:11:12 +0800
 author: mistydew
 comments: true
 category: 译文集
-tags: ガネクロ Lyrics
+tags: Lyrics Garnet
 excerpt: 太陽が色彩(いろ)を連れて、この町を照らしはじめる。こんなに静かで深い朝がここにもある。バスが来る、待合人、共に暮らしがあるような。やさしい時間(とき) 流れる日々がこの地球(ほし)にある。
 ---
 ![GZCA-5242](https://crowsub.github.io/images/discography/album/GZCA-5242.jpg){:.border}

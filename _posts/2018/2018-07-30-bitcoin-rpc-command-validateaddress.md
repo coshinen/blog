@@ -5,7 +5,7 @@ date:   2018-07-30 09:12:36 +0800
 author: mistydew
 comments: true
 category: 区块链
-tags: Blockchain Bitcoin bitcoin-cli
+tags: Bitcoin bitcoin-cli
 excerpt: $ bitcoin-cli validateaddress "bitcoinaddress"
 ---
 ## 提示说明

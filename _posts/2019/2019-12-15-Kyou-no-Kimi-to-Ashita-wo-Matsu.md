@@ -5,7 +5,7 @@ date:   2019-12-15 20:03:11 +0800
 author: mistydew
 comments: true
 category: 译文集
-tags: ガネクロ Lyrics
+tags: Lyrics Garnet
 excerpt: 街中冷えだして again, new fallen snow、君の体温(ぬくもり)胸にしみるよ。何もないままなら気付けずにいる そんな毎日。
 ---
 ![GZCA-5038](https://crowsub.github.io/images/discography/album/GZCA-5038.jpg){:.border}

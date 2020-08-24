@@ -5,7 +5,7 @@ date:   2019-08-04 20:01:01 +0800
 author: mistydew
 comments: true
 category: 译文集
-tags: ガネクロ Lyrics
+tags: Lyrics Garnet
 excerpt: 雨上がりは ふと 空見上げる、何気ない仕草しみついた毎日。なんで迷子みたいな気持ち、君といても感じちゃうんだろう。
 ---
 ![GZCA-1061](https://crowsub.github.io/images/discography/album/GZCA-1061.jpg){:.border}

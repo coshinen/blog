@@ -5,7 +5,7 @@ date:   2018-11-18 20:00:03 +0800
 author: mistydew
 comments: true
 category: 译文集
-tags: コナン ガネクロ Lyrics
+tags: Lyrics Conan Garnet
 excerpt: 君と僕とは 別の人間(いきもの)だから、好みが違う 歩く速さも 想いの伝え方も。
 ---
 ![GZCA-1028](https://crowsub.github.io/images/discography/single/GZCA-1028.jpg){:.border}

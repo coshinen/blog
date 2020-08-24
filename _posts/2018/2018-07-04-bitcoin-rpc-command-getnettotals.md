@@ -5,7 +5,7 @@ date:   2018-07-04 16:47:29 +0800
 author: mistydew
 comments: true
 category: 区块链
-tags: Blockchain Bitcoin bitcoin-cli
+tags: Bitcoin bitcoin-cli
 excerpt: $ bitcoin-cli getnettotals
 ---
 ## 提示说明

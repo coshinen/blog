@@ -5,7 +5,7 @@ date:   2018-08-20 16:03:27 +0800
 author: mistydew
 comments: true
 category: 区块链
-tags: Blockchain Bitcoin bitcoin-cli
+tags: Bitcoin bitcoin-cli
 excerpt: $ bitcoin-cli getreceivedbyaddress "bitcoinaddress" ( minconf )
 ---
 ## 提示说明

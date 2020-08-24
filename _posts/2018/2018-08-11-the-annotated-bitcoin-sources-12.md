@@ -5,7 +5,7 @@ date:   2018-08-11 13:07:25 +0800
 author: mistydew
 comments: true
 category: 区块链
-tags: Blockchain Bitcoin bitcoind
+tags: Bitcoin bitcoind
 ---
 上一篇分析了第五步验证钱包数据库的完整性的详细过程，详见[比特币源码剖析（十一）](/blog/2018/08/the-annotated-bitcoin-sources-11.html)。
 本篇主要分析 Step 6: network initialization 第六步网络初始化的详细过程。

@@ -5,7 +5,7 @@ date:   2018-04-28 20:02:04 +0800
 author: mistydew
 comments: true
 category: 译文集
-tags: ガネクロ Lyrics
+tags: Lyrics Garnet
 excerpt: 君のいない未来が、ただ大きな闇にみえ。死んでしまえば生きなくていい。そんな事ばかり考えてた、穏やかな月明かりに。
 ---
 ![GZCA-5013](https://crowsub.github.io/images/discography/album/GZCA-5013.jpg){:.border}

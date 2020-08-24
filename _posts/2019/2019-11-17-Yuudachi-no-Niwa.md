@@ -5,7 +5,7 @@ date:   2019-11-17 20:02:08 +0800
 author: mistydew
 comments: true
 category: 译文集
-tags: ガネクロ Lyrics
+tags: Lyrics Garnet
 excerpt: 今日買ったばかりのレコードを、抱えたままでいつものカフェ。先送りした小さな幸福、上昇気流の淡い日々。無いものねだりの毎日が、振り返れば今 愛しくさえ思う。
 ---
 ![GZCA-2044](https://crowsub.github.io/images/discography/single/GZCA-2044.jpg){:.border}

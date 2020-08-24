@@ -5,7 +5,7 @@ date:   2019-09-15 20:04:11 +0800
 author: mistydew
 comments: true
 category: 译文集
-tags: コナン ガネクロ Lyrics
+tags: Lyrics Conan Garnet
 excerpt: 気づけば懐かしい川原に来てみたり、昨日みた夢の続き想像してたり。
 ---
 ![GZCA-4028](https://crowsub.github.io/images/discography/single/GZCA-4028.jpg){:.border}

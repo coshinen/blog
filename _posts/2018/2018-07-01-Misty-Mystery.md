@@ -5,7 +5,7 @@ date:   2018-07-01 20:11:08 +0800
 author: mistydew
 comments: true
 category: 译文集
-tags: コナン ガネクロ Lyrics
+tags: Lyrics Conan Garnet
 excerpt: why 見えぬ明日へと、期待込め歩いてるの。まだ君を想う、途中みたいにざわめく。
 ---
 ![GZCA-4135](https://crowsub.github.io/images/discography/single/GZCA-4135.jpg){:.border}

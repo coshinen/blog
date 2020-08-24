@@ -5,7 +5,7 @@ date:   2018-06-10 20:03:09 +0800
 author: mistydew
 comments: true
 category: 译文集
-tags: ガネクロ Lyrics
+tags: Lyrics Garnet
 excerpt: ほんの少し軽い眠りをとったって満たされやしない、きっとまた同じとこで悩んじゃって動けないままで。
 ---
 ![GZCA-7031](https://crowsub.github.io/images/discography/single/GZCA-7031.jpg){:.border}

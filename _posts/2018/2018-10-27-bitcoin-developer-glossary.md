@@ -5,7 +5,7 @@ date:   2018-10-27 22:08:57 +0800
 author: mistydew
 comments: true
 category: 区块链
-tags: Blockchain Bitcoin Translations
+tags: Bitcoin Translations
 ---
 这是一个专业术语汇编。普通用户应该使用[词汇表页面](/blog/2018/10/bitcoin-vocabulary.html)。
 

@@ -5,7 +5,7 @@ date:   2018-08-01 08:52:41 +0800
 author: mistydew
 comments: true
 category: 区块链
-tags: Blockchain Bitcoin bitcoin-cli
+tags: Bitcoin bitcoin-cli
 excerpt: $ bitcoin-cli abandontransaction "txid"
 ---
 ## 提示说明

@@ -5,7 +5,7 @@ date:   2018-06-12 11:40:02 +0800
 author: mistydew
 comments: true
 category: 区块链
-tags: Blockchain Bitcoin bitcoin-cli
+tags: Bitcoin bitcoin-cli
 excerpt: $ bitcoin-cli getinfo
 ---
 ## 提示说明

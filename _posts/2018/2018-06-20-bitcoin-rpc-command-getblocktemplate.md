@@ -5,7 +5,7 @@ date:   2018-06-20 09:10:18 +0800
 author: mistydew
 comments: true
 category: 区块链
-tags: Blockchain Bitcoin bitcoin-cli
+tags: Bitcoin bitcoin-cli
 excerpt: $ bitcoin-cli getblocktemplate ( "jsonrequestobject" )
 ---
 ## 提示说明

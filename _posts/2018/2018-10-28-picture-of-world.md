@@ -5,7 +5,7 @@ date:   2018-10-28 20:04:12 +0800
 author: mistydew
 comments: true
 category: 译文集
-tags: ガネクロ Lyrics
+tags: Lyrics Garnet
 excerpt: ずっと みてたんだ一枚のポスター、壁の片隅で色褪せた。きっと誰かが 剥がし忘れた、夕ぐれのストーリーは そこにあり。
 ---
 ![GZCA-5052](https://crowsub.github.io/images/discography/album/GZCA-5052.jpg){:.border}

@@ -5,7 +5,7 @@ date:   2020-02-23 20:04:01 +0800
 author: mistydew
 comments: true
 category: 译文集
-tags: ガネクロ Lyrics
+tags: Lyrics Garnet
 excerpt: 衝動に任して全部(すべて)終わりにしたくなる時ない？愛に満ちた時間(とき)はいつまでも続きやしない。
 ---
 ![GZCA-7037](https://crowsub.github.io/images/discography/single/GZCA-7037.jpg){:.border}

@@ -5,7 +5,7 @@ date:   2018-06-03 20:00:10 +0800
 author: mistydew
 comments: true
 category: 译文集
-tags: コナン ガネクロ Lyrics
+tags: Lyrics Conan Garnet
 excerpt: 部屋の窓の向こうに、飛行機雲を なぞって。今日ケンカした君の事ばかり、考えてた。
 ---
 ![GZCA-1050](https://crowsub.github.io/images/discography/single/GZCA-1050.jpg){:.border}
