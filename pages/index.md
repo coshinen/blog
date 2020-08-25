@@ -15,7 +15,7 @@ permalink: /
     </li>
   </ul>
   <h2 class="page-heading">近期文章</h2>
-  <ul class="post-list-more">{% for post in site.posts offset:1 limit:6 %}
+  <ul class="post-list-more">{% for post in site.posts offset:1 limit:7 %}
     <li>
       <span><abbr title="{{ post.date | date_to_xmlschema }}">{{ post.date | date: '%Y年%m月%d日' }}</abbr> &raquo; </span>
       <a href="{{ post.url }}">{{ post.title | escape }}</a>

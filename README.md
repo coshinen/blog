@@ -23,12 +23,13 @@ All posts are released under a [Creative Commons Attribution-NonCommercial-NoDer
 
 ## Timeline
 
-* 2020.08.08 [-] assets: ~~images~~; [+] assets: icons
+* 2020.08.25 [-] blog page: ~~sticky post~~
 
 <details>
 <summary>history</summary>
 
-* 2020.07.01 [-] README: ~~Todo~~
+* 2020.08.08 [-] assets: ~~images~~; [+] assets: icons
+* 2020.07.01 [-] README: ~~Todo list~~
 * 2020.06.18 [+] feed page: Email Subscriptions
 * 2020.06.02 [+] site: svg icons use symbol
 * 2020.05.30 [+] archive page: archive by month, year
@@ -96,7 +97,7 @@ All posts are released under a [Creative Commons Attribution-NonCommercial-NoDer
 * 2018.06.19 [+] post: word statistics ~~and reading time~~
 * 2018.06.15 [+] site: ~~particle background~~
 * 2018.06.07 [+] site: Google Analytics and Search Console; ~~Baidu Analytics~~
-* 2018.06.06 [+] blog page: sticky post
+* 2018.06.06 [+] blog page: ~~sticky post~~
 * 2018.06.04 [+] site: ~~Busuanzi analytics (hits, visitors and pageviews)~~
 * 2018.05.22 [+] site: robots.txt (Allow Googlebot and Baiduspider)
 * 2018.05.21 [+] pages: archive page
