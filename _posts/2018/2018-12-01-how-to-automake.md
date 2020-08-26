@@ -5,11 +5,12 @@ date:   2018-12-01 15:10:52 +0800
 author: mistydew
 comments: true
 category: 程序人生
-tags: C/C++ Automake Makefile src-build
+tags: Automake Makefile C++ src-build
+excerpt: 使用 make 编译工具链构建项目的简单过程。
 ---
-使用 make 编译工具链构建项目的简单过程。
+## 0. 准备
 
-## 必备工具
+### 0.1. 工具
 
 > * autoscan
 > * aclocal
@@ -17,10 +18,9 @@ tags: C/C++ Automake Makefile src-build
 > * autoconf
 > * automake
 
-## 0. 编写源码
+### 0.2. 源码
 
-下面是一个 C++ 例子，意在向终端输出一串字符。<br>
-这里分为 2 个文件：头文件 main.h 和源文件 main.cc，放在同一目录 src 下。
+下面是一个 C++ 例子，共 2 个文件：头文件 main.h 和源文件 main.cc，放在同一目录 src 下。
 
 头文件 main.h：
 
@@ -59,7 +59,7 @@ $ vim configure.ac
 
 打开 configure.ac 做以下修改。
 
-```cpp
+```
 #                                               -*- Autoconf -*-
 # Process this file with autoconf to produce a configure script.
 
@@ -103,7 +103,7 @@ $ autoconf # 生成 configure 文件
 $ vim Makefile.am
 ```
 
-```cpp
+```
 AUTOMAKE_OPTIONS=foreign
 
 bin_PROGRAMS=main # 指定生成的 ELF 文件名

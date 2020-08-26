@@ -6,7 +6,7 @@ author: mistydew
 comments: true
 category: 区块链
 tags: Bitcoin Whitepaper Translations
-excerpt: 比特币：一种点对点的电子现金系统，一个电子现金的纯点对点版本允许在线支付从一方直接发送到另一方，而不通过一个金融机构。
+excerpt: 比特币是一个创新的支付网络，一种新型的试验性的数字货币，能够让世界上任何地方的任何人进行即时支付。它使用点对点的技术，在没有中央权力的情况下运作：管理交易和发行货币通过网络共同完成。
 ---
 > <h2 align="center">Bitcoin: A Peer-to-Peer Electronic Cash System</h2>
 > 

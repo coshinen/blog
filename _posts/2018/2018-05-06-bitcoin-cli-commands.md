@@ -10,7 +10,7 @@ tags: Bitcoin bitcoin-cli
 带有 JSON-RPC 接口的基于命令行的守护进程 `bitcoind` 与比特币核心（Bicoin Core）绑定在一起。
 一个允许用户发送 RPC 命令到 `bitcoind` 的简单程序 `bitcoin-cli` 也包含在比特币核心。
 
-下面列出了 bitcoin v0.12.1 客户端 bitcoin-cli 所有（含隐藏分类）的 RPC 命令。
+下面列出了 bitcoin v0.12.1 客户端 `bitcoin-cli` 所有（含隐藏分类）的 RPC 命令。
 
 ## 1. bitcoin-cli 帮助信息
 
@@ -79,13 +79,14 @@ Chain selection options:
        HTTP 请求的超时时间（默认：900s）
 ```
 
-## 2. bitcoin-cli RPC 命令（需要 bitcoind 提供相关服务）
+## 2. bitcoin-cli RPC 命令
+
+**注：需要 `bitcoind` 提供相关服务。
+括号内的 `( 参数 )` 有默认值，可以省略。**
 
 ```shell
 $ bitcoin-cli help # 列出 RPC 命令
 ```
-
-**注：括号 () 内的参数有默认值，可以省略。**
 
 > == Blockchain | 区块链 ==<br>
 > [getbestblockhash](/blog/2018/05/bitcoin-rpc-command-getbestblockhash.html) # 获取最佳块哈希<br>
@@ -204,4 +205,4 @@ $ bitcoin-cli help # 列出 RPC 命令
 ## 参考链接
 
 * [bitcoin/bitcoin at v0.12.1](https://github.com/bitcoin/bitcoin/tree/v0.12.1){:target="_blank"}
-* [Getting Started — Bitcoin](https://developer.bitcoin.org){:target="_blank"}
+* [RPC API Reference — Bitcoin](https://developer.bitcoin.org/reference/rpc/index.html){:target="_blank"}

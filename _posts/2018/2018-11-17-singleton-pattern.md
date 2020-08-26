@@ -5,7 +5,7 @@ date:   2018-11-17 21:31:55 +0800
 author: mistydew
 comments: true
 category: 程序人生
-tags: Design-Patterns C/C++ GC
+tags: Design-Patterns C++ GC
 ---
 单例模式是 23 种设计模式之一，属于创建型模式，限制类只能实例化一个对象。
 

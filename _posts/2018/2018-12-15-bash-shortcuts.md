@@ -5,12 +5,12 @@ date:   2018-12-15 13:35:20 +0800
 author: mistydew
 comments: true
 category: 程序人生
-tags: UNIX/Linux CLI Bash Shortcuts
+tags: Translations UNIX/Linux Bash CLI Shortcuts
 ---
 下面是一些每个 Linux 用户都应该使用的键盘快捷键。
 使用命令行时，这些快捷键可以提升你的生产力和效率。
 
-![linux-terminal-shortcuts](https://i0.wp.com/linuxhandbook.com/wp-content/uploads/2018/06/linux-terminal-shortcuts.jpeg){:.border}
+![linux-terminal-shortcuts](https://linuxhandbook.com/content/images/2020/07/linux-terminal-shortcuts-1.jpeg){:.border}
 
 **注：键盘快捷键中使用了大写字母，并不意味着你在使用时必须按下 `shift` 键。**
 
@@ -47,7 +47,7 @@ tags: UNIX/Linux CLI Bash Shortcuts
 ## 7. Ctrl + E
 
 移动光标到行尾。
-与 `Ctrl+A` 相反。
+与 `Ctrl + A` 相反。
 
 ## 8. Ctrl + U
 
@@ -57,7 +57,7 @@ tags: UNIX/Linux CLI Bash Shortcuts
 ## 9. Ctrl + K
 
 擦除光标到行尾间的内容。
-与 `Ctrl+U` 相反。
+与 `Ctrl + U` 相反。
 
 ## 10. Ctrl + W
 
@@ -66,7 +66,7 @@ tags: UNIX/Linux CLI Bash Shortcuts
 
 ## 11. Ctrl + Y
 
-粘贴使用 `Ctrl+W`、`Ctrl+U` 和 `Ctrl+K` 快捷键擦除的文本。
+粘贴使用 `Ctrl + W`、`Ctrl + U` 和 `Ctrl + K` 快捷键擦除的文本。
 用于错误删除文本或需要在某处使用已擦除的文本。
 
 ## 12. Ctrl + P
@@ -76,7 +76,7 @@ tags: UNIX/Linux CLI Bash Shortcuts
 ## 13. Ctrl + N
 
 显示下一个命令。
-与 `Ctrl+P` 相反。
+与 `Ctrl + P` 相反。
 
 ## 14. Ctrl + R
 

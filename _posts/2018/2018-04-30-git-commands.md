@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Git/GitHub 命令行"
+title:  "Git 版本控制系统指南"
 date:   2018-04-30 16:20:08 +0800
 author: mistydew
 comments: true
@@ -110,7 +110,5 @@ $ git push --force/-f # 强制推送本地仓库到 GitHub
 ## 参考链接
 
 * [Git - Book](https://git-scm.com/book/en/v2){:target="_blank"}
-* [GitHub Guides](https://guides.github.com){:target="_blank"}
 * [GitHub Cheat Sheet](https://github.github.com/training-kit/downloads/github-git-cheat-sheet.pdf){:target="_blank"}
-* [GitHub.com Help Documentation](https://help.github.com/en){:target="_blank"}
 * [git - the simple guide - no deep shit!](http://rogerdudler.github.io/git-guide){:target="_blank"}

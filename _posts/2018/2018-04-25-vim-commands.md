@@ -1,11 +1,11 @@
 ---
 layout: post
-title:  "Vi/Vim 编辑器入门"
+title:  "Vim 编辑器入门"
 date:   2018-04-25 20:11:20 +0800
 author: mistydew
 comments: true
 category: 程序人生
-tags: Vi/Vim CLI
+tags: Vim CLI
 ---
 Vim (Vi IMproved) 是 Vi 编辑器的升级版，在 UNIX/Linux 系统中作为“编辑器之神”与“神之编辑器” Emacs 并驾齐驱。
 
