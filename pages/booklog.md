@@ -98,6 +98,7 @@ excerpt: Here are some books I read.
 > ### 纪实
 > * 敢问路在何方 我们的西游记，[中] 杨洁 王崇秋
 > * 敢问路在何方 我的30年西游路，[中] 杨洁
+> * 血疫 埃博拉的故事，[美] Richard Preston
 > * 最后的熊猫，[美] George B. Schaller
 > * 黑箱 日本之耻，[日] 伊藤詩織
 > * 谁“害”了北大学生，[中] 群言
@@ -151,7 +152,6 @@ excerpt: Here are some books I read.
 > ### 医学
 > * 医生的精进 从仁心仁术到追求卓越，[美] Atul Gawande
 > * 医生的修炼 在不完美中探索行医的真相，[美] Atul Gawande
-> * 血疫 埃博拉的故事，[美] Richard Preston
 > * 众病之王 癌症传，[美] Siddhartha Mukherjee
 > * 绝对笑喷之弃业医生日志，[英] Adam Kay
 
