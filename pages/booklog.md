@@ -5,6 +5,7 @@ permalink: /booklog.html
 excerpt: Here are some books I read.
 ---
 > ## 索引
+> 
 > * [技术](#技术)
 >   * [算法](#算法)
 >   * [区块链](#区块链)
@@ -24,12 +25,12 @@ excerpt: Here are some books I read.
 >   * [伦理学](#伦理学)
 >   * [方法论](#方法论)
 > * [其他](#其他)
->   * [语言](#语言)
 >   * [漫画](#漫画)
 
 ## 技术
 
 > ### 算法
+> 
 > * 漫画算法 小灰的算法之旅，[中] 魏梦舒
 > * 编程之美 —微软技术面试心得，[中] 《编程之美》小组
 > * 剑指 Offer 名企面试官精讲典型编程题，[中] 何海涛
@@ -40,6 +41,7 @@ excerpt: Here are some books I read.
 > * 大话数据结构，[中] 程杰
 
 > ### 区块链
+> 
 > * [精通以太坊](https://github.com/ethereumbook/ethereumbook){:target="_blank"}，[希-英] Andreas M. Antonopoulos [英] Gavin Wood
 > * 区块链启示录 中本聪文集，[美] Phil Champagne
 > * 区块链开发指南，[中] 申屠青春
@@ -48,6 +50,7 @@ excerpt: Here are some books I read.
 > * [Bitcoin: A Peer-to-Peer Electronic Cash System](/blog/2018/04/Bitcoin-A-Peer-to-Peer-Electronic-Cash-System.html)，[?] Satoshi Nakamoto
 
 > ### 编程语言
+> 
 > * Linux/UNIX 系统编程手册（上、下册），[德] [Michael Kerrisk](https://man7.org){:target="_blank"}
 > * STL 源码剖析，[中] 侯捷
 > * C++ 标准程序库，[德] Nicolai M.Josuttis
@@ -60,14 +63,17 @@ excerpt: Here are some books I read.
 > * C 程序设计语言（第2版），[加] [Brian W. Kernighan](https://www.cs.princeton.edu/~bwk){:target="_blank"} [美] [Dennis M. Ritchie](https://www.bell-labs.com/usr/dmr/www){:target="_blank"}
 
 > ### 网络编程
+> 
 > * 图解 HTTP，[日] 上野宣
 > * 图解 TCP/IP（第5版），[日] 竹下隆史 村山公保 荒井透 苅田幸雄
 > * TCP/IP 详解 卷1：协议，[美] [W. Richard Stevens](http://www.kohala.com/start){:target="_blank"}
 
 > ### 操作系统
+> 
 > * [Linux: a Portable Operating System](https://www.cs.helsinki.fi/u/kutvonen/index_files/linus.pdf){:target="_blank"}，[芬] [Linus Torvalds](https://github.com/torvalds){:target="_blank"}
 
 > ### 程序人生
+> 
 > * Vim 实用技巧，[英] Drew Neil
 > * 大话设计模式，[中] 程杰
 > * 程序员健康指南，[美] Joe Kutner
@@ -75,7 +81,7 @@ excerpt: Here are some books I read.
 > * [Pro Git 2nd Edition](https://git-scm.com/book/en/v2){:target="_blank"}，[美] Scott Chacon and Ben Straub
 > * 重构 改善既有代码的设计，[美] Martin Fowler
 > * 代码整洁之道，[美] Robert C. Martin
-> * [Google Style Guides](https://google.github.io/styleguide){:target="_blank"}，[美] Google
+> * [Google Style Guides](https://google.github.io/styleguide){:target="_blank"}，[美] Google Open Source Organization
 > * 你的灯亮着吗？发现问题的真正所在，[美] Donald C. Gause, Gerald M. Weinberg
 > * [How To Ask Questions The Smart Way](http://www.catb.org/~esr/faqs/smart-questions.html){:target="_blank"}，[美] Eric S. Raymond, Rick Moen
 > * [快乐的 Linux 命令行](https://billie66.github.io/TLCL/){:target="_blank"}，[美] William Shotts
@@ -85,6 +91,7 @@ excerpt: Here are some books I read.
 ## 文学
 
 > ### 文集
+> 
 > * 王小波全集 第一、二卷 杂文，[中] 王小波
 > * 暗时间，[中] [刘未鹏](https://mindhacks.cn){:target="_blank"}
 > * 黑客与画家 硅谷创业之父 Paul Graham 文集，[美] [Paul Graham](http://www.paulgraham.com){:target="_blank"}
@@ -96,6 +103,7 @@ excerpt: Here are some books I read.
 > * 80,0 AZUKI NANA photo & anthology，[日] AZUKI 七
 
 > ### 纪实
+> 
 > * 敢问路在何方 我们的西游记，[中] 杨洁 王崇秋
 > * 敢问路在何方 我的30年西游路，[中] 杨洁
 > * 血疫 埃博拉的故事，[美] Richard Preston
@@ -104,6 +112,7 @@ excerpt: Here are some books I read.
 > * 谁“害”了北大学生，[中] 群言
 
 > ### 传记
+> 
 > * 歌舞伎町案内人，[中] 李小牧
 > * 成龙：还没长大就老了，[中] 成龙 朱墨
 > * 天生有罪 特雷弗·诺亚的变色人生，[南非] Trevor Noah
@@ -115,6 +124,7 @@ excerpt: Here are some books I read.
 > * 史蒂夫·乔布斯传，[美] Walter Isaacson
 
 > ### 小说
+> 
 > * 鼠疫，[法] Albert Camus
 > * 局外人，[法] Albert Camus
 > * 偶发空缺，[英] J.K. Rowling
@@ -150,15 +160,18 @@ excerpt: Here are some books I read.
 ## 科学
 
 > ### 医学
+> 
 > * 医生的精进 从仁心仁术到追求卓越，[美] Atul Gawande
 > * 医生的修炼 在不完美中探索行医的真相，[美] Atul Gawande
 > * 众病之王 癌症传，[美] Siddhartha Mukherjee
 > * 绝对笑喷之弃业医生日志，[英] Adam Kay
 
 > ### 化学
+> 
 > * 阿加莎的毒药，[英] Kathryn Harkup
 
 > ### 心理学
+> 
 > * 理解人性，[奥地利] Alfred Adler
 > * 自卑与超越，[奥地利] Alfred Adler
 > * 被讨厌的勇气 “自我启发之父”阿德勒的哲学课，[日] 岸見一郎 古賀史健
@@ -173,10 +186,14 @@ excerpt: Here are some books I read.
 > * 异类 不一样的成功启示录，[加] Malcolm Gladwell
 
 > ### 伦理学
+> 
 > * 最好的告别 关于衰老与死亡，你必须知道的常识，[美] Atul Gawande
 > * 公正 该如何做是好？，[美] [Michael J. Sandel](https://scholar.harvard.edu/sandel){:target="_blank"}
 
 > ### 方法论
+> 
+> * [人人都能用英语](http://lixiaolai.com/#/everyone-can-use-english/){:target="_blank"}，[中] [李笑来](http://lixiaolai.com/#/){:target="_blank"}
+> * [英语进阶指南](https://byoungd.gitbook.io/english-level-up-tips/){:target="_blank"}，[中] byoungd
 > * 子弹笔记术，[日] 杉野干人
 > * 单核工作法图解 事多到事少，拖延变高效，[瑞典] Staffan Nöteberg
 > * 番茄工作法图解 简单易行的时间管理方法，[瑞典] [Staffan Nöteberg](https://staffannoteberg.com){:target="_blank"}
@@ -185,10 +202,7 @@ excerpt: Here are some books I read.
 
 ## 其他
 
-> ### 语言
-> * [英语进阶指南](https://byoungd.gitbook.io/english-level-up-tips/){:target="_blank"}，[中] byoungd
-> * [人人都能用英语](http://lixiaolai.com/#/everyone-can-use-english/){:target="_blank"}，[中] [李笑来](http://lixiaolai.com/#/){:target="_blank"}
-
 > ### 漫画
+> 
 > * 日本人の知らない日本語，[日] 蛇蔵＆海野凪子
 > * 名探偵コナン，[日] 青山剛昌
