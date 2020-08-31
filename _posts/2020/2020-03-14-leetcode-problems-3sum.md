@@ -5,10 +5,10 @@ date:   2020-03-14 20:05:49 +0800
 author: mistydew
 comments: true
 category: 力扣题解
-tags: LeetCode Array Two-Pointers
+tags: LeetCode Medium Array Two-Pointers
 excerpt: 给定一个含 n 个整数的数组 `nums`，数组 `nums` 是否存在元素 a，b，c 使得 a + b + c = 0？找出给定数组中和为零的所有不重复的三元组。
 ---
-> ## 15. 3Sum | Medium
+> ## 15. 3Sum
 > 
 > Given an array `nums` of n integers, are there elements a, b, c in `nums` such that a + b + c = 0? Find all unique triplets in the array which gives the sum of zero.
 > 

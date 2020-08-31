@@ -5,10 +5,10 @@ date:   2020-08-29 08:07:06 +0800
 author: mistydew
 comments: true
 category: 力扣题解
-tags: LeetCode Array Backtracking
+tags: LeetCode Medium Array Backtracking
 excerpt: 给定一个**无重复元素**的数组 `candidates` 和一个目标数 `target`，找出 `candidates` 中所有使数字和为 `target` 的组合。
 ---
-> ## 39. Combination Sum | Medium
+> ## 39. Combination Sum
 > 
 > Given a **set** of candidate numbers (`candidates`) (**without duplicates**) and a target number (`target`), find all unique combinations in `candidates` where the candidate numbers sums to `target`.
 > 

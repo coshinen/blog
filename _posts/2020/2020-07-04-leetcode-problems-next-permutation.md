@@ -5,10 +5,10 @@ date:   2020-07-04 08:31:19 +0800
 author: mistydew
 comments: true
 category: 力扣题解
-tags: LeetCode Array
+tags: LeetCode Medium Array
 excerpt: 实现**下一个排列**，把数字重排成字典序中下一个更大的数字排列。
 ---
-> ## 31. Next Permutation | Medium
+> ## 31. Next Permutation
 > 
 > Implement **next permutation**, which rearranges numbers into the lexicographically next greater permutation of numbers.
 > 

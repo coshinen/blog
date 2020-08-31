@@ -5,10 +5,10 @@ date:   2020-06-13 08:09:19 +0800
 author: mistydew
 comments: true
 category: 力扣题解
-tags: LeetCode Two-Pointers String
+tags: LeetCode Easy Two-Pointers String
 excerpt: 实现 [strStr()](http://www.cplusplus.com/reference/cstring/strstr/){:target="_blank"}。返回 haystack 中 needle 首次出现的索引，若 needle 不是 haystack 的一部分则返回 -1。
 ---
-> ## 28. Implement strStr() | Easy
+> ## 28. Implement strStr()
 > 
 > Implement [strStr()](http://www.cplusplus.com/reference/cstring/strstr/){:target="_blank"}.
 > 

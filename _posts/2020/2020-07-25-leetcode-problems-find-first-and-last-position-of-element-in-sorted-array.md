@@ -5,10 +5,10 @@ date:   2020-07-25 18:34:53 +0800
 author: mistydew
 comments: true
 category: 力扣题解
-tags: LeetCode Array Binary-Search
+tags: LeetCode Medium Array Binary-Search
 excerpt: 给定一个升序排列的整型数组 `nums`，找出一个给定目标值 `target` 的起始和结束位置。
 ---
-> ## 34. Find First and Last Position of Element in Sorted Array | Medium
+> ## 34. Find First and Last Position of Element in Sorted Array
 > 
 > Given an array of integers `nums` sorted in ascending order, find the starting and ending position of a given `target` value.
 > 

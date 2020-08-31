@@ -5,10 +5,10 @@ date:   2020-06-27 17:36:16 +0800
 author: mistydew
 comments: true
 category: 力扣题解
-tags: LeetCode Hash-Table Two-Pointers String
+tags: LeetCode Hard Hash-Table Two-Pointers String
 excerpt: 给你一个字符串 **s** 和一系列长度相同的单词 **words**。找出 **s** 中由 **words** 里每个单词串联成子串的所有起始位置。
 ---
-> ## 30. Substring with Concatenation of All Words | Hard
+> ## 30. Substring with Concatenation of All Words
 > 
 > You are given a string, **s**, and a list of words, **words**, that are all of the same length. Find all starting indices of substring(s) in **s** that is a concatenation of each word in **words** exactly once and without any intervening characters.
 > 

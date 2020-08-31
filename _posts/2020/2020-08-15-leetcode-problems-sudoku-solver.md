@@ -5,10 +5,10 @@ date:   2020-08-15 09:58:35 +0800
 author: mistydew
 comments: true
 category: 力扣题解
-tags: LeetCode Hash-Table Backtracking
+tags: LeetCode Hard Hash-Table Backtracking
 excerpt: 写一个通过填充空格来解决数独问题的程序。
 ---
-> ## 37. Sudoku Solver | Hard
+> ## 37. Sudoku Solver
 > 
 > Write a program to solve a Sudoku puzzle by filling the empty cells.
 > 
@@ -40,6 +40,7 @@ excerpt: 写一个通过填充空格来解决数独问题的程序。
 
 ```cpp
 class Solution {
+private:
     bool rows[9][9] = {false};
     bool columns[9][9] = {false};
     bool boxes[9][9] = {false};

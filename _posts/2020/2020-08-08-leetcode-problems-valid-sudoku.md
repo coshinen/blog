@@ -5,10 +5,10 @@ date:   2020-08-08 13:13:10 +0800
 author: mistydew
 comments: true
 category: 力扣题解
-tags: LeetCode Hash-Table
+tags: LeetCode Medium Hash-Table
 excerpt: 判断一个 9x9 的数独是否有效。只需**根据以下规则**验证已填入的数字。
 ---
-> ## 36. Valid Sudoku | Medium
+> ## 36. Valid Sudoku
 > 
 > Determine if a 9x9 Sudoku board is valid. Only the filled cells need to be validated **according to the following rules**:
 > 

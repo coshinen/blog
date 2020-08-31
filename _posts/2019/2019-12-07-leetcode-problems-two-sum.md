@@ -5,10 +5,10 @@ date:   2019-12-07 12:37:30 +0800
 author: mistydew
 comments: true
 category: 力扣题解
-tags: LeetCode Array Hash-Table
+tags: LeetCode Easy Array Hash-Table
 excerpt: 从一个整型数组中找出两个数，满足两数之和等于给定的目标值，并返回它们的下标。
 ---
-> ## 1. Two Sum | Easy
+> ## 1. Two Sum
 > 
 > Given an array of integers, return **indices** of the two numbers such that they add up to a specific target.
 > 

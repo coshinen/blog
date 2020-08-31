@@ -5,10 +5,10 @@ date:   2020-08-01 07:28:48 +0800
 author: mistydew
 comments: true
 category: 力扣题解
-tags: LeetCode Array Binary-Search
+tags: LeetCode Easy Array Binary-Search
 excerpt: 给定一个有序数组和一个目标值，如果找到目标值则返回其索引。如果没找到，返回其按顺序插入的索引。
 ---
-> ## 35. Search Insert Position | Easy
+> ## 35. Search Insert Position
 > 
 > Given a sorted array and a target value, return the index if the target is found. If not, return the index where it would be if it were inserted in order.
 > 

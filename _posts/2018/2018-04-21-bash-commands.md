@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "UNIX/Linux 用户常用的 Bash 命令"
+title:  "一些常用的 Bash 命令行"
 date:   2018-04-21 18:58:02 +0800
 author: mistydew
 comments: true

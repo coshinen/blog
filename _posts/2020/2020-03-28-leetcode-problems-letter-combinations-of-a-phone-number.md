@@ -5,10 +5,10 @@ date:   2020-03-28 22:15:39 +0800
 author: mistydew
 comments: true
 category: 力扣题解
-tags: LeetCode String Backtracking
+tags: LeetCode Medium String Backtracking
 excerpt: 给定一个包含数字 `2-9` 范围内的字符串，返回它能表示的所有可能的字母组合。
 ---
-> ## 17. Letter Combinations of a Phone Number | Medium
+> ## 17. Letter Combinations of a Phone Number
 > 
 > Given a string containing digits from `2-9` inclusive, return all possible letter combinations that the number could represent.
 > 
@@ -33,6 +33,7 @@ excerpt: 给定一个包含数字 `2-9` 范围内的字符串，返回它能表�
 
 ```cpp
 class Solution {
+private:
     unordered_map<char, string> umap = {
         {'2', "abc"},
         {'3', "def"},
@@ -56,6 +57,7 @@ class Solution {
             s.pop_back();
         }
     }
+
 public:
     vector<string> letterCombinations(string digits) {
         if (digits == "") return result;

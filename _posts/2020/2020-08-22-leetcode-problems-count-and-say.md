@@ -5,10 +5,10 @@ date:   2020-08-22 07:38:58 +0800
 author: mistydew
 comments: true
 category: 力扣题解
-tags: LeetCode String
+tags: LeetCode Easy String
 excerpt: 外观数列是下面前 5 项的整数序列：……给定一个整数 *n* (1 ≤ *n* ≤ 30)，生成外观数列的第 *n* 项。
 ---
-> ## 38. Count and Say | Easy
+> ## 38. Count and Say
 > 
 > The count-and-say sequence is the sequence of integers with the first five terms as following:
 > 

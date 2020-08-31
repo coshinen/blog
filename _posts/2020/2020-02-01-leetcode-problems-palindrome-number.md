@@ -5,10 +5,10 @@ date:   2020-02-01 10:09:21 +0800
 author: mistydew
 comments: true
 category: 力扣题解
-tags: LeetCode Math
-excerpt: 判断一个整数是否为回文数。
+tags: LeetCode Easy Math
+excerpt: 判断一个整数是否为回文数。当一个整数正着读和反着读一样时就是回文。
 ---
-> ## 9. Palindrome Number | Easy
+> ## 9. Palindrome Number
 > 
 > Determine whether an integer is a palindrome. An integer is a palindrome when it reads the same backward as forward.
 > 

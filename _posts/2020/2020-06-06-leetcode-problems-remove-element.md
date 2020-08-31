@@ -5,10 +5,10 @@ date:   2020-06-06 14:27:46 +0800
 author: mistydew
 comments: true
 category: 力扣题解
-tags: LeetCode Array Two-Pointers
+tags: LeetCode Easy Array Two-Pointers
 excerpt: 给定一个数组 *nums* 和一个值 *val*，[原地](https://en.wikipedia.org/wiki/In-place_algorithm){:target="_blank"}移除所有该数值的实例并返回新数组的长度。
 ---
-> ## 27. Remove Element | Easy
+> ## 27. Remove Element
 > 
 > Given an array *nums* and a value *val*, remove all instances of that value [in-place](https://en.wikipedia.org/wiki/In-place_algorithm){:target="_blank"} and return the new length.
 > 

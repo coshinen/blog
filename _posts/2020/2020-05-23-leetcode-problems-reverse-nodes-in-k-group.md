@@ -5,10 +5,10 @@ date:   2020-05-23 08:37:46 +0800
 author: mistydew
 comments: true
 category: 力扣题解
-tags: LeetCode Linked-List
+tags: LeetCode Hard Linked-List
 excerpt: 给定一条链表，每次反转 k 个节点的子链表并返回修改后的链表。
 ---
-> ## 25. Reverse Nodes in k-Group | Hard
+> ## 25. Reverse Nodes in k-Group
 > 
 > Given a linked list, reverse the nodes of a linked list k at a time and return its modified list.
 > 
@@ -47,6 +47,7 @@ excerpt: 给定一条链表，每次反转 k 个节点的子链表并返回修�
  * };
  */
 class Solution {
+private:
     pair<ListNode*, ListNode*> reverseGroup(ListNode* head, ListNode* tail) {
         ListNode *prev = tail->next;
         ListNode *tmp = head;

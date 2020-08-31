@@ -5,10 +5,10 @@ date:   2020-07-18 09:17:04 +0800
 author: mistydew
 comments: true
 category: 力扣题解
-tags: LeetCode Array Binary-Search
+tags: LeetCode Medium Array Binary-Search
 excerpt: 假设一个升序数组在你预先未知的某个点上进行了旋转。
 ---
-> ## 33. Search in Rotated Sorted Array | Medium
+> ## 33. Search in Rotated Sorted Array
 > 
 > Suppose an array sorted in ascending order is rotated at some pivot unknown to you beforehand.
 > 

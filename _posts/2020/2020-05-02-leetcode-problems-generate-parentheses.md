@@ -5,10 +5,10 @@ date:   2020-05-02 11:25:16 +0800
 author: mistydew
 comments: true
 category: 力扣题解
-tags: LeetCode String Backtracking
+tags: LeetCode Medium String Backtracking
 excerpt: 给定括号的对数 n，写一个函数用于生成所有括号的有效组合。
 ---
-> ## 22. Generate Parentheses | Medium
+> ## 22. Generate Parentheses
 > 
 > Given n pairs of parentheses, write a function to generate all combinations of well-formed parentheses.
 > 
@@ -32,6 +32,7 @@ excerpt: 给定括号的对数 n，写一个函数用于生成所有括号的有
 
 ```cpp
 class Solution {
+private:
     bool valid(const string& str) {
         int balance = 0;
         for (char c : str) {
@@ -59,6 +60,7 @@ class Solution {
         generate_all(current, n, result);
         current.pop_back();
     }
+
 public:
     vector<string> generateParenthesis(int n) {
         vector<string> result;
@@ -70,7 +72,7 @@ public:
 ```
 
 复杂度分析：
-* 时间复杂度：*O*(2<sup>2n</sup>*n)，一共有 2<sup>2n</sup> 种可能的组合，建立并验证每种组合的复杂度为 *O*(n)。
+* 时间复杂度：*O*(2<sup>2n</sup>n)，一共有 2<sup>2n</sup> 种可能的组合，建立并验证每种组合的复杂度为 *O*(n)。
 * 空间复杂度：*O*(n)，每层递归需要 *O*(1) 的空间，最多递归 2n 层。
 
 ## 参考链接

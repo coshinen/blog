@@ -5,10 +5,10 @@ date:   2020-01-18 19:10:18 +0800
 author: mistydew
 comments: true
 category: 力扣题解
-tags: LeetCode Math
+tags: LeetCode Easy Math
 excerpt: 给定一个 32 位的有符号整数，反转该整数每个位上的数字。
 ---
-> ## 7. Reverse Integer | Easy
+> ## 7. Reverse Integer
 > 
 > Given a 32-bit signed integer, reverse digits of an integer.
 > 
