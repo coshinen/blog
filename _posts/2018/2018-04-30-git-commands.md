@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Git 版本控制系统指南"
+title:  "Git 版本控制指南"
 date:   2018-04-30 16:20:08 +0800
 author: mistydew
 comments: true
@@ -8,107 +8,175 @@ category: 程序人生
 tags: Git(Hub) CLI
 excerpt: Git 是一个免费且开源的分布式版本控制系统。
 ---
-![git](https://git-scm.com/images/logo@2x.png)
+![git-logo](https://git-scm.com/images/logo@2x.png)
+![branching-illustration](https://git-scm.com/images/branching-illustration@2x.png)
 
-## 配置
+## 配置工具
+
+为所有的本地仓库配置用户信息。
+
+```shell
+$ git config --global user.name "[name]"
+  设置附加到提交的用户名
+```
+
+```shell
+$ git config --global user.email "[email address]"
+  设置附加到提交的电子邮箱
+```
 
 配置文件 `.gitconfig` 位于用户家目录，格式如下：
 
-```shell
+```
 # This is Git's per-user configuration file.
 [user]
     name = [name]
     email = [email address]
 ```
 
-当出现提示 `fatal: unable to auto-detect email address` 时，执行下面两句命令配置本地仓库的用户信息。
+## 创建仓库
 
-### 设置用户名
-
-```shell
-$ git config --global user.name "[name]" # 设置你想要附加到你的提交的名字
-```
-
-### 设置用户邮箱
+当开始使用一个新的仓库时，只需要执行一次；
+或者通过克隆一个现有的仓库。
 
 ```shell
-$ git config --global user.email "[email address]" # 设置你想要附加到你的提交的电子邮箱地址
+$ git init [project-name]
+  把一个现存的目录转化为 git 管理的仓库
 ```
 
-## 本地仓库
-
-### 初始化仓库
+该命令执行后，目录 `[project-name]` 下会生成一个名为 `.git` 的数据目录。
 
 ```shell
-$ git init [project-name] # 初始化目录 [project-name] 为 git 管理的仓库，执行该命令后，指定目录下会多出一个名为 .git 数据目录
+$ git clone https://github.com/[user/organization]/[repository].git
+  克隆（下载）一个 GitHub 上已存在的用户或组织的仓库，包含所有的文件、分支和提交
 ```
 
-### 查看状态
+## 分支
+
+分支是使用 Git 的一个重要部分。
+所做的任何提交都将在当前签出的分支上进行。
+使用 `git status` 查看是哪个分支。
 
 ```shell
-$ git status # 列出所有新的或暂存区中待提交的文件
-$ git diff # 显示未提交到暂存区文件的变化内容（有颜色对比：+ 加号绿色表示新增的内容，- 减号红色表示移除的内容）
+$ git status
+  显示当前分支的状态，包含所有新的和暂存区中待提交的文件
 ```
-
-### 添加文件
 
 ```shell
-$ git add [file] # 添加文件 [file] 到暂存区
+$ git branch [branch-name]
+  创建一个新的分支
 ```
-
-### 撤销文件
 
 ```shell
-$ git reset [file] # 撤销暂存区中的文件 [file]
+$ git branch -d [branch-name]
+  删除指定的分支
 ```
-
-### 提交文件
 
 ```shell
-$ git commit -m "[descriptive message]" # 永久记录文件的简介到版本历史中，即为当前暂存区中的文件添加注释，用于记录文件版本的相关描述信息
+$ git checkout [branch-name]
+  切换到指定的分支并更新工作目录
 ```
-
-### 修改提交
 
 ```shell
-$ git commit --amend # 修改最近一次提交的评论
-$ git rebase -i HEAD~n # 修改倒数第 n 条提交的信息，把 pick 改为 edit，保存退出后根据提示进行
+$ git merge [branch]
+  合并指定的分支历史到当前分支（通常用于拉请求，但是一个重要的 Git 操作）
 ```
 
-### 查看历史
+## 进行更改
 
 ```shell
-$ git log # 列出提交的历史信息，默认时间从近到远排序
-$ git reflog # 列出 git 命令的历史记录
+$ git add [file]
+  快照文件为版本控制做准备（即把文件添加到暂存区）
 ```
-
-### 版本回退
 
 ```shell
-$ git reset --hard HEAD^ # 回退至上一个版本
-$ git reset --hard [version] # 回退至指定版本
+$ git reset [file]
+  撤销已快照文件（即添加到暂存区中的文件）
 ```
-
-## 远程仓库（GitHub）
-
-**注意：慎用 `--force/-f` 参数。**
-
-### 克隆仓库
 
 ```shell
-$ git clone https://github.com/[user/organization]/[repository].git # 克隆 GitHub 用户或组织 [user/organization] 的仓库 [repository] 到本地
+$ git commit -m "[descriptive message]"
+  永久记录文件快照到版本历史（即为当前暂存区中的文件添加注释，以记录文件版本的描述信息）
 ```
-
-### 同步仓库
 
 ```shell
-$ git pull # 拉取 GitHub 仓库到本地
-$ git push # 推送本地仓库到 GitHub
-$ git push --force/-f # 强制推送本地仓库到 GitHub
+$ git commit --amend
+  修改最新的一次提交
 ```
+
+```shell
+$ git rebase -i HEAD~n
+  修改倒数第 n 条提交，把 pick 改为 edit，保存退出后根据提示进行
+```
+
+```shell
+$ git diff [first-branch]...[second-branch]
+  显示两个分支间的内容差异
+```
+
+```shell
+$ git show [commit]
+  输出指定提交的元数据和内容变化
+```
+
+```shell
+$ git log
+  列出当前分支的版本历史（即历史提交，默认时间从近到远排序）
+```
+
+```shell
+$ git log --follow [file]
+  列出一个文件的版本历史，包含重命名
+```
+
+```shell
+$ git reflog
+  列出 git 命令的历史记录
+```
+
+## 同步更改
+
+同步本地仓库与 GitHub.com 上的远程仓库。
+
+```shell
+$ git push
+  上传所有本地分支提交到 GitHub
+```
+
+```shell
+$ git fetch
+  从远程跟踪分支下载所有历史
+```
+
+```shell
+$ git merge
+  合并远程跟踪分支到当前本地分支
+```
+
+```shell
+$ git pull
+  使用来自 GitHub 上相应远程分支的所有最新提交更新当前的本地工作分支（是 fetch 和 merge 的组合）
+```
+
+## 撤销提交
+
+擦除错误并手动替换历史。
+
+```shell
+$ git reset [commit]
+  撤销 [commit] 后的所有提交，保留本地更改
+```
+
+```shell
+$ git reset --hard [commit]
+  丢弃所有历史和更改回到指定的提交
+```
+
+**注意！**
+改变历史会带来严重的副作用。
+如果需要更改 GitHub 上（远程）存在的提交，须慎用 `--force/-f` 参数操作。
 
 ## 参考链接
 
-* [Git - Book](https://git-scm.com/book/en/v2){:target="_blank"}
 * [GitHub Cheat Sheet](https://github.github.com/training-kit/downloads/github-git-cheat-sheet.pdf){:target="_blank"}
 * [git - the simple guide - no deep shit!](http://rogerdudler.github.io/git-guide){:target="_blank"}
