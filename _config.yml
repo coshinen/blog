@@ -43,7 +43,7 @@ sass:
 # Handling Reading
 exclude     : [LICENSE, README.md]
 encoding    : "utf-8"
-markdown_ext: "markdown,mkdown,mkdn,mkd,md" # no spaces
+markdown_ext: "markdown,mkdown,mkdn,mkd,md" # no spaces between exts
 
 # Filtering Content
 limit_posts: 0
@@ -61,4 +61,4 @@ host: 127.0.0.1
 
 # Outputting
 permalink: /blog/:year/:month/:title.html
-timezone : Asia/Shanghai # Beijing Time
+timezone : Asia/Shanghai
