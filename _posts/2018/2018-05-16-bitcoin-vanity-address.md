@@ -67,13 +67,14 @@ CPubKey CWallet::GenerateNewKey()
 这里只需要修改第 6 步，实现同上。
 
 ```cpp
-UniValue getnewaddress(const UniValue& params, bool fHelp) // 在指定账户下新建一个地址，若不指定账户，默认添加到""空账户下
+// 在指定账户下新建一个地址。若未指定账户，则默认添加到空账户 "" 下
+UniValue getnewaddress(const UniValue& params, bool fHelp)
 {
-    if (!EnsureWalletIsAvailable(fHelp)) // 1.确保钱包可用，即钱包已创建成功
+    if (!EnsureWalletIsAvailable(fHelp)) // 1. 确保钱包可用，即钱包已创建成功
         return NullUniValue;
     
-    if (fHelp || params.size() > 1) // 参数个数为 0 或 1，即要么使用默认账户，要么指定账户
-        throw runtime_error( // 2.查看该命令的帮助或命令参数个数超过 1 个均返回该命令的帮助
+    if (fHelp || params.size() > 1) // 0 或 1 个参数（有缺省值）
+        throw runtime_error( // 2. 查看该命令的帮助或命令参数个数超过 1 个均返回该命令的帮助
             "getnewaddress ( \"account\" )\n"
             "\nReturns a new Bitcoin address for receiving payments.\n"
             "If 'account' is specified (DEPRECATED), it is added to the address book \n"
@@ -120,8 +121,8 @@ UniValue getnewaddress(const UniValue& params, bool fHelp) // 在指定账户下
 ```cpp
 UniValue validateaddress(const UniValue& params, bool fHelp)
 {
-    if (fHelp || params.size() != 1) // 参数必须为 1 个
-        throw runtime_error( // 命令帮助反馈
+    if (fHelp || params.size() != 1) // 1 个参数
+        throw runtime_error(
             "validateaddress \"bitcoinaddress\"\n"
             "\nReturn information about the given bitcoin address.\n"
             "\nArguments:\n"
@@ -174,11 +175,11 @@ UniValue validateaddress(const UniValue& params, bool fHelp)
             ret.push_back(Pair("account", pwalletMain->mapAddressBook[dest].name)); // 获取该地址关联的账户名
 #endif
     }
-    return ret; // 返回结果
+    return ret;
 }
 ```
 
-关于比特币地址前缀 `'1'` 的修改，可以参考[如何制作一枚山寨数字货币](/blog/2018/05/how-to-make-an-altcoin.html)。
+关于比特币地址前缀字符 `'1'` 的修改，参考[如何制作一枚山寨数字货币](/blog/2018/05/how-to-make-an-altcoin.html)。
 
 ## 参考链接
 

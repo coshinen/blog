@@ -7,14 +7,14 @@ comments: true
 category: 区块链
 tags: Bitcoin Block
 ---
-交易数据永久记录在区块中，它们可以被当作账本中的单个页面。
+交易数据永久记录在区块中，区块可以被当作账本中的单页。
 区块按时间组成一条线性序列，又称为区块链。
-矿工不断地处理新交易到新的区块，并将其添加到区块链的末端。
-随着区块被埋入区块链越来越深，它们变得越来越难以改变或移除，这就产生了比特币的不可逆交易。
+矿工不断处理新的交易到新的区块，并将其添加到区块链的末端。
+随着区块被埋入区块链越深，它们就变得越难以改变或移除，这就产生了比特币的不可逆交易。
 
 ## 源码剖析
 
-区块头和区块的数据结构都定义在源文件“primitives/block.h”中，分别为类 CBlockHeader 和其派生类 CBlock，如下：
+区块头类 `CBlockHeader` 和其派生区块类 `CBlock` 都定义在源文件 `primitives/block.h` 中，具体如下。
 
 ```cpp
 /** Nodes collect new transactions into a block, hash them into a hash tree,
@@ -23,17 +23,17 @@ tags: Bitcoin Block
  * to everyone and the block is added to the block chain.  The first transaction
  * in the block is a special one that creates a new coin owned by the creator
  * of the block.
- */ // 节点收集新交易到一个区块，把它们散列至哈希树中，并扫描 nonce 来满足所需的工作量证明要求。
-class CBlockHeader // 区块头部分（包含区块版本、前一个区块的哈希、默尔克树根哈希、创建区块的时间、难度对应值和随机数）
+ */
+class CBlockHeader
 {
 public:
-    // header // 区块头（80 Bytes）
-    int32_t nVersion; // 区块版本号（4 Bytes）
-    uint256 hashPrevBlock; // 前一个区块的哈希值（32 Bytes）
-    uint256 hashMerkleRoot; // 默克尔树根哈希值（32 Bytes）
-    uint32_t nTime; // 区块创建时间（4 Bytes）
-    uint32_t nBits; // 难度对应值，与难度呈反比（4 Bytes）
-    uint32_t nNonce; // 随机数（4 Bytes, Number used once/Number once）
+    // header
+    int32_t nVersion;
+    uint256 hashPrevBlock;
+    uint256 hashMerkleRoot;
+    uint32_t nTime;
+    uint32_t nBits;
+    uint32_t nNonce;
     ...
 };
 
@@ -41,18 +41,31 @@ class CBlock : public CBlockHeader
 {
 public:
     // network and disk
-    std::vector<CTransaction> vtx; // 区块体部分（交易列表，至少有一笔交易，即第一笔创币交易 coinbase）
+    std::vector<CTransaction> vtx;
     ...
 };
 ```
 
-区块头固定 80 个字节，共由 6 个数据成员构成：
-1. 区块的版本号（nVersion），一般隨共识改变，比如目前历史上提升过 2 次区块大小，从 250KB 到 750KB 再到 1000KB。
-2. 前一个区块头的哈希值（nhashPrevBlock），类似于单链表的指针。
-3. 默克尔树根哈希值（nMerkleRoot），用于校验交易数据的一致性。
-4. 区块创建时间（nTime），UNIX 时间戳，作为一个影响区块寻找的变量。
-5. 难度对应值（nBits），可通过此值推算出网络挖矿难度，从主网、测试网和回归测试网参数可以看出，此值越小难度越大。
-6. 随机数（nNonce），通过不断的变化来寻找满足要求的区块（挖矿）。
+节点把新交易收集到一个区块里，把它们散列至哈希树中，并扫描随机数值使区块哈希满足工作量证明要求。
+当它们解决了工作量证明，它们将广播该区块到每个节点并把区块添加到区块链上。
+区块里的首笔交易是特殊的（即创币交易 `coinbase`），它会创建一个属于该区块创建者的新币。
+这个过程就是所谓的“挖矿”。
+
+区块头共 80 个字节，由 6 个数据成员构成：
+1. 版本号 `nVersion`，4 个字节 ，隨共识改变。
+比如，当前区块大小提升过 2 次，从 250KB 到 750KB 再到 1000KB。
+2. 前一个区块头的哈希 `nhashPrevBlock`，32 个字节，类似于单链表中节点的指针域。
+3. 默克尔树根哈希 `nMerkleRoot`，32 个字节，用于校验交易数据，保证其一致性。
+4. 创建时间 `nTime`，4 个字节，UNIX 时间戳，作为寻找区块的一个变量。
+5. 难度对应值 `nBits`，4 个字节，从主网、测试网和回归测试网中的默认值可以看出，该值与难度呈反比。
+6. 随机数 `nNonce`，4 个字节，通过递增来寻找满足要求的区块。
+Nonce (Number used once / Number once)，在密码学中是一个只被使用一次的非重复随机数值。
+
+区块体 `vtx` 由首笔创币交易和其余的 n 笔普通交易组成。
+
+比特币区块类图：
+
+![bitcoin-block](https://www.plantuml.com/plantuml/svg/NOxDIiHG34Rtzocobu4o_YpA8EFCHXUAwE1MucsWeRU996aLVzxTqfbDtPvp4hwj1reCVKcUiH1SL1LyS1Djyexb7Grxo0NTRoACtuQWkwpop5y4LKhxNT7StH8sPB3vMQtWI5AQRs3XlnESoGkPimhKCB34-Ver9jgYjuz6uroVrFhowcJkoRf2JwgnK7BWdfP_PCVX_z23IfupuIFxNOwRPutnEIKUJLsFb4DjipyOYcCELhcURhOapT2NFm00)
 
 ## 参考链接
 

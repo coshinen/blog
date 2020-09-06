@@ -14,10 +14,10 @@ tags: Bitcoin src-build Cross-compilation
 以比特币 v0.12.1 为例，进行交叉编译。
 
 ```shell
-$ git clone https://github.com/bitcoin/bitcoin.git # 克隆最新版的比特币源码到本地。
-$ cd bitcoin # 进入比特币项目根目录。
-$ git checkout v0.12.1 # 在当前分支上切换至 tag 为 v0.12.1 的版本，或省略来编译最新版。
-$ git status # 查看当前状态（这里会显示版本信息）。
+$ git clone https://github.com/bitcoin/bitcoin.git
+$ cd bitcoin
+$ git checkout v0.12.1 # 切换到 v0.12.1
+$ git status
 HEAD detached at v0.12.1
 nothing to commit, working directory clean
 ```
@@ -30,7 +30,7 @@ $ vim depends/packages/qt.mk # Line 3: 把 official_releases 改为 archive，�
 
 第 3 行内容变化如下：
 
-```shell
+```
 -$(package)_download_path=http://download.qt.io/official_releases/qt/5.5/$($(package)_version)/submodules
 +$(package)_download_path=http://download.qt.io/archive/qt/5.5/$($(package)_version)/submodules
 ```

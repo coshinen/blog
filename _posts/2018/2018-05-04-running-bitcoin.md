@@ -666,25 +666,25 @@ RPC 服务选项：
 
 ## 4. 比特币配置文件样例
 
-```shell
-# 打印调试信息到控制台
+```
+# 把调试信息打印到控制台
 printtoconsole=1
 
-# 调试信息（IPs、时间戳微秒）
+# 调试信息（记录 IP、时间戳微秒）
 logips=1
 logtimemicros=1
 
 # 后台运行
 daemon=1
 
-# 开启 CPU 挖矿（默认挖矿线程数为 1）
+# 开启 CPU 挖矿（默认线程数为 1）
 gen=1
 
 # RPC 验证信息（用户名、密码）
 rpcuser=username
 rpcpassword=passwd
 
-# RPC 白名单（外网 IP）
+# RPC 白名单（公网 IP）
 rpcallowip=xxx.xxx.xxx.xxx
 ```
 

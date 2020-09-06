@@ -84,6 +84,8 @@ $ git merge [branch]
 
 ## 进行更改
 
+浏览并检查项目文件的演变。
+
 ```shell
 $ git add [file]
   快照文件为版本控制做准备（即把文件添加到暂存区）
@@ -139,8 +141,18 @@ $ git reflog
 同步本地仓库与 GitHub.com 上的远程仓库。
 
 ```shell
+$ git remote add <shortname> <url>
+  添加一个新的远程仓库并指定一个简称
+```
+
+```shell
 $ git push
   上传所有本地分支提交到 GitHub
+```
+
+```shell
+$ git push <remote> <branch>
+  首次把本地分支推送到远程仓库（克隆会自动设置好）
 ```
 
 ```shell
@@ -176,7 +188,37 @@ $ git reset --hard [commit]
 改变历史会带来严重的副作用。
 如果需要更改 GitHub 上（远程）存在的提交，须慎用 `--force/-f` 参数操作。
 
+## 术语
+
+**git:**
+一个开源，分布式的版本控制系统。
+
+**GitHub:**
+一个在 Git 仓库上托管和协作的平台。
+
+**commit:**
+一个 Git 对象，一张整个仓库压缩到一个 SHA 的快照。
+
+**branch:**
+一个指向一条提交的轻量级可移动指针。
+
+**clone:**
+一个仓库的一个本地版本，包含所有的提交和分支。
+
+**remote:**
+一个 GitHub 上的公共仓库，所有团队成员都用它来交换他们的更改。
+
+**fork:**
+一份 GitHub 上由不同的用户拥有的一个仓库的拷贝。
+
+**pull request:**
+一个在一条分支上比较并讨论差异的引入的地方，包括审核、注释、集成测试等。
+
+**HEAD:**
+表示当前的工作目录，使用 `git checkout` 可以把 HEAD 指针移动到不同的分支、标签或提交。
+
 ## 参考链接
 
+* [Pro Git 2nd Edition](https://git-scm.com/book/en/v2){:target="_blank"}
 * [GitHub Cheat Sheet](https://github.github.com/training-kit/downloads/github-git-cheat-sheet.pdf){:target="_blank"}
 * [git - the simple guide - no deep shit!](http://rogerdudler.github.io/git-guide){:target="_blank"}

@@ -11,37 +11,37 @@ tags: Bitcoin src-build
 
 ## 1. 获取源码
 
-使用 git 把 GitHub 上托管的比特币源码克隆到本地，关于 git 的安装和使用详见 [Git 基础命令](/blog/2018/04/git-commands.html)篇。
+比特币源码早期托管在 SourceForge 上，目前托管在 GitHub 上。
 
 ```shell
-$ git clone https://github.com/bitcoin/bitcoin.git # 克隆最新版的比特币源码到本地。
-$ cd bitcoin # 切换至比特币根目录。
-$ git checkout v0.12.1 # 在当前分支上切换至 tag 为 v0.12.1 的版本，或省略此步骤以编译最新版。
-$ git status # 查看当前状态（这里会显示版本信息），此步可省略。
+$ git clone https://github.com/bitcoin/bitcoin.git
+$ cd bitcoin
+$ git checkout v0.12.1 # 切换到 v0.12.1
+$ git status
 HEAD detached at v0.12.1
 nothing to commit, working directory clean
 ```
 
 ## 2. 内存需求
 
-C++ 编译器较吃内存。推荐在编译比特币核心时至少有 1GB 的空闲内存。
-使用 512MB 或更少的内存编译由于内存交换将花费更长的时间。
+C++ 编译器较吃内存。
+推荐编译比特币核心时至少有 1GB 的空闲内存。
+由于内存交换，使用 512MB 或更少的内存编译将花费更长的时间。
 
 ## 3. 依赖构建指南：macOS & Ubuntu
 
-### 3.1. macOS Mojave
-
-使用 Homebrew 安装依赖。
+### 3.1. macOSX
 
 ```shell
 $ brew install automake berkeley-db4 libtool boost@1.59 miniupnpc openssl pkg-config protobuf python qt libevent qrencode
 ```
 
-brew 默认安装指定库的最新版本，可以使用命令 `$ brew search <libname>` 查看指定库的所有版本。
+Homebrew 默认安装指定库的最新版本。
 
-**bitcoin v0.12.1 对应的 boost 库的版本为1.59.0，可以从 [bitcoin/depends/packages/boost.mk](https://github.com/bitcoin/bitcoin/blob/v0.12.1/depends/packages/boost.mk) 中获取当前版本比特币对应的 boost 库的版本。**
+比特币 v0.12.1 对应的 boost 库的版本为 1.59.0。
+可以从 [bitcoin/depends/packages/boost.mk](https://github.com/bitcoin/bitcoin/blob/v0.12.1/depends/packages/boost.mk) 中获取当前版本比特币对应的 boost 库的版本。
 
-### 3.2. Ubuntu 16.04.*
+### 3.2. Ubuntu 16.04.\*
 
 构建必备：
 
@@ -53,10 +53,15 @@ Boost 库：
 
 ```shell
 $ sudo apt-get install libboost-system-dev libboost-filesystem-dev libboost-chrono-dev libboost-program-options-dev libboost-test-dev libboost-thread-dev
-$ sudo apt-get install libboost-all-dev # 如果不管用，你可以安装全部的 boost 开发包
 ```
 
-**ubuntu 16.04.* 默认安装 boost 库的版本为 1.58.0，可满足 bitcoin v0.12.1 对 boost 库的需求。**
+如果不管用，可以安装所有的 boost 开发包：
+
+```shell
+$ sudo apt-get install libboost-all-dev
+```
+
+ubuntu 16.04.\* 默认安装 boost 库的版本为 1.58.0，可满足比特币 v0.12.1 对 boost 库的需求。
 
 BerkeleyDB 钱包所需：
 
@@ -82,7 +87,7 @@ $ sudo apt-get install libzmq3-dev # 提供 ZMQ API 4.x
 GUI 依赖（Qt5 图形库，若不使用图形化界面可省略此步，减少构建时间）：
 
 ```shell
-$ sudo apt-get install libqt5gui5 libqt5core5a libqt5dbus5 qttools5-dev qttools5-dev-tools libprotobuf-dev protobuf-compiler # Qt 5
+$ sudo apt-get install libqt5gui5 libqt5core5a libqt5dbus5 qttools5-dev qttools5-dev-tools libprotobuf-dev protobuf-compiler
 ```
 
 libqrencode 二维码生成库（可选）：
@@ -91,19 +96,21 @@ libqrencode 二维码生成库（可选）：
 $ sudo apt-get install libqrencode-dev
 ```
 
-**注：发行版是使用 GCC 构建然后使用“strip bitcoind”去掉调试符号，该操作可减少可执行文件大小约 90%。**
+## 4. 笔记
 
-## 4. 额外的配置选项
+发行版是使用 GCC 构建然后使用 `"strip bitcoind"` 去掉调试符号，该操作可减少可执行文件大小约 90%。
 
-使用下面命令显示额外的配置选项列表（内容过多这里省略）：
+## 5. 额外的配置选项
+
+使用下面命令显示详细的配置选项列表。
 
 ```shell
 $ ./configure --help
 ```
 
-## 5. 构建（编译和安装）
+## 6. 构建（编译和安装）
 
-**在构建源码之前，应该先安装相关的依赖库。**
+在构建源码前，请确保安装了相关的依赖库。
 
 ```shell
 $ ./autogen.sh # 生成 configure
@@ -112,21 +119,32 @@ $ make # 使用 Makefile 进行比特币源码的编译，编译完成后会生�
 $ make install # 该项可选，把编译好的比特币程序拷贝到系统默认的可执行程序目录 /usr/local/bin 下
 ```
 
-**注：macOS Mojave 无法构建 bitcoin v0.12.1 的可执行文件 bitcoin-qt，因为 macOS Mojave 不支持 bitcoin v0.12.1 对应的 qt5.5 的构建。**
+**macOS Mojave 无法构建比特币 v0.12.1 的可执行文件 `bitcoin-qt`，因为 macOS Mojave 不支持比特币 v0.12.1 对应的 qt5.5 的构建。**
 
-## 6. 特殊构建
+## 7. 特殊构建
 
-**可编译得到类似于官方发布的可执行文件。**
+可得到类似于官方发布的可执行文件。
 
-通过 configure 定制 Makefile，以构建源码得到便于移植（体积小且为静态即不需要依赖库）的 bitcoind、bitcoin-cli、bitcoin-qt 等可执行文件。
+通过 `configure` 定制 Makefile，以构建源码得到便于移植（体积小且静态即不需要依赖库）的可执行文件 `bitcoind`、`bitcoin-cli`、`bitcoin-qt` 等。
 
-首先，安装基本依赖：
+额外的配置选项：
+
+```shell
+  --prefix=PREFIX
+  使用 PREFIX 中的依赖安装独立于体系结构的文件，默认为 /usr/local
+  --enable-glibc-back-compat
+  启用使用 glibc 的向后兼容
+  LDFLAGS
+  链接器标志，例如，库位于非标准目录 <lib dir>，使用 -L <lib dir>
+```
+
+先安装基本依赖：
 
 ```shell
 $ sudo apt install build-essential libtool autotools-dev automake pkg-config bsdmainutils curl
 ```
 
-**注：比特币 v0.12.1 源码需先修改 Qt 包源路径，查看[交叉编译比特币源码](/blog/2018/09/cross-compile-bitcoin.html)。**
+**比特币 v0.12.1 源码需先修改 Qt 包源路径，查看[交叉编译比特币源码](/blog/2018/09/cross-compile-bitcoin.html)。**
 
 ```shell
 $ cd depends
@@ -136,12 +154,6 @@ $ ./autogen.sh # 若是首次构建，先生成 configure
 $ ./configure --prefix=`pwd`/depends/x86_64-pc-linux-gnu --enable-glibc-back-compat LDFLAGS="-static-libstdc++" # 使用指定位置的依赖安装独立于目录结构的文件，开启 glibc 的向后兼容并使用静态链接选项
 $ make # 若构建过，则先执行 make clean 进行清理
 ```
-
-configure 用到的额外的配置选项：
-
-> * --prefix=PREFIX，使用 PREFIX 中的依赖安装独立于体系结构的文件，默认为 /usr/local
-> * --enable-glibc-back-compat，启用使用 glibc 的向后兼容
-> * LDFLAGS，链接器标志，例如，如果库位于非标准目录 \<lib dir> 时，使用 -L \<lib dir>
 
 ## 参考链接
 
