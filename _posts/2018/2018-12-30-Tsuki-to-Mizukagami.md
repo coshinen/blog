@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "横山由依 月と水鏡 歌词翻译"
+title:  "横山由依 月と水鏡 歌词"
 date:   2018-12-30 20:17:02 +0800
 author: mistydew
 comments: true

@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "中森明菜 私は風 歌词翻译"
+title:  "中森明菜 私は風 歌词"
 date:   2019-05-12 20:03:11 +0800
 author: mistydew
 comments: true

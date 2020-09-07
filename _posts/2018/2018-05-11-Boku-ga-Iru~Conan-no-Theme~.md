@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "伊織 ぼくがいる 〜コナンのテーマ〜 歌词翻译"
+title:  "伊織 ぼくがいる 〜コナンのテーマ〜 歌词"
 date:   2018-05-11 20:37:09 +0800
 author: mistydew
 comments: true
@@ -47,7 +47,7 @@ excerpt: 明日になれば、涙が乾く、心も色づいて来る。笑顔�
 </blockquote>
 
 <div class="lyric-translation">
-  <h2>有我在 ～柯南的主旋律～</h2>
+  <h2>有我在 ～柯南的主题曲～</h2>
   <p>
     如果到了明天 泪水就会流干<br>
     心中也会变得成熟<br>

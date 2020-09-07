@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "GARNET CROW Last love song 歌词翻译"
+title:  "GARNET CROW Last love song 歌词"
 date:   2019-08-11 20:01:05 +0800
 author: mistydew
 comments: true

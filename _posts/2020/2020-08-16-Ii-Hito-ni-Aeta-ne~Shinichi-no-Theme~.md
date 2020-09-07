@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "伊織 いいひとに逢えたね 〜新一のテーマ〜 歌词翻译"
+title:  "伊織 いいひとに逢えたね 〜新一のテーマ〜 歌词"
 date:   2020-08-16 20:37:10 +0800
 author: mistydew
 comments: true
@@ -46,7 +46,7 @@ excerpt: バスケットシューズが飛切りお似合い。いいひとに�
 </blockquote>
 
 <div class="lyric-translation">
-  <h2>遇见了好人啊 ～新一的主旋律～</h2>
+  <h2>遇见了好人啊 ～新一的主题曲～</h2>
   <p>
     篮球鞋适合飞奔<br>
     遇见了好人啊 感谢神明<br>

@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "GARNET CROW Crier Girl & Crier Boy 〜ice cold sky〜 歌词翻译"
+title:  "GARNET CROW Crier Girl & Crier Boy 〜ice cold sky〜 歌词"
 date:   2019-11-24 20:02:12 +0800
 author: mistydew
 comments: true

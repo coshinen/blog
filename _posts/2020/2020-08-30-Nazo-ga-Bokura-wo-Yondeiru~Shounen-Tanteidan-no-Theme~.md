@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "伊織 ナゾが僕らを呼んでいる 〜少年探偵団のテーマ〜 歌词翻译"
+title:  "伊織 ナゾが僕らを呼んでいる 〜少年探偵団のテーマ〜 歌词"
 date:   2020-08-30 20:37:10 +0800
 author: mistydew
 comments: true
@@ -58,7 +58,7 @@ excerpt: どこかで誰かが僕らを呼ぶぜ。ナゾナゾだらけの事�
 </blockquote>
 
 <div class="lyric-translation">
-  <h2>谜团在召唤我们 ～少年侦探团的主旋律～</h2>
+  <h2>谜团在召唤我们 ～少年侦探团的主题曲～</h2>
   <p>
     某处有人在呼唤我们<br>
     充满谜团的事件啊<br>

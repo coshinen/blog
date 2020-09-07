@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "GARNET CROW dreaming of love 歌词翻译"
+title:  "GARNET CROW dreaming of love 歌词"
 date:   2019-03-17 20:39:12 +0800
 author: mistydew
 comments: true

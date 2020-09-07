@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "GARNET CROW Misty Mystery 歌词翻译"
+title:  "GARNET CROW Misty Mystery 歌词"
 date:   2018-07-01 20:11:08 +0800
 author: mistydew
 comments: true

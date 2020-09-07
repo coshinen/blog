@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "grram 悲しいほど 今日の夕陽 きれいだね 歌词翻译"
+title:  "grram 悲しいほど 今日の夕陽 きれいだね 歌词"
 date:   2020-07-05 20:12:02 +0800
 author: mistydew
 comments: true

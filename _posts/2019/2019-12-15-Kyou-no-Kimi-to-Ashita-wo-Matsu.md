@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "GARNET CROW 今日の君と明日を待つ 歌词翻译"
+title:  "GARNET CROW 今日の君と明日を待つ 歌词"
 date:   2019-12-15 20:03:11 +0800
 author: mistydew
 comments: true

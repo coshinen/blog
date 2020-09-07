@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "GARNET CROW Mysterious Eyes 歌词翻译"
+title:  "GARNET CROW Mysterious Eyes 歌词"
 date:   2018-11-18 20:00:03 +0800
 author: mistydew
 comments: true

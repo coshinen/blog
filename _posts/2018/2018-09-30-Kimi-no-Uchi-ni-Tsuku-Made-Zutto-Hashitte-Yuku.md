@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "GARNET CROW 君の家に着くまでずっと走ってゆく 歌词翻译"
+title:  "GARNET CROW 君の家に着くまでずっと走ってゆく 歌词"
 date:   2018-09-30 20:39:12 +0800
 author: mistydew
 comments: true

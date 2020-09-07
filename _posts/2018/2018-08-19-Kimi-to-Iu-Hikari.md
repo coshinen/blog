@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "GARNET CROW 君という光 歌词翻译"
+title:  "GARNET CROW 君という光 歌词"
 date:   2018-08-19 20:03:09 +0800
 author: mistydew
 comments: true

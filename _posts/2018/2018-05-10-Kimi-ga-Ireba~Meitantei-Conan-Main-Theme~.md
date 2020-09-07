@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "伊織 キミがいれば 歌词翻译"
+title:  "伊織 キミがいれば 〜名探偵コナン メイン・テーマ〜 歌词"
 date:   2018-05-10 20:37:04 +0800
 author: mistydew
 comments: true
@@ -16,7 +16,7 @@ excerpt: うつむくその背中に、痛い雨がつき刺さる。祈る想�
 編曲：大野克夫
 
 <blockquote class="lyric-original">
-  <h2>キミがいれば</h2>
+  <h2>キミがいれば 〜名探偵コナン メイン・テーマ〜</h2>
   <p>
     うつむくその背中に<br>
     痛い雨がつき刺さる<br>
@@ -51,7 +51,7 @@ excerpt: うつむくその背中に、痛い雨がつき刺さる。祈る想�
 </blockquote>
 
 <div class="lyric-translation">
-  <h2>如果有你在</h2>
+  <h2>如果有你在 ～名侦探柯南 主题曲～</h2>
   <p>
     你低垂着脊背<br>
     雨点敲打着你让我心痛<br>

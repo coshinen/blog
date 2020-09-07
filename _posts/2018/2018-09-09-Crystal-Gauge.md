@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "GARNET CROW クリスタル・ゲージ 歌词翻译"
+title:  "GARNET CROW クリスタル・ゲージ 歌词"
 date:   2018-09-09 20:02:12 +0800
 author: mistydew
 comments: true

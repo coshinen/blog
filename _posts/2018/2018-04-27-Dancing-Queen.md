@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "ABBA Dancing Queen 歌词翻译"
+title:  "ABBA Dancing Queen 歌词"
 date:   2018-04-27 20:16:08 +0800
 author: mistydew
 comments: true

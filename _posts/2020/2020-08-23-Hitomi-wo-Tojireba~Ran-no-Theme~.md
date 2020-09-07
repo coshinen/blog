@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "伊織 瞳を閉じれば 〜蘭のテーマ〜 歌词翻译"
+title:  "伊織 瞳を閉じれば 〜蘭のテーマ〜 歌词"
 date:   2020-08-23 20:37:10 +0800
 author: mistydew
 comments: true
@@ -39,7 +39,7 @@ excerpt: どうしたの？（蘭姉ちゃんこそ、どうしたの？）元�
 </blockquote>
 
 <div class="lyric-translation">
-  <h2>闭上眼的话 ～兰的主旋律～</h2>
+  <h2>闭上眼的话 ～兰的主题曲～</h2>
   <p>
     怎么啦？（小兰姐姐才是，怎么啦？）<br>
     还好吗？（哈，没什么精神嘛）<br>

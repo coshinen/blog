@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "東京事変 永遠の不在証明 歌词翻译"
+title:  "東京事変 永遠の不在証明 歌词"
 date:   2020-04-26 20:20:04 +0800
 author: mistydew
 comments: true

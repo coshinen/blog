@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "GARNET CROW Fall in Life 〜Hallelujah〜 歌词翻译"
+title:  "GARNET CROW Fall in Life 〜Hallelujah〜 歌词"
 date:   2019-12-29 20:09:09 +0800
 author: mistydew
 comments: true

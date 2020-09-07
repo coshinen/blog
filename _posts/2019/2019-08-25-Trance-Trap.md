@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "GARNET CROW トランス・トラップ 歌词翻译"
+title:  "GARNET CROW トランス・トラップ 歌词"
 date:   2019-08-25 20:01:08 +0800
 author: mistydew
 comments: true

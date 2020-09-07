@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "GARNET CROW 冷たい影 歌词翻译"
+title:  "GARNET CROW 冷たい影 歌词"
 date:   2019-09-22 20:04:12 +0800
 author: mistydew
 comments: true

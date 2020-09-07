@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "ザ・ハイロウズ 胸がドキドキ 歌词翻译"
+title:  "ザ・ハイロウズ 胸がドキドキ 歌词"
 date:   2020-06-28 20:36:02 +0800
 author: mistydew
 comments: true

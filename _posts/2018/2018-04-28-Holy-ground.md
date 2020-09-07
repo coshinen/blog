@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "GARNET CROW Holy ground 歌词翻译"
+title:  "GARNET CROW Holy ground 歌词"
 date:   2018-04-28 20:02:04 +0800
 author: mistydew
 comments: true

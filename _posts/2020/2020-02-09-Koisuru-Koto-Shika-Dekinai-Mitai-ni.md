@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "GARNET CROW 恋することしか出来ないみたいに 歌词翻译"
+title:  "GARNET CROW 恋することしか出来ないみたいに 歌词"
 date:   2020-02-09 20:03:11 +0800
 author: mistydew
 comments: true

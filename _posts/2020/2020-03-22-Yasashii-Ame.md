@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "GARNET CROW やさしい雨 歌词翻译"
+title:  "GARNET CROW やさしい雨 歌词"
 date:   2020-03-22 20:04:06 +0800
 author: mistydew
 comments: true

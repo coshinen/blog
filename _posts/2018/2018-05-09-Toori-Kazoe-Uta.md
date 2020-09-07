@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "横山由依 京都の通り数え歌 歌词翻译"
+title:  "横山由依 京都の通り数え歌 歌词"
 date:   2018-05-09 20:03:04 +0800
 author: mistydew
 comments: true
@@ -59,7 +59,7 @@ excerpt: 京都には東西と南北に碁盤の目のように通りが通っ�
 </blockquote>
 
 <div class="lyric-translation">
-  <h2>数道路歌（东西篇）～柯南的主旋律～</h2>
+  <h2>数道路歌（东西篇）～柯南的主题曲～</h2>
   <p>
     丸竹 夷二 押御池<br>
     姉三(新娘) 六角 蛸锦<br>

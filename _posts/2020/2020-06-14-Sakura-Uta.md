@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "yu-yu 桜唄 歌词翻译"
+title:  "yu-yu 桜唄 歌词"
 date:   2020-06-14 20:12:04 +0800
 author: mistydew
 comments: true
