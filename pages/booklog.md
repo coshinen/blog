@@ -136,7 +136,7 @@ excerpt: Here are some books I read.
 > * 冰与火之歌，[美] [George R.R. Martin](https://www.georgerrmartin.com){:target="_blank"}
 > * 失落的世界，[英] Arthur Conan Doyle
 > * 兔子共和国，[英] Richard Adams
-> * 动物农场，[英] [George Orwell](https://www.george-orwell.com){:target="_blank"}
+> * 动物农场，[英] George Orwell
 > * 小王子，[法] [Antoine de Saint Exupéry](https://www.antoinedesaintexupery.com){:target="_blank"}
 > * 百年孤独，[哥伦比亚] Gabriel José de la Concordia García Márquez
 > * 三个火枪手，[法] dit aussi Alexandre Dumas père
@@ -154,8 +154,8 @@ excerpt: Here are some books I read.
 > * 江户川乱步作品集，[日] 江戸川乱歩
 > * 埃勒里·奎因作品合集，[美] Ellery Queen
 > * 阿加莎·克里斯蒂侦探作品集，[英] Agatha Christie
-> * 福尔摩斯探案全集，[英] [Arthur Conan Doyle](https://www.arthur-conan-doyle.com){:target="_blank"}
-> * 爱伦·坡短篇小说集，[美] [Edgar Allan Poe](https://poestories.com){:target="_blank"}
+> * 福尔摩斯探案全集，[英] Arthur Conan Doyle
+> * 爱伦·坡短篇小说集，[美] Edgar Allan Poe
 
 ## 科学
 
