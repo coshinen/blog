@@ -11,15 +11,15 @@ tags: Bitcoin Altcoin
 
 ## 0. 源码准备
 
-这里使用比特币 [v0.12.1](https://github.com/bitcoin/bitcoin/tree/v0.12.1) 的源码，这是官方内置 CPU 挖矿的最后一版。
+这里使用比特币 v0.12.1 的源码，这是官方内置 CPU 挖矿的最后一版。
 
 ```shell
 $ git clone https://github.com/bitcoin/bitcoin.git
 $ cd bitcoin
-$ git checkout v0.12.1
+$ git checkout v0.12.1 # 切换到 v0.12.1
 ```
 
-首次构建源码，参考[编译比特币源码](/blog/2018/05/compile-bitcoin.html)篇。
+首次构建源码，参考[编译比特币源码](/blog/2018/05/compile-bitcoin.html)。
 
 ## 1. 修改币名
 
@@ -56,9 +56,7 @@ $ find . -type f -print0 | xargs -0 sed -i 's/BTC/ATC/g'
 $ grep -inr bitc
 ```
 
-从结果中可以看到部分拼写错误，如：“src/qt/locale/altcoin_et.ts”文件的 Bitconi、
-“src/qt/locale/altcoin_ar.ts”文件中的 Bitcion 和“src/qt/locale/altcoin_da.ts”文件中的 bitcon，
-修改这些误拼，或者选择忽略。
+从结果中可以看到部分拼写错误，如：文件 `src/qt/locale/altcoin_et.ts` 中的 Bitconi、文件 `src/qt/locale/altcoin_ar.ts` 中的 Bitcion 和文件 `src/qt/locale/altcoin_da.ts` 中的 bitcon。
 
 使用以下命令修改这些误拼：
 
@@ -89,7 +87,7 @@ $ find . -type f -print0 | xargs -0 sed -i 's/\ The\ Altcoin\ Core\ developers/\
 $ find src -type f -print0 | xargs -0 sed -i '/\ The\ Bitcoin\ Core\ developers/a\\/\/\ Copyright\ (c)\ 2018\ The\ Altcoin\ Core\ developers'
 ```
 
-最后单独修改版权文件 COPYING：
+最后单独修改版权文件 `COPYING`：
 
 > Copyright (c) 2009-2016 The Bitcoin Core developers<br>
 > +Copyright (c) 2018 The Altcoin Core developers
@@ -107,8 +105,7 @@ $ sed -i 's/Altcoin/Bitcoin/g' doc/release-notes/*
 
 ### 1.7. 修改图标和图像
 
-比特币的图标和图像保存在“src/qt/res”目录下，你可以使用 GIMP 进行编辑，
-至少要修改 altcoin.ico、altcoin.png、altcoin_testnet.ico、altcoin_testnet.png 和 altcoin.icns。
+比特币的图标和图像保存在目录 `src/qt/res` 下，需要修改 altcoin.ico、altcoin.png、altcoin_testnet.ico、altcoin_testnet.png 和 altcoin.icns。
 
 ### 1.8. 重新构建源码
 
@@ -116,10 +113,10 @@ $ sed -i 's/Altcoin/Bitcoin/g' doc/release-notes/*
 
 ## 2. 修改默认端口
 
-这一步修改的是节点间通讯的端口以及服务器端与客户端之间通讯的 RCP 端口。
+这一步修改的是节点间通讯的端口以及服务器端与客户端之间通讯的 RPC 端口。
 从这里开始进入核心内容的修改。
 
-**注：比特币源码的目录为 bitcoin/src，之后文件的位置若无特殊说明，则均以 src 为根目录。**
+**比特币源码的目录为 `bitcoin/src`，之后文件的位置若无特殊说明，则均以 `src` 为根目录。**
 
 ### 2.1. 修改节点间通讯的默认端口
 
@@ -129,7 +126,7 @@ $ sed -i 's/Altcoin/Bitcoin/g' doc/release-notes/*
 > * CTestNetParams（测试网，公有）
 > * CRegTestParams（回归测试网，私有）
 
-它们均定义在文件 “chainparams.cpp” 中，下面以**主网（Main network）**为例进行修改：
+它们均定义在文件 `chainparams.cpp` 中，下面以主网（Main network）为例进行修改：
 
 ```cpp
 /**
@@ -157,7 +154,7 @@ public:
 
 ### 2.2. 修改服务器端（d）与客户端（cli）通讯的 RCP 默认端口
 
-RPC 默认端口硬编在“chainparamsbase.cpp”文件中。修改如下：
+RPC 默认端口硬编在文件 `chainparamsbase.cpp` 中。修改如下：
 
 ```cpp
 /**
@@ -174,7 +171,7 @@ public:
 };
 ```
 
-**注：nRPCPort 和 nDefaultPort 不能相同，否则会导致在节点启动时其中一个默认端口被占用而绑定失败。**
+**注：`nRPCPort` 和 `nDefaultPort` 不能相同，否则会导致在节点启动时其中一个默认端口被占用而绑定失败。**
 
 ## 3. 修改 DNS 种子
 
@@ -268,7 +265,7 @@ public:
 };
 ```
 
-PUBKEY_ADDRESS 是 P2PKH 类型的地址，其前缀对应的 10 进制根据 [List of address prefixes](https://en.bitcoin.it/wiki/List_of_address_prefixes) 进行修改。
+`PUBKEY_ADDRESS` 是 P2PKH 类型的地址，其前缀对应的 10 进制可以参照 [List of address prefixes](https://en.bitcoin.it/wiki/List_of_address_prefixes){:target="_blank"}。
 
 例：把比特币的公钥地址前缀 1 改为大写字母 C，通过查表得到 C 对应的 10 进制为 28，修改如下：
 
@@ -277,7 +274,7 @@ PUBKEY_ADDRESS 是 P2PKH 类型的地址，其前缀对应的 10 进制根据 [L
 +       base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,28);
 ```
 
-**注：公钥地址和脚本地址以及私钥均采用 base58 编码后显示，方便人类使用，详见[Base58 编码](/blog/2018/05/base58-encoding.html)。**
+**公钥地址和脚本地址以及私钥均采用 base58 编码后显示，方便人类使用。**
 
 这里的前缀只有一个字符，若想获取超过 1 个字符长度的前缀，可以参考[比特币“靓号”地址](/blog/2018/05/bitcoin-vanity-address.html)。
 
@@ -286,7 +283,7 @@ PUBKEY_ADDRESS 是 P2PKH 类型的地址，其前缀对应的 10 进制根据 [L
 创世区块的内容包含 2 部分：基本信息和相关信息。基本信息直接保存在区块内，而相关信息则保存在在区块外。
 相关信息通过某种方式转换为基本信息，即可以通过区块内的基本信息索引找到相关信息。
 
-创世区块信息硬编在“chainparams.cpp”文件中，具体如下：
+创世区块信息硬编在文件 `chainparams.cpp` 中，具体如下：
 
 ```cpp
 ...
@@ -345,29 +342,28 @@ public:
 };
 ```
 
-关于区块的内部构造，详见[比特币区块构造](/blog/2018/04/bitcoin-block.html)篇。
+关于区块的内部构造，详见[比特币区块构造](/blog/2018/04/bitcoin-block.html)。
 
 ### 6.1. 修改创世区块相关信息
 
 相关信息有：文字版时间戳。
 
 文字版时间戳使用大多数人都知道的可以成为历史的（可追溯的）事件表示。
-例：中本聪在比特币创世区块中留下的是泰晤士报的头条 "The Times 03/Jan/2009 Chancellor on brink of second bailout for banks"。
+例：中本聪在比特币创世区块中留下的是泰晤士报的头条 `"The Times 03/Jan/2009 Chancellor on brink of second bailout for banks"`。
 
 ### 6.2. 修改创世区块基本信息
 
 基本信息有：创建时间（时间戳），随机数（挖到块时），难度对应值（影响挖矿速度），版本（一般不变），奖励（包含在创币交易的输出中，影响货币的发行量）。
 
 步骤如下：
-
-> 1. 使用如下命令获取当前的 UNIX 时间戳：
-> ```shell
-> $ date +%s
-> ```
-> 2. 随机数置为 0，为挖创世区块做准备，挖到块后重置此值。
-> 3. 难度可以设为回归测试网难度 0x207fffff（很低，可秒出块），同时修改共识中的工作量证明限制。
-> 4. 版本一般不变。
-> 5. 奖励根据货币发行量配合奖励减半时间间隔来更改。
+1. 使用如下命令获取当前的 UNIX 时间戳：
+```shell
+$ date +%s
+```
+2. 随机数置为 0，为挖创世区块做准备，挖到块后重置此值。
+3. 难度可以设为回归测试网难度 0x207fffff（很低，可秒出块），同时修改共识中的工作量证明限制。
+4. 版本一般不变。
+5. 奖励根据货币发行量配合奖励减半时间间隔来更改。
 
 例：修改了时间戳、随机数（非最终值）、难度对应值及共识中工作量证明限制，版本和奖励未改变。
 
@@ -379,12 +375,13 @@ public:
 +       genesis = CreateGenesisBlock(1526197820, 0, 0x207fffff, 1, 50 * COIN);
 ```
 
-接下来开始挖创世区块，其主要信息有随机数（nNonce）、区块哈希和默尔克树根哈希。
+接下来开始挖创世区块，其主要信息有随机数 `nNonce`、区块哈希和默尔克树根哈希。
 
-首先在“miner.cpp”文件中增加以下代码，用于寻找创世区块。
+首先在文件 `miner.cpp` 中增加以下代码，用于寻找创世区块。
 
 ```cpp
-+void getGenesisBlock(CBlock *pblock) // 获取创世区块的基本信息（nNonce, hash, merkleroot）
++// 获取创世区块的基本信息（nNonce、hash、merkleroot）
++void getGenesisBlock(CBlock *pblock)
 +{
 +   arith_uint256 hashTarget = arith_uint256().SetCompact(pblock->nBits);
 +   printf("hashTarget: %s\n", hashTarget.ToString().c_str());
@@ -414,14 +411,14 @@ public:
 +}
 ```
 
-同时在“miner.h”头文件中增加该函数的声明。
+同时在头文件 `miner.h` 中增加该函数的声明。
 
 ```cpp
 +/** Search the genesis block */
 +void getGenesisBlock(CBlock *pblock);
 ```
 
-然后在“chainparams.cpp”文件中包含该头文件，并在适当的位置调用即可获取创世区块剩余的基本信息。
+然后在文件 `chainparams.cpp` 中包含该头文件，并在适当的位置调用即可获取创世区块剩余的基本信息。
 
 ```cpp
 #include "chainparamsseeds.h"
@@ -436,9 +433,8 @@ public:
         consensus.hashGenesisBlock = genesis.GetHash();
 ```
 
-做完以上工作，只需重新 make，再次生成 altcoind 程序后，make 会失败，此时只需执行 altcoind 程序，喝杯咖啡静静等待创世区块的成功挖掘。
-由于设置的难度很低，所以基本上是秒出块，记录下区块信息：随机数（nNonce）、区块哈希（hashGenesisBlock）和默尔克树根哈希（hashMerkleRoot），
-替换以下对应位置即可。
+做完以上工作，只需重新 make，再次生成 altcoind 程序后，make 会失败，此时只需执行 altcoind 程序，等待创世区块的成功挖掘。
+由于设置的难度很低，所以基本上是秒出块，记录下区块信息：随机数 `nNonce`、区块哈希 `hashGenesisBlock` 和默尔克树根哈希 `hashMerkleRoot`，替换以下对应位置即可。
 
 ```cpp
 -       genesis = CreateGenesisBlock(1526197820, 0, 0x207fffff, 1, 50 * COIN);
@@ -502,16 +498,16 @@ public:
 3. 交易数为 0。
 4. 估计交易数为 500（这个值随意填）。
 
-**注：检测点的信息可随区块链的延伸不断更新。**
+**检测点的信息可随区块链的延伸不断更新。**
 
 ## 8. 修改最小链工作量（v0.13.2rc1）
 
-在 v0.13.2rc1 版本中，增加 consensus.nMinimumChainWork 参数，用于替代初始化区块下载检查中的检测点。
+在 v0.13.2rc1 版本中，增加 `consensus.nMinimumChainWork` 参数，用于替代初始化区块下载检查中的检测点。
 引入了一个链参数“最小链工作量”，该参数用于表示软件发布时区块链的工作量。如果没有达到该工作量，说明你还没有赶上。
 用于代替检测点的区块计数测试。
 因为没有主观性，信任，或位置依赖等因素，所以该标准很容易保持更新。它也是同步状态的可靠度量，而非区块计数。
 
-详见 [IBD check uses minimumchain work instead of checkpoints. · bitcoin/bitcoin@ad20cdd](https://github.com/bitcoin/bitcoin/commit/ad20cddce2097c6561202777fccd257deb1a9810)。
+详见 [IBD check uses minimumchain work instead of checkpoints. · bitcoin/bitcoin@ad20cdd](https://github.com/bitcoin/bitcoin/commit/ad20cddce2097c6561202777fccd257deb1a9810){:target="_blank"}。
 
 **注：rc1 即正式发行候选版（Release Candidate）的第一版。测试版一般有 3 种，分别为：alpha、beta、gamma。
 alpha 表示内测版即 CB（Close Beta），beta 表示公测版即 OB（Open Beta），gamma 表示正式发布候选版即 RC（Release Candidate）。**
@@ -537,6 +533,7 @@ public:
 
 ## 参考链接
 
+* [bitcoin/bitcoin: Bitcoin Core integration/staging tree](https://github.com/bitcoin/bitcoin){:target="_blank"}
 * [How to make an altcoin \| Bear's Den](http://dillingers.com/blog/2015/04/18/how-to-make-an-altcoin/){:target="_blank"}
 * [如何仿照比特币创造自己的山寨币 \| Sunny's Blog](http://shusunny.github.io/2016/04/How-to-make-altcoin-1){:target="_blank"}
 * [bitcoin/chainparams.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/chainparams.cpp){:target="_blank"}

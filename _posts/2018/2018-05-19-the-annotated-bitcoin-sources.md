@@ -7,49 +7,24 @@ comments: true
 category: 区块链
 tags: Bitcoin bitcoind
 ---
-以比特币 v0.12.1（目前最新为 v0.16.0）为例进行解读，这是官方内置挖矿功能的最后一个版本。
+本文以比特币 v0.12.1（目前最新为 v0.16.0）为例进行解读，这是内置挖矿功能的最后一个版本。
 
-## 1. 准备
-
-### 1.1. 获取源码
+## 1. 获取源码
 
 ```shell
 $ git clone https://github.com/bitcoin/bitcoin.git
-```
-
-### 1.2. 进入根目录
-
-```shell
-$ cd bitcoin
-```
-
-### 1.3. 切换到 v0.12.1
-
-```shell
-$ git checkout v0.12.1
-```
-
-### 1.4. 进入源码目录
-
-```shell
-$ cd src
+$ cd bitcoin # 进入根目录
+$ git checkout v0.12.1 # 切换到 v0.12.1
+$ cd src # 进入源码目录
 ```
 
 ## 2. 源码剖析
 
-### 2.1. 找出程序入口
-
-```shell
-$ grep main * -nr
-```
-
-由比特币核心程序 bitcoind 可以推测出其入口函数定义在文件 bitcoind.cpp 中。
-
-### 2.2. 开始阅读
+使用 `grep` 查看入口函数 `main` 的所在位置。
+比特币核心程序 `bitcoind` 的入口函数定义在源文件 `bitcoind.cpp` 中。
 
 ```cpp
-...
-int main(int argc, char* argv[]) // 0. 程序入口
+int main(int argc, char* argv[])
 {
     SetupEnvironment(); // 1. 设置程序运行环境：本地化处理
 
@@ -61,7 +36,6 @@ int main(int argc, char* argv[]) // 0. 程序入口
 ```
 
 > 比特币 v0.12.1 核心服务程序启动流程：
-> ![bitcoind-startup](https://www.plantuml.com/plantuml/svg/ZLHDJzn03Btlhx3sK6NHHYhqEmS4uWCXqQhgLke1eSeaJjPYuebc713zzVLaTo7XK7g9alUU_JnsF4THCMZVkbcsju0yFxnU9O2bWIxuacAyWNcBB1cB0eQcN4Avnh2Ntk-lRnRpMHwuMMj-2FCLQT-ToJq7Bos9PebDXFYUVvTUXCfdyBZhBeKr6v8EwIR9lcE8P0ziIId45xAaM9Fh0AM2U-FP2x3KVijTa9wYuYc7h4ONQHVpWx0wyL9pSywEiXQxuz349TZBrzuffw-TTaNEwXrAYDd96bc-OKldmRSdlctD-8g5iiLENcx0t1cQwknJ2o945DP7QngLTrjbXTHwuJ-ex6MBnTGxY1JiC5ieTUVADmrBaor6s5DJBiKUMAOiBxjwaEaw45ONmVVT4gBPLxsZC9sNKWVx1GpUHZnX1mLqEnFWPvSu5hqRYNBr-Q0JT7dji9aetnU0NUUuHDsCYPNHRSzVGCK1d2_lbh1h32sXuwfcHuRHRTyOtumpVYZIqBb-X0TqZjGY5Mynqb1j4wpZO_d70eJqmOUx5-PZqQV2NB22srHB-ibvGd_Uq5l3CVEb6EpJEQXK7nwXnLI6e9Gq5kw_BO3RpWVTcCG9cGQXQ9puQXfcuwXPEDeC_tlAN5kqRmb-KjGvw9fa1iE2Q-Z9bleNifxxi5htMla7oTwCKbaym63qH1j4BfBXbYAjLCen_82XxpHxFLWghl-n-CQyUj6OyvbKaxl9RgtPaUNkM_SN)
 > 1. [SetupEnvironment()](/blog/2018/05/the-annotated-bitcoin-sources-01.html#SetupEnvironment-ref)<br>设置程序运行环境：本地化处理
 > 2. [noui_connect()](/blog/2018/05/the-annotated-bitcoin-sources-01.html#noui_connect-ref)<br>无 UI 连接：连接信号处理函数
 > 3. [AppInit(argc, argv)](/blog/2018/06/the-annotated-bitcoin-sources-02.html#AppInit-ref)<br>应用程序初始化：初始化并启动
@@ -90,6 +64,8 @@ int main(int argc, char* argv[]) // 0. 程序入口
 > > > 12. [Step 12: finished]()<br>步骤 12：完成
 > > 12. [WaitForShutdown(&threadGroup)]()<br>等待关闭：根据启动标志做出相应处理
 > > 13. [Shutdown()]()<br>关闭
+> 
+> ![bitcoind-startup](https://www.plantuml.com/plantuml/svg/ZLHDJzn03Btlhx3sK6NHHYhqEmS4uWCXqQhgLke1eSeaJjPYuebc713zzVLaTo7XK7g9alUU_JnsF4THCMZVkbcsju0yFxnU9O2bWIxuacAyWNcBB1cB0eQcN4Avnh2Ntk-lRnRpMHwuMMj-2FCLQT-ToJq7Bos9PebDXFYUVvTUXCfdyBZhBeKr6v8EwIR9lcE8P0ziIId45xAaM9Fh0AM2U-FP2x3KVijTa9wYuYc7h4ONQHVpWx0wyL9pSywEiXQxuz349TZBrzuffw-TTaNEwXrAYDd96bc-OKldmRSdlctD-8g5iiLENcx0t1cQwknJ2o945DP7QngLTrjbXTHwuJ-ex6MBnTGxY1JiC5ieTUVADmrBaor6s5DJBiKUMAOiBxjwaEaw45ONmVVT4gBPLxsZC9sNKWVx1GpUHZnX1mLqEnFWPvSu5hqRYNBr-Q0JT7dji9aetnU0NUUuHDsCYPNHRSzVGCK1d2_lbh1h32sXuwfcHuRHRTyOtumpVYZIqBb-X0TqZjGY5Mynqb1j4wpZO_d70eJqmOUx5-PZqQV2NB22srHB-ibvGd_Uq5l3CVEb6EpJEQXK7nwXnLI6e9Gq5kw_BO3RpWVTcCG9cGQXQ9puQXfcuwXPEDeC_tlAN5kqRmb-KjGvw9fa1iE2Q-Z9bleNifxxi5htMla7oTwCKbaym63qH1j4BfBXbYAjLCen_82XxpHxFLWghl-n-CQyUj6OyvbKaxl9RgtPaUNkM_SN)
 
 ## 参考链接
 
