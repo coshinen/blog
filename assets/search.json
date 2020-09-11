@@ -1,5 +1,5 @@
 ---
-layout: null
+layout: none
 permalink: /blog/search.json
 ---
 [{% for post in site.posts %}
