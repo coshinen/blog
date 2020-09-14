@@ -80,8 +80,10 @@ $ find . -type f -print0 | xargs -0 sed -i 's/\ The\ Altcoin\ Core\ developers/\
 
 **注：src 目录下源码文件的版权信息（年份）并不统一。**
 
-> // Copyright (c) 2009-2015 The Bitcoin Core developers<br>
-> +// Copyright (c) 2018 The Altcoin Core developers
+```diff
+// Copyright (c) 2009-2015 The Bitcoin Core developers
++// Copyright (c) 2018 The Altcoin Core developers
+```
 
 ```shell
 $ find src -type f -print0 | xargs -0 sed -i '/\ The\ Bitcoin\ Core\ developers/a\\/\/\ Copyright\ (c)\ 2018\ The\ Altcoin\ Core\ developers'
@@ -89,8 +91,10 @@ $ find src -type f -print0 | xargs -0 sed -i '/\ The\ Bitcoin\ Core\ developers/
 
 最后单独修改版权文件 `COPYING`：
 
-> Copyright (c) 2009-2016 The Bitcoin Core developers<br>
-> +Copyright (c) 2018 The Altcoin Core developers
+```diff
+Copyright (c) 2009-2016 The Bitcoin Core developers
++Copyright (c) 2018 The Altcoin Core developers
+```
 
 ```shell
 $ sed -i '/Copyright\ (c)\ 2009-2016\ The\ Bitcoin\ Core\ developers/a\Copyright\ (c)\ 2018\ The\ Altcoin\ Core\ developers' COPYING
@@ -122,9 +126,9 @@ $ sed -i 's/Altcoin/Bitcoin/g' doc/release-notes/*
 
 节点间通讯的默认端口硬编在 3 个网络类的默认无参构造函数中。
 
-> * CMainParams（主网，公有）
-> * CTestNetParams（测试网，公有）
-> * CRegTestParams（回归测试网，私有）
+* CMainParams（主网，公有）
+* CTestNetParams（测试网，公有）
+* CRegTestParams（回归测试网，私有）
 
 它们均定义在文件 `chainparams.cpp` 中，下面以主网（Main network）为例进行修改：
 
