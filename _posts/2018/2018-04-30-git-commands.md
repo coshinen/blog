@@ -9,7 +9,6 @@ tags: Git(Hub) CLI
 excerpt: Git 是一个免费且开源的分布式版本控制系统。
 ---
 ![git-logo](https://git-scm.com/images/logo@2x.png)
-![branching-illustration](https://git-scm.com/images/branching-illustration@2x.png)
 
 ## 配置工具
 
@@ -32,23 +31,6 @@ $ git config --global user.email "[email address]"
 [user]
     name = [name]
     email = [email address]
-```
-
-## 创建仓库
-
-当开始使用一个新的仓库时，只需要执行一次；
-或者通过克隆一个现有的仓库。
-
-```shell
-$ git init [project-name]
-  把一个现存的目录转化为 git 管理的仓库
-```
-
-该命令执行后，目录 `[project-name]` 下会生成一个名为 `.git` 的数据目录。
-
-```shell
-$ git clone https://github.com/[user/organization]/[repository].git
-  克隆（下载）一个 GitHub 上已存在的用户或组织的仓库，包含所有的文件、分支和提交
 ```
 
 ## 分支
@@ -80,6 +62,63 @@ $ git checkout [branch-name]
 ```shell
 $ git merge [branch]
   合并指定的分支历史到当前分支（通常用于拉请求，但是一个重要的 Git 操作）
+```
+
+## 创建仓库
+
+当开始使用一个新的仓库时，只需要执行一次；
+或者通过克隆一个现有的仓库。
+
+```shell
+$ git init [project-name]
+  把一个现存的目录转化为 git 管理的仓库
+```
+
+在使用 `git init` 命令后，目录 `[project-name]` 下会生成一个名为 `.git` 的数据目录，使用下面的命令连接本地仓库到一个空的 GitHub 仓库：
+
+```shell
+$ git remote add origin [url]
+  添加一个新的远程仓库并指定一个简称 origin
+```
+
+```shell
+$ git clone https://github.com/[user/organization]/[repository].git
+  克隆（下载）一个 GitHub 上已存在的用户或组织的仓库，包含所有的文件、分支和提交
+```
+
+## .gitignore 文件
+
+有时使用 Git 把文件排除在追踪外可能是个好主意。
+这通常在一个名为 `.gitignore` 的特殊文件中完成。
+可以在 [github.com/github/gitignore](https://github.com/github/gitignore){:target="_blank"} 找到 `.gitignore` 文件有用的模版。
+
+## 同步更改
+
+同步本地仓库与 GitHub.com 上的远程仓库。
+
+```shell
+$ git push
+  上传所有本地分支提交到 GitHub
+```
+
+```shell
+$ git push <remote> <branch>
+  首次把本地分支推送到远程仓库（克隆会自动设置好）
+```
+
+```shell
+$ git fetch
+  从远程跟踪分支下载所有历史
+```
+
+```shell
+$ git merge
+  合并远程跟踪分支到当前本地分支
+```
+
+```shell
+$ git pull
+  使用来自 GitHub 上相应远程分支的所有最新提交更新当前的本地工作分支（是 fetch 和 merge 的组合）
 ```
 
 ## 进行更改
@@ -136,40 +175,6 @@ $ git reflog
   列出 git 命令的历史记录
 ```
 
-## 同步更改
-
-同步本地仓库与 GitHub.com 上的远程仓库。
-
-```shell
-$ git remote add <shortname> <url>
-  添加一个新的远程仓库并指定一个简称
-```
-
-```shell
-$ git push
-  上传所有本地分支提交到 GitHub
-```
-
-```shell
-$ git push <remote> <branch>
-  首次把本地分支推送到远程仓库（克隆会自动设置好）
-```
-
-```shell
-$ git fetch
-  从远程跟踪分支下载所有历史
-```
-
-```shell
-$ git merge
-  合并远程跟踪分支到当前本地分支
-```
-
-```shell
-$ git pull
-  使用来自 GitHub 上相应远程分支的所有最新提交更新当前的本地工作分支（是 fetch 和 merge 的组合）
-```
-
 ## 撤销提交
 
 擦除错误并手动替换历史。
@@ -219,6 +224,5 @@ $ git reset --hard [commit]
 
 ## 参考链接
 
-* [Pro Git 2nd Edition](https://git-scm.com/book/en/v2){:target="_blank"}
-* [GitHub Cheat Sheet](https://github.github.com/training-kit/downloads/github-git-cheat-sheet.pdf){:target="_blank"}
+* [Git - Reference](https://git-scm.com/docs){:target="_blank"}
 * [git - the simple guide - no deep shit!](http://rogerdudler.github.io/git-guide){:target="_blank"}

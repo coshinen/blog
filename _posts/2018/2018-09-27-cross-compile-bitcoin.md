@@ -22,15 +22,11 @@ HEAD detached at v0.12.1
 nothing to commit, working directory clean
 ```
 
-## 2. 修改 v0.12.1 源码 Qt 包源路径
+## 2. 修改 Qt 包源路径
 
-```shell
-$ vim depends/packages/qt.mk # Line 3: 把 official_releases 改为 archive，其他不变
-```
+把文件 `depends/packages/qt.mk` 中第 3 行的 `official_releases` 改为 `archive`。
 
-第 3 行内容变化如下：
-
-```
+```diff
 -$(package)_download_path=http://download.qt.io/official_releases/qt/5.5/$($(package)_version)/submodules
 +$(package)_download_path=http://download.qt.io/archive/qt/5.5/$($(package)_version)/submodules
 ```
@@ -43,17 +39,15 @@ $ sudo apt upgrade
 $ sudo apt install build-essential libtool autotools-dev automake pkg-config bsdmainutils curl git
 ```
 
-主机工具链（build-essential）是必需的，因为某些依赖包（例如：protobuf）需要构建用于构建过程中的主机实用程序。
+主机工具链 `build-essential` 是必需的，因为某些依赖包（例如：protobuf）需要构建用于构建过程中的主机实用程序。
 
-## 4. 构建 Windows 64 位版
-
-### 4.1. 安装 mingw-w64 交叉编译工具链
+## 4. 安装 mingw-w64 交叉编译工具链
 
 ```shell
 $ sudo apt install g++-mingw-w64-x86-64
 ```
 
-对于 Ubuntu 18.04，设置默认的 mingw32 g++ 编译器选项为 posix，对应的序号为 1。
+设置 `mingw32 g++` 编译器的选项为 `posix`，对应序号为 1。
 
 ```shell
 $ sudo update-alternatives --config x86_64-w64-mingw32-g++ # Set the default mingw32 g++ compiler option to posix.
@@ -65,25 +59,12 @@ There are 2 choices for the alternative x86_64-w64-mingw32-g++ (providing /usr/b
   1            /usr/bin/x86_64-w64-mingw32-g++-posix   30        manual mode
   2            /usr/bin/x86_64-w64-mingw32-g++-win32   60        manual mode
 
-Press <enter> to keep the current choice[*], or type selection number: 1 # 输入 1 后按回车完成设置
+Press <enter> to keep the current choice[*], or type selection number: 1
 ```
 
-再次使用该命令，查看是否设置成功。
+再次使用该命令，确认是否设置成功。
 
-```shell
-$ sudo update-alternatives --config x86_64-w64-mingw32-g++ # Set the default mingw32 g++ compiler option to posix.
-There are 2 choices for the alternative x86_64-w64-mingw32-g++ (providing /usr/bin/x86_64-w64-mingw32-g++).
-
-  Selection    Path                                   Priority   Status
-------------------------------------------------------------
-  0            /usr/bin/x86_64-w64-mingw32-g++-win32   60        auto mode
-* 1            /usr/bin/x86_64-w64-mingw32-g++-posix   30        manual mode
-  2            /usr/bin/x86_64-w64-mingw32-g++-win32   60        manual mode
-
-Press <enter> to keep the current choice[*], or type selection number: # 直接按回车即可
-```
-
-### 4.2. 构建
+## 5. 构建 Windows 64 位版
 
 ```shell
 $ cd depends
