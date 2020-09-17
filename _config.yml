@@ -22,7 +22,7 @@ squote: 流されていくのは簡単だけれど、変わらないっていう
 bquote: 無理は一番の退屈しのぎだ。
 email: mistydew@qq.com
 
-# Pages baseurl
+# Pages url
 about:    "/about.html"
 booklog:  "/booklog.html"
 quotes:   "/quotes.html"
@@ -41,7 +41,7 @@ sass:
     sass_dir: _sass
 
 # Handling Reading
-exclude     : [LICENSE, README.md]
+exclude     : ["LICENSE", "README.md"]
 encoding    : "utf-8"
 markdown_ext: "markdown,mkdown,mkdn,mkd,md" # no spaces between exts
 
