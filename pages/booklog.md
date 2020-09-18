@@ -106,6 +106,7 @@ excerpt: Here are some books I read.
 > 
 > * 敢问路在何方 我们的西游记，[中] 杨洁 王崇秋
 > * 敢问路在何方 我的30年西游路，[中] 杨洁
+> * 血殇 埃博拉的过去、现在和未来，[美] Richard Preston
 > * 血疫 埃博拉的故事，[美] Richard Preston
 > * 最后的熊猫，[美] George B. Schaller
 > * 黑箱 日本之耻，[日] 伊藤詩織
