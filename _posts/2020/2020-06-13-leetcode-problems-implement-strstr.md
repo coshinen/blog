@@ -57,7 +57,8 @@ public:
 ```
 
 复杂度分析：
-* 时间复杂度：*O*((n - len) * len)，n 为字符串 haystack 的长度，len 为字符串 needle 的长度。比较字符串的复杂度为 len，共需要比较 (n - len + 1) 次。
+* 时间复杂度：*O*((n - len) * len)。
+  n 为字符串 haystack 的长度，len 为字符串 needle 的长度，比较字符串的复杂度为 len，共需要比较 (n - len + 1) 次。
 * 空间复杂度：*O*(1)。
 
 ### 方法二：双指针—线性时间复杂度
