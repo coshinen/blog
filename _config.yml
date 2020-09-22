@@ -1,4 +1,4 @@
-# Welcome to Jekyll 3.0.1!
+# Welcome to Jekyll v3.0.1!
 #
 # This config file is meant for settings that affect your whole blog, values
 # which you are expected to set up once and rarely need to edit after that.
@@ -18,11 +18,11 @@ description: >- # this means to ignore newlines until "baseurl:"
   Copyright &copy; 2020 mistydew.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://mistydew.github.io" # the base hostname & protocol for your site
-squote: 流されていくのは簡単だけれど、変わらないっていうのは一番難しい。
-bquote: 無理は一番の退屈しのぎだ。
+squote: 人生は退屈すれば長く、充実すれば短い。
+bquote: 無理は一番の”退屈しのぎ”だ。
 email: mistydew@qq.com
 
-# Pages url
+# Page urls
 about:    "/about.html"
 booklog:  "/booklog.html"
 quotes:   "/quotes.html"
