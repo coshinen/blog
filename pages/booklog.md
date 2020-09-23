@@ -6,13 +6,6 @@ excerpt: Here are some books I read.
 ---
 > ## 索引
 > 
-> * [技术](#技术)
->   * [算法](#算法)
->   * [区块链](#区块链)
->   * [编程语言](#编程语言)
->   * [网络编程](#网络编程)
->   * [操作系统](#操作系统)
->   * [程序人生](#程序人生)
 > * [文学](#文学)
 >   * [文集](#文集)
 >   * [纪实](#纪实)
@@ -24,69 +17,14 @@ excerpt: Here are some books I read.
 >   * [心理学](#心理学)
 >   * [伦理学](#伦理学)
 >   * [方法论](#方法论)
-> * [其他](#其他)
->   * [漫画](#漫画)
-
-## 技术
-
-> ### 算法
-> 
-> * 漫画算法 小灰的算法之旅，[中] 魏梦舒
-> * 编程之美 —微软技术面试心得，[中] 《编程之美》小组
-> * 剑指 Offer 名企面试官精讲典型编程题，[中] 何海涛
-> * 啊哈！算法，[中] 啊哈磊
-> * 图解密码技术（第3版），[日] [結城浩](https://www.hyuki.com){:target="_blank"}
-> * C++ 数据结构与算法（第4版），[美] Adam Drozdek
-> * 数据结构（C++ 语言版 第3版），[中] [邓俊辉](https://dsa.cs.tsinghua.edu.cn/~deng/index.htm){:target="_blank"}
-> * 大话数据结构，[中] 程杰
-
-> ### 区块链
-> 
-> * [精通以太坊](https://github.com/ethereumbook/ethereumbook){:target="_blank"}，[希-英] Andreas M. Antonopoulos [英] Gavin Wood
-> * 区块链启示录 中本聪文集，[美] Phil Champagne
-> * 区块链开发指南，[中] 申屠青春
-> * [区块链技术指南](https://yeasy.gitbook.io/blockchain_guide/){:target="_blank"}，[中] [杨保华](https://yeasy.github.io){:target="_blank"} 陈昌
-> * [精通比特币 第2版](https://bitcoinbook.info){:target="_blank"}，[希-英] Andreas M. Antonopoulos
-> * [Bitcoin: A Peer-to-Peer Electronic Cash System](/blog/2018/04/Bitcoin-A-Peer-to-Peer-Electronic-Cash-System.html)，[?] Satoshi Nakamoto
-
-> ### 编程语言
-> 
-> * Linux/UNIX 系统编程手册（上、下册），[德] [Michael Kerrisk](https://man7.org){:target="_blank"}
-> * STL 源码剖析，[中] 侯捷
-> * C++ 标准程序库，[德] Nicolai M.Josuttis
-> * C++ 沉思录，[美] Andrew Koenig, Barbara Moo
-> * C++ 编程规范 101条规则、准则与最佳实践，[加] Herb Sutter [罗] Andrei Alexandrescu
-> * C++ Primer 中文版（第5版），[美] Stanley B. Lippman, Josée Lajoie, Barbara E. Moo
-> * C 专家编程，[美] Peter van der Linden
-> * C 陷阱与缺陷，[美] Andrew Koening
-> * C 和指针，[美] Kenneth A. Reek
-> * C 程序设计语言（第2版），[加] [Brian W. Kernighan](https://www.cs.princeton.edu/~bwk){:target="_blank"} [美] [Dennis M. Ritchie](https://www.bell-labs.com/usr/dmr/www){:target="_blank"}
-
-> ### 网络编程
-> 
-> * 图解 HTTP，[日] 上野宣
-> * 图解 TCP/IP（第5版），[日] 竹下隆史 村山公保 荒井透 苅田幸雄
-> * TCP/IP 详解 卷1：协议，[美] [W. Richard Stevens](http://www.kohala.com/start){:target="_blank"}
-
-> ### 操作系统
-> 
-> * [Linux: a Portable Operating System](https://www.cs.helsinki.fi/u/kutvonen/index_files/linus.pdf){:target="_blank"}，[芬] [Linus Torvalds](https://github.com/torvalds){:target="_blank"}
-
-> ### 程序人生
-> 
-> * Vim 实用技巧，[英] Drew Neil
-> * 大话设计模式，[中] 程杰
-> * 程序员健康指南，[美] Joe Kutner
-> * GitHub 入门与实践，[日] 大塚弘记
-> * [Pro Git 2nd Edition](https://git-scm.com/book/en/v2){:target="_blank"}，[美] Scott Chacon and Ben Straub
-> * 重构 改善既有代码的设计，[美] Martin Fowler
-> * 代码整洁之道，[美] Robert C. Martin
-> * [Google Style Guides](https://google.github.io/styleguide){:target="_blank"}，[美] Google Open Source Organization
-> * 你的灯亮着吗？发现问题的真正所在，[美] Donald C. Gause, Gerald M. Weinberg
-> * [How To Ask Questions The Smart Way](http://www.catb.org/~esr/faqs/smart-questions.html){:target="_blank"}，[美] Eric S. Raymond, Rick Moen
-> * [快乐的 Linux 命令行](https://billie66.github.io/TLCL/){:target="_blank"}，[美] William Shotts
-> * [中文文案排案指北](https://sparanoid.com/note/chinese-copywriting-guidelines/){:target="_blank"}，[中] Tunghsiao Liu
-> * [中文技术文档的写作规范](https://github.com/ruanyf/document-style-guide){:target="_blank"}，[中] 阮一峰
+> * [技术](#技术)
+>   * [算法](#算法)
+>   * [区块链](#区块链)
+>   * [编程语言](#编程语言)
+>   * [网络编程](#网络编程)
+>   * [操作系统](#操作系统)
+>   * [程序人生](#程序人生)
+> * [杂类](#杂类)
 
 ## 文学
 
@@ -99,7 +37,6 @@ excerpt: Here are some books I read.
 > * [未来世界的幸存者](https://www.ruanyifeng.com/survivor/){:target="_blank"}，[中] 阮一峰
 > * 如何变得有思想 阮一峰博客文集，[中] [阮一峰](https://www.ruanyifeng.com/blog/){:target="_blank"}
 > * [新生 七年就是一辈子](https://b.xinshengdaxue.com){:target="_blank"}，[中] 李笑来
-> * [把时间当作朋友 运用心智 获得解放](http://lixiaolai.com/#/befriending-time/){:target="_blank"}，[中] 李笑来
 > * 80,0 AZUKI NANA photo & anthology，[日] AZUKI 七
 
 > ### 纪实
@@ -201,9 +138,67 @@ excerpt: Here are some books I read.
 > * 一万小时天才理论，[美] Daniel Coyle
 > * 刻意练习 如何从新手到大师，[美] Anders Ericsson, Robert Pool
 
-## 其他
+## 技术
 
-> ### 漫画
+> ### 算法
 > 
-> * 日本人の知らない日本語，[日] 蛇蔵＆海野凪子
-> * 名探偵コナン，[日] 青山剛昌
+> * 漫画算法 小灰的算法之旅，[中] 魏梦舒
+> * 编程之美 —微软技术面试心得，[中] 《编程之美》小组
+> * 剑指 Offer 名企面试官精讲典型编程题，[中] 何海涛
+> * 啊哈！算法，[中] 啊哈磊
+> * 图解密码技术（第3版），[日] [結城浩](https://www.hyuki.com){:target="_blank"}
+> * C++ 数据结构与算法（第4版），[美] Adam Drozdek
+> * 数据结构（C++ 语言版 第3版），[中] [邓俊辉](https://dsa.cs.tsinghua.edu.cn/~deng/index.htm){:target="_blank"}
+> * 大话数据结构，[中] 程杰
+
+> ### 区块链
+> 
+> * [精通以太坊](https://github.com/ethereumbook/ethereumbook){:target="_blank"}，[希-英] Andreas M. Antonopoulos [英] Gavin Wood
+> * 区块链启示录 中本聪文集，[美] Phil Champagne
+> * 区块链开发指南，[中] 申屠青春
+> * [区块链技术指南](https://yeasy.gitbook.io/blockchain_guide/){:target="_blank"}，[中] [杨保华](https://yeasy.github.io){:target="_blank"} 陈昌
+> * [精通比特币 第2版](https://bitcoinbook.info){:target="_blank"}，[希-英] Andreas M. Antonopoulos
+> * [Bitcoin: A Peer-to-Peer Electronic Cash System](/blog/2018/04/Bitcoin-A-Peer-to-Peer-Electronic-Cash-System.html)，[?] Satoshi Nakamoto
+
+> ### 编程语言
+> 
+> * Linux/UNIX 系统编程手册（上、下册），[德] [Michael Kerrisk](https://man7.org){:target="_blank"}
+> * STL 源码剖析，[中] 侯捷
+> * C++ 标准程序库，[德] Nicolai M.Josuttis
+> * C++ 沉思录，[美] Andrew Koenig, Barbara Moo
+> * C++ 编程规范 101条规则、准则与最佳实践，[加] Herb Sutter [罗] Andrei Alexandrescu
+> * C++ Primer 中文版（第5版），[美] Stanley B. Lippman, Josée Lajoie, Barbara E. Moo
+> * C 专家编程，[美] Peter van der Linden
+> * C 陷阱与缺陷，[美] Andrew Koening
+> * C 和指针，[美] Kenneth A. Reek
+> * C 程序设计语言（第2版），[加] [Brian W. Kernighan](https://www.cs.princeton.edu/~bwk){:target="_blank"} [美] [Dennis M. Ritchie](https://www.bell-labs.com/usr/dmr/www){:target="_blank"}
+
+> ### 网络编程
+> 
+> * 图解 HTTP，[日] 上野宣
+> * 图解 TCP/IP（第5版），[日] 竹下隆史 村山公保 荒井透 苅田幸雄
+> * TCP/IP 详解 卷1：协议，[美] [W. Richard Stevens](http://www.kohala.com/start){:target="_blank"}
+
+> ### 操作系统
+> 
+> * [Linux: a Portable Operating System](https://www.cs.helsinki.fi/u/kutvonen/index_files/linus.pdf){:target="_blank"}，[芬] [Linus Torvalds](https://github.com/torvalds){:target="_blank"}
+
+> ### 程序人生
+> 
+> * Vim 实用技巧，[英] Drew Neil
+> * 大话设计模式，[中] 程杰
+> * 程序员健康指南，[美] Joe Kutner
+> * GitHub 入门与实践，[日] 大塚弘记
+> * [Pro Git 2nd Edition](https://git-scm.com/book/en/v2){:target="_blank"}，[美] Scott Chacon and Ben Straub
+> * 重构 改善既有代码的设计，[美] Martin Fowler
+> * 代码整洁之道，[美] Robert C. Martin
+> * [Google Style Guides](https://google.github.io/styleguide){:target="_blank"}，[美] Google Open Source Organization
+> * 你的灯亮着吗？发现问题的真正所在，[美] Donald C. Gause, Gerald M. Weinberg
+> * [How To Ask Questions The Smart Way](http://www.catb.org/~esr/faqs/smart-questions.html){:target="_blank"}，[美] Eric S. Raymond, Rick Moen
+> * [快乐的 Linux 命令行](https://billie66.github.io/TLCL/){:target="_blank"}，[美] William Shotts
+> * [中文文案排案指北](https://sparanoid.com/note/chinese-copywriting-guidelines/){:target="_blank"}，[中] Tunghsiao Liu
+> * [中文技术文档的写作规范](https://github.com/ruanyf/document-style-guide){:target="_blank"}，[中] 阮一峰
+
+## 杂类
+
+> * [把时间当作朋友 运用心智 获得解放](http://lixiaolai.com/#/befriending-time/){:target="_blank"}，[中] 李笑来
