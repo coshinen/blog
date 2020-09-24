@@ -180,11 +180,11 @@ excerpt: Here are my favorite quotes from someones that inspire me or make me la
 > * 大切なのは、どの道を選ぶかより、選んだ道をどういきるかじゃないの？
 
 > ダー子「コンフィデンスマンJP」：
-> * 目に見えるものが真実とは限らない。何が本当で何が嘘か？
+> * 目に見えるものが真実とは限らない。何が本当で、何が嘘か？
 
 > ソルト「マジすか学園4、5」：
 > * 怖いなんて感情、忘れてた…人間いつかは死ぬ、それが早いか遅いかの違いだ…時々考えるんだ、私の命は何のためにあるのか？自分のマジのために使えるのなら、本望だ、笑って死ねるよ。
-> * ただの退屈しのぎだ……無理は一番の、退屈しのぎだ…その何かも、楽しみだな。
+> * ただの退屈しのぎだ……無理は一番の”退屈しのぎ”だ…その何かも、楽しみだな。
 > * 天辺までは、まだまだ遠い。自分の弱さを知る、そして強くなれ！
 > * 頑張って。天辺までは、まだ遠い。ちゃんと、一歩一歩、足踏み外さないように、私の退屈、紛らわせて。
 
@@ -485,3 +485,7 @@ excerpt: Here are my favorite quotes from someones that inspire me or make me la
 > It is a mistake to think that that little room has elastic walls and can distend to any extent.
 > Depend upon it there comes a time when for every addition of knowledge you forget something that you knew before.
 > It is of the highest importance, therefore, not to have useless facts elbowing out the useful ones.
+
+> Egaeus, [Berenice](http://www.literaturepage.com/read/berenice-1.html){:target="_blank"}:
+> * But as, in ethics, evil is a consequence of good, so, in fact, out of joy is sorrow born.
+> Either the memory of past bliss is the anguish of today, or the agonies which are have their origin in the ecstasies which might have been.
