@@ -8,47 +8,36 @@ category: 区块链
 tags: Bitcoin bitcoin-cli
 excerpt: $ bitcoin-cli getbestblockhash
 ---
-## 提示说明
+## 1. 帮助内容
 
 ```shell
-getbestblockhash # 获取最长区块链上最佳（链尖）区块的哈希
+getbestblockhash
+
+返回最长区块链上最佳（尖端）区块的哈希。
+
+结果
+"hex"（字符串）16 进制编码的区块哈希
+
+例子
+> bitcoin-cli getbestblockhash
+> curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "getbestblockhash", "params": [] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
 ```
 
-结果：（字符串）返回区块哈希 16 进制编码形式。
+## 2. 源码剖析
 
-## 用法示例
-
-### 比特币核心客户端
-
-未 IBD (Initial Block Download) 时，查询最佳区块 - 创世区块的哈希值。
-
-```shell
-$ bitcoin-cli getbestblockhash
-0000000000019d6689c085ae165831e934ff763ae46a2a6c172b3f1b60a8ce26f
-```
-
-### cURL
-
-```shell
-$ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "getbestblockhash", "params": [] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
-{"result":"0000000000019d6689c085ae165831e934ff763ae46a2a6c172b3f1b60a8ce26f","error":null,"id":"curltest"}
-```
-
-## 源码剖析
-
-getbestblockhash 对应的函数在“rpcserver.h”文件中被引用。
+`getbestblockhash` 对应的函数在文件 `rpcserver.h` 中被引用。
 
 ```cpp
-extern UniValue getbestblockhash(const UniValue& params, bool fHelp); // 获取当前最佳块的哈希
+extern UniValue getbestblockhash(const UniValue& params, bool fHelp);
 ```
 
-实现在“rpcserver.cpp”文件中。
+实现在文件 `rpcserver.cpp` 中。
 
 ```cpp
 UniValue getbestblockhash(const UniValue& params, bool fHelp)
 {
-    if (fHelp || params.size() != 0) // 1.该命令没有参数
-        throw runtime_error( // 命令帮助反馈
+    if (fHelp || params.size() != 0)
+        throw runtime_error(
             "getbestblockhash\n"
             "\nReturns the hash of the best (tip) block in the longest block chain.\n"
             "\nResult\n"
@@ -56,63 +45,85 @@ UniValue getbestblockhash(const UniValue& params, bool fHelp)
             "\nExamples\n"
             + HelpExampleCli("getbestblockhash", "")
             + HelpExampleRpc("getbestblockhash", "")
-        );
+        ); // 1. 帮助内容
 
     LOCK(cs_main);
-    return chainActive.Tip()->GetBlockHash().GetHex(); // 2.返回激活链尖区块哈希的 16 进制
+    return chainActive.Tip()->GetBlockHash().GetHex(); // 2. 返回活跃的链尖区块哈希的 16 进制
 }
 ```
 
-基本流程：
-1. 处理命令帮助和参数个数。
-2. 获取链尖区块哈希，转换为 16 进制并返回。
+### 2.1. 帮助内容
 
-对象 chainActive 的引用在“main.h”文件中。
+帮助例子函数 `HelpExampleCli()` 和 `HelpExampleRpc()` 均定义在文件 `rpcserver.h` 中。
+
+```cpp
+extern std::string HelpExampleCli(const std::string& methodname, const std::string& args);
+extern std::string HelpExampleRpc(const std::string& methodname, const std::string& args);
+```
+
+实现在文件 `rpcserver.cpp` 中。
+
+```cpp
+std::string HelpExampleCli(const std::string& methodname, const std::string& args)
+{
+    return "> bitcoin-cli " + methodname + " " + args + "\n";
+}
+
+std::string HelpExampleRpc(const std::string& methodname, const std::string& args)
+{
+    return "> curl --user myusername --data-binary '{\"jsonrpc\": \"1.0\", \"id\": \"curltest\", "
+        "\"method\": \"" + methodname + "\", \"params\": [" + args + "]}' -H 'content-type: text/plain;' http://127.0.0.1:8332/\n";
+}
+```
+
+### 2.2. 返回活跃的链尖区块哈希的 16 进制
+
+对象 `chainActive` 的引用在文件 `main.h` 中。
 
 ```cpp
 /** The currently-connected chain of blocks (protected by cs_main). */
-extern CChain chainActive; // 当前连接的区块链（激活的链）
+extern CChain chainActive; // 当前连接的区块链（活跃的链）。
 ```
 
-定义在“main.h”文件中。
+定义在文件 `main.h` 中。
 
 ```cpp
-CChain chainActive; // 当前连接的区块链（激活的链）
+CChain chainActive;
 ```
 
-类 CChain 定义在“chain.h”文件中。
+链类 `CChain` 定义在文件 `chain.h` 中。
 
 ```cpp
 /** An in-memory indexed chain of blocks. */
-class CChain { // 一个内存中用于区块索引的链
+class CChain { // 一个内存中已索引区块的链。
 private:
-    std::vector<CBlockIndex*> vChain; // 内存中区块的索引列表
+    std::vector<CBlockIndex*> vChain;
 
 public:
     ...
     /** Returns the index entry for the tip of this chain, or NULL if none. */
-    CBlockIndex *Tip() const { // 返回该链尖的索引条目，或如果没有则为空
-        return vChain.size() > 0 ? vChain[vChain.size() - 1] : NULL; // 至少返回创世区块的索引
+    CBlockIndex *Tip() const { // 返回该链尖的索引条目，如果没有则为空。
+        return vChain.size() > 0 ? vChain[vChain.size() - 1] : NULL;
     }
     ...
 };
 ```
 
-类 CBlockIndex 也定义在“chain.h”文件中。
+区块索引类 `CBlockIndex` 也定义在文件 `chain.h` 中。
 
 ```cpp
 /** The block chain is a tree shaped structure starting with the
  * genesis block at the root, with each block potentially having multiple
  * candidates to be the next block. A blockindex may have multiple pprev pointing
  * to it, but at most one of them can be part of the currently active branch.
- */ // 区块链是一个始于以创世区块为根的树状结构，每个区块可有多个候选作为下一个区块。一个区块索引可能有多个 pprev 指向它，但最多只能有一个能成为当前激活分支的一部分。
-class CBlockIndex // 区块索引
+ */
+class CBlockIndex
 {
 public:
     //! pointer to the hash of the block, if any. Memory is owned by this CBlockIndex
-    const uint256* phashBlock; // 指向区块的哈希。内存属于该区块索引
+    const uint256* phashBlock; //! 指向区块的哈希，如果存在。内存属于该区块索引
     ...
-    uint256 GetBlockHash() const // 获取区块哈希
+    uint256 GetBlockHash() const
     {
         return *phashBlock;
     }
@@ -120,7 +131,10 @@ public:
 };
 ```
 
-最后把得到区块哈希调用 GetHex() 函数转换为 16 进制返回给客户端。
+区块链是一个从根部创世区块开始的树形结构，每个区块有多个候选作为下一个区块。
+一个区块索引可能有多个 pprev 指向它，但最多有一个是当前活跃分支的一部分。
+
+最后把得到区块哈希调用函数 `GetHex()` 转换为 16 进制返回客户端。
 
 ## 参考链接
 

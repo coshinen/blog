@@ -8,147 +8,66 @@ category: 区块链
 tags: Bitcoin bitcoin-cli
 excerpt: $ bitcoin-cli getblockchaininfo
 ---
-## 提示说明
+## 1. 帮助内容
 
 ```shell
-getblockchaininfo # 获取区块链信息
-```
+getblockchaininfo
 
-结果：返回一个包含关于区块链处理的变量状态信息的对象。
+返回一个包含关于区块链处理的各种状态信息的对象。
 
-```shell
+结果：
 {
-  "chain": "xxxx",        （字符串）当前 BIP70 定义的（main, test, regtest）网络名
-  "blocks": xxxxxx,         （数字）当前服务器已处理的区块数
-  "headers": xxxxxx,        （数字）当前我们验证过的区块头数
-  "bestblockhash": "...", （字符串）当前最佳区块哈希
-  "difficulty": xxxxxx,     （数字）当前难度
-  "mediantime": xxxxxx,     （数字）当前最佳区块的中间时间
-  "verificationprogress": xxxx, （数字）验证进度的估计值 [0..1]
-  "chainwork": "xxxx"     （字符串）激活链上的总工作量，16 进制
-  "pruned": xx,             （布尔型）如果区块被修剪
-  "pruneheight": xxxxxx,    （数字）可用的最高区块
-  "softforks": [            （数组）正在进行的软分叉状态
+  "chain": "xxxx",             （字符串）当前 BIP70 中定义的网络名（main，test，regtest）
+  "blocks": xxxxxx,            （数字）服务器当前已处理的区块数
+  "headers": xxxxxx,           （数字）当前我们验证过的区块头数
+  "bestblockhash": "...",      （字符串）当前最佳区块的哈希
+  "difficulty": xxxxxx,        （数字）当前的难度
+  "mediantime": xxxxxx,        （数字）当前最佳区块的中间时间
+  "verificationprogress": xxxx,（数字）验证进度的估计值 [0..1]
+  "chainwork": "xxxx"          （字符串）活跃的链上的总工作量，16 进制
+  "pruned": xx,                （布尔型）区块是否处于修剪中
+  "pruneheight": xxxxxx,       （数字）有效的最高的区块
+  "softforks": [               （数组）正在进行的软分叉状态
      {
-        "id": "xxxx",        （字符串）软分叉名
+        "id": "xxxx",          （字符串）软分叉名
         "version": xx,         （数字）区块版本
         "enforce": {           （对象）对新版本的区块执行软分叉规则的进度
            "status": xx,       （布尔型）如果到达阈值则为 true
-           "found": xx,        （数字）找到的新版本的区块数
+           "found": xx,        （数字）新版本发现的区块数
            "required": xx,     （数字）需要触发的区块数
            "window": xx,       （数字）最近区块的检查窗口的最大尺寸
         },
         "reject": { ... }      （对象）正在拒绝预软分叉区块的进度（和 "enforce" 域相同）
      }, ...
   ],
-  "bip9_softforks": [       （数组）正在进行的 BIP9 软分叉的状态
+  "bip9_softforks": [          （数组）正在进行的 BIP9 软分叉的状态
      {
-        "id": "xxxx",        （字符串）软分叉名
-        "status": "xxxx",    （字符串）状态 "defined", "started", "lockedin", "active", "failed" 之一
+        "id": "xxxx",          （字符串）软分叉名
+        "status": "xxxx",      （字符串）"defined"，"started"，"lockedin"，"active"，"failed" 之一
      }
   ]
 }
+
+例子：
+> bitcoin-cli getblockchaininfo
+> curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "getblockchaininfo", "params": [] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
 ```
 
-## 用法示例
+## 2. 源码剖析
 
-### 比特币核心客户端
-
-获取当前区块链信息。
-
-```shell
-$ bitcoin-cli getblockchaininfo
-{
-  "chain": "main",
-  "blocks": 21787,
-  "headers": 21787,
-  "bestblockhash": "0000008ab63f8498ae2adf1029b069ac5ea9d5a15631fea9107205cfdaf72f03",
-  "difficulty": 0.0003833332740605197,
-  "mediantime": 1529899046,
-  "verificationprogress": 0.9999999830005525,
-  "chainwork": "0000000000000000000000000000000000000000000000000000000a8c2b98b0",
-  "pruned": false,
-  "softforks": [
-    {
-      "id": "bip34",
-      "version": 2,
-      "enforce": {
-        "status": true,
-        "found": 1000,
-        "required": 750,
-        "window": 1000
-      },
-      "reject": {
-        "status": true,
-        "found": 1000,
-        "required": 950,
-        "window": 1000
-      }
-    }, 
-    {
-      "id": "bip66",
-      "version": 3,
-      "enforce": {
-        "status": true,
-        "found": 1000,
-        "required": 750,
-        "window": 1000
-      },
-      "reject": {
-        "status": true,
-        "found": 1000,
-        "required": 950,
-        "window": 1000
-      }
-    }, 
-    {
-      "id": "bip65",
-      "version": 4,
-      "enforce": {
-        "status": true,
-        "found": 1000,
-        "required": 750,
-        "window": 1000
-      },
-      "reject": {
-        "status": true,
-        "found": 1000,
-        "required": 950,
-        "window": 1000
-      }
-    }
-  ],
-  "bip9_softforks": [
-    {
-      "id": "csv",
-      "status": "failed"
-    }
-  ]
-}
-```
-
-### cURL
-
-```shell
-$ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "getblockchaininfo", "params": [] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
-{"result":{"chain":"main","blocks":25094,"headers":25094,"bestblockhash":"000000d3941157a9621e13d7b672e2616a82591e4d7fabfb4d42108d688b03a9","difficulty":0.001532956637923291,"mediantime":1529917586,"verificationprogress":0.9999999861643509,"chainwork":"0000000000000000000000000000000000000000000000000000000f2bfb4635","pruned":false,"softforks":[{"id":"bip34","version":2,"enforce":{"status":true,"found":1000,"required":750,"window":1000},"reject":{"status":true,"found":1000,"required":950,"window":1000}},{"id":"bip66","version":3,"enforce":{"status":true,"found":1000,"required":750,"window":1000},"reject":{"status":true,"found":1000,"required":950,"window":1000}},{"id":"bip65","version":4,"enforce":{"status":true,"found":1000,"required":750,"window":1000},"reject":{"status":true,"found":1000,"required":950,"window":1000}}],"bip9_softforks":[{"id":"csv","status":"failed"}]},"error":null,"id":"curltest"}
-```
-
-## 源码剖析
-
-getblockchaininfo 对应的函数在“rpcserver.h”文件中被引用。
+`getblockchaininfo` 对应的函数在文件 `rpcserver.h` 中被引用。
 
 ```cpp
-extern UniValue getblockchaininfo(const UniValue& params, bool fHelp); // 获取区块链信息
+extern UniValue getblockchaininfo(const UniValue& params, bool fHelp);
 ```
 
-实现在“rpcblockchain.cpp”文件中。
+实现在文件 `rpcblockchain.cpp` 中。
 
 ```cpp
 UniValue getblockchaininfo(const UniValue& params, bool fHelp)
 {
-    if (fHelp || params.size() != 0) // 该命令没有参数
-        throw runtime_error( // 帮助信息反馈
+    if (fHelp || params.size() != 0)
+        throw runtime_error(
             "getblockchaininfo\n"
             "Returns an object containing various state info regarding block chain processing.\n"
             "\nResult:\n"
@@ -186,11 +105,11 @@ UniValue getblockchaininfo(const UniValue& params, bool fHelp)
             "\nExamples:\n"
             + HelpExampleCli("getblockchaininfo", "")
             + HelpExampleRpc("getblockchaininfo", "")
-        );
+        ); // 1. 帮助内容
 
     LOCK(cs_main);
 
-    UniValue obj(UniValue::VOBJ); // 构造一个目标对象
+    UniValue obj(UniValue::VOBJ); // 2. 获取区块链状态信息返回
     obj.push_back(Pair("chain",                 Params().NetworkIDString())); // 网络 ID，主网 或 测试网
     obj.push_back(Pair("blocks",                (int)chainActive.Height())); // 当前区块高度
     obj.push_back(Pair("headers",               pindexBestHeader ? pindexBestHeader->nHeight : -1)); // 当前最佳区块头高度，同区块高度
@@ -212,25 +131,20 @@ UniValue getblockchaininfo(const UniValue& params, bool fHelp)
     obj.push_back(Pair("softforks",             softforks)); // 软分叉
     obj.push_back(Pair("bip9_softforks", bip9_softforks)); // bip9_软分叉
 
-    if (fPruneMode) // 若开启了修剪模式
+    if (fPruneMode) // 修剪模式
     {
         CBlockIndex *block = chainActive.Tip();
         while (block && block->pprev && (block->pprev->nStatus & BLOCK_HAVE_DATA))
             block = block->pprev;
 
-        obj.push_back(Pair("pruneheight",        block->nHeight)); // 加入修剪到的高度
+        obj.push_back(Pair("pruneheight",        block->nHeight)); // 修剪高度
     }
-    return obj; // 返回目标对象
+    return obj;
 }
 ```
-
-基本流程：
-1. 处理命令帮助和参数个数。
-2. 构造一个目标类型的对象。
-3. 追加区块链相关信息到该对象。
-4. 返回结果。
 
 ## 参考链接
 
 * [bitcoin/rpcserver.h at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/rpcserver.h){:target="_blank"}
+* [bitcoin/rpcserver.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/rpcserver.cpp){:target="_blank"}
 * [bitcoin/rpcblockchain.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/rpcblockchain.cpp){:target="_blank"}
