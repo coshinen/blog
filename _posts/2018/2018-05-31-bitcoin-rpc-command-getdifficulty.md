@@ -8,45 +8,36 @@ category: 区块链
 tags: Bitcoin bitcoin-cli
 excerpt: $ bitcoin-cli getdifficulty
 ---
-## 提示说明
+## 1. 帮助内容
 
 ```shell
-getdifficulty # 获取作为最低难度 1 倍数的工作量证明难度
-```
+getdifficulty
 
-结果：（数字）返回作为最低难度 1 倍数的工作量证明难度。
+以最低难度（1.0）的倍数返回工作量证明难度。
 
-## 用法示例
+结果：
+n.nnn（数字）工作量证明难度是最低难度（1）的倍数。
 
-### 比特币核心客户端
-
-```shell
-$ bitcoin-cli getdifficulty
-0.001533333096242079
-```
-
-### cURL
-
-```shell
-$ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "getdifficulty", "params": [] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
-{"result":0.001532956637923291,"error":null,"id":"curltest"}
+例子：
+> bitcoin-cli getdifficulty
+> curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "getdifficulty", "params": [] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
 ```
 
 ## 源码剖析
 
-getdifficulty 对应的函数在“rpcserver.h”文件中被引用。
+`getdifficulty` 对应的函数在文件 `rpcserver.h` 中被引用。
 
 ```cpp
-extern UniValue getdifficulty(const UniValue& params, bool fHelp); // 获取当前挖矿难度
+extern UniValue getdifficulty(const UniValue& params, bool fHelp);
 ```
 
-实现在“rpcblockchain.cpp”文件中。
+实现在文件 `rpcblockchain.cpp` 中。
 
 ```cpp
 UniValue getdifficulty(const UniValue& params, bool fHelp)
 {
-    if (fHelp || params.size() != 0) // 没有参数
-        throw runtime_error( // 命令帮助反馈
+    if (fHelp || params.size() != 0)
+        throw runtime_error(
             "getdifficulty\n"
             "\nReturns the proof-of-work difficulty as a multiple of the minimum difficulty.\n"
             "\nResult:\n"
@@ -54,37 +45,38 @@ UniValue getdifficulty(const UniValue& params, bool fHelp)
             "\nExamples:\n"
             + HelpExampleCli("getdifficulty", "")
             + HelpExampleRpc("getdifficulty", "")
-        );
+        ); // 1. 帮助内容
 
-    LOCK(cs_main); // 上锁
-    return GetDifficulty(); // 返回获取的难度值
+    LOCK(cs_main);
+    return GetDifficulty(); // 2. 获取的难度值并返回
 }
 ```
 
-基本流程：
-1. 处理命令帮助和参数个数。
-2. 上锁。
-3. 获取当前难度并返回。
+### 2.1. 帮助内容
 
-第三步，调用 GetDifficulty() 函数获取当前难度，该函数实现在“rpcblockchain.cpp”文件中。
+参考[比特币 RPC 命令剖析 "getbestblockhash" 2.1. 帮助内容](/blog/2018/05/bitcoin-rpc-command-getbestblockhash.html#21-帮助内容)。
+
+### 2.2. 获取的难度值并返回
+
+函数 `GetDifficulty()` 实现在文件 `rpcblockchain.cpp` 中。
 
 ```cpp
 double GetDifficulty(const CBlockIndex* blockindex)
 {
-    // Floating point number that is a multiple of the minimum difficulty, // 最小难度倍数的浮点数
-    // minimum difficulty = 1.0. // 最小难度 = 1.0
+    // Floating point number that is a multiple of the minimum difficulty, // 最低难度倍数的浮点数
+    // minimum difficulty = 1.0. // 最低难度 = 1.0。
     if (blockindex == NULL)
     {
         if (chainActive.Tip() == NULL) // 链尖为空
-            return 1.0; // 返回最小难度
+            return 1.0; // 返回最低难度
         else
-            blockindex = chainActive.Tip(); // 获取链尖区块索引
+            blockindex = chainActive.Tip(); // 获取活跃的链尖区块索引
     }
 
     int nShift = (blockindex->nBits >> 24) & 0xff; // 获取 nBits 的高 8 位 2 进制
 
     double dDiff = // main and testnet (0x1d00ffff) or regtest (0x207fffff) 0x1e0ffff0 (dash)
-        (double)0x0000ffff / (double)(blockindex->nBits & 0x00ffffff); // 计算难度
+        (double)0x0000ffff / (double)(blockindex->nBits & 0x00ffffff); // 计算难度并返回
 
     while (nShift < 29)
     {
@@ -97,11 +89,12 @@ double GetDifficulty(const CBlockIndex* blockindex)
         nShift--;
     }
 
-    return dDiff; // 返回难度
+    return dDiff;
 }
 ```
 
 ## 参考链接
 
 * [bitcoin/rpcserver.h at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/rpcserver.h){:target="_blank"}
+* [bitcoin/rpcserver.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/rpcserver.cpp){:target="_blank"}
 * [bitcoin/rpcblockchain.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/rpcblockchain.cpp){:target="_blank"}

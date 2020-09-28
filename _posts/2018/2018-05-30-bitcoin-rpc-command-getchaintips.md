@@ -8,78 +8,56 @@ category: 区块链
 tags: Bitcoin bitcoin-cli
 excerpt: $ bitcoin-cli getchaintips
 ---
-## 提示说明
+## 1. 帮助内容
 
 ```shell
-getchaintips # 获取关于区块树上全部已知的尖部的信息，包括主链和孤儿分支
-```
+getchaintips
+
+返回有关区块树上所有已知尖端的信息，包括主链和孤儿分支。
 
 结果：
-
-```shell
 [
   {
-    "height": xxxx,         （数字）链尖高度
-    "hash": "xxxx",         （字符串）链尖区块哈希
-    "branchlen": 0          （数字）主链为 0
-    "status": "active"      （字符串）主链为 "active"
+    "height": xxxx,   （数字）链尖的高度
+    "hash": "xxxx",   （字符串）链尖区块的哈希
+    "branchlen": 0    （数字）主链为 0
+    "status": "active"（字符串）主链为 "active"
   },
   {
     "height": xxxx,
     "hash": "xxxx",
-    "branchlen": 1          （数字）连接链尖到主链的分叉长度
-    "status": "xxxx"        （字符串）链状态 (active, valid-fork, valid-headers, headers-only, invalid)
+    "branchlen": 1    （数字）连接尖端到主链的分支长度
+    "status": "xxxx"  （字符串）链的状态 (active, valid-fork, valid-headers, headers-only, invalid)
   }
 ]
+
+状态的可能取值：
+1. "invalid"          该分支至少包含一块无效区块
+2. "headers-only"     该分支并非所有区块都有效，但区块头都有效
+3. "valid-headers"    该分支所有区块都有效，但它们没有完全验证
+4. "valid-fork"       该分支不是活跃链的一部分，但已完全验证
+5. "active"           这是活跃主链的尖端，确定有效
+
+例子：
+> bitcoin-cli getchaintips
+> curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "getchaintips", "params": [] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
 ```
 
-可能的状态取值：
-1. invalid 该分支包含至少一块无效区块。
-2. headers-only 该分支上并非所有区块都有效，但区块头都有效。
-3. valid-headers 该分支上所有区块都有效，但它们没有完全验证。
-4. valid-fork 该分支不是激活区块链的一部分，但已完全验证。
-5. active 这是激活主链的尖部，确定有效。
+## 2. 源码剖析
 
-## 用法示例
-
-### 比特币核心客户端
-
-获取当前区块链尖部信息。
-
-```shell
-$ bitcoin-cli getchaintips
-[
-  {
-    "height": 23940,
-    "hash": "0000023628d2d9d302f82e672381f40da80abe735cd24aa7784e5ac327f22446",
-    "branchlen": 0,
-    "status": "active"
-  }
-]
-```
-
-### cURL
-
-```shell
-$ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "getchaintips", "params": [] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
-{"result":[{"height":25160,"hash":"0000008475f1530ec67b79ea60e6c1808b55189ed6e7a78d89487b4191cca2ac","branchlen":0,"status":"active"}],"error":null,"id":"curltest"}
-```
-
-## 源码剖析
-
-getchaintips 对应的函数在“rpcserver.h”文件中被引用。
+`getchaintips` 对应的函数在文件 `rpcserver.h` 中被引用。
 
 ```cpp
-extern UniValue getchaintips(const UniValue& params, bool fHelp); // 获取链尖信息
+extern UniValue getchaintips(const UniValue& params, bool fHelp);
 ```
 
-实现在“rpcblockchain.cpp”文件中。
+实现在文件 `rpcblockchain.cpp` 中。
 
 ```cpp
 UniValue getchaintips(const UniValue& params, bool fHelp)
 {
-    if (fHelp || params.size() != 0) // 没有参数
-        throw runtime_error( // 命令帮助反馈
+    if (fHelp || params.size() != 0)
+        throw runtime_error(
             "getchaintips\n"
             "Return information about all known tips in the block tree,"
             " including the main chain as well as orphaned branches.\n"
@@ -107,9 +85,9 @@ UniValue getchaintips(const UniValue& params, bool fHelp)
             "\nExamples:\n"
             + HelpExampleCli("getchaintips", "")
             + HelpExampleRpc("getchaintips", "")
-        );
+        ); // 1. 帮助内容
 
-    LOCK(cs_main); // 上锁
+    LOCK(cs_main);
 
     /* Build up a list of chain tips.  We start with the list of all // 构建链尖列表。
        known blocks, and successively remove blocks that appear as pprev
@@ -163,13 +141,14 @@ UniValue getchaintips(const UniValue& params, bool fHelp)
         res.push_back(obj);
     }
 
-    return res; // 返回结果数组
+    return res;
 }
 ```
 
-基本流程：
-1. 处理命令帮助和参数个数。
-2. 上锁。
+### 2.1. 帮助内容
+
+参考[比特币 RPC 命令剖析 "getbestblockhash" 2.1. 帮助内容](/blog/2018/05/bitcoin-rpc-command-getbestblockhash.html#21-帮助内容)。
+
 3. 创建链尖区块索引集合，遍历区块索引映射，把所有区块索引加入该集合。
 4. 遍历区块索引映射，把所有区块的前一个区块索引从该集合中擦除。
 5. 把当前激活链的链尖区块索引插入该集合。
@@ -295,6 +274,7 @@ const CBlockIndex* CBlockIndex::GetAncestor(int height) const
 ## 参考链接
 
 * [bitcoin/rpcserver.h at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/rpcserver.h){:target="_blank"}
+* [bitcoin/rpcserver.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/rpcserver.cpp){:target="_blank"}
 * [bitcoin/rpcblockchain.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/rpcblockchain.cpp){:target="_blank"}
 * [bitcoin/chain.h at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/chain.h){:target="_blank"}
 * [bitcoin/chain.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/chain.cpp){:target="_blank"}

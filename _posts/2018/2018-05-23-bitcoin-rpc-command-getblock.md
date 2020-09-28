@@ -108,7 +108,7 @@ UniValue getblock(const UniValue& params, bool fHelp)
     if (params.size() > 1)
         fVerbose = params[1].get_bool();
 
-    if (mapBlockIndex.count(hash) == 0) // 2. 检查区块是否在区块索引映射中
+    if (mapBlockIndex.count(hash) == 0) // 2. 检查区块是否存在
         throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, "Block not found");
 
     CBlock block;
@@ -132,7 +132,11 @@ UniValue getblock(const UniValue& params, bool fHelp)
 }
 ```
 
-### 2.2. 检查区块是否在区块索引映射中
+### 2.1. 帮助内容
+
+参考[比特币 RPC 命令剖析 "getbestblockhash" 2.1. 帮助内容](/blog/2018/05/bitcoin-rpc-command-getbestblockhash.html#21-帮助内容)。
+
+### 2.2. 检查区块是否存在
 
 区块索引映射对象 `mapBlockIndex` 在文件 `main.h` 中被引用。
 
@@ -301,7 +305,7 @@ class CDataStream
         return (*this);
     }
     ...
-}；
+};
 ```
 
 结合向量和流式接口的双端缓冲区。

@@ -8,63 +8,42 @@ category: 区块链
 tags: Bitcoin bitcoin-cli
 excerpt: $ bitcoin-cli getmempoolinfo
 ---
-## 提示说明
+## 1. 帮助内容
 
 ```shell
-getmempoolinfo # 获取交易内存池激活状态的细节
-```
+getmempoolinfo
+
+返回交易内存池活跃状态的详细信息。
 
 结果：
-
-```shell
 {
   "size": xxxxx,               （数字）当前的交易数
   "bytes": xxxxx,              （数字）全部交易的总大小
-  "usage": xxxxx,              （数字）交易内存池的总内存用量
-  "maxmempool": xxxxx,         （数字）交易内存池的最大内存用量
-  "mempoolminfee": xxxxx       （数字）能接受的最小交易费
+  "usage": xxxxx,              （数字）内存池的总内存用量
+  "maxmempool": xxxxx,         （数字）内存池的最大内存用量
+  "mempoolminfee": xxxxx       （数字）交易被接受的最低费用
 }
-```
 
-## 用法示例
-
-### 比特币核心客户端
-
-获取当前交易内存池信息。
-
-```shell
-$ bitcoin-cli getmempoolinfo
-{
-  "size": 2,
-  "bytes": 382,
-  "usage": 1792,
-  "maxmempool": 300000000,
-  "mempoolminfee": 0.00000000
-}
-```
-
-### cURL
-
-```shell
-$ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "getmempoolinfo", "params": [] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
-{"result":{"size":2,"bytes":382,"usage":1792,"maxmempool":300000000,"mempoolminfee":0.00000000},"error":null,"id":"curltest"}
+例子：
+> bitcoin-cli getmempoolinfo
+> curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "getmempoolinfo", "params": [] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
 ```
 
 ## 源码剖析
 
-getmempoolinfo 对应的函数在“rpcserver.h”文件中被引用。
+`getmempoolinfo` 对应的函数在文件 `rpcserver.h` 中被引用。
 
 ```cpp
-extern UniValue getmempoolinfo(const UniValue& params, bool fHelp); // 获取交易内存池信息
+extern UniValue getmempoolinfo(const UniValue& params, bool fHelp);
 ```
 
-实现在“rpcblockchain.cpp”文件中。
+实现在文件 `rpcblockchain.cpp` 中。
 
 ```cpp
 UniValue getmempoolinfo(const UniValue& params, bool fHelp)
 {
-    if (fHelp || params.size() != 0) // 没有参数
-        throw runtime_error( // 命令帮助反馈
+    if (fHelp || params.size() != 0)
+        throw runtime_error(
             "getmempoolinfo\n"
             "\nReturns details on the active state of the TX memory pool.\n"
             "\nResult:\n"
@@ -78,28 +57,30 @@ UniValue getmempoolinfo(const UniValue& params, bool fHelp)
             "\nExamples:\n"
             + HelpExampleCli("getmempoolinfo", "")
             + HelpExampleRpc("getmempoolinfo", "")
-        );
+        ); // 1. 帮助内容
 
-    return mempoolInfoToJSON(); // 把交易内存池信息打包为 JSON 格式并返回
+    return mempoolInfoToJSON(); // 2. 把交易内存池信息打包为 JSON 格式并返回
 }
 ```
 
-基本流程：
-1. 处理命令帮助和参数个数。
-2. 打包交易内存池信息为 JSON 格式并返回。
+### 2.1. 帮助内容
 
-第二步，调用 mempoolInfoToJSON() 函数打包交易池信息至 JSON 格式的目标对象，该函数实现在“rpcblockchain.cpp”文件中。
+参考[比特币 RPC 命令剖析 "getbestblockhash" 2.1. 帮助内容](/blog/2018/05/bitcoin-rpc-command-getbestblockhash.html#21-帮助内容)。
+
+### 2.2. 把交易内存池信息打包为 JSON 格式并返回
+
+打包交易池信息为 JSON 格式的函数 `mempoolInfoToJSON()` 实现在文件 `rpcblockchain.cpp` 中。
 
 ```cpp
 UniValue mempoolInfoToJSON()
 {
-    UniValue ret(UniValue::VOBJ); // 构造一个目标对象
-    ret.push_back(Pair("size", (int64_t) mempool.size())); // 内存池当前大小
-    ret.push_back(Pair("bytes", (int64_t) mempool.GetTotalTxSize())); // 内存池交易总大小
-    ret.push_back(Pair("usage", (int64_t) mempool.DynamicMemoryUsage())); // 动态内存用量
+    UniValue ret(UniValue::VOBJ);
+    ret.push_back(Pair("size", (int64_t) mempool.size())); // 内存池的大小
+    ret.push_back(Pair("bytes", (int64_t) mempool.GetTotalTxSize())); // 内存池总的交易大小
+    ret.push_back(Pair("usage", (int64_t) mempool.DynamicMemoryUsage())); // 内存池的动态内存用量
     size_t maxmempool = GetArg("-maxmempool", DEFAULT_MAX_MEMPOOL_SIZE) * 1000000;
-    ret.push_back(Pair("maxmempool", (int64_t) maxmempool)); // 内存池的大小
-    ret.push_back(Pair("mempoolminfee", ValueFromAmount(mempool.GetMinFee(maxmempool).GetFeePerK()))); // 内存池最小费用
+    ret.push_back(Pair("maxmempool", (int64_t) maxmempool)); // 内存池的上限
+    ret.push_back(Pair("mempoolminfee", ValueFromAmount(mempool.GetMinFee(maxmempool).GetFeePerK()))); // 内存池的最低交易费
 
     return ret;
 }
@@ -108,4 +89,5 @@ UniValue mempoolInfoToJSON()
 ## 参考链接
 
 * [bitcoin/rpcserver.h at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/rpcserver.h){:target="_blank"}
+* [bitcoin/rpcserver.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/rpcserver.cpp){:target="_blank"}
 * [bitcoin/rpcblockchain.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/rpcblockchain.cpp){:target="_blank"}

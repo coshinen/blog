@@ -52,6 +52,10 @@ UniValue getblockcount(const UniValue& params, bool fHelp)
 }
 ```
 
+### 2.1. 帮助内容
+
+参考[比特币 RPC 命令剖析 "getbestblockhash" 2.1. 帮助内容](/blog/2018/05/bitcoin-rpc-command-getbestblockhash.html#21-帮助内容)。
+
 ### 2.2. 返回活跃的链高度
 
 活跃的链对象 `chainActive` 在文件 `main.h` 中被引用。

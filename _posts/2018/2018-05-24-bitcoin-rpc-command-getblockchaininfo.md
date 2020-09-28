@@ -109,7 +109,7 @@ UniValue getblockchaininfo(const UniValue& params, bool fHelp)
 
     LOCK(cs_main);
 
-    UniValue obj(UniValue::VOBJ); // 2. 获取区块链状态信息返回
+    UniValue obj(UniValue::VOBJ); // 2. 获取区块链状态信息并返回
     obj.push_back(Pair("chain",                 Params().NetworkIDString())); // 网络 ID，主网 或 测试网
     obj.push_back(Pair("blocks",                (int)chainActive.Height())); // 当前区块高度
     obj.push_back(Pair("headers",               pindexBestHeader ? pindexBestHeader->nHeight : -1)); // 当前最佳区块头高度，同区块高度
@@ -142,6 +142,10 @@ UniValue getblockchaininfo(const UniValue& params, bool fHelp)
     return obj;
 }
 ```
+
+### 2.1. 帮助内容
+
+参考[比特币 RPC 命令剖析 "getbestblockhash" 2.1. 帮助内容](/blog/2018/05/bitcoin-rpc-command-getbestblockhash.html#21-帮助内容)。
 
 ## 参考链接
 
