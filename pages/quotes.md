@@ -291,6 +291,9 @@ excerpt: Here are my favorite quotes from someones that inspire me or make me la
 > 江戸川コナン(工藤新一)「名探偵コナン OVA 第4作 コナンとキッドとクリスタル・マザー」：
 > * 木の葉を隠すなら森の中、森がない時は自分で森をつく。
 
+> 工藤新一「名探偵コナン 第854話 サクラ組の思い出（新一BOY）」：
+> * ホームズが言ってたよな？中間の推理を全て抜き取り…出発点と答えだけを相手に示せば…安っぽくはあるが…ビックリさせる効果は十分(に)あるって…
+
 > 千葉和伸「名探偵コナン 第624話 初恋のビデオレター」：
 > * 一度、自分を甘やかしてルールを破ると癖になっちゃうんだぞ！！癖は止めようと思っても止められないんだぞ！！
 
@@ -338,7 +341,7 @@ excerpt: Here are my favorite quotes from someones that inspire me or make me la
 > 灰原哀(宮野志保[Sherry])「名探偵コナン 第131話 競技場無差別脅迫事件（後編）」：
 > * あせっちゃダメ…時の流れに人は逆らえないもの…それを無理矢理ねじ曲げようとすれば…人は罰を受ける…
 
-> 江戸川コナン(工藤新一)「名探偵コナン 第79話 名家連続変死事件（後編）」：
+> 江戸川コナン(工藤新一)「名探偵コナン 第78話 名家連続変死事件（後編）」：
 > * 犯人を推理で追い詰めて、みすみす自殺させちまう探偵は…殺人者とかわんねーよ…
 > 完璧な人間なんてこの世にいやしねーよ…オレだってたった一人…（たった一人だけ…）
 
@@ -433,6 +436,7 @@ excerpt: Here are my favorite quotes from someones that inspire me or make me la
 > * Sentiment is a chemical defect found in the losing side.
 
 > Sherlock Holmes, BBC SHERLOCK, Series 1 Episode 3, The Great Game:
+> * People don't like telling you things, but they love to contradict you.
 > * Listen, this is my hard drive, and it only makes sense to put things in there that are useful, REALLY useful.
 
 > Sherlock Holmes, BBC SHERLOCK, Series 1 Episode 2, The Blind Banker:
@@ -446,6 +450,13 @@ excerpt: Here are my favorite quotes from someones that inspire me or make me la
 > * Come at once if convenient, if inconvenient come all the same.
 > * Let me pay you one in return, when I said if I were assured of the former eventuality, I will cheerfully accept the latter.
 
+> Sherlock Holmes, [The Return of Sherlock Holmes, The Adventure of the Dancing Men](http://www.literaturepage.com/read/returnofsherlockholmes-50.html){:target="_blank"}:
+> * It is not really difficult to construct a series of inferences, each dependent upon its predecessor and each simple in itself.
+> if, after doing so, one simply knocks out all the central inferences and presents one's audience with the starting-point and the conclusion, one may produce a startling, though possibly a meretricious, effect.
+
+> Sherlock Holmes, [The Memoirs of Sherlock Holmes, The Final Problem](https://www.pagebypagebooks.com/Arthur_Conan_Doyle/Memoirs_of_Sherlock_Holmes/Adventure_XI_The_Final_Problem_p5.html){:target="_blank"}:
+> * Let me pay you one in return when I say that if I were assured of the former eventuality I would, in the interests of the public, cheerfully accept the latter.
+
 > Sherlock Holmes, [The Adventures of Sherlock Holmes, The Man with the Twisted Lip](https://www.pagebypagebooks.com/Arthur_Conan_Doyle/The_Adventures_of_Sherlock_Holmes/ADVENTURE_VI_THE_MAN_WITH_THE_TWISTED_LIP_p11.html){:target="_blank"}:
 > * It is, of course, a trifle, but there is nothing so important as trifles.
 
@@ -457,9 +468,6 @@ excerpt: Here are my favorite quotes from someones that inspire me or make me la
 
 > Sherlock Holmes, [The Adventures of Sherlock Holmes, A Scandal in Bohemia](https://www.pagebypagebooks.com/Arthur_Conan_Doyle/The_Adventures_of_Sherlock_Holmes/ADVENTURE_I_A_SCANDAL_IN_BOHEMIA_p2.html){:target="_blank"}:
 > * You see, but you do not observe. The distinction is clear.
-
-> Sherlock Holmes, [The Memoirs of Sherlock Holmes, The Final Problem](https://www.pagebypagebooks.com/Arthur_Conan_Doyle/Memoirs_of_Sherlock_Holmes/Adventure_XI_The_Final_Problem_p5.html){:target="_blank"}:
-> * Let me pay you one in return when I say that if I were assured of the former eventuality I would, in the interests of the public, cheerfully accept the latter.
 
 > Sherlock Holmes, [The Sign of the Four, Sherlock Holmes Gives a Demonstration](https://www.pagebypagebooks.com/Arthur_Conan_Doyle/Sign_of_the_Four/Sherlock_Holmes_Gives_a_Demonstration_p2.html){:target="_blank"}:
 > * How often have I said to you that when you have eliminated the impossible whatever remains, HOWEVER IMPROBABLE, must be the truth?
