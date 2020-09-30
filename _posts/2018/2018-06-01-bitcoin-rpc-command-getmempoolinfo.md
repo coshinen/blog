@@ -11,6 +11,7 @@ excerpt: $ bitcoin-cli getmempoolinfo
 ## 1. 帮助内容
 
 ```shell
+$ bitcoin-cli help getmempoolinfo
 getmempoolinfo
 
 返回交易内存池活跃状态的详细信息。

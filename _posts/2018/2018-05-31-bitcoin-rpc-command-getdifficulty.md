@@ -11,6 +11,7 @@ excerpt: $ bitcoin-cli getdifficulty
 ## 1. 帮助内容
 
 ```shell
+$ bitcoin-cli help getdifficulty
 getdifficulty
 
 以最低难度（1.0）的倍数返回工作量证明难度。

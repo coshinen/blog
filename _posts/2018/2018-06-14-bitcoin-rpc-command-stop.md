@@ -8,61 +8,51 @@ category: 区块链
 tags: Bitcoin bitcoin-cli
 excerpt: $ bitcoin-cli stop
 ---
-## 提示说明
+## 1. 帮助内容
 
 ```shell
-stop # 终止比特币核心服务 bitcoind
+$ bitcoin-cli help stop
+stop
+
+停止比特币服务。
+
+例子：
+> bitcoin-cli stop
+> curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "stop", "params": [] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
 ```
 
-## 用法示例
+## 2. 源码剖析
 
-### 比特币核心客户端
-
-关闭比特币核心服务，使其有序退出。
-
-```shell
-$ bitcoin-cli stop
-Bitcoin server stopping
-```
-
-### cURL
-
-```shell
-$ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "stop", "params": [] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
-{"result":"Bitcoin server stopping","error":null,"id":"curltest"}
-```
-
-## 源码剖析
-
-stop 对应的函数实现在“rpcserver.cpp”文件中。
+`stop` 对应的函数实现在文件 `rpcserver.cpp` 中。
 
 ```cpp
 UniValue stop(const UniValue& params, bool fHelp)
 {
     // Accept the deprecated and ignored 'detach' boolean argument
-    if (fHelp || params.size() > 1) // 1.参数最多为 1 个，这里已经过时，现无参数
+    if (fHelp || params.size() > 1)
         throw runtime_error(
             "stop\n"
-            "\nStop Bitcoin server.");
+            "\nStop Bitcoin server."); // 1. 帮助内容
     // Event loop will exit after current HTTP requests have been handled, so
     // this reply will get back to the client. // 在当前 HTTP 请求被处理后时间循环才会退出
-    StartShutdown(); // 2.关闭比特币核心服务
-    return "Bitcoin server stopping"; // 3.返回停止信息
+    StartShutdown(); // 2. 开始关闭比特币核心服务
+    return "Bitcoin server stopping"; // 3. 返回比特币服务器停止信息
 }
 ```
 
-基本流程：
-1. 处理命令帮助和参数个数。
-2. 关闭比特币核心服务。
-3. 完全关闭前返回客端相关信息。
+### 2.1. 帮助内容
 
-调用 StartShutdown() 函数关闭比特币核心服务，该函数声明在“init.h”文件中。
+参考[比特币 RPC 命令剖析 "getbestblockhash" 2.1. 帮助内容](/blog/2018/05/bitcoin-rpc-command-getbestblockhash.html#21-帮助内容)。
+
+### 2.2. 开始关闭比特币核心服务
+
+开始关闭函数 `StartShutdown()` 函数声明在文件 `init.h` 中。
 
 ```cpp
-void StartShutdown(); // 关闭比特币核心服务
+void StartShutdown();
 ```
 
-实现在“init.cpp”文件中。
+实现在文件 `init.cpp` 中。
 
 ```cpp
 volatile bool fRequestShutdown = false; // 请求关闭标志置，初始为 false
@@ -73,7 +63,7 @@ void StartShutdown()
 }
 ```
 
-更多细节请参考[比特币核心服务启动过程](/blog/2018/05/the-annotated-bitcoin-sources-00.html)。
+具体的关闭过程请参考[比特币源码剖析（零） 2. 源码剖析 比特币 v0.12.1 核心服务程序启动流程 3.xiii. Shutdown()](/blog/2018/05/the-annotated-bitcoin-sources.html#2-源码剖析)。
 
 ## 参考链接
 

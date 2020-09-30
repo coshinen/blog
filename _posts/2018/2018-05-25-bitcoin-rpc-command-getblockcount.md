@@ -11,6 +11,7 @@ excerpt: $ bitcoin-cli getblockcount
 ## 1. 帮助内容
 
 ```shell
+$ bitcoin-cli help getblockcount
 getblockcount
 
 返回最长区块链上的区块数。

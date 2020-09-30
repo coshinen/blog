@@ -11,6 +11,7 @@ excerpt: $ bitcoin-cli getblock "hash" ( verbose )
 ## 1. 帮助内容
 
 ```shell
+$ bitcoin-cli help getblock
 getblock "hash" ( verbose )
 
 如果 verbose 是 false，返回一个序列化的字符串，区块 'hash' 为 16 进制编码的数据。

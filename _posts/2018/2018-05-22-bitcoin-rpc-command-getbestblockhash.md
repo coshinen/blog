@@ -11,6 +11,7 @@ excerpt: $ bitcoin-cli getbestblockhash
 ## 1. 帮助内容
 
 ```shell
+$ bitcoin-cli help getbestblockhash
 getbestblockhash
 
 返回最长区块链上最佳（尖端）区块的哈希。
@@ -76,7 +77,7 @@ std::string HelpExampleRpc(const std::string& methodname, const std::string& arg
 }
 ```
 
-### 2.2. 返回活跃的链尖区块哈希的 16 进制
+### 2.2. 返回活跃的链尖区块哈希
 
 对象 `chainActive` 的引用在文件 `main.h` 中。
 

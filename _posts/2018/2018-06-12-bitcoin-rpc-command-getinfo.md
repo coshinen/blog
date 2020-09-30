@@ -8,78 +8,48 @@ category: 区块链
 tags: Bitcoin bitcoin-cli
 excerpt: $ bitcoin-cli getinfo
 ---
-## 提示说明
+##  1. 帮助内容
 
 ```shell
-getinfo # 获取比特币核心信息
-```
+$ bitcoin-cli help getinfo
+getinfo
 
-结果：返回一个包含变量状态信息的对象。
+返回一个包含各种状态信息的对象。
 
-```shell
+结果：
 {
-  "version": xxxxx,           （数字）服务器版本
-  "protocolversion": xxxxx,   （数字）协议版本
-  "walletversion": xxxxx,     （数字）钱包版本
-  "balance": xxxxxxx,         （数字）比特币钱包总余额
-  "blocks": xxxxxx,           （数字）服务器上当前已处理的区块数
-  "timeoffset": xxxxx,        （数字）时间偏移
-  "connections": xxxxx,       （数字）连接数
-  "proxy": "host:port",     （字符串，可选）服务器使用的代理
-  "difficulty": xxxxxx,       （数字）当前的挖矿难度
-  "testnet": true|false,      （布尔型）服务器适用测试网或非测试网
-  "keypoololdest": xxxxxx,    （数字）密钥池中预先生成的最早的密钥时间戳（从格里尼治时间开始以秒为单位）
-  "keypoolsize": xxxx,        （数字）预生成新密钥的数量
-  "unlocked_until": ttt,      （数字）从格里尼治时间开始以秒为单位的钱包解锁结束的时间戳，用于转账，若为 0 表示钱包被锁定，若未出现该字段，说明此时钱包未加密上锁
-  "paytxfee": x.xxxx,         （数字）以 BTC/kB 为单位的交易费
-  "relayfee": x.xxxx,         （数字）对于不免费交易的最小中继费，以 BTC/kB 为单位
-  "errors": "..."           （字符串）任何错误信息
+  "version": xxxxx,        （数字）服务器版本
+  "protocolversion": xxxxx,（数字）协议版本
+  "walletversion": xxxxx,  （数字）钱包版本
+  "balance": xxxxxxx,      （数字）比特币钱包总余额
+  "blocks": xxxxxx,        （数字）服务器上当前已处理的区块数目
+  "timeoffset": xxxxx,     （数字）时间偏移量
+  "connections": xxxxx,    （数字）连接数
+  "proxy": "host:port",    （字符串，可选）服务器使用的代理
+  "difficulty": xxxxxx,    （数字）当前的难度
+  "testnet": true|false,   （布尔型）服务器是否在测试网
+  "keypoololdest": xxxxxx, （数字）密钥池中最早预生成密钥的时间戳（从格里尼治时间开始以秒为单位）
+  "keypoolsize": xxxx,     （数字）预生成新密钥的数量
+  "unlocked_until": ttt,   （数字）从格里尼治时间开始以秒为单位（1970-01-01 00:00:00）的钱包解锁结束的时间戳，用于转账，若为 0 则表示钱包被锁定
+  "paytxfee": x.xxxx,      （数字）以 BTC/kB 为单位的交易费
+  "relayfee": x.xxxx,      （数字）以 BTC/kB 为单位的付费交易的最小中继费
+  "errors": "..."          （字符串）任何错误信息
 }
+
+例子：
+> bitcoin-cli getinfo
+> curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "getinfo", "params": [] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
 ```
 
-## 用法示例
+## 2. 源码剖析
 
-### 比特币核心客户端
-
-获取当前比特币核心服务器基本信息。
-
-```shell
-$ bitcoin-cli getinfo
-{
-  "version": 120100,
-  "protocolversion": 70012,
-  "walletversion": 60000,
-  "balance": 97.99992320,
-  "blocks": 25738,
-  "timeoffset": 0,
-  "connections": 1,
-  "proxy": "",
-  "difficulty": 0.001532956637923291,
-  "testnet": false,
-  "keypoololdest": 1529572814,
-  "keypoolsize": 101,
-  "paytxfee": 0.00000000,
-  "relayfee": 0.00001000,
-  "errors": ""
-}
-```
-
-### cURL
-
-```shell
-$ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "getinfo", "params": [] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
-{"result":{"version":120100,"protocolversion":70012,"walletversion":60000,"balance":97.99992320,"blocks":25759,"timeoffset":0,"connections":1,"proxy":"","difficulty":0.001532956637923291,"testnet":false,"keypoololdest":1529572814,"keypoolsize":101,"paytxfee":0.00000000,"relayfee":0.00001000,"errors":""},"error":null,"id":"curltest"}
-```
-
-## 源码剖析
-
-getinfo 对应的函数在“rpcserver.h”文件中被引用。
+`getinfo` 对应的函数在文件 `rpcserver.h` 中被引用。
 
 ```cpp
-extern UniValue getinfo(const UniValue& params, bool fHelp); // 获取比特币核心信息
+extern UniValue getinfo(const UniValue& params, bool fHelp);
 ```
 
-实现在“rpcmisc.cpp”文件中。
+实现在文件 `rpcmisc.cpp` 中。
 
 ```cpp
 /**
@@ -94,11 +64,11 @@ extern UniValue getinfo(const UniValue& params, bool fHelp); // 获取比特币�
  * - getwalletinfo
  *
  * Or alternatively, create a specific query method for the information.
- **/ // 在该信息通过此方式返回时不添加或改变任何东西
+ **/
 UniValue getinfo(const UniValue& params, bool fHelp)
 {
-    if (fHelp || params.size() != 0) // 1.该方法没有参数
-        throw runtime_error( // 帮助信息反馈
+    if (fHelp || params.size() != 0)
+        throw runtime_error(
             "getinfo\n"
             "Returns an object containing various state info.\n"
             "\nResult:\n"
@@ -123,10 +93,10 @@ UniValue getinfo(const UniValue& params, bool fHelp)
             "\nExamples:\n"
             + HelpExampleCli("getinfo", "")
             + HelpExampleRpc("getinfo", "")
-        );
+        ); // 1. 帮助内容
 
-#ifdef ENABLE_WALLET // 开启钱包功能
-    LOCK2(cs_main, pwalletMain ? &pwalletMain->cs_wallet : NULL); // 2.钱包上锁
+#ifdef ENABLE_WALLET
+    LOCK2(cs_main, pwalletMain ? &pwalletMain->cs_wallet : NULL);
 #else
     LOCK(cs_main);
 #endif
@@ -134,42 +104,42 @@ UniValue getinfo(const UniValue& params, bool fHelp)
     proxyType proxy;
     GetProxy(NET_IPV4, proxy);
 
-    UniValue obj(UniValue::VOBJ); // 3.创建 VOBJ 类型对象
-    obj.push_back(Pair("version", CLIENT_VERSION)); // 追加客户端版本号
+    UniValue obj(UniValue::VOBJ); // 2. 构建各种状态信息的对象并返回
+    obj.push_back(Pair("version", CLIENT_VERSION)); // 客户端版本号
     obj.push_back(Pair("protocolversion", PROTOCOL_VERSION)); // 协议版本号
-#ifdef ENABLE_WALLET // 若开启钱包功能
+#ifdef ENABLE_WALLET
     if (pwalletMain) {
         obj.push_back(Pair("walletversion", pwalletMain->GetVersion())); // 钱包版本号
         obj.push_back(Pair("balance",       ValueFromAmount(pwalletMain->GetBalance()))); // 钱包可用余额
     }
 #endif
-    obj.push_back(Pair("blocks",        (int)chainActive.Height())); // 激活的链高度（总区块数，不算创世区块）
-    obj.push_back(Pair("timeoffset",    GetTimeOffset())); // 时间偏移
-    obj.push_back(Pair("connections",   (int)vNodes.size())); // 已建立的连接数（连入、连出）
+    obj.push_back(Pair("blocks",        (int)chainActive.Height())); // 活跃链的高度
+    obj.push_back(Pair("timeoffset",    GetTimeOffset())); // 时间偏移量
+    obj.push_back(Pair("connections",   (int)vNodes.size())); // 已建立的连接数（出入）
     obj.push_back(Pair("proxy",         (proxy.IsValid() ? proxy.proxy.ToStringIPPort() : string()))); // 代理 IP 和端口
-    obj.push_back(Pair("difficulty",    (double)GetDifficulty())); // 挖矿难度
-    obj.push_back(Pair("testnet",       Params().TestnetToBeDeprecatedFieldRPC())); // 是否为测试网
+    obj.push_back(Pair("difficulty",    (double)GetDifficulty())); // 网络难度
+    obj.push_back(Pair("testnet",       Params().TestnetToBeDeprecatedFieldRPC())); // 测试网弃用的字段 RPC
 #ifdef ENABLE_WALLET
     if (pwalletMain) {
-        obj.push_back(Pair("keypoololdest", pwalletMain->GetOldestKeyPoolTime())); // 密钥池中最早密钥的创建时间
-        obj.push_back(Pair("keypoolsize",   (int)pwalletMain->GetKeyPoolSize())); // 密钥池的大小，比默认大小多 1
+        obj.push_back(Pair("keypoololdest", pwalletMain->GetOldestKeyPoolTime())); // 最早密钥池时间
+        obj.push_back(Pair("keypoolsize",   (int)pwalletMain->GetKeyPoolSize())); // 密钥池的大小
     }
-    if (pwalletMain && pwalletMain->IsCrypted()) // 钱包是否被用户加密
-        obj.push_back(Pair("unlocked_until", nWalletUnlockTime)); // 解锁结束的时间，0 表示未解锁
+    if (pwalletMain && pwalletMain->IsCrypted()) // 钱包是否被加密
+        obj.push_back(Pair("unlocked_until", nWalletUnlockTime)); // 解锁结束的时间
     obj.push_back(Pair("paytxfee",      ValueFromAmount(payTxFee.GetFeePerK()))); // 交易费（每 KB）
 #endif
-    obj.push_back(Pair("relayfee",      ValueFromAmount(::minRelayTxFee.GetFeePerK()))); // 中继费（每 KB）
+    obj.push_back(Pair("relayfee",      ValueFromAmount(::minRelayTxFee.GetFeePerK()))); // 中继交易费（每 KB）
     obj.push_back(Pair("errors",        GetWarnings("statusbar"))); // 错误信息
     return obj;
 }
 ```
 
-基本流程：
-1. 处理命令帮助和参数个数。
-2. 上锁，避免并发。
-3. 相关信息的追加。
+不要添加或改变该方法返回的信息中的任何内容。
+getinfo 的存在只是为了向后兼容。
+它在程序中结合了来自不同源的信息，这是一个混乱，因此计划最终弃用。
 
 ## 参考链接
 
 * [bitcoin/rpcserver.h at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/rpcserver.h){:target="_blank"}
+* [bitcoin/rpcserver.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/rpcserver.cpp){:target="_blank"}
 * [bitcoin/rpcmisc.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/rpcmisc.cpp){:target="_blank"}

@@ -11,6 +11,7 @@ excerpt: $ bitcoin-cli getblockhash index
 ## 1. 帮助内容
 
 ```shell
+$ bitcoin-cli help getblockhash
 getblockhash index
 
 根据提供的索引返回最佳区块链上区块的哈希。

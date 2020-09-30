@@ -11,6 +11,7 @@ excerpt: $ bitcoin-cli getblockchaininfo
 ## 1. 帮助内容
 
 ```shell
+$ bitcoin-cli help getblockchaininfo
 getblockchaininfo
 
 返回一个包含关于区块链处理的各种状态信息的对象。

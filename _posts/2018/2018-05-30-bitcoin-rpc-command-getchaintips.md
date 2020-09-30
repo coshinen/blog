@@ -11,6 +11,7 @@ excerpt: $ bitcoin-cli getchaintips
 ## 1. 帮助内容
 
 ```shell
+$ bitcoin-cli help getchaintips
 getchaintips
 
 返回有关区块树上所有已知尖端的信息，包括主链和孤儿分支。
@@ -89,52 +90,52 @@ UniValue getchaintips(const UniValue& params, bool fHelp)
 
     LOCK(cs_main);
 
-    /* Build up a list of chain tips.  We start with the list of all // 构建链尖列表。
+    /* Build up a list of chain tips.  We start with the list of all
        known blocks, and successively remove blocks that appear as pprev
-       of another block.  */ // 我们从已知块的列表开始，并连续移除另一个区块的 pprev 区块，以获取链尖区块索引。
-    std::set<const CBlockIndex*, CompareBlocksByHeight> setTips; // 链尖区块索引集合
-    BOOST_FOREACH(const PAIRTYPE(const uint256, CBlockIndex*)& item, mapBlockIndex) // 遍历区块索引映射
-        setTips.insert(item.second); // 插入链尖索引集合
-    BOOST_FOREACH(const PAIRTYPE(const uint256, CBlockIndex*)& item, mapBlockIndex) // 遍历区块索引映射
-    {
+       of another block.  */
+    std::set<const CBlockIndex*, CompareBlocksByHeight> setTips; // 2. 构建一个链尖列表。
+    BOOST_FOREACH(const PAIRTYPE(const uint256, CBlockIndex*)& item, mapBlockIndex)
+        setTips.insert(item.second);
+    BOOST_FOREACH(const PAIRTYPE(const uint256, CBlockIndex*)& item, mapBlockIndex)
+    { // 我们从所有已知区块的列表开始，依次移除作为另一个区块的 pprev 区块。
         const CBlockIndex* pprev = item.second->pprev;
         if (pprev)
-            setTips.erase(pprev); // 移除区块的前一个区块
+            setTips.erase(pprev);
     }
 
-    // Always report the currently active tip. // 总是报告当前激活的链尖
-    setTips.insert(chainActive.Tip()); // 插入当前激活链尖区块索引
+    // Always report the currently active tip.
+    setTips.insert(chainActive.Tip()); // 3. 始终报告当前活跃的链尖。
 
-    /* Construct the output array.  */ // 构建输出数组
-    UniValue res(UniValue::VARR); // 创建数组类型的结果对象
-    BOOST_FOREACH(const CBlockIndex* block, setTips) // 遍历链尖区块索引集合
-    {
+    /* Construct the output array.  */
+    UniValue res(UniValue::VARR); // 4. 构建输出数组。
+    BOOST_FOREACH(const CBlockIndex* block, setTips)
+    { // 遍历链尖索引列表
         UniValue obj(UniValue::VOBJ);
-        obj.push_back(Pair("height", block->nHeight)); // 链高度（区块索引）
-        obj.push_back(Pair("hash", block->phashBlock->GetHex())); // 区块哈希
+        obj.push_back(Pair("height", block->nHeight));
+        obj.push_back(Pair("hash", block->phashBlock->GetHex()));
 
         const int branchLen = block->nHeight - chainActive.FindFork(block)->nHeight; // 计算分支长度
         obj.push_back(Pair("branchlen", branchLen));
 
-        string status; // 链状态
-        if (chainActive.Contains(block)) { // 检查当前激活链上是否存在该区块
-            // This block is part of the currently active chain. // 该区块是当前激活链的一部分
-            status = "active"; // 状态标记为激活
-        } else if (block->nStatus & BLOCK_FAILED_MASK) { // 该块或其祖先之一的区块无效
+        string status;
+        if (chainActive.Contains(block)) {
+            // This block is part of the currently active chain.
+            status = "active"; // 这个区块是当前活跃链的一部分。
+        } else if (block->nStatus & BLOCK_FAILED_MASK) {
             // This block or one of its ancestors is invalid.
-            status = "invalid"; // 状态标记为无效
-        } else if (block->nChainTx == 0) { // 该块无法连接，因为该块或其父块之一的完整区块数据丢失
+            status = "invalid"; // 这个区块或其祖先之一是无效的。
+        } else if (block->nChainTx == 0) {
             // This block cannot be connected because full block data for it or one of its parents is missing.
-            status = "headers-only"; // 状态表记为仅区块头
-        } else if (block->IsValid(BLOCK_VALID_SCRIPTS)) { // 该区块已完全验证，但不再是激活链的一部分
-            // This block is fully validated, but no longer part of the active chain. It was probably the active block once, but was reorganized. // 可能曾是激活的区块，但被重组
-            status = "valid-fork"; // 状态标记为验证分叉
-        } else if (block->IsValid(BLOCK_VALID_TREE)) { // 该区块头有效，但它没有被验证。
-            // The headers for this block are valid, but it has not been validated. It was probably never part of the most-work chain. // 可能从来不是有效链的一部分。
-            status = "valid-headers"; // 状态标记为验证头部
+            status = "headers-only"; // 无法连接这个区块，因为缺少该区块或其父块之一的完整区块数据。
+        } else if (block->IsValid(BLOCK_VALID_SCRIPTS)) {
+            // This block is fully validated, but no longer part of the active chain. It was probably the active block once, but was reorganized.
+            status = "valid-fork"; // 这个区块已经完全验证，但不再是活跃链的一部分了。它可能曾经是活跃的区块，但已经被重新组织。
+        } else if (block->IsValid(BLOCK_VALID_TREE)) {
+            // The headers for this block are valid, but it has not been validated. It was probably never part of the most-work chain.
+            status = "valid-headers"; // 这个区块头有效的，但它尚未被验证。这可能从来不是大部分工作链的一部分。
         } else {
             // No clue.
-            status = "unknown";
+            status = "unknown"; // 没有线索。
         }
         obj.push_back(Pair("status", status));
 
@@ -149,23 +150,18 @@ UniValue getchaintips(const UniValue& params, bool fHelp)
 
 参考[比特币 RPC 命令剖析 "getbestblockhash" 2.1. 帮助内容](/blog/2018/05/bitcoin-rpc-command-getbestblockhash.html#21-帮助内容)。
 
-3. 创建链尖区块索引集合，遍历区块索引映射，把所有区块索引加入该集合。
-4. 遍历区块索引映射，把所有区块的前一个区块索引从该集合中擦除。
-5. 把当前激活链的链尖区块索引插入该集合。
-6. 遍历链尖区块索引集合，获取相应信息并加入输出数组。
-7. 返回该数组对象。
+### 2.2. 构建一个链尖列表
 
-第三步，创建链尖区块索引集合对象 setTips 使用了函数对象比较器 CompareBlocksByHeight。
-该函数对象定义在“rpcblockchain.cpp”文件中。
+函数对象比较器 `CompareBlocksByHeight` 定义在文件 `rpcblockchain.cpp` 中。
 
 ```cpp
-/** Comparison function for sorting the getchaintips heads.  */ // 用于 getchaintips 函数排序区块头的比较器
-struct CompareBlocksByHeight // 函数对象，通过高度比较区块
+/** Comparison function for sorting the getchaintips heads.  */
+struct CompareBlocksByHeight // 用于排序函数 getchaintips 区块头的比较函数。
 {
     bool operator()(const CBlockIndex* a, const CBlockIndex* b) const
     {
-        /* Make sure that unequal blocks with the same height do not compare // 确保相同高度不同的块比较后不等
-           equal. Use the pointers themselves to make a distinction. */ // 使用指针区分。
+        /* Make sure that unequal blocks with the same height do not compare
+           equal. Use the pointers themselves to make a distinction. */
 
         if (a->nHeight != b->nHeight)
           return (a->nHeight > b->nHeight);
@@ -175,89 +171,96 @@ struct CompareBlocksByHeight // 函数对象，通过高度比较区块
 };
 ```
 
-第六步，计算分支长度使，调用 chainActive.FindFork(block) 函数得到分支交点区块索引。
-该函数声明在“chain.h”文件的 CChain 类中。
+确保高度相同的不同区块比较起来不想等。
+使用指针自身来做区分。
+
+### 2.3. 始终报告当前活跃的链尖
+
+参考[比特币 RPC 命令剖析 "getbestblockhash" 2.2. 返回活跃的链尖区块哈希](/blog/2018/05/bitcoin-rpc-command-getbestblockhash.html#22-返回活跃的链尖区块哈希)。
+
+### 2.4. 构建输出数组并返回
+
+计算分支长度，寻找分叉函数 `chainActive.FindFork(block)` 声明在文件 `chain.h` 的链类 `CChain` 中。
 
 ```cpp
 /** An in-memory indexed chain of blocks. */
-class CChain { // 一个内存中用于区块索引的链
+class CChain { // 一个内存中已索引的区块链。
 private:
     ...
     /** Find the last common block between this chain and a block index entry. */
-    const CBlockIndex *FindFork(const CBlockIndex *pindex) const; // 在该链和一个区块索引条目间找最近的一个公共区块
+    const CBlockIndex *FindFork(const CBlockIndex *pindex) const; // 查找该链和一个区块索引项之间的最后一个公共区块。
 };
 ```
 
-实现在“chain.cpp”文件中。
+实现在文件 `chain.cpp` 中。
 
 ```cpp
 const CBlockIndex *CChain::FindFork(const CBlockIndex *pindex) const {
     if (pindex == NULL) {
         return NULL;
     }
-    if (pindex->nHeight > Height()) // 若指定区块高度大于当前激活链高度
-        pindex = pindex->GetAncestor(Height()); // 获取其祖先区块索引
-    while (pindex && !Contains(pindex)) // 当该区块包含在激活链上时，找到该分支的交点
+    if (pindex->nHeight > Height()) // 若指定区块高度大于当前活跃的链高度
+        pindex = pindex->GetAncestor(Height()); // 获取活跃的链上祖先区块索引
+    while (pindex && !Contains(pindex)) // 向前查找该分支的交点
         pindex = pindex->pprev;
     return pindex;
 }
 ```
 
-当指定区块的高度大于当前链高度时，调用 pindex->GetAncestor(Height()) 函数获取祖先区块的索引。
-该函数声明在“chain.h”文件的 CBlockIndex 类中。
+获取祖先函数 `pindex->GetAncestor(Height())` 声明在文件 `chain.h` 的区块索引类 `CBlockIndex` 中。
 
 ```cpp
 /** The block chain is a tree shaped structure starting with the
  * genesis block at the root, with each block potentially having multiple
  * candidates to be the next block. A blockindex may have multiple pprev pointing
  * to it, but at most one of them can be part of the currently active branch.
- */ // 区块链是一个始于以创世区块为根的树状结构，每个区块可有多个候选作为下一个区块。一个区块索引可能有多个 pprev 指向它，但最多只能有一个能成为当前激活分支的一部分。
-class CBlockIndex // 区块索引类
+ */
+class CBlockIndex
 {
     ...
     //! Efficiently find an ancestor of this block.
-    CBlockIndex* GetAncestor(int height); // 有效找到该块的祖先
+    CBlockIndex* GetAncestor(int height); //! 有效地找到这个区块的祖先。
     const CBlockIndex* GetAncestor(int height) const;
 };
 ```
 
-实现在“chain.cpp”文件中。
+实现在文件 `chain.cpp` 中。
 
 ```cpp
 /** Turn the lowest '1' bit in the binary representation of a number into a '0'. */
-int static inline InvertLowestOne(int n) { return n & (n - 1); } // 把一个数二进制最低位的 '1' 转换为 '0'
+int static inline InvertLowestOne(int n) { return n & (n - 1); } // 把一个数的二进制表示中的最低位的 '1' 转换为 '0'。
 
 /** Compute what height to jump back to with the CBlockIndex::pskip pointer. */
-int static inline GetSkipHeight(int height) {
+int static inline GetSkipHeight(int height) { // 使用 CBlockIndex::pskip 指针计算跳回的高度。
     if (height < 2)
         return 0;
 
-    // Determine which height to jump back to. Any number strictly lower than height is acceptable, // 确定要跳回的高度。任何严格低于高度的数均可接受，
-    // but the following expression seems to perform well in simulations (max 110 steps to go back // 但下面的表达式似乎在模拟中表现得很好。（最大 110 步返回到 2**18 块）
-    // up to 2**18 blocks).
+    // Determine which height to jump back to. Any number strictly lower than height is acceptable,
+    // but the following expression seems to perform well in simulations (max 110 steps to go back
+    // up to 2**18 blocks). // 确定跳回的高度。任何严格低于高度均可接受，但下面的表达式似乎在模拟中表现得很好（最多 110 步回到 2**18 个区块）。
     return (height & 1) ? InvertLowestOne(InvertLowestOne(height - 1)) + 1 : InvertLowestOne(height); // height 奇前偶后
 }
 
-CBlockIndex* CBlockIndex::GetAncestor(int height) // 当前激活链高度
+CBlockIndex* CBlockIndex::GetAncestor(int height)
 {
-    if (height > nHeight || height < 0) // 高度验证
+    if (height > nHeight || height < 0)
         return NULL;
 
     CBlockIndex* pindexWalk = this;
-    int heightWalk = nHeight; // 指定区块的高度
-    while (heightWalk > height) { // 当指定区块的高度大于当前激活链高度
-        int heightSkip = GetSkipHeight(heightWalk); // 获取要跳回的高度
-        int heightSkipPrev = GetSkipHeight(heightWalk - 1); // 获取要跳回的前一个高度
+    int heightWalk = nHeight;
+    while (heightWalk > height) {
+        int heightSkip = GetSkipHeight(heightWalk);
+        int heightSkipPrev = GetSkipHeight(heightWalk - 1);
         if (pindexWalk->pskip != NULL &&
             (heightSkip == height ||
              (heightSkip > height && !(heightSkipPrev < heightSkip - 2 &&
                                        heightSkipPrev >= height)))) {
             // Only follow pskip if pprev->pskip isn't better than pskip->pprev.
-            pindexWalk = pindexWalk->pskip;
+            pindexWalk = pindexWalk->pskip; // 只有当 pprev->pskip 不优于 pskip->pprev 时才遵循 pskip。
             heightWalk = heightSkip;
         } else {
             pindexWalk = pindexWalk->pprev;
-            heightWalk--; // 高度减 1
+            heightWalk--;
         }
     }
     return pindexWalk;
@@ -265,11 +268,9 @@ CBlockIndex* CBlockIndex::GetAncestor(int height) // 当前激活链高度
 
 const CBlockIndex* CBlockIndex::GetAncestor(int height) const
 {
-    return const_cast<CBlockIndex*>(this)->GetAncestor(height); // 转调重载的获取区块祖先函数
+    return const_cast<CBlockIndex*>(this)->GetAncestor(height); // 转调上面的重载函数
 }
 ```
-
-未完成。
 
 ## 参考链接
 
