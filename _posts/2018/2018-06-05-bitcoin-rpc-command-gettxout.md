@@ -8,109 +8,65 @@ category: 区块链
 tags: Bitcoin bitcoin-cli
 excerpt: $ bitcoin-cli gettxout "txid" n ( includemempool )
 ---
-## 提示说明
+## 1. 帮助内容
 
 ```shell
-gettxout "txid" n ( includemempool ) # 获取关于一笔未花费交易输出的细节
-```
+$ bitcoin-cli help gettxout
+gettxout "txid" n ( includemempool )
+
+返回关于一笔未花费交易输出的细节。
 
 参数：
-1. txid（字符串，必备）交易索引。
-2. n（数字，必备）输出序号（索引）。
-3. includemempool（布尔型，可选）是否在交易内存池中。
+1. txid          （字符串，必备）交易索引
+2. n             （数字，必备）输出值
+3. includemempool（布尔型，可选）是否在内存池中
 
 结果：
-
-```shell
 {
   "bestblock" : "hash",    （字符串）区块哈希
-  "confirmations" : n,       （数字）确认数
-  "value" : x.xxx,           （数字）以 BTC 为单位的交易金额
-  "scriptPubKey" : {         （json 对象）
+  "confirmations" : n,     （数字）确认数
+  "value" : x.xxx,         （数字）以 BTC 为单位的交易金额
+  "scriptPubKey" : {       （json 对象）
      "asm" : "code",       （字符串）
      "hex" : "hex",        （字符串）
-     "reqSigs" : n,          （数字）所需签名数
-     "type" : "pubkeyhash", （字符串）类型，例 "pubkeyhash"
-     "addresses" : [          （字符串数组）比特币地址数组
-        "bitcoinaddress"     （字符串）比特币地址
+     "reqSigs" : n,        （数字）所需签名数
+     "type" : "pubkeyhash",（字符串）类型，例 pubkeyhash
+     "addresses" : [       （字符串数组）比特币地址数组
+        "bitcoinaddress"   （字符串）比特币地址
         ,...
      ]
   },
-  "version" : n,            （数字）版本
-  "coinbase" : true|false   （布尔型）是创币交易或不是
+  "version" : n,           （数字）版本
+  "coinbase" : true|false  （布尔型）是创币交易或不是
 }
+
+例子：
+
+获取未花费的交易
+> bitcoin-cli listunspent
+
+查看细节
+> bitcoin-cli gettxout "txid" 1
+
+作为一个 json rpc 调用
+> curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "gettxout", "params": ["txid", 1] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
 ```
 
-## 用法示例
+## 2. 源码剖析
 
-先使用 [listunspent](/blog/2018/09/bitcoin-rpc-command-listunspent.html) 命令列出未花费交易输出，
-再通过交易索引和交易输出序号获取该交易输出的详细信息。
-
-```shell
-$ bitcoin-cli listunspent
-[
-  {
-    "txid": "b797bafd7830774cec4d24d1e649cafb0aa7a67b9f1cc06954102a50b463fa0f",
-    "vout": 1,
-    "address": "17FGuwcea6vd7GLhBc16Xuwqfk7KFp5cZ3",
-    "scriptPubKey": "76a9144483dc8ad0a184355b70b2767a832266b4c2df0a88ac",
-    "amount": 48.99996160,
-    "confirmations": 18,
-    "spendable": true
-  }, 
-  {
-    "txid": "fb61a61c6cc7b37cd0afd2152a77fa894d82629971c77e11d00e9aed1cd03dfc",
-    "vout": 0,
-    "address": "1NLvqp6kvunbmtWMWbzdn7puD91kTXwiYd",
-    "scriptPubKey": "76a914ea1f7d4b14deb291956a3d5adb503ff9772072fa88ac",
-    "amount": 48.99996160,
-    "confirmations": 16,
-    "spendable": true
-  }
-]
-$ bitcoin-cli gettxout b797bafd7830774cec4d24d1e649cafb0aa7a67b9f1cc06954102a50b463fa0f 1
-{
-  "bestblock": "0000005672bf2346408496c275427a6a8037566e001ed3639fa297ce86a10f09",
-  "confirmations": 43,
-  "value": 48.99996160,
-  "scriptPubKey": {
-    "asm": "OP_DUP OP_HASH160 4483dc8ad0a184355b70b2767a832266b4c2df0a OP_EQUALVERIFY OP_CHECKSIG",
-    "hex": "76a9144483dc8ad0a184355b70b2767a832266b4c2df0a88ac",
-    "reqSigs": 1,
-    "type": "pubkeyhash",
-    "addresses": [
-      "17FGuwcea6vd7GLhBc16Xuwqfk7KFp5cZ3"
-    ]
-  },
-  "version": 1,
-  "coinbase": false
-}
-```
-
-### cURL
-
-使用 json rpc 调用。
-
-```shell
-$ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "gettxout", "params": ["txid", 1] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
-{"result":{"bestblock":"0000012fa5815cb19a6012d2a42aecd0e6d99df2462cb107d752d5637441b54e","confirmations":656,"value":48.99996160,"scriptPubKey":{"asm":"OP_DUP OP_HASH160 4483dc8ad0a184355b70b2767a832266b4c2df0a OP_EQUALVERIFY OP_CHECKSIG","hex":"76a9144483dc8ad0a184355b70b2767a832266b4c2df0a88ac","reqSigs":1,"type":"pubkeyhash","addresses":["17FGuwcea6vd7GLhBc16Xuwqfk7KFp5cZ3"]},"version":1,"coinbase":false},"error":null,"id":"curltest"}
-```
-
-## 源码剖析
-
-gettxout 对应的函数在“rpcserver.h”文件中被引用。
+`gettxout` 对应的函数在文件 `rpcserver.h` 中被引用。
 
 ```cpp
-extern UniValue gettxout(const UniValue& params, bool fHelp); // 获取一笔交易输出（链上或内存池中）的细节
+extern UniValue gettxout(const UniValue& params, bool fHelp);
 ```
 
-实现在“rpcblockchain.cpp”文件中。
+实现在文件 `rpcblockchain.cpp` 中。
 
 ```cpp
 UniValue gettxout(const UniValue& params, bool fHelp)
 {
-    if (fHelp || params.size() < 2 || params.size() > 3) // 参数为 2 个或 3 个
-        throw runtime_error( // 命令帮助反馈
+    if (fHelp || params.size() < 2 || params.size() > 3)
+        throw runtime_error(
             "gettxout \"txid\" n ( includemempool )\n"
             "\nReturns details about an unspent transaction output.\n"
             "\nArguments:\n"
@@ -143,28 +99,28 @@ UniValue gettxout(const UniValue& params, bool fHelp)
             + HelpExampleCli("gettxout", "\"txid\" 1") +
             "\nAs a json rpc call\n"
             + HelpExampleRpc("gettxout", "\"txid\", 1")
-        );
+        ); // 1. 帮助内容
 
     LOCK(cs_main);
 
-    UniValue ret(UniValue::VOBJ); // 目标类型的结果对象
+    UniValue ret(UniValue::VOBJ);
 
-    std::string strHash = params[0].get_str(); // 获取交易索引
+    std::string strHash = params[0].get_str();
     uint256 hash(uint256S(strHash));
-    int n = params[1].get_int(); // 获取交易输出索引
-    bool fMempool = true; // 是否包含内存池内交易的标志，默认为 true
+    int n = params[1].get_int();
+    bool fMempool = true;
     if (params.size() > 2)
-        fMempool = params[2].get_bool(); // 获取指定的内存池标志
+        fMempool = params[2].get_bool();
 
-    CCoins coins; // 创建一个被修剪的交易版本对象（只包含元数据和未花费的交易输出）
-    if (fMempool) { // 若包含内存池中的交易
-        LOCK(mempool.cs); // 内存池上锁
-        CCoinsViewMemPool view(pcoinsTip, mempool); // 创建内存池引用查看对象
-        if (!view.GetCoins(hash, coins)) // 获取修剪版交易
+    CCoins coins;
+    if (fMempool) {
+        LOCK(mempool.cs);
+        CCoinsViewMemPool view(pcoinsTip, mempool); // 创建查看内存池对象
+        if (!view.GetCoins(hash, coins))
             return NullUniValue;
         mempool.pruneSpent(hash, coins); // TODO: this should be done by the CCoinsViewMemPool
-    } else { // 若不包含内存池的交易
-        if (!pcoinsTip->GetCoins(hash, coins)) // 直接获取真正缓存的币数据
+    } else {
+        if (!pcoinsTip->GetCoins(hash, coins)) // 获取缓存的币数据
             return NullUniValue;
     }
     if (n<0 || (unsigned int)n>=coins.vout.size() || coins.vout[n].IsNull()) // 输出索引范围检测，或该索引对应输出为空
@@ -174,31 +130,26 @@ UniValue gettxout(const UniValue& params, bool fHelp)
     CBlockIndex *pindex = it->second; // 获取最佳区块索引
     ret.push_back(Pair("bestblock", pindex->GetBlockHash().GetHex())); // 最佳区块哈希
     if ((unsigned int)coins.nHeight == MEMPOOL_HEIGHT) // 若币的高度为 0x7FFFFFFF
-        ret.push_back(Pair("confirmations", 0)); // 未上链，0 确认数
+        ret.push_back(Pair("confirmations", 0)); // 则未上链，确认数为 0
     else // 否则表示已上链
-        ret.push_back(Pair("confirmations", pindex->nHeight - coins.nHeight + 1)); // 获取确认数
+        ret.push_back(Pair("confirmations", pindex->nHeight - coins.nHeight + 1)); // 确认数
     ret.push_back(Pair("value", ValueFromAmount(coins.vout[n].nValue))); // 输出金额
     UniValue o(UniValue::VOBJ);
     ScriptPubKeyToJSON(coins.vout[n].scriptPubKey, o, true); // 公钥脚本转换为 JSON 格式
     ret.push_back(Pair("scriptPubKey", o)); // 公钥脚本
     ret.push_back(Pair("version", coins.nVersion)); // 版本号
-    ret.push_back(Pair("coinbase", coins.fCoinBase)); // 是否为创币交易
+    ret.push_back(Pair("coinbase", coins.fCoinBase)); // 创币交易标志
 
     return ret;
 }
 ```
 
-基本流程：
-1. 处理命令帮助和参数个数。
-2. 上锁。
-3. 获取相关参数：交易索引，交易输出索引，是否包含交易内存池标志。
-4. 若包含交易内存池，则获取修剪版本交易，并标记该交易输出已花费。
-5. 若不包含，直接获取缓存的币数据。
-6. 交易输出索引检测。
-7. 获取相关信息并追加到结果对象。
-8. 返回结果。
+### 2.1. 帮助内容
+
+参考[比特币 RPC 命令剖析 "getbestblockhash" 2.1. 帮助内容](/blog/2018/05/bitcoin-rpc-command-getbestblockhash.html#21-帮助内容)。
 
 ## 参考链接
 
 * [bitcoin/rpcserver.h at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/rpcserver.h){:target="_blank"}
+* [bitcoin/rpcserver.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/rpcserver.cpp){:target="_blank"}
 * [bitcoin/rpcblockchain.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/rpcblockchain.cpp){:target="_blank"}

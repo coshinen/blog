@@ -8,62 +8,45 @@ category: 区块链
 tags: Bitcoin bitcoin-cli
 excerpt: $ bitcoin-cli submitblock "hexdata" ( "jsonparametersobject" )
 ---
-## 提示说明
+## 1. 帮助内容
 
 ```shell
-submitblock "hexdata" ( "jsonparametersobject" ) # 尝试提交一个新区块到网络
-```
+$ bitcoin-cli help submitblock
+submitblock "hexdata" ( "jsonparametersobject" )
 
-**注：jsonparametersobject 当前被忽略。详见 [https://en.bitcoin.it/wiki/BIP_0022](https://en.bitcoin.it/wiki/BIP_0022)。**
+尝试提交新的区块到网络。
+'jsonparametersobject' 参数当前已被忽略。
+查看 https://en.bitcoin.it/wiki/BIP_0022 获取完整规格。
 
 参数：
-1. hexdata（字符串，必备）用于提交的 16 进制编码的区块数据。
-2. jsonparametersobject（字符串，可选）可选的参数对象。
-```shell
-{
-  "workid" : "id"  （字符串，可选）如果服务器提供一个工作 id，它必须包含在提交内容中。
-}
+1. "hexdata"             （字符串，必备）待提交的 16 进制编码的区块数据
+2. "jsonparametersobject"（字符串，可选）可选的参数对象
+    {
+      "workid" : "id"    （字符串，可选）如果服务器提供一个工作 id，它必须包含在提交中
+    }
+
+结果：
+
+例子：
+> bitcoin-cli submitblock "mydata"
+> curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "submitblock", "params": ["mydata"] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
 ```
 
-结果：无返回值。
+## 2. 源码剖析
 
-## 用法示例
-
-### 比特币核心客户端
-
-尝试提交最佳区块到链上。
-
-```shell
-$ bitcoin-cli getbestblockhash
-00000268eb1f82d7a86f7e3d2db39974933605b36d21b61242bcf8535de8d38c
-$ bitcoin-cli getblock 00000268eb1f82d7a86f7e3d2db39974933605b36d21b61242bcf8535de8d38c false
-0000002083aadc5ca01aeaf98d15b7a0fe04c2a9801c4221a921bb1fb417f329ce010000a677dc9648643da9cf2d013e3cc342a998be81c1d4ce8c41c71a42b8626dbd6eedb6315b538c021ec8e13c000101000000010000000000000000000000000000000000000000000000000000000000000000ffffffff05025c720101ffffffff0100f2052a010000002321029aeb393fdc3360a7c2660487f1955404fbe54f99ad9a80d61686a7b68d08a272ac00000000
-$ bitcoin-cli submitblock 0000002083aadc5ca01aeaf98d15b7a0fe04c2a9801c4221a921bb1fb417f329ce010000a677dc9648643da9cf2d013e3cc342a998be81c1d4ce8c41c71a42b8626dbd6eedb6315b538c021ec8e13c000101000000010000000000000000000000000000000000000000000000000000000000000000ffffffff05025c720101ffffffff0100f2052a010000002321029aeb393fdc3360a7c2660487f1955404fbe54f99ad9a80d61686a7b68d08a272ac00000000
-duplicate
-```
-
-### cURL
-
-```shell
-$ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "submitblock", "params": ["0000002083aadc5ca01aeaf98d15b7a0fe04c2a9801c4221a921bb1fb417f329ce010000a677dc9648643da9cf2d013e3cc342a998be81c1d4ce8c41c71a42b8626dbd6eedb6315b538c021ec8e13c000101000000010000000000000000000000000000000000000000000000000000000000000000ffffffff05025c720101ffffffff0100f2052a010000002321029aeb393fdc3360a7c2660487f1955404fbe54f99ad9a80d61686a7b68d08a272ac00000000"] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
-{"result":"duplicate","error":null,"id":"curltest"}
-```
-
-## 源码剖析
-
-submitblock 对应的函数在“rpcserver.h”文件中被引用。
+`submitblock` 对应的函数在文件 `rpcserver.h` 中被引用。
 
 ```cpp
-extern UniValue submitblock(const UniValue& params, bool fHelp); // 提交区块
+extern UniValue submitblock(const UniValue& params, bool fHelp);
 ```
 
-实现在“rpcmining.cpp”文件中。
+实现在文件 `rpcmining.cpp` 中。
 
 ```cpp
 UniValue submitblock(const UniValue& params, bool fHelp)
 {
-    if (fHelp || params.size() < 1 || params.size() > 2) // 参数只有 1 个
-        throw runtime_error( // 命令帮助反馈
+    if (fHelp || params.size() < 1 || params.size() > 2)
+        throw runtime_error(
             "submitblock \"hexdata\" ( \"jsonparametersobject\" )\n"
             "\nAttempts to submit new block to network.\n"
             "The 'jsonparametersobject' parameter is currently ignored.\n"
@@ -79,25 +62,25 @@ UniValue submitblock(const UniValue& params, bool fHelp)
             "\nExamples:\n"
             + HelpExampleCli("submitblock", "\"mydata\"")
             + HelpExampleRpc("submitblock", "\"mydata\"")
-        );
+        ); // 1. 帮助内容
 
     CBlock block;
-    if (!DecodeHexBlk(block, params[0].get_str())) // 解码 16 进制的区块数据
+    if (!DecodeHexBlk(block, params[0].get_str())) // 2. 解码 16 进制区块数据
         throw JSONRPCError(RPC_DESERIALIZATION_ERROR, "Block decode failed");
 
-    uint256 hash = block.GetHash(); // 获取区块哈希
+    uint256 hash = block.GetHash();
     bool fBlockPresent = false;
     {
         LOCK(cs_main);
-        BlockMap::iterator mi = mapBlockIndex.find(hash); // 通过区块索引得到该区块对应迭代器
-        if (mi != mapBlockIndex.end()) { // 如果找到了
-            CBlockIndex *pindex = mi->second; // 获取其区块索引
+        BlockMap::iterator mi = mapBlockIndex.find(hash);
+        if (mi != mapBlockIndex.end()) {
+            CBlockIndex *pindex = mi->second;
             if (pindex->IsValid(BLOCK_VALID_SCRIPTS))
                 return "duplicate";
             if (pindex->nStatus & BLOCK_FAILED_MASK)
                 return "duplicate-invalid";
             // Otherwise, we might only have the header - process the block before returning
-            fBlockPresent = true;
+            fBlockPresent = true; // 否则，我们可能只有区块头 - 在返回前处理区块
         }
     }
 
@@ -123,14 +106,12 @@ UniValue submitblock(const UniValue& params, bool fHelp)
 
 ```
 
-基本流程：
-1. 处理命令帮助和参数个数。
-2. 解码 16 进制的区块数据。
-3. 获取区块哈希。
-4. 查找该区块是否存在，若存在，...
-5. 若不存在，...
+### 2.1. 帮助内容
+
+参考[比特币 RPC 命令剖析 "getbestblockhash" 2.1. 帮助内容](/blog/2018/05/bitcoin-rpc-command-getbestblockhash.html#21-帮助内容)。
 
 ## 参考链接
 
 * [bitcoin/rpcserver.h at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/rpcserver.h){:target="_blank"}
+* [bitcoin/rpcserver.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/rpcserver.cpp){:target="_blank"}
 * [bitcoin/rpcmining.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/rpcmining.cpp){:target="_blank"}

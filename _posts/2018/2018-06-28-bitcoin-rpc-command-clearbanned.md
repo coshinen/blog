@@ -8,84 +8,60 @@ category: 区块链
 tags: Bitcoin bitcoin-cli
 excerpt: $ bitcoin-cli clearbanned
 ---
-## 提示说明
+## 1. 帮助内容
 
 ```shell
-clearbanned # 清除所有禁止的 IP
+$ bitcoin-cli help clearbanned
+clearbanned
+
+清除所有已禁止的 IP。
+
+例子：
+> bitcoin-cli clearbanned
+> curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "clearbanned", "params": [] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
 ```
 
-结果：无返回值。
+## 2. 源码剖析
 
-## 用法示例
-
-### 比特币核心客户端
-
-使用 RPC 命令 [listbanned](/blog/2018/07/bitcoin-rpc-command-listbanned.html) 查看黑名单。
-
-```shell
-$ bitcoin-cli listbanned
-[
-  {
-    "address": "192.168.0.2/32",
-    "banned_until": 1527642100,
-    "ban_created": 1527555700,
-    "ban_reason": "manually added"
-  }
-]
-$ bitcoin-cli clearbanned
-$ bitcoin-cli listbanned
-[
-]
-```
-
-### cURL
-
-```shell
-$ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "clearbanned", "params": [] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
-{"result":null,"error":null,"id":"curltest"}
-```
-
-## 源码剖析
-
-listbanned 对应的函数在“rpcserver.h”文件中被引用。
+`listbanned` 对应的函数在文件 `rpcserver.h` 中被引用。
 
 ```cpp
-extern UniValue clearbanned(const UniValue& params, bool fHelp); // 清空黑名单
+extern UniValue clearbanned(const UniValue& params, bool fHelp);
 ```
 
-实现在“rpcnet.cpp”文件中。
+实现在文件 `rpcnet.cpp` 中。
 
 ```cpp
 UniValue clearbanned(const UniValue& params, bool fHelp)
 {
-    if (fHelp || params.size() != 0) // 没有参数
-        throw runtime_error( // 命令帮助反馈
+    if (fHelp || params.size() != 0)
+        throw runtime_error(
                             "clearbanned\n"
                             "\nClear all banned IPs.\n"
                             "\nExamples:\n"
                             + HelpExampleCli("clearbanned", "")
                             + HelpExampleRpc("clearbanned", "")
-                            );
+                            ); // 1. 帮助内容
 
-    CNode::ClearBanned(); // 清空禁止列表
-    DumpBanlist(); //store banlist to disk // 导出禁止列表到硬盘
+    CNode::ClearBanned(); // 2. 清空已禁止的节点列表
+    DumpBanlist(); //store banlist to disk // 3. 存储禁止列表到磁盘
     uiInterface.BannedListChanged();
 
     return NullUniValue;
 }
 ```
 
-基本流程：
-1. 处理命令帮助和参数个数。
-2. 清空黑名单。
-3. 导出黑名单到磁盘（清空相应的数据库文件）。
-4. 发送信号，黑名单已改变。
+### 2.1. 帮助内容
 
-函数 CNode::ClearBanned() 声明在“net.h”文件的 CNode 类中。
+参考[比特币 RPC 命令剖析 "getbestblockhash" 2.1. 帮助内容](/blog/2018/05/bitcoin-rpc-command-getbestblockhash.html#21-帮助内容)。
+
+### 2.2. 清空已禁止的节点列表
+
+清空已禁止的节点列表函数 `CNode::ClearBanned()` 声明在文件 `net.h` 的节点类 `CNode` 中。
 
 ```cpp
 /** Information about a peer */
-class CNode // 关于同辈的信息
+class CNode // 关于一个对端的信息
 {
     ...
 protected:
@@ -101,28 +77,30 @@ protected:
 };
 ```
 
-实现在“net.cpp”文件中。
+实现在文件 `net.cpp` 中。
 
 ```cpp
-banmap_t CNode::setBanned; // 设置屏蔽地址列表
+banmap_t CNode::setBanned;
 CCriticalSection CNode::cs_setBanned;
-bool CNode::setBannedIsDirty; // 标志禁止列表已被清空过
+bool CNode::setBannedIsDirty;
 
 void CNode::ClearBanned()
 {
-    LOCK(cs_setBanned); // 上锁
-    setBanned.clear(); // 清空列表
-    setBannedIsDirty = true; // 标志置为 true
+    LOCK(cs_setBanned);
+    setBanned.clear();
+    setBannedIsDirty = true;
 }
 ```
 
-函数 DumpBanlist() 声明在“net.h”文件中。
+### 2.3. 存储禁止列表到磁盘
+
+导出禁止列表函数 `DumpBanlist()` 声明在文件 `net.h` 中。
 
 ```cpp
 void DumpBanlist();
 ```
 
-实现在“net.cpp”文件中。
+实现在文件 `net.cpp` 中。
 
 ```cpp
 void DumpBanlist()
@@ -141,7 +119,7 @@ void DumpBanlist()
 }
 ```
 
-函数 CNode::SweepBanned() 声明在“net.h”文件的 CNode 类中。
+函数 `CNode::SweepBanned()` 声明在文件 `net.h` 的节点类 `CNode` 中。
 
 ```cpp
 /** Information about a peer */
@@ -149,50 +127,50 @@ class CNode // 关于同辈的信息
 {
     ...
     //!clean unused entries (if bantime has expired)
-    static void SweepBanned(); // 清除无用的条目（若禁止时间已过期）
+    static void SweepBanned(); //! 清除无用的条目（若禁止时间已过期）
     ...
 };
 ```
 
-实现在“net.cpp”文件中，用于清除黑名单中过期的条目。
+实现在文件 `net.cpp` 中。
 
 ```cpp
 void CNode::SweepBanned()
 {
-    int64_t now = GetTime(); // 获取当前时间
+    int64_t now = GetTime();
 
     LOCK(cs_setBanned);
     banmap_t::iterator it = setBanned.begin();
     while(it != setBanned.end())
-    { // 遍历禁止列表
+    {
         CBanEntry banEntry = (*it).second;
-        if(now > banEntry.nBanUntil) // 若过期时间小于当前时间
-        { // 说明已过期
-            setBanned.erase(it++); // 清除该条目
+        if(now > banEntry.nBanUntil) // 当前时间大于禁止时间，说明已过期
+        {
+            setBanned.erase(it++);
             setBannedIsDirty = true;
         }
-        else // 跳过该条目
+        else
             ++it;
     }
 }
 ```
 
-类 CBanDB 定义在“net.h”文件中。
+禁止数据库类 `CBanDB` 定义在文件 `net.h` 中。
 
 ```cpp
 /** Access to the banlist database (banlist.dat) */
 class CBanDB // 访问禁止列表数据库（banlist.dat）
 {
 private:
-    boost::filesystem::path pathBanlist; // 保存数据库文件路径
+    boost::filesystem::path pathBanlist;
 public:
-    CBanDB(); // 路径拼接，数据目录 + "banlist.dat"
+    CBanDB();
     bool Write(const banmap_t& banSet);
     bool Read(banmap_t& banSet);
 };
 ```
 
-数据库对象 bandb 生成时，其无参构造函数自动初始化数据库文件名。
+无参构造函数 `CBanDB()` 和写函数 `Write(const banmap_t& banSet)` 实现在文件 `net.cpp` 中。
 
 ```cpp
 //
@@ -203,13 +181,50 @@ CBanDB::CBanDB()
 {
     pathBanlist = GetDataDir() / "banlist.dat";
 }
-```
 
-可以看到被禁止的 IP 列表的数据库文件名为“banlist.dat”，就存放在数据目录“~/.bitcoin”下。
+bool CBanDB::Write(const banmap_t& banSet)
+{
+    // Generate random temporary filename
+    unsigned short randv = 0; // 生成随机临时的文件名
+    GetRandBytes((unsigned char*)&randv, sizeof(randv));
+    std::string tmpfn = strprintf("banlist.dat.%04x", randv);
+
+    // serialize banlist, checksum data up to that point, then append csum
+    CDataStream ssBanlist(SER_DISK, CLIENT_VERSION); // 序列化禁止列表，校验和数据到那一点，然后追加校验和
+    ssBanlist << FLATDATA(Params().MessageStart());
+    ssBanlist << banSet;
+    uint256 hash = Hash(ssBanlist.begin(), ssBanlist.end());
+    ssBanlist << hash;
+
+    // open temp output file, and associate with CAutoFile
+    boost::filesystem::path pathTmp = GetDataDir() / tmpfn; // 打开临时输出文件，并关联 CAutoFile
+    FILE *file = fopen(pathTmp.string().c_str(), "wb");
+    CAutoFile fileout(file, SER_DISK, CLIENT_VERSION);
+    if (fileout.IsNull())
+        return error("%s: Failed to open file %s", __func__, pathTmp.string());
+
+    // Write and commit header, data
+    try { // 写入并提交头部，数据
+        fileout << ssBanlist;
+    }
+    catch (const std::exception& e) {
+        return error("%s: Serialize or I/O error - %s", __func__, e.what());
+    }
+    FileCommit(fileout.Get());
+    fileout.fclose();
+
+    // replace existing banlist.dat, if any, with new banlist.dat.XXXX
+    if (!RenameOver(pathTmp, pathBanlist)) // 替换现存的 banlist.dat，如果存在，使用新的 banlist.dat.XXXX
+        return error("%s: Rename-into-place failed", __func__);
+
+    return true;
+}
+```
 
 ## 参考链接
 
 * [bitcoin/rpcserver.h at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/rpcserver.h){:target="_blank"}
+* [bitcoin/rpcserver.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/rpcserver.cpp){:target="_blank"}
 * [bitcoin/rpcnet.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/rpcnet.cpp){:target="_blank"}
 * [bitcoin/net.h at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/net.h){:target="_blank"}
 * [bitcoin/net.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/net.cpp){:target="_blank"}
