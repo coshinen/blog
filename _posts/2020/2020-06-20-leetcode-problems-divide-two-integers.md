@@ -40,7 +40,7 @@ excerpt: 给定被除数 `dividend` 和除数 `divisor` 两个整数，不使用
 
 ## 解决方案
 
-### 方法一：初等数学（Elementary Math）
+### 方法一：初等数学
 
 利用对数公式 log<sub>e</sub>(a / b) = log<sub>e</sub>a - log<sub>e</sub>b 把除法转换为减法。
 

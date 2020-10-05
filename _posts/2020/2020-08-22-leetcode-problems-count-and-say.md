@@ -68,7 +68,7 @@ excerpt: 外观数列是下面前 5 项的整数序列：……给定一个整�
 
 ## 解决方案
 
-### 方法一：递归（Recursion）
+### 方法一：递归
 
 ```cpp
 class Solution {

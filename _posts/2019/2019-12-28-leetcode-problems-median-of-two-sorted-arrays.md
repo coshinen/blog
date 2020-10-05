@@ -36,7 +36,7 @@ excerpt: 这里是两个大小分别为 m 和 n 的有序数组 **nums1** 和 **
 
 ## 解决方案
 
-### 方法一：二分查找（Binary Search）
+### 方法一：二分查找
 
 ```cpp
 class Solution {

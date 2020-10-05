@@ -54,7 +54,7 @@ excerpt: 给定一个无序的整型数组，找出缺失的最小正整数。
 
 ## 解决方案
 
-### 方法一：置换（Swap）
+### 方法一：置换
 
 ```cpp
 class Solution {
@@ -81,7 +81,7 @@ public:
   n 为数组长度。
 * 空间复杂度：*O*(1)。
 
-### 方法二：哈希表（Hash Table）
+### 方法二：哈希表
 
 ```cpp
 class Solution {

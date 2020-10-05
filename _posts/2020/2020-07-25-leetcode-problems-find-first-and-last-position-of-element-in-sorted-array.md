@@ -39,7 +39,7 @@ excerpt: 给定一个升序排列的整型数组 `nums`，找出一个给定目�
 
 ## 解决方案
 
-### 方法一：线性扫描（Linear Scan）
+### 方法一：线性扫描
 
 ```cpp
 class Solution {
@@ -71,7 +71,7 @@ public:
 
 此方法的时间复杂度不满足题目要求的 *O*(log n)，因为给定数组是有序的，所以可以使用二分法搜索指定元素。
 
-### 方法二：二分搜索（Binary Search）
+### 方法二：二分搜索
 
 ```cpp
 class Solution {

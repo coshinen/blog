@@ -34,7 +34,7 @@ excerpt: 给你一个字符串 **s** 和一系列长度相同的单词 **words**
 
 ## 解决方案
 
-### 方法一：双指针（Two Pointers）
+### 方法一：双指针
 
 ```cpp
 class Solution {

@@ -29,7 +29,7 @@ excerpt: 给定一个包含数字 `2-9` 范围内的字符串，返回它能表�
 
 ## 解决方案
 
-### 方法一：深度优先搜索（Depth First Search）
+### 方法一：深度优先搜索
 
 ```cpp
 class Solution {

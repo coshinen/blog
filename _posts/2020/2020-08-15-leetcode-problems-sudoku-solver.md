@@ -36,7 +36,7 @@ excerpt: 写一个通过填充空格来解决数独问题的程序。
 
 ## 解决方案
 
-### 方法一：回溯法（Backtracking）
+### 方法一：回溯法
 
 ```cpp
 class Solution {

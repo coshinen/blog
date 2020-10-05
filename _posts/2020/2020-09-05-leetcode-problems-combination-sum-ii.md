@@ -45,7 +45,7 @@ excerpt: 给定一个的数组 `candidates` 和一个目标数 `target`，找出
 
 ## 解决方案
 
-### 方法一：回溯法（Backtracking）
+### 方法一：回溯
 
 在上道题的基础上进行去重。
 

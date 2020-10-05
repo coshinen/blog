@@ -52,7 +52,7 @@ excerpt: 给定一个**无重复元素**的数组 `candidates` 和一个目标�
 
 ## 解决方案
 
-### 方法一：回溯法（Backtracking）
+### 方法一：回溯
 
 ```cpp
 class Solution {

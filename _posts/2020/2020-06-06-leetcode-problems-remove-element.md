@@ -75,7 +75,7 @@ excerpt: 给定一个数组 *nums* 和一个值 *val*，[原地](https://en.wiki
 
 ## 解决方案
 
-### 方法一：双指针（Two Pointers）
+### 方法一：双指针
 
 ```cpp
 class Solution {
@@ -98,7 +98,7 @@ public:
   假设数组共有 n 个元素，i 和 j 最多共移动 2n 步。
 * 空间复杂度：*O*(1)。
 
-### 方法二：双指针—当要删除的元素很少时（Two Pointers - when elements to remove are rare）
+### 方法二：双指针—当待删元素很少时
 
 ```cpp
 class Solution {

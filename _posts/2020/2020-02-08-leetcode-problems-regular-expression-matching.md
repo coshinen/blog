@@ -75,7 +75,7 @@ excerpt: 给定一个字符串（`s`）和一个模式串（`p`），实现支�
 
 ## 解决方案
 
-### 方法一：动态规划（Dynamic Programming）
+### 方法一：动态规划
 
 ```cpp
 class Solution {

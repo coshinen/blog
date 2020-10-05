@@ -39,7 +39,7 @@ excerpt: 给定一个字符串，找出没有重复字符的**最长子串**的�
 
 ## 解决方案
 
-### 方法一：滑动窗口（Sliding Window）
+### 方法一：滑动窗口
 
 ```cpp
 class Solution {
