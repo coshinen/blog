@@ -8,63 +8,39 @@ category: 区块链
 tags: Bitcoin bitcoin-cli
 excerpt: $ bitcoin-cli invalidateblock "hash"
 ---
-## 提示说明
+## 1. 帮助内容
 
 ```shell
-invalidateblock "hash" # 永久标记一个区块无效，就像该块违反了共识规则
-```
+$ bitcoin-cli help invalidateblock
+invalidateblock "hash"
+
+永久标记一个区块无效，就像其违反了共识规则。
 
 参数：
-1. hash（字符串，必备）用来标记为无效的区块哈希。
+1. hash（字符串，必备）待标记为无效的区块哈希
 
-结果：无返回值。
+结果：
 
-## 用法示例
-
-### 比特币核心服务程序
-
-获取当前最佳区块哈希，记录该区块高度 32723 和当前区块数 32729 和连接数 1，无效化该区块后，再次查看...
-
-```shell
-$ bitcoin-cli getbestblockhash
-000000ea5bb666e0ab8e837691bbb2a0605c4a82281eecd858ad3ffce917df96
-$ bitocin-cli getblock 000000ea5bb666e0ab8e837691bbb2a0605c4a82281eecd858ad3ffce917df96 | grep height
-  "height": 32723,
-$ bitcoin-cli getblockcount
-32729
-$ bitcoin-cli getconnectioncount
-1
-$ bitcoin-cli invalidateblock 000000ea5bb666e0ab8e837691bbb2a0605c4a82281eecd858ad3ffce917df96
-$ bitcoin-cli getblockcount
-32722
-$ bitcoin-cli getconnectioncount
-0
+例子：
+> bitcoin-cli invalidateblock "blockhash"
+> curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "invalidateblock", "params": ["blockhash"] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
 ```
 
-此时区块数变为 32722，从高度 32723 开始的区块均被标记为无效，但不会影响与其相连的其他节点，之后全部连接也会自动断开。
+## 2. 源码剖析
 
-### cURL
-
-```shell
-$ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "invalidateblock", "params": ["000000ea5bb666e0ab8e837691bbb2a0605c4a82281eecd858ad3ffce917df96"] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
-{"result":null,"error":null,"id":"curltest"}
-```
-
-## 源码剖析
-
-invalidateblock 对应的函数在“rpcserver.h”文件中被引用。
+`invalidateblock` 对应的函数在文件 `rpcserver.h` 中被引用。
 
 ```cpp
-extern UniValue invalidateblock(const UniValue& params, bool fHelp); // 无效化区块
+extern UniValue invalidateblock(const UniValue& params, bool fHelp);
 ```
 
-实现在“rpcblockchain.cpp”文件中。
+实现在文件 `rpcblockchain.cpp` 中。
 
 ```cpp
 UniValue invalidateblock(const UniValue& params, bool fHelp)
 {
-    if (fHelp || params.size() != 1) // 参数必须为 1 个
-        throw runtime_error( // 命令帮助反馈
+    if (fHelp || params.size() != 1)
+        throw runtime_error(
             "invalidateblock \"hash\"\n"
             "\nPermanently marks a block as invalid, as if it violated a consensus rule.\n"
             "\nArguments:\n"
@@ -73,46 +49,52 @@ UniValue invalidateblock(const UniValue& params, bool fHelp)
             "\nExamples:\n"
             + HelpExampleCli("invalidateblock", "\"blockhash\"")
             + HelpExampleRpc("invalidateblock", "\"blockhash\"")
-        );
+        ); // 1. 帮助内容
 
-    std::string strHash = params[0].get_str(); // 获取指定的区块哈希
-    uint256 hash(uint256S(strHash)); // 转换为 uint256 对象
+    std::string strHash = params[0].get_str();
+    uint256 hash(uint256S(strHash));
     CValidationState state;
 
-    {
-        LOCK(cs_main); // 上锁
-        if (mapBlockIndex.count(hash) == 0) // 若指定哈希再区块索引映射列表中不存在
-            throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, "Block not found");
+    { // 2. 检查指定区块是否存在
+        LOCK(cs_main);
+        if (mapBlockIndex.count(hash) == 0) // 若不存在
+            throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, "Block not found"); // 抛出区块未找到的错误信息
 
-        CBlockIndex* pblockindex = mapBlockIndex[hash]; // 获取指定哈希对应的区块索引
+        CBlockIndex* pblockindex = mapBlockIndex[hash]; // 若存在
         InvalidateBlock(state, Params().GetConsensus(), pblockindex); // 使该区块无效化
     }
 
-    if (state.IsValid()) { // 若验证状态有效
+    if (state.IsValid()) { // 3. 验证链状态是否有效
         ActivateBestChain(state, Params()); // 激活最佳链
     }
 
-    if (!state.IsValid()) { // 再次验证激活状态
+    if (!state.IsValid()) { // 再次验证链状态
         throw JSONRPCError(RPC_DATABASE_ERROR, state.GetRejectReason());
     }
 
-    return NullUniValue; // 返回空值
+    return NullUniValue;
 }
 ```
 
-基本流程：
-1. 处理命令帮助和参数个数。
-2. 获取指定区块哈希，构造 uint256 对象。
-3. 验证指定区块是否存在，若存在，使该区块无效化。
-4. 检查验证状态，若有效，激活最佳链。
-5. 再次检查激活验证状态，若有效，直接返回空值。
+### 2.1. 帮助内容
 
-第三步，调用 InvalidateBlock(state, Params().GetConsensus(), pblockindex) 使指定区块及其后辈无效化，该函数定义在“main.cpp”文件中。
+参考[比特币 RPC 命令剖析 "getbestblockhash" 2.1. 帮助内容](/blog/2018/05/bitcoin-rpc-command-getbestblockhash.html#21-帮助内容)。
+
+### 2.2. 检查指定区块是否存在
+
+无效化区块函数 `InvalidateBlock(state, Params().GetConsensus(), pblockindex)` 声明在文件 `main.h` 中。
 
 ```cpp
-/** Disconnect chainActive's tip. You probably want to call mempool.removeForReorg and manually re-limit mempool size after this, with cs_main held. */ // 断开激活的链尖。你可能想要调用 mempool.removeForReorg 并在该操作后手动再次限制内存池大小，同时持有主锁。
+/** Mark a block as invalid. */
+bool InvalidateBlock(CValidationState& state, const Consensus::Params& consensusParams, CBlockIndex *pindex); // 标记一个区块为无效。
+```
+
+实现在文件 `main.cpp` 中。
+
+```cpp
+/** Disconnect chainActive's tip. You probably want to call mempool.removeForReorg and manually re-limit mempool size after this, with cs_main held. */
 bool static DisconnectTip(CValidationState& state, const Consensus::Params& consensusParams)
-{
+{ // 断开激活的链尖。你可能想要调用 mempool.removeForReorg 并在该操作后手动再次限制内存池大小，同时持有主锁。
     CBlockIndex *pindexDelete = chainActive.Tip(); // 获取链尖区块索引
     assert(pindexDelete);
     // Read block from disk. // 从磁盘读区块
@@ -156,7 +138,7 @@ bool static DisconnectTip(CValidationState& state, const Consensus::Params& cons
     BOOST_FOREACH(const CTransaction &tx, block.vtx) { // 遍历已删除区块的交易列表
         SyncWithWallets(tx, NULL); // 同步到钱包
     }
-    return true; // 返回 true
+    return true;
 }
 ...
 bool InvalidateBlock(CValidationState& state, const Consensus::Params& consensusParams, CBlockIndex *pindex)
@@ -199,8 +181,12 @@ bool InvalidateBlock(CValidationState& state, const Consensus::Params& consensus
 }
 ```
 
+### 2.3. 验证链状态是否有效
+
 ## 参考链接
 
 * [bitcoin/rpcserver.h at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/rpcserver.h){:target="_blank"}
+* [bitcoin/rpcserver.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/rpcserver.cpp){:target="_blank"}
 * [bitcoin/rpcblockchain.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/rpcblockchain.cpp){:target="_blank"}
+* [bitcoin/main.h at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/main.h){:target="_blank"}
 * [bitcoin/main.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/main.cpp){:target="_blank"}
