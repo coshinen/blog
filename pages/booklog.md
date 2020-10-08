@@ -100,6 +100,7 @@ excerpt: Here are some books I read.
 
 > ### 数学
 > 
+> * 数学女孩，[日] [結城浩](https://www.hyuki.com){:target="_blank"}
 > * 程序员的数学，[日] 結城浩
 
 > ### 医学
@@ -151,7 +152,7 @@ excerpt: Here are some books I read.
 > * 编程之美 —微软技术面试心得，[中] 《编程之美》小组
 > * 剑指 Offer 名企面试官精讲典型编程题，[中] 何海涛
 > * 啊哈！算法，[中] 啊哈磊
-> * 图解密码技术（第3版），[日] [結城浩](https://www.hyuki.com){:target="_blank"}
+> * 图解密码技术（第3版），[日] 結城浩
 > * C++ 数据结构与算法（第4版），[美] Adam Drozdek
 > * 数据结构（C++ 语言版 第3版），[中] [邓俊辉](https://dsa.cs.tsinghua.edu.cn/~deng/index.htm){:target="_blank"}
 > * 大话数据结构，[中] 程杰
