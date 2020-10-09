@@ -8,95 +8,46 @@ category: 区块链
 tags: Bitcoin bitcoin-cli
 excerpt: $ bitcoin-cli gettxoutproof ["txid",...] ( blockhash )
 ---
-## 提示说明
+## 1. 帮助内容
 
 ```shell
-gettxoutproof ["txid",...] ( blockhash ) # 获取包含在一个区块上的交易 txid 的 16 进制编码的证明
-```
+$ bitcoin-cli help gettxoutproof
+gettxoutproof ["txid",...] ( blockhash )
 
-**注：默认情况下，此功能仅在有时可用。这是当在该交易的未花费交易输出上有一个未花费的输出时。
-为了使其一直工作，你需要维持一个交易索引，使用 -txindex 命令行选项或手动指定包含该交易的区块（通过区块哈希）。**
+返回在一个区块中的 "txid" 的 16 进制编码的证明。
+
+注意：默认情况下该功能只在某些时候起作用。这是指在该交易的 utxo 中有一个未花费的输出。
+要使其一直工作，你需要维护一个交易索引，使用 -txindex 命令行选项或者手动指定包含该交易的区块（通过区块哈希）。
+
+返回原始交易数据。
 
 参数：
-1. txids（字符串）一个用于过滤器的交易索引 json 数组。
-```shell
+1. "txids"     （字符串）一个待筛选的交易索引的 json 数组
     [
-      "txid"     （字符串）一笔交易哈希
+      "txid"   （字符串）一笔交易哈希
       ,...
     ]
-```
-2. block hash（字符串，可选）如果指定了，则在该哈希对应的区块上查询交易。
+2. "block hash"（字符串，可选）如果指定，则在该哈希对应的区块中查询交易索引
 
-结果：（字符串）返回原始交易数据。一个序列化的字符串，16 进制编码的证明。
-
-## 用法示例
-
-### 比特币核心客户端
-
-用法一：获取指定索引的交易验证。
-
-```shell
-$ bitcoin-cli gettxoutproof [\"b797bafd7830774cec4d24d1e649cafb0aa7a67b9f1cc06954102a50b463fa0f\"]
-00000020a7bdefd4740678bd9e4b6c6c170dd6ebdfb4dabfb237e428bb4a70f3ae000000ea0a02f07f8f8d9e81792b0068341be05dc20a1d7488b0c34a64c6ed1de72d41b7a3305b538c021e7d5952000200000002ba9ac033f860746a4ab907f918192bf412965e414d84aca52d705131f3b47e570ffa63b4502a105469c01c9f7ba6a70afbca49e6d1244dec4c773078fdba97b70105
+结果：
+"data"         （字符串）一个用于证明的序列化的、16 进制编码的字符串。
 ```
 
-用法二：通过指定交易所在的区块获取指定索引的交易验证。<br>
-先使用 [gettransaction](/blog/2018/08/bitcoin-rpc-command-gettransaction.html) 获取指定交易所在的区块。
+## 2. 源码剖析
 
-```shell
-$ bitcoin-cli gettransaction b797bafd7830774cec4d24d1e649cafb0aa7a67b9f1cc06954102a50b463fa0f
-{
-  "amount": -1.00000000,
-  "fee": -0.00003840,
-  "confirmations": 383,
-  "blockhash": "000001a79bb8f78383723fdaab5c3cdf2a64431ea2edaadde5656bee9718b027",
-  "blockindex": 1,
-  "blocktime": 1529914295,
-  "txid": "b797bafd7830774cec4d24d1e649cafb0aa7a67b9f1cc06954102a50b463fa0f",
-  "walletconflicts": [
-  ],
-  "time": 1529912960,
-  "timereceived": 1529912960,
-  "bip125-replaceable": "no",
-  "details": [
-    {
-      "account": "",
-      "address": "1Q11qnWi8RqMgJy6DJ8FzrUEdbsFxq651Y",
-      "category": "send",
-      "amount": -1.00000000,
-      "vout": 0,
-      "fee": -0.00003840,
-      "abandoned": false
-    }
-  ],
-  "hex": "01000000010667e834b5ab662ee16594f94544eb4c19053c91c43fbf0d632d79b9049d435c0000000048473044022006d96053e65a45947d76afaec17c7dea2812a3b1e68392023e9608eaad63a0070220743d593a922b3a38b6a875888966ded6e3a90e1337029cec9e1540ab53e7acdb01feffffff0200e1f505000000001976a914fc4b985c0e6819f137f5c7dd2947fb0ba6eff1d988ac00021024010000001976a9144483dc8ad0a184355b70b2767a832266b4c2df0a88ac425f0000"
-}
-$ bitcoin-cli gettxoutproof [\"b797bafd7830774cec4d24d1e649cafb0aa7a67b9f1cc06954102a50b463fa0f\"]
-00000020a7bdefd4740678bd9e4b6c6c170dd6ebdfb4dabfb237e428bb4a70f3ae000000ea0a02f07f8f8d9e81792b0068341be05dc20a1d7488b0c34a64c6ed1de72d41b7a3305b538c021e7d5952000200000002ba9ac033f860746a4ab907f918192bf412965e414d84aca52d705131f3b47e570ffa63b4502a105469c01c9f7ba6a70afbca49e6d1244dec4c773078fdba97b70105
-```
-
-### cURL
-
-```shell
-$ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "gettxoutproof", "params": [["b797bafd7830774cec4d24d1e649cafb0aa7a67b9f1cc06954102a50b463fa0f"]] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
-{"result":"00000020a7bdefd4740678bd9e4b6c6c170dd6ebdfb4dabfb237e428bb4a70f3ae000000ea0a02f07f8f8d9e81792b0068341be05dc20a1d7488b0c34a64c6ed1de72d41b7a3305b538c021e7d5952000200000002ba9ac033f860746a4ab907f918192bf412965e414d84aca52d705131f3b47e570ffa63b4502a105469c01c9f7ba6a70afbca49e6d1244dec4c773078fdba97b70105","error":null,"id":"curltest"}
-```
-
-## 源码剖析
-
-gettxoutproof 对应的函数在“rpcserver.h”文件中被引用。
+`gettxoutproof` 对应的函数在文件 `rpcserver.h` 中被引用。
 
 ```cpp
-extern UniValue gettxoutproof(const UniValue& params, bool fHelp); // 获取交易输出证明
+extern UniValue gettxoutproof(const UniValue& params, bool fHelp);
 ```
 
-实现在“rpcrawtransaction.cpp”文件中。
+实现在文件 `rpcrawtransaction.cpp` 中。
 
 ```cpp
 UniValue gettxoutproof(const UniValue& params, bool fHelp)
 {
-    if (fHelp || (params.size() != 1 && params.size() != 2)) // 参数为 1 个或 2 个
-        throw runtime_error( // 命令帮助反馈
+    if (fHelp || (params.size() != 1 && params.size() != 2))
+        throw runtime_error(
             "gettxoutproof [\"txid\",...] ( blockhash )\n"
             "\nReturns a hex-encoded proof that \"txid\" was included in a block.\n"
             "\nNOTE: By default this function only works sometimes. This is when there is an\n"
@@ -113,7 +64,7 @@ UniValue gettxoutproof(const UniValue& params, bool fHelp)
             "2. \"block hash\"  (string, optional) If specified, looks for txid in the block with this hash\n"
             "\nResult:\n"
             "\"data\"           (string) A string that is a serialized, hex-encoded data for the proof.\n"
-        );
+        ); // 1. 帮助内容
 
     set<uint256> setTxids; // 交易索引集合
     uint256 oneTxid;
@@ -171,9 +122,13 @@ UniValue gettxoutproof(const UniValue& params, bool fHelp)
     CMerkleBlock mb(block, setTxids); // 把交易索引集以及对应区块的数据构建一个 CMerkleBlock 对象
     ssMB << mb; // 导入数据流
     std::string strHex = HexStr(ssMB.begin(), ssMB.end()); // 转换为 16 进制
-    return strHex; // 返回结果
+    return strHex;
 }
 ```
+
+### 2.1. 帮助内容
+
+参考[比特币 RPC 命令剖析 "getbestblockhash" 2.1. 帮助内容](/blog/2018/05/bitcoin-rpc-command-getbestblockhash.html#21-帮助内容)。
 
 基本流程：
 1. 处理命令帮助和参数个数。
@@ -188,4 +143,5 @@ UniValue gettxoutproof(const UniValue& params, bool fHelp)
 ## 参考链接
 
 * [bitcoin/rpcserver.h at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/rpcserver.h){:target="_blank"}
+* [bitcoin/rpcserver.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/rpcserver.cpp){:target="_blank"}
 * [bitcoin/rpcrawtransaction.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/rpcrawtransaction.cpp){:target="_blank"}

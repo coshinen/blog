@@ -8,55 +8,44 @@ category: 区块链
 tags: Bitcoin bitcoin-cli
 excerpt: $ bitcoin-cli generate numblocks
 ---
-## 提示说明
+## 1. 帮助内容
 
 ```shell
-generate numblocks # 立刻挖出区块（在 RPC 调用返回前）
-```
+$ bitcoin-cli help generate
+generate numblocks
 
-**注：此功能仅限回归测试网 regtest 使用。**
+立刻挖出区块（在 RPC 调用返回前）
+
+注意：此功能只用于回归测试网
 
 参数：
-1. numblocks（数字，必备）立刻生成区块的数量。
+1. numblocks（数字，必备）立刻生成多少区块。
 
-结果：（数组）返回生成区块的哈希集。
+结果：
+[ blockhashes ]（数组）生成区块的哈希
 
-## 用法示例
+例子：
 
-### 比特币核心客户端
+生成 11 个区块
 
-在比特币核心服务回归测试模式下产生 2 个区块并上链。
-
-```shell
-$ bitcoin-cli -regtest generate 2
-[
-  "2d14c7f08a52e24913b4f36b486d0171faed26f978d02656d88efdc0acf2a5f5", 
-  "4ad63ef738b9d5da85b21fe84853b1672209ffdfbe914896bb475b523efca628"
-]
+> bitcoin-cli -regtest generate 11
 ```
 
-### cURL
+## 2. 源码剖析
 
-```shell
-$ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "generate", "params": [2] }' -H 'content-type: text/plain;' http://127.0.0.1:18332/
-{"result":["5f522cf0b746297737f3522e7830657e114f80b1f48504c11b2ebe942ffa8da0","4bcd4c044152135e7523a870ec198947d4d937bcba8857812c5ace77d725b517"],"error":null,"id":"curltest"}
-```
-
-## 源码剖析
-
-generate 对应的函数在“rpcserver.h”文件中被引用。
+`generate` 对应的函数在文件 `rpcserver.h` 中被引用。
 
 ```cpp
-extern UniValue generate(const UniValue& params, bool fHelp); // 产生指定数目个区块（回归测试网用）
+extern UniValue generate(const UniValue& params, bool fHelp);
 ```
 
-实现在“rpcmining.cpp”文件中。
+实现在文件 `rpcmining.cpp` 中。
 
 ```cpp
 UniValue generate(const UniValue& params, bool fHelp)
 {
-    if (fHelp || params.size() < 1 || params.size() > 1) // 1.参数只能为 1 个（要生成区块的个数）
-        throw runtime_error( // 帮助信息反馈
+    if (fHelp || params.size() < 1 || params.size() > 1)
+        throw runtime_error(
             "generate numblocks\n"
             "\nMine blocks immediately (before the RPC call returns)\n"
             "\nNote: this function can only be used on the regtest network\n"
@@ -67,7 +56,7 @@ UniValue generate(const UniValue& params, bool fHelp)
             "\nExamples:\n"
             "\nGenerate 11 blocks\n"
             + HelpExampleCli("generate", "11")
-        );
+        ); // 1. 帮助内容
 
     if (!Params().MineBlocksOnDemand()) // 2.检测网络，只有回归测试网返回 true
         throw JSONRPCError(RPC_METHOD_NOT_FOUND, "This method can only be used on regtest"); // 提示
@@ -123,6 +112,10 @@ UniValue generate(const UniValue& params, bool fHelp)
     return blockHashes; // 9.返回产生所有区块的哈希
 }
 ```
+
+### 2.1. 帮助内容
+
+参考[比特币 RPC 命令剖析 "getbestblockhash" 2.1. 帮助内容](/blog/2018/05/bitcoin-rpc-command-getbestblockhash.html#21-帮助内容)。
 
 基本流程：
 1. 处理命令帮助和参数个数。
@@ -737,6 +730,7 @@ CBlockTemplate* CreateNewBlock(const CChainParams& chainparams, const CScript& s
 ## 参考链接
 
 * [bitcoin/rpcserver.h at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/rpcserver.h){:target="_blank"}
+* [bitcoin/rpcserver.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/rpcserver.cpp){:target="_blank"}
 * [bitcoin/rpcmining.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/rpcmining.cpp){:target="_blank"}
 * [bitcoin/chainparams.h at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/chainparams.h){:target="_blank"}
 * [bitcoin/chainparams.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/chainparams.cpp){:target="_blank"}

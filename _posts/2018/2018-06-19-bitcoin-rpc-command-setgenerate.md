@@ -8,89 +8,54 @@ category: 区块链
 tags: Bitcoin bitcoin-cli
 excerpt: $ bitcoin-cli setgenerate generate ( genproclimit )
 ---
-## 提示说明
+## 1. 帮助内容
 
 ```shell
-setgenerate generate ( genproclimit ) # 设置打开或关闭挖矿的开关和矿工线程数
-```
+$ bitcoin-cli help setgenerate
+setgenerate generate ( genproclimit )
 
-挖矿受限于 genproclimit 线程数，-1 表示无限制（与 CPU 核数相同）。
-使用 [getgenerate](/blog/2018/06/bitcoin-rpc-command-getgenerate.html) 查看当前设置。
+把 'generate' 设置为 true 或 false 用于打开或关闭挖矿。
+挖矿受限于 'genproclimit' 处理器，-1 为无限制。
+使用 getgenerate 查看当前设置。
 
 参数：
-1. generate（布尔型，必备）默认为 false，true 表示开启挖矿，false 表示关闭。
-2. genproclimit（整型，可选）设置开启挖矿时的线程数，默认为 1，-1 表示无限制（同 CPU 核数）。
+1. generate    （布尔型，必备）设置为 true 以打开挖矿，false 用于关闭。
+2. genproclimit（整型，可选）设置挖矿开启时的处理器限制。-1 为无限制。
 
-**注：此方法不适用于 regtest 回归测试模式，在该模式下使用 RPC 命令 [generate](/blog/2018/05/bitcoin-rpc-command-generate.html)。**
+例子：
 
-## 用法示例
+在一个处理器的限制下设置挖矿
 
-### 比特币核心客户端
+> bitcoin-cli setgenerate true 1
 
-**注：该命令执行成功不会有任何反馈，可以通过 RPC 命令 [getgenerate](/blog/2018/06/bitcoin-rpc-command-getgenerate.html) 查看当前挖矿状态。**
+检查设置
 
-用法一：开启挖矿功能，使用默认的单线程挖矿。
+> bitcoin-cli getgenerate
 
-```shell
-$ bitcoin-cli setgenerate true
-$ bitcoin-cli getgenerate
-true
+关闭挖矿
+
+> bitcoin-cli setgenerate false
+
+使用 json rpc
+
+> curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "setgenerate", "params": [true, 1] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
 ```
 
-或显示指定 1 个线程挖矿，效果同上。
+## 2. 源码剖析
 
-```shell
-$ bitcoin-cli setgenerate true 1
-$ bitcoin-cli getgenerate
-true
-```
-
-用法二：开启挖矿功能，并指定双线程挖矿。
-
-```shell
-$ bitcoin-cli setgenerate true 2
-$ bitcoin-cli getgenerate
-true
-```
-
-用法三：关闭挖矿功能。
-
-```shell
-$ bitcoin-cli setgenerate false
-$ bitcoin-cli getgenerate
-false
-```
-
-用法四：另类关闭挖矿功能。
-
-```shell
-$ bitcoin-cli setgenerate true 0
-$ bitcoin-cli getgenerate
-false
-```
-
-### cURL
-
-```shell
-$ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "setgenerate", "params": [true, 1] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
-{"result":null,"error":null,"id":"curltest"}
-```
-
-## 源码剖析
-
-setgenerate 对应的函数在“rpcserver.h”文件中被引用。
+`setgenerate` 对应的函数在文件 `rpcserver.h` 中被引用。
 
 ```cpp
-extern UniValue setgenerate(const UniValue& params, bool fHelp); // 设置挖矿状态，挖矿开关
+extern UniValue setgenerate(const UniValue& params, bool fHelp);
 ```
 
-实现在“rpcmining.cpp”文件中。
+实现在文件 `rpcmining.cpp` 中。
 
 ```cpp
 UniValue setgenerate(const UniValue& params, bool fHelp)
 {
-    if (fHelp || params.size() < 1 || params.size() > 2) // 参数至少为 1 个，至多为 2 个
-        throw runtime_error( // 命令帮助反馈
+    if (fHelp || params.size() < 1 || params.size() > 2)
+        throw runtime_error(
             "setgenerate generate ( genproclimit )\n"
             "\nSet 'generate' true or false to turn generation on or off.\n"
             "Generation is limited to 'genproclimit' processors, -1 is unlimited.\n"
@@ -107,7 +72,7 @@ UniValue setgenerate(const UniValue& params, bool fHelp)
             + HelpExampleCli("setgenerate", "false") +
             "\nUsing json rpc\n"
             + HelpExampleRpc("setgenerate", "true, 1")
-        );
+        ); // 1. 帮助内容
 
     if (Params().MineBlocksOnDemand()) // 若是回归测试网络，此方法不适用，使用 "generate" 代替
         throw JSONRPCError(RPC_METHOD_NOT_FOUND, "Use the generate method instead of setgenerate on this network");
@@ -128,9 +93,13 @@ UniValue setgenerate(const UniValue& params, bool fHelp)
     mapArgs ["-genproclimit"] = itostr(nGenProcLimit); // 修改挖矿线程数
     GenerateBitcoins(fGenerate, nGenProcLimit, Params()); // 杀掉当前挖矿线程或创建指定数量的新挖矿线程
 
-    return NullUniValue; // 返回空值
+    return NullUniValue;
 }
 ```
+
+### 2.1. 帮助内容
+
+参考[比特币 RPC 命令剖析 "getbestblockhash" 2.1. 帮助内容](/blog/2018/05/bitcoin-rpc-command-getbestblockhash.html#21-帮助内容)。
 
 基本流程：<br>
 1.处理命令帮助和参数个数。<br>
@@ -310,6 +279,7 @@ void static BitcoinMiner(const CChainParams& chainparams)
 ## 参考链接
 
 * [bitcoin/rpcserver.h at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/rpcserver.h){:target="_blank"}
+* [bitcoin/rpcserver.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/rpcserver.cpp){:target="_blank"}
 * [bitcoin/rpcmining.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/rpcmining.cpp){:target="_blank"}
 * [bitcoin/miner.h at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/miner.h){:target="_blank"}
 * [bitcoin/miner.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/miner.cpp){:target="_blank"}

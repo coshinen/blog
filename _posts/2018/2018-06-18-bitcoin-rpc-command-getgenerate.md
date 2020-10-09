@@ -8,50 +8,39 @@ category: 区块链
 tags: Bitcoin bitcoin-cli
 excerpt: $ bitcoin-cli getgenerate
 ---
-## 提示说明
+## 1. 帮助内容
 
 ```shell
-getgenerate # 获取比特币核心服务的挖矿状态
+$ bitcoin-cli help getgenerate
+getgenerate
+
+返回服务器是否设置了生成币。默认是 false。
+它通过命令行参数 -gen（或 bitcoin.conf 设置选项 gen）进行设置
+也可以使用 setgenerate 调用进行设置。
+
+结果：
+true|false（布尔型）服务器是否设置了生成币
+
+例子：
+> bitcoin-cli getgenerate
+> curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "getgenerate", "params": [] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
 ```
 
-默认为 false。
-服务器程序设置命令行参数 -gen（或配置文件 bitcoin.conf 中设置 gen），也可以使用 [setgenerate](/blog/2018/06/bitcoin-rpc-command-setgenerate.html) 命令设置。
+## 2. 源码剖析
 
-结果：（布尔型）true 表示服务器开启 CPU 挖矿，false 表示关闭。
-
-## 用法示例
-
-### 比特币核心客户端
-
-获取当前比特币核心服务器 CPU 挖矿状态。
-
-```shell
-$ bitcoin-cli getgenerate
-false
-```
-
-### cURL
-
-```shell
-$ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "getgenerate", "params": [] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
-{"result":false,"error":null,"id":"curltest"}
-```
-
-## 源码剖析
-
-getgenerate 对应的函数在“rpcserver.h”文件中被引用。
+`getgenerate` 对应的函数在文件 `rpcserver.h` 中被引用。
 
 ```cpp
-extern UniValue getgenerate(const UniValue& params, bool fHelp); // 获取挖矿状态
+extern UniValue getgenerate(const UniValue& params, bool fHelp);
 ```
 
-实现在“rpcmining.cpp”文件中。
+实现在文件 `rpcmining.cpp` 中。
 
 ```cpp
 UniValue getgenerate(const UniValue& params, bool fHelp)
 {
-    if (fHelp || params.size() != 0) // 没有参数
-        throw runtime_error( // 命令帮助反馈
+    if (fHelp || params.size() != 0)
+        throw runtime_error(
             "getgenerate\n"
             "\nReturn if the server is set to generate coins or not. The default is false.\n"
             "It is set with the command line argument -gen (or " + std::string(BITCOIN_CONF_FILENAME) + " setting gen)\n"
@@ -61,26 +50,26 @@ UniValue getgenerate(const UniValue& params, bool fHelp)
             "\nExamples:\n"
             + HelpExampleCli("getgenerate", "")
             + HelpExampleRpc("getgenerate", "")
-        );
+        ); // 1. 帮助内容
 
     LOCK(cs_main);
-    return GetBoolArg("-gen", DEFAULT_GENERATE); // 获取 "-gen" 选项的值并返回
+    return GetBoolArg("-gen", DEFAULT_GENERATE); // 2. 获取 "-gen" 的值并返回
 }
 ```
 
-基本流程：
-1. 处理命令帮助和参数个数。
-2. 上锁。
-3. 获取启动选项 "-gen" 对应的值，转换为布尔型并返回。
+### 2.1. 帮助内容
 
-调用 GetBoolArg("-gen", DEFAULT_GENERATE) 函数获取挖矿状态，即挖矿选项 "-gen" 对应的值。<br>
-DEFAULT_GENERATE 定义在“miner.h”文件中。
+参考[比特币 RPC 命令剖析 "getbestblockhash" 2.1. 帮助内容](/blog/2018/05/bitcoin-rpc-command-getbestblockhash.html#21-帮助内容)。
+
+### 2.2. 获取 "-gen" 的值并返回
+
+`DEFAULT_GENERATE` 定义在文件 `miner.h` 中，默认为 `false`。
 
 ```cpp
-static const bool DEFAULT_GENERATE = false; // 挖矿状态，默认关闭
+static const bool DEFAULT_GENERATE = false;
 ```
 
-该函数声明在“util.h”文件中。
+获取布尔型参数函数 `GetBoolArg("-gen", DEFAULT_GENERATE)` 声明在文件 `util.h` 中。
 
 ```cpp
 /**
@@ -89,11 +78,11 @@ static const bool DEFAULT_GENERATE = false; // 挖矿状态，默认关闭
  * @param strArg Argument to get (e.g. "-foo")
  * @param default (true or false)
  * @return command-line argument or default value
- */ // 返回布尔型参数或默认值
-bool GetBoolArg(const std::string& strArg, bool fDefault); // 获取指定选项的值
+ */
+bool GetBoolArg(const std::string& strArg, bool fDefault); // 返回布尔型参数或默认值
 ```
 
-实现在“util.cpp”文件中。
+实现在文件 `util.cpp` 中。
 
 ```cpp
 bool GetBoolArg(const std::string& strArg, bool fDefault)
@@ -104,28 +93,30 @@ bool GetBoolArg(const std::string& strArg, bool fDefault)
 }
 ```
 
-对象 mapArgs 定义在“”文件中，该对象保存所有用户指定的命令行参数和配置文件中的启动选项。<br>
+参数映射对象 `mapArgs` 定义在 `util.cpp` 文件中，保存所有用户指定的命令行参数和配置文件中的启动选项。
+
 其初始化是在比特币核心启动过程 3.1.ParseParameters(argc, argv) 和 3.4.ReadConfigFile(mapArgs, mapMultiArgs) 中完成的。
 
 ```cpp
-map<string, string> mapArgs; // 命令行参数（启动选项）映射列表
+map<string, string> mapArgs;
 ```
 
-确认指定命令行参数（启动选项）"-gen" 存在，调用 InterpretBool(mapArgs[strArg]) 函数把 "-gen" 对应的值转换为布尔型。
+转换为布尔型函数 `InterpretBool(mapArgs[strArg])` 实现在 `util.cpp` 文件中。
 
 ```cpp
 /** Interpret string as boolean, for argument parsing */
 static bool InterpretBool(const std::string& strValue) // 把字符串转换为布尔型，用于参数解析
 {
-    if (strValue.empty()) // 若字符串为空
-        return true; // 返回 true，表示指定的选项未指定值时，该值默认为 true
-    return (atoi(strValue) != 0); // 否则，在返回时转换为对应布尔型
+    if (strValue.empty())
+        return true;
+    return (atoi(strValue) != 0);
 }
 ```
 
 ## 参考链接
 
 * [bitcoin/rpcserver.h at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/rpcserver.h){:target="_blank"}
+* [bitcoin/rpcserver.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/rpcserver.cpp){:target="_blank"}
 * [bitcoin/rpcmining.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/rpcmining.cpp){:target="_blank"}
 * [bitcoin/util.h at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/util.h){:target="_blank"}
 * [bitcoin/util.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/util.cpp){:target="_blank"}

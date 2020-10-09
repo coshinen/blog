@@ -8,67 +8,48 @@ category: 区块链
 tags: Bitcoin bitcoin-cli
 excerpt: $ bitcoin-cli verifychain ( checklevel numblocks )
 ---
-## 提示说明
+## 1. 帮助内容
 
 ```shell
-verifychain ( checklevel numblocks ) # 验证区块链数据库
-```
+$ bitcoin-cli help verifychain
+verifychain ( checklevel numblocks )
+
+验证区块链数据库。
 
 参数：
-1. checklevel（字符串，可选，0-4，默认为 3）区块验证等级。
-```
+1. checklevel（字符串，可选，0-4，默认为 3）区块验证有多彻底。
 检查等级 0：从磁盘读区块数据到内存。
 检查等级 1：验证区块有效性。
 检查等级 2：验证撤销有效性。
 检查等级 3：检查在内存中断开链尖区块连接的不一致性。
 检查等级 4：尝试重连区块。
-```
-2. numblocks（字符串，可选，默认为 288，0 或负数表示全部）检查的区块数。
+2. numblocks （字符串，可选，默认为 288，0 或负数表示全部）要检查的区块数。
 
-结果：（布尔型）true 表示已验证。
+结果：
+"true|false" （布尔型）验证与否
 
-## 用法示例
-
-### 比特币核心客户端
-
-方法一：使用默认等级 3 和默认区块数 288 检查区块链。
-
-```shell
-$ bitcoin-cli verifychain
-true
+例子：
+> bitcoin-cli verifychain
+> curl --user myusername:userpassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "verifychain", "params": [] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
 ```
 
-方法二：使用等级 4 检查区块链全部区块。
+## 2. 源码剖析
 
-```shell
-$ bitcoin-cli verifychain 4 0
-true
-```
-
-### cURL
-
-```shell
-$ curl --user myusername:userpassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "verifychain", "params": [] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
-{"result":true,"error":null,"id":"curltest"}
-```
-
-## 源码剖析
-
-verifychain 对应的函数在“rpcserver.h”文件中被引用。
+`verifychain` 对应的函数在文件 `rpcserver.h` 中被引用。
 
 ```cpp
-extern UniValue verifychain(const UniValue& params, bool fHelp); // 验证区块链数据库
+extern UniValue verifychain(const UniValue& params, bool fHelp);
 ```
 
-实现在“rpcblockchain.cpp”文件中。
+实现在文件 `rpcblockchain.cpp` 中。
 
 ```cpp
 UniValue verifychain(const UniValue& params, bool fHelp)
 {
     int nCheckLevel = GetArg("-checklevel", DEFAULT_CHECKLEVEL); // 检查等级，默认 3
     int nCheckDepth = GetArg("-checkblocks", DEFAULT_CHECKBLOCKS); // 检查块数，默认 288
-    if (fHelp || params.size() > 2) // 参数最多 2 个
-        throw runtime_error( // 命令帮助反馈
+    if (fHelp || params.size() > 2)
+        throw runtime_error(
             "verifychain ( checklevel numblocks )\n"
             "\nVerifies blockchain database.\n"
             "\nArguments:\n"
@@ -79,7 +60,7 @@ UniValue verifychain(const UniValue& params, bool fHelp)
             "\nExamples:\n"
             + HelpExampleCli("verifychain", "")
             + HelpExampleRpc("verifychain", "")
-        );
+        ); // 1. 帮助内容
 
     LOCK(cs_main); // 上锁
 
@@ -92,12 +73,16 @@ UniValue verifychain(const UniValue& params, bool fHelp)
 }
 ```
 
-基本流程：<br>
-1.设置默认检查等级和默认检查块数。<br>
-2.处理命令帮助和参数个数。<br>
-3.上锁。<br>
-4.获取用户指定的检查等级和检查块数（深度）。<br>
-5.检查区块链数据库。
+### 2.1. 帮助内容
+
+参考[比特币 RPC 命令剖析 "getbestblockhash" 2.1. 帮助内容](/blog/2018/05/bitcoin-rpc-command-getbestblockhash.html#21-帮助内容)。
+
+基本流程：
+1. 设置默认检查等级和默认检查块数。
+2. 处理命令帮助和参数个数。
+3. 上锁。
+4. 获取用户指定的检查等级和检查块数（深度）。
+5. 检查区块链数据库。
 
 第五步，创建了一个临时对象然后调用 CVerifyDB().VerifyDB(Params(), pcoinsTip, nCheckLevel, nCheckDepth) 来验证区块链数据库。
 该类定义在“main.h”文件中。
@@ -190,7 +175,7 @@ bool CVerifyDB::VerifyDB(const CChainParams& chainparams, CCoinsView *coinsview,
 
     LogPrintf("No coin database inconsistencies in last %i blocks (%i transactions)\n", chainActive.Height() - pindexState->nHeight, nGoodTransactions); // 检验完成，没有不一致
 
-    return true; // 返回 true
+    return true;
 }
 ```
 
@@ -199,6 +184,7 @@ bool CVerifyDB::VerifyDB(const CChainParams& chainparams, CCoinsView *coinsview,
 ## 参考链接
 
 * [bitcoin/rpcserver.h at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/rpcserver.h){:target="_blank"}
+* [bitcoin/rpcserver.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/rpcserver.cpp){:target="_blank"}
 * [bitcoin/rpcblockchain.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/rpcblockchain.cpp){:target="_blank"}
 * [bitcoin/main.h at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/main.h){:target="_blank"}
 * [bitcoin/main.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/main.cpp){:target="_blank"}

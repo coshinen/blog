@@ -8,11 +8,13 @@ category: 区块链
 tags: Bitcoin bitcoin-cli
 excerpt: $ bitcoin-cli getblocktemplate ( "jsonrequestobject" )
 ---
-## 提示说明
+## 1. 帮助内容
 
 ```shell
-getblocktemplate ( "jsonrequestobject" ) # 获取一个区块模板
-```
+$ bitcoin-cli help getblocktemplate
+getblocktemplate ( "jsonrequestobject" )
+
+获取一个区块模板
 
 如果请求参数包含 mode 关键字，用于在默认的 template 请求或 proposal 间选择。
 返回构建一个区块所需的数据。
@@ -20,7 +22,6 @@ getblocktemplate ( "jsonrequestobject" ) # 获取一个区块模板
 
 参数：
 1. jsonrequestobject（字符串，可选）以下规范中的 json 对象。
-```shell
      {
        "mode":"template"    （字符串，可选）该项必须设置 "template" 或省略
        "capabilities":[       （数组，可选）字符串列表
@@ -28,11 +29,8 @@ getblocktemplate ( "jsonrequestobject" ) # 获取一个区块模板
            ,...
          ]
      }
-```
 
 结果：
-
-```shell
 {
   "version" : n,                    （数字）区块版本
   "previousblockhash" : "xxxx",    （字符串）当前最高区块哈希
@@ -68,67 +66,27 @@ getblocktemplate ( "jsonrequestobject" ) # 获取一个区块模板
   "bits" : "xxx",                 （字符串）下一个区块的压缩目标
   "height" : n                      （数字）下一个去跨的高度
 }
+
+例子：
+> bitcoin-cli getblocktemplate
+> curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "getblocktemplate", "params": [] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
 ```
 
-## 用法示例
+## 2. 源码剖析
 
-### 比特币核心客户端
-
-该命令需要被请求的节点至少建立一条连接。
-
-```shell
-$ bitcoin-cli getblocktemplate
-{
-  "capabilities": [
-    "proposal"
-  ],
-  "version": 536870912,
-  "previousblockhash": "00000809c1e06be7fd29f489ce3598631c0fd928d84739f994a18ea8c210630f",
-  "transactions": [
-  ],
-  "coinbaseaux": {
-    "flags": ""
-  },
-  "coinbasevalue": 5000000000,
-  "longpollid": "00000809c1e06be7fd29f489ce3598631c0fd928d84739f994a18ea8c210630f2169",
-  "target": "00000a314c000000000000000000000000000000000000000000000000000000",
-  "mintime": 1529979540,
-  "mutable": [
-    "time", 
-    "transactions", 
-    "prevblock"
-  ],
-  "noncerange": "00000000ffffffff",
-  "sigoplimit": 20000,
-  "sizelimit": 1000000,
-  "curtime": 1529979565,
-  "bits": "1e0a314c",
-  "height": 28217
-}
-```
-
-### cURL
-
-```shell
-$ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "getblocktemplate", "params": [] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
-{"result":{"capabilities":["proposal"],"version":536870912,"previousblockhash":"000001f1b79b87f65722af42df4d4e284146e868ba374eda95ef621f70f648a8","transactions":[],"coinbaseaux":{"flags":""},"coinbasevalue":5000000000,"longpollid":"000001f1b79b87f65722af42df4d4e284146e868ba374eda95ef621f70f648a82203","target":"0000028c53000000000000000000000000000000000000000000000000000000","mintime":1529979643,"mutable":["time","transactions","prevblock"],"noncerange":"00000000ffffffff","sigoplimit":20000,"sizelimit":1000000,"curtime":1529979682,"bits":"1e028c53","height":28251},"error":null,"id":"curltest"}
-```
-
-## 源码剖析
-
-getblocktemplate 对应的函数在“rpcserver.h”文件中被引用。
+`getblocktemplate` 对应的函数在文件 `rpcserver.h` 中被引用。
 
 ```cpp
-extern UniValue getblocktemplate(const UniValue& params, bool fHelp); // 获取区块模板
+extern UniValue getblocktemplate(const UniValue& params, bool fHelp);
 ```
 
-实现在“rpcmining.cpp”文件中。
+实现在文件 `rpcmining.cpp` 中。
 
 ```cpp
 UniValue getblocktemplate(const UniValue& params, bool fHelp)
 {
-    if (fHelp || params.size() > 1) // 参数最多为 1 个
-        throw runtime_error( // 命令帮助反馈
+    if (fHelp || params.size() > 1)
+        throw runtime_error(
             "getblocktemplate ( \"jsonrequestobject\" )\n"
             "\nIf the request parameters include a 'mode' key, that is used to explicitly select between the default 'template' request or a 'proposal'.\n"
             "It returns data needed to construct a block to work on.\n"
@@ -185,9 +143,9 @@ UniValue getblocktemplate(const UniValue& params, bool fHelp)
             "\nExamples:\n"
             + HelpExampleCli("getblocktemplate", "")
             + HelpExampleRpc("getblocktemplate", "")
-         );
+         ); // 1. 帮助内容
 
-    LOCK(cs_main); // 上锁
+    LOCK(cs_main);
 
     std::string strMode = "template"; // 模式，默认为 "template"
     UniValue lpval = NullUniValue;
@@ -392,9 +350,13 @@ UniValue getblocktemplate(const UniValue& params, bool fHelp)
     result.push_back(Pair("bits", strprintf("%08x", pblock->nBits))); // 难度
     result.push_back(Pair("height", (int64_t)(pindexPrev->nHeight+1))); // 高度
 
-    return result; // 返回结果
+    return result;
 }
 ```
+
+### 2.1. 帮助内容
+
+参考[比特币 RPC 命令剖析 "getbestblockhash" 2.1. 帮助内容](/blog/2018/05/bitcoin-rpc-command-getbestblockhash.html#21-帮助内容)。
 
 基本流程：
 1. 处理命令帮助和参数个数。
@@ -406,4 +368,5 @@ UniValue getblocktemplate(const UniValue& params, bool fHelp)
 ## 参考链接
 
 * [bitcoin/rpcserver.h at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/rpcserver.h){:target="_blank"}
+* [bitcoin/rpcserver.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/rpcserver.cpp){:target="_blank"}
 * [bitcoin/rpcmining.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/rpcmining.cpp){:target="_blank"}
