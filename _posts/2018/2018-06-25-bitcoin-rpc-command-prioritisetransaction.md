@@ -8,57 +8,46 @@ category: 区块链
 tags: Bitcoin bitcoin-cli
 excerpt: $ bitcoin-cli prioritisetransaction <txid> <priority delta> <fee delta>
 ---
-## 提示说明
+## 1. 帮助内容
 
 ```shell
-prioritisetransaction <txid> <priority delta> <fee delta> # 改变交易内存池中一笔交易的优先级
-```
+$ bitcoin-cli help prioritisetransaction
+prioritisetransaction <txid> <priority delta> <fee delta>
 
-**该优先级用于接收交易进入被挖的区块。**
+以较高（或较低）的优先级接受交易进入被挖矿的区块
 
 参数：
-1. txid（字符串，必备）交易索引（16 进制形式）。
-2. priority delta（数字，浮点型，必备）增加或减少优先级。交易选择算法认为指定交易 tx 会有更高优先级（交易优先级计算：coinage * value_in_satoshis / txsize）。
-3. fee delta（数字，整型，必备）增加（或减少，若为负值）该费用（单位：satoshis）。该费用实际上没有花费，仅仅是选择交易进入一个区块的算法把该交易作为其将支付更高（或更低）的费用。
+1. "txid"        （字符串，必备）交易索引。
+2. priority delta（数字，浮点型，必备）增加或减少的优先级。
+                 交易选择算法会以高优先级考虑交易。
+                 （计算交易优先级：coinage * value_in_satoshis / txsize）。
+3. fee delta     （数字，整型，必备）待增加（或减少，若为负值）的费用值（以聪为单位）。
+                 该费用并非实际支付的，只是选择交易进入一个区块的算法会以较高（或较低）的费用考虑交易。
 
-结果：（布尔型）返回 true。
+结果：
+true             （布尔型）返回 true
 
-## 用法示例
-
-### 比特币核心客户端
-
-```shell
-$ bitcoin-cli getrawmempool
-[
-  "fb9bd2df3cef0abd9f444971dff097790b7bf146843a752cb48461418d3c7e67"
-]
-$ bitcoin-cli prioritisetransaction fb9bd2df3cef0abd9f444971dff097790b7bf146843a752cb48461418d3c7e67
-true
+例子：
+> bitcoin-cli prioritisetransaction "txid" 0.0 10000
+> curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "prioritisetransaction", "params": ["txid", 0.0, 10000] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
 ```
 
-### cURL
+## 2. 源码剖析
 
-```shell
-$ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "prioritisetransaction", "params": ["fb9bd2df3cef0abd9f444971dff097790b7bf146843a752cb48461418d3c7e67", 0.0, 10000] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
-{"result":true,"error":null,"id":"curltest"}
-```
-
-## 源码剖析
-
-prioritisetransaction 对应的函数在“rpcserver.h”文件中被引用。
+`prioritisetransaction` 对应的函数在文件 `rpcserver.h` 中被引用。
 
 ```cpp
-extern UniValue prioritisetransaction(const UniValue& params, bool fHelp); // 设置交易的优先级
+extern UniValue prioritisetransaction(const UniValue& params, bool fHelp);
 ```
 
-实现在“rpcmining.cpp”文件中。
+实现在文件 `rpcmining.cpp` 中。
 
 ```cpp
 // NOTE: Unlike wallet RPC (which use BTC values), mining RPCs follow GBT (BIP 22) in using satoshi amounts
-UniValue prioritisetransaction(const UniValue& params, bool fHelp) // 注：与钱包 RPC （使用 BTC）不同，挖矿 RPC 使用 satoshi 作为单位
+UniValue prioritisetransaction(const UniValue& params, bool fHelp) // 注：不像钱包 RPC（使用 BTC），挖矿 RPC 遵循 GBT（BIP 22）使用 satoshi 数量
 {
-    if (fHelp || params.size() != 3) // 必须为 3 个参数
-        throw runtime_error( // 命令帮助反馈
+    if (fHelp || params.size() != 3)
+        throw runtime_error(
             "prioritisetransaction <txid> <priority delta> <fee delta>\n"
             "Accepts the transaction into mined blocks at a higher (or lower) priority\n"
             "\nArguments:\n"
@@ -74,25 +63,27 @@ UniValue prioritisetransaction(const UniValue& params, bool fHelp) // 注：与�
             "\nExamples:\n"
             + HelpExampleCli("prioritisetransaction", "\"txid\" 0.0 10000")
             + HelpExampleRpc("prioritisetransaction", "\"txid\", 0.0, 10000")
-        );
+        ); // 1. 帮助内容
 
     LOCK(cs_main);
 
-    uint256 hash = ParseHashStr(params[0].get_str(), "txid"); // 获取指定的交易哈希并创建 uint256 对象
-    CAmount nAmount = params[2].get_int64(); // 获取交易金额
+    uint256 hash = ParseHashStr(params[0].get_str(), "txid");
+    CAmount nAmount = params[2].get_int64();
 
-    mempool.PrioritiseTransaction(hash, params[0].get_str(), params[1].get_real(), nAmount); // 调整指定交易优先级
+    mempool.PrioritiseTransaction(hash, params[0].get_str(), params[1].get_real(), nAmount); // 2. 调整交易优先级
     return true;
 }
 ```
 
-基本流程：
-1. 处理命令帮助和参数个数。
-2. 上锁。
-3. 获取交易索引和指定交易费，创建相应对象。
-4. 改变交易内存池中交易的优先级。
+### 2.1. 帮助内容
 
-第四步，函数 mempool.PrioritiseTransaction(hash, params[0].get_str(), params[1].get_real(), nAmount) 声明在“txmempool.h”文件的 CTxMemPool 类中。
+参考[比特币 RPC 命令剖析 "getbestblockhash" 2.1. 帮助内容](/blog/2018/05/bitcoin-rpc-command-getbestblockhash.html#21-帮助内容)。
+
+### 2.2. 调整交易优先级
+
+调整交易优先级函数 `mempool.PrioritiseTransaction(hash, params[0].get_str(), params[1].get_real(), nAmount)` 声明在文件 `txmempool.h` 的交易内存池类 `CTxMemPool` 中，用于影响 `CreateNewBlock` 时交易的优先级。
+
+`CTxMemPool` 有效依据当前最佳链存储可能包含在下一个区块的交易。
 
 ```cpp
 /**
@@ -171,23 +162,23 @@ UniValue prioritisetransaction(const UniValue& params, bool fHelp) // 注：与�
  * the entry as "dirty", and set the feerate for sorting purposes to be equal
  * the feerate of the transaction without any descendants.
  *
- */ // CTxMemPool 存储可能包含在下一个区块的基于当前最佳链的有效交易。
+ */
 class CTxMemPool
 {
     ...
-    /** Affect CreateNewBlock prioritisation of transactions */ // 调整 CreateNewBlock 时交易的优先级
+    /** Affect CreateNewBlock prioritisation of transactions */
     void PrioritiseTransaction(const uint256 hash, const std::string strHash, double dPriorityDelta, const CAmount& nFeeDelta);
     ...
 };
 ```
 
-实现在“txmempool.cpp”文件中。
+实现在文件 `txmempool.cpp` 中。
 
 ```cpp
 void CTxMemPool::PrioritiseTransaction(const uint256 hash, const string strHash, double dPriorityDelta, const CAmount& nFeeDelta)
 {
     {
-        LOCK(cs); // 上锁
+        LOCK(cs);
         std::pair<double, CAmount> &deltas = mapDeltas[hash]; // 获取指定交易哈希对应优先级和交易费
         deltas.first += dPriorityDelta; // 增加优先级
         deltas.second += nFeeDelta; // 增加交易费
@@ -211,6 +202,7 @@ void CTxMemPool::PrioritiseTransaction(const uint256 hash, const string strHash,
 ## 参考链接
 
 * [bitcoin/rpcserver.h at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/rpcserver.h){:target="_blank"}
+* [bitcoin/rpcserver.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/rpcserver.cpp){:target="_blank"}
 * [bitcoin/rpcmining.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/rpcmining.cpp){:target="_blank"}
 * [bitcoin/txmempool.h at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/txmempool.h){:target="_blank"}
 * [bitcoin/txmempool.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/txmempool.cpp){:target="_blank"}

@@ -8,77 +8,43 @@ category: 区块链
 tags: Bitcoin bitcoin-cli
 excerpt: $ bitcoin-cli addnode "node" "add|remove|onetry"
 ---
-## 提示说明
+## 1. 帮助内容
 
 ```shell
-addnode "node" "add|remove|onetry" # 尝试从 addnode 列表中添加或移除一个节点，或尝试连接某节点一次
-```
+$ bitcoin-cli help addnode
+addnode "node" "add|remove|onetry"
+
+尝试在 addnode 列表添加或移除一个节点。
+或尝试连接到一个节点一次。
 
 参数：
-1. node（字符串，必备）节点（见 [getpeerinfo](/blog/2018/07/bitcoin-rpc-command-getpeerinfo.html) 获取的节点）。
-2. add\|remove\|onetry（字符串，必备）add 添加一个节点到列表（不会主动连接），remove 从列表移除一个节点，onetry 尝试连接到节点一次。
+1. "node"   （字符串，必备）节点（查看 getpeerinfo）
+2. "command"（字符串，必备）'add' 用来添加一个节点到列表，'remove' 用来从列表中移除一个节点，'onetry' 用来尝试连接到节点一次
 
-结果：无返回值。
-
-## 用法示例
-
-### 比特币核心客户端
-
-用法一：添加节点，由于无法查看 addnode 节点列表，添加 2 次进行验证。
-
-```shell
-$ bitcoin-cli addnode "192.168.0.2:8333" "add"
-$ bitcoin-cli addnode "192.168.0.2:8333" "add"
-error code: -23
-error message:
-Error: Node already added
+例子：
+> bitcoin-cli addnode "192.168.0.6:8333" "onetry"
+> curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "addnode", "params": ["192.168.0.6:8333", "onetry"] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
 ```
 
-用法二：移除节点，由于无法查看 addnode 节点列表，先添加 1 次，再移除 2 次进行验证。
+## 2. 源码剖析
 
-```shell
-$ bitcoin-cli addnode "192.168.0.2:8333" "add"
-$ bitcoin-cli addnode "192.168.0.2:8333" "remove"
-$ bitcoin-cli addnode "192.168.0.2:8333" "remove"
-error code: -24
-error message:
-Error: Node has not been added.
-```
-
-用法三：尝试连接节点一次，使用 getpeerinfo、getconnectioncount 查看是否成功建立连接。
-
-```shell
-$ bitcoin-cli addnode "192.168.0.2:8333" "onetry"
-```
-
-**注：端口号可以省略，使用默认端口。**
-
-### cURL
-
-```shell
-$ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "addnode", "params": ["192.168.0.6:8333", "onetry"] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
-{"result":null,"error":null,"id":"curltest"}
-```
-
-## 源码剖析
-
-addnode 对应的函数在“rpcserver.h”文件中被引用。
+`addnode` 对应的函数在文件 `rpcserver.h` 中被引用。
 
 ```cpp
-extern UniValue addnode(const UniValue& params, bool fHelp); // 添加节点
+extern UniValue addnode(const UniValue& params, bool fHelp);
 ```
 
-实现在“rpcnet.cpp”文件中。
+实现在文件 `rpcnet.cpp` 中。
 
 ```cpp
 UniValue addnode(const UniValue& params, bool fHelp)
 {
     string strCommand;
-    if (params.size() == 2) // 若有 2 个参数
-        strCommand = params[1].get_str(); // 获取第二个参数作为命令
+    if (params.size() == 2)
+        strCommand = params[1].get_str();
     if (fHelp || params.size() != 2 ||
-        (strCommand != "onetry" && strCommand != "add" && strCommand != "remove")) // 参数必须为 2 个，命令必须为 "onetry" "add" "remove" 这 3 个中的一个
-        throw runtime_error( // 命令帮助反馈
+        (strCommand != "onetry" && strCommand != "add" && strCommand != "remove"))
+        throw runtime_error(
             "addnode \"node\" \"add|remove|onetry\"\n"
             "\nAttempts add or remove a node from the addnode list.\n"
             "Or try a connection to a node once.\n"
@@ -88,9 +54,9 @@ UniValue addnode(const UniValue& params, bool fHelp)
             "\nExamples:\n"
             + HelpExampleCli("addnode", "\"192.168.0.6:8333\" \"onetry\"")
             + HelpExampleRpc("addnode", "\"192.168.0.6:8333\", \"onetry\"")
-        );
+        ); // 1. 帮助内容
 
-    string strNode = params[0].get_str(); // 获取指定节点
+    string strNode = params[0].get_str();
 
     if (strCommand == "onetry") // 尝试连接操作
     {
@@ -118,9 +84,13 @@ UniValue addnode(const UniValue& params, bool fHelp)
         vAddedNodes.erase(it); // 从列表中擦除该节点
     }
 
-    return NullUniValue; // 无返回值
+    return NullUniValue;
 }
 ```
+
+### 2.1. 帮助内容
+
+参考[比特币 RPC 命令剖析 "getbestblockhash" 2.1. 帮助内容](/blog/2018/05/bitcoin-rpc-command-getbestblockhash.html#21-帮助内容)。
 
 基本流程：
 1. 处理命令帮助和参数个数。
@@ -359,6 +329,7 @@ bool static ConnectSocketDirectly(const CService &addrConnect, SOCKET& hSocketRe
 ## 参考链接
 
 * [bitcoin/rpcserver.h at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/rpcserver.h){:target="_blank"}
+* [bitcoin/rpcserver.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/rpcserver.cpp){:target="_blank"}
 * [bitcoin/rpcnet.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/rpcnet.cpp){:target="_blank"}
 * [bitcoin/net.h at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/net.h){:target="_blank"}
 * [bitcoin/net.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/net.cpp){:target="_blank"}

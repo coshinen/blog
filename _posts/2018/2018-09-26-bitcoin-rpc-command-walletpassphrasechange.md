@@ -8,7 +8,7 @@ category: 区块链
 tags: Bitcoin bitcoin-cli
 excerpt: $ bitcoin-cli walletpassphrasechange "oldpassphrase" "newpassphrase"
 ---
-## 提示说明
+## 1. 帮助内容
 
 ```shell
 walletpassphrasechange "oldpassphrase" "newpassphrase" # 更改钱包密码 oldpassphrase 为 newpassphrase

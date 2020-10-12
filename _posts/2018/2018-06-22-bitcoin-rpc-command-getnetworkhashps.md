@@ -8,83 +8,43 @@ category: 区块链
 tags: Bitcoin bitcoin-cli
 excerpt: $ bitcoin-cli getnetworkhashps ( blocks height )
 ---
-## 提示说明
+## 1. 帮助内容
 
 ```shell
-getnetworkhashps ( blocks height ) # 获取基于最后 n 个区块估算的网络算力（每秒网络哈希次数）
-```
+$ bitcoin-cli help getnetworkhashps
+getnetworkhashps ( blocks height )
+
+返回基于最后 n 个区块估算的每秒的哈希数。
+传入 [blocks] 以覆盖一部分区块，-1 指定从上次难度改变以来。
+传入 [height] 以估计发现某个区块时的网络速度。
 
 参数：
-1. blocks（整型，可选，默认为 120）区块的数量，-1 表示从上一次变化的难度开始。
-2. height（整型，可选，默认为 -1 表示当前高度）给定区块链高度用于评估当某个块被找到时的网络速度。
+1. blocks（整型，可选，默认为 120）区块的数量，或 -1 表示从上次难度改变以来。
+2. height（整型，可选，默认为 -1）估计给定的高度时间。
 
-结果：（数字）返回估算的每秒网络哈希的次数（链工作量 chainwork 之差 / 时间 time 之差）。
+结果：
+x        （数字）估算的每秒的哈希数
 
-## 用法示例
-
-### 比特币核心客户端
-
-用法一：未 IBD 时高度为 0，获取此时的网络算力。
-
-```shell
-$ bitcoin-cli getnetworkhashps
-0
+例子：
+> bitcoin-cli getnetworkhashps
+> curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "getnetworkhashps", "params": [] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
 ```
 
-用法二：获取第三个区块产生时的算力。
+## 2. 源码剖析
 
-```shell
-$ bitcoin-cli getnetworkhashps 1 3
-10011731.54545454
-```
-
-计算方法：用第三块与第二块的工作量之差 / 第三块与第二块产生时间之差。
-
-公式：(chainwork3 - chainwork(3 - 1) ) / (time3 - time(3 - 1) )。
-
-用法三：获取产生前三个区块的算力。
-
-```shell
-$ bitcoin-cli getnetworkhashps 3 3
-27789.49269520433
-```
-
-或使 blocks 为 0，效果同上。
-
-```shell
-$ bitcoin-cli getnetworkhashps 0 3
-27789.49269520433
-```
-
-或使 blocks 为 -1，效果同上。
-
-```shell
-$ bitcoin-cli getnetworkhashps -1 3
-27789.49269520433
-```
-
-### cURL
-
-```shell
-$ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "getnetworkhashps", "params": [] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
-{"result":1721333.071895425,"error":null,"id":"curltest"}
-```
-
-## 源码剖析
-
-getnetworkhashps 对应的函数在“rpcserver.h”文件中被引用。
+`getnetworkhashps` 对应的函数在文件 `rpcserver.h` 中被引用。
 
 ```cpp
-extern UniValue getnetworkhashps(const UniValue& params, bool fHelp); // 获取全网算力
+extern UniValue getnetworkhashps(const UniValue& params, bool fHelp);
 ```
 
-实现在“rpcmining.cpp”文件中。
+实现在文件 `rpcmining.cpp` 中。
 
 ```cpp
 UniValue getnetworkhashps(const UniValue& params, bool fHelp)
 {
-    if (fHelp || params.size() > 2) // 参数个数最多为 2 个
-        throw runtime_error( // 命令帮助反馈
+    if (fHelp || params.size() > 2)
+        throw runtime_error(
             "getnetworkhashps ( blocks height )\n"
             "\nReturns the estimated network hashes per second based on the last n blocks.\n"
             "Pass in [blocks] to override # of blocks, -1 specifies since last difficulty change.\n"
@@ -97,20 +57,20 @@ UniValue getnetworkhashps(const UniValue& params, bool fHelp)
             "\nExamples:\n"
             + HelpExampleCli("getnetworkhashps", "")
             + HelpExampleRpc("getnetworkhashps", "")
-       );
+       ); // 1. 帮助内容
 
     LOCK(cs_main);
-    return GetNetworkHashPS(params.size() > 0 ? params[0].get_int() : 120, params.size() > 1 ? params[1].get_int() : -1); // 获取网络算力（哈希次数/秒）并返回
+    return GetNetworkHashPS(params.size() > 0 ? params[0].get_int() : 120, params.size() > 1 ? params[1].get_int() : -1); // 2. 获取每秒的网络哈希并返回
 }
 ```
 
-基本流程：
-1. 处理命令帮助和参数个数。
-2. 上锁。
-3. 获取指定高度及块数的算力（网络哈希/秒），并返回。
+### 2.1. 帮助内容
 
-第三步，调用 GetNetworkHashPS(params.size() > 0 ? params[0].get_int() : 120, params.size() > 1 ? params[1].get_int() : -1) 函数获取算力，
-该函数实现在“rpcmining.cpp”文件中。
+参考[比特币 RPC 命令剖析 "getbestblockhash" 2.1. 帮助内容](/blog/2018/05/bitcoin-rpc-command-getbestblockhash.html#21-帮助内容)。
+
+### 2.2. 获取每秒的网络哈希并返回
+
+获取每秒的网络哈希函数 `GetNetworkHashPS(params.size() > 0 ? params[0].get_int() : 120, params.size() > 1 ? params[1].get_int() : -1)` 实现在文件 `rpcmining.cpp` 中。
 
 ```cpp
 /**
@@ -161,4 +121,5 @@ UniValue GetNetworkHashPS(int lookup, int height) { // 默认 (120, -1)
 ## 参考链接
 
 * [bitcoin/rpcserver.h at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/rpcserver.h){:target="_blank"}
+* [bitcoin/rpcserver.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/rpcserver.cpp){:target="_blank"}
 * [bitcoin/rpcmining.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/rpcmining.cpp){:target="_blank"}
