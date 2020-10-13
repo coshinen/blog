@@ -179,6 +179,10 @@ excerpt: Here are my favorite quotes from someones that inspire me or make me la
 > 新堂頼子「はんなりギロリの頼子さん」：
 > * 大切なのは、どの道を選ぶかより、選んだ道をどういきるかじゃないの？
 
+> ゲーテ「コンフィデンスマンJP ーロマンス編ー」：
+> * 人に欺かれるのではない。自分が己を欺くのである。
+> * We are never deceived; we deceive ourselves.
+
 > ダー子「コンフィデンスマンJP」：
 > * 目に見えるものが真実とは限らない。何が本当で、何が嘘か？
 
