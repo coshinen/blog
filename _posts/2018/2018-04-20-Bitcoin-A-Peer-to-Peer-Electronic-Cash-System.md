@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "比特币白皮书中英对照"
-date:   2018-04-20 09:07:06 +0800
+date:   2018-04-20 20:08:10 +0800
 author: mistydew
 comments: true
 category: 区块链
@@ -594,5 +594,5 @@ q=0.45   z=340
 
 ## 参考链接
 
-* [Bitcoin: A Peer-to-Peer Electronic Cash System](https://bitcoin.org/bitcoin.pdf){:target="_blank"} - 官方原版
-* [Bitcoin: A Peer-to-Peer Electronic Cash System](https://git.dhimmel.com/bitcoin-whitepaper){:target="_blank"} - 非官方重新排版
+* [Bitcoin P2P e-cash paper](https://www.metzdowd.com/pipermail/cryptography/2008-October/014810.html){:target="_blank"}
+* [Bitcoin: A Peer-to-Peer Electronic Cash System](https://bitcoin.org/bitcoin.pdf){:target="_blank"}

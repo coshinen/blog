@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "启动比特币核心服务 bitcoind"
-date:   2018-05-04 13:08:22 +0800
+date:   2018-05-04 23:08:22 +0800
 author: mistydew
 comments: true
 category: 区块链

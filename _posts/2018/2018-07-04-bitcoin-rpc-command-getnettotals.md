@@ -1,82 +1,57 @@
 ---
 layout: post
 title:  "比特币 RPC 命令剖析 \"getnettotals\""
-date:   2018-07-04 16:47:29 +0800
+date:   2018-07-04 20:47:29 +0800
 author: mistydew
 comments: true
 category: 区块链
 tags: Bitcoin bitcoin-cli
 excerpt: $ bitcoin-cli getnettotals
 ---
-## 提示说明
+## 1. 帮助内容
 
 ```shell
-getnettotals # 获取关于网络流量的信息，包含流入字节，流出字节，和当前时间
-```
+$ bitcoin-cli help getnettotals
+getnettotals
+
+返回关于网络流量的信息，包含流入字节、流出字节和当前的时间。
 
 结果：
-```shell
 {
-  "totalbytesrecv": n,   （数字）接收的总字节
-  "totalbytessent": n,   （数字）发送的总字节
-  "timemillis": t,       （数字）总 CPU 时间
+  "totalbytesrecv": n,                    （数字）总接收的字节
+  "totalbytessent": n,                    （数字）总发送的字节
+  "timemillis": t,                        （数字）总 CPU 时间
   "uploadtarget":
   {
-    "timeframe": n,                         （数字）测量时间范围的长度，以秒为单位
-    "target": n,                            （数字）目标字节数
-    "target_reached": true|false,           （布尔型）如果目标可达则为 true
-    "serve_historical_blocks": true|false,  （布尔型）如果服务历史的区块则为 true
-    "bytes_left_in_cycle": t,               （数字）当前时间周期剩下的字节
-    "time_left_in_cycle": t                 （数字）当前时间周期剩余的秒数
+    "timeframe": n,                       （数字）以秒为单位的测量时间范围的长度
+    "target": n,                          （数字）目标字节数
+    "target_reached": true|false,         （布尔型）如果目标可抵达则为 true
+    "serve_historical_blocks": true|false,（布尔型）如果服务历史区块则为 true
+    "bytes_left_in_cycle": t,             （数字）当前时间周期剩余的字节数
+    "time_left_in_cycle": t               （数字）当前时间周期剩余的秒数
   }
 }
+
+例子：
+> bitcoin-cli getnettotals
+> curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "getnettotals", "params": [] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
 ```
 
-## 用法示例
+## 2. 源码剖析
 
-### 比特币核心客户端
-
-获取当前网络总流量信息。
-
-```shell
-$ bitcoin-cli getnettotals
-{
-  "totalbytesrecv": 46172,
-  "totalbytessent": 10696,
-  "timemillis": 1529999588020,
-  "uploadtarget": {
-    "timeframe": 86400,
-    "target": 0,
-    "target_reached": false,
-    "serve_historical_blocks": true,
-    "bytes_left_in_cycle": 0,
-    "time_left_in_cycle": 0
-  }
-}
-```
-
-### cURL
-
-```shell
-$ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "getnettotals", "params": [] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
-{"result":{"totalbytesrecv":46794,"totalbytessent":10818,"timemillis":1529999617779,"uploadtarget":{"timeframe":86400,"target":0,"target_reached":false,"serve_historical_blocks":true,"bytes_left_in_cycle":0,"time_left_in_cycle":0}},"error":null,"id":"curltest"}
-```
-
-## 源码剖析
-
-getnettotals 对应的函数在“rpcserver.h”文件中被引用。
+`getnettotals` 对应的函数在文件 `rpcserver.h` 中被引用。
 
 ```cpp
-extern UniValue getnettotals(const UniValue& params, bool fHelp); // 获取网络流量信息
+extern UniValue getnettotals(const UniValue& params, bool fHelp);
 ```
 
-实现在“rpcnet.cpp”文件中。
+实现在文件 `rpcnet.cpp` 中。
 
 ```cpp
 UniValue getnettotals(const UniValue& params, bool fHelp)
 {
-    if (fHelp || params.size() > 0) // 没有参数
-        throw runtime_error( // 命令帮助反馈
+    if (fHelp || params.size() > 0)
+        throw runtime_error(
             "getnettotals\n"
             "\nReturns information about network traffic, including bytes in, bytes out,\n"
             "and current time.\n"
@@ -98,12 +73,12 @@ UniValue getnettotals(const UniValue& params, bool fHelp)
             "\nExamples:\n"
             + HelpExampleCli("getnettotals", "")
             + HelpExampleRpc("getnettotals", "")
-       );
+       ); // 1. 帮助内容
 
-    UniValue obj(UniValue::VOBJ);
-    obj.push_back(Pair("totalbytesrecv", CNode::GetTotalBytesRecv())); // 接收的总字节数
-    obj.push_back(Pair("totalbytessent", CNode::GetTotalBytesSent())); // 发送的总字节数
-    obj.push_back(Pair("timemillis", GetTimeMillis())); // 时间毫秒
+    UniValue obj(UniValue::VOBJ); // 2. 构建网络流量的对象并返回
+    obj.push_back(Pair("totalbytesrecv", CNode::GetTotalBytesRecv()));
+    obj.push_back(Pair("totalbytessent", CNode::GetTotalBytesSent()));
+    obj.push_back(Pair("timemillis", GetTimeMillis()));
 
     UniValue outboundLimit(UniValue::VOBJ);
     outboundLimit.push_back(Pair("timeframe", CNode::GetMaxOutboundTimeframe()));
@@ -117,11 +92,12 @@ UniValue getnettotals(const UniValue& params, bool fHelp)
 }
 ```
 
-基本流程：
-1. 处理命令帮助和参数个数。
-2. 创建一个对象类型的结果，追加相关信息到该对象。
+### 2.1. 帮助内容
+
+参考[比特币 RPC 命令剖析 "getbestblockhash" 2.1. 帮助内容](/blog/2018/05/bitcoin-rpc-command-getbestblockhash.html#21-帮助内容)。
 
 ## 参考链接
 
 * [bitcoin/rpcserver.h at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/rpcserver.h){:target="_blank"}
+* [bitcoin/rpcserver.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/rpcserver.cpp){:target="_blank"}
 * [bitcoin/rpcnet.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/rpcnet.cpp){:target="_blank"}

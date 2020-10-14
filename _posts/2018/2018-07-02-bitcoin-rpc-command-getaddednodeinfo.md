@@ -8,135 +8,58 @@ category: 区块链
 tags: Bitcoin bitcoin-cli
 excerpt: $ bitcoin-cli getaddednodeinfo dns ( "node" )
 ---
-## 提示说明
+## 1. 帮助内容
 
 ```shell
-getaddednodeinfo dns ( "node" ) # 获取关于给定或全部添加节点的信息（注意 addnode 命令中 onetry 选项不在这儿列出）
-```
+$ bitcoin-cli help getaddednodeinfo
+getaddednodeinfo dns ( "node" )
+
+返回有关给定或所有已添加节点的信息
+（注意这里没有列出 addnode onetry）
+如果 dns 为 false，则只提供已添加的节点列表，
+否则已连接的信息也将可用。
 
 参数：
-1. dns（布尔型，必备）如果为 false，只提供一个添加节点的列表，否则显示连接信息。
-2. node（字符串，可选）如果提供，则返回关于指定节点的信息，否则返回所有节点信息。
+1. dns   （布尔型，必备）如果为 false，则只提供一个已添加节点的列表，否则已连接的信息也将可用。
+2. "node"（字符串，可选）如果已提供，则返回有关该指定节点的信息，否则返回所有节点。
 
 结果：
-```shell
 [
   {
-    "addednode" : "192.168.0.201",   （字符串）节点 ip 地址
-    "connected" : true|false,          （布尔型）是否已连接
+    "addednode" : "192.168.0.201",        （字符串）节点的 ip 地址
+    "connected" : true|false,             （布尔型）是否已连接
     "addresses" : [
        {
-         "address" : "192.168.0.201:8333",  （字符串）比特币服务器主机和端口
-         "connected" : "outbound"           （字符串）3 种连接类型 connection, inbound or outbound
+         "address" : "192.168.0.201:8333",（字符串）比特币服务器主机和端口
+         "connected" : "outbound"         （字符串）connection，inbound 或 outbound
        }
        ,...
      ]
   }
   ,...
 ]
+
+例子：
+> bitcoin-cli getaddednodeinfo true
+> bitcoin-cli getaddednodeinfo true "192.168.0.201"
+> curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "getaddednodeinfo", "params": [true, "192.168.0.201"] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
 ```
 
-## 用法示例
+## 2. 源码剖析
 
-### 比特币核心客户端
-
-用法一：获取所有添加的节点列表。
-
-```shell
-$ bitcoin-cli addnode 192.168.0.2 add
-$ bitcoin-cli addnode 192.168.0.6 add
-$ bitcoin-cli getaddednodeinfo false
-[
-  {
-    "addednode": "192.168.0.2"
-  }, 
-  {
-    "addednode": "192.168.0.6"
-  }
-]
-```
-
-用法二：获取所有添加的节点列表的连接信息。
-
-```shell
-$ bitcoin-cli addnode 192.168.0.2 add
-$ bitcoin-cli addnode 192.168.0.6 add
-$ bitcoin-cli getaddednodeinfo true
-[
-  {
-    "addednode": "192.168.0.2",
-    "connected": true,
-    "addresses": [
-      {
-        "address": "192.168.0.2:8333",
-        "connected": "outbound"
-      }
-    ]
-  }, 
-  {
-    "addednode": "192.168.0.6",
-    "connected": false,
-    "addresses": [
-      {
-        "address": "192.168.0.6:8333",
-        "connected": "false"
-      }
-    ]
-  }
-]
-```
-
-用法三：获取指定添加的节点的信息。
-
-```shell
-$ bitcoin-cli getaddednodeinfo false 192.168.0.2
-[
-  {
-    "addednode": "192.168.0.2"
-  }
-]
-```
-
-用法四：获取指定添加的节点的连接信息。
-
-```shell
-$ bitcoin-cli getaddednodeinfo true 192.168.0.2
-[
-  {
-    "addednode": "192.168.0.2",
-    "connected": true,
-    "addresses": [
-      {
-        "address": "192.168.0.2:8333",
-        "connected": "outbound"
-      }
-    ]
-  }
-]
-```
-
-### cURL
-
-```shell
-$ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "getaddednodeinfo", "params": [false] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
-{"result":[{"addednode":"192.168.0.2"},{"addednode":"192.168.0.6"}],"error":null,"id":"curltest"}
-```
-
-## 源码剖析
-
-getaddednodeinfo 对应的函数在“rpcserver.h”文件中被引用。
+`getaddednodeinfo` 对应的函数在文件 `rpcserver.h` 中被引用。
 
 ```cpp
-extern UniValue getaddednodeinfo(const UniValue& params, bool fHelp); // 获取添加节点的信息
+extern UniValue getaddednodeinfo(const UniValue& params, bool fHelp);
 ```
 
-实现在“rpcnet.cpp”文件中。
+实现在文件 `rpcnet.cpp` 中。
 
 ```cpp
 UniValue getaddednodeinfo(const UniValue& params, bool fHelp)
 {
-    if (fHelp || params.size() < 1 || params.size() > 2) // 参数至少为 1 个，至多为 2 个
-        throw runtime_error( // 命令帮助反馈
+    if (fHelp || params.size() < 1 || params.size() > 2)
+        throw runtime_error(
             "getaddednodeinfo dns ( \"node\" )\n"
             "\nReturns information about the given added node, or all added nodes\n"
             "(note that onetry addnodes are not listed here)\n"
@@ -164,48 +87,48 @@ UniValue getaddednodeinfo(const UniValue& params, bool fHelp)
             + HelpExampleCli("getaddednodeinfo", "true")
             + HelpExampleCli("getaddednodeinfo", "true \"192.168.0.201\"")
             + HelpExampleRpc("getaddednodeinfo", "true, \"192.168.0.201\"")
-        );
+        ); // 1. 帮助内容
 
-    bool fDns = params[0].get_bool(); // 获取 dns 标志
+    bool fDns = params[0].get_bool();
 
-    list<string> laddedNodes(0); // 添加节点 IP 的双向环状链表
-    if (params.size() == 1) // 只有一个参数，未指定节点
+    list<string> laddedNodes(0); // 2. 处理指定节点的情况
+    if (params.size() == 1) // 未指定节点
     {
         LOCK(cs_vAddedNodes);
-        BOOST_FOREACH(const std::string& strAddNode, vAddedNodes) // 遍历添加节点 IP 的列表
-            laddedNodes.push_back(strAddNode); // 依次添加到该双向环状链表
+        BOOST_FOREACH(const std::string& strAddNode, vAddedNodes) // 遍历已添加的节点列表
+            laddedNodes.push_back(strAddNode); // 依次添加到链表
     }
-    else
-    { // 超过 1 个参数
-        string strNode = params[1].get_str(); // 获取指定节点 IP 的字符串
+    else // 指定节点
+    {
+        string strNode = params[1].get_str();
         LOCK(cs_vAddedNodes);
         BOOST_FOREACH(const std::string& strAddNode, vAddedNodes) { // 遍历添加节点 IP 的列表
-            if (strAddNode == strNode) // 若指定了节点
+            if (strAddNode == strNode) // 若存在指定的节点
             {
-                laddedNodes.push_back(strAddNode); // 添加到双向环状链表
-                break; // 跳出
+                laddedNodes.push_back(strAddNode); // 则添加到链表
+                break;
             }
         }
-        if (laddedNodes.size() == 0) // 若该链表大小为 0，表示没有节点被添加
+        if (laddedNodes.size() == 0) // 若该链表大小为 0，则表示没有节点被添加。
             throw JSONRPCError(RPC_CLIENT_NODE_NOT_ADDED, "Error: Node has not been added.");
     }
 
-    UniValue ret(UniValue::VARR); // 创建数组类型的结果对象
+    UniValue ret(UniValue::VARR); // 3. 处理 dns
     if (!fDns) // 若关闭了 dns
     {
-        BOOST_FOREACH (const std::string& strAddNode, laddedNodes) { // 遍历添加节点 IP 的列表
+        BOOST_FOREACH (const std::string& strAddNode, laddedNodes) { // 遍历已添加节点的链表
             UniValue obj(UniValue::VOBJ);
             obj.push_back(Pair("addednode", strAddNode));
-            ret.push_back(obj); // 加入结果对象
+            ret.push_back(obj);
         }
-        return ret; // 返回结果
+        return ret;
     } // 若开启了 dns
 
-    list<pair<string, vector<CService> > > laddedAddreses(0); // 添加地址的双向环状链表
-    BOOST_FOREACH(const std::string& strAddNode, laddedNodes) { // 遍历添加节点的链表
+    list<pair<string, vector<CService> > > laddedAddreses(0);
+    BOOST_FOREACH(const std::string& strAddNode, laddedNodes) { // 遍历已添加节点的链表
         vector<CService> vservNode(0);
-        if(Lookup(strAddNode.c_str(), vservNode, Params().GetDefaultPort(), fNameLookup, 0)) // IP + 端口 获取服务节点
-            laddedAddreses.push_back(make_pair(strAddNode, vservNode)); // 追加到添加地址的双向环状链表
+        if(Lookup(strAddNode.c_str(), vservNode, Params().GetDefaultPort(), fNameLookup, 0)) // 查找节点
+            laddedAddreses.push_back(make_pair(strAddNode, vservNode)); // 追加到已添加的地址链表
         else
         {
             UniValue obj(UniValue::VOBJ);
@@ -217,15 +140,15 @@ UniValue getaddednodeinfo(const UniValue& params, bool fHelp)
     }
 
     LOCK(cs_vNodes);
-    for (list<pair<string, vector<CService> > >::iterator it = laddedAddreses.begin(); it != laddedAddreses.end(); it++) // 遍历添加地址的双向环状链表
+    for (list<pair<string, vector<CService> > >::iterator it = laddedAddreses.begin(); it != laddedAddreses.end(); it++) // 遍历已添加的地址链表
     {
         UniValue obj(UniValue::VOBJ);
         obj.push_back(Pair("addednode", it->first));
 
         UniValue addresses(UniValue::VARR);
-        bool fConnected = false; // 连接标志
+        bool fConnected = false;
         BOOST_FOREACH(const CService& addrNode, it->second) {
-            bool fFound = false; // 是否在连接的节点列表中找到
+            bool fFound = false;
             UniValue node(UniValue::VOBJ);
             node.push_back(Pair("address", addrNode.ToString()));
             BOOST_FOREACH(CNode* pnode, vNodes) { // 遍历已建立连接的节点列表
@@ -237,27 +160,25 @@ UniValue getaddednodeinfo(const UniValue& params, bool fHelp)
                     break;
                 }
             }
-            if (!fFound) // 未找到，未连接
+            if (!fFound) // 若未找到，则表示未连接
                 node.push_back(Pair("connected", "false"));
             addresses.push_back(node);
         }
         obj.push_back(Pair("connected", fConnected));
         obj.push_back(Pair("addresses", addresses));
-        ret.push_back(obj); // 加入结果集
+        ret.push_back(obj);
     }
 
-    return ret; // 返回数组类型的结果
+    return ret;
 }
 ```
 
-基本流程：
-1. 处理命令帮助和参数个数。
-2. 获取布尔型的 dns 标志。
-3. 创建添加节点 IP 的链表，根据是否有第二个参数，添加相应（全部或指定）节点到该链表。
-4. 若关闭了 dns，只添加节点 IP 到结果集并返回。
-5. 若开启了 dns，则追加相应的连接状态以及端口号到结果集并返回。
+### 2.1. 帮助内容
+
+参考[比特币 RPC 命令剖析 "getbestblockhash" 2.1. 帮助内容](/blog/2018/05/bitcoin-rpc-command-getbestblockhash.html#21-帮助内容)。
 
 ## 参考链接
 
 * [bitcoin/rpcserver.h at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/rpcserver.h){:target="_blank"}
+* [bitcoin/rpcserver.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/rpcserver.cpp){:target="_blank"}
 * [bitcoin/rpcnet.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/rpcnet.cpp){:target="_blank"}

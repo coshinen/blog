@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "ZARD 運命のルーレット廻して 歌词"
-date:   2018-05-14 20:38:09 +0800
+date:   2018-05-13 20:38:09 +0800
 author: mistydew
 comments: true
 category: 译文集

@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "比特币 RPC 命令剖析 \"getblockchaininfo\""
-date:   2018-05-24 11:27:13 +0800
+date:   2018-05-24 21:27:13 +0800
 author: mistydew
 comments: true
 category: 区块链
