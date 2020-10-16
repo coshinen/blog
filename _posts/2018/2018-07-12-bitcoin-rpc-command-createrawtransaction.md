@@ -8,133 +8,59 @@ category: 区块链
 tags: Bitcoin bitcoin-cli
 excerpt: $ bitcoin-cli createrawtransaction [{"txid":"id","vout":n},...] {"address":amount,"data":"hex",...} ( locktime )
 ---
-## 提示说明
+## 1. 帮助内容
 
 ```shell
-createrawtransaction [{"txid":"id","vout":n},...] {"address":amount,"data":"hex",...} ( locktime ) # 基于输入和创建新的输出创建一笔交易花费
-```
+$ bitcoin-cli help createrawtransaction
+createrawtransaction [{"txid":"id","vout":n},...] {"address":amount,"data":"hex",...} ( locktime )
 
-**输出可以是地址集或数据。返回 16 进制编码的原始交易。
-注：交易的输入没有签名，且该交易不会存储在钱包或传输到网络中。**
+创建一笔使用给定输入并创建新输出的交易。
+输出可以是地址集或数据。
+返回 16 进制编码的原始交易。
+注意交易的输入未被签名，并且它不会存储在钱包中或传输到网络中。
 
 参数：
-1. transactions（字符串，必备）一个由 json 对象构成的 json 数组。
-```shell
+1. "transactions"      （字符串，必备）一个 json 对象们的 json 数组
      [
        {
-         "txid":"id",    （字符串，必备）交易索引
-         "vout":n        （数字，必备）输出序号/索引
+         "txid":"id",  （字符串，必备）交易索引
+         "vout":n      （数字，必备）输出序号
        }
        ,...
      ]
-```
-2. outputs（字符串，必备）一个输出的 json 对象。
-```shell
+2. "outputs"           （字符串，必备）一个输出们的 json 对象
     {
-      "address": x.xxx,  （数字或字符串，必备）比特币地址，以 BTC 为单位的数字类型（可以是字符串）金额
-      "data": "hex",     （字符串，必备）“数据”，该值是 16 进制编码的数据
+      "address": x.xxx,（数字或字符串，必备）密钥是比特币地址，数值（可以是字符串）是以 BTC 为单位金额
+      "data": "hex",   （字符串，必备）密钥是 "data"，该值是 16 进制编码的数据
       ...
     }
-```
-3. locktime（数字，可选，默认为 0）原始锁定时间。非 0 值也可以激活输入的锁定时间。
+3. locktime            （数字，可选，默认为 0）原始锁定时间。非 0 值也会激活锁定时间输入
 
-结果：（字符串）返回 16 进制编码的交易索引字符串。
+结果：
+"transaction"          （字符串）16 进制的交易字符串
 
-## 用法示例
-
-### 比特币核心客户端
-
-方法一：指定输入（交易索引和 UTXO 序号）和输出（地址和金额）创建一笔原始交易。<br>
-这里的输入即一笔未花费的输出所在的交易索引和输出序号，通过 [listunspent](/blog/2018/09/bitcoin-rpc-command-listunspent.html) 获取 UTXO。<br>
-创建原始交易完成后，通过 [decoderawtransaction](/blog/2018/07/bitcoin-rpc-command-decoderawtransaction.html) 解码获取该原始交易的详细信息。
-
-```shell
-$ bitcoin-cli listunspent
-[
-  ...
-  {
-    "txid": "fb9bd2df3cef0abd9f444971dff097790b7bf146843a752cb48461418d3c7e67",
-    "vout": 0,
-    "address": "1NQcq6VbVu5qRFaKe1YvNPx43Ye22WBYM7",
-    "account": "",
-    "scriptPubKey": "76a914ead21e07ca90f1d1d8a29440a68f070cdd2c8e1588ac",
-    "amount": 1.00000000,
-    "confirmations": 3660,
-    "spendable": true
-  }, 
-  ...
-]
-$ bitcoin-cli getnewaddress
-1Mcg7MDBD38sSScsX3USbsCnkcMbPnLyTV
-$ bitcoin-cli createrawtransaction "[{\"txid\":\"fb9bd2df3cef0abd9f444971dff097790b7bf146843a752cb48461418d3c7e67\",\"vout\":0}]" "{\"1Mcg7MDBD38sSScsX3USbsCnkcMbPnLyTV\":0.01}"
-0100000001677e3c8d416184b42c753a8446f17b0b7997f0df7149449fbd0aef3cdfd29bfb0000000000ffffffff0140420f00000000001976a914e221b8a504199bec7c5fe8081edd011c3653118288ac00000000
-$ bitcoin-cli decoderawtransaction 0100000001677e3c8d416184b42c753a8446f17b0b7997f0df7149449fbd0aef3cdfd29bfb0000000000ffffffff0140420f00000000001976a914e221b8a504199bec7c5fe8081edd011c3653118288ac00000000
-{
-  "txid": "6d5ea131dd69b0a04950cfd95b94412c3f3c70ec57f8558d9986946a37b3958e",
-  "size": 85,
-  "version": 1,
-  "locktime": 0,
-  "vin": [
-    {
-      "txid": "fb9bd2df3cef0abd9f444971dff097790b7bf146843a752cb48461418d3c7e67",
-      "vout": 0,
-      "scriptSig": {
-        "asm": "",
-        "hex": ""
-      },
-      "sequence": 4294967295
-    }
-  ],
-  "vout": [
-    {
-      "value": 0.01000000,
-      "n": 0,
-      "scriptPubKey": {
-        "asm": "OP_DUP OP_HASH160 e221b8a504199bec7c5fe8081edd011c36531182 OP_EQUALVERIFY OP_CHECKSIG",
-        "hex": "76a914e221b8a504199bec7c5fe8081edd011c3653118288ac",
-        "reqSigs": 1,
-        "type": "pubkeyhash",
-        "addresses": [
-          "1Mcg7MDBD38sSScsX3USbsCnkcMbPnLyTV"
-        ]
-      }
-    }
-  ]
-}
+例子：
+> bitcoin-cli createrawtransaction "[{\"txid\":\"myid\",\"vout\":0}]" "{\"address\":0.01}"
+> bitcoin-cli createrawtransaction "[{\"txid\":\"myid\",\"vout\":0}]" "{\"data\":\"00010203\"}"
+> curl --user myusername:mypassword  --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "createrawtransaction", "params": ["[{\"txid\":\"myid\",\"vout\":0}]", "{\"address\":0.01}"] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
+> curl --user myusername:mypassword  --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "createrawtransaction", "params": ["[{\"txid\":\"myid\",\"vout\":0}]", "{\"data\":\"00010203\"}"] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
 ```
 
-**注：这里没有指定找零地址和金额，所以输入和输出之差会全部作为交易费。<br>
-使用 [fundrawtransaction](/blog/2018/07/bitcoin-rpc-command-fundrawtransaction.html) 增加找零输出。**
+## 2. 源码剖析
 
-方法二：指定 data 类型的输出，data value 来源暂无，这里使用官方用例 "00010203"。
+`createrawtransaction` 对应的函数在文件 `rpcserver.h` 中被引用。
 
 ```cpp
-$ bitcoin-cli createrawtransaction "[{\"txid\":\"fb9bd2df3cef0abd9f444971dff097790b7bf146843a752cb48461418d3c7e67\",\"vout\":0}]" "{\"data\":\"00010203\"}"
-01000000016e913e3ec13124ad5cee842be5b381786f4e2e1c9f54bd34c683540f58a0b09d0000000000ffffffff010000000000000000066a040001020300000000
+extern UniValue createrawtransaction(const UniValue& params, bool fHelp);
 ```
 
-### cURL
-
-```cpp
-$ curl --user myusername:mypassword  --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "createrawtransaction", "params": [[{"txid":"fb9bd2df3cef0abd9f444971dff097790b7bf146843a752cb48461418d3c7e67","vout":0}], {"1Mcg7MDBD38sSScsX3USbsCnkcMbPnLyTV":0.01}] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
-{"result":"0100000001677e3c8d416184b42c753a8446f17b0b7997f0df7149449fbd0aef3cdfd29bfb0000000000ffffffff0140420f00000000001976a914e221b8a504199bec7c5fe8081edd011c3653118288ac00000000","error":null,"id":"curltest"}
-```
-
-## 源码剖析
-
-createrawtransaction 对应的函数在“rpcserver.h”文件中被引用。
-
-```cpp
-extern UniValue createrawtransaction(const UniValue& params, bool fHelp); // 创建原始交易
-```
-
-实现在“rpcrawtransaction.cpp”文件中。
+实现在文件 `rpcrawtransaction.cpp` 中。
 
 ```cpp
 UniValue createrawtransaction(const UniValue& params, bool fHelp)
 {
-    if (fHelp || params.size() < 2 || params.size() > 3) // 1.参数为 2 或 3 个
-        throw runtime_error( // 命令帮助反馈
+    if (fHelp || params.size() < 2 || params.size() > 3)
+        throw runtime_error(
             "createrawtransaction [{\"txid\":\"id\",\"vout\":n},...] {\"address\":amount,\"data\":\"hex\",...} ( locktime )\n"
             "\nCreate a transaction spending the given inputs and creating new outputs.\n"
             "Outputs can be addresses or data.\n"
@@ -166,26 +92,26 @@ UniValue createrawtransaction(const UniValue& params, bool fHelp)
             + HelpExampleCli("createrawtransaction", "\"[{\\\"txid\\\":\\\"myid\\\",\\\"vout\\\":0}]\" \"{\\\"data\\\":\\\"00010203\\\"}\"")
             + HelpExampleRpc("createrawtransaction", "\"[{\\\"txid\\\":\\\"myid\\\",\\\"vout\\\":0}]\", \"{\\\"address\\\":0.01}\"")
             + HelpExampleRpc("createrawtransaction", "\"[{\\\"txid\\\":\\\"myid\\\",\\\"vout\\\":0}]\", \"{\\\"data\\\":\\\"00010203\\\"}\"")
-        );
+        ); // 1. 帮助内容
 
-    LOCK(cs_main); // 2.上锁
-    RPCTypeCheck(params, boost::assign::list_of(UniValue::VARR)(UniValue::VOBJ)(UniValue::VNUM), true); // 3.检查参数类型
-    if (params[0].isNull() || params[1].isNull()) // 输入和输出均不能为空
+    LOCK(cs_main);
+    RPCTypeCheck(params, boost::assign::list_of(UniValue::VARR)(UniValue::VOBJ)(UniValue::VNUM), true); // 2. RPC 类型检测
+    if (params[0].isNull() || params[1].isNull())
         throw JSONRPCError(RPC_INVALID_PARAMETER, "Invalid parameter, arguments 1 and 2 must be non-null");
 
-    UniValue inputs = params[0].get_array(); // 获取输入
-    UniValue sendTo = params[1].get_obj(); // 获取输出
+    UniValue inputs = params[0].get_array();
+    UniValue sendTo = params[1].get_obj();
 
-    CMutableTransaction rawTx; // 4.创建一笔原始交易
+    CMutableTransaction rawTx; // 3. 构建原始交易
 
-    if (params.size() > 2 && !params[2].isNull()) { // 4.1.若指定了锁定时间
+    if (params.size() > 2 && !params[2].isNull()) { // 若指定了锁定时间
         int64_t nLockTime = params[2].get_int64(); // 获取锁定时间
         if (nLockTime < 0 || nLockTime > std::numeric_limits<uint32_t>::max()) // 锁定时间范围检查
             throw JSONRPCError(RPC_INVALID_PARAMETER, "Invalid parameter, locktime out of range");
         rawTx.nLockTime = nLockTime; // 交易锁定时间初始化
     }
 
-    for (unsigned int idx = 0; idx < inputs.size(); idx++) { // 4.2.遍历输入，构建原始交易输入列表
+    for (unsigned int idx = 0; idx < inputs.size(); idx++) { // 遍历输入，构建原始交易输入列表
         const UniValue& input = inputs[idx]; // 获取一个输入
         const UniValue& o = input.get_obj(); // 拿到该输入对象
 
@@ -204,7 +130,7 @@ UniValue createrawtransaction(const UniValue& params, bool fHelp)
         rawTx.vin.push_back(in); // 加入原始交易输入列表
     }
 
-    set<CBitcoinAddress> setAddress; // 4.3.地址集
+    set<CBitcoinAddress> setAddress; // 地址集
     vector<string> addrList = sendTo.getKeys(); // 获取输出的所有关键字（地址）
     BOOST_FOREACH(const string& name_, addrList) { // 遍历地址列表
 
@@ -230,21 +156,16 @@ UniValue createrawtransaction(const UniValue& params, bool fHelp)
         }
     }
 
-    return EncodeHexTx(rawTx); // 5.16 进制编码该原始交易并返回
+    return EncodeHexTx(rawTx); // 4. 编码 16 进制交易并返回
 }
 ```
 
-基本流程：
-1. 处理命令帮助和参数个数。
-2. 上锁。
-3. 检验参数类型并获取指定参数。
-4. 构建一笔原始交易。
-   41. 初始化原始交易锁定时间。
-   42. 构建交易输入列表。
-   43. 构建交易输出列表。
-5. 返回原始交易的 16 进制编码形式。
+### 2.1. 帮助内容
+
+参考[比特币 RPC 命令剖析 "getbestblockhash" 2.1. 帮助内容](/blog/2018/05/bitcoin-rpc-command-getbestblockhash.html#21-帮助内容)。
 
 ## 参考链接
 
 * [bitcoin/rpcserver.h at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/rpcserver.h){:target="_blank"}
+* [bitcoin/rpcserver.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/rpcserver.cpp){:target="_blank"}
 * [bitcoin/rpcrawtransaction.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/rpcrawtransaction.cpp){:target="_blank"}

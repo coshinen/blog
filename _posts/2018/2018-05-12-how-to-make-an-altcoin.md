@@ -151,7 +151,6 @@ public:
 -       nDefaultPort = 8333; // 改为其它端口，例："8331"
 +       nDefaultPort = 8331;
         ...
-        };
     }
 };
 ```
@@ -204,7 +203,6 @@ public:
 -       vFixedSeeds = std::vector<SeedSpec6>(pnSeed6_main, pnSeed6_main + ARRAYLEN(pnSeed6_main));
 +       //vFixedSeeds = std::vector<SeedSpec6>(pnSeed6_main, pnSeed6_main + ARRAYLEN(pnSeed6_main));
         ...
-        };
     }
 };
 ```
@@ -236,7 +234,6 @@ public:
 +       pchMessageStart[2] = 0xca;
 +       pchMessageStart[3] = 0xfe;
         ...
-        };
     }
 };
 ```
@@ -264,7 +261,6 @@ public:
         base58Prefixes[EXT_PUBLIC_KEY] = boost::assign::list_of(0x04)(0x88)(0xB2)(0x1E).convert_to_container<std::vector<unsigned char> >();
         base58Prefixes[EXT_SECRET_KEY] = boost::assign::list_of(0x04)(0x88)(0xAD)(0xE4).convert_to_container<std::vector<unsigned char> >();
         ...
-        };
     }
 };
 ```
@@ -290,7 +286,6 @@ public:
 创世区块信息硬编在文件 `chainparams.cpp` 中，具体如下：
 
 ```cpp
-...
 static CBlock CreateGenesisBlock(const char* pszTimestamp, const CScript& genesisOutputScript, uint32_t nTime, uint32_t nNonce, uint32_t nBits, int32_t nVersion, const CAmount& genesisReward)
 {
     CMutableTransaction txNew; // 创币交易 coinbase （区块中的第一笔交易）
@@ -341,7 +336,6 @@ public:
         assert(consensus.hashGenesisBlock == uint256S("0x000000000019d6689c085ae165831e934ff763ae46a2a6c172b3f1b60a8ce26f")); // 检验创世区块哈希
         assert(genesis.hashMerkleRoot == uint256S("0x4a5e1e4baab89f3a32518a88c31bc87f618f76673e2cc77ab2127b7afdeda33b")); // 检验区块默尔克树根哈希
         ...
-        };
     }
 };
 ```
@@ -381,44 +375,38 @@ $ date +%s
 
 接下来开始挖创世区块，其主要信息有随机数 `nNonce`、区块哈希和默尔克树根哈希。
 
-首先在文件 `miner.cpp` 中增加以下代码，用于寻找创世区块。
+首先在文件 `miner.cpp` 中增加以下代码，用来寻找创世区块的基本信息 `nNonce`、`hash` 和 `merkleroot`。
 
 ```cpp
-+// 获取创世区块的基本信息（nNonce、hash、merkleroot）
 +void getGenesisBlock(CBlock *pblock)
 +{
-+   arith_uint256 hashTarget = arith_uint256().SetCompact(pblock->nBits);
-+   printf("hashTarget: %s\n", hashTarget.ToString().c_str());
-+   uint256 hash;
-+   uint32_t nNonce = 0;
-+   int64_t nStart = GetTime();
-+   while (true)
-+   {
-+       if (ScanHash(pblock, nNonce, &hash))
-+       {
-+           printf("block hash: %s", hash.ToString().c_str());
-+           if (UintToArith256(hash) <= hashTarget)
-+           {
-+      	        printf(" true\n"
-+       	        "Congratulation! You found the genesis block. total time: %lds\n"
-+       	        "the nNonce: %u\n"
-+       	        "genesis block hash: %s\n"
-+       	        "genesis block merkle root: %s\n", GetTime() - nStart, nNonce, hash.ToString().c_str(), pblock->hashMerkleRoot.ToString().c_str());
-+       	    break;
-+           }
-+           else
-+           {
-+               printf(" false\n");
-+           }
-+       }
-+   }
++    arith_uint256 hashTarget = arith_uint256().SetCompact(pblock->nBits);
++    printf("hashTarget: %s\n", hashTarget.ToString().c_str());
++    uint256 hash;
++    uint32_t nNonce = 0;
++    int64_t nStart = GetTime();
++    while (true) {
++        if (ScanHash(pblock, nNonce, &hash)) {
++            printf("block hash: %s", hash.ToString().c_str());
++            if (UintToArith256(hash) <= hashTarget) {
++                printf(" true\n"
++                       "Congratulation! You found the genesis block. total time: %lds\n"
++                       "the nNonce: %u\n"
++                       "genesis block hash: %s\n"
++                       "genesis block merkle root: %s\n", GetTime() - nStart, nNonce, hash.ToString().c_str(), pblock->hashMerkleRoot.ToString().c_str());
++                break;
++            } else {
++                printf(" false\n");
++            }
++        }
++    }
 +}
 ```
 
 同时在头文件 `miner.h` 中增加该函数的声明。
 
 ```cpp
-+/** Search the genesis block */
++/** Search the genesis block. */
 +void getGenesisBlock(CBlock *pblock);
 ```
 

@@ -8,119 +8,78 @@ category: 区块链
 tags: Bitcoin bitcoin-cli
 excerpt: $ bitcoin-cli listbanned
 ---
-## 提示说明
+## 1. 帮助内容
 
 ```shell
-listbanned # 列出所有禁止的 IP/子网
+$ bitcoin-cli help listbanned
+listbanned
+
+列出所有已禁止的 IP /子网。
+
+例子：
+> bitcoin-cli listbanned
+> curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "listbanned", "params": [] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
 ```
 
-结果：以 JSON 数组的形式返回所有被禁止的 IP。
+## 2. 源码剖析
 
-## 用法示例
-
-### 比特币核心客户端
-
-显示服务器黑名单（被禁止的 IP 合集）。
-
-```shell
-$ bitcoin-cli listbanned
-[
-  {
-    "address": "192.168.0.2/32",
-    "banned_until": 1530079566,
-    "ban_created": 1529993166,
-    "ban_reason": "manually added"
-  }
-]
-```
-
-### cURL
-
-```shell
-$ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "listbanned", "params": [] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
-{"result":[{"address":"192.168.0.2/32","banned_until":1530079566,"ban_created":1529993166,"ban_reason":"manually added"}],"error":null,"id":"curltest"}
-```
-
-## 源码剖析
-
-listbanned 对应的函数在“rpcserver.h”文件中被引用。
+`listbanned` 对应的函数在文件 `rpcserver.h` 中被引用。
 
 ```cpp
-extern UniValue listbanned(const UniValue& params, bool fHelp); // 列出黑名单
+extern UniValue listbanned(const UniValue& params, bool fHelp);
 ```
 
-实现在“rpcnet.cpp”文件中。
+实现在文件 `rpcnet.cpp` 中。
 
 ```cpp
 UniValue listbanned(const UniValue& params, bool fHelp)
 {
-    if (fHelp || params.size() != 0) // 没有参数
-        throw runtime_error( // 命令帮助反馈
+    if (fHelp || params.size() != 0)
+        throw runtime_error(
                             "listbanned\n"
                             "\nList all banned IPs/Subnets.\n"
                             "\nExamples:\n"
                             + HelpExampleCli("listbanned", "")
                             + HelpExampleRpc("listbanned", "")
-                            );
+                            ); // 1. 帮助内容
 
     banmap_t banMap;
-    CNode::GetBanned(banMap); // 获取禁止列表
+    CNode::GetBanned(banMap); // 2. 获取禁止映射列表
 
-    UniValue bannedAddresses(UniValue::VARR); // 创建数组类型的禁止地址
+    UniValue bannedAddresses(UniValue::VARR); // 3. 构建已禁止的地址集对象并返回
     for (banmap_t::iterator it = banMap.begin(); it != banMap.end(); it++)
-    { // 遍历禁止列表
-        CBanEntry banEntry = (*it).second; // 获取禁止条目
+    {
+        CBanEntry banEntry = (*it).second;
         UniValue rec(UniValue::VOBJ);
-        rec.push_back(Pair("address", (*it).first.ToString())); // 子网地址
-        rec.push_back(Pair("banned_until", banEntry.nBanUntil)); // 禁止结束时间
-        rec.push_back(Pair("ban_created", banEntry.nCreateTime)); // 创建禁止时间
-        rec.push_back(Pair("ban_reason", banEntry.banReasonToString())); // 禁止原因
+        rec.push_back(Pair("address", (*it).first.ToString()));
+        rec.push_back(Pair("banned_until", banEntry.nBanUntil));
+        rec.push_back(Pair("ban_created", banEntry.nCreateTime));
+        rec.push_back(Pair("ban_reason", banEntry.banReasonToString()));
 
-        bannedAddresses.push_back(rec); // 加入结果集
+        bannedAddresses.push_back(rec);
     }
 
-    return bannedAddresses; // 返回禁止列表
+    return bannedAddresses;
 }
 ```
 
-基本流程：
-1. 处理命令帮助和参数个数。
-2. 获取禁止列表。
-3. 遍历该列表获取需要的信息。
-4. 返回获取的信息。
+### 2.1. 帮助内容
 
-类型 banmap_t 的定义在“net.h”文件中。
+参考[比特币 RPC 命令剖析 "getbestblockhash" 2.1. 帮助内容](/blog/2018/05/bitcoin-rpc-command-getbestblockhash.html#21-帮助内容)。
+
+### 2.2. 获取禁止映射列表
+
+类型 `banmap_t` 定义在文件 `net.h` 中。
 
 ```cpp
-typedef std::map<CSubNet, CBanEntry> banmap_t; // 禁止列表：子网与禁止条目的映射
+typedef std::map<CSubNet, CBanEntry> banmap_t;
 ```
 
-函数 CNode::GetBanned(banMap) 声明在“net.h”文件的 CNode 类中。
+获取屏蔽映射列表函数 `CNode::GetBanned(banMap)` 声明在文件 `net.h` 的节点类 `CNode` 中。
 
 ```cpp
 /** Information about a peer */
-class CNode // 关于同辈的信息
-{
-    ...
-    static void GetBanned(banmap_t &banmap);
-    ...
-};
-```
-
-实现在“net.cpp”文件中。
-
-```cpp
-void CNode::GetBanned(banmap_t &banMap)
-{
-    LOCK(cs_setBanned);
-    banMap = setBanned; //create a thread safe copy
-}
-```
-
-对象 setBanned 是静态的屏蔽地址列表，所有被禁止的地址会添加到该对象，它定义在“net.h”文件的 CNode 类中。
-
-```cpp
-class CNode // 关于同辈的信息
+class CNode // 关于一个对端的信息
 {
     ...
 protected:
@@ -130,19 +89,30 @@ protected:
     static banmap_t setBanned;
     static CCriticalSection cs_setBanned;
     ...
+public:
+    ...
+    static void GetBanned(banmap_t &banmap);
+    ...
 };
 ```
 
-初始化在“net.cpp”文件中。
+实现在文件 `net.cpp` 中。
 
 ```cpp
-banmap_t CNode::setBanned; // 设置屏蔽地址列表
+banmap_t CNode::setBanned;
 CCriticalSection CNode::cs_setBanned;
+...
+void CNode::GetBanned(banmap_t &banMap)
+{
+    LOCK(cs_setBanned);
+    banMap = setBanned; //create a thread safe copy
+}
 ```
 
 ## 参考链接
 
 * [bitcoin/rpcserver.h at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/rpcserver.h){:target="_blank"}
+* [bitcoin/rpcserver.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/rpcserver.cpp){:target="_blank"}
 * [bitcoin/rpcnet.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/rpcnet.cpp){:target="_blank"}
 * [bitcoin/net.h at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/net.h){:target="_blank"}
 * [bitcoin/net.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/net.cpp){:target="_blank"}
