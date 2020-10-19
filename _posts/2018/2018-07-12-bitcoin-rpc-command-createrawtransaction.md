@@ -37,7 +37,7 @@ createrawtransaction [{"txid":"id","vout":n},...] {"address":amount,"data":"hex"
 3. locktime            （数字，可选，默认为 0）原始锁定时间。非 0 值也会激活锁定时间输入
 
 结果：
-"transaction"          （字符串）16 进制的交易字符串
+"transaction"（字符串）16 进制的交易字符串
 
 例子：
 > bitcoin-cli createrawtransaction "[{\"txid\":\"myid\",\"vout\":0}]" "{\"address\":0.01}"

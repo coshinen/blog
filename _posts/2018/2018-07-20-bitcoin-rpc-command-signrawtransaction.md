@@ -8,103 +8,77 @@ category: 区块链
 tags: Bitcoin bitcoin-cli
 excerpt: $ bitcoin-cli signrawtransaction "hexstring" ( [{"txid":"id","vout":n,"scriptPubKey":"hex","redeemScript":"hex"},...] ["privatekey1",...] sighashtype )
 ---
-## 提示说明
+## 1. 帮助内容
 
 ```shell
-signrawtransaction "hexstring" ( [{"txid":"id","vout":n,"scriptPubKey":"hex","redeemScript":"hex"},...] ["privatekey1",...] sighashtype ) # 对（序列化的，16 进制编码的）原始交易的输入签名
-```
+$ bitcoin-cli help signrawtransaction
+signrawtransaction "hexstring" ( [{"txid":"id","vout":n,"scriptPubKey":"hex","redeemScript":"hex"},...] ["privatekey1",...] sighashtype )
 
-**第二个可选的参数（可能为空）是该交易所依赖的前一笔交易输出数组，但该交易可能还没上链。<br>
-第三个可选的参数（可能为空）是一个 base58 编码的私钥数组，如果指定，它将是签名该交易的唯一私钥。**
+对原始交易（序列化的，16 进制编码的）的输入签名。
+第二个可选参数（可能为空）是该交易依赖但可能尚未在区块亮中的前一笔交易的输出。
+第三个可选参数（可能为空）是一个 base58 编码的私钥数组，如果给定，它将是唯一用于签名该交易的私钥。
 
 参数：
-1. hexstring（字符串，必备）交易的 16 进制字符串。
-2. prevtxs（字符串，可选）依赖的前一笔交易输出的 json 数组。
-```shell
-     [               （json 对象的 json 数组，若未提供则为空）
-       {
-         "txid":"id",             （字符串，必备）交易索引
-         "vout":n,                  （数字，必备）输出序号
-         "scriptPubKey": "hex",   （字符串，必备）脚本公钥
-         "redeemScript": "hex"    （字符串，对于 P2SH 必备）赎回脚本
-       }
-       ,...
-    ]
-```
-3. privatekeys（字符串，可选）用于签名的 base58 编码的私钥组成的 json 数组。<br>
-```shell
-    [                  （字符串 json 数组，若未提供则为空）
-      "privatekey"   （字符串）base58 编码的私钥
+1. "hexstring"（字符串，必备）交易的 16 进制字符串
+2. "prevtxs"  （字符串，可选）依赖上一笔的交易输出的 json 数组
+    [         （json 对象的 json 数组，若未提供则为空）
+      {
+        "txid":"id",          （字符串，必备）交易索引
+        "vout":n,             （数字，必备）输出序号
+        "scriptPubKey": "hex",（字符串，必备）脚本公钥
+        "redeemScript": "hex" （字符串，对于 P2SH 必备）赎回脚本
+      }
       ,...
     ]
-```
-4. sighashtype（字符串，可选，默认为 ALL）签名哈希类型。必须是下列中的一个：
-```shell
+3. "privatekeys"  （字符串，可选）用于签名的 base58 编码的私钥的 json 数组
+    [             （字符串的 json 数组，若未提供则为空）
+      "privatekey"（字符串）base58 编码的私钥
+      ,...
+    ]
+4. "sighashtype"  （字符串，可选，默认为 ALL）签名哈希类型。必须是其中之一
        "ALL"
        "NONE"
        "SINGLE"
        "ALL|ANYONECANPAY"
        "NONE|ANYONECANPAY"
        "SINGLE|ANYONECANPAY"
-```
 
 结果：
-```shell
 {
-  "hex" : "value",           （字符串）16 进制编码的带签名的原始交易
-  "complete" : true|false,   （布尔型）交易是否有一个完整的签名集
-  "errors" : [                 （json 对象数组）脚本验证错误（如果有）
+  "hex" : "value",        （字符串）16 进制编码的带签名的原始交易
+  "complete" : true|false,（布尔型）交易是否有一个完整的签名集
+  "errors" : [            （json 对象数组）脚本验证错误（如果有）
     {
-      "txid" : "hash",           （字符串）参照的前一笔交易的哈希
-      "vout" : n,                （数字）用于作为输入花费的输出索引/序号
-      "scriptSig" : "hex",       （字符串）16 进制编码的签名脚本
-      "sequence" : n,            （数字）脚本序列号
-      "error" : "text"           （字符串）关于输入的验证或签名错误
+      "txid" : "hash",    （字符串）引用上一笔交易的哈希
+      "vout" : n,         （数字）用于花费并作为输入的输出索引
+      "scriptSig" : "hex",（字符串）16 进制编码的签名脚本
+      "sequence" : n,     （数字）脚本序列号
+      "error" : "text"    （字符串）与输入相关的验证或签名错误
     }
     ,...
   ]
 }
+
+例子：
+> bitcoin-cli signrawtransaction "myhex"
+> curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "signrawtransaction", "params": ["myhex"] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
 ```
 
-## 用法示例
+## 2. 源码剖析
 
-### 比特币核心客户端
-
-对已创建的原始交易进行签名。<br>
-原始交易的创建见 [createrawtransaction](/blog/2018/07/bitcoin-rpc-command-createrawtransaction.html)。
-
-```shell
-$ bitcoin-cli createrawtransaction "[{\"txid\":\"fb9bd2df3cef0abd9f444971dff097790b7bf146843a752cb48461418d3c7e67\",\"vout\":0}]" "{\"1Mcg7MDBD38sSScsX3USbsCnkcMbPnLyTV\":0.01}"
-0100000001677e3c8d416184b42c753a8446f17b0b7997f0df7149449fbd0aef3cdfd29bfb0000000000ffffffff0140420f00000000001976a914e221b8a504199bec7c5fe8081edd011c3653118288ac00000000
-$ bitcoin-cli signrawtransaction 0100000001677e3c8d416184b42c753a8446f17b0b7997f0df7149449fbd0aef3cdfd29bfb0000000000ffffffff0140420f00000000001976a914e221b8a504199bec7c5fe8081edd011c3653118288ac00000000
-{
-  "hex": "0100000001677e3c8d416184b42c753a8446f17b0b7997f0df7149449fbd0aef3cdfd29bfb000000006b4830450221009b29490f5e1709bc3cce16c6433a0b8895add5a9d3c2fa63da11da065105ad59022022d068337cd3b20be04513e539f0bbbb5319ed1b3a3a8ec6262a30a8bd393b3d012103583eb3acb7f0b9c431d97a4872a270f4e519fbca0ec519adf16764c663e36546ffffffff0140420f00000000001976a914e221b8a504199bec7c5fe8081edd011c3653118288ac00000000",
-  "complete": true
-}
-```
-
-### cURL
-
-```shell
-$ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "signrawtransaction", "params": ["0100000001677e3c8d416184b42c753a8446f17b0b7997f0df7149449fbd0aef3cdfd29bfb0000000000ffffffff0140420f00000000001976a914e221b8a504199bec7c5fe8081edd011c3653118288ac00000000"] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
-{"result":{"hex":"0100000001677e3c8d416184b42c753a8446f17b0b7997f0df7149449fbd0aef3cdfd29bfb000000006b4830450221009b29490f5e1709bc3cce16c6433a0b8895add5a9d3c2fa63da11da065105ad59022022d068337cd3b20be04513e539f0bbbb5319ed1b3a3a8ec6262a30a8bd393b3d012103583eb3acb7f0b9c431d97a4872a270f4e519fbca0ec519adf16764c663e36546ffffffff0140420f00000000001976a914e221b8a504199bec7c5fe8081edd011c3653118288ac00000000","complete":true},"error":null,"id":"curltest"}
-```
-
-## 源码剖析
-
-signrawtransaction 对应的函数在“rpcserver.h”文件中被引用。
+`signrawtransaction` 对应的函数在文件 `rpcserver.h` 中被引用。
 
 ```cpp
-extern UniValue signrawtransaction(const UniValue& params, bool fHelp); // 签名原始交易
+extern UniValue signrawtransaction(const UniValue& params, bool fHelp);
 ```
 
-实现在“rpcrawtransaction.cpp”文件中。
+实现在文件 `rpcrawtransaction.cpp` 中。
 
 ```cpp
 UniValue signrawtransaction(const UniValue& params, bool fHelp)
 {
-    if (fHelp || params.size() < 1 || params.size() > 4) // 参数最少 1 个，至多 4 个
-        throw runtime_error( // 命令帮助反馈
+    if (fHelp || params.size() < 1 || params.size() > 4)
+        throw runtime_error(
             "signrawtransaction \"hexstring\" ( [{\"txid\":\"id\",\"vout\":n,\"scriptPubKey\":\"hex\",\"redeemScript\":\"hex\"},...] [\"privatekey1\",...] sighashtype )\n"
             "\nSign inputs for raw transaction (serialized, hex-encoded).\n"
             "The second optional argument (may be null) is an array of previous transaction outputs that\n"
@@ -159,133 +133,133 @@ UniValue signrawtransaction(const UniValue& params, bool fHelp)
             "\nExamples:\n"
             + HelpExampleCli("signrawtransaction", "\"myhex\"")
             + HelpExampleRpc("signrawtransaction", "\"myhex\"")
-        );
+        ); // 1. 帮助内容
 
 #ifdef ENABLE_WALLET
-    LOCK2(cs_main, pwalletMain ? &pwalletMain->cs_wallet : NULL); // 钱包上锁
+    LOCK2(cs_main, pwalletMain ? &pwalletMain->cs_wallet : NULL);
 #else
     LOCK(cs_main);
 #endif
-    RPCTypeCheck(params, boost::assign::list_of(UniValue::VSTR)(UniValue::VARR)(UniValue::VARR)(UniValue::VSTR), true); // 检查参数类型
+    RPCTypeCheck(params, boost::assign::list_of(UniValue::VSTR)(UniValue::VARR)(UniValue::VARR)(UniValue::VSTR), true); // 2. RPC 类型检测
 
-    vector<unsigned char> txData(ParseHexV(params[0], "argument 1")); // 解析第一个参数
-    CDataStream ssData(txData, SER_NETWORK, PROTOCOL_VERSION); // 创建数据流对象
-    vector<CMutableTransaction> txVariants; // 可变的交易列表
-    while (!ssData.empty()) { // 当数据流对象非空
+    vector<unsigned char> txData(ParseHexV(params[0], "argument 1")); // 3. 交易解码
+    CDataStream ssData(txData, SER_NETWORK, PROTOCOL_VERSION);
+    vector<CMutableTransaction> txVariants;
+    while (!ssData.empty()) {
         try {
             CMutableTransaction tx;
-            ssData >> tx; // 导入一笔交易
-            txVariants.push_back(tx); // 加入交易列表
+            ssData >> tx;
+            txVariants.push_back(tx);
         }
         catch (const std::exception&) {
             throw JSONRPCError(RPC_DESERIALIZATION_ERROR, "TX decode failed");
         }
     }
 
-    if (txVariants.empty()) // 列表非空，至少有一笔交易
+    if (txVariants.empty())
         throw JSONRPCError(RPC_DESERIALIZATION_ERROR, "Missing transaction");
 
-    // mergedTx will end up with all the signatures; it // mergeTx 将以全部签名为结尾；
-    // starts as a clone of the rawtx: // 它作为 rawtx 的副本开始：
-    CMutableTransaction mergedTx(txVariants[0]); // 合并的可变交易输入集
+    // mergedTx will end up with all the signatures; it
+    // starts as a clone of the rawtx:
+    CMutableTransaction mergedTx(txVariants[0]); // 4. mergeTx 将以所有签名结束；它以 rawtx 的克隆开始
 
-    // Fetch previous transactions (inputs): // 获取之前的交易（输入）：
-    CCoinsView viewDummy;
+    // Fetch previous transactions (inputs):
+    CCoinsView viewDummy; // 5. 获取上一笔交易（输入）
     CCoinsViewCache view(&viewDummy);
-    { // 开始访问内存池
-        LOCK(mempool.cs); // 交易内存池上锁
-        CCoinsViewCache &viewChain = *pcoinsTip; // 获取激活的 CCoinsView
+    {
+        LOCK(mempool.cs);
+        CCoinsViewCache &viewChain = *pcoinsTip;
         CCoinsViewMemPool viewMempool(&viewChain, mempool);
         view.SetBackend(viewMempool); // temporarily switch cache backend to db+mempool view
 
-        BOOST_FOREACH(const CTxIn& txin, mergedTx.vin) { // 遍历交易输入列表
-            const uint256& prevHash = txin.prevout.hash; // 获取输入的前一笔交易输出的哈希
+        BOOST_FOREACH(const CTxIn& txin, mergedTx.vin) {
+            const uint256& prevHash = txin.prevout.hash;
             CCoins coins;
-            view.AccessCoins(prevHash); // this is certainly allowed to fail // 这里肯定会失败
+            view.AccessCoins(prevHash); // this is certainly allowed to fail
         }
 
-        view.SetBackend(viewDummy); // switch back to avoid locking mempool for too long // 切换回以避免锁定内存池时间过长
+        view.SetBackend(viewDummy); // switch back to avoid locking mempool for too long
     }
 
-    bool fGivenKeys = false; // 指定密钥标志，默认为 false
-    CBasicKeyStore tempKeystore; // 临时私钥库
-    if (params.size() > 2 && !params[2].isNull()) { // 若指定了密钥
-        fGivenKeys = true; // 标志置为 true
-        UniValue keys = params[2].get_array(); // 获取密钥数组
-        for (unsigned int idx = 0; idx < keys.size(); idx++) { // 遍历该数组
-            UniValue k = keys[idx]; // 获取一个 base58 编码的密钥
-            CBitcoinSecret vchSecret; // 比特币密钥对象
-            bool fGood = vchSecret.SetString(k.get_str()); // 初始化密钥
+    bool fGivenKeys = false;
+    CBasicKeyStore tempKeystore;
+    if (params.size() > 2 && !params[2].isNull()) {
+        fGivenKeys = true;
+        UniValue keys = params[2].get_array();
+        for (unsigned int idx = 0; idx < keys.size(); idx++) {
+            UniValue k = keys[idx];
+            CBitcoinSecret vchSecret;
+            bool fGood = vchSecret.SetString(k.get_str());
             if (!fGood)
                 throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, "Invalid private key");
-            CKey key = vchSecret.GetKey(); // 获取私钥
-            if (!key.IsValid()) // 验证私钥是否有效
+            CKey key = vchSecret.GetKey();
+            if (!key.IsValid())
                 throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, "Private key outside allowed range");
-            tempKeystore.AddKey(key); // 添加到临时私钥库
+            tempKeystore.AddKey(key);
         }
     }
 #ifdef ENABLE_WALLET
     else if (pwalletMain)
-        EnsureWalletIsUnlocked(); // 确保此时钱包处于解密状态
+        EnsureWalletIsUnlocked(); // 6. 确保钱包未上锁
 #endif
 
     // Add previous txouts given in the RPC call:
-    if (params.size() > 1 && !params[1].isNull()) { // 若指定了前一笔交易输出集合，且非空
-        UniValue prevTxs = params[1].get_array(); // 获取前一笔交易输出的数组
-        for (unsigned int idx = 0; idx < prevTxs.size(); idx++) { // 遍历该数组
-            const UniValue& p = prevTxs[idx]; // 获取一个交易输出对象
-            if (!p.isObject()) // 确保是对象类型
+    if (params.size() > 1 && !params[1].isNull()) { // 7. 添加在 RPC 调用中给定的上一笔交易输出
+        UniValue prevTxs = params[1].get_array();
+        for (unsigned int idx = 0; idx < prevTxs.size(); idx++) {
+            const UniValue& p = prevTxs[idx];
+            if (!p.isObject())
                 throw JSONRPCError(RPC_DESERIALIZATION_ERROR, "expected object with {\"txid'\",\"vout\",\"scriptPubKey\"}");
 
-            UniValue prevOut = p.get_obj(); // 获取输出对象
+            UniValue prevOut = p.get_obj();
 
-            RPCTypeCheckObj(prevOut, boost::assign::map_list_of("txid", UniValue::VSTR)("vout", UniValue::VNUM)("scriptPubKey", UniValue::VSTR)); // 参数类型检查
+            RPCTypeCheckObj(prevOut, boost::assign::map_list_of("txid", UniValue::VSTR)("vout", UniValue::VNUM)("scriptPubKey", UniValue::VSTR));
 
-            uint256 txid = ParseHashO(prevOut, "txid"); // 解析交易索引
+            uint256 txid = ParseHashO(prevOut, "txid");
 
-            int nOut = find_value(prevOut, "vout").get_int(); // 获取交易输出序号
-            if (nOut < 0) // 序号最小为 0
+            int nOut = find_value(prevOut, "vout").get_int();
+            if (nOut < 0)
                 throw JSONRPCError(RPC_DESERIALIZATION_ERROR, "vout must be positive");
 
-            vector<unsigned char> pkData(ParseHexO(prevOut, "scriptPubKey")); // 解析脚本公钥
-            CScript scriptPubKey(pkData.begin(), pkData.end()); // 创建一个脚本公钥对象
+            vector<unsigned char> pkData(ParseHexO(prevOut, "scriptPubKey"));
+            CScript scriptPubKey(pkData.begin(), pkData.end());
 
             {
-                CCoinsModifier coins = view.ModifyCoins(txid); // 获取交易索引对应的可修改 CCoins
-                if (coins->IsAvailable(nOut) && coins->vout[nOut].scriptPubKey != scriptPubKey) { // 检测输出的脚本公钥是否一致
+                CCoinsModifier coins = view.ModifyCoins(txid);
+                if (coins->IsAvailable(nOut) && coins->vout[nOut].scriptPubKey != scriptPubKey) {
                     string err("Previous output scriptPubKey mismatch:\n");
                     err = err + ScriptToAsmStr(coins->vout[nOut].scriptPubKey) + "\nvs:\n"+
                         ScriptToAsmStr(scriptPubKey);
                     throw JSONRPCError(RPC_DESERIALIZATION_ERROR, err);
                 }
-                if ((unsigned int)nOut >= coins->vout.size()) // 交易输出序号若大于等于币输出大小
-                    coins->vout.resize(nOut+1); // 重新设置输出列表大小 +1
-                coins->vout[nOut].scriptPubKey = scriptPubKey; // 设置输出列表中输出对应的脚本公钥
-                coins->vout[nOut].nValue = 0; // we don't know the actual output value // 输出对应的值初始化为 0
-            }
+                if ((unsigned int)nOut >= coins->vout.size())
+                    coins->vout.resize(nOut+1);
+                coins->vout[nOut].scriptPubKey = scriptPubKey;
+                coins->vout[nOut].nValue = 0; // we don't know the actual output value
+            } // 我们不知道真正输出的值
 
-            // if redeemScript given and not using the local wallet (private keys // 如果给定了赎回脚本，且不使用本地钱包（提供了私钥），
-            // given), add redeemScript to the tempKeystore so it can be signed: // 添加赎回脚本到临时密钥库以至于对它签名：
-            if (fGivenKeys && scriptPubKey.IsPayToScriptHash()) { // 如果是 P2SH
-                RPCTypeCheckObj(prevOut, boost::assign::map_list_of("txid", UniValue::VSTR)("vout", UniValue::VNUM)("scriptPubKey", UniValue::VSTR)("redeemScript",UniValue::VSTR)); // 先进行参数类型检查
-                UniValue v = find_value(prevOut, "redeemScript"); // 获取赎回脚本
-                if (!v.isNull()) { // 脚本非空
+            // if redeemScript given and not using the local wallet (private keys
+            // given), add redeemScript to the tempKeystore so it can be signed:
+            if (fGivenKeys && scriptPubKey.IsPayToScriptHash()) { // 8. 如果提供了赎回脚本且不使用本地钱包（提供了私钥），则添加赎回脚本到临时密钥库以以便对其签名
+                RPCTypeCheckObj(prevOut, boost::assign::map_list_of("txid", UniValue::VSTR)("vout", UniValue::VNUM)("scriptPubKey", UniValue::VSTR)("redeemScript",UniValue::VSTR));
+                UniValue v = find_value(prevOut, "redeemScript");
+                if (!v.isNull()) {
                     vector<unsigned char> rsData(ParseHexV(v, "redeemScript"));
-                    CScript redeemScript(rsData.begin(), rsData.end()); // 创建脚本对象
-                    tempKeystore.AddCScript(redeemScript); // 添加脚本到临时密钥库
+                    CScript redeemScript(rsData.begin(), rsData.end());
+                    tempKeystore.AddCScript(redeemScript);
                 }
             }
         }
     }
 
 #ifdef ENABLE_WALLET
-    const CKeyStore& keystore = ((fGivenKeys || !pwalletMain) ? tempKeystore : *pwalletMain); // 若提供了密钥 或 主钱包无效,则获取临时密钥库的引用
+    const CKeyStore& keystore = ((fGivenKeys || !pwalletMain) ? tempKeystore : *pwalletMain);
 #else
     const CKeyStore& keystore = tempKeystore;
 #endif
 
-    int nHashType = SIGHASH_ALL; // 脚本哈希类型，默认为 ALL
-    if (params.size() > 3 && !params[3].isNull()) { // 若指定了类型
+    int nHashType = SIGHASH_ALL; // 9. 设置脚本哈希类型
+    if (params.size() > 3 && !params[3].isNull()) {
         static map<string, int> mapSigHashValues =
             boost::assign::map_list_of
             (string("ALL"), int(SIGHASH_ALL))
@@ -294,10 +268,10 @@ UniValue signrawtransaction(const UniValue& params, bool fHelp)
             (string("NONE|ANYONECANPAY"), int(SIGHASH_NONE|SIGHASH_ANYONECANPAY))
             (string("SINGLE"), int(SIGHASH_SINGLE))
             (string("SINGLE|ANYONECANPAY"), int(SIGHASH_SINGLE|SIGHASH_ANYONECANPAY))
-            ; // 签名哈希值类型映射列表
-        string strHashType = params[3].get_str(); // 获取哈希类型
-        if (mapSigHashValues.count(strHashType)) // 若在映射列表中存在指定的哈希类型
-            nHashType = mapSigHashValues[strHashType]; // 设置脚本哈希类型
+            ;
+        string strHashType = params[3].get_str();
+        if (mapSigHashValues.count(strHashType))
+            nHashType = mapSigHashValues[strHashType];
         else
             throw JSONRPCError(RPC_INVALID_PARAMETER, "Invalid sighash param");
     }
@@ -305,53 +279,51 @@ UniValue signrawtransaction(const UniValue& params, bool fHelp)
     bool fHashSingle = ((nHashType & ~SIGHASH_ANYONECANPAY) == SIGHASH_SINGLE);
 
     // Script verification errors
-    UniValue vErrors(UniValue::VARR); // 数组类型的脚本验证错误集
+    UniValue vErrors(UniValue::VARR); // 脚本验证错误
 
-    // Sign what we can: // 我们签名：
-    for (unsigned int i = 0; i < mergedTx.vin.size(); i++) { // 遍历合并的可变交易输入列表
-        CTxIn& txin = mergedTx.vin[i]; // 获取一笔交易输入
-        const CCoins* coins = view.AccessCoins(txin.prevout.hash); // 获取该输入依赖的前一笔交易的哈希对应的 CCoins
+    // Sign what we can:
+    for (unsigned int i = 0; i < mergedTx.vin.size(); i++) { // 10. 尽我们所能签名
+        CTxIn& txin = mergedTx.vin[i];
+        const CCoins* coins = view.AccessCoins(txin.prevout.hash);
         if (coins == NULL || !coins->IsAvailable(txin.prevout.n)) {
             TxInErrorToJSON(txin, vErrors, "Input not found or already spent");
             continue;
         }
-        const CScript& prevPubKey = coins->vout[txin.prevout.n].scriptPubKey; // 获取前一笔交易输出的脚本公钥
+        const CScript& prevPubKey = coins->vout[txin.prevout.n].scriptPubKey;
 
-        txin.scriptSig.clear(); // 清空交易输入的脚本签名
-        // Only sign SIGHASH_SINGLE if there's a corresponding output: // 如果有相应的输出，只签名 SIGHASH_SINGLE
-        if (!fHashSingle || (i < mergedTx.vout.size()))
-            SignSignature(keystore, prevPubKey, mergedTx, i, nHashType); // 签名
+        txin.scriptSig.clear();
+        // Only sign SIGHASH_SINGLE if there's a corresponding output:
+        if (!fHashSingle || (i < mergedTx.vout.size())) // 如果有相应的输出，则只签名 SIGHASH_SINGLE
+            SignSignature(keystore, prevPubKey, mergedTx, i, nHashType);
 
-        // ... and merge in other signatures: // ... 接着合并其他签名：
-        BOOST_FOREACH(const CMutableTransaction& txv, txVariants) { // 遍历交易列表
-            txin.scriptSig = CombineSignatures(prevPubKey, mergedTx, i, txin.scriptSig, txv.vin[i].scriptSig); // 合并所有输入签名
+        // ... and merge in other signatures:
+        BOOST_FOREACH(const CMutableTransaction& txv, txVariants) { // …接着合并其他签名
+            txin.scriptSig = CombineSignatures(prevPubKey, mergedTx, i, txin.scriptSig, txv.vin[i].scriptSig);
         }
         ScriptError serror = SCRIPT_ERR_OK;
-        if (!VerifyScript(txin.scriptSig, prevPubKey, STANDARD_SCRIPT_VERIFY_FLAGS, MutableTransactionSignatureChecker(&mergedTx, i), &serror)) { // 验证脚本签名
+        if (!VerifyScript(txin.scriptSig, prevPubKey, STANDARD_SCRIPT_VERIFY_FLAGS, MutableTransactionSignatureChecker(&mergedTx, i), &serror)) {
             TxInErrorToJSON(txin, vErrors, ScriptErrorString(serror));
         }
     }
-    bool fComplete = vErrors.empty(); // 若没有错误，表示已完成
+    bool fComplete = vErrors.empty();
 
     UniValue result(UniValue::VOBJ);
-    result.push_back(Pair("hex", EncodeHexTx(mergedTx))); // 合并的交易的 16 进制编码
-    result.push_back(Pair("complete", fComplete)); // 是否完成签名
+    result.push_back(Pair("hex", EncodeHexTx(mergedTx)));
+    result.push_back(Pair("complete", fComplete));
     if (!vErrors.empty()) {
-        result.push_back(Pair("errors", vErrors)); // 错误信息
+        result.push_back(Pair("errors", vErrors));
     }
 
-    return result; // 返回结果集
+    return result;
 }
 ```
 
-基本流程：
-1. 处理命令帮助和参数个数。
-2. 上锁，若钱包功能开启，钱包上锁。
-3. 检验参数类型并获取指定参数：待签名的交易哈希，依赖的前一笔交易输出集，用于签名的私钥，签名的哈希类型。
-4. 开始签名，遍历交易输入列表，对每笔交易输入进行签名，然后遍历前一笔输出交易列表，合并全部的交易输入签名，验证脚本签名。
-5. 追加相关信息到对象类型的结果集后返回。
+### 2.1. 帮助内容
+
+参考[比特币 RPC 命令剖析 "getbestblockhash" 2.1. 帮助内容](/blog/2018/05/bitcoin-rpc-command-getbestblockhash.html#21-帮助内容)。
 
 ## 参考链接
 
 * [bitcoin/rpcserver.h at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/rpcserver.h){:target="_blank"}
+* [bitcoin/rpcserver.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/rpcserver.cpp){:target="_blank"}
 * [bitcoin/rpcrawtransaction.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/rpcrawtransaction.cpp){:target="_blank"}
