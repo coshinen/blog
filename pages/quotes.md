@@ -179,6 +179,9 @@ excerpt: Here are my favorite quotes from someones that inspire me or make me la
 > 新堂頼子「はんなりギロリの頼子さん」：
 > * 大切なのは、どの道を選ぶかより、選んだ道をどういきるかじゃないの？
 
+> 怨み屋「怨み屋本舗 第八回 ハートキャッチャー」：
+> * 嘘をつかない人間なんて、どこにもいないわ。嘘をどう利用するか、それが問題なんだけよ。
+
 > ゲーテ「コンフィデンスマンJP ーロマンス編ー」：
 > * 人に欺かれるのではない。自分が己を欺くのである。
 > * We are never deceived; we deceive ourselves.
