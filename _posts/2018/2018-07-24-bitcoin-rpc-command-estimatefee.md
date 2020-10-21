@@ -1,59 +1,48 @@
 ---
 layout: post
 title:  "比特币 RPC 命令剖析 \"estimatefee\""
-date:   2018-07-24 13:28:47 +0800
+date:   2018-07-24 23:28:47 +0800
 author: mistydew
 comments: true
 category: 区块链
 tags: Bitcoin bitcoin-cli
 excerpt: $ bitcoin-cli estimatefee nblocks
 ---
-## 提示说明
+## 1. 帮助内容
 
 ```shell
-estimatefee nblocks # 估算交易在 nblocks 个区块开始确认的每千字节的大致费用
-```
+$ bitcoin-cli help estimatefee
+estimatefee nblocks
+
+估算对于在第 nblocks 个区块开始确认的一笔交易的每千字节的大致费用。
 
 参数：
-1. nblocks（数字）区块数。
+1. nblocks（数字）
 
-结果：（数字型）返回预估的每千字节的交易费。
+结果：
+n（数字）估算的每千字节的费用
 
-如果没有足够的交易和区块用来估算则会返回一个负值，-1 表示交易费为 0。
+如果没有观察足够的交易和区块来做估算则返回一个负值。
 
-## 用法示例
-
-### 比特币核心客户端
-
-估算交易经 6 个区块确认所需的每千字节的交易费。
-
-```shell
-$ bitcoin-cli estimatefee 6
--1
+例子：
+> bitcoin-cli estimatefee 6
 ```
 
-### cURL
+## 2. 源码剖析
 
-```shell
-$ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "estimatefee", "params": [6] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
-{"result":-1,"error":null,"id":"curltest"}
-```
-
-## 源码剖析
-
-estimatefee 对应的函数在“rpcserver.h”文件中被引用。
+`estimatefee` 对应的函数在文件 `rpcserver.h` 中被引用。
 
 ```cpp
-extern UniValue estimatefee(const UniValue& params, bool fHelp); // 估算交易费
+extern UniValue estimatefee(const UniValue& params, bool fHelp);
 ```
 
-实现在“rpcmining.cpp”文件中。
+实现在文件 `rpcmining.cpp` 中。
 
 ```cpp
 UniValue estimatefee(const UniValue& params, bool fHelp)
 {
-    if (fHelp || params.size() != 1) // 参数必须为 1 个
-        throw runtime_error( // 命令帮助反馈
+    if (fHelp || params.size() != 1)
+        throw runtime_error(
             "estimatefee nblocks\n"
             "\nEstimates the approximate fee per kilobyte needed for a transaction to begin\n"
             "confirmation within nblocks blocks.\n"
@@ -66,31 +55,28 @@ UniValue estimatefee(const UniValue& params, bool fHelp)
             "have been observed to make an estimate.\n"
             "\nExample:\n"
             + HelpExampleCli("estimatefee", "6")
-            );
+            ); // 1. 帮助内容
 
-    RPCTypeCheck(params, boost::assign::list_of(UniValue::VNUM)); // 参数类型检查
+    RPCTypeCheck(params, boost::assign::list_of(UniValue::VNUM)); // 2. RPC 类型检测
 
-    int nBlocks = params[0].get_int(); // 获取指定的块数
-    if (nBlocks < 1) // 块数最低为 1
+    int nBlocks = params[0].get_int();
+    if (nBlocks < 1)
         nBlocks = 1;
 
-    CFeeRate feeRate = mempool.estimateFee(nBlocks); // 交易内存池预估交易费（根据区块数）
-    if (feeRate == CFeeRate(0)) // 若交易费为 0
-        return -1.0; // 返回 -1.0
+    CFeeRate feeRate = mempool.estimateFee(nBlocks); // 3. 估算指定位置区块的交易费并返回
+    if (feeRate == CFeeRate(0))
+        return -1.0;
 
-    return ValueFromAmount(feeRate.GetFeePerK()); // 否则，格式化后返回预估交易费
+    return ValueFromAmount(feeRate.GetFeePerK());
 }
 ```
 
-基本流程：
-1. 处理命令帮助和参数个数。
-2. 参数类型检查。
-3. 获取指定的块数，最低为 1 块。
-4. 在交易内存池中通过块数预估交易费。
-5. 若预估交易费为 0，则返回 -1。
-6. 否则获取每千字节的交易费并返回。
+### 2.1. 帮助内容
+
+参考[比特币 RPC 命令剖析 "getbestblockhash" 2.1. 帮助内容](/blog/2018/05/bitcoin-rpc-command-getbestblockhash.html#21-帮助内容)。
 
 ## 参考链接
 
 * [bitcoin/rpcserver.h at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/rpcserver.h){:target="_blank"}
+* [bitcoin/rpcserver.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/rpcserver.cpp){:target="_blank"}
 * [bitcoin/rpcmining.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/rpcmining.cpp){:target="_blank"}

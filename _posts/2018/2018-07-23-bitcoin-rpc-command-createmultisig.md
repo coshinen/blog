@@ -1,76 +1,59 @@
 ---
 layout: post
 title:  "比特币 RPC 命令剖析 \"createmultisig\""
-date:   2018-07-23 10:48:50 +0800
+date:   2018-07-23 20:48:50 +0800
 author: mistydew
 comments: true
 category: 区块链
 tags: Bitcoin bitcoin-cli
 excerpt: $ bitcoin-cli createmultisig urequired ["key",...]
 ---
-## 提示说明
+## 1. 帮助内容
 
 ```shell
-createmultisig urequired ["key",...] # 创建一个需要 m 个密钥的 n 个签名的多重签名地址
-```
+createmultisig urequired ["key",...]
+
+创建一个需要 m 个密钥的 n 个签名的多签地址。
+它会返回一个带有地址和赎回脚本的 json 对象。
 
 参数：
-1. nrequired（数字，必备）n 个密钥或地址所需的签名数量。
-2. keys（字符串，必备）一个比特币地址或 16 进制编码的公钥的 json 数组。
-```shell
+1. nrequired（数字，必备）n 个密钥或地址所需的签名数。
+2. "keys"   （字符串，必备）一个比特币地址或 16 进制编码公钥的 json 数组
      [
-       "key"    （字符串）比特币地址或 16 进制编码的公钥
+       "key"（字符串）比特币地址或 16 进制编码的公钥
        ,...
      ]
-```
 
-结果：返回一个带有地址和赎回脚本的 json 对象。
-```shell
+结果：
 {
-  "address":"multisigaddress",  （字符串）新的多签地址值
-  "redeemScript":"script"       （字符串）16 进制编码的赎回脚本的字符串值
+  "address":"multisigaddress",（字符串）新的多签地址值。
+  "redeemScript":"script"     （字符串）16 进制编码的赎回脚本的字符串值。
 }
+
+例子：
+
+从 2 个地址创建一个多签地址
+> bitcoin-cli createmultisig 2 "[\"16sSauSf5pF2UkUwvKGq4qjNRzBZYqgEL5\",\"171sgjn4YtPu27adkKGrdDwzRTxnRkBfKV\"]"
+
+作为一个 json rpc 调用
+> curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "createmultisig", "params": [2, "[\"16sSauSf5pF2UkUwvKGq4qjNRzBZYqgEL5\",\"171sgjn4YtPu27adkKGrdDwzRTxnRkBfKV\"]"] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
 ```
 
-## 用法示例
+## 2. 源码剖析
 
-### 比特币核心客户端
-
-从 2 个地址创建一个需要 2 个签名的多签地址。
-
-```shell
-$ bitcoin-cli getnewaddress
-16vpmdSDaX3Nv9UMuk2vSecMrdstjjSP4R
-$ bitcoin-cli getnewaddress
-1KfU9yv17ZSqMiX96hMDjys2oU2EBMrT9n
-$ bitcoin-cli createmultisig 2 "[\"16vpmdSDaX3Nv9UMuk2vSecMrdstjjSP4R\",\"1KfU9yv17ZSqMiX96hMDjys2oU2EBMrT9n\"]"
-{
-  "address": "3B3ozHj9C7b9nXRypCWJg7s5AdDphUsqHA",
-  "redeemScript": "522103da146818f8f3edb975287c53a0de7bd9066153be0818ce1c8fa996e83cd76fca2103abe35a69e0a8eb5e0cb2468b37418e9b9c44d25310a4c3815e3347849c4094c952ae"
-}
-```
-
-### cURL
-
-```shell
-暂无。
-```
-
-## 源码剖析
-
-createmultisig 对应的函数在“rpcserver.h”文件中被引用。
+`createmultisig` 对应的函数在文件 `rpcserver.h` 中被引用。
 
 ```cpp
-extern UniValue createmultisig(const UniValue& params, bool fHelp); // 创建多重签名
+extern UniValue createmultisig(const UniValue& params, bool fHelp);
 ```
 
-实现在“rpcmisc.cpp”文件中。
+实现在文件 `rpcmisc.cpp` 中。
 
 ```cpp
 UniValue createmultisig(const UniValue& params, bool fHelp)
 {
-    if (fHelp || params.size() < 2 || params.size() > 2) // 参数必须为 2 个
-    { // 命令帮助反馈
+    if (fHelp || params.size() < 2 || params.size() > 2)
+    {
         string msg = "createmultisig nrequired [\"key\",...]\n"
             "\nCreates a multi-signature address with n signature of m keys required.\n"
             "It returns a json object with the address and redeemScript.\n"
@@ -96,29 +79,27 @@ UniValue createmultisig(const UniValue& params, bool fHelp)
             + HelpExampleRpc("createmultisig", "2, \"[\\\"16sSauSf5pF2UkUwvKGq4qjNRzBZYqgEL5\\\",\\\"171sgjn4YtPu27adkKGrdDwzRTxnRkBfKV\\\"]\"")
         ;
         throw runtime_error(msg);
-    }
+    } // 1. 帮助内容
 
-    // Construct using pay-to-script-hash: // 使用 P2SH 进行构建
-    CScript inner = _createmultisig_redeemScript(params); // 创建多签赎回脚本
-    CScriptID innerID(inner); // 获取脚本索引
-    CBitcoinAddress address(innerID); // 获取比特币地址
+    // Construct using pay-to-script-hash:
+    CScript inner = _createmultisig_redeemScript(params); // 2. 使用 P2SH 构造多签并返回
+    CScriptID innerID(inner);
+    CBitcoinAddress address(innerID);
 
-    UniValue result(UniValue::VOBJ); // 目标对象
-    result.push_back(Pair("address", address.ToString())); // 地址
-    result.push_back(Pair("redeemScript", HexStr(inner.begin(), inner.end()))); // 赎回脚本
+    UniValue result(UniValue::VOBJ);
+    result.push_back(Pair("address", address.ToString()));
+    result.push_back(Pair("redeemScript", HexStr(inner.begin(), inner.end())));
 
-    return result; // 返回结果
+    return result;
 }
 ```
 
-基本流程：
-1. 处理命令帮助和参数个数。
-2. 创建多钱赎回脚本。
-3. 通过脚本获取脚本索引。
-4. 通过脚本索引获取比特币地址。
-5. 添加地址或赎回脚本到结果对象并返回。
+### 2.1. 帮助内容
+
+参考[比特币 RPC 命令剖析 "getbestblockhash" 2.1. 帮助内容](/blog/2018/05/bitcoin-rpc-command-getbestblockhash.html#21-帮助内容)。
 
 ## 参考链接
 
 * [bitcoin/rpcserver.h at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/rpcserver.h){:target="_blank"}
+* [bitcoin/rpcserver.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/rpcserver.cpp){:target="_blank"}
 * [bitcoin/rpcmisc.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/rpcmisc.cpp){:target="_blank"}

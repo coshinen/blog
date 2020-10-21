@@ -1,71 +1,54 @@
 ---
 layout: post
 title:  "比特币 RPC 命令剖析 \"estimatesmartfee\""
-date:   2018-07-26 14:25:15 +0800
+date:   2018-07-26 20:25:15 +0800
 author: mistydew
 comments: true
 category: 区块链
 tags: Bitcoin bitcoin-cli
 excerpt: $ bitcoin-cli estimatesmartfee nblocks
 ---
-## 提示说明
+## 1. 帮助内容
 
 ```shell
-estimatesmartfee nblocks # 估计交易在 nblocks 个区块开始确认的每千字节的大致费用，如果可能则返回估计有效的区块数
-```
+$ bitcoin-cli help estimatesmartfee
+estimatesmartfee nblocks
 
-**警告：该接口不稳定且可能消失或改变！**
+警告：这个接口不稳定并且可能消失或改变！
+
+估算交易在第 nblocks 个区块开始确认所需的每千字节的大致费用，如果可能则返回有效估算的区块号。
 
 参数：
-1. nblocks（数字）区块数。
+1. nblocks（数字）
 
 结果：
-```shell
 {
-  "feerate" : x.x,     （数字）估算每千字节的交易费（以 BTC 为单位）
-  "blocks" : n         （数字）估计被找到的区块数
+  "feerate" : x.x,（数字）估算每千字节的费用（以 BTC 为单位）
+  "blocks" : n    （数字）找到估值的区块号
 }
+
+如果没有观察足够的交易和区块来做估算任意数量的区块则返回一个负值。
+但是它不会返回一个低于内存池拒绝的费用值。
+
+例子：
+> bitcoin-cli estimatesmartfee 6
 ```
 
-**注：如果没有足够的交易和区块用来做估算任意数量的区块，则返回一个负值。<br>
-但是不会返回低于交易内存池拒收费用的值。**
+## 2. 源码剖析
 
-## 用法示例
-
-### 比特币核心客户端
-
-估算交易经 6 个区块确认所需的每千字节的交易费，并获取估算时找到的区块数。
-
-```shell
-$ bitcoin-cli estimatesmartfee 6
-{
-  "feerate": -1,
-  "blocks": 25
-}
-```
-
-### cURL
-
-```shell
-$ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "estimatesmartfee", "params": [6] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
-{"result":{"feerate":-1,"blocks":25},"error":null,"id":"curltest"}
-```
-
-## 源码剖析
-
-estimatesmartfee 对应的函数在“rpcserver.h”文件中被引用。
+`estimatesmartfee` 对应的函数在文件 `rpcserver.h` 中被引用。
 
 ```cpp
-extern UniValue estimatesmartfee(const UniValue& params, bool fHelp); // 智能估计交易费
+extern UniValue estimatesmartfee(const UniValue& params, bool fHelp);
 ```
 
-实现在“rpcmining.cpp”文件中。
+实现在文件 `rpcmining.cpp` 中。
 
 ```cpp
 UniValue estimatesmartfee(const UniValue& params, bool fHelp)
 {
-    if (fHelp || params.size() != 1) // 参数必须为 1 个
-        throw runtime_error( // 命令帮助反馈
+    if (fHelp || params.size() != 1)
+        throw runtime_error(
             "estimatesmartfee nblocks\n"
             "\nWARNING: This interface is unstable and may disappear or change!\n"
             "\nEstimates the approximate fee per kilobyte needed for a transaction to begin\n"
@@ -84,29 +67,27 @@ UniValue estimatesmartfee(const UniValue& params, bool fHelp)
             "However it will not return a value below the mempool reject fee.\n"
             "\nExample:\n"
             + HelpExampleCli("estimatesmartfee", "6")
-            );
+            ); // 1. 帮助内容
 
-    RPCTypeCheck(params, boost::assign::list_of(UniValue::VNUM)); // 参数类型检查
+    RPCTypeCheck(params, boost::assign::list_of(UniValue::VNUM)); // 2. RPC 类型检测
 
-    int nBlocks = params[0].get_int(); // 获取指定的区块数
+    int nBlocks = params[0].get_int();
 
     UniValue result(UniValue::VOBJ);
-    int answerFound; // 保存估计有效的块数
-    CFeeRate feeRate = mempool.estimateSmartFee(nBlocks, &answerFound); // 智能估算交易费
-    result.push_back(Pair("feerate", feeRate == CFeeRate(0) ? -1.0 : ValueFromAmount(feeRate.GetFeePerK()))); // 交易费
-    result.push_back(Pair("blocks", answerFound)); // 有效的区块数
-    return result; // 返回结果
+    int answerFound;
+    CFeeRate feeRate = mempool.estimateSmartFee(nBlocks, &answerFound); // 3. 估算精确的费用并返回
+    result.push_back(Pair("feerate", feeRate == CFeeRate(0) ? -1.0 : ValueFromAmount(feeRate.GetFeePerK())));
+    result.push_back(Pair("blocks", answerFound));
+    return result;
 }
 ```
 
-基本流程：
-1. 处理命令帮助和参数个数。
-2. 参数类型检查。
-3. 获取指定的块数。
-4. 智能估算交易费，同时获取估算有效的区块数。
-5. 把交易费和有效区块数加入结果对象并返回。
+### 2.1. 帮助内容
+
+参考[比特币 RPC 命令剖析 "getbestblockhash" 2.1. 帮助内容](/blog/2018/05/bitcoin-rpc-command-getbestblockhash.html#21-帮助内容)。
 
 ## 参考链接
 
 * [bitcoin/rpcserver.h at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/rpcserver.h){:target="_blank"}
+* [bitcoin/rpcserver.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/rpcserver.cpp){:target="_blank"}
 * [bitcoin/rpcmining.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/rpcmining.cpp){:target="_blank"}
