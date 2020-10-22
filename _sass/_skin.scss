@@ -6,7 +6,7 @@ $brand-color:           #2a7ae2 !default;
 $brand-color-light:     lighten($brand-color, 40%) !default;
 $brand-color-dark:      darken($brand-color, 25%) !default;
 
-$text-color:            #111 !default;
+$text-color:            #111111 !default;
 $background-color:      #fff1e0 !default;
 $code-background-color: #f7f2f0 !default;
 
@@ -19,12 +19,12 @@ $grey-color-dark:       darken($grey-color, 25%) !default;
 $table-text-color:      lighten($text-color, 18%) !default;
 $table-zebra-color:     lighten($brand-color, 46%) !default;
 $table-header-bg-color: lighten($brand-color, 43%) !default;
-$table-header-border:   lighten($brand-color, 36%) !default;
+$table-header-border:   lighten($brand-color, 37%) !default;
 $table-border-color:    $brand-color-light !default;
 
-// Syntax highlighting styles
-// --------------------------
-
+// Syntax highlighting styles should be adjusted appropriately for every "skin"
+// List of tokens: https://github.com/rouge-ruby/rouge/wiki/List-of-tokens
+// ----------------------------------------------------------------------------
 .highlight {
   .c     { color: #998; font-style: italic } // Comment
   .err   { color: #a61717; background-color: #e3d2d2 } // Error
