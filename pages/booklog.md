@@ -192,6 +192,7 @@ excerpt: Here are some books I read.
 > ### 程序人生
 > 
 > * Vim 实用技巧，[英] Drew Neil
+> * 图解设计模式，[日] 結城浩
 > * 大话设计模式，[中] 程杰
 > * 程序员健康指南，[美] Joe Kutner
 > * GitHub 入门与实践，[日] 大塚弘记
