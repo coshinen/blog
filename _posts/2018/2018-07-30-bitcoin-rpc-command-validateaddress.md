@@ -1,105 +1,57 @@
 ---
 layout: post
 title:  "比特币 RPC 命令剖析 \"validateaddress\""
-date:   2018-07-30 09:12:36 +0800
+date:   2018-07-30 19:12:36 +0800
 author: mistydew
 comments: true
 category: 区块链
 tags: Bitcoin bitcoin-cli
 excerpt: $ bitcoin-cli validateaddress "bitcoinaddress"
 ---
-## 提示说明
+## 1. 帮助内容
 
 ```shell
-validateaddress "bitcoinaddress" # 获取关于给定比特币地址的信息（不含余额）
-```
+$ bitcoin-cli help validateaddress
+validateaddress "bitcoinaddress"
+
+返回关于给定比特币地址的信息。
 
 参数：
-1. bitcoinaddress（字符串，必备）用于验证的比特币地址。
+1. "bitcoinaddress"（字符串，必备）用于验证的比特币地址
 
 结果：
-```shell
 {
-  "isvalid" : true|false,       （布尔型）地址是否有效。若无效，则只返回该项
-  "address" : "bitcoinaddress", （字符串）验证过的比特币地址
-  "scriptPubKey" : "hex",       （字符串）通过地址生成的 16 进制编码的脚本公钥
-  "ismine" : true|false,        （布尔型）地址是否属于我（钱包）
-  "iswatchonly" : true|false,   （布尔型）地址是否为 watchonly 地址
-  "isscript" : true|false,      （布尔型）密钥是否为一个脚本
-  "pubkey" : "publickeyhex",    （字符串）原始公钥的 16 进制值
-  "iscompressed" : true|false,  （布尔型）地址是否压缩过
-  "account" : "account"         （字符串，已过时）该地址关联的账户，"" 为默认账户
+  "isvalid" : true|false,      （布尔型）地址是否验证。若没有，则只返回该项。
+  "address" : "bitcoinaddress",（字符串）已验证的比特币地址
+  "scriptPubKey" : "hex",      （字符串）通过地址生成的 16 进制编码的脚本公钥
+  "ismine" : true|false,       （布尔型）地址是否为你的
+  "iswatchonly" : true|false,  （布尔型）地址是否为 watchonly
+  "isscript" : true|false,     （布尔型）密钥是否为一个脚本
+  "pubkey" : "publickeyhex",   （字符串）原始公钥的 16 进制值
+  "iscompressed" : true|false, （布尔型）地址是否已压缩
+  "account" : "account"        （字符串）已过时。关联该地址的账户，"" 为默认账户
 }
+
+例子：
+> bitcoin-cli validateaddress "1PSSGeFHDnKNxiEyFrD1wcEaHr9hrQDDWc"
+> curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "validateaddress", "params": ["1PSSGeFHDnKNxiEyFrD1wcEaHr9hrQDDWc"] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
 ```
 
-## 用法示例
+## 2. 源码剖析
 
-### 比特币核心客户端
-
-用法一：验证本钱包中的地址。
-
-```shell
-$ bitcoin-cli getnewaddress
-1C5RT9cGsDZwNyaEvUHPj7Qb1SgB5eePG
-$ bitcoin-cli validateaddress 1C5RT9cGsDZwNyaEvUHPj7Qb1SgB5eePG
-{
-  "isvalid": true,
-  "address": "1C5RT9cGsDZwNyaEvUHPj7Qb1SgB5eePG",
-  "scriptPubKey": "76a9140218443a78a9ed0013efb2332506625dcfdf61b488ac",
-  "ismine": true,
-  "iswatchonly": false,
-  "isscript": false,
-  "pubkey": "028a82549a52b0e931d5dceadcf4509d93e45981683896e5c0d106dd802d59034f",
-  "iscompressed": true,
-  "account": ""
-}
-```
-
-用法二：验证非本钱包中的地址。
-
-```shell
-$ bitcoin-cli validateaddress 1PSSGeFHDnKNxiEyFrD1wcEaHr9hrQDDWc
-{
-  "isvalid": true,
-  "address": "1PSSGeFHDnKNxiEyFrD1wcEaHr9hrQDDWc",
-  "scriptPubKey": "76a914f62242a747ec1cb02afd56aac978faf05b90462e88ac",
-  "ismine": false,
-  "iswatchonly": false,
-  "isscript": false
-}
-```
-
-用法三：验证错误地址，这里地址前缀错误。
-
-```shell
-$ bitcoin-cli validateaddress 2C5RT9cGsDZwNyaEvUHPj7Qb1SgB5eePG
-{
-  "isvalid": false
-}
-```
-
-### cURL
-
-```shell
-$ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "validateaddress", "params": ["1C5RT9cGsDZwNyaEvUHPj7Qb1SgB5eePG"] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
-{"result":{"isvalid":true,"address":"1C5RT9cGsDZwNyaEvUHPj7Qb1SgB5eePG","scriptPubKey":"76a9140218443a78a9ed0013efb2332506625dcfdf61b488ac","ismine":true,"iswatchonly":false,"isscript":false,"pubkey":"028a82549a52b0e931d5dceadcf4509d93e45981683896e5c0d106dd802d59034f","iscompressed":true,"account":""},"error":null,"id":"curltest"}
-```
-
-## 源码剖析
-
-validateaddress 对应的函数在“rpcserver.h”文件中被引用。
+`validateaddress` 对应的函数在文件 `rpcserver.h` 中被引用。
 
 ```cpp
-extern UniValue validateaddress(const UniValue& params, bool fHelp); // 验证地址
+extern UniValue validateaddress(const UniValue& params, bool fHelp);
 ```
 
-实现在“rpcmisc.cpp”文件中。
+实现在文件 `rpcmisc.cpp` 中。
 
 ```cpp
 UniValue validateaddress(const UniValue& params, bool fHelp)
 {
-    if (fHelp || params.size() != 1) // 参数必须为 1 个
-        throw runtime_error( // 命令帮助反馈
+    if (fHelp || params.size() != 1)
+        throw runtime_error(
             "validateaddress \"bitcoinaddress\"\n"
             "\nReturn information about the given bitcoin address.\n"
             "\nArguments:\n"
@@ -119,50 +71,48 @@ UniValue validateaddress(const UniValue& params, bool fHelp)
             "\nExamples:\n"
             + HelpExampleCli("validateaddress", "\"1PSSGeFHDnKNxiEyFrD1wcEaHr9hrQDDWc\"")
             + HelpExampleRpc("validateaddress", "\"1PSSGeFHDnKNxiEyFrD1wcEaHr9hrQDDWc\"")
-        );
+        ); // 1. 帮助内容
 
 #ifdef ENABLE_WALLET
-    LOCK2(cs_main, pwalletMain ? &pwalletMain->cs_wallet : NULL); // 钱包上锁
+    LOCK2(cs_main, pwalletMain ? &pwalletMain->cs_wallet : NULL);
 #else
     LOCK(cs_main);
 #endif
 
-    CBitcoinAddress address(params[0].get_str()); // 获取指定的比特币地址
-    bool isValid = address.IsValid(); // 判断地址是否有效
+    CBitcoinAddress address(params[0].get_str());
+    bool isValid = address.IsValid();
 
-    UniValue ret(UniValue::VOBJ); // 对象类型的返回结果
-    ret.push_back(Pair("isvalid", isValid)); // 有效性
-    if (isValid) // 若有效
+    UniValue ret(UniValue::VOBJ); // 2. 构造地址的相关信息并返回
+    ret.push_back(Pair("isvalid", isValid));
+    if (isValid)
     {
-        CTxDestination dest = address.Get(); // 从比特币地址获取交易目的地址
+        CTxDestination dest = address.Get();
         string currentAddress = address.ToString();
-        ret.push_back(Pair("address", currentAddress)); // 当前比特币地址
+        ret.push_back(Pair("address", currentAddress));
 
-        CScript scriptPubKey = GetScriptForDestination(dest); // 从交易目的地址获取脚本公钥
-        ret.push_back(Pair("scriptPubKey", HexStr(scriptPubKey.begin(), scriptPubKey.end()))); // 脚本公钥
+        CScript scriptPubKey = GetScriptForDestination(dest);
+        ret.push_back(Pair("scriptPubKey", HexStr(scriptPubKey.begin(), scriptPubKey.end())));
 
 #ifdef ENABLE_WALLET
         isminetype mine = pwalletMain ? IsMine(*pwalletMain, dest) : ISMINE_NO;
-        ret.push_back(Pair("ismine", (mine & ISMINE_SPENDABLE) ? true : false)); // 是否属于我的
-        ret.push_back(Pair("iswatchonly", (mine & ISMINE_WATCH_ONLY) ? true: false)); // 是否为 watch-only 地址
-        UniValue detail = boost::apply_visitor(DescribeAddressVisitor(), dest); // 排序
-        ret.pushKVs(detail); // 地址细节
-        if (pwalletMain && pwalletMain->mapAddressBook.count(dest)) // 若钱包可用 且 该目的地址在地址簿中
-            ret.push_back(Pair("account", pwalletMain->mapAddressBook[dest].name)); // 获取该地址关联的账户名
+        ret.push_back(Pair("ismine", (mine & ISMINE_SPENDABLE) ? true : false));
+        ret.push_back(Pair("iswatchonly", (mine & ISMINE_WATCH_ONLY) ? true: false));
+        UniValue detail = boost::apply_visitor(DescribeAddressVisitor(), dest);
+        ret.pushKVs(detail);
+        if (pwalletMain && pwalletMain->mapAddressBook.count(dest))
+            ret.push_back(Pair("account", pwalletMain->mapAddressBook[dest].name));
 #endif
     }
-    return ret; // 返回结果
+    return ret;
 }
 ```
 
-基本流程：
-1. 处理命令帮助和参数个数。
-2. 上锁，若开启钱包功能，钱包上锁。
-3. 获取指定的比特币地址，并判断该地址是否有效。
-4. 获取相关地址信息，判断该地址是否属于自己并添加到结果对象中。
-5. 返回结果。
+### 2.1. 帮助内容
+
+参考[比特币 RPC 命令剖析 "getbestblockhash" 2.1. 帮助内容](/blog/2018/05/bitcoin-rpc-command-getbestblockhash.html#21-帮助内容)。
 
 ## 参考链接
 
 * [bitcoin/rpcserver.h at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/rpcserver.h){:target="_blank"}
+* [bitcoin/rpcserver.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/rpcserver.cpp){:target="_blank"}
 * [bitcoin/rpcmisc.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/rpcmisc.cpp){:target="_blank"}

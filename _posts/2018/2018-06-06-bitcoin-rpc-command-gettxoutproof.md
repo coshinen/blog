@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "比特币 RPC 命令剖析 \"gettxoutproof\""
-date:   2018-06-06 10:45:50 +0800
+date:   2018-06-06 20:45:50 +0800
 author: mistydew
 comments: true
 category: 区块链

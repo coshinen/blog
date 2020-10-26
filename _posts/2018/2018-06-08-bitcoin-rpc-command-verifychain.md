@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "比特币 RPC 命令剖析 \"verifychain\""
-date:   2018-06-08 14:46:42 +0800
+date:   2018-06-08 20:46:42 +0800
 author: mistydew
 comments: true
 category: 区块链
