@@ -133,7 +133,7 @@ excerpt: Here are my favorite quotes from someones that inspire me or make me la
 > Socrates:
 > * The unexamined life is not worth living.
 
-> Thirteen Virtues, The Autobiography of Benjamin Franklin:
+> Benjamin Franklin, The Autobiography of Benjamin Franklin, Thirteen Virtues:
 > * Temperance. Eat not to dullness; drink not to elevation.
 > * Silence. Speak not but what may benefit others or yourself; avoid trifling conversation.
 > * Order. Let all your things have their places; let each part of your business have its time.
@@ -165,22 +165,14 @@ excerpt: Here are my favorite quotes from someones that inspire me or make me la
 > * ALL ANIMALS ARE EQUAL BUT SOME ANIMALS ARE MORE EQUAL THAN OTHERS.
 > * FOUR LEGS GOOD, TWO LEGS BAD.
 
-> 松井玲奈のお母さん「[輝きYELL!](http://www.ntv.co.jp/yell/206.html){:target="_blank"}」：
-> * いつ死ぬかわからない、好きな事しなさい！
-
-> 緑のお父さん「パパのお弁当は世界一」：
-> * 人生はいろいろある、苦しい時も悲しい時も自分を信じていれば楽しい事がやってくるよ。
-
-> 竜ヶ崎桃子「下妻物語」：
-> * 自分が一番大事なものは、絶対貸しちゃいけないの。貸してもいいのはどうでもいいものだけ。だから私は借りた物を返さない主義。その代わり、貸す時は戻って来なくていいって思うの。
-> * 人間は一人なの。一人で生まれて一人で考えて一人で死んで行くの。人は一人じゃ生きられないなんて、だったら私は人じゃなくていい。ミジンコでいい。寄り添わなきゃいけない人間よりもずっとずっと自立してるもの。
-> * 人間は、大きな幸せを前にすると、急に臆病になる。幸せを勝ち取ることは、不幸に耐えることより勇気が要るの。
+> 怨み屋「怨み屋本舗 第八回 ハートキャッチャー」：
+> * 嘘をつかない人間なんて、どこにもいないわ。嘘をどう利用するか、それが問題なんだけよ。
 
 > 新堂頼子「はんなりギロリの頼子さん」：
 > * 大切なのは、どの道を選ぶかより、選んだ道をどういきるかじゃないの？
 
-> 怨み屋「怨み屋本舗 第八回 ハートキャッチャー」：
-> * 嘘をつかない人間なんて、どこにもいないわ。嘘をどう利用するか、それが問題なんだけよ。
+> 緑のお父さん「パパのお弁当は世界一」：
+> * 人生はいろいろある、苦しい時も悲しい時も自分を信じていれば楽しい事がやってくるよ。
 
 > ゲーテ「コンフィデンスマンJP ーロマンス編ー」：
 > * 人に欺かれるのではない。自分が己を欺くのである。
@@ -188,6 +180,14 @@ excerpt: Here are my favorite quotes from someones that inspire me or make me la
 
 > ダー子「コンフィデンスマンJP」：
 > * 目に見えるものが真実とは限らない。何が本当で、何が嘘か？
+
+> 竜ヶ崎桃子「下妻物語」：
+> * 自分が一番大事なものは、絶対貸しちゃいけないの。貸してもいいのはどうでもいいものだけ。だから私は借りた物を返さない主義。その代わり、貸す時は戻って来なくていいって思うの。
+> * 人間は一人なの。一人で生まれて一人で考えて一人で死んで行くの。人は一人じゃ生きられないなんて、だったら私は人じゃなくていい。ミジンコでいい。寄り添わなきゃいけない人間よりもずっとずっと自立してるもの。
+> * 人間は、大きな幸せを前にすると、急に臆病になる。幸せを勝ち取ることは、不幸に耐えることより勇気が要るの。
+
+> 松井玲奈のお母さん「[輝きYELL!](http://www.ntv.co.jp/yell/206.html){:target="_blank"}」：
+> * いつ死ぬかわからない、好きな事しなさい！
 
 > ソルト「マジすか学園4、5」：
 > * 怖いなんて感情、忘れてた…人間いつかは死ぬ、それが早いか遅いかの違いだ…時々考えるんだ、私の命は何のためにあるのか？自分のマジのために使えるのなら、本望だ、笑って死ねるよ。
@@ -199,11 +199,11 @@ excerpt: Here are my favorite quotes from someones that inspire me or make me la
 > * 勘定は、合わさせてもらうで…
 > * アホ、最後に勝つのはどんな時も、強い方や。
 > * 本当に強いヤツはな、本当の恐怖を知ってんねん。
-> * 放火魔は、必ず現場に戻る。自分がつけた火が、どこまで燃え広がるか、見ておきたいからや。
+> * 放火魔は、必ず現場に戻る。自分が付けた火が、どこまで燃え広がるか、見ておきたいからや。
 
 > 甘口(ゲキカラ)「マジすか学園2」：
 > * 本当の強さは喧嘩じゃねぇ、怖さを知ってるヤツだ。
-> * 優子さんが、教えてくれた。喧嘩には理由がなきゃいけない。理由のない喧嘩は、勝っても負けても虚しい。
+> * 優子さんが、教えてくれた。喧嘩には理由がなきゃいけない。理由のない喧嘩は、勝っても負けても空しい。
 
 > 宇佐美博人「サバイバル ウェデぃング」：
 > * 大切なのは、どんな選択をするかじゃない。自分が選択した人生を強く生きるかどうか。ただそれだけだ！
@@ -213,13 +213,6 @@ excerpt: Here are my favorite quotes from someones that inspire me or make me la
 
 > 土屋百合「逃げるは恥だが 役に立つ」：
 > * 今あなたが価値がないと切り捨てたものは、この先あなたが向かっていく未来でもあるのよ。自分がバカにしていたものに自分がなる、それってつらいんじゃないかな？私達の周りにはね、たくさんの呪いがあるの。あなたが感じているのはその一つ。自分に呪いをかけないで、そんな恐ろしい呪いからは、さっさと逃げてしまいなさい。
-
-> AZUKI 七「[GARNET CROW クリスタル・ゲージ](/blog/2018/09/Crystal-Gauge.html)」：
-> * 何処にいても揺るがぬ ideology、善悪の基準はすべての人に共通じゃない。
-
-> Joan Baez「Garnet Time 02 AZUKI'S NIGHT」：
-> * 人はどう死ぬか、いつ死ぬか選択できない。どう生きるか、これだけは決められる。さあ決めるのです。
-> * You don't get to choose how you're going to die, or when. You can only decide how you're going to live. Now.
 
 > 中村由利「GARNET CROW livescope 〜The Final〜」：
 > * 本当に今日は皆さん、楽しい時間を本当に本当にどうもありがとうございました。
@@ -251,6 +244,13 @@ excerpt: Here are my favorite quotes from someones that inspire me or make me la
 
 > 中村由利「GARNET CROW "le 5 ème anniversaire" L'Histoire de 2000 à 2005」：
 > * 流されていくのは簡単だけれど、変わらないっていうのは一番難しい。
+
+> AZUKI 七「[GARNET CROW クリスタル・ゲージ](/blog/2018/09/Crystal-Gauge.html)」：
+> * 何処にいても揺るがぬ ideology、善悪の基準はすべての人に共通じゃない。
+
+> Joan Baez「Garnet Time 02 AZUKI'S NIGHT」：
+> * 人はどう死ぬか、いつ死ぬか選択できない。どう生きるか、これだけは決められる。さあ決めるのです。
+> * You don't get to choose how you're going to die, or when. You can only decide how you're going to live. Now.
 
 > サイタマ「ワンパンマン 第3話 執念の科学者」：
 > * お前も知りたいのか？いいだろう！ジェノスもよく聞いとけ…
