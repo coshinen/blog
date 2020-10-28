@@ -13,7 +13,7 @@ excerpt: Here are my blog post tags.
 <div class="contents">
   <h2 id="{{ tag[0] }}">
     {{ tag[0] }}（{{ tag[1].size }}）
-    <a href="#tagcloud" style="float:right">🔝</a>
+    <a href="#tagcloud" class="right">🔝</a>
   </h2>
   <ul>{% for post in tag[1] %}
     <li><abbr title="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%Y-%m-%d-" }}</abbr><a href="{{ post.url }}">{{ post.title }}</a></li>{% endfor %}

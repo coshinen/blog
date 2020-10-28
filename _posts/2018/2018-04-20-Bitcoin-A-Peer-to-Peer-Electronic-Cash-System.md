@@ -97,7 +97,7 @@ excerpt: 比特币是一个创新的支付网络，一种新型的试验性的�
 每个所有者通过数字签名前一笔交易的哈希和下一个所有者的公钥并把它们添加到货币的尾部，转移货币到下一个所有者。
 收款者可以验证该签名以验证链的所有权。
 
-![transactions](https://git.dhimmel.com/bitcoin-whitepaper/images/transactions.svg){:.border#center}
+![transactions](https://git.dhimmel.com/bitcoin-whitepaper/images/transactions.svg){:.border.center}
 
 > The problem of course is the payee can't verify that one of the owners did not double-spend
 > the coin.  A common solution is to introduce a trusted central authority, or mint, that checks every
@@ -142,7 +142,7 @@ excerpt: 比特币是一个创新的支付网络，一种新型的试验性的�
 时间戳证明数据必须在当时存在，显然是为了进入散列。
 每个时间戳在其散列中都包含前一个时间戳，形成一个链，每个附加的时间戳都会加强它前面的时间戳。
 
-![timestamp-server](https://git.dhimmel.com/bitcoin-whitepaper/images/timestamp-server.svg){:.border#center}
+![timestamp-server](https://git.dhimmel.com/bitcoin-whitepaper/images/timestamp-server.svg){:.border.center}
 
 > ## 4. Proof-of-Work
 > 
@@ -168,7 +168,7 @@ excerpt: 比特币是一个创新的支付网络，一种新型的试验性的�
 一旦 CPU 花费功夫在使其满足工作量证明上，该块在没有重做工作量的情况下不能改变。
 随后区块被连接在后面，改变区块的工作量将包含重做在该块之后全部区块的工作量。
 
-![proof-of-work](https://git.dhimmel.com/bitcoin-whitepaper/images/proof-of-work.svg){:.border#center}
+![proof-of-work](https://git.dhimmel.com/bitcoin-whitepaper/images/proof-of-work.svg){:.border.center}
 
 > The proof-of-work also solves the problem of determining representation in majority decision 
 > making.  If the majority were based on one-IP-address-one-vote, it could be subverted by anyone 
@@ -197,7 +197,8 @@ excerpt: 比特币是一个创新的支付网络，一种新型的试验性的�
 
 > ## 5. Network
 > 
-> The steps to run the network are as follows:<br>
+> The steps to run the network are as follows:
+> 
 > 1) New transactions are broadcast to all nodes.<br>
 > 2) Each node collects new transactions into a block.<br>
 > 3) Each node works on finding a difficult proof-of-work for its block.<br>
@@ -208,7 +209,8 @@ excerpt: 比特币是一个创新的支付网络，一种新型的试验性的�
 
 ## 5. 网络
 
-这步运行如下网络：<br>
+这步运行如下网络：
+
 1) 新的交易广播到全部节点。<br>
 2) 每个节点收集新的交易到一个区块。<br>
 3) 每个节点都为了找一个区块的困难的工作量证明而工作。<br>
@@ -289,7 +291,7 @@ excerpt: 比特币是一个创新的支付网络，一种新型的试验性的�
 然后通过除去树枝来压缩旧的区块。
 树内部（树枝）哈希不需要存储（在区块中）。
 
-![reclaiming-disk-space](https://git.dhimmel.com/bitcoin-whitepaper/images/reclaiming-disk-space.svg){:.border#center}
+![reclaiming-disk-space](https://git.dhimmel.com/bitcoin-whitepaper/images/reclaiming-disk-space.svg){:.border.center}
 
 > A block header with no transactions would be about 80 bytes.  If we suppose blocks are 
 > generated every 10 minutes, 80 bytes * 6 * 24 * 365 = 4.2MB per year.  With computer systems 
@@ -315,7 +317,7 @@ excerpt: 比特币是一个创新的支付网络，一种新型的试验性的�
 不需要运行完整的网络节点也可以验证支付。用户只需要保留最长工作量证明链的区块头的副本，他能通过查询网络节点获取，直到他确信他拥有最长的链，并获得默尔克分支，从而把交易连接到加时间戳的区块上。
 他不能自行检查交易，但通过连接交易到链上的某个地方，他能够看到网络节点已接受该交易，并在进一步确认网络接受了该交易后添加到区块上。
 
-![simplified-payment-verification](https://git.dhimmel.com/bitcoin-whitepaper/images/simplified-payment-verification.svg){:.border#center}
+![simplified-payment-verification](https://git.dhimmel.com/bitcoin-whitepaper/images/simplified-payment-verification.svg){:.border.center}
 
 > As such, the verification is reliable as long as honest nodes control the network, but is more 
 > vulnerable if the network is overpowered by an attacker.  While network nodes can verify 
@@ -345,7 +347,7 @@ excerpt: 比特币是一个创新的支付网络，一种新型的试验性的�
 为了允许价值被拆分和组合，交易包含多个输入和输出。
 通常来自较大金额的前一笔交易的单一输入或联合多个较小金额的输入，并且最多连个输出：一个用于付款，另一个（如果有）返回找零给发送者。
 
-![combining-splitting-value](https://git.dhimmel.com/bitcoin-whitepaper/images/combining-splitting-value.svg){:.border#center}
+![combining-splitting-value](https://git.dhimmel.com/bitcoin-whitepaper/images/combining-splitting-value.svg){:.border.center}
 
 > It should be noted that fan-out, where a transaction depends on several transactions, and those 
 > transactions depend on many more, is not a problem here.  There is never the need to extract a 
@@ -371,7 +373,7 @@ excerpt: 比特币是一个创新的支付网络，一种新型的试验性的�
 公众能够看到某人向某人发送一笔金额，但没有交易与任何人相关联的信息。
 这和证券交易所发布的信息类似，其中个别交易的时间和大小的记录是公开的，但没有告知双方是谁。
 
-![privacy](https://git.dhimmel.com/bitcoin-whitepaper/images/privacy.svg){:.border#center}
+![privacy](https://git.dhimmel.com/bitcoin-whitepaper/images/privacy.svg){:.border.center}
 
 > As an additional firewall, a new key pair should be used for each transaction to keep them 
 > from being linked to a common owner.  Some linking is still unavoidable with multi-input 
@@ -577,19 +579,20 @@ q=0.45   z=340
 
 > ## References
 > 
-> [1] W. Dai, "b-money," [http://www.weidai.com/bmoney.txt](http://www.weidai.com/bmoney.txt){:target="_blank"}, 1998.<br>
-> [2] H. Massias, X.S. Avila, and J.-J. Quisquater, "[Design of a secure timestamping service with minimal 
-> trust requirements](http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.13.6228){:target="_blank"}," In 20th Symposium on Information Theory in the Benelux, May 1999.<br>
-> [3] S. Haber, W.S. Stornetta, "[How to time-stamp a digital document](https://doi.org/10.1007/bf00196791){:target="_blank"}," In Journal of Cryptology, vol 3, no 
-> 2, pages 99-111, 1991.<br>
-> [4] D. Bayer, S. Haber, W.S. Stornetta, "[Improving the efficiency and reliability of digital time-stamping](https://doi.org/10.1007/978-1-4613-9323-8_24){:target="_blank"}," 
-> In Sequences II: Methods in Communication, Security and Computer Science, pages 329-334, 1993.<br>
-> [5] S. Haber, W.S. Stornetta, "[Secure names for bit-strings](https://doi.org/10.1145/266420.266430){:target="_blank"}," In Proceedings of the 4th ACM Conference 
-> on Computer and Communications Security, pages 28-35, April 1997.<br>
-> [6] A. Back, "[Hashcash - a denial of service counter-measure](http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.15.8){:target="_blank"}," 
-> [http://www.hashcash.org/papers/hashcash.pdf](http://www.hashcash.org/papers/hashcash.pdf){:target="_blank"}, 2002.<br>
-> [7] R.C. Merkle, "[Protocols for public key cryptosystems](https://doi.org/10.1109/sp.1980.10006){:target="_blank"}," In Proc. 1980 Symposium on Security and 
-> Privacy, IEEE Computer Society, pages 122-133, April 1980.<br>
+> [1] W. Dai, "b-money," [http://www.weidai.com/bmoney.txt](http://www.weidai.com/bmoney.txt){:target="_blank"}, 1998.
+> 
+> [2] H. Massias, X.S. Avila, and J.-J. Quisquater, "[Design of a secure timestamping service with minimal trust requirements](http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.13.6228){:target="_blank"}," In 20th Symposium on Information Theory in the Benelux, May 1999.
+> 
+> [3] S. Haber, W.S. Stornetta, "[How to time-stamp a digital document](https://doi.org/10.1007/bf00196791){:target="_blank"}," In Journal of Cryptology, vol 3, no 2, pages 99-111, 1991.
+> 
+> [4] D. Bayer, S. Haber, W.S. Stornetta, "[Improving the efficiency and reliability of digital time-stamping](https://doi.org/10.1007/978-1-4613-9323-8_24){:target="_blank"}," In Sequences II: Methods in Communication, Security and Computer Science, pages 329-334, 1993.
+> 
+> [5] S. Haber, W.S. Stornetta, "[Secure names for bit-strings](https://doi.org/10.1145/266420.266430){:target="_blank"}," In Proceedings of the 4th ACM Conference on Computer and Communications Security, pages 28-35, April 1997.
+> 
+> [6] A. Back, "[Hashcash - a denial of service counter-measure](http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.15.8){:target="_blank"}," [http://www.hashcash.org/papers/hashcash.pdf](http://www.hashcash.org/papers/hashcash.pdf){:target="_blank"}, 2002.
+> 
+> [7] R.C. Merkle, "[Protocols for public key cryptosystems](https://doi.org/10.1109/sp.1980.10006){:target="_blank"}," In Proc. 1980 Symposium on Security and Privacy, IEEE Computer Society, pages 122-133, April 1980.
+> 
 > [8] W. Feller, "[An introduction to probability theory and its applications](https://archive.org/details/AnIntroductionToProbabilityTheoryAndItsApplicationsVolume1){:target="_blank"}," 1957.
 
 ## 参考链接

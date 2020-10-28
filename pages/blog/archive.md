@@ -18,7 +18,7 @@ excerpt: This is my blog post archive.
 <div class="contents">
   <h2 id="{{ post.date | date: '%Y年%m月' }}">
     {{ post.date | date: '%Y年%m月' }}（{{ counts[idx] }}）
-    <a href="#archive" style="float:right">🔝</a>
+    <a href="#archive" class="right">🔝</a>
   </h2>
   <ul>{% assign idx = idx | plus: 1 %}{% endif %}
     <li><abbr title="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%Y-%m-%d-" }}</abbr><a href="{{ post.url }}">{{ post.title }}</a></li>{% endfor %}
