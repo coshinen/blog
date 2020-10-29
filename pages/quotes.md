@@ -133,20 +133,20 @@ excerpt: Here are my favorite quotes from someones that inspire me or make me la
 > Socrates:
 > * The unexamined life is not worth living.
 
-> Benjamin Franklin, The Autobiography of Benjamin Franklin, Thirteen Virtues:
-> * Temperance. Eat not to dullness; drink not to elevation.
-> * Silence. Speak not but what may benefit others or yourself; avoid trifling conversation.
-> * Order. Let all your things have their places; let each part of your business have its time.
-> * Resolution. Resolve to perform what you ought; perform without fail what you resolve.
-> * Frugality. Make no expense but to do good to others or youself; i.e., waste nothing.
-> * Industry. Lose no time; be always employ'd in something useful; cut off all unnecessary actions.
-> * Sincerity. Use no hurtful deceit; think innocently and justly, and, if you speak, speak accordingly.
-> * Justice. Wrong none by doing injuries, or omitting the benefits that are your duty.
-> * Moderation. Avoid extremes; forbear resenting injuries so much as you think they deserve.
-> * Cleanliness. Tolerate no uncleanliness in body, clothes, or habitation.
-> * Tranquility. Be not disturbed at trifles, or at accidents common or unavoidable.
-> * Chastity. Rarely use venery but for health or offspring, never to dullness, weakness, or the injury of your own or another's peace or reputation.
-> * Humility. Imitate Jesus and Socrates.
+> Benjamin Franklin, The Autobiography of Benjamin Franklin, PART TWO, Thirteen Names of Virtues:
+> * TEMPERANCE. Eat not to dullness; drink not to elevation.
+> * SILENCE. Speak not but what may benefit others or yourself; avoid trifling conversation.
+> * ORDER. Let all your things have their places; let each part of your business have its time.
+> * RESOLUTION. Resolve to perform what you ought; perform without fail what you resolve.
+> * FRUGALITY. Make no expense but to do good to others or youself; i.e., waste nothing.
+> * INDUSTRY. Lose no time; be always employ'd in something useful; cut off all unnecessary actions.
+> * SINCERITY. Use no hurtful deceit; think innocently and justly, and, if you speak, speak accordingly.
+> * JUSTICE. Wrong none by doing injuries, or omitting the benefits that are your duty.
+> * MODERATION. Avoid extremes; forbear resenting injuries so much as you think they deserve.
+> * CLEANLINESS. Tolerate no uncleanliness in body, clothes, or habitation.
+> * TRANQUILITY. Be not disturbed at trifles, or at accidents common or unavoidable.
+> * CHASTITY. Rarely use venery but for health or offspring, never to dullness, weakness, or the injury of your own or another's peace or reputation.
+> * HUMILITY. Imitate Jesus and Socrates.
 
 > Martin Luther King, Jr.:
 > * In the End, we will remember not the words of our enemies, but the silence of our friends.
@@ -161,9 +161,9 @@ excerpt: Here are my favorite quotes from someones that inspire me or make me la
 > * The very concept of objective truth is fading out of the world.
 > Lies will pass into history.
 
-> THE SEVEN COMMANDMENTS, Animal Farm:
-> * ALL ANIMALS ARE EQUAL BUT SOME ANIMALS ARE MORE EQUAL THAN OTHERS.
+> George Orwell, Animal Farm, THE SEVEN COMMANDMENTS:
 > * FOUR LEGS GOOD, TWO LEGS BAD.
+> * ALL ANIMALS ARE EQUAL BUT SOME ANIMALS ARE MORE EQUAL THAN OTHERS.
 
 > 怨み屋「怨み屋本舗 第八回 ハートキャッチャー」：
 > * 嘘をつかない人間なんて、どこにもいないわ。嘘をどう利用するか、それが問題なんだけよ。
