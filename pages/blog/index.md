@@ -6,7 +6,7 @@ permalink: /blog/
   <ul class="post-list">
     <li>
       <span class="post-meta"><abbr title="{{ site.posts.first.date | date_to_xmlschema }}">{{ site.posts.first.date | date: "%Y年%m月%d日 %H:%M" }}</abbr>【最新】</span>
-      <span style="float:right">分类：<a class="category" href="{{ site.category }}#{{ site.posts.first.category }}">{{ site.posts.first.category }}</a></span>
+      <span class="right">分类：<a class="category" href="{{ site.category }}#{{ site.posts.first.category }}">{{ site.posts.first.category }}</a></span>
       <h2>
         <a class="post-link" href="{{ site.posts.first.url }}">{{ site.posts.first.title | escape }}</a>
       </h2>
@@ -16,7 +16,7 @@ permalink: /blog/
     <h2 class="page-heading">近期文章</h2>{% for post in site.posts offset:1 limit:7 %}
     <li>
       <span class="post-meta"><abbr title="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%Y年%m月%d日" }}</abbr></span>
-      <span style="float:right">分类：<a class="category" href="{{ site.category }}#{{ post.category }}">{{ post.category }}</a></span>
+      <span class="right">分类：<a class="category" href="{{ site.category }}#{{ post.category }}">{{ post.category }}</a></span>
       <h2>
         <a class="post-link" href="{{ post.url }}">{{ post.title | escape }}</a>
       </h2>
