@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "比特币 RPC 命令剖析 \"walletpassphrasechange\""
-date:   2018-09-26 17:24:02 +0800
+date:   2018-09-26 20:24:02 +0800
 author: mistydew
 comments: true
 category: 区块链
@@ -11,50 +11,38 @@ excerpt: $ bitcoin-cli walletpassphrasechange "oldpassphrase" "newpassphrase"
 ## 1. 帮助内容
 
 ```shell
-walletpassphrasechange "oldpassphrase" "newpassphrase" # 更改钱包密码 oldpassphrase 为 newpassphrase
-```
+$ bitcoin-cli help walletpassphrasechange
+walletpassphrasechange "oldpassphrase" "newpassphrase"
+
+把钱包密码 'oldpassphrase' 改为 'newpassphrase'。
 
 参数：
-1. oldpassphrase（字符串）当前密码。
-2. newpassphrase（字符串）新密码。
+1. "oldpassphrase"（字符串）当前的密码
+2. "newpassphrase"（字符串）新的密码
 
-结果：无返回值。
-
-## 用法示例
-
-### 比特币核心客户端
-
-修改钱包密码 mypasswd 为 newpasswd。
-
-```shell
-$ bitcoin-cli walletpassphrase mypasswd newpasswd
+例子：
+> bitcoin-cli walletpassphrase "old one" "new one"
+> curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "walletpassphrasechange", "params": ["old one", "new one"] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
 ```
 
-### cURL
+## 2. 源码剖析
 
-```shell
-$ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "walletpassphrasechange", "params": ["mypasswd", "newpasswd"] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
-{"result":null,"error":null,"id":"curltest"}
-```
-
-## 源码剖析
-
-walletpassphrase 对应的函数在“rpcserver.h”文件中被引用。
+`walletpassphrase` 对应的函数在文件 `rpcserver.h` 中被引用。
 
 ```cpp
-extern UniValue walletpassphrasechange(const UniValue& params, bool fHelp); // 修改钱包密码
+extern UniValue walletpassphrasechange(const UniValue& params, bool fHelp);
 ```
 
-实现在“rpcwallet.cpp”文件中。
+实现在文件 `rpcwallet.cpp` 中。
 
 ```cpp
 UniValue walletpassphrasechange(const UniValue& params, bool fHelp)
 {
-    if (!EnsureWalletIsAvailable(fHelp)) // 确保钱包当前可用
+    if (!EnsureWalletIsAvailable(fHelp)) // 1. 确保钱包可用
         return NullUniValue;
     
-    if (pwalletMain->IsCrypted() && (fHelp || params.size() != 2)) // 钱包已加密 且 参数必须为 2 个
-        throw runtime_error( // 命令帮助反馈
+    if (pwalletMain->IsCrypted() && (fHelp || params.size() != 2))
+        throw runtime_error(
             "walletpassphrasechange \"oldpassphrase\" \"newpassphrase\"\n"
             "\nChanges the wallet passphrase from 'oldpassphrase' to 'newpassphrase'.\n"
             "\nArguments:\n"
@@ -63,48 +51,44 @@ UniValue walletpassphrasechange(const UniValue& params, bool fHelp)
             "\nExamples:\n"
             + HelpExampleCli("walletpassphrasechange", "\"old one\" \"new one\"")
             + HelpExampleRpc("walletpassphrasechange", "\"old one\", \"new one\"")
-        );
+        ); // 2. 帮助内容
 
-    LOCK2(cs_main, pwalletMain->cs_wallet); // 钱包上锁
+    LOCK2(cs_main, pwalletMain->cs_wallet);
 
-    if (fHelp) // 若钱包未加密，则无法显示该命令帮助
+    if (fHelp)
         return true;
-    if (!pwalletMain->IsCrypted()) // 若钱包未加密，则无法使用该命令
+    if (!pwalletMain->IsCrypted())
         throw JSONRPCError(RPC_WALLET_WRONG_ENC_STATE, "Error: running with an unencrypted wallet, but walletpassphrasechange was called.");
 
     // TODO: get rid of these .c_str() calls by implementing SecureString::operator=(std::string)
     // Alternately, find a way to make params[0] mlock()'d to begin with.
     SecureString strOldWalletPass;
     strOldWalletPass.reserve(100);
-    strOldWalletPass = params[0].get_str().c_str(); // 获取用户指定的旧密码
+    strOldWalletPass = params[0].get_str().c_str();
 
     SecureString strNewWalletPass;
     strNewWalletPass.reserve(100);
-    strNewWalletPass = params[1].get_str().c_str(); // 获取用户指定的新密码
+    strNewWalletPass = params[1].get_str().c_str();
 
-    if (strOldWalletPass.length() < 1 || strNewWalletPass.length() < 1) // 新旧密码长度都不能小于 1
+    if (strOldWalletPass.length() < 1 || strNewWalletPass.length() < 1)
         throw runtime_error(
             "walletpassphrasechange <oldpassphrase> <newpassphrase>\n"
             "Changes the wallet passphrase from <oldpassphrase> to <newpassphrase>.");
 
-    if (!pwalletMain->ChangeWalletPassphrase(strOldWalletPass, strNewWalletPass)) // 改变钱包密码
+    if (!pwalletMain->ChangeWalletPassphrase(strOldWalletPass, strNewWalletPass)) // 3. 更改钱包密码
         throw JSONRPCError(RPC_WALLET_PASSPHRASE_INCORRECT, "Error: The wallet passphrase entered was incorrect.");
 
-    return NullUniValue; // 返回空值
+    return NullUniValue;
 }
 ```
 
-基本流程：
-1. 确保当前钱包可用（已初始化完成）。
-2. 处理命令帮助和参数个数。
-3. 钱包上锁。
-4. 钱包未加密时查看命令帮助，不返回任何信息。
-5. 钱包未加密时无法使用该命令。
-6. 获取用户指定新旧密码。
-7. 新旧密码长度检查，均不能少于 1 个字符。
-8. 改变钱包密码。
+### 2.2. 帮助内容
 
-第七步，调用 pwalletMain->ChangeWalletPassphrase(strOldWalletPass, strNewWalletPass) 函数改变钱包密码，先解密旧密码，后加密新密码，定义在“wallet.cpp”文件中。
+参考[比特币 RPC 命令剖析 "getbestblockhash" 2.1. 帮助内容](/blog/2018/05/bitcoin-rpc-command-getbestblockhash.html#21-帮助内容)。
+
+### 2.3. 更改钱包密码
+
+更改钱包密码函数 `pwalletMain->ChangeWalletPassphrase(strOldWalletPass, strNewWalletPass)` 定义在文件 `wallet.cpp` 中。
 
 ```cpp
 bool CWallet::ChangeWalletPassphrase(const SecureString& strOldWalletPassphrase, const SecureString& strNewWalletPassphrase)
@@ -157,5 +141,6 @@ bool CWallet::ChangeWalletPassphrase(const SecureString& strOldWalletPassphrase,
 ## 参考链接
 
 * [bitcoin/rpcserver.h at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/rpcserver.h){:target="_blank"}
+* [bitcoin/rpcserver.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/rpcserver.cpp){:target="_blank"}
 * [bitcoin/rpcwallet.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/wallet/rpcwallet.cpp){:target="_blank"}
 * [bitcoin/wallet.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/wallet/wallet.cpp){:target="_blank"}

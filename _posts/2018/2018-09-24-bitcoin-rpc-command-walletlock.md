@@ -1,68 +1,55 @@
 ---
 layout: post
 title:  "比特币 RPC 命令剖析 \"walletlock\""
-date:   2018-09-24 16:52:09 +0800
+date:   2018-09-24 20:52:09 +0800
 author: mistydew
 comments: true
 category: 区块链
 tags: Bitcoin bitcoin-cli
 excerpt: $ bitcoin-cli walletlock
 ---
-## 提示说明
+## 1. 帮助内容
 
 ```shell
-walletlock # 从内存中移除钱包密钥，锁定钱包
+$ bitcoin-cli help walletlock
+walletlock
+
+从内存移除钱包密钥，锁定钱包。
+调用该方法后，你需要再次调用 walletpassphrase 后再调用任何需要解锁钱包的方法。
+
+例子：
+
+设置密码为 2 分钟以执行一条交易
+> bitcoin-cli walletpassphrase "my pass phrase" 120
+
+执行一次发送（需要设置密码）
+> bitcoin-cli sendtoaddress "1M72Sfpbz1BPpXFHz9m3CdqATR44Jvaydd" 1.0
+
+清除密码因为我们在 2 分钟前就完成了
+> bitcoin-cli walletlock
+
+作为 json rpc 调用
+> curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "walletlock", "params": [] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
 ```
 
-在调用此方法后，在调用任何需要钱包解锁的方法之前
-你将需要再次调用 [walletpassphrase](/blog/2018/09/bitcoin-rpc-command-walletpassphrase.html)。
+## 2. 源码剖析
 
-结果：无返回值。
-
-## 用法示例
-
-### 比特币核心客户端
-
-先解锁钱包 120 秒，然后锁定钱包。
-
-```shell
-$ bitcoin-cli getinfo | grep unlocked_until
-  "unlocked_until": 0,
-$ bitcoin-cli walletpassphrase "mypasswd" 120
-$ bitcoin-cli getinfo | grep unlocked_until
-  "unlocked_until": 1527757245,
-$ bitcoin-cli walletlock
-$ bitcoin-cli getinfo | grep unlocked_until
-  "unlocked_until": 0,
-```
-
-**一般先解锁钱包数秒，在发送比特币之后，使用该命令锁定钱包。**
-
-### cURL
-
-```shell
-$ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "walletlock", "params": [] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
-{"result":null,"error":null,"id":"curltest"}
-```
-
-## 源码剖析
-
-walletlock 对应的函数在“rpcserver.h”文件中被引用。
+`walletlock` 对应的函数在文件 `rpcserver.h` 中被引用。
 
 ```cpp
-extern UniValue walletlock(const UniValue& params, bool fHelp); // 锁定钱包
+extern UniValue walletlock(const UniValue& params, bool fHelp);
 ```
 
-实现在“rpcwallet.cpp”文件中。
+实现在文件 `rpcwallet.cpp` 中。
 
 ```cpp
 UniValue walletlock(const UniValue& params, bool fHelp)
 {
-    if (!EnsureWalletIsAvailable(fHelp)) // 确保钱包当前可用
+    if (!EnsureWalletIsAvailable(fHelp)) // 1. 确保钱包可用
         return NullUniValue;
     
-    if (pwalletMain->IsCrypted() && (fHelp || params.size() != 0)) // 钱包已加密 且 没有参数
-        throw runtime_error( // 命令帮助反馈
+    if (pwalletMain->IsCrypted() && (fHelp || params.size() != 0))
+        throw runtime_error(
             "walletlock\n"
             "\nRemoves the wallet encryption key from memory, locking the wallet.\n"
             "After calling this method, you will need to call walletpassphrase again\n"
@@ -76,38 +63,35 @@ UniValue walletlock(const UniValue& params, bool fHelp)
             + HelpExampleCli("walletlock", "") +
             "\nAs json rpc call\n"
             + HelpExampleRpc("walletlock", "")
-        );
+        ); // 2. 帮助内容
 
-    LOCK2(cs_main, pwalletMain->cs_wallet); // 钱包上锁
+    LOCK2(cs_main, pwalletMain->cs_wallet);
 
-    if (fHelp) // 钱包未加密时无法查看该命令帮助
+    if (fHelp)
         return true;
-    if (!pwalletMain->IsCrypted()) // 钱包未加密时无法使用该命令
+    if (!pwalletMain->IsCrypted())
         throw JSONRPCError(RPC_WALLET_WRONG_ENC_STATE, "Error: running with an unencrypted wallet, but walletlock was called.");
 
-    {
+    { // 3. 重置钱包解锁时间为 0
         LOCK(cs_nWalletUnlockTime);
-        pwalletMain->Lock(); // 锁定钱包
-        nWalletUnlockTime = 0; // 钱包解锁过期时间置 0
+        pwalletMain->Lock();
+        nWalletUnlockTime = 0;
     }
 
-    return NullUniValue; // 返回空值
+    return NullUniValue;
 }
 ```
 
-基本流程：
-1. 确保当前钱包可用（已初始化完成）。
-2. 处理命令帮助和参数个数。
-3. 钱包上锁。
-4. 钱包未加密时查看命令帮助，不返回任何信息。
-5. 钱包未加密时无法使用该命令。
-6. 锁定钱包。
-7. 把解锁钱包过期时间置为 0。
+### 2.2. 帮助内容
 
-第六步，调用 pwalletMain->Lock() 函数清空主密钥，锁定钱包。该函数定义在“crypter.cpp”文件中。
+参考[比特币 RPC 命令剖析 "getbestblockhash" 2.1. 帮助内容](/blog/2018/05/bitcoin-rpc-command-getbestblockhash.html#21-帮助内容)。
+
+### 2.3. 重置钱包解锁时间为 0
+
+锁定钱包函数 `pwalletMain->Lock()` 定义在文件 `crypter.cpp` 中。
 
 ```cpp
-bool CCryptoKeyStore::SetCrypted() // 设置加密状态为 true
+bool CCryptoKeyStore::SetCrypted()
 {
     LOCK(cs_KeyStore);
     if (fUseCrypto)
@@ -120,15 +104,15 @@ bool CCryptoKeyStore::SetCrypted() // 设置加密状态为 true
 
 bool CCryptoKeyStore::Lock()
 {
-    if (!SetCrypted()) // 设置加密状态
+    if (!SetCrypted())
         return false;
 
     {
-        LOCK(cs_KeyStore); // 上锁
-        vMasterKey.clear(); // 清空主密钥
+        LOCK(cs_KeyStore);
+        vMasterKey.clear();
     }
 
-    NotifyStatusChanged(this); // 通知状态改变
+    NotifyStatusChanged(this);
     return true;
 }
 ```
@@ -136,5 +120,6 @@ bool CCryptoKeyStore::Lock()
 ## 参考链接
 
 * [bitcoin/rpcserver.h at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/rpcserver.h){:target="_blank"}
+* [bitcoin/rpcserver.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/rpcserver.cpp){:target="_blank"}
 * [bitcoin/rpcwallet.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/wallet/rpcwallet.cpp){:target="_blank"}
 * [bitcoin/crypter.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/wallet/crypter.cpp){:target="_blank"}
