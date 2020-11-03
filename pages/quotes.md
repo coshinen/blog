@@ -133,6 +133,10 @@ excerpt: Here are my favorite quotes from someones that inspire me or make me la
 > Socrates:
 > * The unexamined life is not worth living.
 
+> Benjamin Franklin, The Autobiography of Benjamin Franklin, PART THREE:
+> * This is another instance of the truth of an old maxim I had learned, which says, "He that has once done you a kindness will be more ready to do you another, than he whom you yourself have obliged."
+> And it shows how much more profitable it is prudently to remove, than to resent, return, and continue inimical proceedings.
+
 > Benjamin Franklin, The Autobiography of Benjamin Franklin, PART TWO, Thirteen Names of Virtues:
 > * TEMPERANCE. Eat not to dullness; drink not to elevation.
 > * SILENCE. Speak not but what may benefit others or yourself; avoid trifling conversation.
@@ -162,8 +166,8 @@ excerpt: Here are my favorite quotes from someones that inspire me or make me la
 > Lies will pass into history.
 
 > George Orwell, Animal Farm, THE SEVEN COMMANDMENTS:
-> * FOUR LEGS GOOD, TWO LEGS BAD.
 > * ALL ANIMALS ARE EQUAL BUT SOME ANIMALS ARE MORE EQUAL THAN OTHERS.
+> * FOUR LEGS GOOD, TWO LEGS BAD.
 
 > 怨み屋「怨み屋本舗 第八回 ハートキャッチャー」：
 > * 嘘をつかない人間なんて、どこにもいないわ。嘘をどう利用するか、それが問題なんだけよ。
