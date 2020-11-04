@@ -328,13 +328,13 @@ article .contents {
   border-radius: 0;
   border-right: 3px solid $border-color;
   padding: 0 $spacing-unit / 2 0 0;
-  width: calc(54% - (#{$spacing-unit} / 2) - 3px);
+  width: calc(50% - (#{$spacing-unit} / 2) - 3px);
 }
 
 .lyric-translation {
   float: right;
   padding: 0 0 0 $spacing-unit / 2;
-  width: calc(46% - (#{$spacing-unit} / 2));
+  width: calc(50% - (#{$spacing-unit} / 2));
 }
 
 @include media-query($on-palm) {
