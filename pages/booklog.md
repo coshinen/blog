@@ -116,6 +116,7 @@ excerpt: Here are some books I read.
 
 > ### 心理学[🔝](#索引){:.right}
 > 
+> * 为何家会伤人，[中] 武志红
 > * 理解人性，[奥地利] Alfred Adler
 > * 自卑与超越，[奥地利] Alfred Adler
 > * 被讨厌的勇气 “自我启发之父”阿德勒的哲学课，[日] 岸見一郎 古賀史健
