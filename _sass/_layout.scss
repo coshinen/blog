@@ -321,8 +321,8 @@ article .contents {
   }
 }
 
-// Lyrics
-.lyric-original {
+// Lyrics, Poem
+.original {
   float: left;
   border: 0;
   border-radius: 0;
@@ -331,15 +331,15 @@ article .contents {
   width: calc(50% - (#{$spacing-unit} / 2) - 3px);
 }
 
-.lyric-translation {
+.translation {
   float: right;
   padding: 0 0 0 $spacing-unit / 2;
   width: calc(50% - (#{$spacing-unit} / 2));
 }
 
 @include media-query($on-palm) {
-  .lyric-original,
-  .lyric-translation {
+  .original,
+  .translation {
     float: none;
     border: 0;
     padding: 0;

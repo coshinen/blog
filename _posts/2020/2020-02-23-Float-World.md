@@ -15,7 +15,7 @@ excerpt: 衝動に任して全部(すべて)終わりにしたくなる時ない
 作曲：中村由利<br>
 編曲：古井弘人
 
-<blockquote class="lyric-original">
+<blockquote class="original">
   <h2>Float World</h2>
   <p>
     衝動に任して全部(すべて)終わりにしたくなる時ない？<br>
@@ -55,7 +55,7 @@ excerpt: 衝動に任して全部(すべて)終わりにしたくなる時ない
   </p>
 </blockquote>
 
-<div class="lyric-translation">
+<div class="translation">
   <h2>浮动世界</h2>
   <p>
     没有任由冲动想全部结束的时候？<br>

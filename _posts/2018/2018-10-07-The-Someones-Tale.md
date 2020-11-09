@@ -15,7 +15,7 @@ excerpt: まっすぐな思いはまっすぐに伝わるの？唐突な青空 �
 作曲：中村由利<br>
 編曲：古井弘人
 
-<blockquote class="lyric-original">
+<blockquote class="original">
   <h2>The Someone's Tale</h2>
   <p>
     まっすぐな思いはまっすぐに伝わるの？<br>
@@ -46,7 +46,7 @@ excerpt: まっすぐな思いはまっすぐに伝わるの？唐突な青空 �
   </p>
 </blockquote>
 
-<div class="lyric-translation">
+<div class="translation">
   <h2>某人的故事</h2>
   <p>
     直率的想法能直接传达吗？<br>

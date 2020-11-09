@@ -14,7 +14,7 @@ excerpt: うまく話ができなくて 本当はすまないと思ってる。�
 作詞：スガシカオ<br>
 作曲：スガシカオ
 
-<blockquote class="lyric-original">
+<blockquote class="original">
   <h2>Happy Birthday</h2>
   <p>
     うまく話ができなくて 本当はすまないと思ってる<br>
@@ -43,7 +43,7 @@ excerpt: うまく話ができなくて 本当はすまないと思ってる。�
   </p>
 </blockquote>
 
-<div class="lyric-translation">
+<div class="translation">
   <h2>生日快乐</h2>
   <p>
     不能好好地说话 其实觉得很抱歉<br>

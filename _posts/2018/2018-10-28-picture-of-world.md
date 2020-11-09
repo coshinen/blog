@@ -15,7 +15,7 @@ excerpt: ずっと みてたんだ一枚のポスター、壁の片隅で色褪�
 作曲：中村由利<br>
 編曲：古井弘人
 
-<blockquote class="lyric-original">
+<blockquote class="original">
   <h2>picture of world</h2>
   <p>
     ずっと みてたんだ一枚のポスター<br>
@@ -57,7 +57,7 @@ excerpt: ずっと みてたんだ一枚のポスター、壁の片隅で色褪�
   </p>
 </blockquote>
 
-<div class="lyric-translation">
+<div class="translation">
   <h2>世界的图画</h2>
   <p>
     一直 看着的一张海报<br>

@@ -15,7 +15,7 @@ excerpt: ため息ひとつ落ちた週末の、どうしようもない感じ�
 作曲：中村由利<br>
 編曲：古井弘人
 
-<blockquote class="lyric-original">
+<blockquote class="original">
   <h2>dreaming of love</h2>
   <p>
     ため息ひとつ落ちた週末の<br>
@@ -74,7 +74,7 @@ excerpt: ため息ひとつ落ちた週末の、どうしようもない感じ�
   </p>
 </blockquote>
 
-<div class="lyric-translation">
+<div class="translation">
   <h2>梦见爱情</h2>
   <p>
     叹息一声落下的周末的<br>

@@ -15,7 +15,7 @@ excerpt: 弱い日差しが揺れるテーブルの上、開いた世界地図�
 作曲：中村由利<br>
 編曲：古井弘人
 
-<blockquote class="lyric-original">
+<blockquote class="original">
   <h2>Cried a little</h2>
   <p>
     弱い日差しが揺れるテーブルの上<br>
@@ -63,7 +63,7 @@ excerpt: 弱い日差しが揺れるテーブルの上、開いた世界地図�
   </p>
 </blockquote>
 
-<div class="lyric-translation">
+<div class="translation">
   <h2>哭了会儿</h2>
   <p>
     微弱的陽光在桌面上搖晃<br>

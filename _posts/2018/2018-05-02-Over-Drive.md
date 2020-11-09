@@ -15,7 +15,7 @@ excerpt: 風の音だけが、体中を包む。サイレント・Kiss、夢に�
 作曲：中村由利<br>
 編曲：古井弘人
 
-<blockquote class="lyric-original">
+<blockquote class="original">
   <h2>Over Drive</h2>
   <p>
     風の音だけが<br>
@@ -72,7 +72,7 @@ excerpt: 風の音だけが、体中を包む。サイレント・Kiss、夢に�
   </p>
 </blockquote>
 
-<div class="lyric-translation">
+<div class="translation">
   <h2>凌空驾驭</h2>
   <p>
     只有风的声音<br>

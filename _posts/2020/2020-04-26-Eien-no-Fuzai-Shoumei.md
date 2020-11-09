@@ -14,7 +14,7 @@ excerpt: 引き金を引いた途端立ち現わる白く空虚な時よ。掻�
 作詞：椎名林檎<br>
 作曲：椎名林檎
 
-<blockquote class="lyric-original">
+<blockquote class="original">
   <h2>永遠の不在証明</h2>
   <p>
     引き金を引いた途端立ち現わる白く空虚な時よ<br>
@@ -39,7 +39,7 @@ excerpt: 引き金を引いた途端立ち現わる白く空虚な時よ。掻�
   </p>
 </blockquote>
 
-<div class="lyric-translation">
+<div class="translation">
   <h2>永远的不在场证明</h2>
   <p>
     扣下扳机就会显现的白色空虚的时刻啊<br>

@@ -15,7 +15,7 @@ excerpt: 夕暮れとこの街の匂い、染みついた諦めと希望。雨�
 作曲：中村由利<br>
 編曲：古井弘人
 
-<blockquote class="lyric-original">
+<blockquote class="original">
   <h2>Love is a Bird</h2>
   <p>
     夕暮れとこの街の匂い<br>
@@ -65,7 +65,7 @@ excerpt: 夕暮れとこの街の匂い、染みついた諦めと希望。雨�
   </p>
 </blockquote>
 
-<div class="lyric-translation">
+<div class="translation">
   <h2>爱是一只鸟儿</h2>
   <p>
     黄昏和这个街道的气味<br>

@@ -15,7 +15,7 @@ excerpt: 都会の眠りは 短く浅く。夢もカケラばかり。人はみ�
 作曲：大野克夫<br>
 編曲：大野克夫
 
-<blockquote class="lyric-original">
+<blockquote class="original">
   <h2>
     ホシが歩いた道を<br>
     〜名探偵コナン 新メイン・テーマ〜
@@ -62,7 +62,7 @@ excerpt: 都会の眠りは 短く浅く。夢もカケラばかり。人はみ�
   </p>
 </blockquote>
 
-<div class="lyric-translation">
+<div class="translation">
   <h2>
     星星走过的道路<br>
     ～名侦探柯南 新・主题曲～

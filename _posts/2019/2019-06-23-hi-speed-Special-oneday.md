@@ -15,7 +15,7 @@ excerpt: コーヒーは最初の一口、甘いケーキの端っこ、ポテ�
 作曲：中村由利<br>
 編曲：古井弘人
 
-<blockquote class="lyric-original">
+<blockquote class="original">
   <h2>hi-speed スペシャル oneday</h2>
   <p>
     コーヒーは最初の一口<br>
@@ -78,7 +78,7 @@ excerpt: コーヒーは最初の一口、甘いケーキの端っこ、ポテ�
   </p>
 </blockquote>
 
-<div class="lyric-translation">
+<div class="translation">
   <h2>高速 特别的 一天</h2>
   <p>
     咖啡是最初的一口<br>

@@ -15,7 +15,7 @@ excerpt: そっと目を閉じれば、いまも浮かぶよ。きらめく陽�
 作曲：大野克夫<br>
 編曲：大野克夫
 
-<blockquote class="lyric-original">
+<blockquote class="original">
   <h2>想い出たち 〜想い出〜</h2>
   <p>
     そっと目を閉じれば<br>
@@ -62,7 +62,7 @@ excerpt: そっと目を閉じれば、いまも浮かぶよ。きらめく陽�
   </p>
 </blockquote>
 
-<div class="lyric-translation">
+<div class="translation">
   <h2>回忆们 ～回忆～</h2>
   <p>
     轻轻闭上眼的话<br>

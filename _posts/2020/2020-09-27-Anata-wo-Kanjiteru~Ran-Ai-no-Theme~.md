@@ -15,7 +15,7 @@ excerpt: 離れて不意に気づく。大事なものがあるね。それは�
 作曲：大野克夫<br>
 編曲：大野克夫
 
-<blockquote class="lyric-original">
+<blockquote class="original">
   <h2>あなたを感じてる 〜蘭・愛のテーマ〜</h2>
   <p>
     離れて不意に気づく<br>
@@ -47,7 +47,7 @@ excerpt: 離れて不意に気づく。大事なものがあるね。それは�
   </p>
 </blockquote>
 
-<div class="lyric-translation">
+<div class="translation">
   <h2>感受着你 ～兰・爱的主题曲～</h2>
   <p>
     离开后突然发觉<br>

@@ -15,7 +15,7 @@ excerpt: バスケットシューズが飛切りお似合い。いいひとに�
 作曲：大野克夫<br>
 編曲：大野克夫
 
-<blockquote class="lyric-original">
+<blockquote class="original">
   <h2>いいひとに逢えたね 〜新一のテーマ〜</h2>
   <p>
     バスケットシューズが飛切りお似合い<br>
@@ -45,7 +45,7 @@ excerpt: バスケットシューズが飛切りお似合い。いいひとに�
   </p>
 </blockquote>
 
-<div class="lyric-translation">
+<div class="translation">
   <h2>遇见了好人啊 ～新一的主题曲～</h2>
   <p>
     篮球鞋适合飞奔<br>

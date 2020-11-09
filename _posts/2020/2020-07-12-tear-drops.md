@@ -15,7 +15,7 @@ excerpt: tear drops そうでしょ 気付いているんじゃない？tear dro
 作曲：大野愛果<br>
 編曲：葉山たけし
 
-<blockquote class="lyric-original">
+<blockquote class="original">
   <h2>tear drops</h2>
   <p>
     tear drops そうでしょ 気付いているんじゃない？<br>
@@ -68,7 +68,7 @@ excerpt: tear drops そうでしょ 気付いているんじゃない？tear dro
   </p>
 </blockquote>
 
-<div class="lyric-translation">
+<div class="translation">
   <h2>眼泪落下</h2>
   <p>
     tear drops 是那样吧 注意到了不是吗？<br>

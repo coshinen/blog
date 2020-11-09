@@ -15,7 +15,7 @@ excerpt: 公園で髪を切る、落ちてゆく毛先を払う。君が笑う �
 作曲：中村由利<br>
 編曲：古井弘人
 
-<blockquote class="lyric-original">
+<blockquote class="original">
   <h2>千以上の言葉を並べても…</h2>
   <p>
     公園で髪を切る<br>
@@ -63,7 +63,7 @@ excerpt: 公園で髪を切る、落ちてゆく毛先を払う。君が笑う �
   </p>
 </blockquote>
 
-<div class="lyric-translation">
+<div class="translation">
   <h2>纵使有千言万语…</h2>
   <p>
     在公园剪头发<br>

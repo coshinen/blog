@@ -15,7 +15,7 @@ excerpt: 一晩中考えても 解けなかった問題が、今日 目覚めた
 作曲：中村由利<br>
 編曲：古井弘人
 
-<blockquote class="lyric-original">
+<blockquote class="original">
   <h2>二人のロケット</h2>
   <p>
     一晩中考えても 解けなかった問題が<br>
@@ -77,7 +77,7 @@ excerpt: 一晩中考えても 解けなかった問題が、今日 目覚めた
   </p>
 </blockquote>
 
-<div class="lyric-translation">
+<div class="translation">
   <h2>两个人的火箭</h2>
   <p>
     尽管考虑了一整晚 也无法解决的问题<br>

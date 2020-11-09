@@ -15,7 +15,7 @@ excerpt: 永い夜が朝が昼が すべてのらりくらり流れゆくよ、�
 作曲：中村由利<br>
 編曲：古井弘人
 
-<blockquote class="lyric-original">
+<blockquote class="original">
   <h2>世界はまわると言うけれど</h2>
   <p>
     永い夜が朝が昼が すべてのらりくらり流れゆくよ<br>
@@ -56,7 +56,7 @@ excerpt: 永い夜が朝が昼が すべてのらりくらり流れゆくよ、�
   </p>
 </blockquote>
 
-<div class="lyric-translation">
+<div class="translation">
   <h2>虽说世界是旋转的</h2>
   <p>
     漫长的夜晚早晨白天 全部顺其自然地流逝着<br>

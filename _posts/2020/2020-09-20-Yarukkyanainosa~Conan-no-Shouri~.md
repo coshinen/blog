@@ -15,7 +15,7 @@ excerpt: やるっきゃないのさ。いま 勇気だして。やるっきゃ�
 作曲：大野克夫<br>
 編曲：大野克夫
 
-<blockquote class="lyric-original">
+<blockquote class="original">
   <h2>やるっきゃないのさ 〜コナンの勝利〜</h2>
   <p>
     やるっきゃないのさ<br>
@@ -52,7 +52,7 @@ excerpt: やるっきゃないのさ。いま 勇気だして。やるっきゃ�
   </p>
 </blockquote>
 
-<div class="lyric-translation">
+<div class="translation">
   <h2>不得不做啦 ～柯南的胜利～</h2>
   <p>
     不得不做啦<br>

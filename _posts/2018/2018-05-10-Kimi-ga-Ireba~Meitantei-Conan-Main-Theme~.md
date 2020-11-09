@@ -15,7 +15,7 @@ excerpt: うつむくその背中に、痛い雨がつき刺さる。祈る想�
 作曲：大野克夫<br>
 編曲：大野克夫
 
-<blockquote class="lyric-original">
+<blockquote class="original">
   <h2>
     キミがいれば<br>
     〜名探偵コナン メイン・テーマ〜
@@ -53,7 +53,7 @@ excerpt: うつむくその背中に、痛い雨がつき刺さる。祈る想�
   </p>
 </blockquote>
 
-<div class="lyric-translation">
+<div class="translation">
   <h2>
     如果有你在<br>
     ～名侦探柯南 主题曲～

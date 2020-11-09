@@ -15,7 +15,7 @@ excerpt: 走り出したら通り雨、もう一休みしてる。待ちきれ�
 作曲：中村由利<br>
 編曲：古井弘人
 
-<blockquote class="lyric-original">
+<blockquote class="original">
   <h2>Jewel Fish</h2>
   <p>
     走り出したら通り雨<br>
@@ -65,7 +65,7 @@ excerpt: 走り出したら通り雨、もう一休みしてる。待ちきれ�
   </p>
 </blockquote>
 
-<div class="lyric-translation">
+<div class="translation">
   <h2>宝石鱼</h2>
   <p>
     一跑起来就下起了阵雨<br>

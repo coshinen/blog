@@ -12,7 +12,7 @@ excerpt: Should auld acquaintance be forgot, and never brought to mind? Should a
 
 歌手：中村由利
 
-<blockquote class="lyric-original">
+<blockquote class="original">
   <h2>AULD LANG SYNE</h2>
   <p>
     Should auld acquaintance be forgot<br>
@@ -29,7 +29,7 @@ excerpt: Should auld acquaintance be forgot, and never brought to mind? Should a
   </p>
 </blockquote>
 
-<div class="lyric-translation">
+<div class="translation">
   <h2>逝去已久的日子</h2>
   <p>
     应该忘记以前的相识<br>

@@ -15,7 +15,7 @@ excerpt: 追いかけ合う月と太陽、決して同じ朝は来なくて。�
 作曲：中村由利<br>
 編曲：古井弘人
 
-<blockquote class="lyric-original">
+<blockquote class="original">
   <h2>永遠に葬れ</h2>
   <p>
     追いかけ合う月と太陽<br>
@@ -58,7 +58,7 @@ excerpt: 追いかけ合う月と太陽、決して同じ朝は来なくて。�
   </p>
 </blockquote>
 
-<div class="lyric-translation">
+<div class="translation">
   <h2>永远地埋葬</h2>
   <p>
     相互追逐的月亮和太阳<br>

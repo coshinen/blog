@@ -15,7 +15,7 @@ excerpt: おいでやす うちの故郷は お寺や 神社だけじゃない�
 編曲：江口亮<br>
 弦編曲：クラッシャー木村
 
-<blockquote class="lyric-original">
+<blockquote class="original">
   <h2>気まぐれロマンティック 京都Ver.</h2>
   <p>
     おいでやす うちの故郷は お寺や 神社だけじゃない<br>
@@ -44,7 +44,7 @@ excerpt: おいでやす うちの故郷は お寺や 神社だけじゃない�
   </p>
 </blockquote>
 
-<div class="lyric-translation">
+<div class="translation">
   <h2>摇摆不定的浪漫 京都版</h2>
   <p>
     欢迎光临 我的故乡 并不是只有寺庙 神社<br>

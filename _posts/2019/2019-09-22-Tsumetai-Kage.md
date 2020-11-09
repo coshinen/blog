@@ -15,7 +15,7 @@ excerpt: 冷えた 空から 溶け込む 淡い雪、すべては この大地�
 作曲：中村由利<br>
 編曲：古井弘人
 
-<blockquote class="lyric-original">
+<blockquote class="original">
   <h2>冷たい影</h2>
   <p>
     冷えた 空から 溶け込む 淡い雪<br>
@@ -52,7 +52,7 @@ excerpt: 冷えた 空から 溶け込む 淡い雪、すべては この大地�
   </p>
 </blockquote>
 
-<div class="lyric-translation">
+<div class="translation">
   <h2>冷漠的影子</h2>
   <p>
     来自冰冷的 天空的 融化的 淡雪<br>

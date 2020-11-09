@@ -15,7 +15,7 @@ excerpt: 深い森に身をひそめて、逃れの町さがしてる。
 作曲：中村由利<br>
 編曲：古井弘人
 
-<blockquote class="lyric-original">
+<blockquote class="original">
   <h2>逃れの町</h2>
   <p>
     深い森に身をひそめて<br>
@@ -54,7 +54,7 @@ excerpt: 深い森に身をひそめて、逃れの町さがしてる。
   </p>
 </blockquote>
 
-<div class="lyric-translation">
+<div class="translation">
   <h2>逃避的城市</h2>
   <p>
     藏身于深深的森林中<br>

@@ -15,7 +15,7 @@ excerpt: どうしたの？（蘭姉ちゃんこそ、どうしたの？）元�
 作曲：大野克夫<br>
 編曲：大野克夫
 
-<blockquote class="lyric-original">
+<blockquote class="original">
   <h2>瞳を閉じれば 〜蘭のテーマ〜</h2>
   <p>
     どうしたの？（蘭姉ちゃんこそ、どうしたの？）<br>
@@ -38,7 +38,7 @@ excerpt: どうしたの？（蘭姉ちゃんこそ、どうしたの？）元�
   </p>
 </blockquote>
 
-<div class="lyric-translation">
+<div class="translation">
   <h2>闭上眼的话 ～兰的主题曲～</h2>
   <p>
     怎么啦？（小兰姐姐才是，怎么啦？）<br>

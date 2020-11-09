@@ -15,7 +15,7 @@ excerpt: 君のすべては 君の心に、今は しまってあるから。
 作曲：Hidenori, トオミ ヨウ<br>
 編曲：Hidenori, トオミ ヨウ
 
-<blockquote class="lyric-original">
+<blockquote class="original">
   <h2>星の中の君</h2>
   <p>
     君のすべては 君の心に<br>
@@ -52,7 +52,7 @@ excerpt: 君のすべては 君の心に、今は しまってあるから。
   </p>
 </blockquote>
 
-<div class="lyric-translation">
+<div class="translation">
   <h2>星星中的你</h2>
   <p>
     你的全部 在你心中<br>

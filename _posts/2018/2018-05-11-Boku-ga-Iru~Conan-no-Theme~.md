@@ -15,7 +15,7 @@ excerpt: 明日になれば、涙が乾く、心も色づいて来る。笑顔�
 作曲：大野克夫<br>
 編曲：大野克夫
 
-<blockquote class="lyric-original">
+<blockquote class="original">
   <h2>ぼくがいる 〜コナンのテーマ〜</h2>
   <p>
     明日になれば 涙が乾く<br>
@@ -46,7 +46,7 @@ excerpt: 明日になれば、涙が乾く、心も色づいて来る。笑顔�
   </p>
 </blockquote>
 
-<div class="lyric-translation">
+<div class="translation">
   <h2>有我在 ～柯南的主题曲～</h2>
   <p>
     如果到了明天 泪水就会流干<br>

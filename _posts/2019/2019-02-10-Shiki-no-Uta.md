@@ -15,7 +15,7 @@ excerpt: 春を愛する人は、心清き人。すみれの花のような、�
 作曲：荒木とよひさ<br>
 編曲：青木望
 
-<blockquote class="lyric-original">
+<blockquote class="original">
   <h2>四季の歌</h2>
   <p>
     春を愛する人は 心清き人<br>
@@ -33,7 +33,7 @@ excerpt: 春を愛する人は、心清き人。すみれの花のような、�
   </p>
 </blockquote>
 
-<div class="lyric-translation">
+<div class="translation">
   <h2>四季的歌</h2>
   <p>
     热爱春天的人 是内心纯洁的人<br>

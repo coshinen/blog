@@ -15,7 +15,7 @@ excerpt: 寄り添う二人に 君がオーバーラップ。色なき風に 思
 作曲：徳永暁人<br>
 編曲：徳永暁人
 
-<blockquote class="lyric-original">
+<blockquote class="original">
   <h2>渡月橋 〜君 想ふ〜</h2>
   <p>
     寄り添う二人に 君がオーバーラップ<br>
@@ -68,7 +68,7 @@ excerpt: 寄り添う二人に 君がオーバーラップ。色なき風に 思
   </p>
 </blockquote>
 
-<div class="lyric-translation">
+<div class="translation">
   <h2>渡月桥 ～想念 你～</h2>
   <p>
     你重叠 于相互依偎的两个人<br>

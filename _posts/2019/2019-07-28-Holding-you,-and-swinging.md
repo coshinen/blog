@@ -15,7 +15,7 @@ excerpt: 街の音 人の声 ざわめき、やけに今 躰が音をひらう�
 作曲：中村由利<br>
 編曲：古井弘人
 
-<blockquote class="lyric-original">
+<blockquote class="original">
   <h2>Holding you, and swinging</h2>
   <p>
     街の音 人の声 ざわめき<br>
@@ -81,7 +81,7 @@ excerpt: 街の音 人の声 ざわめき、やけに今 躰が音をひらう�
   </p>
 </blockquote>
 
-<div class="lyric-translation">
+<div class="translation">
   <h2>抱着你，摇摆</h2>
   <p>
     街道的声音 人的声音 嘈杂<br>

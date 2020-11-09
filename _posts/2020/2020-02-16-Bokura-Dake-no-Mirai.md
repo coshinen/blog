@@ -15,7 +15,7 @@ excerpt: 生まれ変われるなら、早く君にあいたい。通り過ぎ�
 作曲：中村由利<br>
 編曲：古井弘人
 
-<blockquote class="lyric-original">
+<blockquote class="original">
   <h2>僕らだけの未来</h2>
   <p>
     生まれ変われるなら<br>
@@ -66,7 +66,7 @@ excerpt: 生まれ変われるなら、早く君にあいたい。通り過ぎ�
   </p>
 </blockquote>
 
-<div class="lyric-translation">
+<div class="translation">
   <h2>只属于我们的未来</h2>
   <p>
     如果能够重生<br>

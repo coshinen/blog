@@ -15,7 +15,7 @@ excerpt: 百年ぶりの世紀末 泣けといわれて僕は笑った。ひさ�
 作曲：甲本ヒロト・真島昌利<br>
 編曲：ザ・ハイロウズ
 
-<blockquote class="lyric-original">
+<blockquote class="original">
   <h2>胸がドキドキ</h2>
   <p>
     百年ぶりの世紀末 泣けといわれて僕は笑った<br>
@@ -51,7 +51,7 @@ excerpt: 百年ぶりの世紀末 泣けといわれて僕は笑った。ひさ�
   </p>
 </blockquote>
 
-<div class="lyric-translation">
+<div class="translation">
   <h2>心中动荡不安</h2>
   <p>
     过了百年的世纪末 本该哭的我却笑了<br>

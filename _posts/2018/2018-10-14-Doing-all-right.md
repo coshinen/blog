@@ -15,7 +15,7 @@ excerpt: Doing all right!かみしめた君の記憶 木漏れ日の匂い、置
 作曲：中村由利<br>
 編曲：古井弘人
 
-<blockquote class="lyric-original">
+<blockquote class="original">
   <h2>Doing all right</h2>
   <p>
     Doing all right!<br>
@@ -55,7 +55,7 @@ excerpt: Doing all right!かみしめた君の記憶 木漏れ日の匂い、置
   </p>
 </blockquote>
 
-<div class="lyric-translation">
+<div class="translation">
   <h2>做好一切</h2>
   <p>
     Doing all right!<br>

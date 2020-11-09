@@ -15,7 +15,7 @@ excerpt: 薄明かりを灯して、冷たい壁に 頬寄せ。静寂に 耳を
 作曲：中村由利<br>
 編曲：古井弘人
 
-<blockquote class="lyric-original">
+<blockquote class="original">
   <h2>Marionette Fantasia</h2>
   <p>
     薄明かりを灯して<br>
@@ -82,7 +82,7 @@ excerpt: 薄明かりを灯して、冷たい壁に 頬寄せ。静寂に 耳を
   </p>
 </blockquote>
 
-<div class="lyric-translation">
+<div class="translation">
   <h2>木偶幻想曲</h2>
   <p>
     点亮微弱的光<br>

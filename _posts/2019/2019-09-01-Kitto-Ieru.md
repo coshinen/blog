@@ -15,7 +15,7 @@ excerpt: 明日あった時は きっと言える素直になれるよ、今ま�
 作曲：山口一久<br>
 編曲：山口一久
 
-<blockquote class="lyric-original">
+<blockquote class="original">
   <h2>きっと言える</h2>
   <p>
     明日あった時は きっと言える素直になれるよ<br>
@@ -41,7 +41,7 @@ excerpt: 明日あった時は きっと言える素直になれるよ、今ま�
   </p>
 </blockquote>
 
-<div class="lyric-translation">
+<div class="translation">
   <h2>一定能说出口</h2>
   <p>
     明天见面时 一定能坦率地说出口<br>

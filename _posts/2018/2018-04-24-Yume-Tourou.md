@@ -14,7 +14,7 @@ excerpt: あぁ、このまま僕たちの声が 世界の端っこまで消え�
 作詞：野田洋次郎<br>
 作曲：野田洋次郎
 
-<blockquote class="lyric-original">
+<blockquote class="original">
   <h2>夢灯籠</h2>
   <p>
     あぁ このまま僕たちの声が 世界の端っこまで消えることなく<br>
@@ -38,7 +38,7 @@ excerpt: あぁ、このまま僕たちの声が 世界の端っこまで消え�
   </p>
 </blockquote>
 
-<div class="lyric-translation">
+<div class="translation">
   <h2>梦灯笼</h2>
   <p>
     啊 如果我们的声音能够 传达到世界的彼端也不会消失<br>

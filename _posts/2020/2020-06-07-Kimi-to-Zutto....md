@@ -16,7 +16,7 @@ excerpt: 想い出してごらん 萌ゆる草木 散る花ビラ。共に笑い
 作曲：Koma2 Kaz<br>
 編曲：Koma2 Kaz
 
-<blockquote class="lyric-original">
+<blockquote class="original">
   <h2>君とずっと…</h2>
   <p>
     想い出してごらん 萌ゆる草木 散る花ビラ<br>
@@ -66,7 +66,7 @@ excerpt: 想い出してごらん 萌ゆる草木 散る花ビラ。共に笑い
   </p>
 </blockquote>
 
-<div class="lyric-translation">
+<div class="translation">
   <h2>和你一直…</h2>
   <p>
     试着回想起 萌发的草木 散落的花瓣<br>

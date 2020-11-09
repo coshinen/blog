@@ -13,7 +13,7 @@ excerpt: Lying here with you so close to me. It's hard to fight these feelings w
 Singer: Lady Antebellum<br>
 Songwriters: Hillary Scott, Charles Kelley, Dave Haywood & Dallas Davidson
 
-<blockquote class="lyric-original">
+<blockquote class="original">
   <h2>Just A Kiss</h2>
   <p>
     Lying here with you so close to me<br>
@@ -65,7 +65,7 @@ Songwriters: Hillary Scott, Charles Kelley, Dave Haywood & Dallas Davidson
   </p>
 </blockquote>
 
-<div class="lyric-translation">
+<div class="translation">
   <h2>只是个吻</h2>
   <p>
     当你如此的靠近我时<br>

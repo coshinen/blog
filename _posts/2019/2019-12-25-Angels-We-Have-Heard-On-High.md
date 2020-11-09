@@ -12,7 +12,7 @@ excerpt: Angels we have heard on high, sweetly singing o'er the plains, and the 
 
 歌手：中村由利
 
-<blockquote class="lyric-original">
+<blockquote class="original">
   <h2>Angels We Have Heard On High</h2>
   <p>
     Angels we have heard on high<br>
@@ -38,7 +38,7 @@ excerpt: Angels we have heard on high, sweetly singing o'er the plains, and the 
   </p>
 </blockquote>
 
-<div class="lyric-translation">
+<div class="translation">
   <h2>我们听到天使在高处</h2>
   <p>
     我们听到天使在高处<br>

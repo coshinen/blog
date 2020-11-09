@@ -15,7 +15,7 @@ excerpt: close island、素早く暮れる空に、意味もなく胸が切な�
 作曲：中村由利<br>
 編曲：古井弘人
 
-<blockquote class="lyric-original">
+<blockquote class="original">
   <h2>HAPPY DAYS?</h2>
   <p>
     close island<br>
@@ -70,7 +70,7 @@ excerpt: close island、素早く暮れる空に、意味もなく胸が切な�
   </p>
 </blockquote>
 
-<div class="lyric-translation">
+<div class="translation">
   <h2>快乐的日子？</h2>
   <p>
     close island<br>

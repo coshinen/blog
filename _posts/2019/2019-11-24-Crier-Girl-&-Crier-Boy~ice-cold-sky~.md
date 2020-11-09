@@ -15,7 +15,7 @@ excerpt: 気づけば温もり求めて心が彷徨うことない？
 作曲：中村由利<br>
 編曲：古井弘人
 
-<blockquote class="lyric-original">
+<blockquote class="original">
   <h2>Crier Girl & Crier Boy 〜ice cold sky〜</h2>
   <p>
     気づけば温もり求めて心が彷徨うことない？<br>
@@ -60,7 +60,7 @@ excerpt: 気づけば温もり求めて心が彷徨うことない？
   </p>
 </blockquote>
 
-<div class="lyric-translation">
+<div class="translation">
   <h2>哭泣的女孩&男孩～冰冷的天空～</h2>
   <p>
     如果注意到的话追求温暖的心不会徬徨吗？<br>

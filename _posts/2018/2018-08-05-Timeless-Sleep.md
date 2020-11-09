@@ -15,7 +15,7 @@ excerpt: 君がいなくなってから、何度朝日迎えたかしれない�
 作曲：中村由利<br>
 編曲：古井弘人
 
-<blockquote class="lyric-original">
+<blockquote class="original">
   <h2>Timeless Sleep</h2>
   <p>
     君がいなくなってから<br>
@@ -51,7 +51,7 @@ excerpt: 君がいなくなってから、何度朝日迎えたかしれない�
   </p>
 </blockquote>
 
-<div class="lyric-translation">
+<div class="translation">
   <h2>永眠</h2>
   <p>
     从你不在开始<br>

@@ -15,7 +15,7 @@ excerpt: 無防備に求めることに線を引いた 愛しさだけなら、�
 作曲：中村由利<br>
 編曲：古井弘人
 
-<blockquote class="lyric-original">
+<blockquote class="original">
   <h2>泣けない夜も 泣かない朝も</h2>
   <p>
     無防備に求めることに線を引いた 愛しさだけなら<br>
@@ -57,7 +57,7 @@ excerpt: 無防備に求めることに線を引いた 愛しさだけなら、�
   </p>
 </blockquote>
 
-<div class="lyric-translation">
+<div class="translation">
   <h2>既不能哭泣的夜晚 又不哭泣的早晨</h2>
   <p>
     为追求无防备而画上界线 只是爱的话<br>

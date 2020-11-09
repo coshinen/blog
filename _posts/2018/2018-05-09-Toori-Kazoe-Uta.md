@@ -13,7 +13,7 @@ excerpt: 京都には東西と南北に碁盤の目のように通りが通っ�
 
 歌手：横山由依
 
-<blockquote class="lyric-original">
+<blockquote class="original">
   <h2>通り数え歌（東西編）</h2>
   <p>
     丸 竹 夷 二 押 御池<br>
@@ -26,7 +26,7 @@ excerpt: 京都には東西と南北に碁盤の目のように通りが通っ�
   </p>
 </blockquote>
 
-<div class="lyric-translation">
+<div class="translation">
   <h2>数道路歌（东西篇）</h2>
   <p>
     丸 竹 夷 二 押 御池<br>
@@ -45,7 +45,7 @@ excerpt: 京都には東西と南北に碁盤の目のように通りが通っ�
 
 歌手：遠山和葉
 
-<blockquote class="lyric-original">
+<blockquote class="original">
   <h2>通り数え歌（東西編）〜コナンのテーマ〜</h2>
   <p>
     丸竹夷二押御池<br>
@@ -58,7 +58,7 @@ excerpt: 京都には東西と南北に碁盤の目のように通りが通っ�
   </p>
 </blockquote>
 
-<div class="lyric-translation">
+<div class="translation">
   <h2>数道路歌（东西篇）～柯南的主题曲～</h2>
   <p>
     丸竹 夷二 押御池<br>

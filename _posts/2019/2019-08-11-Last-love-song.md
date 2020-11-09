@@ -15,7 +15,7 @@ excerpt: 午後になると西陽が射す、部屋の片隅のソファー。�
 作曲：中村由利<br>
 編曲：古井弘人
 
-<blockquote class="lyric-original">
+<blockquote class="original">
   <h2>Last love song</h2>
   <p>
     午後になると西陽が射す<br>
@@ -59,7 +59,7 @@ excerpt: 午後になると西陽が射す、部屋の片隅のソファー。�
   </p>
 </blockquote>
 
-<div class="lyric-translation">
+<div class="translation">
   <h2>最后的恋歌</h2>
   <p>
     到了下午阳光照射<br>

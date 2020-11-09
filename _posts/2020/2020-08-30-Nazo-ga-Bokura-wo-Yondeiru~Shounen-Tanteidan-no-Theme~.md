@@ -15,7 +15,7 @@ excerpt: どこかで誰かが僕らを呼ぶぜ。ナゾナゾだらけの事�
 作曲：大野克夫<br>
 編曲：大野克夫
 
-<blockquote class="lyric-original">
+<blockquote class="original">
   <h2>
     ナゾが僕らを呼んでいる<br>
     〜少年探偵団のテーマ〜
@@ -60,7 +60,7 @@ excerpt: どこかで誰かが僕らを呼ぶぜ。ナゾナゾだらけの事�
   </p>
 </blockquote>
 
-<div class="lyric-translation">
+<div class="translation">
   <h2>
     谜团在召唤我们<br>
     ～少年侦探团的主题曲～

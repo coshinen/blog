@@ -15,7 +15,7 @@ excerpt: じゃれ合う日曜の午後 (oh- yeah Why do I love you ~)、まだ�
 作曲：中村由利<br>
 編曲：古井弘人
 
-<blockquote class="lyric-original">
+<blockquote class="original">
   <h2>幸福なペット</h2>
   <p>
     じゃれ合う日曜の午後<br>
@@ -54,7 +54,7 @@ excerpt: じゃれ合う日曜の午後 (oh- yeah Why do I love you ~)、まだ�
   </p>
 </blockquote>
 
-<div class="lyric-translation">
+<div class="translation">
   <h2>幸福的宠物</h2>
   <p>
     一起玩耍的周日下午<br>

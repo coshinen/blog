@@ -15,7 +15,7 @@ excerpt: 決してその手を離さずに、振り返らないでいて。願�
 作曲：中村由利<br>
 編曲：古井弘人
 
-<blockquote class="lyric-original">
+<blockquote class="original">
   <h2>未完成な音色</h2>
   <p>
     決してその手を離さずに<br>
@@ -62,7 +62,7 @@ excerpt: 決してその手を離さずに、振り返らないでいて。願�
   </p>
 </blockquote>
 
-<div class="lyric-translation">
+<div class="translation">
   <h2>未完成的音色</h2>
   <p>
     绝不放开那只手<br>

@@ -12,7 +12,7 @@ excerpt: 桜の花びら 風の中に舞う。一片散るたび 目に射す頬
 
 歌手：yu-yu
 
-<blockquote class="lyric-original">
+<blockquote class="original">
   <h2>桜唄</h2>
   <p>
     桜の花びら 風の中に舞う<br>
@@ -29,7 +29,7 @@ excerpt: 桜の花びら 風の中に舞う。一片散るたび 目に射す頬
   </p>
 </blockquote>
 
-<div class="lyric-translation">
+<div class="translation">
   <h2>樱歌</h2>
   <p>
     樱花的花瓣 在风中飞舞<br>

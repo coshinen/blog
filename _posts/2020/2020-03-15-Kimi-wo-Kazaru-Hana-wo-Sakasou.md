@@ -15,7 +15,7 @@ excerpt: 君を飾る花を咲かそう。心をこめて育ててゆくよ、�
 作曲：中村由利<br>
 編曲：古井弘人
 
-<blockquote class="lyric-original">
+<blockquote class="original">
   <h2>君を飾る花を咲かそう</h2>
   <p>
     君を飾る花を咲かそう<br>
@@ -54,7 +54,7 @@ excerpt: 君を飾る花を咲かそう。心をこめて育ててゆくよ、�
   </p>
 </blockquote>
 
-<div class="lyric-translation">
+<div class="translation">
   <h2>让装饰你的花儿绽放吧</h2>
   <p>
     让装饰你的花儿绽放吧<br>

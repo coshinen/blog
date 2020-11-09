@@ -10,7 +10,7 @@ excerpt: In Me, Past, Present, Future Meet, to hold long chiding conference. My 
 ---
 作者：Siegfried Sassoon
 
-<blockquote class="lyric-original">
+<blockquote class="original">
   <h2>In Me, Past, Present, Future Meet</h2>
   <p>
     In me, past, present, future meet<br>
@@ -29,7 +29,7 @@ excerpt: In Me, Past, Present, Future Meet, to hold long chiding conference. My 
   </p>
 </blockquote>
 
-<div class="lyric-translation">
+<div class="translation">
   <h2>在我心中，遇见过去、现在、未来</h2>
   <p>
     在我心中，遇见过去、现在、未来<br>

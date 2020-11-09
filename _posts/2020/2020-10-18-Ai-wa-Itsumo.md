@@ -15,7 +15,7 @@ excerpt: あの日から 感じてた。ふたり 離れても、この想い �
 作曲：大野克夫<br>
 編曲：大野克夫
 
-<blockquote class="lyric-original">
+<blockquote class="original">
   <h2>愛はいつも</h2>
   <p>
     あの日から 感じてた<br>
@@ -28,7 +28,7 @@ excerpt: あの日から 感じてた。ふたり 離れても、この想い �
   </p>
 </blockquote>
 
-<div class="lyric-translation">
+<div class="translation">
   <h2>爱总是</h2>
   <p>
     那一天开始 就感觉到了<br>

@@ -16,7 +16,7 @@ excerpt: いくら待っていたって この店は、誰も何も 持って来
 作曲：徳永暁人<br>
 編曲：岡本仁志
 
-<blockquote class="lyric-original">
+<blockquote class="original">
   <h2>悲しいほど 今日の夕陽 きれいだね</h2>
   <p>
     いくら待っていたって この店は<br>
@@ -54,7 +54,7 @@ excerpt: いくら待っていたって この店は、誰も何も 持って来
   </p>
 </blockquote>
 
-<div class="lyric-translation">
+<div class="translation">
   <h2>越是悲伤 今天的夕阳 就越是漂亮吧</h2>
   <p>
     无论等多久 这家店<br>

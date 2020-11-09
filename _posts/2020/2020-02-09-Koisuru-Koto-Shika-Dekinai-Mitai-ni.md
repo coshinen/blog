@@ -15,7 +15,7 @@ excerpt: 町中オレンジ色に染める、秋空 加速してゆくサイク�
 作曲：中村由利<br>
 編曲：古井弘人
 
-<blockquote class="lyric-original">
+<blockquote class="original">
   <h2>恋することしか出来ないみたいに</h2>
   <p>
     町中オレンジ色に染める<br>
@@ -69,7 +69,7 @@ excerpt: 町中オレンジ色に染める、秋空 加速してゆくサイク�
   </p>
 </blockquote>
 
-<div class="lyric-translation">
+<div class="translation">
   <h2>好像只能恋爱一样</h2>
   <p>
     整个城市都染上了橙色<br>
