@@ -130,7 +130,7 @@ excerpt: Here are my favorite quotes from someones that inspire me or make me la
 > * One often meets his destiny on the road he takes to avoid it.
 > * Nothing is impossible.
 
-> Siegfried Sassoon, In Me, Past, Present, Future Meet:
+> Siegfried Sassoon, [In Me, Past, Present, Future Meet](/blog/2020/11/In-Me,-Past,-Present,-Future-Meet.html):
 > * In me the tiger sniffs the rose.
 
 > Socrates:
