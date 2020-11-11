@@ -188,7 +188,7 @@ excerpt: Here are some books I read.
 
 > ### 操作系统[🔝](#索引){:.right}
 > 
-> * [Linux: a Portable Operating System](https://www.cs.helsinki.fi/u/kutvonen/index_files/linus.pdf){:target="_blank"}，[芬] [Linus Torvalds](https://github.com/torvalds){:target="_blank"}
+> * [Linux: a Portable Operating System](https://www.cs.helsinki.fi/u/kutvonen/index_files/linus.pdf){:target="_blank"}，[芬] [Linus Torvalds](https://www.cs.helsinki.fi/u/torvalds/){:target="_blank"}
 
 > ### 程序人生[🔝](#索引){:.right}
 > 
@@ -205,7 +205,6 @@ excerpt: Here are some books I read.
 > * [How To Ask Questions The Smart Way](http://www.catb.org/~esr/faqs/smart-questions.html){:target="_blank"}，[美] Eric S. Raymond, Rick Moen
 > * [快乐的 Linux 命令行](https://billie66.github.io/TLCL/){:target="_blank"}，[美] William Shotts
 > * [中文文案排案指北](https://sparanoid.com/note/chinese-copywriting-guidelines/){:target="_blank"}，[中] Tunghsiao Liu
-> * [中文技术文档的写作规范](https://github.com/ruanyf/document-style-guide){:target="_blank"}，[中] 阮一峰
 
 ## 杂类[🔝](#索引){:.right}
 
