@@ -8,64 +8,55 @@ category: 区块链
 tags: Bitcoin bitcoin-cli
 excerpt: $ bitcoin-cli addmultisigaddress urequired ["key",...] ( "account" )
 ---
-## 提示说明
+## 1. 帮助内容
 
 ```shell
-addmultisigaddress urequired ["key",...] ( "account" ) # 添加一个需要 nrequired 个签名的多重签名地址到钱包
-```
+$ bitcoin-cli help addmultisigaddress
+addmultisigaddress urequired ["key",...] ( "account" )
 
-**每个密钥都是一个比特币地址或 16 进制编码公钥。如果指定了账户（已过时），则分配地址到该账户。**
+添加一个需要 n 个签名的多签地址到钱包。
+每个密钥都是一个比特币地址或 16 进制编码的公钥。
+如果指定了 'account'（已过时），则分配地址到该账户。
 
 参数：
-1. nrequired（数字，必备）n 个密钥或地址所需的签名数量。
-2. keysobject（字符串，必备）一个比特币地址或 16 进制编码公钥的 json 数组。
-```shell
+1. nrequired    （数字，必备）n 个密钥或地址所需的签名数。
+2. "keysobject" （字符串，必备）一个比特币地址或 16 进制编码的公钥的 json 数组
      [
-       "key"    （字符串）比特币地址或 16 进制编码的公钥
+       "address"（字符串）比特币地址或 16 进制编码的公钥
        ,...
      ]
-```
-3. account（字符串，可选，已过时）分配地址到该账户。
+3. "account"    （字符串，可选）已过时。一个用于分配地址的账户。
 
-结果：（字符串）返回一个关联密钥的比特币地址（base58 编码的脚本索引）。
+结果：
+"bitcoinaddress"（字符串）一个关联密钥的比特币地址。
 
-## 用法示例
+例子：
 
-### 比特币核心客户端
+添加一个含 2 个地址的多签地址
+> bitcoin-cli addmultisigaddress 2 "[\"16sSauSf5pF2UkUwvKGq4qjNRzBZYqgEL5\",\"171sgjn4YtPu27adkKGrdDwzRTxnRkBfKV\"]"
 
-```shell
-$ bitcoin-cli getnewaddress
-1Ge7nrPf46ynNkzASjFxAtxim5qRJG3CVB
-$ bitcoin-cli getnewaddress
-1GdZoU57JSNfPzRcecLw182zPEE4DNwSL1
-$ bitcoin-cli addmultisigaddress 2 "[\"1Ge7nrPf46ynNkzASjFxAtxim5qRJG3CVB\",\"1GdZoU57JSNfPzRcecLw182zPEE4DNwSL1\"]"
-36cQfr8uciR5svcX5Ge3H3XuWiXTrbtAGQ
+作为 json rpc 调用
+> curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "addmultisigaddress", "params": [2, "[\"16sSauSf5pF2UkUwvKGq4qjNRzBZYqgEL5\",\"171sgjn4YtPu27adkKGrdDwzRTxnRkBfKV\"]"] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
 ```
 
-### cURL
+## 2. 源码剖析
 
-```shell
-暂无。
-```
-
-## 源码剖析
-
-addmultisigaddress 对应的函数在“rpcserver.h”文件中被引用。
+`addmultisigaddress` 对应的函数在文件 `rpcserver.h` 中被引用。
 
 ```cpp
-extern UniValue addmultisigaddress(const UniValue& params, bool fHelp); // 添加多重签名地址
+extern UniValue addmultisigaddress(const UniValue& params, bool fHelp);
 ```
 
-实现在“wallet/rpcwallet.cpp”文件中。
+实现在文件 `wallet/rpcwallet.cpp` 中。
 
 ```cpp
 UniValue addmultisigaddress(const UniValue& params, bool fHelp)
 {
-    if (!EnsureWalletIsAvailable(fHelp)) // 确保当前钱包可用
+    if (!EnsureWalletIsAvailable(fHelp)) // 1. 确保钱包可用
         return NullUniValue;
     
-    if (fHelp || params.size() < 2 || params.size() > 3) // 参数为 2 或 3 个
-    { // 命令帮助反馈
+    if (fHelp || params.size() < 2 || params.size() > 3)
+    {
         string msg = "addmultisigaddress nrequired [\"key\",...] ( \"account\" )\n"
             "\nAdd a nrequired-to-sign multisignature address to the wallet.\n"
             "Each key is a Bitcoin address or hex-encoded public key.\n"
@@ -90,34 +81,34 @@ UniValue addmultisigaddress(const UniValue& params, bool fHelp)
             + HelpExampleRpc("addmultisigaddress", "2, \"[\\\"16sSauSf5pF2UkUwvKGq4qjNRzBZYqgEL5\\\",\\\"171sgjn4YtPu27adkKGrdDwzRTxnRkBfKV\\\"]\"")
         ;
         throw runtime_error(msg);
-    }
+    } // 2. 帮助内容
 
-    LOCK2(cs_main, pwalletMain->cs_wallet); // 钱包上锁
+    LOCK2(cs_main, pwalletMain->cs_wallet);
 
     string strAccount;
     if (params.size() > 2)
-        strAccount = AccountFromValue(params[2]); // 获取指定账户名
+        strAccount = AccountFromValue(params[2]);
 
-    // Construct using pay-to-script-hash: // 使用 P2SH 构建
-    CScript inner = _createmultisig_redeemScript(params); // 创建多签赎回脚本
-    CScriptID innerID(inner); // 获取脚本索引
-    pwalletMain->AddCScript(inner); // 添加该脚本索引到钱包
+    // Construct using pay-to-script-hash:
+    CScript inner = _createmultisig_redeemScript(params); // 3. 使用 P2SH 构建：
+    CScriptID innerID(inner);
+    pwalletMain->AddCScript(inner);
 
-    pwalletMain->SetAddressBook(innerID, strAccount, "send"); // 设置地址簿
-    return CBitcoinAddress(innerID).ToString(); // 对脚本索引进行 base58 编码后返回
+    pwalletMain->SetAddressBook(innerID, strAccount, "send");
+    return CBitcoinAddress(innerID).ToString();
 }
 ```
 
-基本流程：
-1. 确保当前钱包可用。
-2. 处理命令帮助和参数个数。
-3. 钱包上锁。
-4. 获取指定的账户名，若未指定，则为默认账户 ""。
-5. 创建多签赎回脚本，获取脚本索引并把该索引添加到钱包。
-6. 设置脚本索引和指定账户到地址簿，脚本用途为 "send"。
-7. 对脚本索引进行 base58 编码并返回。
+### 2.1. 确保钱包可用
+
+参考[比特币 RPC 命令剖析 "fundrawtransaction" 2.1. 确保钱包可用](/blog/2018/07/bitcoin-rpc-command-fundrawtransaction.html#21-确保钱包可用)。
+
+### 2.2. 帮助内容
+
+参考[比特币 RPC 命令剖析 "getbestblockhash" 2.1. 帮助内容](/blog/2018/05/bitcoin-rpc-command-getbestblockhash.html#21-帮助内容)。
 
 ## 参考链接
 
 * [bitcoin/rpcserver.h at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/rpcserver.h){:target="_blank"}
+* [bitcoin/rpcserver.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/rpcserver.cpp){:target="_blank"}
 * [bitcoin/rpcwallet.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/wallet/rpcwallet.cpp){:target="_blank"}

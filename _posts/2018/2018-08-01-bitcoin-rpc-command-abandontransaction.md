@@ -8,56 +8,44 @@ category: 区块链
 tags: Bitcoin bitcoin-cli
 excerpt: $ bitcoin-cli abandontransaction "txid"
 ---
-## 提示说明
+## 1. 帮助内容
 
 ```shell
-abandontransaction "txid" # 标记钱包交易 <txid> 为已放弃
-```
+$ bitcoin-cli help abandontransaction
+abandontransaction "txid"
 
-该操作将标记指定交易和其所有钱包后裔为已放弃，将允许它们的输入被重新花费。<br>
-可用来代替“卡住”或被驱逐的交易。<br>
-仅适用于未包含在区块中且当前不在交易内存池中的交易。<br>
-对已发生冲突和已放弃的交易无影响。
+标记钱包内交易 <txid> 为已抛弃
+该操作将标记此交易及其钱包内的后裔为已抛弃，将允许它们的输入被重新花费。
+它可用来替换 "stuck" 或被剔除的交易。
+它只适用于未包含在区块中且当前不在内存池中的交易。
+它对已冲突和已抛弃的交易没有影响。
 
 参数：
-1. txid（字符串，必备）交易索引。
+1. "txid"（字符串，必备）交易索引
 
-结果：无返回值。
-
-## 用法示例
-
-### 比特币核心客户端
-
-```shell
-$ bitcoin-cli abandontransaction <txid>
-暂无。
+例子：
+> bitcoin-cli abandontransaction "1075db55d416d3ca199f55b6084e2115b9345e16c5cf302fc80e9d5fbf5d48d"
+> curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "abandontransaction", "params": ["1075db55d416d3ca199f55b6084e2115b9345e16c5cf302fc80e9d5fbf5d48d"] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
 ```
 
-### cURL
+## 2. 源码剖析
 
-```shell
-$ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "abandontransaction", "params": ["txid"] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
-暂无。
-```
-
-## 源码剖析
-
-abandontransaction 对应的函数在“rpcserver.h”文件中被引用。
+`abandontransaction` 对应的函数在文件 `rpcserver.h` 中被引用。
 
 ```cpp
-extern UniValue abandontransaction(const UniValue& params, bool fHelp); // 抛弃钱包内的交易
+extern UniValue abandontransaction(const UniValue& params, bool fHelp);
 ```
 
-实现在“rpcwallet.cpp”文件中。
+实现在文件 `rpcwallet.cpp` 中。
 
 ```cpp
 UniValue abandontransaction(const UniValue& params, bool fHelp)
 {
-    if (!EnsureWalletIsAvailable(fHelp)) // 确保当前钱包可用
+    if (!EnsureWalletIsAvailable(fHelp)) // 1. 确保钱包可用
         return NullUniValue;
 
-    if (fHelp || params.size() != 1) // 参数必须为 1 个
-        throw runtime_error( // 命令帮助反馈
+    if (fHelp || params.size() != 1)
+        throw runtime_error(
             "abandontransaction \"txid\"\n"
             "\nMark in-wallet transaction <txid> as abandoned\n"
             "This will mark this transaction and all its in-wallet descendants as abandoned which will allow\n"
@@ -70,119 +58,103 @@ UniValue abandontransaction(const UniValue& params, bool fHelp)
             "\nExamples:\n"
             + HelpExampleCli("abandontransaction", "\"1075db55d416d3ca199f55b6084e2115b9345e16c5cf302fc80e9d5fbf5d48d\"")
             + HelpExampleRpc("abandontransaction", "\"1075db55d416d3ca199f55b6084e2115b9345e16c5cf302fc80e9d5fbf5d48d\"")
-        );
+        ); // 2. 帮助内容
 
-    LOCK2(cs_main, pwalletMain->cs_wallet); // 上锁
+    LOCK2(cs_main, pwalletMain->cs_wallet);
 
     uint256 hash;
-    hash.SetHex(params[0].get_str()); // 获取交易索引
+    hash.SetHex(params[0].get_str());
 
-    if (!pwalletMain->mapWallet.count(hash)) // 检查指定交易是否在钱包中
+    if (!pwalletMain->mapWallet.count(hash)) // 3. 检查交易是否有效
         throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, "Invalid or non-wallet transaction id");
-    if (!pwalletMain->AbandonTransaction(hash)) // 标记该钱包交易为已抛弃
+    if (!pwalletMain->AbandonTransaction(hash)) // 抛弃交易
         throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, "Transaction not eligible for abandonment");
 
-    return NullUniValue; // 返回空
+    return NullUniValue;
 }
 ```
 
-基本流程：
-1. 确保当前钱包可用（已初始化完成）。
-2. 处理命令帮助和参数个数。
-3. 钱包上锁。
-4. 获取指定交易索引构建 uint256 对象。
-5. 检查指定交易是否在钱包中。
-6. 标记指定交易为已抛弃。
+### 2.1. 确保钱包可用
 
-第一步，调用 EnsureWalletIsAvailable(fHelp) 函数检查当前钱包是否初始化完成。该函数实现在“rpcwallet.cpp”文件中。
+参考[比特币 RPC 命令剖析 "fundrawtransaction" 2.1. 确保钱包可用](/blog/2018/07/bitcoin-rpc-command-fundrawtransaction.html#21-确保钱包可用)。
 
-```cpp
-bool EnsureWalletIsAvailable(bool avoidException)
-{
-    if (!pwalletMain) // 若当前钱包未创建
-    {
-        if (!avoidException)
-            throw JSONRPCError(RPC_METHOD_NOT_FOUND, "Method not found (disabled)");
-        else
-            return false;
-    }
-    return true; // 钱包创建了直接返回 true
-}
-```
+### 2.2. 帮助内容
 
-第五步，钱包交易映射对象 pwalletMain->mapWallet 定义在“wallet.h”文件的 CWallet 类中。
+参考[比特币 RPC 命令剖析 "getbestblockhash" 2.1. 帮助内容](/blog/2018/05/bitcoin-rpc-command-getbestblockhash.html#21-帮助内容)。
 
-第六步，调用 pwalletMain->AbandonTransaction(hash) 函数标记该钱包交易为以抛弃，该函数声明在“wallet.h”文件的 CWallet 类中。
+### 2.3. 检查交易是否有效并抛弃交易
+
+钱包映射对象 `pwalletMain->mapWallet` 和抛弃交易函数 `pwalletMain->AbandonTransaction(hash)` 均声明在文件 `wallet.h` 的钱包类 `CWallet` 中。
 
 ```cpp
 /** 
  * A CWallet is an extension of a keystore, which also maintains a set of transactions and balances,
  * and provides the ability to create new transactions.
- */ // CWallet 是密钥库的扩展，可以维持一组交易和余额，并提供创建新交易的能力。
+ */
 class CWallet : public CCryptoKeyStore, public CValidationInterface
 {
     ...
-    std::map<uint256, CWalletTx> mapWallet; // 钱包映射 <交易索引， 钱包交易>
+    std::map<uint256, CWalletTx> mapWallet;
     ...
     /* Mark a transaction (and it in-wallet descendants) as abandoned so its inputs may be respent. */
-    bool AbandonTransaction(const uint256& hashTx); // 标记一笔交易（及其钱包后裔）为以抛弃，以至于它的输入被重新关注
+    bool AbandonTransaction(const uint256& hashTx); // 标记一笔交易（及其钱包内后裔）为已抛弃，以至于它的输入被重新花费。
 };
 ```
 
-实现在“wallet.cpp”文件中。
+实现在文件 `wallet.cpp` 中。
 
 ```cpp
 bool CWallet::AbandonTransaction(const uint256& hashTx)
 {
-    LOCK2(cs_main, cs_wallet); // 上锁
+    LOCK2(cs_main, cs_wallet);
 
     // Do not flush the wallet here for performance reasons
     CWalletDB walletdb(strWalletFile, "r+", false); // 因为性能原因不要在这里刷新钱包
 
-    std::set<uint256> todo; // 待办列表
-    std::set<uint256> done; // 已完成列表
+    std::set<uint256> todo;
+    std::set<uint256> done;
 
-    // Can't mark abandoned if confirmed or in mempool // 若已确认或在内存池中的交易则无法标记已抛弃
-    assert(mapWallet.count(hashTx)); // 检查交易是否在钱包中
-    CWalletTx& origtx = mapWallet[hashTx]; // 获取指定的钱包交易
-    if (origtx.GetDepthInMainChain() > 0 || origtx.InMempool()) { // 交易所在区块深度大于 0 （该交易已上链）或该交易在内存池中
+    // Can't mark abandoned if confirmed or in mempool
+    assert(mapWallet.count(hashTx)); // 若已确认或在内存池中则不能标记为已抛弃
+    CWalletTx& origtx = mapWallet[hashTx];
+    if (origtx.GetDepthInMainChain() > 0 || origtx.InMempool()) {
         return false;
     }
 
-    todo.insert(hashTx); // 插入待办列表
+    todo.insert(hashTx);
 
-    while (!todo.empty()) { // 待办列表非空
-        uint256 now = *todo.begin(); // 取出待办列表的第一项
+    while (!todo.empty()) {
+        uint256 now = *todo.begin();
         todo.erase(now);
-        done.insert(now); // 插入已完成列表
+        done.insert(now);
         assert(mapWallet.count(now));
-        CWalletTx& wtx = mapWallet[now]; // 获取对应的钱包交易
-        int currentconfirm = wtx.GetDepthInMainChain(); // 获取该交易所在区块在链上的深度作为确认数
+        CWalletTx& wtx = mapWallet[now];
+        int currentconfirm = wtx.GetDepthInMainChain();
         // If the orig tx was not in block, none of its spends can be
-        assert(currentconfirm <= 0);
+        assert(currentconfirm <= 0); // 如果原始交易不在区块里，它的花费都不能
         // if (currentconfirm < 0) {Tx and spends are already conflicted, no need to abandon}
-        if (currentconfirm == 0 && !wtx.isAbandoned()) { // 当前确认为 0 且钱包交易未标记已抛弃
-            // If the orig tx was not in block/mempool, none of its spends can be in mempool // 它的所有花费都不在内存池中
-            assert(!wtx.InMempool()); // 钱包交易不在内存池中
+        if (currentconfirm == 0 && !wtx.isAbandoned()) { // 如果（当前确认数小于 0）{交易和花费已经冲突，则不需要抛弃}
+            // If the orig tx was not in block/mempool, none of its spends can be in mempool
+            assert(!wtx.InMempool()); // 如果原始交易不在区块/内存池中，则它的花费都不能在内存池中
             wtx.nIndex = -1;
-            wtx.setAbandoned(); // 把钱包交易标记为已抛弃
-            wtx.MarkDirty(); // 标记该交易已变动
-            wtx.WriteToDisk(&walletdb); // 写入钱包数据库
+            wtx.setAbandoned();
+            wtx.MarkDirty();
+            wtx.WriteToDisk(&walletdb);
             NotifyTransactionChanged(this, wtx.GetHash(), CT_UPDATED);
-            // Iterate over all its outputs, and mark transactions in the wallet that spend them abandoned too // 遍历它所有的输出，并标记钱包中的交易为已抛弃
-            TxSpends::const_iterator iter = mapTxSpends.lower_bound(COutPoint(hashTx, 0));
-            while (iter != mapTxSpends.end() && iter->first.hash == now) { // 遍历交易花费映射，且全部为该交易的输出
-                if (!done.count(iter->second)) { // 对应交易若不在已完成列表
-                    todo.insert(iter->second); // 把该交易加入待办列表
+            // Iterate over all its outputs, and mark transactions in the wallet that spend them abandoned too
+            TxSpends::const_iterator iter = mapTxSpends.lower_bound(COutPoint(hashTx, 0)); // 迭代它所有的输出，并标记钱包中的交易为已抛弃
+            while (iter != mapTxSpends.end() && iter->first.hash == now) {
+                if (!done.count(iter->second)) {
+                    todo.insert(iter->second);
                 }
                 iter++;
             }
-            // If a transaction changes 'conflicted' state, that changes the balance // 如果交易改变“冲突”状态，会改变其输出花费的可用余额。
-            // available of the outputs it spends. So force those to be recomputed // 所以强制重新计算。
-            BOOST_FOREACH(const CTxIn& txin, wtx.vin)
+            // If a transaction changes 'conflicted' state, that changes the balance
+            // available of the outputs it spends. So force those to be recomputed
+            BOOST_FOREACH(const CTxIn& txin, wtx.vin) // 如果一个交易改变“已冲突”状态，则会改变其花费输出的可用余额。所以强制它们重新计算
             {
-                if (mapWallet.count(txin.prevout.hash)) // 若前一笔交易的在钱包中
-                    mapWallet[txin.prevout.hash].MarkDirty(); // 把该交易索引对应的钱包交易标记为已改变
+                if (mapWallet.count(txin.prevout.hash))
+                    mapWallet[txin.prevout.hash].MarkDirty();
             }
         }
     }
@@ -191,7 +163,7 @@ bool CWallet::AbandonTransaction(const uint256& hashTx)
 }
 ```
 
-调用 origtx.GetDepthInMainChain() 和 origtx.InMempool() 函数，它们均实现在“wallet.cpp”文件中。
+函数 `origtx.GetDepthInMainChain()` 和 `origtx.InMempool()` 均实现在文件 `wallet.cpp` 中。
 
 ```cpp
 bool CWalletTx::InMempool() const
@@ -205,25 +177,25 @@ bool CWalletTx::InMempool() const
 ...
 int CMerkleTx::GetDepthInMainChain(const CBlockIndex* &pindexRet) const
 {
-    if (hashUnset()) // 判断该区块的有效性
+    if (hashUnset())
         return 0;
 
-    AssertLockHeld(cs_main); // 验证锁状态
+    AssertLockHeld(cs_main);
 
-    // Find the block it claims to be in // 找到该交易声明在的区块
-    BlockMap::iterator mi = mapBlockIndex.find(hashBlock); // 获取对应区块的迭代器
-    if (mi == mapBlockIndex.end()) // 若没找到，则返回 0
+    // Find the block it claims to be in
+    BlockMap::iterator mi = mapBlockIndex.find(hashBlock); // 找到它声明所在的区块
+    if (mi == mapBlockIndex.end())
         return 0;
-    CBlockIndex* pindex = (*mi).second; // 获取区块索引
-    if (!pindex || !chainActive.Contains(pindex)) // 检查该区块是否在激活主链上
+    CBlockIndex* pindex = (*mi).second;
+    if (!pindex || !chainActive.Contains(pindex))
         return 0;
 
     pindexRet = pindex;
-    return ((nIndex == -1) ? (-1) : 1) * (chainActive.Height() - pindex->nHeight + 1); // 返回深度，链尖的深度为 1
+    return ((nIndex == -1) ? (-1) : 1) * (chainActive.Height() - pindex->nHeight + 1);
 }
 ```
 
-函数 mempool.exists(GetHash()) 定义在“txmempool.h”文件的 CTxMemPool 类中。
+函数 `mempool.exists(GetHash())` 定义在文件 `txmempool.h` 的内存池类 `CTxMemPool` 中。
 
 ```cpp
 /**
@@ -302,8 +274,8 @@ int CMerkleTx::GetDepthInMainChain(const CBlockIndex* &pindexRet) const
  * the entry as "dirty", and set the feerate for sorting purposes to be equal
  * the feerate of the transaction without any descendants.
  *
- */ // CTxMemPool 存储可能包含在下一个区块的基于当前最佳链的有效交易。
-class CTxMemPool
+ */
+class CTxMemPool // CTxMemPool 存储可能包含在下一个区块的基于当前最佳链的有效交易。
 {
     ...
     bool exists(uint256 hash) const
@@ -315,22 +287,10 @@ class CTxMemPool
 };
 ```
 
-下面是一些相关函数的定义，在“wallet.h”文件的 CMerkleTx 类中。
-
-```cpp
-/** A transaction with a merkle branch linking it to the block chain. */
-class CMerkleTx : public CTransaction // 一个连接它到区块链的默克分支交易
-{
-    ...
-    bool hashUnset() const { return (hashBlock.IsNull() || hashBlock == ABANDON_HASH); } // 哈希未设置（为空或已抛弃的哈希）
-    bool isAbandoned() const { return (hashBlock == ABANDON_HASH); } // 该交易是否标记为已抛弃
-    void setAbandoned() { hashBlock = ABANDON_HASH; } // 标记该交易为已抛弃
-};
-```
-
 ## 参考链接
 
 * [bitcoin/rpcserver.h at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/rpcserver.h){:target="_blank"}
+* [bitcoin/rpcserver.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/rpcserver.cpp){:target="_blank"}
 * [bitcoin/rpcwallet.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/wallet/rpcwallet.cpp){:target="_blank"}
 * [bitcoin/wallet.h at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/wallet/wallet.h){:target="_blank"}
 * [bitcoin/wallet.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/wallet/wallet.cpp){:target="_blank"}

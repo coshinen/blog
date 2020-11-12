@@ -8,73 +8,40 @@ category: 区块链
 tags: Bitcoin bitcoin-cli
 excerpt: $ bitcoin-cli backupwallet "destination"
 ---
-## 提示说明
+## 1. 帮助内容
 
 ```shell
-backupwallet "destination" # 安全复制 wallet.dat 到目标 destination，它可以是一个目录或一个文件名
-```
+$ bitcoin-cli help backupwallet
+backupwallet "destination"
+
+安全复制 wallet.dat 到目的地，它可以是一个目录或一个带文件名的路径。
 
 参数：
-1. destination（字符串）目标目录或文件。
+1. "destination"（字符串）目标目录或文件
 
-结果：无返回值。
-
-## 用法示例
-
-### 比特币核心客户端
-
-用法一：备份为指定文件名，默认保存在用户首次使用该命令的工作目录下。<br>
-这里在家目录 ~ 下使用该命令。
-
-```shell
-$ bitcoin-cli backupwallet backup.dat
-$ ls ~
-... backup.dat ...
+例子：
+> bitcoin-cli backupwallet "backup.dat"
+> curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "backupwallet", "params": ["backup.dat"] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
 ```
 
-用法二：备份为指定全路径名的文件。
+## 2. 源码剖析
 
-```shell
-$ ls ~/.bitcoin
-bitcoind.pid blocks chainstate database db.log debug.log wallet.dat
-$ bitcoin-cli backupwallet ~/.bitcoin/backup.dat
-$ ls ~/.bitcoin
-backup.dat bitcoind.pid blocks chainstate database db.log debug.log wallet.dat
-```
-
-用法三：备份到指定目录下。
-
-```shell
-$ bitcoin-cli backupwallet ~
-$ ls ~
-... wallet.dat ...
-```
-
-### cURL
-
-```shell
-$ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "backupwallet", "params": ["~/.bitcoin/backup.dat"] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
-{"result":null,"error":null,"id":"curltest"}
-```
-
-## 源码剖析
-
-backupwallet 对应的函数在“rpcserver.h”文件中被引用。
+`backupwallet` 对应的函数在文件 `rpcserver.h` 中被引用。
 
 ```cpp
-extern UniValue backupwallet(const UniValue& params, bool fHelp); // 备份钱包
+extern UniValue backupwallet(const UniValue& params, bool fHelp);
 ```
 
-实现在“rpcwallet.cpp”文件中。
+实现在文件 `rpcwallet.cpp` 中。
 
 ```cpp
 UniValue backupwallet(const UniValue& params, bool fHelp)
 {
-    if (!EnsureWalletIsAvailable(fHelp)) // 确保当前钱包可用
+    if (!EnsureWalletIsAvailable(fHelp)) // 1. 确保钱包可用
         return NullUniValue;
     
-    if (fHelp || params.size() != 1) // 参数必须为 1 个
-        throw runtime_error( // 命令帮助反馈
+    if (fHelp || params.size() != 1)
+        throw runtime_error(
             "backupwallet \"destination\"\n"
             "\nSafely copies wallet.dat to destination, which can be a directory or a path with filename.\n"
             "\nArguments:\n"
@@ -82,62 +49,65 @@ UniValue backupwallet(const UniValue& params, bool fHelp)
             "\nExamples:\n"
             + HelpExampleCli("backupwallet", "\"backup.dat\"")
             + HelpExampleRpc("backupwallet", "\"backup.dat\"")
-        );
+        ); // 2. 帮助内容
 
-    LOCK2(cs_main, pwalletMain->cs_wallet); // 钱包上锁
+    LOCK2(cs_main, pwalletMain->cs_wallet);
 
-    string strDest = params[0].get_str(); // 获取指定的输出目标
-    if (!BackupWallet(*pwalletMain, strDest))
+    string strDest = params[0].get_str();
+    if (!BackupWallet(*pwalletMain, strDest)) // 3. 备份钱包
         throw JSONRPCError(RPC_WALLET_ERROR, "Error: Wallet backup failed!");
 
-    return NullUniValue; // 返回空值
+    return NullUniValue;
 }
 ```
 
-基本流程：
-1. 确保钱包当前可用（已初始化完成）。
-2. 处理命令帮助和参数个数。
-3. 钱包上锁。
-4. 获取指定的备份位置。
-5. 备份文件（复制原 wallet.dat 文件到指定位置）。
+### 2.1. 确保钱包可用
 
-第五步，调用 BackupWallet(*pwalletMain, strDest) 函数复制原钱包数据文件到指定位置，达到备份钱包文件的效果。该函数声明在“walletdb.h”文件中。
+参考[比特币 RPC 命令剖析 "fundrawtransaction" 2.1. 确保钱包可用](/blog/2018/07/bitcoin-rpc-command-fundrawtransaction.html#21-确保钱包可用)。
+
+### 2.2. 帮助内容
+
+参考[比特币 RPC 命令剖析 "getbestblockhash" 2.1. 帮助内容](/blog/2018/05/bitcoin-rpc-command-getbestblockhash.html#21-帮助内容)。
+
+### 2.3. 备份钱包
+
+备份钱包函数 `BackupWallet(*pwalletMain, strDest)` 声明在文件 `walletdb.h` 中。
 
 ```cpp
-bool BackupWallet(const CWallet& wallet, const std::string& strDest); // 备份钱包
+bool BackupWallet(const CWallet& wallet, const std::string& strDest);
 ```
 
-实现在“walletdb.cpp”文件中。
+实现在文件 `walletdb.cpp` 中。
 
 ```cpp
 bool BackupWallet(const CWallet& wallet, const string& strDest)
 {
-    if (!wallet.fFileBacked) // 备份文件标志为 true
+    if (!wallet.fFileBacked)
         return false;
     while (true)
     {
         {
-            LOCK(bitdb.cs_db); // 数据库上锁
-            if (!bitdb.mapFileUseCount.count(wallet.strWalletFile) || bitdb.mapFileUseCount[wallet.strWalletFile] == 0) // 文件名未使用过 或 文件名存在但使用次数为 0
+            LOCK(bitdb.cs_db);
+            if (!bitdb.mapFileUseCount.count(wallet.strWalletFile) || bitdb.mapFileUseCount[wallet.strWalletFile] == 0)
             {
-                // Flush log data to the dat file // 刷新日志数据到数据文件
-                bitdb.CloseDb(wallet.strWalletFile);
+                // Flush log data to the dat file
+                bitdb.CloseDb(wallet.strWalletFile); // 刷新日志数据到数据文件
                 bitdb.CheckpointLSN(wallet.strWalletFile);
                 bitdb.mapFileUseCount.erase(wallet.strWalletFile);
 
-                // Copy wallet.dat // 复制 wallet.dat 文件
-                boost::filesystem::path pathSrc = GetDataDir() / wallet.strWalletFile; // 原 wallet.dat 路径
-                boost::filesystem::path pathDest(strDest); // 目标路径
-                if (boost::filesystem::is_directory(pathDest)) // 若目标路径为目录
-                    pathDest /= wallet.strWalletFile; // 拼接默认钱包文件名 "wallet.dat"
+                // Copy wallet.dat
+                boost::filesystem::path pathSrc = GetDataDir() / wallet.strWalletFile; // 复制 wallet.dat
+                boost::filesystem::path pathDest(strDest);
+                if (boost::filesystem::is_directory(pathDest))
+                    pathDest /= wallet.strWalletFile;
 
                 try {
-#if BOOST_VERSION >= 104000 // boost 版本为 104000 之后
-                    boost::filesystem::copy_file(pathSrc, pathDest, boost::filesystem::copy_option::overwrite_if_exists); // copy 文件到目标位置，若文件已存在则覆盖
+#if BOOST_VERSION >= 104000
+                    boost::filesystem::copy_file(pathSrc, pathDest, boost::filesystem::copy_option::overwrite_if_exists);
 #else
-                    boost::filesystem::copy_file(pathSrc, pathDest); // copy 文件到目标位置
+                    boost::filesystem::copy_file(pathSrc, pathDest);
 #endif
-                    LogPrintf("copied wallet.dat to %s\n", pathDest.string()); // 记录日志
+                    LogPrintf("copied wallet.dat to %s\n", pathDest.string());
                     return true;
                 } catch (const boost::filesystem::filesystem_error& e) {
                     LogPrintf("error copying wallet.dat to %s - %s\n", pathDest.string(), e.what());
@@ -145,7 +115,7 @@ bool BackupWallet(const CWallet& wallet, const string& strDest)
                 }
             }
         }
-        MilliSleep(100); // 睡 100 毫秒
+        MilliSleep(100);
     }
     return false;
 }
@@ -154,6 +124,7 @@ bool BackupWallet(const CWallet& wallet, const string& strDest)
 ## 参考链接
 
 * [bitcoin/rpcserver.h at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/rpcserver.h){:target="_blank"}
+* [bitcoin/rpcserver.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/rpcserver.cpp){:target="_blank"}
 * [bitcoin/rpcwallet.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/wallet/rpcwallet.cpp){:target="_blank"}
 * [bitcoin/walletdb.h at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/wallet/walletdb.h){:target="_blank"}
 * [bitcoin/walletdb.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/wallet/walletdb.cpp){:target="_blank"}

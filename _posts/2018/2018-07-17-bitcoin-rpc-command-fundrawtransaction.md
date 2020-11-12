@@ -62,7 +62,7 @@ extern UniValue fundrawtransaction(const UniValue& params, bool fHelp);
 ```cpp
 UniValue fundrawtransaction(const UniValue& params, bool fHelp)
 {
-    if (!EnsureWalletIsAvailable(fHelp)) // 1. 确保当前钱包可用
+    if (!EnsureWalletIsAvailable(fHelp)) // 1. 确保钱包可用
         return NullUniValue;
 
     if (fHelp || params.size() < 1 || params.size() > 2)
@@ -124,6 +124,24 @@ UniValue fundrawtransaction(const UniValue& params, bool fHelp)
     result.push_back(Pair("fee", ValueFromAmount(nFee)));
 
     return result;
+}
+```
+
+### 2.1. 确保钱包可用
+
+确保钱包可用函数 `EnsureWalletIsAvailable(fHelp)` 实现在文件 `rpcwallet.cpp` 中。
+
+```cpp
+bool EnsureWalletIsAvailable(bool avoidException)
+{
+    if (!pwalletMain)
+    {
+        if (!avoidException)
+            throw JSONRPCError(RPC_METHOD_NOT_FOUND, "Method not found (disabled)");
+        else
+            return false;
+    }
+    return true;
 }
 ```
 
