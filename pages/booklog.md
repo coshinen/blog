@@ -27,9 +27,9 @@ excerpt: Here are some books I read.
 >   * [程序人生](#程序人生)
 > * [杂类](#杂类)
 
-## 文学[🔝](#索引){:.right}
+## 文学<a href="#索引" class="right">🔝</a>
 
-> ### 文集[🔝](#索引){:.right}
+> ### 文集<a href="#索引" class="right">🔝</a>
 > 
 > * 王小波全集 第一、二卷 杂文，[中] 王小波
 > * 暗时间，[中] [刘未鹏](https://mindhacks.cn){:target="_blank"}
@@ -40,7 +40,7 @@ excerpt: Here are some books I read.
 > * [新生 七年就是一辈子](https://b.xinshengdaxue.com){:target="_blank"}，[中] 李笑来
 > * 80,0 AZUKI NANA photo & anthology，[日] AZUKI 七
 
-> ### 纪实[🔝](#索引){:.right}
+> ### 纪实<a href="#索引" class="right">🔝</a>
 > 
 > * 敢问路在何方 我们的西游记，[中] 杨洁 王崇秋
 > * 敢问路在何方 我的30年西游路，[中] 杨洁
@@ -50,7 +50,7 @@ excerpt: Here are some books I read.
 > * 黑箱 日本之耻，[日] 伊藤詩織
 > * 谁“害”了北大学生，[中] 群言
 
-> ### 传记[🔝](#索引){:.right}
+> ### 传记<a href="#索引" class="right">🔝</a>
 > 
 > * 歌舞伎町案内人，[中] 李小牧
 > * 成龙：还没长大就老了，[中] 成龙 朱墨
@@ -62,7 +62,7 @@ excerpt: Here are some books I read.
 > * 只是为了好玩 Linux 之父林纳斯自传，[芬] Linus Torvalds [美] David Diamond
 > * 史蒂夫·乔布斯传，[美] Walter Isaacson
 
-> ### 小说[🔝](#索引){:.right}
+> ### 小说<a href="#索引" class="right">🔝</a>
 > 
 > * 鼠疫，[法] Albert Camus
 > * 局外人，[法] Albert Camus
@@ -96,25 +96,25 @@ excerpt: Here are some books I read.
 > * 福尔摩斯探案全集，[英] Arthur Conan Doyle
 > * 爱伦·坡短篇小说集，[美] Edgar Allan Poe
 
-## 科学[🔝](#索引){:.right}
+## 科学<a href="#索引" class="right">🔝</a>
 
-> ### 数学[🔝](#索引){:.right}
+> ### 数学<a href="#索引" class="right">🔝</a>
 > 
 > * 数学女孩，[日] [結城浩](https://www.hyuki.com){:target="_blank"}
 > * 程序员的数学，[日] 結城浩
 
-> ### 医学[🔝](#索引){:.right}
+> ### 医学<a href="#索引" class="right">🔝</a>
 > 
 > * 医生的精进 从仁心仁术到追求卓越，[美] Atul Gawande
 > * 医生的修炼 在不完美中探索行医的真相，[美] Atul Gawande
 > * 众病之王 癌症传，[美] Siddhartha Mukherjee
 > * 绝对笑喷之弃业医生日志，[英] Adam Kay
 
-> ### 化学[🔝](#索引){:.right}
+> ### 化学<a href="#索引" class="right">🔝</a>
 > 
 > * 阿加莎的毒药，[英] Kathryn Harkup
 
-> ### 心理学[🔝](#索引){:.right}
+> ### 心理学<a href="#索引" class="right">🔝</a>
 > 
 > * 为何家会伤人，[中] 武志红
 > * 理解人性，[奥地利] Alfred Adler
@@ -130,12 +130,12 @@ excerpt: Here are some books I read.
 > * 少有人走的路 心智成熟的旅程，[美] M. Scott peck
 > * 异类 不一样的成功启示录，[加] Malcolm Gladwell
 
-> ### 伦理学[🔝](#索引){:.right}
+> ### 伦理学<a href="#索引" class="right">🔝</a>
 > 
 > * 最好的告别 关于衰老与死亡，你必须知道的常识，[美] Atul Gawande
 > * 公正 该如何做是好？，[美] [Michael J. Sandel](https://scholar.harvard.edu/sandel){:target="_blank"}
 
-> ### 方法论[🔝](#索引){:.right}
+> ### 方法论<a href="#索引" class="right">🔝</a>
 > 
 > * [人人都能用英语](http://lixiaolai.com/#/everyone-can-use-english/){:target="_blank"}，[中] [李笑来](http://lixiaolai.com/#/){:target="_blank"}
 > * [英语进阶指南](https://byoungd.gitbook.io/english-level-up-tips/){:target="_blank"}，[中] byoungd
@@ -145,9 +145,9 @@ excerpt: Here are some books I read.
 > * 一万小时天才理论，[美] Daniel Coyle
 > * 刻意练习 如何从新手到大师，[美] Anders Ericsson, Robert Pool
 
-## 技术[🔝](#索引){:.right}
+## 技术<a href="#索引" class="right">🔝</a>
 
-> ### 算法[🔝](#索引){:.right}
+> ### 算法<a href="#索引" class="right">🔝</a>
 > 
 > * 漫画算法 小灰的算法之旅，[中] 魏梦舒
 > * 编程之美 —微软技术面试心得，[中] 《编程之美》小组
@@ -158,7 +158,7 @@ excerpt: Here are some books I read.
 > * 数据结构（C++ 语言版 第3版），[中] [邓俊辉](https://dsa.cs.tsinghua.edu.cn/~deng/index.htm){:target="_blank"}
 > * 大话数据结构，[中] 程杰
 
-> ### 区块链[🔝](#索引){:.right}
+> ### 区块链<a href="#索引" class="right">🔝</a>
 > 
 > * [精通以太坊](https://github.com/ethereumbook/ethereumbook){:target="_blank"}，[希-英] Andreas M. Antonopoulos [英] Gavin Wood
 > * 区块链启示录 中本聪文集，[美] Phil Champagne
@@ -167,7 +167,7 @@ excerpt: Here are some books I read.
 > * [精通比特币 第2版](https://bitcoinbook.info){:target="_blank"}，[希-英] Andreas M. Antonopoulos
 > * [Bitcoin: A Peer-to-Peer Electronic Cash System](/blog/2018/04/Bitcoin-A-Peer-to-Peer-Electronic-Cash-System.html)，[?] Satoshi Nakamoto
 
-> ### 编程语言[🔝](#索引){:.right}
+> ### 编程语言<a href="#索引" class="right">🔝</a>
 > 
 > * Linux/UNIX 系统编程手册（上、下册），[德] [Michael Kerrisk](https://man7.org){:target="_blank"}
 > * STL 源码剖析，[中] 侯捷
@@ -180,17 +180,17 @@ excerpt: Here are some books I read.
 > * C 和指针，[美] Kenneth A. Reek
 > * C 程序设计语言（第2版），[加] [Brian W. Kernighan](https://www.cs.princeton.edu/~bwk){:target="_blank"} [美] [Dennis M. Ritchie](https://www.bell-labs.com/usr/dmr/www){:target="_blank"}
 
-> ### 网络编程[🔝](#索引){:.right}
+> ### 网络编程<a href="#索引" class="right">🔝</a>
 > 
 > * 图解 HTTP，[日] 上野宣
 > * 图解 TCP/IP（第5版），[日] 竹下隆史 村山公保 荒井透 苅田幸雄
 > * TCP/IP 详解 卷1：协议，[美] [W. Richard Stevens](http://www.kohala.com/start){:target="_blank"}
 
-> ### 操作系统[🔝](#索引){:.right}
+> ### 操作系统<a href="#索引" class="right">🔝</a>
 > 
 > * [Linux: a Portable Operating System](https://www.cs.helsinki.fi/u/kutvonen/index_files/linus.pdf){:target="_blank"}，[芬] [Linus Torvalds](https://www.cs.helsinki.fi/u/torvalds/){:target="_blank"}
 
-> ### 程序人生[🔝](#索引){:.right}
+> ### 程序人生<a href="#索引" class="right">🔝</a>
 > 
 > * Vim 实用技巧，[英] Drew Neil
 > * 图解设计模式，[日] 結城浩
@@ -206,6 +206,6 @@ excerpt: Here are some books I read.
 > * [快乐的 Linux 命令行](https://billie66.github.io/TLCL/){:target="_blank"}，[美] William Shotts
 > * [中文文案排案指北](https://sparanoid.com/note/chinese-copywriting-guidelines/){:target="_blank"}，[中] Tunghsiao Liu
 
-## 杂类[🔝](#索引){:.right}
+## 杂类<a href="#索引" class="right">🔝</a>
 
 > * [把时间当作朋友 运用心智 获得解放](http://lixiaolai.com/#/befriending-time/){:target="_blank"}，[中] 李笑来
