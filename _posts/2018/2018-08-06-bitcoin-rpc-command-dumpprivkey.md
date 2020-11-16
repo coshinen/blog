@@ -1,65 +1,52 @@
 ---
 layout: post
 title:  "比特币 RPC 命令剖析 \"dumpprivkey\""
-date:   2018-08-06 14:06:23 +0800
+date:   2018-08-06 20:06:23 +0800
 author: mistydew
 comments: true
 category: 区块链
 tags: Bitcoin bitcoin-cli
 excerpt: $ bitcoin-cli dumpprivkey "bitcoinaddress"
 ---
-## 提示说明
+## 1. 帮助内容
 
 ```shell
-dumpprivkey "bitcoinaddress" # 导出 bitcoinaddress 对应的私钥
-```
+$ bitcoin-cli help dumpprivkey
+dumpprivkey "bitcoinaddress"
 
-RPC 命令 [importprivkey](/blog/2018/08/bitcoin-rpc-command-importprivkey.html) 可以使用该输出作为输入。
+显示 'bitcoinaddress' 对应的私钥。
+然后 importprivkey 可以使用这个输出
 
 参数：
-1. bitcoinaddress（字符串，必备）私钥对应的比特币地址。
+1. "bitcoinaddress"（字符串，必备）私钥对应的比特币地址
 
-结果：（字符串）返回私钥。
+结果：
+"key"（字符串）私钥
 
-## 用法示例
-
-### 比特币核心客户端
-
-使用 [getnewaddress](/blog/2018/08/bitcoin-rpc-command-getnewaddress.html) 命令获取一个比特币地址，
-然后以该地址为输入，导出其对应的私钥。
-
-```shell
-$ bitcoin-cli getnewaddress
-13m7dqxmjCxTgVTnRHNywcgqp7SCFUtV7X
-$ bitcoin-cli dumpprivkey 13m7dqxmjCxTgVTnRHNywcgqp7SCFUtV7X
-L26dH1T4tfSbmYax7jdGMNPanrLtSvMtKnwrPjyLcD1prmsKBTts
+例子：
+> bitcoin-cli dumpprivkey "myaddress"
+> bitcoin-cli importprivkey "mykey"
+> curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "dumpprivkey", "params": ["myaddress"] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
 ```
 
-### cURL
+## 2. 源码剖析
 
-```shell
-$ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "dumpprivkey", "params": ["13m7dqxmjCxTgVTnRHNywcgqp7SCFUtV7X"] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
-{"result":"L26dH1T4tfSbmYax7jdGMNPanrLtSvMtKnwrPjyLcD1prmsKBTts","error":null,"id":"curltest"}
-```
-
-## 源码剖析
-
-dumpprivkey 对应的函数在“rpcserver.h”文件中被引用。
+`dumpprivkey` 对应的函数在文件 `rpcserver.h` 中被引用。
 
 ```cpp
-extern UniValue dumpprivkey(const UniValue& params, bool fHelp); // 导出私钥
+extern UniValue dumpprivkey(const UniValue& params, bool fHelp);
 ```
 
-实现在“wallet/rpcdump.cpp”文件中。
+实现在文件 `wallet/rpcdump.cpp` 中。
 
 ```cpp
 UniValue dumpprivkey(const UniValue& params, bool fHelp)
 {
-    if (!EnsureWalletIsAvailable(fHelp)) // 确保当前钱包可用
+    if (!EnsureWalletIsAvailable(fHelp)) // 1. 确保钱包可用
         return NullUniValue;
     
-    if (fHelp || params.size() != 1) // 参数必须为 1 个
-        throw runtime_error( // 命令帮助反馈
+    if (fHelp || params.size() != 1)
+        throw runtime_error(
             "dumpprivkey \"bitcoinaddress\"\n"
             "\nReveals the private key corresponding to 'bitcoinaddress'.\n"
             "Then the importprivkey can be used with this output\n"
@@ -71,13 +58,13 @@ UniValue dumpprivkey(const UniValue& params, bool fHelp)
             + HelpExampleCli("dumpprivkey", "\"myaddress\"")
             + HelpExampleCli("importprivkey", "\"mykey\"")
             + HelpExampleRpc("dumpprivkey", "\"myaddress\"")
-        );
+        ); // 2. 帮助内容
 
-    LOCK2(cs_main, pwalletMain->cs_wallet); // 钱包上锁
+    LOCK2(cs_main, pwalletMain->cs_wallet);
 
-    EnsureWalletIsUnlocked(); // 确保钱包当前解锁（为加密或加密了但处于解密状态）
+    EnsureWalletIsUnlocked(); // 3. 确保钱包解锁
 
-    string strAddress = params[0].get_str(); // 获取指定的公钥地址
+    string strAddress = params[0].get_str(); // 4. 获取地址对应的私钥
     CBitcoinAddress address;
     if (!address.SetString(strAddress)) // 初始化一个比特币地址对象
         throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, "Invalid Bitcoin address");
@@ -91,23 +78,25 @@ UniValue dumpprivkey(const UniValue& params, bool fHelp)
 }
 ```
 
-基本流程：
-1. 确保钱包当前可用（已初始化完成）。
-2. 处理命令帮助和参数个数。
-3. 钱包上锁。
-4. 确保当前钱包处于解密状态。
-5. 获取用户指定的公钥地址并初始化一个比特币地址对象。
-6. 获取该地址的索引。
-7. 通过密钥索引获取对应的私钥数据。
-8. 对私钥进行 base58 编码并返回结果。
+### 2.1. 确保钱包可用
 
-第五步，调用 address.SetString(strAddress) 函数初始化一个比特币地址对象，该函数声明在“base58.h”文件的 CBitcoinAddress 类中。
+参考[比特币 RPC 命令剖析 "fundrawtransaction" 2.1. 确保钱包可用](/blog/2018/07/bitcoin-rpc-command-fundrawtransaction.html#21-确保钱包可用)。
+
+### 2.2. 帮助内容
+
+参考[比特币 RPC 命令剖析 "getbestblockhash" 2.1. 帮助内容](/blog/2018/05/bitcoin-rpc-command-getbestblockhash.html#21-帮助内容)。
+
+### 2.3. 确保钱包解锁
+
+### 2.4. 获取地址对应的私钥
+
+函数 `address.SetString(strAddress)` 声明在文件 `base58.h` 的比特币地址类 `CBitcoinAddress` 中。
 
 ```cpp
 /**
  * Base class for all base58-encoded data
- */ // 所有 base58 编码数据的基类
-class CBase58Data // 包含一个版本号和一个编码
+ */
+class CBase58Data // 所有 base58 编码数据的基类
 {
 protected:
     //! the version byte(s)
@@ -123,7 +112,7 @@ protected:
 };
 ```
 
-实现在“base58.cpp”文件中。
+实现在文件 `base58.cpp` 中。
 
 ```cpp
 bool CBase58Data::SetString(const char* psz, unsigned int nVersionBytes)
@@ -149,7 +138,7 @@ bool CBase58Data::SetString(const std::string& str)
 }
 ```
 
-第六步，调用 address.GetKeyID(keyID) 函数获取地址对应的密钥索引，该函数定义在“base58.cpp”文件中。
+获取密钥索引函数 `address.GetKeyID(keyID)` 定义在文件 `base58.cpp` 中。
 
 ```cpp
 bool CBitcoinAddress::GetKeyID(CKeyID& keyID) const
@@ -166,6 +155,8 @@ bool CBitcoinAddress::GetKeyID(CKeyID& keyID) const
 ## 参考链接
 
 * [bitcoin/rpcserver.h at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/rpcserver.h){:target="_blank"}
+* [bitcoin/rpcserver.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/rpcserver.cpp){:target="_blank"}
+* [bitcoin/rpcwallet.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/wallet/rpcwallet.cpp){:target="_blank"}
 * [bitcoin/rpcdump.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/wallet/rpcdump.cpp){:target="_blank"}
 * [bitcoin/base58.h at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/base58.h){:target="_blank"}
 * [bitcoin/base58.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/base58.cpp){:target="_blank"}
