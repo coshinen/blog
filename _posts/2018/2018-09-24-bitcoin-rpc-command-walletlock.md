@@ -82,6 +82,10 @@ UniValue walletlock(const UniValue& params, bool fHelp)
 }
 ```
 
+### 2.1. 确保钱包可用
+
+参考[比特币 RPC 命令剖析 "fundrawtransaction" 2.1. 确保钱包可用](/blog/2018/07/bitcoin-rpc-command-fundrawtransaction.html#21-确保钱包可用)。
+
 ### 2.2. 帮助内容
 
 参考[比特币 RPC 命令剖析 "getbestblockhash" 2.1. 帮助内容](/blog/2018/05/bitcoin-rpc-command-getbestblockhash.html#21-帮助内容)。
