@@ -116,6 +116,7 @@ excerpt: Here are some books I read.
 
 > ### 心理学<a href="#索引" class="right">🔝</a>
 > 
+> * 为何爱会伤人，[中] 武志红
 > * 为何家会伤人，[中] [武志红](http://blog.sina.com.cn/wuzii){:target="_blank"}
 > * 理解人性，[奥地利] Alfred Adler
 > * 自卑与超越，[奥地利] Alfred Adler
