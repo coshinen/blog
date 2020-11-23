@@ -1,66 +1,64 @@
 ---
 layout: post
 title:  "比特币 RPC 命令剖析 \"encryptwallet\""
-date:   2018-08-08 11:44:43 +0800
+date:   2018-08-08 21:44:43 +0800
 author: mistydew
 comments: true
 category: 区块链
 tags: Bitcoin bitcoin-cli
 excerpt: $ bitcoin-cli encryptwallet "passphrase"
 ---
-## 提示说明
+## 1. 帮助内容
 
 ```shell
-encryptwallet "passphrase" # 使用 passphrase 加密钱包
-```
+$ bitcoin-cli help encryptwallet
+encryptwallet "passphrase"
 
-用于第一次加密。<br>
-在此之后，任何与私钥相关的调用，例如发送或签名，需要在调用前设置密钥解密。<br>
-使用 [walletpassphrase](/blog/2018/09/bitcoin-rpc-command-walletpassphrase.html) 解密钱包，或使用 [walletlock](/blog/2018/09/bitcoin-rpc-command-walletlock.html) 锁定钱包。<br>
-如果钱包已经加密，使用 [walletpassphrasechange](/blog/2018/09/bitcoin-rpc-command-walletpassphrasechange.html) 更改密码。<br>
-**注：该命令将会关闭服务器。**
+使用 'passphrase' 加密钱包。这是用于首次加密。
+在此之后，任何与私钥相关的调用，例如发送或签名都需要在进行这些调用前设置密钥短语。
+为此使用 walletpassphrase 调用，然后是 walletlock 调用。
+如果钱包已经加密，使用 walletpassphrasechange 调用。
+注意这将会关闭服务器。
 
 参数：
-1. passphrase（字符串）用来加密钱包的密码。至少 1 个字符，应该较长。
+1. "passphrase"（字符串）用来加密钱包的密码。它必须至少 1 个字符，但应该很长。
 
-结果：返回提示信息。
+例子：
 
-## 用法示例
+加密你的钱包
+> bitcoin-cli encryptwallet "my pass phrase"
 
-### 比特币核心客户端
+现在设置用于钱包的密码，例如用于签名或发送比特币
+> bitcoin-cli walletpassphrase "my pass phrase"
 
-使用密码 mypasswd 加密钱包。
+现在我们能做些像签名事情
+> bitcoin-cli signmessage "bitcoinaddress" "test message"
 
-```shell
-$ bitcoin-cli encryptwallet mypasswd
-wallet encrypted; Bitcoin server stopping, restart to run with encrypted wallet. The keypool has been flushed, you need to make a new backup.
+现在通过移除密码再次锁定钱包
+> bitcoin-cli walletlock
+
+作为一个 json rpc 调用
+> curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "encryptwallet", "params": ["my pass phrase"] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
 ```
 
-### cURL
+## 2. 源码剖析
 
-```shell
-$ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "encryptwallet", "params": ["mypasswd"] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
-{"result":"wallet encrypted; Bitcoin server stopping, restart to run with encrypted wallet. The keypool has been flushed, you need to make a new backup.","error":null,"id":"curltest"}
-```
-
-## 源码剖析
-
-encryptwallet 对应的函数在“rpcserver.h”文件中被引用。
+`encryptwallet` 对应的函数在文件 `rpcserver.h` 中被引用。
 
 ```cpp
-extern UniValue encryptwallet(const UniValue& params, bool fHelp); // 加密钱包
+extern UniValue encryptwallet(const UniValue& params, bool fHelp);
 ```
 
-实现在“rpcwallet.cpp”文件中。
+实现在文件 `rpcwallet.cpp` 中。
 
 ```cpp
 UniValue encryptwallet(const UniValue& params, bool fHelp)
 {
-    if (!EnsureWalletIsAvailable(fHelp)) // 确保钱包当前可用
+    if (!EnsureWalletIsAvailable(fHelp)) // 1. 确保钱包可用
         return NullUniValue;
     
-    if (!pwalletMain->IsCrypted() && (fHelp || params.size() != 1)) // 钱包未加密 且 参数只能有 1 个
-        throw runtime_error( // 命令参数反馈
+    if (!pwalletMain->IsCrypted() && (fHelp || params.size() != 1))
+        throw runtime_error(
             "encryptwallet \"passphrase\"\n"
             "\nEncrypts the wallet with 'passphrase'. This is for first time encryption.\n"
             "After this, any calls that interact with private keys such as sending or signing \n"
@@ -81,54 +79,53 @@ UniValue encryptwallet(const UniValue& params, bool fHelp)
             + HelpExampleCli("walletlock", "") +
             "\nAs a json rpc call\n"
             + HelpExampleRpc("encryptwallet", "\"my pass phrase\"")
-        );
+        ); // 2. 帮助内容
 
-    LOCK2(cs_main, pwalletMain->cs_wallet); // 钱包上锁
+    LOCK2(cs_main, pwalletMain->cs_wallet);
 
-    if (fHelp) // 钱包加密时帮助处理，不反馈任何信息
+    if (fHelp)
         return true;
-    if (pwalletMain->IsCrypted()) // 若钱包已加密
+    if (pwalletMain->IsCrypted()) // 3. 检查钱包加密状态
         throw JSONRPCError(RPC_WALLET_WRONG_ENC_STATE, "Error: running with an encrypted wallet, but encryptwallet was called.");
 
     // TODO: get rid of this .c_str() by implementing SecureString::operator=(std::string)
     // Alternately, find a way to make params[0] mlock()'d to begin with.
-    SecureString strWalletPass; // 创建一个安全字符串对象，用来保存密码
-    strWalletPass.reserve(100); // 预开辟 100 个字符的空间
-    strWalletPass = params[0].get_str().c_str(); // 获取用户指定的密码
+    SecureString strWalletPass;
+    strWalletPass.reserve(100);
+    strWalletPass = params[0].get_str().c_str();
 
-    if (strWalletPass.length() < 1) // 密码长度不能小于 1，至少为 1 个字符
+    if (strWalletPass.length() < 1)
         throw runtime_error(
             "encryptwallet <passphrase>\n"
             "Encrypts the wallet with <passphrase>.");
 
-    if (!pwalletMain->EncryptWallet(strWalletPass)) // 加密钱包
+    if (!pwalletMain->EncryptWallet(strWalletPass)) // 4. 加密钱包
         throw JSONRPCError(RPC_WALLET_ENCRYPTION_FAILED, "Error: Failed to encrypt the wallet.");
 
     // BDB seems to have a bad habit of writing old data into // Berkeley DB 似乎有一个坏习惯，
-    // slack space in .dat files; that is bad if the old data is // 把旧数据写入 .dat 文件的松散空
+    // slack space in .dat files; that is bad if the old data is // 把旧数据写入 .dat 文件的松散空间；
     // unencrypted private keys. So: // 糟糕的是旧数据是没有加密的私钥，所以：
-    StartShutdown(); // 关闭核心服务器
+    StartShutdown(); // 5. 关闭核心服务器
     return "wallet encrypted; Bitcoin server stopping, restart to run with encrypted wallet. The keypool has been flushed, you need to make a new backup."; // 返回该信息表示加密成功
 }
 ```
 
-基本流程：
-1. 确保当前钱包可用（已初始化完成）。
-2. 处理命令帮助和参数个数。
-3. 钱包上锁。
-4. 钱包加密时查看命令帮助，不返回任何信息。
-5. 钱包已加密，再次加密直接返回提示信息。
-6. 获取用户指定密码。
-7. 密码长度检查，不能少于 1 个字符。
-8. 加密钱包。
-9. 关闭核心服务器。
+### 2.1. 确保钱包可用
 
-第五步，调用 pwalletMain->IsCrypted() 函数判断钱包当前是否加密，定义在“crypter.h”文件的 CCryptoKeyStore 类中。
+参考[比特币 RPC 命令剖析 "fundrawtransaction" 2.1. 确保钱包可用](/blog/2018/07/bitcoin-rpc-command-fundrawtransaction.html#21-确保钱包可用)。
+
+### 2.2. 帮助内容
+
+参考[比特币 RPC 命令剖析 "getbestblockhash" 2.1. 帮助内容](/blog/2018/05/bitcoin-rpc-command-getbestblockhash.html#21-帮助内容)。
+
+### 2.3. 检查钱包加密状态
+
+函数 `pwalletMain->IsCrypted()` 定义在文件 `crypter.h` 的密钥存储类 `CCryptoKeyStore` 中。
 
 ```cpp
 /** Keystore which keeps the private keys encrypted.
  * It derives from the basic key store, which is used if no encryption is active.
- */ // 用于存储加密私钥的密钥库。
+ */
 class CCryptoKeyStore : public CBasicKeyStore
 {
     ...
@@ -144,20 +141,22 @@ class CCryptoKeyStore : public CBasicKeyStore
 };
 ```
 
-第六步，类型 SecureString 的定义在“secure.h”文件中。
+类型 `SecureString` 的定义在文件 `secure.h` 中。
 
 ```cpp
-// This is exactly like std::string, but with a custom allocator. // 这是一个 std::string，但定制了空间配置器。
-typedef std::basic_string<char, std::char_traits<char>, secure_allocator<char> > SecureString; // 安全字符串类型
+// This is exactly like std::string, but with a custom allocator.
+typedef std::basic_string<char, std::char_traits<char>, secure_allocator<char> > SecureString; // 这与 std::string 非常相似，但使用了一个定制的空间配置器。
 ```
 
-第八步，调用 pwalletMain->EncryptWallet(strWalletPass) 函数加密钱包，该函数声明在“wallet.h”文件的 CWallet 类中。
+### 2.4. 加密钱包
+
+函数 `pwalletMain->EncryptWallet(strWalletPass)` 声明在文件 `wallet.h` 的钱包类 `CWallet` 中。
 
 ```cpp
 /** 
  * A CWallet is an extension of a keystore, which also maintains a set of transactions and balances,
  * and provides the ability to create new transactions.
- */ // CWallet 是密钥库的扩展，可以维持一组交易和余额，并提供创建新交易的能力。
+ */
 class CWallet : public CCryptoKeyStore, public CValidationInterface
 {
     ...
@@ -166,7 +165,7 @@ class CWallet : public CCryptoKeyStore, public CValidationInterface
 };
 ```
 
-实现在“wallet.cpp”文件中。
+实现在文件 `wallet.cpp` 中。
 
 ```cpp
 bool CWallet::EncryptWallet(const SecureString& strWalletPassphrase)
@@ -263,14 +262,14 @@ bool CWallet::EncryptWallet(const SecureString& strWalletPassphrase)
 }
 ```
 
-调用 NewKeyPool() 函数重新创建密钥池，定义在“wallet.h”文件中。
+重新创建密钥池函数 `NewKeyPool()` 定义在文件 `wallet.h` 中。
 
 ```cpp
 /**
  * Mark old keypool keys as used,
  * and generate all new keys 
- */ // 标记旧密钥池密钥为已使用，并生成全部的新密钥
-bool CWallet::NewKeyPool()
+ */
+bool CWallet::NewKeyPool() // 标记旧密钥池密钥为已使用，并生成所有新的密钥
 {
     {
         LOCK(cs_wallet); // 钱包上锁
@@ -295,13 +294,15 @@ bool CWallet::NewKeyPool()
 }
 ```
 
-第九步，调用 StartShutdown() 函数关闭比特币核心服务，该函数声明在“init.h”文件中。
+### 2.5. 关闭核心服务器
+
+关闭比特币核心服务函数 `StartShutdown()` 声明在文件 `init.h` 中。
 
 ```cpp
-void StartShutdown(); // 关闭比特币核心服务
+void StartShutdown();
 ```
 
-实现在“init.cpp”文件中。
+实现在文件 `init.cpp` 中。
 
 ```cpp
 volatile bool fRequestShutdown = false; // 请求关闭标志，初始为 false
@@ -315,6 +316,7 @@ void StartShutdown()
 ## 参考链接
 
 * [bitcoin/rpcserver.h at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/rpcserver.h){:target="_blank"}
+* [bitcoin/rpcserver.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/rpcserver.cpp){:target="_blank"}
 * [bitcoin/rpcwallet.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/wallet/rpcwallet.cpp){:target="_blank"}
 * [bitcoin/crypter.h at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/wallet/crypter.h){:target="_blank"}
 * [bitcoin/secure.h at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/support/allocators/secure.h){:target="_blank"}

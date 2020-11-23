@@ -6,7 +6,7 @@ author: mistydew
 comments: true
 category: 力扣题解
 tags: LeetCode Hard Backtracking
-excerpt: 该 **n 皇后**难题研究的是如何把 `n` 个皇后放在 `n x n` 的棋盘上并使皇后彼此两两不能攻击的问题。
+excerpt: n **皇后**难题研究的是如何把 `n` 个皇后放在 `n x n` 的棋盘上并使皇后彼此两两不能攻击的问题。给定一个整数 `n`，返回所有不同的 **n 皇后难题**的解决方案。
 ---
 > ## 51. N-Queens
 > 

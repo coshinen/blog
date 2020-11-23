@@ -1,62 +1,47 @@
 ---
 layout: post
 title:  "比特币 RPC 命令剖析 \"dumpwallet\""
-date:   2018-08-07 10:52:21 +0800
+date:   2018-08-07 20:52:21 +0800
 author: mistydew
 comments: true
 category: 区块链
 tags: Bitcoin bitcoin-cli
 excerpt: $ bitcoin-cli dumpwallet "filename"
 ---
-## 提示说明
+## 1. 帮助内容
 
 ```shell
-dumpwallet "filename" # 以可读的方式导出全部钱包密钥到指定文件 filename
-```
+$ bitcoin-cli help dumpwallet
+dumpwallet "filename"
+
+用人类可读的方式导出所有钱包密钥。
 
 参数：
-1. filename（字符串，必备）文件名。
+1. "filename"（字符串，必备）文件名
 
-结果：无返回值。
-
-## 用法示例
-
-### 比特币核心客户端
-
-导出到指定文件，默认保存在用户首次使用该命令的工作目录下。<br>
-这里在家目录 ~ 下使用该命令。
-
-```shell
-$ bitcoin-cli backupwallet wallet.txt
-$ ls ~
-... wallet.txt ...
+例子：
+> bitcoin-cli backupwallet "test"
+> curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "dumpwallet", "params": ["test"] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
 ```
 
-### cURL
+## 2. 源码剖析
 
-```shell
-$ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "dumpwallet", "params": ["./wallet.txt"] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
-{"result":null,"error":null,"id":"curltest"}
-```
-
-## 源码剖析
-
-dumpwallet 对应的函数在“rpcserver.h”文件中被引用。
+`dumpwallet` 对应的函数在文件 `rpcserver.h` 中被引用。
 
 ```cpp
-extern UniValue dumpwallet(const UniValue& params, bool fHelp); // 导出钱包
+extern UniValue dumpwallet(const UniValue& params, bool fHelp);
 ```
 
-实现在“rpcwallet.cpp”文件中。
+实现在文件 `rpcwallet.cpp` 中。
 
 ```cpp
 UniValue dumpwallet(const UniValue& params, bool fHelp)
 {
-    if (!EnsureWalletIsAvailable(fHelp)) // 确保当前钱包可用
+    if (!EnsureWalletIsAvailable(fHelp)) // 1. 确保钱包可用
         return NullUniValue;
     
-    if (fHelp || params.size() != 1) // 参数必须为 1 个
-        throw runtime_error( // 命令帮助反馈
+    if (fHelp || params.size() != 1)
+        throw runtime_error(
             "dumpwallet \"filename\"\n"
             "\nDumps all wallet keys in a human-readable format.\n"
             "\nArguments:\n"
@@ -64,70 +49,69 @@ UniValue dumpwallet(const UniValue& params, bool fHelp)
             "\nExamples:\n"
             + HelpExampleCli("dumpwallet", "\"test\"")
             + HelpExampleRpc("dumpwallet", "\"test\"")
-        );
+        ); // 2. 帮助内容
 
-    LOCK2(cs_main, pwalletMain->cs_wallet); // 钱包上锁
+    LOCK2(cs_main, pwalletMain->cs_wallet);
 
-    EnsureWalletIsUnlocked(); // 确保当前钱包未加密
+    EnsureWalletIsUnlocked(); // 3. 确保钱包解锁
 
-    ofstream file; // 文件输出流对象
-    file.open(params[0].get_str().c_str()); // 打开指定文件
-    if (!file.is_open()) // 检测打开文件状态
+    ofstream file;
+    file.open(params[0].get_str().c_str());
+    if (!file.is_open())
         throw JSONRPCError(RPC_INVALID_PARAMETER, "Cannot open wallet dump file");
 
-    std::map<CKeyID, int64_t> mapKeyBirth; // 密钥创建时间
-    std::set<CKeyID> setKeyPool; // 密钥池集合
-    pwalletMain->GetKeyBirthTimes(mapKeyBirth); // 获取钱包密钥创建时间
-    pwalletMain->GetAllReserveKeys(setKeyPool); // 获取所有预创建的密钥
+    std::map<CKeyID, int64_t> mapKeyBirth;
+    std::set<CKeyID> setKeyPool;
+    pwalletMain->GetKeyBirthTimes(mapKeyBirth);
+    pwalletMain->GetAllReserveKeys(setKeyPool);
 
     // sort time/key pairs
-    std::vector<std::pair<int64_t, CKeyID> > vKeyBirth; // 密钥创建时间映射列表
+    std::vector<std::pair<int64_t, CKeyID> > vKeyBirth; // 4. 排序时间/密钥对
     for (std::map<CKeyID, int64_t>::const_iterator it = mapKeyBirth.begin(); it != mapKeyBirth.end(); it++) {
-        vKeyBirth.push_back(std::make_pair(it->second, it->first)); // 把 map 内的数据导入 vector
+        vKeyBirth.push_back(std::make_pair(it->second, it->first));
     }
-    mapKeyBirth.clear(); // 清空 map
-    std::sort(vKeyBirth.begin(), vKeyBirth.end()); // 对该列表按创建时间进行排序，默认升序
+    mapKeyBirth.clear();
+    std::sort(vKeyBirth.begin(), vKeyBirth.end());
 
     // produce output
-    file << strprintf("# Wallet dump created by Bitcoin %s (%s)\n", CLIENT_BUILD, CLIENT_DATE); // 客户端版本
-    file << strprintf("# * Created on %s\n", EncodeDumpTime(GetTime())); // 当前时间
-    file << strprintf("# * Best block at time of backup was %i (%s),\n", chainActive.Height(), chainActive.Tip()->GetBlockHash().ToString()); // 最佳块的高度和哈希
-    file << strprintf("#   mined on %s\n", EncodeDumpTime(chainActive.Tip()->GetBlockTime())); // 最佳块产生的时间
+    file << strprintf("# Wallet dump created by Bitcoin %s (%s)\n", CLIENT_BUILD, CLIENT_DATE); // 5. 产生输出
+    file << strprintf("# * Created on %s\n", EncodeDumpTime(GetTime()));
+    file << strprintf("# * Best block at time of backup was %i (%s),\n", chainActive.Height(), chainActive.Tip()->GetBlockHash().ToString());
+    file << strprintf("#   mined on %s\n", EncodeDumpTime(chainActive.Tip()->GetBlockTime()));
     file << "\n";
     for (std::vector<std::pair<int64_t, CKeyID> >::const_iterator it = vKeyBirth.begin(); it != vKeyBirth.end(); it++) {
-        const CKeyID &keyid = it->second; // 获取密钥索引
-        std::string strTime = EncodeDumpTime(it->first); // 编码时间，按一定的格式输出
-        std::string strAddr = CBitcoinAddress(keyid).ToString(); // 获取公钥地址
+        const CKeyID &keyid = it->second;
+        std::string strTime = EncodeDumpTime(it->first);
+        std::string strAddr = CBitcoinAddress(keyid).ToString();
         CKey key;
         if (pwalletMain->GetKey(keyid, key)) {
-            if (pwalletMain->mapAddressBook.count(keyid)) { // 密钥索引存在于地址簿映射列表
+            if (pwalletMain->mapAddressBook.count(keyid)) {
                 file << strprintf("%s %s label=%s # addr=%s\n", CBitcoinSecret(key).ToString(), strTime, EncodeDumpString(pwalletMain->mapAddressBook[keyid].name), strAddr); // label=
-            } else if (setKeyPool.count(keyid)) { // 密钥索引存在于密钥池集合
+            } else if (setKeyPool.count(keyid)) {
                 file << strprintf("%s %s reserve=1 # addr=%s\n", CBitcoinSecret(key).ToString(), strTime, strAddr); // reserve=1
-            } else { // 其他类型
+            } else {
                 file << strprintf("%s %s change=1 # addr=%s\n", CBitcoinSecret(key).ToString(), strTime, strAddr); // change=1
             }
         }
     }
     file << "\n";
-    file << "# End of dump\n"; // 导出结束
-    file.close(); // 关闭文件输出流
-    return NullUniValue; // 返回空值
+    file << "# End of dump\n";
+    file.close();
+    return NullUniValue;
 }
 ```
 
-基本流程：
-1. 确保钱包当前可用（已初始化完成）。
-2. 处理命令帮助和参数个数。
-3. 钱包上锁。
-4. 确保钱包当前未加密。
-5. 创建文件输出流对象打开指定文件。
-6. 获取钱包密钥创建时间映射，和密钥池中预创建的密钥索引。
-7. 根据密钥创建时间对密钥列表进行排序。
-8. 按一定格式输出密钥到指定文件。
-9. 关闭文件输出流对象。
+### 2.1. 确保钱包可用
 
-第六步，调用 pwalletMain->GetKeyBirthTimes(mapKeyBirth) 和 pwalletMain->GetAllReserveKeys(setKeyPool) 函数声明在“wallet.h”文件的 CWallet 类中。
+参考[比特币 RPC 命令剖析 "fundrawtransaction" 2.1. 确保钱包可用](/blog/2018/07/bitcoin-rpc-command-fundrawtransaction.html#21-确保钱包可用)。
+
+### 2.2. 帮助内容
+
+参考[比特币 RPC 命令剖析 "getbestblockhash" 2.1. 帮助内容](/blog/2018/05/bitcoin-rpc-command-getbestblockhash.html#21-帮助内容)。
+
+### 2.3. 确保钱包解锁
+
+函数 `pwalletMain->GetKeyBirthTimes(mapKeyBirth)` 和 `pwalletMain->GetAllReserveKeys(setKeyPool)` 声明在文件 `wallet.h` 的钱包类 `CWallet` 中。
 
 ```cpp
 /** 
@@ -220,13 +204,17 @@ void CWallet::GetKeyBirthTimes(std::map<CKeyID, int64_t> &mapKeyBirth) const {
 }
 ```
 
-第八步，调用 pwalletMain->GetKey(keyid, key) 函数获取密钥索引对应的私钥，该函数声明在“crypter.h”文件的 CCryptoKeyStore 类中。
+### 2.4. 排序时间/密钥对
+
+### 2.5. 产生输出
+
+获取密钥函数 `pwalletMain->GetKey(keyid, key)` 声明在文件 `crypter.h` 的密钥存储类 `CCryptoKeyStore` 中。
 
 ```cpp
 /** Keystore which keeps the private keys encrypted.
  * It derives from the basic key store, which is used if no encryption is active.
- */ // 用于存储加密私钥的密钥库。
-class CCryptoKeyStore : public CBasicKeyStore
+ */
+class CCryptoKeyStore : public CBasicKeyStore // 存储加密私钥的密钥库。
 {
 private:
     CryptedKeyMap mapCryptedKeys; // 密钥索引对应公钥私钥对映射列表
@@ -236,7 +224,7 @@ private:
 };
 ```
 
-实现在“crypter.cpp”文件中。
+实现在文件 `crypter.cpp` 中。
 
 ```cpp
 bool CCryptoKeyStore::GetKey(const CKeyID &address, CKey& keyOut) const
@@ -258,8 +246,8 @@ bool CCryptoKeyStore::GetKey(const CKeyID &address, CKey& keyOut) const
 }
 ```
 
-若当前钱包未加密，则调用 CBasicKeyStore::GetKey(address, keyOut) 函数获取密钥索引对应的私钥。
-该函数定义在“crypter.h”文件的 CBasicKeyStore 类中。
+若钱包未加密，则调用函数 `CBasicKeyStore::GetKey(address, keyOut)` 获取密钥索引对应的私钥。
+该函数定义在文件 `crypter.h` 的基础密钥存储类 `CBasicKeyStore` 中。
 
 ```cpp
 typedef std::map<CKeyID, CKey> KeyMap; // 密钥索引和私钥的映射
@@ -287,14 +275,14 @@ protected:
 };
 ```
 
-若钱包已加密，且能在密钥索引和公私钥对映射列表 mapCryptedKeys 中找到指定索引，则调用 DecryptKey(vMasterKey, vchCryptedSecret, vchPubKey, keyOut) 函数解密并获取私钥。
-对象 mapCryptedKeys 的类型 CryptedKeyMap 定义在“keystore.h”文件中。
+若钱包已加密，且能在密钥索引和公私钥对映射列表 `mapCryptedKeys` 中找到指定索引，则调用函数 `DecryptKey(vMasterKey, vchCryptedSecret, vchPubKey, keyOut)` 解密并获取私钥。
+密钥映射对象 `mapCryptedKeys` 的类型 `CryptedKeyMap` 定义在文件 `keystore.h` 中。
 
 ```cpp
 typedef std::map<CKeyID, std::pair<CPubKey, std::vector<unsigned char> > > CryptedKeyMap; // 密钥索引对应公钥私钥对映射
 ```
 
-函数 DecryptKey(vMasterKey, vchCryptedSecret, vchPubKey, keyOut) 定义在“crypter.cpp”文件中。
+函数 `DecryptKey(vMasterKey, vchCryptedSecret, vchPubKey, keyOut)` 定义在文件 `crypter.cpp` 中。
 
 ```cpp
 static bool DecryptKey(const CKeyingMaterial& vMasterKey, const std::vector<unsigned char>& vchCryptedSecret, const CPubKey& vchPubKey, CKey& key)
@@ -311,11 +299,10 @@ static bool DecryptKey(const CKeyingMaterial& vMasterKey, const std::vector<unsi
 }
 ```
 
-未完成。
-
 ## 参考链接
 
 * [bitcoin/rpcserver.h at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/rpcserver.h){:target="_blank"}
+* [bitcoin/rpcserver.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/rpcserver.cpp){:target="_blank"}
 * [bitcoin/rpcwallet.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/wallet/rpcwallet.cpp){:target="_blank"}
 * [bitcoin/wallet.h at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/wallet/wallet.h){:target="_blank"}
 * [bitcoin/wallet.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/wallet/wallet.cpp){:target="_blank"}
