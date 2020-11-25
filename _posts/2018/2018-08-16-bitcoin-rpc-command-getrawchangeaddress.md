@@ -1,59 +1,48 @@
 ---
 layout: post
 title:  "比特币 RPC 命令剖析 \"getrawchangeaddress\""
-date:   2018-08-16 14:28:37 +0800
+date:   2018-08-16 20:28:37 +0800
 author: mistydew
 comments: true
 category: 区块链
 tags: Bitcoin bitcoin-cli
 excerpt: $ bitcoin-cli getrawchangeaddress
 ---
-## 提示说明
+## 1. 帮助内容
 
 ```shell
-getrawchangeaddress # 获取一个新的用于接收找零的比特币地址
+$ bitcoin-cli help getrawchangeaddress
+getrawchangeaddress
+
+返回一个新的比特币地址，用于接收找零。
+这是用于原始交易，而非通常使用。
+
+结果：
+"address"（字符串）地址
+
+例子：
+> bitcoin-cli getrawchangeaddress
+> curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "getrawchangeaddress", "params": [] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
 ```
 
-**这是用于原始交易，而非普通交易。**
+## 2. 源码剖析
 
-结果：（字符串）返回地址。
-
-## 用法示例
-
-### 比特币核心客户端
-
-获取一个新的用于原始交易的找零地址。
-
-```shell
-$ bitcoin-cli getrawchangeaddress
-16h8G5hCrbHKU6ihp3RaBNP4uctzac1S6k
-```
-
-### cURL
-
-```shell
-$ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "getrawchangeaddress", "params": [] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
-{"result":"1UtBfdBGyzJjWPe7VYCASooGdkUAVosRg","error":null,"id":"curltest"}
-```
-
-## 源码剖析
-
-getrawchangeaddress 对应的函数在“rpcserver.h”文件中被引用。
+`getrawchangeaddress` 对应的函数在文件 `rpcserver.h` 中被引用。
 
 ```cpp
-extern UniValue getrawchangeaddress(const UniValue& params, bool fHelp); // 获取元交易找零地址
+extern UniValue getrawchangeaddress(const UniValue& params, bool fHelp);
 ```
 
-实现在“wallet/rpcwallet.cpp”文件中。
+实现在文件 `wallet/rpcwallet.cpp` 中。
 
 ```cpp
 UniValue getrawchangeaddress(const UniValue& params, bool fHelp)
 {
-    if (!EnsureWalletIsAvailable(fHelp)) // 确保当前钱包可用
+    if (!EnsureWalletIsAvailable(fHelp)) // 1. 确保钱包可用
         return NullUniValue;
     
-    if (fHelp || params.size() > 1) // 没有参数，这里错了
-        throw runtime_error( // 命令帮助反馈
+    if (fHelp || params.size() > 1)
+        throw runtime_error(
             "getrawchangeaddress\n"
             "\nReturns a new Bitcoin address, for receiving change.\n"
             "This is for use with raw transactions, NOT normal use.\n"
@@ -62,9 +51,9 @@ UniValue getrawchangeaddress(const UniValue& params, bool fHelp)
             "\nExamples:\n"
             + HelpExampleCli("getrawchangeaddress", "")
             + HelpExampleRpc("getrawchangeaddress", "")
-       );
+       ); // 2. 帮助内容
 
-    LOCK2(cs_main, pwalletMain->cs_wallet); // 钱包上锁
+    LOCK2(cs_main, pwalletMain->cs_wallet);
 
     if (!pwalletMain->IsLocked()) // 若当前钱包处于未加密状态
         pwalletMain->TopUpKeyPool(); // 填充密钥池
@@ -82,16 +71,16 @@ UniValue getrawchangeaddress(const UniValue& params, bool fHelp)
 }
 ```
 
-基本流程：
-1. 确保钱包当前可用（已初始化完成）。
-2. 处理命令帮助和参数个数。
-3. 钱包上锁。
-4. 若当前钱包处于解密状态，填充满密钥池。
-5. 从密钥池中取出一个密钥，并获取对应的公钥。
-6. 从密钥池中移除获取的密钥。
-7. 获取公钥索引，经 Base58 编码转化为公钥地址并返回。
+### 2.1. 确保钱包可用
+
+参考[比特币 RPC 命令剖析 "fundrawtransaction" 2.1. 确保钱包可用](/blog/2018/07/bitcoin-rpc-command-fundrawtransaction.html#21-确保钱包可用)。
+
+### 2.2. 帮助内容
+
+参考[比特币 RPC 命令剖析 "getbestblockhash" 2.1. 帮助内容](/blog/2018/05/bitcoin-rpc-command-getbestblockhash.html#21-帮助内容)。
 
 ## 参考链接
 
 * [bitcoin/rpcserver.h at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/rpcserver.h){:target="_blank"}
+* [bitcoin/rpcserver.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/rpcserver.cpp){:target="_blank"}
 * [bitcoin/rpcwallet.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/wallet/rpcwallet.cpp){:target="_blank"}

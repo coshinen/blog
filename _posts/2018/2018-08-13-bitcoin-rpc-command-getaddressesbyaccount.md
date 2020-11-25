@@ -1,70 +1,53 @@
 ---
 layout: post
 title:  "比特币 RPC 命令剖析 \"getaddressesbyaccount\""
-date:   2018-08-13 11:07:06 +0800
+date:   2018-08-13 21:07:06 +0800
 author: mistydew
 comments: true
 category: 区块链
 tags: Bitcoin bitcoin-cli
 excerpt: $ bitcoin-cli getaddressesbyaccount "account"
 ---
-## 提示说明
+## 1. 帮助内容
 
 ```shell
-getaddressesbyaccount "account" # （已过时）获取指定账户的地址列表
-```
+$ bitcoin-cli help getaddressesbyaccount
+getaddressesbyaccount "account"
+
+已过时。返回给定账户的地址列表。
 
 参数：
-1. account（字符串，必备）账户名。
+1. "account"（字符串，必备）账户名。
 
 结果：
-```shell
-[                     （json 字符串数组）
-  "bitcoinaddress"  （字符串）一个关联给定账户的比特币地址
+[                 （字符串的 json 数组）
+  "bitcoinaddress"（字符串）一个关联给定账户的比特币地址
   ,...
 ]
+
+例子：
+> bitcoin-cli getaddressesbyaccount "tabby"
+> curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "getaddressesbyaccount", "params": ["tabby"] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
 ```
 
-## 用法示例
+## 2. 源码剖析
 
-### 比特币核心客户端
-
-获取账户 "tabby" 下的所有地址。
-
-```shell
-$ bitcoin-cli getaddressesbyaccount "tabby"
-[
-  "1N7xDfRbkVwa2Co8q1KbDCVEr9rg8VWsfW", 
-  "1QKe82sDGtbBRp1ymRqG5XXFzJCfjUmpsi",
-  ...
-]
-```
-
-### cURL
-
-```shell
-$ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "getaddressesbyaccount", "params": ["tabby"] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
-{"result":["1N7xDfRbkVwa2Co8q1KbDCVEr9rg8VWsfW","1QKe82sDGtbBRp1ymRqG5XXFzJCfjUmpsi"],"error":null,"id":"curltest"}
-```
-
-## 源码剖析
-
-getaddressesbyaccount 对应的函数在“rpcserver.h”文件中被引用。
+`getaddressesbyaccount` 对应的函数在文件 `rpcserver.h` 中被引用。
 
 ```cpp
-extern UniValue getaddressesbyaccount(const UniValue& params, bool fHelp); // 获取账户下的所有地址
+extern UniValue getaddressesbyaccount(const UniValue& params, bool fHelp);
 ```
 
-实现在“rpcwallet.cpp”文件中。
+实现在文件 `rpcwallet.cpp` 中。
 
 ```cpp
 UniValue getaddressesbyaccount(const UniValue& params, bool fHelp)
 {
-    if (!EnsureWalletIsAvailable(fHelp)) // 确保当前钱包可用
+    if (!EnsureWalletIsAvailable(fHelp)) // 1. 确保钱包可用
         return NullUniValue;
     
-    if (fHelp || params.size() != 1) // 参数必须为 1 个
-        throw runtime_error( // 命令参数反馈
+    if (fHelp || params.size() != 1)
+        throw runtime_error(
             "getaddressesbyaccount \"account\"\n"
             "\nDEPRECATED. Returns the list of addresses for the given account.\n"
             "\nArguments:\n"
@@ -77,34 +60,35 @@ UniValue getaddressesbyaccount(const UniValue& params, bool fHelp)
             "\nExamples:\n"
             + HelpExampleCli("getaddressesbyaccount", "\"tabby\"")
             + HelpExampleRpc("getaddressesbyaccount", "\"tabby\"")
-        );
+        ); // 2. 帮助内容
 
-    LOCK2(cs_main, pwalletMain->cs_wallet); // 钱包上锁
+    LOCK2(cs_main, pwalletMain->cs_wallet);
 
-    string strAccount = AccountFromValue(params[0]); // 获取指定账户名
+    string strAccount = AccountFromValue(params[0]);
 
-    // Find all addresses that have the given account // 查找基于给定帐户名的所有地址
-    UniValue ret(UniValue::VARR); // 创建数组类型的结果对象
+    // Find all addresses that have the given account
+    UniValue ret(UniValue::VARR); // 3. 找到给定帐户的所有地址
     BOOST_FOREACH(const PAIRTYPE(CBitcoinAddress, CAddressBookData)& item, pwalletMain->mapAddressBook)
-    { // 遍历地址簿
-        const CBitcoinAddress& address = item.first; // 获取比特币地址
-        const string& strName = item.second.name; // 获取账户名
-        if (strName == strAccount) // 若与指定帐户名相同
-            ret.push_back(address.ToString()); // 把该地址加入结果集
+    {
+        const CBitcoinAddress& address = item.first;
+        const string& strName = item.second.name;
+        if (strName == strAccount)
+            ret.push_back(address.ToString());
     }
-    return ret; // 返回结果对象
+    return ret;
 }
 ```
 
-基本流程：
-1. 确保钱包当前可用（已初始化完成）。
-2. 处理命令帮助和参数个数。
-3. 钱包上锁。
-4. 获取指定账户，账户名不能为 *。
-5. 遍历地址簿，把与指定账户相同的地址加入结果集。
-6. 返回结果集。
+### 2.1. 确保钱包可用
+
+参考[比特币 RPC 命令剖析 "fundrawtransaction" 2.1. 确保钱包可用](/blog/2018/07/bitcoin-rpc-command-fundrawtransaction.html#21-确保钱包可用)。
+
+### 2.2. 帮助内容
+
+参考[比特币 RPC 命令剖析 "getbestblockhash" 2.1. 帮助内容](/blog/2018/05/bitcoin-rpc-command-getbestblockhash.html#21-帮助内容)。
 
 ## 参考链接
 
 * [bitcoin/rpcserver.h at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/rpcserver.h){:target="_blank"}
+* [bitcoin/rpcserver.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/rpcserver.cpp){:target="_blank"}
 * [bitcoin/rpcwallet.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/wallet/rpcwallet.cpp){:target="_blank"}

@@ -1,75 +1,61 @@
 ---
 layout: post
 title:  "比特币 RPC 命令剖析 \"getreceivedbyaccount\""
-date:   2018-08-17 15:14:02 +0800
+date:   2018-08-17 20:14:02 +0800
 author: mistydew
 comments: true
 category: 区块链
 tags: Bitcoin bitcoin-cli
 excerpt: $ bitcoin-cli getreceivedbyaccount "account" ( minconf )
 ---
-## 提示说明
+## 1. 帮助内容
 
 ```shell
-getreceivedbyaccount "account" ( minconf ) # （已过时）获取账户 account 下所有地址至少 minconf 个确认的交易接收到的总金额
-```
+$ bitcoin-cli help getreceivedbyaccount
+getreceivedbyaccount "account" ( minconf )
+
+已过时。返回 <account> 里至少 [minconf] 次确认的交易地址收到的总金额。
 
 参数：
-1. account（字符串，必备）选择的账户，默认账户使用 ""。
-2. minconf（数字，可选，默认为 1）只包含至少 minconf 次确认的交易。
+1. "account"（字符串，必备）选择的账户，可能是使用 "" 的默认账户。
+2. minconf  （数字，可选，默认为 1）只包含至少这么多次确认的交易。
 
-结果：（数字）返回该账户接收到的 BTC 总数。
+结果：
+amount（数字）这个账户收到的 BTC 总数。
 
-## 用法示例
+例子：
 
-### 比特币核心客户端
+默认账户至少 1 次确认的收到的金额
+> bitcoin-cli getreceivedbyaccount ""
 
-用法一：获取默认账户下接收的至少 1 次确认的金额。
+包含 0 次确认的未确认的金额的 tabby 账户收到的金额
+> bitcoin-cli getreceivedbyaccount "tabby" 0
 
-```shell
-$ bitcoin-cli getreceivedbyaccount ""
-105.009878
-```
+至少 6 次确认的金额，非常安全
+> bitcoin-cli getreceivedbyaccount "tabby" 6
 
-用法二：获取指定账户下接收的包含未确认的金额。
-
-```shell
-$ bitcoin-cli getreceivedbyaccount "tabby" 0
-0
-```
-
-用法三：获取指定账户下接收的至少 6 次确认的金额，非常安全。
-
-```shell
-$ bitcoin-cli getreceivedbyaccount "tabby" 6
-0
-```
-
-### cURL
-
-```shell
-$ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "getreceivedbyaccount", "params": ["", 6] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
-{"result":105.009878,"error":null,"id":"curltest"}
+作为一个 json rpc 调用
+> curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "getreceivedbyaccount", "params": ["tabby", 6] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
 ```
 
 ## 源码剖析
 
-getreceivedbyaccount 对应的函数在“rpcserver.h”文件中被引用。
+`getreceivedbyaccount` 对应的函数在文件 `rpcserver.h` 中被引用。
 
 ```cpp
-extern UniValue getreceivedbyaccount(const UniValue& params, bool fHelp); // 获取某账户接收到的金额
+extern UniValue getreceivedbyaccount(const UniValue& params, bool fHelp);
 ```
 
-实现在“wallet/rpcwallet.cpp”文件中。
+实现在文件 `wallet/rpcwallet.cpp` 中。
 
 ```cpp
 UniValue getreceivedbyaccount(const UniValue& params, bool fHelp)
 {
-    if (!EnsureWalletIsAvailable(fHelp)) // 确保当前钱包可用
+    if (!EnsureWalletIsAvailable(fHelp)) // 1. 确保钱包可用
         return NullUniValue;
     
-    if (fHelp || params.size() < 1 || params.size() > 2) // 参数为 1 个或 2 个
-        throw runtime_error( // 命令参数反馈
+    if (fHelp || params.size() < 1 || params.size() > 2)
+        throw runtime_error(
             "getreceivedbyaccount \"account\" ( minconf )\n"
             "\nDEPRECATED. Returns the total amount received by addresses with <account> in transactions with at least [minconf] confirmations.\n"
             "\nArguments:\n"
@@ -86,85 +72,87 @@ UniValue getreceivedbyaccount(const UniValue& params, bool fHelp)
             + HelpExampleCli("getreceivedbyaccount", "\"tabby\" 6") +
             "\nAs a json rpc call\n"
             + HelpExampleRpc("getreceivedbyaccount", "\"tabby\", 6")
-        );
+        ); // 2. 帮助内容
 
-    LOCK2(cs_main, pwalletMain->cs_wallet); // 钱包上锁
+    LOCK2(cs_main, pwalletMain->cs_wallet);
 
-    // Minimum confirmations // 最小确认数
-    int nMinDepth = 1; // 最小深度，默认为 1
+    // Minimum confirmations
+    int nMinDepth = 1; // 最小确认数
     if (params.size() > 1)
-        nMinDepth = params[1].get_int(); // 获取指定确认数作为最小深度
+        nMinDepth = params[1].get_int();
 
-    // Get the set of pub keys assigned to account // 获取指定账户的公钥集合
-    string strAccount = AccountFromValue(params[0]); // 获取指定账户
-    set<CTxDestination> setAddress = pwalletMain->GetAccountAddresses(strAccount); // 获取指定账户的地址集合
+    // Get the set of pub keys assigned to account
+    string strAccount = AccountFromValue(params[0]); // 3. 获取分配到账户的公钥集合
+    set<CTxDestination> setAddress = pwalletMain->GetAccountAddresses(strAccount);
 
-    // Tally // 总计
-    CAmount nAmount = 0;
-    for (map<uint256, CWalletTx>::iterator it = pwalletMain->mapWallet.begin(); it != pwalletMain->mapWallet.end(); ++it) // 遍历钱包交易映射列表
+    // Tally
+    CAmount nAmount = 0; // 4. 总计
+    for (map<uint256, CWalletTx>::iterator it = pwalletMain->mapWallet.begin(); it != pwalletMain->mapWallet.end(); ++it)
     {
-        const CWalletTx& wtx = (*it).second; // 获取钱包交易
-        if (wtx.IsCoinBase() || !CheckFinalTx(wtx)) // 若为创币交易 或 非最终交易
-            continue; // 跳过
+        const CWalletTx& wtx = (*it).second;
+        if (wtx.IsCoinBase() || !CheckFinalTx(wtx))
+            continue;
 
-        BOOST_FOREACH(const CTxOut& txout, wtx.vout) // 遍历该交易的输出列表
+        BOOST_FOREACH(const CTxOut& txout, wtx.vout)
         {
             CTxDestination address;
-            if (ExtractDestination(txout.scriptPubKey, address) && IsMine(*pwalletMain, address) && setAddress.count(address)) // 若从输出公钥脚本中提取地址 且 该地址为自己的 且 属于指定账户地址集
-                if (wtx.GetDepthInMainChain() >= nMinDepth) // 且交易深度大于最小深度
-                    nAmount += txout.nValue; // 累加输出的金额
+            if (ExtractDestination(txout.scriptPubKey, address) && IsMine(*pwalletMain, address) && setAddress.count(address))
+                if (wtx.GetDepthInMainChain() >= nMinDepth)
+                    nAmount += txout.nValue;
         }
     }
 
-    return (double)nAmount / (double)COIN; // 换算单位 Satoshi 为 BTC
+    return (double)nAmount / (double)COIN;
 }
 ```
 
-基本流程：
-1. 确保钱包当前可用（已初始化完成）。
-2. 处理命令帮助和参数个数。
-3. 钱包上锁。
-4. 获取最小确认数和指定账户的地址集。
-5. 遍历钱包交易映射列表，把满足一定条件的交易的金额累加。
-6. 把上步得到的总金额除 10<sup>8</sup> 得到以 BTC 为单位的结果并返回。
+### 2.1. 确保钱包可用
 
-第四步，调用 pwalletMain->GetAccountAddresses(strAccount) 函数获取指定账户的地址集，
-该函数声明在“wallet/wallet.h”文件的 CWallet 类中。
+参考[比特币 RPC 命令剖析 "fundrawtransaction" 2.1. 确保钱包可用](/blog/2018/07/bitcoin-rpc-command-fundrawtransaction.html#21-确保钱包可用)。
+
+### 2.2. 帮助内容
+
+参考[比特币 RPC 命令剖析 "getbestblockhash" 2.1. 帮助内容](/blog/2018/05/bitcoin-rpc-command-getbestblockhash.html#21-帮助内容)。
+
+### 2.3. 获取分配到账户的公钥集合
+
+获取账户地址集函数 `pwalletMain->GetAccountAddresses(strAccount)` 声明在文件 `wallet/wallet.h` 的钱包类 `CWallet` 中。
 
 ```cpp
 /** 
  * A CWallet is an extension of a keystore, which also maintains a set of transactions and balances,
  * and provides the ability to create new transactions.
- */ // CWallet 是密钥库的扩展，可以维持一组交易和余额，并提供创建新交易的能力。
+ */
 class CWallet : public CCryptoKeyStore, public CValidationInterface
 {
     ...
-    std::set<CTxDestination> GetAccountAddresses(const std::string& strAccount) const; // 根据指定的账户获取相关联的地址集
+    std::set<CTxDestination> GetAccountAddresses(const std::string& strAccount) const;
     ...
 };
 ```
 
-实现在“wallet/wallet.cpp”文件中。
+实现在文件 `wallet/wallet.cpp` 中。
 
 ```cpp
 std::set<CTxDestination> CWallet::GetAccountAddresses(const std::string& strAccount) const
 {
-    LOCK(cs_wallet); // 钱包上锁
-    set<CTxDestination> result; // 交易目的地址集
-    BOOST_FOREACH(const PAIRTYPE(CTxDestination, CAddressBookData)& item, mapAddressBook) // 遍历地址簿映射列表
+    LOCK(cs_wallet);
+    set<CTxDestination> result;
+    BOOST_FOREACH(const PAIRTYPE(CTxDestination, CAddressBookData)& item, mapAddressBook)
     {
-        const CTxDestination& address = item.first; // 获取目的（交易输出）地址
-        const string& strName = item.second.name; // 获取账户名
-        if (strName == strAccount) // 若为指定账户名
-            result.insert(address); // 插入交易目的地址集
+        const CTxDestination& address = item.first;
+        const string& strName = item.second.name;
+        if (strName == strAccount)
+            result.insert(address);
     }
-    return result; // 返回地址集
+    return result;
 }
 ```
 
 ## 参考链接
 
 * [bitcoin/rpcserver.h at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/rpcserver.h){:target="_blank"}
+* [bitcoin/rpcserver.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/rpcserver.cpp){:target="_blank"}
 * [bitcoin/rpcwallet.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/wallet/rpcwallet.cpp){:target="_blank"}
 * [bitcoin/wallet.h at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/wallet/wallet.h){:target="_blank"}
 * [bitcoin/wallet.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/wallet/wallet.cpp){:target="_blank"}

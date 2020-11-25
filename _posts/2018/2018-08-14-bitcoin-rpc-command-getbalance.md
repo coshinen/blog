@@ -1,80 +1,62 @@
 ---
 layout: post
 title:  "比特币 RPC 命令剖析 \"getbalance\""
-date:   2018-08-14 11:42:32 +0800
+date:   2018-08-14 21:42:32 +0800
 author: mistydew
 comments: true
 category: 区块链
 tags: Bitcoin bitcoin-cli
 excerpt: $ bitcoin-cli getbalance ( "account" minconf includeWatchonly )
 ---
-## 提示说明
+## 1. 帮助内容
 
 ```shell
-getbalance ( "account" minconf includeWatchonly ) # 获取钱包余额
-```
+$ bitcoin-cli help getbalance
+getbalance ( "account" minconf includeWatchonly )
 
-如果未指定账户，返回服务器钱包总可用余额。<br>
-如果指定了账户（已过时），返回账户的余额。<br>
-**注：默认账户 "" 与没有参数不同。服务器钱包总余额可能与默认账户 "" 余额不同。**
+如果未指定账户，则返回服务器的总可用余额。
+如果指定了账户（已过时），则返回账户的余额。
+注意账户 "" 与无参数不同。
+服务器总余额可能与默认 "" 账户余额不同。
 
 参数：
-1. account（字符串，可选，已过时）选择的账户，或 * 表示整个钱包。可能是默认账户 ""。
-2. minconf（数字，可选，默认为 1）。只包含至少确认 minconf 次的交易。
-3. includeWatchonly（布尔型，可选，默认为 false）也包括包含在 watchonly 地址中的余额（参阅 [importaddress](/blog/2018/06/bitcoin-rpc-command-importaddress.html)）。
+1. "account"       （字符串，可选）已过时。选择的账户，或 "*" 表示整个钱包。它可能是使用 "" 的默认账户。
+2. minconf         （数字，可选，默认为 1）只包括至少确认这么多次的交易。
+3. includeWatchonly（布尔型，可选，默认为 false）也包括 watchonly 地址中的余额（查看 'importaddress'）
 
-结果：（数字）返回该账户收到的 BTC 的总金额。
+结果：
+amount（数字）这个账户收到 BTC 的总金额。
 
-## 用法示例
+例子：
 
-### 比特币核心客户端
+钱包的总金额
+> bitcoin-cli getbalance
 
-用法一：获取当前整个钱包的余额。
+钱包内至少有 5 个区块确认的总金额
+> bitcoin-cli getbalance "*" 6
 
-```shell
-$ bitcoin-cli getbalance
-0.00000000
+作为一个 json rpc 调用
+> curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "getbalance", "params": ["*", 6] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
 ```
 
-用法二：获取当前整个钱包的余额，结果同上。
+## 2. 源码剖析
 
-```shell
-$ bitcoin-cli getbalance * 1 true
-0.00000000
-```
-
-用法三：获取当前整个钱包至少确认 6 次交易的余额。
-
-```shell
-$ bitcoin-cli getbalance * 6
-0.00000000
-```
-
-### cURL
-
-```shell
-$ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "getbalance", "params": [] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
-{"result":0.00000000,"error":null,"id":"curltest"}
-```
-
-## 源码剖析
-
-getbalance 对应的函数在“rpcserver.h”文件中被引用。
+`getbalance` 对应的函数在文件 `rpcserver.h` 中被引用。
 
 ```cpp
-extern UniValue getbalance(const UniValue& params, bool fHelp); // 获取余额
+extern UniValue getbalance(const UniValue& params, bool fHelp);
 ```
 
-实现在“rpcwallet.cpp”文件中。
+实现在文件 `rpcwallet.cpp` 中。
 
 ```cpp
 UniValue getbalance(const UniValue& params, bool fHelp)
 {
-    if (!EnsureWalletIsAvailable(fHelp)) // 确保当前钱包可用
+    if (!EnsureWalletIsAvailable(fHelp)) // 1. 确保钱包可用
         return NullUniValue;
     
-    if (fHelp || params.size() > 3) // 参数最多为 3 个
-        throw runtime_error( // 命令帮助反馈
+    if (fHelp || params.size() > 3)
+        throw runtime_error(
             "getbalance ( \"account\" minconf includeWatchonly )\n"
             "\nIf account is not specified, returns the server's total available balance.\n"
             "If account is specified (DEPRECATED), returns the balance in the account.\n"
@@ -93,11 +75,11 @@ UniValue getbalance(const UniValue& params, bool fHelp)
             + HelpExampleCli("getbalance", "\"*\" 6") +
             "\nAs a json rpc call\n"
             + HelpExampleRpc("getbalance", "\"*\", 6")
-        );
+        ); // 2. 帮助内容
 
-    LOCK2(cs_main, pwalletMain->cs_wallet); // 钱包上锁
+    LOCK2(cs_main, pwalletMain->cs_wallet);
 
-    if (params.size() == 0) // 若无参数
+    if (params.size() == 0)
         return  ValueFromAmount(pwalletMain->GetBalance()); // 直接返回当前整个钱包的余额
 
     int nMinDepth = 1; // 最小深度，默认为 1
@@ -144,16 +126,16 @@ UniValue getbalance(const UniValue& params, bool fHelp)
 }
 ```
 
-基本流程：
-1. 确保钱包当前可用（已初始化完成）。
-2. 处理命令帮助和参数个数。
-3. 钱包上锁。
-4. 若无参数，直接获取钱包总余额并返回。
-5. 若指定了参数，处理相应的参数。
-6. 若指定的账户为 "*"，以不同于 4 的方式获取钱包总余额并返回。
-7. 若指定的账户非 "*"，获取指定账户下的余额并返回。
+### 2.1. 确保钱包可用
+
+参考[比特币 RPC 命令剖析 "fundrawtransaction" 2.1. 确保钱包可用](/blog/2018/07/bitcoin-rpc-command-fundrawtransaction.html#21-确保钱包可用)。
+
+### 2.2. 帮助内容
+
+参考[比特币 RPC 命令剖析 "getbestblockhash" 2.1. 帮助内容](/blog/2018/05/bitcoin-rpc-command-getbestblockhash.html#21-帮助内容)。
 
 ## 参考链接
 
 * [bitcoin/rpcserver.h at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/rpcserver.h){:target="_blank"}
+* [bitcoin/rpcserver.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/rpcserver.cpp){:target="_blank"}
 * [bitcoin/rpcwallet.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/wallet/rpcwallet.cpp){:target="_blank"}
