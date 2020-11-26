@@ -469,52 +469,53 @@ excerpt: Here are my favorite quotes from someones that inspire me or make me la
 
 > Sherlock Holmes, A Game of Shadows:
 > * Come at once if convenient, if inconvenient come all the same.
-> * Let me pay you one in return, when I said if I were assured of the former eventuality, I will cheerfully accept the latter.
+> * You've paid me several compliments.
+> Let me pay you one in return when I say that if I were assured of the former eventuality I would cheerfully accept the latter.
 
-> Sherlock Holmes, [The Return of Sherlock Holmes, The Adventure of the Dancing Men](http://www.literaturepage.com/read/returnofsherlockholmes-50.html){:target="_blank"}:
+> Sherlock Holmes, [The Return of Sherlock Holmes, The Adventure of the Dancing Men](https://standardebooks.org/ebooks/arthur-conan-doyle/the-return-of-sherlock-holmes/text/the-adventure-of-the-dancing-men){:target="_blank"}:
 > * It is not really difficult to construct a series of inferences, each dependent upon its predecessor and each simple in itself.
-> if, after doing so, one simply knocks out all the central inferences and presents one's audience with the starting-point and the conclusion, one may produce a startling, though possibly a meretricious, effect.
+> If, after doing so, one simply knocks out all the central inferences and presents one's audience with the starting-point and the conclusion, one may produce a startling, though possibly a meretricious, effect.
 
-> Sherlock Holmes, [The Memoirs of Sherlock Holmes, The Final Problem](https://www.pagebypagebooks.com/Arthur_Conan_Doyle/Memoirs_of_Sherlock_Holmes/Adventure_XI_The_Final_Problem_p5.html){:target="_blank"}:
-> * Let me pay you one in return when I say that if I were assured of the former eventuality I would, in the interests of the public, cheerfully accept the latter.
+> Sherlock Holmes, [The Memoirs of Sherlock Holmes, The Final Problem](https://standardebooks.org/ebooks/arthur-conan-doyle/the-memoirs-of-sherlock-holmes/text/the-final-problem){:target="_blank"}:
+> * " 'You have paid me several compliments, Mr. Moriarty,' said I.
+> 'Let me pay you one in return when I say that if I were assured of the former eventuality I would, in the interests of the public, cheerfully accept the latter.'
 
-> Sherlock Holmes, [The Adventures of Sherlock Holmes, The Man with the Twisted Lip](https://www.pagebypagebooks.com/Arthur_Conan_Doyle/The_Adventures_of_Sherlock_Holmes/ADVENTURE_VI_THE_MAN_WITH_THE_TWISTED_LIP_p11.html){:target="_blank"}:
+> Sherlock Holmes, [The Adventures of Sherlock Holmes, The Man with the Twisted Lip](https://standardebooks.org/ebooks/arthur-conan-doyle/the-adventures-of-sherlock-holmes/text/the-man-with-the-twisted-lip){:target="_blank"}:
 > * It is, of course, a trifle, but there is nothing so important as trifles.
 
-> Sherlock Holmes, [The Adventures of Sherlock Holmes, A Case of Identity](https://www.pagebypagebooks.com/Arthur_Conan_Doyle/The_Adventures_of_Sherlock_Holmes/ADVENTURE_III_A_CASE_OF_IDENTITY_p5.html){:target="_blank"}:
+> Sherlock Holmes, [The Adventures of Sherlock Holmes, A Case of Identity](https://standardebooks.org/ebooks/arthur-conan-doyle/the-adventures-of-sherlock-holmes/text/a-case-of-identity){:target="_blank"}:
 > * It has long been an axiom of mine that the little things are infinitely the most important.
 
-> Sherlock Holmes, [The Adventures of Sherlock Holmes, A Scandal in Bohemia](https://www.pagebypagebooks.com/Arthur_Conan_Doyle/The_Adventures_of_Sherlock_Holmes/ADVENTURE_I_A_SCANDAL_IN_BOHEMIA_p3.html){:target="_blank"}:
-> * It is a capital mistake to theorize before one has data. Insensibly one begins to twist facts to suit theories, instead of theories to suit facts.
-
-> Sherlock Holmes, [The Adventures of Sherlock Holmes, A Scandal in Bohemia](https://www.pagebypagebooks.com/Arthur_Conan_Doyle/The_Adventures_of_Sherlock_Holmes/ADVENTURE_I_A_SCANDAL_IN_BOHEMIA_p2.html){:target="_blank"}:
+> Sherlock Holmes, [The Adventures of Sherlock Holmes, A Scandal in Bohemia, I](https://standardebooks.org/ebooks/arthur-conan-doyle/the-adventures-of-sherlock-holmes/text/a-scandal-in-bohemia){:target="_blank"}:
+> * It is a capital mistake to theorise before one has data.
+> Insensibly one begins to twist facts to suit theories, instead of theories to suit facts.
 > * You see, but you do not observe. The distinction is clear.
 
-> Sherlock Holmes, [The Sign of the Four, Sherlock Holmes Gives a Demonstration](https://www.pagebypagebooks.com/Arthur_Conan_Doyle/Sign_of_the_Four/Sherlock_Holmes_Gives_a_Demonstration_p2.html){:target="_blank"}:
-> * How often have I said to you that when you have eliminated the impossible whatever remains, HOWEVER IMPROBABLE, must be the truth?
+> Sherlock Holmes, [The Sign of the Four, VI: Sherlock Holmes Gives a Demonstration](https://standardebooks.org/ebooks/arthur-conan-doyle/the-sign-of-the-four/text/chapter-6){:target="_blank"}:
+> * How often have I said to you that when you have eliminated the impossible whatever remains, *however improbable*, must be the truth?
 
-> Sherlock Holmes, [The Sign of the Four, The Statement of the Case](https://www.pagebypagebooks.com/Arthur_Conan_Doyle/Sign_of_the_Four/The_Statement_of_the_Case_p3.html){:target="_blank"}:
-> * It is of the first importance, not to allow your judgment to be biased by personal qualities.
+> Sherlock Holmes, [The Sign of the Four, II: The Statement of the Case](https://standardebooks.org/ebooks/arthur-conan-doyle/the-sign-of-the-four/text/chapter-2){:target="_blank"}:
+> * He smiled gently. "It is of the first importance," he said, "not to allow your judgment to be biased by personal qualities.
+> A client is to me a mere unit—a factor in a problem.
 > The emotional qualities are antagonistic to clear reasoning.
+> I assure you that the most winning woman I ever knew was hanged for poisoning three little children for their insurance-money, and the most repellant man of my acquaintance is a philanthropist who has spent nearly a quarter of a million upon the London poor."
 
-> Sherlock Holmes, [The Sign of the Four, The Science of Deduction](https://www.pagebypagebooks.com/Arthur_Conan_Doyle/Sign_of_the_Four/The_Science_of_Deduction_p5.html){:target="_blank"}:
-> * I never guess. It is a shocking habit,\--destructive to the logical faculty.
-
-> Sherlock Holmes, [The Sign of the Four, The Science of Deduction](https://www.pagebypagebooks.com/Arthur_Conan_Doyle/Sign_of_the_Four/The_Science_of_Deduction_p4.html){:target="_blank"}:
+> Sherlock Holmes, [The Sign of the Four, I: The Science of Deduction](https://standardebooks.org/ebooks/arthur-conan-doyle/the-sign-of-the-four/text/chapter-1){:target="_blank"}:
+> * No, no: I never guess. It is a shocking habit—destructive to the logical faculty.
 > * Eliminate all other factors, and the one which remains must be the truth.
 
-> Sherlock Holmes, [A Study In Scarlet, Our Advertisement Brings A Visitor](https://www.pagebypagebooks.com/Arthur_Conan_Doyle/A_Study_In_Scarlet/Part_I_Being_a_reprint_from_the_reminiscences_of_JOHN_H_WATSON_M_D_late_of_the_Army_Medical_Department_Our_Advertisement_Brings_A_Visitor_p1.html){:target="_blank"}:
+> Sherlock Holmes, [A Study In Scarlet, Part I, V:  Our Advertisement Brings A Visitor](https://standardebooks.org/ebooks/arthur-conan-doyle/a-study-in-scarlet/text/chapter-1-5){:target="_blank"}:
 > * There is a mystery about this which stimulates the imagination; where there is no imagination there is no horror.
 
-> Sherlock Holmes, [A Study In Scarlet, The Science Of Deduction](https://www.pagebypagebooks.com/Arthur_Conan_Doyle/A_Study_In_Scarlet/Part_I_Being_a_reprint_from_the_reminiscences_of_JOHN_H_WATSON_M_D_late_of_the_Army_Medical_Department_The_Science_Of_Deduction_p2.html){:target="_blank"}:
-> * You see, I consider that a man's brain originally is like a little empty attic, and you have to stock it with such furniture as you choose.
+> Sherlock Holmes, [A Study In Scarlet, Part I, II: The Science Of Deduction](https://standardebooks.org/ebooks/arthur-conan-doyle/a-study-in-scarlet/text/chapter-1-2){:target="_blank"}:
+> * "You see," he explained, "I consider that a man's brain originally is like a little empty attic, and you have to stock it with such furniture as you choose.
 > A fool takes in all the lumber of every sort that he comes across, so that the knowledge which might be useful to him gets crowded out, or at best is jumbled up with a lot of other things so that he has a difficulty in laying his hands upon it.
 > Now the skilful workman is very careful indeed as to what he takes into his brain-attic.
 > He will have nothing but the tools which may help him in doing his work, but of these he has a large assortment, and all in the most perfect order.
 > It is a mistake to think that that little room has elastic walls and can distend to any extent.
 > Depend upon it there comes a time when for every addition of knowledge you forget something that you knew before.
-> It is of the highest importance, therefore, not to have useless facts elbowing out the useful ones.
+> It is of the highest importance, therefore, not to have useless facts elbowing out the useful ones."
 
-> Egaeus, [Berenice](http://www.literaturepage.com/read/berenice-1.html){:target="_blank"}:
+> Egaeus, [Short Fiction, Berenice](https://standardebooks.org/ebooks/edgar-allan-poe/short-fiction/text/berenice){:target="_blank"}:
 > * But as, in ethics, evil is a consequence of good, so, in fact, out of joy is sorrow born.
-> Either the memory of past bliss is the anguish of today, or the agonies which are have their origin in the ecstasies which might have been.
+> Either the memory of past bliss is the anguish of today, or the agonies which are, have their origin in the ecstasies which might have been.
