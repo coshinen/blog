@@ -1,72 +1,52 @@
 ---
 layout: post
 title:  "比特币 RPC 命令剖析 \"getnewaddress\""
-date:   2018-08-15 14:45:40 +0800
+date:   2018-08-15 20:45:40 +0800
 author: mistydew
 comments: true
 category: 区块链
 tags: Bitcoin bitcoin-cli
 excerpt: $ bitcoin-cli getnewaddress ( "account" )
 ---
-## 提示说明
+## 1. 帮助内容
 
 ```shell
-getnewaddress ( "account" ) # 获取一个用于接收付款的新的比特币地址
-```
+$ bitcoin-cli help getnewaddress
+getnewaddress ( "account" )
 
-如果指定了账户（已过时），它将同地址一起添加到地址簿中，
-以便接收付款的地址计入账户。
+返回一个用于接收付款的新的比特币地址。
+如果 'account' 已指定（已过时），则将它添加到地址簿
+以便接收付款的地址将被计入 'account'。
 
 参数：
-1. account（字符串，可选，已过时）地址链接的账户名。
-如果没有提供，则使用默认账户 ""。也可以设置空字符串 "" 表示默认账户。
-该账户不需要存在，如果没有指定名称的账户，将会创建该账户。
+1. "account"（字符串，可选）已过时。用于地址链接到的账户名。如果未提供，则使用默认账户 ""。它也可以设置为空字符串 "" 以表示默认账户。该账户不需要存在，如果没有给定账户名那么它将会被创建。
 
-结果：（字符串）返回新的比特币地址。
+结果：
+"bitcoinaddress"（字符串）新的比特币地址
 
-## 用法示例
-
-### 比特币核心客户端
-
-用法一：未指定账户，关联到默认账户 ""。
-
-```shell
-$ bitcoin-cli getnewaddress
-1JyyCKqxsyV5KBjtbsD4K7ea62StpRbXVd
+例子：
+> bitcoin-cli getnewaddress
+> curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "getnewaddress", "params": [] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
 ```
 
-用法二：指定了默认账户 ""，效果同上。
+## 2. 源码剖析
 
-```shell
-$ bitcoin-cli getnewaddress ""
-1L57BgkTtT3qYa5PfLgGmqcVgtHAWh8vAp
-```
-
-### cURL
-
-```shell
-$ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "getnewaddress", "params": [] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
-{"result":"1BWLn7uqfsnFxKp2J88HBGd9njWBT1JU2i","error":null,"id":"curltest"}
-```
-
-## 源码剖析
-
-getnewaddress 对应的函数在“rpcserver.h”文件中被引用。
+`getnewaddress` 对应的函数在文件 `rpcserver.h` 中被引用。
 
 ```cpp
-extern UniValue getnewaddress(const UniValue& params, bool fHelp); // 获取新地址
+extern UniValue getnewaddress(const UniValue& params, bool fHelp);
 ```
 
-实现在“wallet/rpcwallet.cpp”文件中。
+实现在文件 `wallet/rpcwallet.cpp` 中。
 
 ```cpp
-UniValue getnewaddress(const UniValue& params, bool fHelp) // 在指定账户下新建一个地址，若不指定账户，默认添加到""空账户下
+UniValue getnewaddress(const UniValue& params, bool fHelp)
 {
-    if (!EnsureWalletIsAvailable(fHelp)) // 1.确保钱包可用，即当前钱包已存在
+    if (!EnsureWalletIsAvailable(fHelp)) // 1. 确保钱包可用
         return NullUniValue;
 
-    if (fHelp || params.size() > 1) // 参数个数为 0 或 1，即要么使用默认账户，要么指定账户
-        throw runtime_error( // 2.查看该命令的帮助或命令的参数个数错误均返回该命令的帮助
+    if (fHelp || params.size() > 1)
+        throw runtime_error(
             "getnewaddress ( \"account\" )\n"
             "\nReturns a new Bitcoin address for receiving payments.\n"
             "If 'account' is specified (DEPRECATED), it is added to the address book \n"
@@ -78,21 +58,21 @@ UniValue getnewaddress(const UniValue& params, bool fHelp) // 在指定账户下
             "\nExamples:\n"
             + HelpExampleCli("getnewaddress", "")
             + HelpExampleRpc("getnewaddress", "")
-        );
+        ); // 2. 帮助内容
 
-    LOCK2(cs_main, pwalletMain->cs_wallet); // 3.对钱包加锁
+    LOCK2(cs_main, pwalletMain->cs_wallet);
 
     // Parse the account first so we don't generate a key if there's an error
-    string strAccount; // 用于保存账户名
-    if (params.size() > 0) // 有 1 个参数的情况
-        strAccount = AccountFromValue(params[0]); // 4.解析第一个参数并将其作为账户名
+    string strAccount; // 3. 首先解析账户这样如果这里出错我们就不会生成密钥
+    if (params.size() > 0)
+        strAccount = AccountFromValue(params[0]);
 
-    if (!pwalletMain->IsLocked()) // 检查钱包是否上锁（被用户加密）
-        pwalletMain->TopUpKeyPool(); // 5.填充密钥池
+    if (!pwalletMain->IsLocked())
+        pwalletMain->TopUpKeyPool(); // 4. 填充密钥池
 
     // Generate a new key that is added to wallet
-    CPubKey newKey; // 6.生成一个新密钥并添加到钱包，返回一个对应的比特币地址
-    if (!pwalletMain->GetKeyFromPool(newKey)) // 获取一个公钥
+    CPubKey newKey; // 5. 生成一个新密钥并添加到钱包
+    if (!pwalletMain->GetKeyFromPool(newKey))
         throw JSONRPCError(RPC_WALLET_KEYPOOL_RAN_OUT, "Error: Keypool ran out, please call keypoolrefill first");
     CKeyID keyID = newKey.GetID(); // 对 65 bytes 的公钥调用 hash160(即先 sha256, 再 ripemd160)
 
@@ -102,60 +82,31 @@ UniValue getnewaddress(const UniValue& params, bool fHelp) // 在指定账户下
 }
 ```
 
-基本流程：
-1. 检查钱包是否可用（存在）。
-2. 命令帮助和命令参数个数的处理。
-3. 钱包加锁，涉及临界资源的操作，防止并发。
-4. 解析参数获取指定的帐户名。
-5. 填充密钥池，在此之前需判断钱包是否上锁。
-6. 生成一个新密钥并添加到钱包，同时得到对应的公钥地址并返回。
+### 2.1. 确保钱包可用
 
-第一步，检查钱包是否可用（存在）。
-调用 EnsureWalletIsAvailable(fHelp)，该函数实现在“wallet/rpcwllet.cpp”文件中。
+参考[比特币 RPC 命令剖析 "fundrawtransaction" 2.1. 确保钱包可用](/blog/2018/07/bitcoin-rpc-command-fundrawtransaction.html#21-确保钱包可用)。
+
+### 2.2. 帮助内容
+
+参考[比特币 RPC 命令剖析 "getbestblockhash" 2.1. 帮助内容](/blog/2018/05/bitcoin-rpc-command-getbestblockhash.html#21-帮助内容)。
+
+### 2.3. 首先解析账户这样如果这里出错我们就不会生成密钥
+
+函数 `AccountFromValue(params[0])` 实现在文件 `wallet/rpcwllet.cpp` 中。
 
 ```cpp
-bool EnsureWalletIsAvailable(bool avoidException) // 确保钱包当前可用
+string AccountFromValue(const UniValue& value)
 {
-    if (!pwalletMain) // 钱包未创建成功
-    {
-        if (!avoidException)
-            throw JSONRPCError(RPC_METHOD_NOT_FOUND, "Method not found (disabled)");
-        else
-            return false;
-    }
-    return true; // 钱包已创建完成，返回 true
-}
-```
-
-pwalletMain 是钱包对象指针，指向一个钱包对象，其引用在“init.h”文件中。
-
-```cpp
-extern CWallet* pwalletMain; // 钱包对象指针
-```
-
-pwalletMain 在“init.cpp”文件中的 AppInit2(...) 函数的第 8 步加载钱包中进行初始化，这里不再赘述，详见。
-
-```cpp
-    // ********************************************************* Step 8: load wallet // 若启用钱包功能，则加载钱包
-                       ...
-            pwalletMain = new CWallet(strWalletFile); // 根据指定的钱包文件名创建并初始化钱包对象
-```
-
-第四步，解析参数获取指定的帐户名，只需满足帐户名不为 "*" 即可。<br>
-调用 AccountFromValue(params[0])，该函数实现在“wallet/rpcwllet.cpp”文件中。
-
-```cpp
-string AccountFromValue(const UniValue& value) // 从参数中获取账户名
-{
-    string strAccount = value.get_str(); // 把 UniValue 类型的参数转化为 std::string 类型
+    string strAccount = value.get_str();
     if (strAccount == "*") // 账户名不能为 "*"
         throw JSONRPCError(RPC_WALLET_INVALID_ACCOUNT_NAME, "Invalid account name");
-    return strAccount; // 返回获取的账户名，可能为空
+    return strAccount;
 }
 ```
 
-第五步，填充密钥池，在此之前需判断钱包是否上锁。<br>
-进入 pwalletMain->IsLocked() 函数，在“wallet/crypter.h”文件的 CCryptoKeyStore 类中。
+### 2.4. 填充密钥池
+
+函数 `pwalletMain->IsLocked()` 在文件 `wallet/crypter.h` 的密钥存储类 `CCryptoKeyStore` 中。
 
 ```cpp
 typedef std::vector<unsigned char, secure_allocator<unsigned char> > CKeyingMaterial;
@@ -164,24 +115,24 @@ class CCryptoKeyStore : public CBasicKeyStore
 {
 private:
     ...
-    CKeyingMaterial vMasterKey; // 主密钥
+    CKeyingMaterial vMasterKey;
 
     //! if fUseCrypto is true, mapKeys must be empty
     //! if fUseCrypto is false, vMasterKey must be empty
-    bool fUseCrypto; // 如果使用加密标志为 true，mapKeys 必须为空；如果为 false，vMasterKey 必须为空
+    bool fUseCrypto; // ！如果使用加密标志为 true，密钥映射必须为空；如果为 false，主密钥必须为空
     ...
 public:
     ...
     bool IsCrypted() const
     {
-        return fUseCrypto; // 返回当前钱包是否被用户加密的状态
+        return fUseCrypto;
     }
 
     bool IsLocked() const
     {
-        if (!IsCrypted()) // 当 fUseCrypto 为 false
+        if (!IsCrypted())
             return false;
-        bool result; // 当 fUseCrypto 为 true
+        bool result;
         {
             LOCK(cs_KeyStore);
             result = vMasterKey.empty();
@@ -192,14 +143,13 @@ public:
 };
 ```
 
-当 fUseCrypto 为 false 即用户没有加密钱包时，<br>
-进入 pwalletMain->TopUpKeyPool() 函数，定义在“wallet/wallet.h”文件的 CWallet 类中。
+函数 `pwalletMain->TopUpKeyPool()` 定义在文件 `wallet/wallet.h` 的钱包类 `CWallet` 中。
 
 ```cpp
 /** 
  * A CWallet is an extension of a keystore, which also maintains a set of transactions and balances,
  * and provides the ability to create new transactions.
- */ // CWallet 是密钥库的扩展，可以维持一组交易和余额，并提供创建新交易的能力。
+ */
 class CWallet : public CCryptoKeyStore, public CValidationInterface
 {
     ...
@@ -208,15 +158,15 @@ class CWallet : public CCryptoKeyStore, public CValidationInterface
 };
 ```
 
-实现在“wallet/wallet.cpp”文件中。
+实现在文件 `wallet/wallet.cpp` 中。
 
 ```cpp
 bool CWallet::TopUpKeyPool(unsigned int kpSize)
 {
-    { // 这里是一个技巧，在函数返回前可提前析构创建的局部对象
+    {
         LOCK(cs_wallet);
 
-        if (IsLocked()) // 再次检查钱包是否被锁
+        if (IsLocked())
             return false;
 
         CWalletDB walletdb(strWalletFile); // 通过钱包文件名创建钱包数据库对象
@@ -243,16 +193,15 @@ bool CWallet::TopUpKeyPool(unsigned int kpSize)
 }
 ```
 
-先获取密钥池的大小，默认为 100，定义在“wallet/wallet.h”文件中。
+默认密钥池的大小 `DEFAULT_KEYPOOL_SIZE` 定义在文件 `wallet/wallet.h` 中。
 
 ```cpp
 static const unsigned int DEFAULT_KEYPOOL_SIZE = 100;
 ```
 
-可以直接修改该值（硬编码），也可通过 -keypool=<n> 选项或配置文件来在[启动比特币核心服务 bitcoind](/blog/2018/05/running-bitcoin.html) 时修改该值（软编码）。
+该值可通过 `-keypool=<n>` 启动选项改变。
 
-接下来就开始不断生成新密钥并将与之对应的公钥加入密钥池，直至密钥池中密钥的数量达到指定大小 DEFAULT_KEYPOOL_SIZE + 1。<br>
-进入 GenerateNewKey() 函数，同样属于 CWallet 类，实现在“wallet/wallet.cpp”文件中。
+生成新密钥函数 `GenerateNewKey()` 实现在文件 `wallet/wallet.cpp` 中。
 
 ```cpp
 CPubKey CWallet::GenerateNewKey()
@@ -282,12 +231,12 @@ CPubKey CWallet::GenerateNewKey()
 }
 ```
 
-该函数在规定范围内生成一个新的密钥，并通过椭圆曲线加密算法获取与之对应的公钥。<br>
+该函数在规定范围内生成一个新的密钥，并通过椭圆曲线加密算法获取与之对应的公钥。
 之后将返回的公钥转换为一个密钥池条目对象，与其索引一起写入钱包数据库的密钥池中。
 
 ```cpp
 /** A key pool entry */
-class CKeyPool // 一个密钥池条目（保存公钥）
+class CKeyPool // 一个密钥池条目
 {
 public:
     int64_t nTime; // 时间
@@ -308,7 +257,7 @@ public:
 };
 ```
 
-然后调用 walletdb.WritePool(nEnd, CKeyPool(GenerateNewKey()))，该函数定义在“wallet/walletdb.h”文件的 CWalletDB 类中。
+写入钱包数据库密钥池函数 `walletdb.WritePool(nEnd, CKeyPool(GenerateNewKey()))` 定义在文件 `wallet/walletdb.h` 的钱包数据库类 `CWalletDB` 中。
 
 ```cpp
 /** Access to the wallet database (wallet.dat) */
@@ -321,7 +270,7 @@ public:
 };
 ```
 
-实现在“wallet/walletdb.cpp”文件中。
+实现在文件 `wallet/walletdb.cpp` 中。
 
 ```cpp
 bool CWalletDB::WritePool(int64_t nPool, const CKeyPool& keypool)
@@ -331,10 +280,11 @@ bool CWalletDB::WritePool(int64_t nPool, const CKeyPool& keypool)
 }
 ```
 
-从这里可以看出所谓的“密钥池”并非一个对象，而是钱包数据库中一个打了标签 "pool" 的条目。
+密钥池是钱包数据库中一个打了标签 `pool` 的条目。
 
-第六步，生成一个新密钥并添加到钱包，同时得到对应的公钥地址并返回。
-先从钱包中的密钥池获取一个公钥，调用 pwalletMain->GetKeyFromPool(newKey)，该函数定义在“wallet/wallet.h”文件的 CWallet 类中，实现在“wallet/wallet.cpp”文件中。
+### 2.5. 生成一个新密钥并添加到钱包
+
+从密钥池获取公钥函数 `pwalletMain->GetKeyFromPool(newKey)` 实现在文件 `wallet/wallet.cpp` 中。
 
 ```cpp
 bool CWallet::GetKeyFromPool(CPubKey& result)
@@ -358,7 +308,8 @@ bool CWallet::GetKeyFromPool(CPubKey& result)
 ```
 
 从密钥池中取一个最早创建的密钥中的公钥，或密钥池为空，就生成一个新的私钥获取其对应的公钥。
-若从密钥池中取出一个密钥，则要移除密钥池中对应的密钥，调用 KeepKey(nIndex)，该函数实现在“wallet/wallet.cpp”文件中。
+
+移除密钥函数 `KeepKey(nIndex)` 实现在文件 `wallet/wallet.cpp` 中。
 
 ```cpp
 void CWallet::KeepKey(int64_t nIndex)
@@ -373,7 +324,7 @@ void CWallet::KeepKey(int64_t nIndex)
 }
 ```
 
-进入 walletdb.ErasePool(nIndex) 函数，定义在“wallet/walletdb.h"文件的 CWalletDB 类中，实现在“wallet/walletdb.cpp”文件中。
+清除钱包数据库函数 `walletdb.ErasePool(nIndex)` 实现在文件 `wallet/walletdb.cpp`。
 
 ```cpp
 bool CWalletDB::ErasePool(int64_t nPool)
@@ -383,8 +334,9 @@ bool CWalletDB::ErasePool(int64_t nPool)
 }
 ```
 
-若密钥池为空，则生成一个新的密钥，获取其对应的公钥。<br>
-调用 ReserveKeyFromKeyPool(nIndex, keypool)，该函数实现在“wallet/wallet.cpp”文件中。
+若密钥池为空，则生成一个新的密钥，获取其对应的公钥。
+
+从密钥池预定密钥函数 `ReserveKeyFromKeyPool(nIndex, keypool)` 实现在文件 `wallet/wallet.cpp` 中。
 
 ```cpp
 void CWallet::ReserveKeyFromKeyPool(int64_t& nIndex, CKeyPool& keypool)
@@ -415,8 +367,7 @@ void CWallet::ReserveKeyFromKeyPool(int64_t& nIndex, CKeyPool& keypool)
 }
 ```
 
-拿到公钥后，调用 GetID() 中的 Hash160(...) 函数获取该公钥对应 ID，160 位二进制，共 20 个字节。<br>
-进入 GetID() 函数，定义在“pubkey.h”文件中。
+获取索引函数 `GetID()` 定义在文件 `pubkey.h` 中。
 
 ```cpp
 /** An encapsulated public key. */
@@ -440,11 +391,12 @@ class CPubKey // 一个封装的公钥
 };
 ```
 
-Hash160(vch, vch + size()) 函数用来计算一个对象并输出其 160 位的哈希值。在“hash.h”文件中用模板实现。
+哈希 160 函数 `Hash160(vch, vch + size())` 用来计算一个对象并输出其 160 位的哈希值。
+其模板实现在文件 `hash.h` 中。
 
 ```cpp
 /** Compute the 160-bit hash an object. */
-template<typename T1> // 计算一个对象的 160 位哈希值
+template<typename T1> // 计算一个对象的 160 位哈希值。
 inline uint160 Hash160(const T1 pbegin, const T1 pend)
 {
     static unsigned char pblank[1] = {};
@@ -455,8 +407,9 @@ inline uint160 Hash160(const T1 pbegin, const T1 pend)
 }
 ```
 
-得到公钥 ID 后，作为公钥的索引与指定的账户名和该地址的用途一起加入到地址簿中。<br>
-调用 pwalletMain->SetAddressBook(keyID, strAccount, "receive")，该函数实现在“wallet/wallet.cpp”文件中。
+得到公钥 ID 后，作为公钥的索引与指定的账户名和该地址的用途一起加入到地址簿中。
+
+设置地址簿函数 `pwalletMain->SetAddressBook(keyID, strAccount, "receive")` 实现在文件 `wallet/wallet.cpp` 中。
 
 ```cpp
 bool CWallet::SetAddressBook(const CTxDestination& address, const string& strName, const string& strPurpose)
@@ -480,9 +433,11 @@ bool CWallet::SetAddressBook(const CTxDestination& address, const string& strNam
 }
 ```
 
-最后一步就是把公钥索引通过 Base58 编码转换为比特币公钥地址。<br>
-进入 CBitcoinAddress(keyID).ToString() 函数，分两步，先构造一个比特币地址类临时对象，然后再转换为字符串形式。<br>
-CBitcoinAddress 类定义在“base58.h”文件中，该类相应的构造函数如下。
+最后一步就是把公钥索引通过 `Base58` 编码转换为比特币公钥地址。
+
+比特币地址转字符串函数 `CBitcoinAddress(keyID).ToString()` 分两步，先构造一个比特币地址类临时对象，然后再转换为字符串形式。
+
+比特币地址类 `CBitcoinAddress` 定义在 `base58.h` 文件中。
 
 ```cpp
 /** base58-encoded Bitcoin addresses.
@@ -501,7 +456,7 @@ public:
 };
 ```
 
-Set() 函数的实现在“base58.cpp”文件中。
+设置函数 `Set()` 的实现在文件 `base58.cpp` 中。
 
 ```cpp
 bool CBitcoinAddress::Set(const CTxDestination& dest)
@@ -510,14 +465,13 @@ bool CBitcoinAddress::Set(const CTxDestination& dest)
 }
 ```
 
-最后调用 CBitcoinAddress(keyID).ToString() 中的 ToString() 实现了 Base58Check Encoding 的功能。<br>
-定义在“base58.h”文件的 CBase58Data 类中。
+比特币地址转字符串函数 `CBitcoinAddress(keyID).ToString()` 定义在文件 `base58.h` 的 Base58 数据类 `CBase58Data` 中。
 
 ```cpp
 /**
  * Base class for all base58-encoded data
- */ // 所有 base58 编码数据的基类
-class CBase58Data // 包含一个版本号和一个编码
+ */
+class CBase58Data // 所有 base58 编码的数据基类
 {
     ...
     std::string ToString() const; // 为要编码的数据附加前缀，通过该值计算两次 sha256 后取 4 bytes 的前缀附加在该值后面，再进行 Base58 编码得到公钥地址
@@ -525,7 +479,7 @@ class CBase58Data // 包含一个版本号和一个编码
 };
 ```
 
-实现在“base58.cpp”文件中。
+实现在文件 `base58.cpp` 中。
 
 ```cpp
 std::string CBase58Data::ToString() const
@@ -536,21 +490,22 @@ std::string CBase58Data::ToString() const
 }
 ```
 
-附加 1 个字节的网络中定义的公钥地址前缀后，调用 EncodeBase58Check(vch)，计算并附加校验和的前 4 个字节到公钥后面，得到 25bytes 的数据。
+附加 1 个字节的网络中定义的公钥地址前缀后，调用 Base58 编码函数 `EncodeBase58Check(vch)`，计算并附加校验和的前 4 个字节到公钥后面，得到 25bytes 的数据。
 
 ```cpp
 std::string EncodeBase58Check(const std::vector<unsigned char>& vchIn)
 {
     // add 4-byte hash check to the end
-    std::vector<unsigned char> vch(vchIn);
+    std::vector<unsigned char> vch(vchIn); // 添加 4 个字节的校验到末端
     uint256 hash = Hash(vch.begin(), vch.end()); // 2 次 sha256 计算校验和
     vch.insert(vch.end(), (unsigned char*)&hash, (unsigned char*)&hash + 4); // 将校验和添加到末尾
     return EncodeBase58(vch); // 计算 Base58 得到地址
 }
 ```
 
-把得到的 25bytes 的数据，通过调用 EncodeBase58(vch) 进行 Base58 编码得到最终的比特币公钥地址。<br>
-该函数实现在“Base.cpp”文件中，通过函数重载，在 EncodeBase58(&vch[0], &vch[0] + vch.size()) 函数中实现 Base58 编码。
+把得到的 25bytes 的数据，通过调用  进行 Base58 编码得到最终的比特币公钥地址。
+
+函数 `EncodeBase58(vch)` 实现在文件 `Base.cpp` 中，通过函数重载，在函数 `EncodeBase58(&vch[0], &vch[0] + vch.size())` 中实现 Base58 编码。
 
 ```cpp
 /** All alphanumeric characters except for "0", "I", "O", and "l" */
@@ -597,11 +552,10 @@ std::string EncodeBase58(const std::vector<unsigned char>& vch)
 }
 ```
 
-至此，RPC 命令 getnewaddress 对应的源码剖析就结束了。
-
 ## 参考链接
 
 * [bitcoin/rpcserver.h at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/rpcserver.h){:target="_blank"}
+* [bitcoin/rpcserver.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/rpcserver.cpp){:target="_blank"}
 * [bitcoin/rpcwallet.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/wallet/rpcwallet.cpp){:target="_blank"}
 * [bitcoin/init.h at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/init.h){:target="_blank"}
 * [bitcoin/init.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/init.cpp){:target="_blank"}
