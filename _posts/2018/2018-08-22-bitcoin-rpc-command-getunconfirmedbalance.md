@@ -1,80 +1,66 @@
 ---
 layout: post
 title:  "比特币 RPC 命令剖析 \"getunconfirmedbalance\""
-date:   2018-08-22 18:00:08 +0800
+date:   2018-08-22 20:00:08 +0800
 author: mistydew
 comments: true
 category: 区块链
 tags: Bitcoin bitcoin-cli
 excerpt: $ bitcoin-cli getunconfirmedbalance
 ---
-## 提示说明
+## 1. 帮助内容
 
 ```shell
-getunconfirmedbalance # 获取服务器钱包未确认的（未打包交易/内存池中交易）总余额
+$ bitcoin-cli help getunconfirmedbalance
+getunconfirmedbalance
+返回服务器端未确认的总余额
 ```
 
-结果：返回服务器钱包未确认的总余额。
+## 2. 源码剖析
 
-## 用法示例
-
-### 比特币核心客户端
-
-获取服务器钱包未确认的余额。
-
-```shell
-$ bitcoin-cli getunconfirmedbalance
-0.00000000
-```
-
-### cURL
-
-```shell
-$ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "getunconfirmedbalance", "params": [] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
-{"result":0.00000000,"error":null,"id":"curltest"}
-```
-
-## 源码剖析
-
-getunconfirmedbalance 对应的函数在“rpcserver.h”文件中被引用。
+`getunconfirmedbalance` 对应的函数在文件 `rpcserver.h` 中被引用。
 
 ```cpp
-extern UniValue getunconfirmedbalance(const UniValue& params, bool fHelp); // 获取未确认的余额
+extern UniValue getunconfirmedbalance(const UniValue& params, bool fHelp);
 ```
 
-实现在“rpcwallet.cpp”文件中。
+实现在文件 `rpcwallet.cpp` 中。
 
 ```cpp
 UniValue getunconfirmedbalance(const UniValue &params, bool fHelp)
 {
-    if (!EnsureWalletIsAvailable(fHelp)) // 确保当前钱包可用
+    if (!EnsureWalletIsAvailable(fHelp)) // 1. 确保钱包可用
         return NullUniValue;
     
-    if (fHelp || params.size() > 0) // 没有参数
-        throw runtime_error( // 命令帮助反馈
+    if (fHelp || params.size() > 0)
+        throw runtime_error(
                 "getunconfirmedbalance\n"
-                "Returns the server's total unconfirmed balance\n");
+                "Returns the server's total unconfirmed balance\n"); // 2. 帮助内容
 
-    LOCK2(cs_main, pwalletMain->cs_wallet); // 钱包上锁
+    LOCK2(cs_main, pwalletMain->cs_wallet);
 
-    return ValueFromAmount(pwalletMain->GetUnconfirmedBalance()); // 获取未确认的余额并返回
+    return ValueFromAmount(pwalletMain->GetUnconfirmedBalance()); // 3. 获取未确认的余额
 }
 ```
 
-基本流程：
-1. 确保钱包当前可用（已初始化完成）。
-2. 处理命令帮助和参数个数。
-3. 钱包上锁。
-4. 获取未确认的总余额并返回。
+### 2.1. 确保钱包可用
 
-第四步，调用 pwalletMain->GetUnconfirmedBalance() 函数获取未确认的金额总和，该函数定义在“wallet.cpp”文件中。
+参考[比特币 RPC 命令剖析 "fundrawtransaction" 2.1. 确保钱包可用](/blog/2018/07/bitcoin-rpc-command-fundrawtransaction.html#21-确保钱包可用)。
+
+### 2.2. 帮助内容
+
+参考[比特币 RPC 命令剖析 "getbestblockhash" 2.1. 帮助内容](/blog/2018/05/bitcoin-rpc-command-getbestblockhash.html#21-帮助内容)。
+
+### 2.3. 获取未确认的余额
+
+获取未确认的余额函数 `pwalletMain->GetUnconfirmedBalance()` 定义在文件 `wallet.cpp` 中。
 
 ```cpp
 bool CWalletTx::InMempool() const
 {
     LOCK(mempool.cs);
-    if (mempool.exists(GetHash())) { // 若该交易索引是否存在于内存池中
-        return true; // 返回 true
+    if (mempool.exists(GetHash())) {
+        return true;
     }
     return false;
 }
@@ -91,12 +77,15 @@ CAmount CWallet::GetUnconfirmedBalance() const
                 nTotal += pcoin->GetAvailableCredit(); // 获取累加可用余额
         }
     }
-    return nTotal; // 返回总余额
+    return nTotal;
 }
 ```
 
 ## 参考链接
 
 * [bitcoin/rpcserver.h at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/rpcserver.h){:target="_blank"}
+* [bitcoin/rpcserver.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/rpcserver.cpp){:target="_blank"}
 * [bitcoin/rpcwallet.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/wallet/rpcwallet.cpp){:target="_blank"}
+* [bitcoin/init.h at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/init.h){:target="_blank"}
+* [bitcoin/init.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/init.cpp){:target="_blank"}
 * [bitcoin/wallet.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/wallet/wallet.cpp){:target="_blank"}

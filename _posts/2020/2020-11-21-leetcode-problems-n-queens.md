@@ -12,7 +12,7 @@ excerpt: n **皇后**难题研究的是如何把 `n` 个皇后放在 `n x n` 的
 > 
 > The **n-queens** puzzle is the problem of placing `n` queens on an `n x n` chessboard such that no two queens attack each other.
 > 
-> Given an integer `n`, return all distinct solutions to the ***n-queens puzzle***.
+> Given an integer `n`, return *all distinct solutions to the **n-queens puzzle***.
 > 
 > Each solution contains a distinct board configuration of the n-queens' placement, where `'Q'` and `'.'` both indicate a queen and an empty space, respectively.
 > 
@@ -80,11 +80,9 @@ private:
 
 public:
     vector<vector<string>> solveNQueens(int n) {
-        auto solutions = vector<vector<string>>();
+        vector<vector<string>> solutions;
         auto queens = vector<int>(n, -1);
-        auto columns = unordered_set<int>();
-        auto diagonals1 = unordered_set<int>();
-        auto diagonals2 = unordered_set<int>();
+        unordered_set<int> columns, diagonals1, diagonals2;
         backtrack(solutions, queens, n, 0, columns, diagonals1, diagonals2);
         return solutions;
     }
