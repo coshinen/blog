@@ -1,89 +1,60 @@
 ---
 layout: post
 title:  "比特币 RPC 命令剖析 \"importaddress\""
-date:   2018-08-24 08:55:46 +0800
+date:   2018-08-24 20:55:46 +0800
 author: mistydew
 comments: true
 category: 区块链
 tags: Bitcoin bitcoin-cli
 excerpt: $ bitcoin-cli importaddress "address" ( "label" rescan p2sh )
 ---
-## 提示说明
+## 1. 帮助内容
 
 ```shell
-importaddress "address" ( "label" rescan p2sh ) # 导入一个脚本（16 进制）或地址用于监视
-```
+$ bitcoin-cli help importaddress
+importaddress "address" ( "label" rescan p2sh )
 
-即 Watch-only 地址，就好像它在你的钱包里，但不能用来花费（新版本中已经可以花费）。
+添加一个脚本（16 进制）或地址用于查看，就好像它在你的钱包里但不能用于花费。
 
 参数：
-1. script（字符串，必备）16 进制编码的脚本（或地址）。
-2. label（字符串，可选，默认为 ""）一个可选的标签（账户名）。
-3. rescan（布尔型，可选，默认为 true）再扫描钱包交易。
-4. p2sh（布尔型，可选，默认为 true）添加 P2SH 版本的脚本。
+1. "script"（字符串，必备）16 进制编码的脚本（或地址）
+2. "label" （字符串，可选，默认为 ""）一个可选的标签
+3. rescan  （布尔型，可选，默认为 true）重新扫描钱包交易
+4. p2sh    （布尔型，可选，默认为 true）添加脚本的 P2SH 版本
 
-**注：如果 rescan 为 true，该调用可能需要数分钟来完成。
-如果你有完整的公钥，你应该使用 [importpubkey](/blog/2018/06/bitcoin-rpc-command-importpubkey.html) 代替该命令。**
+注：如果重新扫描为 true，这个调用要花费数分钟来完成。
+如果你有完整的公钥，你应该调用 importpubkey 代替这个。
 
-结果：无返回值。
+例子：
 
-## 用法示例
+导入一个脚本并重新扫描
+> bitcoin-cli importaddress "myscript"
 
-### 比特币核心客户端
+导入地址到钱包账户 "testing" 中，并关闭再扫描。
+> bitcoin-cli importaddress "myscript" "testing" false
 
-用法一：导入一个脚本并进行再扫描。
-
-```shell
-$ bitcoin-cli getaddressesbyaccount ""
-[
-  ...
-]
-$ bitcoin-cli importaddress 1HvgGctUMNkHPwvayRFfPePBjke477ZqsH
-$ bitcoin-cli getaddressesbyaccount ""
-[
-  ...
-  "1HvgGctUMNkHPwvayRFfPePBjke477ZqsH"
-]
+作为一个 JSON-RPC 调用
+> curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "importaddress", "params": ["myscript", "testing", false] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
 ```
 
-用法二：导入地址到钱包账户 "testing" 中，并关闭再扫描。
+## 2. 源码剖析
 
-```shell
-$ bitcoin-cli getaddressesbyaccount "testing"
-[
-]
-$ bitcoin-cli importaddress 1HvgGctUMNkHPwvayRFfPePBjke477ZqsH
-$ bitcoin-cli getaddressesbyaccount "testing"
-[
-  "1HvgGctUMNkHPwvayRFfPePBjke477ZqsH"
-]
-```
-
-### cURL
-
-```shell
-$ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "importaddress", "params": ["1HvgGctUMNkHPwvayRFfPePBjke477ZqsH", "testing", false] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
-{"result":null,"error":null,"id":"curltest"}
-```
-
-## 源码剖析
-
-importaddress 对应的函数在“rpcserver.h”文件中被引用。
+`importaddress` 对应的函数在文件 `rpcserver.h` 中被引用。
 
 ```cpp
-extern UniValue importaddress(const UniValue& params, bool fHelp); // 导入地址或脚本
+extern UniValue importaddress(const UniValue& params, bool fHelp);
 ```
 
-实现在“wallet/rpcdump.cpp”文件中。
+实现在文件 `wallet/rpcdump.cpp` 中。
 
 ```cpp
 UniValue importaddress(const UniValue& params, bool fHelp)
 {
-    if (!EnsureWalletIsAvailable(fHelp)) // 确保当前钱包可用
+    if (!EnsureWalletIsAvailable(fHelp)) // 1. 确保钱包可用
         return NullUniValue;
     
-    if (fHelp || params.size() < 1 || params.size() > 4) // 参数最少为 1 个，最多 4 个
-        throw runtime_error( // 命令参数反馈
+    if (fHelp || params.size() < 1 || params.size() > 4)
+        throw runtime_error(
             "importaddress \"address\" ( \"label\" rescan p2sh )\n"
             "\nAdds a script (in hex) or address that can be watched as if it were in your wallet but cannot be used to spend.\n"
             "\nArguments:\n"
@@ -100,64 +71,76 @@ UniValue importaddress(const UniValue& params, bool fHelp)
             + HelpExampleCli("importaddress", "\"myscript\" \"testing\" false") +
             "\nAs a JSON-RPC call\n"
             + HelpExampleRpc("importaddress", "\"myscript\", \"testing\", false")
-        );
+        ); // 2. 帮助内容
 
 
-    string strLabel = ""; // 账户名，默认为 ""
+    string strLabel = "";
     if (params.size() > 1)
-        strLabel = params[1].get_str(); // 获取账户名或脚本
+        strLabel = params[1].get_str();
 
-    // Whether to perform rescan after import // 在导入后是否执行再扫描
-    bool fRescan = true; // 再扫描选项，默认开启
+    // Whether to perform rescan after import
+    bool fRescan = true; // 3. 在导入后是否执行重新扫描
     if (params.size() > 2)
-        fRescan = params[2].get_bool(); // 获取再扫描设置
+        fRescan = params[2].get_bool();
 
-    if (fRescan && fPruneMode) // 再扫描和修剪模式不能兼容
+    if (fRescan && fPruneMode)
         throw JSONRPCError(RPC_WALLET_ERROR, "Rescan is disabled in pruned mode");
 
     // Whether to import a p2sh version, too
-    bool fP2SH = false; // 是否也导入 p2sh 版本的脚本
+    bool fP2SH = false; // 4. 是否也导入一个 p2sh 版本
     if (params.size() > 3)
-        fP2SH = params[3].get_bool(); // 获取选项设置
+        fP2SH = params[3].get_bool();
 
-    LOCK2(cs_main, pwalletMain->cs_wallet); // 钱包上锁
+    LOCK2(cs_main, pwalletMain->cs_wallet);
 
-    CBitcoinAddress address(params[0].get_str()); // 初始化比特币地址
-    if (address.IsValid()) { // 若地址有效
-        if (fP2SH) // 还开启了 P2SH 标志
-            throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, "Cannot use the p2sh flag with an address - use a script instead"); // 抛出异常
+    CBitcoinAddress address(params[0].get_str());
+    if (address.IsValid()) {
+        if (fP2SH)
+            throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, "Cannot use the p2sh flag with an address - use a script instead");
         ImportAddress(address, strLabel); // 导入地址及其关联账户
-    } else if (IsHex(params[0].get_str())) { // 若地址无效，表明是脚本
-        std::vector<unsigned char> data(ParseHex(params[0].get_str())); // 把脚本放入 vector 容器中
+    } else if (IsHex(params[0].get_str())) {
+        std::vector<unsigned char> data(ParseHex(params[0].get_str()));
         ImportScript(CScript(data.begin(), data.end()), strLabel, fP2SH); // 导入脚本
     } else {
         throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, "Invalid Bitcoin address or script");
     }
 
-    if (fRescan) // 若再扫描开启
+    if (fRescan)
     {
-        pwalletMain->ScanForWalletTransactions(chainActive.Genesis(), true); // 再扫描钱包交易
+        pwalletMain->ScanForWalletTransactions(chainActive.Genesis(), true); // 重新扫描钱包交易
         pwalletMain->ReacceptWalletTransactions(); // 把交易放入内存池
     }
 
-    return NullUniValue; // 返回空值
+    return NullUniValue;
 }
 ```
 
-基本流程：
-1. 确保钱包当前可用（已初始化完成）。
-2. 处理命令帮助和参数个数。
-3. 处理相关参数。
-4. 钱包上锁。
-5. 使用指定地址或脚本初始化一个比特币地址。
-6. 若该地址有效且未开启 P2SH 选项，导入地址及其关联账户。
-7. 若该地址无效，表示用户输入的可能是个脚本，导入脚本。
-8. 若开启了再扫描选项，进行钱包交易再扫描并把交易放入内存池。
+### 2.1. 确保钱包可用
 
-第六、七步，调用 ImportAddress(address, strLabel) 和 ImportScript(CScript(data.begin(), data.end()), strLabel, fP2SH) 函数分别导入地址和脚本，它们定义在“wallet/rpcdump.cpp”文件中。
+参考[比特币 RPC 命令剖析 "fundrawtransaction" 2.1. 确保钱包可用](/blog/2018/07/bitcoin-rpc-command-fundrawtransaction.html#21-确保钱包可用)。
+
+### 2.2. 帮助内容
+
+参考[比特币 RPC 命令剖析 "getbestblockhash" 2.1. 帮助内容](/blog/2018/05/bitcoin-rpc-command-getbestblockhash.html#21-帮助内容)。
+
+### 2.4. 是否也导入一个 p2sh 版本
+
+导入地址函数 `ImportAddress(address, strLabel)` 实现在文件 `wallet/rpcdump.cpp` 中。
 
 ```cpp
-void ImportAddress(const CBitcoinAddress& address, const string& strLabel); // 导入地址到钱包
+void ImportAddress(const CBitcoinAddress& address, const string& strLabel)
+{
+    CScript script = GetScriptForDestination(address.Get()); // 通过脚本索引获取脚本
+    ImportScript(script, strLabel, false); // 导入脚本
+    // add to address book or update label // 添加到地址簿或更新账户
+    if (address.IsValid()) // 若该地址有效
+        pwalletMain->SetAddressBook(address.Get(), strLabel, "receive"); // 添加地址及关联账户、用途到地址簿
+}
+```
+
+导入脚本函数 `ImportScript(CScript(data.begin(), data.end()), strLabel, fP2SH)` 实现在文件 `wallet/rpcdump.cpp` 中。
+
+```cpp
 void ImportScript(const CScript& script, const string& strLabel, bool isRedeemScript) // 导入脚本
 {
     if (!isRedeemScript && ::IsMine(*pwalletMain, script) == ISMINE_SPENDABLE) // P2SH 类型 且 是自己的脚本
@@ -174,19 +157,9 @@ void ImportScript(const CScript& script, const string& strLabel, bool isRedeemSc
         ImportAddress(CBitcoinAddress(CScriptID(script)), strLabel); // 导入地址及关联账户
     }
 }
-
-void ImportAddress(const CBitcoinAddress& address, const string& strLabel)
-{
-    CScript script = GetScriptForDestination(address.Get()); // 通过脚本索引获取脚本
-    ImportScript(script, strLabel, false); // 导入脚本
-    // add to address book or update label // 添加到地址簿或更新账户
-    if (address.IsValid()) // 若该地址有效
-        pwalletMain->SetAddressBook(address.Get(), strLabel, "receive"); // 添加地址及关联账户、用途到地址簿
-}
 ```
 
-在 ImportScript(...) 函数中，对公钥地址对应脚本进行了验证，若不在 Watch-only 集中则将其添加到该集合中。<br>
-Watch-only 集对象定义在“keystore.h”文件的 CBasicKeyStore 类中，实质上就是一个脚本对象的集合。
+`Watch-only` 脚本对象定义在文件 `keystore.h` 的基础密钥存储类 `CBasicKeyStore` 中。
 
 ```cpp
 typedef std::set<CScript> WatchOnlySet; // watch-only 脚本集合
@@ -203,7 +176,7 @@ protected:
 };
 ```
 
-第八步，调用 pwalletMain->ReacceptWalletTransactions() 函数把交易添加到内存池，该函数定义在“wallet/wallet.cpp”文件中。
+重新接受钱包交易函数 `pwalletMain->ReacceptWalletTransactions()` 定义在文件 `wallet/wallet.cpp` 中。
 
 ```cpp
 void CWallet::ReacceptWalletTransactions()
@@ -245,10 +218,11 @@ bool CMerkleTx::AcceptToMemoryPool(bool fLimitFree, bool fRejectAbsurdFee)
 }
 ```
 
-未完成。
-
 ## 参考链接
 
 * [bitcoin/rpcserver.h at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/rpcserver.h){:target="_blank"}
+* [bitcoin/rpcserver.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/rpcserver.cpp){:target="_blank"}
 * [bitcoin/rpcdump.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/wallet/rpcdump.cpp){:target="_blank"}
 * [bitcoin/wallet.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/wallet/wallet.cpp){:target="_blank"}
+* [bitcoin/init.h at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/init.h){:target="_blank"}
+* [bitcoin/init.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/init.cpp){:target="_blank"}

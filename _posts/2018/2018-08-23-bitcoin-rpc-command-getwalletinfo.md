@@ -1,80 +1,57 @@
 ---
 layout: post
 title:  "比特币 RPC 命令剖析 \"getwalletinfo\""
-date:   2018-08-23 11:25:12 +0800
+date:   2018-08-23 21:25:12 +0800
 author: mistydew
 comments: true
 category: 区块链
 tags: Bitcoin bitcoin-cli
 excerpt: $ bitcoin-cli getwalletinfo
 ---
-## 提示说明
+## 1. 帮助内容
 
 ```shell
-getwalletinfo # 获取一个包含各种钱包状态信息的对象
-```
+$ bitcoin-cli help getwalletinfo
+getwalletinfo
+
+返回一个各种钱包状态信息的对象。
 
 结果：
-```shell
 {
-  "walletversion": xxxxx,     （数字）钱包版本
-  "balance": xxxxxxx,         （数字）钱包中以 BTC 为单位已确认的总余额
-  "unconfirmed_balance": xxx, （数字）钱包中以 BTC 为单位未确认的总余额
-  "immature_balance": xxxxxx, （数字）钱包中以 BTC 为单位未成熟的总余额
-  "txcount": xxxxxxx,         （数字）钱包中交易总数
-  "keypoololdest": xxxxxx,    （数字）密钥池中最早预生成密钥（从格林尼治时间开始以秒为单位）的时间戳
-  "keypoolsize": xxxx,        （数字）预生成密钥的数量
-  "unlocked_until": ttt,      （数字）从格林尼治时间（1970-01-01 00:00:00）开始以秒为单位钱包用于转账的解锁截止时间戳，若钱包锁定则为 0
-  "paytxfee": x.xxxx,         （数字）交易费配置，以 BTC/kB 为单位
+  "walletversion": xxxxx,    （数字）钱包版本
+  "balance": xxxxxxx,        （数字）钱包中以 BTC 为单位已确认的总余额
+  "unconfirmed_balance": xxx,（数字）钱包中以 BTC 为单位未确认的总余额
+  "immature_balance": xxxxxx,（数字）钱包中以 BTC 为单位未成熟的总余额
+  "txcount": xxxxxxx,        （数字）钱包中交易总数
+  "keypoololdest": xxxxxx,   （数字）密钥池中最早预生成密钥（从格林尼治时间开始以秒为单位）的时间戳
+  "keypoolsize": xxxx,       （数字）预生成新密钥的数量
+  "unlocked_until": ttt,     （数字）从格林尼治时间（1970-01-01 午夜）开始以秒为单位钱包用于转账的解锁时间戳，若钱包被锁定则为 0
+  "paytxfee": x.xxxx,        （数字）交易费配置，以 BTC/kB 为单位设置
 }
+
+例子：
+> bitcoin-cli getwalletinfo
+> curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "getwalletinfo", "params": [] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
 ```
 
-## 用法示例
+## 2. 源码剖析
 
-### 比特币核心客户端
-
-获取钱包信息。
-
-```shell
-$ bitcoin-cli getwalletinfo
-{
-  "walletversion": 60000,
-  "balance": 117697.01429440,
-  "unconfirmed_balance": 0.00000000,
-  "immature_balance": 0.00000000,
-  "txcount": 2413,
-  "keypoololdest": 1530153420,
-  "keypoolsize": 92,
-  "unlocked_until": 0,
-  "paytxfee": 0.00000000
-}
-```
-
-### cURL
-
-```shell
-$ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "getwalletinfo", "params": [] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
-{"result":{"walletversion":60000,"balance":117697.01429440,"unconfirmed_balance":0.00000000,"immature_balance":0.00000000,"txcount":2413,"keypoololdest":1530153420,"keypoolsize":92,"unlocked_until":0,"paytxfee":0.00000000},"error":null,"id":"curltest"}
-```
-
-## 源码剖析
-
-getwalletinfo 对应的函数在“rpcserver.h”文件中被引用。
+`getwalletinfo` 对应的函数在文件 `rpcserver.h` 中被引用。
 
 ```cpp
-extern UniValue getwalletinfo(const UniValue& params, bool fHelp); // 获取钱包信息
+extern UniValue getwalletinfo(const UniValue& params, bool fHelp);
 ```
 
-实现在“rpcwallet.cpp”文件中。
+实现在文件 `rpcwallet.cpp` 中。
 
 ```cpp
 UniValue getwalletinfo(const UniValue& params, bool fHelp)
 {
-    if (!EnsureWalletIsAvailable(fHelp)) // 确保钱包当前可用
+    if (!EnsureWalletIsAvailable(fHelp)) // 1. 确保钱包可用
         return NullUniValue;
     
-    if (fHelp || params.size() != 0) // 没有参数
-        throw runtime_error( // 命令帮助反馈
+    if (fHelp || params.size() != 0)
+        throw runtime_error(
             "getwalletinfo\n"
             "Returns an object containing various wallet state info.\n"
             "\nResult:\n"
@@ -92,32 +69,37 @@ UniValue getwalletinfo(const UniValue& params, bool fHelp)
             "\nExamples:\n"
             + HelpExampleCli("getwalletinfo", "")
             + HelpExampleRpc("getwalletinfo", "")
-        );
+        ); // 2. 帮助内容
 
-    LOCK2(cs_main, pwalletMain->cs_wallet); // 钱包上锁
+    LOCK2(cs_main, pwalletMain->cs_wallet);
 
-    UniValue obj(UniValue::VOBJ); // 创建目标类型对象
-    obj.push_back(Pair("walletversion", pwalletMain->GetVersion())); // 钱包版本
-    obj.push_back(Pair("balance",       ValueFromAmount(pwalletMain->GetBalance()))); // 钱包余额（可用，已确认，已成熟）
-    obj.push_back(Pair("unconfirmed_balance", ValueFromAmount(pwalletMain->GetUnconfirmedBalance()))); // 未确认余额
-    obj.push_back(Pair("immature_balance",    ValueFromAmount(pwalletMain->GetImmatureBalance()))); // 未成熟余额
-    obj.push_back(Pair("txcount",       (int)pwalletMain->mapWallet.size())); // 该钱包内的交易数
-    obj.push_back(Pair("keypoololdest", pwalletMain->GetOldestKeyPoolTime())); // 密钥池最早的密钥创建时间
-    obj.push_back(Pair("keypoolsize",   (int)pwalletMain->GetKeyPoolSize())); // 密钥池大小
-    if (pwalletMain->IsCrypted()) // 若钱包已加密
-        obj.push_back(Pair("unlocked_until", nWalletUnlockTime)); // 解锁过期时间
-    obj.push_back(Pair("paytxfee",      ValueFromAmount(payTxFee.GetFeePerK()))); // 交易费
-    return obj; // 返回结果
+    UniValue obj(UniValue::VOBJ); // 3. 各种钱包信息
+    obj.push_back(Pair("walletversion", pwalletMain->GetVersion()));
+    obj.push_back(Pair("balance",       ValueFromAmount(pwalletMain->GetBalance())));
+    obj.push_back(Pair("unconfirmed_balance", ValueFromAmount(pwalletMain->GetUnconfirmedBalance())));
+    obj.push_back(Pair("immature_balance",    ValueFromAmount(pwalletMain->GetImmatureBalance())));
+    obj.push_back(Pair("txcount",       (int)pwalletMain->mapWallet.size()));
+    obj.push_back(Pair("keypoololdest", pwalletMain->GetOldestKeyPoolTime()));
+    obj.push_back(Pair("keypoolsize",   (int)pwalletMain->GetKeyPoolSize()));
+    if (pwalletMain->IsCrypted())
+        obj.push_back(Pair("unlocked_until", nWalletUnlockTime));
+    obj.push_back(Pair("paytxfee",      ValueFromAmount(payTxFee.GetFeePerK())));
+    return obj;
 }
 ```
 
-基本流程：
-1. 确保当前钱包可用（已初始化完成）。
-2. 处理命令帮助和参数个数。
-3. 钱包上锁。
-4. 创建返回对象，追加相关的钱包状态信息并返回。
+### 2.1. 确保钱包可用
+
+参考[比特币 RPC 命令剖析 "fundrawtransaction" 2.1. 确保钱包可用](/blog/2018/07/bitcoin-rpc-command-fundrawtransaction.html#21-确保钱包可用)。
+
+### 2.2. 帮助内容
+
+参考[比特币 RPC 命令剖析 "getbestblockhash" 2.1. 帮助内容](/blog/2018/05/bitcoin-rpc-command-getbestblockhash.html#21-帮助内容)。
 
 ## 参考链接
 
 * [bitcoin/rpcserver.h at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/rpcserver.h){:target="_blank"}
+* [bitcoin/rpcserver.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/rpcserver.cpp){:target="_blank"}
 * [bitcoin/rpcwallet.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/wallet/rpcwallet.cpp){:target="_blank"}
+* [bitcoin/init.h at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/init.h){:target="_blank"}
+* [bitcoin/init.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/init.cpp){:target="_blank"}
