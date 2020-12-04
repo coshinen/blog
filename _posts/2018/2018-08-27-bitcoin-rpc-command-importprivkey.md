@@ -1,81 +1,62 @@
 ---
 layout: post
 title:  "比特币 RPC 命令剖析 \"importprivkey\""
-date:   2018-08-27 15:10:01 +0800
+date:   2018-08-27 20:10:01 +0800
 author: mistydew
 comments: true
 category: 区块链
 tags: Bitcoin bitcoin-cli
 excerpt: $ bitcoin-cli importprivkey "bitcoinprivkey" ( "label" rescan )
 ---
-## 提示说明
+## 1. 帮助内容
 
 ```shell
-importprivkey "bitcoinprivkey" ( "label" rescan ) # 导入私钥（通过 dumpprivkey 返回）到你的钱包
-```
+importprivkey "bitcoinprivkey" ( "label" rescan )
+
+添加一个私钥（由 dumpprivkey 返回）到你的钱包。
 
 参数：
-1. bitcoinprivkey（字符串，必备）私钥（见 [dumpprivkey](/blog/2018/06/bitcoin-rpc-command-dumpprivkey.html)）。
-2. label（字符串，可选，默认为 ""）一个可选的标签（账户名）。
-3. rescan（布尔型，可选，默认为 true）再扫描钱包交易。
+1. "bitcoinprivkey"（字符串，必备）私钥（见 dumpprivkey）
+2. label           （字符串，可选，默认为 ""）一个可选的标签
+3. rescan          （布尔型，可选，默认为 true）重新扫描钱包交易
 
-**注：如果 rescan 为 true，该调用可能需要数分钟来完成。**
+注：如果 rescan 为 true 那么这个调用可能花费数分钟来完成。
 
 结果：无返回值。
 
-## 用法示例
+例子：
 
-### 比特币核心客户端
+导出一个私钥
+> bitcoin-cli dumpprivkey "myaddress"
 
-用法一：在钱包默认账户 "" 中生成一个新地址，获取其私钥，再导入私钥到账户 "tabby" 中。
+导入私钥并重新扫描
+> bitcoin-cli importprivkey "mykey"
 
-```shell
-$ bitcoin-cli getnewaddress
-1HvgGctUMNkHPwvayRFfPePBjke477ZqsH
-$ bitcoin-cli dumpprivkey 1HvgGctUMNkHPwvayRFfPePBjke477ZqsH
-L4fh51n2P8MpNP8hgNc9kLhS2e525GLNu4NGcWNphiLMRpE8rDGH
-$ bitcoin-cli importprivkey L4fh51n2P8MpNP8hgNc9kLhS2e525GLNu4NGcWNphiLMRpE8rDGH "tabby"
-$ bitcoin-cli getaddressesbyaccount "tabby"
-[
-  "1HvgGctUMNkHPwvayRFfPePBjke477ZqsH"
-]
+用一个标签导入并不重新扫描
+$ bitcoin-cli importprivkey "mykey" "testing" false
+
+作为一个 JSON-RPC 调用
+> curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "importprivkey", "params": ["mykey", "testing", false] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
 ```
 
-用法二：导入私钥到账户 "testing" 中，并关闭再扫描。
+## 2. 源码剖析
 
-```shell
-$ bitcoin-cli importprivkey L4fh51n2P8MpNP8hgNc9kLhS2e525GLNu4NGcWNphiLMRpE8rDGH "testing" false
-$ bitcoin-cli getaddressesbyaccount "testing"
-[
-  "1HvgGctUMNkHPwvayRFfPePBjke477ZqsH"
-]
-```
-
-### cURL
-
-```shell
-$ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "importprivkey", "params": ["L4fh51n2P8MpNP8hgNc9kLhS2e525GLNu4NGcWNphiLMRpE8rDGH", "testing", false] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
-{"result":null,"error":null,"id":"curltest"}
-```
-
-## 源码剖析
-
-importprivkey 对应的函数在“rpcserver.h”文件中被引用。
+`importprivkey` 对应的函数在文件 `rpcserver.h` 中被引用。
 
 ```cpp
-extern UniValue importprivkey(const UniValue& params, bool fHelp); // 导入私钥
+extern UniValue importprivkey(const UniValue& params, bool fHelp);
 ```
 
-实现在“wallet/rpcdump.cpp”文件中。
+实现在文件 `wallet/rpcdump.cpp` 中。
 
 ```cpp
 UniValue importprivkey(const UniValue& params, bool fHelp)
 {
-    if (!EnsureWalletIsAvailable(fHelp)) // 确保当前钱包可用
+    if (!EnsureWalletIsAvailable(fHelp)) // 1. 确保钱包可用
         return NullUniValue;
     
-    if (fHelp || params.size() < 1 || params.size() > 3) // 参数至少为 1 个，至多为 3 个
-        throw runtime_error( // 命令帮助反馈
+    if (fHelp || params.size() < 1 || params.size() > 3)
+        throw runtime_error(
             "importprivkey \"bitcoinprivkey\" ( \"label\" rescan )\n"
             "\nAdds a private key (as returned by dumpprivkey) to your wallet.\n"
             "\nArguments:\n"
@@ -92,35 +73,35 @@ UniValue importprivkey(const UniValue& params, bool fHelp)
             + HelpExampleCli("importprivkey", "\"mykey\" \"testing\" false") +
             "\nAs a JSON-RPC call\n"
             + HelpExampleRpc("importprivkey", "\"mykey\", \"testing\", false")
-        );
+        ); // 2. 帮助内容
 
 
-    LOCK2(cs_main, pwalletMain->cs_wallet); // 钱包上锁
+    LOCK2(cs_main, pwalletMain->cs_wallet);
 
-    EnsureWalletIsUnlocked(); // 确保钱包当前处于解密状态
+    EnsureWalletIsUnlocked(); // 3. 确保钱包被解锁
 
-    string strSecret = params[0].get_str(); // 获取指定的私钥
-    string strLabel = ""; // 标签（账户），默认为 ""
+    string strSecret = params[0].get_str();
+    string strLabel = "";
     if (params.size() > 1)
-        strLabel = params[1].get_str(); // 获取指定的帐户名
+        strLabel = params[1].get_str();
 
-    // Whether to perform rescan after import // 在导入私钥后是否执行再扫描
-    bool fRescan = true; // 再扫描标志，默认打开
+    // Whether to perform rescan after import
+    bool fRescan = true; // 4. 在导入后是否执行重新扫描
     if (params.size() > 2)
-        fRescan = params[2].get_bool(); // 获取指定的再扫描设置
+        fRescan = params[2].get_bool();
 
-    if (fRescan && fPruneMode) // 再扫描模式和修剪模式不能同时开启，二者不兼容
+    if (fRescan && fPruneMode)
         throw JSONRPCError(RPC_WALLET_ERROR, "Rescan is disabled in pruned mode");
 
     CBitcoinSecret vchSecret;
-    bool fGood = vchSecret.SetString(strSecret); // 初始化比特币密钥对象
+    bool fGood = vchSecret.SetString(strSecret);
 
     if (!fGood) throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, "Invalid private key encoding");
 
-    CKey key = vchSecret.GetKey(); // 获取私钥
+    CKey key = vchSecret.GetKey();
     if (!key.IsValid()) throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, "Private key outside allowed range");
 
-    CPubKey pubkey = key.GetPubKey(); // 获取公钥
+    CPubKey pubkey = key.GetPubKey();
     assert(key.VerifyPubKey(pubkey)); // 验证公私钥是否配对
     CKeyID vchAddress = pubkey.GetID(); // 获取公钥索引
     {
@@ -129,7 +110,7 @@ UniValue importprivkey(const UniValue& params, bool fHelp)
 
         // Don't throw error in case a key is already there
         if (pwalletMain->HaveKey(vchAddress)) // 若密钥已存在，不抛出错误
-            return NullUniValue; // 直接返回空值
+            return NullUniValue;
 
         pwalletMain->mapKeyMetadata[vchAddress].nCreateTime = 1; // 初始化创建时间为 1
 
@@ -144,24 +125,21 @@ UniValue importprivkey(const UniValue& params, bool fHelp)
         }
     }
 
-    return NullUniValue; // 成功返回空值
+    return NullUniValue;
 }
 ```
 
-基本流程：
-1. 确保钱包当前可用（已初始化完成）。
-2. 处理命令帮助和参数个数。
-3. 钱包上锁。
-4. 确保当前钱包处于解密状态。
-5. 获取指定的参数。
-6. 初始化比特币密钥对象，并通过密钥获取私钥。
-7. 通过是私钥计算公钥，并验证公私钥是否配对。
-8. 获取公钥索引，并查询该密钥是否存在，若存在直接返回空值。
-9. 若不存在，添加公私钥到钱包。
-10. 从创世区块开始再扫描钱包交易。
+### 2.1. 确保钱包可用
 
-第九步，调用 pwalletMain->AddKeyPubKey(key, pubkey) 函数添加公私钥对到钱包，
-该函数定义在“keystore.cpp”文件中。
+参考[比特币 RPC 命令剖析 "fundrawtransaction" 2.1. 确保钱包可用](/blog/2018/07/bitcoin-rpc-command-fundrawtransaction.html#21-确保钱包可用)。
+
+### 2.2. 帮助内容
+
+参考[比特币 RPC 命令剖析 "getbestblockhash" 2.1. 帮助内容](/blog/2018/05/bitcoin-rpc-command-getbestblockhash.html#21-帮助内容)。
+
+### 2.4. 在导入后是否执行重新扫描
+
+添加密钥对函数 `pwalletMain->AddKeyPubKey(key, pubkey)` 定义在文件 `keystore.cpp` 中。
 
 ```cpp
 bool CBasicKeyStore::AddKeyPubKey(const CKey& key, const CPubKey &pubkey)
@@ -172,8 +150,7 @@ bool CBasicKeyStore::AddKeyPubKey(const CKey& key, const CPubKey &pubkey)
 }
 ```
 
-这里只是把公私钥对添加到内存中的 mapKeys 对象，并没有本地化到数据库。
-该对象定义在“keystore.h”文件的 CBasicKeyStore 类中。
+密钥映射对象 `mapKeys` 定义在文件 `keystore.h` 的基础密钥存储类 `CBasicKeyStore` 中。
 
 ```cpp
 typedef std::map<CKeyID, CKey> KeyMap; // 密钥索引和私钥的映射
@@ -187,7 +164,7 @@ protected:
 };
 ```
 
-第十步，调用 pwalletMain->ScanForWalletTransactions(chainActive.Genesis(), true) 函数再扫描钱包交易，该函数定义在“wallet.cpp”文件中。
+扫描钱包交易函数 `pwalletMain->ScanForWalletTransactions(chainActive.Genesis(), true)` 定义在文件 `wallet.cpp` 中。
 
 ```cpp
 /**
@@ -237,12 +214,13 @@ int CWallet::ScanForWalletTransactions(CBlockIndex* pindexStart, bool fUpdate)
 }
 ```
 
-未完成。更新交易函数 AddToWalletIfInvolvingMe(tx, &block, fUpdate)。
-
 ## 参考链接
 
 * [bitcoin/rpcserver.h at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/rpcserver.h){:target="_blank"}
+* [bitcoin/rpcserver.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/rpcserver.cpp){:target="_blank"}
 * [bitcoin/rpcdump.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/wallet/rpcdump.cpp){:target="_blank"}
 * [bitcoin/keystore.h at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/keystore.h){:target="_blank"}
 * [bitcoin/keystore.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/keystore.cpp){:target="_blank"}
 * [bitcoin/wallet.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/wallet/wallet.cpp){:target="_blank"}
+* [bitcoin/init.h at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/init.h){:target="_blank"}
+* [bitcoin/init.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/init.cpp){:target="_blank"}

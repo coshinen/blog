@@ -1,74 +1,58 @@
 ---
 layout: post
 title:  "比特币 RPC 命令剖析 \"importpubkey\""
-date:   2018-08-28 10:40:03 +0800
+date:   2018-08-28 20:40:03 +0800
 author: mistydew
 comments: true
 category: 区块链
 tags: Bitcoin bitcoin-cli
 excerpt: $ bitcoin-cli importpubkey "pubkey" ( "label" rescan )
 ---
-## 提示说明
+## 1. 帮助内容
 
 ```shell
-importpubkey "pubkey" ( "label" rescan ) # 导入一个公钥（16 进制）用来监视
-```
+$ bitcoin-cli help importpubkey
+importpubkey "pubkey" ( "label" rescan )
 
-最终导入的还是公钥对应的地址。
-该公钥好像在你的钱包，但不能用于花费。
+添加一个公钥（16 进制）用来监视，就像它还在你的钱包，但不能用于花费。
 
 参数：
-1. pubkey（字符串，必备）16 进制的公钥。
-2. label（字符串，可选，默认为 ""）一个可选的标签（账户名）。
-3. rescan（布尔型，可选，默认为 true）再扫描钱包交易。
+1. "pubkey"（字符串，必备）16 进制编码的公钥
+2. "label" （字符串，可选，默认为 ""）一个可选的标签
+3. rescan  （布尔型，可选，默认为 true）重新扫描钱包交易
 
-**注：如果 rescan 为 true，该调用可能需要数分钟来完成。**
+注：如果 rescan 为 true 那么这个调用可能花费数分钟来完成。
 
-结果：无返回值。
+例子：
 
-## 用法示例
+导入一个公钥到钱包并重新扫描
+> bitcoin-cli importpubkey "mypubkey"
 
-### 比特币核心客户端
+使用一个标签导入并不重新扫描
+> bitcoin-cli importpubkey "mypubkey" "testing" false
 
-暂无。
-
-用法一：导入公钥到钱包并使用再扫描。
-
-```shell
-$ bitcoin-cli importpubkey "mypubkey"
+作为一个 JSON-RPC 调用
+> curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "importpubkey", "params": ["mypubkey", "testing", flase] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
 ```
 
-用法二：导入一个公钥及其关联账户到钱包，不使用再扫描。
+## 2. 源码剖析
 
-```shell
-$ bitcoin-cli importpubkey "mypubkey" "testing" false
-```
-
-### cURL
-
-```shell
-$ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "importpubkey", "params": ["mypubkey", "testing", flase] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
-暂无。
-```
-
-## 源码剖析
-
-importpubkey 对应的函数在“rpcserver.h”文件中被引用。
+`importpubkey` 对应的函数在文件 `rpcserver.h` 中被引用。
 
 ```cpp
-extern UniValue importpubkey(const UniValue& params, bool fHelp); // 导入公钥
+extern UniValue importpubkey(const UniValue& params, bool fHelp);
 ```
 
-实现在“wallet/rpcdump.cpp”文件中。
+实现在文件 `wallet/rpcdump.cpp` 中。
 
 ```cpp
 UniValue importpubkey(const UniValue& params, bool fHelp)
 {
-    if (!EnsureWalletIsAvailable(fHelp)) // 确保当前钱包可用
+    if (!EnsureWalletIsAvailable(fHelp)) // 1. 确保钱包可用
         return NullUniValue;
 
-    if (fHelp || params.size() < 1 || params.size() > 4) // 参数最少 1 个，最多 3 个，这里错了
-        throw runtime_error( // 命令帮助反馈
+    if (fHelp || params.size() < 1 || params.size() > 4)
+        throw runtime_error(
             "importpubkey \"pubkey\" ( \"label\" rescan )\n"
             "\nAdds a public key (in hex) that can be watched as if it were in your wallet but cannot be used to spend.\n"
             "\nArguments:\n"
@@ -83,19 +67,19 @@ UniValue importpubkey(const UniValue& params, bool fHelp)
             + HelpExampleCli("importpubkey", "\"mypubkey\" \"testing\" false") +
             "\nAs a JSON-RPC call\n"
             + HelpExampleRpc("importpubkey", "\"mypubkey\", \"testing\", false")
-        );
+        ); // 2. 帮助内容
 
 
-    string strLabel = ""; // 帐户名，默认为 ""
+    string strLabel = "";
     if (params.size() > 1)
-        strLabel = params[1].get_str(); // 获取指定的帐户名
+        strLabel = params[1].get_str();
 
-    // Whether to perform rescan after import // 在导入之后是否执行再扫描
-    bool fRescan = true; // 再扫描选项，默认开启
+    // Whether to perform rescan after import
+    bool fRescan = true; // 3. 在导入之后是否重新扫描
     if (params.size() > 2)
-        fRescan = params[2].get_bool(); // 获取再扫描设置
+        fRescan = params[2].get_bool();
 
-    if (fRescan && fPruneMode) // 再扫描与修剪模式步兼容
+    if (fRescan && fPruneMode)
         throw JSONRPCError(RPC_WALLET_ERROR, "Rescan is disabled in pruned mode");
 
     if (!IsHex(params[0].get_str())) // 公钥必须为 16 进制
@@ -116,22 +100,16 @@ UniValue importpubkey(const UniValue& params, bool fHelp)
         pwalletMain->ReacceptWalletTransactions(); // 把交易放入内存池
     }
 
-    return NullUniValue; // 返回空值
+    return NullUniValue;
 }
 ```
 
-基本流程：
-1. 确保钱包当前可用（已初始化完成）。
-2. 处理命令帮助和参数个数。
-3. 处理相关参数，获取并设置参数，以及正确性检验。
-4. 钱包上锁。
-5. 导入地址及其关联账户。
-7. 导入脚本。
-8. 若开启了再扫描选项，进行钱包交易再扫描并把交易放入内存池。
-
-相关函数调用，见 [importaddress](/blog/2018/08/bitcoin-rpc-command-importaddress.html)。
+相关函数调用详见[比特币 RPC 命令剖析 "importaddress"](/blog/2018/08/bitcoin-rpc-command-importaddress.html)。
 
 ## 参考链接
 
 * [bitcoin/rpcserver.h at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/rpcserver.h){:target="_blank"}
+* [bitcoin/rpcserver.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/rpcserver.cpp){:target="_blank"}
 * [bitcoin/rpcdump.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/wallet/rpcdump.cpp){:target="_blank"}
+* [bitcoin/init.h at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/init.h){:target="_blank"}
+* [bitcoin/init.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/init.cpp){:target="_blank"}

@@ -1,67 +1,54 @@
 ---
 layout: post
 title:  "比特币 RPC 命令剖析 \"importwallet\""
-date:   2018-08-29 15:52:09 +0800
+date:   2018-08-29 20:52:09 +0800
 author: mistydew
 comments: true
 category: 区块链
 tags: Bitcoin bitcoin-cli
-excerpt: $ bitcoin-cli importwallet "filename" # 从一个导出的钱包文件（见 dumpwallet）导入密钥
+excerpt: $ bitcoin-cli importwallet "filename"
 ---
-## 提示说明
+## 1. 帮助内容
 
 ```shell
-importwallet "filename" # 从一个导出的钱包文件（见 dumpwallet）导入密钥
-```
+$ bitcoin-cli help importwallet
+importwallet "filename"
+
+从一个钱包导出文件（见 dumpwallet）导入。
 
 参数：
-1. filename（字符串，必备）钱包文件（使用 [dumpwallet](/blog/2018/08/bitcoin-rpc-command-dumpwallet.html) 导出的）。
+1. "filename"（字符串，必备）钱包文件
 
-结果：无返回值。
+例子：
 
-## 用法示例
+导出钱包
+> bitcoin-cli dumpwallet "test"
 
-### 比特币核心客户端
+导入钱包
+> bitcoin-cli importwallet "test"
 
-导入 [dumpwallet](/blog/2018/08/bitcoin-rpc-command-dumpwallet.html) 导出的钱包文件。<br>
-这里在家目录 ~ 下使用该命令。
-
-```shell
-$ bitcoin-cli dumpwallet wallet.txt
-$ ls ~
-... wallet.txt ...
-$ bitcoin-cli importwallet ~/wallet.txt
-$ bitcoin-cli dumpwallet newwallet.txt
-$ vim newwallet.txt
+使用 json rpc 调用导入
+> curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "importwallet", "params": ["test"] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
 ```
 
-导入后再次导出钱包文件查看导入的密钥。
+## 2. 源码剖析
 
-### cURL
-
-```shell
-$ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "importwallet", "params": ["wallet.txt"] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
-{"result":null,"error":null,"id":"curltest"}
-```
-
-## 源码剖析
-
-importwallet 对应的函数在“rpcserver.h”文件中被引用。
+`importwallet` 对应的函数在文件 `rpcserver.h` 中被引用。
 
 ```cpp
-extern UniValue importwallet(const UniValue& params, bool fHelp); // 导入钱包
+extern UniValue importwallet(const UniValue& params, bool fHelp);
 ```
 
-实现在“rpcwallet.cpp”文件中。
+实现在文件 `rpcwallet.cpp` 中。
 
 ```cpp
 UniValue importwallet(const UniValue& params, bool fHelp)
 {
-    if (!EnsureWalletIsAvailable(fHelp)) // 确保当前钱包可用
+    if (!EnsureWalletIsAvailable(fHelp)) // 1. 确保钱包可用
         return NullUniValue;
     
-    if (fHelp || params.size() != 1) // 参数必须为 1 个
-        throw runtime_error( // 命令帮助反馈
+    if (fHelp || params.size() != 1)
+        throw runtime_error(
             "importwallet \"filename\"\n"
             "\nImports keys from a wallet dump file (see dumpwallet).\n"
             "\nArguments:\n"
@@ -73,18 +60,18 @@ UniValue importwallet(const UniValue& params, bool fHelp)
             + HelpExampleCli("importwallet", "\"test\"") +
             "\nImport using the json rpc call\n"
             + HelpExampleRpc("importwallet", "\"test\"")
-        );
+        ); // 2. 帮助内容
 
-    if (fPruneMode) // 导入钱包在修剪模式下无效
+    if (fPruneMode)
         throw JSONRPCError(RPC_WALLET_ERROR, "Importing wallets is disabled in pruned mode");
 
-    LOCK2(cs_main, pwalletMain->cs_wallet); // 钱包上锁
+    LOCK2(cs_main, pwalletMain->cs_wallet);
 
-    EnsureWalletIsUnlocked(); // 确保钱包此时未加密
+    EnsureWalletIsUnlocked(); // 3. 确保钱包被解锁
 
-    ifstream file; // 文件输入流对象
+    ifstream file;
     file.open(params[0].get_str().c_str(), std::ios::in | std::ios::ate); // 打开指定文件并立刻定位到文件流结尾
-    if (!file.is_open()) // 判断文件的打开状态
+    if (!file.is_open())
         throw JSONRPCError(RPC_INVALID_PARAMETER, "Cannot open wallet dump file");
 
     int64_t nTimeBegin = chainActive.Tip()->GetBlockTime(); // 获取最佳区块创建时间
@@ -159,23 +146,22 @@ UniValue importwallet(const UniValue& params, bool fHelp)
     if (!fGood) // 某个密钥添加到钱包失败
         throw JSONRPCError(RPC_WALLET_ERROR, "Error adding some keys to wallet");
 
-    return NullUniValue; // 返回空值
+    return NullUniValue;
 }
 ```
 
-基本流程：
-1. 确保钱包当前可用（已初始化完成）。
-2. 处理命令帮助和参数个数。
-3. 修剪模式下禁止导入钱包。
-4. 钱包上锁。
-5. 确保钱包当前未加密。
-6. 创建文件输入流对象打开指定钱包导出文件。
-7. 获取文件大小，用于加载密钥时显示进度。
-8. 加载钱包数据：私钥、创建时间、标签。
-9. 关闭文件输入流对象。
-10. 标记钱包已改变。
+### 2.1. 确保钱包可用
+
+参考[比特币 RPC 命令剖析 "fundrawtransaction" 2.1. 确保钱包可用](/blog/2018/07/bitcoin-rpc-command-fundrawtransaction.html#21-确保钱包可用)。
+
+### 2.2. 帮助内容
+
+参考[比特币 RPC 命令剖析 "getbestblockhash" 2.1. 帮助内容](/blog/2018/05/bitcoin-rpc-command-getbestblockhash.html#21-帮助内容)。
 
 ## 参考链接
 
 * [bitcoin/rpcserver.h at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/rpcserver.h){:target="_blank"}
+* [bitcoin/rpcserver.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/rpcserver.cpp){:target="_blank"}
 * [bitcoin/rpcwallet.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/wallet/rpcwallet.cpp){:target="_blank"}
+* [bitcoin/init.h at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/init.h){:target="_blank"}
+* [bitcoin/init.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/init.cpp){:target="_blank"}
