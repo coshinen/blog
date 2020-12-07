@@ -8,7 +8,7 @@ category: 译文集
 tags: Lyrics Garnet
 excerpt: 冷えた 空から 溶け込む 淡い雪、すべては この大地の中 すい込まれ ゆくのですね。
 ---
-![GZCA-5052](https://crowsub.github.io/images/discography/album/GZCA-5052.jpg){:.border}
+![GZCA-5052](https://ganekuro.github.io/images/discography/album/GZCA-5052.jpg){:.border}
 
 歌手：GARNET CROW<br>
 作詞：AZUKI 七<br>
@@ -92,4 +92,4 @@ excerpt: 冷えた 空から 溶け込む 淡い雪、すべては この大地�
 ## 参考链接
 
 * [GARNET CROW 冷たい影 歌詞 - 歌ネット](https://www.uta-net.com/song/25896/){:target="_blank"}
-* [冷たい影 Lyrics \| GARNET CROW music diary](https://crowsub.github.io/lyrics/original/冷たい影.html){:target="_blank"}
+* [冷たい影 : Lyrics : GARNET CROW unofficial website : ガーネットクロウ アンオフィシャルサイト](https://ganekuro.github.io/lyrics/original/Tsumetai-Kage.html){:target="_blank"}

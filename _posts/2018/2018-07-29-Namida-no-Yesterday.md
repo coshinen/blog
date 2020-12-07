@@ -8,7 +8,7 @@ category: 译文集
 tags: Lyrics Conan Garnet
 excerpt: 流星がこぼれた夏の空、願いこめた。いつもあの人の傍にいさせて、朝になり街中人が溢れゆく度に。
 ---
-![GZCA-4096](https://crowsub.github.io/images/discography/single/GZCA-4096.jpg){:.border}
+![GZCA-4096](https://ganekuro.github.io/images/discography/single/GZCA-4096.jpg){:.border}
 
 歌手：GARNET CROW<br>
 作詞：AZUKI 七<br>
@@ -122,4 +122,4 @@ excerpt: 流星がこぼれた夏の空、願いこめた。いつもあの人�
 ## 参考链接
 
 * [GARNET CROW 涙のイエスタデー 歌詞 - 歌ネット](https://www.uta-net.com/song/55020/){:target="_blank"}
-* [涙のイエスタデー Lyrics \| GARNET CROW music diary](https://crowsub.github.io/lyrics/original/涙のイエスタデー.html){:target="_blank"}
+* [涙のイエスタデー : Lyrics : GARNET CROW unofficial website : ガーネットクロウ アンオフィシャルサイト](https://ganekuro.github.io/lyrics/original/Namida-no-Yesterday.html){:target="_blank"}

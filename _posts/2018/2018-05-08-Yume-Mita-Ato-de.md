@@ -8,7 +8,7 @@ category: 译文集
 tags: Lyrics Conan Garnet
 excerpt: 朝が来るたび君のことを想う、一日の始まりさえも切なくて。二度と戻れない？無邪気な二人、ただ傍にいれば幸せだった。
 ---
-![GZCA-2031](https://crowsub.github.io/images/discography/single/GZCA-2031.jpg){:.border}
+![GZCA-2031](https://ganekuro.github.io/images/discography/single/GZCA-2031.jpg){:.border}
 
 歌手：GARNET CROW<br>
 作詞：AZUKI 七<br>
@@ -120,4 +120,4 @@ excerpt: 朝が来るたび君のことを想う、一日の始まりさえも�
 ## 参考链接
 
 * [GARNET CROW 夢みたあとで 歌詞 - 歌ネット](https://www.uta-net.com/song/15314/){:target="_blank"}
-* [夢みたあとで Lyrics \| GARNET CROW music diary](https://crowsub.github.io/lyrics/original/夢みたあとで.html){:target="_blank"}
+* [夢みたあとで : Lyrics : GARNET CROW unofficial website : ガーネットクロウ アンオフィシャルサイト](https://ganekuro.github.io/lyrics/original/Yume-Mita-Ato-de.html){:target="_blank"}

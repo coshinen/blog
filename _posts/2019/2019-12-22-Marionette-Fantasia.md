@@ -8,7 +8,7 @@ category: 译文集
 tags: Lyrics Garnet
 excerpt: 薄明かりを灯して、冷たい壁に 頬寄せ。静寂に 耳をすます、ひっそりと ゆっくりと、惹き返す。
 ---
-![GZCA-5038](https://crowsub.github.io/images/discography/album/GZCA-5038.jpg){:.border}
+![GZCA-5038](https://ganekuro.github.io/images/discography/album/GZCA-5038.jpg){:.border}
 
 歌手：GARNET CROW<br>
 作詞：AZUKI 七<br>
@@ -152,4 +152,4 @@ excerpt: 薄明かりを灯して、冷たい壁に 頬寄せ。静寂に 耳を
 ## 参考链接
 
 * [GARNET CROW Marionette Fantasia 歌詞 - 歌ネット](https://www.uta-net.com/song/20214/){:target="_blank"}
-* [Marionette Fantasia Lyrics \| GARNET CROW music diary](https://crowsub.github.io/lyrics/original/Marionette%20Fantasia.html){:target="_blank"}
+* [Marionette Fantasia : Lyrics : GARNET CROW unofficial website : ガーネットクロウ アンオフィシャルサイト](https://ganekuro.github.io/lyrics/original/Marionette-Fantasia.html){:target="_blank"}

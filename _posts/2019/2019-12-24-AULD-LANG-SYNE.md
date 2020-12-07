@@ -5,10 +5,10 @@ date:   2019-12-24 20:10:11 +0800
 author: mistydew
 comments: true
 category: 译文集
-tags: Lyrics
+tags: Lyrics Garnet
 excerpt: Should auld acquaintance be forgot, and never brought to mind? Should auld acquaintance be forgot, and days of auld lang syne?
 ---
-![GZCA-5229](https://crowsub.github.io/images/discography/other/GZCA-5229.jpg){:.border}
+![GZCA-5229](https://ganekuro.github.io/images/discography/other/GZCA-5229.jpg){:.border}
 
 歌手：中村由利
 
@@ -53,4 +53,4 @@ excerpt: Should auld acquaintance be forgot, and never brought to mind? Should a
 ## 参考链接
 
 * [Lea Michele – Auld Lang Syne Lyrics \| Genius Lyrics](https://genius.com/Lea-michele-auld-lang-syne-lyrics){:target="_blank"}
-* [AULD LANG SYNE Lyrics \| GARNET CROW music diary](https://crowsub.github.io/lyrics/featuring/AULD%20LANG%20SYNE.html){:target="_blank"}
+* [AULD LANG SYNE : Lyrics : GARNET CROW unofficial website : ガーネットクロウ アンオフィシャルサイト](https://ganekuro.github.io/lyrics/featuring/AULD-LANG-SYNE.html){:target="_blank"}

@@ -8,7 +8,7 @@ category: 译文集
 tags: Lyrics Garnet
 excerpt: 走り出したら通り雨、もう一休みしてる。待ちきれない君は飛び出して、振り返りもせずに。
 ---
-![GZCA-1072](https://crowsub.github.io/images/discography/single/GZCA-1072.jpg){:.border}
+![GZCA-1072](https://ganekuro.github.io/images/discography/single/GZCA-1072.jpg){:.border}
 
 歌手：GARNET CROW<br>
 作詞：AZUKI 七<br>
@@ -118,4 +118,4 @@ excerpt: 走り出したら通り雨、もう一休みしてる。待ちきれ�
 ## 参考链接
 
 * [GARNET CROW Jewel Fish 歌詞 - 歌ネット](https://www.uta-net.com/song/20144/){:target="_blank"}
-* [Jewel Fish Lyrics \| GARNET CROW music diary](https://crowsub.github.io/lyrics/original/Jewel%20Fish.html){:target="_blank"}
+* [Jewel Fish : Lyrics : GARNET CROW unofficial website : ガーネットクロウ アンオフィシャルサイト](https://ganekuro.github.io/lyrics/original/Jewel-Fish.html){:target="_blank"}

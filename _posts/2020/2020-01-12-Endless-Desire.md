@@ -8,7 +8,7 @@ category: 译文集
 tags: Lyrics Garnet
 excerpt: そんなに移り気じゃヤダ、正直って便利な言い訳、多様して流れてゆく 生涯(ひととき)。
 ---
-![GZCA-5038](https://crowsub.github.io/images/discography/album/GZCA-5038.jpg){:.border}
+![GZCA-5038](https://ganekuro.github.io/images/discography/album/GZCA-5038.jpg){:.border}
 
 歌手：GARNET CROW<br>
 作詞：AZUKI 七<br>
@@ -140,4 +140,4 @@ excerpt: そんなに移り気じゃヤダ、正直って便利な言い訳、�
 ## 参考链接
 
 * [GARNET CROW Endless Desire 歌詞 - 歌ネット](https://www.uta-net.com/song/20211/){:target="_blank"}
-* [Endless Desire Lyrics \| GARNET CROW music diary](https://crowsub.github.io/lyrics/original/Endless%20Desire.html){:target="_blank"}
+* [Endless Desire : Lyrics : GARNET CROW unofficial website : ガーネットクロウ アンオフィシャルサイト](https://ganekuro.github.io/lyrics/original/Endless-Desire.html){:target="_blank"}

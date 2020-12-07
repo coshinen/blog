@@ -8,7 +8,7 @@ category: 译文集
 tags: Lyrics Garnet
 excerpt: 生まれ変われるなら、早く君にあいたい。通り過ぎたときに、君だけが足りない。
 ---
-![GZCA-7037](https://crowsub.github.io/images/discography/single/GZCA-7037.jpg){:.border}
+![GZCA-7037](https://ganekuro.github.io/images/discography/single/GZCA-7037.jpg){:.border}
 
 歌手：GARNET CROW<br>
 作詞：AZUKI 七<br>
@@ -120,4 +120,4 @@ excerpt: 生まれ変われるなら、早く君にあいたい。通り過ぎ�
 ## 参考链接
 
 * [GARNET CROW 僕らだけの未来 歌詞 - 歌ネット](https://www.uta-net.com/song/18459/){:target="_blank"}
-* [僕らだけの未来 Lyrics \| GARNET CROW music diary](https://crowsub.github.io/lyrics/original/僕らだけの未来.html){:target="_blank"}
+* [僕らだけの未来 : Lyrics : GARNET CROW unofficial website : ガーネットクロウ アンオフィシャルサイト](https://ganekuro.github.io/lyrics/original/Bokura-Dake-no-Mirai.html){:target="_blank"}

@@ -8,7 +8,7 @@ category: 译文集
 tags: Lyrics Garnet
 excerpt: 離陸間近の午前1時5分 空を見上げていた。いつかまた会えるかなあ 何故かなあ、もう離れてしまったことばかりを思うこと止められず、心がきしんだ。
 ---
-![GZCA-5198](https://crowsub.github.io/images/discography/album/GZCA-5198.jpg){:.border}
+![GZCA-5198](https://ganekuro.github.io/images/discography/album/GZCA-5198.jpg){:.border}
 
 歌手：GARNET CROW<br>
 作詞：AZUKI 七<br>
@@ -126,4 +126,4 @@ excerpt: 離陸間近の午前1時5分 空を見上げていた。いつかま�
 ## 参考链接
 
 * [GARNET CROW Hello Sadness 歌詞 - 歌ネット](https://www.uta-net.com/song/85223/){:target="_blank"}
-* [Hello Sadness Lyrics \| GARNET CROW music diary](https://crowsub.github.io/lyrics/original/Hello%20Sadness.html){:target="_blank"}
+* [Hello Sadness : Lyrics : GARNET CROW unofficial website : ガーネットクロウ アンオフィシャルサイト](https://ganekuro.github.io/lyrics/original/Hello-Sadness.html){:target="_blank"}

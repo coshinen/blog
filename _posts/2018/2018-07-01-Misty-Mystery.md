@@ -8,7 +8,7 @@ category: 译文集
 tags: Lyrics Conan Garnet
 excerpt: why 見えぬ明日へと、期待込め歩いてるの。まだ君を想う、途中みたいにざわめく。
 ---
-![GZCA-4135](https://crowsub.github.io/images/discography/single/GZCA-4135.jpg){:.border}
+![GZCA-4135](https://ganekuro.github.io/images/discography/single/GZCA-4135.jpg){:.border}
 
 歌手：GARNET CROW<br>
 作詞：AZUKI 七<br>
@@ -154,4 +154,4 @@ excerpt: why 見えぬ明日へと、期待込め歩いてるの。まだ君を�
 ## 参考链接
 
 * [GARNET CROW Misty Mystery 歌詞 - 歌ネット](https://www.uta-net.com/song/117216/){:target="_blank"}
-* [Misty Mystery Lyrics \| GARNET CROW music diary](https://crowsub.github.io/lyrics/original/Misty%20Mystery.html){:target="_blank"}
+* [Misty Mystery : Lyrics : GARNET CROW unofficial website : ガーネットクロウ アンオフィシャルサイト](https://ganekuro.github.io/lyrics/original/Misty-Mystery.html){:target="_blank"}

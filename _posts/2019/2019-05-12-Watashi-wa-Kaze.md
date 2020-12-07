@@ -89,4 +89,4 @@ excerpt: あまりに悲しいことばかりで、どこか遠くへ旅にで�
 ## 参考链接
 
 * [カルメン・マキ 私は風 歌詞 - 歌ネット](https://www.uta-net.com/song/221765/){:target="_blank"}
-* [私は風 Lyrics \| GARNET CROW music diary](https://crowsub.github.io/lyrics/featuring/私は風.html){:target="_blank"}
+* [私は風 : Lyrics : GARNET CROW unofficial website : ガーネットクロウ アンオフィシャルサイト](https://ganekuro.github.io/lyrics/featuring/Watashi-wa-Kaze.html){:target="_blank"}

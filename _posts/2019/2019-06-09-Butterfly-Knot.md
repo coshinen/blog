@@ -8,7 +8,7 @@ category: 译文集
 tags: Lyrics Garnet
 excerpt: ねぇ何を話そうか…もう夜が来てしまう、遠い道のりを歩いてきた。
 ---
-![GZCA-5256~7](https://crowsub.github.io/images/discography/album/GZCA-5256~7.jpg){:.border}
+![GZCA-5256~7](https://ganekuro.github.io/images/discography/album/GZCA-5256~7.jpg){:.border}
 
 歌手：GARNET CROW<br>
 作詞：AZUKI 七<br>
@@ -94,4 +94,4 @@ excerpt: ねぇ何を話そうか…もう夜が来てしまう、遠い道の�
 ## 参考链接
 
 * [GARNET CROW バタフライ・ノット 歌詞 - 歌ネット](https://www.uta-net.com/song/153420/){:target="_blank"}
-* [バタフライ・ノット Lyrics \| GARNET CROW music diary](https://crowsub.github.io/lyrics/original/バタフライ・ノット.html){:target="_blank"}
+* [バタフライ・ノット : Lyrics : GARNET CROW unofficial website : ガーネットクロウ アンオフィシャルサイト](https://ganekuro.github.io/lyrics/original/Butterfly-Knot.html){:target="_blank"}

@@ -8,7 +8,7 @@ category: 译文集
 tags: Lyrics Garnet
 excerpt: 夕月の光とならぬ空、そっと寄り添う。人影にも惑う。
 ---
-![GZCA-5052](https://crowsub.github.io/images/discography/album/GZCA-5052.jpg){:.border}
+![GZCA-5052](https://ganekuro.github.io/images/discography/album/GZCA-5052.jpg){:.border}
 
 歌手：GARNET CROW<br>
 作詞：AZUKI 七<br>
@@ -110,5 +110,5 @@ excerpt: 夕月の光とならぬ空、そっと寄り添う。人影にも惑�
 ## 参考链接
 
 * [GARNET CROW 夕月夜 歌詞 - 歌ネット](https://www.uta-net.com/song/25895/){:target="_blank"}
-* [夕月夜 Lyrics \| GARNET CROW music diary](https://crowsub.github.io/lyrics/original/夕月夜.html){:target="_blank"}
+* [夕月夜 : Lyrics : GARNET CROW unofficial website : ガーネットクロウ アンオフィシャルサイト](https://ganekuro.github.io/lyrics/original/Yuuzukiyo.html){:target="_blank"}
 * [「見ゆ(みゆ)」の意味や使い方 Weblio辞書](https://www.weblio.jp/content/見ゆ){:target="_blank"}

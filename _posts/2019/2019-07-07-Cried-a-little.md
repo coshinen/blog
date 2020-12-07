@@ -8,7 +8,7 @@ category: 译文集
 tags: Lyrics Garnet
 excerpt: 弱い日差しが揺れるテーブルの上、開いた世界地図に、君のクセのある文字がまだ残る。ah- 現実かなぁ、、
 ---
-![GZCA-1029](https://crowsub.github.io/images/discography/single/GZCA-1029.jpg){:.border}
+![GZCA-1029](https://ganekuro.github.io/images/discography/single/GZCA-1029.jpg){:.border}
 
 歌手：GARNET CROW<br>
 作詞：AZUKI 七<br>
@@ -114,4 +114,4 @@ excerpt: 弱い日差しが揺れるテーブルの上、開いた世界地図�
 ## 参考链接
 
 * [GARNET CROW Cried a little 歌詞 - 歌ネット](https://www.uta-net.com/song/20136/){:target="_blank"}
-* [Cried a little Lyrics \| GARNET CROW music diary](https://crowsub.github.io/lyrics/original/Cried%20a%20little.html){:target="_blank"}
+* [Cried a little : Lyrics : GARNET CROW unofficial website : ガーネットクロウ アンオフィシャルサイト](https://ganekuro.github.io/lyrics/original/Cried-a-little.html){:target="_blank"}

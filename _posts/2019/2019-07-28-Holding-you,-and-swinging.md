@@ -8,7 +8,7 @@ category: 译文集
 tags: Lyrics Garnet
 excerpt: 街の音 人の声 ざわめき、やけに今 躰が音をひらうよ。君一人で世界が変わるなんて、ah- なんて 単純な feel & brain。
 ---
-![GZCA-1061](https://crowsub.github.io/images/discography/album/GZCA-1061.jpg){:.border}
+![GZCA-1061](https://ganekuro.github.io/images/discography/album/GZCA-1061.jpg){:.border}
 
 歌手：GARNET CROW<br>
 作詞：AZUKI 七<br>
@@ -152,5 +152,5 @@ excerpt: 街の音 人の声 ざわめき、やけに今 躰が音をひらう�
 ## 参考链接
 
 * [GARNET CROW Holding you, and swinging 歌詞 - 歌ネット](https://www.uta-net.com/song/20141/){:target="_blank"}
-* [Holding you, and swinging Lyrics \| GARNET CROW music diary](https://crowsub.github.io/lyrics/original/Holding%20you,%20and%20swinging.html){:target="_blank"}
+* [Holding you, and swinging : Lyrics : GARNET CROW unofficial website : ガーネットクロウ アンオフィシャルサイト](https://ganekuro.github.io/lyrics/original/Holding-you,-and-swinging.html){:target="_blank"}
 * [ひらうの意味や使い方 Weblio辞書](https://www.weblio.jp/content/ひらう){:target="_blank"}

@@ -8,7 +8,7 @@ category: 译文集
 tags: Lyrics Garnet
 excerpt: 追いかけ合う月と太陽、決して同じ朝は来なくて。二人を重ねて見ていたよ、空っぽの部屋で。
 ---
-![TCR-001](https://crowsub.github.io/images/discography/album/TCR-001.jpg){:.border}
+![TCR-001](https://ganekuro.github.io/images/discography/album/TCR-001.jpg){:.border}
 
 歌手：GARNET CROW<br>
 作詞：AZUKI 七<br>
@@ -104,4 +104,4 @@ excerpt: 追いかけ合う月と太陽、決して同じ朝は来なくて。�
 ## 参考链接
 
 * [GARNET CROW 永遠に葬れ 歌詞 - 歌ネット](https://www.uta-net.com/song/20129/){:target="_blank"}
-* [永遠に葬れ Lyrics \| GARNET CROW music diary](https://crowsub.github.io/lyrics/original/永遠に葬れ.html){:target="_blank"}
+* [永遠に葬れ : Lyrics : GARNET CROW unofficial website : ガーネットクロウ アンオフィシャルサイト](https://ganekuro.github.io/lyrics/original/Towa-ni-Nemure.html){:target="_blank"}

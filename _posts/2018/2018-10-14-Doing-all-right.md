@@ -8,7 +8,7 @@ category: 译文集
 tags: Lyrics Conan Garnet
 excerpt: Doing all right!かみしめた君の記憶 木漏れ日の匂い、置いてきた何かはもう 此処にはないけど。
 ---
-![GZCA-7141](https://crowsub.github.io/images/discography/single/GZCA-7141.jpg){:.border}
+![GZCA-7141](https://ganekuro.github.io/images/discography/single/GZCA-7141.jpg){:.border}
 
 歌手：GARNET CROW<br>
 作詞：AZUKI 七<br>
@@ -98,4 +98,4 @@ excerpt: Doing all right!かみしめた君の記憶 木漏れ日の匂い、置
 ## 参考链接
 
 * [GARNET CROW Doing all right 歌詞 - 歌ネット](https://www.uta-net.com/song/79833/){:target="_blank"}
-* [Doing all right Lyrics \| GARNET CROW music diary](https://crowsub.github.io/lyrics/original/Doing%20all%20right.html){:target="_blank"}
+* [Doing all right : Lyrics : GARNET CROW unofficial website : ガーネットクロウ アンオフィシャルサイト](https://ganekuro.github.io/lyrics/original/Doing-all-right.html){:target="_blank"}

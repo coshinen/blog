@@ -8,7 +8,7 @@ category: 译文集
 tags: Lyrics Garnet
 excerpt: 十二月にしては暖かいこんな夜は、思いつきで出かけた。車の中でずっと手をつないで眠った、朝日が二人を起こすまで。
 ---
-![GZCA-1029](https://crowsub.github.io/images/discography/single/GZCA-1029.jpg){:.border}
+![GZCA-1029](https://ganekuro.github.io/images/discography/single/GZCA-1029.jpg){:.border}
 
 歌手：GARNET CROW<br>
 作詞：AZUKI 七<br>
@@ -116,4 +116,4 @@ excerpt: 十二月にしては暖かいこんな夜は、思いつきで出か�
 ## 参考链接
 
 * [GARNET CROW in little time 歌詞 - 歌ネット](https://www.uta-net.com/song/20143/){:target="_blank"}
-* [in little time Lyrics \| GARNET CROW music diary](https://crowsub.github.io/lyrics/original/in%20little%20time.html){:target="_blank"}
+* [in little time : Lyrics : GARNET CROW unofficial website : ガーネットクロウ アンオフィシャルサイト](https://ganekuro.github.io/lyrics/original/in-little-time.html){:target="_blank"}

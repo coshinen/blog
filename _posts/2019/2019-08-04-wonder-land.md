@@ -8,7 +8,7 @@ category: 译文集
 tags: Lyrics Garnet
 excerpt: 雨上がりは ふと 空見上げる、何気ない仕草しみついた毎日。なんで迷子みたいな気持ち、君といても感じちゃうんだろう。
 ---
-![GZCA-1061](https://crowsub.github.io/images/discography/album/GZCA-1061.jpg){:.border}
+![GZCA-1061](https://ganekuro.github.io/images/discography/album/GZCA-1061.jpg){:.border}
 
 歌手：GARNET CROW<br>
 作詞：AZUKI 七<br>
@@ -122,4 +122,4 @@ excerpt: 雨上がりは ふと 空見上げる、何気ない仕草しみつい
 ## 参考链接
 
 * [GARNET CROW wonder land 歌詞 - 歌ネット](https://www.uta-net.com/song/20126/){:target="_blank"}
-* [wonder land Lyrics \| GARNET CROW music diary](https://crowsub.github.io/lyrics/original/wonder%20land.html){:target="_blank"}
+* [wonder land : Lyrics : GARNET CROW unofficial website : ガーネットクロウ アンオフィシャルサイト](https://ganekuro.github.io/lyrics/original/wonder-land.html){:target="_blank"}

@@ -8,7 +8,7 @@ category: 译文集
 tags: Lyrics Conan Garnet
 excerpt: 気づけば懐かしい川原に来てみたり、昨日みた夢の続き想像してたり。
 ---
-![GZCA-4028](https://crowsub.github.io/images/discography/single/GZCA-4028.jpg){:.border}
+![GZCA-4028](https://ganekuro.github.io/images/discography/single/GZCA-4028.jpg){:.border}
 
 歌手：GARNET CROW<br>
 作詞：AZUKI 七<br>
@@ -88,4 +88,4 @@ excerpt: 気づけば懐かしい川原に来てみたり、昨日みた夢の�
 ## 参考链接
 
 * [GARNET CROW 忘れ咲き 歌詞 - 歌ネット](https://www.uta-net.com/song/21024/){:target="_blank"}
-* [忘れ咲き Lyrics \| GARNET CROW music diary](https://crowsub.github.io/lyrics/original/忘れ咲き.html){:target="_blank"}
+* [忘れ咲き : Lyrics : GARNET CROW unofficial website : ガーネットクロウ アンオフィシャルサイト](https://ganekuro.github.io/lyrics/original/Wasurezaki.html){:target="_blank"}

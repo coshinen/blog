@@ -8,7 +8,7 @@ category: 译文集
 tags: Lyrics Garnet
 excerpt: 水のない晴れた海へ、たどり着いた white mermaid。夢にまでみていた、地上の天国は silence×3。
 ---
-![GZCA-1061](https://crowsub.github.io/images/discography/album/GZCA-1061.jpg){:.border}
+![GZCA-1061](https://ganekuro.github.io/images/discography/album/GZCA-1061.jpg){:.border}
 
 歌手：GARNET CROW<br>
 作詞：AZUKI 七<br>
@@ -98,4 +98,4 @@ excerpt: 水のない晴れた海へ、たどり着いた white mermaid。夢に
 ## 参考链接
 
 * [GARNET CROW 水のない晴れた海へ 歌詞 - 歌ネット](https://www.uta-net.com/song/20148/){:target="_blank"}
-* [水のない晴れた海へ Lyrics \| GARNET CROW music diary](https://crowsub.github.io/lyrics/original/水のない晴れた海へ.html){:target="_blank"}
+* [水のない晴れた海へ : Lyrics : GARNET CROW unofficial website : ガーネットクロウ アンオフィシャルサイト](https://ganekuro.github.io/lyrics/original/Mizu-no-Nai-Hareta-Umi-e.html){:target="_blank"}

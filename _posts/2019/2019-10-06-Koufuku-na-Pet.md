@@ -8,7 +8,7 @@ category: 译文集
 tags: Lyrics Garnet
 excerpt: じゃれ合う日曜の午後 (oh- yeah Why do I love you ~)、まだ眠い？ 話しかける (Let's step on out today)。
 ---
-![GZCA-2031](https://crowsub.github.io/images/discography/single/GZCA-2031.jpg){:.border}
+![GZCA-2031](https://ganekuro.github.io/images/discography/single/GZCA-2031.jpg){:.border}
 
 歌手：GARNET CROW<br>
 作詞：AZUKI 七<br>
@@ -96,4 +96,4 @@ excerpt: じゃれ合う日曜の午後 (oh- yeah Why do I love you ~)、まだ�
 ## 参考链接
 
 * [GARNET CROW 幸福なペット 歌詞 - 歌ネット](https://www.uta-net.com/song/20152/){:target="_blank"}
-* [幸福なペット Lyrics \| GARNET CROW music diary](https://crowsub.github.io/lyrics/original/幸福なペット.html){:target="_blank"}
+* [幸福なペット : Lyrics : GARNET CROW unofficial website : ガーネットクロウ アンオフィシャルサイト](https://ganekuro.github.io/lyrics/original/Koufuku-na-Pet.html){:target="_blank"}

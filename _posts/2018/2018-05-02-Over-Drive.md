@@ -8,7 +8,7 @@ category: 译文集
 tags: Lyrics Conan Garnet
 excerpt: 風の音だけが、体中を包む。サイレント・Kiss、夢に似た気配。
 ---
-![GZCA-7156](https://crowsub.github.io/images/discography/single/GZCA-7156.jpg){:.border}
+![GZCA-7156](https://ganekuro.github.io/images/discography/single/GZCA-7156.jpg){:.border}
 
 歌手：GARNET CROW<br>
 作詞：AZUKI 七<br>
@@ -132,4 +132,4 @@ excerpt: 風の音だけが、体中を包む。サイレント・Kiss、夢に�
 ## 参考链接
 
 * [GARNET CROW Over Drive 歌詞 - 歌ネット](https://www.uta-net.com/song/93464/){:target="_blank"}
-* [Over Drive Lyrics \| GARNET CROW music diary](https://crowsub.github.io/lyrics/original/Over%20Drive.html){:target="_blank"}
+* [Over Drive : Lyrics : GARNET CROW unofficial website : ガーネットクロウ アンオフィシャルサイト](https://ganekuro.github.io/lyrics/original/Over-Drive.html){:target="_blank"}

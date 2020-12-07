@@ -8,7 +8,7 @@ category: 译文集
 tags: Lyrics Garnet
 excerpt: 君のいない 明日へ向かう 日々なら、すべてが もう… 暇つぶしのようで。
 ---
-![GZCA-7037](https://crowsub.github.io/images/discography/single/GZCA-7037.jpg){:.border}
+![GZCA-7037](https://ganekuro.github.io/images/discography/single/GZCA-7037.jpg){:.border}
 
 歌手：GARNET CROW<br>
 作詞：AZUKI 七<br>
@@ -74,4 +74,4 @@ excerpt: 君のいない 明日へ向かう 日々なら、すべてが もう�
 ## 参考链接
 
 * [GARNET CROW lose feeling 歌詞 - 歌ネット](https://www.uta-net.com/song/59993/){:target="_blank"}
-* [lose feeling Lyrics \| GARNET CROW music diary](https://crowsub.github.io/lyrics/original/lose%20feeling.html){:target="_blank"}
+* [lose feeling : Lyrics : GARNET CROW unofficial website : ガーネットクロウ アンオフィシャルサイト](https://ganekuro.github.io/lyrics/original/lose-feeling.html){:target="_blank"}

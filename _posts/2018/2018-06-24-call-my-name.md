@@ -8,7 +8,7 @@ category: 译文集
 tags: Lyrics Garnet
 excerpt: 白い壁と Rembrandt、いつまでも眺めていた、日曜の朝君とただ並んでた。開いた窓から差し込む光がほらそこに、ふと思い出したように call my name。
 ---
-![GZCA-2005](https://crowsub.github.io/images/discography/single/GZCA-2005.jpg){:.border}
+![GZCA-2005](https://ganekuro.github.io/images/discography/single/GZCA-2005.jpg){:.border}
 
 歌手：GARNET CROW<br>
 作詞：AZUKI 七<br>
@@ -114,4 +114,4 @@ excerpt: 白い壁と Rembrandt、いつまでも眺めていた、日曜の朝�
 ## 参考链接
 
 * [GARNET CROW call my name 歌詞 - 歌ネット](https://www.uta-net.com/song/14411/){:target="_blank"}
-* [call my name Lyrics \| GARNET CROW music diary](https://crowsub.github.io/lyrics/original/call%20my%20name.html){:target="_blank"}
+* [call my name : Lyrics : GARNET CROW unofficial website : ガーネットクロウ アンオフィシャルサイト](https://ganekuro.github.io/lyrics/original/call-my-name.html){:target="_blank"}

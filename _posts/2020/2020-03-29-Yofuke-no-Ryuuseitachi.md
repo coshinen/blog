@@ -8,7 +8,7 @@ category: 译文集
 tags: Lyrics Garnet
 excerpt: 夜深けの流星達 眺めていたよね。言葉にならない 感覚(きもち)を共有してた。
 ---
-![GZCA-7054](https://crowsub.github.io/images/discography/single/GZCA-7054.jpg){:.border}
+![GZCA-7054](https://ganekuro.github.io/images/discography/single/GZCA-7054.jpg){:.border}
 
 歌手：GARNET CROW<br>
 作詞：AZUKI 七<br>
@@ -98,5 +98,5 @@ excerpt: 夜深けの流星達 眺めていたよね。言葉にならない 感
 ## 参考链接
 
 * [GARNET CROW 夜深けの流星達 歌詞 - 歌ネット](https://www.uta-net.com/song/50834/){:target="_blank"}
-* [夜深けの流星達 Lyrics \| GARNET CROW music diary](https://crowsub.github.io/lyrics/original/夜深けの流星達.html){:target="_blank"}
+* [夜深けの流星達 : Lyrics : GARNET CROW unofficial website : ガーネットクロウ アンオフィシャルサイト](https://ganekuro.github.io/lyrics/original/Yofuke-no-Ryuuseitachi.html){:target="_blank"}
 * [◆GARNET CROW 20th Anniversary企画スタート！](http://www.garnetcrow.com/news/#info20200329){:target="_blank"}

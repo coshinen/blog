@@ -8,7 +8,7 @@ category: 译文集
 tags: Lyrics Garnet
 excerpt: 公園で髪を切る、落ちてゆく毛先を払う。君が笑う 頬に触れる、見上げれば飛行機雲。
 ---
-![GZCA-1044](https://crowsub.github.io/images/discography/single/GZCA-1044.jpg){:.border}
+![GZCA-1044](https://ganekuro.github.io/images/discography/single/GZCA-1044.jpg){:.border}
 
 歌手：GARNET CROW<br>
 作詞：AZUKI 七<br>
@@ -114,4 +114,4 @@ excerpt: 公園で髪を切る、落ちてゆく毛先を払う。君が笑う �
 ## 参考链接
 
 * [GARNET CROW 千以上の言葉を並べても… 歌詞 - 歌ネット](https://www.uta-net.com/song/12650/){:target="_blank"}
-* [千以上の言葉を並べても… Lyrics \| GARNET CROW music diary](https://crowsub.github.io/lyrics/original/千以上の言葉を並べても….html){:target="_blank"}
+* [千以上の言葉を並べても… : Lyrics : GARNET CROW unofficial website : ガーネットクロウ アンオフィシャルサイト](https://ganekuro.github.io/lyrics/original/Sen-Ijou-no-Kotoba-wo-Narabete-mo.html){:target="_blank"}

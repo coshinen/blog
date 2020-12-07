@@ -110,4 +110,4 @@ Songwriters: Benny Andersson, Björn Ulvaeus & Stig Anderson
 ## 参考链接
 
 * [ABBA – Dancing Queen Lyrics \| Genius Lyrics](https://genius.com/Abba-dancing-queen-lyrics){:target="_blank"}
-* [Dancing Queen Lyrics \| GARNET CROW music diary](https://crowsub.github.io/lyrics/featuring/Dancing%20Queen.html){:target="_blank"}
+* [Dancing Queen : Lyrics : GARNET CROW unofficial website : ガーネットクロウ アンオフィシャルサイト](https://ganekuro.github.io/lyrics/featuring/Dancing-Queen.html){:target="_blank"}

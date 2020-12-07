@@ -8,7 +8,7 @@ category: 译文集
 tags: Lyrics Garnet
 excerpt: ため息ひとつ落ちた週末の、どうしようもない感じ、絶望より深く堕ちてゆく 夜明け。
 ---
-![TCR-001](https://crowsub.github.io/images/discography/album/TCR-001.jpg){:.border}
+![TCR-001](https://ganekuro.github.io/images/discography/album/TCR-001.jpg){:.border}
 
 歌手：GARNET CROW<br>
 作詞：AZUKI 七<br>
@@ -136,4 +136,4 @@ excerpt: ため息ひとつ落ちた週末の、どうしようもない感じ�
 ## 参考链接
 
 * [GARNET CROW dreaming of love 歌詞 - 歌ネット](https://www.uta-net.com/song/20147/){:target="_blank"}
-* [dreaming of love Lyrics \| GARNET CROW music diary](https://crowsub.github.io/lyrics/original/dreaming%20of%20love.html){:target="_blank"}
+* [dreaming of love : Lyrics : GARNET CROW unofficial website : ガーネットクロウ アンオフィシャルサイト](https://ganekuro.github.io/lyrics/original/dreaming-of-love.html){:target="_blank"}

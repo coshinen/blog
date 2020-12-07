@@ -8,7 +8,7 @@ category: 译文集
 tags: Lyrics Conan Garnet
 excerpt: 部屋の窓の向こうに、飛行機雲を なぞって。今日ケンカした君の事ばかり、考えてた。
 ---
-![GZCA-1050](https://crowsub.github.io/images/discography/single/GZCA-1050.jpg){:.border}
+![GZCA-1050](https://ganekuro.github.io/images/discography/single/GZCA-1050.jpg){:.border}
 
 歌手：GARNET CROW<br>
 作詞：AZUKI 七<br>
@@ -134,4 +134,4 @@ excerpt: 部屋の窓の向こうに、飛行機雲を なぞって。今日ケ�
 ## 参考链接
 
 * [GARNET CROW 夏の幻 歌詞 - 歌ネット](https://www.uta-net.com/song/12675/){:target="_blank"}
-* [夏の幻 Lyrics \| GARNET CROW music diary](https://crowsub.github.io/lyrics/original/夏の幻.html){:target="_blank"}
+* [夏の幻 : Lyrics : GARNET CROW unofficial website : ガーネットクロウ アンオフィシャルサイト](https://ganekuro.github.io/lyrics/original/Natsu-no-Maboroshi.html){:target="_blank"}

@@ -8,7 +8,7 @@ category: 译文集
 tags: Lyrics Conan Garnet
 excerpt: 波の上漂う海月をみるのが好きで、いつまでもどこか遠い世界想い馳せるよう。
 ---
-![GZCA-7031](https://crowsub.github.io/images/discography/single/GZCA-7031.jpg){:.border}
+![GZCA-7031](https://ganekuro.github.io/images/discography/single/GZCA-7031.jpg){:.border}
 
 歌手：GARNET CROW<br>
 作詞：AZUKI 七<br>
@@ -94,4 +94,4 @@ excerpt: 波の上漂う海月をみるのが好きで、いつまでもどこ�
 ## 参考链接
 
 * [GARNET CROW 君という光 歌詞 - 歌ネット](https://www.uta-net.com/song/17804/){:target="_blank"}
-* [君という光 Lyrics \| GARNET CROW music diary](https://crowsub.github.io/lyrics/original/君という光.html){:target="_blank"}
+* [君という光 : Lyrics : GARNET CROW unofficial website : ガーネットクロウ アンオフィシャルサイト](https://ganekuro.github.io/lyrics/original/Kimi-to-Iu-Hikari.html){:target="_blank"}

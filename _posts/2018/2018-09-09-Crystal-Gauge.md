@@ -8,7 +8,7 @@ category: 译文集
 tags: Lyrics Garnet
 excerpt: La La tu lu Rah Ta、緑の木漏れ日。目を閉じたら、スベテの繋がりを感じられる？まるで遺伝子の様な cosmic world、tu ta la ta...wave。
 ---
-![GZCA-7006](https://crowsub.github.io/images/discography/single/GZCA-7006.jpg){:.border}
+![GZCA-7006](https://ganekuro.github.io/images/discography/single/GZCA-7006.jpg){:.border}
 
 歌手：GARNET CROW<br>
 作詞：AZUKI 七<br>
@@ -126,4 +126,4 @@ excerpt: La La tu lu Rah Ta、緑の木漏れ日。目を閉じたら、スベ�
 ## 参考链接
 
 * [GARNET CROW クリスタル・ゲージ 歌詞 - 歌ネット](https://www.uta-net.com/song/16488/){:target="_blank"}
-* [クリスタル・ゲージ Lyrics \| GARNET CROW music diary](https://crowsub.github.io/lyrics/original/クリスタル・ゲージ.html){:target="_blank"}
+* [クリスタル・ゲージ : Lyrics : GARNET CROW unofficial website : ガーネットクロウ アンオフィシャルサイト](https://ganekuro.github.io/lyrics/original/Crystal-Gauge.html){:target="_blank"}

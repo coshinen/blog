@@ -8,7 +8,7 @@ category: 译文集
 tags: Lyrics Garnet
 excerpt: 夕暮れとこの街の匂い、染みついた諦めと希望。雨の中うつむいていた、少年の足取り。
 ---
-![GZCA-5126](https://crowsub.github.io/images/discography/album/GZCA-5126.jpg){:.border}
+![GZCA-5126](https://ganekuro.github.io/images/discography/album/GZCA-5126.jpg){:.border}
 
 歌手：GARNET CROW<br>
 作詞：AZUKI 七<br>
@@ -118,4 +118,4 @@ excerpt: 夕暮れとこの街の匂い、染みついた諦めと希望。雨�
 ## 参考链接
 
 * [GARNET CROW Love is a Bird 歌詞 - 歌ネット](https://www.uta-net.com/song/63136/){:target="_blank"}
-* [Love is a Bird Lyrics \| GARNET CROW music diary](https://crowsub.github.io/lyrics/original/Love%20is%20a%20Bird.html){:target="_blank"}
+* [Love is a Bird : Lyrics : GARNET CROW unofficial website : ガーネットクロウ アンオフィシャルサイト](https://ganekuro.github.io/lyrics/original/Love-is-a-Bird.html){:target="_blank"}

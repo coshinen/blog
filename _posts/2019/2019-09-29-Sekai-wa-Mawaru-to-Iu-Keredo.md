@@ -8,7 +8,7 @@ category: 译文集
 tags: Lyrics Conan Garnet
 excerpt: 永い夜が朝が昼が すべてのらりくらり流れゆくよ、日々をつないでゆくにも そうね 意思というものが必要？
 ---
-![GZCA-4100](https://crowsub.github.io/images/discography/single/GZCA-4100.jpg){:.border}
+![GZCA-4100](https://ganekuro.github.io/images/discography/single/GZCA-4100.jpg){:.border}
 
 歌手：GARNET CROW<br>
 作詞：AZUKI 七<br>
@@ -100,4 +100,4 @@ excerpt: 永い夜が朝が昼が すべてのらりくらり流れゆくよ、�
 ## 参考链接
 
 * [GARNET CROW 世界はまわると言うけれど 歌詞 - 歌ネット](https://www.uta-net.com/song/58595/){:target="_blank"}
-* [世界はまわると言うけれど Lyrics \| GARNET CROW music diary](https://crowsub.github.io/lyrics/original/世界はまわると言うけれど.html){:target="_blank"}
+* [世界はまわると言うけれど : Lyrics : GARNET CROW unofficial website : ガーネットクロウ アンオフィシャルサイト](https://ganekuro.github.io/lyrics/original/Sekai-wa-Mawaru-to-Iu-Keredo.html){:target="_blank"}

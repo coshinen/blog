@@ -8,7 +8,7 @@ category: 译文集
 tags: Lyrics Garnet
 excerpt: 街中冷えだして again, new fallen snow、君の体温(ぬくもり)胸にしみるよ。何もないままなら気付けずにいる そんな毎日。
 ---
-![GZCA-5038](https://crowsub.github.io/images/discography/album/GZCA-5038.jpg){:.border}
+![GZCA-5038](https://ganekuro.github.io/images/discography/album/GZCA-5038.jpg){:.border}
 
 歌手：GARNET CROW<br>
 作詞：AZUKI 七<br>
@@ -104,4 +104,4 @@ excerpt: 街中冷えだして again, new fallen snow、君の体温(ぬくも�
 ## 参考链接
 
 * [GARNET CROW 今日の君と明日を待つ 歌詞 - 歌ネット](https://www.uta-net.com/song/20213/){:target="_blank"}
-* [今日の君と明日を待つ Lyrics \| GARNET CROW music diary](https://crowsub.github.io/lyrics/original/今日の君と明日を待つ.html){:target="_blank"}
+* [今日の君と明日を待つ : Lyrics : GARNET CROW unofficial website : ガーネットクロウ アンオフィシャルサイト](https://ganekuro.github.io/lyrics/original/Kyou-no-Kimi-to-Ashita-wo-Matsu.html){:target="_blank"}

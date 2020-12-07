@@ -8,7 +8,7 @@ category: 译文集
 tags: Lyrics Garnet
 excerpt: 君の手の内で トランス、偶然に見せかけられた トラップ。変に格好つけた関係なんて要らない、ただ触れて欲しいの。傷は癒えて強くなってゆく、立ち止まるくらいなら、深く堕ちてく方がイイ。
 ---
-![GZCA-2005](https://crowsub.github.io/images/discography/single/GZCA-2005.jpg){:.border}
+![GZCA-2005](https://ganekuro.github.io/images/discography/single/GZCA-2005.jpg){:.border}
 
 歌手：GARNET CROW<br>
 作詞：AZUKI 七<br>
@@ -126,4 +126,4 @@ excerpt: 君の手の内で トランス、偶然に見せかけられた トラ
 ## 参考链接
 
 * [GARNET CROW トランス・トラップ 歌詞 - 歌ネット](https://www.uta-net.com/song/20128/){:target="_blank"}
-* [トランス・トラップ Lyrics \| GARNET CROW music diary](https://crowsub.github.io/lyrics/original/トランス・トラップ.html){:target="_blank"}
+* [トランス・トラップ : Lyrics : GARNET CROW unofficial website : ガーネットクロウ アンオフィシャルサイト](https://ganekuro.github.io/lyrics/original/Trance-Trap.html){:target="_blank"}

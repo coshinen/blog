@@ -8,8 +8,8 @@ category: 译文集
 tags: Lyrics Garnet
 excerpt: 新しいコートに着替えて、気分を変えて飛び出した。離れて過ごしている時間はすぐに、blueな気分に襲われてゆく。
 ---
-![TCR-001](https://crowsub.github.io/images/discography/album/TCR-001.jpg){:.border}
-![GZCA-1029](https://crowsub.github.io/images/discography/single/GZCA-1029.jpg){:.border}
+![TCR-001](https://ganekuro.github.io/images/discography/album/TCR-001.jpg){:.border}
+![GZCA-1029](https://ganekuro.github.io/images/discography/single/GZCA-1029.jpg){:.border}
 
 歌手：GARNET CROW<br>
 作詞：AZUKI 七<br>
@@ -133,4 +133,4 @@ excerpt: 新しいコートに着替えて、気分を変えて飛び出した�
 ## 参考链接
 
 * [GARNET CROW 君の家に着くまでずっと走ってゆく 歌詞 - 歌ネット](https://www.uta-net.com/song/20130/){:target="_blank"}
-* [君の家に着くまでずっと走ってゆく Lyrics \| GARNET CROW music diary](https://crowsub.github.io/lyrics/original/君の家に着くまでずっと走ってゆく.html){:target="_blank"}
+* [君の家に着くまでずっと走ってゆく : Lyrics : GARNET CROW unofficial website : ガーネットクロウ アンオフィシャルサイト](https://ganekuro.github.io/lyrics/original/Kimi-no-Uchi-ni-Tsuku-Made-Zutto-Hashitte-Yuku.html){:target="_blank"}

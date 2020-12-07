@@ -8,7 +8,7 @@ category: 译文集
 tags: Lyrics Garnet
 excerpt: 太陽が色彩(いろ)を連れて、この町を照らしはじめる。こんなに静かで深い朝がここにもある。バスが来る、待合人、共に暮らしがあるような。やさしい時間(とき) 流れる日々がこの地球(ほし)にある。
 ---
-![GZCA-5242](https://crowsub.github.io/images/discography/album/GZCA-5242.jpg){:.border}
+![GZCA-5242](https://ganekuro.github.io/images/discography/album/GZCA-5242.jpg){:.border}
 
 歌手：GARNET CROW<br>
 作詞：AZUKI 七<br>
@@ -82,4 +82,4 @@ excerpt: 太陽が色彩(いろ)を連れて、この町を照らしはじめる
 ## 参考链接
 
 * [GARNET CROW 静寂のconcerto 歌詞 - 歌ネット](https://www.uta-net.com/song/122963/){:target="_blank"}
-* [静寂の concerto Lyrics \| GARNET CROW music diary](https://crowsub.github.io/lyrics/original/静寂の%20concerto.html){:target="_blank"}
+* [静寂の concerto : Lyrics : GARNET CROW unofficial website : ガーネットクロウ アンオフィシャルサイト](https://ganekuro.github.io/lyrics/original/Seijaku-no-concerto.html){:target="_blank"}

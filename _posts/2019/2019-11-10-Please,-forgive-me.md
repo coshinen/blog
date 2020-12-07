@@ -8,7 +8,7 @@ category: 译文集
 tags: Lyrics Garnet
 excerpt: 優しく触れる君の手に戸惑った、痛みが消えて置き去りの罪だけ、私を責める 逃げること許さない、今目の前の光(あい)を求めていいのかな。
 ---
-![GZCA-5013](https://crowsub.github.io/images/discography/album/GZCA-5013.jpg){:.border}
+![GZCA-5013](https://ganekuro.github.io/images/discography/album/GZCA-5013.jpg){:.border}
 
 歌手：GARNET CROW<br>
 作詞：AZUKI 七<br>
@@ -140,4 +140,4 @@ excerpt: 優しく触れる君の手に戸惑った、痛みが消えて置き�
 ## 参考链接
 
 * [GARNET CROW Please, forgive me 歌詞 - 歌ネット](https://www.uta-net.com/song/20140/){:target="_blank"}
-* [Please, forgive me Lyrics \| GARNET CROW music diary](https://crowsub.github.io/lyrics/original/Please,%20forgive%20me.html){:target="_blank"}
+* [Please, forgive me : Lyrics : GARNET CROW unofficial website : ガーネットクロウ アンオフィシャルサイト](https://ganekuro.github.io/lyrics/original/Please,-forgive-me.html){:target="_blank"}

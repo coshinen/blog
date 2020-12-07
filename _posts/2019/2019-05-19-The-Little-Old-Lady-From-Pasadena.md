@@ -5,10 +5,10 @@ date:   2019-05-19 20:02:07 +0800
 author: mistydew
 comments: true
 category: 译文集
-tags: Lyrics
+tags: Lyrics Garnet
 excerpt: It's the little old lady from Pasadena, has a pretty little flower bed of white gardenias. But parked in a rickety old garage, is a brand new shiny red super stocked Dodge.
 ---
-![GZCA-5017](https://crowsub.github.io/images/discography/other/GZCA-5017.jpg){:.border}
+![GZCA-5017](https://ganekuro.github.io/images/discography/other/GZCA-5017.jpg){:.border}
 
 歌手：中村由利<br>
 作詞：Roger Christian, Don Altfeld & Jan Berry<br>
@@ -103,4 +103,4 @@ excerpt: It's the little old lady from Pasadena, has a pretty little flower bed 
 ## 参考链接
 
 * [The Beach Boys – The Little Old Lady From Pasadena Lyrics \| Genius Lyrics](https://genius.com/The-beach-boys-the-little-old-lady-from-pasadena-lyrics){:target="_blank"}
-* [THE LITTLE OLD LADY FROM PASADENA Lyrics \| GARNET CROW music diary](https://crowsub.github.io/lyrics/featuring/THE%20LITTLE%20OLD%20LADY%20FROM%20PASADENA.html){:target="_blank"}
+* [THE LITTLE OLD LADY FROM PASADENA : Lyrics : GARNET CROW unofficial website : ガーネットクロウ アンオフィシャルサイト](https://ganekuro.github.io/lyrics/featuring/THE-LITTLE-OLD-LADY-FROM-PASADENA.html){:target="_blank"}

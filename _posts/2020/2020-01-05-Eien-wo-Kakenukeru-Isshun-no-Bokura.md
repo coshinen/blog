@@ -8,7 +8,7 @@ category: 译文集
 tags: Lyrics Garnet
 excerpt: まるで異国の知らない場所へ来たみたい、懐かしいこの街の匂い 記憶。洪水みたいに溢れてくる五感(きもち)が、あった事思い出す 夕波の音。
 ---
-![GZCA-5038](https://crowsub.github.io/images/discography/album/GZCA-5038.jpg){:.border}
+![GZCA-5038](https://ganekuro.github.io/images/discography/album/GZCA-5038.jpg){:.border}
 
 歌手：GARNET CROW<br>
 作詞：AZUKI 七<br>
@@ -82,4 +82,4 @@ excerpt: まるで異国の知らない場所へ来たみたい、懐かしい�
 ## 参考链接
 
 * [GARNET CROW 永遠を駆け抜ける一瞬の僕ら 歌詞 - 歌ネット](https://www.uta-net.com/song/20212/){:target="_blank"}
-* [永遠を駆け抜ける一瞬の僕ら Lyrics \| GARNET CROW music diary](https://crowsub.github.io/lyrics/original/永遠を駆け抜ける一瞬の僕ら.html){:target="_blank"}
+* [永遠を駆け抜ける一瞬の僕ら : Lyrics : GARNET CROW unofficial website : ガーネットクロウ アンオフィシャルサイト](https://ganekuro.github.io/lyrics/original/Eien-wo-Kakenukeru-Isshun-no-Bokura.html){:target="_blank"}

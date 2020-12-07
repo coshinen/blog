@@ -8,7 +8,7 @@ category: 译文集
 tags: Lyrics Garnet
 excerpt: 衝動に任して全部(すべて)終わりにしたくなる時ない？愛に満ちた時間(とき)はいつまでも続きやしない。
 ---
-![GZCA-7037](https://crowsub.github.io/images/discography/single/GZCA-7037.jpg){:.border}
+![GZCA-7037](https://ganekuro.github.io/images/discography/single/GZCA-7037.jpg){:.border}
 
 歌手：GARNET CROW<br>
 作詞：AZUKI 七<br>
@@ -98,4 +98,4 @@ excerpt: 衝動に任して全部(すべて)終わりにしたくなる時ない
 ## 参考链接
 
 * [GARNET CROW Float World 歌詞 - 歌ネット](https://www.uta-net.com/song/59991/){:target="_blank"}
-* [Float World Lyrics \| GARNET CROW music diary](https://crowsub.github.io/lyrics/original/Float%20World.html){:target="_blank"}
+* [Float World : Lyrics : GARNET CROW unofficial website : ガーネットクロウ アンオフィシャルサイト](https://ganekuro.github.io/lyrics/original/Float-World.html){:target="_blank"}

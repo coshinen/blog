@@ -5,10 +5,10 @@ date:   2019-12-25 20:11:06 +0800
 author: mistydew
 comments: true
 category: 译文集
-tags: Lyrics
+tags: Lyrics Garnet
 excerpt: Angels we have heard on high, sweetly singing o'er the plains, and the mountains in reply, echoing their joyous strains.
 ---
-![GZBA-8020~1](https://crowsub.github.io/images/discography/dvd/GZBA-8020~1.jpg){:.border}
+![GZBA-8020~1](https://ganekuro.github.io/images/discography/dvd/GZBA-8020~1.jpg){:.border}
 
 歌手：中村由利
 
@@ -71,4 +71,4 @@ excerpt: Angels we have heard on high, sweetly singing o'er the plains, and the 
 ## 参考链接
 
 * [Christmas Songs – Angels We Have Heard on High Lyrics \| Genius Lyrics](https://genius.com/Christmas-songs-angels-we-have-heard-on-high-lyrics){:target="_blank"}
-* [Angels We Have Heard on High Lyrics \| GARNET CROW music diary](https://crowsub.github.io/lyrics/featuring/Angels%20We%20Have%20Heard%20On%20High.html){:target="_blank"}
+* [Angels We Have Heard on High : Lyrics : GARNET CROW unofficial website : ガーネットクロウ アンオフィシャルサイト](https://ganekuro.github.io/lyrics/featuring/Angels-We-Have-Heard-On-High.html){:target="_blank"}

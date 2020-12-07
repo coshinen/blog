@@ -8,7 +8,7 @@ category: 译文集
 tags: Lyrics Garnet
 excerpt: 無防備に求めることに線を引いた 愛しさだけなら、交叉しない価値観すれ違う。
 ---
-![GZCA-7031](https://crowsub.github.io/images/discography/single/GZCA-7031.jpg){:.border}
+![GZCA-7031](https://ganekuro.github.io/images/discography/single/GZCA-7031.jpg){:.border}
 
 歌手：GARNET CROW<br>
 作詞：AZUKI 七<br>
@@ -102,4 +102,4 @@ excerpt: 無防備に求めることに線を引いた 愛しさだけなら、�
 ## 参考链接
 
 * [GARNET CROW 泣けない夜も 泣かない朝も 歌詞 - 歌ネット](https://www.uta-net.com/song/17628/){:target="_blank"}
-* [泣けない夜も 泣かない朝も Lyrics \| GARNET CROW music diary](https://crowsub.github.io/lyrics/original/泣けない夜も%20泣かない朝も.html){:target="_blank"}
+* [泣けない夜も 泣かない朝も : Lyrics : GARNET CROW unofficial website : ガーネットクロウ アンオフィシャルサイト](https://ganekuro.github.io/lyrics/original/Nakenai-Yoru-mo-Nakanai-Asa-mo.html){:target="_blank"}

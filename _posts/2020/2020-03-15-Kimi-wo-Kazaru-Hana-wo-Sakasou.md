@@ -8,7 +8,7 @@ category: 译文集
 tags: Lyrics Garnet
 excerpt: 君を飾る花を咲かそう。心をこめて育ててゆくよ、数え切れない やさしい想い出を。包み込むほどの甘い香りに、見送られてゆけるように。
 ---
-![GZCA-7054](https://crowsub.github.io/images/discography/single/GZCA-7054.jpg){:.border}
+![GZCA-7054](https://ganekuro.github.io/images/discography/single/GZCA-7054.jpg){:.border}
 
 歌手：GARNET CROW<br>
 作詞：AZUKI 七<br>
@@ -96,4 +96,4 @@ excerpt: 君を飾る花を咲かそう。心をこめて育ててゆくよ、�
 ## 参考链接
 
 * [GARNET CROW 君を飾る花を咲かそう 歌詞 - 歌ネット](https://www.uta-net.com/song/19180/){:target="_blank"}
-* [君を飾る花を咲かそう Lyrics \| GARNET CROW music diary](https://crowsub.github.io/lyrics/original/君を飾る花を咲かそう.html){:target="_blank"}
+* [君を飾る花を咲かそう : Lyrics : GARNET CROW unofficial website : ガーネットクロウ アンオフィシャルサイト](https://ganekuro.github.io/lyrics/original/Kimi-wo-Kazaru-Hana-wo-Sakasou.html){:target="_blank"}
