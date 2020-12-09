@@ -1,78 +1,57 @@
 ---
 layout: post
 title:  "比特币 RPC 命令剖析 \"listaddressgroupings\""
-date:   2018-09-03 11:32:59 +0800
+date:   2018-09-03 21:32:59 +0800
 author: mistydew
 comments: true
 category: 区块链
 tags: Bitcoin bitcoin-cli
 excerpt: $ bitcoin-cli listaddressgroupings
 ---
-## 提示说明
+## 1. 帮助内容
 
 ```shell
-listaddressgroupings # 列出作为输入公开使用的公共所有权或过去交易导致找零的地址分组
-```
+$ bitcoin-cli help listaddressgroupings
+listaddressgroupings
+
+列出一组地址，它们的共同所有权作为输入或在过去的交易中作为找零而被公开
 
 结果：
-```shell
 [
   [
     [
-      "bitcoinaddress",     （字符串）比特币地址
-      amount,                 （数字）以 BTC 为单位的金额
-      "account"             （字符串，可选，已过时）账户
+      "bitcoinaddress",（字符串）比特币地址
+      amount,          （数字）以 BTC 为单位的金额
+      "account"        （字符串，可选）账户（已过时）
     ]
     ,...
   ]
   ,...
 ]
+
+例子：
+> bitcoin-cli listaddressgroupings
+> curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "listaddressgroupings", "params": [] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
 ```
 
-## 用法示例
+## 2. 源码剖析
 
-### 比特币核心客户端
-
-获取核心服务器上钱包中地址分组（地址，余额，账户），包含找零地址。
-
-```shell
-$ bitcoin-cli listaddressgroupings
-[
-  [
-    [
-      "1kjTv8TKSsbpGEBVZqLTcx1MeA4G8JkCnk", 
-      300.00000000, 
-      ""
-    ]
-  ]
-]
-```
-
-### cURL
-
-```shell
-$ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "listaddressgroupings", "params": [] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
-{"result":[[["1kjTv8TKSsbpGEBVZqLTcx1MeA4G8JkCnk", 300.00000000, ""]]],"error":null,"id":"curltest"}
-```
-
-## 源码剖析
-
-listaddressgroupings 对应的函数在“rpcserver.h”文件中被引用。
+`listaddressgroupings` 对应的函数在文件 `rpcserver.h` 中被引用。
 
 ```cpp
-extern UniValue listaddressgroupings(const UniValue& params, bool fHelp); // 列出地址分组
+extern UniValue listaddressgroupings(const UniValue& params, bool fHelp);
 ```
 
-实现在“rpcwallet.cpp”文件中。
+实现在文件 `rpcwallet.cpp` 中。
 
 ```cpp
-UniValue listaddressgroupings(const UniValue& params, bool fHelp) // 列出地址分组信息（地址、余额、账户）
+UniValue listaddressgroupings(const UniValue& params, bool fHelp)
 {
-    if (!EnsureWalletIsAvailable(fHelp)) // 1.确保当前钱包可用
+    if (!EnsureWalletIsAvailable(fHelp)) // 1. 确保钱包可用
         return NullUniValue;
     
-    if (fHelp) // 2.没有参数
-        throw runtime_error( // 命令帮助反馈
+    if (fHelp)
+        throw runtime_error(
             "listaddressgroupings\n"
             "\nLists groups of addresses which have had their common ownership\n"
             "made public by common use as inputs or as the resulting change\n"
@@ -92,13 +71,13 @@ UniValue listaddressgroupings(const UniValue& params, bool fHelp) // 列出地�
             "\nExamples:\n"
             + HelpExampleCli("listaddressgroupings", "")
             + HelpExampleRpc("listaddressgroupings", "")
-        );
+        ); // 2. 帮助内容
 
-    LOCK2(cs_main, pwalletMain->cs_wallet); // 3.钱包上锁
+    LOCK2(cs_main, pwalletMain->cs_wallet);
 
-    UniValue jsonGroupings(UniValue::VARR); // 4.地址分组集合对象
-    map<CTxDestination, CAmount> balances = pwalletMain->GetAddressBalances(); // 4.1.获取地址余额映射列表
-    BOOST_FOREACH(set<CTxDestination> grouping, pwalletMain->GetAddressGroupings()) // 4.2.获取并遍历地址分组集合
+    UniValue jsonGroupings(UniValue::VARR); // 3. 获取地址集合
+    map<CTxDestination, CAmount> balances = pwalletMain->GetAddressBalances(); // 获取地址余额映射列表
+    BOOST_FOREACH(set<CTxDestination> grouping, pwalletMain->GetAddressGroupings()) // 获取并遍历地址分组集合
     {
         UniValue jsonGrouping(UniValue::VARR); // 地址分组对象
         BOOST_FOREACH(CTxDestination address, grouping) // 遍历一个地址分组
@@ -114,19 +93,21 @@ UniValue listaddressgroupings(const UniValue& params, bool fHelp) // 列出地�
         }
         jsonGroupings.push_back(jsonGrouping); // 加入地址分组集合
     }
-    return jsonGroupings; // 返回地址分组集合
+    return jsonGroupings;
 }
 ```
 
-基本流程：
-1. 确保钱包当前可用。
-2. 处理命令帮助和参数个数。
-3. 钱包上锁。
-4. 遍历地址分组集合，获取每个地址，把相关信息加入结果集并返回。
-   41. 获取地址余额映射列表。
-   42. 获取并遍历地址分组集合，把每个地址的相关信息加入结果集。
+### 2.1. 确保钱包可用
 
-函数 pwalletMain->GetAddressBalances() 获取地址余额映射列表，定义在“wallet.cpp”文件中。
+参考[比特币 RPC 命令剖析 "fundrawtransaction" 2.1. 确保钱包可用](/blog/2018/07/bitcoin-rpc-command-fundrawtransaction.html#21-确保钱包可用)。
+
+### 2.2. 帮助内容
+
+参考[比特币 RPC 命令剖析 "getbestblockhash" 2.1. 帮助内容](/blog/2018/05/bitcoin-rpc-command-getbestblockhash.html#21-帮助内容)。
+
+### 2.3. 获取地址集合
+
+获取地址余额函数 `pwalletMain->GetAddressBalances()` 定义在文件 `wallet.cpp` 中。
 
 ```cpp
 std::map<CTxDestination, CAmount> CWallet::GetAddressBalances()
@@ -175,4 +156,7 @@ std::map<CTxDestination, CAmount> CWallet::GetAddressBalances()
 ## 参考链接
 
 * [bitcoin/rpcserver.h at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/rpcserver.h){:target="_blank"}
+* [bitcoin/rpcserver.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/rpcserver.cpp){:target="_blank"}
 * [bitcoin/rpcwallet.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/wallet/rpcwallet.cpp){:target="_blank"}
+* [bitcoin/init.h at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/init.h){:target="_blank"}
+* [bitcoin/init.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/init.cpp){:target="_blank"}

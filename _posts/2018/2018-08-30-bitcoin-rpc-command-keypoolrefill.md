@@ -1,84 +1,52 @@
 ---
 layout: post
 title:  "比特币 RPC 命令剖析 \"keypoolrefill\""
-date:   2018-08-30 08:59:50 +0800
+date:   2018-08-30 20:59:50 +0800
 author: mistydew
 comments: true
 category: 区块链
 tags: Bitcoin bitcoin-cli
 excerpt: $ bitcoin-cli keypoolrefill ( newsize )
 ---
-## 提示说明
+## 1. 帮助内容
 
 ```shell
-keypoolrefill ( newsize ) # 填充满密钥池
-```
+$ bitcoin-cli help keypoolrefill
+keypoolrefill ( newsize )
 
-**注：
-1.需要调用 [walletpassphrase](/blog/2018/09/bitcoin-rpc-command-walletpassphrase.html) 设置钱包密码。<br>
-2.填充后大小必定比填充前大。<br>
-3.填充后密钥池大小为指定或默认值 + 1。**
+填充密钥池。
+
+注：
+1. 需要调用 walletpassphrase 设置钱包密码。
+2. 填充后大小必定比填充前大。
+3. 填充后密钥池大小为指定或默认值 + 1。
 
 参数：
-1. newsize（整型，可选，默认为 100）新密钥池大小。
+1. newsize（整型，可选，默认为 100）新密钥池大小
 
-结果：无返回值。
-
-## 用法示例
-
-### 比特币核心客户端
-
-**注：若钱包设置了密码，使用该命令前先用 [walletpassphrase](/blog/2018/09/bitcoin-rpc-command-walletpassphrase.html) 解密钱包。**
-
-用法一：使用比特币核心服务启动时的 -keypool 选项对应的默认值进行填充，填充大小为默认值 + 1。
-
-```shell
-$ bitcoin-cli getinfo | grep keypoolsize
-  "keypoolsize": 100
-$ bitcoin-cli getnewaddress
-17HgY9ieCzTse44eFbX1bEyPUHKJKjMVEB
-$ bitcoin-cli getinfo | grep keypoolsize
-  "keypoolsize": 99
-$ bitcoin-cli keypoolrefill
-$ bitcoin-cli getinfo | grep keypoolsize
-  "keypoolsize": 101
+例子：
+> bitcoin-cli keypoolrefill
+> curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "keypoolrefill", "params": [] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
 ```
 
-用法二：指定大于当前密钥池大小的数字进行填充。
+## 2. 源码剖析
 
-```shell
-$ bitcoin-cli getinfo | grep keypoolsize
-  "keypoolsize": 101
-$ bitcoin-cli keypoolrefill 200
-$ bitcoin-cli getinfo | grep keypoolsize
-  "keypoolsize": 201
-```
-
-### cURL
-
-```shell
-$ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "keypoolrefill", "params": [] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
-{"result":null,"error":null,"id":"curltest"}
-```
-
-## 源码剖析
-
-keypoolrefill 对应的函数在“rpcserver.h”文件中被引用。
+`keypoolrefill` 对应的函数在文件 `rpcserver.h` 中被引用。
 
 ```cpp
-extern UniValue keypoolrefill(const UniValue& params, bool fHelp); // 再填充密钥池
+extern UniValue keypoolrefill(const UniValue& params, bool fHelp);
 ```
 
-实现在“rpcwallet.cpp”文件中。
+实现在文件 `rpcwallet.cpp` 中。
 
 ```cpp
 UniValue keypoolrefill(const UniValue& params, bool fHelp)
 {
-    if (!EnsureWalletIsAvailable(fHelp)) // 确保钱包当前可用
+    if (!EnsureWalletIsAvailable(fHelp)) // 1. 确保钱包可用
         return NullUniValue;
     
-    if (fHelp || params.size() > 1) // 至多 1 个参数
-        throw runtime_error( // 命令帮助反馈
+    if (fHelp || params.size() > 1)
+        throw runtime_error(
             "keypoolrefill ( newsize )\n"
             "\nFills the keypool."
             + HelpRequiringPassphrase() + "\n"
@@ -87,64 +55,64 @@ UniValue keypoolrefill(const UniValue& params, bool fHelp)
             "\nExamples:\n"
             + HelpExampleCli("keypoolrefill", "")
             + HelpExampleRpc("keypoolrefill", "")
-        );
+        ); // 2. 帮助内容
 
-    LOCK2(cs_main, pwalletMain->cs_wallet); // 钱包上锁
+    LOCK2(cs_main, pwalletMain->cs_wallet);
 
     // 0 is interpreted by TopUpKeyPool() as the default keypool size given by -keypool
-    unsigned int kpSize = 0; // 0 表示通过 TopUpKeyPool() 基于 -keypool 选项的默认密钥池大小
+    unsigned int kpSize = 0; // 3. 0 被 TopUpKeyPool() 解释为 -keypool 给定的默认密钥池大小
     if (params.size() > 0) {
-        if (params[0].get_int() < 0) // 密钥池大小不能小于 0
+        if (params[0].get_int() < 0)
             throw JSONRPCError(RPC_INVALID_PARAMETER, "Invalid parameter, expected valid size.");
-        kpSize = (unsigned int)params[0].get_int(); // 获取密钥池大小
+        kpSize = (unsigned int)params[0].get_int();
     }
 
-    EnsureWalletIsUnlocked(); // 确保钱包当前未加密
+    EnsureWalletIsUnlocked(); // 确保钱包未加密
     pwalletMain->TopUpKeyPool(kpSize); // 根据指定大小填充密钥池
 
-    if (pwalletMain->GetKeyPoolSize() < kpSize) // 填充后的密钥池大小不能小于 kpSize
+    if (pwalletMain->GetKeyPoolSize() < kpSize)
         throw JSONRPCError(RPC_WALLET_ERROR, "Error refreshing keypool.");
 
-    return NullUniValue; // 返回空值
+    return NullUniValue;
 }
 ```
 
-基本流程：<br>
-1.确保钱包当前可用（已初始化完成）。<br>
-2.处理命令帮助和参数个数。<br>
-3.钱包上锁。<br>
-4.获取指定的密钥池大小，不能小于 0。<br>
-5.确保钱包当前未加密。<br>
-6.填充满密钥池。<br>
-7.检测填充后的密钥池大小。
+### 2.1. 确保钱包可用
 
-第五步，调用 EnsureWalletIsUnlocked() 函数确保当前钱包未加密，若已加密，先使用 [wallepassphrase](/blog/2018/05/bitcoin-rpc-command-walletpassphrase.html) 解密钱包。
-该函数定义在“rpcwallet.cpp”文件中。
+参考[比特币 RPC 命令剖析 "fundrawtransaction" 2.1. 确保钱包可用](/blog/2018/07/bitcoin-rpc-command-fundrawtransaction.html#21-确保钱包可用)。
+
+### 2.2. 帮助内容
+
+参考[比特币 RPC 命令剖析 "getbestblockhash" 2.1. 帮助内容](/blog/2018/05/bitcoin-rpc-command-getbestblockhash.html#21-帮助内容)。
+
+### 2.3. 0 被 TopUpKeyPool() 解释为 -keypool 给定的默认密钥池大小
+
+确保钱包解锁函数 `EnsureWalletIsUnlocked()` 定义在文件 `rpcwallet.cpp` 中。
 
 ```cpp
 void EnsureWalletIsUnlocked()
 {
-    if (pwalletMain->IsLocked()) // 若钱包加密
+    if (pwalletMain->IsLocked())
         throw JSONRPCError(RPC_WALLET_UNLOCK_NEEDED, "Error: Please enter the wallet passphrase with walletpassphrase first."); // 抛出错误信息
 }
 ```
 
-第六步，调用 pwalletMain->TopUpKeyPool(kpSize) 函数按指定大小填充密钥池，该函数声明在“wallet.h”文件的 CWallet 类中。
+填充密钥池函数 `pwalletMain->TopUpKeyPool(kpSize)` 声明在文件 `wallet.h` 的钱包类 `CWallet` 中。
 
 ```cpp
 /** 
  * A CWallet is an extension of a keystore, which also maintains a set of transactions and balances,
  * and provides the ability to create new transactions.
- */ // CWallet 是密钥库的扩展，可以维持一组交易和余额，并提供创建新交易的能力。
+ */
 class CWallet : public CCryptoKeyStore, public CValidationInterface
 {
     ...
-    bool TopUpKeyPool(unsigned int kpSize = 0); // 填充满密钥池
+    bool TopUpKeyPool(unsigned int kpSize = 0);
     ...
 };
 ```
 
-实现在“wallet.cpp”文件中。
+实现在文件 `wallet.cpp` 中。
 
 ```cpp
 bool CWallet::TopUpKeyPool(unsigned int kpSize)
@@ -179,13 +147,13 @@ bool CWallet::TopUpKeyPool(unsigned int kpSize)
 }
 ```
 
-第七步，调用 pwalletMain->GetKeyPoolSize() 函数获取当前即填充后密钥池的大小，该函数定义在“wallet.h”文件的 CWallet 类中。
+获取密钥池大小函数 `pwalletMain->GetKeyPoolSize()` 定义在文件 `wallet.h` 的钱包类 `CWallet` 中。
 
 ```cpp
 /** 
  * A CWallet is an extension of a keystore, which also maintains a set of transactions and balances,
  * and provides the ability to create new transactions.
- */ // CWallet 是密钥库的扩展，可以维持一组交易和余额，并提供创建新交易的能力。
+ */
 class CWallet : public CCryptoKeyStore, public CValidationInterface
 {
     ...
@@ -203,6 +171,9 @@ class CWallet : public CCryptoKeyStore, public CValidationInterface
 ## 参考链接
 
 * [bitcoin/rpcserver.h at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/rpcserver.h){:target="_blank"}
+* [bitcoin/rpcserver.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/rpcserver.cpp){:target="_blank"}
 * [bitcoin/rpcwallet.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/wallet/rpcwallet.cpp){:target="_blank"}
+* [bitcoin/init.h at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/init.h){:target="_blank"}
+* [bitcoin/init.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/init.cpp){:target="_blank"}
 * [bitcoin/wallet.h at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/wallet/wallet.h){:target="_blank"}
 * [bitcoin/wallet.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/wallet/wallet.cpp){:target="_blank"}
