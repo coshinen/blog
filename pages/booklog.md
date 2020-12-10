@@ -116,6 +116,7 @@ excerpt: Here are some books I read.
 
 > ### 心理学<a href="#索引" class="right">🔝</a>
 > 
+> * 不成熟的父母，[美] Lindsay C. Gibson
 > * 中国式的情与爱，[中] 武志红 青音
 > * 身体知道答案，[中] 武志红
 > * 为何爱会伤人，[中] 武志红
