@@ -1,140 +1,74 @@
 ---
 layout: post
 title:  "比特币 RPC 命令剖析 \"listsinceblock\""
-date:   2018-09-07 09:09:08 +0800
+date:   2018-09-07 20:09:08 +0800
 author: mistydew
 comments: true
 category: 区块链
 tags: Bitcoin bitcoin-cli
 excerpt: $ bitcoin-cli listsinceblock ( "blockhash" target-confirmations includeWatchonly )
 ---
-## 提示说明
+## 1. 帮助内容
 
 ```shell
-listsinceblock ( "blockhash" target-confirmations includeWatchonly ) # 获取从区块 blockhash 开始到最佳区块上的全部交易，如果该参数省略则获取全部区块交易
-```
+$ bitcoin-cli help listsinceblock
+listsinceblock ( "blockhash" target-confirmations includeWatchonly )
+
+获取从区块 [blockhash] 开始的区块中的全部交易，如果该参数省略则获取全部区块交易
 
 参数：
-1. blockhash（字符串，可选）列出从该区块哈希开始的全部交易。
-2. target-confirmations（数字型，可选）所需的确认数，必须大于等于 1。
-3. includeWatchonly（布尔型，可选，默认为 false）包含到 watchonly 地址的交易（见 [importaddress](/blog/2018/08/bitcoin-rpc-command-importaddress.html)）。
+1. "blockhash"         （字符串，可选）列出从该区块哈希开始的交易
+2. target-confirmations（数字型，可选）所需的确认数，必须为 1 或更多
+3. includeWatchonly    （布尔型，可选，默认为 false）包含 watchonly 地址的交易（见 'importaddress'）
 
 结果：
-```shell
 {
   "transactions": [
-    "account":"accountname",       （字符串，已过时）交易关联的帐户名。默认账户为 ""。
-    "address":"bitcoinaddress",    （字符串）交易的比特币地址。对于 'move' 交易（类别为 'move'）不存在。
-    "category":"send|receive",     （字符串）交易类别。'send' 是负值，'receive' 是正值。
-    "amount": x.xxx,          （数字）以 BTC 为单位的金额。对于 'send' 类型为负值，且对于 'move' 类型为移出。
-                                          对于 'receive' 类型为正值，且对于 'move' 类型为移入资金。
-    "vout" : n,               （数字）输出序号
-    "fee": x.xxx,             （数字）以 BTC 为单位的交易费。只对于 'send' 类型交易是负值。
-    "confirmations": n,       （数字）交易的确认数。适用于 'send' 和 'receive' 类型的交易。
-    "blockhash": "hashvalue",     （字符串）包含该交易的区块哈希。适用于 'send' 和 'receive' 类型的交易。
-    "blockindex": n,          （数字）包含该交易的区块索引。适用于 'send' 和 'receive' 类型的交易。
-    "blocktime": xxx,         （数字）从格林尼治时间（1970-01-01 00:00:00）开始以秒为单位的区块时间。
-    "txid": "transactionid",  （字符串）交易索引。适用于 'send' 和 'receive' 类型的交易。
-    "time": xxx,              （数字）从格林尼治时间（1970-01-01 00:00:00）开始以秒为单位的交易时间。
-    "timereceived": xxx,      （数字）从格林尼治时间（1970-01-01 00:00:00）开始以秒为单位的交易接收时间。
-    "comment": "...",       （字符串）交易相关的备注。
-    "label" : "label"       （字符串）地址/交易的备注，如果有的话
-    "to": "...",            （字符串）交易目的地相关的备注。
+    "account":"accountname",   （字符串）已过时。关联该交易的帐户名。默认账户为 ""。
+    "address":"bitcoinaddress",（字符串）该交易的比特币地址。不代表移动交易（类别为 = move）。
+    "category":"send|receive", （字符串）该交易类别。'send' 为负，'receive' 为正。
+    "amount": x.xxx,           （数字）以 BTC 为单位的金额。对于 'send' 类型为负，且对于 'move' 类型为移出。
+                                       对于 'receive' 类型为正，且对于 'move' 类型为移入资金。
+    "vout" : n,                （数字）输出序号
+    "fee": x.xxx,              （数字）以 BTC 为单位的交易费。只对于 'send' 类型的交易是负。
+    "confirmations": n,        （数字）该交易的确认数。适用于 'send' 和 'receive' 类型的交易。
+    "blockhash": "hashvalue",  （字符串）包含该交易的区块哈希。适用于 'send' 和 'receive' 类型的交易。
+    "blockindex": n,           （数字）包含该交易的区块索引。适用于 'send' 和 'receive' 类型的交易。
+    "blocktime": xxx,          （数字）从格林尼治时间（1970-01-01 00:00:00）开始以秒为单位的区块接收时间。
+    "txid": "transactionid",   （字符串）该交易索引。适用于 'send' 和 'receive' 类型的交易。
+    "time": xxx,               （数字）从格林尼治时间（1970-01-01 00:00:00）开始以秒为单位的交易时间。
+    "timereceived": xxx,       （数字）从格林尼治时间（1970-01-01 00:00:00）开始以秒为单位的交易接收时间。
+    "comment": "...",          （字符串）该交易关联的一条备注。
+    "label" : "label"          （字符串）该地址/交易的一条备注，如果存在
+    "to": "...",               （字符串）交易目标关联的一条备注。
   ],
-  "lastblock": "lastblockhash"     （字符串）最新的区块哈希
+  "lastblock": "lastblockhash" （字符串）最新的区块哈希
 }
+
+例子：
+> bitcoin-cli listsinceblock
+> bitcoin-cli listsinceblock "000000000000000bacf66f7497b7dc45ef753ee9a7d38571037cdb1a57f663ad" 6
+> curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "listsinceblock", "params": ["000000000000000bacf66f7497b7dc45ef753ee9a7d38571037cdb1a57f663ad", 6] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
 ```
 
-## 用法示例
+## 2. 源码剖析
 
-### 比特币核心客户端
-
-用法一：列出全部区块的交易。
-
-```shell
-$ bitcoin-cli listsinceblock
-{
-  "transactions": [
-    ...
-    {
-      "account": "",
-      "address": "1Z99Lsij11ajDEhipZbnifdFkBu8fC1Hb",
-      "category": "generate",
-      "amount": 50.00000000,
-      "vout": 0,
-      "confirmations": 7049,
-      "generated": true,
-      "blockhash": "0000008bfc52e5e1b4ba7790ee64fca1d3b2aecec0e422b6b66ba42cb136a318",
-      "blockindex": 0,
-      "blocktime": 1529993986,
-      "txid": "64cccab86b0dc3ce37c7fffab2c30ab227add4542c19486aa85eca1a9e02d3ff",
-      "walletconflicts": [
-      ],
-      "time": 1529993986,
-      "timereceived": 1529993986,
-      "bip125-replaceable": "no"
-    }
-  ],
-  "lastblock": "00000071df37848cb6d23425da28d400d0c0b9cd0725b629a0891a14be272083"
-}
-```
-
-用法二：列出从当前最佳区块开始的全部交易。
-
-```shell
-$ bitcoin-cli getblockcount
-38565
-$ bitcoin-cli getblockhash 38565
-0000014c2436b10caba31a8ab61b78b91a3f877d1e00f9995f0c6f77a08d4516
-$ bitcoin-cli listsinceblock 0000014c2436b10caba31a8ab61b78b91a3f877d1e00f9995f0c6f77a08d4516 6
-{
-  "transactions": [
-    ...
-    {
-      "account": "",
-      "address": "1Z99Lsij11ajDEhipZbnifdFkBu8fC1Hb",
-      "category": "orphan",
-      "amount": 50.00000000,
-      "vout": 0,
-      "confirmations": 0,
-      "generated": true,
-      "trusted": false,
-      "txid": "18955cbce8c776fb6132c0c3a4770965bc5530d896a95c0128920630aa084dfa",
-      "walletconflicts": [
-      ],
-      "time": 1529979442,
-      "timereceived": 1529979442,
-      "bip125-replaceable": "unknown"
-    }
-  ],
-  "lastblock": "00000125b002c17dea5a3b2139f0277827a84809e17379c10a7c987282144012"
-}
-```
-
-### cURL
-
-```shell
-{"result":{"transactions":[{"account":"","address":"1Z99Lsij11ajDEhipZbnifdFkBu8fC1Hb","category":"orphan","amount":50.00000000,"vout":0,"confirmations":0,"generated":true,"trusted":false,"txid":"18955cbce8c776fb6132c0c3a4770965bc5530d896a95c0128920630aa084dfa","walletconflicts":[],"time":1529979442,"timereceived":1529979442,"bip125-replaceable":"unknown"}],"lastblock":"000000796192bdbec7c9d6c540dbbc04a9d8cd24ea6d77c96723f9a093450a70"},"error":null,"id":"curltest"}
-```
-
-## 源码剖析
-
-listsinceblock 对应的函数在“rpcserver.h”文件中被引用。
+`listsinceblock` 对应的函数在文件 `rpcserver.h` 中被引用。
 
 ```cpp
-extern UniValue listsinceblock(const UniValue& params, bool fHelp); // 列出指定区块开始区块上的全部交易
+extern UniValue listsinceblock(const UniValue& params, bool fHelp);
 ```
 
-实现在“wallet/rpcwallet.cpp”文件中。
+实现在文件 `wallet/rpcwallet.cpp` 中。
 
 ```cpp
 UniValue listsinceblock(const UniValue& params, bool fHelp)
 {
-    if (!EnsureWalletIsAvailable(fHelp)) // 确保当前钱包可用
+    if (!EnsureWalletIsAvailable(fHelp)) // 1. 确保钱包可用
         return NullUniValue;
     
-    if (fHelp) // 只处理帮助信息
-        throw runtime_error( // 命令帮助反馈
+    if (fHelp)
+        throw runtime_error(
             "listsinceblock ( \"blockhash\" target-confirmations includeWatchonly)\n"
             "\nGet all transactions in blocks since block [blockhash], or all transactions if omitted\n"
             "\nArguments:\n"
@@ -168,69 +102,70 @@ UniValue listsinceblock(const UniValue& params, bool fHelp)
             + HelpExampleCli("listsinceblock", "")
             + HelpExampleCli("listsinceblock", "\"000000000000000bacf66f7497b7dc45ef753ee9a7d38571037cdb1a57f663ad\" 6")
             + HelpExampleRpc("listsinceblock", "\"000000000000000bacf66f7497b7dc45ef753ee9a7d38571037cdb1a57f663ad\", 6")
-        );
+        ); // 2. 帮助内容
 
-    LOCK2(cs_main, pwalletMain->cs_wallet); // 钱包上锁
+    LOCK2(cs_main, pwalletMain->cs_wallet);
 
-    CBlockIndex *pindex = NULL; // 从某个区块开始
-    int target_confirms = 1; // 确认数，默认为 1
+    CBlockIndex *pindex = NULL;
+    int target_confirms = 1;
     isminefilter filter = ISMINE_SPENDABLE; // watchonly
 
-    if (params.size() > 0) // 有 1 个以上的参数
+    if (params.size() > 0)
     {
         uint256 blockId;
 
-        blockId.SetHex(params[0].get_str()); // 获取区块索引
-        BlockMap::iterator it = mapBlockIndex.find(blockId); // 在区块索引映射列表中查找该区块
-        if (it != mapBlockIndex.end()) // 若找到
-            pindex = it->second; // 获取该区块索引指针
+        blockId.SetHex(params[0].get_str());
+        BlockMap::iterator it = mapBlockIndex.find(blockId);
+        if (it != mapBlockIndex.end())
+            pindex = it->second;
     }
 
-    if (params.size() > 1) // 若参数有 2 个以上
+    if (params.size() > 1)
     {
-        target_confirms = params[1].get_int(); // 获取确认数
+        target_confirms = params[1].get_int();
 
-        if (target_confirms < 1) // 确认数最小为 1
+        if (target_confirms < 1)
             throw JSONRPCError(RPC_INVALID_PARAMETER, "Invalid parameter");
     }
 
-    if(params.size() > 2) // 若参数有 3 个以上
+    if(params.size() > 2)
         if(params[2].get_bool())
-            filter = filter | ISMINE_WATCH_ONLY; // 设置 watchonly
+            filter = filter | ISMINE_WATCH_ONLY;
 
-    int depth = pindex ? (1 + chainActive.Height() - pindex->nHeight) : -1; // 获取指定区块的深度
+    int depth = pindex ? (1 + chainActive.Height() - pindex->nHeight) : -1;
 
-    UniValue transactions(UniValue::VARR); // 创建数组类型的交易信息集
+    UniValue transactions(UniValue::VARR);
 
-    for (map<uint256, CWalletTx>::iterator it = pwalletMain->mapWallet.begin(); it != pwalletMain->mapWallet.end(); it++) // 遍历钱包交易映射列表
+    for (map<uint256, CWalletTx>::iterator it = pwalletMain->mapWallet.begin(); it != pwalletMain->mapWallet.end(); it++)
     {
-        CWalletTx tx = (*it).second; // 获取钱包交易
+        CWalletTx tx = (*it).second;
 
-        if (depth == -1 || tx.GetDepthInMainChain() < depth) // 若未指定区块 或 该交易深度小于指定区块深度
-            ListTransactions(tx, "*", 0, true, transactions, filter); // 以钱包交易为索引获取交易信息集
+        if (depth == -1 || tx.GetDepthInMainChain() < depth)
+            ListTransactions(tx, "*", 0, true, transactions, filter); // 3. 列出交易
     }
 
-    CBlockIndex *pblockLast = chainActive[chainActive.Height() + 1 - target_confirms]; // 若确认数为 1，获取最佳区块索引
-    uint256 lastblock = pblockLast ? pblockLast->GetBlockHash() : uint256(); // 获取该区块哈希值
+    CBlockIndex *pblockLast = chainActive[chainActive.Height() + 1 - target_confirms];
+    uint256 lastblock = pblockLast ? pblockLast->GetBlockHash() : uint256();
 
-    UniValue ret(UniValue::VOBJ); // 对象类型的结果
-    ret.push_back(Pair("transactions", transactions)); // 交易集
-    ret.push_back(Pair("lastblock", lastblock.GetHex())); // 最佳区块哈希值
+    UniValue ret(UniValue::VOBJ);
+    ret.push_back(Pair("transactions", transactions));
+    ret.push_back(Pair("lastblock", lastblock.GetHex()));
 
-    return ret; // 返回结果对象
+    return ret;
 }
 ```
 
-基本流程：
-1. 确保钱包当前可用（已初始化完成）。
-2. 处理命令帮助。
-3. 钱包上锁。
-4. 处理参数。
-5. 获取指定区块深度。
-6. 遍历钱包交易映射列表，获取每笔交易的相关信息并加入交易信息集。
-7. 若确认数为 1，则获取最佳区块哈希，加入交易信息集并返回。
+### 2.1. 确保钱包可用
 
-第六步，调用 ListTransactions(tx, "*", 0, true, transactions, filter) 函数获取一笔交易的相关信息，该函数定义在“wallet/rpcwallet.cpp”文件中。
+参考[比特币 RPC 命令剖析 "fundrawtransaction" 2.1. 确保钱包可用](/blog/2018/07/bitcoin-rpc-command-fundrawtransaction.html#21-确保钱包可用)。
+
+### 2.2. 帮助内容
+
+参考[比特币 RPC 命令剖析 "getbestblockhash" 2.1. 帮助内容](/blog/2018/05/bitcoin-rpc-command-getbestblockhash.html#21-帮助内容)。
+
+### 2.3. 列出交易
+
+函数 `ListTransactions(tx, "*", 0, true, transactions, filter)` 定义在文件 `wallet/rpcwallet.cpp` 中。
 
 ```cpp
 void ListTransactions(const CWalletTx& wtx, const string& strAccount, int nMinDepth, bool fLong, UniValue& ret, const isminefilter& filter)
@@ -309,7 +244,7 @@ void ListTransactions(const CWalletTx& wtx, const string& strAccount, int nMinDe
 }
 ```
 
-调用 WalletTxToJSON(wtx, entry) 函数把相应钱包信息转化为 JSON 格式，该函数定义在“wallet/rpcwallet.cpp”文件中。
+函数 `WalletTxToJSON(wtx, entry)` 定义在文件 `wallet/rpcwallet.cpp` 中。
 
 ```cpp
 void WalletTxToJSON(const CWalletTx& wtx, UniValue& entry)
@@ -359,4 +294,7 @@ void WalletTxToJSON(const CWalletTx& wtx, UniValue& entry)
 ## 参考链接
 
 * [bitcoin/rpcserver.h at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/rpcserver.h){:target="_blank"}
+* [bitcoin/rpcserver.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/rpcserver.cpp){:target="_blank"}
 * [bitcoin/rpcwallet.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/wallet/rpcwallet.cpp){:target="_blank"}
+* [bitcoin/init.h at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/init.h){:target="_blank"}
+* [bitcoin/init.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/init.cpp){:target="_blank"}
