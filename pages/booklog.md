@@ -2,7 +2,7 @@
 layout: page
 title: "书单"
 permalink: /booklog.html
-excerpt: Here are some books I read.
+excerpt: Here are some books that renew my spirit or reclaim my life.
 ---
 > ## 索引
 > 
@@ -124,8 +124,6 @@ excerpt: Here are some books I read.
 > * 理解人性，[奥地利] Alfred Adler
 > * 自卑与超越，[奥地利] Alfred Adler
 > * 被讨厌的勇气 “自我启发之父”阿德勒的哲学课，[日] 岸見一郎 古賀史健
-> * 内向者优势 如何在外向的世界中获得成功，[美] Marti Olsen Laney
-> * 安静 内向性格的竞争力，[美] Susan Cain
 > * 原生家庭 如何修补自己的性格缺陷，[美] Susan Forward
 > * 非暴力沟通，[美] Marshall B.Rosenberg
 > * 人性的弱点，[美] Dale Carnegie
