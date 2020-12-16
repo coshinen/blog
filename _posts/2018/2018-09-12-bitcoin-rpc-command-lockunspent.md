@@ -1,97 +1,75 @@
 ---
 layout: post
 title:  "比特币 RPC 命令剖析 \"lockunspent\""
-date:   2018-09-12 16:40:29 +0800
+date:   2018-09-12 20:40:29 +0800
 author: mistydew
 comments: true
 category: 区块链
 tags: Bitcoin bitcoin-cli
 excerpt: $ bitcoin-cli lockunspent unlock [{"txid":"txid","vout":n},...]
 ---
-## 提示说明
+## 1. 帮助内容
 
 ```shell
-lockunspent unlock [{"txid":"txid","vout":n},...] # 临时加锁（unlock=false）或解锁（unlock=true）指定的交易输出
-```
+$ bitcoin-cli help lockunspent
+lockunspent unlock [{"txid":"txid","vout":n},...]
 
-更新不可花费的临时输出列表。<br>
-一个锁定的交易输出，当花费比特币时，将不会被自动筛选币选中。<br>
-该锁只存储在内存中。节点启动时零个锁定的输出，且当一个节点停止或崩溃时，锁定的输出列表总会被清空。<br>
-也可以查看 [listunspent](/blog/2018/09/bitcoin-rpc-command-listunspent.html)。
+更新不可花费输出的临时列表。
+临时加锁（unlock=false）或解锁（unlock=true）指定的交易输出。
+一个锁定的交易输出，当花费比特币时，将不会被自动币选择器选中。
+锁定只存储在内存中。节点启动时零个锁定的输出，且当一个节点停止或崩溃时，锁定的输出列表总会被清空（通过进程退出）。
+也可以查看 listunspent 调用
 
 参数：
-1. unlock（布尔型，必备）指定交易是否解锁（true）或上锁（false）。
-2. transactions（字符串，可选，默认为全部交易输出）一个 json 对象数组。每个对象的交易索引（字符串）和交易输出序号（数字）。
-```shell
-     [           （json 对象的 json 数组）
+1. unlock            （布尔型，必备）指定交易是否解锁（true）或上锁（false）
+2. transactions      （字符串，可选）一个 json 对象数组。每个对象的交易索引（字符串）和交易输出序号（数字）
+     [               （json 对象的 json 数组）
        {
-         "txid":"id",    （字符串）交易索引
-         "vout": n         （数字）输出序号
+         "txid":"id",（字符串）交易索引
+         "vout": n   （数字）输出序号
        }
        ,...
      ]
+
+结果：
+true|false（布尔型）命令是否成功
+
+例子：
+
+列出未花费的交易
+> bitcoin-cli listunspent
+
+锁定一笔未花费的交易
+> bitcoin-cli lockunspent false "[{\"txid\":\"a08e6907dbbd3d809776dbfc5d82e371b764ed838b5655e72f463568df1aadf0\",\"vout\":1}]"
+
+列出锁定的交易
+> bitcoin-cli listlockunspent
+
+再次解锁交易
+> bitcoin-cli lockunspent true "[{\"txid\":\"a08e6907dbbd3d809776dbfc5d82e371b764ed838b5655e72f463568df1aadf0\",\"vout\":1}]"
+
+作为一个 json rpc 调用
+> curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "lockunspent", "params": [false, "[{\"txid\":\"a08e6907dbbd3d809776dbfc5d82e371b764ed838b5655e72f463568df1aadf0\",\"vout\":1}]"] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
 ```
 
-结果：（布尔型）返回 true 表示成功，false 表示失败。
+## 2. 源码剖析
 
-## 用法示例
-
-### 比特币核心客户端
-
-1. 使用 [listunspent](/blog/2018/06/bitcoin-rpc-command-listunspent.html) 获取未花费的交易输出列表。<br>
-2. 使用该命令对其中一个未花费的交易输出加临时锁。<br>
-3. 使用 [listlockunspent](/blog/2018/06/bitcoin-rpc-command-listlockunspent.html) 查看未花费交易输出的临时锁定列表。
-
-```shell
-$ bitcoin-cli listunspent
-[
-  ...
-  {
-    "txid": "8d71b6c01c1a3710e1d7d2cfd7aeb827a0e0150579a9840b9ba51bf7a13d8aff",
-    "vout": 0,
-    "address": "1Z99Lsij11ajDEhipZbnifdFkBu8fC1Hb",
-    "scriptPubKey": "21023d2f5ddafe8a161867bb9a9162aa5c84b0882af4bfca1fa89f4811b651761f10ac",
-    "amount": 50.00000000,
-    "confirmations": 6631,
-    "spendable": true
-  }
-]
-$ bitcoin-cli lockunspent false "[{\"txid\":\"8d71b6c01c1a3710e1d7d2cfd7aeb827a0e0150579a9840b9ba51bf7a13d8aff\",\"vout\":0}]"
-true
-$ bitcoin-cli listlockunspent
-[
-  {
-    "txid": "8d71b6c01c1a3710e1d7d2cfd7aeb827a0e0150579a9840b9ba51bf7a13d8aff",
-    "vout": 0
-  }
-]
-```
-
-### cURL
-
-```shell
-$ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "lockunspent", "params": [false, "[{\"txid\":\"8d71b6c01c1a3710e1d7d2cfd7aeb827a0e0150579a9840b9ba51bf7a13d8aff\",\"vout\":0}]"] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
-暂无。
-```
-
-## 源码剖析
-
-lockunspent 对应的函数在“rpcserver.h”文件中被引用。
+`lockunspent` 对应的函数在文件 `rpcserver.h` 中被引用。
 
 ```cpp
-extern UniValue lockunspent(const UniValue& params, bool fHelp); // 加解锁未花费的交易输出
+extern UniValue lockunspent(const UniValue& params, bool fHelp);
 ```
 
-实现在“rpcwallet.cpp”文件中。
+实现在文件 `rpcwallet.cpp` 中。
 
 ```cpp
 UniValue lockunspent(const UniValue& params, bool fHelp)
 {
-    if (!EnsureWalletIsAvailable(fHelp)) // 确保当前钱包可用
+    if (!EnsureWalletIsAvailable(fHelp)) // 1. 确保钱包可用
         return NullUniValue;
     
-    if (fHelp || params.size() < 1 || params.size() > 2) // 参数只能是 1 个或 2 个
-        throw runtime_error( // 命令帮助反馈
+    if (fHelp || params.size() < 1 || params.size() > 2)
+        throw runtime_error(
             "lockunspent unlock [{\"txid\":\"txid\",\"vout\":n},...]\n"
             "\nUpdates list of temporarily unspendable outputs.\n"
             "Temporarily lock (unlock=false) or unlock (unlock=true) specified transaction outputs.\n"
@@ -124,20 +102,20 @@ UniValue lockunspent(const UniValue& params, bool fHelp)
             + HelpExampleCli("lockunspent", "true \"[{\\\"txid\\\":\\\"a08e6907dbbd3d809776dbfc5d82e371b764ed838b5655e72f463568df1aadf0\\\",\\\"vout\\\":1}]\"") +
             "\nAs a json rpc call\n"
             + HelpExampleRpc("lockunspent", "false, \"[{\\\"txid\\\":\\\"a08e6907dbbd3d809776dbfc5d82e371b764ed838b5655e72f463568df1aadf0\\\",\\\"vout\\\":1}]\"")
-        );
+        ); // 2. 帮助内容
 
-    LOCK2(cs_main, pwalletMain->cs_wallet); // 钱包上锁
+    LOCK2(cs_main, pwalletMain->cs_wallet);
 
-    if (params.size() == 1) // 若只有一个参数
-        RPCTypeCheck(params, boost::assign::list_of(UniValue::VBOOL)); // 验证参数类型
+    if (params.size() == 1)
+        RPCTypeCheck(params, boost::assign::list_of(UniValue::VBOOL)); // 3. RPC 类型验证
     else
         RPCTypeCheck(params, boost::assign::list_of(UniValue::VBOOL)(UniValue::VARR));
 
-    bool fUnlock = params[0].get_bool(); // 获取加解锁的状态
+    bool fUnlock = params[0].get_bool();
 
-    if (params.size() == 1) { // 若只有一个参数
-        if (fUnlock) // 若是解锁
-            pwalletMain->UnlockAllCoins(); // 解锁全部
+    if (params.size() == 1) {
+        if (fUnlock)
+            pwalletMain->UnlockAllCoins(); // 解锁全部币
         return true;
     }
 
@@ -166,36 +144,36 @@ UniValue lockunspent(const UniValue& params, bool fHelp)
             pwalletMain->LockCoin(outpt); // 加锁该交易输出
     }
 
-    return true; // 成功返回 true
+    return true;
 }
 ```
 
-基本流程：
-1. 确保钱包当前可用（已初始化完成）。
-2. 处理命令帮助和参数个数。
-3. 钱包上锁。
-3. 检查参数类型。
-4. 若只用一个参数，且为 true，则解锁全部交易输出并返回 true。
-5. 若指定了交易输出索引，获取并遍历该数组，把指定交易输出加/解锁后返回 true。
+### 2.1. 确保钱包可用
 
-相关加解锁函数声明在“wallet.h”文件的 CWallet 类中。
+参考[比特币 RPC 命令剖析 "fundrawtransaction" 2.1. 确保钱包可用](/blog/2018/07/bitcoin-rpc-command-fundrawtransaction.html#21-确保钱包可用)。
+
+### 2.2. 帮助内容
+
+参考[比特币 RPC 命令剖析 "getbestblockhash" 2.1. 帮助内容](/blog/2018/05/bitcoin-rpc-command-getbestblockhash.html#21-帮助内容)。
+
+加解锁函数声明在文件 `wallet.h` 的钱包类 `CWallet` 中。
 
 ```cpp
 /** 
  * A CWallet is an extension of a keystore, which also maintains a set of transactions and balances,
  * and provides the ability to create new transactions.
- */ // CWallet 是密钥库的扩展，可以维持一组交易和余额，并提供创建新交易的能力。
+ */
 class CWallet : public CCryptoKeyStore, public CValidationInterface
 {
     ...
-    void LockCoin(COutPoint& output); // 锁定指定交易输出
-    void UnlockCoin(COutPoint& output); // 解锁指定交易输出
-    void UnlockAllCoins(); // 解锁全部交易输出
+    void LockCoin(COutPoint& output);
+    void UnlockCoin(COutPoint& output);
+    void UnlockAllCoins();
     ...
 };
 ```
 
-实现在“wallet.cpp”文件中。
+实现在文件 `wallet.cpp` 中。
 
 ```cpp
 void CWallet::LockCoin(COutPoint& output)
@@ -220,6 +198,9 @@ void CWallet::UnlockAllCoins()
 ## 参考链接
 
 * [bitcoin/rpcserver.h at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/rpcserver.h){:target="_blank"}
+* [bitcoin/rpcserver.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/rpcserver.cpp){:target="_blank"}
 * [bitcoin/rpcwallet.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/wallet/rpcwallet.cpp){:target="_blank"}
+* [bitcoin/init.h at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/init.h){:target="_blank"}
+* [bitcoin/init.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/init.cpp){:target="_blank"}
 * [bitcoin/wallet.h at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/wallet/wallet.h){:target="_blank"}
 * [bitcoin/wallet.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/wallet/wallet.cpp){:target="_blank"}

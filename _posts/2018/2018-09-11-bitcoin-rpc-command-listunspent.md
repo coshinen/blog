@@ -1,116 +1,71 @@
 ---
 layout: post
 title:  "比特币 RPC 命令剖析 \"listunspent\""
-date:   2018-09-11 15:23:42 +0800
+date:   2018-09-11 20:23:42 +0800
 author: mistydew
 comments: true
 category: 区块链
 tags: Bitcoin bitcoin-cli
 excerpt: $ bitcoin-cli listunspent ( minconf maxconf  ["address",...] )
 ---
-## 提示说明
+## 1. 帮助内容
 
 ```shell
-listunspent ( minconf maxconf  ["address",...] ) # 列出在 minconf（含）和 maxconf（含）之间确认数的未花费交易输出
-```
+$ bitcoin-cli help listunspent
+listunspent ( minconf maxconf  ["address",...] )
 
-**注：只能查看本钱包内的地址所关联的交易的 UTXO。**
-
-选择性过滤只包含支付给指定地址们的交易输出。<br>
-结果是一个对象数组，每个对象都有：{交易索引，输出序号，公钥脚本，金额，确认数}
+返回在 minconf 和 maxconf（含）间的确认数的未花费交易输出的数组。
+选择性过滤器只包含支付给指定地址的交易输出。
+结果是一个对象数组，每个对象都有：
+{交易索引，输出序号，脚本公钥，金额，确认数}
 
 参数：
-1. minconf（数字，可选，默认为 1）要过滤的最小确认数。
-2. maxconf（数字，可选，默认为 9999999）要过滤的最大确认数。
-3. addresses（字符串）要过滤的比特币地址的 json 数组。
-```shell
+1. minconf  （数字，可选，默认为 1）待过滤的最小确认数
+2. maxconf  （数字，可选，默认为 9999999）待过滤的最大确认数
+3. addresses（字符串）一个待过滤的比特币地址的 json 数组
     [
       "address" （字符串）比特币地址
       ,...
     ]
-```
 
 结果：
-```shell
-[                   （json 对象数组）
+[                         （json 对象的数组）
   {
-    "txid" : "txid",        （字符串）交易索引
-    "vout" : n,               （数字）输出序号
-    "address" : "address",  （字符串）比特币地址
-    "account" : "account",  （字符串，已过时）关联的账户，默认账户为 ""
-    "scriptPubKey" : "key", （字符串）脚本公钥
-    "amount" : x.xxx,         （数字）以 BTC 为单位的交易金额
-    "confirmations" : n       （数字）确认数
+    "txid" : "txid",       （字符串）交易索引
+    "vout" : n,            （数字）输出序号
+    "address" : "address", （字符串）比特币地址
+    "account" : "account", （字符串）已过时。关联的账户，默认账户为 ""
+    "scriptPubKey" : "key",（字符串）脚本公钥
+    "amount" : x.xxx,      （数字）以 BTC 为单位的交易金额
+    "confirmations" : n    （数字）确认数
   }
   ,...
 ]
+
+例子：
+> bitcoin-cli listunspent
+> bitcoin-cli listunspent 6 9999999 "[\"1PGFqEzfmQch1gKD3ra4k18PNj3tTUUSqg\",\"1LtvqCaApEdUGFkpKMM4MstjcaL4dKg8SP\"]"
+> curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "listunspent", "params": [6, 9999999, "[\"1PGFqEzfmQch1gKD3ra4k18PNj3tTUUSqg\",\"1LtvqCaApEdUGFkpKMM4MstjcaL4dKg8SP\"]"] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
 ```
 
-## 用法示例
+## 2. 源码剖析
 
-### 比特币核心客户端
-
-用法一：列出全部未花费的交易输出。
-
-```shell
-$ bitcoin-cli listunspent
-[
-  ...
-  {
-    "txid": "69e560109acccf73c6552f5f4f095cd97fde3261a568cc6547a540bcc3e372ff",
-    "vout": 0,
-    "address": "1Z99Lsij11ajDEhipZbnifdFkBu8fC1Hb",
-    "scriptPubKey": "21023d2f5ddafe8a161867bb9a9162aa5c84b0882af4bfca1fa89f4811b651761f10ac",
-    "amount": 50.00000000,
-    "confirmations": 7298,
-    "spendable": true
-  }
-]
-```
-
-方法二：列出至少 6 个确认的未花费交易输出，并指定地址过滤器。
-
-```shell
-$ bitcoin-cli listunspent 6 9999999 "[\"1Z99Lsij11ajDEhipZbnifdFkBu8fC1Hb\"]"
-[
-  ...
-  {
-    "txid": "69e560109acccf73c6552f5f4f095cd97fde3261a568cc6547a540bcc3e372ff",
-    "vout": 0,
-    "address": "1Z99Lsij11ajDEhipZbnifdFkBu8fC1Hb",
-    "scriptPubKey": "21023d2f5ddafe8a161867bb9a9162aa5c84b0882af4bfca1fa89f4811b651761f10ac",
-    "amount": 50.00000000,
-    "confirmations": 7306,
-    "spendable": true
-  }
-]
-```
-
-### cURL
-
-```shell
-curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "listunspent", "params": [6, 9999999, ["1Z99Lsij11ajDEhipZbnifdFkBu8fC1Hb"]] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
-{"result":[{"txid":"69e560109acccf73c6552f5f4f095cd97fde3261a568cc6547a540bcc3e372ff","vout":0,"address":"1Z99Lsij11ajDEhipZbnifdFkBu8fC1Hb","scriptPubKey":"21023d2f5ddafe8a161867bb9a9162aa5c84b0882af4bfca1fa89f4811b651761f10ac","amount":50.00000000,"confirmations":7306,"spendable":true}],"error":null,"id":"curltest"}
-```
-
-## 源码剖析
-
-listunspent 对应的函数在“rpcserver.h”文件中被引用。
+`listunspent` 对应的函数在文件 `rpcserver.h` 中被引用。
 
 ```cpp
-extern UniValue listunspent(const UniValue& params, bool fHelp); // 列出未花费的交易输出
+extern UniValue listunspent(const UniValue& params, bool fHelp);
 ```
 
-实现在“rpcwallet.cpp”文件中。
+实现在文件 `rpcwallet.cpp` 中。
 
 ```cpp
 UniValue listunspent(const UniValue& params, bool fHelp)
 {
-    if (!EnsureWalletIsAvailable(fHelp)) // 确保当前钱包可用
+    if (!EnsureWalletIsAvailable(fHelp)) // 1. 确保钱包可用
         return NullUniValue;
     
-    if (fHelp || params.size() > 3) // 参数最多 3 个
-        throw runtime_error( // 命令帮助反馈
+    if (fHelp || params.size() > 3)
+        throw runtime_error(
             "listunspent ( minconf maxconf  [\"address\",...] )\n"
             "\nReturns array of unspent transaction outputs\n"
             "with between minconf and maxconf (inclusive) confirmations.\n"
@@ -143,17 +98,17 @@ UniValue listunspent(const UniValue& params, bool fHelp)
             + HelpExampleCli("listunspent", "")
             + HelpExampleCli("listunspent", "6 9999999 \"[\\\"1PGFqEzfmQch1gKD3ra4k18PNj3tTUUSqg\\\",\\\"1LtvqCaApEdUGFkpKMM4MstjcaL4dKg8SP\\\"]\"")
             + HelpExampleRpc("listunspent", "6, 9999999 \"[\\\"1PGFqEzfmQch1gKD3ra4k18PNj3tTUUSqg\\\",\\\"1LtvqCaApEdUGFkpKMM4MstjcaL4dKg8SP\\\"]\"")
-        );
+        ); // 2. 帮助内容
 
     RPCTypeCheck(params, boost::assign::list_of(UniValue::VNUM)(UniValue::VNUM)(UniValue::VARR)); // 检查参数类型
 
-    int nMinDepth = 1; // 最小深度，默认为 1
+    int nMinDepth = 1;
     if (params.size() > 0)
-        nMinDepth = params[0].get_int(); // 获取最小深度
+        nMinDepth = params[0].get_int();
 
-    int nMaxDepth = 9999999; // 最大深度，默认为 9999999
+    int nMaxDepth = 9999999;
     if (params.size() > 1)
-        nMaxDepth = params[1].get_int(); // 获取最大深度
+        nMaxDepth = params[1].get_int();
 
     set<CBitcoinAddress> setAddress; // 比特币地址集合
     if (params.size() > 2) { // 若指定了地址集
@@ -185,7 +140,7 @@ UniValue listunspent(const UniValue& params, bool fHelp)
 
             if (!setAddress.count(address)) // 查看地址集中是否含此地址
                 continue;
-        } // 多余？
+        }
 
         CAmount nValue = out.tx->vout[out.i].nValue; // 获取输出金额
         const CScript& pk = out.tx->vout[out.i].scriptPubKey; // 获取公钥脚本
@@ -214,20 +169,22 @@ UniValue listunspent(const UniValue& params, bool fHelp)
         results.push_back(entry); // 加入结果集
     }
 
-    return results; // 返回结果集
+    return results;
 }
 ```
 
-基本流程：
-1. 确保钱包当前可用（已初始化完成）。
-2. 处理命令帮助和参数个数。
-3. 检查参数类型。
-4. 获取指定的参数：最大/小确认数（深度）、地址集合。
-5. 检查钱包可用，钱包上锁。
-6. 获取可花费的输出列表。
-7. 遍历该列表获取所需信息并返回。
+### 2.1. 确保钱包可用
+
+参考[比特币 RPC 命令剖析 "fundrawtransaction" 2.1. 确保钱包可用](/blog/2018/07/bitcoin-rpc-command-fundrawtransaction.html#21-确保钱包可用)。
+
+### 2.2. 帮助内容
+
+参考[比特币 RPC 命令剖析 "getbestblockhash" 2.1. 帮助内容](/blog/2018/05/bitcoin-rpc-command-getbestblockhash.html#21-帮助内容)。
 
 ## 参考链接
 
 * [bitcoin/rpcserver.h at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/rpcserver.h){:target="_blank"}
+* [bitcoin/rpcserver.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/rpcserver.cpp){:target="_blank"}
 * [bitcoin/rpcwallet.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/wallet/rpcwallet.cpp){:target="_blank"}
+* [bitcoin/init.h at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/init.h){:target="_blank"}
+* [bitcoin/init.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/init.cpp){:target="_blank"}
