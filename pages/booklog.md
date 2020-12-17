@@ -120,6 +120,7 @@ excerpt: Here are some books that renew my spirit or reclaim my life.
 > * 中国式的情与爱，[中] 武志红 青音
 > * 身体知道答案，[中] 武志红
 > * 为何爱会伤人，[中] 武志红
+> * 七个心理寓言，[中] 武志红
 > * 为何家会伤人，[中] [武志红](http://blog.sina.com.cn/wuzii){:target="_blank"}
 > * 理解人性，[奥地利] Alfred Adler
 > * 自卑与超越，[奥地利] Alfred Adler
