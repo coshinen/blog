@@ -1,78 +1,62 @@
 ---
 layout: post
 title:  "比特币 RPC 命令剖析 \"sendfrom\""
-date:   2018-09-14 15:59:43 +0800
+date:   2018-09-14 20:59:43 +0800
 author: mistydew
 comments: true
 category: 区块链
 tags: Bitcoin bitcoin-cli
 excerpt: $ bitcoin-cli sendfrom "fromaccount" "tobitcoinaddress" amount ( minconf "comment" "comment-to" )
 ---
-## 提示说明
+## 1. 帮助内容
 
 ```shell
-sendfrom "fromaccount" "tobitcoinaddress" amount ( minconf "comment" "comment-to" ) # （已过时）从一个账户发送金额到一个比特币地址
-```
+$ bitcoin-cli help sendfrom
+sendfrom "fromaccount" "tobitcoinaddress" amount ( minconf "comment" "comment-to" )
 
-**使用 [sendtoaddress](/blog/2018/09/bitcoin-rpc-command-sendtoaddress.html) 替代该命令。<br>
-使用该命令前需要调用 [walletpassphrase](/blog/2018/09/bitcoin-rpc-command-walletpassphrase.html) 解锁钱包。**
+已过时（使用 sendtoaddress）。从一个账户发送一笔金额到一个比特币地址。
 
 参数：
-1. fromaccount（字符串，必备）从该账户发送资金。默认账户使用 ""。
-2. tobitcoinaddress（字符串，必备）发送资金到的比特币地址。
-3. amount（数字或字符串，必备）以 BTC 为单位的金额（交易费加在上面）。
-4. minconf（数字，可选，默认为 1）只使用至少 minconf 次确认的资金。
-5. comment（字符串，可选）用于存储交易的备注。这不是交易的一部分，只保存在你的钱包中。
-6. comment-to（字符串，可选）存储你要发送交易的个人或组织名的备注。这不是交易的一部分，只保存在你的钱包中。
+1. "fromaccount"     （字符串，必备）从该账户发送资金。可能使用默认账户 ""。
+2. "tobitcoinaddress"（字符串，必备）发送资金到的比特币地址。
+3. amount            （数字或字符串，必备）以 BTC 为单位的金额（交易费加在上面）。
+4. minconf           （数字，可选，默认为 1）只使用至少这么多次确认的资金。
+5. "comment"         （字符串，可选）一条用于存储交易的备注。这不是交易的一部分，只存在于你的钱包。
+6. "comment-to"      （字符串，可选）一条存储你要发送交易的个人或组织名的备注。这不是交易的一部分，只存在于你的钱包。
 
-结果：（字符串）返回交易索引。
+结果：
+"transactionid"（字符串）交易索引。
 
-## 用法示例
+例子：
 
-### 比特币核心客户端
+发送 0.01 BTC 从默认账户到指定地址，必须至少 1 次确认
+> bitcoin-cli sendfrom "" "1M72Sfpbz1BPpXFHz9m3CdqATR44Jvaydd" 0.01
 
-**使用该命令前，先调用 [walletpassphrase](/blog/2018/09/bitcoin-rpc-command-walletpassphrase.html) 解锁钱包，<br>
-使用该命令后，再调用 [walletlock](/blog/2018/09/bitcoin-rpc-command-walletlock.html) 锁定钱包。**
+发送 0.01 BTC 从账户 tabby 到指定地址，资金必须至少 6 次确认
+> bitcoin-cli sendfrom "tabby" "1M72Sfpbz1BPpXFHz9m3CdqATR44Jvaydd" 0.01 6 "donation" "seans outpost"
 
-用法一：从默认账户发送 0.01 BTC 到指定地址，资金必须至少 1 次确认。
-
-```shell
-$ bitcoin-cli sendfrom "" 1M72Sfpbz1BPpXFHz9m3CdqATR44Jvaydd 0.01
-5ef2e350852ac84977fa2bff1a980bb7095046066d17b3a383f3ccd6c091cf1b
+作为一个 json rpc 调用
+> curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "sendfrom", "params": ["tabby", "1M72Sfpbz1BPpXFHz9m3CdqATR44Jvaydd", 0.01, 6, "donation", "seans outpost"] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
 ```
 
-用法二：从账户 tabby 发送 0.01 BTC 到指定地址，资金必须至少 6 次确认，并增加备注。
+## 2. 源码剖析
 
-```shell
-$ bitcoin-cli sendfrom "tabby" 1M72Sfpbz1BPpXFHz9m3CdqATR44Jvaydd 0.01 6 "donation" "seans outpost"
-2165d605c35472ddb84fbacb51b6d7c39d412b58493ef7209503003ad6b79be7
-```
-
-### cURL
-
-```shell
-$ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "sendfrom", "params": ["tabby", "1M72Sfpbz1BPpXFHz9m3CdqATR44Jvaydd", 0.01, 6, "donation", "seans outpost"] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
-{"result":"2165d605c35472ddb84fbacb51b6d7c39d412b58493ef7209503003ad6b79be7","error":null,"id":"curltest"}
-```
-
-## 源码剖析
-
-sendfrom 对应的函数在“rpcserver.h”文件中被引用。
+`sendfrom` 对应的函数在文件 `rpcserver.h` 中被引用。
 
 ```cpp
-extern UniValue sendfrom(const UniValue& params, bool fHelp); // 从指定账户发送金额
+extern UniValue sendfrom(const UniValue& params, bool fHelp);
 ```
 
-实现在“wallet/rpcwallet.cpp”文件中。
+实现在文件 `wallet/rpcwallet.cpp` 中。
 
 ```cpp
 UniValue sendfrom(const UniValue& params, bool fHelp)
 {
-    if (!EnsureWalletIsAvailable(fHelp)) // 确保当前钱包可用
+    if (!EnsureWalletIsAvailable(fHelp)) // 1. 确保钱包可用
         return NullUniValue;
     
-    if (fHelp || params.size() < 3 || params.size() > 6) // 参数至少为 3 个，至多为 6 个
-        throw runtime_error( // 命令帮助反馈
+    if (fHelp || params.size() < 3 || params.size() > 6)
+        throw runtime_error(
             "sendfrom \"fromaccount\" \"tobitcoinaddress\" amount ( minconf \"comment\" \"comment-to\" )\n"
             "\nDEPRECATED (use sendtoaddress). Sent an amount from an account to a bitcoin address."
             + HelpRequiringPassphrase() + "\n"
@@ -95,56 +79,57 @@ UniValue sendfrom(const UniValue& params, bool fHelp)
             + HelpExampleCli("sendfrom", "\"tabby\" \"1M72Sfpbz1BPpXFHz9m3CdqATR44Jvaydd\" 0.01 6 \"donation\" \"seans outpost\"") +
             "\nAs a json rpc call\n"
             + HelpExampleRpc("sendfrom", "\"tabby\", \"1M72Sfpbz1BPpXFHz9m3CdqATR44Jvaydd\", 0.01, 6, \"donation\", \"seans outpost\"")
-        );
+        ); // 2. 帮助内容
 
-    LOCK2(cs_main, pwalletMain->cs_wallet); // 钱包上锁
+    LOCK2(cs_main, pwalletMain->cs_wallet);
 
-    string strAccount = AccountFromValue(params[0]); // 获取指定账户
-    CBitcoinAddress address(params[1].get_str()); // 获取目标比特币地址
-    if (!address.IsValid()) // 验证地址是否有效
+    string strAccount = AccountFromValue(params[0]);
+    CBitcoinAddress address(params[1].get_str());
+    if (!address.IsValid())
         throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, "Invalid Bitcoin address");
-    CAmount nAmount = AmountFromValue(params[2]); // 获取发送金额
-    if (nAmount <= 0) // 该金额必须大于 0
+    CAmount nAmount = AmountFromValue(params[2]);
+    if (nAmount <= 0)
         throw JSONRPCError(RPC_TYPE_ERROR, "Invalid amount for send");
-    int nMinDepth = 1; // 最小深度（确认数）
+    int nMinDepth = 1;
     if (params.size() > 3)
-        nMinDepth = params[3].get_int(); // 获取最小确认数
+        nMinDepth = params[3].get_int();
 
-    CWalletTx wtx; // 创建钱包交易
-    wtx.strFromAccount = strAccount; // 初始化发送账户
+    CWalletTx wtx;
+    wtx.strFromAccount = strAccount;
     if (params.size() > 4 && !params[4].isNull() && !params[4].get_str().empty())
-        wtx.mapValue["comment"] = params[4].get_str(); // 交易备注
+        wtx.mapValue["comment"] = params[4].get_str();
     if (params.size() > 5 && !params[5].isNull() && !params[5].get_str().empty())
-        wtx.mapValue["to"]      = params[5].get_str(); // 交易人或组织备注
+        wtx.mapValue["to"]      = params[5].get_str();
 
-    EnsureWalletIsUnlocked(); // 确保当前钱包处于为解密状态
+    EnsureWalletIsUnlocked(); // 3. 确保钱包已解锁
 
-    // Check funds // 检查资金
-    CAmount nBalance = GetAccountBalance(strAccount, nMinDepth, ISMINE_SPENDABLE); // 获取指定账户余额
-    if (nAmount > nBalance) // 发送金额不能大于该账户余额
+    // Check funds
+    CAmount nBalance = GetAccountBalance(strAccount, nMinDepth, ISMINE_SPENDABLE); // 4. 获取账户余额
+    if (nAmount > nBalance)
         throw JSONRPCError(RPC_WALLET_INSUFFICIENT_FUNDS, "Account has insufficient funds");
 
-    SendMoney(address.Get(), nAmount, false, wtx); // 发送金额
+    SendMoney(address.Get(), nAmount, false, wtx); // 5. 发送金额
 
-    return wtx.GetHash().GetHex(); // 获取交易哈希，转换为 16 进制并返回
+    return wtx.GetHash().GetHex();
 }
 ```
 
-基本流程：
-1. 确保钱包当前可用（已初始化完成）。
-2. 处理命令帮助和参数个数。
-3. 钱包上锁。
-4. 获取相关参数：指定账户，目标地址，发送金额，最小确认数和交易备注。
-5. 创建钱包交易并初始化发送账户和交易备注。
-6. 确保当前钱包处于为解密状态。
-7. 检查余额是否充足。
-8. 发送金额到指定的地址。
-9. 获取交易哈希，转化为 16 进制并返回。
+### 2.1. 确保钱包可用
 
-第八步，调用 SendMoney(address.Get(), nAmount, false, wtx) 发送交易，
-见 [比特币 RPC 命令剖析 sendtoaddress](/blog/2018/09/bitcoin-rpc-command-sendtoaddress.html)。
+参考[比特币 RPC 命令剖析 "fundrawtransaction" 2.1. 确保钱包可用](/blog/2018/07/bitcoin-rpc-command-fundrawtransaction.html#21-确保钱包可用)。
+
+### 2.2. 帮助内容
+
+参考[比特币 RPC 命令剖析 "getbestblockhash" 2.1. 帮助内容](/blog/2018/05/bitcoin-rpc-command-getbestblockhash.html#21-帮助内容)。
+
+### 2.5. 发送金额
+
+参考[比特币 RPC 命令剖析 "sendtoaddress"](/blog/2018/09/bitcoin-rpc-command-sendtoaddress.html)。
 
 ## 参考链接
 
 * [bitcoin/rpcserver.h at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/rpcserver.h){:target="_blank"}
+* [bitcoin/rpcserver.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/rpcserver.cpp){:target="_blank"}
 * [bitcoin/rpcwallet.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/wallet/rpcwallet.cpp){:target="_blank"}
+* [bitcoin/init.h at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/init.h){:target="_blank"}
+* [bitcoin/init.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/init.cpp){:target="_blank"}

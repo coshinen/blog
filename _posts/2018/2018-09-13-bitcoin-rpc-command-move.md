@@ -1,129 +1,61 @@
 ---
 layout: post
 title:  "比特币 RPC 命令剖析 \"move\""
-date:   2018-09-13 10:03:06 +0800
+date:   2018-09-13 20:03:06 +0800
 author: mistydew
 comments: true
 category: 区块链
 tags: Bitcoin bitcoin-cli
 excerpt: $ bitcoin-cli move "fromaccount" "toaccount" amount ( minconf "comment" )
 ---
-## 提示说明
+## 1. 帮助内容
 
 ```shell
-move "fromaccount" "toaccount" amount ( minconf "comment" ) # （已过时）从你钱包中一个账户转移指定金额到另一个账户
-```
+$ bitcoin-cli help move
+move "fromaccount" "toaccount" amount ( minconf "comment" )
+
+已过时。从你钱包中的一个账户移动一笔指定的金额到另一个账户。
 
 参数：
-1. fromaccount（字符串，必备）从该账户转移资金。默认账户使用 ""。
-2. toaccount（字符串，必备）转移资金到该账户。默认账户使用 ""。
-3. amount（数字）在账户间转移 BTC 的数量，不能为负数。
-4. minconf（数字，可选，默认为 1）只使用至少 minconf 次确认的资金。
-5. comment（字符串，可选）一个可选的备注，只存储在钱包中。
+1. "fromaccount"（字符串，必备）从该账户转移资金。可能使用默认账户 ""。
+2. "toaccount"  （字符串，必备）转移资金到该账户。可能使用默认账户 ""。
+3. amount       （数字）在账户间转移 BTC 的数量。
+4. minconf      （数字，可选，默认为 1）只使用至少这么多次确认的资金。
+5. "comment"    （字符串，可选）一个可选的备注，只存储在钱包中。
 
-结果：（布尔型）如果成功返回 true。
+结果：
+true|false（布尔型）若成功则为 true。
 
-## 用法示例
+例子：
 
-### 比特币核心客户端
+转移 0.01 BTC 从默认账户到名为 tabby 的账户
+> bitcoin-cli move "" "tabby" 0.01
 
-用法一：从默认账户 "" 转移 0.01 BTC 到账户 "tabby"。
+转移至少 6 次确认的 0.01 BTC 从 timotei 到 akiko，并附加一条备注
+> bitcoin-cli move "timotei" "akiko" 0.01 6 "happy birthday!"
 
-```shell
-$ bitcoin-cli listaccounts
-{
-  "": 1.00000000,
-  "tabby": 0.00000000
-}
-$ bitcoin-cli move "" "tabby" 0.01
-$ bitcoin-cli listaccounts
-{
-  "": 0.99000000,
-  "tabby": 0.01000000
-}
-$ bitcoin-cli listtransactions
-[
-  ...
-  {
-    "account": "",
-    "category": "move",
-    "time": 1530234049,
-    "amount": -0.01000000,
-    "otheraccount": "tabby",
-    "comment": ""
-  }, 
-  {
-    "account": "tabby",
-    "category": "move",
-    "time": 1530234049,
-    "amount": 0.01000000,
-    "otheraccount": "",
-    "comment": ""
-  }
-]
+作为一个 json rpc 调用
+> curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "move", "params": ["timotei", "akiko", 0.01, 6, "happy birthday!"] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
 ```
 
-用法二：从默认账户 "" 转移至少 6 次确认的 0.01 BTC 到账户 tabby，并附加备注。
+## 2. 源码剖析
 
-```shell
-$ bitcoin-cli listaccounts
-{
-  "": 0.99000000,
-  "tabby": 0.01000000
-}
-$ bitcoin-cli move "" "tabby" 0.01 6 "happy birthday!"
-$ bitcoin-cli listaccounts
-{
-  "": 0.98000000,
-  "tabby": 0.02000000
-}
-$ bitcoin-cli listtransactions
-[
-  ...
-  {
-    "account": "",
-    "category": "move",
-    "time": 1530234396,
-    "amount": -0.01000000,
-    "otheraccount": "tabby",
-    "comment": "happy birthday!"
-  }, 
-  {
-    "account": "tabby",
-    "category": "move",
-    "time": 1530234396,
-    "amount": 0.01000000,
-    "otheraccount": "",
-    "comment": "happy birthday!"
-  }
-]
-```
-
-### cURL
-
-```shell
-$ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "move", "params": ["", "tabby", 0.01, 6, "happy birthday!"] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
-{"result":true,"error":null,"id":"curltest"}
-```
-
-## 源码剖析
-
-move 对应的函数在“rpcserver.h”文件中被引用。
+`move` 对应的函数在文件 `rpcserver.h` 中被引用。
 
 ```cpp
-extern UniValue movecmd(const UniValue& params, bool fHelp); // 账户间转移资金
+extern UniValue movecmd(const UniValue& params, bool fHelp);
 ```
 
-实现在“wallet/rpcwallet.cpp”文件中。
+实现在文件 `wallet/rpcwallet.cpp` 中。
 
 ```cpp
 UniValue movecmd(const UniValue& params, bool fHelp)
 {
-    if (!EnsureWalletIsAvailable(fHelp)) // 确保当前钱包可用
+    if (!EnsureWalletIsAvailable(fHelp)) // 1. 确保钱包可用
         return NullUniValue;
     
-    if (fHelp || params.size() < 3 || params.size() > 5) // 参数至少 3 个，至多 5 个
-        throw runtime_error( // 命令帮助反馈
+    if (fHelp || params.size() < 3 || params.size() > 5)
+        throw runtime_error(
             "move \"fromaccount\" \"toaccount\" amount ( minconf \"comment\" )\n"
             "\nDEPRECATED. Move a specified amount from one account in your wallet to another.\n"
             "\nArguments:\n"
@@ -141,30 +73,30 @@ UniValue movecmd(const UniValue& params, bool fHelp)
             + HelpExampleCli("move", "\"timotei\" \"akiko\" 0.01 6 \"happy birthday!\"") +
             "\nAs a json rpc call\n"
             + HelpExampleRpc("move", "\"timotei\", \"akiko\", 0.01, 6, \"happy birthday!\"")
-        );
+        ); // 2. 帮助内容
 
-    LOCK2(cs_main, pwalletMain->cs_wallet); // 钱包上锁
+    LOCK2(cs_main, pwalletMain->cs_wallet);
 
-    string strFrom = AccountFromValue(params[0]); // 起始账户
-    string strTo = AccountFromValue(params[1]); // 目标账户
-    CAmount nAmount = AmountFromValue(params[2]); // 转账金额
-    if (nAmount <= 0) // 转账金额不能小于 0
+    string strFrom = AccountFromValue(params[0]);
+    string strTo = AccountFromValue(params[1]);
+    CAmount nAmount = AmountFromValue(params[2]);
+    if (nAmount <= 0)
         throw JSONRPCError(RPC_TYPE_ERROR, "Invalid amount for send");
     if (params.size() > 3)
         // unused parameter, used to be nMinDepth, keep type-checking it though
-        (void)params[3].get_int(); // 未使用的参数，曾经是最小深度，目前保持类型检查
+        (void)params[3].get_int(); // 未使用的参数，曾作为最小深度，目前保持类型检查
     string strComment;
     if (params.size() > 4)
-        strComment = params[4].get_str(); // 获取备注
+        strComment = params[4].get_str();
 
-    CWalletDB walletdb(pwalletMain->strWalletFile); // 创建钱包数据库对象
-    if (!walletdb.TxnBegin()) // 数据库初始化检查
+    CWalletDB walletdb(pwalletMain->strWalletFile);
+    if (!walletdb.TxnBegin())
         throw JSONRPCError(RPC_DATABASE_ERROR, "database error");
 
-    int64_t nNow = GetAdjustedTime(); // 获取当前时间
+    int64_t nNow = GetAdjustedTime();
 
-    // Debit // 借出
-    CAccountingEntry debit; // 创建账户条目类（用于内部转账）借出对象
+    // Debit
+    CAccountingEntry debit; // 3. 借出
     debit.nOrderPos = pwalletMain->IncOrderPosNext(&walletdb); // 增加下一条交易的序号
     debit.strAccount = strFrom; // 借出账户
     debit.nCreditDebit = -nAmount; // 金额标记为负数，表示借出
@@ -173,8 +105,8 @@ UniValue movecmd(const UniValue& params, bool fHelp)
     debit.strComment = strComment; // 记录备注信息
     pwalletMain->AddAccountingEntry(debit, walletdb); // 把该账户条目加入钱包数据库
 
-    // Credit // 贷入
-    CAccountingEntry credit; //  创建账户条目类（用于内部转账）贷入对象
+    // Credit
+    CAccountingEntry credit; // 4. 贷入
     credit.nOrderPos = pwalletMain->IncOrderPosNext(&walletdb); // 增加下一条交易的序号
     credit.strAccount = strTo; // 贷入账户
     credit.nCreditDebit = nAmount; // 金额标记为正数，表示贷入
@@ -186,43 +118,42 @@ UniValue movecmd(const UniValue& params, bool fHelp)
     if (!walletdb.TxnCommit()) // 钱包数据库交易提交
         throw JSONRPCError(RPC_DATABASE_ERROR, "database error");
 
-    return true; // 成功返回 true
+    return true;
 }
 ```
 
-基本流程：
-1. 确保钱包当前可用（已初始化完成）。
-2. 处理命令帮助和参数个数。
-3. 钱包上锁。
-4. 获取相关参数：2 个转账地址，转账金额，确认数（暂时无用），备注（只保存在钱包中）。
-5. 创建钱包数据库对象，并检查是否初始化成功。
-6. 创建账户条目（借出、贷入）对象，并初始化相关值。
-7. 进行钱包数据交易提交，若成功，则返回 true。
+### 2.1. 确保钱包可用
 
-第六步，调用 pwalletMain->IncOrderPosNext(&walletdb) 增加下一条交易的序号，并写入钱包数据库。
-调用 pwalletMain->AddAccountingEntry(credit, walletdb) 把初始化的账户条目加入钱包。
-它们声明在“wallet/wallet.h”文件的 CWallet 类中。
+参考[比特币 RPC 命令剖析 "fundrawtransaction" 2.1. 确保钱包可用](/blog/2018/07/bitcoin-rpc-command-fundrawtransaction.html#21-确保钱包可用)。
+
+### 2.2. 帮助内容
+
+参考[比特币 RPC 命令剖析 "getbestblockhash" 2.1. 帮助内容](/blog/2018/05/bitcoin-rpc-command-getbestblockhash.html#21-帮助内容)。
+
+### 2.3. 借出
+
+增加下一条交易的序号函数 `pwalletMain->IncOrderPosNext(&walletdb)` 和增加账户条目函数 `pwalletMain->AddAccountingEntry(credit, walletdb)` 声明在文件 `wallet/wallet.h` 的钱包类 `CWallet` 中。
 
 ```cpp
 /** 
  * A CWallet is an extension of a keystore, which also maintains a set of transactions and balances,
  * and provides the ability to create new transactions.
- */ // CWallet 是密钥库的扩展，可以维持一组交易和余额，并提供创建新交易的能力。
+ */
 class CWallet : public CCryptoKeyStore, public CValidationInterface
 {
     ...
     /** 
      * Increment the next transaction order id
      * @return next transaction order id
-     */ // 增加下一条交易序号，返回下一个交易的序号
-    int64_t IncOrderPosNext(CWalletDB *pwalletdb = NULL);
+     */
+    int64_t IncOrderPosNext(CWalletDB *pwalletdb = NULL); // 增加下一条交易序号，返回下一个交易的序号
     ...
     bool AddAccountingEntry(const CAccountingEntry&, CWalletDB & pwalletdb); // 添加账户条目到钱包数据库
     ...
 };
 ```
 
-实现在“wallet/wallet.cpp”文件中。
+实现在文件 `wallet/wallet.cpp` 中。
 
 ```cpp
 int64_t CWallet::IncOrderPosNext(CWalletDB *pwalletdb)
@@ -234,7 +165,7 @@ int64_t CWallet::IncOrderPosNext(CWalletDB *pwalletdb)
     } else {
         CWalletDB(strWalletFile).WriteOrderPosNext(nOrderPosNext);
     }
-    return nRet; // 返回增加后的下一条交易序号
+    return nRet;
 }
 ...
 bool CWallet::AddAccountingEntry(const CAccountingEntry& acentry, CWalletDB & pwalletdb)
@@ -253,6 +184,9 @@ bool CWallet::AddAccountingEntry(const CAccountingEntry& acentry, CWalletDB & pw
 ## 参考链接
 
 * [bitcoin/rpcserver.h at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/rpcserver.h){:target="_blank"}
+* [bitcoin/rpcserver.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/rpcserver.cpp){:target="_blank"}
 * [bitcoin/rpcwallet.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/wallet/rpcwallet.cpp){:target="_blank"}
+* [bitcoin/init.h at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/init.h){:target="_blank"}
+* [bitcoin/init.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/init.cpp){:target="_blank"}
 * [bitcoin/wallet.h at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/wallet/wallet.h){:target="_blank"}
 * [bitcoin/wallet.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/wallet/wallet.cpp){:target="_blank"}
