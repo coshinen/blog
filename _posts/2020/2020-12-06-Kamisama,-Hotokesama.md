@@ -75,7 +75,7 @@ excerpt: 充たしたいのよ五臓六腑まで沁みわたつてよ。留度�
 
 ## 参考链接
 
-* [椎名林檎 神様、仏様 - 歌詞 - 歌ネット](https://www.uta-net.com/song/191239/){:target="_blank"}
+* [椎名林檎 神様、仏様 歌詞 - 歌ネット](https://www.uta-net.com/song/191239/){:target="_blank"}
 * [這い蹲う（はいつくばう）の意味 - goo国語辞書](https://dictionary.goo.ne.jp/word/這い蹲う/){:target="_blank"}
 * [よみがへるの意味 - 古文辞書 - Weblio古語辞典](https://kobun.weblio.jp/content/よみがへる){:target="_blank"}
 * [「姿をくらます(すがたをくらます)」の意味や使い方 Weblio辞書](https://www.weblio.jp/content/姿をくらます){:target="_blank"}
