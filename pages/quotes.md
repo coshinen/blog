@@ -2,7 +2,7 @@
 layout: page
 title: "引言"
 permalink: /quotes.html
-excerpt: Here are my favorite quotes from someones that inspire me or make me laugh. I hope you enjoy them.
+excerpt: Here are my favorite quotes from someones that inspire me or make me laugh.
 ---
 > Paul Graham, [What You'll Wish You'd Known](http://www.paulgraham.com/hs.html){:target="_blank"}:
 > * Your life doesn't have to be shaped by admissions officers. It could be shaped by your own curiosity. It is for all ambitious adults. And you don't have to wait to start.

@@ -2,7 +2,7 @@
 layout: page
 title: "类别"
 permalink: /blog/category.html
-excerpt: Here are my blog post categories.
+excerpt: Here is the category of my blog posts.
 ---
 <div id="category">
   <h2>目录</h2>

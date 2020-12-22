@@ -2,7 +2,7 @@
 layout: page
 title: "档案"
 permalink: /blog/archive.html
-excerpt: Here is my blog post archive.
+excerpt: Here is the archive of my blog posts.
 ---
 <div id="archive">
   <h2>日期</h2>
