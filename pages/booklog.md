@@ -25,7 +25,6 @@ excerpt: Here are some books that renew my spirit or reclaim my life.
 >   * [网络编程](#网络编程)
 >   * [操作系统](#操作系统)
 >   * [程序人生](#程序人生)
-> * [杂类](#杂类)
 
 ## 文学<a href="#索引" class="right">🔝</a>
 
@@ -140,6 +139,7 @@ excerpt: Here are some books that renew my spirit or reclaim my life.
 
 > ### 方法论<a href="#索引" class="right">🔝</a>
 > 
+> * [把时间当作朋友](http://lixiaolai.com/#/befriending-time/){:target="_blank"}，[中] 李笑来
 > * [人人都能用英语](http://lixiaolai.com/#/everyone-can-use-english/){:target="_blank"}，[中] [李笑来](http://lixiaolai.com/#/){:target="_blank"}
 > * [英语进阶指南](https://byoungd.gitbook.io/english-level-up-tips/){:target="_blank"}，[中] byoungd
 > * 子弹笔记术，[日] 杉野干人
@@ -208,7 +208,3 @@ excerpt: Here are some books that renew my spirit or reclaim my life.
 > * [How To Ask Questions The Smart Way](http://www.catb.org/~esr/faqs/smart-questions.html){:target="_blank"}，[美] Eric S. Raymond, Rick Moen
 > * [快乐的 Linux 命令行](https://billie66.github.io/TLCL/){:target="_blank"}，[美] William Shotts
 > * [中文文案排案指北](https://sparanoid.com/note/chinese-copywriting-guidelines/){:target="_blank"}，[中] Tunghsiao Liu
-
-## 杂类<a href="#索引" class="right">🔝</a>
-
-> * [把时间当作朋友 运用心智 获得解放](http://lixiaolai.com/#/befriending-time/){:target="_blank"}，[中] 李笑来
