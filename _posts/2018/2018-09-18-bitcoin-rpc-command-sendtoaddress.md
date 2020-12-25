@@ -8,159 +8,49 @@ category: 区块链
 tags: Bitcoin bitcoin-cli
 excerpt: $ bitcoin-cli sendtoaddress "bitcoinaddress" amount ( "comment" "comment-to" subtractfeefromamount )
 ---
-## 提示说明
+## 1. 帮助内容
 
 ```shell
-sendtoaddress "bitcoinaddress" amount ( "comment" "comment-to" subtractfeefromamount ) # 发送一笔金额到指定地址
-```
+$ bitcoin-cli help sendtoaddress
+sendtoaddress "bitcoinaddress" amount ( "comment" "comment-to" subtractfeefromamount )
+
+发送一笔金额到给定的地址。
 
 参数：
-1. bitcoinaddress（字符串，必备）要发送到的比特币地址。
-2. amount（数字或字符串，必备）以 BTC 为单位的发送的金额。例 0.1。
-3. comment（字符串，可选）用于存储交易的备注。这不是交易的一部分，只保存在你的钱包中。
-4. comment-to（字符串，可选）存储你要发送交易的个人或组织名的备注。这不是交易的一部分，只保存在你的钱包中。
-5. subtractfeefromamount（布尔型，可选，默认为 false）交易费将从发送金额中扣除。接收者将收到少于你在金额栏输入的比特币。
-若该值为 true，则发送金额包含交易费，默认 false，交易费另算。
+1. "bitcoinaddress"（字符串，必备）待发送到的比特币地址。
+2. "amount"        （数字或字符串，必备）以 BTC 为单位的待发送的金额。例 0.1
+3. "comment"       （字符串，可选）用于存储交易的一条备注。这不是交易的一部分，只存在于你的钱包。
+4. "comment-to"    （字符串，可选）用于存储你要发送交易的个人或组织名的一条备注。这不是交易的一部分，只存在于你的钱包。
+5. subtractfeefromamount（布尔型，可选，默认 = false）交易费将从发送金额中扣除。收款者将收到少于你在金额栏输入的比特币。
 
-结果：（字符串）返回交易索引。
+结果：
+"transactionid"（字符串）交易索引。
 
-## 用法示例
-
-### 比特币核心客户端
-
-**使用该命令前，先调用 [walletpassphrase](/blog/2018/09/bitcoin-rpc-command-walletpassphrase.html) 解锁钱包，<br>
-使用该命令后，再调用 [walletlock](/blog/2018/09/bitcoin-rpc-command-walletlock.html) 锁定钱包。**
-
-用法一：向指定地址发送 0.1 BTC。
-
-```shell
-$ bitcoin-cli sendtoaddress 1M72Sfpbz1BPpXFHz9m3CdqATR44Jvaydd 0.1
-533ac3682be8723cca63f37a75178155c0b6e69d06606010d5cee1c0f7ccba97
-$ bitcoin-cli gettransaction 533ac3682be8723cca63f37a75178155c0b6e69d06606010d5cee1c0f7ccba97
-{
-  "amount": -0.10000000,
-  "fee": -0.00000226,
-  "confirmations": 9,
-  "blockhash": "000065e66f10b6b4e46558967e213f2973fb746ab077f209e254121983b1e0b6",
-  "blockindex": 1,
-  "blocktime": 1528443900,
-  "txid": "533ac3682be8723cca63f37a75178155c0b6e69d06606010d5cee1c0f7ccba97",
-  "walletconflicts": [
-  ],
-  "time": 1528443879,
-  "timereceived": 1528443879,
-  "bip125-replaceable": "no",
-  "details": [
-    {
-      "account": "",
-      "address": "1M72Sfpbz1BPpXFHz9m3CdqATR44Jvaydd",
-      "category": "send",
-      "amount": -0.10000000,
-      "label": "",
-      "vout": 1,
-      "fee": -0.00000226,
-      "abandoned": false
-    }
-  ],
-  "hex": "010000000297baccf7c0e1ced5106060069de6b6c0558117757af363ca3c72e82b68c33a53000000006a4730440220301dd1386f1f17937ecbe62193cf94772ea536cb0f2a1ef0721ace1a3086e945022007c1706db1d282022cf99eb66dde50cdd640dadaaf444fd0627b95dc09c2bfa20121026c992de443610f0775ff4ea7eab3fc2c9cecb1ec61383d1f8b0b54b4fdcc45d5feffffff1625da83e5b868b1bedd69b6579449fb2746416e73cc70fc2a8dc6df8b6863b8000000006a47304402202f1dcd475339b71578941fc10ebe3411f14b40b02d1c9a1e7dbeaa6e63c1c1a4022017b38c7628056a083f49728514b00ae1046e94724e8bea80a61c661af92dc7dc012102ef09fb034dc26337de85e77c6b519bfeb2500f2cd69ca4c0c34e5425144ffaa0feffffff02ef8c9800000000001976a914a2fe6cb25949dc7f1da3da93086c164a1bf72ef888ac80969800000000001976a9149dd5d8f38714a8b07a4e702777d445d388805ebd88acd0150100"
-}
+例子：
+> bitcoin-cli sendtoaddress "1M72Sfpbz1BPpXFHz9m3CdqATR44Jvaydd" 0.1
+> bitcoin-cli sendtoaddress "1M72Sfpbz1BPpXFHz9m3CdqATR44Jvaydd" 0.1 "donation" "seans outpost"
+> bitcoin-cli sendtoaddress "1M72Sfpbz1BPpXFHz9m3CdqATR44Jvaydd" 0.1 "" "" true
+> curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "sendtoaddress", "params": ["1M72Sfpbz1BPpXFHz9m3CdqATR44Jvaydd", 0.1, "donation", "seans outpost"] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
 ```
 
-用法二：向指定地址发送 0.1 BTC，增加交易备注 donation 和交易组织名 seans outpost。
+## 2. 源码剖析
 
-```shell
-$ bitcoin-cli sendtoaddress 1M72Sfpbz1BPpXFHz9m3CdqATR44Jvaydd 0.1 "donation" "seans outpost"
-f3748b3e27f22dbf04eed3d779b54507c839f89dd34c0263f9b4d21928083014
-$ bitcoin-cli gettransaction f3748b3e27f22dbf04eed3d779b54507c839f89dd34c0263f9b4d21928083014
-{
-  "amount": -0.10000000,
-  "fee": -0.00000374,
-  "confirmations": 0,
-  "trusted": true,
-  "txid": "f3748b3e27f22dbf04eed3d779b54507c839f89dd34c0263f9b4d21928083014",
-  "walletconflicts": [
-  ],
-  "time": 1528443879,
-  "timereceived": 1528443879,
-  "bip125-replaceable": "no",
-  "comment": "donation",
-  "to": "seans outpost",
-  "details": [
-    {
-      "account": "",
-      "address": "1M72Sfpbz1BPpXFHz9m3CdqATR44Jvaydd",
-      "category": "send",
-      "amount": -0.10000000,
-      "label": "",
-      "vout": 0,
-      "fee": -0.00000374,
-      "abandoned": false
-    }
-  ],
-  "hex": "010000000297baccf7c0e1ced5106060069de6b6c0558117757af363ca3c72e82b68c33a53000000006a4730440220301dd1386f1f17937ecbe62193cf94772ea536cb0f2a1ef0721ace1a3086e945022007c1706db1d282022cf99eb66dde50cdd640dadaaf444fd0627b95dc09c2bfa20121026c992de443610f0775ff4ea7eab3fc2c9cecb1ec61383d1f8b0b54b4fdcc45d5feffffff1625da83e5b868b1bedd69b6579449fb2746416e73cc70fc2a8dc6df8b6863b8000000006a47304402202f1dcd475339b71578941fc10ebe3411f14b40b02d1c9a1e7dbeaa6e63c1c1a4022017b38c7628056a083f49728514b00ae1046e94724e8bea80a61c661af92dc7dc012102ef09fb034dc26337de85e77c6b519bfeb2500f2cd69ca4c0c34e5425144ffaa0feffffff02ef8c9800000000001976a914a2fe6cb25949dc7f1da3da93086c164a1bf72ef888ac80969800000000001976a9149dd5d8f38714a8b07a4e702777d445d388805ebd88acd0150100"
-}
-```
-
-用法三：向指定地址发送 0.1 BTC，没有备注，从发送金额中扣掉交易费。
-
-```shell
-$ bitcoin-cli sendtoaddress 1M72Sfpbz1BPpXFHz9m3CdqATR44Jvaydd 0.1 "" "" true
-191e845fc0427be5128779cbee8a25b41d2f5cf07eb6df7438c5a67f92104eee
-$ bitcoin-cli gettransaction 191e845fc0427be5128779cbee8a25b41d2f5cf07eb6df7438c5a67f92104eee
-{
-  "amount": -0.09999808,
-  "fee": -0.00000192,
-  "confirmations": 4,
-  "blockhash": "00001bdcb2a48929fe02ad604a73df673267a00873f2644cb8b2c2278e9bb589",
-  "blockindex": 1,
-  "blocktime": 1528444190,
-  "txid": "191e845fc0427be5128779cbee8a25b41d2f5cf07eb6df7438c5a67f92104eee",
-  "walletconflicts": [
-  ],
-  "time": 1528444187,
-  "timereceived": 1528444187,
-  "bip125-replaceable": "no",
-  "details": [
-    {
-      "account": "",
-      "address": "1M72Sfpbz1BPpXFHz9m3CdqATR44Jvaydd",
-      "category": "send",
-      "amount": -0.09999808,
-      "label": "",
-      "vout": 0,
-      "fee": -0.00000192,
-      "abandoned": false
-    }
-  ],
-  "hex": "010000000173f50ee4ecd6a810f0177c9ce42a53a7da9579a836d78ded0733397af4d8d72b000000006b483045022100eb59463fd150c1fbc1fd4389e703df7916be15abd4aa294aa40746213f329272022039c089685f4feb23847db90b039a2ba2e41b0c07b63a8d029df46c07d1e0cc61012102ef09fb034dc26337de85e77c6b519bfeb2500f2cd69ca4c0c34e5425144ffaa0feffffff01c0959800000000001976a9149dd5d8f38714a8b07a4e702777d445d388805ebd88ac00160100"
-}
-```
-
-### cURL
-
-```shell
-$ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "sendtoaddress", "params": ["1M72Sfpbz1BPpXFHz9m3CdqATR44Jvaydd", 0.1, "donation", "seans outpost"] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
-{"result":"f3748b3e27f22dbf04eed3d779b54507c839f89dd34c0263f9b4d21928083014","error":null,"id":"curltest"}
-```
-
-## 源码剖析
-
-sendtoaddress 对应的函数在“rpcserver.h”文件中被引用。
+`sendtoaddress` 对应的函数在文件 `rpcserver.h` 中被引用。
 
 ```cpp
-extern UniValue sendtoaddress(const UniValue& params, bool fHelp); // 发送比特币到指定地址
+extern UniValue sendtoaddress(const UniValue& params, bool fHelp);
 ```
 
-实现在“wallet/rpcwallet.cpp”文件中。
+实现在文件 `wallet/rpcwallet.cpp` 中。
 
 ```cpp
 UniValue sendtoaddress(const UniValue& params, bool fHelp)
 {
-    if (!EnsureWalletIsAvailable(fHelp)) // 1.确保钱包当前可用
+    if (!EnsureWalletIsAvailable(fHelp)) // 1. 确保钱包可用
         return NullUniValue;
     
-    if (fHelp || params.size() < 2 || params.size() > 5) // 2.参数至少为 2 个，至多为 5 个
-        throw runtime_error( // 命令帮助反馈
+    if (fHelp || params.size() < 2 || params.size() > 5)
+        throw runtime_error(
             "sendtoaddress \"bitcoinaddress\" amount ( \"comment\" \"comment-to\" subtractfeefromamount )\n"
             "\nSend an amount to a given address.\n"
             + HelpRequiringPassphrase() +
@@ -181,49 +71,49 @@ UniValue sendtoaddress(const UniValue& params, bool fHelp)
             + HelpExampleCli("sendtoaddress", "\"1M72Sfpbz1BPpXFHz9m3CdqATR44Jvaydd\" 0.1 \"donation\" \"seans outpost\"")
             + HelpExampleCli("sendtoaddress", "\"1M72Sfpbz1BPpXFHz9m3CdqATR44Jvaydd\" 0.1 \"\" \"\" true")
             + HelpExampleRpc("sendtoaddress", "\"1M72Sfpbz1BPpXFHz9m3CdqATR44Jvaydd\", 0.1, \"donation\", \"seans outpost\"")
-        );
+        ); // 2. 帮助内容
 
-    LOCK2(cs_main, pwalletMain->cs_wallet); // 3.钱包上锁
+    LOCK2(cs_main, pwalletMain->cs_wallet);
 
-    CBitcoinAddress address(params[0].get_str()); // 4.获取指定的比特币地址
-    if (!address.IsValid()) // 验证地址是否有效
+    CBitcoinAddress address(params[0].get_str());
+    if (!address.IsValid())
         throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, "Invalid Bitcoin address");
 
     // Amount
-    CAmount nAmount = AmountFromValue(params[1]); // 获取转账金额
-    if (nAmount <= 0) // 金额不能小于等于 0
+    CAmount nAmount = AmountFromValue(params[1]); // 3. 金额
+    if (nAmount <= 0)
         throw JSONRPCError(RPC_TYPE_ERROR, "Invalid amount for send");
 
-    // Wallet comments // 钱包备注
-    CWalletTx wtx; // 一个钱包交易对象
+    // Wallet comments
+    CWalletTx wtx; // 4. 钱包备注
     if (params.size() > 2 && !params[2].isNull() && !params[2].get_str().empty())
-        wtx.mapValue["comment"] = params[2].get_str(); // 交易备注
+        wtx.mapValue["comment"] = params[2].get_str();
     if (params.size() > 3 && !params[3].isNull() && !params[3].get_str().empty())
-        wtx.mapValue["to"]      = params[3].get_str(); // 交易的个人或组织名备注
+        wtx.mapValue["to"]      = params[3].get_str();
 
-    bool fSubtractFeeFromAmount = false; // 扣除交易费标志，默认关闭
+    bool fSubtractFeeFromAmount = false;
     if (params.size() > 4)
-        fSubtractFeeFromAmount = params[4].get_bool(); // 获取设置
+        fSubtractFeeFromAmount = params[4].get_bool();
 
-    EnsureWalletIsUnlocked(); // 5.确保钱包当前处于解密状态
+    EnsureWalletIsUnlocked(); // 5. 确保钱包已被解锁
 
-    SendMoney(address.Get(), nAmount, fSubtractFeeFromAmount, wtx); // 6.发送金额到指定地址
+    SendMoney(address.Get(), nAmount, fSubtractFeeFromAmount, wtx); // 6. 发送金额
 
-    return wtx.GetHash().GetHex(); // 7.获取交易哈希，转化为 16 进制并返回
+    return wtx.GetHash().GetHex();
 }
 ```
 
-基本流程：
-1. 确保钱包当前可用（已初始化完成）。
-2. 处理命令帮助和参数个数。
-3. 钱包上锁。
-4. 获取相关参数：目标地址，发送金额，交易备注和是否扣除交易费标志。
-5. 确保钱包当前处于解密状态。
-6. 发送金额到指定的地址。
-7. 获取交易哈希，转化为 16 进制并返回。
+### 2.1. 确保钱包可用
 
-6.调用 SendMoney(address.Get(), nAmount, fSubtractFeeFromAmount, wtx) 发送指定金额到指定比特币地址，
-该函数定义在“wallet/rpcwallet.cpp”文件中，入参为：交易目的地址，金额，从金额中减去交易费标志，添加了备注的钱包交易。
+参考[比特币 RPC 命令剖析 "fundrawtransaction" 2.1. 确保钱包可用](/blog/2018/07/bitcoin-rpc-command-fundrawtransaction.html#21-确保钱包可用)。
+
+### 2.2. 帮助内容
+
+参考[比特币 RPC 命令剖析 "getbestblockhash" 2.1. 帮助内容](/blog/2018/05/bitcoin-rpc-command-getbestblockhash.html#21-帮助内容)。
+
+### 2.6. 发送金额
+
+发送金额函数 `SendMoney(address.Get(), nAmount, fSubtractFeeFromAmount, wtx)` 定义在文件 `wallet/rpcwallet.cpp` 中。
 
 ```cpp
 static void SendMoney(const CTxDestination &address, CAmount nValue, bool fSubtractFeeFromAmount, CWalletTx& wtxNew)
@@ -789,7 +679,10 @@ class CNode // 对端节点信息类
 ## 参考链接
 
 * [bitcoin/rpcserver.h at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/rpcserver.h){:target="_blank"}
+* [bitcoin/rpcserver.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/rpcserver.cpp){:target="_blank"}
 * [bitcoin/rpcwallet.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/wallet/rpcwallet.cpp){:target="_blank"}
+* [bitcoin/init.h at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/init.h){:target="_blank"}
+* [bitcoin/init.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/init.cpp){:target="_blank"}
 * [bitcoin/wallet.h at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/wallet/wallet.h){:target="_blank"}
 * [bitcoin/wallet.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/wallet/wallet.cpp){:target="_blank"}
 * [bitcoin/net.h at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/net.h){:target="_blank"}

@@ -12,12 +12,12 @@ macOS 对 NTFS 格式的硬盘默认只支持读操作，据说是版权原因�
 
 ![ntfs-write-mac-osx](https://cdn.osxdaily.com/wp-content/uploads/2013/10/ntfs-write-mac-osx.jpeg){:.border}
 
-fstab 全称 file system table，即文件系统表，用于描述文件系统的静态信息，是 UNIX 和类 UNIX 计算机系统上常见的系统配置文件。
+文件系统表 fstab（file system table）用于描述文件系统的静态信息，是 UNIX 和类 UNIX 计算机系统上常见的系统配置文件。
 该文件通常列出所有可用磁盘分区，并指明如何初始化它们。
 mount 命令在引导时自动读取 fstab 文件以确定整个文件系统结构，直至当用户执行 mount 命令修改该结构。
 传统的 UNIX 总是允许特权用户（root 用户和 wheel 组的用户）在没有 fstab 条目的情况下挂载或卸载设备。
 
-## fstab 文件中各字段说明
+## 1. fstab 文件中各字段说明
 
 > LABEL=device-spec mount-point fs-type options dump pass
 > * device-spec: 设备名，UUID。
@@ -29,15 +29,13 @@ mount 命令在引导时自动读取 fstab 文件以确定整个文件系统结�
 
 **最后两个字段缺省值为 0。第一、二、四字段中的空格字符由八进制的字符代码 `\040` 表示，参照 ASCII 码表。**
 
-## 文件系统通用选项（options）
-
 由于 `/etc/fstab` 中的文件系统最终使用 mount 挂载，因此 options 字段使用逗号分隔符。
 
 > * auto / noauto: 使用 auto 选项，设备将在启动时或使用 mount -a 命令时自动挂载。auto 是默认选项。对于不能自动安装的设备，使用 noauto 选项，只能显式安装设备。
 > * rw / ro: 以“读写”或“只读”模式挂载文件系统。把文件系统明确定义为 rw 可以缓解默认为只读文件系统中的一些问题，如软盘或 NTFS 分区的情况。
 > * nobrowse: 作用不明，禁止磁盘在访达中显式，若删除此项，则不能开启写模式。
 
-## 开启 NTFS 硬盘的写权限
+## 2. 开启 NTFS 硬盘的写权限
 
 使用 root 权限在 `/etc/` 目录下创建 fstab 文件。
 
@@ -45,11 +43,11 @@ mount 命令在引导时自动读取 fstab 文件以确定整个文件系统结�
 $ sudo vim /etc/fstab
 ```
 
-以硬盘名为 My Passport 为例，在 fstab 文件中键入下面内容并保存。
+以硬盘名为 `My Passport` 为例，在 fstab 文件中键入下面内容并保存。
 
 > LABEL=My\040Passport none ntfs auto,rw,nobrowse
 
-含义是对于名为 My Passport 的设备，挂载到默认位置 `/Volumes/` 目录下，以 NTFS 文件系统类型，引导时自动挂载、用户可读写，永不自动备份，引导时不检查设备错误。
+意思是对名为 `My Passport` 的设备，挂载到默认位置 `/Volumes/` 目录下，以 NTFS 文件系统类型，引导时自动挂载、用户可读写，永不自动备份，引导时不检查设备错误。
 
 重新插入硬盘，就可以进行写操作了。
 

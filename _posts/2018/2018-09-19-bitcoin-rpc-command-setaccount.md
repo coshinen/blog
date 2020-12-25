@@ -1,66 +1,48 @@
 ---
 layout: post
 title:  "比特币 RPC 命令剖析 \"setaccount\""
-date:   2018-09-19 09:30:12 +0800
+date:   2018-09-19 20:30:12 +0800
 author: mistydew
 comments: true
 category: 区块链
 tags: Bitcoin bitcoin-cli
 excerpt: $ bitcoin-cli setaccount "bitcoinaddress" "account"
 ---
-## 提示说明
+## 1. 帮助内容
 
 ```shell
-setaccount "bitcoinaddress" "account" # （已过时）设置给定地址关联的账户
-```
+$ bitcoin-cli help setaccount
+setaccount "bitcoinaddress" "account"
+
+已过时。设置给定地址关联的账户。
 
 参数：
-1. bitcoinaddress（字符串，必备）用于关联一个账户的比特币地址。
-2. account（字符串，必备）要分配地址的账户。
+1. "bitcoinaddress"（字符串，必备）用于关联一个账户的比特币地址。
+2. "account"       （字符串，必备）待指定地址的账户。
 
-结果：无返回值。
-
-## 用法示例
-
-### 比特币核心客户端
-
-获取一个新的比特币地址，在默认账户下，
-重新设置该地址关联账户为 tabby。
-
-```shell
-$ bitcoin-cli getnewaddress
-1MfmEDut9v3b2MEQG8GB1s5fqRSguMw3fs
-$ bitcoin-cli getaccount 1MfmEDut9v3b2MEQG8GB1s5fqRSguMw3fs
-$ bitcoin-cli setaccount 1MfmEDut9v3b2MEQG8GB1s5fqRSguMw3fs "tabby"
-$ bitcoin-cli getaccount 1MfmEDut9v3b2MEQG8GB1s5fqRSguMw3fs
-tabby
+例子：
+> bitcoin-cli setaccount "1D1ZrZNe3JUo7ZycKEYQQiQAWd9y54F4XZ" "tabby"
+> curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "setaccount", "params": ["1D1ZrZNe3JUo7ZycKEYQQiQAWd9y54F4XZ", "tabby"] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
 ```
 
-### cURL
+## 2. 源码剖析
 
-```shell
-$ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "setaccount", "params": ["1MfmEDut9v3b2MEQG8GB1s5fqRSguMw3fs", "tabby"] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
-{"result":null,"error":null,"id":"curltest"}
-```
-
-## 源码剖析
-
-setaccount 对应的函数在“rpcserver.h”文件中被引用。
+`setaccount` 对应的函数在文件 `rpcserver.h` 中被引用。
 
 ```cpp
-extern UniValue setaccount(const UniValue& params, bool fHelp); // 设置地址关联账户
+extern UniValue setaccount(const UniValue& params, bool fHelp);
 ```
 
-实现在“wallet/rpcwallet.cpp”文件中。
+实现在文件 `wallet/rpcwallet.cpp` 中。
 
 ```cpp
 UniValue setaccount(const UniValue& params, bool fHelp)
 {
-    if (!EnsureWalletIsAvailable(fHelp)) // 确保钱包当前可用
+    if (!EnsureWalletIsAvailable(fHelp)) // 1. 确保钱包可用
         return NullUniValue;
     
-    if (fHelp || params.size() < 1 || params.size() > 2) // 参数为 1 或 2 个
-        throw runtime_error( // 命令帮助反馈
+    if (fHelp || params.size() < 1 || params.size() > 2)
+        throw runtime_error(
             "setaccount \"bitcoinaddress\" \"account\"\n"
             "\nDEPRECATED. Sets the account associated with the given address.\n"
             "\nArguments:\n"
@@ -69,46 +51,48 @@ UniValue setaccount(const UniValue& params, bool fHelp)
             "\nExamples:\n"
             + HelpExampleCli("setaccount", "\"1D1ZrZNe3JUo7ZycKEYQQiQAWd9y54F4XZ\" \"tabby\"")
             + HelpExampleRpc("setaccount", "\"1D1ZrZNe3JUo7ZycKEYQQiQAWd9y54F4XZ\", \"tabby\"")
-        );
+        ); // 2. 帮助内容
 
-    LOCK2(cs_main, pwalletMain->cs_wallet); // 钱包上锁
+    LOCK2(cs_main, pwalletMain->cs_wallet);
 
-    CBitcoinAddress address(params[0].get_str()); // 获取指定的比特币地址
-    if (!address.IsValid()) // 验证地址是否有效
+    CBitcoinAddress address(params[0].get_str());
+    if (!address.IsValid())
         throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, "Invalid Bitcoin address");
 
     string strAccount;
     if (params.size() > 1)
-        strAccount = AccountFromValue(params[1]); // 获取指定的账户
+        strAccount = AccountFromValue(params[1]);
 
-    // Only add the account if the address is yours. // 如果该地址是你的，只需添加账户
-    if (IsMine(*pwalletMain, address.Get())) // 若该地址是我的
+    // Only add the account if the address is yours.
+    if (IsMine(*pwalletMain, address.Get())) // 如果该地址是你的则只添加账户。
     {
-        // Detect when changing the account of an address that is the 'unused current key' of another account: // 侦测到
-        if (pwalletMain->mapAddressBook.count(address.Get())) // 若该地址在地址簿中
+        // Detect when changing the account of an address that is the 'unused current key' of another account:
+        if (pwalletMain->mapAddressBook.count(address.Get())) // 当改变一个账户的地址是另一账户的“当前未使用的密钥”时检测：
         {
-            string strOldAccount = pwalletMain->mapAddressBook[address.Get()].name; // 获取地址关联的旧账户名
-            if (address == GetAccountAddress(strOldAccount)) // 若旧账户关联的地址为指定地址
-                GetAccountAddress(strOldAccount, true); // 先在旧账户下生成一个新地址
+            string strOldAccount = pwalletMain->mapAddressBook[address.Get()].name;
+            if (address == GetAccountAddress(strOldAccount))
+                GetAccountAddress(strOldAccount, true); // 3. 在旧账户下生成一个新地址
         }
-        pwalletMain->SetAddressBook(address.Get(), strAccount, "receive"); // 再把该地址关联到指定账户
+        pwalletMain->SetAddressBook(address.Get(), strAccount, "receive"); // 4. 把该地址关联到指定账户
     }
     else
         throw JSONRPCError(RPC_MISC_ERROR, "setaccount can only be used with own address");
 
-    return NullUniValue; // 返回空值
+    return NullUniValue;
 }
 ```
 
-基本流程：
-1. 确保钱包当前可用（已初始化完成）。
-2. 处理命令帮助和参数个数。
-3. 钱包上锁。
-4. 获取相关参数：指定的地址和账户，并验证地址是否有效。
-5. 若该地址属于自己，只需在原账户下新建地址并改变指定地址关联的账户，否则报错。
-6. 返回空值。
+### 2.1. 确保钱包可用
 
-第五步，调用 GetAccountAddress(strOldAccount, true) 函数在旧账户下生成新地址，该函数定义在“wallet/rpcwallet.cpp”文件中。
+参考[比特币 RPC 命令剖析 "fundrawtransaction" 2.1. 确保钱包可用](/blog/2018/07/bitcoin-rpc-command-fundrawtransaction.html#21-确保钱包可用)。
+
+### 2.2. 帮助内容
+
+参考[比特币 RPC 命令剖析 "getbestblockhash" 2.1. 帮助内容](/blog/2018/05/bitcoin-rpc-command-getbestblockhash.html#21-帮助内容)。
+
+### 2.3. 在旧账户下生成一个新地址
+
+函数 `GetAccountAddress(strOldAccount, true)` 定义在文件 `wallet/rpcwallet.cpp` 中。
 
 ```cpp
 CBitcoinAddress GetAccountAddress(string strAccount, bool bForceNew=false)
@@ -152,4 +136,7 @@ CBitcoinAddress GetAccountAddress(string strAccount, bool bForceNew=false)
 ## 参考链接
 
 * [bitcoin/rpcserver.h at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/rpcserver.h){:target="_blank"}
+* [bitcoin/rpcserver.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/rpcserver.cpp){:target="_blank"}
 * [bitcoin/rpcwallet.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/wallet/rpcwallet.cpp){:target="_blank"}
+* [bitcoin/init.h at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/init.h){:target="_blank"}
+* [bitcoin/init.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/init.cpp){:target="_blank"}
