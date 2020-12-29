@@ -181,7 +181,10 @@ excerpt: Here are my favorite quotes from someones that inspire me or make me la
 > 緑のお父さん「パパのお弁当は世界一」：
 > * 人生はいろいろある、苦しい時も悲しい時も自分を信じていれば楽しい事がやってくるよ。
 
-> ゲーテ「コンフィデンスマンJP ーロマンス編ー」：
+> ダー子「コンフィデンスマンJP プリンセス編」：
+> * 本物も偽物もない。信じればそれが真実。
+
+> ゲーテ「コンフィデンスマンJP ロマンス編」：
 > * 人に欺かれるのではない。自分が己を欺くのである。
 > * We are never deceived; we deceive ourselves.
 
