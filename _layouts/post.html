@@ -7,13 +7,13 @@ layout: default
             <p class="post-meta">
               <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
                 <svg class="icon" viewBox="0 0 448 512">
-                  <use xlink:href="/assets/icons/misc.svg#calendar"></use>
+                  <use xlink:href="/assets/icons/.svg#calendar"></use>
                 </svg>
                 <abbr title="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%b %d, %Y" }}</abbr>
               </time>
               <span itemprop="author" itemscope itemtype="http://schema.org/Person">|
                 <svg class="icon" viewBox="0 0 448 512">
-                  <use xlink:href="/assets/icons/misc.svg#user"></use>
+                  <use xlink:href="/assets/icons/.svg#user"></use>
                 </svg>
                 <span itemprop="name">
                   <a href="{{ site.about }}" title="{{ site.author }}">{% if page.author %}{{ page.author }}{% else %}{{ site.root }}{% endif %}</a>
@@ -21,25 +21,25 @@ layout: default
               </span>
               <span>|
                 <svg class="icon" viewBox="0 0 512 512">
-                  <use xlink:href="/assets/icons/misc.svg#copyright"></use>
+                  <use xlink:href="/assets/icons/.svg#copyright"></use>
                 </svg>
                 <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh" title="知识共享 署名-非商业性使用-禁止演绎 4.0 国际 许可协议" target="_blank">CC BY-NC-ND</a>
               </span>
               <span>|
                 <svg class="icon" viewBox="0 0 384 512">
-                  <use xlink:href="/assets/icons/misc.svg#words"></use>
+                  <use xlink:href="/assets/icons/.svg#words"></use>
                 </svg>
                 <span>{% assign words = page.content | strip_html | strip_newlines | remove: " " | size %}{% if words >= 1000 %}{% assign thousands = words | divided_by: 1000 %}{% assign hundreds = words | modulo: 1000 | divided_by: 100 %}{% assign tensones = words | modulo: 100 %}{% if hundreds == 0 %}{% if tensones >= 50 %}{{ thousands }}.{{ hundreds | plus: 1 }}{% else %}{{ thousands }}{% endif %}{% elsif hundreds == 9 %}{% if tensones >= 50 %}{{ thousands | plus: 1 }}{% else %}{{ thousands }}.{{ hundreds }}{% endif %}{% else %}{{ thousands }}.{% if tensones >= 50 %}{{ hundreds | plus: 1 }}{% else %}{{ hundreds }}{% endif %}{% endif %}k{% else %}{{ words }}{% endif %}</span>
               </span>
               <span>|
                 <svg class="icon" viewBox="0 0 640 512">
-                  <use xlink:href="/assets/icons/misc.svg#tags"></use>
+                  <use xlink:href="/assets/icons/.svg#tags"></use>
                 </svg>{% for tag in page.tags %}
                 <a href="{{ site.tag }}#{{ tag }}">{{ tag }}</a>{% endfor %}
               </span>{% if page.comments %}
               <span>|
                 <svg class="icon" viewBox="0 0 576 512">
-                  <use xlink:href="/assets/icons/misc.svg#comments"></use>
+                  <use xlink:href="/assets/icons/.svg#comments"></use>
                 </svg>
                 <script>
                   var idcomments_acct = 'b051fd1ebb6d822f554a521d0827b1d8';
