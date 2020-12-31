@@ -6,6 +6,7 @@
     <meta name="generator" content="Jekyll v{{ jekyll.version }}">
     <title>{% if page.layout != "default" %}{% if page.url contains site.blog %}{{ page.title | append: " | " | append: site.subtitle }}{% else %}{{ page.title | append: " | " | append: site.root }}{% endif %}{% elsif page.url == "/" %}{{ site.title | append: " | " | append: site.root }}{% elsif page.url == site.blog %}{{ site.subtitle }}{% endif %}</title>
     <meta property="og:title" content="{% if page.layout != "default" %}{{ page.title | escape }}{% elsif page.url == "/" %}{{ site.title }}{% elsif page.url == site.blog %}{{ site.subtitle }}{% endif %}">
+    <script src="/assets/js/hidden.js"></script>
     <meta name="author" content="{{ site.root }}">
     <meta property="og:locale" content="zh_CN">
     <meta name="description" content="{% if page.layout == "post" %}{{ page.excerpt | markdownify | strip_newlines | strip_html | escape }}{% elsif page.layout == "page" or page.layout == "error" %}{{ page.excerpt }}{% elsif page.url == "/" %}{{ site.description }}{% elsif page.url == site.blog %}{{ site.description | replace_first: site.title, site.subtitle }}{% endif %}">

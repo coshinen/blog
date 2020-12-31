@@ -23,11 +23,12 @@ All posts are released under a [Creative Commons Attribution-NonCommercial-NoDer
 
 ## Timeline
 
-* 2020.09.12 [-] assets: ~~js~~ (unnecessary)
+* 2020.12.31 [+] assets: js
 
 <details>
 <summary>history</summary>
 
+* 2020.09.12 [-] assets: ~~js~~ (unnecessary)
 * 2020.08.25 [-] blog page: ~~sticky post~~ (unnecessary)
 * 2020.08.08 [-] assets: ~~images~~ (unnecessary); [+] assets: icons
 * 2020.07.01 [-] README: ~~Todo list~~ (unnecessary)
