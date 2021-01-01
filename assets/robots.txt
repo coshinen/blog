@@ -2,19 +2,7 @@
 layout: none
 permalink: /robots.txt
 ---
-User-agent: Googlebot
-Allow: /
-
-User-agent: Bingbot
-Allow: /
-
-User-agent: Slurp
-Allow: /
-
-User-agent: Baiduspider
-Allow: /
-
 User-agent: *
-Disallow: /
+Allow: /
 
 Sitemap: {{ "/sitemap.xml" | absolute_url }}
