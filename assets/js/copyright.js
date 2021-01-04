@@ -20,13 +20,8 @@ function setClipboardData(event) {
     var clipboardData = event.clipboardData || window.clipboardData;
     if (clipboardData) {
         event.preventDefault();
-
         var textData = '“' + window.getSelection().toString() + '”\n\n'
-            + 'Excerpt From: '
-            + 'mistydew\'s blog, '
-            + window.location.href
-            + '.';
-
+            + 'Excerpt From: mistydew\'s blog, ' + window.location.href + '.';
         clipboardData.setData('text/plain', textData);
     }
 };
