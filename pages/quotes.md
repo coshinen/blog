@@ -5,21 +5,28 @@ permalink: /quotes.html
 excerpt: Here are my favorite quotes from someones that inspire me or make me laugh.
 ---
 > Paul Graham, [What You'll Wish You'd Known](http://www.paulgraham.com/hs.html){:target="_blank"}:
-> * Your life doesn't have to be shaped by admissions officers. It could be shaped by your own curiosity. It is for all ambitious adults. And you don't have to wait to start.
-> In fact, you don't have to wait to be an adult. There's no switch inside you that magically flips when you turn a certain age or graduate from some institution.
-> You start being an adult when you decide to take responsibility for your life. You can do that at any age.
-> * Fouls happen. The thing to do when you get fouled is not to lose your cool. Just keep playing.
-> * The best protection is always to be working on hard problems. Writing novels is hard. Reading novels isn't.
-> Hard means worry: if you're not worrying that something you're making will come out badly, or that you won't be able to understand something you're studying, then it isn't hard enough. There has to be suspense.
+> * Your life doesn't have to be shaped by admissions officers. It could be
+> shaped by your own curiosity. It is for all ambitious adults. And you don't
+> have to wait to start. In fact, you don't have to wait to be an adult. There's
+> no switch inside you that magically flips when you turn a certain age or
+> graduate from some institution. You start being an adult when you decide to
+> take responsibility for your life. You can do that at any age.
+> * Fouls happen. The thing to do when you get fouled is not to lose your cool.
+> Just keep playing.
+> * The best protection is always to be working on hard problems. Writing novels
+> is hard. Reading novels isn't. Hard means worry: if you're not worrying that
+> something you're making will come out badly, or that you won't be able to
+> understand something you're studying, then it isn't hard enough. There has to
+> be suspense.
 
 > Steve Jobs, [Text of Steve Jobs' Commencement address (2005)](https://news.stanford.edu/2005/06/14/jobs-061505){:target="_blank"}:
 > * Stay Hungry. Stay Foolish.
-> * Your time is limited, so don't waste it living someone else's life.
-> Don't be trapped by dogma - which is living with the results of other people's thinking.
-> Don't let the noise of others' opinions drown out your own inner voice.
-> And most important, have the courage to follow your heart and intuition.
-> They somehow already know what you truly want to become.
-> Everything else is secondary.
+> * Your time is limited, so don't waste it living someone else's life. Don't be
+> trapped by dogma - which is living with the results of other people's thinking
+> . Don't let the noise of others' opinions drown out your own inner voice. And
+> most important, have the courage to follow your heart and intuition. They
+> somehow already know what you truly want to become. Everything else is
+> secondary.
 
 > Linus Torvalds, [Re: log-buf-len dynamic](https://lkml.org/lkml/2003/9/23/215){:target="_blank"}, [Reference](https://shlomif.livejournal.com/39215.html){:target="_blank"}:
 > * Those that can, do. Those that can't, complain.
@@ -28,8 +35,8 @@ excerpt: Here are my favorite quotes from someones that inspire me or make me la
 > * Talk is cheap. Show me the code.
 
 > Satoshi Nakamoto, [Bitcoin P2P e-cash paper](https://www.metzdowd.com/pipermail/cryptography/2008-November/014853.html){:target="_blank"}:
-> * It's very attractive to the libertarian viewpoint if we can explain it properly.
-> I'm better with code than with words though.
+> * It's very attractive to the libertarian viewpoint if we can explain it
+> properly. I'm better with code than with words though.
 
 > Sansa Stark, Game of Thrones, Season 7 Episode 7:
 > * I'm a slow learner, it's true. But I learn.
@@ -57,7 +64,8 @@ excerpt: Here are my favorite quotes from someones that inspire me or make me la
 
 > Varys, Game of Thrones, Season 2 Episode 3:
 > * Power resides where men believe it resides.
-> It's a trick, a shadow on the wall, and a very smell man can cast a very large shadow.
+> It's a trick, a shadow on the wall, and a very smell man can cast a very large
+> shadow.
 
 > Tyrion Lannister (The Imp), Game of Thrones, Season 1 Episode 1:
 > * Never forget what you are. The rest of the world will not.
@@ -70,47 +78,56 @@ excerpt: Here are my favorite quotes from someones that inspire me or make me la
 > * My mercy prevails over my wrath.
 
 > Raymond Fowler, The Thin Blue Line, Series 2 Episode 1, Court in the Act:
-> * Even our greatest and most revered institutions, are mixtures of good and bad.
-> Those who have had to rummage through the remnants of the Christmas tin of Quality street, will vouch for the truth in that.
-> Nothing is without fault.
-> Even police officers are, as we shall see, like the lottery predictions of Mystic Meg, not completely infallible.
+> * Even our greatest and most revered institutions, are mixtures of good and
+> bad. Those who have had to rummage through the remnants of the Christmas tin
+> of Quality street, will vouch for the truth in that. Nothing is without fault.
+> Even police officers are, as we shall see, like the lottery predictions of
+> Mystic Meg, not completely infallible.
 
 > Raymond Fowler, The Thin Blue Line, Series 1 Episode 4, Rag Week:
-> * When I was at college I suffered from the curious delusion, that I was there to study.
+> * When I was at college I suffered from the curious delusion, that I was there
+> to study.
 
 > Alan Turing, The imitation game:
-> * Sometimes it is the people no one imagines anything of who do the things that no one can imagine.
+> * Sometimes it is the people no one imagines anything of who do the things
+> that no one can imagine.
 
 > J.K. Rowling, [Interview](https://jjmarsh.wordpress.com/2013/08/14/jk-rowling){:target="_blank"}:
 > * Print will never die. There's no substitute for the feel of an actual book.
-> I adore physically turning pages, and being able to underline passages and not worrying about dropping them in the bath or running out of power.
-> I also find print books objects of beauty.
+> I adore physically turning pages, and being able to underline passages and not
+> worrying about dropping them in the bath or running out of power. I also find
+> print books objects of beauty.
 
 > Severus Snape, Harry Potter AND THE DEATHLY HALLOWS PART 2:
 > * You've been raising him like a pig for slaughter.
 
 > Severus Snape, Harry Potter AND THE ORDER OF THE PHOENIX:
-> * Sentimental children forever whining about how bitterly unfair your lives have been.
-> Well, it may have escaped your notice, but life isn't fair.
+> * Sentimental children forever whining about how bitterly unfair your lives
+> have been. Well, it may have escaped your notice, but life isn't fair.
 
 > The Marauder's Map, Harry Potter AND THE PRISONER OF AZKABAN:
 > * I solemnly swear that I am up to no good.
 
 > Albus Dumbledore, Harry Potter AND THE PRISONER OF AZKABAN:
-> * Oh, and by the way. When in doubt, I find retracing my steps to be a wise place to begin.
-> * A child's voice, however honest and true is meaningless to those who have forgotten how to listen.
+> * Oh, and by the way. When in doubt, I find retracing my steps to be a wise
+> place to begin.
+> * A child's voice, however honest and true is meaningless to those who have
+> forgotten how to listen.
 
 > Albus Dumbledore, Harry Potter AND THE CHAMBER OF SECRETS:
 > * It is not our abilities that show what we truly are. It is our choices.
 
 > Voldemort, Harry Potter AND THE PHILOSOPHER'S STONE:
-> * There is no good and evil, there is only power, and those too weak to seek it.
+> * There is no good and evil, there is only power, and those too weak to seek
+> it.
 
 > Hermione Granger, Harry Potter AND THE PHILOSOPHER'S STONE:
-> * Me? Books and cleverness. There are more important things, friendship and bravery.
+> * Me? Books and cleverness. There are more important things, friendship and
+> bravery.
 
 > Albus Dumbledore, Harry Potter AND THE PHILOSOPHER'S STONE:
-> * It takes a great deal of bravery to stand up to your enemies, but a great deal more to stand up to your friends.
+> * It takes a great deal of bravery to stand up to your enemies, but a great
+> deal more to stand up to your friends.
 > * It does not do to dwell on dreams, and forget to live.
 
 > Severus Snape, Harry Potter AND THE PHILOSOPHER'S STONE:
@@ -123,9 +140,11 @@ excerpt: Here are my favorite quotes from someones that inspire me or make me la
 > * If you only do what you can do, you will never be more than you are now.
 
 > Master Oogway, Kung Fu Panda, 3:
-> * Inner peace. Inner peace. Itchy nose. Ah-choo! Finally, inner peace. Now, what?
-> * Quit? Don't quit. Noodles? Don't noodles. You are too concerned with what was and what will be.
-> There's a saying: Yesterday is history, tomorrow is a mystery, but today is a gift. That is why it is called the present.
+> * Inner peace. Inner peace. Itchy nose. Ah-choo! Finally, inner peace. Now,
+> what?
+> * Quit? Don't quit. Noodles? Don't noodles. You are too concerned with what
+> was and what will be. There's a saying: Yesterday is history, tomorrow is a
+> mystery, but today is a gift. That is why it is called the present.
 > * There are no accidents.
 > * One often meets his destiny on the road he takes to avoid it.
 > * Nothing is impossible.
@@ -137,8 +156,11 @@ excerpt: Here are my favorite quotes from someones that inspire me or make me la
 > * The unexamined life is not worth living.
 
 > Benjamin Franklin, The Autobiography of Benjamin Franklin, PART THREE:
-> * This is another instance of the truth of an old maxim I had learned, which says, "He that has once done you a kindness will be more ready to do you another, than he whom you yourself have obliged."
-> And it shows how much more profitable it is prudently to remove, than to resent, return, and continue inimical proceedings.
+> * This is another instance of the truth of an old maxim I had learned, which
+> says, "He that has once done you a kindness will be more ready to do you
+> another, than he whom you yourself have obliged." And it shows how much more
+> profitable it is prudently to remove, than to resent, return, and continue
+> inimical proceedings.
 
 > Benjamin Franklin, The Autobiography of Benjamin Franklin, PART TWO, Thirteen Names of Virtues:
 > * TEMPERANCE. Eat not to dullness; drink not to elevation.
@@ -156,13 +178,16 @@ excerpt: Here are my favorite quotes from someones that inspire me or make me la
 > * HUMILITY. Imitate Jesus and Socrates.
 
 > Martin Luther King, Jr.:
-> * In the End, we will remember not the words of our enemies, but the silence of our friends.
+> * In the End, we will remember not the words of our enemies, but the silence
+> of our friends.
 
 > Mahatma Gandhi:
-> * First they ignore you, then they laugh at you, then they fight you, then you win.
+> * First they ignore you, then they laugh at you, then they fight you, then you
+> win.
 
 > Evelyn Beatrice Hall:
-> * I do not agree with what you have to say, but I'll defend to the death your right to say it.
+> * I do not agree with what you have to say, but I'll defend to the death your
+> right to say it.
 
 > George Orwell:
 > * The very concept of objective truth is fading out of the world.
@@ -441,28 +466,35 @@ excerpt: Here are my favorite quotes from someones that inspire me or make me la
 > * ポーカーフェイスを忘れるな。父の言葉を胸にして、摩天楼を駆けるミラクルマジシャン。怪盗キッド参上。今日のターゲットは…さあ、ショーの始まりだ。
 
 > Sherlock Holmes, BBC SHERLOCK, Series 4 Episode 2, The Lying Detective:
-> * Must be something comforting about the number three, people always give up after three.
+> * Must be something comforting about the number three, people always give up
+> after three.
 
 > Sherlock Holmes, BBC SHERLOCK, Series 3 Episode 3, His Last Vow:
-> * Oh, do your research. I'm not a hero, I'm a high-functioning sociopath. Merry Christmas!
+> * Oh, do your research. I'm not a hero, I'm a high-functioning sociopath.
+> Merry Christmas!
 
 > Sherlock Holmes, BBC SHERLOCK, Series 2 Episode 3, The Reichenbach Fall:
-> * I may be on the side of the angels, but don't think for one second that I am one of them.
+> * I may be on the side of the angels, but don't think for one second that I am
+> one of them.
 > * Alone is what I have. Alone protects me.
 
 > Sherlock Holmes, BBC SHERLOCK, Series 2 Episode 2, The Hounds of Baskerville:
-> * Once you've ruled out the impossible, whatever remains, however improbable, must be true.
+> * Once you've ruled out the impossible, whatever remains, however improbable,
+> must be true.
 
 > Sherlock Holmes, BBC SHERLOCK, Series 2 Episode 1, A Scandal in Belgravia:
 > * Sentiment is a chemical defect found in the losing side.
 
 > Sherlock Holmes, BBC SHERLOCK, Series 1 Episode 3, The Great Game:
 > * People don't like telling you things, but they love to contradict you.
-> * Listen, this is my hard drive, and it only makes sense to put things in there that are useful, REALLY useful.
+> * Listen, this is my hard drive, and it only makes sense to put things in
+> there that are useful, REALLY useful.
 
 > Sherlock Holmes, BBC SHERLOCK, Series 1 Episode 2, The Blind Banker:
 > * I don't eat when I'm working. Digesting slows me down.
-> * You want to hide a tree, then a forest is the best place to do it, wouldn't you say? People would just walk straight past, not knowing, unable to decipher the message.
+> * You want to hide a tree, then a forest is the best place to do it, wouldn't
+> you say? People would just walk straight past, not knowing, unable to decipher
+> the message.
 
 > Sherlock Holmes, BBC SHERLOCK, Series 1 Episode 1, A Study in Pink:
 > * Come at once if convenient. If inconvenient come anyway.
@@ -473,52 +505,73 @@ excerpt: Here are my favorite quotes from someones that inspire me or make me la
 > Sherlock Holmes, A Game of Shadows:
 > * Come at once if convenient, if inconvenient come all the same.
 > * You've paid me several compliments.
-> Let me pay you one in return when I say that if I were assured of the former eventuality I would cheerfully accept the latter.
+> Let me pay you one in return when I say that if I were assured of the former
+> eventuality I would cheerfully accept the latter.
 
 > Sherlock Holmes, [The Return of Sherlock Holmes, The Adventure of the Dancing Men](https://standardebooks.org/ebooks/arthur-conan-doyle/the-return-of-sherlock-holmes/text/the-adventure-of-the-dancing-men){:target="_blank"}:
-> * It is not really difficult to construct a series of inferences, each dependent upon its predecessor and each simple in itself.
-> If, after doing so, one simply knocks out all the central inferences and presents one's audience with the starting-point and the conclusion, one may produce a startling, though possibly a meretricious, effect.
+> * It is not really difficult to construct a series of inferences, each
+> dependent upon its predecessor and each simple in itself. If, after doing so,
+> one simply knocks out all the central inferences and presents one's audience
+> with the starting-point and the conclusion, one may produce a startling,
+> though possibly a meretricious, effect.
 
 > Sherlock Holmes, [The Memoirs of Sherlock Holmes, The Final Problem](https://standardebooks.org/ebooks/arthur-conan-doyle/the-memoirs-of-sherlock-holmes/text/the-final-problem){:target="_blank"}:
 > * " 'You have paid me several compliments, Mr. Moriarty,' said I.
-> 'Let me pay you one in return when I say that if I were assured of the former eventuality I would, in the interests of the public, cheerfully accept the latter.'
+> 'Let me pay you one in return when I say that if I were assured of the former
+> eventuality I would, in the interests of the public, cheerfully accept the
+> latter.'
 
 > Sherlock Holmes, [The Adventures of Sherlock Holmes, The Man with the Twisted Lip](https://standardebooks.org/ebooks/arthur-conan-doyle/the-adventures-of-sherlock-holmes/text/the-man-with-the-twisted-lip){:target="_blank"}:
 > * It is, of course, a trifle, but there is nothing so important as trifles.
 
 > Sherlock Holmes, [The Adventures of Sherlock Holmes, A Case of Identity](https://standardebooks.org/ebooks/arthur-conan-doyle/the-adventures-of-sherlock-holmes/text/a-case-of-identity){:target="_blank"}:
-> * It has long been an axiom of mine that the little things are infinitely the most important.
+> * It has long been an axiom of mine that the little things are infinitely the
+> most important.
 
 > Sherlock Holmes, [The Adventures of Sherlock Holmes, A Scandal in Bohemia, I](https://standardebooks.org/ebooks/arthur-conan-doyle/the-adventures-of-sherlock-holmes/text/a-scandal-in-bohemia){:target="_blank"}:
 > * It is a capital mistake to theorise before one has data.
-> Insensibly one begins to twist facts to suit theories, instead of theories to suit facts.
+> Insensibly one begins to twist facts to suit theories, instead of theories to
+> suit facts.
 > * You see, but you do not observe. The distinction is clear.
 
 > Sherlock Holmes, [The Sign of the Four, VI: Sherlock Holmes Gives a Demonstration](https://standardebooks.org/ebooks/arthur-conan-doyle/the-sign-of-the-four/text/chapter-6){:target="_blank"}:
-> * How often have I said to you that when you have eliminated the impossible whatever remains, *however improbable*, must be the truth?
+> * How often have I said to you that when you have eliminated the impossible
+> whatever remains, *however improbable*, must be the truth?
 
 > Sherlock Holmes, [The Sign of the Four, II: The Statement of the Case](https://standardebooks.org/ebooks/arthur-conan-doyle/the-sign-of-the-four/text/chapter-2){:target="_blank"}:
-> * He smiled gently. "It is of the first importance," he said, "not to allow your judgment to be biased by personal qualities.
-> A client is to me a mere unit—a factor in a problem.
-> The emotional qualities are antagonistic to clear reasoning.
-> I assure you that the most winning woman I ever knew was hanged for poisoning three little children for their insurance-money, and the most repellant man of my acquaintance is a philanthropist who has spent nearly a quarter of a million upon the London poor."
+> * He smiled gently. "It is of the first importance," he said, "not to allow
+> your judgment to be biased by personal qualities. A client is to me a mere
+> unit—a factor in a problem. The emotional qualities are antagonistic to clear
+> reasoning. I assure you that the most winning woman I ever knew was hanged for
+> poisoning three little children for their insurance-money, and the most
+> repellant man of my acquaintance is a philanthropist who has spent nearly a
+> quarter of a million upon the London poor."
 
 > Sherlock Holmes, [The Sign of the Four, I: The Science of Deduction](https://standardebooks.org/ebooks/arthur-conan-doyle/the-sign-of-the-four/text/chapter-1){:target="_blank"}:
-> * No, no: I never guess. It is a shocking habit—destructive to the logical faculty.
+> * No, no: I never guess. It is a shocking habit—destructive to the logical
+> faculty.
 > * Eliminate all other factors, and the one which remains must be the truth.
 
 > Sherlock Holmes, [A Study In Scarlet, Part I, V:  Our Advertisement Brings A Visitor](https://standardebooks.org/ebooks/arthur-conan-doyle/a-study-in-scarlet/text/chapter-1-5){:target="_blank"}:
-> * There is a mystery about this which stimulates the imagination; where there is no imagination there is no horror.
+> * There is a mystery about this which stimulates the imagination; where there
+> is no imagination there is no horror.
 
 > Sherlock Holmes, [A Study In Scarlet, Part I, II: The Science Of Deduction](https://standardebooks.org/ebooks/arthur-conan-doyle/a-study-in-scarlet/text/chapter-1-2){:target="_blank"}:
-> * "You see," he explained, "I consider that a man's brain originally is like a little empty attic, and you have to stock it with such furniture as you choose.
-> A fool takes in all the lumber of every sort that he comes across, so that the knowledge which might be useful to him gets crowded out, or at best is jumbled up with a lot of other things so that he has a difficulty in laying his hands upon it.
-> Now the skilful workman is very careful indeed as to what he takes into his brain-attic.
-> He will have nothing but the tools which may help him in doing his work, but of these he has a large assortment, and all in the most perfect order.
-> It is a mistake to think that that little room has elastic walls and can distend to any extent.
-> Depend upon it there comes a time when for every addition of knowledge you forget something that you knew before.
-> It is of the highest importance, therefore, not to have useless facts elbowing out the useful ones."
+> * "You see," he explained, "I consider that a man's brain originally is like a
+> little empty attic, and you have to stock it with such furniture as you choose
+> . A fool takes in all the lumber of every sort that he comes across, so that
+> the knowledge which might be useful to him gets crowded out, or at best is
+> jumbled up with a lot of other things so that he has a difficulty in laying
+> his hands upon it. Now the skilful workman is very careful indeed as to what
+> he takes into his brain-attic. He will have nothing but the tools which may
+> help him in doing his work, but of these he has a large assortment, and all in
+> the most perfect order. It is a mistake to think that that little room has
+> elastic walls and can distend to any extent. Depend upon it there comes a time
+> when for every addition of knowledge you forget something that you knew before
+> . It is of the highest importance, therefore, not to have useless facts
+> elbowing out the useful ones."
 
 > Egaeus, [Short Fiction, Berenice](https://standardebooks.org/ebooks/edgar-allan-poe/short-fiction/text/berenice){:target="_blank"}:
-> * But as, in ethics, evil is a consequence of good, so, in fact, out of joy is sorrow born.
-> Either the memory of past bliss is the anguish of today, or the agonies which are, have their origin in the ecstasies which might have been.
+> * But as, in ethics, evil is a consequence of good, so, in fact, out of joy is
+> sorrow born. Either the memory of past bliss is the anguish of today, or the
+> agonies which are, have their origin in the ecstasies which might have been.
