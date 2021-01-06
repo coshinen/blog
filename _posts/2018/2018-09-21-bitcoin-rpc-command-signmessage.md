@@ -1,68 +1,61 @@
 ---
 layout: post
 title:  "比特币 RPC 命令剖析 \"signmessage\""
-date:   2018-09-21 09:51:33 +0800
+date:   2018-09-21 20:51:33 +0800
 author: mistydew
 comments: true
 category: 区块链
 tags: Bitcoin bitcoin-cli
 excerpt: $ bitcoin-cli signmessage "bitcoinaddress" "message"
 ---
-## 提示说明
+## 1. 帮助内容
 
 ```shell
-signmessage "bitcoinaddress" "message" # 使用一个地址的私钥签名一个消息
-```
+$ bitcoin-cli help signmessage
+signmessage "bitcoinaddress" "message"
+
+使用一个地址的私钥签名一条消息。
 
 参数：
-1. bitcoinaddress（字符串，必备）拥有对应私钥的比特币地址。
-2. message（字符串，必备）用于创建一个签名的消息。
+1. "bitcoinaddress"（字符串，必备）用于私钥的比特币地址。
+2. "message"       （字符串，必备）用来创建一个签名的消息。
 
-结果：（字符串）返回 base64 编码的消息的签名。
+结果：
+"signature"（字符串）base 64 编码的消息的签名
 
-## 用法示例
+例子：
 
-### 比特币核心客户端
+解锁钱包 30 秒
+> bitcoin-cli walletpassphrase "mypassphrase" 30
 
-1. 若钱包加密了，需使用 [walletpassphrase](/blog/2018/09/bitcoin-rpc-command-walletpassphrase.html) 解锁钱包数秒。
-2. 使用此命令对一条消息进行签名。
-3. 使用 [verifymessage](/blog/2018/07/bitcoin-rpc-command-verifymessage.html) 验证消息。
+创建签名
+> bitcoin-cli signmessage "1D1ZrZNe3JUo7ZycKEYQQiQAWd9y54F4XZ" "my message"
 
-```shell
-$ bitcoin-cli walletpassphrase "mypasswd" 60
-$ bitcoin-cli getnewaddress
-1DMEoWsZoJJmaaGfhxRsE9yQmxdn6xSGfE
-$ bitcoin-cli signmessage 1DMEoWsZoJJmaaGfhxRsE9yQmxdn6xSGfE "my message"
-H/iROQoxdpDoQcWwbtd481fUZqyUhf2b/bFCsQqb/NanKrRAJtg9CkvGCFuTL9dn8BDfZULo4uduQi20mZFKDbQ=
-$ bitcoin-cli verifymessage 1DMEoWsZoJJmaaGfhxRsE9yQmxdn6xSGfE H/iROQoxdpDoQcWwbtd481fUZqyUhf2b/bFCsQqb/NanKrRAJtg9CkvGCFuTL9dn8BDfZULo4uduQi20mZFKDbQ= "my message"
-true
+验证签名
+> bitcoin-cli verifymessage "1D1ZrZNe3JUo7ZycKEYQQiQAWd9y54F4XZ" "signature" "my message"
+
+作为 json rpc
+> curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "signmessage", "params": ["1D1ZrZNe3JUo7ZycKEYQQiQAWd9y54F4XZ", "my message"] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
 ```
 
-### cURL
+## 2. 源码剖析
 
-```shell
-$ curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "signmessage", "params": ["1DMEoWsZoJJmaaGfhxRsE9yQmxdn6xSGfE", "my message"] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
-{"result":"H/iROQoxdpDoQcWwbtd481fUZqyUhf2b/bFCsQqb/NanKrRAJtg9CkvGCFuTL9dn8BDfZULo4uduQi20mZFKDbQ=","error":null,"id":"curltest"}
-```
-
-## 源码剖析
-
-signmessage 对应的函数在“rpcserver.h”文件中被引用。
+`signmessage` 对应的函数在文件 `rpcserver.h` 中被引用。
 
 ```cpp
-extern UniValue signmessage(const UniValue& params, bool fHelp); // 签名消息
+extern UniValue signmessage(const UniValue& params, bool fHelp);
 ```
 
-实现在“wallet/rpcwallet.cpp”文件中。
+实现在文件 `wallet/rpcwallet.cpp` 中。
 
 ```cpp
 UniValue signmessage(const UniValue& params, bool fHelp)
 {
-    if (!EnsureWalletIsAvailable(fHelp)) // 确保当前钱包可用
+    if (!EnsureWalletIsAvailable(fHelp)) // 1. 确保钱包可用
         return NullUniValue;
     
-    if (fHelp || params.size() != 2) // 参数必须为 2 个
-        throw runtime_error( // 命令帮助反馈
+    if (fHelp || params.size() != 2)
+        throw runtime_error(
             "signmessage \"bitcoinaddress\" \"message\"\n"
             "\nSign a message with the private key of an address"
             + HelpRequiringPassphrase() + "\n"
@@ -80,14 +73,14 @@ UniValue signmessage(const UniValue& params, bool fHelp)
             + HelpExampleCli("verifymessage", "\"1D1ZrZNe3JUo7ZycKEYQQiQAWd9y54F4XZ\" \"signature\" \"my message\"") +
             "\nAs json rpc\n"
             + HelpExampleRpc("signmessage", "\"1D1ZrZNe3JUo7ZycKEYQQiQAWd9y54F4XZ\", \"my message\"")
-        );
+        ); // 2. 帮助内容
 
-    LOCK2(cs_main, pwalletMain->cs_wallet); // 钱包上锁
+    LOCK2(cs_main, pwalletMain->cs_wallet);
 
-    EnsureWalletIsUnlocked(); // 确保当前钱包处于解密状态
+    EnsureWalletIsUnlocked(); // 3. 确保钱包已解锁
 
-    string strAddress = params[0].get_str(); // 获取指定地址
-    string strMessage = params[1].get_str(); // 获取消息
+    string strAddress = params[0].get_str();
+    string strMessage = params[1].get_str();
 
     CBitcoinAddress addr(strAddress);
     if (!addr.IsValid()) // 验证地址是否有效
@@ -113,17 +106,18 @@ UniValue signmessage(const UniValue& params, bool fHelp)
 }
 ```
 
-基本流程：
-1. 确保当前钱包可用。
-2. 处理命令帮助和参数个数。
-3. 钱包上锁，并确保当前钱包处于解密状态。
-4. 获取指定的参数：比特币地址，用于签名的消息，并验证地址是否有效。
-5. 获取地址对应的密钥索引，再通过索引获取对应私钥。
-6. 创建哈希写入器对象，导入消息魔术头和指定消息。
-7. 使用私钥对该消息进行签名，并获取签名数据。
-8. base64 编码签名数据并返回。
+### 2.1. 确保钱包可用
+
+参考[比特币 RPC 命令剖析 "fundrawtransaction" 2.1. 确保钱包可用](/blog/2018/07/bitcoin-rpc-command-fundrawtransaction.html#21-确保钱包可用)。
+
+### 2.2. 帮助内容
+
+参考[比特币 RPC 命令剖析 "getbestblockhash" 2.1. 帮助内容](/blog/2018/05/bitcoin-rpc-command-getbestblockhash.html#21-帮助内容)。
 
 ## 参考链接
 
 * [bitcoin/rpcserver.h at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/rpcserver.h){:target="_blank"}
+* [bitcoin/rpcserver.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/rpcserver.cpp){:target="_blank"}
 * [bitcoin/rpcwallet.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/wallet/rpcwallet.cpp){:target="_blank"}
+* [bitcoin/init.h at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/init.h){:target="_blank"}
+* [bitcoin/init.cpp at v0.12.1 · bitcoin/bitcoin](https://github.com/bitcoin/bitcoin/blob/v0.12.1/src/init.cpp){:target="_blank"}
