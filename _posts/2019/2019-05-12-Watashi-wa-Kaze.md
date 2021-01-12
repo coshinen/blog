@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "中森明菜 私は風 歌词"
+title:  "カルメン・マキ 私は風 歌词"
 date:   2019-05-12 20:03:11 +0800
 author: mistydew
 comments: true
@@ -10,7 +10,7 @@ excerpt: あまりに悲しいことばかりで、どこか遠くへ旅にで�
 ---
 ![UTAHIME](https://is5-ssl.mzstatic.com/image/thumb/Music113/v4/97/56/c1/9756c131-fad6-8105-ade0-c915827a9c0b/source/600x600bb.jpg){:.border}
 
-歌手：中森明菜<br>
+歌手：カルメン・マキ&OZ<br>
 作詞：Maki Annette Lovelace<br>
 作曲：春日博文
 
@@ -30,16 +30,17 @@ excerpt: あまりに悲しいことばかりで、どこか遠くへ旅にで�
     あぁ もう涙なんか枯れてしまった<br>
     明日から身軽な私<br>
     風のように自由に生きるわ<br>
-    ひとりぼっちも気楽なものさ<br>
+    ひとりぼっちも あぁ気楽なものさ<br>
     <br>
     あぁ 目をとじて心もとじて<br>
     開いた本もとじてしまえ<br>
     あぁ私は風私は風<br>
     終わりのない旅を続けるの<br>
+    <br>
     あぁ 私を抱いて気のすむように<br>
-    抱いたあとであなたとはお別れよ<br>
+    抱いたあとであなたとはもうお別れよ<br>
     どうせ私は気ままな女<br>
-    気ままな風よ<br>
+    あぁ 気ままな風よ<br>
     <br>
     胸の奥深くうす紫色の 霧が流れる<br>
     誰か教えてよ 私の行く先を<br>
@@ -66,16 +67,17 @@ excerpt: あまりに悲しいことばかりで、どこか遠くへ旅にで�
     啊 眼泪已经枯干了<br>
     明天开始轻松的我<br>
     像风一样自由地活着<br>
-    一个人孤孤单单也轻松<br>
+    一个人孤孤单单 啊也轻松啊<br>
     <br>
     啊 闭上眼然后静下心来<br>
     打开的书也合上<br>
     啊我是风我是风<br>
     继续着没有终点的旅程<br>
+    <br>
     啊 像抱着我的心情一样<br>
-    拥抱过后和你分开<br>
+    拥抱过后和你已经分开<br>
     反正我是个任性的女人<br>
-    任性的风啊<br>
+    啊 任性的风啊<br>
     <br>
     内心深处流淌着紫色的雾<br>
     谁能告诉我 该去哪里<br>
@@ -89,4 +91,5 @@ excerpt: あまりに悲しいことばかりで、どこか遠くへ旅にで�
 ## 参考链接
 
 * [カルメン・マキ 私は風 歌詞 - 歌ネット](https://www.uta-net.com/song/221765/){:target="_blank"}
+* [カルメン・マキ 私は風 & OZ 歌詞 - 歌ネット](https://www.uta-net.com/song/38844/){:target="_blank"}
 * [私は風 : Lyrics : GARNET CROW unofficial website : ガーネットクロウ アンオフィシャルサイト](https://ganekuro.github.io/lyrics/featuring/Watashi-wa-Kaze.html){:target="_blank"}
