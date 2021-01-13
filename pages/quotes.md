@@ -22,11 +22,11 @@ excerpt: Here are my favorite quotes from someones that inspire me or make me la
 > Steve Jobs, [Text of Steve Jobs' Commencement address (2005)](https://news.stanford.edu/2005/06/14/jobs-061505){:target="_blank"}:
 > * Stay Hungry. Stay Foolish.
 > * Your time is limited, so don't waste it living someone else's life. Don't be
-> trapped by dogma - which is living with the results of other people's thinking
-> . Don't let the noise of others' opinions drown out your own inner voice. And
-> most important, have the courage to follow your heart and intuition. They
-> somehow already know what you truly want to become. Everything else is
-> secondary.
+> trapped by dogma - which is living with the results of other people's
+> thinking. Don't let the noise of others' opinions drown out your own inner
+> voice. And most important, have the courage to follow your heart and
+> intuition. They somehow already know what you truly want to become. Everything
+> else is secondary.
 
 > Linus Torvalds, [Re: log-buf-len dynamic](https://lkml.org/lkml/2003/9/23/215){:target="_blank"}, [Reference](https://shlomif.livejournal.com/39215.html){:target="_blank"}:
 > * Those that can, do. Those that can't, complain.
@@ -543,17 +543,17 @@ excerpt: Here are my favorite quotes from someones that inspire me or make me la
 
 > Sherlock Holmes, [A Study In Scarlet, Part I, II: The Science Of Deduction](https://standardebooks.org/ebooks/arthur-conan-doyle/a-study-in-scarlet/text/chapter-1-2){:target="_blank"}:
 > * "You see," he explained, "I consider that a man's brain originally is like a
-> little empty attic, and you have to stock it with such furniture as you choose
-> . A fool takes in all the lumber of every sort that he comes across, so that
-> the knowledge which might be useful to him gets crowded out, or at best is
-> jumbled up with a lot of other things so that he has a difficulty in laying
+> little empty attic, and you have to stock it with such furniture as you
+> choose. A fool takes in all the lumber of every sort that he comes across, so
+> that the knowledge which might be useful to him gets crowded out, or at best
+> is jumbled up with a lot of other things so that he has a difficulty in laying
 > his hands upon it. Now the skilful workman is very careful indeed as to what
 > he takes into his brain-attic. He will have nothing but the tools which may
 > help him in doing his work, but of these he has a large assortment, and all in
 > the most perfect order. It is a mistake to think that that little room has
 > elastic walls and can distend to any extent. Depend upon it there comes a time
-> when for every addition of knowledge you forget something that you knew before
-> . It is of the highest importance, therefore, not to have useless facts
+> when for every addition of knowledge you forget something that you knew
+> before. It is of the highest importance, therefore, not to have useless facts
 > elbowing out the useful ones."
 
 > Egaeus, [Short Fiction, Berenice](https://standardebooks.org/ebooks/edgar-allan-poe/short-fiction/text/berenice){:target="_blank"}:
