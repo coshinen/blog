@@ -186,18 +186,12 @@ a.readmore,
  */
 blockquote {
   background-color: $code-background-color;
-  border: 3px solid $border-color;
-  border-radius: 16px;
-  padding: 10px;
+  border-left: 3px solid $border-color;
+  padding-left: $spacing-unit / 2;
 
   > :last-child {
     margin-bottom: 0;
   }
-}
-
-.home-right blockquote {
-  background-color: transparent;
-  border: 2px solid $border-color;
 }
 
 

@@ -325,7 +325,6 @@ article .contents {
 .original {
   float: left;
   border: 0;
-  border-radius: 0;
   border-right: 3px solid $border-color;
   padding: 0 $spacing-unit / 2 0 0;
   width: calc(50% - (#{$spacing-unit} / 2) - 3px);
