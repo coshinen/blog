@@ -468,6 +468,8 @@ excerpt: Here are my favorite quotes from someones that inspire me or make me la
 > must be true.
 
 > Sherlock Holmes, BBC SHERLOCK, Series 2 Episode 1, A Scandal in Belgravia:
+> * I've always assumed that love is a dangerous disadvantage. Thank you for the
+> final proof.
 > * Sentiment is a chemical defect found in the losing side.
 
 > Sherlock Holmes, BBC SHERLOCK, Series 1 Episode 3, The Great Game:
