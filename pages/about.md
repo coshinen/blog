@@ -8,7 +8,7 @@ The **parallel universe** is based on jekyll/minima.
 
 I'm **mistydew**. And now, I live in Mainland China.
 
-You can subscribe my blog [feed]({{ site.feed }}) to get the latest post.
+You can subscribe my blog [feed]({{ "/blog/atom.xml" | absolute_url }}) to get the latest post.
 
 If you have any great questions, feel free to mail me, and I'll possibly feel free to ignore you.
 

@@ -11,7 +11,6 @@
 * Favicon: [RealFaviconGenerator](https://realfavicongenerator.net)
 * Icon Library: [Font Awesome](https://fontawesome.com)
 * Math Equation: [EqnEditor Render](https://latex.codecogs.com)
-* Web Feed: [Google FeedBurner](https://www.feedburner.com)
 * Diagrams: [PlantUML](https://plantuml.com)
 * Cloud Storage: [OneDrive](https://onedrive.live.com)
 
@@ -23,16 +22,17 @@ All posts are released under a [Creative Commons Attribution-NonCommercial-NoDer
 
 ## Timeline
 
-* 2020.12.31 [+] assets: js
+* 2021.01.18 [-] feed page: ~~Email Subscriptions~~; pages: ~~feed page~~
 
 <details>
 <summary>history</summary>
 
+* 2020.12.31 [+] assets: js
 * 2020.09.12 [-] assets: ~~js~~ (unnecessary)
 * 2020.08.25 [-] blog page: ~~sticky post~~ (unnecessary)
 * 2020.08.08 [-] assets: ~~images~~ (unnecessary); [+] assets: icons
 * 2020.07.01 [-] README: ~~Todo list~~ (unnecessary)
-* 2020.06.18 [+] feed page: Email Subscriptions
+* 2020.06.18 [+] feed page: ~~Email Subscriptions~~
 * 2020.06.02 [+] site: svg icons use symbol
 * 2020.05.30 [+] archive page: archive by month, year
 * 2020.05.02 [+] site: favicon for all browsers and platforms
@@ -59,7 +59,7 @@ All posts are released under a [Creative Commons Attribution-NonCommercial-NoDer
 * 2019.08.18 [+] assets: css, font~~, images and js~~
 * 2019.08.14 [+] about page: PGP key and fingerprint
 * 2019.08.02 [+] site: Simple Jekyll Search
-* 2019.07.18 [+] pages: booklog (reading list) page and feed page
+* 2019.07.18 [+] pages: booklog (reading list) page ~~and feed page~~
 * 2019.07.04 [-] site: ~~Baidu Search~~ (unfriendly); [+] site: DogeDoge Search (Bing-like)
 * 2019.06.21 [-] post: ~~bShare~~ (loading problem); [+] post: ~~AddToAny Share Button~~
 * 2019.06.20 [+] post: ~~bShare~~

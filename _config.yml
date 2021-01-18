@@ -29,7 +29,6 @@ quotes:   "/quotes.html"
 blog:     "/blog/"
 archive:  "/blog/archive.html"
 category: "/blog/category.html"
-feed:     "/blog/feed.html"
 tag:      "/blog/tags.html"
 
 # Where things are
