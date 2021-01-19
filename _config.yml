@@ -13,9 +13,7 @@ title: parallel universe
 blogname: 袁子晨的网络日志
 subtitle: mistydew's blog
 description: >- # this means to ignore newlines until "baseurl:"
-  Welcome to the parallel universe!
-  Powered by Jekyll. Hosted from GitHub.
-  Copyright &copy; 2021 mistydew.
+  Welcome to the parallel universe! Powered by Jekyll. Hosted from GitHub.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://mistydew.github.io" # the base hostname & protocol for your site
 squote: 人生は退屈すれば長く、充実すれば短い。

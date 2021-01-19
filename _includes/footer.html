@@ -4,7 +4,8 @@
           <a href="https://ganekuro.github.io" title="深紅の鴉非公式サイト" target="_blank">
             <svg width="20" height="16" viewBox="0 0 640 512" fill="darkred">
               <use xlink:href="/assets/icons/.svg#crow"></use>
-            </svg></a>
+            </svg>
+          </a>
           <a href="{{ site.quotes }}">{% if page.url contains site.blog %}{{ site.bquote }}{% else %}{{ site.squote }}{% endif %}</a>
         </h2>
         <div class="footer-col-wrapper">
@@ -49,7 +50,7 @@
             </ul>
           </div>
           <div class="footer-col footer-col-3">
-            <p>{% if page.url contains site.blog %}{{ site.description | replace_first: site.title, site.subtitle }}{% else %}{{ site.description }}{% endif %}</p>
+            <p>{% if page.url contains site.blog %}{{ site.description | replace_first: site.title, site.subtitle }}{% else %}{{ site.description }}{% endif %} Copyright &copy; {{ site.time | date: "%Y" }} {{ site.root }}.</p>
           </div>
         </div>
       </div>
