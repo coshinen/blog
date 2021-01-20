@@ -263,7 +263,7 @@ excerpt: Here are my favorite quotes from someones that inspire me or make me la
 > * 人生、退屈すれば長く、充実すれば短い。
 
 > 中村由利「GARNET CROW "le 5 ème anniversaire" L'Histoire de 2000 à 2005」：
-> * 流されていくのは簡単だけれど、変わらないっていうのは一番難しい。
+> * 流されていくのは簡単だけれど、変わらないっていう(こと)のは一番難しい。
 
 > AZUKI 七「[GARNET CROW クリスタル・ゲージ](/blog/2018/09/Crystal-Gauge.html)」：
 > * 何処にいても揺るがぬ ideology、善悪の基準はすべての人に共通じゃない。
