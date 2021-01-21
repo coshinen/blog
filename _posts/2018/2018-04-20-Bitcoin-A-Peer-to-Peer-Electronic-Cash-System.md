@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "比特币白皮书中英对照"
+title:  "比特币白皮书"
 date:   2018-04-20 20:08:10 +0800
 author: mistydew
 comments: true
@@ -37,7 +37,7 @@ excerpt: 比特币是一个创新的支付网络，一种新型的试验性的�
 
 <p align="center">中本聪</p>
 
-**概要.**
+**概要。**
 一个电子现金的纯点对点版本允许在线支付从一方直接发送到另一方，而不通过一个金融机构。
 数字签名提供了部分解决方案，但如果仍需要一个可信的第三方来防止双重花费，其主要优势就丧失了。
 我们提出一个使用点对点网络解决双重花费问题的方案。
@@ -174,11 +174,12 @@ excerpt: 比特币是一个创新的支付网络，一种新型的试验性的�
 工作量证明涉及扫描散列时的值，例如 SHA-256，从一个 0 位数字开始散列。
 所需的平均工作量是指数所需的 0 位数，且能通过执行一个单一散列来验证。
 
-> For our timestamp network, we implement the proof-of-work by incrementing a nonce in the 
-> block until a value is found that gives the block's hash the required zero bits.  Once the CPU 
-> effort has been expended to make it satisfy the proof-of-work, the block cannot be changed 
-> without redoing the work.  As later blocks are chained after it, the work to change the block 
-> would include redoing all the blocks after it.
+> For our timestamp network, we implement the proof-of-work by incrementing a
+> nonce in the block until a value is found that gives the block's hash the
+> required zero bits. Once the CPU effort has been expended to make it satisfy
+> the proof-of-work, the block cannot be changed without redoing the work. As
+> later blocks are chained after it, the work to change the block would include
+> redoing all the blocks after it.
 
 对于我们的时间戳网络，我们通过增加块中的一个随机数来实现工作量证明，直到找到一个给定区块哈希所需 0 位数的值。
 一旦 CPU 花费功夫在使其满足工作量证明上，该块在没有重做工作量的情况下不能改变。
@@ -186,15 +187,17 @@ excerpt: 比特币是一个创新的支付网络，一种新型的试验性的�
 
 ![proof-of-work](https://git.dhimmel.com/bitcoin-whitepaper/images/proof-of-work.svg){:.border.center}
 
-> The proof-of-work also solves the problem of determining representation in majority decision 
-> making.  If the majority were based on one-IP-address-one-vote, it could be subverted by anyone 
-> able to allocate many IPs.  Proof-of-work is essentially one-CPU-one-vote.  The majority 
-> decision is represented by the longest chain, which has the greatest proof-of-work effort invested 
-> in it.  If a majority of CPU power is controlled by honest nodes, the honest chain will grow the 
-> fastest and outpace any competing chains.  To modify a past block, an attacker would have to 
-> redo the proof-of-work of the block and all blocks after it and then catch up with and surpass the 
-> work of the honest nodes.  We will show later that the probability of a slower attacker catching up 
-> diminishes exponentially as subsequent blocks are added.
+> The proof-of-work also solves the problem of determining representation in
+> majority decision making. If the majority were based on
+> one-IP-address-one-vote, it could be subverted by anyone able to allocate many
+> IPs. Proof-of-work is essentially one-CPU-one-vote. The majority decision is
+> represented by the longest chain, which has the greatest proof-of-work effort
+> invested in it. If a majority of CPU power is controlled by honest nodes, the
+> honest chain will grow the fastest and outpace any competing chains. To modify
+> a past block, an attacker would have to redo the proof-of-work of the block
+> and all blocks after it and then catch up with and surpass the work of the
+> honest nodes. We will show later that the probability of a slower attacker
+> catching up diminishes exponentially as subsequent blocks are added.
 
 工作量证明也解决了多数决策中确定代表性的问题。
 如果大多数人都是基于一个 IP 地址一个投票，那么任何分配许多 IP 的人都可以破坏它。
@@ -204,9 +207,10 @@ excerpt: 比特币是一个创新的支付网络，一种新型的试验性的�
 为了修改过去的块，一个攻击者必须重做该块和其之后所有块的工作量证明，然后赶上并超过诚实节点的工作。
 我们稍后会展示随着后续块的添加，较慢的攻击者追赶上的概率将呈指数级下降。
 
-> To compensate for increasing hardware speed and varying interest in running nodes over time, 
-> the proof-of-work difficulty is determined by a moving average targeting an average number of 
-> blocks per hour.  If they're generated too fast, the difficulty increases.
+> To compensate for increasing hardware speed and varying interest in running
+> nodes over time, the proof-of-work difficulty is determined by a moving
+> average targeting an average number of blocks per hour. If they're generated
+> too fast, the difficulty increases.
 
 为了补偿增加的硬件速度以及随着时间的推移对运行的节点的兴趣不断变化，工作量证明的难度通过一个变化的平均值确定，以每小时的平均块数为平均值。
 如果它们产生的过快，难度会增加。
@@ -219,9 +223,10 @@ excerpt: 比特币是一个创新的支付网络，一种新型的试验性的�
 > 2) Each node collects new transactions into a block.<br>
 > 3) Each node works on finding a difficult proof-of-work for its block.<br>
 > 4) When a node finds a proof-of-work, it broadcasts the block to all nodes.<br>
-> 5) Nodes accept the block only if all transactions in it are valid and not already spent.<br>
-> 6) Nodes express their acceptance of the block by working on creating the next block in the 
-> chain, using the hash of the accepted block as the previous hash.
+> 5) Nodes accept the block only if all transactions in it are valid and not
+> already spent.<br>
+> 6) Nodes express their acceptance of the block by working on creating the next
+> block in the chain, using the hash of the accepted block as the previous hash.
 
 ## 5. 网络
 
@@ -234,11 +239,12 @@ excerpt: 比特币是一个创新的支付网络，一种新型的试验性的�
 5) 如果其内部所有交易都是有效的且没有已经花费的交易，节点就接受该区块。<br>
 6) 节点通过在链上使用该区块的散列作为前一个区块的散列创建新区块来表达它们接受了该块。
 
-> Nodes always consider the longest chain to be the correct one and will keep working on 
-> extending it.  If two nodes broadcast different versions of the next block simultaneously, some 
-> nodes may receive one or the other first.  In that case, they work on the first one they received, 
-> but save the other branch in case it becomes longer.  The tie will be broken when the next proof-
-> of-work is found and one branch becomes longer; the nodes that were working on the other 
+> Nodes always consider the longest chain to be the correct one and will keep
+> working on extending it. If two nodes broadcast different versions of the next
+> block simultaneously, some nodes may receive one or the other first. In that
+> case, they work on the first one they received, but save the other branch in
+> case it becomes longer. The tie will be broken when the next proof-of-work is
+> found and one branch becomes longer; the nodes that were working on the other
 > branch will then switch to the longer one.
 
 节点总是认为最长的链是正确的并且继续努力扩展该链。
@@ -247,10 +253,11 @@ excerpt: 比特币是一个创新的支付网络，一种新型的试验性的�
 当找到下一个工作量证明并且一个分支变得更长时，两个分支的局势将被打破。
 在另一个分支上工作的节点将会切换到较长的分支上工作。
 
-> New transaction broadcasts do not necessarily need to reach all nodes.  As long as they reach 
-> many nodes, they will get into a block before long.  Block broadcasts are also tolerant of dropped 
-> messages.  If a node does not receive a block, it will request it when it receives the next block and 
-> realizes it missed one.
+> New transaction broadcasts do not necessarily need to reach all nodes. As long
+> as they reach many nodes, they will get into a block before long. Block
+> broadcasts are also tolerant of dropped messages. If a node does not receive a
+> block, it will request it when it receives the next block and realizes it
+> missed one.
 
 新的交易广播不一定需要到达全部节点。
 只要它们到达多个节点，不久它们将会进入一个区块。
@@ -259,11 +266,13 @@ excerpt: 比特币是一个创新的支付网络，一种新型的试验性的�
 
 > ## 6. Incentive
 > 
-> By convention, the first transaction in a block is a special transaction that starts a new coin owned 
-> by the creator of the block.  This adds an incentive for nodes to support the network, and provides 
-> a way to initially distribute coins into circulation, since there is no central authority to issue them. 
-> The steady addition of a constant of amount of new coins is analogous to gold miners expending 
-> resources to add gold to circulation.  In our case, it is CPU time and electricity that is expended.
+> By convention, the first transaction in a block is a special transaction that
+> starts a new coin owned by the creator of the block. This adds an incentive
+> for nodes to support the network, and provides a way to initially distribute
+> coins into circulation, since there is no central authority to issue them. The
+> steady addition of a constant of amount of new coins is analogous to gold
+> miners expending resources to add gold to circulation. In our case, it is CPU
+> time and electricity that is expended.
 
 ## 6. 激励
 
@@ -272,21 +281,23 @@ excerpt: 比特币是一个创新的支付网络，一种新型的试验性的�
 稳定的郑家一定数量的新币类似于黄金矿工花费资源为了增加黄金到流通中。
 在我们的情况中，消耗的是 CPU 时间和电力。
 
-> The incentive can also be funded with transaction fees.  If the output value of a transaction is 
-> less than its input value, the difference is a transaction fee that is added to the incentive value of 
-> the block containing the transaction.  Once a predetermined number of coins have entered 
-> circulation, the incentive can transition entirely to transaction fees and be completely inflation 
-> free.
+> The incentive can also be funded with transaction fees. If the output value of
+> a transaction is less than its input value, the difference is a transaction
+> fee that is added to the incentive value of the block containing the
+> transaction. Once a predetermined number of coins have entered circulation,
+> the incentive can transition entirely to transaction fees and be completely
+> inflation free.
 
 激励也可以用交易费来支付。
 如果一笔交易的输出值小于它的输入值，该差值就是交易费，它被添加到包含该交易的区块激励上。
 一旦预定数量的币进入循环，激励能够完全转变为交易费并且完全没有通货膨胀。
 
-> The incentive may help encourage nodes to stay honest.  If a greedy attacker is able to 
-> assemble more CPU power than all the honest nodes, he would have to choose between using it 
-> to defraud people by stealing back his payments, or using it to generate new coins.  He ought to 
-> find it more profitable to play by the rules, such rules that favour him with more new coins than 
-> everyone else combined, than to undermine the system and the validity of his own wealth.
+> The incentive may help encourage nodes to stay honest. If a greedy attacker is
+> able to assemble more CPU power than all the honest nodes, he would have to
+> choose between using it to defraud people by stealing back his payments, or
+> using it to generate new coins. He ought to find it more profitable to play by
+> the rules, such rules that favour him with more new coins than everyone else
+> combined, than to undermine the system and the validity of his own wealth.
 
 激励可能有助于鼓励节点保持诚实。
 如果是个贪婪的攻击者能够比所有诚实节点聚集更多的 CPU 能力，他将必须选择通过窃取它的付款或使用它来生成新币来欺诈人们。
@@ -294,11 +305,12 @@ excerpt: 比特币是一个创新的支付网络，一种新型的试验性的�
 
 > ## 7. Reclaiming Disk Space
 > 
-> Once the latest transaction in a coin is buried under enough blocks, the spent transactions before 
-> it can be discarded to save disk space.  To facilitate this without breaking the block's hash, 
-> transactions are hashed in a Merkle Tree [[7][2][5]](#references), with only the root included in the block's hash.
-> Old blocks can then be compacted by stubbing off branches of the tree.  The interior hashes do 
-> not need to be stored.
+> Once the latest transaction in a coin is buried under enough blocks, the spent
+> transactions before it can be discarded to save disk space. To facilitate this
+> without breaking the block's hash, transactions are hashed in a Merkle Tree
+> [[7][2][5]](#references), with only the root included in the block's hash. Old
+> blocks can then be compacted by stubbing off branches of the tree. The
+> interior hashes do not need to be stored.
 
 ## 7. 回收硬盘空间
 
@@ -309,11 +321,11 @@ excerpt: 比特币是一个创新的支付网络，一种新型的试验性的�
 
 ![reclaiming-disk-space](https://git.dhimmel.com/bitcoin-whitepaper/images/reclaiming-disk-space.svg){:.border.center}
 
-> A block header with no transactions would be about 80 bytes.  If we suppose blocks are 
-> generated every 10 minutes, 80 bytes * 6 * 24 * 365 = 4.2MB per year.  With computer systems 
-> typically selling with 2GB of RAM as of 2008, and Moore's Law predicting current growth of 
-> 1.2GB per year, storage should not be a problem even if the block headers must be kept in 
-> memory.
+> A block header with no transactions would be about 80 bytes. If we suppose
+> blocks are generated every 10 minutes, 80 bytes * 6 * 24 * 365 = 4.2MB per
+> year. With computer systems typically selling with 2GB of RAM as of 2008, and
+> Moore's Law predicting current growth of 1.2GB per year, storage should not be
+> a problem even if the block headers must be kept in memory.
 
 一个没有交易的区块头大约 80 个字节。
 如果我们假设每 10 分钟产生一个区块，80 字节 * 6 * 24 * 365 = 4.2 兆字节/年。
@@ -321,12 +333,14 @@ excerpt: 比特币是一个创新的支付网络，一种新型的试验性的�
 
 > ## 8. Simplified Payment Verification
 > 
-> It is possible to verify payments without running a full network node.  A user only needs to keep 
-> a copy of the block headers of the longest proof-of-work chain, which he can get by querying 
-> network nodes until he's convinced he has the longest chain, and obtain the Merkle branch 
-> linking the transaction to the block it's timestamped in.  He can't check the transaction for 
-> himself, but by linking it to a place in the chain, he can see that a network node has accepted it, 
-> and blocks added after it further confirm the network has accepted it.
+> It is possible to verify payments without running a full network node. A user
+> only needs to keep a copy of the block headers of the longest proof-of-work
+> chain, which he can get by querying network nodes until he's convinced he has
+> the longest chain, and obtain the Merkle branch linking the transaction to the
+> block it's timestamped in. He can't check the transaction for himself, but by
+> linking it to a place in the chain, he can see that a network node has
+> accepted it, and blocks added after it further confirm the network has
+> accepted it.
 
 ## 8. 简单支付验证
 
@@ -335,14 +349,16 @@ excerpt: 比特币是一个创新的支付网络，一种新型的试验性的�
 
 ![simplified-payment-verification](https://git.dhimmel.com/bitcoin-whitepaper/images/simplified-payment-verification.svg){:.border.center}
 
-> As such, the verification is reliable as long as honest nodes control the network, but is more 
-> vulnerable if the network is overpowered by an attacker.  While network nodes can verify 
-> transactions for themselves, the simplified method can be fooled by an attacker's fabricated 
-> transactions for as long as the attacker can continue to overpower the network.  One strategy to 
-> protect against this would be to accept alerts from network nodes when they detect an invalid 
-> block, prompting the user's software to download the full block and alerted transactions to 
-> confirm the inconsistency.  Businesses that receive frequent payments will probably still want to 
-> run their own nodes for more independent security and quicker verification.
+> As such, the verification is reliable as long as honest nodes control the
+> network, but is more vulnerable if the network is overpowered by an attacker.
+> While network nodes can verify transactions for themselves, the simplified
+> method can be fooled by an attacker's fabricated transactions for as long as
+> the attacker can continue to overpower the network. One strategy to protect
+> against this would be to accept alerts from network nodes when they detect an
+> invalid block, prompting the user's software to download the full block and
+> alerted transactions to confirm the inconsistency. Businesses that receive
+> frequent payments will probably still want to run their own nodes for more
+> independent security and quicker verification.
 
 因此，只要诚实节点控制网络，验证就是可靠的，但如果网络被攻击者控制，则验证会更加脆弱。
 虽然网络节点嫩巩固自己验证交易，但只要攻击者继续压制网络，这种简化的方法就会被攻击者伪造的交易所欺骗。
@@ -351,11 +367,13 @@ excerpt: 比特币是一个创新的支付网络，一种新型的试验性的�
 
 > ## 9. Combining and Splitting Value
 > 
-> Although it would be possible to handle coins individually, it would be unwieldy to make a 
-> separate transaction for every cent in a transfer.  To allow value to be split and combined, 
-> transactions contain multiple inputs and outputs.  Normally there will be either a single input 
-> from a larger previous transaction or multiple inputs combining smaller amounts, and at most two 
-> outputs: one for the payment, and one returning the change, if any, back to the sender.  
+> Although it would be possible to handle coins individually, it would be
+> unwieldy to make a separate transaction for every cent in a transfer. To allow
+> value to be split and combined, transactions contain multiple inputs and
+> outputs. Normally there will be either a single input from a larger previous
+> transaction or multiple inputs combining smaller amounts, and at most two
+> outputs: one for the payment, and one returning the change, if any, back to
+> the sender.
 
 ## 9. 合并与分离价值
 
@@ -365,22 +383,25 @@ excerpt: 比特币是一个创新的支付网络，一种新型的试验性的�
 
 ![combining-splitting-value](https://git.dhimmel.com/bitcoin-whitepaper/images/combining-splitting-value.svg){:.border.center}
 
-> It should be noted that fan-out, where a transaction depends on several transactions, and those 
-> transactions depend on many more, is not a problem here.  There is never the need to extract a 
-> complete standalone copy of a transaction's history.
+> It should be noted that fan-out, where a transaction depends on several
+> transactions, and those transactions depend on many more, is not a problem
+> here. There is never the need to extract a complete standalone copy of a
+> transaction's history.
 
 应该指出，交易依赖多个交易，且这些交易依赖更多的交易，在这里不是一个问题。
 从不需要提取完整的交易历史的独立副本。
 
 > ## 10. Privacy
 > 
-> The traditional banking model achieves a level of privacy by limiting access to information to the 
-> parties involved and the trusted third party.  The necessity to announce all transactions publicly 
-> precludes this method, but privacy can still be maintained by breaking the flow of information in 
-> another place: by keeping public keys anonymous.  The public can see that someone is sending 
-> an amount to someone else, but without information linking the transaction to anyone.  This is 
-> similar to the level of information released by stock exchanges, where the time and size of 
-> individual trades, the "tape", is made public, but without telling who the parties were.
+> The traditional banking model achieves a level of privacy by limiting access
+> to information to the parties involved and the trusted third party. The
+> necessity to announce all transactions publicly precludes this method, but
+> privacy can still be maintained by breaking the flow of information in another
+> place: by keeping public keys anonymous. The public can see that someone is
+> sending an amount to someone else, but without information linking the
+> transaction to anyone. This is similar to the level of information released by
+> stock exchanges, where the time and size of individual trades, the "tape", is
+> made public, but without telling who the parties were.
 
 ## 10. 隐私
 
@@ -391,11 +412,12 @@ excerpt: 比特币是一个创新的支付网络，一种新型的试验性的�
 
 ![privacy](https://git.dhimmel.com/bitcoin-whitepaper/images/privacy.svg){:.border.center}
 
-> As an additional firewall, a new key pair should be used for each transaction to keep them 
-> from being linked to a common owner.  Some linking is still unavoidable with multi-input 
-> transactions, which necessarily reveal that their inputs were owned by the same owner.  The risk 
-> is that if the owner of a key is revealed, linking could reveal other transactions that belonged to 
-> the same owner.
+> As an additional firewall, a new key pair should be used for each transaction
+> to keep them from being linked to a common owner. Some linking is still
+> unavoidable with multi-input transactions, which necessarily reveal that their
+> inputs were owned by the same owner. The risk is that if the owner of a key is
+> revealed, linking could reveal other transactions that belonged to the same
+> owner.
 
 作为附加的防火墙，每笔交易都应该使用一个新密钥对，以防它们连接到共同所有者。
 对于多输入交易，一些连接仍是不可避免的，这必然会表明它们的输入属于相同的所有者。
@@ -403,12 +425,13 @@ excerpt: 比特币是一个创新的支付网络，一种新型的试验性的�
 
 > ## 11. Calculations
 > 
-> We consider the scenario of an attacker trying to generate an alternate chain faster than the honest 
-> chain.  Even if this is accomplished, it does not throw the system open to arbitrary changes, such 
-> as creating value out of thin air or taking money that never belonged to the attacker.  Nodes are 
-> not going to accept an invalid transaction as payment, and honest nodes will never accept a block 
-> containing them.  An attacker can only try to change one of his own transactions to take back 
-> money he recently spent.
+> We consider the scenario of an attacker trying to generate an alternate chain
+> faster than the honest chain. Even if this is accomplished, it does not throw
+> the system open to arbitrary changes, such as creating value out of thin air
+> or taking money that never belonged to the attacker. Nodes are not going to
+> accept an invalid transaction as payment, and honest nodes will never accept a
+> block containing them. An attacker can only try to change one of his own
+> transactions to take back money he recently spent.
 
 ## 11. 计算
 
@@ -417,18 +440,19 @@ excerpt: 比特币是一个创新的支付网络，一种新型的试验性的�
 节点不会接收无效的交易用作支付，诚实的节点永远不会接收一个包含这种交易的区块。
 攻击者只能尝试改变他自己的交易，用来回收他最近花掉的钱。
 
-> The race between the honest chain and an attacker chain can be characterized as a Binomial 
-> Random Walk.  The success event is the honest chain being extended by one block, increasing its 
-> lead by +1, and the failure event is the attacker's chain being extended by one block, reducing the 
-> gap by -1.
+> The race between the honest chain and an attacker chain can be characterized
+> as a Binomial Random Walk. The success event is the honest chain being
+> extended by one block, increasing its lead by +1, and the failure event is the
+> attacker's chain being extended by one block, reducing the gap by -1.
 
 诚实链和攻击者链之间的竞争可以描述为二项式随机游走。
 成功的情况使诚实链延申一个区块，+1 领先，而失败的情况是攻击者链延申一个区块，间距 -1。
 
-> The probability of an attacker catching up from a given deficit is analogous to a Gambler's 
-> Ruin problem.  Suppose a gambler with unlimited credit starts at a deficit and plays potentially an 
-> infinite number of trials to try to reach breakeven.  We can calculate the probability he ever 
-> reaches breakeven, or that an attacker ever catches up with the honest chain, as follows [[8]](#references):
+> The probability of an attacker catching up from a given deficit is analogous
+> to a Gambler's Ruin problem. Suppose a gambler with unlimited credit starts at
+> a deficit and plays potentially an infinite number of trials to try to reach
+> breakeven. We can calculate the probability he ever reaches breakeven, or that
+> an attacker ever catches up with the honest chain, as follows [[8]](#references):
 > 
 > &emsp;p = probability an honest node finds the next block<br>
 > &emsp;q = probability the attacker finds the next block<br>
@@ -444,45 +468,50 @@ excerpt: 比特币是一个创新的支付网络，一种新型的试验性的�
 
 ![math](https://latex.codecogs.com/svg.latex?\large%20q_{z}%20=%20\begin{Bmatrix}%201%20&%20if%20p%20\leqslant%20q%20\\%20\left%20(%20q%20/%20p%20\right%20)^{z}%20&%20if%20p%20%3E%20q%20\end{Bmatrix})
 
-> Given our assumption that p > q, the probability drops exponentially as the number of blocks the 
-> attacker has to catch up with increases.  With the odds against him, if he doesn't make a lucky 
-> lunge forward early on, his chances become vanishingly small as he falls further behind.
+> Given our assumption that p > q, the probability drops exponentially as the
+> number of blocks the attacker has to catch up with increases. With the odds
+> against him, if he doesn't make a lucky lunge forward early on, his chances
+> become vanishingly small as he falls further behind.
 
 根据我们的假设 p > q，随着攻击者追赶上的区块的增加，概率呈指数级减少。
 如果他没有提前向前冲刺，赶上的机会会越来越小，因为他落单了。
 
-> We now consider how long the recipient of a new transaction needs to wait before being 
-> sufficiently certain the sender can't change the transaction.  We assume the sender is an attacker 
-> who wants to make the recipient believe he paid him for a while, then switch it to pay back to 
-> himself after some time has passed.  The receiver will be alerted when that happens, but the 
-> sender hopes it will be too late.
+> We now consider how long the recipient of a new transaction needs to wait
+> before being sufficiently certain the sender can't change the transaction. We
+> assume the sender is an attacker who wants to make the recipient believe he
+> paid him for a while, then switch it to pay back to himself after some time
+> has passed. The receiver will be alerted when that happens, but the sender
+> hopes it will be too late.
 
 我们现在考虑在发送人不能改变交易前，一笔新的交易的收款人需要等多久。
 我们假设发送人是一个想让收款人详细他支付了一会了的攻击者，在过了一段时间后钱又回到他自己。
 当发生这种情况时，这个收款人会收到警报，但发送者希望这个警报已经晚了。
 
-> The receiver generates a new key pair and gives the public key to the sender shortly before 
-> signing.  This prevents the sender from preparing a chain of blocks ahead of time by working on 
-> it continuously until he is lucky enough to get far enough ahead, then executing the transaction at 
-> that moment.  Once the transaction is sent, the dishonest sender starts working in secret on a 
+> The receiver generates a new key pair and gives the public key to the sender
+> shortly before signing. This prevents the sender from preparing a chain of
+> blocks ahead of time by working on it continuously until he is lucky enough to
+> get far enough ahead, then executing the transaction at that moment. Once the
+> transaction is sent, the dishonest sender starts working in secret on a
 > parallel chain containing an alternate version of his transaction.
 
 收款人在签名前不久生成了一个新的密钥对并把公钥给了发送者。
 这可以防止发送者提前准备好区块链，持续在该链上工作直到他有幸前进的足够远。
 一旦交易被发送，不诚实的发送者开始在一条包含他替代版的交易的平行链上秘密工作。
 
-> The recipient waits until the transaction has been added to a block and z blocks have been 
-> linked after it.  He doesn't know the exact amount of progress the attacker has made, but 
-> assuming the honest blocks took the average expected time per block, the attacker's potential 
-> progress will be a Poisson distribution with expected value:
+> The recipient waits until the transaction has been added to a block and z
+> blocks have been linked after it. He doesn't know the exact amount of progress
+> the attacker has made, but assuming the honest blocks took the average
+> expected time per block, the attacker's potential progress will be a Poisson
+> distribution with expected value:
 
 收款人等到交易添加到区块上且 z 个块被链接在该块后面。
 他不知道攻击者进展的具体数量，但假设诚实的区块花费了每个区块被挖出的平均时间，攻击者的潜在进度将是具有预期值的泊松分布：
 
 ![math](https://latex.codecogs.com/svg.latex?\large%20\lambda%20=%20z%20\frac{q}{p})
 
-> To get the probability the attacker could still catch up now, we multiply the Poisson density for 
-> each amount of progress he could have made by the probability he could catch up from that point:
+> To get the probability the attacker could still catch up now, we multiply the
+> Poisson density for each amount of progress he could have made by the
+> probability he could catch up from that point:
 
 为了获得攻击者现在可能仍在追赶的概率，我们将泊松密度乘以他从那个点赶上额概率所取得的进步量：
 
@@ -568,18 +597,21 @@ q=0.45   z=340
 
 > ## 12. Conclusion
 > 
-> We have proposed a system for electronic transactions without relying on trust.  We started with
-> the usual framework of coins made from digital signatures, which provides strong control of
-> ownership, but is incomplete without a way to prevent double-spending.  To solve this, we
-> proposed a peer-to-peer network using proof-of-work to record a public history of transactions
-> that quickly becomes computationally impractical for an attacker to change if honest nodes
-> control a majority of CPU power.  The network is robust in its unstructured simplicity.  Nodes
-> work all at once with little coordination.  They do not need to be identified, since messages are
-> not routed to any particular place and only need to be delivered on a best effort basis.  Nodes can
-> leave and rejoin the network at will, accepting the proof-of-work chain as proof of what
-> happened while they were gone.  They vote with their CPU power, expressing their acceptance of
-> valid blocks by working on extending them and rejecting invalid blocks by refusing to work on
-> them.  Any needed rules and incentives can be enforced with this consensus mechanism.
+> We have proposed a system for electronic transactions without relying on
+> trust. We started with the usual framework of coins made from digital
+> signatures, which provides strong control of ownership, but is incomplete
+> without a way to prevent double-spending. To solve this, we proposed a
+> peer-to-peer network using proof-of-work to record a public history of
+> transactions that quickly becomes computationally impractical for an attacker
+> to change if honest nodes control a majority of CPU power. The network is
+> robust in its unstructured simplicity. Nodes work all at once with little
+> coordination. They do not need to be identified, since messages are not routed
+> to any particular place and only need to be delivered on a best effort basis.
+> Nodes can leave and rejoin the network at will, accepting the proof-of-work
+> chain as proof of what happened while they were gone. They vote with their CPU
+> power, expressing their acceptance of valid blocks by working on extending
+> them and rejecting invalid blocks by refusing to work on them. Any needed
+> rules and incentives can be enforced with this consensus mechanism.
 
 ## 12. 结论
 
@@ -595,21 +627,43 @@ q=0.45   z=340
 
 > ## References
 > 
-> [1] W. Dai, "b-money," [http://www.weidai.com/bmoney.txt](http://www.weidai.com/bmoney.txt){:target="_blank"}, 1998.
+> [1] W. Dai,
+> "b-money," [http://www.weidai.com/bmoney.txt](http://www.weidai.com/bmoney.txt){:target="_blank"},
+> 1998.
 > 
-> [2] H. Massias, X.S. Avila, and J.-J. Quisquater, "[Design of a secure timestamping service with minimal trust requirements](http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.13.6228){:target="_blank"}," In 20th Symposium on Information Theory in the Benelux, May 1999.
+> [2] H. Massias, X.S. Avila, and J.-J. Quisquater,
+> "[Design of a secure timestamping service with minimal trust requirements](http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.13.6228){:target="_blank"},"
+> In 20th Symposium on Information Theory in the Benelux,
+> May 1999.
 > 
-> [3] S. Haber, W.S. Stornetta, "[How to time-stamp a digital document](https://doi.org/10.1007/bf00196791){:target="_blank"}," In Journal of Cryptology, vol 3, no 2, pages 99-111, 1991.
+> [3] S. Haber, W.S. Stornetta,
+> "[How to time-stamp a digital document](https://doi.org/10.1007/bf00196791){:target="_blank"},"
+> In Journal of Cryptology, vol 3, no 2, pages 99-111,
+> 1991.
 > 
-> [4] D. Bayer, S. Haber, W.S. Stornetta, "[Improving the efficiency and reliability of digital time-stamping](https://doi.org/10.1007/978-1-4613-9323-8_24){:target="_blank"}," In Sequences II: Methods in Communication, Security and Computer Science, pages 329-334, 1993.
+> [4] D. Bayer, S. Haber, W.S. Stornetta,
+> "[Improving the efficiency and reliability of digital time-stamping](https://doi.org/10.1007/978-1-4613-9323-8_24){:target="_blank"},"
+> In Sequences II: Methods in Communication, Security and Computer Science, pages 329-334,
+> 1993.
 > 
-> [5] S. Haber, W.S. Stornetta, "[Secure names for bit-strings](https://doi.org/10.1145/266420.266430){:target="_blank"}," In Proceedings of the 4th ACM Conference on Computer and Communications Security, pages 28-35, April 1997.
+> [5] S. Haber, W.S. Stornetta,
+> "[Secure names for bit-strings](https://doi.org/10.1145/266420.266430){:target="_blank"},"
+> In Proceedings of the 4th ACM Conference on Computer and Communications Security, pages 28-35,
+> April 1997.
 > 
-> [6] A. Back, "[Hashcash - a denial of service counter-measure](http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.15.8){:target="_blank"}," [http://www.hashcash.org/papers/hashcash.pdf](http://www.hashcash.org/papers/hashcash.pdf){:target="_blank"}, 2002.
+> [6] A. Back,
+> "[Hashcash - a denial of service counter-measure](http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.15.8){:target="_blank"},"
+> [http://www.hashcash.org/papers/hashcash.pdf](http://www.hashcash.org/papers/hashcash.pdf){:target="_blank"},
+> 2002.
 > 
-> [7] R.C. Merkle, "[Protocols for public key cryptosystems](https://doi.org/10.1109/sp.1980.10006){:target="_blank"}," In Proc. 1980 Symposium on Security and Privacy, IEEE Computer Society, pages 122-133, April 1980.
+> [7] R.C. Merkle,
+> "[Protocols for public key cryptosystems](https://doi.org/10.1109/sp.1980.10006){:target="_blank"},"
+> In Proc. 1980 Symposium on Security and Privacy, IEEE Computer Society, pages 122-133,
+> April 1980.
 > 
-> [8] W. Feller, "[An introduction to probability theory and its applications](https://archive.org/details/AnIntroductionToProbabilityTheoryAndItsApplicationsVolume1){:target="_blank"}," 1957.
+> [8] W. Feller,
+> "[An introduction to probability theory and its applications](https://archive.org/details/AnIntroductionToProbabilityTheoryAndItsApplicationsVolume1){:target="_blank"},"
+> 1957.
 
 ## 参考链接
 

@@ -70,11 +70,11 @@ public:
         vector<int> ret;
         int left = 0, right = matrix[0].size() - 1, top = 0, bottom = matrix.size() - 1;
         while (true) {
-            for (int column = left; column <= right; column++) ret.push_back(matrix[top][column]);
+            for (int col = left; col <= right; col++) ret.push_back(matrix[top][col]);
             if (++top > bottom) break;
             for (int row = top; row <= bottom; row++) ret.push_back(matrix[row][right]);
             if (--right < left) break;
-            for (int column = right; column >= left; column--) ret.push_back(matrix[bottom][column]);
+            for (int col = right; col >= left; col--) ret.push_back(matrix[bottom][col]);
             if (--bottom < top) break;
             for (int row = bottom; row >= top; row--) ret.push_back(matrix[row][left]);
             if (++left > right) break;
