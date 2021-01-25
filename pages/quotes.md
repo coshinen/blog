@@ -241,7 +241,9 @@ excerpt: Here are my favorite quotes from someones that inspire me or make me la
 > * 優子さんが、教えてくれた。喧嘩には理由がなきゃいけない。理由のない喧嘩は、勝っても負けても空しい。
 
 > 宇佐美博人「サバイバル ウェデぃング」：
-> * 大切なのは、どんな選択をするかじゃない。自分が選択した人生を強く生きるかどうか。ただそれだけだ！
+> * 大切なのはどんな選択をするかじゃない！
+> 自分が選択した人生を強く生きるかどうか！
+> ただそれだけだ！
 
 > 音の母から音への手紙「いつかこの恋を思い出してきっと泣いてしまう」：
 > * ブドウの花はブドウの味がする。バナナの花はバナナの味がする。愛するって心から心へ残していく事だと思う。
@@ -263,7 +265,7 @@ excerpt: Here are my favorite quotes from someones that inspire me or make me la
 > * 人生、退屈すれば長く、充実すれば短い。
 
 > 中村由利「GARNET CROW "le 5 ème anniversaire" L'Histoire de 2000 à 2005」：
-> * 流されていくのは簡単だけれど、変わらないっていう(こと)のは一番難しい。
+> * 流されていくのは簡単だけれど、変わらないでいることっていうのは一番難しい。
 
 > AZUKI 七「[GARNET CROW クリスタル・ゲージ](/blog/2018/09/Crystal-Gauge.html)」：
 > * 何処にいても揺るがぬ ideology、善悪の基準はすべての人に共通じゃない。
