@@ -16,7 +16,8 @@ description: >- # this means to ignore newlines until "baseurl:"
   Welcome to the parallel universe! Powered by Jekyll. Hosted from GitHub.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://mistydew.github.io" # the base hostname & protocol for your site
-squote: 人生は退屈すれば長く、充実すれば短い。
+squote: 流されていくのは簡単だけれど、変わらないでいることっていうのは一番難しい。
+iquote: 人生は退屈すれば長く、充実すれば短い。
 bquote: 無理は一番の”退屈しのぎ”だ。
 email: mistydew@qq.com
 
