@@ -275,7 +275,8 @@ excerpt: Here are my favorite quotes from someones that inspire me or make me la
 
 > Joan Baez「Garnet Time 02 AZUKI'S NIGHT」：
 > * 人はどう死ぬか、いつ死ぬか選択できない。どう生きるか、これだけは決められる。さあ決めるのです。
-> * You don't get to choose how you're going to die, or when. You can only decide how you're going to live. Now.
+> * You don't get to choose how you're going to die, or when. You can only
+> decide how you're going to live. Now.
 
 > サイタマ「ワンパンマン 第3話 執念の科学者」：
 > * お前も知りたいのか？いいだろう！ジェノスもよく聞いとけ…
@@ -455,6 +456,9 @@ excerpt: Here are my favorite quotes from someones that inspire me or make me la
 > Sherlock Holmes, BBC SHERLOCK, Series 4 Episode 2, The Lying Detective:
 > * Must be something comforting about the number three, people always give up
 > after three.
+
+> Sherlock Holmes, BBC SHERLOCK, Series 4 Episode 1, The Six Thatchers:
+> * Work is the best antidote to sorrow.
 
 > Sherlock Holmes, BBC SHERLOCK, Series 3 Episode 3, His Last Vow:
 > * Oh, do your research. I'm not a hero, I'm a high-functioning sociopath.
