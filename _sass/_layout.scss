@@ -337,10 +337,16 @@ article .contents {
 }
 
 @include media-query($on-palm) {
-  .original,
-  .translation {
+  .original {
     float: none;
     border: 0;
+    border-left: 3px solid $border-color;
+    padding: 0 $spacing-unit / 2;
+    width: calc(100% - (#{$spacing-unit}) - 3px);
+  }
+
+  .translation {
+    float: none;
     padding: 0;
     width: 100%;
   }
