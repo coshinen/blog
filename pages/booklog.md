@@ -30,7 +30,7 @@ excerpt: Here are some books that renew my spirit or reclaim my life.
 
 > ### 文集
 > 
-> * 王小波全集 第一、二卷 杂文，[中] 王小波
+> * 王小波作品集 杂文卷，[中] 王小波
 > * 暗时间，[中] [刘未鹏](https://mindhacks.cn){:target="_blank"}
 > * 黑客与画家 硅谷创业之父 Paul Graham 文集，[美] [Paul Graham](http://www.paulgraham.com){:target="_blank"}
 > * [前方的路](https://www.ruanyifeng.com/road/){:target="_blank"}，[中] 阮一峰
