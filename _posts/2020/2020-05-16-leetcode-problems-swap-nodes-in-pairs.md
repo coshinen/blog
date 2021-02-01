@@ -12,7 +12,8 @@ excerpt: 给定一条链表，交换每两个相邻的节点并返回它的头�
 > 
 > Given a linked list, swap every two adjacent nodes and return its head.
 > 
-> You may **not** modify the values in the list's nodes, only nodes itself may be changed.
+> You may **not** modify the values in the list's nodes, only nodes itself may
+> be changed.
 > 
 > **Example:**
 > 

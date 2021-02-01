@@ -10,9 +10,12 @@ excerpt: 给定一个字符串数组 `strs`，把**字母异序词**分为一组
 ---
 > ## 49. Group Anagrams
 > 
-> Given an array of strings `strs`, group **the anagrams** together. You can return the answer in **any order**.
+> Given an array of strings `strs`, group **the anagrams** together. You can
+> return the answer in **any order**.
 > 
-> An **Anagram** is a word or phrase formed by rearranging the letters of a different word or phrase, typically using all the original letters exactly once.
+> An **Anagram** is a word or phrase formed by rearranging the letters of a
+> different word or phrase, typically using all the original letters exactly
+> once.
 > 
 > **Example 1:**
 > 

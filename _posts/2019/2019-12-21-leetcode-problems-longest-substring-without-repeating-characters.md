@@ -10,7 +10,8 @@ excerpt: 给定一个字符串，找出没有重复字符的**最长子串**的�
 ---
 > ## 3. Longest Substring Without Repeating Characters
 > 
-> Given a string, find the length of the **longest substring** without repeating characters.
+> Given a string, find the length of the **longest substring** without repeating
+> characters.
 > 
 > **Example 1:**
 > 

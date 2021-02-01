@@ -12,7 +12,8 @@ excerpt: 实现 [strStr()](http://www.cplusplus.com/reference/cstring/strstr/){:
 > 
 > Implement [strStr()](http://www.cplusplus.com/reference/cstring/strstr/){:target="_blank"}.
 > 
-> Return the index of the first occurrence of needle in haystack, or **-1** if needle is not part of haystack.
+> Return the index of the first occurrence of needle in haystack, or **-1** if
+> needle is not part of haystack.
 > 
 > **Example 1:**
 > 
@@ -30,9 +31,12 @@ excerpt: 实现 [strStr()](http://www.cplusplus.com/reference/cstring/strstr/){:
 > 
 > **Clarification:**
 > 
-> What should we return when `needle` is an empty string? This is a great question to ask during an interview.
+> What should we return when `needle` is an empty string? This is a great
+> question to ask during an interview.
 > 
-> For the purpose of this problem, we will return 0 when `needle` is an empty string. This is consistent to C's [strstr()](http://www.cplusplus.com/reference/cstring/strstr/){:target="_blank"} and Java's [indexOf()](https://docs.oracle.com/javase/7/docs/api/java/lang/String.html#indexOf(java.lang.String)){:target="_blank"}.
+> For the purpose of this problem, we will return 0 when `needle` is an empty
+> string. This is consistent to C's [strstr()](http://www.cplusplus.com/reference/cstring/strstr/){:target="_blank"}
+> and Java's [indexOf()](https://docs.oracle.com/javase/7/docs/api/java/lang/String.html#indexOf(java.lang.String)){:target="_blank"}.
 
 ## 解决方案
 

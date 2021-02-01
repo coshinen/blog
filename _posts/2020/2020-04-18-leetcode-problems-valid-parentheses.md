@@ -10,7 +10,8 @@ excerpt: 给定一个只包含字符 `'('`, `')'`, `'{'`, `'}'`, `'['` 和 `']'`
 ---
 > ## 20. Valid Parentheses
 > 
-> Given a string containing just the characters `'('`, `')'`, `'{'`, `'}'`, `'['` and `']'`, determine if the input string is valid.
+> Given a string containing just the characters `'('`, `')'`, `'{'`, `'}'`,
+> `'['` and `']'`, determine if the input string is valid.
 > 
 > An input string is valid if:
 > 
@@ -56,7 +57,9 @@ excerpt: 给定一个只包含字符 `'('`, `')'`, `'{'`, `'}'`, `'['` 和 `']'`
 > 
 > <details>
 > <summary>Hint 1</summary>
-> An interesting property about a valid parenthesis expression is that a sub-expression of a valid expression should also be a valid expression. (Not every sub-expression) e.g.
+> An interesting property about a valid parenthesis expression is that a
+> sub-expression of a valid expression should also be a valid expression. (Not
+> every sub-expression) e.g.
 > <pre>
 > { { } [ ] [ [ [ ] ] ] } is VALID expression
 >           [ [ [ ] ] ]    is VALID sub-expression
@@ -67,7 +70,9 @@ excerpt: 给定一个只包含字符 `'('`, `')'`, `'{'`, `'}'`, `'['` 和 `']'`
 > 
 > <details>
 > <summary>Hint 2</summary>
-> What if whenever we encounter a matching pair of parenthesis in the expression, we simply remove it from the expression? This would keep on shortening the expression. e.g.
+> What if whenever we encounter a matching pair of parenthesis in the
+> expression, we simply remove it from the expression? This would keep on
+> shortening the expression. e.g.
 > <pre>
 > { { ( { } ) } }
 >       |_|
@@ -86,7 +91,10 @@ excerpt: 给定一个只包含字符 `'('`, `')'`, `'{'`, `'}'`, `'['` 和 `']'`
 > 
 > <details>
 > <summary>Hint 3</summary>
-> The <b>stack</b> data structure can come in handy here in representing this recursive structure of the problem. We can't really process this from the inside out because we don't have an idea about the overall structure. But, the stack can help us process this recursively i.e. from outside to inwards.
+> The <b>stack</b> data structure can come in handy here in representing this
+> recursive structure of the problem. We can't really process this from the
+> inside out because we don't have an idea about the overall structure. But, the
+> stack can help us process this recursively i.e. from outside to inwards.
 > </details>
 
 ## 解决方案

@@ -10,7 +10,8 @@ excerpt: 给定一个输入字符串（`s`）和一个模式（`p`），实现�
 ---
 > ## 44. Wildcard Matching
 > 
-> Given an input string (`s`) and a pattern (`p`), implement wildcard pattern matching with support for `'?'` and `'*'`.
+> Given an input string (`s`) and a pattern (`p`), implement wildcard pattern
+> matching with support for `'?'` and `'*'`.
 > 
 > <pre>
 > '?' Matches any single character.
@@ -22,7 +23,8 @@ excerpt: 给定一个输入字符串（`s`）和一个模式（`p`），实现�
 > **Note:**
 > 
 > * `s` could be empty and contains only lowercase letters `a-z`.
-> * `p` could be empty and contains only lowercase letters `a-z`, and characters like `?` or `*`.
+> * `p` could be empty and contains only lowercase letters `a-z`, and characters
+> like `?` or `*`.
 > 
 > **Example 1:**
 > 

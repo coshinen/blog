@@ -10,7 +10,9 @@ excerpt: 给定一个`区间` <code>intervals[i] = [start<sub>i</sub>, end<sub>i
 ---
 > ## 56. Merge Intervals
 > 
-> Given an array of `intervals` where <code>intervals[i] = [start<sub>i</sub>, end<sub>i</sub>]</code>, merge all overlapping intervals, and return *an array of the non-overlapping intervals that cover all the intervals in the input*.
+> Given an array of `intervals` where <code>intervals[i] = [start<sub>i</sub>,
+> end<sub>i</sub>]</code>, merge all overlapping intervals, and return *an array
+> of the non-overlapping intervals that cover all the intervals in the input*.
 > 
 > **Example 1:**
 > 

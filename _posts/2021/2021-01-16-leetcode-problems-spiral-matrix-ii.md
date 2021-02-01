@@ -10,7 +10,8 @@ excerpt: 给定一个正整数 `n`，生成一个含 `1` 到 <code>n<sup>2</sup>
 ---
 > ## 59. Spiral Matrix II
 > 
-> Given a positive integer `n`, generate an `n x n` `matrix` filled with elements from `1` to <code>n<sup>2</sup></code> in spiral order.
+> Given a positive integer `n`, generate an `n x n` `matrix` filled with
+> elements from `1` to <code>n<sup>2</sup></code> in spiral order.
 > 
 > **Example 1:**
 > 

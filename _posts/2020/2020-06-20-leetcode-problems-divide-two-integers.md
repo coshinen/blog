@@ -10,11 +10,14 @@ excerpt: 给定被除数 `dividend` 和除数 `divisor` 两个整数，不使用
 ---
 > ## 29. Divide Two Integers
 > 
-> Given two integers `dividend` and `divisor`, divide two integers without using multiplication, division and mod operator.
+> Given two integers `dividend` and `divisor`, divide two integers without using
+> multiplication, division and mod operator.
 > 
 > Return the quotient after dividing `dividend` by `divisor`.
 > 
-> The integer division should truncate toward zero, which means losing its fractional part. For example, `truncate(8.345) = 8` and `truncate(-2.7335) = -2`.
+> The integer division should truncate toward zero, which means losing its
+> fractional part. For example, `truncate(8.345) = 8` and `truncate(-2.7335) =
+> -2`.
 > 
 > **Example 1:**
 > 
@@ -36,7 +39,10 @@ excerpt: 给定被除数 `dividend` 和除数 `divisor` 两个整数，不使用
 > 
 > * Both dividend and divisor will be 32-bit signed integers.
 > * The divisor will never be 0.
-> * Assume we are dealing with an environment which could only store integers within the 32-bit signed integer range: [−2<sup>31</sup>,  2<sup>31</sup> − 1]. For the purpose of this problem, assume that your function **returns 2<sup>31</sup> − 1 when the division result overflows**.
+> * Assume we are dealing with an environment which could only store integers
+> within the 32-bit signed integer range: [-2<sup>31</sup>,  2<sup>31</sup> -
+> 1]. For the purpose of this problem, assume that your function **returns
+> 2<sup>31</sup> - 1 when the division result overflows**.
 
 ## 解决方案
 

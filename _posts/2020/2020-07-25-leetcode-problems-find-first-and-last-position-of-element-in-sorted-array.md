@@ -10,7 +10,8 @@ excerpt: 给定一个升序排列的整型数组 `nums`，找出一个给定目�
 ---
 > ## 34. Find First and Last Position of Element in Sorted Array
 > 
-> Given an array of integers `nums` sorted in ascending order, find the starting and ending position of a given `target` value.
+> Given an array of integers `nums` sorted in ascending order, find the starting
+> and ending position of a given `target` value.
 > 
 > Your algorithm's runtime complexity must be in the order of O(log n).
 > 

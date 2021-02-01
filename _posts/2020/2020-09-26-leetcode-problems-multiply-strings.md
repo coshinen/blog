@@ -10,7 +10,8 @@ excerpt: 给定两个以字符串形式表示的非负整数 `num1` 和 `num2`�
 ---
 > ## 43. Multiply Strings
 > 
-> Given two non-negative integers `num1` and `num2` represented as strings, return the product of `num1` and `num2`, also represented as a string.
+> Given two non-negative integers `num1` and `num2` represented as strings,
+> return the product of `num1` and `num2`, also represented as a string.
 > 
 > **Example 1:**
 > 
@@ -30,8 +31,10 @@ excerpt: 给定两个以字符串形式表示的非负整数 `num1` 和 `num2`�
 > 
 > 1. The length of both `num1` and `num2` is < 110.
 > 2. Both `num1` and `num2` contain only digits `0-9`.
-> 3. Both `num1` and `num2` do not contain any leading zero, except the number 0 itself.
-> 4. You **must not use any built-in BigInteger library** or **convert the inputs to integer** directly.
+> 3. Both `num1` and `num2` do not contain any leading zero, except the number 0
+> itself.
+> 4. You **must not use any built-in BigInteger library** or **convert the
+> inputs to integer** directly.
 
 ## 解决方案
 

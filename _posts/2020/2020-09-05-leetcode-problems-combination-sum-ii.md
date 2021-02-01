@@ -10,7 +10,9 @@ excerpt: 给定一个的数组 `candidates` 和一个目标数 `target`，找出
 ---
 > ## 40. Combination Sum II
 > 
-> Given a collection of candidate numbers (`candidates`) and a target number (`target`), find all unique combinations in `candidates` where the candidate numbers sums to `target`.
+> Given a collection of candidate numbers (`candidates`) and a target number
+> (`target`), find all unique combinations in `candidates` where the candidate
+> numbers sums to `target`.
 > 
 > Each number in `candidates` may only be used **once** in the combination.
 > 

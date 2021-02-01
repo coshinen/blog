@@ -10,7 +10,8 @@ excerpt: 给定一个字符串（`s`）和一个模式串（`p`），实现支�
 ---
 > ## 10. Regular Expression Matching
 > 
-> Given an input string (`s`) and a pattern (`p`), implement regular expression matching with support for `'.'` and `'*'`.
+> Given an input string (`s`) and a pattern (`p`), implement regular expression
+> matching with support for `'.'` and `'*'`.
 > 
 > ```
 > '.' Matches any single character.
@@ -22,7 +23,8 @@ excerpt: 给定一个字符串（`s`）和一个模式串（`p`），实现支�
 > **Note:**
 > 
 > * `s` could be empty and contains only lowercase letters `a-z`.
-> * `p` could be empty and contains only lowercase letters `a-z`, and characters like `.` or `*`.
+> * `p` could be empty and contains only lowercase letters `a-z`, and characters
+> like `.` or `*`.
 > 
 > **Example 1:**
 > 

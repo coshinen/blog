@@ -10,7 +10,10 @@ excerpt: 给定一个含 n 个整数的数组 `nums` 和一个整数 `target`，
 ---
 > ## 16. 3Sum Closest
 > 
-> Given an array `nums` of n integers and an integer `target`, find three integers in `nums` such that the sum is closest to `target`. Return the sum of the three integers. You may assume that each input would have exactly one solution.
+> Given an array `nums` of n integers and an integer `target`, find three
+> integers in `nums` such that the sum is closest to `target`. Return the sum of
+> the three integers. You may assume that each input would have exactly one
+> solution.
 > 
 > **Example:**
 > 

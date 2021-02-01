@@ -12,7 +12,8 @@ excerpt: 集合 `[1, 2, 3, ..., n]` 一共包含 `n!` 种排列。按顺序列�
 > 
 > The set `[1, 2, 3, ..., n]` contains a total of `n!` unique permutations.
 > 
-> By listing and labeling all of the permutations in order, we get the following sequence for `n = 3`:
+> By listing and labeling all of the permutations in order, we get the following
+> sequence for `n = 3`:
 > 
 > 1. `"123"`
 > 2. `"132"`
@@ -21,7 +22,8 @@ excerpt: 集合 `[1, 2, 3, ..., n]` 一共包含 `n!` 种排列。按顺序列�
 > 5. `"312"`
 > 6. `"321"`
 > 
-> Given `n` and `k`, return the <code>k<sup>th</sup></code> permutation sequence.
+> Given `n` and `k`, return the <code>k<sup>th</sup></code> permutation
+> sequence.
 > 
 > **Example 1:**
 > 

@@ -10,7 +10,9 @@ excerpt: 给定一个含 n 个整数的数组 `nums`，数组 `nums` 是否存�
 ---
 > ## 15. 3Sum
 > 
-> Given an array `nums` of n integers, are there elements a, b, c in `nums` such that a + b + c = 0? Find all unique triplets in the array which gives the sum of zero.
+> Given an array `nums` of n integers, are there elements a, b, c in `nums` such
+> that a + b + c = 0? Find all unique triplets in the array which gives the sum
+> of zero.
 > 
 > **Note:**
 > 
@@ -30,7 +32,9 @@ excerpt: 给定一个含 n 个整数的数组 `nums`，数组 `nums` 是否存�
 > 
 > <details>
 > <summary>Hint 1</summary>
-> So, we essentially need to find three numbers x, y, and z such that they add up to the given value. If we fix one of the numbers say x, we are left with the two-sum problem at hand!
+> So, we essentially need to find three numbers x, y, and z such that they add
+> up to the given value. If we fix one of the numbers say x, we are left with
+> the two-sum problem at hand!
 > </details>
 > 
 > <details>
@@ -41,12 +45,14 @@ excerpt: 给定一个含 n 个整数的数组 `nums`，数组 `nums` 是否存�
 > <pre>y</pre>
 > which is
 > <pre>value - x</pre>
-> where value is the input parameter. Can we change our array somehow so that this search becomes faster?
+> where value is the input parameter. Can we change our array somehow so that
+> this search becomes faster?
 > </details>
 > 
 > <details>
 > <summary>Hint 3</summary>
-> The second train of thought for two-sum is, without changing the array, can we use additional space somehow? Like maybe a hash map to speed up the search?
+> The second train of thought for two-sum is, without changing the array, can we
+> use additional space somehow? Like maybe a hash map to speed up the search?
 > </details>
 
 ## 解决方案

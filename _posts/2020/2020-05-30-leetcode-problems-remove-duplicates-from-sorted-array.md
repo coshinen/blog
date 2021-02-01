@@ -10,9 +10,12 @@ excerpt: 给定一个有序数组，[原地](https://en.wikipedia.org/wiki/In-pl
 ---
 > ## 26. Remove Duplicates from Sorted Array
 > 
-> Given a sorted array nums, remove the duplicates [in-place](https://en.wikipedia.org/wiki/In-place_algorithm){:target="_blank"} such that each element appear only once and return the new length.
+> Given a sorted array nums, remove the duplicates [in-place](https://en.wikipedia.org/wiki/In-place_algorithm){:target="_blank"}
+> such that each element appear only once and return the new length.
 > 
-> Do not allocate extra space for another array, you must do this by **modifying the input array** [in-place](https://en.wikipedia.org/wiki/In-place_algorithm){:target="_blank"} with O(1) extra memory.
+> Do not allocate extra space for another array, you must do this by **modifying
+> the input array** [in-place](https://en.wikipedia.org/wiki/In-place_algorithm){:target="_blank"}
+> with O(1) extra memory.
 > 
 > **Example 1:**
 > 
@@ -38,7 +41,8 @@ excerpt: 给定一个有序数组，[原地](https://en.wikipedia.org/wiki/In-pl
 > 
 > Confused why the returned value is an integer but your answer is an array?
 > 
-> Note that the input array is passed in by <strong>reference</strong>, which means modification to the input array will be known to the caller as well.
+> Note that the input array is passed in by <strong>reference</strong>, which
+> means modification to the input array will be known to the caller as well.
 > 
 > Internally you can think of this:
 > 
@@ -55,18 +59,26 @@ excerpt: 给定一个有序数组，[原地](https://en.wikipedia.org/wiki/In-pl
 > 
 > <details>
 > <summary>Hint 1</summary>
-> In this problem, the key point to focus on is the input array being sorted. As far as duplicate elements are concerned, what is their positioning in the array when the given array is sorted? Look at the image above for the answer. If we know the position of one of the elements, do we also know the positioning of all the duplicate elements?<br>
+> In this problem, the key point to focus on is the input array being sorted. As
+> far as duplicate elements are concerned, what is their positioning in the
+> array when the given array is sorted? Look at the image above for the answer.
+> If we know the position of one of the elements, do we also know the
+> positioning of all the duplicate elements?<br>
 > <img src="https://assets.leetcode.com/uploads/2019/10/20/hint_rem_dup.png" width="500">
 > </details>
 > 
 > <details>
 > <summary>Hint 2</summary>
-> We need to modify the array in-place and the size of the final array would potentially be smaller than the size of the input array. So, we ought to use a two-pointer approach here. One, that would keep track of the current element in the original array and another one for just the unique elements.
+> We need to modify the array in-place and the size of the final array would
+> potentially be smaller than the size of the input array. So, we ought to use a
+> two-pointer approach here. One, that would keep track of the current element
+> in the original array and another one for just the unique elements.
 > </details>
 > 
 > <details>
 > <summary>Hint 3</summary>
-> Essentially, once an element is encountered, you simply need to <b>bypass</b> its duplicates and move on to the next unique element.
+> Essentially, once an element is encountered, you simply need to <b>bypass</b>
+> its duplicates and move on to the next unique element.
 > </details>
 
 ## 解决方案

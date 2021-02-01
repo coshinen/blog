@@ -10,7 +10,8 @@ excerpt: 实现 [pow(*x*, *n*)](http://www.cplusplus.com/reference/valarray/pow/
 ---
 > ## 50. Pow(x, n)
 > 
-> Implement [pow(*x*, *n*)](http://www.cplusplus.com/reference/valarray/pow/){:target="_blank"}, which calculates *x* raised to the power *n* (i.e. x<sup>n</sup>).
+> Implement [pow(*x*, *n*)](http://www.cplusplus.com/reference/valarray/pow/){:target="_blank"},
+> which calculates *x* raised to the power *n* (i.e. x<sup>n</sup>).
 > 
 > **Example 1:**
 > 

@@ -10,7 +10,8 @@ excerpt: 给定一个字符串 **s**，找到 **s** 中最长的回文子串。�
 ---
 > ## 5. Longest Palindromic Substring
 > 
-> Given a string **s**, find the longest palindromic substring in **s**. You may assume that the maximum length of **s** is 1000.
+> Given a string **s**, find the longest palindromic substring in **s**. You may
+> assume that the maximum length of **s** is 1000.
 > 
 > **Example 1:**
 > 
@@ -29,18 +30,23 @@ excerpt: 给定一个字符串 **s**，找到 **s** 中最长的回文子串。�
 > 
 > <details>
 > <summary>Hint 1</summary>
-> How can we reuse a previously computed palindrome to compute a larger palindrome?
+> How can we reuse a previously computed palindrome to compute a larger
+> palindrome?
 > </details>
 > 
 > <details>
 > <summary>Hint 2</summary>
-> If “aba” is a palindrome, is “xabax” and palindrome? Similarly is “xabay” a palindrome?
+> If "aba" is a palindrome, is "xabax" and palindrome? Similarly is "xabay" a
+> palindrome?
 > </details>
 > 
 > <details>
 > <summary>Hint 3</summary>
 > Complexity based hint:<br>
-> If we use brute-force and check whether for every start and end position a substring is a palindrome we have O(n<sup>2</sup>) start - end pairs and O(n) palindromic checks. Can we reduce the time for palindromic checks to O(1) by reusing some previous computation.
+> If we use brute-force and check whether for every start and end position a
+> substring is a palindrome we have O(n<sup>2</sup>) start - end pairs and O(n)
+> palindromic checks. Can we reduce the time for palindromic checks to O(1) by
+> reusing some previous computation.
 > </details>
 
 ## 解决方案

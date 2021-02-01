@@ -10,9 +10,12 @@ excerpt: 给定一个 *n* x *n* 的二维`矩阵`表示一个图像，旋转该�
 ---
 > ## 48. Rotate Image
 > 
-> You are given an *n* x *n* 2D `matrix` representing an image, rotate the image by 90 degrees (clockwise).
+> You are given an *n* x *n* 2D `matrix` representing an image, rotate the image
+> by 90 degrees (clockwise).
 > 
-> You have to rotate the image [in-place](https://en.wikipedia.org/wiki/In-place_algorithm){:target="_blank"}, which means you have to modify the input 2D matrix directly. **DO NOT** allocate another 2D matrix and do the rotation.
+> You have to rotate the image [in-place](https://en.wikipedia.org/wiki/In-place_algorithm){:target="_blank"},
+> which means you have to modify the input 2D matrix directly. **DO NOT**
+> allocate another 2D matrix and do the rotation.
 > 
 > **Example 1:**
 > 

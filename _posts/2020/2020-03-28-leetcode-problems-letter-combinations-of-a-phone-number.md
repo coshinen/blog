@@ -10,11 +10,13 @@ excerpt: 给定一个包含数字 `2-9` 范围内的字符串，返回它能表�
 ---
 > ## 17. Letter Combinations of a Phone Number
 > 
-> Given a string containing digits from `2-9` inclusive, return all possible letter combinations that the number could represent.
+> Given a string containing digits from `2-9` inclusive, return all possible
+> letter combinations that the number could represent.
 > 
-> A mapping of digit to letters (just like on the telephone buttons) is given below. Note that 1 does not map to any letters.
+> A mapping of digit to letters (just like on the telephone buttons) is given
+> below. Note that 1 does not map to any letters.
 > 
-> ![](http://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Telephone-keypad2.svg/200px-Telephone-keypad2.svg.png)
+> <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Telephone-keypad2.svg/200px-Telephone-keypad2.svg.png" style="width: 200px; height: 162px;">
 > 
 > **Example:**
 > 
@@ -25,7 +27,8 @@ excerpt: 给定一个包含数字 `2-9` 范围内的字符串，返回它能表�
 > 
 > **Note:**
 > 
-> Although the above answer is in lexicographical order, your answer could be in any order you want.
+> Although the above answer is in lexicographical order, your answer could be in
+> any order you want.
 
 ## 解决方案
 

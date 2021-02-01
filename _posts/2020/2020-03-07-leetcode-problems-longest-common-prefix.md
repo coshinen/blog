@@ -10,7 +10,8 @@ excerpt: 写一个函数来查找字符串数组的最长公共前缀。
 ---
 > ## 14. Longest Common Prefix
 > 
-> Write a function to find the longest common prefix string amongst an array of strings.
+> Write a function to find the longest common prefix string amongst an array of
+> strings.
 > 
 > If there is no common prefix, return an empty string `""`.
 > 

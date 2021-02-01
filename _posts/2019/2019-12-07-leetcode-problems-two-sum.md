@@ -10,9 +10,11 @@ excerpt: 从一个整型数组中找出两个数，满足两数之和等于给�
 ---
 > ## 1. Two Sum
 > 
-> Given an array of integers, return **indices** of the two numbers such that they add up to a specific target.
+> Given an array of integers, return **indices** of the two numbers such that
+> they add up to a specific target.
 > 
-> You may assume that each input would have **exactly** one solution, and you may not use the same element twice.
+> You may assume that each input would have **exactly** one solution, and you
+> may not use the same element twice.
 > 
 > **Example:**
 > 
@@ -25,7 +27,10 @@ excerpt: 从一个整型数组中找出两个数，满足两数之和等于给�
 > 
 > <details>
 > <summary>Hint 1</summary>
-> A really brute force way would be to search for all possible pairs of numbers but that would be too slow. Again, it's best to try out brute force solutions for just for completeness. It is from these brute force solutions that you can come up with optimizations.
+> A really brute force way would be to search for all possible pairs of numbers
+> but that would be too slow. Again, it's best to try out brute force solutions
+> for just for completeness. It is from these brute force solutions that you can
+> come up with optimizations.
 > </details>
 > 
 > <details>
@@ -36,12 +41,14 @@ excerpt: 从一个整型数组中找出两个数，满足两数之和等于给�
 > <pre>y</pre>
 > which is
 > <pre>value - x</pre>
-> where value is the input parameter. Can we change our array somehow so that this search becomes faster?
+> where value is the input parameter. Can we change our array somehow so that
+> this search becomes faster?
 > </details>
 > 
 > <details>
 > <summary>Hint 3</summary>
-> The second train of thought is, without changing the array, can we use additional space somehow? Like maybe a hash map to speed up the search?
+> The second train of thought is, without changing the array, can we use
+> additional space somehow? Like maybe a hash map to speed up the search?
 > </details>
 
 ## 解决方案

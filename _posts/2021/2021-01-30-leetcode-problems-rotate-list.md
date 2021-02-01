@@ -6,7 +6,7 @@ author: mistydew
 comments: true
 category: 力扣题解
 tags: LeetCode Medium Linked-List Two-Pointers
-excerpt: 给定一条以 `head` 为首的链表，向右旋转该链表 `k` 个位置。
+excerpt: 给定一条头指针为 `head` 的链表，向右旋转该链表 `k` 个位置。
 ---
 > ## 61. Rotate List
 > 
@@ -38,7 +38,7 @@ excerpt: 给定一条以 `head` 为首的链表，向右旋转该链表 `k` 个�
 
 ## 解决方案
 
-### 方法一：衔接后再断开
+### 方法一：首尾衔接后再断开
 
 ```cpp
 /**

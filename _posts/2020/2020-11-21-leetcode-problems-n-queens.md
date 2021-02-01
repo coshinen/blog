@@ -10,11 +10,15 @@ excerpt: n **皇后**难题研究的是如何把 `n` 个皇后放在 `n x n` 的
 ---
 > ## 51. N-Queens
 > 
-> The **n-queens** puzzle is the problem of placing `n` queens on an `n x n` chessboard such that no two queens attack each other.
+> The **n-queens** puzzle is the problem of placing `n` queens on an `n x n`
+> chessboard such that no two queens attack each other.
 > 
-> Given an integer `n`, return *all distinct solutions to the **n-queens puzzle***.
+> Given an integer `n`, return *all distinct solutions to the **n-queens
+> puzzle***.
 > 
-> Each solution contains a distinct board configuration of the n-queens' placement, where `'Q'` and `'.'` both indicate a queen and an empty space, respectively.
+> Each solution contains a distinct board configuration of the n-queens'
+> placement, where `'Q'` and `'.'` both indicate a queen and an empty space,
+> respectively.
 > 
 > **Example 1:**
 > 

@@ -10,7 +10,8 @@ excerpt: 合并两条有序链表并返回一条新链表。新链表通过拼�
 ---
 > ## 21. Merge Two Sorted Lists
 > 
-> Merge two sorted linked lists and return it as a new list. The new list should be made by splicing together the nodes of the first two lists.
+> Merge two sorted linked lists and return it as a new list. The new list should
+> be made by splicing together the nodes of the first two lists.
 > 
 > **Example:**
 > 

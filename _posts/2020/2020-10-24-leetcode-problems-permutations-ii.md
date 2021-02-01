@@ -10,7 +10,8 @@ excerpt: 给定一个可包含重复数字的集合，返回其所有不重复�
 ---
 > ## 47. Permutations II
 > 
-> Given a collection of numbers that might contain duplicates, return all possible unique permutations.
+> Given a collection of numbers that might contain duplicates, return all
+> possible unique permutations.
 > 
 > **Example:**
 > 

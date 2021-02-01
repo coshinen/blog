@@ -10,7 +10,9 @@ excerpt: 给定一个字符串 `"PAYPALISHIRING"`，根据给定的行数，以�
 ---
 > ## 6. ZigZag Conversion
 > 
-> The string `"PAYPALISHIRING"` is written in a zigzag pattern on a given number of rows like this: (you may want to display this pattern in a fixed font for better legibility)
+> The string `"PAYPALISHIRING"` is written in a zigzag pattern on a given number
+> of rows like this: (you may want to display this pattern in a fixed font for
+> better legibility)
 > 
 > <pre>
 > P   A   H   N
@@ -20,7 +22,8 @@ excerpt: 给定一个字符串 `"PAYPALISHIRING"`，根据给定的行数，以�
 > 
 > And then read line by line: `"PAHNAPLSIIGYIR"`
 > 
-> Write the code that will take a string and make this conversion given a number of rows:
+> Write the code that will take a string and make this conversion given a number
+> of rows:
 > 
 > <pre>
 > string convert(string s, int numRows);
@@ -39,7 +42,6 @@ excerpt: 给定一个字符串 `"PAYPALISHIRING"`，根据给定的行数，以�
 > <strong>Input:</strong> s = "PAYPALISHIRING", numRows = 4
 > <strong>Output:</strong> "PINALSIGYAHRPI"
 > <strong>Explanation:</strong>
-> 
 > P     I    N
 > A   L S  I G
 > Y A   H R

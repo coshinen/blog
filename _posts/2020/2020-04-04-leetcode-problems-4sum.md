@@ -10,7 +10,9 @@ excerpt: 给定一个含 n 个整数的数组 `nums` 和一个整数 `target`，
 ---
 > ## 18. 4Sum
 > 
-> Given an array `nums` of n integers and an integer `target`, are there elements a, b, c, and d in `nums` such that a + b + c + d = `target`? Find all unique quadruplets in the array which gives the sum of `target`.
+> Given an array `nums` of n integers and an integer `target`, are there
+> elements a, b, c, and d in `nums` such that a + b + c + d = `target`? Find all
+> unique quadruplets in the array which gives the sum of `target`.
 > 
 > **Note:**
 > 

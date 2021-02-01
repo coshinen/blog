@@ -39,7 +39,8 @@ excerpt: 给定一个无序的整型数组，找出缺失的最小正整数。
 > 
 > <details>
 > <summary>Hint 1</summary>
-> Think about how you would solve the problem in non-constant space. Can you apply that logic to the existing space?
+> Think about how you would solve the problem in non-constant space. Can you
+> apply that logic to the existing space?
 > </details>
 > 
 > <details>

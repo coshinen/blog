@@ -10,9 +10,11 @@ excerpt: 这里是两个大小分别为 m 和 n 的有序数组 **nums1** 和 **
 ---
 > ## 4. Median of Two Sorted Arrays
 > 
-> There are two sorted arrays **nums1** and **nums2** of size m and n respectively.
+> There are two sorted arrays **nums1** and **nums2** of size m and n
+> respectively.
 > 
-> Find the median of the two sorted arrays. The overall run time complexity should be O(log (m+n)).
+> Find the median of the two sorted arrays. The overall run time complexity
+> should be O(log (m+n)).
 > 
 > You may assume **nums1** and **nums2** cannot be both empty.
 > 

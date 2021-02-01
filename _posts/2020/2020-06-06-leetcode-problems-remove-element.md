@@ -10,11 +10,16 @@ excerpt: 给定一个数组 *nums* 和一个值 *val*，[原地](https://en.wiki
 ---
 > ## 27. Remove Element
 > 
-> Given an array *nums* and a value *val*, remove all instances of that value [in-place](https://en.wikipedia.org/wiki/In-place_algorithm){:target="_blank"} and return the new length.
+> Given an array *nums* and a value *val*, remove all instances of that value
+> [in-place](https://en.wikipedia.org/wiki/In-place_algorithm){:target="_blank"}
+> and return the new length.
 > 
-> Do not allocate extra space for another array, you must do this by **modifying the input array** [in-place](https://en.wikipedia.org/wiki/In-place_algorithm){:target="_blank"} with O(1) extra memory.
+> Do not allocate extra space for another array, you must do this by **modifying
+> the input array** [in-place](https://en.wikipedia.org/wiki/In-place_algorithm){:target="_blank"}
+> with O(1) extra memory.
 > 
-> The order of elements can be changed. It doesn't matter what you leave beyond the new length.
+> The order of elements can be changed. It doesn't matter what you leave beyond
+> the new length.
 > 
 > **Example 1:**
 > 
@@ -42,7 +47,8 @@ excerpt: 给定一个数组 *nums* 和一个值 *val*，[原地](https://en.wiki
 > 
 > Confused why the returned value is an integer but your answer is an array?
 > 
-> Note that the input array is passed in by **reference**, which means modification to the input array will be known to the caller as well.
+> Note that the input array is passed in by **reference**, which means
+> modification to the input array will be known to the caller as well.
 > 
 > Internally you can think of this:
 > 
@@ -59,18 +65,24 @@ excerpt: 给定一个数组 *nums* 和一个值 *val*，[原地](https://en.wiki
 > 
 > <details>
 > <summary>Hint 1</summary>
-> The problem statement clearly asks us to modify the array in-place and it also says that the element beyond the new length of the array can be anything. Given an element, we need to remove all the occurrences of it from the array. We don't technically need to <b>remove</b> that element per-say, right?
+> The problem statement clearly asks us to modify the array in-place and it also
+> says that the element beyond the new length of the array can be anything.
+> Given an element, we need to remove all the occurrences of it from the array.
+> We don't technically need to <b>remove</b> that element per-say, right?
 > </details>
 > 
 > <details>
 > <summary>Hint 2</summary>
-> We can move all the occurrences of this element to the end of the array. Use two pointers!<br>
+> We can move all the occurrences of this element to the end of the array. Use
+> two pointers!<br>
 > <img src="https://assets.leetcode.com/uploads/2019/10/20/hint_remove_element.png" width="500">
 > </details>
 > 
 > <details>
 > <summary>Hint 3</summary>
-> Yet another direction of thought is to consider the elements to be removed as non-existent. In a single pass, if we keep copying the visible elements in-place, that should also solve this problem for us.
+> Yet another direction of thought is to consider the elements to be removed as
+> non-existent. In a single pass, if we keep copying the visible elements
+> in-place, that should also solve this problem for us.
 > </details>
 
 ## 解决方案

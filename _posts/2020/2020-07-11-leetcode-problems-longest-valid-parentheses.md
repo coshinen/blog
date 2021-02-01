@@ -10,7 +10,8 @@ excerpt: 给定一个只包含 `'('` 和 `')'` 的字符串，找出最长的有
 ---
 > ## 32. Longest Valid Parentheses
 > 
-> Given a string containing just the characters `'('` and `')'`, find the length of the longest valid (well-formed) parentheses substring.
+> Given a string containing just the characters `'('` and `')'`, find the length
+> of the longest valid (well-formed) parentheses substring.
 > 
 > **Example 1:**
 > 
