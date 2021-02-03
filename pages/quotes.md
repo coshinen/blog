@@ -92,12 +92,6 @@ excerpt: Here are my favorite quotes from someones that inspire me or make me la
 > * Sometimes it is the people no one imagines anything of who do the things
 > that no one can imagine.
 
-> J.K. Rowling, [Interview](https://jjmarsh.wordpress.com/2013/08/14/jk-rowling){:target="_blank"}:
-> * Print will never die. There's no substitute for the feel of an actual book.
-> I adore physically turning pages, and being able to underline passages and not
-> worrying about dropping them in the bath or running out of power. I also find
-> print books objects of beauty.
-
 > Severus Snape, Harry Potter AND THE DEATHLY HALLOWS PART 2:
 > * You've been raising him like a pig for slaughter.
 
@@ -117,7 +111,7 @@ excerpt: Here are my favorite quotes from someones that inspire me or make me la
 > Albus Dumbledore, Harry Potter AND THE CHAMBER OF SECRETS:
 > * It is not our abilities that show what we truly are. It is our choices.
 
-> Voldemort, Harry Potter AND THE PHILOSOPHER'S STONE:
+> Voldemort (Tom Marvolo Riddle), Harry Potter AND THE PHILOSOPHER'S STONE:
 > * There is no good and evil, there is only power, and those too weak to seek
 > it.
 
