@@ -2,6 +2,7 @@
 
 ## Dependencies
 
+* Written: [Markdown](https://daringfireball.net/projects/markdown/)
 * Powered: [Jekyll](https://www.jekyllrb.com)
 * Hosted: [GitHub Pages](https://pages.github.com)
 * Analytics: [Google Analytics](https://analytics.google.com/analytics/web/)
