@@ -6,7 +6,9 @@ author: mistydew
 comments: true
 category: 力扣题解
 tags: LeetCode Medium Array Backtracking
-excerpt: 给定一个**无重复元素**的数组 `candidates` 和一个目标数 `target`，找出 `candidates` 中所有使数字和为 `target` 的组合。
+excerpt:
+  给定一个**无重复元素**的数组 `candidates` 和一个目标数 `target`，找出 `candidates` 中所有使数字和为 `target` 的组合。<br>
+  数组 `candidates` 中的数字可以无限制重复被选取。
 ---
 > ## 39. Combination Sum
 > 

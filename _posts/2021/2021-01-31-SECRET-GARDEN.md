@@ -6,7 +6,11 @@ author: mistydew
 comments: true
 category: 译文集
 tags: Lyrics
-excerpt: THERE IS A BRIGHTNESS. IT'S LIKE THE SUNSHINE. THAT COMES DOWN AMONG THE TREES, AND KISSES THE GROUNDS.
+excerpt:
+  THERE IS A BRIGHTNESS<br>
+  IT'S LIKE THE SUNSHINE<br>
+  THAT COMES DOWN AMONG THE TREES<br>
+  AND KISSES THE GROUNDS
 ---
 ![ZMCP-1457](https://images-na.ssl-images-amazon.com/images/I/81vlCOws-HL._AC_SX425_.jpg){:.border}
 ![ZMCP-1657](https://m.media-amazon.com/images/I/21DSKNYSCPL._SL240_.jpg){:.border}

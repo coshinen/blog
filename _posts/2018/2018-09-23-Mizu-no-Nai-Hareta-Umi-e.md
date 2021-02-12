@@ -6,7 +6,11 @@ author: mistydew
 comments: true
 category: 译文集
 tags: Lyrics Garnet
-excerpt: 水のない晴れた海へ、たどり着いた white mermaid。夢にまでみていた、地上の天国は silence×3。
+excerpt:
+  水のない晴れた海へ<br>
+  たどり着いた white mermaid<br>
+  夢にまでみていた<br>
+  地上の天国は silence×3
 ---
 ![GZCA-1061](https://ganekuro.github.io/images/discography/album/GZCA-1061.jpg){:.border}
 

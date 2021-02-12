@@ -6,7 +6,11 @@ author: mistydew
 comments: true
 category: 译文集
 tags: Lyrics Garnet
-excerpt: ずっと みてたんだ一枚のポスター、壁の片隅で色褪せた。きっと誰かが 剥がし忘れた、夕ぐれのストーリーは そこにあり。
+excerpt:
+  ずっと みてたんだ一枚のポスター<br>
+  壁の片隅で色褪せた<br>
+  きっと誰かが 剥がし忘れた<br>
+  夕ぐれのストーリーは そこにあり
 ---
 ![GZCA-5052](https://ganekuro.github.io/images/discography/album/GZCA-5052.jpg){:.border}
 

@@ -6,7 +6,9 @@ author: mistydew
 comments: true
 category: 译文集
 tags: Lyrics
-excerpt: やっと眼を覚ましたかい それなのになぜ眼も合わせやしないんだい？「遅いよ」と怒る君 これでもやれるだけ飛ばしてきたんだよ。
+excerpt:
+  やっと眼を覚ましたかい それなのになぜ眼も合わせやしないんだい？<br>
+  「遅いよ」と怒る君 これでもやれるだけ飛ばしてきたんだよ
 ---
 ![UPCH-20423](https://is3-ssl.mzstatic.com/image/thumb/Music118/v4/ae/1d/0e/ae1d0e28-3c2f-b977-1b06-7909397e2fea/source/600x600bb.jpg){:.border}
 

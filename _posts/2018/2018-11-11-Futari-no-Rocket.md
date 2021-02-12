@@ -6,7 +6,13 @@ author: mistydew
 comments: true
 category: 译文集
 tags: Lyrics Garnet
-excerpt: 一晩中考えても 解けなかった問題が、今日 目覚めたら ひらめく。夢見て 泣いて起きた、起きたら 忘れていた。どこか遠くで鳴るベルに、目を覚ます君のいる一日が 始まる。
+excerpt:
+  一晩中考えても 解けなかった問題が<br>
+  今日 目覚めたら ひらめく<br>
+  夢見て 泣いて起きた<br>
+  起きたら 忘れていた<br>
+  どこか遠くで鳴るベルに<br>
+  目を覚ます君のいる一日が 始まる
 ---
 ![TCR-001](https://ganekuro.github.io/images/discography/album/TCR-001.jpg){:.border}
 

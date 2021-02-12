@@ -6,7 +6,10 @@ author: mistydew
 comments: true
 category: 译文集
 tags: Lyrics Conan
-excerpt: 離れて不意に気づく。大事なものがあるね。それはきっと真実の 愛と呼ぶ引力(ちから)。
+excerpt:
+  離れて不意に気づく<br>
+  大事なものがあるね<br>
+  それはきっと真実の 愛と呼ぶ引力(ちから)
 ---
 ![POCX-1081](https://www.generasia.com/w/images/5/58/IORI_BGI_A.jpg){:.border}
 

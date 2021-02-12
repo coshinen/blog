@@ -6,7 +6,11 @@ author: mistydew
 comments: true
 category: 译文集
 tags: Lyrics Garnet
-excerpt: 公園で髪を切る、落ちてゆく毛先を払う。君が笑う 頬に触れる、見上げれば飛行機雲。
+excerpt:
+  公園で髪を切る<br>
+  落ちてゆく毛先を払う<br>
+  君が笑う 頬に触れる<br>
+  見上げれば飛行機雲
 ---
 ![GZCA-1044](https://ganekuro.github.io/images/discography/single/GZCA-1044.jpg){:.border}
 

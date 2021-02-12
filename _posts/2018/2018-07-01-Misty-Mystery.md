@@ -6,7 +6,11 @@ author: mistydew
 comments: true
 category: 译文集
 tags: Lyrics Conan Garnet
-excerpt: why 見えぬ明日へと、期待込め歩いてるの。まだ君を想う、途中みたいにざわめく。
+excerpt:
+  why 見えぬ明日へと<br>
+  期待込め歩いてるの<br>
+  まだ君を想う<br>
+  途中みたいにざわめく
 ---
 ![GZCA-4135](https://ganekuro.github.io/images/discography/single/GZCA-4135.jpg){:.border}
 

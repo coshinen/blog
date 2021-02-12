@@ -6,7 +6,12 @@ author: mistydew
 comments: true
 category: 译文集
 tags: Lyrics Garnet
-excerpt: 君のいない未来が、ただ大きな闇にみえ。死んでしまえば生きなくていい。そんな事ばかり考えてた、穏やかな月明かりに。
+excerpt:
+  君のいない未来が<br>
+  ただ大きな闇にみえ<br>
+  死んでしまえば生きなくていい<br>
+  そんな事ばかり考えてた<br>
+  穏やかな月明かりに
 ---
 ![GZCA-5013](https://ganekuro.github.io/images/discography/album/GZCA-5013.jpg){:.border}
 

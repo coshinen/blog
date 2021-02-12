@@ -6,7 +6,11 @@ author: mistydew
 comments: true
 category: 译文集
 tags: Lyrics Conan
-excerpt: やるっきゃないのさ。いま 勇気だして。やるっきゃないのさ。まだ終われない。
+excerpt:
+  やるっきゃないのさ<br>
+  いま 勇気だして<br>
+  やるっきゃないのさ<br>
+  まだ終われない
 ---
 ![PODX-1031](https://www.generasia.com/w/images/6/6f/IORI_BGI_S.jpg){:.border}
 

@@ -6,7 +6,9 @@ author: mistydew
 comments: true
 category: 译文集
 tags: Lyrics Conan
-excerpt: 運命のルーレット廻して、ずっと 君を見ていた。
+excerpt:
+  運命のルーレット廻して<br>
+  ずっと 君を見ていた
 ---
 ![JBDJ-1041](https://www.generasia.com/w/images/thumb/2/2f/Unmei_no_Roulette_Mawashite.jpg/299px-Unmei_no_Roulette_Mawashite.jpg){:.border}
 

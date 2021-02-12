@@ -6,7 +6,14 @@ author: mistydew
 comments: true
 category: 译文集
 tags: Lyrics
-excerpt: まためぐり合う春を待っている 時よつづれ。そして人は皆 僅かな誇りと運命を感じている。
+excerpt:
+  まためぐり合う春を待っている 時よつづれ<br>
+  そして人は皆 僅かな誇りと運命を感じている<br>
+  此処には 過去も未来もない 今しかない<br>
+  まわり道も 意味がある修行(おしえ)と気付く日が来る<br>
+  きっとどこかへと つながっている<br>
+  冷たい石の上を歩く 靴音が懐かしいよね<br>
+  許せなかった幼い日 どうかせめて前途ある未来に…
 ---
 ![JBCJ-9008](https://is2-ssl.mzstatic.com/image/thumb/Music/v4/ff/11/3f/ff113f97-4a1b-16e4-95c4-8f02a1b41b9e/source/600x600bb.jpg){:.border}
 

@@ -6,7 +6,11 @@ author: mistydew
 comments: true
 category: 译文集
 tags: Lyrics Conan
-excerpt: そっと目を閉じれば、いまも浮かぶよ。きらめく陽射しと、なつかしい風景が。
+excerpt:
+  そっと目を閉じれば<br>
+  いまも浮かぶよ<br>
+  きらめく陽射しと<br>
+  なつかしい風景が
 ---
 ![POCX-1081](https://www.generasia.com/w/images/5/58/IORI_BGI_A.jpg){:.border}
 

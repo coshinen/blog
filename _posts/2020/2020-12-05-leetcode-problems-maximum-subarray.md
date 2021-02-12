@@ -6,7 +6,9 @@ author: mistydew
 comments: true
 category: 力扣题解
 tags: LeetCode Easy Array Divide-and-Conquer Dynamic-Programming
-excerpt: 给定一个整数数组 `nums`，找到具有最大和的连续子数组（至少包含一个数）并返回*它的和*。
+excerpt:
+  给定一个整数数组 `nums`，找到具有最大和的连续子数组（至少包含一个数）并返回*它的和*。<br>
+  **补充：**如果你已经找到了 `O(n)` 的解决方案，尝试用分治法编写另一个解决方案，这更微妙。
 ---
 > ## 53. Maximum Subarray
 > 

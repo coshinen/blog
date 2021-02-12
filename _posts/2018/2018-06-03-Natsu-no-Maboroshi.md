@@ -6,7 +6,11 @@ author: mistydew
 comments: true
 category: 译文集
 tags: Lyrics Conan Garnet
-excerpt: 部屋の窓の向こうに、飛行機雲を なぞって。今日ケンカした君の事ばかり、考えてた。
+excerpt:
+  部屋の窓の向こうに<br>
+  飛行機雲を なぞって<br>
+  今日ケンカした君の事ばかり<br>
+  考えてた
 ---
 ![GZCA-1050](https://ganekuro.github.io/images/discography/single/GZCA-1050.jpg){:.border}
 

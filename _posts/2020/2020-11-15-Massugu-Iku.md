@@ -6,7 +6,10 @@ author: mistydew
 comments: true
 category: 译文集
 tags: Lyrics Conan
-excerpt: 朝日が昇る稜線、幾筋もの光の柱、どれもが君の心へ。
+excerpt:
+  朝日が昇る稜線<br>
+  幾筋もの光の柱<br>
+  どれもが君の心へ
 ---
 歌手：高山みなみ<br>
 作詞：小林準治<br>

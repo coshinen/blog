@@ -6,7 +6,11 @@ author: mistydew
 comments: true
 category: 译文集
 tags: Lyrics Garnet
-excerpt: 君がいなくなってから、何度朝日迎えたかしれない。急に地平線をみたくなって ふらり、始発に飛び乗る。
+excerpt:
+  君がいなくなってから<br>
+  何度朝日迎えたかしれない<br>
+  急に地平線をみたくなって ふらり<br>
+  始発に飛び乗る
 ---
 ![GZCA-2020](https://ganekuro.github.io/images/discography/single/GZCA-2020.jpg){:.border}
 

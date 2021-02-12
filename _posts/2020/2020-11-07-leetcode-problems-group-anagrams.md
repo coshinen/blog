@@ -6,7 +6,9 @@ author: mistydew
 comments: true
 category: 力扣题解
 tags: LeetCode Medium Hash-Table String
-excerpt: 给定一个字符串数组 `strs`，把**字母异序词**分为一组。**字母异序词**是通过重排不同单词或短语的字母形成的单词或短语，通常只使用所有原始字母一次。
+excerpt:
+  给定一个字符串数组 `strs`，把**字母异序词**分为一组。<br>
+  **字母异序词**是通过重排不同单词或短语的字母形成的单词或短语，通常只使用所有原始字母一次。
 ---
 > ## 49. Group Anagrams
 > 

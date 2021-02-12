@@ -6,7 +6,15 @@ author: mistydew
 comments: true
 category: 译文集
 tags: Lyrics
-excerpt: 真赤な薔薇は あいつの唇。やさしく抱きしめて くれとねだる。瞳の奥に 獲物を映して、淋しく問いかける 愛の在りか。
+excerpt:
+  真赤な薔薇は あいつの唇<br>
+  やさしく抱きしめて くれとねだる<br>
+  瞳の奥に 獲物を映して<br>
+  淋しく問いかける 愛の在りか<br>
+  男には 自分の世界がある たとえるなら<br>
+  空をかける ひとすじの流れ星<br>
+  孤独な笑みを 夕陽にさらして<br>
+  背中で泣いてる 男の美学
 ---
 ![COCC-14667](https://columbia.jp/prod-info/jacket/COCC-14667.jpg){:.border}
 

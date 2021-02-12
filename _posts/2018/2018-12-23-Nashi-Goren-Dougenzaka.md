@@ -6,7 +6,11 @@ author: mistydew
 comments: true
 category: 译文集
 tags: Lyrics
-excerpt: 突然のその成り行きに、街の灯りと心が揺れている。どうする？空車のタクシー。
+excerpt:
+  「ウォンチュー！」<br>
+  突然のその成り行きに<br>
+  街の灯りと心が揺れている<br>
+  どうする？空車のタクシー
 ---
 ![ナシゴレン道玄坂](https://is4-ssl.mzstatic.com/image/thumb/Music71/v4/83/86/c2/8386c2f6-1816-b693-73cf-475890a43db7/source/600x600bb.jpg){:.border}
 

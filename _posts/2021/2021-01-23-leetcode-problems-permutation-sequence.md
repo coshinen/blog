@@ -6,7 +6,16 @@ author: mistydew
 comments: true
 category: 力扣题解
 tags: LeetCode Hard Backtracking
-excerpt: 集合 `[1, 2, 3, ..., n]` 一共包含 `n!` 种排列。按顺序列出并标记所有排列，对于 `n = 3` 我们给出下面序列：……给定 `n` 和 `k`，返回第 `k` 个排序序列。
+excerpt:
+  集合 `[1, 2, 3, ..., n]` 一共包含 `n!` 种排列。<br>
+  按顺序列出并标记所有排列，对于 `n = 3` 我们给出下面序列：<br>
+  1. `"123"`<br>
+  2. `"132"`<br>
+  3. `"213"`<br>
+  4. `"231"`<br>
+  5. `"312"`<br>
+  6. `"321"`<br>
+  给定 `n` 和 `k`，返回第 `k` 个排序序列。
 ---
 > ## 60. Permutation Sequence
 > 

@@ -6,7 +6,9 @@ author: mistydew
 comments: true
 category: 译文集
 tags: Lyrics
-excerpt: 君のすべては 君の心に、今は しまってあるから。
+excerpt:
+  君のすべては 君の心に<br>
+  今は しまってあるから
 ---
 ![AICL-3121](https://is5-ssl.mzstatic.com/image/thumb/Music128/v4/52/36/08/52360891-7d38-b6be-b7b7-aec2af215a65/source/600x600bb.jpg){:.border}
 

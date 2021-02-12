@@ -6,7 +6,16 @@ author: mistydew
 comments: true
 category: 译文集
 tags: Lyrics Conan Garnet
-excerpt: 流星がこぼれた夏の空、願いこめた。いつもあの人の傍にいさせて、朝になり街中人が溢れゆく度に。
+excerpt:
+  流星がこぼれた夏の空<br>
+  願いこめた<br>
+  いつもあの人の傍にいさせて<br>
+  朝になり街中人が溢れゆく度に<br>
+  大事な哀しみも見失いそう<br>
+  言葉にはならない気持ちを<br>
+  きっと誰もが隠してるね<br>
+  不器用なやさしさ気付けたら<br>
+  もっと二人は近づくかな
 ---
 ![GZCA-4096](https://ganekuro.github.io/images/discography/single/GZCA-4096.jpg){:.border}
 

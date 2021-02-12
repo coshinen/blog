@@ -6,7 +6,11 @@ author: mistydew
 comments: true
 category: 译文集
 tags: Lyrics Conan Garnet
-excerpt: 風の音だけが、体中を包む。サイレント・Kiss、夢に似た気配。
+excerpt:
+  風の音だけが<br>
+  体中を包む<br>
+  サイレント・Kiss<br>
+  夢に似た気配
 ---
 ![GZCA-7156](https://ganekuro.github.io/images/discography/single/GZCA-7156.jpg){:.border}
 

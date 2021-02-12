@@ -6,7 +6,11 @@ author: mistydew
 comments: true
 category: 译文集
 tags: Lyrics Garnet
-excerpt: 新しいコートに着替えて、気分を変えて飛び出した。離れて過ごしている時間はすぐに、blueな気分に襲われてゆく。
+excerpt:
+  新しいコートに着替えて<br>
+  気分を変えて飛び出した<br>
+  離れて過ごしている時間(どき)はすぐに<br>
+  blue な気分に襲われてゆく
 ---
 ![TCR-001](https://ganekuro.github.io/images/discography/album/TCR-001.jpg){:.border}
 ![GZCA-1029](https://ganekuro.github.io/images/discography/single/GZCA-1029.jpg){:.border}

@@ -6,7 +6,10 @@ author: mistydew
 comments: true
 category: 译文集
 tags: Lyrics Conan
-excerpt: 都会の眠りは 短く浅く。夢もカケラばかり。人はみんな寝不足。
+excerpt:
+  都会の眠りは 短く浅く<br>
+  夢もカケラばかり<br>
+  人はみんな寝不足
 ---
 ![POCX-1081](https://www.generasia.com/w/images/5/58/IORI_BGI_A.jpg){:.border}
 

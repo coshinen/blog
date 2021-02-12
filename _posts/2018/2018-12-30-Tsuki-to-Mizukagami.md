@@ -6,7 +6,11 @@ author: mistydew
 comments: true
 category: 译文集
 tags: Lyrics
-excerpt: 川の水面に映った月を、手のひら差し出しすくい上げた。冷たい水が指の隙間を、零れて何も残らない。
+excerpt:
+  川の水面に映った月を<br>
+  手のひら差し出しすくい上げた<br>
+  冷たい水が指の隙間を<br>
+  零れて何も残らない
 ---
 ![Team A 7th Stage](http://stage48.net/wiki/images/thumb/2/22/A7thPoster.jpg/423px-A7thPoster.jpg){:.border}
 

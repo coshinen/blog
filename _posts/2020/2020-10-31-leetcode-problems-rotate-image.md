@@ -6,7 +6,10 @@ author: mistydew
 comments: true
 category: 力扣题解
 tags: LeetCode Medium Array
-excerpt: 给定一个 *n* x *n* 的二维`矩阵`表示一个图像，旋转该图像 90 度（顺时针）。
+excerpt:
+  给定一个 *n* x *n* 的二维`矩阵`表示一个图像，旋转该图像 90 度（顺时针）。<br>
+  你必须原地旋转图片，这意味着你必须直接修改输入的 2D 矩阵。<br>
+  **不要**分配另一个 2D 矩阵然后做旋转。
 ---
 > ## 48. Rotate Image
 > 

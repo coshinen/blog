@@ -6,7 +6,11 @@ author: mistydew
 comments: true
 category: 译文集
 tags: Lyrics Conan Garnet
-excerpt: 朝が来るたび君のことを想う、一日の始まりさえも切なくて。二度と戻れない？無邪気な二人、ただ傍にいれば幸せだった。
+excerpt:
+  朝が来るたび君のことを想う<br>
+  一日の始まりさえも切なくて<br>
+  二度と戻れない？無邪気な二人<br>
+  ただ傍にいれば幸せだった
 ---
 ![GZCA-2031](https://ganekuro.github.io/images/discography/single/GZCA-2031.jpg){:.border}
 

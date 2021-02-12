@@ -6,7 +6,9 @@ author: mistydew
 comments: true
 category: 力扣题解
 tags: LeetCode Medium Array Sort
-excerpt: 给定一个*无重叠的*区间集合，插入一个新的区间到区间集中（如果必要就合并）。你可以假设区间最初是根据它们的开始时间排序的。
+excerpt:
+  给定一个*无重叠的*区间集合，插入一个新的区间到区间集中（如果必要就合并）。<br>
+  你可以假设区间最初是根据它们的开始时间排序的。
 ---
 > ## 57. Insert Interval
 > 

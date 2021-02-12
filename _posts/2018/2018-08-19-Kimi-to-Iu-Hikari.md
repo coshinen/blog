@@ -6,7 +6,9 @@ author: mistydew
 comments: true
 category: 译文集
 tags: Lyrics Conan Garnet
-excerpt: 波の上漂う海月をみるのが好きで、いつまでもどこか遠い世界想い馳せるよう。
+excerpt:
+  波の上漂う海月をみるのが好きで<br>
+  いつまでもどこか遠い世界想い馳せるよう
 ---
 ![GZCA-7031](https://ganekuro.github.io/images/discography/single/GZCA-7031.jpg){:.border}
 

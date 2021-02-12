@@ -6,7 +6,9 @@ author: mistydew
 comments: true
 category: 译文集
 tags: Lyrics
-excerpt: 砂の上 刻むステップ ほんのひとり遊び。振り向くと遠く人影 渚を駆けて来る。
+excerpt:
+  砂の上 刻むステップ ほんのひとり遊び<br>
+  振り向くと遠く人影 渚を駆けて来る
 ---
 ![L-1600](https://www.generasia.com/w/images/d/da/Akina_Slow_Motion.jpg){:.border}
 

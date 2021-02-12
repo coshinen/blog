@@ -6,7 +6,10 @@ author: mistydew
 comments: true
 category: 力扣题解
 tags: LeetCode Easy String
-excerpt: 给定一个通过空格分隔的一些单词组成的字符串 `s`，返回*该字符串中最后一个单词的长度*。如果最后一个单词不存在，则返回 `0`。
+excerpt:
+  给定一个通过空格分隔的一些单词组成的字符串 `s`，返回*该字符串中最后一个单词的长度*。<br>
+  如果最后一个单词不存在，则返回 `0`。<br>
+  **单词**是指仅由字母组成且不含任何空格字符的最大子串。
 ---
 > ## 58. Length of Last Word
 > 

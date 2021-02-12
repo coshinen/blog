@@ -6,7 +6,11 @@ author: mistydew
 comments: true
 category: 译文集
 tags: Lyrics
-excerpt: これ以上何を失えば 心は許されるの、どれ程の痛みならば もういちど君に会える。One more time 季節よ うつろわないで、One more time ふざけあった 時間よ。
+excerpt:
+  これ以上何を失えば 心は許されるの<br>
+  どれ程の痛みならば もういちど君に会える<br>
+  One more time 季節よ うつろわないで<br>
+  One more time ふざけあった 時間よ
 ---
 ![UPCH-80013](https://is1-ssl.mzstatic.com/image/thumb/Music128/v4/99/fd/91/99fd91c1-2ccc-636f-029c-2078b3f41037/source/600x600bb.jpg){:.border}
 

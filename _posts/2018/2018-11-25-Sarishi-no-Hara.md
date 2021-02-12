@@ -6,7 +6,9 @@ author: mistydew
 comments: true
 category: 译文集
 tags: Lyrics
-excerpt: 大抵の事じゃ挫けない 僕は君と共にある、週末改札の向こう 銀河一等星の輝き。
+excerpt:
+  大抵の事じゃ挫けない 僕は君と共にある<br>
+  週末改札の向こう 銀河一等星の輝き
 ---
 ![QWCE-245](https://is4-ssl.mzstatic.com/image/thumb/Music5/v4/51/27/5b/51275b66-8ad1-b788-c8e6-4f1f5faf5bee/source/600x600bb.jpg){:.border}
 

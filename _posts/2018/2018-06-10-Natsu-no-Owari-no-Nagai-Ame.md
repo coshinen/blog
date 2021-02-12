@@ -6,7 +6,9 @@ author: mistydew
 comments: true
 category: 译文集
 tags: Lyrics Garnet
-excerpt: ほんの少し軽い眠りをとったって満たされやしない、きっとまた同じとこで悩んじゃって動けないままで。
+excerpt:
+  ほんの少し軽い眠りをとったって満たされやしない<br>
+  きっとまた同じとこで悩んじゃって動けないままで
 ---
 ![GZCA-7031](https://ganekuro.github.io/images/discography/single/GZCA-7031.jpg){:.border}
 

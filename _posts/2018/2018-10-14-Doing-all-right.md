@@ -6,7 +6,10 @@ author: mistydew
 comments: true
 category: 译文集
 tags: Lyrics Conan Garnet
-excerpt: Doing all right!かみしめた君の記憶 木漏れ日の匂い、置いてきた何かはもう 此処にはないけど。
+excerpt:
+    Doing all right!<br>
+    かみしめた君の記憶 木漏れ日の匂い<br>
+    置いてきた何かはもう 此処にはないけど
 ---
 ![GZCA-7141](https://ganekuro.github.io/images/discography/single/GZCA-7141.jpg){:.border}
 

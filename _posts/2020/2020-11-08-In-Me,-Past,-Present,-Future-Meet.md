@@ -6,7 +6,13 @@ author: mistydew
 comments: true
 category: 译文集
 tags: Poem
-excerpt: In Me, Past, Present, Future Meet, to hold long chiding conference. My lusts usurp the present tense, and strangle Reason in his seat. My loves leap through the future's fence, to dance with dream-enfranchised feet.
+excerpt:
+  In me, past, present, future meet<br>
+  To hold long chiding conference.<br>
+  My lusts usurp the present tense<br>
+  And strangle Reason in his seat.<br>
+  My loves leap through the future's fence<br>
+  To dance with dream-enfranchised feet.
 ---
 作者：Siegfried Sassoon
 

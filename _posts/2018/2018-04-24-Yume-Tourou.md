@@ -6,7 +6,9 @@ author: mistydew
 comments: true
 category: 译文集
 tags: Lyrics
-excerpt: あぁ、このまま僕たちの声が 世界の端っこまで消えることなく 届いたりしたらいいのにな。
+excerpt:
+  あぁ このまま僕たちの声が 世界の端っこまで消えることなく<br>
+  届いたりしたらいいのにな
 ---
 ![UPCH-20423](https://is3-ssl.mzstatic.com/image/thumb/Music118/v4/ae/1d/0e/ae1d0e28-3c2f-b977-1b06-7909397e2fea/source/600x600bb.jpg){:.border}
 

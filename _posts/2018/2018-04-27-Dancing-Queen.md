@@ -6,7 +6,11 @@ author: mistydew
 comments: true
 category: 译文集
 tags: Lyrics
-excerpt: Ooh, you can dance, you can jive. Having the time of your life. Ooh, see that girl, watch that scene. Digging the dancing queen.
+excerpt:
+  Ooh, you can dance, you can jive<br>
+  Having the time of your life<br>
+  Ooh, see that girl, watch that scene<br>
+  Digging the dancing queen
 ---
 ![GOLD GREATEST HITS](https://is1-ssl.mzstatic.com/image/thumb/Music128/v4/88/92/4c/88924c01-6fb3-8616-f0b3-881b1ed09e03/source/600x600bb.jpg){:.border}
 

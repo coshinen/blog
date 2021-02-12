@@ -6,7 +6,14 @@ author: mistydew
 comments: true
 category: 译文集
 tags: Lyrics Conan
-excerpt: あの日から 感じてた。ふたり 離れても、この想い あなたへと、きっと 届く。
+excerpt:
+  あの日から 感じてた<br>
+  ふたり 離れても<br>
+  この想い あなたへと<br>
+  きっと 届く<br>
+  通りすぎる季節に 願いをたくした<br>
+  愛は いつも はかなくて せつない<br>
+  涙 ひとつ 流れ星
 ---
 ![POCX-1117](https://www.generasia.com/w/images/2/28/MC_M3_OS_F.jpg){:.border}
 

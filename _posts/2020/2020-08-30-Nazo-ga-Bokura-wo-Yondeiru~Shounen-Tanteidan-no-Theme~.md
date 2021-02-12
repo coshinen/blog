@@ -6,7 +6,10 @@ author: mistydew
 comments: true
 category: 译文集
 tags: Lyrics Conan
-excerpt: どこかで誰かが僕らを呼ぶぜ。ナゾナゾだらけの事件(ヤマ)なのさ。さあ行こうぜ また事件だ。
+excerpt:
+  どこかで誰かが僕らを呼ぶぜ<br>
+  ナゾナゾだらけの事件(ヤマ)なのさ<br>
+  さあ行こうぜ また事件だ
 ---
 ![POCX-1081](https://www.generasia.com/w/images/5/58/IORI_BGI_A.jpg){:.border}
 

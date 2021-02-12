@@ -6,7 +6,11 @@ author: mistydew
 comments: true
 category: 译文集
 tags: Lyrics Conan
-excerpt: 明日になれば、涙が乾く、心も色づいて来る。笑顔が似合う、あなたのために、いつでもこのぼくがいる。
+excerpt:
+  明日になれば 涙が乾く<br>
+  心も色づいて来る<br>
+  笑顔が似合う あなたのために<br>
+  いつでもこのぼくがいる
 ---
 ![PODX-1031](https://www.generasia.com/w/images/6/6f/IORI_BGI_S.jpg){:.border}
 

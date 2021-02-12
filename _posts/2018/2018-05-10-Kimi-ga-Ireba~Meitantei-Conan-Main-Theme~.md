@@ -6,7 +6,10 @@ author: mistydew
 comments: true
 category: 译文集
 tags: Lyrics Conan
-excerpt: うつむくその背中に、痛い雨がつき刺さる。祈る想いで見ていた。
+excerpt:
+  うつむくその背中に<br>
+  痛い雨がつき刺さる<br>
+  祈る想いで見ていた
 ---
 ![PODX-1023](https://www.generasia.com/w/images/5/5b/IORI_KGI.jpg){:.border}
 

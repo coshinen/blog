@@ -6,7 +6,9 @@ author: mistydew
 comments: true
 category: 译文集
 tags: Lyrics Garnet
-excerpt: まっすぐな思いはまっすぐに伝わるの？唐突な青空 遠ざかる飛行機。
+excerpt:
+  まっすぐな思いはまっすぐに伝わるの？<br>
+  唐突な青空 遠ざかる飛行機
 ---
 ![GZCA-5251](https://ganekuro.github.io/images/discography/album/GZCA-5251.jpg){:.border}
 
