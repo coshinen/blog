@@ -6,7 +6,9 @@ author: mistydew
 comments: true
 category: 译文集
 tags: Lyrics Garnet
-excerpt: ねぇ何を話そうか…もう夜が来てしまう、遠い道のりを歩いてきた。
+excerpt:
+  ねぇ何を話そうか… もう夜が来てしまう<br>
+  遠い道のりを歩いてきた
 ---
 ![GZCA-5256~7](https://ganekuro.github.io/images/discography/album/GZCA-5256~7.jpg){:.border}
 

@@ -6,7 +6,12 @@ author: mistydew
 comments: true
 category: 译文集
 tags: Lyrics Garnet
-excerpt: 薄明かりを灯して、冷たい壁に 頬寄せ。静寂に 耳をすます、ひっそりと ゆっくりと、惹き返す。
+excerpt:
+  薄明かりを灯して<br>
+  冷たい壁に 頬寄せ<br>
+  静寂に 耳をすます<br>
+  ひっそりと ゆっくりと<br>
+  惹き返す
 ---
 ![GZCA-5038](https://ganekuro.github.io/images/discography/album/GZCA-5038.jpg){:.border}
 

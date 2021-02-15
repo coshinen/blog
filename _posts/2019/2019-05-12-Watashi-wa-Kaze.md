@@ -6,7 +6,11 @@ author: mistydew
 comments: true
 category: 译文集
 tags: Lyrics
-excerpt: あまりに悲しいことばかりで、どこか遠くへ旅にでようと。ポケットに思い出つめこみ、ひとり汽車にのったの。
+excerpt:
+  あまりに悲しいことばかりで<br>
+  どこか遠くへ旅にでようと<br>
+  ポケットに思い出つめこみ<br>
+  ひとり汽車にのったの
 ---
 ![UTAHIME](https://is5-ssl.mzstatic.com/image/thumb/Music113/v4/97/56/c1/9756c131-fad6-8105-ade0-c915827a9c0b/source/600x600bb.jpg){:.border}
 

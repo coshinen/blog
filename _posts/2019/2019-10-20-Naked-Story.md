@@ -6,7 +6,11 @@ author: mistydew
 comments: true
 category: 译文集
 tags: Lyrics Garnet
-excerpt: Naked story yeah- 無防備でも飛び出したい、感じるまま stay yeah- We're born in this way.
+excerpt:
+  Naked story yeah-<br>
+  無防備でも飛び出したい<br>
+  感じるまま stay yeah-<br>
+  We're born in this way.
 ---
 ![GZCA-5013](https://ganekuro.github.io/images/discography/album/GZCA-5013.jpg){:.border}
 

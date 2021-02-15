@@ -6,7 +6,12 @@ author: mistydew
 comments: true
 category: 译文集
 tags: Lyrics Garnet
-excerpt: 暮れゆく空おセンチな気分。海辺のDrive、まだみたことのない場所へ、僕らを乗せて be high yeah、密やかに辿る道。
+excerpt:
+  暮れゆく空おセンチな気分<br>
+  海辺のDrive<br>
+  まだみたことのない場所へ<br>
+  僕らを乗せて be high yeah<br>
+  密やかに辿る道
 ---
 ![GZCA-5198](https://ganekuro.github.io/images/discography/album/GZCA-5198.jpg){:.border}
 

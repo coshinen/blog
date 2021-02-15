@@ -6,7 +6,11 @@ author: mistydew
 comments: true
 category: 译文集
 tags: Lyrics Garnet
-excerpt: 十二月にしては暖かいこんな夜は、思いつきで出かけた。車の中でずっと手をつないで眠った、朝日が二人を起こすまで。
+excerpt:
+  十二月にしては暖かいこんな夜は<br>
+  思いつきで出かけた<br>
+  車の中でずっと手をつないで眠った<br>
+  朝日が二人を起こすまで
 ---
 ![GZCA-1029](https://ganekuro.github.io/images/discography/single/GZCA-1029.jpg){:.border}
 

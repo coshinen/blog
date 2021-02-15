@@ -6,7 +6,9 @@ author: mistydew
 comments: true
 category: 译文集
 tags: Lyrics Garnet
-excerpt: 夕焼けのオレンジ色残すような明りを灯しだす。秋風にざわめく足音が祭りをつれて。
+excerpt:
+  夕焼けのオレンジ色残すような明りを灯しだす<br>
+  秋風にざわめく足音が祭りをつれて
 ---
 ![GZCA-4028](https://ganekuro.github.io/images/discography/single/GZCA-4028.jpg){:.border}
 

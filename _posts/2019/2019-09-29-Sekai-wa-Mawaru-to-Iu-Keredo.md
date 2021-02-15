@@ -6,7 +6,9 @@ author: mistydew
 comments: true
 category: 译文集
 tags: Lyrics Conan Garnet
-excerpt: 永い夜が朝が昼が すべてのらりくらり流れゆくよ、日々をつないでゆくにも そうね 意思というものが必要？
+excerpt:
+  永い夜が朝が昼が すべてのらりくらり流れゆくよ<br>
+  日々をつないでゆくにも そうね 意思というものが必要？
 ---
 ![GZCA-4100](https://ganekuro.github.io/images/discography/single/GZCA-4100.jpg){:.border}
 

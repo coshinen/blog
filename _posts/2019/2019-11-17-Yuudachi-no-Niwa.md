@@ -6,7 +6,13 @@ author: mistydew
 comments: true
 category: 译文集
 tags: Lyrics Garnet
-excerpt: 今日買ったばかりのレコードを、抱えたままでいつものカフェ。先送りした小さな幸福、上昇気流の淡い日々。無いものねだりの毎日が、振り返れば今 愛しくさえ思う。
+excerpt:
+  今日買ったばかりのレコードを<br>
+  抱えたままでいつものカフェ<br>
+  先送りした小さな幸福<br>
+  上昇気流の淡い日々<br>
+  無いものねだりの毎日が<br>
+  振り返れば今 愛しくさえ思う
 ---
 ![GZCA-2044](https://ganekuro.github.io/images/discography/single/GZCA-2044.jpg){:.border}
 

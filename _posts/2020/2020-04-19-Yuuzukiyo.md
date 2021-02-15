@@ -6,7 +6,10 @@ author: mistydew
 comments: true
 category: 译文集
 tags: Lyrics Garnet
-excerpt: 夕月の光とならぬ空、そっと寄り添う。人影にも惑う。
+excerpt:
+  夕月の光とならぬ空<br>
+  そっと寄り添う<br>
+  人影にも惑う
 ---
 ![GZCA-5052](https://ganekuro.github.io/images/discography/album/GZCA-5052.jpg){:.border}
 

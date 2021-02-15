@@ -6,7 +6,9 @@ author: mistydew
 comments: true
 category: 译文集
 tags: Lyrics Garnet
-excerpt: 夜深けの流星達 眺めていたよね。言葉にならない 感覚(きもち)を共有してた。
+excerpt:
+  夜深けの流星達 眺めていたよね<br>
+  言葉にならない 感覚(きもち)を共有してた
 ---
 ![GZCA-7054](https://ganekuro.github.io/images/discography/single/GZCA-7054.jpg){:.border}
 

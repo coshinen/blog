@@ -6,7 +6,11 @@ author: mistydew
 comments: true
 category: 译文集
 tags: Lyrics Garnet
-excerpt: 夢去りし 数えきれぬ、幼い優しさに守られていた日々。眠れずに 叫ぶように、君を想うもどかしさ 駆け巡る。
+excerpt:
+  夢去りし 数えきれぬ<br>
+  幼い優しさに守られていた日々<br>
+  眠れずに 叫ぶように<br>
+  君を想うもどかしさ 駆け巡る
 ---
 ![GZCA-1061](https://ganekuro.github.io/images/discography/album/GZCA-1061.jpg){:.border}
 

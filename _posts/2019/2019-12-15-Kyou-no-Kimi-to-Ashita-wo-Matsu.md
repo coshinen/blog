@@ -6,7 +6,10 @@ author: mistydew
 comments: true
 category: 译文集
 tags: Lyrics Garnet
-excerpt: 街中冷えだして again, new fallen snow、君の体温(ぬくもり)胸にしみるよ。何もないままなら気付けずにいる そんな毎日。
+excerpt:
+  街中冷えだして again, new fallen snow<br>
+  君の体温(ぬくもり)胸にしみるよ<br>
+  何もないままなら気付けずにいる そんな毎日
 ---
 ![GZCA-5038](https://ganekuro.github.io/images/discography/album/GZCA-5038.jpg){:.border}
 
@@ -17,7 +20,7 @@ excerpt: 街中冷えだして again, new fallen snow、君の体温(ぬくも�
 
 <blockquote class="original">
   <h2>今日の君と明日を待つ</h2>
-    <p>
+  <p>
     街中冷えだして again, new fallen snow<br>
     君の体温(ぬくもり)胸にしみるよ<br>
     何もないままなら気付けずにいる そんな毎日<br>

@@ -6,7 +6,9 @@ author: mistydew
 comments: true
 category: 译文集
 tags: Lyrics
-excerpt: あの日見渡した渚を 今も思い出すんだ。砂の上に刻んだ言葉 君の後ろ姿。
+excerpt:
+  あの日見渡した渚を 今も思い出すんだ<br>
+  砂の上に刻んだ言葉 君の後ろ姿
 ---
 ![TFCC-89632](https://is2-ssl.mzstatic.com/image/thumb/Music118/v4/0f/b0/e7/0fb0e7cc-54bc-76c5-f598-d9a489dcdecb/source/600x600bb.jpg){:.border}
 ![SRCL-9571](https://is5-ssl.mzstatic.com/image/thumb/Music118/v4/d7/02/8a/d7028a3a-bd1b-e54a-04f3-c2c459174ad1/source/600x600bb.jpg){:.border}

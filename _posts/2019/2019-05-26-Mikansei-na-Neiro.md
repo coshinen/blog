@@ -6,7 +6,11 @@ author: mistydew
 comments: true
 category: 译文集
 tags: Lyrics Garnet
-excerpt: 決してその手を離さずに、振り返らないでいて。願うだけしか出来ない私を、いつの日か裁くでしょう。
+excerpt:
+  決してその手を離さずに<br>
+  振り返らないでいて<br>
+  願うだけしか出来ない私を<br>
+  いつの日か裁くでしょう
 ---
 ![GZCA-1032](https://ganekuro.github.io/images/discography/single/GZCA-1032.jpg){:.border}
 

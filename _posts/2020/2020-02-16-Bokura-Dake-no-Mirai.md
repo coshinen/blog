@@ -6,7 +6,11 @@ author: mistydew
 comments: true
 category: 译文集
 tags: Lyrics Garnet
-excerpt: 生まれ変われるなら、早く君にあいたい。通り過ぎたときに、君だけが足りない。
+excerpt:
+  生まれ変われるなら<br>
+  早く君にあいたい<br>
+  通り過ぎたときに<br>
+  君だけが足りない
 ---
 ![GZCA-7037](https://ganekuro.github.io/images/discography/single/GZCA-7037.jpg){:.border}
 

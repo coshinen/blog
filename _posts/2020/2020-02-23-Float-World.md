@@ -6,7 +6,9 @@ author: mistydew
 comments: true
 category: 译文集
 tags: Lyrics Garnet
-excerpt: 衝動に任して全部(すべて)終わりにしたくなる時ない？愛に満ちた時間(とき)はいつまでも続きやしない。
+excerpt:
+  衝動に任して全部(すべて)終わりにしたくなる時ない？<br>
+  愛に満ちた時間(とき)はいつまでも続きやしない
 ---
 ![GZCA-7037](https://ganekuro.github.io/images/discography/single/GZCA-7037.jpg){:.border}
 

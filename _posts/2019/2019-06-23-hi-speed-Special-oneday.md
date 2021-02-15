@@ -6,7 +6,11 @@ author: mistydew
 comments: true
 category: 译文集
 tags: Lyrics Garnet
-excerpt: コーヒーは最初の一口、甘いケーキの端っこ、ポテトは揚げたてにして、おいしいトコは少しだけ。
+excerpt:
+  コーヒーは最初の一口<br>
+  甘いケーキの端っこ<br>
+  ポテトは揚げたてにして<br>
+  おいしいトコは少しだけ
 ---
 ![GZCA-1050](https://ganekuro.github.io/images/discography/single/GZCA-1050.jpg){:.border}
 

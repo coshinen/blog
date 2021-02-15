@@ -6,7 +6,9 @@ author: mistydew
 comments: true
 category: 译文集
 tags: Lyrics
-excerpt: 春を愛する人は、心清き人。すみれの花のような、僕の友だち。
+excerpt:
+  春を愛する人は 心清き人<br>
+  すみれの花のような 僕の友だち
 ---
 ![BEST COLLECTION](https://is1-ssl.mzstatic.com/image/thumb/Music71/v4/5b/3a/7d/5b3a7dab-c452-66d8-616e-8c3e0e1bca66/source/600x600bb.jpg){:.border}
 

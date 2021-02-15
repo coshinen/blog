@@ -6,7 +6,11 @@ author: mistydew
 comments: true
 category: 力扣题解
 tags: LeetCode Hard Array Binary-Search Divide-and-Conquer
-excerpt: 这里是两个大小分别为 m 和 n 的有序数组 **nums1** 和 **nums2**。找出两个有序数组的中位数。
+excerpt:
+  这里是两个大小分别为 m 和 n 的有序数组 **nums1** 和 **nums2**。<br>
+  找出两个有序数组的中位数。
+  整个运行时间复杂度应该为 O(log (m+n))。<br>
+  你可以假设 **nums1** 和 **nums2** 不都是空。
 ---
 > ## 4. Median of Two Sorted Arrays
 > 

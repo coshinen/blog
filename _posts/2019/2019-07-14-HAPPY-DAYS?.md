@@ -6,7 +6,13 @@ author: mistydew
 comments: true
 category: 译文集
 tags: Lyrics Garnet
-excerpt: close island、素早く暮れる空に、意味もなく胸が切なくなる。そんな季節、冷えてく体抱きしめてくれる、君の腕がまた恋しくなるから。
+excerpt:
+  close island<br>
+  素早く暮れる空に<br>
+  意味もなく胸が切なくなる<br>
+  そんな季節<br>
+  冷えてく体抱きしめてくれる<br>
+  君の腕がまた恋しくなるから
 ---
 ![GZCA-1061](https://ganekuro.github.io/images/discography/album/GZCA-1061.jpg){:.border}
 

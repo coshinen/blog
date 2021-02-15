@@ -6,7 +6,10 @@ author: mistydew
 comments: true
 category: 译文集
 tags: Lyrics Garnet
-excerpt: 全速力でも かけ抜けた、あの路地は今とても狭く。記憶の曖昧さにホロリとくる。
+excerpt:
+  全速力でも かけ抜けた<br>
+  あの路地は今とても狭く<br>
+  記憶の曖昧さにホロリとくる
 ---
 ![GZCA-7054](https://ganekuro.github.io/images/discography/single/GZCA-7054.jpg){:.border}
 

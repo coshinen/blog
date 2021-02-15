@@ -6,7 +6,9 @@ author: mistydew
 comments: true
 category: 译文集
 tags: Lyrics Garnet
-excerpt: 君のいない 明日へ向かう 日々なら、すべてが もう… 暇つぶしのようで。
+excerpt:
+  君のいない 明日へ向かう 日々なら<br>
+  すべてが もう… 暇つぶしのようで
 ---
 ![GZCA-7037](https://ganekuro.github.io/images/discography/single/GZCA-7037.jpg){:.border}
 

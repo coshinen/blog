@@ -6,7 +6,10 @@ author: mistydew
 comments: true
 category: 译文集
 tags: Lyrics
-excerpt: Here comes the sun, doo doo doo doo. Here comes the sun, and I say. It's all right.
+excerpt:
+  Here comes the sun, doo doo doo doo<br>
+  Here comes the sun, and I say<br>
+  It's all right
 ---
 ![Abbey Road](https://is4-ssl.mzstatic.com/image/thumb/Music128/v4/0a/91/ba/0a91bafc-8a02-202e-e604-9d920f0d7e1b/source/600x600bb.jpg){:.border}
 

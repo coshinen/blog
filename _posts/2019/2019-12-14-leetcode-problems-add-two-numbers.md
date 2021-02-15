@@ -6,7 +6,11 @@ author: mistydew
 comments: true
 category: 力扣题解
 tags: LeetCode Medium Linked-List Math
-excerpt: 给定两条**非空**链表用于表示两个非负整数。数字以**倒序**的方式存储在链表中，每个节点保存**一位**数字。把两数之和保存在一条链表中并返回。
+excerpt:
+  给定两条**非空**链表用于表示两个非负整数。
+  数字以**倒序**的方式存储在链表中，每个节点保存**一位**数字。
+  把两数之和保存在一条链表中并返回。<br>
+  你可以假设除了数字 0，这两个数都不会以 0 开头。
 ---
 > ## 2. Add Two Numbers
 > 

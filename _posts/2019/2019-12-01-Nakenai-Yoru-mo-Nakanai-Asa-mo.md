@@ -6,7 +6,9 @@ author: mistydew
 comments: true
 category: 译文集
 tags: Lyrics Garnet
-excerpt: 無防備に求めることに線を引いた 愛しさだけなら、交叉しない価値観すれ違う。
+excerpt:
+  無防備に求めることに線を引いた 愛しさだけなら<br>
+  交叉しない価値観すれ違う
 ---
 ![GZCA-7031](https://ganekuro.github.io/images/discography/single/GZCA-7031.jpg){:.border}
 

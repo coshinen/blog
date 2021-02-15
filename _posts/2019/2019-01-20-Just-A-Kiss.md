@@ -6,7 +6,11 @@ author: mistydew
 comments: true
 category: 译文集
 tags: Lyrics
-excerpt: Lying here with you so close to me. It's hard to fight these feelings when it feels so hard to breathe. I'm caught up in this moment. I'm caught up in your smile.
+excerpt:
+  Lying here with you so close to me<br>
+  It's hard to fight these feelings when it feels so hard to breathe<br>
+  I'm caught up in this moment<br>
+  I'm caught up in your smile
 ---
 ![own the night](https://is2-ssl.mzstatic.com/image/thumb/Music123/v4/9b/01/10/9b01105e-4822-c47a-8c2f-f9ef49105f10/source/600x600bb.jpg){:.border}
 

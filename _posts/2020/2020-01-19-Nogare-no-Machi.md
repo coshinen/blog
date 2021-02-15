@@ -6,7 +6,9 @@ author: mistydew
 comments: true
 category: 译文集
 tags: Lyrics Garnet
-excerpt: 深い森に身をひそめて、逃れの町さがしてる。
+excerpt:
+  深い森に身をひそめて<br>
+  逃れの町さがしてる
 ---
 ![GZCA-5038](https://ganekuro.github.io/images/discography/album/GZCA-5038.jpg){:.border}
 

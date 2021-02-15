@@ -6,7 +6,13 @@ author: mistydew
 comments: true
 category: 译文集
 tags: Lyrics Garnet
-excerpt: 午後になると西陽が射す、部屋の片隅のソファー。海を越えて運んだ、大切な君の場所へ。初めて僕が座る、出会いから半年の今日。
+excerpt:
+  午後になると西陽が射す<br>
+  部屋の片隅のソファー<br>
+  海を越えて運んだ<br>
+  大切な君の場所へ<br>
+  初めて僕が座る<br>
+  出会いから半年の今日
 ---
 ![GZCA-1072](https://ganekuro.github.io/images/discography/single/GZCA-1072.jpg){:.border}
 

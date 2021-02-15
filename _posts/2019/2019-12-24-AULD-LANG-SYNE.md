@@ -6,7 +6,11 @@ author: mistydew
 comments: true
 category: 译文集
 tags: Lyrics Garnet
-excerpt: Should auld acquaintance be forgot, and never brought to mind? Should auld acquaintance be forgot, and days of auld lang syne?
+excerpt:
+  Should auld acquaintance be forgot<br>
+  And never brought to mind?<br>
+  Should auld acquaintance be forgot<br>
+  And days of auld lang syne?
 ---
 ![GZCA-5229](https://ganekuro.github.io/images/discography/other/GZCA-5229.jpg){:.border}
 

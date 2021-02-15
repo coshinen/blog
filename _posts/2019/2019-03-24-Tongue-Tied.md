@@ -6,7 +6,11 @@ author: mistydew
 comments: true
 category: 译文集
 tags: Lyrics
-excerpt: Take me to your best friend's house. Going around this roundabout, oh, yeah. Take me to your best friend's house. I loved you then and I love you now, oh, yeah.
+excerpt:
+  Take me to your best friend's house<br>
+  Going around this roundabout, oh, yeah<br>
+  Take me to your best friend's house<br>
+  I loved you then and I love you now, oh, yeah
 ---
 ![NEVER TRUST A HAPPY SONG](https://is3-ssl.mzstatic.com/image/thumb/Music/v4/a3/9e/bf/a39ebf90-5cd2-659b-b273-c318e6f14790/source/600x600bb.jpg){:.border}
 

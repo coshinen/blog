@@ -6,7 +6,9 @@ author: mistydew
 comments: true
 category: 译文集
 tags: Lyrics Conan Garnet
-excerpt: 気づけば懐かしい川原に来てみたり、昨日みた夢の続き想像してたり。
+excerpt:
+  気づけば懐かしい川原に来てみたり<br>
+  昨日みた夢の続き想像してたり
 ---
 ![GZCA-4028](https://ganekuro.github.io/images/discography/single/GZCA-4028.jpg){:.border}
 

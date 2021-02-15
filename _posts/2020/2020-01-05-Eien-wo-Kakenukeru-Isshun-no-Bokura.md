@@ -6,7 +6,11 @@ author: mistydew
 comments: true
 category: 译文集
 tags: Lyrics Garnet
-excerpt: まるで異国の知らない場所へ来たみたい、懐かしいこの街の匂い 記憶。洪水みたいに溢れてくる五感(きもち)が、あった事思い出す 夕波の音。
+excerpt:
+  まるで異国の知らない場所へ来たみたい<br>
+  懐かしいこの街の匂い 記憶<br>
+  洪水みたいに溢れてくる五感(きもち)が<br>
+  あった事思い出す 夕波の音
 ---
 ![GZCA-5038](https://ganekuro.github.io/images/discography/album/GZCA-5038.jpg){:.border}
 
