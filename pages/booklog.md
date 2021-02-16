@@ -120,6 +120,7 @@ excerpt: Here are some books that renew my spirit or reclaim my life.
 > * 巨婴国，[中] 武志红
 > * 身体知道答案，[中] 武志红
 > * 为何爱会伤人，[中] 武志红
+> * 为何越爱越孤独，[中] 武志红
 > * 心灵的七种兵器，[中] 武志红
 > * 七个心理寓言，[中] 武志红
 > * 为何家会伤人，[中] [武志红](http://blog.sina.com.cn/wuzii){:target="_blank"}
