@@ -6,7 +6,10 @@ author: mistydew
 comments: true
 category: 力扣题解
 tags: LeetCode Hard String Dynamic-Programming Backtracking
-excerpt: 给定一个字符串（`s`）和一个模式串（`p`），实现支持 `'.'` 和 `'*'` 的正则表达式匹配。
+excerpt:
+  给定一个字符串（`s`）和一个模式串（`p`），实现支持 `'.'` 和 `'*'` 的正则表达式匹配。<br>
+  ……<br>
+  该匹配应该覆盖**整个**输入字符串（非部分）。
 ---
 > ## 10. Regular Expression Matching
 > 

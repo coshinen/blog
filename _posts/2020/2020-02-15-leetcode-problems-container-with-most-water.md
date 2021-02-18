@@ -6,7 +6,11 @@ author: mistydew
 comments: true
 category: 力扣题解
 tags: LeetCode Medium Array Two-Pointers
-excerpt: 给定 n (n >= 2) 个非负整数用于表示坐标系中垂线的高，在其中找出任意两条，使它们与 x 轴构成的容器可以容纳最多的水。
+excerpt:
+  给定 n 个非负整数 a1、a2……an，其中每个代表坐标 (i, ai)。
+  画 n 条垂线，使得线 i 的两个端点位于 (i, ai) 和 (i, 0)。
+  找两条线，使它们与 x 轴构成的容器可以容纳最多的水。<br>
+  **注：**你不能倾斜容器并且 n 至少为 2。
 ---
 > ## 11. Container With Most Water
 > 

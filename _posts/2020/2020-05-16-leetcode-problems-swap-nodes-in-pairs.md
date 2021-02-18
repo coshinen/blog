@@ -6,7 +6,9 @@ author: mistydew
 comments: true
 category: 力扣题解
 tags: LeetCode Medium Linked-List
-excerpt: 给定一条链表，交换每两个相邻的节点并返回它的头。
+excerpt:
+  给定一条链表，交换每两个相邻的节点并返回它的头。<br>
+  **不要**修改链表节点的值，只修改节点本身。
 ---
 > ## 24. Swap Nodes in Pairs
 > 

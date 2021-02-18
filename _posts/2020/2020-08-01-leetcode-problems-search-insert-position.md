@@ -6,7 +6,10 @@ author: mistydew
 comments: true
 category: 力扣题解
 tags: LeetCode Easy Array Binary-Search
-excerpt: 给定一个有序数组和一个目标值，如果找到目标值则返回其索引。如果没找到，返回其按顺序插入的索引。
+excerpt:
+  给定一个有序数组和一个目标值，如果找到目标值则返回其索引。
+  如果没找到，返回其按顺序插入的索引。<br>
+  你可以假设数组中没有重复项。
 ---
 > ## 35. Search Insert Position
 > 

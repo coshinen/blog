@@ -6,7 +6,10 @@ author: mistydew
 comments: true
 category: 力扣题解
 tags: LeetCode Medium Array Two-Pointers
-excerpt: 给定一个含 n 个整数的数组 `nums`，数组 `nums` 是否存在元素 a，b，c 使得 a + b + c = 0？找出给定数组中和为零的所有不重复的三元组。
+excerpt:
+  给定一个含 n 个整数的数组 `nums`，数组 `nums` 是否存在元素 a，b，c 使得 a + b + c = 0？
+  找出给定数组中和为零的所有不重复的三元组。<br>
+  **注：**解决方案必须不含重复的三元组。
 ---
 > ## 15. 3Sum
 > 

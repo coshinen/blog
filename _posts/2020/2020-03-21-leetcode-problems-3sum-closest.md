@@ -6,7 +6,10 @@ author: mistydew
 comments: true
 category: 力扣题解
 tags: LeetCode Medium Array Two-Pointers
-excerpt: 给定一个含 n 个整数的数组 `nums` 和一个整数 `target`，在数组 `nums` 中找出三个和最接近 `target` 的整数。返回三个之和。你可以假定每组输入只有一个结果。
+excerpt:
+  给定一个含 n 个整数的数组 `nums` 和一个整数 `target`，在数组 `nums` 中找出三个和最接近 `target` 的整数。
+  返回三个之和。
+  你可以假定每组输入只有一个结果。
 ---
 > ## 16. 3Sum Closest
 > 
@@ -17,11 +20,11 @@ excerpt: 给定一个含 n 个整数的数组 `nums` 和一个整数 `target`，
 > 
 > **Example:**
 > 
-> <pre>
+> ```
 > Given array nums = [-1, 2, 1, -4], and target = 1.
 > 
 > The sum that is closest to the target is 2. (-1 + 2 + 1 = 2).
-> </pre>
+> ```
 
 ## 解决方案
 

@@ -6,7 +6,9 @@ author: mistydew
 comments: true
 category: 力扣题解
 tags: LeetCode Medium Hash-Table
-excerpt: 判断一个 9x9 的数独是否有效。只需**根据以下规则**验证已填入的数字。
+excerpt:
+  判断一个 9x9 的数独是否有效。
+  只需**根据以下规则**验证已填入的数字。
 ---
 > ## 36. Valid Sudoku
 > 

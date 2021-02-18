@@ -6,7 +6,9 @@ author: mistydew
 comments: true
 category: 力扣题解
 tags: LeetCode Easy Linked-List
-excerpt: 合并两条有序链表并返回一条新链表。新链表通过拼接两条链表的节点组成。
+excerpt:
+  合并两条有序链表并返回一条新链表。
+  新链表通过拼接两条链表的节点组成。
 ---
 > ## 21. Merge Two Sorted Lists
 > 

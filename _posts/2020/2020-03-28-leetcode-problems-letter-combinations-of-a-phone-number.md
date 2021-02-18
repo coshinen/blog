@@ -6,7 +6,10 @@ author: mistydew
 comments: true
 category: 力扣题解
 tags: LeetCode Medium String Backtracking
-excerpt: 给定一个包含数字 `2-9` 范围内的字符串，返回它能表示的所有可能的字母组合。
+excerpt:
+  给定一个包含数字 `2-9` 范围内的字符串，返回它能表示的所有可能的字母组合。<br>
+  一个数字到字母的映射（就像手机按键）基于下面。
+  注意 1 没有映射到任何字母。
 ---
 > ## 17. Letter Combinations of a Phone Number
 > 

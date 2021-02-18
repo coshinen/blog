@@ -6,7 +6,9 @@ author: mistydew
 comments: true
 category: 力扣题解
 tags: LeetCode Easy String
-excerpt: 写一个函数来查找字符串数组的最长公共前缀。
+excerpt:
+  写一个函数来查找字符串数组的最长公共前缀。<br>
+  如果没有公共前缀，则返回一个空字符串 `""`。
 ---
 > ## 14. Longest Common Prefix
 > 

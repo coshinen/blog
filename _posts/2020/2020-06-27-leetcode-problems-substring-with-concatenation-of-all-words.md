@@ -6,7 +6,9 @@ author: mistydew
 comments: true
 category: 力扣题解
 tags: LeetCode Hard Hash-Table Two-Pointers String
-excerpt: 给你一个字符串 **s** 和一系列长度相同的单词 **words**。找出 **s** 中由 **words** 里每个单词串联成子串的所有起始位置。
+excerpt:
+  给你一个字符串 **s** 和一系列长度相同的单词 **words**。
+  找出 **s** 中由 **words** 里每个单词串联成子串的所有起始位置。
 ---
 > ## 30. Substring with Concatenation of All Words
 > 

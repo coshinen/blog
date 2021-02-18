@@ -6,7 +6,9 @@ author: mistydew
 comments: true
 category: 力扣题解
 tags: LeetCode Hard Linked-List Divide-and-Conquer Heap
-excerpt: 合并 k 条有序链表为一条并返回。分析并描述它的复杂度。
+excerpt:
+  合并 k 条有序链表为一条并返回。
+  分析并描述它的复杂度。
 ---
 > ## 23. Merge k Sorted Lists
 > 

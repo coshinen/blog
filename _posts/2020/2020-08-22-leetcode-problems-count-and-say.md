@@ -6,7 +6,10 @@ author: mistydew
 comments: true
 category: 力扣题解
 tags: LeetCode Easy String
-excerpt: 外观数列是下面前 5 项的整数序列：……给定一个整数 *n* (1 ≤ *n* ≤ 30)，生成外观数列的第 *n* 项。
+excerpt:
+  外观数列是下面前 5 项的整数序列：<br>
+  ……<br>
+  给定一个整数 *n* (1 ≤ *n* ≤ 30)，生成外观数列的第 *n* 项。
 ---
 > ## 38. Count and Say
 > 

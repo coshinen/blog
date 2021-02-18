@@ -6,7 +6,9 @@ author: mistydew
 comments: true
 category: 力扣题解
 tags: LeetCode Easy Math
-excerpt: 判断一个整数是否为回文数。当一个整数正着读和反着读一样时就是回文。
+excerpt:
+  判断一个整数是否为回文数。
+  当一个整数正着读和反着读一样时就是回文。
 ---
 > ## 9. Palindrome Number
 > 
