@@ -16,7 +16,7 @@ excerpt: Here are some books that renew my spirit or reclaim my life.
 >   * [医学](#医学)
 >   * [化学](#化学)
 >   * [心理学](#心理学)
->   * [伦理学](#伦理学)
+>   * [社会学](#社会学)
 >   * [方法论](#方法论)
 > * [技术](#技术)
 >   * [算法](#算法)
@@ -135,8 +135,9 @@ excerpt: Here are some books that renew my spirit or reclaim my life.
 > * 少有人走的路 心智成熟的旅程，[美] M. Scott peck
 > * 异类 不一样的成功启示录，[加] Malcolm Gladwell
 
-> ### 伦理学
+> ### 社会学
 > 
+> * 一个人的老后，[日] 上野千鶴子
 > * 最好的告别 关于衰老与死亡，你必须知道的常识，[美] Atul Gawande
 > * 公正 该如何做是好？，[美] [Michael J. Sandel](https://scholar.harvard.edu/sandel){:target="_blank"}
 
