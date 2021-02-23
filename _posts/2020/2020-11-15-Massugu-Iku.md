@@ -11,6 +11,8 @@ excerpt:
   幾筋もの光の柱<br>
   どれもが君の心へ
 ---
+![PODX-1023](https://www.generasia.com/w/images/5/5b/IORI_KGI.jpg){:.border}
+
 歌手：高山みなみ<br>
 作詞：小林準治<br>
 作曲：大野克夫<br>

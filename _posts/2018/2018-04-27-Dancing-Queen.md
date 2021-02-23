@@ -66,7 +66,7 @@ Songwriters: Benny Andersson, Björn Ulvaeus & Stig Anderson
 <div class="translation">
   <h2>舞后</h2>
   <p>
-    哦，你能跳舞，你能摇摆<br>
+    哦，你会跳舞，你会摇摆<br>
     享受你生命中的时光<br>
     哦，看那女孩，看那一幕<br>
     欣赏这个舞后<br>

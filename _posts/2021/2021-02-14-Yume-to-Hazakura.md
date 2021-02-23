@@ -12,8 +12,7 @@ excerpt:
   吹く風が頬を撫でていく<br>
   懐かしい思い出が滲む
 ---
-![DGBA-10012](https://st.cdjapan.co.jp/pictures/l/16/42/DGBA-10012.jpg){:.border}
-![BUZZ](https://img.moegirl.org.cn/common/3/3e/19759474.jpg){:.border}
+![BUZZ](https://cdn.piapro.jp/thumb_i/53/537t75rgz7lnn9o0_20110620064505_0740_0500.jpg){:.border}
 
 歌手：初音ミク<br>
 作詞：青木月光<br>
@@ -102,4 +101,4 @@ excerpt:
 
 ## 参考链接
 
-* [夢と葉桜 - 初音ミク Wiki - atwiki（アットウィキ）](https://w.atwiki.jp/hmiku/pages/17261.html){:target="_blank"}
+* [piapro(ピアプロ)\|オンガク「夢と葉桜　歌なし」](https://piapro.jp/t/DDlj){:target="_blank"}

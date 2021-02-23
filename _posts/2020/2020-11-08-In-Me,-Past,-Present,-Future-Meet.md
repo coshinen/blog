@@ -14,7 +14,9 @@ excerpt:
   My loves leap through the future's fence<br>
   To dance with dream-enfranchised feet.
 ---
-作者：Siegfried Sassoon
+![](https://www.brainyquote.com/photos_tr/en/s/siegfriedsassoon/333437/siegfriedsassoon1-2x.jpg){:.border}
+
+Author: Siegfried Sassoon
 
 <blockquote class="original">
   <h2>In Me, Past, Present, Future Meet</h2>
