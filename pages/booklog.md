@@ -211,4 +211,3 @@ excerpt: Here are some books that renew my spirit or reclaim my life.
 > * 你的灯亮着吗？发现问题的真正所在，[美] Donald C. Gause, Gerald M. Weinberg
 > * [How To Ask Questions The Smart Way](http://www.catb.org/~esr/faqs/smart-questions.html){:target="_blank"}，[美] Eric S. Raymond, Rick Moen
 > * [快乐的 Linux 命令行](https://billie66.github.io/TLCL/){:target="_blank"}，[美] William Shotts
-> * [中文文案排案指北](https://sparanoid.com/note/chinese-copywriting-guidelines/){:target="_blank"}，[中] Tunghsiao Liu
