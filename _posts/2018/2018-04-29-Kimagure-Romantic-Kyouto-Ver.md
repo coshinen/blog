@@ -13,7 +13,8 @@ excerpt:
   「おめん」のうどんはきんぴらで 京ゆば元は精進料理<br>
   宇治のお茶屋通圓(つうえん)は 創業850年 広辞苑に出てる
 ---
-![yuihan](https://e40yqg.dm.files.1drv.com/y4mqHBTKlD-7t-qW8Eas1qeldzSdIAWao7_69WuUjE62ZtxJ6bnSiZLh-uF2GeONR2AfiV2U62M0K7fCbUisOFrlMFcJlAFwOLPGpnDMI-Pe6wtQBThgWw-_9HQvPUDWYpGJw7O0TDTV7iqoeRl5_O0Ey-2D1vTn_BLmqyssj5TND8G3ZJYhq5E5ntkOloVftKGrwANDplYWd9sPDYvkCLGAQ){:.border}
+![G4ngewwE50w](https://i.ytimg.com/vi/G4ngewwE50w/maxresdefault.jpg){:.border}
+![ESCL-3139](https://is3-ssl.mzstatic.com/image/thumb/Music124/v4/d4/36/f5/d436f5e9-07c7-a6ee-bb8e-71bb696d3dd7/source/600x600bb.jpg){:.border}
 
 歌手：横山由依<br>
 作曲：水野良樹<br>

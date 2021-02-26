@@ -6,7 +6,13 @@ author: mistydew
 comments: true
 category: 力扣题解
 tags: LeetCode Hard Hash-Table Backtracking
-excerpt: 写一个通过填充空格来解决数独问题的程序。
+excerpt:
+  写一个通过填充空单元格来解决数独问题的程序。<br>
+  数独解法必须满足**以下所有规则**：<br>
+  1. 每个数字 `1-9` 必须在每行中恰好出现一次。<br>
+  2. 每个数字 `1-9` 必须在每列中恰好出现一次。<br>
+  3. 每个数字 `1-9` 必须在每个 `3x3` 的子网格中恰好出现一次。<br>
+  字符 `'.'` 表示空单元格。
 ---
 > ## 37. Sudoku Solver
 > 
@@ -16,25 +22,29 @@ excerpt: 写一个通过填充空格来解决数独问题的程序。
 > 
 > 1. Each of the digits `1-9` must occur exactly once in each row.
 > 2. Each of the digits `1-9` must occur exactly once in each column.
-> 3. Each of the the digits `1-9` must occur exactly once in each of the 9 `3x3`
+> 3. Each of the digits `1-9` must occur exactly once in each of the 9 `3x3`
 > sub-boxes of the grid.
 > 
-> Empty cells are indicated by the character `'.'`.
+> The `'.'` character indicates empty cells.
 > 
-> ![Sudoku-by-L2G-20050714](https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Sudoku-by-L2G-20050714.svg/250px-Sudoku-by-L2G-20050714.svg.png)
+> **Example 1:**
 > 
-> A sudoku puzzle...
+> <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Sudoku-by-L2G-20050714.svg/250px-Sudoku-by-L2G-20050714.svg.png" style="height:250px; width:250px">
 > 
-> ![Sudoku-by-L2G-20050714_solution](https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Sudoku-by-L2G-20050714_solution.svg/250px-Sudoku-by-L2G-20050714_solution.svg.png)
+> <pre>
+> <strong>Input:</strong> board = [["5","3",".",".","7",".",".",".","."],["6",".",".","1","9","5",".",".","."],[".","9","8",".",".",".",".","6","."],["8",".",".",".","6",".",".",".","3"],["4",".",".","8",".","3",".",".","1"],["7",".",".",".","2",".",".",".","6"],[".","6",".",".",".",".","2","8","."],[".",".",".","4","1","9",".",".","5"],[".",".",".",".","8",".",".","7","9"]]
+> <strong>Output:</strong> [["5","3","4","6","7","8","9","1","2"],["6","7","2","1","9","5","3","4","8"],["1","9","8","3","4","2","5","6","7"],["8","5","9","7","6","1","4","2","3"],["4","2","6","8","5","3","7","9","1"],["7","1","3","9","2","4","8","5","6"],["9","6","1","5","3","7","2","8","4"],["2","8","7","4","1","9","6","3","5"],["3","4","5","2","8","6","1","7","9"]]
+> <strong>Explanation:</strong> The input board is shown above and the only valid solution is shown below:
 > 
-> ...and its solution numbers marked in red.
+> <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Sudoku-by-L2G-20050714_solution.svg/250px-Sudoku-by-L2G-20050714_solution.svg.png" style="height:250px; width:250px">
+> </pre>
 > 
-> **Note:**
+> **Constraints:**
 > 
-> * The given board contain only digits `1-9` and the character `'.'`.
-> * You may assume that the given Sudoku puzzle will have a single unique
-> solution.
-> * The given board size is always `9x9`.
+> * `board.length == 9`
+> * `board[i].length == 9`
+> * `board[i][j]` is a digit or `'.'`.
+> * It is **guaranteed** that the input board has only one solution.
 
 ## 解决方案
 

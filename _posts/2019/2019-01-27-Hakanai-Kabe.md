@@ -11,7 +11,7 @@ excerpt:
   大切に守りぬく<br>
   烈しい事に遭逢しても 立ち向かえばいいさ
 ---
-![hakanaikabe](https://e43pnw.dm.files.1drv.com/y4mB69BcRWysB5gu0frcZcQ2UvG3a3ZnkWFPbEVm3X-acmbpf5RHhNTggot5ppyVV3AG85Zt5qSIw9sumMXs5y1rvPGmROZYeMCX4Fojpx8hoJVEodlmPk6qmrRp4QJV3aADsChpnBmFvl-1LSFF0osxkBQUaaX1-F0IaTpK7Wt82U9OfZu972uRrDS9GfFwn5p5DaWuQbxpqDfqipPRy5bUg){:.border}
+![bLsZnoGbin8](https://i.ytimg.com/vi/bLsZnoGbin8/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLB0_1rAMZXPZuODGARJlH5e6spk3g){:.border}
 
 歌手：桐崎栄二<br>
 作詞：桐崎栄二<br>
@@ -71,4 +71,5 @@ excerpt:
 
 ## 参考链接
 
+* [桐崎栄二の歌／はかない壁 - YouTube](https://youtu.be/bLsZnoGbin8){:target="_blank"}
 * [果敢ない壁　歌詞【桐崎英二】 \| 歌詞検索UtaTen（うたてん）](https://utaten.com/lyric/桐崎英二/果敢ない壁){:target="_blank"}

@@ -7,27 +7,34 @@ comments: true
 category: 力扣题解
 tags: LeetCode Medium Hash-Table
 excerpt:
-  判断一个 9x9 的数独是否有效。
-  只需**根据以下规则**验证已填入的数字。
+  判断一个 `9x9` 的数独是否有效。
+  只需**根据以下规则**验证已填入的数字：<br>
+  1. 每一行必须包含数字 `1-9` 且不能重复。<br>
+  2. 每一列必须包含数字 `1-9` 且不能重复。<br>
+  3. 每个 `3x3` 的子网格必须包含数字 `1-9` 且不能重复。<br>
+  **注意：**<br>
+  * 数独（部分填充）可能有效，但不一定可解。<br>
+  * 只有填充的单元格需要根据上述规则进行验证。
 ---
 > ## 36. Valid Sudoku
 > 
-> Determine if a 9x9 Sudoku board is valid. Only the filled cells need to be
+> Determine if a `9x9` Sudoku board is valid. Only the filled cells need to be
 > validated **according to the following rules**:
 > 
 > 1. Each row must contain the digits `1-9` without repetition.
 > 2. Each column must contain the digits `1-9` without repetition.
-> 3. Each of the 9 `3x3` sub-boxes of the grid must contain the digits `1-9`
+> 3. Each of the nine `3x3` sub-boxes of the grid must contain the digits `1-9`
 > without repetition.
 > 
-> ![Sudoku](https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Sudoku-by-L2G-20050714.svg/250px-Sudoku-by-L2G-20050714.svg.png)
+> **Note:**
 > 
-> A partially filled sudoku which is valid.
-> 
-> The Sudoku board could be partially filled, where empty cells are filled with
-> the character `'.'`.
+> * A Sudoku board (partially filled) could be valid but is not necessarily
+> solvable.
+> * Only the filled cells need to be validated according to the mentioned rules.
 > 
 > **Example 1:**
+> 
+> <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Sudoku-by-L2G-20050714.svg/250px-Sudoku-by-L2G-20050714.svg.png" style="height:250px; width:250px">
 > 
 > <pre>
 > <strong>Input:</strong>

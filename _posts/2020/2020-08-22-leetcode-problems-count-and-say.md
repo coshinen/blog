@@ -7,38 +7,39 @@ comments: true
 category: 力扣题解
 tags: LeetCode Easy String
 excerpt:
-  外观数列是下面前 5 项的整数序列：<br>
-  ……<br>
-  给定一个整数 *n* (1 ≤ *n* ≤ 30)，生成外观数列的第 *n* 项。
+  该**外观数列**是由递归公式定义的数字字符串序列：<br>
+  * `countAndSay(1) = "1"`<br>
+  * `countAndSay(n)` 是从 `countAndSay(n-1)` 中“说出”数字字符串，然后将其转换为不同的数字字符串。<br>
+  要确定如何“说出”一个数字字符串，把它分成**最少**数量的组，使每个组都是一个连续的部分，所有部分具有**相同的字符**。
+  然后对于每个组，说出字符数，然后说出字符。
+  把语句转换为数字字符串，用数字替换计数，然后把每个语句串联起来。
 ---
 > ## 38. Count and Say
 > 
-> The count-and-say sequence is the sequence of integers with the first five
-> terms as following:
+> The **count-and-say** sequence is a sequence of digit strings defined by the
+> recursive formula:
 > 
-> <pre>
-> 1.     1
-> 2.     11
-> 3.     21
-> 4.     1211
-> 5.     111221
-> </pre>
+> * `countAndSay(1) = "1"`
+> * `countAndSay(n)` is the way you would "say" the digit string from
+> `countAndSay(n-1)`, which is then converted into a different digit string.
 > 
-> `1` is read off as `"one 1"` or `11`.<br>
-> `11` is read off as `"two 1s"` or `21`.<br>
-> `21` is read off as `"one 2, then one 1"` or `1211`.
+> To determine how you "say" a digit string, split it into the **minimal**
+> number of groups so that each group is a contiguous section all of the **same
+> character**. Then for each group, say the number of characters, then say the
+> character. To convert the saying into a digit string, replace the counts with
+> a number and concatenate every saying.
 > 
-> Given an integer *n* where 1 ≤ *n* ≤ 30, generate the *n*<sup>th</sup> term of
-> the count-and-say sequence. You can do so recursively, in other words from the
-> previous member read off the digits, counting the number of digits in groups
-> of the same digit.
+> For example, the saying and conversion for digit string `"3322251"`:
 > 
-> Note: Each term of the sequence of integers will be represented as a string.
+> <img alt="" src="https://assets.leetcode.com/uploads/2020/10/23/countandsay.jpg" style="width: 581px; height: 172px;">
+> 
+> Given a positive integer `n`, return the <code>n<sup>th</sup></code> term of
+> the **count-and-say** sequence.
 > 
 > **Example 1:**
 > 
 > <pre>
-> <strong>Input:</strong> 1
+> <strong>Input:</strong> n = 1
 > <strong>Output:</strong> "1"
 > <strong>Explanation:</strong> This is the base case.
 > </pre>
@@ -46,10 +47,18 @@ excerpt:
 > **Example 2:**
 > 
 > <pre>
-> <strong>Input:</strong> 4
+> <strong>Input:</strong> n = 4
 > <strong>Output:</strong> "1211"
-> <strong>Explanation:</strong> For n = 3 the term was "21" in which we have two groups "2" and "1", "2" can be read as "12" which means frequency = 1 and value = 2, the same way "1" is read as "11", so the answer is the concatenation of "12" and "11" which is "1211".
+> <strong>Explanation:</strong>
+> countAndSay(1) = "1"
+> countAndSay(2) = say "1" = one 1 = "11"
+> countAndSay(3) = say "11" = two 1's = "21"
+> countAndSay(4) = say "21" = one 2 + one 1 = "12" + "11" = "1211"
 > </pre>
+> 
+> **Constraints:**
+> 
+> * `1 <= n <= 30`
 > 
 > <details>
 > <summary>Hint 1</summary>
