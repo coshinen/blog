@@ -13,7 +13,6 @@
 * Icon Library: [Font Awesome](https://fontawesome.com)
 * Math Equation: [EqnEditor Render](https://latex.codecogs.com)
 * Diagrams: [PlantUML](https://plantuml.com)
-* Cloud Storage: [OneDrive](https://onedrive.live.com)
 
 ## Licenses
 
