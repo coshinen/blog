@@ -172,12 +172,17 @@ excerpt: Here are my favorite quotes from someones that inspire me or make me la
 > right to say it.
 
 > George Orwell:
-> * The very concept of objective truth is fading out of the world.
-> Lies will pass into history.
+> * The very concept of objective truth is fading out of the world. Lies will
+> pass into history.
 
 > George Orwell, Animal Farm, THE SEVEN COMMANDMENTS:
 > * ALL ANIMALS ARE EQUAL BUT SOME ANIMALS ARE MORE EQUAL THAN OTHERS.
 > * FOUR LEGS GOOD, TWO LEGS BAD.
+
+> George Orwell, As I Please 1943-1945, [Benefit of Clergy: Some Notes on Salvador Dali](https://www.orwell.ru/library/reviews/dali/english/e_dali){:target="_blank"}:
+> * Autobiography is only to be trusted when it reveals something disgraceful. A
+> man who gives a good account of himself is probably lying, since any life when
+> viewed from the inside is simply a series of defeats.
 
 > 怨み屋「怨み屋本舗 第八回 ハートキャッチャー」：
 > * 嘘をつかない人間なんて、どこにもいないわ。
