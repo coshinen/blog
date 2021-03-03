@@ -75,9 +75,9 @@ excerpt: Here are some books that renew my spirit or reclaim my life.
 > * 失落的世界，[英] Arthur Conan Doyle
 > * 兔子共和国，[英] Richard Adams
 > * 动物农场，[英] George Orwell
-> * 小王子，[法] Antoine de Saint Exupéry
-> * 百年孤独，[哥伦比亚] Gabriel José de la Concordia García Márquez
-> * 三个火枪手，[法] dit aussi Alexandre Dumas père
+> * 小王子，[法] Antoine de Saint-Exupéry
+> * 百年孤独，[哥伦比亚] Gabriel García Márquez
+> * 三个火枪手，[法] Alexandre Dumas
 > * 神奇动物在哪里，[英] J.K. Rowling
 > * 神奇的魁地奇球，[英] J.K. Rowling
 > * 诗翁彼豆故事集 赫敏·格兰杰译自如尼文，[英] J.K. Rowling
