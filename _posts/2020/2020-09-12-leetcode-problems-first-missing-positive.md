@@ -6,32 +6,38 @@ author: mistydew
 comments: true
 category: 力扣题解
 tags: LeetCode Hard Array
-excerpt: 给定一个无序的整型数组，找出缺失的最小正整数。
+excerpt: 给定一个无序的整型数组 `nums`，找出缺失的最小正整数。
 ---
 > ## 41. First Missing Positive
 > 
-> Given an unsorted integer array, find the smallest missing positive integer.
+> Given an unsorted integer array `nums`, find the smallest missing positive
+> integer.
 > 
 > **Example 1:**
 > 
 > <pre>
-> Input: [1,2,0]
-> Output: 3
+> <strong>Input:</strong> [1,2,0]
+> <strong>Output:</strong> 3
 > </pre>
 > 
 > **Example 2:**
 > 
 > <pre>
-> Input: [3,4,-1,1]
-> Output: 2
+> <strong>Input:</strong> [3,4,-1,1]
+> <strong>Output:</strong> 2
 > </pre>
 > 
 > **Example 3:**
 > 
 > <pre>
-> Input: [7,8,9,11,12]
-> Output: 1
+> <strong>Input:</strong> [7,8,9,11,12]
+> <strong>Output:</strong> 1
 > </pre>
+> 
+> **Constraints:**
+> 
+> * `0 <= nums.length <= 300`
+> * <code>-2<sup>31</sup> <= nums[i] <= 2<sup>31</sup> - 1</code>
 > 
 > **Follow up:**
 > 
