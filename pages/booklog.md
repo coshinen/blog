@@ -182,6 +182,7 @@ excerpt: Here are some books that renew my spirit or reclaim my life.
 > * C++ 沉思录，[美] Andrew Koenig, Barbara Moo
 > * C++ 编程规范 101条规则、准则与最佳实践，[加] Herb Sutter [罗] Andrei Alexandrescu
 > * C++ Primer 中文版（第5版），[美] Stanley B. Lippman, Josée Lajoie, Barbara E. Moo
+> * [Essential C](http://cslibrary.stanford.edu/101/){:target="_blank"}，[美] [Nick Parlante](https://cs.stanford.edu/people/nick/){:target="_blank"}
 > * C 专家编程，[美] Peter van der Linden
 > * C 陷阱与缺陷，[美] Andrew Koening
 > * C 和指针，[美] Kenneth A. Reek
