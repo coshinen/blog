@@ -137,6 +137,7 @@ excerpt: Here are some books that renew my spirit or reclaim my life.
 
 > ### 社会学
 > 
+> * 厌女 日本的女性嫌恶，[日] 上野千鶴子
 > * 一个人的老后，[日] 上野千鶴子
 > * 最好的告别 关于衰老与死亡，你必须知道的常识，[美] Atul Gawande
 > * 公正 该如何做是好？，[美] [Michael J. Sandel](https://scholar.harvard.edu/sandel){:target="_blank"}
