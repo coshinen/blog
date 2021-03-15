@@ -59,9 +59,6 @@ excerpt: Here are my favorite quotes from someones that inspire me or make me la
 > * I don't distrust you because you're a woman.
 > I distrust you because you're not as smart as you think you are.
 
-> Ygritte, Game of Thrones, Season 2 Episode 7:
-> * You know nothing, Jon Snow.
-
 > Varys, Game of Thrones, Season 2 Episode 3:
 > * Power resides where men believe it resides.
 > It's a trick, a shadow on the wall, and a very smell man can cast a very large
