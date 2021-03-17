@@ -143,9 +143,6 @@ excerpt: Here are my favorite quotes from someones that inspire me or make me la
 > Siegfried Sassoon, [In Me, Past, Present, Future Meet](/blog/2020/11/In-Me,-Past,-Present,-Future-Meet.html):
 > * In me the tiger sniffs the rose.
 
-> Socrates:
-> * The unexamined life is not worth living.
-
 > Benjamin Franklin, The Autobiography of Benjamin Franklin, PART THREE:
 > * This is another instance of the truth of an old maxim I had learned, which
 > says, "He that has once done you a kindness will be more ready to do you
@@ -182,7 +179,7 @@ excerpt: Here are my favorite quotes from someones that inspire me or make me la
 > * 嘘をつかない人間なんて、どこにもいないわ。
 > 嘘をどう利用するか、それが問題なんだけよ。
 
-> 新堂頼子「はんなりギロリの頼子さん」：
+> 新堂頼子「はんなりギロリの頼子さん 第一話」：
 > * 大切なのは、どの道を選ぶかより、選んだ道をどういきるかじゃないの？
 
 > 緑のお父さん「パパのお弁当は世界一」：
