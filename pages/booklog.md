@@ -151,8 +151,9 @@ excerpt: Here are some books that renew my spirit or reclaim my life.
 > * 子弹笔记术，[日] 杉野干人
 > * 单核工作法图解 事多到事少，拖延变高效，[瑞典] Staffan Nöteberg
 > * 番茄工作法图解 简单易行的时间管理方法，[瑞典] [Staffan Nöteberg](https://staffannoteberg.com){:target="_blank"}
-> * 一万小时天才理论，[美] Daniel Coyle
 > * 刻意练习 如何从新手到大师，[美] Anders Ericsson, Robert Pool
+> * 高效能人士的七个习惯，[美] Stephen R. Covey
+> * 一万小时天才理论，[美] Daniel Coyle
 
 ## 技术
 
