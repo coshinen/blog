@@ -158,13 +158,18 @@ excerpt: Here are my favorite quotes from someones that inspire me or make me la
 > * First they ignore you, then they laugh at you, then they fight you, then you
 > win.
 
-> George Orwell:
-> * The very concept of objective truth is fading out of the world. Lies will
-> pass into history.
-
 > George Orwell, Animal Farm, THE SEVEN COMMANDMENTS:
 > * ALL ANIMALS ARE EQUAL BUT SOME ANIMALS ARE MORE EQUAL THAN OTHERS.
 > * FOUR LEGS GOOD, TWO LEGS BAD.
+
+> George Orwell, [Looking back on the Spanish War](https://orwell.ru/library/essays/Spanish_War/english/esw_1){:target="_blank"}:
+> * This kind of thing is frightening to me, because it often gives me the
+> feeling that the very concept of objective truth is fading out of the world.
+> After all, the chances are that those lies, or at any rate similar lies, will
+> pass into history...
+> Yet, after all, some kind of history will be written, and after those who
+> actually remember the war are dead, it will be universally accepted. So for
+> all practical purposes the lie will have become truth.
 
 > George Orwell, As I Please 1943-1945, [Benefit of Clergy: Some Notes on Salvador Dali](https://www.orwell.ru/library/reviews/dali/english/e_dali){:target="_blank"}:
 > * Autobiography is only to be trusted when it reveals something disgraceful. A
