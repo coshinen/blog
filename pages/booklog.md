@@ -124,7 +124,7 @@ excerpt: Here are some books that renew my spirit or reclaim my life.
 > * 梦知道答案，[中] 武志红
 > * 心灵的七种兵器，[中] 武志红
 > * 七个心理寓言，[中] 武志红
-> * 为何家会伤人，[中] [武志红](http://blog.sina.com.cn/wuzii){:target="_blank"}
+> * 为何家会伤人——揭示家庭中的心理真相，[中] [武志红](http://blog.sina.com.cn/wuzii){:target="_blank"}
 > * 理解人性，[奥地利] Alfred Adler
 > * 自卑与超越，[奥地利] Alfred Adler
 > * 被讨厌的勇气 “自我启发之父”阿德勒的哲学课，[日] 岸見一郎 古賀史健
@@ -160,7 +160,7 @@ excerpt: Here are some books that renew my spirit or reclaim my life.
 > ### 算法
 > 
 > * 漫画算法 小灰的算法之旅，[中] 魏梦舒
-> * 编程之美 —微软技术面试心得，[中] 《编程之美》小组
+> * 编程之美——微软技术面试心得，[中] 《编程之美》小组
 > * 剑指 Offer 名企面试官精讲典型编程题，[中] 何海涛
 > * 啊哈！算法，[中] 啊哈磊
 > * 图解密码技术（第3版），[日] 結城浩
