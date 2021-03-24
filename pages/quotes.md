@@ -154,10 +154,6 @@ excerpt: Here are my favorite quotes from someones that inspire me or make me la
 > * MODERATION.
 > Avoid extremes; forbear resenting injuries so much as you think they deserve.
 
-> Mahatma Gandhi:
-> * First they ignore you, then they laugh at you, then they fight you, then you
-> win.
-
 > George Orwell, Animal Farm, THE SEVEN COMMANDMENTS:
 > * ALL ANIMALS ARE EQUAL BUT SOME ANIMALS ARE MORE EQUAL THAN OTHERS.
 > * FOUR LEGS GOOD, TWO LEGS BAD.
