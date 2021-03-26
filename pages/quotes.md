@@ -150,10 +150,6 @@ excerpt: Here are my favorite quotes from someones that inspire me or make me la
 > profitable it is prudently to remove, than to resent, return, and continue
 > inimical proceedings.
 
-> Benjamin Franklin, The Autobiography of Benjamin Franklin, PART TWO, Thirteen Names of Virtues:
-> * MODERATION.
-> Avoid extremes; forbear resenting injuries so much as you think they deserve.
-
 > George Orwell, Animal Farm, THE SEVEN COMMANDMENTS:
 > * ALL ANIMALS ARE EQUAL BUT SOME ANIMALS ARE MORE EQUAL THAN OTHERS.
 > * FOUR LEGS GOOD, TWO LEGS BAD.
