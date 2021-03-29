@@ -481,9 +481,9 @@ excerpt: Here are my favorite quotes from someones that inspire me or make me la
 
 > Sherlock Holmes, A Game of Shadows:
 > * Come at once if convenient, if inconvenient come all the same.
-> * You've paid me several compliments.
-> Let me pay you one in return when I say that if I were assured of the former
-> eventuality I would cheerfully accept the latter.
+> * You've paid me several compliments. Let me pay you one in return when I say
+> that if I were assured of the former eventuality I would cheerfully accept the
+> latter.
 
 > Sherlock Holmes, [The Return of Sherlock Holmes, The Adventure of the Dancing Men](https://standardebooks.org/ebooks/arthur-conan-doyle/the-return-of-sherlock-holmes/text/the-adventure-of-the-dancing-men){:target="_blank"}:
 > * It is not really difficult to construct a series of inferences, each
