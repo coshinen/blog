@@ -96,9 +96,6 @@ excerpt: Here are my favorite quotes from someones that inspire me or make me la
 > * Sentimental children forever whining about how bitterly unfair your lives
 > have been. Well, it may have escaped your notice, but life isn't fair.
 
-> The Marauder's Map, Harry Potter AND THE PRISONER OF AZKABAN:
-> * I solemnly swear that I am up to no good.
-
 > Albus Dumbledore, Harry Potter AND THE PRISONER OF AZKABAN:
 > * Oh, and by the way. When in doubt, I find retracing my steps to be a wise
 > place to begin.
