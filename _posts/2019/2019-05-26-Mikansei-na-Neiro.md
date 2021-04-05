@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "GARNET CROW 未完成な音色 歌词"
+title:  "GARNET CROW「未完成な音色」歌词"
 date:   2019-05-26 20:00:05 +0800
 author: mistydew
 comments: true

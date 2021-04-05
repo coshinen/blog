@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "RADWIMPS 前前前世 歌词"
+title:  "RADWIMPS「前前前世」歌词"
 date:   2018-05-01 20:16:08 +0800
 author: mistydew
 comments: true

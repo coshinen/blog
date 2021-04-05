@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "伊織 あなたを感じてる 〜蘭・愛のテーマ〜 歌词"
+title:  "伊織「あなたを感じてる 〜蘭・愛のテーマ〜」歌词"
 date:   2020-09-27 20:37:10 +0800
 author: mistydew
 comments: true

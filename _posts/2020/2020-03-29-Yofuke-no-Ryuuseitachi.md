@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "GARNET CROW 夜深けの流星達 歌词"
+title:  "GARNET CROW「夜深けの流星達」歌词"
 date:   2020-03-29 20:04:06 +0800
 author: mistydew
 comments: true

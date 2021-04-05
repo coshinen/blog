@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "RADWIMPS 夢灯籠 歌词"
+title:  "RADWIMPS「夢灯籠」歌词"
 date:   2018-04-24 20:16:08 +0800
 author: mistydew
 comments: true

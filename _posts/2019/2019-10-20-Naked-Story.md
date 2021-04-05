@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "GARNET CROW Naked Story 歌词"
+title:  "GARNET CROW「Naked Story」歌词"
 date:   2019-10-20 20:02:04 +0800
 author: mistydew
 comments: true

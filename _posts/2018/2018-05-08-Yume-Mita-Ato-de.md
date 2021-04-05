@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "GARNET CROW 夢みたあとで 歌词"
+title:  "GARNET CROW「夢みたあとで」歌词"
 date:   2018-05-08 20:02:03 +0800
 author: mistydew
 comments: true

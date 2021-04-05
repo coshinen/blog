@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "松本梨香 めざせポケモンマスター 歌词"
+title:  "松本梨香「めざせポケモンマスター」歌词"
 date:   2021-01-24 20:37:06 +0800
 author: mistydew
 comments: true

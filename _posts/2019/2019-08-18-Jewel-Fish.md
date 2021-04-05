@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "GARNET CROW Jewel Fish 歌词"
+title:  "GARNET CROW「Jewel Fish」歌词"
 date:   2019-08-18 20:01:05 +0800
 author: mistydew
 comments: true

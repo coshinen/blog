@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "GARNET CROW Cried a little 歌词"
+title:  "GARNET CROW「Cried a little」歌词"
 date:   2019-07-07 20:00:11 +0800
 author: mistydew
 comments: true

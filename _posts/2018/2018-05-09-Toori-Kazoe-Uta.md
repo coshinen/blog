@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "横山由依 京都の通り数え歌 歌词"
+title:  "横山由依「京都の通り数え歌」歌词"
 date:   2018-05-09 20:03:04 +0800
 author: mistydew
 comments: true

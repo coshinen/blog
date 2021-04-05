@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "田村ゆかり きっと言える 歌词"
+title:  "田村ゆかり「きっと言える」歌词"
 date:   2019-09-01 20:39:01 +0800
 author: mistydew
 comments: true

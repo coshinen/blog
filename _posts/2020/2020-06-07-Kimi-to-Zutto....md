@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "yu-yu 君とずっと… 歌词"
+title:  "yu-yu「君とずっと…」歌词"
 date:   2020-06-07 20:11:08 +0800
 author: mistydew
 comments: true

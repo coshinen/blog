@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "GARNET CROW Hello Sadness 歌词"
+title:  "GARNET CROW「Hello Sadness」歌词"
 date:   2018-05-06 20:09:09 +0800
 author: mistydew
 comments: true

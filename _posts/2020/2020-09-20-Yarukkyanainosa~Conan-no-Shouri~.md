@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "伊織 やるっきゃないのさ 〜コナンの勝利〜 歌词"
+title:  "伊織「やるっきゃないのさ 〜コナンの勝利〜」歌词"
 date:   2020-09-20 20:37:09 +0800
 author: mistydew
 comments: true

@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "ZARD 止まっていた時計が今動き出した 歌词"
+title:  "ZARD「止まっていた時計が今動き出した」歌词"
 date:   2020-12-27 20:04:01 +0800
 author: mistydew
 comments: true

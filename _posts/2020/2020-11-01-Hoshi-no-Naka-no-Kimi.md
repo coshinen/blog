@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Uru 星の中の君 歌词"
+title:  "Uru「星の中の君」歌词"
 date:   2020-11-01 20:16:06 +0800
 author: mistydew
 comments: true

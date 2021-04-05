@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "中村由利 THE LITTLE OLD LADY FROM PASADENA 歌词"
+title:  "中村由利「THE LITTLE OLD LADY FROM PASADENA」歌词"
 date:   2019-05-19 20:02:07 +0800
 author: mistydew
 comments: true

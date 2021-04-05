@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "島崎遥香 ナシゴレン道玄坂 歌词"
+title:  "島崎遥香「ナシゴレン道玄坂」歌词"
 date:   2018-12-23 20:16:12 +0800
 author: mistydew
 comments: true

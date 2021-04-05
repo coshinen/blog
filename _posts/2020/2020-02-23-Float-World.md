@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "GARNET CROW Float World 歌词"
+title:  "GARNET CROW「Float World」歌词"
 date:   2020-02-23 20:04:01 +0800
 author: mistydew
 comments: true

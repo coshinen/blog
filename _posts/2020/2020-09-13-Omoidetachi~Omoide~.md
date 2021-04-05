@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "伊織 想い出たち 〜想い出〜 歌词"
+title:  "伊織「想い出たち 〜想い出〜」歌词"
 date:   2020-09-13 20:37:10 +0800
 author: mistydew
 comments: true

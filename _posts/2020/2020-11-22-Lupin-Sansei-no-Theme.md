@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "ピート・マック・ジュニア ルパン三世のテーマ 歌词"
+title:  "ピート・マック・ジュニア「ルパン三世のテーマ」歌词"
 date:   2020-11-22 20:37:11 +0800
 author: mistydew
 comments: true

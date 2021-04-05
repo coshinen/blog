@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "伊織 ぼくがいる 〜コナンのテーマ〜 歌词"
+title:  "伊織「ぼくがいる 〜コナンのテーマ〜」歌词"
 date:   2018-05-11 20:37:09 +0800
 author: mistydew
 comments: true

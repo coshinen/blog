@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "GARNET CROW strangers 歌词"
+title:  "GARNET CROW「strangers」歌词"
 date:   2018-08-12 20:10:12 +0800
 author: mistydew
 comments: true

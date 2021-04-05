@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "伊織 キミがいれば 〜名探偵コナン メイン・テーマ〜 歌词"
+title:  "伊織「キミがいれば 〜名探偵コナン メイン・テーマ〜」歌词"
 date:   2018-05-10 20:37:04 +0800
 author: mistydew
 comments: true

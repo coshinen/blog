@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "GARNET CROW 巡り来る春に 歌词"
+title:  "GARNET CROW「巡り来る春に」歌词"
 date:   2019-01-06 20:01:01 +0800
 author: mistydew
 comments: true

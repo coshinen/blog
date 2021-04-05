@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "桐崎栄二 果敢ない壁 歌词"
+title:  "桐崎栄二「果敢ない壁」歌词"
 date:   2019-01-27 20:15:07 +0800
 author: mistydew
 comments: true

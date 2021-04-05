@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "RADWIMPS なんでもないや 歌词"
+title:  "RADWIMPS「なんでもないや」歌词"
 date:   2018-05-21 20:16:08 +0800
 author: mistydew
 comments: true

@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "GARNET CROW Holding you, and swinging 歌词"
+title:  "GARNET CROW「Holding you, and swinging」歌词"
 date:   2019-07-28 20:01:01 +0800
 author: mistydew
 comments: true

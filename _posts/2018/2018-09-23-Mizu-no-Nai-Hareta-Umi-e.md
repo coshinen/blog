@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "GARNET CROW 水のない晴れた海へ 歌词"
+title:  "GARNET CROW「水のない晴れた海へ」歌词"
 date:   2018-09-23 20:01:01 +0800
 author: mistydew
 comments: true

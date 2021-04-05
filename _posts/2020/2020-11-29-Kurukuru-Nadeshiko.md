@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "yucat 狂々撫子 歌词"
+title:  "yucat「狂々撫子」歌词"
 date:   2020-11-29 20:16:04 +0800
 author: mistydew
 comments: true

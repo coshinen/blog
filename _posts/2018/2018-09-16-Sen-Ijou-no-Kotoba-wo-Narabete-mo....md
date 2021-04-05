@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "GARNET CROW 千以上の言葉を並べても… 歌词"
+title:  "GARNET CROW「千以上の言葉を並べても…」歌词"
 date:   2018-09-16 20:00:09 +0800
 author: mistydew
 comments: true

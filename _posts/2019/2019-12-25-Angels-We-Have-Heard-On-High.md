@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "中村由利 Angels We Have Heard On High 歌词"
+title:  "中村由利「Angels We Have Heard On High」歌词"
 date:   2019-12-25 20:11:06 +0800
 author: mistydew
 comments: true

@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Coldplay Viva La Vida 歌词"
+title:  "Coldplay「Viva La Vida」歌词"
 date:   2018-04-23 20:08:05 +0800
 author: mistydew
 comments: true

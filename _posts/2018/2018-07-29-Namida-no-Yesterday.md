@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "GARNET CROW 涙のイエスタデー 歌词"
+title:  "GARNET CROW「涙のイエスタデー」歌词"
 date:   2018-07-29 20:07:07 +0800
 author: mistydew
 comments: true

@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "伊織 ホシが歩いた道を 〜名探偵コナン 新メイン・テーマ〜 歌词"
+title:  "伊織「ホシが歩いた道を 〜名探偵コナン 新メイン・テーマ〜」歌词"
 date:   2020-09-06 20:37:10 +0800
 author: mistydew
 comments: true

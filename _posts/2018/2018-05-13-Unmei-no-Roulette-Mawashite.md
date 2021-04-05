@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "ZARD 運命のルーレット廻して 歌词"
+title:  "ZARD「運命のルーレット廻して」歌词"
 date:   2018-05-13 20:38:09 +0800
 author: mistydew
 comments: true

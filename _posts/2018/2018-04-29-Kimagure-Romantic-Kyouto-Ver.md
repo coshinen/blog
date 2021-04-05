@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "横山由依 気まぐれロマンティック 京都Ver. 歌词"
+title:  "横山由依「気まぐれロマンティック 京都Ver.」歌词"
 date:   2018-04-29 20:12:04 +0800
 author: mistydew
 comments: true

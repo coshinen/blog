@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "GARNET CROW call my name 歌词"
+title:  "GARNET CROW「call my name」歌词"
 date:   2018-06-24 20:01:08 +0800
 author: mistydew
 comments: true

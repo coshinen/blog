@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "ZARD こんなにそばに居るのに 歌词"
+title:  "ZARD「こんなにそばに居るのに」歌词"
 date:   2020-12-20 20:34:08 +0800
 author: mistydew
 comments: true

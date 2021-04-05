@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "椎名林檎 神様、仏様 歌词"
+title:  "椎名林檎「神様、仏様」歌词"
 date:   2020-12-06 20:15:08 +0800
 author: mistydew
 comments: true

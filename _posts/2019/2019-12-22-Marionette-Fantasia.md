@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "GARNET CROW Marionette Fantasia 歌词"
+title:  "GARNET CROW「Marionette Fantasia」歌词"
 date:   2019-12-22 20:03:11 +0800
 author: mistydew
 comments: true

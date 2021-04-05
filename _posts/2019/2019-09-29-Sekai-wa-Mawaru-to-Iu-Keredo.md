@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "GARNET CROW 世界はまわると言うけれど 歌词"
+title:  "GARNET CROW「世界はまわると言うけれど」歌词"
 date:   2019-09-29 20:07:11 +0800
 author: mistydew
 comments: true
