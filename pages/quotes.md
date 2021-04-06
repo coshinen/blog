@@ -165,6 +165,9 @@ excerpt: Here are my favorite quotes from someones that inspire me or make me la
 > man who gives a good account of himself is probably lying, since any life when
 > viewed from the inside is simply a series of defeats.
 
+> 橘カラ(十和田幸)「サイレーン 刑事×彼女×完全悪女 第1話 完全悪女が僕の彼女を獲物にした」：
+> * 信頼を得るにはふたつ。役に立つと思われること。それと弱みをさらすこと。
+
 > 怨み屋「怨み屋本舗 第八回 ハートキャッチャー」：
 > * 嘘をつかない人間なんて、どこにもいないわ。
 > 嘘をどう利用するか、それが問題なんだけよ。
