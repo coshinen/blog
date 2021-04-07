@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "LeetCode 70. 爬楼梯 简单"
+title:  "LeetCode 70. 爬楼梯（简单）"
 date:   2021-04-03 17:54:23 +0800
 author: mistydew
 comments: true

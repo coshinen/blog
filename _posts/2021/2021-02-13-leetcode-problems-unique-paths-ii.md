@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "LeetCode 63. 不同的路径 II 中等"
+title:  "LeetCode 63. 不同的路径 II（中等）"
 date:   2021-02-13 09:40:35 +0800
 author: mistydew
 comments: true

@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "LeetCode 11. 盛水最多的容器 中等"
+title:  "LeetCode 11. 盛水最多的容器（中等）"
 date:   2020-02-15 21:45:18 +0800
 author: mistydew
 comments: true

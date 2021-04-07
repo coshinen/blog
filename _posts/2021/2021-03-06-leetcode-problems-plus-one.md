@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "LeetCode 66. 加一 简单"
+title:  "LeetCode 66. 加一（简单）"
 date:   2021-03-06 20:16:54 +0800
 author: mistydew
 comments: true

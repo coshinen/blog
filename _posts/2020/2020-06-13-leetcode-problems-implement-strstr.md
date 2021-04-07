@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "LeetCode 28. 实现 strStr() 简单"
+title:  "LeetCode 28. 实现 strStr()（简单）"
 date:   2020-06-13 08:09:19 +0800
 author: mistydew
 comments: true

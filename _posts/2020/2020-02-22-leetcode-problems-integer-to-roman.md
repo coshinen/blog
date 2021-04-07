@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "LeetCode 12. 整数转罗马数字 中等"
+title:  "LeetCode 12. 整数转罗马数字（中等）"
 date:   2020-02-22 20:23:04 +0800
 author: mistydew
 comments: true

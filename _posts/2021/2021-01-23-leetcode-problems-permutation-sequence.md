@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "LeetCode 60. 排列序列 困难"
+title:  "LeetCode 60. 排列序列（困难）"
 date:   2021-01-23 08:36:44 +0800
 author: mistydew
 comments: true

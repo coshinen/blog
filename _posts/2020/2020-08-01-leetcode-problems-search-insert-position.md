@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "LeetCode 35. 搜索插入位置 简单"
+title:  "LeetCode 35. 搜索插入位置（简单）"
 date:   2020-08-01 07:28:48 +0800
 author: mistydew
 comments: true

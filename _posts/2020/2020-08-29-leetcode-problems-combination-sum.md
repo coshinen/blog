@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "LeetCode 39. 组合总和 中等"
+title:  "LeetCode 39. 组合总和（中等）"
 date:   2020-08-29 08:07:06 +0800
 author: mistydew
 comments: true

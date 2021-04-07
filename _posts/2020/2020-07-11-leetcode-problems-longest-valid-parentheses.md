@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "LeetCode 32. 最长有效括号 困难"
+title:  "LeetCode 32. 最长有效括号（困难）"
 date:   2020-07-11 08:57:01 +0800
 author: mistydew
 comments: true

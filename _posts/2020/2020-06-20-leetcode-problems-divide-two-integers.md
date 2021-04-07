@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "LeetCode 29. 两数相除 中等"
+title:  "LeetCode 29. 两数相除（中等）"
 date:   2020-06-20 08:41:50 +0800
 author: mistydew
 comments: true

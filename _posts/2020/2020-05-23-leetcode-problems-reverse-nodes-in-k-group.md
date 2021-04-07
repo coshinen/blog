@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "LeetCode 25. k 个一组反转节点 困难"
+title:  "LeetCode 25. k 个一组反转节点（困难）"
 date:   2020-05-23 08:37:46 +0800
 author: mistydew
 comments: true

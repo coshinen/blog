@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "LeetCode 20. 有效的括号 简单"
+title:  "LeetCode 20. 有效的括号（简单）"
 date:   2020-04-18 10:07:43 +0800
 author: mistydew
 comments: true

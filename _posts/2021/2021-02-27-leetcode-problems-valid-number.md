@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "LeetCode 65. 有效数字 困难"
+title:  "LeetCode 65. 有效数字（困难）"
 date:   2021-02-27 17:08:37 +0800
 author: mistydew
 comments: true

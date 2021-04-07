@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "LeetCode 8. 字符串转整数 (atoi) 中等"
+title:  "LeetCode 8. 字符串转整数 (atoi)（中等）"
 date:   2020-01-25 07:50:53 +0800
 author: mistydew
 comments: true

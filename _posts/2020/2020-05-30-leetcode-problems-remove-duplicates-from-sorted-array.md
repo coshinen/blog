@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "LeetCode 26. 移除有序数组的重复项 简单"
+title:  "LeetCode 26. 移除有序数组的重复项（简单）"
 date:   2020-05-30 08:09:21 +0800
 author: mistydew
 comments: true

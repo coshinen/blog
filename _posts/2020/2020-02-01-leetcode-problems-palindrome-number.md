@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "LeetCode 9. 回文数 简单"
+title:  "LeetCode 9. 回文数（简单）"
 date:   2020-02-01 10:09:21 +0800
 author: mistydew
 comments: true

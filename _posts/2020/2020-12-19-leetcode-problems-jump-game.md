@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "LeetCode 55. 跳跃游戏 中等"
+title:  "LeetCode 55. 跳跃游戏（中等）"
 date:   2020-12-19 13:08:05 +0800
 author: mistydew
 comments: true

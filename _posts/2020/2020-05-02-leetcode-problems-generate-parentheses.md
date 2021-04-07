@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "LeetCode 22. 生成括号 中等"
+title:  "LeetCode 22. 生成括号（中等）"
 date:   2020-05-02 11:25:16 +0800
 author: mistydew
 comments: true

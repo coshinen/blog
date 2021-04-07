@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "LeetCode 2. 两数相加 中等"
+title:  "LeetCode 2. 两数相加（中等）"
 date:   2019-12-14 14:58:13 +0800
 author: mistydew
 comments: true

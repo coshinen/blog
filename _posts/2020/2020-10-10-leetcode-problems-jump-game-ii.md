@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "LeetCode 45. 跳跃游戏 II 困难"
+title:  "LeetCode 45. 跳跃游戏 II（困难）"
 date:   2020-10-10 20:13:19 +0800
 author: mistydew
 comments: true

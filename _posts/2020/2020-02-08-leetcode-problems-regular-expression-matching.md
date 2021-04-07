@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "LeetCode 10. 正则表达式匹配 困难"
+title:  "LeetCode 10. 正则表达式匹配（困难）"
 date:   2020-02-08 15:52:08 +0800
 author: mistydew
 comments: true

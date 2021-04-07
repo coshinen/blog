@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "LeetCode 54. 螺旋矩阵 中等"
+title:  "LeetCode 54. 螺旋矩阵（中等）"
 date:   2020-12-12 09:06:20 +0800
 author: mistydew
 comments: true

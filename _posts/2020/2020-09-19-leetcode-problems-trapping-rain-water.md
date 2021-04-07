@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "LeetCode 42. 收集雨水 困难"
+title:  "LeetCode 42. 收集雨水（困难）"
 date:   2020-09-19 18:18:54 +0800
 author: mistydew
 comments: true

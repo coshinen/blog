@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "LeetCode 47. 全排列 II 中等"
+title:  "LeetCode 47. 全排列 II（中等）"
 date:   2020-10-24 19:45:04 +0800
 author: mistydew
 comments: true

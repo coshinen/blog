@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "LeetCode 57. 插入区间 中等"
+title:  "LeetCode 57. 插入区间（中等）"
 date:   2021-01-02 21:46:59 +0800
 author: mistydew
 comments: true

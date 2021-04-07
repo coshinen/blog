@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "LeetCode 49. 字母异序词分组 中等"
+title:  "LeetCode 49. 字母异序词分组（中等）"
 date:   2020-11-07 19:59:48 +0800
 author: mistydew
 comments: true

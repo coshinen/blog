@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "LeetCode 1. 两数之和 简单"
+title:  "LeetCode 1. 两数之和（简单）"
 date:   2019-12-07 12:37:30 +0800
 author: mistydew
 comments: true

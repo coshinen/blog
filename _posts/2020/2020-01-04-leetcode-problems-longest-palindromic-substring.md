@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "LeetCode 5. 最长的回文子串 中等"
+title:  "LeetCode 5. 最长的回文子串（中等）"
 date:   2020-01-04 08:47:12 +0800
 author: mistydew
 comments: true

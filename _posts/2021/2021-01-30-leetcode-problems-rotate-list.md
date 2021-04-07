@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "LeetCode 61. 旋转链表 中等"
+title:  "LeetCode 61. 旋转链表（中等）"
 date:   2021-01-30 15:49:07 +0800
 author: mistydew
 comments: true

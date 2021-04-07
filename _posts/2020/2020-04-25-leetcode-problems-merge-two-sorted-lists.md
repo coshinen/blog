@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "LeetCode 21. 合并两条有序链表 简单"
+title:  "LeetCode 21. 合并两条有序链表（简单）"
 date:   2020-04-25 10:09:53 +0800
 author: mistydew
 comments: true

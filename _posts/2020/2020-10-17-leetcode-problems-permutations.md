@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "LeetCode 46. 全排列 中等"
+title:  "LeetCode 46. 全排列（中等）"
 date:   2020-10-17 07:48:52 +0800
 author: mistydew
 comments: true

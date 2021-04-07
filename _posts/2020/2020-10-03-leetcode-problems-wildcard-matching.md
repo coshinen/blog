@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "LeetCode 44. 通配符匹配 困难"
+title:  "LeetCode 44. 通配符匹配（困难）"
 date:   2020-10-03 08:24:06 +0800
 author: mistydew
 comments: true
@@ -13,10 +13,8 @@ excerpt: 给定一个输入字符串（`s`）和一个模式（`p`），实现�
 > Given an input string (`s`) and a pattern (`p`), implement wildcard pattern
 > matching with support for `'?'` and `'*'`.
 > 
-> <pre>
-> '?' Matches any single character.
-> '*' Matches any sequence of characters (including the empty sequence).
-> </pre>
+> * `'?'` Matches any single character.
+> * `'*'` Matches any sequence of characters (including the empty sequence).
 > 
 > The matching should cover the **entire** input string (not partial).
 > 

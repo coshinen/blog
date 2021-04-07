@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "LeetCode 58. 最后一个单词的长度 简单"
+title:  "LeetCode 58. 最后一个单词的长度（简单）"
 date:   2021-01-09 07:47:20 +0800
 author: mistydew
 comments: true

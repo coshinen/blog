@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "LeetCode 59. 螺旋矩阵 II 中等"
+title:  "LeetCode 59. 螺旋矩阵 II（中等）"
 date:   2021-01-16 09:07:19 +0800
 author: mistydew
 comments: true

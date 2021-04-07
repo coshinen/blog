@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "LeetCode 68. 文本对齐 困难"
+title:  "LeetCode 68. 文本对齐（困难）"
 date:   2021-03-20 19:21:46 +0800
 author: mistydew
 comments: true

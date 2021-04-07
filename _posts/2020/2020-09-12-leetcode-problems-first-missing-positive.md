@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "LeetCode 41. 首个缺失的正数 困难"
+title:  "LeetCode 41. 首个缺失的正数（困难）"
 date:   2020-09-12 17:08:02 +0800
 author: mistydew
 comments: true

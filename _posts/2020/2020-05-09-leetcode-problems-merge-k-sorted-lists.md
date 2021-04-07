@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "LeetCode 23. 合并 k 个有序链表 困难"
+title:  "LeetCode 23. 合并 k 个有序链表（困难）"
 date:   2020-05-09 08:18:24 +0800
 author: mistydew
 comments: true

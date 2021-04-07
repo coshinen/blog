@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "LeetCode 48. 旋转图像 中等"
+title:  "LeetCode 48. 旋转图像（中等）"
 date:   2020-10-31 07:51:42 +0800
 author: mistydew
 comments: true

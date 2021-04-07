@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "LeetCode 34. 在有序数组中查找元素的首个和最后一个位置 中等"
+title:  "LeetCode 34. 找到有序数组中元素首个和最后一个位置（中等）"
 date:   2020-07-25 18:34:53 +0800
 author: mistydew
 comments: true

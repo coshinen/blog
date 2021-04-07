@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "LeetCode 50. Pow(x, n) 中等"
+title:  "LeetCode 50. Pow(x, n)（中等）"
 date:   2020-11-14 20:00:12 +0800
 author: mistydew
 comments: true

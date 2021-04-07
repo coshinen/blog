@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "LeetCode 37. 数独解法 困难"
+title:  "LeetCode 37. 数独解法（困难）"
 date:   2020-08-15 09:58:35 +0800
 author: mistydew
 comments: true

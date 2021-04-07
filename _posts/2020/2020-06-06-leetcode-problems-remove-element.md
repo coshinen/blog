@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "LeetCode 27. 移除元素 简单"
+title:  "LeetCode 27. 移除元素（简单）"
 date:   2020-06-06 14:27:46 +0800
 author: mistydew
 comments: true

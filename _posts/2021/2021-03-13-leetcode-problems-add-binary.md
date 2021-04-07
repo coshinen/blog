@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "LeetCode 67. 加二进制 简单"
+title:  "LeetCode 67. 加二进制（简单）"
 date:   2021-03-13 08:08:07 +0800
 author: mistydew
 comments: true

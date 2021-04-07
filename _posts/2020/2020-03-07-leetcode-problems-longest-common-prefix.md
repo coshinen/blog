@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "LeetCode 14. 最长公共前缀 简单"
+title:  "LeetCode 14. 最长公共前缀（简单）"
 date:   2020-03-07 19:00:29 +0800
 author: mistydew
 comments: true

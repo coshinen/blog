@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "LeetCode 19. 移除链表末尾的第 n 个节点 中等"
+title:  "LeetCode 19. 移除链表末尾的第 n 个节点（中等）"
 date:   2020-04-11 19:27:35 +0800
 author: mistydew
 comments: true

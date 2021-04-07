@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "LeetCode 24. 成对交换节点 中等"
+title:  "LeetCode 24. 成对交换节点（中等）"
 date:   2020-05-16 17:10:58 +0800
 author: mistydew
 comments: true

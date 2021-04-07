@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "LeetCode 51. N 皇后 困难"
+title:  "LeetCode 51. N 皇后（困难）"
 date:   2020-11-21 19:38:58 +0800
 author: mistydew
 comments: true

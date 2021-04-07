@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "LeetCode 30. 串联所有单词的子串 困难"
+title:  "LeetCode 30. 串联所有单词的子串（困难）"
 date:   2020-06-27 17:36:16 +0800
 author: mistydew
 comments: true

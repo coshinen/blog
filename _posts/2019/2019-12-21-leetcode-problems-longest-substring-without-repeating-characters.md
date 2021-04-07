@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "LeetCode 3. 无重复字符的最长子串 中等"
+title:  "LeetCode 3. 无重复字符的最长子串（中等）"
 date:   2019-12-21 13:32:52 +0800
 author: mistydew
 comments: true

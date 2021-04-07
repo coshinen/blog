@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "LeetCode 7. 整数反转 简单"
+title:  "LeetCode 7. 整数反转（简单）"
 date:   2020-01-18 19:10:18 +0800
 author: mistydew
 comments: true

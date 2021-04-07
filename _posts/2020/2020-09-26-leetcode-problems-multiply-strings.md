@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "LeetCode 43. 字符串相乘 中等"
+title:  "LeetCode 43. 字符串相乘（中等）"
 date:   2020-09-26 08:17:57 +0800
 author: mistydew
 comments: true

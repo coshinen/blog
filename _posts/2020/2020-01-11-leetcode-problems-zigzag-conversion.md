@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "LeetCode 6. Z 字形变换 中等"
+title:  "LeetCode 6. Z 字形变换（中等）"
 date:   2020-01-11 14:57:51 +0800
 author: mistydew
 comments: true

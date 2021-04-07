@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "LeetCode 17. 电话号码的字母组合 中等"
+title:  "LeetCode 17. 电话号码的字母组合（中等）"
 date:   2020-03-28 22:15:39 +0800
 author: mistydew
 comments: true

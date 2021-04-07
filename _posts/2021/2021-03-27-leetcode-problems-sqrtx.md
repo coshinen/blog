@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "LeetCode 69. Sqrt(x) 简单"
+title:  "LeetCode 69. Sqrt(x)（简单）"
 date:   2021-03-27 08:32:01 +0800
 author: mistydew
 comments: true
