@@ -14,7 +14,7 @@ excerpt:
   蘇る 思い出の歌<br>
   この胸に 今も優しく
 ---
-![GZCA-7011](https://www.generasia.com/w/images/c/c1/Kuraki_Mai_-_Time_after_time_~Hana_Mau_Machi_de~.jpg){:.border}
+![GZCA-7011](https://www.mai-kuraki.com/jacket/sg/GZCA-7011.jpg){:.border}
 
 歌手：倉木麻衣<br>
 作詞：倉木麻衣<br>

@@ -5,7 +5,7 @@ date:   2021-04-04 20:11:10 +0800
 author: mistydew
 comments: true
 category: 译文集
-tags: Lyrics
+tags: Lyrics Conan
 excerpt:
   君のこと全部 わかってあげたいけど<br>
   辛くても ごまかす いつも笑顔で<br>
