@@ -81,7 +81,7 @@ tags: Translations UNIX/Linux Bash CLI Shortcuts
 ## 14. Ctrl + R
 
 搜索历史命令。
-历史命令保存在用户家目录下的 .bash_history 文件中。
+历史命令保存在用户家目录下的 `.bash_history` 文件中。
 
 ## 参考链接
 
