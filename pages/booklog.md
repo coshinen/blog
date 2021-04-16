@@ -130,12 +130,13 @@ excerpt: Here are some books that renew my spirit or reclaim my life.
 > * 理解人性，[奥地利] Alfred Adler
 > * 自卑与超越，[奥地利] Alfred Adler
 > * 被讨厌的勇气 “自我启发之父”阿德勒的哲学课，[日] 岸見一郎 古賀史健
-> * 原生家庭 如何修补自己的性格缺陷，[美] Susan Forward
 > * 非暴力沟通，[美] Marshall B.Rosenberg
 > * 人性的弱点，[美] Dale Carnegie
 > * 乌合之众 大众心理研究，[法] Gustave Le Bon
 > * 亲密关系，[美] Rowland S. Miller, Daniel Perlman
 > * 少有人走的路 心智成熟的旅程，[美] M. Scott peck
+> * 原生家庭 如何修补自己的性格缺陷，[美] Susan Forward
+> * 不要用爱控制我，[美] [Patricia Evans](https://www.verbalabuse.com){:target="_blank"}
 > * 异类 不一样的成功启示录，[加] Malcolm Gladwell
 
 > ### 社会学
