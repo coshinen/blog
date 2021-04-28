@@ -38,36 +38,6 @@ excerpt: Here are my favorite quotes from someones that inspire me or make me la
 > * It's very attractive to the libertarian viewpoint if we can explain it
 > properly. I'm better with code than with words though.
 
-> Sansa Stark, Game of Thrones, Season 7 Episode 7:
-> * I'm a slow learner, it's true. But I learn.
-
-> Jon Snow, Game of Thrones, Season 7 Episode 1:
-> * Everything before the word "but" is horse shit.
-
-> Sandor Clegane (The Hound), Game of Thrones, Season 4 Episode 5:
-> * Hate's as good a thing as any to keep a person going. Better than most.
-
-> Petyr Baelish (Littlefinger), Game of Thrones, Season 3 Episode 6:
-> * Chaos isn't a pit. Chaos is a ladder.
-> Many who try to climb it fail, and never get to try again.
-> The fall breaks them.
-> And some are given a chance to climb, but they refuse.
-> They cling to the realm, or the gods, or love. Illusions.
-> Only the ladder is real. The climb is all there is.
-
-> Tywin Lannister, Game of Thrones, Season 3 Episode 4:
-> * I don't distrust you because you're a woman.
-> I distrust you because you're not as smart as you think you are.
-
-> Varys, Game of Thrones, Season 2 Episode 3:
-> * Power resides where men believe it resides.
-> It's a trick, a shadow on the wall, and a very smell man can cast a very large
-> shadow.
-
-> Tyrion Lannister (The Imp), Game of Thrones, Season 1 Episode 1:
-> * Never forget what you are. The rest of the world will not.
-> Wear it like armor, and it can never be used to hurt you.
-
 > Negan, The Walking Dead, Season 9 Episode 16:
 > * It's just that no one ever thinks that they're the evil one.
 
