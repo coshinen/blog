@@ -135,6 +135,7 @@ excerpt: Here are some books that renew my spirit or reclaim my life.
 > * 乌合之众 大众心理研究，[法] Gustave Le Bon
 > * 亲密关系，[美] Rowland S. Miller, Daniel Perlman
 > * 少有人走的路 心智成熟的旅程，[美] M. Scott peck
+> * 爱是一种选择 不再讨好别人，拖累自己，[美] Robert Hemfelt, Frank Minirth, Paul Meier
 > * 原生家庭 如何修补自己的性格缺陷，[美] Susan Forward
 > * 不要用爱控制我，[美] [Patricia Evans](https://www.verbalabuse.com){:target="_blank"}
 > * 异类 不一样的成功启示录，[加] Malcolm Gladwell
