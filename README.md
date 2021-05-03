@@ -18,4 +18,4 @@
 
 The theme is available as open source under the terms of the [MIT license](LICENSE).
 
-All posts are released under a [Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License](https://creativecommons.org/licenses/by-nc-nd/4.0/).
+All posts are released under the terms of the [CC BY-NC-ND 4.0 License](https://creativecommons.org/licenses/by-nc-nd/4.0/).
