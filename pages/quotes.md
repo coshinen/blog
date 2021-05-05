@@ -52,38 +52,6 @@ excerpt: Here are my favorite quotes from someones that inspire me or make me la
 > * Sometimes it is the people no one imagines anything of who do the things
 > that no one can imagine.
 
-> Severus Snape, Harry Potter AND THE DEATHLY HALLOWS PART 2:
-> * You've been raising him like a pig for slaughter.
-
-> Severus Snape, Harry Potter AND THE ORDER OF THE PHOENIX:
-> * Sentimental children forever whining about how bitterly unfair your lives
-> have been. Well, it may have escaped your notice, but life isn't fair.
-
-> Albus Dumbledore, Harry Potter AND THE PRISONER OF AZKABAN:
-> * Oh, and by the way. When in doubt, I find retracing my steps to be a wise
-> place to begin.
-> * A child's voice, however honest and true is meaningless to those who have
-> forgotten how to listen.
-
-> Albus Dumbledore, Harry Potter AND THE CHAMBER OF SECRETS:
-> * It is not our abilities that show what we truly are. It is our choices.
-
-> Voldemort (Tom Marvolo Riddle), Harry Potter AND THE PHILOSOPHER'S STONE:
-> * There is no good and evil, there is only power, and those too weak to seek
-> it.
-
-> Hermione Granger, Harry Potter AND THE PHILOSOPHER'S STONE:
-> * Me? Books and cleverness. There are more important things, friendship and
-> bravery.
-
-> Albus Dumbledore, Harry Potter AND THE PHILOSOPHER'S STONE:
-> * It takes a great deal of bravery to stand up to your enemies, but a great
-> deal more to stand up to your friends.
-> * It does not do to dwell on dreams, and forget to live.
-
-> Severus Snape, Harry Potter AND THE PHILOSOPHER'S STONE:
-> * Clearly, fame isn't everything...
-
 > Tigress, Kung Fu Panda: Legends of Awesomeness, Season 3 Episode 10, PO PICKS a POCKET:
 > * Trust has to be earned.
 
