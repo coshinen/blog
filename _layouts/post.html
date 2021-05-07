@@ -37,24 +37,19 @@ layout: default
                   <use xlink:href="/assets/icons/.svg#tags"></use>
                 </svg>{% for tag in page.tags %}
                 <a href="{{ site.tag }}#{{ tag }}">{{ tag }}</a>{% endfor %}
-              </span>{% if page.comments %}
-              <span>|
-                <svg class="icon" viewBox="0 0 576 512">
-                  <use xlink:href="/assets/icons/.svg#comments"></use>
-                </svg>
-                <script>
-                  var idcomments_acct = 'b051fd1ebb6d822f554a521d0827b1d8';
-                  var idcomments_post_id;
-                  var idcomments_post_url;
-                </script>
-                <script type="text/javascript" src="https://www.intensedebate.com/js/genericLinkWrapperV2.js"></script>
-              </span>{% endif %}
+              </span>
             </p>
           </header>
           <div class="post-content" itemprop="articleBody">
 {{ content }}
           </div>{% if page.comments %}
-          <!-- IntenseDebate Imagine better comments. -->
-          <span id="IDCommentsPostTitle" style="display:none"></span>
-          <script type='text/javascript' src='https://www.intensedebate.com/js/genericCommentWrapperV2.js'></script>{% endif %}
+          <div id="cusdis_thread"
+            data-host="https://cusdis.com"
+            data-app-id="0438ee71-26cb-4ec2-b2b2-9ff7b8334e50"
+            data-page-id="{{ page.id }}"
+            data-page-url="{{ page.url | absolute_url }}"
+            data-page-title="{{ page.title | escape }}"
+          ></div>
+          <script defer src="https://cusdis.com/js/widget/lang/zh-cn.js"></script>
+          <script async defer src="https://cusdis.com/js/cusdis.es.js"></script>{% endif %}
         </article>

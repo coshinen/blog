@@ -25,7 +25,6 @@ permalink: /
 </div>
 
 <div class="home-right">
-  <script src='https://www.intensedebate.com/widgets/acctComment/415414/2' defer="defer" type='text/javascript'></script>
   <div id="profile">
     <h2>关于</h2>
     <p>
