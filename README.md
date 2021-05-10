@@ -1,4 +1,7 @@
-# [mistydew's blog](https://mistydew.github.io/blog/)
+# parallel universe
+
+Parauni is a one-size-fits-all Jekyll theme for my blog.
+It's based on Jekyll's default (and first) theme minima.
 
 ## Licenses
 
