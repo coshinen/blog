@@ -2,7 +2,7 @@
 layout: post
 title:  "一些可能会听到的比特币术语"
 date:   2018-10-20 20:43:26 +0800
-author: mistydew
+author: Coshin
 comments: true
 category: 区块链
 tags: Bitcoin Translations

@@ -2,7 +2,7 @@
 layout: post
 title:  "GARNET CROW「やさしい雨」歌词"
 date:   2020-03-22 20:04:06 +0800
-author: mistydew
+author: Coshin
 comments: true
 category: 译文集
 tags: Lyrics Garnet

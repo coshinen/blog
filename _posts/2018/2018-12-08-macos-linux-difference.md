@@ -2,7 +2,7 @@
 layout: post
 title:  "macOS 和 Linux 内核之间有什么不同？"
 date:   2018-12-08 15:46:38 +0800
-author: mistydew
+author: Coshin
 comments: true
 category: 译文集
 tags: Translations macOS UNIX/Linux Kernel

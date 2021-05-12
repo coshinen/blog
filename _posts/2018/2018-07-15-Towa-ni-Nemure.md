@@ -2,7 +2,7 @@
 layout: post
 title:  "GARNET CROW「永遠に葬れ」歌词"
 date:   2018-07-15 20:39:12 +0800
-author: mistydew
+author: Coshin
 comments: true
 category: 译文集
 tags: Lyrics Garnet

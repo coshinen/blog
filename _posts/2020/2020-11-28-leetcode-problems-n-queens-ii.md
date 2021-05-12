@@ -2,7 +2,7 @@
 layout: post
 title:  "LeetCode 52. N 皇后 II（困难）"
 date:   2020-11-28 07:24:14 +0800
-author: mistydew
+author: Coshin
 comments: true
 category: 力扣题解
 tags: LeetCode Hard Backtracking

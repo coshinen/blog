@@ -2,7 +2,7 @@
 layout: post
 title:  "LeetCode 72. 编辑距离（困难）"
 date:   2021-04-17 13:34:14 +0800
-author: mistydew
+author: Coshin
 comments: true
 category: 力扣题解
 tags: LeetCode Hard String Dynamic-Programming

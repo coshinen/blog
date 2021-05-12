@@ -2,7 +2,7 @@
 layout: post
 title:  "倉木麻衣「風のららら」歌词"
 date:   2021-05-09 20:03:05 +0800
-author: mistydew
+author: Coshin
 comments: true
 category: 译文集
 tags: Lyrics Conan

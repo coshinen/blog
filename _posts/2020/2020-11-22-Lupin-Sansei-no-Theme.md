@@ -2,7 +2,7 @@
 layout: post
 title:  "ピート・マック・ジュニア「ルパン三世のテーマ」歌词"
 date:   2020-11-22 20:37:11 +0800
-author: mistydew
+author: Coshin
 comments: true
 category: 译文集
 tags: Lyrics

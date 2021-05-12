@@ -2,7 +2,7 @@
 layout: post
 title:  "LeetCode 33. 搜索旋转有序数组（中等）"
 date:   2020-07-18 09:17:04 +0800
-author: mistydew
+author: Coshin
 comments: true
 category: 力扣题解
 tags: LeetCode Medium Array Binary-Search

@@ -2,7 +2,7 @@
 layout: post
 title:  "LeetCode 45. 跳跃游戏 II（困难）"
 date:   2020-10-10 20:13:19 +0800
-author: mistydew
+author: Coshin
 comments: true
 category: 力扣题解
 tags: LeetCode Hard Array Greedy

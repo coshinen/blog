@@ -2,7 +2,7 @@
 layout: post
 title:  "GARNET CROW「picture of world」歌词"
 date:   2018-10-28 20:04:12 +0800
-author: mistydew
+author: Coshin
 comments: true
 category: 译文集
 tags: Lyrics Garnet

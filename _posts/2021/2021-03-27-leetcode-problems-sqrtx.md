@@ -2,7 +2,7 @@
 layout: post
 title:  "LeetCode 69. Sqrt(x)（简单）"
 date:   2021-03-27 08:32:01 +0800
-author: mistydew
+author: Coshin
 comments: true
 category: 力扣题解
 tags: LeetCode Easy Math Binary-Search

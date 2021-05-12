@@ -2,7 +2,7 @@
 layout: post
 title:  "LeetCode 25. k 个一组反转节点（困难）"
 date:   2020-05-23 08:37:46 +0800
-author: mistydew
+author: Coshin
 comments: true
 category: 力扣题解
 tags: LeetCode Hard Linked-List

@@ -2,7 +2,7 @@
 layout: post
 title:  "比特币 RPC 命令剖析 \"setgenerate\""
 date:   2018-06-19 20:19:21 +0800
-author: mistydew
+author: Coshin
 comments: true
 category: 区块链
 tags: Bitcoin bitcoin-cli

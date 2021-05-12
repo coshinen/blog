@@ -2,7 +2,7 @@
 layout: post
 title:  "比特币“靓号”地址"
 date:   2018-05-16 18:56:51 +0800
-author: mistydew
+author: Coshin
 comments: true
 category: 区块链
 tags: Bitcoin Address

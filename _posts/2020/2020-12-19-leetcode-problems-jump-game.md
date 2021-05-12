@@ -2,7 +2,7 @@
 layout: post
 title:  "LeetCode 55. 跳跃游戏（中等）"
 date:   2020-12-19 13:08:05 +0800
-author: mistydew
+author: Coshin
 comments: true
 category: 力扣题解
 tags: LeetCode Medium Array Greedy

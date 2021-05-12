@@ -2,7 +2,7 @@
 layout: post
 title:  "LeetCode 16. 最接近的三数之和（中等）"
 date:   2020-03-21 18:41:18 +0800
-author: mistydew
+author: Coshin
 comments: true
 category: 力扣题解
 tags: LeetCode Medium Array Two-Pointers

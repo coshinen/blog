@@ -2,7 +2,7 @@
 layout: post
 title:  "GARNET CROW「夏の終わりの長い雨」歌词"
 date:   2018-06-10 20:03:09 +0800
-author: mistydew
+author: Coshin
 comments: true
 category: 译文集
 tags: Lyrics Garnet

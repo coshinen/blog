@@ -2,7 +2,7 @@
 layout: post
 title:  "夏洛克福尔摩斯名言"
 date:   2021-01-06 18:54:16 +0800
-author: mistydew
+author: Coshin
 comments: true
 category: 译文集
 tags: Translations

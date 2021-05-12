@@ -2,7 +2,7 @@
 layout: post
 title:  "比特币区块构造"
 date:   2018-04-26 21:02:10 +0800
-author: mistydew
+author: Coshin
 comments: true
 category: 区块链
 tags: Bitcoin Block

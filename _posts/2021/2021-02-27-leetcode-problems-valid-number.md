@@ -2,7 +2,7 @@
 layout: post
 title:  "LeetCode 65. 有效数字（困难）"
 date:   2021-02-27 17:08:37 +0800
-author: mistydew
+author: Coshin
 comments: true
 category: 力扣题解
 tags: LeetCode Hard Math String

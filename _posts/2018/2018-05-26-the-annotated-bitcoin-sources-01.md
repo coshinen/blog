@@ -2,7 +2,7 @@
 layout: post
 title:  "比特币源码剖析（一）"
 date:   2018-05-26 10:06:52 +0800
-author: mistydew
+author: Coshin
 comments: true
 category: 区块链
 tags: Bitcoin bitcoind

@@ -2,7 +2,7 @@
 layout: post
 title:  "Vim 编辑器入门"
 date:   2018-04-25 20:11:20 +0800
-author: mistydew
+author: Coshin
 comments: true
 category: 程序人生
 tags: Vim CLI

@@ -2,7 +2,7 @@
 layout: post
 title:  "LeetCode 36. 有效的数独（中等）"
 date:   2020-08-08 13:13:10 +0800
-author: mistydew
+author: Coshin
 comments: true
 category: 力扣题解
 tags: LeetCode Medium Hash-Table

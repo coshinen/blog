@@ -2,7 +2,7 @@
 layout: post
 title:  "Base58Check 编码"
 date:   2018-05-15 20:22:02 +0800
-author: mistydew
+author: Coshin
 comments: true
 category: 区块链
 tags: Bitcoin Base58Check-encoding

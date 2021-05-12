@@ -2,7 +2,7 @@
 layout: post
 title:  "田村ゆかり「きっと言える」歌词"
 date:   2019-09-01 20:39:01 +0800
-author: mistydew
+author: Coshin
 comments: true
 category: 译文集
 tags: Lyrics Conan

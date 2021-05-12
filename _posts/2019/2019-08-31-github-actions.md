@@ -2,7 +2,7 @@
 layout: post
 title:  "GitHub Actions 工作流入门"
 date:   2019-08-31 22:56:58 +0800
-author: mistydew
+author: Coshin
 comments: true
 category: 程序人生
 tags: Git(Hub) CI/CD

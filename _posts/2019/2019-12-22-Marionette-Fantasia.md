@@ -2,7 +2,7 @@
 layout: post
 title:  "GARNET CROW「Marionette Fantasia」歌词"
 date:   2019-12-22 20:03:11 +0800
-author: mistydew
+author: Coshin
 comments: true
 category: 译文集
 tags: Lyrics Garnet

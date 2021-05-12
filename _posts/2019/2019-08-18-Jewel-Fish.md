@@ -2,7 +2,7 @@
 layout: post
 title:  "GARNET CROW「Jewel Fish」歌词"
 date:   2019-08-18 20:01:05 +0800
-author: mistydew
+author: Coshin
 comments: true
 category: 译文集
 tags: Lyrics Garnet

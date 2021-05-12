@@ -2,7 +2,7 @@
 layout: post
 title:  "伊織「愛はいつも」歌词"
 date:   2020-10-18 20:39:04 +0800
-author: mistydew
+author: Coshin
 comments: true
 category: 译文集
 tags: Lyrics Conan

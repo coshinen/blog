@@ -2,7 +2,7 @@
 layout: post
 title:  "比特币开发者术语表"
 date:   2018-10-27 22:08:57 +0800
-author: mistydew
+author: Coshin
 comments: true
 category: 区块链
 tags: Bitcoin Translations

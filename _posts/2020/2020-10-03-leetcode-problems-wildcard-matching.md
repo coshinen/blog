@@ -2,7 +2,7 @@
 layout: post
 title:  "LeetCode 44. 通配符匹配（困难）"
 date:   2020-10-03 08:24:06 +0800
-author: mistydew
+author: Coshin
 comments: true
 category: 力扣题解
 tags: LeetCode Hard String Dynamic-Programming Backtracking Greedy

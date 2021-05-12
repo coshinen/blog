@@ -2,7 +2,7 @@
 layout: post
 title:  "GARNET CROW「静寂の concerto」歌词"
 date:   2018-04-22 20:11:12 +0800
-author: mistydew
+author: Coshin
 comments: true
 category: 译文集
 tags: Lyrics Garnet

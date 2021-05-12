@@ -2,7 +2,7 @@
 layout: post
 title:  "LeetCode 39. 组合总和（中等）"
 date:   2020-08-29 08:07:06 +0800
-author: mistydew
+author: Coshin
 comments: true
 category: 力扣题解
 tags: LeetCode Medium Array Backtracking

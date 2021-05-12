@@ -2,7 +2,7 @@
 layout: post
 title:  "GARNET CROW「in little time」歌词"
 date:   2019-05-05 20:00:03 +0800
-author: mistydew
+author: Coshin
 comments: true
 category: 译文集
 tags: Lyrics Garnet

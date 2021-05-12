@@ -2,7 +2,7 @@
 layout: post
 title:  "GARNET CROW「夕立の庭」歌词"
 date:   2019-11-17 20:02:08 +0800
-author: mistydew
+author: Coshin
 comments: true
 category: 译文集
 tags: Lyrics Garnet

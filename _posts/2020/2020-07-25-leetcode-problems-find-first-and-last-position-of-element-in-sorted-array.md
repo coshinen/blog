@@ -2,7 +2,7 @@
 layout: post
 title:  "LeetCode 34. 找到有序数组中元素首个和最后一个位置（中等）"
 date:   2020-07-25 18:34:53 +0800
-author: mistydew
+author: Coshin
 comments: true
 category: 力扣题解
 tags: LeetCode Medium Array Binary-Search

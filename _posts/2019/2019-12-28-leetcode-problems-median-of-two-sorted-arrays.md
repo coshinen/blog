@@ -2,7 +2,7 @@
 layout: post
 title:  "LeetCode 4. 两个有序数组的中位数（困难）"
 date:   2019-12-28 10:03:47 +0800
-author: mistydew
+author: Coshin
 comments: true
 category: 力扣题解
 tags: LeetCode Hard Array Binary-Search Divide-and-Conquer

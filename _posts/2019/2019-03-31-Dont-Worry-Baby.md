@@ -2,7 +2,7 @@
 layout: post
 title:  "The Beach Boys「Don't Worry Baby」歌词"
 date:   2019-03-31 20:04:03 +0800
-author: mistydew
+author: Coshin
 comments: true
 category: 译文集
 tags: Lyrics

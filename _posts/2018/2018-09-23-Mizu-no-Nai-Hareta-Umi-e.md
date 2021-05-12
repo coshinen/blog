@@ -2,7 +2,7 @@
 layout: post
 title:  "GARNET CROW「水のない晴れた海へ」歌词"
 date:   2018-09-23 20:01:01 +0800
-author: mistydew
+author: Coshin
 comments: true
 category: 译文集
 tags: Lyrics Garnet

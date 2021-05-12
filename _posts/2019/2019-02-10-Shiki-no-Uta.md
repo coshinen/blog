@@ -2,7 +2,7 @@
 layout: post
 title:  "芹洋子「四季の歌」歌词"
 date:   2019-02-10 20:09:10 +0800
-author: mistydew
+author: Coshin
 comments: true
 category: 译文集
 tags: Lyrics

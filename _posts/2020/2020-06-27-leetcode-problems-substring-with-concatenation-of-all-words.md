@@ -2,7 +2,7 @@
 layout: post
 title:  "LeetCode 30. 串联所有单词的子串（困难）"
 date:   2020-06-27 17:36:16 +0800
-author: mistydew
+author: Coshin
 comments: true
 category: 力扣题解
 tags: LeetCode Hard Hash-Table Two-Pointers String

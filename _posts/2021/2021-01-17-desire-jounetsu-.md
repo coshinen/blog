@@ -2,7 +2,7 @@
 layout: post
 title:  "中森明菜「DESIRE -情熱-」歌词"
 date:   2021-01-17 20:26:02 +0800
-author: mistydew
+author: Coshin
 comments: true
 category: 译文集
 tags: Lyrics

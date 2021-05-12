@@ -2,7 +2,7 @@
 layout: post
 title:  "GARNET CROW「逃れの町」歌词"
 date:   2020-01-19 20:03:11 +0800
-author: mistydew
+author: Coshin
 comments: true
 category: 译文集
 tags: Lyrics Garnet

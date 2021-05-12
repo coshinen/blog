@@ -2,7 +2,7 @@
 layout: post
 title:  "如何在 macOS 上开启 NTFS 硬盘的写权限"
 date:   2019-04-10 20:54:36 +0800
-author: mistydew
+author: Coshin
 comments: true
 category: 程序人生
 tags: macOS fstab NTFS

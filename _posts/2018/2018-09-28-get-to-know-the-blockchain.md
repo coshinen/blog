@@ -2,7 +2,7 @@
 layout: post
 title:  "了解区块链"
 date:   2018-09-28 20:19:08 +0800
-author: mistydew
+author: Coshin
 comments: true
 category: 区块链
 tags: Blockchain Translations

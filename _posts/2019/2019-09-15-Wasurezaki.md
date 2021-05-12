@@ -2,7 +2,7 @@
 layout: post
 title:  "GARNET CROW「忘れ咲き」歌词"
 date:   2019-09-15 20:04:11 +0800
-author: mistydew
+author: Coshin
 comments: true
 category: 译文集
 tags: Lyrics Conan Garnet

@@ -2,7 +2,7 @@
 layout: post
 title:  "LeetCode 42. 收集雨水（困难）"
 date:   2020-09-19 18:18:54 +0800
-author: mistydew
+author: Coshin
 comments: true
 category: 力扣题解
 tags: LeetCode Hard Array Two-Pointers Stack

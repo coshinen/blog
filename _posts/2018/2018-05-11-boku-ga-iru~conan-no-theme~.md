@@ -2,7 +2,7 @@
 layout: post
 title:  "伊織「ぼくがいる 〜コナンのテーマ〜」歌词"
 date:   2018-05-11 20:37:09 +0800
-author: mistydew
+author: Coshin
 comments: true
 category: 译文集
 tags: Lyrics Conan

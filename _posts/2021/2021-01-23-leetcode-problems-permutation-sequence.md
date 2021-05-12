@@ -2,7 +2,7 @@
 layout: post
 title:  "LeetCode 60. 排列序列（困难）"
 date:   2021-01-23 08:36:44 +0800
-author: mistydew
+author: Coshin
 comments: true
 category: 力扣题解
 tags: LeetCode Hard Backtracking

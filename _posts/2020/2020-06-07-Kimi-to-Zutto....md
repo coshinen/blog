@@ -2,7 +2,7 @@
 layout: post
 title:  "yu-yu「君とずっと…」歌词"
 date:   2020-06-07 20:11:08 +0800
-author: mistydew
+author: Coshin
 comments: true
 category: 译文集
 tags: Lyrics Conan

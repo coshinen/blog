@@ -2,7 +2,7 @@
 layout: post
 title:  "GARNET CROW「クリスタル・ゲージ」歌词"
 date:   2018-09-09 20:02:12 +0800
-author: mistydew
+author: Coshin
 comments: true
 category: 译文集
 tags: Lyrics Garnet

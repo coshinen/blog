@@ -2,7 +2,7 @@
 layout: post
 title:  "DAOKOx米津玄師「打上花火」歌词"
 date:   2020-01-26 20:17:08 +0800
-author: mistydew
+author: Coshin
 comments: true
 category: 译文集
 tags: Lyrics

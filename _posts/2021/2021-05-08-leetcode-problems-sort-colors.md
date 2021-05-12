@@ -2,7 +2,7 @@
 layout: post
 title:  "LeetCode 75. 颜色分类（中等）"
 date:   2021-05-08 20:00:08 +0800
-author: mistydew
+author: Coshin
 comments: true
 category: 力扣题解
 tags: LeetCode Medium Array Two-Pointers Sort

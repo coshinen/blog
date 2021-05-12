@@ -2,7 +2,7 @@
 layout: post
 title:  "LeetCode 28. 实现 strStr()（简单）"
 date:   2020-06-13 08:09:19 +0800
-author: mistydew
+author: Coshin
 comments: true
 category: 力扣题解
 tags: LeetCode Easy Two-Pointers String

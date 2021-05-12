@@ -2,7 +2,7 @@
 layout: post
 title:  "一些常用的 Bash 命令行"
 date:   2018-04-21 18:58:02 +0800
-author: mistydew
+author: Coshin
 comments: true
 category: 程序人生
 tags: Bash CLI

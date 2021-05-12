@@ -2,7 +2,7 @@
 layout: post
 title:  "GARNET CROW「Hello Sadness」歌词"
 date:   2018-05-06 20:09:09 +0800
-author: mistydew
+author: Coshin
 comments: true
 category: 译文集
 tags: Lyrics Garnet

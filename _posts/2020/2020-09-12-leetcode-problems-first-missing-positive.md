@@ -2,7 +2,7 @@
 layout: post
 title:  "LeetCode 41. 首个缺失的正数（困难）"
 date:   2020-09-12 17:08:02 +0800
-author: mistydew
+author: Coshin
 comments: true
 category: 力扣题解
 tags: LeetCode Hard Array

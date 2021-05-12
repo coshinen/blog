@@ -2,7 +2,7 @@
 layout: post
 title:  "LeetCode 35. 搜索插入位置（简单）"
 date:   2020-08-01 07:28:48 +0800
-author: mistydew
+author: Coshin
 comments: true
 category: 力扣题解
 tags: LeetCode Easy Array Binary-Search

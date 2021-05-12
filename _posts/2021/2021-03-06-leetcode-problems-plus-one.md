@@ -2,7 +2,7 @@
 layout: post
 title:  "LeetCode 66. 加一（简单）"
 date:   2021-03-06 20:16:54 +0800
-author: mistydew
+author: Coshin
 comments: true
 category: 力扣题解
 tags: LeetCode Easy Array

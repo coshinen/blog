@@ -2,7 +2,7 @@
 layout: post
 title:  "倉木麻衣「Time after time 〜花舞う街で〜」歌词"
 date:   2018-05-14 20:03:03 +0800
-author: mistydew
+author: Coshin
 comments: true
 category: 译文集
 tags: Lyrics Conan

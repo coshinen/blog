@@ -2,7 +2,7 @@
 layout: post
 title:  "GARNET CROW「冷たい影」歌词"
 date:   2019-09-22 20:04:12 +0800
-author: mistydew
+author: Coshin
 comments: true
 category: 译文集
 tags: Lyrics Garnet

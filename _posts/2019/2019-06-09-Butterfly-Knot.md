@@ -2,7 +2,7 @@
 layout: post
 title:  "GARNET CROW「バタフライ・ノット」歌词"
 date:   2019-06-09 20:13:10 +0800
-author: mistydew
+author: Coshin
 comments: true
 category: 译文集
 tags: Lyrics Garnet

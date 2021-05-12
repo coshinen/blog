@@ -2,7 +2,7 @@
 layout: post
 title:  "GARNET CROW「The Someone's Tale」歌词"
 date:   2018-10-07 20:13:03 +0800
-author: mistydew
+author: Coshin
 comments: true
 category: 译文集
 tags: Lyrics Garnet

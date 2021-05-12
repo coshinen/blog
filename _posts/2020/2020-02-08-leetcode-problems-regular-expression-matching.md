@@ -2,7 +2,7 @@
 layout: post
 title:  "LeetCode 10. 正则表达式匹配（困难）"
 date:   2020-02-08 15:52:08 +0800
-author: mistydew
+author: Coshin
 comments: true
 category: 力扣题解
 tags: LeetCode Hard String Dynamic-Programming Backtracking

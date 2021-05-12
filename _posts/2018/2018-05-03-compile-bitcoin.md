@@ -2,7 +2,7 @@
 layout: post
 title:  "编译比特币源码"
 date:   2018-05-03 18:57:36 +0800
-author: mistydew
+author: Coshin
 comments: true
 category: 区块链
 tags: Bitcoin src-build

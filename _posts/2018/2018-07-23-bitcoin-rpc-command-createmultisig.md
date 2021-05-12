@@ -2,7 +2,7 @@
 layout: post
 title:  "比特币 RPC 命令剖析 \"createmultisig\""
 date:   2018-07-23 20:48:50 +0800
-author: mistydew
+author: Coshin
 comments: true
 category: 区块链
 tags: Bitcoin bitcoin-cli

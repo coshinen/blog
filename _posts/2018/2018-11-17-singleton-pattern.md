@@ -2,7 +2,7 @@
 layout: post
 title:  "设计模式—单例模式"
 date:   2018-11-17 21:31:55 +0800
-author: mistydew
+author: Coshin
 comments: true
 category: 程序人生
 tags: Design-Patterns C++ GC

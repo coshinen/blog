@@ -2,7 +2,7 @@
 layout: post
 title:  "LeetCode 15. 三数之和（中等）"
 date:   2020-03-14 20:05:49 +0800
-author: mistydew
+author: Coshin
 comments: true
 category: 力扣题解
 tags: LeetCode Medium Array Two-Pointers

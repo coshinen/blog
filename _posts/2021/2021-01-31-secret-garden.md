@@ -2,7 +2,7 @@
 layout: post
 title:  "MADOKA「SECRET GARDEN」歌词"
 date:   2021-01-31 20:02:08 +0800
-author: mistydew
+author: Coshin
 comments: true
 category: 译文集
 tags: Lyrics

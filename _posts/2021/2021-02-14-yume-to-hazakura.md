@@ -2,7 +2,7 @@
 layout: post
 title:  "初音ミク「夢と葉桜」歌词"
 date:   2021-02-14 20:11:07 +0800
-author: mistydew
+author: Coshin
 comments: true
 category: 译文集
 tags: Lyrics

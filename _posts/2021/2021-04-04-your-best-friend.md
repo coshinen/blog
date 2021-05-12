@@ -2,7 +2,7 @@
 layout: post
 title:  "倉木麻衣「Your Best Friend」歌词"
 date:   2021-04-04 20:11:10 +0800
-author: mistydew
+author: Coshin
 comments: true
 category: 译文集
 tags: Lyrics Conan

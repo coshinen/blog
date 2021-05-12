@@ -2,7 +2,7 @@
 layout: post
 title:  "ZARD「止まっていた時計が今動き出した」歌词"
 date:   2020-12-27 20:04:01 +0800
-author: mistydew
+author: Coshin
 comments: true
 category: 译文集
 tags: Lyrics

@@ -2,7 +2,7 @@
 layout: post
 title:  "カルメン・マキ「私は風」歌词"
 date:   2019-05-12 20:03:11 +0800
-author: mistydew
+author: Coshin
 comments: true
 category: 译文集
 tags: Lyrics

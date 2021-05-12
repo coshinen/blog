@@ -2,7 +2,7 @@
 layout: post
 title:  "ザ・ハイロウズ「胸がドキドキ」歌词"
 date:   2020-06-28 20:36:02 +0800
-author: mistydew
+author: Coshin
 comments: true
 category: 译文集
 tags: Lyrics Conan

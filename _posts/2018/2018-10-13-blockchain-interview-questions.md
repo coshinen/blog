@@ -2,7 +2,7 @@
 layout: post
 title:  "10 个基础的区块链面试问答"
 date:   2018-10-13 09:23:37 +0800
-author: mistydew
+author: Coshin
 comments: true
 category: 区块链
 tags: Bitcoin Translations

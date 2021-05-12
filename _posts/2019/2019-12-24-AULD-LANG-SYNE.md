@@ -2,7 +2,7 @@
 layout: post
 title:  "中村由利「AULD LANG SYNE」歌词"
 date:   2019-12-24 20:10:11 +0800
-author: mistydew
+author: Coshin
 comments: true
 category: 译文集
 tags: Lyrics Garnet

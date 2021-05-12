@@ -2,7 +2,7 @@
 layout: post
 title:  "GARNET CROW「hi-speed スペシャル oneday」歌词"
 date:   2019-06-23 20:00:10 +0800
-author: mistydew
+author: Coshin
 comments: true
 category: 译文集
 tags: Lyrics Garnet

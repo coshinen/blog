@@ -2,7 +2,7 @@
 layout: post
 title:  "倉木麻衣「渡月橋 〜君 想ふ〜」歌词"
 date:   2020-05-17 20:17:04 +0800
-author: mistydew
+author: Coshin
 comments: true
 category: 译文集
 tags: Lyrics Conan

@@ -2,7 +2,7 @@
 layout: post
 title:  "伊織「いいひとに逢えたね 〜新一のテーマ〜」歌词"
 date:   2020-08-16 20:37:10 +0800
-author: mistydew
+author: Coshin
 comments: true
 category: 译文集
 tags: Lyrics Conan

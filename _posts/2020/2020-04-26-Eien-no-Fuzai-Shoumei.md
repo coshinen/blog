@@ -2,7 +2,7 @@
 layout: post
 title:  "東京事変「永遠の不在証明」歌词"
 date:   2020-04-26 20:20:04 +0800
-author: mistydew
+author: Coshin
 comments: true
 category: 译文集
 tags: Lyrics Conan

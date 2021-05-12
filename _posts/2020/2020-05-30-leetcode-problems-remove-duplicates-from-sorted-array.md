@@ -2,7 +2,7 @@
 layout: post
 title:  "LeetCode 26. 移除有序数组的重复项（简单）"
 date:   2020-05-30 08:09:21 +0800
-author: mistydew
+author: Coshin
 comments: true
 category: 力扣题解
 tags: LeetCode Easy Array Two-Pointers

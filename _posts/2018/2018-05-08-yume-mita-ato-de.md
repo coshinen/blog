@@ -2,7 +2,7 @@
 layout: post
 title:  "GARNET CROW「夢みたあとで」歌词"
 date:   2018-05-08 20:02:03 +0800
-author: mistydew
+author: Coshin
 comments: true
 category: 译文集
 tags: Lyrics Conan Garnet

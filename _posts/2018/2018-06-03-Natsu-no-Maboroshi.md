@@ -2,7 +2,7 @@
 layout: post
 title:  "GARNET CROW「夏の幻」歌词"
 date:   2018-06-03 20:00:10 +0800
-author: mistydew
+author: Coshin
 comments: true
 category: 译文集
 tags: Lyrics Conan Garnet

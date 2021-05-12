@@ -2,7 +2,7 @@
 layout: post
 title:  "LeetCode 53. 最大子数组（简单）"
 date:   2020-12-05 07:37:33 +0800
-author: mistydew
+author: Coshin
 comments: true
 category: 力扣题解
 tags: LeetCode Easy Array Divide-and-Conquer Dynamic-Programming

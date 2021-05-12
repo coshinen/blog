@@ -2,7 +2,7 @@
 layout: post
 title:  "杏子「Happy Birthday」歌词"
 date:   2020-05-03 20:37:04 +0800
-author: mistydew
+author: Coshin
 comments: true
 category: 译文集
 tags: Lyrics Conan

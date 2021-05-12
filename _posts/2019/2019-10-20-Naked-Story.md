@@ -2,7 +2,7 @@
 layout: post
 title:  "GARNET CROW「Naked Story」歌词"
 date:   2019-10-20 20:02:04 +0800
-author: mistydew
+author: Coshin
 comments: true
 category: 译文集
 tags: Lyrics Garnet

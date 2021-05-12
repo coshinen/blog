@@ -2,7 +2,7 @@
 layout: post
 title:  "LeetCode 23. 合并 k 个有序链表（困难）"
 date:   2020-05-09 08:18:24 +0800
-author: mistydew
+author: Coshin
 comments: true
 category: 力扣题解
 tags: LeetCode Hard Linked-List Divide-and-Conquer Heap

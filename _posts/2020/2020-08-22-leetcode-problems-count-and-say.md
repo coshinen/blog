@@ -2,7 +2,7 @@
 layout: post
 title:  "LeetCode 38. 外观数列（简单）"
 date:   2020-08-22 07:38:58 +0800
-author: mistydew
+author: Coshin
 comments: true
 category: 力扣题解
 tags: LeetCode Easy String

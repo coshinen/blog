@@ -2,7 +2,7 @@
 layout: post
 title:  "GARNET CROW「Please, forgive me」歌词"
 date:   2019-11-10 20:02:04 +0800
-author: mistydew
+author: Coshin
 comments: true
 category: 译文集
 tags: Lyrics Garnet

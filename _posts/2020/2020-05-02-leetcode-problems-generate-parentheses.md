@@ -2,7 +2,7 @@
 layout: post
 title:  "LeetCode 22. 生成括号（中等）"
 date:   2020-05-02 11:25:16 +0800
-author: mistydew
+author: Coshin
 comments: true
 category: 力扣题解
 tags: LeetCode Medium String Backtracking

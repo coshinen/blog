@@ -2,7 +2,7 @@
 layout: post
 title:  "LeetCode 3. 无重复字符的最长子串（中等）"
 date:   2019-12-21 13:32:52 +0800
-author: mistydew
+author: Coshin
 comments: true
 category: 力扣题解
 tags: LeetCode Medium Hash-Table Two-Pointers String Sliding-Window

@@ -2,7 +2,7 @@
 layout: post
 title:  "LeetCode 27. 移除元素（简单）"
 date:   2020-06-06 14:27:46 +0800
-author: mistydew
+author: Coshin
 comments: true
 category: 力扣题解
 tags: LeetCode Easy Array Two-Pointers

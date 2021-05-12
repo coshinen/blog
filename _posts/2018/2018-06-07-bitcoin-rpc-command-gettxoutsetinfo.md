@@ -2,7 +2,7 @@
 layout: post
 title:  "比特币 RPC 命令剖析 \"gettxoutsetinfo\""
 date:   2018-06-07 23:59:06 +0800
-author: mistydew
+author: Coshin
 comments: true
 category: 区块链
 tags: Bitcoin bitcoin-cli

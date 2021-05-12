@@ -2,7 +2,7 @@
 layout: post
 title:  "安田レイ「Not the End」歌词"
 date:   2021-03-07 20:21:02 +0800
-author: mistydew
+author: Coshin
 comments: true
 category: 译文集
 tags: Lyrics

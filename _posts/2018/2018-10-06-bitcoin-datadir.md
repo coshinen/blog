@@ -2,7 +2,7 @@
 layout: post
 title:  "比特币数据目录"
 date:   2018-10-06 09:28:37 +0800
-author: mistydew
+author: Coshin
 comments: true
 category: 区块链
 tags: Bitcoin

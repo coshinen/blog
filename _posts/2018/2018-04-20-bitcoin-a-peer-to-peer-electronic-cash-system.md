@@ -2,7 +2,7 @@
 layout: post
 title:  "比特币白皮书"
 date:   2018-04-20 20:08:10 +0800
-author: mistydew
+author: Coshin
 comments: true
 category: 区块链
 tags: Bitcoin Whitepaper Translations

@@ -2,7 +2,7 @@
 layout: post
 title:  "祈Inory「爱@五十音」歌词"
 date:   2021-02-28 20:15:11 +0800
-author: mistydew
+author: Coshin
 comments: true
 category: 译文集
 tags: Lyrics

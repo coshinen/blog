@@ -2,7 +2,7 @@
 layout: post
 title:  "LeetCode 62. 不同的路径（中等）"
 date:   2021-02-06 20:02:36 +0800
-author: mistydew
+author: Coshin
 comments: true
 category: 力扣题解
 tags: LeetCode Medium Array Dynamic-Programming

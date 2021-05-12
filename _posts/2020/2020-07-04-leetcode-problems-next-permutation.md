@@ -2,7 +2,7 @@
 layout: post
 title:  "LeetCode 31. 下一个排列（中等）"
 date:   2020-07-04 08:31:19 +0800
-author: mistydew
+author: Coshin
 comments: true
 category: 力扣题解
 tags: LeetCode Medium Array

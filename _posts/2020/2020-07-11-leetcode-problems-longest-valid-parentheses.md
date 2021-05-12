@@ -2,7 +2,7 @@
 layout: post
 title:  "LeetCode 32. 最长有效括号（困难）"
 date:   2020-07-11 08:57:01 +0800
-author: mistydew
+author: Coshin
 comments: true
 category: 力扣题解
 tags: LeetCode Hard String Dynamic-Programming

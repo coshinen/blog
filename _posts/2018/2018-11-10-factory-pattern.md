@@ -2,7 +2,7 @@
 layout: post
 title:  "设计模式—工厂模式"
 date:   2018-11-10 17:16:10 +0800
-author: mistydew
+author: Coshin
 comments: true
 category: 程序人生
 tags: Design-Patterns C++

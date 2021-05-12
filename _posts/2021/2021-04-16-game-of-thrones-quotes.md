@@ -1,8 +1,8 @@
 ---
 layout: post
 title:  "权力的游戏名言"
-date:   2021-05-04 20:21:25 +0800
-author: mistydew
+date:   2021-04-16 20:21:10 +0800
+author: Coshin
 comments: true
 category: 译文集
 tags: Translations GoT

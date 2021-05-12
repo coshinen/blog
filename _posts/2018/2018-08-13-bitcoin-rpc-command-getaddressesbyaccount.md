@@ -2,7 +2,7 @@
 layout: post
 title:  "比特币 RPC 命令剖析 \"getaddressesbyaccount\""
 date:   2018-08-13 21:07:06 +0800
-author: mistydew
+author: Coshin
 comments: true
 category: 区块链
 tags: Bitcoin bitcoin-cli

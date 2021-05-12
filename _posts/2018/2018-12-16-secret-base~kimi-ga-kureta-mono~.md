@@ -2,7 +2,7 @@
 layout: post
 title:  "ZONE「secret base 〜君がくれたもの〜」歌词"
 date:   2018-12-16 20:01:08 +0800
-author: mistydew
+author: Coshin
 comments: true
 category: 译文集
 tags: Lyrics

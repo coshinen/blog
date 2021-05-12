@@ -2,7 +2,7 @@
 layout: post
 title:  "LeetCode 12. 整数转罗马数字（中等）"
 date:   2020-02-22 20:23:04 +0800
-author: mistydew
+author: Coshin
 comments: true
 category: 力扣题解
 tags: LeetCode Medium Math String

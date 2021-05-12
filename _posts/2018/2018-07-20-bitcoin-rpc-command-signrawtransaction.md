@@ -2,7 +2,7 @@
 layout: post
 title:  "比特币 RPC 命令剖析 \"signrawtransaction\""
 date:   2018-07-20 20:25:33 +0800
-author: mistydew
+author: Coshin
 comments: true
 category: 区块链
 tags: Bitcoin bitcoin-cli

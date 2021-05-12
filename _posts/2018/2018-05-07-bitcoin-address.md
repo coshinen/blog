@@ -2,7 +2,7 @@
 layout: post
 title:  "私钥到公钥到比特币地址的转换"
 date:   2018-05-07 20:22:21 +0800
-author: mistydew
+author: Coshin
 comments: true
 category: 区块链
 tags: Bitcoin Address ECC

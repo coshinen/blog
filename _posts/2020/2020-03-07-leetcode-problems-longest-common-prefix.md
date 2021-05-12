@@ -2,7 +2,7 @@
 layout: post
 title:  "LeetCode 14. 最长公共前缀（简单）"
 date:   2020-03-07 19:00:29 +0800
-author: mistydew
+author: Coshin
 comments: true
 category: 力扣题解
 tags: LeetCode Easy String

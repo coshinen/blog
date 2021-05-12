@@ -2,7 +2,7 @@
 layout: post
 title:  "GARNET CROW「夜深けの流星達」歌词"
 date:   2020-03-29 20:04:06 +0800
-author: mistydew
+author: Coshin
 comments: true
 category: 译文集
 tags: Lyrics Garnet

@@ -2,7 +2,7 @@
 layout: post
 title:  "比特币 RPC 命令剖析 \"move\""
 date:   2018-09-13 20:03:06 +0800
-author: mistydew
+author: Coshin
 comments: true
 category: 区块链
 tags: Bitcoin bitcoin-cli

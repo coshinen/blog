@@ -2,7 +2,7 @@
 layout: post
 title:  "LeetCode 1. 两数之和（简单）"
 date:   2019-12-07 12:37:30 +0800
-author: mistydew
+author: Coshin
 comments: true
 category: 力扣题解
 tags: LeetCode Easy Array Hash-Table

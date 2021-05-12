@@ -2,7 +2,7 @@
 layout: post
 title:  "高山みなみ「まっすぐ行く」歌词"
 date:   2020-11-15 20:10:12 +0800
-author: mistydew
+author: Coshin
 comments: true
 category: 译文集
 tags: Lyrics Conan

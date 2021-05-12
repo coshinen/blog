@@ -2,7 +2,7 @@
 layout: post
 title:  "GARNET CROW「幸福なペット」歌词"
 date:   2019-10-06 20:02:03 +0800
-author: mistydew
+author: Coshin
 comments: true
 category: 译文集
 tags: Lyrics Garnet

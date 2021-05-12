@@ -2,7 +2,7 @@
 layout: post
 title:  "LeetCode 2. 两数相加（中等）"
 date:   2019-12-14 14:58:13 +0800
-author: mistydew
+author: Coshin
 comments: true
 category: 力扣题解
 tags: LeetCode Medium Linked-List Math

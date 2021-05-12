@@ -2,7 +2,7 @@
 layout: post
 title:  "伊織「ナゾが僕らを呼んでいる 〜少年探偵団のテーマ〜」歌词"
 date:   2020-08-30 20:37:10 +0800
-author: mistydew
+author: Coshin
 comments: true
 category: 译文集
 tags: Lyrics Conan

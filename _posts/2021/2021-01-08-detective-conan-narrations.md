@@ -2,7 +2,7 @@
 layout: post
 title:  "名侦探柯南开场白"
 date:   2021-01-08 20:21:25 +0800
-author: mistydew
+author: Coshin
 comments: true
 category: 译文集
 tags: Translations Conan
@@ -230,7 +230,7 @@ excerpt: 25 年前的今天，改编自青山刚昌同名漫画的动漫「名�
 
 ![conan-movie](https://www.ytv.co.jp/conan/slide/conanmovie24n_date.jpg){:.border}
 
-## 劇場版 第1~23弾
+## 劇場版 第1~24弾
 
 > オレは高校生探偵、工藤新一。
 > 幼なじみで同級生の毛利蘭と遊園地へ遊びに行って…黒ずくめの男の怪しげな取り引き現場を目撃した！！

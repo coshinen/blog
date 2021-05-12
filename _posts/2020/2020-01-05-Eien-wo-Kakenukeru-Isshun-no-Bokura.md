@@ -2,7 +2,7 @@
 layout: post
 title:  "GARNET CROW「永遠を駆け抜ける一瞬の僕ら」歌词"
 date:   2020-01-05 20:03:11 +0800
-author: mistydew
+author: Coshin
 comments: true
 category: 译文集
 tags: Lyrics Garnet

@@ -2,7 +2,7 @@
 layout: post
 title:  "GARNET CROW「Love is a Bird」歌词"
 date:   2018-08-26 20:08:03 +0800
-author: mistydew
+author: Coshin
 comments: true
 category: 译文集
 tags: Lyrics Garnet

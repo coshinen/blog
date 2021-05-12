@@ -2,7 +2,7 @@
 layout: post
 title:  "LeetCode 56. 合并区间（中等）"
 date:   2020-12-26 17:10:52 +0800
-author: mistydew
+author: Coshin
 comments: true
 category: 力扣题解
 tags: LeetCode Medium Array Sort

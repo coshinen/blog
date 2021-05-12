@@ -2,7 +2,7 @@
 layout: post
 title:  "りぶ「サリシノハラ」歌词"
 date:   2018-11-25 20:12:09 +0800
-author: mistydew
+author: Coshin
 comments: true
 category: 译文集
 tags: Lyrics

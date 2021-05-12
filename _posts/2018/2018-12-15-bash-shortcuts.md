@@ -2,7 +2,7 @@
 layout: post
 title:  "每个高效的 Linux 用户都必须知道的 14 个 Bash 快捷键"
 date:   2018-12-15 13:35:20 +0800
-author: mistydew
+author: Coshin
 comments: true
 category: 译文集
 tags: Translations UNIX/Linux Bash CLI Shortcuts

@@ -2,7 +2,7 @@
 layout: post
 title:  "LeetCode 46. 全排列（中等）"
 date:   2020-10-17 07:48:52 +0800
-author: mistydew
+author: Coshin
 comments: true
 category: 力扣题解
 tags: LeetCode Medium Backtracking

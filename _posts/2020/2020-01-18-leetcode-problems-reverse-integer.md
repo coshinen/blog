@@ -2,7 +2,7 @@
 layout: post
 title:  "LeetCode 7. 整数反转（简单）"
 date:   2020-01-18 19:10:18 +0800
-author: mistydew
+author: Coshin
 comments: true
 category: 力扣题解
 tags: LeetCode Easy Math

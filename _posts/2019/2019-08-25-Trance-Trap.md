@@ -2,7 +2,7 @@
 layout: post
 title:  "GARNET CROW「トランス・トラップ」歌词"
 date:   2019-08-25 20:01:08 +0800
-author: mistydew
+author: Coshin
 comments: true
 category: 译文集
 tags: Lyrics Garnet

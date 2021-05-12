@@ -2,7 +2,7 @@
 layout: post
 title:  "比特币 RPC 命令剖析 \"getchaintips\""
 date:   2018-05-30 21:30:08 +0800
-author: mistydew
+author: Coshin
 comments: true
 category: 区块链
 tags: Bitcoin bitcoin-cli

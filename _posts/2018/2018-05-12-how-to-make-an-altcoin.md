@@ -2,7 +2,7 @@
 layout: post
 title:  "如何制作一枚山寨数字货币"
 date:   2018-05-12 16:02:28 +0800
-author: mistydew
+author: Coshin
 comments: true
 category: 区块链
 tags: Bitcoin Altcoin

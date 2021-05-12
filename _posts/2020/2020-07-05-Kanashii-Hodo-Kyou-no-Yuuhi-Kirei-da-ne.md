@@ -2,7 +2,7 @@
 layout: post
 title:  "grram「悲しいほど 今日の夕陽 きれいだね」歌词"
 date:   2020-07-05 20:12:02 +0800
-author: mistydew
+author: Coshin
 comments: true
 category: 译文集
 tags: Lyrics Conan

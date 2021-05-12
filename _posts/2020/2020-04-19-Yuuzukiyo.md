@@ -2,7 +2,7 @@
 layout: post
 title:  "GARNET CROW「夕月夜」歌词"
 date:   2020-04-19 20:04:12 +0800
-author: mistydew
+author: Coshin
 comments: true
 category: 译文集
 tags: Lyrics Garnet

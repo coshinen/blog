@@ -2,7 +2,7 @@
 layout: post
 title:  "GARNET CROW「Misty Mystery」歌词"
 date:   2018-07-01 20:11:08 +0800
-author: mistydew
+author: Coshin
 comments: true
 category: 译文集
 tags: Lyrics Conan Garnet

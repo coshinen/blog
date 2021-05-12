@@ -2,7 +2,7 @@
 layout: post
 title:  "交叉编译比特币源码"
 date:   2018-09-27 21:01:52 +0800
-author: mistydew
+author: Coshin
 comments: true
 category: 区块链
 tags: Bitcoin src-build Cross-compilation
