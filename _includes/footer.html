@@ -6,11 +6,11 @@
               <use xlink:href="/assets/icons/.svg#crow"></use>
             </svg>
           </a>
-          <a href="{{ site.quotes }}">{% if page.url == site.blog %}{{ site.iquote }}{% elsif page.url contains site.blog %}{{ site.bquote }}{% else %}{{ site.squote }}{% endif %}</a>
+          <a href="{{ site.quotes }}">{% unless page.url contains site.blog %}{{ site.squote }}{% else %}{{ site.bquote }}{% endunless %}</a>
         </h2>
         <div class="footer-col-wrapper">
           <div class="footer-col footer-col-1">
-            <ul class="contact-list">{% if site.root %}
+            <ul class="contact-list">
               <li>
                 <a href="https://github.com/{{ site.root }}" target="_blank">
                   <svg class="icon">
@@ -18,7 +18,7 @@
                   </svg>
                   <span>{{ site.root }}</span>
                 </a>
-              </li>{% endif %}{% if site.email %}
+              </li>
               <li>
                 <a href="mailto:{{ site.email }}">
                   <svg class="icon" viewBox="0 0 512 512">
@@ -26,11 +26,11 @@
                   </svg>
                   <span>{{ site.email }}</span>
                 </a>
-              </li>{% endif %}
+              </li>
             </ul>
           </div>
           <div class="footer-col footer-col-2">
-            <ul class="social-media-list">{% if site.about %}
+            <ul class="social-media-list">
               <li>
                 <a href="{{ site.about }}">
                   <svg class="icon" viewBox="0 0 512 512">
@@ -38,7 +38,7 @@
                   </svg>
                   <span>About</span>
                 </a>
-              </li>{% endif %}{% if site.booklog %}
+              </li>
               <li>
                 <a href="{{ site.booklog }}">
                   <svg class="icon" viewBox="0 0 448 512">
@@ -46,11 +46,11 @@
                   </svg>
                   <span>Booklog</span>
                 </a>
-              </li>{% endif %}
+              </li>
             </ul>
           </div>
           <div class="footer-col footer-col-3">
-            <p>{% if page.url contains site.blog %}{{ site.description | replace_first: site.title, site.subtitle }}{% else %}{{ site.description }}{% endif %} Copyright &copy; {{ site.time | date: "%Y" }} {{ site.root }}.</p>
+            <p>{% unless page.url contains site.blog %}{{ site.description }}{% else %}{{ site.description | replace_first: site.title, site.subtitle }}{% endunless %} Copyright &copy; {{ site.time | date: "%Y" }} {{ site.root }}.</p>
           </div>
         </div>
       </div>
