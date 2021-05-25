@@ -4,6 +4,8 @@ title: "关于"
 permalink: /about.html
 excerpt: Here is about me.
 ---
+![@{{ site.root }}](https://avatars0.githubusercontent.com/u/29818825){:.border height="128" width="128"}
+
 ## Contact
 
 If you have any questions, feel free to drop me a line.

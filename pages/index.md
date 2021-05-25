@@ -14,24 +14,15 @@ permalink: /
       <span><a class="readmore" href="{{ site.posts.first.url }}">阅读全文 &raquo;</a></span>
     </li>
   </ul>
+</div>
+
+<div class="home-right">
   <h2 class="page-heading">近期文章</h2>
   <ul class="post-list-more">{% for post in site.posts offset:1 limit:7 %}
     <li>
-      <span><abbr title="{{ post.date | date_to_xmlschema }}">{{ post.date | date: '%Y年%m月%d日' }}</abbr> &raquo; </span>
+      <span><abbr title="{{ post.date | date_to_xmlschema }}">{{ post.date | date: '%Y年%m月%d日' }}</abbr></span><br>
       <a href="{{ post.url }}">{{ post.title | escape }}</a>
     </li>{% endfor %}
     <li><a class="readmore" href="{{ site.blog }}">更多内容……</a></li>
   </ul>
-</div>
-
-<div class="home-right">
-  <div id="profile">
-    <h2>关于</h2>
-    <p>
-      <a href="https://github.com/{{ site.root }}" target="_blank"><img class="border" height="128" width="128" alt="@mistydew" src="https://avatars0.githubusercontent.com/u/29818825"></a>
-    </p>
-    <ul>
-      <li>文章：<a href="{{ site.archive }}">{{ site.posts.size }}</a></li>
-    </ul>
-  </div>
 </div>
