@@ -243,31 +243,31 @@
 }
 
 // Archive, Category and Tags page
-article #archive,
-article #category,
-article #tagcloud {
+.page #archive,
+.page #category,
+.page #tagcloud {
   float: right;
   width: calc(28% - #{$spacing-unit});
 }
 
-article .contents {
+.page .contents {
   float: left;
   width: calc(72% - #{$spacing-unit});
 }
 
-article #archive,
-article #category,
-article #tagcloud,
-article .contents {
+.page #archive,
+.page #category,
+.page #tagcloud,
+.page .contents {
   background-color: $code-background-color;
   border: 3px solid $border-color;
 }
 
 @include media-query($on-palm) {
-  article #archive,
-  article #category,
-  article #tagcloud,
-  article .contents {
+  .page #archive,
+  .page #category,
+  .page #tagcloud,
+  .page .contents {
     float: none;
     width: calc(100% - (10px + 3px) * 2);
   }

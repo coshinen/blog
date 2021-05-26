@@ -69,18 +69,18 @@ img {
   vertical-align: middle;
 }
 
-img.border {
+.border {
   border: 3px solid $border-color;
   border-radius: 16px;
 }
 
-img.center {
+.center {
   display: block;
   margin: auto;
 }
 
 @include media-query($on-palm) {
-  article img.border {
+  .post .border {
     width: calc(100% - 6px);
   }
 }
@@ -146,7 +146,7 @@ a {
   }
 }
 
-a.post-link,
+.post-link,
 .site-footer a {
   color: $text-color;
 
@@ -155,8 +155,8 @@ a.post-link,
   }
 }
 
-a.category,
-a.readmore,
+.category,
+.readmore,
 .post-meta a {
   color: $garnet-color;
 
