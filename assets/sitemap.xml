@@ -11,7 +11,7 @@ permalink: /sitemap.xml
     <loc>{{ page.url | absolute_url }}</loc>
   </url>{% endunless %}{% endfor %}{% for post in site.posts %}
   <url>
-    <loc>{{ post.url | absolute_url | xml_escape }}</loc>
+    <loc>{{ post.url | absolute_url }}</loc>
     <lastmod>{{ post.date | date_to_xmlschema }}</lastmod>
   </url>{% endfor %}
 </urlset>

@@ -15,8 +15,8 @@ permalink: /blog/atom.xml
   <generator uri="https://jekyllrb.com" version="{{ jekyll.version }}">Jekyll v{{ jekyll.version }}</generator>{% for post in site.posts limit:8 %}
   <entry>
     <title>{{ post.title | xml_escape }}</title>
-    <link rel="alternate" type="text/html" href="{{ post.url | absolute_url | xml_escape }}"/>
-    <id>tag:{{ site.url | replace_first: "https://", "" }},{{ post.id | xml_escape }}</id>
+    <link rel="alternate" type="text/html" href="{{ post.url | absolute_url }}"/>
+    <id>tag:{{ site.url | replace_first: "https://", "" }},{{ post.id }}</id>
     <updated>{{ post.date | date_to_xmlschema }}</updated>
     <published>{{ post.date | date_to_xmlschema }}</published>
     <summary>{{ post.excerpt | markdownify | strip_newlines | strip_html | xml_escape }}</summary>
