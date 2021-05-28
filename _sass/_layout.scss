@@ -141,16 +141,13 @@
   padding-left: $spacing-unit / 2;
 }
 
-.footer-col-1 {
-  width: calc(28% - (#{$spacing-unit} / 2));
-}
-
+.footer-col-1,
 .footer-col-2 {
-  width: calc(28% - (#{$spacing-unit} / 2));
+  width: calc((58% - #{$spacing-unit}) / 2);
 }
 
 .footer-col-3 {
-  width: calc(44% - (#{$spacing-unit} / 2));
+  width: calc(42% - (#{$spacing-unit} / 2));
 }
 
 @include media-query($on-laptop) {

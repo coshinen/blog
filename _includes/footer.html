@@ -50,7 +50,10 @@
             </ul>
           </div>
           <div class="footer-col footer-col-3">
-            <p>{% unless page.url contains site.blog %}{{ site.description }}{% else %}{{ site.description | replace_first: site.title, site.subtitle }}{% endunless %} Copyright &copy; {{ site.time | date: "%Y" }} {{ site.root }}.</p>
+            <p>
+              {% unless page.url contains site.blog %}{{ site.description }}{% else %}{{ site.description | replace_first: site.title, site.subtitle }}{% endunless %}
+              &copy;{{ site.time | date: " %Y " }}{{ site.root }}.
+            </p>
           </div>
         </div>
       </div>
