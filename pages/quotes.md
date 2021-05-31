@@ -68,19 +68,12 @@ excerpt: Here are my favorite quotes from someones that inspire me or make me la
 > * One often meets his destiny on the road he takes to avoid it.
 > * Nothing is impossible.
 
-> Siegfried Sassoon, [In Me, Past, Present, Future Meet](/blog/2020/11/In-Me,-Past,-Present,-Future-Meet.html):
-> * In me the tiger sniffs the rose.
-
 > Benjamin Franklin, The Autobiography of Benjamin Franklin, PART THREE:
 > * This is another instance of the truth of an old maxim I had learned, which
 > says, "He that has once done you a kindness will be more ready to do you
 > another, than he whom you yourself have obliged." And it shows how much more
 > profitable it is prudently to remove, than to resent, return, and continue
 > inimical proceedings.
-
-> George Orwell, Animal Farm, THE SEVEN COMMANDMENTS:
-> * ALL ANIMALS ARE EQUAL BUT SOME ANIMALS ARE MORE EQUAL THAN OTHERS.
-> * FOUR LEGS GOOD, TWO LEGS BAD.
 
 > George Orwell, [Looking back on the Spanish War](https://orwell.ru/library/essays/Spanish_War/english/esw_1){:target="_blank"}:
 > * This kind of thing is frightening to me, because it often gives me the
@@ -186,12 +179,6 @@ excerpt: Here are my favorite quotes from someones that inspire me or make me la
 
 > 中村由利「GARNET CROW "le 5 ème anniversaire" L'Histoire de 2000 à 2005」：
 > * 流されていくのは簡単だけれど、変わらないでいることっていうのは一番難しい。
-
-> AZUKI 七「[GARNET CROW クリスタル・ゲージ](/blog/2018/09/Crystal-Gauge.html)」：
-> * 何処にいても揺るがぬ ideology、善悪の基準はすべての人に共通じゃない。
-
-> AZUKI 七「[GARNET CROW 夢みたあとで](/blog/2018/05/Yume-Mita-Ato-de.html)」：
-> * 望まなければ失わないのに、求めずにはいられないよ、どんな未来がこの先にあっても。
 
 > Joan Baez「Garnet Time 02 AZUKI'S NIGHT」：
 > * 人はどう死ぬか、いつ死ぬか選択できない。どう生きるか、これだけは決められる。
