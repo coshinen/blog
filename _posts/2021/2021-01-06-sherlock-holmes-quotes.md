@@ -99,6 +99,13 @@ excerpt: 夏洛克福尔摩斯相关作品中的名言集。
 
 > Come at once if convenient. If inconvenient come anyway.
 
+方便的话来一趟。
+不方便也要过来。
+
+> You lower the IQ of the whole street.
+
+你拉低了整条街的智商。
+
 ## BBC SHERLOCK, Series 1 Episode 2, The Blind Banker
 
 > You want to hide a tree, then a forest is the best place to do it, wouldn't
@@ -116,6 +123,10 @@ excerpt: 夏洛克福尔摩斯相关作品中的名言集。
 
 ## BBC SHERLOCK, Series 2 Episode 1, A Scandal in Belgravia
 
+> Some things are best left to the imagination.
+
+有些事情留点想象才完美。
+
 > Sentiment is a chemical defect found in the losing side.
 
 > I've always assumed that love is a dangerous disadvantage. Thank you for the
@@ -132,6 +143,13 @@ excerpt: 夏洛克福尔摩斯相关作品中的名言集。
 
 > I may be on the side of the angels, but don't think for one second that I am
 > one of them.
+
+## BBC SHERLOCK, Series 3 Episode 1, The Empty Hearse
+
+> Once you eliminate all the other factors, the other thing remaining must be
+> the truth.
+
+一旦你排除了所有的不可能，剩下的便是真相。
 
 ## BBC SHERLOCK, Series 3 Episode 3, His Last Vow
 

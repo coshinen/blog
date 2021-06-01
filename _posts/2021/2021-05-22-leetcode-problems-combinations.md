@@ -53,6 +53,7 @@ class Solution {
 private:
     vector<int> path;
     vector<vector<int>> result;
+
     void dfs(int n, int k, int startIdx) {
         if (path.size() == k) {
             result.push_back(path);
