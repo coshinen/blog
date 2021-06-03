@@ -65,7 +65,7 @@ $ vim configure.ac
 
 AC_PREREQ([2.69])
 -AC_INIT([FULL-PACKAGE-NAME], [VERSION], [BUG-REPORT-ADDRESS])
-+AC_INIT([main], [1.0], [mistydew@qq.com]) # 初始化包名，版本号，bug 报告邮箱
++AC_INIT([main], [1.0], [email address]) # 初始化包名，版本号，bug 报告邮箱
 AC_CONFIG_SRCDIR([main.cc])
 AC_CONFIG_HEADERS([config.h])
 

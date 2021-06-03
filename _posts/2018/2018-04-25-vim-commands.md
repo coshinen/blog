@@ -6,16 +6,10 @@ author: Coshin
 comments: true
 category: 程序人生
 tags: Vim CLI
+excerpt: Vim (Vi IMproved) 是编辑器 Vi 的升级版，作为“编辑器之神”与“神之编辑器” Emacs 并驾齐驱。
 ---
-Vim (Vi IMproved) 是 Vi 编辑器的升级版，在 UNIX/Linux 系统中作为“编辑器之神”与“神之编辑器” Emacs 并驾齐驱。
-
-## 模式（modes）
-
-共分为两大模式，**命令**模式和**插入**模式。
-
-刚进入编辑器时，默认是命令模式；转换到插入模式后，进行文本输入。
-
-命令模式下，按 `I` 键进入插入模式；插入模式下，按 `esc` 键返回命令模式。
+共分为**命令**和**插入**两大模式。
+默认是命令模式，按 `I` 键进入插入模式，再按 `esc` 键返回命令模式。
 
 ## 命令模式
 
@@ -123,7 +117,89 @@ $ vim -b <file>
 
 ## 配置文件示例
 
-[~/.vimrc](https://github.com/mistydew/os.conf/blob/master/macOS/Users/mistydew/.vimrc){:target="_blank"}
+Linux, macOS: `~/.vimrc`
+
+```
+" Basic
+" -----
+syntax on "code highlight
+"colorscheme darkblue
+set mouse=a "support mouse
+"set cursorcolumn
+set fileencodings=utf-8,gb2312,gbk,gb18030
+set termencoding=utf-8
+"set fileformats=unix
+"set encoding=prc
+set encoding=utf-8
+filetype on
+
+" Indent
+" ------
+set autoindent
+set cindent
+set smartindent
+set backspace=2 "backspace can delete any character
+set expandtab "space grid replace tab
+set tabstop=4 "tab: the number of space grid
+set shiftwidth=4
+set softtabstop=4
+
+" Appearance
+" ----------
+set nu "line number
+set cursorline "cursorline hightlight
+set linebreak
+set nowrap
+set laststatus=2 "show status bar
+set ruler "the position of cursor
+
+" Search
+" ------
+set showmatch "the match of character highlight
+set hlsearch "search result highlight
+set incsearch "first search result
+"set ignorecase "ignore case-sensitive
+
+" Edit
+" ----
+"set spell spelllang=en_us
+set nobackup
+set noswapfile
+"set undofile
+"set backupdir=~/.vim/.backup//
+"set directory=~/.vim/.swp//
+"set undodir=~/.vim/.undo//
+set history=1000
+set autoread
+"set list
+set wildmenu
+set wildmode=longest:list,full
+
+" Readme
+" ------
+autocmd BufNewFile *.[ch],*.hpp,*.cpp,*.cc exec ':call InitCPPHeader()'
+autocmd BufNewFile *.md,*markdown exec ':call InitMDHeader()'
+
+function InitCPPHeader()
+    call setline(1, '// Copyright (c)'.strftime(' %Y ').expand('{{ site.root }}'))
+    call append(1, '// Distributed under the MIT software license, see the accompanying')
+    call append(2, '// file LICENSE or http://www.opensource.org/licenses/mit-license.php.')
+    call append(3, '')
+endf
+
+function InitMDHeader()
+    call setline(1, '---')
+    call append(1, 'layout: '.expand('post'))
+    call append(2, 'title:  '.expand('"').expand('%:t:r').expand('"'))
+    call append(3, 'date:   '.strftime('%Y-%m-%d %H:%M:%S').expand(' +0800'))
+    call append(4, 'author: '.expand('{{ site.root }}'))
+    call append(5, 'comments: '.expand('true'))
+    call append(6, 'category: category')
+    call append(7, 'tags: tag1 tag2')
+    call append(8, 'excerpt: excerpt')
+    call append(9, '---')
+endf
+```
 
 ## 参考链接
 

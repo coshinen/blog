@@ -435,6 +435,42 @@ $ strip <ELF>
   通过删除可执行文件中的调试符号等相关信息减少其体积（此操作不可逆）
 ```
 
+## 配置文件示例
+
+* Linux: ~/.bashrc
+* macOS: ~/.bash_profile
+
+```
+# The colorful bash profile.
+# Preview: "username@hostname:~"
+#          "(! lineno.)$".
+PS1='\[\e[1;34m\]\u\[\e[m\]\[\e[1;31m\]@\[\e[m\]\[\e[1;33m\]\h\[\e[m\]\[\e[1;34m\]:\[\e[m\]\[\e[1;32m\]\w\[\e[m\]\[\e[1;32m\]\n(\[\e[37;1m\]! \!\[\e[32;1m\])\[\e[m\]\[\e[1;35m\]$\[\e[m\]'
+# The order of the attributes are as follows:
+#  1. directory.
+#  2. symbolic link.
+#  3. socket.
+#  4. pipe.
+#  5. executable.
+#  6. block special.
+#  7. character special.
+#  8. executable with setuid bit set.
+#  9. executable with setgid bit set.
+# 10. directory writable to others, with sticky bit.
+# 11. directory writable to others, without sticky bit.
+# The color designators are as follows:
+#  a: black;      A: bold black, usually shows up as dark grey.
+#  b: red;        B: bold red.
+#  c: green;      C: bold green.
+#  d: brown;      D: bold brown, usually shows up as yellow.
+#  e: blue;       E: bold blue.
+#  f: magenta;    F: bold magenta.
+#  g: cyan;       G: bold cyan.
+#  h: light grey; H: blod light grey, looks like bright white.
+#  x: default foreground or background.
+export CLICOLOR=1
+export LSCOLORS=gxfxaxdxcxegedabagacad # directory color: gx (font: g, background: x).
+```
+
 ## 参考链接
 
 * [torvalds/linux: Linux kernel source tree](https://github.com/torvalds/linux){:target="_blank"}

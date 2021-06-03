@@ -7,11 +7,7 @@ comments: true
 category: 程序人生
 tags: Git(Hub) CI/CD
 ---
-GitHub Actions 可以直接在 GitHub 仓库中创建自定义软件开发生命周期的工作流，目前~~处于测试阶段，需要注册 beta 版等待官方开启后才能使用~~已正式开放。
-
-![GitHub Actions](https://github.blog/wp-content/uploads/2019/08/DL-V2-LinkedIn_FB.png?w=768){:.border}
-
-## 0. 关于 GitHub Actions
+![@actions](https://avatars.githubusercontent.com/u/44036562)
 
 GitHub Actions 提供了灵活构建一个自动化的软件开发生命周期的工作流。
 你可以编写单独的任务、调用操作、再合并它们以创建一个自定义的工作流。
@@ -269,8 +265,6 @@ jobs:
 通常是在你仓库的 README.md 文件中添加一个状态标志，但是你可以把它添加到任何你想要添加的网页中。
 标志显示的是你的默认分支的状态（通常是主分支）。
 
-![](https://github.com/mistydew/netCloud/workflows/C/C++%20CI/badge.svg)
-
 如果你的工作流使用了 name 关键字，你可以通过 name 引用工作流。
 如果你工作流的 name 中包含空格，你需要使用 URL 编码字符串 %20 替换空格。
 
@@ -284,27 +278,7 @@ https://github.com/<OWNER>/<REPOSITORY>/workflows/<WORKFLOW_NAME>/badge.svg
 https://github.com/<OWNER>/<REPOSITORY>/workflows/<WORKFLOW_FILE_PATH>/badge.svg
 ```
 
-**使用一个工作流名称的例子**
-
-这个例子给一个 name 为“C/C++ CI”的工作流添加一个状态标志。
-该仓库的所属者（OWNER）是 mistydew 用户，并且仓库（REPOSITORY）的名字是 hello-world。
-
-```markdown
-![](https://github.com/mistydew/hello-world/workflows/C/C++%20CI/badge.svg)
-```
-
-**使用一个工作流文件路径的例子**
-
-这个例子给一个文件路径为 .github/workflows/c-cpp.yml 的工作流添加一个状态标志。
-该仓库的所属者和仓库名同上。
-
-```markdown
-![](https://github.com/mistydew/hello-world/workflows/.github/workflows/c-cpp.yml/badge.svg)
-```
-
 ## 参考链接
 
-* [GitHub Actions now supports CI/CD, free for public repositories](https://github.blog/2019-08-08-github-actions-now-supports-ci-cd){:target="_blank"}
 * [Features • GitHub Actions](https://github.com/features/actions){:target="_blank"}
-* [Automating your workflow with GitHub Actions - GitHub Help](https://help.github.com/en/categories/automating-your-workflow-with-github-actions){:target="_blank"}
 * [actions/starter-workflows: Accelerating new GitHub Actions workflows](https://github.com/actions/starter-workflows){:target="_blank"}
