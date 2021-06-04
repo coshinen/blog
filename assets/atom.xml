@@ -11,7 +11,7 @@ permalink: /blog/atom.xml
   <link rel="alternate" type="text/html" href="{{ site.blog | absolute_url }}"/>
   <link rel="self" type="application/atom+xml" href="{{ "/blog/atom.xml" | absolute_url }}"/>
   <icon>{{ "/assets/icons/favicon.ico" | absolute_url }}</icon>
-  <rights>Copyright (c) {{ site.time | date: "%Y" }}, {{ site.root }}</rights>
+  <rights>Copyright (c) {{ site.time | date: "%Y" }}, {{ site.author.nick }}</rights>
   <generator uri="https://jekyllrb.com" version="{{ jekyll.version }}">Jekyll v{{ jekyll.version }}</generator>{% for post in site.posts limit:8 %}
   <entry>
     <title>{{ post.title | xml_escape }}</title>
@@ -21,9 +21,9 @@ permalink: /blog/atom.xml
     <published>{{ post.date | date_to_xmlschema }}</published>
     <summary>{{ post.excerpt | markdownify | strip_newlines | strip_html | xml_escape }}</summary>
     <author>
-      <name>{{ site.author }}</name>
+      <name>{{ site.author.name }}</name>
       <uri>{{ site.url }}</uri>
-      <email>{{ site.email }}</email>
+      <email>{{ site.author.e-mail }}</email>
     </author>
     <content type="html" xml:lang="zh" xml:base="{{ site.blog | absolute_url }}">
 {{ post.content | xml_escape }}

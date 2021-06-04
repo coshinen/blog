@@ -1,8 +1,8 @@
 var tid;
 var title = document.title;
-document.addEventListener('visibilitychange', function() {
+document.addEventListener("visibilitychange", function() {
     if (document.hidden) {
-        document.title = 'また会おうぜ…';
+        document.title = "また会おうぜ…";
         tid = setTimeout(function() {
             document.title = title;
         }, 2000);

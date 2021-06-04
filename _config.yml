@@ -6,20 +6,21 @@
 # 'jekyll serve'. If you change this file, please restart the server process.
 
 # Site settings
-author: 袁子晨
+author:
+  name: 袁子晨
+  nick: Coshin
+  github: mistydew
+  e-mail: mistydew@qq.com
 name: 平行宇宙
-root: mistydew
 title: parallel universe
 subtitle: blog of Coshin
 blogtitle: Coshin's Blog
 blogname: 袁子晨的网络日志
-description: >- # this means to ignore newlines until "baseurl:"
+description: >- # this means to ignore newlines until "url:"
   Welcome to the parallel universe! Hosted from GitHub. Powered by Jekyll.
-baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://mistydew.github.io" # the base hostname & protocol for your site
 squote: 流されていくのは簡単だけれど、変わらないでいることっていうのは一番難しい。
 bquote: 無理は一番の”退屈しのぎ”だ。
-email: mistydew@qq.com
 
 # Page urls
 about:    "/about.html"
@@ -54,8 +55,9 @@ excerpt_separator: "\n\n"
 incremental      : false
 
 # Serving
-port: 4000
-host: 127.0.0.1
+port   : 4000
+host   : 127.0.0.1
+baseurl: "" # the subpath of your site, e.g. /blog
 
 # Outputting
 permalink: /blog/:year/:month/:title.html

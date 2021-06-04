@@ -16,7 +16,7 @@ layout: default
                   <use xlink:href="/assets/icons/.svg#user"></use>
                 </svg>
                 <span itemprop="name">
-                  <a href="{{ site.about }}" title="{{ site.author }}">{% if page.author %}{{ page.author }}{% else %}{{ site.root }}{% endif %}</a>
+                  <a href="{{ site.about }}" title="{{ site.author.name }}">{% if page.author %}{{ page.author }}{% else %}{{ site.author.nick }}{% endif %}</a>
                 </span>
               </span>
               <span>|

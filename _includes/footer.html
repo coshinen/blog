@@ -12,19 +12,19 @@
           <div class="footer-col footer-col-1">
             <ul class="contact-list">
               <li>
-                <a href="https://github.com/{{ site.root }}" target="_blank">
+                <a href="https://github.com/{{ site.author.github }}" target="_blank">
                   <svg class="icon">
                     <use xlink:href="/assets/icons/.svg#github"></use>
                   </svg>
-                  <span>{{ site.root }}</span>
+                  <span>{{ site.author.github }}</span>
                 </a>
               </li>
               <li>
-                <a href="mailto:{{ site.email }}">
+                <a href="mailto:{{ site.author.e-mail }}">
                   <svg class="icon" viewBox="0 0 512 512">
                     <use xlink:href="/assets/icons/.svg#envelope"></use>
                   </svg>
-                  <span>{{ site.email }}</span>
+                  <span>{{ site.author.e-mail }}</span>
                 </a>
               </li>
             </ul>
@@ -52,7 +52,7 @@
           <div class="footer-col footer-col-3">
             <p>
               {% unless page.url contains site.blog %}{{ site.description }}{% else %}{{ site.description | replace_first: site.title, site.subtitle }}{% endunless %}
-              &copy;{{ site.time | date: " %Y " }}{{ site.root }}.
+              &copy;{{ site.time | date: " %Y " }}{{ site.author.nick }}.
             </p>
           </div>
         </div>
