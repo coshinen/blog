@@ -210,6 +210,9 @@ excerpt: Here are my favorite quotes from someones that inspire me or make me la
 > * 分からねぇか？その甘え、そろそろ卒業しなくちゃな。
 > 自分で決めなきゃ、明日は開かれねぇんだぜ！
 
+> 宮崎駿「終わらない人 宮崎駿」：
+> * オレ、いまの世の中に合わせて生きる気ないから。
+
 > Egaeus, [Short Fiction, Berenice](https://standardebooks.org/ebooks/edgar-allan-poe/short-fiction/text/berenice){:target="_blank"}:
 > * But as, in ethics, evil is a consequence of good, so, in fact, out of joy is
 > sorrow born. Either the memory of past bliss is the anguish of today, or the
