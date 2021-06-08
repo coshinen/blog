@@ -5,7 +5,7 @@ date:   2018-12-01 15:10:52 +0800
 author: Coshin
 comments: true
 category: 程序人生
-tags: Automake Makefile C++ src-build
+tags: Automake Makefile C++ Build
 excerpt: 使用 make 编译工具链构建项目的简单过程。
 ---
 ## 0. 准备

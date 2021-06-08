@@ -6,9 +6,8 @@ author: Coshin
 comments: true
 category: 区块链
 tags: Bitcoin Altcoin
+excerpt: 基于比特币制作一枚山寨币。
 ---
-基于比特币制作一枚山寨币是了解数字货币比特币及其底层区块链技术的最好方式。
-
 ## 0. 源码准备
 
 这里使用比特币 v0.12.1 的源码，这是官方内置 CPU 挖矿的最后一版。
@@ -519,7 +518,7 @@ public:
 };
 ```
 
-该值一开始置零（0x00），和检测点一样，随着区块链的延伸不断增加（更新），可通过 RPC 命令 [getbestblockhash](/blog/2018/05/bitcoin-rpc-command-getbestblockhash.html) 和 [getblock](/blog/2018/05/bitcoin-rpc-command-getblock.html) 获取最佳区块信息的链工作量（chainwork）值获取。
+该值一开始置零（0x00），和检测点一样，随着区块链的延伸不断增加（更新），可通过 RPC 命令 [getbestblockhash](/blog/2018/05/bitcoin-rpc-getbestblockhash.html) 和 [getblock](/blog/2018/05/bitcoin-rpc-getblock.html) 获取最佳区块信息的链工作量（chainwork）值获取。
 
 现在第三次编译源码，一枚基于比特币的山寨币就初步完成了。
 

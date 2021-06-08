@@ -5,7 +5,7 @@ date:   2018-05-03 18:57:36 +0800
 author: Coshin
 comments: true
 category: 区块链
-tags: Bitcoin src-build
+tags: Bitcoin Build
 ---
 在 macOS、UNIX/Linux 平台下构建比特币源码，得到可执行文件 `bitcoind`、`bitcoin-cli`、`bitcoin-qt` 等。
 

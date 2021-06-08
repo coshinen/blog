@@ -181,7 +181,7 @@ autocmd BufNewFile *.[ch],*.hpp,*.cpp,*.cc exec ':call InitCPPHeader()'
 autocmd BufNewFile *.md,*markdown exec ':call InitMDHeader()'
 
 function InitCPPHeader()
-    call setline(1, '// Copyright (c)'.strftime(' %Y ').expand('{{ site.root }}'))
+    call setline(1, '// Copyright (c)'.strftime(' %Y ').expand('[name]'))
     call append(1, '// Distributed under the MIT software license, see the accompanying')
     call append(2, '// file LICENSE or http://www.opensource.org/licenses/mit-license.php.')
     call append(3, '')
@@ -192,7 +192,7 @@ function InitMDHeader()
     call append(1, 'layout: '.expand('post'))
     call append(2, 'title:  '.expand('"').expand('%:t:r').expand('"'))
     call append(3, 'date:   '.strftime('%Y-%m-%d %H:%M:%S').expand(' +0800'))
-    call append(4, 'author: '.expand('{{ site.root }}'))
+    call append(4, 'author: '.expand('[name]'))
     call append(5, 'comments: '.expand('true'))
     call append(6, 'category: category')
     call append(7, 'tags: tag1 tag2')

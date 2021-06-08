@@ -5,7 +5,7 @@ date:   2019-08-31 22:56:58 +0800
 author: Coshin
 comments: true
 category: 程序人生
-tags: Git(Hub) CI/CD
+tags: GitHub CI/CD
 ---
 ![@actions](https://avatars.githubusercontent.com/u/44036562)
 

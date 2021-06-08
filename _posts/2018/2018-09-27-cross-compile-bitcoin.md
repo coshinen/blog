@@ -5,7 +5,7 @@ date:   2018-09-27 21:01:52 +0800
 author: Coshin
 comments: true
 category: 区块链
-tags: Bitcoin src-build Cross-compilation
+tags: Bitcoin Build Cross-compilation
 ---
 在 UNIX/Linux 平台下交叉编译比特币源码，得到 Windows 下的可执行文件 `bitcoin.exe`、`bitcoin-cli.exe`、`bitcoin-qt.exe` 等。
 

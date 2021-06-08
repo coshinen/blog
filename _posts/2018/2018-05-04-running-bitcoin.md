@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "启动比特币核心服务 bitcoind"
+title:  "启动比特币服务"
 date:   2018-05-04 23:08:22 +0800
 author: Coshin
 comments: true
