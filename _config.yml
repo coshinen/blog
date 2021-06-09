@@ -1,0 +1,63 @@
+# Welcome to Jekyll v3.0.1!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely need to edit after that.
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'jekyll serve'. If you change this file, please restart the server process.
+
+# Site settings
+author:
+  name: 袁子晨
+  bname: Coshin En
+  github: encoshin
+  e-mail: encoshin@mailo.com
+name: 平行宇宙
+title: parallel universe
+subtitle: blog of Coshin
+blogtitle: Coshin's Blog
+blogname: 袁子晨的网络日志
+description: >- # this means to ignore newlines until "squote:"
+  Welcome to the parallel universe! Hosted from GitHub. Powered by Jekyll.
+squote: 流されていくのは簡単だけれど、変わらないでいることっていうのは一番難しい。
+bquote: オレ、いまの世の中に合わせて生きる気ないから。
+
+# Page urls
+about:    "/about.html"
+booklog:  "/booklog.html"
+quotes:   "/quotes.html"
+blog:     "/blog/"
+archive:  "/blog/archive.html"
+category: "/blog/category.html"
+tag:      "/blog/tags.html"
+
+# Where things are
+source      : .
+destination : ./_site
+layouts_dir : _layouts
+includes_dir: _includes
+sass:
+    sass_dir: _sass
+
+# Handling Reading
+exclude     : ["LICENSE", "README.md"]
+encoding    : "utf-8"
+markdown_ext: "markdown,mkdown,mkdn,mkd,md" # no spaces between exts
+
+# Filtering Content
+limit_posts: 0
+future     : false
+
+# Conversion
+markdown         : kramdown
+highlighter      : rouge
+excerpt_separator: "\n\n"
+incremental      : false
+
+# Serving
+port   : 4000
+host   : 127.0.0.1
+baseurl: "" # the subpath of your site, e.g. /blog
+
+# Outputting
+permalink: /blog/:year/:month/:title.html
+timezone : Asia/Shanghai

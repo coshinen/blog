@@ -1,0 +1,49 @@
+---
+layout: default
+---
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+          <header class="post-header">
+            <h1 class="post-title" itemprop="name headline">{{ page.title | escape }}</h1>
+            <p class="post-meta">
+              <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
+                <svg class="icon" viewBox="0 0 448 512">
+                  <use xlink:href="/assets/icons/.svg#calendar"></use>
+                </svg>
+                <abbr title="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%b %d, %Y" }}</abbr>
+              </time>
+              <span itemprop="author" itemscope itemtype="http://schema.org/Person">|
+                <svg class="icon" viewBox="0 0 448 512">
+                  <use xlink:href="/assets/icons/.svg#user"></use>
+                </svg>
+                <span itemprop="name">
+                  <a href="{{ site.about }}" title="{{ site.author.name }}">{% if page.author %}{{ page.author }}{% else %}{{ site.author.bname }}{% endif %}</a>
+                </span>
+              </span>
+              <span>|
+                <svg class="icon" viewBox="0 0 512 512">
+                  <use xlink:href="/assets/icons/.svg#copyright"></use>
+                </svg>
+                <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh" title="知识共享 署名-非商业性使用-禁止演绎 4.0 国际 许可协议" target="_blank">CC BY-NC-ND 4.0</a>
+                <script src="/assets/js/copyright.js"></script>
+              </span>
+              <span>|
+                <svg class="icon" viewBox="0 0 640 512">
+                  <use xlink:href="/assets/icons/.svg#tags"></use>
+                </svg>{% for tag in page.tags %}
+                <a href="{{ site.tag }}#{{ tag }}">{{ tag }}</a>{% endfor %}
+              </span>
+            </p>
+          </header>
+          <div class="post-content" itemprop="articleBody">
+{{ content }}
+          </div>{% if page.comments %}
+          <div id="cusdis_thread"
+            data-host="https://cusdis.com"
+            data-app-id="0438ee71-26cb-4ec2-b2b2-9ff7b8334e50"
+            data-page-id="{{ page.id }}"
+            data-page-url="{{ page.url | absolute_url }}"
+            data-page-title="{{ page.title | escape }}"
+          ></div>
+          <script defer src="https://cusdis.com/js/widget/lang/zh-cn.js"></script>
+          <script async defer src="https://cusdis.com/js/cusdis.es.js"></script>{% endif %}
+        </article>
