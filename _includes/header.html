@@ -12,7 +12,7 @@
               <use xlink:href="/assets/icons/.svg#search"></use>
             </svg>
           </a>
-          <form class="cse-search-box" action="https://bing.com/search" method="get" target="_blank" onsubmit="this.q.value=this.origin.value+' site:{{ site.url | replace_first: "https://", "" }}'">
+          <form class="cse-search-box" action="https://bing.com/search" method="get" target="_blank" onsubmit="this.q.value=this.origin.value+' site:{{ site.hostname }}'">
             <svg id="search-icon" viewBox="0 0 24 24">
               <use xlink:href="/assets/icons/.svg#search"></use>
             </svg>
