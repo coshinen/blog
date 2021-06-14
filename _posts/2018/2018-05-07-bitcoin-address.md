@@ -114,7 +114,7 @@ rpcfn_type 是一个函数标签为 UniValue(const UniValue&, bool) 的回调函
   bitcoin-cli [options] help <command>      Get help for a command # 获取一条命令的帮助信息（用法示例）
 ```
 
-详见[比特币 RCP 命令剖析 "getnewaddress"](/blog/2018/08/bitcoin-rpc-getnewaddress.html)。
+详见[比特币 RPC 命令「getnewaddress」](/blog/2018/08/bitcoin-rpc-getnewaddress.html)。
 
 ## 参考链接
 
