@@ -42,7 +42,6 @@ excerpt: Here are some books that renew my spirit or reclaim my life.
 > ### 纪实
 > 
 > * 敢问路在何方 我们的西游记，[中] 杨洁 王崇秋
-> * 敢问路在何方 我的30年西游路，[中] 杨洁
 > * 血殇 埃博拉的过去、现在和未来，[美] Richard Preston
 > * 血疫 埃博拉的故事，[美] Richard Preston
 > * 最后的熊猫，[美] George B. Schaller
@@ -180,7 +179,7 @@ excerpt: Here are some books that renew my spirit or reclaim my life.
 > * 区块链开发指南，[中] 申屠青春
 > * [区块链技术指南](https://yeasy.gitbook.io/blockchain_guide/){:target="_blank"}，[中] [杨保华](https://yeasy.github.io){:target="_blank"} 陈昌
 > * [精通比特币 第2版](https://bitcoinbook.info){:target="_blank"}，[希-英] Andreas M. Antonopoulos
-> * [Bitcoin: A Peer-to-Peer Electronic Cash System](/blog/2018/04/Bitcoin-A-Peer-to-Peer-Electronic-Cash-System.html)，[?] Satoshi Nakamoto
+> * [Bitcoin: A Peer-to-Peer Electronic Cash System](/blog/2018/04/Bitcoin-A-Peer-to-Peer-Electronic-Cash-System.html)，[日?] Satoshi Nakamoto
 
 > ### 编程语言
 > 
