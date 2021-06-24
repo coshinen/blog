@@ -132,12 +132,22 @@ excerpt: 「行骗天下 JP」系列里出现的名言集。
 ## ロマンス編
 
 > ゲーテ(Goethe)：
-> * 人に欺かれるのではない。自分が己を欺くのである。
-> * We are never deceived; we deceive ourselves.
+> 人に欺かれるのではない。自分が己を欺くのである。
+> We are never deceived; we deceive ourselves.
 
 歌德：
 人是不会被欺骗的。
 都是自己欺骗自己。
+
+> オスカー・ワイルド(Oscar Wilde)：
+> 恋は、いつだって自分を欺くことから始まり、他人を欺くことで終わる。
+> これが世間でいうロマンスというものである。
+> When one is in love, one always begins by deceiving one's self, and one
+> always ends by deceiving others. That is what the world calls a romance.
+
+奥斯卡·王尔德：
+恋爱，总是以自欺开始，用欺人结束。
+这就是世间所谓的浪漫。
 
 ## プリンセス編
 
@@ -147,6 +157,14 @@ excerpt: 「行骗天下 JP」系列里出现的名言集。
 达子：
 既没真的也没假的。
 相信的话就是真相。
+
+> アーネスト・ヘミングウェイ(Ernest Hemingway)：
+> 他人より優れていることが、高貴なのではない。
+> 本当の高貴とは、過去の自分自身より優れていることにある。
+
+欧内斯特·海明威：
+比他人优秀，不是高贵。
+真正的高贵，是比过去的自己优秀。
 
 ## 参考链接
 
