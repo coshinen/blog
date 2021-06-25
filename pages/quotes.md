@@ -58,12 +58,14 @@ excerpt: Here are my favorite quotes from someones that inspire me or make me la
 > Master Shifu, Kung Fu Panda 3:
 > * If you only do what you can do, you will never be more than you are now.
 
-> Master Oogway, Kung Fu Panda, 3:
-> * Inner peace. Inner peace. Itchy nose. Ah-choo! Finally, inner peace. Now,
-> what?
-> * Quit? Don't quit. Noodles? Don't noodles. You are too concerned with what
-> was and what will be. There's a saying: Yesterday is history, tomorrow is a
-> mystery, but today is a gift. That is why it is called the present.
+> The Soothsayer, Kung Fu Panda 2:
+> * Your story may not have such a happy beginning, but that doesn't make you
+> who you are. It is the rest of your story, who you choose to be.
+
+> Master Oogway, Kung Fu Panda:
+> * You are too concerned with what was and what will be. There's a saying:
+> Yesterday is history, tomorrow is a mystery, but today is a gift. That is why
+> it is called the present.
 > * There are no accidents.
 > * One often meets his destiny on the road he takes to avoid it.
 > * Nothing is impossible.
@@ -91,6 +93,11 @@ excerpt: Here are my favorite quotes from someones that inspire me or make me la
 > * Autobiography is only to be trusted when it reveals something disgraceful. A
 > man who gives a good account of himself is probably lying, since any life when
 > viewed from the inside is simply a series of defeats.
+
+> Egaeus, [Short Fiction, Berenice](https://standardebooks.org/ebooks/edgar-allan-poe/short-fiction/text/berenice){:target="_blank"}:
+> * But as, in ethics, evil is a consequence of good, so, in fact, out of joy is
+> sorrow born. Either the memory of past bliss is the anguish of today, or the
+> agonies which are, have their origin in the ecstasies which might have been.
 
 > 橘カラ(十和田幸)「サイレーン 刑事×彼女×完全悪女 第1話 完全悪女が僕の彼女を獲物にした」：
 > * 信頼を得るにはふたつ。役に立つと思われること。それと弱みをさらすこと。
@@ -121,13 +128,9 @@ excerpt: Here are my favorite quotes from someones that inspire me or make me la
 > おたべ「マジすか学園2 第8話 それぞれの答え」：
 > * 本当に強いヤツはな、本当の恐怖を知ってんねん。
 
-> 宇佐美博人「サバイバル ウェデぃング 最終話 結婚か？仕事か？幸せはどっちだ！？」：
+> 宇佐美博人「サバイバル ウェディング 最終話 結婚か？仕事か？幸せはどっちだ！？」：
 > * 大切なのはどんな選択をするかじゃない！
 > 自分が選択した人生を強く生きるかどうか！ただそれだけだ！
-
-> 音の母から音への手紙「いつかこの恋を思い出してきっと泣いてしまう 第1回 失くした手紙が繋いだ奇跡…二人は出逢った」：
-> * ブドウの花はブドウの味がする。バナナの花はバナナの味がする。
-> 愛するって心から心へと残していく事だと思う。
 
 > 土屋百合「逃げるは恥だが役に立つ 最終話 夫婦を超えてゆけ」：
 > * 今あなたが価値がないと切り捨てたものは、この先あなたが向かっていく未来でもあるのよ。
@@ -170,8 +173,3 @@ excerpt: Here are my favorite quotes from someones that inspire me or make me la
 
 > 宮崎駿「終わらない人 宮崎駿」：
 > * オレ、いまの世の中に合わせて生きる気ないから。
-
-> Egaeus, [Short Fiction, Berenice](https://standardebooks.org/ebooks/edgar-allan-poe/short-fiction/text/berenice){:target="_blank"}:
-> * But as, in ethics, evil is a consequence of good, so, in fact, out of joy is
-> sorrow born. Either the memory of past bliss is the anguish of today, or the
-> agonies which are, have their origin in the ecstasies which might have been.
