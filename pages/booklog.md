@@ -65,24 +65,18 @@ excerpt: Here are some books that renew my spirit or reclaim my life.
 > 
 > * 鼠疫，[法] Albert Camus
 > * 局外人，[法] Albert Camus
-> * 偶发空缺，[英] J.K. Rowling
 > * 日安憂鬱，[法] Françoise Sagan
 > * 机械心，[法] Mathias Malzieu
 > * 你的名字。，[日] 新海誠
 > * 言叶之庭，[日] 新海誠
 > * 秒速五厘米，[日] [新海誠](http://shinkaimakoto.jp){:target="_blank"}
 > * 冰与火之歌，[美] [George R.R. Martin](https://www.georgerrmartin.com){:target="_blank"}
-> * 失落的世界，[英] Arthur Conan Doyle
 > * 兔子共和国，[英] Richard Adams
 > * 动物农场，[英] George Orwell
 > * 小王子，[法] Antoine de Saint-Exupéry
 > * 百年孤独，[哥伦比亚] Gabriel García Márquez
 > * 三个火枪手，[法] Alexandre Dumas
-> * 神奇动物在哪里，[英] J.K. Rowling
-> * 神奇的魁地奇球，[英] J.K. Rowling
-> * 诗翁彼豆故事集 赫敏·格兰杰译自如尼文，[英] J.K. Rowling
 > * 哈利波特完整系列，[英] [J.K. Rowling](https://www.jkrowling.com){:target="_blank"}
-> * 布谷鸟的呼唤，[英] J.K. Rowling
 > * 尸人庄谜案，[日] 今村昌弘
 > * 福尔摩斯先生，[美] Mitch Cullin
 > * 福尔摩斯症候群，[法] J.M.ERRE
