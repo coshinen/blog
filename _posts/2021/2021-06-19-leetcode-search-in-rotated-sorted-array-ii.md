@@ -12,7 +12,7 @@ excerpt:
   例如，`[0,1,2,4,4,4,5,6,6,7]` 在下标 `5` 旋转后可能变为 `[4,5,6,6,7,0,1,2,4,4]`。<br>
   给定的旋转**后**的数组 `nums` 和一个整数 `target`，如果 `nums` 中存在目标值 `target`，则返回 `true`，否则返回 `false`。
 ---
-> ## 80. Search in Rotated Sorted Array II
+> ## 81. Search in Rotated Sorted Array II
 > 
 > There is an integer array `nums` sorted in non-decreasing order (not
 > necessarily with **distinct** values).
