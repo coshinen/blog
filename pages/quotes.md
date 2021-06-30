@@ -52,9 +52,6 @@ excerpt: Here are my favorite quotes from someones that inspire me or make me la
 > * Sometimes it is the people no one imagines anything of who do the things
 > that no one can imagine.
 
-> Tigress, Kung Fu Panda: Legends of Awesomeness, Season 3 Episode 10, PO PICKS a POCKET:
-> * Trust has to be earned.
-
 > Master Shifu, Kung Fu Panda 3:
 > * If you only do what you can do, you will never be more than you are now.
 
@@ -69,6 +66,19 @@ excerpt: Here are my favorite quotes from someones that inspire me or make me la
 > * There are no accidents.
 > * One often meets his destiny on the road he takes to avoid it.
 > * Nothing is impossible.
+
+> Albus Dumbledore, Harry Potter AND THE PHILOSOPHER'S STONE:
+> * It takes a great deal of bravery to stand up to your enemies, but a great
+> deal more to stand up to your friends.
+> * It does not do to dwell on dreams, and forget to live.
+
+> Albus Dumbledore, Harry Potter AND THE CHAMBER OF SECRETS:
+> * It is not our abilities that show what we truly are. It is our choices.
+
+> Albus Dumbledore, Harry Potter AND THE PRISONER OF AZKABAN:
+> * When in doubt, I find retracing my steps to be a wise place to begin.
+> * A child's voice, however honest and true is meaningless to those who have
+> forgotten how to listen.
 
 > Carl Jung, [C.G. Jung Letters, Vol. 1: 1906-1950, Page 33](https://carljungdepthpsychologysite.blog/2020/02/08/carl-jung-i-am-afraid-that-the-mere-fact-of-my-presence-takes-you-away-from-yourself/){:target="_blank"}:
 > * Who looks outside dreams; who looks inside awakes.
@@ -108,9 +118,6 @@ excerpt: Here are my favorite quotes from someones that inspire me or make me la
 
 > 新堂頼子「はんなりギロリの頼子さん 第一話」：
 > * 大切なのは、どの道を選ぶかより、選んだ道をどういきるかじゃないの？
-
-> 緑のお父さん「パパのお弁当は世界一」：
-> * 人生はいろいろある、苦しい時も悲しい時も自分を信じていれば楽しい事がやってくるよ。
 
 > 竜ヶ崎桃子「下妻物語」：
 > * 自分が一番大事なものは、絶対貸しちゃいけないの。
