@@ -173,7 +173,7 @@ excerpt: Here are some books that renew my spirit or reclaim my life.
 > * 区块链开发指南，[中] 申屠青春
 > * [区块链技术指南](https://yeasy.gitbook.io/blockchain_guide/){:target="_blank"}，[中] [杨保华](https://yeasy.github.io){:target="_blank"} 陈昌
 > * [精通比特币 第2版](https://bitcoinbook.info){:target="_blank"}，[希-英] Andreas M. Antonopoulos
-> * [Bitcoin: A Peer-to-Peer Electronic Cash System](/blog/2018/04/Bitcoin-A-Peer-to-Peer-Electronic-Cash-System.html)，[日?] Satoshi Nakamoto
+> * [比特币：一种点对点的电子现金系统](/blog/2018/04/bitcoin-a-peer-to-peer-electronic-cash-system.html)，[美?] Satoshi Nakamoto
 
 > ### 编程语言
 > 
@@ -209,7 +209,6 @@ excerpt: Here are some books that renew my spirit or reclaim my life.
 > * [Pro Git 2nd Edition](https://git-scm.com/book/en/v2){:target="_blank"}，[美] Scott Chacon and Ben Straub
 > * 重构 改善既有代码的设计，[美] Martin Fowler
 > * 代码整洁之道，[美] Robert C. Martin
-> * [Google Style Guides](https://google.github.io/styleguide){:target="_blank"}，[美] Google Open Source Organization
 > * 你的灯亮着吗？发现问题的真正所在，[美] Donald C. Gause, Gerald M. Weinberg
-> * [How To Ask Questions The Smart Way](http://www.catb.org/~esr/faqs/smart-questions.html){:target="_blank"}，[美] Eric S. Raymond, Rick Moen
+> * [提问的智慧](http://www.catb.org/~esr/faqs/smart-questions.html){:target="_blank"}，[美] Eric S. Raymond, Rick Moen
 > * [快乐的 Linux 命令行](https://billie66.github.io/TLCL/){:target="_blank"}，[美] William Shotts
