@@ -5,7 +5,7 @@ date:   2018-04-20 20:08:10 +0800
 author: Coshin
 comments: true
 category: 区块链
-tags: Bitcoin Whitepaper Translations
+tags: Bitcoin P2P E-cash Paper Translations
 excerpt:
   比特币是一个创新的支付网络，一种新型的试验性的数字货币，能够让世界上任何地方的任何人进行即时支付。<br>
   它使用点对点的技术，在没有中央权力的情况下运作：管理交易和发行货币通过网络共同完成。

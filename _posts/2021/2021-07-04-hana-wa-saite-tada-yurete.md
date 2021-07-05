@@ -10,7 +10,7 @@ excerpt:
   朝焼けに秘められた願いは現実に潜み<br>
   運命(さだめ)には逆らえぬ何かがあると思う時
 ---
-![GZCA-7150](https://is2-ssl.mzstatic.com/image/thumb/Music115/v4/97/4a/1a/974a1a6c-5c28-5b9d-2f78-47ba79eee0de/source/600x600bb.jpg){:.border}
+![GZCA-7150](https://ganekuro.github.io/images/discography/single/GZCA-7150.jpg){:.border}
 
 歌手：GARNET CROW<br>
 作詞：AZUKI 七<br>
