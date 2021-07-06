@@ -52,34 +52,6 @@ excerpt: Here are my favorite quotes from someones that inspire me or make me la
 > * Sometimes it is the people no one imagines anything of who do the things
 > that no one can imagine.
 
-> Master Shifu, Kung Fu Panda 3:
-> * If you only do what you can do, you will never be more than you are now.
-
-> The Soothsayer, Kung Fu Panda 2:
-> * Your story may not have such a happy beginning, but that doesn't make you
-> who you are. It is the rest of your story, who you choose to be.
-
-> Master Oogway, Kung Fu Panda:
-> * You are too concerned with what was and what will be. There's a saying:
-> Yesterday is history, tomorrow is a mystery, but today is a gift. That is why
-> it is called the present.
-> * There are no accidents.
-> * One often meets his destiny on the road he takes to avoid it.
-> * Nothing is impossible.
-
-> Albus Dumbledore, Harry Potter AND THE PHILOSOPHER'S STONE:
-> * It takes a great deal of bravery to stand up to your enemies, but a great
-> deal more to stand up to your friends.
-> * It does not do to dwell on dreams, and forget to live.
-
-> Albus Dumbledore, Harry Potter AND THE CHAMBER OF SECRETS:
-> * It is not our abilities that show what we truly are. It is our choices.
-
-> Albus Dumbledore, Harry Potter AND THE PRISONER OF AZKABAN:
-> * When in doubt, I find retracing my steps to be a wise place to begin.
-> * A child's voice, however honest and true is meaningless to those who have
-> forgotten how to listen.
-
 > Carl Jung, [C.G. Jung Letters, Vol. 1: 1906-1950, Page 33](https://carljungdepthpsychologysite.blog/2020/02/08/carl-jung-i-am-afraid-that-the-mere-fact-of-my-presence-takes-you-away-from-yourself/){:target="_blank"}:
 > * Who looks outside dreams; who looks inside awakes.
 
