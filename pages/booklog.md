@@ -173,7 +173,7 @@ excerpt: Here are some books that renew my spirit or reclaim my life.
 > * 区块链开发指南，[中] 申屠青春
 > * [区块链技术指南](https://yeasy.gitbook.io/blockchain_guide/){:target="_blank"}，[中] [杨保华](https://yeasy.github.io){:target="_blank"} 陈昌
 > * [精通比特币 第2版](https://bitcoinbook.info){:target="_blank"}，[希-英] Andreas M. Antonopoulos
-> * [比特币：一种点对点的电子现金系统](/blog/2018/04/bitcoin-a-peer-to-peer-electronic-cash-system.html)，[美?] Satoshi Nakamoto
+> * [比特币：一种点对点的电子现金系统](/blog/2018/04/bitcoin-paper.html)，[美] Satoshi Nakamoto
 
 > ### 编程语言
 > 
