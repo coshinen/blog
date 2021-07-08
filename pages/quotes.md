@@ -104,9 +104,6 @@ excerpt: Here are my favorite quotes from someones that inspire me or make me la
 > ソルト「マジすか学園5 第1話」：
 > * 無理は一番の”退屈しのぎ”だ。
 
-> おたべ「マジすか学園2 第8話 それぞれの答え」：
-> * 本当に強いヤツはな、本当の恐怖を知ってんねん。
-
 > 宇佐美博人「サバイバル ウェディング 最終話 結婚か？仕事か？幸せはどっちだ！？」：
 > * 大切なのはどんな選択をするかじゃない！
 > 自分が選択した人生を強く生きるかどうか！ただそれだけだ！
@@ -116,9 +113,6 @@ excerpt: Here are my favorite quotes from someones that inspire me or make me la
 > 自分がバカにしていたものに自分がなる、それってつらいんじゃないかな？
 > 私達の周りにはね、たくさんの呪いがあるの。あなたが感じているのはその一つ。
 > 自分に呪いをかけないで、そんな恐ろしい呪いからは、さっさと逃げてしまいなさい。
-
-> 中村由利「GARNET CROW livescope 2013 〜Terminus〜」：
-> * GARNET CROWとして、全てのことを出し切りました。
 
 > シラー(Schiller)「GARNET CROW premium live 〜happy 5th anniversary〜」：
 > * 人生、退屈すれば長く、充実すれば短い。
