@@ -111,6 +111,7 @@ excerpt: Here are some books that renew my spirit or reclaim my life.
 > 
 > * 不成熟的父母，[美] Lindsay C. Gibson
 > * 中国式的情与爱，[中] 武志红 青音
+> * 和另一个自己谈谈心，[中] 武志红
 > * 巨婴国，[中] 武志红
 > * 身体知道答案，[中] 武志红
 > * 为何爱会伤人，[中] 武志红
