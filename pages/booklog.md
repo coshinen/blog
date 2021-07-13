@@ -188,6 +188,7 @@ excerpt: Here are some books that renew my spirit or reclaim my life.
 > * C 专家编程，[美] Peter van der Linden
 > * C 陷阱与缺陷，[美] Andrew Koening
 > * C 和指针，[美] Kenneth A. Reek
+> * C 语言程序设计：现代方法（第2版），[美] [K. N. King](http://www.knking.com){:target="_blank"}
 > * C 程序设计语言（第2版），[加] [Brian W. Kernighan](https://www.cs.princeton.edu/~bwk){:target="_blank"} [美] [Dennis M. Ritchie](https://www.bell-labs.com/usr/dmr/www){:target="_blank"}
 
 > ### 网络编程
