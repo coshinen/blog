@@ -15,6 +15,7 @@ excerpt: 功夫熊猫作品集中出现的名言。
 > Master Oogway:
 > * Nothing is impossible.
 > * One often meets his destiny on the road he takes to avoid it.
+> * There is just news. There is no good or bad.
 > * There are no accidents.
 > * You are too concerned with what was and what will be. There's a saying:
 > Yesterday is history, tomorrow is a mystery, but today is a gift. That is why
@@ -23,12 +24,20 @@ excerpt: 功夫熊猫作品集中出现的名言。
 乌龟大师：
 * 没有什么是不可能的。
 * 人常常在他逃避命运的路上遇到他的命运。
+* 只有消息而已。没有好坏之分。
 * 这儿没有意外。
 * 你太在意过去和将来了。
   俗话说：昨天是历史，明天是一个谜，但今天是一份礼物。
   那就是为什么它被称为现在（礼物）。
 
 ## Kung Fu Panda 2
+
+> Master Shifu:
+> But once I realized the problem was not you, but within me, I found inner
+> peace, and was able to harness the flow of the universe.
+
+师傅：
+但当我意识到问题不在你，而在我的内心后，我找到了内心的平静，并且能够驾驭宇宙的流。
 
 > The Soothsayer:
 > Your story may not have such a happy beginning, but that doesn't make you
