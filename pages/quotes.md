@@ -88,9 +88,6 @@ excerpt: Here are my favorite quotes from someones that inspire me or make me la
 > * 嘘をつかない人間なんて、どこにもいないわ。
 > 嘘をどう利用するか、それが問題なんだけよ。
 
-> 新堂頼子「はんなりギロリの頼子さん 第一話」：
-> * 大切なのは、どの道を選ぶかより、選んだ道をどういきるかじゃないの？
-
 > 竜ヶ崎桃子「下妻物語」：
 > * 自分が一番大事なものは、絶対貸しちゃいけないの。
 > 貸してもいいのはどうでもいいものだけ。だから私は借りた物を返さない主義。
@@ -111,15 +108,8 @@ excerpt: Here are my favorite quotes from someones that inspire me or make me la
 > 中村由利「GARNET CROW "le 5 ème anniversaire" L'Histoire de 2000 à 2005」：
 > * 流されていくのは簡単だけれど、変わらないでいることっていうのは一番難しい。
 
-> Joan Baez「Garnet Time 02 AZUKI'S NIGHT」：
-> * 人はどう死ぬか、いつ死ぬか選択できない。どう生きるか、これだけは決められる。
-> さあ決めるのです。
-> * You don't get to choose how you're going to die, or when. You can only
-> decide how you're going to live. Now.
-
 > サイタマ「ワンパンマン 第3話 執念の科学者」：
-> * 変化に気づいたのは一年半後だった。俺はハゲていた。そして、強くなっていた。
-> つまり、ハゲるくらい死に物狂いで己を鍛えこむのだ。それが強くなる唯一の方法だ…
+> * つまり、ハゲるくらい死に物狂いで己を鍛えこむのだ。それが強くなる唯一の方法だ…
 > 自分で変われるのが人間の強さだ！
 
 > ルパン三世「ルパン三世 SP 第23作 東方見聞録 ～アナザーページ～」：
