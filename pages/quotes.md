@@ -41,9 +41,6 @@ excerpt: Here are my favorite quotes from someones that inspire me or make me la
 > Negan, The Walking Dead, Season 9 Episode 16:
 > * It's just that no one ever thinks that they're the evil one.
 
-> Rick Grimes, The Walking Dead, Season 8:
-> * My mercy prevails over my wrath.
-
 > Raymond Fowler, The Thin Blue Line, Series 1 Episode 4, Rag Week:
 > * When I was at college I suffered from the curious delusion, that I was there
 > to study.
@@ -109,8 +106,7 @@ excerpt: Here are my favorite quotes from someones that inspire me or make me la
 > * 流されていくのは簡単だけれど、変わらないでいることっていうのは一番難しい。
 
 > サイタマ「ワンパンマン 第3話 執念の科学者」：
-> * つまり、ハゲるくらい死に物狂いで己を鍛えこむのだ。それが強くなる唯一の方法だ…
-> 自分で変われるのが人間の強さだ！
+> * 自分で変われるのが人間の強さだ！
 
 > ルパン三世「ルパン三世 SP 第23作 東方見聞録 ～アナザーページ～」：
 > * 分からねぇか？その甘え、そろそろ卒業しなくちゃな。
