@@ -6,7 +6,6 @@ author: Coshin
 comments: true
 category: 译文集
 tags: Translations
-excerpt: 哈利波特作品集中出现的名言。
 ---
 ![hp-book](https://images.ctfassets.net/usf1vwtuqyxm/4GGNm78qwDGkNXEoEUYGBa/27d003c95f166b1fdaf218921cbabcf2/webnav_400x400_books_01.png){:.border}
 

@@ -6,15 +6,9 @@ author: Coshin
 comments: true
 category: 译文集
 tags: Lyrics Conan
-excerpt:
-  tear drops そうでしょ 気付いているんじゃない？<br>
-  tear drops そうでしょ 泣いているんじゃない<br>
-  tear drops そうでしょ ずっと忘れない愛<br>
-  tear drops tear drops この謎解いてtear drops
 ---
 ![GZCA-7160](https://is1-ssl.mzstatic.com/image/thumb/Music/v4/07/05/a5/0705a58a-eda4-d5e3-51dd-7fc17df9f10c/source/600x600bb.jpg){:.border}
 
-歌手：Caos Caos Caos<br>
 作詞：白石乃梨<br>
 作曲：大野愛果<br>
 編曲：葉山たけし

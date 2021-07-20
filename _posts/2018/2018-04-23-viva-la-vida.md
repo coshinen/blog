@@ -6,23 +6,9 @@ author: Coshin
 comments: true
 category: 译文集
 tags: Lyrics
-excerpt:
-  I used to rule the world<br>
-  Seas would rise when I gave the word<br>
-  Now in the morning I sleep alone<br>
-  Sweep the streets I used to own<br>
-  I used to roll the dice<br>
-  Feel the fear in my enemy's eyes<br>
-  Listen as the crowd would sing<br>
-  Now the old King is dead, long live the King<br>
-  One minute I held the key<br>
-  Next the walls were closed on me<br>
-  And I discovered that my castles stand<br>
-  Upon pillars of salt and pillars of sand
 ---
 ![VIVA LA VIDA](https://is4-ssl.mzstatic.com/image/thumb/Music30/v4/aa/13/0e/aa130e1a-fbb8-bf02-5014-726bbb8f81f6/source/600x600bb.jpg){:.border}
 
-Singer: Coldplay<br>
 Songwriters: Guy Berryman, Jonny Buckland, Will Champion & Chris Martin
 
 <blockquote class="original">

@@ -6,17 +6,9 @@ author: Coshin
 comments: true
 category: 译文集
 tags: Lyrics Conan
-excerpt:
-  どんな 言葉に変えて<br>
-  君に 伝えられるだろう<br>
-  あれから いくつもの季節が<br>
-  通り過ぎたけれど<br>
-  いつも 傍で笑ってる<br>
-  私にも言えないことが まだ ひとつだけある
 ---
 ![GZCA-1030](https://www.mai-kuraki.com/jacket/sg/GZCA-1030.jpg){:.border}
 
-歌手：倉木麻衣<br>
 作詞：倉木麻衣<br>
 作曲：大野愛果<br>
 編曲：Cybersound

@@ -6,15 +6,9 @@ author: Coshin
 comments: true
 category: 译文集
 tags: Lyrics Garnet
-excerpt:
-  弱い日差しが揺れるテーブルの上<br>
-  開いた世界地図に<br>
-  君のクセのある文字がまだ残る<br>
-  ah- 現実かなぁ、、
 ---
 ![GZCA-1029](https://ganekuro.github.io/images/discography/single/GZCA-1029.jpg){:.border}
 
-歌手：GARNET CROW<br>
 作詞：AZUKI 七<br>
 作曲：中村由利<br>
 編曲：古井弘人

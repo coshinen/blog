@@ -6,13 +6,9 @@ author: Coshin
 comments: true
 category: 译文集
 tags: Lyrics
-excerpt:
-  Get up, Get up, Get up, Get up<br>
-  Burning love
 ---
 ![L-1750](https://is1-ssl.mzstatic.com/image/thumb/Music/v4/35/68/e5/3568e56b-0e1d-4983-ed0b-127c4e485a78/source/600x600bb.jpg){:.border}
 
-歌手：中森明菜<br>
 作詞：阿木燿子<br>
 作曲：鈴木キサブロー<br>
 編曲：椎名和夫

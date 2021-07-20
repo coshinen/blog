@@ -6,15 +6,9 @@ author: Coshin
 comments: true
 category: 译文集
 tags: Lyrics Garnet
-excerpt:
-  走り出したら通り雨<br>
-  もう一休みしてる<br>
-  待ちきれない君は飛び出して<br>
-  振り返りもせずに
 ---
 ![GZCA-1072](https://ganekuro.github.io/images/discography/single/GZCA-1072.jpg){:.border}
 
-歌手：GARNET CROW<br>
 作詞：AZUKI 七<br>
 作曲：中村由利<br>
 編曲：古井弘人

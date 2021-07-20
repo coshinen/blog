@@ -6,15 +6,9 @@ author: Coshin
 comments: true
 category: 译文集
 tags: Lyrics Garnet
-excerpt:
-  町中オレンジ色に染める<br>
-  秋空 加速してゆくサイクリング<br>
-  上空 小さく 色とりどりのハングライダー舞う<br>
-  風が冷えてゆく
 ---
 ![GZCA-5038](https://ganekuro.github.io/images/discography/album/GZCA-5038.jpg){:.border}
 
-歌手：GARNET CROW<br>
 作詞：AZUKI 七<br>
 作曲：中村由利<br>
 編曲：古井弘人

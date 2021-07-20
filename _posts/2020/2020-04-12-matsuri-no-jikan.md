@@ -6,13 +6,9 @@ author: Coshin
 comments: true
 category: 译文集
 tags: Lyrics Garnet
-excerpt:
-  夕焼けのオレンジ色残すような明りを灯しだす<br>
-  秋風にざわめく足音が祭りをつれて
 ---
 ![GZCA-4028](https://ganekuro.github.io/images/discography/single/GZCA-4028.jpg){:.border}
 
-歌手：GARNET CROW<br>
 作詞：AZUKI 七<br>
 作曲：中村由利<br>
 編曲：古井弘人

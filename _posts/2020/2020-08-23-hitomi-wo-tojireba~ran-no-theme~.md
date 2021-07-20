@@ -6,15 +6,9 @@ author: Coshin
 comments: true
 category: 译文集
 tags: Lyrics Conan
-excerpt:
-  どうしたの？（蘭姉ちゃんこそ、どうしたの？）<br>
-  元気なの？（はあ、元気ないなあ）<br>
-  さみしいの？（なんわけねえよ）<br>
-  逢いたいな（いつも、そばにいるだっけ）
 ---
 ![POCX-1081](https://www.generasia.com/w/images/5/58/IORI_BGI_A.jpg){:.border}
 
-歌手：伊織、江戸川コナン<br>
 作詞：及川眠子<br>
 作曲：大野克夫<br>
 編曲：大野克夫

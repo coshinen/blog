@@ -6,15 +6,9 @@ author: Coshin
 comments: true
 category: 译文集
 tags: Lyrics Garnet
-excerpt:
-  公園で髪を切る<br>
-  落ちてゆく毛先を払う<br>
-  君が笑う 頬に触れる<br>
-  見上げれば飛行機雲
 ---
 ![GZCA-1044](https://ganekuro.github.io/images/discography/single/GZCA-1044.jpg){:.border}
 
-歌手：GARNET CROW<br>
 作詞：AZUKI 七<br>
 作曲：中村由利<br>
 編曲：古井弘人

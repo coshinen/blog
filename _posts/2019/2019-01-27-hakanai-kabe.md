@@ -6,14 +6,9 @@ author: Coshin
 comments: true
 category: 译文集
 tags: Lyrics
-excerpt:
-  華やぐ心(人を) 見つけ出したら<br>
-  大切に守りぬく<br>
-  烈しい事に遭逢しても 立ち向かえばいいさ
 ---
 ![bLsZnoGbin8](https://i.ytimg.com/vi/bLsZnoGbin8/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLB0_1rAMZXPZuODGARJlH5e6spk3g){:.border}
 
-歌手：桐崎栄二<br>
 作詞：桐崎栄二<br>
 作曲：takai
 

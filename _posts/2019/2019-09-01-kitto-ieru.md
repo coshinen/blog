@@ -6,13 +6,9 @@ author: Coshin
 comments: true
 category: 译文集
 tags: Lyrics Conan
-excerpt:
-  明日あった時は きっと言える素直になれるよ<br>
-  今まであった誰よりも 特別に考えてる あなたを
 ---
 ![PODX-1042](https://www.generasia.com/w/images/a/a8/Tamura_Yukari_-_Kitto_Ieru.jpg){:.border}
 
-歌手：田村ゆかり<br>
 作詞：三枝翔<br>
 作曲：山口一久<br>
 編曲：山口一久

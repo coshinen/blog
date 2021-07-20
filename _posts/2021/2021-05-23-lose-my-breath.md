@@ -6,19 +6,9 @@ author: Coshin
 comments: true
 category: 译文集
 tags: Lyrics
-excerpt:
-  きりが無い位増やしてしまったミス<br>
-  途絶えた声が届くように<br>
-  見栄えのする懐古主義<br>
-  その間に繋いだりしないで<br>
-  なんて収まりの良い感情<br>
-  偶然にも生きてきた中で<br>
-  うまい具合にやれただけだって<br>
-  繰り返すならその位置でいいよ
 ---
 ![GZCA-5232](https://ganekuro.github.io/images/discography/other/GZCA-5232.jpg){:.border}
 
-歌手：岡本仁志<br>
 作詞：岡本仁志<br>
 作曲：岡本仁志<br>
 編曲：岡本仁志

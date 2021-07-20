@@ -6,15 +6,9 @@ author: Coshin
 comments: true
 category: 译文集
 tags: Lyrics Garnet
-excerpt:
-  君がいなくなってから<br>
-  何度朝日迎えたかしれない<br>
-  急に地平線をみたくなって ふらり<br>
-  始発に飛び乗る
 ---
 ![GZCA-2020](https://ganekuro.github.io/images/discography/single/GZCA-2020.jpg){:.border}
 
-歌手：GARNET CROW<br>
 作詞：AZUKI 七<br>
 作曲：中村由利<br>
 編曲：古井弘人

@@ -6,22 +6,9 @@ author: Coshin
 comments: true
 category: 译文集
 tags: Lyrics
-excerpt:
-  Well its been building up inside of me<br>
-  For oh I don't know how long<br>
-  I don't know why<br>
-  But I keep thinking<br>
-  Something's bound to go wrong<br>
-  But she looks in my eyes<br>
-  And makes me realize<br>
-  And she says "Don't worry baby"<br>
-  Don't worry baby<br>
-  Don't worry baby<br>
-  Everything will turn out alright
 ---
 ![SHUT DOWN VOLUME 2](https://is1-ssl.mzstatic.com/image/thumb/Music128/v4/77/a5/89/77a589d0-282a-da0d-089e-a5a376b2ec49/source/600x600bb.jpg){:.border}
 
-Singer: The Beach Boys<br>
 Songwriters: Brian Wilson & Roger Christian
 
 <blockquote class="original">

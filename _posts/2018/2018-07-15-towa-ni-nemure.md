@@ -6,15 +6,9 @@ author: Coshin
 comments: true
 category: 译文集
 tags: Lyrics Garnet
-excerpt:
-  追いかけ合う月と太陽<br>
-  決して同じ朝は来なくて<br>
-  二人を重ねて見ていたよ<br>
-  空っぽの部屋で
 ---
 ![TCR-001](https://ganekuro.github.io/images/discography/album/TCR-001.jpg){:.border}
 
-歌手：GARNET CROW<br>
 作詞：AZUKI 七<br>
 作曲：中村由利<br>
 編曲：古井弘人

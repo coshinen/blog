@@ -6,15 +6,9 @@ author: Coshin
 comments: true
 category: 译文集
 tags: Lyrics Conan
-excerpt:
-  君のこと全部 わかってあげたいけど<br>
-  辛くても ごまかす いつも笑顔で<br>
-  but I know 涙を こらえてるね ずっと<br>
-  その胸が壊れそうなくらい
 ---
 ![VNZM-6024](https://is5-ssl.mzstatic.com/image/thumb/Music/v4/4d/06/43/4d06437b-0666-9c53-8c09-dddd700c7070/source/600x600bb.jpg){:.border}
 
-歌手：倉木麻衣<br>
 作詞：Mai Kuraki・GIORGIO 13<br>
 作曲：GIORGIO CANCEMI<br>
 編曲：GIORGIO CANCEMI

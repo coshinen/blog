@@ -6,17 +6,9 @@ author: Coshin
 comments: true
 category: 译文集
 tags: Lyrics Conan
-excerpt:
-  もしも君に巡り逢えたら<br>
-  二度と君の手を離さない<br>
-  春の終わり告げる 花御堂<br>
-  霞む花 一枚(ひとひら)<br>
-  蘇る 思い出の歌<br>
-  この胸に 今も優しく
 ---
 ![GZCA-7011](https://www.mai-kuraki.com/jacket/sg/GZCA-7011.jpg){:.border}
 
-歌手：倉木麻衣<br>
 作詞：倉木麻衣<br>
 作曲：大野愛果<br>
 編曲：Cybersound

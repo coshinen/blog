@@ -6,15 +6,10 @@ author: Coshin
 comments: true
 category: 译文集
 tags: Lyrics Conan
-excerpt:
-  Feel Your Heart めぐる季節の中 君への憧れが<br>
-  Just My Love その想いが 見えない力くれるから<br>
-  迷いも悩みもみんな まるでちっさく感じる どんな時でも
 ---
 ![PODH-1329](https://www.generasia.com/w/images/8/8c/PODH-1329.jpg){:.border}
 ![PODH-1329B](https://www.generasia.com/w/images/a/a4/PODH-1329B.jpg){:.border}
 
-歌手：Velvet Garden<br>
 作詞：室井美樹<br>
 作曲：川添智久<br>
 編曲：神長弘一、川添智久、月光惠亮

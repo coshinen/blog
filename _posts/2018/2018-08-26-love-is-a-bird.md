@@ -6,15 +6,9 @@ author: Coshin
 comments: true
 category: 译文集
 tags: Lyrics Garnet
-excerpt:
-  夕暮れとこの街の匂い<br>
-  染みついた諦めと希望<br>
-  雨の中うつむいていた<br>
-  少年の足取り
 ---
 ![GZCA-5126](https://ganekuro.github.io/images/discography/album/GZCA-5126.jpg){:.border}
 
-歌手：GARNET CROW<br>
 作詞：AZUKI 七<br>
 作曲：中村由利<br>
 編曲：古井弘人

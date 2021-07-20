@@ -6,15 +6,9 @@ author: Coshin
 comments: true
 category: 译文集
 tags: Lyrics Garnet
-excerpt:
-  コーヒーは最初の一口<br>
-  甘いケーキの端っこ<br>
-  ポテトは揚げたてにして<br>
-  おいしいトコは少しだけ
 ---
 ![GZCA-1050](https://ganekuro.github.io/images/discography/single/GZCA-1050.jpg){:.border}
 
-歌手：GARNET CROW<br>
 作詞：AZUKI 七<br>
 作曲：中村由利<br>
 編曲：古井弘人

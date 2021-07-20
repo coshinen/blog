@@ -6,18 +6,9 @@ author: Coshin
 comments: true
 category: 译文集
 tags: Lyrics Conan
-excerpt:
-  あの日から 感じてた<br>
-  ふたり 離れても<br>
-  この想い あなたへと<br>
-  きっと 届く<br>
-  通りすぎる季節に 願いをたくした<br>
-  愛は いつも はかなくて せつない<br>
-  涙 ひとつ 流れ星
 ---
 ![POCX-1117](https://www.generasia.com/w/images/2/28/MC_M3_OS_F.jpg){:.border}
 
-歌手：伊織<br>
 作詞：三枝翔<br>
 作曲：大野克夫<br>
 編曲：大野克夫

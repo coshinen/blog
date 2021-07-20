@@ -6,14 +6,9 @@ author: Coshin
 comments: true
 category: 译文集
 tags: Lyrics Garnet
-excerpt:
-  ため息ひとつ落ちた週末の<br>
-  どうしようもない感じ<br>
-  絶望より深く堕ちてゆく 夜明け
 ---
 ![TCR-001](https://ganekuro.github.io/images/discography/album/TCR-001.jpg){:.border}
 
-歌手：GARNET CROW<br>
 作詞：AZUKI 七<br>
 作曲：中村由利<br>
 編曲：古井弘人

@@ -6,14 +6,10 @@ author: Coshin
 comments: true
 category: 译文集
 tags: Lyrics Conan
-excerpt:
-  想い出してごらん 萌ゆる草木 散る花ビラ<br>
-  共に笑い 手を繋いで 歩いた並木道に
 ---
 ![Shinichi-Conan](https://is4-ssl.mzstatic.com/image/thumb/Music/v4/b2/f7/a8/b2f7a84f-becf-fe06-1a2f-74ff6d767a30/source/600x600bb.jpg){:.border}
 ![RZCD-46901](https://www.generasia.com/w/images/a/ac/Kimi_to_Zutto.jpg){:.border}
 
-歌手：yu-yu<br>
 作詞：rockco.<br>
 作曲：Koma2 Kaz<br>
 編曲：Koma2 Kaz

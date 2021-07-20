@@ -6,15 +6,9 @@ author: Coshin
 comments: true
 category: 译文集
 tags: Lyrics
-excerpt:
-  ゆれる瞳 神秘の海か<br>
-  胸の奥は やけつく砂漠か<br>
-  あざむく言葉に とどろく銃声<br>
-  セクシー・アドベンチャー
 ---
 ![Lupin-3rd-Part3-OP](https://m.media-amazon.com/images/I/61FdN93V16L._SL240_.jpg){:.border}
 
-歌手：中村裕介<br>
 作詞：宮原芽映<br>
 作曲：大野雄二<br>
 編曲：大野雄二

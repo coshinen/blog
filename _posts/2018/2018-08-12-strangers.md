@@ -6,15 +6,9 @@ author: Coshin
 comments: true
 category: 译文集
 tags: Lyrics Garnet
-excerpt:
-  緑揺れる午後の空<br>
-  幾つ目の飛行機かな<br>
-  遠く潮騒が届いて<br>
-  客船が泊まった
 ---
 ![GZCA-5231](https://ganekuro.github.io/images/discography/album/GZCA-5231.jpg){:.border}
 
-歌手：GARNET CROW<br>
 作詞：AZUKI 七<br>
 作曲：中村由利<br>
 編曲：古井弘人

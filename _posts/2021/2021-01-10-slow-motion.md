@@ -6,13 +6,9 @@ author: Coshin
 comments: true
 category: 译文集
 tags: Lyrics
-excerpt:
-  砂の上 刻むステップ ほんのひとり遊び<br>
-  振り向くと遠く人影 渚を駆けて来る
 ---
 ![L-1600](https://www.generasia.com/w/images/d/da/Akina_Slow_Motion.jpg){:.border}
 
-歌手：中森明菜<br>
 作詞：来生えつこ<br>
 作曲：来生たかお<br>
 編曲：船山基紀

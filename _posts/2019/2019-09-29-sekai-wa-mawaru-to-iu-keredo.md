@@ -6,13 +6,9 @@ author: Coshin
 comments: true
 category: 译文集
 tags: Lyrics Conan Garnet
-excerpt:
-  永い夜が朝が昼が すべてのらりくらり流れゆくよ<br>
-  日々をつないでゆくにも そうね 意思というものが必要？
 ---
 ![GZCA-4100](https://ganekuro.github.io/images/discography/single/GZCA-4100.jpg){:.border}
 
-歌手：GARNET CROW<br>
 作詞：AZUKI 七<br>
 作曲：中村由利<br>
 編曲：古井弘人

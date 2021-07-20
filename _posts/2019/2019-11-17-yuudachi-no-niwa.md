@@ -6,17 +6,9 @@ author: Coshin
 comments: true
 category: 译文集
 tags: Lyrics Garnet
-excerpt:
-  今日買ったばかりのレコードを<br>
-  抱えたままでいつものカフェ<br>
-  先送りした小さな幸福<br>
-  上昇気流の淡い日々<br>
-  無いものねだりの毎日が<br>
-  振り返れば今 愛しくさえ思う
 ---
 ![GZCA-2044](https://ganekuro.github.io/images/discography/single/GZCA-2044.jpg){:.border}
 
-歌手：GARNET CROW<br>
 作詞：AZUKI 七<br>
 作曲：中村由利<br>
 編曲：古井弘人

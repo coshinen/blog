@@ -6,16 +6,9 @@ author: Coshin
 comments: true
 category: 译文集
 tags: Lyrics Conan
-excerpt:
-  潮風に君を感じて<br>
-  銀色の波に二人溶けてしまいそう<br>
-  このまま時間よ止まれと<br>
-  街が遠く小さく見えるよ<br>
-  もう離さない 君に決めたよ
 ---
 ![GZCA-7022](https://www.mai-kuraki.com/jacket/sg/GZCA-7022.jpg){:.border}
 
-歌手：倉木麻衣<br>
 作詞：倉木麻衣<br>
 作曲：春畑道哉<br>
 編曲：Cybersound

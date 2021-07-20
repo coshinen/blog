@@ -6,15 +6,9 @@ author: Coshin
 comments: true
 category: 译文集
 tags: Lyrics Conan
-excerpt:
-  明日になれば 涙が乾く<br>
-  心も色づいて来る<br>
-  笑顔が似合う あなたのために<br>
-  いつでもこのぼくがいる
 ---
 ![PODX-1031](https://www.generasia.com/w/images/6/6f/IORI_BGI_S.jpg){:.border}
 
-歌手：伊織、江戸川コナン<br>
 作詞：阿久悠<br>
 作曲：大野克夫<br>
 編曲：大野克夫

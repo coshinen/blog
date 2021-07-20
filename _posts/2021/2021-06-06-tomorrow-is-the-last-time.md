@@ -6,16 +6,9 @@ author: Coshin
 comments: true
 category: 译文集
 tags: Lyrics Conan
-excerpt:
-  昨日はあんなに泣いたりしたけど<br>
-  今ならわかるよ I listen to the song<br>
-  自分の思いを言葉にしようと<br>
-  あなたを見たら<br>
-  声にならない my heart
 ---
 ![VNCM-9012](https://www.mai-kuraki.com/jacket/al/VNCM-9012.jpg){:.border}
 
-歌手：倉木麻衣<br>
 作詞：倉木麻衣<br>
 作曲：大野愛果<br>
 編曲：葉山武

@@ -6,16 +6,9 @@ author: Coshin
 comments: true
 category: 译文集
 tags: Lyrics Garnet
-excerpt:
-  暮れゆく空おセンチな気分<br>
-  海辺のDrive<br>
-  まだみたことのない場所へ<br>
-  僕らを乗せて be high yeah<br>
-  密やかに辿る道
 ---
 ![GZCA-5198](https://ganekuro.github.io/images/discography/album/GZCA-5198.jpg){:.border}
 
-歌手：GARNET CROW<br>
 作詞：AZUKI 七<br>
 作曲：中村由利<br>
 編曲：古井弘人

@@ -6,15 +6,9 @@ author: Coshin
 comments: true
 category: 译文集
 tags: Lyrics Garnet
-excerpt:
-  街の音 人の声 ざわめき<br>
-  やけに今 躰が音をひらうよ<br>
-  君一人で世界が変わるなんて<br>
-  ah- なんて 単純な feel & brain
 ---
 ![GZCA-1061](https://ganekuro.github.io/images/discography/album/GZCA-1061.jpg){:.border}
 
-歌手：GARNET CROW<br>
 作詞：AZUKI 七<br>
 作曲：中村由利<br>
 編曲：古井弘人

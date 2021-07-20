@@ -6,15 +6,9 @@ author: Coshin
 comments: true
 category: 译文集
 tags: Lyrics Garnet
-excerpt:
-  優しく触れる君の手に戸惑った<br>
-  痛みが消えて置き去りの罪だけ<br>
-  私を責める 逃げること許さない<br>
-  今目の前の光(あい)を求めていいのかな
 ---
 ![GZCA-5013](https://ganekuro.github.io/images/discography/album/GZCA-5013.jpg){:.border}
 
-歌手：GARNET CROW<br>
 作詞：AZUKI 七<br>
 作曲：中村由利<br>
 編曲：古井弘人

@@ -6,13 +6,6 @@ author: Coshin
 comments: true
 category: 译文集
 tags: Poem
-excerpt:
-  In me, past, present, future meet<br>
-  To hold long chiding conference.<br>
-  My lusts usurp the present tense<br>
-  And strangle Reason in his seat.<br>
-  My loves leap through the future's fence<br>
-  To dance with dream-enfranchised feet.
 ---
 ![](https://www.brainyquote.com/photos_tr/en/s/siegfriedsassoon/333437/siegfriedsassoon1-2x.jpg){:.border}
 

@@ -6,15 +6,9 @@ author: Coshin
 comments: true
 category: 译文集
 tags: Lyrics Garnet
-excerpt:
-  水のない晴れた海へ<br>
-  たどり着いた white mermaid<br>
-  夢にまでみていた<br>
-  地上の天国は silence×3
 ---
 ![GZCA-1061](https://ganekuro.github.io/images/discography/album/GZCA-1061.jpg){:.border}
 
-歌手：GARNET CROW<br>
 作詞：AZUKI 七<br>
 作曲：中村由利<br>
 編曲：古井弘人

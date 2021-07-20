@@ -6,17 +6,9 @@ author: Coshin
 comments: true
 category: 译文集
 tags: Lyrics
-excerpt:
-  Tell me this is Not the End<br>
-  This world is chained<br>
-  音も立てずに<br>
-  わたしを奪って行くの<br>
-  世界が少しずつ 壊れても<br>
-  あの日の約束 変わらずここにあるよ<br>
 ---
 ![SECL-2585](https://is4-ssl.mzstatic.com/image/thumb/Music114/v4/6f/60/6a/6f606a89-4f04-1dbe-388f-c31891e97deb/source/600x600bb.jpg){:.border}
 
-歌手：安田レイ<br>
 作詞：安田レイ<br>
 作曲：永澤和真<br>
 編曲：玉井健二／横山裕章／永澤和真

@@ -6,15 +6,9 @@ author: Coshin
 comments: true
 category: 译文集
 tags: Lyrics
-excerpt:
-  この川の流れるが如く<br>
-  穏やかに音色が聞こえる<br>
-  吹く風が頬を撫でていく<br>
-  懐かしい思い出が滲む
 ---
 ![BUZZ](https://cdn.piapro.jp/thumb_i/53/537t75rgz7lnn9o0_20110620064505_0740_0500.jpg){:.border}
 
-歌手：初音ミク<br>
 作詞：青木月光<br>
 作曲：青木月光<br>
 編曲：青木月光

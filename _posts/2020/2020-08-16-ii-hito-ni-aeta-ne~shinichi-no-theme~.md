@@ -6,16 +6,9 @@ author: Coshin
 comments: true
 category: 译文集
 tags: Lyrics Conan
-excerpt:
-  バスケットシューズが飛切りお似合い<br>
-  いいひとに逢えたね 神様に感謝を<br>
-  またどこかですれ違うことがあるかも<br>
-  その日まで胸にしまって<br>
-  夢でときどき話してみる
 ---
 ![POCX-1081](https://www.generasia.com/w/images/5/58/IORI_BGI_A.jpg){:.border}
 
-歌手：伊織<br>
 作詞：阿久悠<br>
 作曲：大野克夫<br>
 編曲：大野克夫

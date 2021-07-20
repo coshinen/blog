@@ -6,15 +6,9 @@ author: Coshin
 comments: true
 category: 译文集
 tags: Lyrics Conan Garnet
-excerpt:
-  風の音だけが<br>
-  体中を包む<br>
-  サイレント・Kiss<br>
-  夢に似た気配
 ---
 ![GZCA-7156](https://ganekuro.github.io/images/discography/single/GZCA-7156.jpg){:.border}
 
-歌手：GARNET CROW<br>
 作詞：AZUKI 七<br>
 作曲：中村由利<br>
 編曲：古井弘人

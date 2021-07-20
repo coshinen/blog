@@ -6,14 +6,9 @@ author: Coshin
 comments: true
 category: 译文集
 tags: Lyrics Conan
-excerpt:
-  うつむくその背中に<br>
-  痛い雨がつき刺さる<br>
-  祈る想いで見ていた
 ---
 ![PODX-1023](https://www.generasia.com/w/images/5/5b/IORI_KGI.jpg){:.border}
 
-歌手：伊織<br>
 作詞：高柳恋<br>
 作曲：大野克夫<br>
 編曲：大野克夫

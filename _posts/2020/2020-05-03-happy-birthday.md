@@ -6,15 +6,9 @@ author: Coshin
 comments: true
 category: 译文集
 tags: Lyrics Conan
-excerpt:
-  うまく話ができなくて 本当はすまないと思ってる<br>
-  しばらく悩んでもみたけど そのうち疲れて眠ってる<br>
-  週末のこの街の空気は 人いきれでむせ返り<br>
-  深くため息をついたら 街頭スピーカーに消された
 ---
 ![PODH-1354](https://www.generasia.com/w/images/thumb/4/4f/HB-Kyoko-F.jpg/307px-HB-Kyoko-F.jpg){:.border}
 
-歌手：杏子<br>
 作詞：スガシカオ<br>
 作曲：スガシカオ
 

@@ -6,11 +6,9 @@ author: Coshin
 comments: true
 category: 译文集
 tags: Lyrics Conan
-excerpt: 引き金を引いた途端立ち現わる白く空虚な時よ
 ---
 ![UPCH-29360](https://is4-ssl.mzstatic.com/image/thumb/Music114/v4/8f/81/98/8f8198c6-6082-4671-46b8-c44befbdc857/source/600x600bb.jpg){:.border}
 
-歌手：東京事変<br>
 作詞：椎名林檎<br>
 作曲：椎名林檎
 

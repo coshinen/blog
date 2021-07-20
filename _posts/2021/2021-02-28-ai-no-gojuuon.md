@@ -6,15 +6,9 @@ author: Coshin
 comments: true
 category: 译文集
 tags: Lyrics
-excerpt:
-  あいうえお 歌い出す<br>
-  かきくけこ 叫ぶよ<br>
-  さしすせこ こんな言葉は<br>
-  たちつてと 分からないよ
 ---
 ![](http://i1.hdslb.com/bfs/archive/69c6cc8c916167626dddb147febe7c37f69b69ba.jpg){:.border}
 
-歌手：祈Inory<br>
 作詞：柒未来<br>
 作曲：柒未来<br>
 編曲：杨金城

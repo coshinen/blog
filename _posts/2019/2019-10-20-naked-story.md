@@ -6,15 +6,9 @@ author: Coshin
 comments: true
 category: 译文集
 tags: Lyrics Garnet
-excerpt:
-  Naked story yeah-<br>
-  無防備でも飛び出したい<br>
-  感じるまま stay yeah-<br>
-  We're born in this way.
 ---
 ![GZCA-5013](https://ganekuro.github.io/images/discography/album/GZCA-5013.jpg){:.border}
 
-歌手：GARNET CROW<br>
 作詞：AZUKI 七<br>
 作曲：中村由利<br>
 編曲：古井弘人

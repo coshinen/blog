@@ -6,17 +6,8 @@ author: Coshin
 comments: true
 category: 译文集
 tags: Lyrics Garnet
-excerpt:
-  Angels we have heard on high<br>
-  Sweetly singing o'er the plains,<br>
-  And the mountains in reply<br>
-  Echoing their joyous strains.<br>
-  Gloria, in excelsis Deo!<br>
-  Gloria, in excelsis Deo!
 ---
 ![GZBA-8020~1](https://ganekuro.github.io/images/discography/dvd/GZBA-8020~1.jpg){:.border}
-
-歌手：中村由利
 
 <blockquote class="original">
   <h2>Angels We Have Heard On High</h2>

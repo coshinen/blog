@@ -6,15 +6,9 @@ author: Coshin
 comments: true
 category: 译文集
 tags: Lyrics Garnet
-excerpt:
-  雨上がりは ふと 空見上げる<br>
-  何気ない仕草しみついた毎日<br>
-  なんで迷子みたいな気持ち<br>
-  君といても感じちゃうんだろう
 ---
 ![GZCA-1061](https://ganekuro.github.io/images/discography/album/GZCA-1061.jpg){:.border}
 
-歌手：GARNET CROW<br>
 作詞：AZUKI 七<br>
 作曲：中村由利<br>
 編曲：古井弘人

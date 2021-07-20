@@ -6,16 +6,9 @@ author: Coshin
 comments: true
 category: 译文集
 tags: Lyrics Garnet
-excerpt:
-  薄明かりを灯して<br>
-  冷たい壁に 頬寄せ<br>
-  静寂に 耳をすます<br>
-  ひっそりと ゆっくりと<br>
-  惹き返す
 ---
 ![GZCA-5038](https://ganekuro.github.io/images/discography/album/GZCA-5038.jpg){:.border}
 
-歌手：GARNET CROW<br>
 作詞：AZUKI 七<br>
 作曲：中村由利<br>
 編曲：古井弘人

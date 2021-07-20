@@ -6,20 +6,9 @@ author: Coshin
 comments: true
 category: 译文集
 tags: Lyrics Conan Garnet
-excerpt:
-  流星がこぼれた夏の空<br>
-  願いこめた<br>
-  いつもあの人の傍にいさせて<br>
-  朝になり街中人が溢れゆく度に<br>
-  大事な哀しみも見失いそう<br>
-  言葉にはならない気持ちを<br>
-  きっと誰もが隠してるね<br>
-  不器用なやさしさ気付けたら<br>
-  もっと二人は近づくかな
 ---
 ![GZCA-4096](https://ganekuro.github.io/images/discography/single/GZCA-4096.jpg){:.border}
 
-歌手：GARNET CROW<br>
 作詞：AZUKI 七<br>
 作曲：中村由利<br>
 編曲：古井弘人

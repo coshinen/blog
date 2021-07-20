@@ -12,8 +12,6 @@ excerpt:
 ---
 ![Melody of yu-yu -spring 2-](https://is3-ssl.mzstatic.com/image/thumb/Music/v4/6b/52/29/6b52292e-374f-ed46-5e55-b4ac180c735d/source/600x600bb.jpg){:.border}
 
-歌手：yu-yu
-
 <blockquote class="original">
   <h2>桜唄</h2>
   <p>

@@ -6,15 +6,9 @@ author: Coshin
 comments: true
 category: 译文集
 tags: Lyrics Conan
-excerpt:
-  寄り添う二人に 君がオーバーラップ<br>
-  色なき風に 思い馳せて<br>
-  触れた手の温もり 今も…<br>
-  Stop 時間を止めて
 ---
 ![VNCM-6040](https://is4-ssl.mzstatic.com/image/thumb/Music122/v4/49/dc/c3/49dcc39d-d34f-1d37-0d5d-4835bb8664ff/source/600x600bb.jpg){:.border}
 
-歌手：倉木麻衣<br>
 作詞：倉木麻衣<br>
 作曲：徳永暁人<br>
 編曲：徳永暁人

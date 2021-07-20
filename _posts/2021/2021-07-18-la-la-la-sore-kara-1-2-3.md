@@ -6,14 +6,12 @@ author: Coshin
 comments: true
 category: 译文集
 tags: Lyrics Garnet
-excerpt_separator: <!--more-->
 ---
 ![GZCA-7156](https://ganekuro.github.io/images/discography/single/GZCA-7156.jpg){:.border}
 
-歌手：GARNET CROW<br>
 作詞：AZUKI 七<br>
 作曲：中村由利<br>
-編曲：古井弘人<!--more-->
+編曲：古井弘人
 
 <blockquote class="original">
   <h2>la-la-la それから 1・2・3</h2>

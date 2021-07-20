@@ -6,15 +6,9 @@ author: Coshin
 comments: true
 category: 译文集
 tags: Lyrics Conan
-excerpt:
-  いいことばかりの 未来じゃないけれど<br>
-  確かに今は 明日に向かい<br>
-  誰よりも輝き ここに立っている<br>
-  壊れかけそうな現実(いま)に涙し それでも
 ---
 ![GZCA-1063](https://www.mai-kuraki.com/jacket/sg/GZCA-1063.jpg){:.border}
 
-歌手：倉木麻衣<br>
 作詞：倉木麻衣<br>
 作曲：大野愛果<br>
 編曲：Cybersound

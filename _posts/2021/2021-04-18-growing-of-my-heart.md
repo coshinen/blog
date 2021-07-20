@@ -6,15 +6,9 @@ author: Coshin
 comments: true
 category: 译文集
 tags: Lyrics Conan
-excerpt:
-  未来へ荷造り済ませてbaby 明日(あす)の物語へ歩き出す<br>
-  見下ろす大地の向こう側まで 終わらない夢を敷き詰めてく<br>
-  空を流れてる雲と一緒に そう夕陽に抱かれ君を思う<br>
-  今 Get up Get up Get up Get up Baby
 ---
 ![GZCA-4054](https://www.mai-kuraki.com/jacket/sg/GZCA-4054.jpg){:.border}
 
-歌手：倉木麻衣<br>
 作詞：倉木麻衣<br>
 作曲：大野愛果<br>
 編曲：葉山武

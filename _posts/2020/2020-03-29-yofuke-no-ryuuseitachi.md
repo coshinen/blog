@@ -6,13 +6,9 @@ author: Coshin
 comments: true
 category: 译文集
 tags: Lyrics Garnet
-excerpt:
-  夜深けの流星達 眺めていたよね<br>
-  言葉にならない 感覚(きもち)を共有してた
 ---
 ![GZCA-7054](https://ganekuro.github.io/images/discography/single/GZCA-7054.jpg){:.border}
 
-歌手：GARNET CROW<br>
 作詞：AZUKI 七<br>
 作曲：中村由利<br>
 編曲：古井弘人

@@ -6,13 +6,9 @@ author: Coshin
 comments: true
 category: 译文集
 tags: Lyrics Conan
-excerpt:
-  百年ぶりの世紀末 泣けといわれて僕は笑った<br>
-  ひさかたぶりの世紀末 広い世界へとび出してゆく
 ---
 ![KTDR-2150](https://www.generasia.com/w/images/5/5c/KTDR-2150.jpg){:.border}
 
-歌手：ザ・ハイロウズ<br>
 作詞：甲本ヒロト・真島昌利<br>
 作曲：甲本ヒロト・真島昌利<br>
 編曲：ザ・ハイロウズ

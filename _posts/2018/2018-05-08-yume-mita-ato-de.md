@@ -6,15 +6,9 @@ author: Coshin
 comments: true
 category: 译文集
 tags: Lyrics Conan Garnet
-excerpt:
-  朝が来るたび君のことを想う<br>
-  一日の始まりさえも切なくて<br>
-  二度と戻れない？無邪気な二人<br>
-  ただ傍にいれば幸せだった
 ---
 ![GZCA-2031](https://ganekuro.github.io/images/discography/single/GZCA-2031.jpg){:.border}
 
-歌手：GARNET CROW<br>
 作詞：AZUKI 七<br>
 作曲：中村由利<br>
 編曲：古井弘人

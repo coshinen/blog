@@ -6,38 +6,17 @@ author: Coshin
 comments: true
 category: 力扣题解
 tags: LeetCode Easy Linked-List
-excerpt:
-  给定一个升序排列的单链表头 `head`，*删除所有含重复元素，使每个元素只出现一次*。
-  返回*同样**按升序排列的**单链表*。
 ---
-> ## 83. Remove Duplicates from Sorted List
-> 
-> Given the `head` of a sorted linked list, *delete all duplicates such that
-> each element appears only once*. Return *the linked list **sorted** as well*.
-> 
-> **Example 1:**
-> 
-> <img alt="" src="https://assets.leetcode.com/uploads/2021/01/04/list1.jpg" style="width: 302px; height: 242px;">
-> 
-> <pre>
-> <strong>Input:</strong> head = [1,1,2]
-> <strong>Output:</strong> [1,2]
-> </pre>
-> 
-> **Example 2:**
+> 给定一个升序排列的单链表 `head`，*删除所有重复元素，使每个元素只出现一次*。
+> 返回*同样**按升序排列的**单链表*。
 > 
 > <img alt="" src="https://assets.leetcode.com/uploads/2021/01/04/list2.jpg" style="width: 542px; height: 222px;">
 > 
-> <pre>
-> <strong>Input:</strong> head = [1,1,1,2,3]
-> <strong>Output:</strong> [1,2,3]
-> </pre>
+> **限制条件：**
 > 
-> **Constraints:**
-> 
-> * The number of nodes in the list is in the range `[0, 300]`.
+> * 链表中节点数在范围 `[0, 300]` 里。
 > * `-100 <= Node.val <= 100`
-> * The list is guaranteed to be **sorted** in ascending order.
+> * 已确保链表按升序*排列*。
 
 ## 解决方案
 

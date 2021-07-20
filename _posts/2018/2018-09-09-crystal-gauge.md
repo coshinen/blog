@@ -6,17 +6,9 @@ author: Coshin
 comments: true
 category: 译文集
 tags: Lyrics Garnet
-excerpt:
-  La La tu lu Rah Ta<br>
-  緑の木漏れ日<br>
-  目を閉じたら<br>
-  スベテの繋がりを感じられる？<br>
-  まるで遺伝子の様な cosmic world<br>
-  tu ta la ta...wave
 ---
 ![GZCA-7006](https://ganekuro.github.io/images/discography/single/GZCA-7006.jpg){:.border}
 
-歌手：GARNET CROW<br>
 作詞：AZUKI 七<br>
 作曲：中村由利<br>
 編曲：古井弘人

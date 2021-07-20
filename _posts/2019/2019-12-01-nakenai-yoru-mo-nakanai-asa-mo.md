@@ -6,13 +6,9 @@ author: Coshin
 comments: true
 category: 译文集
 tags: Lyrics Garnet
-excerpt:
-  無防備に求めることに線を引いた 愛しさだけなら<br>
-  交叉しない価値観すれ違う
 ---
 ![GZCA-7031](https://ganekuro.github.io/images/discography/single/GZCA-7031.jpg){:.border}
 
-歌手：GARNET CROW<br>
 作詞：AZUKI 七<br>
 作曲：中村由利<br>
 編曲：古井弘人

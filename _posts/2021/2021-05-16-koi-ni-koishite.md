@@ -6,13 +6,9 @@ author: Coshin
 comments: true
 category: 译文集
 tags: Lyrics Conan
-excerpt:
-  キミとの恋に恋をしてるだけで 伝えたくてもまだ<br>
-  秘密にしてるほうが幸せだから 今は私だけの secret love
 ---
 ![VNCM-6028](https://www.mai-kuraki.com/jacket/sg/VNCM-6028.jpg){:.border}
 
-歌手：倉木麻衣<br>
 作詞：Mai Kuraki・GIORGIO 13<br>
 作曲：GIORGIO CANCEMI<br>
 編曲：Cybersound

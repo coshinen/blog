@@ -6,58 +6,17 @@ author: Coshin
 comments: true
 category: 力扣题解
 tags: LeetCode Hard Array Dynamic-Programming Stack Matrix Monotonic-Stack
-excerpt:
-  给定一个只含 `0` 和 `1` 的 `rows x cols` 二进制矩阵 `matrix`，找到只包含 `1` 的最大的矩形并返回*其面积*。
 ---
-> ## 85. Maximal Rectangle
-> 
-> Given a `rows x cols` binary `matrix` filled with `0`'s and `1`'s, find the
-> largest rectangle containing only `1`'s and return *its area*.
-> 
-> **Example 1:**
+> 给定一个只含 `0` 和 `1` 的 `rows x cols` 二进制 `matrix`，找到只包含 `1` 的最大的矩形并返回*其面积*。
 > 
 > <img alt="" src="https://assets.leetcode.com/uploads/2020/09/14/maximal.jpg" style="width: 402px; height: 322px;">
 > 
-> <pre>
-> <strong>Input:</strong> matrix = [["1","0","1","0","0"],["1","0","1","1","1"],["1","1","1","1","1"],["1","0","0","1","0"]]
-> <strong>Output:</strong> 6
-> <strong>Explanation:</strong> The maximal rectangle is shown in the above picture.
-> </pre>
-> 
-> **Example 2:**
-> 
-> <pre>
-> <strong>Input:</strong> matrix = []
-> <strong>Output:</strong> 0
-> </pre>
-> 
-> **Example 3:**
-> 
-> <pre>
-> <strong>Input:</strong> matrix = [["0"]]
-> <strong>Output:</strong> 0
-> </pre>
-> 
-> **Example 4:**
-> 
-> <pre>
-> <strong>Input:</strong> matrix = [["1"]]
-> <strong>Output:</strong> 1
-> </pre>
-> 
-> **Example 5:**
-> 
-> <pre>
-> <strong>Input:</strong> matrix = [["0","0"]]
-> <strong>Output:</strong> 0
-> </pre>
-> 
-> **Constraints:**
+> **限制条件：**
 > 
 > * `rows == matrix.length`
 > * `cols == matrix[i].length`
 > * `0 <= row, cols <= 200`
-> * `matrix[i][j]` is `'0'` or `'1'`.
+> * `matrix[i][j]` 非 `'0'` 即 `'1'`.
 
 ## 解决方案
 

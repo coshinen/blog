@@ -6,13 +6,9 @@ author: Coshin
 comments: true
 category: 译文集
 tags: Lyrics Garnet
-excerpt:
-  冷えた 空から 溶け込む 淡い雪<br>
-  すべては この大地の中 すい込まれ ゆくのですね
 ---
 ![GZCA-5052](https://ganekuro.github.io/images/discography/album/GZCA-5052.jpg){:.border}
 
-歌手：GARNET CROW<br>
 作詞：AZUKI 七<br>
 作曲：中村由利<br>
 編曲：古井弘人

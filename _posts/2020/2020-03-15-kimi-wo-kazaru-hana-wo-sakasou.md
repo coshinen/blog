@@ -6,16 +6,9 @@ author: Coshin
 comments: true
 category: 译文集
 tags: Lyrics Garnet
-excerpt:
-  君を飾る花を咲かそう<br>
-  心をこめて育ててゆくよ<br>
-  数え切れない やさしい想い出を<br>
-  包み込むほどの甘い香りに<br>
-  見送られてゆけるように
 ---
 ![GZCA-7054](https://ganekuro.github.io/images/discography/single/GZCA-7054.jpg){:.border}
 
-歌手：GARNET CROW<br>
 作詞：AZUKI 七<br>
 作曲：中村由利<br>
 編曲：古井弘人

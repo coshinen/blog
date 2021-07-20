@@ -6,15 +6,9 @@ author: Coshin
 comments: true
 category: 译文集
 tags: Lyrics Garnet
-excerpt:
-  決してその手を離さずに<br>
-  振り返らないでいて<br>
-  願うだけしか出来ない私を<br>
-  いつの日か裁くでしょう
 ---
 ![GZCA-1032](https://ganekuro.github.io/images/discography/single/GZCA-1032.jpg){:.border}
 
-歌手：GARNET CROW<br>
 作詞：AZUKI 七<br>
 作曲：中村由利<br>
 編曲：古井弘人

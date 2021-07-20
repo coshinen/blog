@@ -6,17 +6,9 @@ author: Coshin
 comments: true
 category: 译文集
 tags: Lyrics Garnet
-excerpt:
-  It's the little old lady from Pasadena<br>
-  (Go granny, go granny, go granny, go!)<br>
-  Has a pretty little flower bed of white gardenias<br>
-  (Go granny, go granny, go granny, go!)<br>
-  But parked in a rickety old garage<br>
-  Is a brand new shiny red super stocked Dodge
 ---
 ![GZCA-5017](https://ganekuro.github.io/images/discography/other/GZCA-5017.jpg){:.border}
 
-歌手：中村由利<br>
 作詞：Roger Christian, Don Altfeld & Jan Berry<br>
 作曲：Roger Christian, Don Altfeld & Jan Berry
 

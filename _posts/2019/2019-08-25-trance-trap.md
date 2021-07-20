@@ -6,18 +6,9 @@ author: Coshin
 comments: true
 category: 译文集
 tags: Lyrics Garnet
-excerpt:
-  君の手の内で トランス<br>
-  偶然に見せかけられた トラップ<br>
-  変に格好つけた関係なんて要らない<br>
-  ただ触れて欲しいの<br>
-  傷は癒えて強くなってゆく<br>
-  立ち止まるくらいなら<br>
-  深く堕ちてく方がイイ
 ---
 ![GZCA-2005](https://ganekuro.github.io/images/discography/single/GZCA-2005.jpg){:.border}
 
-歌手：GARNET CROW<br>
 作詞：AZUKI 七<br>
 作曲：中村由利<br>
 編曲：古井弘人

@@ -6,14 +6,9 @@ author: Coshin
 comments: true
 category: 译文集
 tags: Lyrics
-excerpt:
-  (ポケモン ゲットだぜーッ！)<br>
-  たとえ 火の中 水の中 草の中 森の中<br>
-  土の中 雲の中 あのコのスカートの中 (キャ～)
 ---
 ![TGDS-98](https://www.generasia.com/w/images/a/a5/Matsumoto_Rica_-_Mezame_Pocket_Master.jpg){:.border}
 
-歌手：松本梨香<br>
 作詞：戸田昭吾<br>
 作曲：たなかひろかず<br>
 編曲：渡部チェル

@@ -6,15 +6,9 @@ author: Coshin
 comments: true
 category: 译文集
 tags: Lyrics Garnet
-excerpt:
-  十二月にしては暖かいこんな夜は<br>
-  思いつきで出かけた<br>
-  車の中でずっと手をつないで眠った<br>
-  朝日が二人を起こすまで
 ---
 ![GZCA-1029](https://ganekuro.github.io/images/discography/single/GZCA-1029.jpg){:.border}
 
-歌手：GARNET CROW<br>
 作詞：AZUKI 七<br>
 作曲：中村由利<br>
 編曲：古井弘人

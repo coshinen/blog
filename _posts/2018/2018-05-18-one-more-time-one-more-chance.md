@@ -6,15 +6,9 @@ author: Coshin
 comments: true
 category: 译文集
 tags: Lyrics
-excerpt:
-  これ以上何を失えば 心は許されるの<br>
-  どれ程の痛みならば もういちど君に会える<br>
-  One more time 季節よ うつろわないで<br>
-  One more time ふざけあった 時間よ
 ---
 ![UPCH-80013](https://is1-ssl.mzstatic.com/image/thumb/Music128/v4/99/fd/91/99fd91c1-2ccc-636f-029c-2078b3f41037/source/600x600bb.jpg){:.border}
 
-歌手：山崎まさよし<br>
 作詞：山崎将義<br>
 作曲：山崎将義<br>
 編曲：森俊之

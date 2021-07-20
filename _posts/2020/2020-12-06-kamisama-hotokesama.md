@@ -6,15 +6,9 @@ author: Coshin
 comments: true
 category: 译文集
 tags: Lyrics
-excerpt:
-  充たしたいのよ五臓六腑まで沁みわたってよ<br>
-  留度ないのう酔へる物なら皆呑ませておくれ もの足りないのう<br>
-  眠りたいのよ生きてゐることも忘れたいのよ<br>
-  忙しないのう狸寝入りを照らさないでおくれ…うらめしや
 ---
 ![UPCH-89233](https://is1-ssl.mzstatic.com/image/thumb/Music128/v4/73/20/3b/73203bd6-682c-04ff-832a-b57ca674ca0d/source/600x600bb.jpg){:.border}
 
-歌手：椎名林檎<br>
 作詞：椎名林檎・向井秀徳<br>
 作曲：椎名林檎<br>
 編曲：椎名林檎

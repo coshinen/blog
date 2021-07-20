@@ -6,15 +6,9 @@ author: Coshin
 comments: true
 category: 译文集
 tags: Lyrics Garnet
-excerpt:
-  じゃれ合う日曜の午後<br>
-  (oh- yeah Why do I love you ~)<br>
-  まだ眠い？ 話しかける<br>
-  (Let's step on out today)
 ---
 ![GZCA-2031](https://ganekuro.github.io/images/discography/single/GZCA-2031.jpg){:.border}
 
-歌手：GARNET CROW<br>
 作詞：AZUKI 七<br>
 作曲：中村由利<br>
 編曲：古井弘人

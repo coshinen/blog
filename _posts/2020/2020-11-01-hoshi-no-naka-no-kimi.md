@@ -6,13 +6,9 @@ author: Coshin
 comments: true
 category: 译文集
 tags: Lyrics
-excerpt:
-  君のすべては 君の心に<br>
-  今は しまってあるから
 ---
 ![AICL-3121](https://is5-ssl.mzstatic.com/image/thumb/Music128/v4/52/36/08/52360891-7d38-b6be-b7b7-aec2af215a65/source/600x600bb.jpg){:.border}
 
-歌手：Uru<br>
 作詞：Hidenori, Uru<br>
 作曲：Hidenori, トオミ ヨウ<br>
 編曲：Hidenori, トオミ ヨウ

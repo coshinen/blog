@@ -6,13 +6,9 @@ author: Coshin
 comments: true
 category: 译文集
 tags: Lyrics Conan Garnet
-excerpt:
-  波の上漂う海月をみるのが好きで<br>
-  いつまでもどこか遠い世界想い馳せるよう
 ---
 ![GZCA-7031](https://ganekuro.github.io/images/discography/single/GZCA-7031.jpg){:.border}
 
-歌手：GARNET CROW<br>
 作詞：AZUKI 七<br>
 作曲：中村由利<br>
 編曲：古井弘人

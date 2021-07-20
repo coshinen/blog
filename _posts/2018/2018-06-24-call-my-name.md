@@ -6,16 +6,9 @@ author: Coshin
 comments: true
 category: 译文集
 tags: Lyrics Garnet
-excerpt:
-  白い壁と Rembrandt<br>
-  いつまでも眺めていた<br>
-  日曜の朝君とただ並んでた<br>
-  開いた窓から差し込む光がほらそこに<br>
-  ふと思い出したように call my name
 ---
 ![GZCA-2005](https://ganekuro.github.io/images/discography/single/GZCA-2005.jpg){:.border}
 
-歌手：GARNET CROW<br>
 作詞：AZUKI 七<br>
 作曲：中村由利<br>
 編曲：古井弘人

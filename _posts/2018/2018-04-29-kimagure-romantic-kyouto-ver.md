@@ -6,17 +6,10 @@ author: Coshin
 comments: true
 category: 译文集
 tags: Lyrics
-excerpt:
-  おいでやす うちの故郷は お寺や 神社だけじゃない<br>
-  嘘みたい カラフル八ツ橋<br>
-  町家でイタリアン 京ばあむが今人気<br>
-  「おめん」のうどんはきんぴらで 京ゆば元は精進料理<br>
-  宇治のお茶屋通圓(つうえん)は 創業850年 広辞苑に出てる
 ---
 ![G4ngewwE50w](https://i.ytimg.com/vi/G4ngewwE50w/maxresdefault.jpg){:.border}
 ![ESCL-3139](https://is3-ssl.mzstatic.com/image/thumb/Music124/v4/d4/36/f5/d436f5e9-07c7-a6ee-bb8e-71bb696d3dd7/source/600x600bb.jpg){:.border}
 
-歌手：横山由依<br>
 作曲：水野良樹<br>
 編曲：江口亮<br>
 弦編曲：クラッシャー木村

@@ -6,15 +6,9 @@ author: Coshin
 comments: true
 category: 译文集
 tags: Lyrics
-excerpt:
-  Take me to your best friend's house<br>
-  Going around this roundabout, oh, yeah<br>
-  Take me to your best friend's house<br>
-  I loved you then and I love you now, oh, yeah
 ---
 ![NEVER TRUST A HAPPY SONG](https://is3-ssl.mzstatic.com/image/thumb/Music/v4/a3/9e/bf/a39ebf90-5cd2-659b-b273-c318e6f14790/source/600x600bb.jpg){:.border}
 
-Singer: Grouplove<br>
 Songwriter: Grouplove
 
 <blockquote class="original">
