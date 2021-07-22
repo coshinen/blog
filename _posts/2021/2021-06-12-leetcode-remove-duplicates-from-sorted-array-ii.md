@@ -6,60 +6,16 @@ author: Coshin
 comments: true
 category: 力扣题解
 tags: LeetCode Medium Array Two-Pointers
-excerpt:
-  给定一个有序数组 *nums*，[原地](http://baike.baidu.com/item/原地算法){:target="_blank"}删除重复项使每项最多出现两次并返回新长度。<br>
-  不要开辟额外的数组空间；你必须[原地](http://baike.baidu.com/item/原地算法){:target="_blank"}**修改输入数组**并使用 O(1) 的额外空间。
 ---
-> ## 80. Remove Duplicates from Sorted Array II
+> 给定一个有序数组 *nums*，[原地](http://baike.baidu.com/item/原地算法){:target="_blank"}删除重复项使每项最多出现两次并返回新长度。
 > 
-> Given a sorted array *nums*, remove the duplicates [in-place](https://en.wikipedia.org/wiki/In-place_algorithm){:target="_blank"}
-> such that duplicates appeared at most twice and return the new length.
+> 不要开辟额外的数组空间；你必须[原地](http://baike.baidu.com/item/原地算法){:target="_blank"}**修改输入数组**并使用 O(1) 的额外空间。
 > 
-> Do not allocate extra space for another array; you must do this by **modifying
-> the input array** [in-place](https://en.wikipedia.org/wiki/In-place_algorithm){:target="_blank"}
-> with O(1) extra memory.
-> 
-> **Clarification:**
-> 
-> Confused why the returned value is an integer, but your answer is an array?
-> 
-> Note that the input array is passed in by **reference**, which means a
-> modification to the input array will be known to the caller.
-> 
-> Internally you can think of this:
-> 
-> <pre>
-> // <strong>nums</strong> is passed in by reference. (i.e., without making a copy)
-> int len = removeDuplicates(nums);
-> 
-> // any modification to <strong>nums</strong> in your function would be known by the caller.
-> // using the length returned by your function, it prints the first <strong>len</strong> elements.
-> for (int i = 0; i < len; i++) {
->     print(nums[i]);
-> }
-> </pre>
-> 
-> **Example 1:**
-> 
-> <pre>
-> <strong>Input:</strong> nums = [1,1,1,2,2,3]
-> <strong>Output:</strong> 5, nums = [1,1,2,2,3]
-> <strong>Explanation:</strong> Your function should return length = <strong>5</strong>, with the first five elements of nums being <strong>1, 1, 2, 2</strong> and <strong>3</strong> respectively. It doesn't matter what you leave beyond the returned length.
-> </pre>
-> 
-> **Example 2:**
-> 
-> <pre>
-> <strong>Input:</strong> nums = [0,0,1,1,1,1,2,3,3]
-> <strong>Output:</strong> 7, nums = [0,0,1,1,2,3,3]
-> <strong>Explanation:</strong> Your function should return length = <strong>7</strong>, with the first seven elements of nums being modified to <strong>0, 0, 1, 1, 2, 3</strong> and <strong>3</strong> respectively. It doesn't matter what values are set beyond the returned length.
-> </pre>
-> 
-> **Constraints:**
+> **限制条件：**
 > 
 > * <code>1 <= nums.length <= 3 * 10<sup>4</sup></code>
 > * <code>-10<sup>4</sup> <= nums[i] <= 10<sup>4</sup></code>
-> * `nums` is sorted in ascending order.
+> * `nums` 是按升序排列的。
 
 ## 解决方案
 

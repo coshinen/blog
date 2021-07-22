@@ -6,37 +6,8 @@ author: Coshin
 comments: true
 category: 力扣题解
 tags: LeetCode Medium Hash-Table Two-Pointers String Sliding-Window
-excerpt: 给定一个字符串，找出没有重复字符的**最长子串**的长度。
 ---
-> ## 3. Longest Substring Without Repeating Characters
-> 
-> Given a string, find the length of the **longest substring** without repeating
-> characters.
-> 
-> **Example 1:**
-> 
-> <pre>
-> <strong>Input:</strong> "abcabcbb"
-> <strong>Output:</strong> 3
-> <strong>Explanation:</strong> The answer is "abc", with the length of 3.
-> </pre>
-> 
-> **Example 2:**
-> 
-> <pre>
-> <strong>Input:</strong> "bbbbb"
-> <strong>Output:</strong> 1
-> <strong>Explanation:</strong> The answer is "b", with the length of 1.
-> </pre>
-> 
-> **Example 3:**
-> 
-> <pre>
-> <strong>Input:</strong> "pwwkew"
-> <strong>Output:</strong> 3
-> <strong>Explanation:</strong> The answer is "wke", with the length of 3.
->              Note that the answer must be a <strong>substring</strong>, "pwke" is a subsequence and not a substring.
-> </pre>
+> 给定一个字符串，找出没有重复字符的**最长子串**的长度。
 
 ## 解决方案
 

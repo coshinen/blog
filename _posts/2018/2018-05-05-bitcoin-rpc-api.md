@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "比特币 RPC 命令合集"
+title:  "比特币 RPC 命令集"
 date:   2018-05-05 14:02:51 +0800
 author: Coshin
 comments: true

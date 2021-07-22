@@ -6,8 +6,9 @@ author: Coshin
 comments: true
 category: 区块链
 tags: Bitcoin Altcoin
-excerpt: 基于比特币制作一枚山寨币。
 ---
+基于比特币制作一枚山寨币。
+
 ## 0. 源码准备
 
 这里使用比特币 v0.12.1 的源码，这是官方内置 CPU 挖矿的最后一版。

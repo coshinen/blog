@@ -6,39 +6,17 @@ author: Coshin
 comments: true
 category: 力扣题解
 tags: LeetCode Medium Linked-List Two-Pointers
-excerpt:
-  给定一个升序排列的单链表头 `head`，*删除所有含重复数字的节点，原链表中只保留没有重复的数字*。
-  返回*同样**按升序排列的**单链表*。
 ---
-> ## 82. Remove Duplicates from Sorted List II
-> 
-> Given the `head` of a sorted linked list, *delete all nodes that have
-> duplicate numbers, leaving only distinct numbers from the original list*.
-> Return *the linked list **sorted** as well*.
-> 
-> **Example 1:**
+> 给定一个升序排列的单链表 `head`，*删除所有含重复数字的节点，原链表中只保留没有重复的数字*。
+> 返回*同样**按升序排列的**单链表*。
 > 
 > <img alt="" src="https://assets.leetcode.com/uploads/2021/01/04/linkedlist1.jpg" style="width: 500px; height: 142px;">
 > 
-> <pre>
-> <strong>Input:</strong> head = [1,2,3,3,4,4,5]
-> <strong>Output:</strong> [1,2,5]
-> </pre>
+> **限制条件：**
 > 
-> **Example 2:**
-> 
-> <img alt="" src="https://assets.leetcode.com/uploads/2021/01/04/linkedlist2.jpg" style="width: 500px; height: 205px;">
-> 
-> <pre>
-> <strong>Input:</strong> head = [1,1,1,2,3]
-> <strong>Output:</strong> [2,3]
-> </pre>
-> 
-> **Constraints:**
-> 
-> * The number of nodes in the list is in the range `[0, 300]`.
+> * 链表中节点数在范围 `[0, 300]` 里。
 > * `-100 <= Node.val <= 100`
-> * The list is guaranteed to be **sorted** in ascending order.
+> * 已确保链表按升序*排列*。
 
 ## 解决方案
 

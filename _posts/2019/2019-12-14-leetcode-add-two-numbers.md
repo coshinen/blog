@@ -6,28 +6,14 @@ author: Coshin
 comments: true
 category: 力扣题解
 tags: LeetCode Medium Linked-List Math
-excerpt:
-  给定两条**非空**链表用于表示两个非负整数。
-  数字以**倒序**的方式存储在链表中，每个节点保存**一位**数字。
-  把两数之和保存在一条链表中并返回。<br>
-  你可以假设除了数字 0，这两个数都不会以 0 开头。
 ---
-> ## 2. Add Two Numbers
+> 给定两条**非空**链表用于表示两个非负整数。
+> 数字以**倒序**的方式存储在链表中，并且每个节点保存一位数字。
+> 把两数之和保存在一条链表中并返回。
 > 
-> You are given two **non-empty** linked lists representing two non-negative
-> integers. The digits are stored in **reverse order** and each of their nodes
-> contain a single digit. Add the two numbers and return it as a linked list.
+> 你可以假设除了数字 0，这两个数都不会以 0 开头。
 > 
-> You may assume the two numbers do not contain any leading zero, except the
-> number 0 itself.
-> 
-> **Example:**
-> 
-> <pre>
-> <strong>Input:</strong> (2 -> 4 -> 3) + (5 -> 6 -> 4)
-> <strong>Output:</strong> 7 -> 0 -> 8
-> <strong>Explanation:</strong> 342 + 465 = 807.
-> </pre>
+> <img alt="" src="https://assets.leetcode.com/uploads/2020/10/02/addtwonumber1.jpg" style="width: 483px; height: 342px;">
 
 ## 解决方案
 

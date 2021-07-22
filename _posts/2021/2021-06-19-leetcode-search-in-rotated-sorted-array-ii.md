@@ -6,52 +6,26 @@ author: Coshin
 comments: true
 category: 力扣题解
 tags: LeetCode Medium Array Binary-Search
-excerpt:
-  这里是一个按非降序排列的整形数组 `nums`（不一定是**互不相同的**值）。<br>
-  在传递函数之前，`nums` 在未知的下标 `k` (`0 <= k < nums.length`) 上**进行了旋转**，使数组变为 `[nums[k], nums[k+1], ..., nums[n-1], nums[0], nums[1], ..., nums[k-1]]`（**下标从 0 开始**）。
-  例如，`[0,1,2,4,4,4,5,6,6,7]` 在下标 `5` 旋转后可能变为 `[4,5,6,6,7,0,1,2,4,4]`。<br>
-  给定的旋转**后**的数组 `nums` 和一个整数 `target`，如果 `nums` 中存在目标值 `target`，则返回 `true`，否则返回 `false`。
 ---
-> ## 81. Search in Rotated Sorted Array II
+> 这里是一个按非降序排列的整形数组 `nums`（不一定是**互不相同的**值）。
 > 
-> There is an integer array `nums` sorted in non-decreasing order (not
-> necessarily with **distinct** values).
+> 在传递函数之前，`nums` 在未知的下标 `k` (`0 <= k < nums.length`) 上**进行了旋转**，使数组变为 `[nums[k], nums[k+1], ..., nums[n-1], nums[0], nums[1], ..., nums[k-1]]`（**下标从 0 开始**）。
+> 例如，`[0,1,2,4,4,4,5,6,6,7]` 在下标 `5` 旋转后可能变为 `[4,5,6,6,7,0,1,2,4,4]`。
 > 
-> Before being passed to your function, `nums` is **rotated** at an unknown
-> pivot index `k` (`0 <= k < nums.length`) such that the resulting array is
-> `[nums[k], nums[k+1], ..., nums[n-1], nums[0], nums[1], ..., nums[k-1]]`
-> (**0-indexed**). For example, `[0,1,2,4,4,4,5,6,6,7]` might be rotated at
-> pivot index `5` and become `[4,5,6,6,7,0,1,2,4,4]`.
+> 给定的旋转**后**的数组 `nums` 和一个整数 `target`，如果 `nums` 中存在 `target`，则返回 `true`，否则返回 `false`。
 > 
-> Given the array `nums` **after** the rotation and an integer `target`, return
-> *`true` if `target` is in `nums`, or `false` if it is not in `nums`*.
+> 你必须尽可能减少整个操作步骤。
 > 
-> You must decrease the overall operation steps as much as possible.
-> 
-> **Example 1:**
-> 
-> <pre>
-> <strong>Input:</strong> nums = [2,5,6,0,0,1,2], target = 0
-> <strong>Output:</strong> true
-> </pre>
-> 
-> **Example 2:**
-> 
-> <pre>
-> <strong>Input:</strong> nums = [2,5,6,0,0,1,2], target = 3
-> <strong>Output:</strong> false
-> </pre>
-> 
-> **Constraints:**
+> **限制条件：**
 > 
 > * `1 <= nums.length <= 5000`
 > * <code>-10<sup>4</sup> <= nums[i] <= 10<sup>4</sup></code>
-> * `nums` is guaranteed to be rotated at some pivot.
+> * 已确保 `nums` 在某个下标上进行了旋转。
 > * <code>-10<sup>4</sup> <= target <= 10<sup>4</sup></code>
 > 
-> **Follow up:**
-> This problem is similar to Search in Rotated Sorted Array, but `nums` may
-> contain **duplicates**. Would this affect the runtime complexity? How and why?
+> **进阶：**
+> 这个问题类似于搜索已旋转的有序数组，但 `nums` 可能包含**重复项**。
+> 这会影响运行时复杂度吗？如何以及为何？
 
 ## 解决方案
 

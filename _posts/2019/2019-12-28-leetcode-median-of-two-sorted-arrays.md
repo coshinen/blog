@@ -6,39 +6,19 @@ author: Coshin
 comments: true
 category: 力扣题解
 tags: LeetCode Hard Array Binary-Search Divide-and-Conquer
-excerpt:
-  这里是两个大小分别为 m 和 n 的有序数组 **nums1** 和 **nums2**。<br>
-  找出两个有序数组的中位数。
-  整个运行时间复杂度应该为 O(log (m+n))。<br>
-  你可以假设 **nums1** 和 **nums2** 不都是空。
 ---
-> ## 4. Median of Two Sorted Arrays
+> 给定两个大小分别为 `m` 和 `n` 的有序数组 `nums1` 和 `nums2`，返回这两个有序数组的**中位数**。
 > 
-> There are two sorted arrays **nums1** and **nums2** of size m and n
-> respectively.
+> 整个运行时间复杂度应该为 `O(log (m+n))`。
 > 
-> Find the median of the two sorted arrays. The overall run time complexity
-> should be O(log (m+n)).
+> **限制条件：**
 > 
-> You may assume **nums1** and **nums2** cannot be both empty.
-> 
-> **Example 1:**
-> 
-> <pre>
-> nums1 = [1, 3]
-> nums2 = [2]
-> 
-> The median is 2.0
-> </pre>
-> 
-> **Example 2:**
-> 
-> <pre>
-> nums1 = [1, 2]
-> nums2 = [3, 4]
-> 
-> The median is (2 + 3)/2 = 2.5
-> </pre>
+> * `nums1.length == m`
+> * `nums2.length == n`
+> * `0 <= m <= 1000`
+> * `0 <= n <= 1000`
+> * `1 <= m + n <= 2000`
+> * <code>-10<sup>6</sup> <= nums1[i], nums2[i] <= 10<sup>6</sup></code>
 
 ## 解决方案
 

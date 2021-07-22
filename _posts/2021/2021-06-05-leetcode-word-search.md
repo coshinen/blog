@@ -6,57 +6,24 @@ author: Coshin
 comments: true
 category: 力扣题解
 tags: LeetCode Medium Array Backtracking
-excerpt:
-  给定一个 `m x n` 的字符网格 `board` 和一个字符串 `word`，*如果 `word` 存在于网格*返回 `true`。<br>
-  单词按字母顺序由相邻单元格的字母构成，相邻单元格是水平或垂直相邻的。
-  同一个单元格的字母不能重复使用。
 ---
-> ## 79. Word Search
+> 给定一个 `m x n` 的字符网格 `board` 和一个字符串 `word`，*如果 `word` 存在于网格*则返回 `true`。
 > 
-> Given an `m x n` grid of characters `board` and a string `word`, return `true`
-> *if `word` exists in the grid*.
-> 
-> The word can be constructed from letters of sequentially adjacent cells, where
-> adjacent cells are horizontally or vertically neighboring. The same letter
-> cell may not be used more than once.
-> 
-> **Example 1:**
+> 单词按字母顺序由相邻单元格的字母构成，相邻单元格是水平或垂直相邻的。
+> 同一个单元格的字母不能重复使用。
 > 
 > <img alt="" src="https://assets.leetcode.com/uploads/2020/11/04/word2.jpg" style="width: 322px; height: 242px;">
 > 
-> <pre>
-> <strong>Input:</strong> board = [["A","B","C","E"],["S","F","C","S"],["A","D","E","E"]], word = "ABCCED"
-> <strong>Output:</strong> true
-> </pre>
-> 
-> **Example 2:**
-> 
-> <img alt="" src="https://assets.leetcode.com/uploads/2020/11/04/word-1.jpg" style="width: 322px; height: 242px;">
-> 
-> <pre>
-> <strong>Input:</strong> board = [["A","B","C","E"],["S","F","C","S"],["A","D","E","E"]], word = "SEE"
-> <strong>Output:</strong> true
-> </pre>
-> 
-> **Example 3:**
-> 
-> <img alt="" src="https://assets.leetcode.com/uploads/2020/10/15/word3.jpg" style="width: 322px; height: 242px;">
-> 
-> <pre>
-> <strong>Input:</strong> board = [["A","B","C","E"],["S","F","C","S"],["A","D","E","E"]], word = "ABCB"
-> <strong>Output:</strong> false
-> </pre>
-> 
-> **Constraints:**
+> **限制条件：**
 > 
 > * `m == board.length`
 > * `n = board[i].length`
 > * `1 <= m, n <= 6`
 > * `1 <= word.length <= 15`
-> * `board` and `word` consists of only lowercase and uppercase English letters.
+> * `board` 和 `word` 只由小写和大写英文字母组成。
 > 
-> **Follow up:** Could you use search pruning to make your solution faster with
-> a larger `board`?
+> **进阶：**
+> 你能否使用搜索剪枝在 `borad` 更大时使你的解决方案更快？
 
 ## 解决方案
 
