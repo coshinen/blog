@@ -77,6 +77,7 @@ excerpt: Here are some books that renew my spirit or reclaim my life.
 > * 百年孤独，[哥伦比亚] Gabriel García Márquez
 > * 三个火枪手，[法] Alexandre Dumas
 > * 哈利波特完整系列，[英] [J.K. Rowling](https://www.jkrowling.com){:target="_blank"}
+> * W 的悲剧，[日] 夏樹静子
 > * 尸人庄谜案，[日] 今村昌弘
 > * 福尔摩斯先生，[美] Mitch Cullin
 > * 福尔摩斯症候群，[法] J.M.ERRE
