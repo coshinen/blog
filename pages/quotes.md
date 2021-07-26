@@ -78,6 +78,9 @@ excerpt: Here are my favorite quotes from someones that inspire me or make me la
 > sorrow born. Either the memory of past bliss is the anguish of today, or the
 > agonies which are, have their origin in the ecstasies which might have been.
 
+> 倉沢さつき(和辻摩子)「Wの悲劇 第二幕 資産2000億の女帝」：
+> * 人は、見たいものしか見ないし、信じないものしか…信じないですから。
+
 > 橘カラ(十和田幸)「サイレーン 刑事×彼女×完全悪女 第1話 完全悪女が僕の彼女を獲物にした」：
 > * 信頼を得るにはふたつ。役に立つと思われること。それと弱みをさらすこと。
 
