@@ -6,7 +6,6 @@ author: Coshin
 comments: true
 category: 译文集
 tags: Translations
-excerpt: 功夫熊猫作品集中出现的名言。
 ---
 ![kung-fu-panda-logo](https://www.dreamworks.com/storage/movies/kung-fu-panda/kung-fu-panda-logo.png){:.border}
 

@@ -6,45 +6,20 @@ author: Coshin
 comments: true
 category: 力扣题解
 tags: LeetCode Medium Array
-excerpt:
-  给定一个 *`m x n`* 的矩阵。
-  如果一个元素为 **0**，则设置所在行和列的所有元素为 **0**。
-  [原地](https://en.wikipedia.org/wiki/In-place_algorithm){:target="_blank"}置换。<br>
-  **进阶：**<br>
-  * 一个直观的解决方案是使用 *O*(mn) 的额外空间，但这并不是一个好主意。<br>
-  * 一个简单的改进是使用 *O*(m + n) 的额外空间，但仍不是最佳的解决方案。<br>
-  * 你能想出一个常量空间的解决方案吗？
 ---
-> ## 73. Set Matrix Zeroes
+> 给定一个 *`m x n`* 的矩阵。
+> 如果一个元素为 **0**，则设置所在行和列的所有元素为 **0**。
+> [原地](https://en.wikipedia.org/wiki/In-place_algorithm){:target="_blank"}置换。
 > 
-> Given an *`m x n`* matrix. If an element is **0**, set its entire row and
-> column to **0**. Do it [in-place](https://en.wikipedia.org/wiki/In-place_algorithm){:target="_blank"}.
+> **进阶：**
 > 
-> **Follow up:**
-> 
-> * A straight forward solution using *O*(mn) space is probably a bad idea.
-> * A simple improvement uses *O*(m + n) space, but still not the best solution.
-> * Could you devise a constant space solution?
-> 
-> **Example 1:**
+> * 一个直观的解决方案是使用 *O*(mn) 的额外空间，但这并不是一个好主意。
+> * 一个简单的改进是使用 *O*(m + n) 的额外空间，但仍不是最佳的解决方案。
+> * 你能想出一个常量空间的解决方案吗？
 > 
 > <img alt="" src="https://assets.leetcode.com/uploads/2020/08/17/mat1.jpg" style="width: 450px; height: 169px;">
 > 
-> <pre>
-> <strong>Input:</strong> matrix = [[1,1,1],[1,0,1],[1,1,1]]
-> <strong>Output:</strong> [[1,0,1],[0,0,0],[1,0,1]]
-> </pre>
-> 
-> **Example 2:**
-> 
-> <img alt="" src="https://assets.leetcode.com/uploads/2020/08/17/mat2.jpg" style="width: 450px; height: 137px;">
-> 
-> <pre>
-> <strong>Input:</strong> matrix = [[0,1,2,0],[3,4,5,2],[1,3,1,5]]
-> <strong>Output:</strong> [[0,0,0,0],[0,4,5,0],[0,3,1,0]]
-> </pre>
-> 
-> **Constraints:**
+> **限制条件：**
 > 
 > * `m == matrix.length`
 > * `n == matrix[0].length`
@@ -52,31 +27,29 @@ excerpt:
 > * <code>-2<sup>31</sup> <= matrix[i][j] <= 2<sup>31</sup> - 1</code>
 > 
 > <details>
-> <summary>Hint 1</summary>
-> If any cell of the matrix has a zero we can record its row and column number
-> using additional memory. But if you don't want to use extra memory then you
-> can manipulate the array instead. i.e. simulating exactly what the question
-> says.
+> <summary>提示 1</summary>
+> 如果矩阵的任何单元有一个零，我们可以使用额外的内存来记录它的行数和列数。
+> 但如果你不想使用额外的内存，那么你可以操作数组来代替。
+> 即精准模拟问题所说的。
 > </details>
 > 
 > <details>
-> <summary>Hint 2</summary>
-> Setting cell values to zero on the fly while iterating might lead to
-> discrepancies. What if you use some other integer value as your marker? There
-> is still a better approach for this problem with 0(1) space.
+> <summary>提示 2</summary>
+> 在迭代时把单元设置为零可能会导致差异。
+> 如果使用其他整数值作为标记呢？
+> 对于 0(1) 空间的问题仍有更好的方法。
 > </details>
 > 
 > <details>
-> <summary>Hint 3</summary>
-> We could have used 2 sets to keep a record of rows/columns which need to be
-> set to zero. But for an O(1) space solution, you can use one of the rows and
-> and one of the columns to keep track of this information.
+> <summary>提示 3</summary>
+> 我们可以使用 2 个 set 来保存需要设置为零的行/列的记录。
+> 但对于一个 O(1) 空间的解决方案，可以使用一行或一列来跟踪该信息。
 > </details>
 > 
 > <details>
-> <summary>Hint 4</summary>
-> We can use the first cell of every row and column as a flag. This flag would
-> determine whether a row or column has been set to zero.
+> <summary>提示 4</summary>
+> 我们可以使用每一行和每一列的第一个单元作为标志。
+> 该标志将确定行或列是否已设置为零。
 > </details>
 
 ## 解决方案

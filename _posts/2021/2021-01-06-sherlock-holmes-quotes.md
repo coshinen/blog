@@ -6,7 +6,6 @@ author: Coshin
 comments: true
 category: 译文集
 tags: Translations
-excerpt: 夏洛克福尔摩斯相关作品中的名言集。
 ---
 ![the-valley-of-fear](https://standardebooks.org/images/covers/arthur-conan-doyle_the-valley-of-fear-798b05a6-hero@2x.jpg){:.border}
 

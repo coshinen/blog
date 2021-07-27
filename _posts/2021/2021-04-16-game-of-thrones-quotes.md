@@ -6,7 +6,6 @@ author: Coshin
 comments: true
 category: 译文集
 tags: Translations GoT
-excerpt: 小说「冰与火之歌」的改编作品「权力的游戏」中的名言集。
 ---
 ![GoT](https://awoiaf.westeros.org/images/1/1c/Sean_Bean_as_Eddard_Stark.png){:.border}
 

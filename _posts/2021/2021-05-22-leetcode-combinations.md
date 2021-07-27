@@ -6,40 +6,12 @@ author: Coshin
 comments: true
 category: 力扣题解
 tags: LeetCode Medium Backtracking
-excerpt:
-  给定两个整数 `n` 和 `k`，返回*范围 `[1, n]` 内所有可能的 `k` 个数的组合*。<br>
-  你可以**任何顺序**返回答案。
 ---
-> ## 77. Combinations
+> 给定两个整数 `n` 和 `k`，返回*范围 `[1, n]` 内所有可能的 `k` 个数的组合*。
 > 
-> Given two integers `n` and `k`, return *all possible combinations of `k`
-> numbers out of the range `[1, n]`*.
+> 你可以**任何顺序**返回答案。
 > 
-> You may return the answer in **any order**.
-> 
-> **Example 1:**
-> 
-> <pre>
-> <strong>Input:</strong> n = 4, k = 2
-> <strong>Output:</strong>
-> [
->   [2,4],
->   [3,4],
->   [2,3],
->   [1,2],
->   [1,3],
->   [1,4],
-> ]
-> </pre>
-> 
-> **Example 2:**
-> 
-> <pre>
-> <strong>Input:</strong> n = 1, k = 1
-> <strong>Output:</strong> [[1]]
-> </pre>
-> 
-> **Constraints:**
+> **限制条件：**
 > 
 > * `1 <= n <= 20`
 > * `1 <= k <= n`

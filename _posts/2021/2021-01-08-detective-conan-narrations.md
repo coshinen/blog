@@ -6,7 +6,6 @@ author: Coshin
 comments: true
 category: 译文集
 tags: Translations Conan
-excerpt: 25 年前的今天，改编自青山刚昌同名漫画的动漫「名侦探柯南」在读卖电视台首播。
 ---
 ![conan-tv](https://www.ytv.co.jp/conan/slide/light/slide.jpg){:.border}
 

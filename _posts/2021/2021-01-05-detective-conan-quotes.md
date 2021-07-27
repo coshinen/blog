@@ -6,7 +6,6 @@ author: Coshin
 comments: true
 category: 译文集
 tags: Translations Conan
-excerpt: 今天是漫画「名侦探柯南」在「周刊少年 Sunday」连载的 27 周年纪念。
 ---
 ![conan](https://www.conan-portal.com/img/bg.jpg){:.border}
 

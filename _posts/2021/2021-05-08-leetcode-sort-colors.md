@@ -6,74 +6,35 @@ author: Coshin
 comments: true
 category: 力扣题解
 tags: LeetCode Medium Array Two-Pointers Sort
-excerpt:
-  给定一个含红色、白色和蓝色的 `n` 个对象的数组 `nums`，对它们[原地](https://baike.baidu.com/item/原地算法){:target="_blank"}排序，使相同颜色的元素相邻，并按红色、白色和蓝色的顺序排序。<br>
-  我们使用整数 `0`、`1` 和 `2` 分别表示红色、白色和蓝色。
 ---
-> ## 75. Sort Colors
+> 给定一个含红色、白色和蓝色的 `n` 个对象的数组 `nums`，对它们[原地](https://baike.baidu.com/item/原地算法){:target="_blank"}排序，使相同颜色的元素相邻，并按红色、白色和蓝色的顺序排序。
 > 
-> Given an array `nums` with `n` objects colored red, white, or blue, sort them
-> [in-place](https://en.wikipedia.org/wiki/In-place_algorithm){:target="_blank"}
-> so that objects of the same color are adjacent, with the colors in the order
-> red, white, and blue.
+> 我们使用整数 `0`、`1` 和 `2` 分别表示红色、白色和蓝色。
 > 
-> We will use the integers `0`, `1`, and `2` to represent the color red, white,
-> and blue, respectively.
-> 
-> **Example 1:**
-> 
-> <pre>
-> <strong>Input:</strong> nums = [2,0,2,1,1,0]
-> <strong>Output:</strong> [0,0,1,1,2,2]
-> </pre>
-> 
-> **Example 2:**
-> 
-> <pre>
-> <strong>Input:</strong> nums = [2,0,1]
-> <strong>Output:</strong> [0,1,2]
-> </pre>
-> 
-> **Example 3:**
-> 
-> <pre>
-> <strong>Input:</strong> nums = [0]
-> <strong>Output:</strong> [0]
-> </pre>
-> 
-> **Example 4:**
-> 
-> <pre>
-> <strong>Input:</strong> nums = [1]
-> <strong>Output:</strong> [1]
-> </pre>
-> 
-> **Constraints:**
+> **限制条件：**
 > 
 > * `n == nums.length`
 > * `1 <= n <= 300`
-> * `nums[i]` is `0`, `1`, or `2`.
+> * `nums[i]` 是 `0`、`1` 或 `2`。
 > 
-> **Follow up:**
+> **进阶：**
 > 
-> * Could you solve this problem without using the library's sort function?
-> * Could you come up with a one-pass algorithm using only `O(1)` constant
-> space?
+> * 你能在不使用库的排序函数的情况下解决该问题吗？
+> * 你能想出一个只用 `O(1)` 常数空间的一遍算法吗？
 > 
 > <details>
-> <summary>Hint 1</summary>
-> A rather straight forward solution is a two-pass algorithm using counting
-> sort.
+> <summary>提示 1</summary>
+> 一个相当直接的解决方案是使用计数排序的两遍算法。
 > </details>
 > 
 > <details>
-> <summary>Hint 2</summary>
-> Iterate the array counting number of 0's, 1's, and 2's.
+> <summary>提示 2</summary>
+> 迭代计数 0、1 和 2 的数组。
 > </details>
 > 
 > <details>
-> <summary>Hint 3</summary>
-> Overwrite array with the total number of 0's, then 1's and followed by 2's.
+> <summary>提示 3</summary>
+> 覆盖数组使用总数 0，然后是 1 后跟 2。
 > </details>
 
 ## 解决方案

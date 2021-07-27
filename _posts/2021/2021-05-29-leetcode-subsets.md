@@ -6,37 +6,16 @@ author: Coshin
 comments: true
 category: 力扣题解
 tags: LeetCode Medium Array Backtracking Bit-Manipulation
-excerpt:
-  给定一个每个元素都**互不相同**的整型数组 `nums`，返回*所有可能的子集（幂集）*。<br>
-  解集**不能**包含重复的子集。按**任意顺序**返回结果。
 ---
-> ## 78. Subsets
+> 给定一个每个元素都**互不相同**的整型数组 `nums`，返回*所有可能的子集（幂集）*。
 > 
-> Given an integer array `nums` of **unique** elements, return *all possible
-> subsets (the power set)*.
+> 解集**不能**包含重复的子集。按**任意顺序**返回结果。
 > 
-> The solution set **must not** contain duplicate subsets. Return the solution
-> in **any order**.
-> 
-> **Example 1:**
-> 
-> <pre>
-> <strong>Input:</strong> nums = [1,2,3]
-> <strong>Output:</strong> [[],[1],[2],[1,2],[3],[1,3],[2,3],[1,2,3]]
-> </pre>
-> 
-> **Example 2:**
-> 
-> <pre>
-> <strong>Input:</strong> nums = [0]
-> <strong>Output:</strong> [[],[0]]
-> </pre>
-> 
-> **Constraints:**
+> **限制条件：**
 > 
 > * `1 <= nums.length <= 10`
 > * `-10 <= nums[i] <= 10`
-> * All the numbers of `nums` are **unique**.
+> * `nums` 中的所有数字是**互不相同的**。
 
 ## 解决方案
 

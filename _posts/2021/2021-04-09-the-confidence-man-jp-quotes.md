@@ -6,7 +6,6 @@ author: Coshin
 comments: true
 category: 译文集
 tags: Translations
-excerpt: 「行骗天下 JP」系列里出现的名言集。
 ---
 ![confidenceman_jp](https://www.fujitv.co.jp/confidenceman_jp/photo/mainvisual.jpg){:.border}
 

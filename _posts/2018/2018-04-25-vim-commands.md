@@ -6,9 +6,8 @@ author: Coshin
 comments: true
 category: 程序人生
 tags: Vim CLI
-excerpt: Vim (Vi IMproved) 是编辑器 Vi 的升级版，作为“编辑器之神”与“神之编辑器” Emacs 并驾齐驱。
 ---
-共分为**命令**和**插入**两大模式。
+Vim (Vi IMproved) 是编辑器 Vi 的升级版，共分为**命令**和**插入**两大模式。
 默认是命令模式，按 `I` 键进入插入模式，再按 `esc` 键返回命令模式。
 
 ## 命令模式
@@ -115,9 +114,7 @@ $ vim -b <file>
 
 > * :set noeol # （set no end-of-line）设置无行尾结束符
 
-## 配置文件示例
-
-Linux, macOS: `~/.vimrc`
+## 配置文件 `~/.vimrc` 示例
 
 ```
 " Basic
@@ -181,7 +178,7 @@ autocmd BufNewFile *.[ch],*.hpp,*.cpp,*.cc exec ':call InitCPPHeader()'
 autocmd BufNewFile *.md,*markdown exec ':call InitMDHeader()'
 
 function InitCPPHeader()
-    call setline(1, '// Copyright (c)'.strftime(' %Y ').expand('[name]'))
+    call setline(1, '// Copyright (c)'.strftime(' %Y ').expand('[author]'))
     call append(1, '// Distributed under the MIT software license, see the accompanying')
     call append(2, '// file LICENSE or http://www.opensource.org/licenses/mit-license.php.')
     call append(3, '')
@@ -192,11 +189,11 @@ function InitMDHeader()
     call append(1, 'layout: '.expand('post'))
     call append(2, 'title:  '.expand('"').expand('%:t:r').expand('"'))
     call append(3, 'date:   '.strftime('%Y-%m-%d %H:%M:%S').expand(' +0800'))
-    call append(4, 'author: '.expand('[name]'))
+    call append(4, 'author: '.expand('[author]'))
     call append(5, 'comments: '.expand('true'))
     call append(6, 'category: category')
     call append(7, 'tags: tag1 tag2')
-    call append(8, 'excerpt: excerpt')
+    call append(8, '#excerpt: excerpt')
     call append(9, '---')
 endf
 ```

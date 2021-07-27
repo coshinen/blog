@@ -6,48 +6,20 @@ author: Coshin
 comments: true
 category: 力扣题解
 tags: LeetCode Easy Dynamic-Programming
-excerpt:
-  你正在爬一个楼梯。
-  需要 `n` 阶才能到达顶楼。<br>
-  每次你可以爬 `1` 或 `2` 阶。
-  你有多少种不同的方法可以到达顶楼？
 ---
-> ## 70. Climbing Stairs
+> 你正在爬一个楼梯。
+> 需要 `n` 阶才能到达顶楼。
 > 
-> You are climbing a staircase. It takes `n` steps to reach the top.
+> 每次你可以爬 `1` 或 `2` 阶。
+> 你有多少种不同的方法可以到达顶楼？
 > 
-> Each time you can either climb `1` or `2` steps. In how many distinct ways can
-> you climb to the top?
-> 
-> **Example 1:**
-> 
-> <pre>
-> <strong>Input:</strong> n = 2
-> <strong>Output:</strong> 2
-> <strong>Explanation:</strong> There are two ways to climb to the top.
-> 1. 1 step + 1 step
-> 2. 2 steps
-> </pre>
-> 
-> **Example 2:**
-> 
-> <pre>
-> <strong>Input:</strong> n = 3
-> <strong>Output:</strong> 3
-> <strong>Explanation:</strong> There are three ways to climb to the top.
-> 1. 1 step + 1 step + 1 step
-> 2. 1 step + 2 steps
-> 3. 2 steps + 1 step
-> </pre>
-> 
-> **Constraints:**
+> **限制条件：**
 > 
 > * `1 <= n <= 45`
 > 
 > <details>
-> <summary>Hint 1</summary>
-> To reach nth step, what could have been your previous steps? (Think about the
-> step sizes)
+> <summary>提示 1</summary>
+> 为了到第 n 步，你之前的步骤是什么？（想想步子的大小）
 > </details>
 
 ## 解决方案

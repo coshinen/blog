@@ -6,62 +6,37 @@ author: Coshin
 comments: true
 category: 力扣题解
 tags: LeetCode Hard Hash-Table Two-Pointers String Sliding-Window
-excerpt:
-  给定两个长度分别为 `m` 和 `n` 字符串 `s` 和 `t`，返回 *`s` 中包含 `t` 所有字符的最小子串*。
-  如果 `s` 中不存在包含 `t` 所有字符的子串，则返回*空字符串 `""`*。<br>
-  **注意**如果 `s` 中存在这样的子串，保证它是唯一的最小子串。
 ---
-> ## 76. Minimum Window Substring
+> 给定两个长度分别为 `m` 和 `n` 字符串 `s` 和 `t`，返回 *`s` 中包含 `t` 所有字符的最小子串*。
+> 如果 `s` 中不存在包含 `t` 所有字符的子串，则返回*空字符串 `""`*。
 > 
-> Given two strings `s` and `t` of lengths `m` and `n` respectively, return *the
-> minimum window in `s` which will contain all the characters in `t`*. If there
-> is no such window in `s` that covers all characters in `t`, return *the empty
-> string `""`*.
+> **注意**如果 `s` 中存在这样的子串，保证它是唯一的最小子串。
 > 
-> **Note** that If there is such a window, it is guaranteed that there will
-> always be only one unique minimum window in `s`.
-> 
-> **Example 1:**
-> 
-> <pre>
-> <strong>Input:</strong> s = "ADOBECODEBANC", t = "ABC"
-> <strong>Output:</strong> "BANC"
-> </pre>
-> 
-> **Example 2:**
-> 
-> <pre>
-> <strong>Input:</strong> s = "a", t = "a"
-> <strong>Output:</strong> "a"
-> </pre>
-> 
-> **Constraints:**
+> **限制条件：**
 > 
 > * `m == s.length`
 > * `n == t.length`
 > * <code>1 <= m, n <= 10<sup>5</sup></code>
-> * `s` and `t` consist of English letters.
+> * `s` 和 `t` 由大写和小写英文字母组成。
 > 
-> **Follow up:** Could you find an algorithm that runs in `O(m + n)` time?
+> **进阶：**
+> 你能找到一个在 `O(m + n)` 内运行的算法吗？
 > 
 > <details>
-> <summary>Hint 1</summary>
-> Use two pointers to create a window of letters in <b>S</b>, which would have
-> all the characters from <b>T</b>.
+> <summary>提示 1</summary>
+> 使用两个指针在 <b>S</b> 中创建一个字母窗口，其中包含 <b>T</b> 中的所有字符。
 > </details>
 > 
 > <details>
-> <summary>Hint 2</summary>
-> Since you have to find the minimum window in <b>S</b> which has all the
-> characters from <b>T</b>, you need to expand and contract the window using the
-> two pointers and keep checking the window for all the characters. This
-> approach is also called Sliding Window Approach. 
+> <summary>提示 2</summary>
+> 因为必须在 <b>S</b> 中找到包含 <b>T</b> 中所有字符的最小窗口，所以你需要使用两个指针展开和收缩窗口，并不断检查窗口中的所有字符。
+> 这种方法也称为滑动窗口法。
 > <pre>
-> L------------------------R, Suppose this is the window that contains all characters of <b>T</b>
+> L------------------------R，假设这是一个包含 <b>T</b> 中所有字符的窗口
 > 
->        L-----------------R, this is the contracted window. We found a smaller window that still contains all the characters in <b>T</b>
+>        L-----------------R，这是一个收缩窗口。我们发现了一个较小的窗口仍包含 <b>T</b> 中所有字符
 > 
-> When the window is no longer valid, start expanding again using the right pointer. 
+> 当窗口不再有效时，使用右指针再次开始展开。
 > </pre>
 > </details>
 
