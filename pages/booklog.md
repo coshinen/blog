@@ -83,6 +83,7 @@ excerpt: Here are some books that renew my spirit or reclaim my life.
 > * 福尔摩斯症候群，[法] J.M.ERRE
 > * 丝之屋，[英] Anthony Horowitz
 > * 失踪的专列，[英] Arthur Conan Doyle
+> * 梅格雷探案，[比] Georges Simenon
 > * 东野圭吾作品集，[日] 東野圭吾
 > * 江户川乱步作品集，[日] 江戸川乱歩
 > * 埃勒里·奎因作品合集，[美] Ellery Queen
