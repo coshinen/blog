@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "三枝夕夏 IN db「Graduation」歌词"
-date:   2021-07-24 20:03:02 +0800
+date:   2021-07-25 20:03:02 +0800
 author: Coshin
 comments: true
 category: 译文集

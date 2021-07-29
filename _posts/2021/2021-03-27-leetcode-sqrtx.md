@@ -6,45 +6,23 @@ author: Coshin
 comments: true
 category: 力扣题解
 tags: LeetCode Easy Math Binary-Search
-excerpt:
-  给定一个非负整数 `x`，计算并返回 *`x` 的平方根*。<br>
-  由于返回类型是整数，返回结果**去掉**小数部分，只保留**整数部分**。
 ---
-> ## 69. Sqrt(x)
+> 给定一个非负整数 `x`，计算并返回 *`x` 的平方根*。
 > 
-> Given a non-negative integer `x`, compute and return *the square root of `x`*.
+> 由于返回类型是整数，返回结果**去掉**小数部分，只保留**整数部分**。
 > 
-> Since the return type is an integer, the decimal digits are **truncated**, and
-> only **the integer part** of the result is returned.
-> 
-> **Example 1:**
-> 
-> <pre>
-> <strong>Input:</strong> x = 4
-> <strong>Output:</strong> 2
-> </pre>
-> 
-> **Example 2:**
-> 
-> <pre>
-> <strong>Input:</strong> x = 8
-> <strong>Output:</strong> 2
-> <strong>Explanation:</strong> The square root of 8 is 2.82842..., and since the decimal part is truncated, 2 is returned.
-> </pre>
-> 
-> **Constraints:**
+> **限制条件：**
 > 
 > * <code>0 <= x <= 2<sup>31</sup> - 1</code>
 > 
 > <details>
-> <summary>Hint 1</summary>
-> Try exploring all integers. (Credits: @annujoshi)
+> <summary>提示 1</summary>
+> 尝试探索所有整数。(Credits: @annujoshi)
 > </details>
 > 
 > <details>
-> <summary>Hint 2</summary>
-> Use the sorted property of integers to reduced the search space. (Credits:
-> @annujoshi)
+> <summary>提示 2</summary>
+> 使用整数的排序属性来减少搜索空间。(Credits: @annujoshi)
 > </details>
 
 ## 解决方案

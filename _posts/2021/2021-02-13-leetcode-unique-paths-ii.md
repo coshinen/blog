@@ -6,51 +6,20 @@ author: Coshin
 comments: true
 category: 力扣题解
 tags: LeetCode Medium Array Dynamic-Programming
-excerpt:
-  一个机器人位于一个 `m x n` 网格的左上角（起点在下图中标记为 "Start"）。<br>
-  机器人每次只能向下或向右移动一步。
-  机器人试图到达网格的右下角（在下图中标记为 "Finish"）。<br>
-  现在考虑如果有一些障碍物添加到网格中。
-  共有多少条不同的路径？<br>
-  网格中的障碍物和空格分别用 `1` 和 `0` 标记。
 ---
-> ## 63. Unique Paths II
+> 一个机器人位于一个 `m x n` 网格的左上角（起点在下图中标记为 "Start"）。
 > 
-> A robot is located at the top-left corner of a `m x n` grid (marked 'Start' in
-> the diagram below).
+> 机器人每次只能向下或向右移动一步。
+> 机器人试图到达网格的右下角（在下图中标记为 "Finish"）。
 > 
-> The robot can only move either down or right at any point in time. The robot
-> is trying to reach the bottom-right corner of the grid (marked 'Finish' in the
-> diagram below).
+> 现在考虑如果有一些障碍物添加到网格中。
+> 共有多少条不同的路径？
 > 
-> Now consider if some obstacles are added to the grids. How many unique paths
-> would there be?
-> 
-> An obstacle and space is marked as 1 and 0 respectively in the grid.
-> 
-> **Example 1:**
+> 网格中的障碍物和空格分别用 `1` 和 `0` 标记。
 > 
 > <img alt="" src="https://assets.leetcode.com/uploads/2020/11/04/robot1.jpg" style="width: 242px; height: 242px;">
 > 
-> <pre>
-> <strong>Input:</strong> obstacleGrid = [[0,0,0],[0,1,0],[0,0,0]]
-> <strong>Output:</strong> 2
-> <strong>Explanation:</strong> There is one obstacle in the middle of the 3x3 grid above.
-> There are two ways to reach the bottom-right corner:
-> 1. Right -> Right -> Down -> Down
-> 2. Down -> Down -> Right -> Right
-> </pre>
-> 
-> **Example 2:**
-> 
-> <img alt="" src="https://assets.leetcode.com/uploads/2020/11/04/robot2.jpg" style="width: 162px; height: 162px;">
-> 
-> <pre>
-> <strong>Input:</strong> obstacleGrid = [[0,1],[0,0]]
-> <strong>Output:</strong> 1
-> </pre>
-> 
-> **Constraints:**
+> **限制条件：**
 > 
 > * `m == obstacleGrid.length`
 > * `n == obstacleGrid[i].length`
@@ -58,33 +27,29 @@ excerpt:
 > * `obstacleGrid[i][j]` is `0` or `1`.
 > 
 > <details>
-> <summary>Hint 1</summary>
-> The robot can only move either down or right. Hence any cell in the first row
-> can only be reached from the cell left to it. However, if any cell has an
-> obstacle, you don't let that cell contribute to any path. So, for the first
-> row, the number of ways will simply be
+> <summary>提示 1</summary>
+> 机器人智能向下或向右移动。
+> 因此第一行中的所有单元只能从其左侧单元到达。
+> 但是，如果任何单元有障碍物，则不允许该单元对任何路径做贡献。
+> 所以，对于第一行，路径数将简化为
 > <pre>
 > if obstacleGrid[i][j] is not an obstacle
 >      obstacleGrid[i,j] = obstacleGrid[i,j - 1] 
 > else
 >      obstacleGrid[i,j] = 0
 > </pre>
-> You can do a similar processing for finding out the number of ways of reaching
-> the cells in the first column.
+> 你可以执行类似的处理，以找出到达第一列单元的路径数。
 > </details>
 > 
 > <details>
-> <summary>Hint 2</summary>
-> For any other cell, we can find out the number of ways of reaching it, by
-> making use of the number of ways of reaching the cell directly above it and
-> the cell to the left of it in the grid. This is because these are the only two
-> directions from which the robot can come to the current cell.
+> <summary>提示 2</summary>
+> 对于其他任何单元，我们都可以通过使用网格中直接到达其上方单元和其左侧单元的路径数来确定到达该单元的路径数。
+> 这是因为这是机器人能够到达当前单元的仅有的两个方向。
 > </details>
 > 
 > <details>
-> <summary>Hint 3</summary>
-> Since we are making use of pre-computed values along the iteration, this
-> becomes a dynamic programming problem.
+> <summary>提示 3</summary>
+> 由于我们在迭代过程中使用了预先计算的值，于是这就成了一个动态规划问题。
 > <pre>
 > if obstacleGrid[i][j] is not an obstacle
 >      obstacleGrid[i,j] = obstacleGrid[i,j - 1]  + obstacleGrid[i - 1][j]

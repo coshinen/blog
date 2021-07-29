@@ -6,35 +6,14 @@ author: Coshin
 comments: true
 category: 力扣题解
 tags: LeetCode Medium Array Dynamic-Programming
-excerpt:
-  给定一个包含非负整数的 `m x n` 网格，找出一条从左上到右下的路径，使路径上的数字总和最小。<br>
-  **注：**你每次只能向下或向右移动一步。
 ---
-> ## 64. Minimum Path Sum
+> 给定一个包含非负整数的 `m x n` 网格，找出一条从左上到右下的路径，使路径上的数字总和最小。
 > 
-> Given a `m x n` grid filled with non-negative numbers, find a path from top
-> left to bottom right, which minimizes the sum of all numbers along its path.
-> 
-> **Note:** You can only move either down or right at any point in time.
-> 
-> **Example 1:**
+> **注：**你每次只能向下或向右移动一步。
 > 
 > <img alt="" src="https://assets.leetcode.com/uploads/2020/11/05/minpath.jpg" style="width: 242px; height: 242px;">
 > 
-> <pre>
-> <strong>Input:</strong> grid = [[1,3,1],[1,5,1],[4,2,1]]
-> <strong>Output:</strong> 7
-> <strong>Explanation:</strong> Because the path 1 → 3 → 1 → 1 → 1 minimizes the sum.
-> </pre>
-> 
-> **Example 2:**
-> 
-> <pre>
-> <strong>Input:</strong> grid = [[1,2,3],[4,5,6]]
-> <strong>Output:</strong> 12
-> </pre>
-> 
-> **Constraints:**
+> **限制条件：**
 > 
 > * `m == grid.length`
 > * `n == grid[i].length`

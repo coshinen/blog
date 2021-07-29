@@ -6,81 +6,34 @@ author: Coshin
 comments: true
 category: 力扣题解
 tags: LeetCode Hard Math String
-excerpt:
-  一个**有效数字**可以分成下面几个部分（按顺序）：<br>
-  1. 一个**小数**或一个**整数**。<br>
-  2. （可选）一个 `'e'` 或 `'E'`，后面跟一个**整数**。<br>
-  一个**小数**可以分成下面几个部分（按顺序）：<br>
-  1. （可选）一个符号字符（`'+'` 或 `'-'`）。<br>
-  2. 下面格式之一：<br>
-  &nbsp;&nbsp;1. 至少一个数字，后面跟一个点 `'.'`。<br>
-  &nbsp;&nbsp;2. 至少一个数字，后面跟一个点 `'.'`，后面再跟至少一个数字。<br>
-  &nbsp;&nbsp;3. 一个点 `'.'`，后面跟至少一个数字。<br>
-  一个**整数**可以分成下面几个部分（按顺序）：<br>
-  1. （可选）一个符号字符（`'+'` 或 `'-'`）。<br>
-  2. 至少一个数字。<br>
-  给定一个字符串 `s`，*如果 `s` 是一个**有效数字***返回 `true`。
 ---
-> ## 65. Valid Number
+> 一个**有效数字**可以分成下面几个部分（按顺序）：
 > 
-> A **valid number** can be split up into these components (in order):
+> 1. 一个**小数**或一个**整数**。
+> 2. （可选）一个 `'e'` 或 `'E'`，后面跟一个**整数**。
 > 
-> 1. A **decimal number** or an **integer**.
-> 2. (Optional) An `'e'` or `'E'`, followed by an **integer**.
+> 一个**小数**可以分成下面几个部分（按顺序）：
 > 
-> A **decimal number** can be split up into these components (in order):
+> 1. （可选）一个符号字符（`'+'` 或 `'-'`）。
+> 2. 下面格式之一：
+>   1. 至少一个数字，后面跟一个点 `'.'`。
+>   2. 至少一个数字，后面跟一个点 `'.'`，后面再跟至少一个数字。
+>   3. 一个点 `'.'`，后面跟至少一个数字。
 > 
-> 1. (Optional) A sign character (either `'+'` or `'-'`).
-> 2. One of the following formats:
->    1. At least one digit, followed by a dot `'.'`.
->    2. At least one digit, followed by a dot `'.'`, followed by at least one digit.
->    3. A dot `'.'`, followed by at least one digit.
+> 一个**整数**可以分成下面几个部分（按顺序）：
 > 
-> An **integer** can be split up into these components (in order):
+> 1. （可选）一个符号字符（`'+'` 或 `'-'`）。
+> 2. 至少一个数字。
 > 
-> 1. (Optional) A sign character (either `'+'` or `'-'`).
-> 2. At least one digit.
+> 例如，下面所有为有效数字：`["2", "0089", "-0.1", "+3.14", "4.", "-.9", "2e10", "-90E3", "3e+7", "+6e-1", "53.5e93", "-123.456e789"]`，
+> 下面非有效数字：`["abc", "1a", "1e", "e3", "99e2.5", "--6", "-+3", "95a54e53"]`。
 > 
-> For example, all the following are valid numbers: `["2", "0089", "-0.1",
-> "+3.14", "4.", "-.9", "2e10", "-90E3", "3e+7", "+6e-1", "53.5e93",
-> "-123.456e789"]`, while the following are not valid numbers: `["abc", "1a",
-> "1e", "e3", "99e2.5", "--6", "-+3", "95a54e53"]`.
+> 给定一个字符串 `s`，*如果 `s` 是一个**有效数字***返回 `true`。
 > 
-> Given a string `s`, return `true` *if `s` is a **valid number***.
-> 
-> **Example 1:**
-> 
-> <pre>
-> <strong>Input:</strong> s = "0"
-> <strong>Output:</strong> true
-> </pre>
-> 
-> **Example 2:**
-> 
-> <pre>
-> <strong>Input:</strong> s = "e"
-> <strong>Output:</strong> false
-> </pre>
-> 
-> **Example 3:**
-> 
-> <pre>
-> <strong>Input:</strong> s = "."
-> <strong>Output:</strong> false
-> </pre>
-> 
-> **Example 4:**
-> 
-> <pre>
-> <strong>Input:</strong> s = ".1"
-> <strong>Output:</strong> true
-> </pre>
-> 
-> **Constraints:**
+> **限制条件：**
 > 
 > * `1 <= s.length <= 20`
-> * `s` consists of only English letters (both uppercase and lowercase), digits
-> (`0-9`), plus `'+'`, minus `'-'`, or dot `'.'`.
+> * `s` 仅由英文字母（含大写和小写）组成，数字 (`0-9`)，加号 `'+'`，减号 `'-'`，或点 `'.'`。
 
 ## 解决方案
 

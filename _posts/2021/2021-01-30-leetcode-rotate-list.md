@@ -6,33 +6,14 @@ author: Coshin
 comments: true
 category: 力扣题解
 tags: LeetCode Medium Linked-List Two-Pointers
-excerpt: 给定一条头指针为 `head` 的链表，向右旋转该链表 `k` 个位置。
 ---
-> ## 61. Rotate List
-> 
-> Given the `head` of a linked list, rotate the list to the right by `k` places.
-> 
-> **Example 1:**
+> 给定一条头指针为 `head` 的链表，向右旋转该链表 `k` 个位置。
 > 
 > <img alt="" src="https://assets.leetcode.com/uploads/2020/11/13/rotate1.jpg" style="width: 600px; height: 254px;">
 > 
-> <pre>
-> <strong>Input:</strong> head = [1,2,3,4,5], k = 2
-> <strong>Output:</strong> [4,5,1,2,3]
-> </pre>
+> **限制条件：**
 > 
-> **Example 2:**
-> 
-> <img alt="" src="https://assets.leetcode.com/uploads/2020/11/13/roate2.jpg" style="width: 472px; height: 542px;">
-> 
-> <pre>
-> <strong>Input:</strong> head = [0,1,2], k = 4
-> <strong>Output:</strong> [2,0,1]
-> </pre>
-> 
-> **Constraints:**
-> 
-> * The number of nodes in the list is in the range `[0, 500]`.
+> * 链表中节点的数字在范围 `[0, 500]` 里。
 > * `-100 <= Node.val <= 100`
 > * <code>0 <= k <= 2 * 10<sup>9</sup></code>
 

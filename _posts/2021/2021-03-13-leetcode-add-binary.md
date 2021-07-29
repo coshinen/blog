@@ -6,31 +6,14 @@ author: Coshin
 comments: true
 category: 力扣题解
 tags: LeetCode Easy Math String
-excerpt: 给定两个二进制字符串 `a` 和 `b`，返回*用一个二进制字符串表示的它们的和*。
 ---
-> ## 67. Add Binary
+> 给定两个二进制字符串 `a` 和 `b`，返回*用一个二进制字符串表示的它们的和*。
 > 
-> Given two binary strings `a` and `b`, return *their sum as a binary string*.
-> 
-> **Example 1:**
-> 
-> <pre>
-> <strong>Input:</strong> a = "11", b = "1"
-> <strong>Output:</strong> "100"
-> </pre>
-> 
-> **Example 2:**
-> 
-> <pre>
-> <strong>Input:</strong> a = "1010", b = "1011"
-> <strong>Output:</strong> "10101"
-> </pre>
-> 
-> **Constraints:**
+> **限制条件：**
 > 
 > * <code>1 <= a.length, b.length <= 10<sup>4</sup></code>
-> * `a` and b consist only of `'0'` or `'1'` characters.
-> * Each string does not contain leading zeros except for the zero itself.
+> * `a` 和 `b` 只由 `'0'` 或 `'1'` 字符组成。
+> * 每个字符串不包含前导零，除了零本身。
 
 ## 解决方案
 
