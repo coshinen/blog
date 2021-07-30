@@ -34,6 +34,10 @@ excerpt: Here are my favorite quotes from someones that inspire me or make me la
 > Linus Torvalds, [Re: SCO: "thread creation is about a thousand times faster than on native Linux"](https://lkml.org/lkml/2000/8/25/132){:target="_blank"}:
 > * Talk is cheap. Show me the code.
 
+> Satoshi Nakamoto, [Scalability and transaction rate](https://bitcointalk.org/index.php?topic=532.msg6306#msg6306){:target="_blank"}:
+> * If you don't believe it or don't get it, I don't have the time to try to
+> convince you, sorry.
+
 > Satoshi Nakamoto, [Bitcoin P2P e-cash paper](https://www.metzdowd.com/pipermail/cryptography/2008-November/014853.html){:target="_blank"}:
 > * It's very attractive to the libertarian viewpoint if we can explain it
 > properly. I'm better with code than with words though.
