@@ -6,32 +6,12 @@ author: Coshin
 comments: true
 category: 力扣题解
 tags: LeetCode Medium Array
-excerpt: 给定一个 `m x n` 的`矩阵`，返回*按螺旋顺序的*`矩阵`*的所有元素*。
 ---
-> ## 54. Spiral Matrix
-> 
-> Given an `m x n` `matrix`, return *all elements of the* `matrix` *in spiral
-> order*.
-> 
-> **Example 1:**
-> 
-> <img alt="" src="https://assets.leetcode.com/uploads/2020/11/13/spiral1.jpg" style="width: 242px; height: 242px;">
-> 
-> <pre>
-> <strong>Input:</strong> matrix = [[1,2,3],[4,5,6],[7,8,9]]
-> <strong>Output:</strong> [1,2,3,6,9,8,7,4,5]
-> </pre>
-> 
-> **Example 2:**
+> 给定一个 `m x n` 的`矩阵`，返回*按螺旋顺序的*`矩阵`*的所有元素*。
 > 
 > <img alt="" src="https://assets.leetcode.com/uploads/2020/11/13/spiral.jpg" style="width: 322px; height: 242px;">
 > 
-> <pre>
-> <strong>Input:</strong> matrix = [[1,2,3,4],[5,6,7,8],[9,10,11,12]]
-> <strong>Output:</strong> [1,2,3,4,8,12,11,10,9,5,6,7]
-> </pre>
-> 
-> **Constraints:**
+> **限制条件：**
 > 
 > * `m == matrix.length`
 > * `n == matrix[i].length`
@@ -39,32 +19,32 @@ excerpt: 给定一个 `m x n` 的`矩阵`，返回*按螺旋顺序的*`矩阵`*�
 > * `-100 <= matrix[i][j] <= 100`
 > 
 > <details>
-> <summary>Hint 1</summary>
-> Well for some problems, the best way really is to come up with some algorithms
-> for simulation. Basically, you need to simulate what the problem asks us to
-> do.
+> <summary>提示 1</summary>
+> 对于某些问题，最好的方法就是提出一些模拟算法。
+> 基本上，你需要模拟问题问问我们要做什么。
 > </details>
 > 
 > <details>
-> <summary>Hint 2</summary>
-> We go boundary by boundary and move inwards. That is the essential operation.
-> First row, last column, last row, first column and then we move inwards by 1
-> and then repeat. That's all, that is all the simulation that we need.
+> <summary>提示 2</summary>
+> 我们一个边界接一个边界向内移动。
+> 这是最基本的操作。
+> 第一行，最后一列，最后一行，第一列，然后我们向内移动 1 格并重复。
+> 这就是我们需要的全部模拟。
 > </details>
 > 
 > <details>
-> <summary>Hint 3</summary>
-> Think about when you want to switch the progress on one of the indexes. If you
-> progress on
+> <summary>提示 3</summary>
+> 请考虑什么时候切换其中一个索引的进度。
+> 如果你继续前进
 > <pre>i</pre>
-> out of
+> 在下面的范围中
 > <pre>[i, j]</pre>
-> , you'd be shifting in the same column. Similarly, by changing values for
+> ，你将在同一列中切换。
+> 类似的，通过更改
 > <pre>j</pre>
-> , you'd be shifting in the same row. Also, keep track of the end of a boundary
-> so that you can move inwards and then keep repeating. It's always best to run
-> the simulation on edge cases like a single column or a single row to see if
-> anything breaks or not.
+> ，你将在同一行中切换。
+> 此外，请跟踪边界的端点，以便向内移动，然后继续重复。
+> 最好在边缘情况下运行模拟，如单列或单行，以查看是否又任何中断。
 > </details>
 
 ## 解决方案

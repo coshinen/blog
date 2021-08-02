@@ -6,36 +6,14 @@ author: Coshin
 comments: true
 category: 力扣题解
 tags: LeetCode Hard Backtracking
-excerpt:
-  n **皇后**难题研究的是如何把 `n` 个皇后放在 `n x n` 的棋盘上并使皇后彼此两两不能攻击的问题。<br>
-  给定一个整数 `n`，返回 **n 皇后难题**不同解决方案的数量。
 ---
-> ## 52. N-Queens II
+> n **皇后**难题研究的是如何把 `n` 个皇后放在 `n x n` 的棋盘上并使皇后彼此两两不能攻击的问题。
 > 
-> The **n-queens** puzzle is the problem of placing `n` queens on an `n x n`
-> chessboard such that no two queens attack each other.
-> 
-> Given an integer `n`, return *the number of distinct solutions to the
-> **n-queens puzzle***.
-> 
-> **Example 1:**
+> 给定一个整数 `n`，返回 **n 皇后难题**不同解决方案的数量。
 > 
 > <img alt="" src="https://assets.leetcode.com/uploads/2020/11/13/queens.jpg" style="width: 600px; height: 268px;">
 > 
-> <pre>
-> <strong>Input:</strong> n = 4
-> <strong>Output:</strong> 2
-> <strong>Explanation:</strong> There are two distinct solutions to the 4-queens puzzle as shown.
-> </pre>
-> 
-> **Example 2:**
-> 
-> <pre>
-> <strong>Input:</strong> n = 1
-> <strong>Output:</strong> 1
-> </pre>
-> 
-> **Constraints:**
+> **限制条件：**
 > 
 > * `1 <= n <= 9`
 

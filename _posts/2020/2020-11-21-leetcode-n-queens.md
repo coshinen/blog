@@ -6,41 +6,16 @@ author: Coshin
 comments: true
 category: 力扣题解
 tags: LeetCode Hard Backtracking
-excerpt:
-  n **皇后**难题研究的是如何把 `n` 个皇后放在 `n x n` 的棋盘上并使皇后彼此两两不能攻击的问题。<br>
-  给定一个整数 `n`，返回所有不同的 **n 皇后难题**的解决方案。<br>
-  每个解决方案都包含一个不同的 n 皇后位置的配置，其中 `'Q'` 和 `'.'` 分别表示一个皇后和一个空格。
 ---
-> ## 51. N-Queens
+> n **皇后**难题研究的是如何把 `n` 个皇后放在 `n x n` 的棋盘上并使皇后彼此两两不能攻击的问题。
 > 
-> The **n-queens** puzzle is the problem of placing `n` queens on an `n x n`
-> chessboard such that no two queens attack each other.
+> 给定一个整数 `n`，返回所有不同的 **n 皇后难题**的解决方案。
 > 
-> Given an integer `n`, return *all distinct solutions to the **n-queens
-> puzzle***.
-> 
-> Each solution contains a distinct board configuration of the n-queens'
-> placement, where `'Q'` and `'.'` both indicate a queen and an empty space,
-> respectively.
-> 
-> **Example 1:**
+> 每个解决方案都包含一个不同的 n 皇后位置的配置，其中 `'Q'` 和 `'.'` 分别表示一个皇后和一个空格。
 > 
 > <img alt="" src="https://assets.leetcode.com/uploads/2020/11/13/queens.jpg" style="width: 600px; height: 268px;">
 > 
-> <pre>
-> <strong>Input:</strong> n = 4
-> <strong>Output:</strong> [[".Q..","...Q","Q...","..Q."],["..Q.","Q...","...Q",".Q.."]]
-> <strong>Explanation:</strong> There exist two distinct solutions to the 4-queens puzzle as shown above
-> </pre>
-> 
-> **Example 2:**
-> 
-> <pre>
-> <strong>Input:</strong> n = 1
-> <strong>Output:</strong> [["Q"]]
-> </pre>
-> 
-> **Constraints:**
+> **限制条件：**
 > 
 > * `1 <= n <= 9`
 

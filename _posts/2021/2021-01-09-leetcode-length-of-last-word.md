@@ -6,37 +6,16 @@ author: Coshin
 comments: true
 category: 力扣题解
 tags: LeetCode Easy String
-excerpt:
-  给定一个通过空格分隔的一些单词组成的字符串 `s`，返回*该字符串中最后一个单词的长度*。<br>
-  如果最后一个单词不存在，则返回 `0`。<br>
-  **单词**是指仅由字母组成且不含任何空格字符的最大子串。
 ---
-> ## 58. Length of Last Word
+> 给定一个通过空格分隔的一些单词组成的字符串 `s`，返回*该字符串中最后一个单词的长度*。
+> 如果最后一个单词不存在，则返回 `0`。
 > 
-> Given a string `s` consists of some words separated by spaces, return *the
-> length of the last word in the string*. If the last word does not exist,
-> return `0`.
+> **单词**是指仅由字母组成且不含任何空格字符的最大子串。
 > 
-> A **word** is a maximal substring consisting of non-space characters only.
-> 
-> **Example 1:**
-> 
-> <pre>
-> <strong>Input:</strong> s = "Hello World"
-> <strong>Output:</strong> 5
-> </pre>
-> 
-> **Example 2:**
-> 
-> <pre>
-> <strong>Input:</strong> s = " "
-> <strong>Output:</strong> 0
-> </pre>
-> 
-> **Constraints:**
+> **限制条件：**
 > 
 > * <code>1 <= s.length <= 10<sup>4</sup></code>
-> * `s` consists of only English letters and spaces `' '`.
+> * `s` 仅由英文字母和空格 `' '` 组成。
 
 ## 解决方案
 

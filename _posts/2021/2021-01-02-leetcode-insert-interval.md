@@ -6,60 +6,17 @@ author: Coshin
 comments: true
 category: 力扣题解
 tags: LeetCode Medium Array Sort
-excerpt:
-  给定一个*无重叠的*区间集合，插入一个新的区间到区间集中（如果必要就合并）。<br>
-  你可以假设区间最初是根据它们的开始时间排序的。
 ---
-> ## 57. Insert Interval
+> 给定一个*无重叠的*区间集合，插入一个新的区间到区间集中（如果必要就合并）。
 > 
-> Given a set of *non-overlapping* intervals, insert a new interval into the
-> intervals (merge if necessary).
+> 你可以假设区间最初是根据它们的开始时间排序的。
 > 
-> You may assume that the intervals were initially sorted according to their
-> start times.
-> 
-> **Example 1:**
-> 
-> <pre>
-> <strong>Input:</strong> intervals = [[1,3],[6,9]], newInterval = [2,5]
-> <strong>Output:</strong> [[1,5],[6,9]]
-> </pre>
-> 
-> **Example 2:**
-> 
-> <pre>
-> <strong>Input:</strong> intervals = [[1,2],[3,5],[6,7],[8,10],[12,16]], newInterval = [4,8]
-> <strong>Output:</strong> [[1,2],[3,10],[12,16]]
-> <strong>Explanation:</strong> Because the new interval [4,8] overlaps with [3,5],[6,7],[8,10].
-> </pre>
-> 
-> **Example 3:**
-> 
-> <pre>
-> <strong>Input:</strong> intervals = [], newInterval = [5,7]
-> <strong>Output:</strong> [[5,7]]
-> </pre>
-> 
-> **Example 4:**
-> 
-> <pre>
-> <strong>Input:</strong> intervals = [[1,5]], newInterval = [2,3]
-> <strong>Output:</strong> [[1,5]]
-> </pre>
-> 
-> **Example 5:**
-> 
-> <pre>
-> <strong>Input:</strong> intervals = [[1,5]], newInterval = [2,7]
-> <strong>Output:</strong> [[1,7]]
-> </pre>
-> 
-> **Constraints:**
+> **限制条件：**
 > 
 > * <code>0 <= intervals.length <= 10<sup>4</sup></code>
 > * <code>intervals[i].length == 2</code>
 > * <code>0 <= intervals[i][0] <= intervals[i][1] <= 10<sup>5</sup></code>
-> * `intervals` is sorted by `intervals[i][0]` in **ascending** order.
+> * `intervals` 根据 `intervals[i][0]` 按**升**序排列。
 > * <code>newInterval.length == 2</code>
 > * <code>0 <= newInterval[0] <= newInterval[1] <= 10<sup>5</sup></code>
 

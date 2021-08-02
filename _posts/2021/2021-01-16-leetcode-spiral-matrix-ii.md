@@ -6,30 +6,12 @@ author: Coshin
 comments: true
 category: 力扣题解
 tags: LeetCode Medium Array
-excerpt: 给定一个正整数 `n`，生成一个含 `1` 到 <code>n<sup>2</sup></code> 所有元素并按顺时针螺旋排列的 `n x n` `矩阵`。
 ---
-> ## 59. Spiral Matrix II
-> 
-> Given a positive integer `n`, generate an `n x n` `matrix` filled with
-> elements from `1` to <code>n<sup>2</sup></code> in spiral order.
-> 
-> **Example 1:**
+> 给定一个正整数 `n`，生成一个含 `1` 到 <code>n<sup>2</sup></code> 所有元素并按顺时针螺旋排列的 `n x n` `矩阵`。
 > 
 > <img alt="" src="https://assets.leetcode.com/uploads/2020/11/13/spiraln.jpg" style="width: 242px; height: 242px;">
 > 
-> <pre>
-> <strong>Input:</strong> n = 3
-> <strong>Output:</strong> [[1,2,3],[8,9,4],[7,6,5]]
-> </pre>
-> 
-> **Example 2:**
-> 
-> <pre>
-> <strong>Input:</strong> n = 1
-> <strong>Output:</strong> [[1]]
-> </pre>
-> 
-> **Constraints:**
+> **限制条件：**
 > 
 > * `1 <= n <= 20`
 

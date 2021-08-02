@@ -6,23 +6,10 @@ author: Coshin
 comments: true
 category: 力扣题解
 tags: LeetCode Hard Backtracking
-excerpt:
-  集合 `[1, 2, 3, ..., n]` 一共包含 `n!` 种排列。<br>
-  按顺序列出并标记所有排列，对于 `n = 3` 我们给出下面序列：<br>
-  1. `"123"`<br>
-  2. `"132"`<br>
-  3. `"213"`<br>
-  4. `"231"`<br>
-  5. `"312"`<br>
-  6. `"321"`<br>
-  给定 `n` 和 `k`，返回第 `k` 个排序序列。
 ---
-> ## 60. Permutation Sequence
+> 集合 `[1, 2, 3, ..., n]` 一共包含 `n!` 种排列。
 > 
-> The set `[1, 2, 3, ..., n]` contains a total of `n!` unique permutations.
-> 
-> By listing and labeling all of the permutations in order, we get the following
-> sequence for `n = 3`:
+> 按顺序列出并标记所有排列，对于 `n = 3` 我们给出下面序列：
 > 
 > 1. `"123"`
 > 2. `"132"`
@@ -31,31 +18,9 @@ excerpt:
 > 5. `"312"`
 > 6. `"321"`
 > 
-> Given `n` and `k`, return the <code>k<sup>th</sup></code> permutation
-> sequence.
+> 给定 `n` 和 `k`，返回第 `k` 个排序序列。
 > 
-> **Example 1:**
-> 
-> <pre>
-> <strong>Input:</strong> n = 3, k = 3
-> <strong>Output:</strong> "213"
-> </pre>
-> 
-> **Example 2:**
-> 
-> <pre>
-> <strong>Input:</strong> n = 4, k = 9
-> <strong>Output:</strong> "2314"
-> </pre>
-> 
-> **Example 3:**
-> 
-> <pre>
-> <strong>Input:</strong> n = 3, k = 1
-> <strong>Output:</strong> "123"
-> </pre>
-> 
-> **Constraints:**
+> **限制条件：**
 > 
 > * `1 <= n <= 9`
 > * `1 <= k <= n!`

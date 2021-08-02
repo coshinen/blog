@@ -6,58 +6,17 @@ author: Coshin
 comments: true
 category: 力扣题解
 tags: LeetCode Easy Array Divide-and-Conquer Dynamic-Programming
-excerpt:
-  给定一个整数数组 `nums`，找到具有最大和的连续子数组（至少包含一个数）并返回*它的和*。<br>
-  **补充：**如果你已经找到了 `O(n)` 的解决方案，尝试用分治法编写另一个解决方案，这更微妙。
 ---
-> ## 53. Maximum Subarray
+> 给定一个整数数组 `nums`，找到具有最大和的连续子数组（至少包含一个数）并返回*它的和*。
 > 
-> Given an integer array `nums`, find the contiguous subarray (containing at
-> least one number) which has the largest sum and return *its sum*.
+> 一个**子数组**是一个数组的**连续**部分。
 > 
-> **Follow up:** If you have figured out the `O(n)` solution, try coding another
-> solution using the **divide and conquer** approach, which is more subtle.
-> 
-> **Example 1:**
-> 
-> <pre>
-> <strong>Input:</strong> nums = [-2,1,-3,4,-1,2,1,-5,4]
-> <strong>Output:</strong> 6
-> <strong>Explanation:</strong> [4,-1,2,1] has the largest sum = 6.
-> </pre>
-> 
-> **Example 2:**
-> 
-> <pre>
-> <strong>Input:</strong> nums = [1]
-> <strong>Output:</strong> 1
-> </pre>
-> 
-> **Example 3:**
-> 
-> <pre>
-> <strong>Input:</strong> nums = [0]
-> <strong>Output:</strong> 0
-> </pre>
-> 
-> **Example 4:**
-> 
-> <pre>
-> <strong>Input:</strong> nums = [-1]
-> <strong>Output:</strong> -1
-> </pre>
-> 
-> **Example 5:**
-> 
-> <pre>
-> <strong>Input:</strong> nums = [-2147483647]
-> <strong>Output:</strong> -2147483647
-> </pre>
->  
-> **Constraints:**
+> **限制条件：**
 > 
 > * <code>1 <= nums.length <= 2 * 10<sup>4</sup></code>
 > * <code>-2<sup>31</sup> <= nums[i] <= 2<sup>31</sup> - 1</code>
+> 
+> **补充：**如果你已经找到了 `O(n)` 的解决方案，尝试用分治法编写另一个解决方案，这更微妙。
 
 ## 解决方案
 
