@@ -5,28 +5,28 @@ permalink: /quotes.html
 excerpt: Here are my favorite quotes from someones that inspire me or make me laugh.
 ---
 > Paul Graham, [What You'll Wish You'd Known](http://www.paulgraham.com/hs.html){:target="_blank"}:
+> * The best protection is always to be working on hard problems. Writing novels
+> is hard. Reading novels isn't. Hard means worry: if you're not worrying that
+> something you're making will come out badly, or that you won't be able to
+> understand something you're studying, then it isn't hard enough. There has to
+> be suspense.
+> * Fouls happen. The thing to do when you get fouled is not to lose your cool.
+> Just keep playing.
 > * Your life doesn't have to be shaped by admissions officers. It could be
 > shaped by your own curiosity. It is for all ambitious adults. And you don't
 > have to wait to start. In fact, you don't have to wait to be an adult. There's
 > no switch inside you that magically flips when you turn a certain age or
 > graduate from some institution. You start being an adult when you decide to
 > take responsibility for your life. You can do that at any age.
-> * Fouls happen. The thing to do when you get fouled is not to lose your cool.
-> Just keep playing.
-> * The best protection is always to be working on hard problems. Writing novels
-> is hard. Reading novels isn't. Hard means worry: if you're not worrying that
-> something you're making will come out badly, or that you won't be able to
-> understand something you're studying, then it isn't hard enough. There has to
-> be suspense.
 
 > Steve Jobs, [Text of Steve Jobs' Commencement address (2005)](https://news.stanford.edu/2005/06/14/jobs-061505){:target="_blank"}:
-> * Stay Hungry. Stay Foolish.
 > * Your time is limited, so don't waste it living someone else's life. Don't be
 > trapped by dogma - which is living with the results of other people's
 > thinking. Don't let the noise of others' opinions drown out your own inner
 > voice. And most important, have the courage to follow your heart and
 > intuition. They somehow already know what you truly want to become. Everything
 > else is secondary.
+> * Stay Hungry. Stay Foolish.
 
 > Linus Torvalds, [Re: log-buf-len dynamic](https://lkml.org/lkml/2003/9/23/215){:target="_blank"}, [Reference](https://shlomif.livejournal.com/39215.html){:target="_blank"}:
 > * Those that can, do. Those that can't, complain.
@@ -93,14 +93,14 @@ excerpt: Here are my favorite quotes from someones that inspire me or make me la
 > 嘘をどう利用するか、それが問題なんだけよ。
 
 > 竜ヶ崎桃子「下妻物語」：
-> * 自分が一番大事なものは、絶対貸しちゃいけないの。
-> 貸してもいいのはどうでもいいものだけ。だから私は借りた物を返さない主義。
-> その代わり、貸す時は戻って来なくていいって思うの。
+> * 人間は、大きな幸せを前にすると、急に臆病になる。
+> 幸せを勝ち取ることは、不幸に耐えることより勇気が要るの。
 > * 人間は一人なの。一人で生まれて一人で考えて一人で死んで行くの。
 > 人は一人じゃ生きられないなんて、だったら私は人じゃなくていい。ミジンコでいい。
 > 寄り添わなきゃいけない人間よりもずっとずっと自立してるもの。
-> * 人間は、大きな幸せを前にすると、急に臆病になる。
-> 幸せを勝ち取ることは、不幸に耐えることより勇気が要るの。
+> * 自分が一番大事なものは、絶対貸しちゃいけないの。
+> 貸してもいいのはどうでもいいものだけ。だから私は借りた物を返さない主義。
+> その代わり、貸す時は戻って来なくていいって思うの。
 
 > ソルト「マジすか学園5 第1話」：
 > * 無理は一番の”退屈しのぎ”だ。
