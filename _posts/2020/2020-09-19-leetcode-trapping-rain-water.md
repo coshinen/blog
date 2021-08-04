@@ -6,31 +6,12 @@ author: Coshin
 comments: true
 category: 力扣题解
 tags: LeetCode Hard Array Two-Pointers Stack
-excerpt: 给定 `n` 个非负整数表示每个宽为 `1` 的条状高度图，计算雨后能够收集多少雨水。
 ---
-> ## 42. Trapping Rain Water
-> 
-> Given `n` non-negative integers representing an elevation map where the width
-> of each bar is `1`, compute how much water it is able to trap after raining.
-> 
-> **Example 1:**
+> 给定 `n` 个非负整数表示每个宽为 `1` 的条状高度图，计算雨后能够收集多少雨水。
 > 
 > <img src="https://assets.leetcode.com/uploads/2018/10/22/rainwatertrap.png" style="width: 412px; height: 161px;">
 > 
-> <pre>
-> <strong>Input:</strong> [0,1,0,2,1,0,1,3,2,1,2,1]
-> <strong>Output:</strong> 6
-> <strong>Explanation:</strong> The above elevation map (black section) is represented by array [0,1,0,2,1,0,1,3,2,1,2,1]. In this case, 6 units of rain water (blue section) are being trapped.
-> </pre>
-> 
-> **Example 2:**
-> 
-> <pre>
-> <strong>Input:</strong> height = [4,2,0,3,2,5]
-> <strong>Output:</strong> 9
-> </pre>
-> 
-> **Constraints:**
+> **限制条件：**
 > 
 > * `n == height.length`
 > * <code>0 <= n <= 3 * 10<sup>4</sup></code>

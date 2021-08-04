@@ -6,33 +6,19 @@ author: Coshin
 comments: true
 category: 力扣题解
 tags: LeetCode Hard Array Greedy
-excerpt:
-  给定一个非负整数数组，你最初位于数组的第一个位置。<br>
-  数组中的每个元素代表你在该位置可以跳跃的最大长度。<br>
-  你的目标是使用最少的跳跃次数抵达数组的最后一个位置。
 ---
-> ## 45. Jump Game II
+> 给定一个非负整数数组 `nums`，你最初位于数组的第一个位置。
 > 
-> Given an array of non-negative integers, you are initially positioned at the
-> first index of the array.
+> 数组中的每个元素代表你在该位置可以跳跃的最大长度。
 > 
-> Each element in the array represents your maximum jump length at that
-> position.
+> 你的目标是使用最少的跳跃次数抵达数组的最后一个位置。
 > 
-> Your goal is to reach the last index in the minimum number of jumps.
+> 你可以假设你总是能抵达最后的一个位置。
 > 
-> **Example:**
+> **限制条件：**
 > 
-> <pre>
-> <strong>Input:</strong> [2,3,1,1,4]
-> <strong>Output:</strong> 2
-> <strong>Explanation:</strong> The minimum number of jumps to reach the last index is 2.
->     Jump 1 step from index 0 to 1, then 3 steps to the last index.
-> </pre>
-> 
-> **Note:**
-> 
-> You can assume that you can always reach the last index.
+> * <code>1 <= nums.length <= 10<sup>4</sup></code>
+> * `0 <= nums[i] <= 1000`
 
 ## 解决方案
 

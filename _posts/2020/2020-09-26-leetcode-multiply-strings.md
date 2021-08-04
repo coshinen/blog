@@ -6,38 +6,16 @@ author: Coshin
 comments: true
 category: 力扣题解
 tags: LeetCode Medium Math String
-excerpt:
-  给定两个以字符串形式表示的非负整数 `num1` 和 `num2`，返回 `num1` 和 `num2` 的乘积，也用字符串表示。<br
-  **注：**你不能使用内置的大整数库或直接转换输入为整数。
 ---
-> ## 43. Multiply Strings
+> 给定两个以字符串形式表示的非负整数 `num1` 和 `num2`，返回 `num1` 和 `num2` 的乘积，也用字符串表示。
 > 
-> Given two non-negative integers `num1` and `num2` represented as strings,
-> return the product of `num1` and `num2`, also represented as a string.
+> **注：**你不能使用内置的大整数库或直接转换输入为整数。
 > 
-> **Note:** You must not use any built-in BigInteger library or convert the
-> inputs to integer directly.
-> 
-> **Example 1:**
-> 
-> <pre>
-> <strong>Input:</strong> num1 = "2", num2 = "3"
-> <strong>Output:</strong> "6"
-> </pre>
-> 
-> **Example 2:**
-> 
-> <pre>
-> <strong>Input:</strong> num1 = "123", num2 = "456"
-> <strong>Output:</strong> "56088"
-> </pre>
-> 
-> **Constraints:**
+> **限制条件：**
 > 
 > * `1 <= num1.length, num2.length <= 200`
-> * `num1` and `num2` consist of digits only.
-> * Both `num1` and `num2` do not contain any leading zero, except the number 0
-> itself.
+> * `num1` 和 `num2` 都仅由数字组成。
+> * `num1` 和 `num2` 都不含任何前导零，除数字 `0` 本身。
 
 ## 解决方案
 

@@ -6,24 +6,13 @@ author: Coshin
 comments: true
 category: 力扣题解
 tags: LeetCode Medium Backtracking
-excerpt: 给定一个可包含重复数字的集合，返回其所有不重复的全排列。
 ---
-> ## 47. Permutations II
+> 给定一个可包含重复数字的集合 `nums`，**以任意顺序**返回其所有不重复的全排列。
 > 
-> Given a collection of numbers that might contain duplicates, return all
-> possible unique permutations.
+> **限制条件：**
 > 
-> **Example:**
-> 
-> <pre>
-> <strong>Input:</strong> [1,1,2]
-> <strong>Output:</strong>
-> [
->   [1,1,2],
->   [1,2,1],
->   [2,1,1]
-> ]
-> </pre>
+> * 1 <= nums.length <= 8
+> * -10 <= nums[i] <= 10
 
 ## 解决方案
 

@@ -6,72 +6,19 @@ author: Coshin
 comments: true
 category: 力扣题解
 tags: LeetCode Hard String Dynamic-Programming Backtracking Greedy
-excerpt: 给定一个输入字符串（`s`）和一个模式（`p`），实现支持 `'?'` 和 `'*'` 的通配符模式匹配。
 ---
-> ## 44. Wildcard Matching
+> 给定一个输入字符串（`s`）和一个模式（`p`），实现支持 `'?'` 和 `'*'` 的通配符模式匹配。
 > 
-> Given an input string (`s`) and a pattern (`p`), implement wildcard pattern
-> matching with support for `'?'` and `'*'`.
+> * `'?'` 匹配任意单个字符。
+> * `'*'` 匹配任意字符序列（包含空序列）。
 > 
-> * `'?'` Matches any single character.
-> * `'*'` Matches any sequence of characters (including the empty sequence).
+> 该匹配应该覆盖**整个**输入字符串（非部分）。
 > 
-> The matching should cover the **entire** input string (not partial).
+> **限制条件：**
 > 
-> **Note:**
-> 
-> * `s` could be empty and contains only lowercase letters `a-z`.
-> * `p` could be empty and contains only lowercase letters `a-z`, and characters
-> like `?` or `*`.
-> 
-> **Example 1:**
-> 
-> <pre>
-> <strong>Input:</strong>
-> s = "aa"
-> p = "a"
-> <strong>Output:</strong> false
-> <strong>Explanation:</strong> "a" does not match the entire string "aa".
-> </pre>
-> 
-> **Example 2:**
-> 
-> <pre>
-> <strong>Input:</strong>
-> s = "aa"
-> p = "*"
-> <strong>Output:</strong> true
-> <strong>Explanation:</strong> '*' matches any sequence.
-> </pre>
-> 
-> **Example 3:**
-> 
-> <pre>
-> <strong>Input:</strong>
-> s = "cb"
-> p = "?a"
-> <strong>Output:</strong> false
-> <strong>Explanation:</strong> '?' matches 'c', but the second letter is 'a', which does not match 'b'.
-> </pre>
-> 
-> **Example 4:**
-> 
-> <pre>
-> <strong>Input:</strong>
-> s = "adceb"
-> p = "*a*b"
-> <strong>Output:</strong> true
-> <strong>Explanation:</strong> The first '*' matches the empty sequence, while the second '*' matches the substring "dce".
-> </pre>
-> 
-> **Example 5:**
-> 
-> <pre>
-> <strong>Input:</strong>
-> s = "acdcb"
-> p = "a*c?b"
-> <strong>Output:</strong> false
-> </pre>
+> * `0 <= s.length, p.length <= 2000`
+> * `s` 仅由小写英文字母组成。
+> * `p` 仅由小写英文字母，`'?'` 或 `'*'` 组成。
 
 ## 解决方案
 

@@ -6,45 +6,16 @@ author: Coshin
 comments: true
 category: 力扣题解
 tags: LeetCode Medium Hash-Table String
-excerpt:
-  给定一个字符串数组 `strs`，把**字母异序词**分为一组。<br>
-  **字母异序词**是通过重排不同单词或短语的字母形成的单词或短语，通常只使用所有原始字母一次。
 ---
-> ## 49. Group Anagrams
+> 给定一个字符串数组 `strs`，把**字母异序词**分为一组。
 > 
-> Given an array of strings `strs`, group **the anagrams** together. You can
-> return the answer in **any order**.
+> **字母异序词**是通过重排不同单词或短语的字母形成的单词或短语，通常只使用所有原始字母一次。
 > 
-> An **Anagram** is a word or phrase formed by rearranging the letters of a
-> different word or phrase, typically using all the original letters exactly
-> once.
-> 
-> **Example 1:**
-> 
-> <pre>
-> <strong>Input:</strong> strs = ["eat","tea","tan","ate","nat","bat"]
-> <strong>Output:</strong> [["bat"],["nat","tan"],["ate","eat","tea"]]
-> </pre>
-> 
-> **Example 2:**
-> 
-> <pre>
-> <strong>Input:</strong> strs = [""]
-> <strong>Output:</strong> [[""]]
-> </pre>
-> 
-> **Example 3:**
-> 
-> <pre>
-> <strong>Input:</strong> strs = ["a"]
-> <strong>Output:</strong> [["a"]]
-> </pre>
-> 
-> **Constraints:**
+> **限制条件：**
 > 
 > * <code>1 <= strs.length <= 10<sup>4</sup></code>
 > * `0 <= strs[i].length <= 100`
-> * `strs[i]` consists of lower-case English letters.
+> * `strs[i]` 由小写英文字母组成。
 
 ## 解决方案
 

@@ -6,53 +6,15 @@ author: Coshin
 comments: true
 category: 力扣题解
 tags: LeetCode Medium Array
-excerpt:
-  给定一个 *n* x *n* 的二维`矩阵`表示一个图像，旋转该图像 90 度（顺时针）。<br>
-  你必须原地旋转图片，这意味着你必须直接修改输入的 2D 矩阵。<br>
-  **不要**分配另一个 2D 矩阵然后做旋转。
 ---
-> ## 48. Rotate Image
+> 给定一个 *n* x *n* 的二维`矩阵`表示一个图像，旋转该图像 90 度（顺时针）。
 > 
-> You are given an *n* x *n* 2D `matrix` representing an image, rotate the image
-> by 90 degrees (clockwise).
-> 
-> You have to rotate the image [in-place](https://en.wikipedia.org/wiki/In-place_algorithm){:target="_blank"},
-> which means you have to modify the input 2D matrix directly. **DO NOT**
-> allocate another 2D matrix and do the rotation.
-> 
-> **Example 1:**
+> 你必须原地旋转图片，这意味着你必须直接修改输入的 2D 矩阵。
+> **不要**分配另一个 2D 矩阵然后做旋转。
 > 
 > <img alt="" src="https://assets.leetcode.com/uploads/2020/08/28/mat1.jpg" style="width: 642px; height: 242px;">
 > 
-> <pre>
-> <strong>Input:</strong> matrix = [[1,2,3],[4,5,6],[7,8,9]]
-> <strong>Output:</strong> [[7,4,1],[8,5,2],[9,6,3]]
-> </pre>
-> 
-> **Example 2:**
-> 
-> <img alt="" src="https://assets.leetcode.com/uploads/2020/08/28/mat2.jpg" style="width: 800px; height: 321px;">
-> 
-> <pre>
-> <strong>Input:</strong> matrix = [[5,1,9,11],[2,4,8,10],[13,3,6,7],[15,14,12,16]]
-> <strong>Output:</strong> [[15,13,2,5],[14,3,4,1],[12,6,8,9],[16,7,10,11]]
-> </pre>
-> 
-> **Example 3:**
-> 
-> <pre>
-> <strong>Input:</strong> matrix = [[1]]
-> <strong>Output:</strong> [[1]]
-> </pre>
-> 
-> **Example 4:**
-> 
-> <pre>
-> <strong>Input:</strong> matrix = [[1,2],[3,4]]
-> <strong>Output:</strong> [[3,1],[4,2]]
-> </pre>
->  
-> **Constraints:**
+> **限制条件：**
 > 
 > * `matrix.length == n`
 > * `matrix[i].length == n`

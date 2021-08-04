@@ -6,36 +6,10 @@ author: Coshin
 comments: true
 category: 力扣题解
 tags: LeetCode Medium Math Binary-Search
-excerpt: 实现 [pow(*x*, *n*)](http://www.cplusplus.com/reference/valarray/pow/){:target="_blank"}，计算 *x* 的 *n* 次幂（即 x<sup>n</sup>）。
 ---
-> ## 50. Pow(x, n)
+> 实现 [pow(*x*, *n*)](http://www.cplusplus.com/reference/valarray/pow/){:target="_blank"}，计算 *x* 的 *n* 次幂（即 x<sup>n</sup>）。
 > 
-> Implement [pow(*x*, *n*)](http://www.cplusplus.com/reference/valarray/pow/){:target="_blank"},
-> which calculates *x* raised to the power *n* (i.e. x<sup>n</sup>).
-> 
-> **Example 1:**
-> 
-> <pre>
-> <strong>Input:</strong> x = 2.00000, n = 10
-> <strong>Output:</strong> 1024.00000
-> </pre>
-> 
-> **Example 2:**
-> 
-> <pre>
-> <strong>Input:</strong> x = 2.10000, n = 3
-> <strong>Output:</strong> 9.26100
-> </pre>
-> 
-> **Example 3:**
-> 
-> <pre>
-> <strong>Input:</strong> x = 2.00000, n = -2
-> <strong>Output:</strong> 0.25000
-> <strong>Explanation:</strong> 2<sup>-2</sup> = 1/2<sup>2</sup> = 1/4 = 0.25
-> </pre>
-> 
-> **Constraints:**
+> **限制条件：**
 > 
 > * `-100.0 < x < 100.0`
 > * <code>-2<sup>31</sup> <= n <= 2<sup>31</sup>-1</code>

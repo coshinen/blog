@@ -6,46 +6,14 @@ author: Coshin
 comments: true
 category: 力扣题解
 tags: LeetCode Medium Array Backtracking
-excerpt:
-  给定一个的候选数组 `candidates` 和一个目标数 `target`，找出 `candidates` 中所有使数字和为 `target` 的组合。<br>
-  数组 `candidates` 的每个数在组合中只能使用**一次**。<br>
-  **注：**解决方案集合必须不含重复的组合。
 ---
-> ## 40. Combination Sum II
+> 给定一个的候选数组 `candidates` 和一个目标数 `target`，找出 `candidates` 中所有使数字和为 `target` 的组合。
 > 
-> Given a collection of candidate numbers (`candidates`) and a target number
-> (`target`), find all unique combinations in `candidates` where the candidate
-> numbers sums to `target`.
+> 数组 `candidates` 的每个数在组合中只能使用**一次**。
 > 
-> Each number in `candidates` may only be used **once** in the combination.
+> **注：**解决方案集合必须不含重复的组合。
 > 
-> **Note:** The solution set must not contain duplicate combinations.
-> 
-> **Example 1:**
-> 
-> <pre>
-> <strong>Input:</strong> candidates = [10,1,2,7,6,1,5], target = 8,
-> <strong>Output:</strong>
-> [
->   [1, 1, 6],
->   [1, 2, 5],
->   [1, 7],
->   [2, 6]
-> ]
-> </pre>
-> 
-> **Example 2:**
-> 
-> <pre>
-> <strong>Input:</strong> candidates = [2,5,2,1,2], target = 5,
-> <strong>Output:</strong>
-> [
->   [1,2,2],
->   [5]
-> ]
-> </pre>
-> 
-> **Constraints:**
+> **限制条件：**
 > 
 > * `1 <= candidates.length <= 100`
 > * `1 <= candidates[i] <= 50`

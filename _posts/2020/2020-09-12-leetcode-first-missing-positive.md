@@ -6,57 +6,30 @@ author: Coshin
 comments: true
 category: 力扣题解
 tags: LeetCode Hard Array
-excerpt: 给定一个无序的整型数组 `nums`，找出缺失的最小正整数。
 ---
-> ## 41. First Missing Positive
+> 给定一个无序的整型数组 `nums`，找出缺失的最小正整数。
 > 
-> Given an unsorted integer array `nums`, find the smallest missing positive
-> integer.
+> 你必须实现一个运行时间为 `O(n)` 并使用常数级额外空间的算法。
 > 
-> **Example 1:**
+> **限制条件：**
 > 
-> <pre>
-> <strong>Input:</strong> [1,2,0]
-> <strong>Output:</strong> 3
-> </pre>
-> 
-> **Example 2:**
-> 
-> <pre>
-> <strong>Input:</strong> [3,4,-1,1]
-> <strong>Output:</strong> 2
-> </pre>
-> 
-> **Example 3:**
-> 
-> <pre>
-> <strong>Input:</strong> [7,8,9,11,12]
-> <strong>Output:</strong> 1
-> </pre>
-> 
-> **Constraints:**
-> 
-> * `0 <= nums.length <= 300`
+> * <code>1 <= nums.length <= 5 * 10<sup>5</sup></code>
 > * <code>-2<sup>31</sup> <= nums[i] <= 2<sup>31</sup> - 1</code>
 > 
-> **Follow up:**
-> 
-> Your algorithm should run in *O*(n) time and uses constant extra space.
-> 
 > <details>
-> <summary>Hint 1</summary>
-> Think about how you would solve the problem in non-constant space. Can you
-> apply that logic to the existing space?
+> <summary>提示 1</summary>
+> 想想你如何用非常数空间解决该问题。
+> 你能把这个逻辑应用到现有的空间吗？
 > </details>
 > 
 > <details>
-> <summary>Hint 2</summary>
-> We don't care about duplicates or non-positive integers
+> <summary>提示 2</summary>
+> 我们不关心重复或非正整数
 > </details>
 > 
 > <details>
-> <summary>Hint 3</summary>
-> Remember that O(2n) = O(n)
+> <summary>提示 3</summary>
+> 记住 O(2n) = O(n)
 > </details>
 
 ## 解决方案

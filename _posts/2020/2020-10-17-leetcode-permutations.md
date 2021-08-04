@@ -6,26 +6,14 @@ author: Coshin
 comments: true
 category: 力扣题解
 tags: LeetCode Medium Backtracking
-excerpt: 给定一个**无重复**数字的集合，返回其所有可能的全排列。
 ---
-> ## 46. Permutations
+> 给定一个**无重复**数字的集合，以**按任意顺序**返回其所有可能的全排列。
 > 
-> Given a collection of **distinct** integers, return all possible permutations.
+> **限制条件：**
 > 
-> **Example:**
-> 
-> <pre>
-> <strong>Input:</strong> [1,2,3]
-> <strong>Output:</strong>
-> [
->   [1,2,3],
->   [1,3,2],
->   [2,1,3],
->   [2,3,1],
->   [3,1,2],
->   [3,2,1]
-> ]
-> </pre>
+> * `1 <= nums.length <= 6`
+> * `-10 <= nums[i] <= 10`
+> * `nums` 中的所有整数是**互不相同的**。
 
 ## 解决方案
 
