@@ -6,46 +6,18 @@ author: Coshin
 comments: true
 category: 力扣题解
 tags: LeetCode Easy Array Binary-Search
-excerpt:
-  给定一个有序数组和一个目标值，如果找到目标值则返回其索引。
-  如果没找到，返回其按顺序插入的索引。<br>
-  你可以假设数组中没有重复项。
 ---
-> ## 35. Search Insert Position
+> 给定一个有序数组和一个目标值，如果找到目标值则返回其索引。
+> 如果没找到，返回其按顺序插入的索引。
 > 
-> Given a sorted array and a target value, return the index if the target is
-> found. If not, return the index where it would be if it were inserted in
-> order.
+> 你必须写一个 `O(log n)` 时间复杂度的算法。
 > 
-> You may assume no duplicates in the array.
+> **限制条件：**
 > 
-> **Example 1:**
-> 
-> <pre>
-> <strong>Input:</strong> [1,3,5,6], 5
-> <strong>Output:</strong> 2
-> </pre>
-> 
-> **Example 2:**
-> 
-> <pre>
-> <strong>Input:</strong> [1,3,5,6], 2
-> <strong>Output:</strong> 1
-> </pre>
-> 
-> **Example 3:**
-> 
-> <pre>
-> <strong>Input:</strong> [1,3,5,6], 7
-> <strong>Output:</strong> 4
-> </pre>
-> 
-> **Example 4:**
-> 
-> <pre>
-> <strong>Input:</strong> [1,3,5,6], 0
-> <strong>Output:</strong> 0
-> </pre>
+> * <code>1 <= nums.length <= 10<sup>4</sup></code>
+> * <code>-10<sup>4</sup> <= nums[i] <= 10<sup>4</sup></code>
+> * `nums` 包含**互不相同的**已**按升序**排列的值。
+> * <code>-10<sup>4</sup> <= target <= 10<sup>4</sup></code>
 
 ## 解决方案
 

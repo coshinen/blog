@@ -6,25 +6,17 @@ author: Coshin
 comments: true
 category: 力扣题解
 tags: LeetCode Medium Array
-excerpt: 实现**下一个排列**，把数字重排成字典序中下一个更大的数字排列。
 ---
-> ## 31. Next Permutation
+> 实现**下一个排列**，把数字重排成字典序中下一个更大的数字排列。
 > 
-> Implement **next permutation**, which rearranges numbers into the
-> lexicographically next greater permutation of numbers.
+> 如果这样的排列是不可能的，那么它必须重新排列成最小的排列（即，按升序排列）。
 > 
-> If such arrangement is not possible, it must rearrange it as the lowest
-> possible order (ie, sorted in ascending order).
+> 该替换必须在[原地进行](https://baike.baidu.com/item/原地算法){:target="_blank"}并只使用常数级的额外空间。
 > 
-> The replacement must be [in-place](https://en.wikipedia.org/wiki/In-place_algorithm){:target="_blank"}
-> and use only constant extra memory.
+> **限制条件：**
 > 
-> Here are some examples. Inputs are in the left-hand column and its
-> corresponding outputs are in the right-hand column.
-> 
-> `1,2,3` → `1,3,2`<br>
-> `3,2,1` → `1,2,3`<br>
-> `1,1,5` → `1,5,1`
+> * `1 <= nums.length <= 100`
+> * `0 <= nums[i] <= 100`
 
 ## 解决方案
 

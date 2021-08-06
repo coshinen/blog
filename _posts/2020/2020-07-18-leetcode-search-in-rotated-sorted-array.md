@@ -6,35 +6,23 @@ author: Coshin
 comments: true
 category: 力扣题解
 tags: LeetCode Medium Array Binary-Search
-excerpt: 假设一个升序数组在你预先未知的某个点上进行了旋转。
 ---
-> ## 33. Search in Rotated Sorted Array
+> 这里是一个按升序排列的整形数组 `nums`（都是**互不相同的**值）。
 > 
-> Suppose an array sorted in ascending order is rotated at some pivot unknown to
-> you beforehand.
+> 在传递函数之前，`nums` 在未知的下标 `k` (`0 <= k < nums.length`) 上**进行了旋转**，使数组变为 `[nums[k], nums[k+1], ..., nums[n-1], nums[0], nums[1], ..., nums[k-1]]`（**下标从 0 开始**）。
+> 例如，`[0,1,2,4,5,6,7]` 在下标 `3` 旋转后可能变为 `[4,5,6,7,0,1,2,4]`。
 > 
-> (i.e., `[0,1,2,4,5,6,7]` might become `[4,5,6,7,0,1,2]`).
+> 给定的旋转**后**的数组 `nums` 和一个整数 `target`，如果 `nums` 中存在 `target`，则返回其索引，否则返回 `-1`。
 > 
-> You are given a target value to search. If found in the array return its
-> index, otherwise return `-1`.
+> 你必须写一个 `O(log n)` 时间复杂度的算法。
 > 
-> You may assume no duplicate exists in the array.
+> **限制条件：**
 > 
-> Your algorithm's runtime complexity must be in the order of *O*(log n).
-> 
-> **Example 1:**
-> 
-> <pre>
-> <strong>Input:</strong> nums = [4,5,6,7,0,1,2], target = 0
-> <strong>Output:</strong> 4
-> </pre>
-> 
-> **Example 2:**
-> 
-> <pre>
-> <strong>Input:</strong> nums = [4,5,6,7,0,1,2], target = 3
-> <strong>Output:</strong> -1
-> </pre>
+> * `1 <= nums.length <= 5000`
+> * <code>-10<sup>4</sup> <= nums[i] <= 10<sup>4</sup></code>
+> * `nums` 中的所有值都是**独一无二的**。
+> * 已确保 `nums` 在某个下标上进行了旋转。
+> * <code>-10<sup>4</sup> <= target <= 10<sup>4</sup></code>
 
 ## 解决方案
 
