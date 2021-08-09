@@ -6,22 +6,16 @@ author: Coshin
 comments: true
 category: 力扣题解
 tags: LeetCode Medium Linked-List
-excerpt:
-  给定一条链表，交换每两个相邻的节点并返回它的头。<br>
-  **不要**修改链表节点的值，只修改节点本身。
 ---
-> ## 24. Swap Nodes in Pairs
+> 给定一条单链表，交换每两个相邻的节点并返回它的头。
+> 你必须不要修改链表节点的值解决该问题（即，只能更改节点本身）。
 > 
-> Given a linked list, swap every two adjacent nodes and return its head.
+> <img alt="" src="https://assets.leetcode.com/uploads/2020/10/03/swap_ex1.jpg" style="width: 422px; height: 222px;">
 > 
-> You may **not** modify the values in the list's nodes, only nodes itself may
-> be changed.
+> **限制条件：**
 > 
-> **Example:**
-> 
-> <pre>
-> Given 1->2->3->4, you should return the list as 2->1->4->3.
-> </pre>
+> * 链表中的节点数在范围 `[0, 100]` 里。
+> * `0 <= Node.val <= 100`
 
 ## 解决方案
 

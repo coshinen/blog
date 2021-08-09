@@ -6,21 +6,17 @@ author: Coshin
 comments: true
 category: 力扣题解
 tags: LeetCode Easy Linked-List
-excerpt:
-  合并两条有序链表并返回一条新链表。
-  新链表通过拼接两条链表的节点组成。
 ---
-> ## 21. Merge Two Sorted Lists
+> 合并两条有序链表后以一条**有序**链表返回它。
+> 该链表通过拼接前两条链表的节点组成。
 > 
-> Merge two sorted linked lists and return it as a new list. The new list should
-> be made by splicing together the nodes of the first two lists.
+> <img alt="" src="https://assets.leetcode.com/uploads/2020/10/03/merge_ex1.jpg" style="width: 662px; height: 302px;">
 > 
-> **Example:**
+> **限制条件：**
 > 
-> <pre>
-> <strong>Input:</strong> 1->2->4, 1->3->4
-> <strong>Output:</strong> 1->1->2->3->4->4
-> </pre>
+> * 链表的节点数在范围 `[0, 50]` 里。
+> * `-100 <= Node.val <= 100`
+> * `l1` 和 `l2` 都是按**非降序**排列的有序链表。
 
 ## 解决方案
 

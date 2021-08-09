@@ -6,26 +6,19 @@ author: Coshin
 comments: true
 category: 力扣题解
 tags: LeetCode Hard Linked-List Divide-and-Conquer Heap
-excerpt:
-  合并 k 条有序链表为一条并返回。
-  分析并描述它的复杂度。
 ---
-> ## 23. Merge k Sorted Lists
+> 给你一个含 `k` 条单链表的数组 `lists`，每条单链表都是按升序排列的。
 > 
-> Merge k sorted linked lists and return it as one sorted list. Analyze and
-> describe its complexity.
+> *合并所有单链表到一条有序链表并返回它*。
 > 
-> **Example:**
+> **限制条件：**
 > 
-> <pre>
-> <strong>Input:</strong>
-> [
->   1->4->5,
->   1->3->4,
->   2->6
-> ]
-> <strong>Output:</strong> 1->1->2->3->4->4->5->6
-> </pre>
+> * `k == lists.length`
+> * <code>0 <= k <= 10<sup>4</sup></code>
+> * `0 <= lists[i].length <= 500`
+> * <code>-10<sup>4</sup> <= lists[i][j] <= 10<sup>4</sup></code>
+> * `lists[i]` 是按**升序排列的**有序链表。
+> * `lists[i].length` 的总和不超过 <code>10<sup>4</sup></code>。
 
 ## 解决方案
 

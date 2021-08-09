@@ -6,24 +6,12 @@ author: Coshin
 comments: true
 category: 力扣题解
 tags: LeetCode Medium String Backtracking
-excerpt: 给定括号的对数 n，写一个函数用于生成所有括号的有效组合。
 ---
-> ## 22. Generate Parentheses
+> 给定 `n` 对括号，写一个函数用于*生成所有括号的有效组合*。
 > 
-> Given n pairs of parentheses, write a function to generate all combinations of
-> well-formed parentheses.
+> **限制条件：**
 > 
-> For example, given n = 3, a solution set is:
-> 
-> <pre>
-> [
->   "((()))",
->   "(()())",
->   "(())()",
->   "()(())",
->   "()()()"
-> ]
-> </pre>
+> * `1 <= n <= 8`
 
 ## 解决方案
 

@@ -6,49 +6,30 @@ author: Coshin
 comments: true
 category: 力扣题解
 tags: LeetCode Medium String Dynamic-Programming
-excerpt:
-  给定一个字符串 **s**，找到 **s** 中最长的回文子串。
-  你可以假设 **s** 的最大长度为 1000。
 ---
-> ## 5. Longest Palindromic Substring
+> 给定一个字符串 `s`，返回 `s` 中*最长的回文子串*。
 > 
-> Given a string **s**, find the longest palindromic substring in **s**. You may
-> assume that the maximum length of **s** is 1000.
+> **限制条件：**
 > 
-> **Example 1:**
-> 
-> <pre>
-> <strong>Input:</strong> "babad"
-> <strong>Output:</strong> "bab"
-> <strong>Note:</strong> "aba" is also a valid answer.
-> </pre>
-> 
-> **Example 2:**
-> 
-> <pre>
-> <strong>Input:</strong> "cbbd"
-> <strong>Output:</strong> "bb"
-> </pre>
+> * `1 <= s.length <= 1000`
+> * `s` 仅由数字和英文字母组成。
 > 
 > <details>
-> <summary>Hint 1</summary>
-> How can we reuse a previously computed palindrome to compute a larger
-> palindrome?
+> <summary>提示 1</summary>
+> 我们如何重用一个提前计算好的回文来计算一个更大的回文？
 > </details>
 > 
 > <details>
-> <summary>Hint 2</summary>
-> If "aba" is a palindrome, is "xabax" and palindrome? Similarly is "xabay" a
-> palindrome?
+> <summary>提示 2</summary>
+> 如果 "aba" 是一个回文，那么 "xabax" 是回文吗？
+> 同样 "xabay" 是回文吗？
 > </details>
 > 
 > <details>
-> <summary>Hint 3</summary>
-> Complexity based hint:<br>
-> If we use brute-force and check whether for every start and end position a
-> substring is a palindrome we have O(n<sup>2</sup>) start - end pairs and O(n)
-> palindromic checks. Can we reduce the time for palindromic checks to O(1) by
-> reusing some previous computation.
+> <summary>提示 3</summary>
+> 基于复杂度的提示：<br>
+> 如果我们使用暴力法并检查每个开始和结束位置的子串是否为回文，我们有 O(n<sup>2</sup>) 开始 - 结束对和 O(n) 的回文检查。
+> 我们能否通过重用之前的一些计算把回文检查的时间减少到 O(1)？
 > </details>
 
 ## 解决方案

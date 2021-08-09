@@ -6,30 +6,22 @@ author: Coshin
 comments: true
 category: 力扣题解
 tags: LeetCode Hard Linked-List
-excerpt: 给定一条链表，每次反转 k 个节点的子链表并返回修改后的链表。
 ---
-> ## 25. Reverse Nodes in k-Group
+> 给定一条单链表，每次反转 *k* 个节点的子链表并返回其修改后的链表。
 > 
-> Given a linked list, reverse the nodes of a linked list k at a time and return
-> its modified list.
+> *k* 是一个正整数且小于或等于链表的长度。
+> 如果节点数不是 *k* 的倍数，那么最终剩下的节点应该保持不变。
 > 
-> k is a positive integer and is less than or equal to the length of the linked
-> list. If the number of nodes is not a multiple of k then left-out nodes in the
-> end should remain as it is.
+> 你不能更改链表节点的值，只能改变节点本身。
 > 
-> **Example:**
+> <img alt="" src="https://assets.leetcode.com/uploads/2020/10/03/reverse_ex1.jpg" style="width: 542px; height: 222px;">
 > 
-> Given this linked list: `1->2->3->4->5`
+> **限制条件：**
 > 
-> For k = 2, you should return: `2->1->4->3->5`
-> 
-> For k = 3, you should return: `3->2->1->4->5`
-> 
-> **Note:**
-> 
-> * Only constant extra memory is allowed.
-> * You may not alter the values in the list's nodes, only nodes itself may be
-> changed.
+> * 链表中的节点数在范围 `sz` 里。
+> * `1 <= sz <= 5000`
+> * `0 <= Node.val <= 1000`
+> * `1 <= k <= sz`
 
 ## 解决方案
 
