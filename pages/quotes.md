@@ -82,6 +82,10 @@ excerpt: Here are my favorite quotes from someones that inspire me or make me la
 > sorrow born. Either the memory of past bliss is the anguish of today, or the
 > agonies which are, have their origin in the ecstasies which might have been.
 
+> 永里大介「家族ノカタチ 第1話 結婚しない息子と娘vs超破天荒な父と母」：
+> * 人はどんなことも慣れると当たり前になってくる。
+> それがたとえ孤独という習慣だったとしても、一度身についてしまったものを手放すのは難しい。
+
 > 倉沢さつき(和辻摩子)「Wの悲劇 第二幕 資産2000億の女帝」：
 > * 人は、見たいものしか見ないし、信じないものしか…信じないですから。
 
