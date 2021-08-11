@@ -6,83 +6,64 @@ author: Coshin
 comments: true
 category: 力扣题解
 tags: LeetCode Easy Array Two-Pointers
-excerpt: 给定一个数组 *nums* 和一个值 *val*，[原地](https://en.wikipedia.org/wiki/In-place_algorithm){:target="_blank"}移除所有该数值的实例并返回新数组的长度。
 ---
-> ## 27. Remove Element
+> 给定一个整数数组 `nums` 和一个整数 `val`，[原地](https://en.wikipedia.org/wiki/In-place_algorithm){:target="_blank"}移除 `nums` 中出现的所有 `val`。
+> 元素的相对顺序可以被改变。
 > 
-> Given an array *nums* and a value *val*, remove all instances of that value
-> [in-place](https://en.wikipedia.org/wiki/In-place_algorithm){:target="_blank"}
-> and return the new length.
+> 由于在某些语言中无法更改数组的长度，因此必须把结果放在数组 `nums` 的**前面部分**。
+> 更正式地说，如果删除重复项后有 `k` 个元素，那么 `nums` 的前 `k` 个元素应该保存最终结果。
+> 除了前 `k` 个元素外，剩下的不重要。
 > 
-> Do not allocate extra space for another array, you must do this by **modifying
-> the input array** [in-place](https://en.wikipedia.org/wiki/In-place_algorithm){:target="_blank"}
-> with O(1) extra memory.
+> 返回 `k` *前把最终结果放入 `nums` 的前 `k` 个插槽*。
 > 
-> The order of elements can be changed. It doesn't matter what you leave beyond
-> the new length.
+> **不要**为其他数组开辟额外的空间。
+> 为此你必须使用 O(1) 的额外内存[原地](https://en.wikipedia.org/wiki/In-place_algorithm){:target="_blank"}**修改输入数组**。
 > 
-> **Example 1:**
+> **定制评判：**
 > 
-> <pre>
-> Given <em>nums</em> = <strong>[3,2,2,3]</strong>, <em>val</em> = <strong>3</strong>,
-> 
-> Your function should return length = <strong>2</strong>, with the first two elements of <em>nums</em> being <strong>2</strong>.
-> 
-> It doesn't matter what you leave beyond the returned length.
-> </pre>
-> 
-> **Example 2:**
+> 评判将使用下面代码测试你的解决方案：
 > 
 > <pre>
-> Given <em>nums</em> = <strong>[0,1,2,2,3,0,4,2]</strong>, <em>val</em> = <strong>2</strong>,
+> int[] nums = [...]; // Input array
+> int val = ...; // Value to remove
+> int[] expectedNums = [...]; // The expected answer with correct length.
+>                             // It is sorted with no values equaling val.
 > 
-> Your function should return length = <strong>5</strong>, with the first five elements of <em>nums</em> containing <strong>0</strong>, <strong>1</strong>, <strong>3</strong>, <strong>0</strong>, and <strong>4</strong>.
+> int k = removeElement(nums, val); // Calls your implementation
 > 
-> Note that the order of those five elements can be arbitrary.
-> 
-> It doesn't matter what values are set beyond the returned length.
-> </pre>
-> 
-> **Clarification:**
-> 
-> Confused why the returned value is an integer but your answer is an array?
-> 
-> Note that the input array is passed in by **reference**, which means
-> modification to the input array will be known to the caller as well.
-> 
-> Internally you can think of this:
-> 
-> <pre>
-> // <strong>nums</strong> is passed in by reference. (i.e., without making a copy)
-> int len = removeElement(nums, val);
-> 
-> // any modification to <strong>nums</strong> in your function would be known by the caller.
-> // using the length returned by your function, it prints the first <strong>len</strong> elements.
-> for (int i = 0; i < len; i++) {
->     print(nums[i]);
+> assert k == expectedNums.length;
+> sort(nums, 0, k); // Sort the first k elements of nums
+> for (int i = 0; i < actualLength; i++) {
+>     assert nums[i] == expectedNums[i];
 > }
 > </pre>
 > 
+> 如果所有测试通过，那么你的解决方案将**被接受**。
+> 
+> **限制条件：**
+> 
+> * `0 <= nums.length <= 100`
+> * `0 <= nums[i] <= 50`
+> * `0 <= val <= 100`
+> 
 > <details>
-> <summary>Hint 1</summary>
-> The problem statement clearly asks us to modify the array in-place and it also
-> says that the element beyond the new length of the array can be anything.
-> Given an element, we need to remove all the occurrences of it from the array.
-> We don't technically need to <b>remove</b> that element per-say, right?
+> <summary>提示 1</summary>
+> 问题陈述清楚地要求我们在适当的位置修改数组，它还说超出数组的新长度的元素可以是任何东西。
+> 给定一个元素，我们需要从数组中删除它的所有匹配项。
+> 从技术上讲，我们不需要<b>移除</b>每个元素，对吗？
 > </details>
 > 
 > <details>
-> <summary>Hint 2</summary>
-> We can move all the occurrences of this element to the end of the array. Use
-> two pointers!<br>
+> <summary>提示 2</summary>
+> 我们可以把该元素的所有存在移动到数组的末尾。
+> 使用两个指针！<br>
 > <img src="https://assets.leetcode.com/uploads/2019/10/20/hint_remove_element.png" width="500">
 > </details>
 > 
 > <details>
-> <summary>Hint 3</summary>
-> Yet another direction of thought is to consider the elements to be removed as
-> non-existent. In a single pass, if we keep copying the visible elements
-> in-place, that should also solve this problem for us.
+> <summary>提示 3</summary>
+> 然而另一个思考方向是考虑那些被移除的元素，因为它们不存在。
+> 在一次过程中，如果我们继续在适当的位置复制可见元素，这也应该能为我们解决该问题。
 > </details>
 
 ## 解决方案

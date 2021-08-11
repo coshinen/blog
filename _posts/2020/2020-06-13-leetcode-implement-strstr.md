@@ -5,40 +5,24 @@ date:   2020-06-13 08:09:19 +0800
 author: Coshin
 comments: true
 category: 力扣题解
-tags: LeetCode Easy Two-Pointers String
-excerpt:
-  实现 [strStr()](http://www.cplusplus.com/reference/cstring/strstr/){:target="_blank"}。<br>
-  返回 haystack 中 needle 首次出现的索引，若 needle 不是 haystack 的一部分则返回 -1。
+tags: LeetCode Easy Two-Pointers String String-Matching
 ---
-> ## 28. Implement strStr()
+> 实现 [strStr()](http://www.cplusplus.com/reference/cstring/strstr/){:target="_blank"}。
 > 
-> Implement [strStr()](http://www.cplusplus.com/reference/cstring/strstr/){:target="_blank"}.
+> 返回 `haystack` 中 `needle` 首次出现的索引，若 `needle` 不是 `haystack` 的一部分则返回 `-1`。
 > 
-> Return the index of the first occurrence of needle in haystack, or **-1** if
-> needle is not part of haystack.
+> **阐明：**
 > 
-> **Example 1:**
+> 当 `needle` 是空字符串时我们应该返回什么？
+> 这是一个很棒的面试问题。
 > 
-> <pre>
-> <strong>Input:</strong> haystack = "hello", needle = "ll"
-> <strong>Output:</strong> 2
-> </pre>
+> 为了解决该问题，当 `needle` 是一个空串时我们将返回 0。
+> 这与 C 的 [strstr()](http://www.cplusplus.com/reference/cstring/strstr/){:target="_blank"} 和 Java 的 [indexOf()](https://docs.oracle.com/javase/7/docs/api/java/lang/String.html#indexOf(java.lang.String)){:target="_blank"} 一致。
 > 
-> **Example 2:**
+> **限制条件：**
 > 
-> <pre>
-> <strong>Input:</strong> haystack = "aaaaa", needle = "bba"
-> <strong>Output:</strong> -1
-> </pre>
-> 
-> **Clarification:**
-> 
-> What should we return when `needle` is an empty string? This is a great
-> question to ask during an interview.
-> 
-> For the purpose of this problem, we will return 0 when `needle` is an empty
-> string. This is consistent to C's [strstr()](http://www.cplusplus.com/reference/cstring/strstr/){:target="_blank"}
-> and Java's [indexOf()](https://docs.oracle.com/javase/7/docs/api/java/lang/String.html#indexOf(java.lang.String)){:target="_blank"}.
+> * <code>0 <= haystack.length, needle.length <= 5 * 10<sup>4</sup></code>
+> * `haystack` 和 `needle` 仅由小写英文字母组成。
 
 ## 解决方案
 

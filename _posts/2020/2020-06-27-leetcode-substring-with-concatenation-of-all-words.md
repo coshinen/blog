@@ -5,37 +5,20 @@ date:   2020-06-27 17:36:16 +0800
 author: Coshin
 comments: true
 category: 力扣题解
-tags: LeetCode Hard Hash-Table Two-Pointers String
-excerpt:
-  给你一个字符串 **s** 和一系列长度相同的单词 **words**。
-  找出 **s** 中由 **words** 里每个单词串联成子串的所有起始位置。
+tags: LeetCode Hard Hash-Table String Sliding-Window
 ---
-> ## 30. Substring with Concatenation of All Words
+> 给你一个字符串 `s` 和一个字符串**长度相同**的数组 `words`。
+> 返回 `s` 中 substring(s) 的所有起始索引，该子串是 `words` 中各个单词**按任意顺序的一次**串联，且**中间不含任何字符**。
 > 
-> You are given a string, **s**, and a list of words, **words**, that are all of
-> the same length. Find all starting indices of substring(s) in **s** that is a
-> concatenation of each word in **words** exactly once and without any
-> intervening characters.
+> 你可以按**任意顺序**返回答案。
 > 
-> **Example 1:**
+> **限制条件：**
 > 
-> <pre>
-> <strong>Input:</strong>
->   <strong>s</strong> = "barfoothefoobarman",
->   <strong>words</strong> = ["foo","bar"]
-> <strong>Output:</strong> [0,9]
-> <strong>Explanation:</strong> Substrings starting at index 0 and 9 are "barfoo" and "foobar" respectively.
-> The output order does not matter, returning [9,0] is fine too.
-> </pre>
-> 
-> **Example 2:**
-> 
-> <pre>
-> <strong>Input:</strong>
->   <strong>s</strong> = "wordgoodgoodgoodbestword",
->   <strong>words</strong> = ["word","good","best","word"]
-> <strong>Output:</strong> []
-> </pre>
+> * <code>1 <= s.length <= 10<sup>4</sup></code>
+> * `s` 由小写英文字母组成。
+> * `1 <= words.length <= 5000`
+> * `1 <= words[i].length <= 30`
+> * `words[i]` 由小写英文字母组成。
 
 ## 解决方案
 

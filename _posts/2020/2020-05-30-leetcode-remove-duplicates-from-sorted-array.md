@@ -6,79 +6,62 @@ author: Coshin
 comments: true
 category: 力扣题解
 tags: LeetCode Easy Array Two-Pointers
-excerpt: 给定一个有序数组，[原地](https://en.wikipedia.org/wiki/In-place_algorithm){:target="_blank"}移除重复元素使每个元素只出现一次并返回新数组的长度。
 ---
-> ## 26. Remove Duplicates from Sorted Array
+> 给定一个按**非降序**排列的整数数组 `nums`，[原地](https://en.wikipedia.org/wiki/In-place_algorithm){:target="_blank"}移除重复元素使每个元素只出现**一次**。
+> 元素的**相对顺序**应该保持**不变**。
 > 
-> Given a sorted array nums, remove the duplicates [in-place](https://en.wikipedia.org/wiki/In-place_algorithm){:target="_blank"}
-> such that each element appear only once and return the new length.
+> 由于在某些语言中无法更改数组的长度，因此必须把结果放在数组 `nums` 的**前面部分**。
+> 更正式地说，如果删除重复项后有 `k` 个元素，那么 `nums` 的前 `k` 个元素应该保存最终结果。
+> 除了前 `k` 个元素外，剩下的不重要。
 > 
-> Do not allocate extra space for another array, you must do this by **modifying
-> the input array** [in-place](https://en.wikipedia.org/wiki/In-place_algorithm){:target="_blank"}
-> with O(1) extra memory.
+> 返回 `k` *前把最终结果放入 `nums` 的前 `k` 个插槽*。
 > 
-> **Example 1:**
+> **不要**为其他数组开辟额外的空间。
+> 为此你必须使用 O(1) 的额外内存[原地](https://en.wikipedia.org/wiki/In-place_algorithm){:target="_blank"}**修改输入数组**。
 > 
-> <pre>
-> Given <em>nums</em> = <strong>[1,1,2]</strong>,
+> **定制评判：**
 > 
-> Your function should return length = <strong>2</strong>, with the first two elements of <em>nums</em> being <strong>1</strong> and <strong>2</strong> respectively.
-> 
-> It doesn't matter what you leave beyond the returned length.
-> </pre>
-> 
-> **Example 2:**
+> 评判将使用下面代码测试你的解决方案：
 > 
 > <pre>
-> Given <em>nums</em> = <strong>[0,0,1,1,1,2,2,3,3,4]</strong>,
+> int[] nums = [...]; // Input array
+> int[] expectedNums = [...]; // The expected answer with correct length
 > 
-> Your function should return length = <strong>5</strong>, with the first five elements of <em>nums</em> being modified to <strong>0</strong>, <strong>1</strong>, <strong>2</strong>, <strong>3</strong>, and <strong>4</strong> respectively.
+> int k = removeDuplicates(nums); // Calls your implementation
 > 
-> It doesn't matter what values are set beyond the returned length.
-> </pre>
-> 
-> **Clarification:**
-> 
-> Confused why the returned value is an integer but your answer is an array?
-> 
-> Note that the input array is passed in by <strong>reference</strong>, which
-> means modification to the input array will be known to the caller as well.
-> 
-> Internally you can think of this:
-> 
-> <pre>
-> // <strong>nums</strong> is passed in by reference. (i.e., without making a copy)
-> int len = removeDuplicates(nums);
-> 
-> // any modification to <strong>nums</strong> in your function would be known by the caller.
-> // using the length returned by your function, it prints the first <strong>len</strong> elements.
-> for (int i = 0; i < len; i++) {
->     print(nums[i]);
+> assert k == expectedNums.length;
+> for (int i = 0; i < k; i++) {
+>     assert nums[i] == expectedNums[i];
 > }
 > </pre>
 > 
+> 如果所有测试通过，那么你的解决方案将**被接受**。
+> 
+> **限制条件：**
+> 
+> * <code>0 <= nums.length <= 3 * 10<sup>4</sup></code>
+> * `-100 <= nums[i] <= 100`
+> * `nums` 是按**非降序**排列的。
+> 
 > <details>
-> <summary>Hint 1</summary>
-> In this problem, the key point to focus on is the input array being sorted. As
-> far as duplicate elements are concerned, what is their positioning in the
-> array when the given array is sorted? Look at the image above for the answer.
-> If we know the position of one of the elements, do we also know the
-> positioning of all the duplicate elements?<br>
+> <summary>提示 1</summary>
+> 在该问题中，需要关注的关键点是正在排序的输入数组。
+> 就重复元素而言，当对给定数组进行排序时，它们在数组中的位置是什么？
+> 请看下面的图片寻找答案。
+> 如果我们知道其中一个元素的位置，我们是否也知道所有重复元素的位置？<br>
 > <img src="https://assets.leetcode.com/uploads/2019/10/20/hint_rem_dup.png" width="500">
 > </details>
 > 
 > <details>
-> <summary>Hint 2</summary>
-> We need to modify the array in-place and the size of the final array would
-> potentially be smaller than the size of the input array. So, we ought to use a
-> two-pointer approach here. One, that would keep track of the current element
-> in the original array and another one for just the unique elements.
+> <summary>提示 2</summary>
+> 我们需要原地修改数组，最终数组的大小可能会小于输入数组的大小。
+> 因此，我们应该在这里使用双指针法。
+> 一个，用于跟踪原始数组中的当前元素，另一个用于跟踪唯一的元素。
 > </details>
 > 
 > <details>
-> <summary>Hint 3</summary>
-> Essentially, once an element is encountered, you simply need to <b>bypass</b>
-> its duplicates and move on to the next unique element.
+> <summary>提示 3</summary>
+> 本质上，一旦遇到一个元素，你只需<b>绕过</b>它的重复项后移动到下一个唯一的元素。
 > </details>
 
 ## 解决方案

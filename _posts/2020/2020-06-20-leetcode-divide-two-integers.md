@@ -5,44 +5,22 @@ date:   2020-06-20 08:41:50 +0800
 author: Coshin
 comments: true
 category: 力扣题解
-tags: LeetCode Medium Math Binary-Search
-excerpt: 给定被除数 `dividend` 和除数 `divisor` 两个整数，不使用乘法、除法和 mod 运算符使两数相除。
+tags: LeetCode Medium Math Bit-Manipulation
 ---
-> ## 29. Divide Two Integers
+> 给定两个整数 `dividend` 和 `divisor`，不使用乘法、除法和模运算符使两数相除。
 > 
-> Given two integers `dividend` and `divisor`, divide two integers without using
-> multiplication, division and mod operator.
+> 返回 `dividend` 除 `divisor` 后的商。
 > 
-> Return the quotient after dividing `dividend` by `divisor`.
+> 整数除法应该向零截断，这意味着丢失其小数部分。
+> 例如，`truncate(8.345) = 8` 和 `truncate(-2.7335) = -2`。
 > 
-> The integer division should truncate toward zero, which means losing its
-> fractional part. For example, `truncate(8.345) = 8` and `truncate(-2.7335) =
-> -2`.
+> **注：**假设我们处理的环境只能存储 **32 位**有符号整数范围内的整数：<code>[-2<sup>31</sup>,  2<sup>31</sup> - 1]</code>。
+> 对于该问题，假设**当除法结果溢出时**函数**返回** <code>2<sup>31</sup> - 1</code>。
 > 
-> **Example 1:**
+> **限制条件：**
 > 
-> <pre>
-> <strong>Input:</strong> dividend = 10, divisor = 3
-> <strong>Output:</strong> 3
-> <strong>Explanation:</strong> 10/3 = truncate(3.33333..) = 3.
-> </pre>
-> 
-> **Example 2:**
-> 
-> <pre>
-> <strong>Input:</strong> dividend = 7, divisor = -3
-> <strong>Output:</strong> -2
-> <strong>Explanation:</strong> 7/-3 = truncate(-2.33333..) = -2.
-> </pre>
-> 
-> **Note:**
-> 
-> * Both dividend and divisor will be 32-bit signed integers.
-> * The divisor will never be 0.
-> * Assume we are dealing with an environment which could only store integers
-> within the 32-bit signed integer range: [-2<sup>31</sup>,  2<sup>31</sup> -
-> 1]. For the purpose of this problem, assume that your function **returns
-> 2<sup>31</sup> - 1 when the division result overflows**.
+> * <code>-2<sup>31</sup> <= dividend, divisor <= 2<sup>31</sup> - 1</code>
+> * `divisor != 0`
 
 ## 解决方案
 
