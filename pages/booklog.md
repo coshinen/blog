@@ -135,6 +135,7 @@ excerpt: Here are some books that renew my spirit or reclaim my life.
 > * 爱是一种选择 不再讨好别人，拖累自己，[美] Robert Hemfelt, Frank Minirth, Paul Meier
 > * 执迷 如何正常地爱与被爱，[美] Susan Forward, Craig Buck
 > * 原生家庭 如何修补自己的性格缺陷，[美] Susan Forward, Craig Buck
+> * 依恋 为什么我们爱得如此卑微，[美] Susan Forward, Joan Torres
 > * 不要用爱控制我，[美] [Patricia Evans](https://www.verbalabuse.com){:target="_blank"}
 > * 异类 不一样的成功启示录，[加] Malcolm Gladwell
 
