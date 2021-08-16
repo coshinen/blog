@@ -6,32 +6,21 @@ author: Coshin
 comments: true
 category: 力扣题解
 tags: LeetCode Medium Linked-List Two-Pointers
-excerpt: 给定一条链表，移除链表末尾的第 n 个节点并返回它的头。
 ---
-> ## 19. Remove Nth Node From End of List
+> 给定一条链表的头 `head`，移除该链表末尾的`第 n 个`节点并返回它的头。
 > 
-> Given a linked list, remove the n-th node from the end of list and return its
-> head.
+> <img alt="" src="https://assets.leetcode.com/uploads/2020/10/03/remove_ex1.jpg" style="width: 542px; height: 222px;">
 > 
-> **Example:**
+> **限制条件：**
 > 
-> <pre>
-> Given linked list: <strong>1->2->3->4->5</strong>, and <strong><em>n</em> = 2</strong>.
-> 
-> After removing the second node from the end, the linked list becomes <strong>1->2->3->5</strong>.
-> </pre>
-> 
-> **Note:**
-> 
-> Given n will always be valid.
-> 
-> **Follow up:**
-> 
-> Could you do this in one pass?
+> * 链表中的节点数是 `sz`。
+> * `1 <= sz <= 30`
+> * `0 <= Node.val <= 100`
+> * `1 <= n <= sz`
 > 
 > <details>
-> <summary>Hint 1</summary>
-> Maintain two pointers and update one with a delay of n steps.
+> <summary>提示 1</summary>
+> 维持两个指针并以 n 步的延迟更新一个指针。
 > </details>
 
 ## 解决方案

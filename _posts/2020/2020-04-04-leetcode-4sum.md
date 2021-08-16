@@ -5,34 +5,21 @@ date:   2020-04-04 10:44:16 +0800
 author: Coshin
 comments: true
 category: 力扣题解
-tags: LeetCode Medium Array Hash-Table Two-Pointers
-excerpt:
-  给定一个含 n 个整数的数组 `nums` 和一个整数 `target`，`nums` 中是否存在 a、b、c 和 d 使 a + b + c + d = `target`？
-  找出数组中所有不重复且和为 `target` 的四元组。<br>
-  **注：**解决方案必须不含重复的四元组。
+tags: LeetCode Medium Array Two-Pointers Sorting
 ---
-> ## 18. 4Sum
+> 给定一个 `n` 个整数的数组 `nums`，返回*一个包含所有**唯一的**四元组 `[nums[a], nums[b], nums[c], nums[d]]`* 如下：
 > 
-> Given an array `nums` of n integers and an integer `target`, are there
-> elements a, b, c, and d in `nums` such that a + b + c + d = `target`? Find all
-> unique quadruplets in the array which gives the sum of `target`.
+> * `0 <= a, b, c, d < n`
+> * `a`，`b`，`c` 和 `d` 是**唯一的**。
+> * `nums[a] + nums[b] + nums[c] + nums[d] == target`
 > 
-> **Note:**
+> 你可以以**任何顺序**返回答案。
 > 
-> The solution set must not contain duplicate quadruplets.
+> **限制条件：**
 > 
-> **Example:**
-> 
-> <pre>
-> Given array nums = [1, 0, -1, 0, -2, 2], and target = 0.
-> 
-> A solution set is:
-> [
->   [-1,  0, 0, 1],
->   [-2, -1, 1, 2],
->   [-2,  0, 0, 2]
-> ]
-> </pre>
+> * `1 <= nums.length <= 200`
+> * <code>-10<sup>9</sup> <= nums[i] <= 10<sup>9</sup></code>
+> * <code>-10<sup>9</sup> <= target <= 10<sup>9</sup></code>
 
 ## 解决方案
 

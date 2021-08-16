@@ -6,73 +6,34 @@ author: Coshin
 comments: true
 category: 力扣题解
 tags: LeetCode Easy String Stack
-excerpt: 给定一个只包含字符 `'('`, `')'`, `'{'`, `'}'`, `'['` 和 `']'` 的字符串，判断字符串是否有效。
 ---
-> ## 20. Valid Parentheses
+> 给定一个只含字符 `'('`, `')'`, `'{'`, `'}'`, `'['` 和 `']'` 的字符串 `s`，判断输入字符串是否有效。
 > 
-> Given a string containing just the characters `'('`, `')'`, `'{'`, `'}'`,
-> `'['` and `']'`, determine if the input string is valid.
+> 一个输入字符串是否有效：
 > 
-> An input string is valid if:
+> 1. 左括号必须由相同类型的右括号闭合。
+> 2. 左括号必须按正确的顺序闭合。
 > 
-> 1. Open brackets must be closed by the same type of brackets.
-> 2. Open brackets must be closed in the correct order.
+> **限制条件：**
 > 
-> Note that an empty string is also considered valid.
-> 
-> **Example 1:**
-> 
-> <pre>
-> <strong>Input:</strong> "()"
-> <strong>Output:</strong> true
-> </pre>
-> 
-> **Example 2:**
-> 
-> <pre>
-> <strong>Input:</strong> "()[]{}"
-> <strong>Output:</strong> true
-> </pre>
-> 
-> **Example 3:**
-> 
-> <pre>
-> <strong>Input:</strong> "(]"
-> <strong>Output:</strong> false
-> </pre>
-> 
-> **Example 4:**
-> 
-> <pre>
-> <strong>Input:</strong> "([)]"
-> <strong>Output:</strong> false
-> </pre>
-> 
-> **Example 5:**
-> 
-> <pre>
-> <strong>Input:</strong> "{[]}"
-> <strong>Output:</strong> true
-> </pre>
+> * <code>1 <= s.length <= 10<sup>4</sup></code>
+> * `s` 仅由括号 `'()[]{}'` 组成。
 > 
 > <details>
-> <summary>Hint 1</summary>
-> An interesting property about a valid parenthesis expression is that a
-> sub-expression of a valid expression should also be a valid expression. (Not
-> every sub-expression) e.g.
+> <summary>提示 1</summary>
+> 有效括号表达的一个有趣特性是，有效表达的子表达也应该是有效表达。（非每个子表达）例如：
 > <pre>
-> { { } [ ] [ [ [ ] ] ] } is VALID expression
->           [ [ [ ] ] ]    is VALID sub-expression
->   { } [ ]                is VALID sub-expression
+> { { } [ ] [ [ [ ] ] ] } 是有效表达
+>           [ [ [ ] ] ]   是有效子表达
+>   { } [ ]               是有效子表达
 > </pre>
-> Can we exploit this recursive structure somehow?
+> 我们能以某种方式利用这种递归结构吗？
 > </details>
 > 
 > <details>
-> <summary>Hint 2</summary>
-> What if whenever we encounter a matching pair of parenthesis in the
-> expression, we simply remove it from the expression? This would keep on
-> shortening the expression. e.g.
+> <summary>提示 2</summary>
+> 如果每当我们在表达中遇到一堆匹配的括号时，我们只是将其从表达中删除会怎样？
+> 这将不断缩短表达。例如：
 > <pre>
 > { { ( { } ) } }
 >       |_|
@@ -86,15 +47,14 @@ excerpt: 给定一个只包含字符 `'('`, `')'`, `'{'`, `'}'`, `'['` 和 `']'`
 > {                }
 > |________________|
 > </pre>
-> VALID EXPRESSION!
+> 有效表达！
 > </details>
 > 
 > <details>
-> <summary>Hint 3</summary>
-> The <b>stack</b> data structure can come in handy here in representing this
-> recursive structure of the problem. We can't really process this from the
-> inside out because we don't have an idea about the overall structure. But, the
-> stack can help us process this recursively i.e. from outside to inwards.
+> <summary>提示 3</summary>
+> 在这里<b>堆栈</b>数据结构可以方便地表示该问题的这种递归结构。
+> 我们不能从内到外处理这个问题，因为我们对整体结构没有概念。
+> 但，堆栈可以帮助我们递归处理该问题，即从外到内。
 > </details>
 
 ## 解决方案

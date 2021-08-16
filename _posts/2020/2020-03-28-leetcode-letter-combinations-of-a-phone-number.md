@@ -5,33 +5,20 @@ date:   2020-03-28 22:15:39 +0800
 author: Coshin
 comments: true
 category: 力扣题解
-tags: LeetCode Medium String Backtracking
-excerpt:
-  给定一个包含数字 `2-9` 范围内的字符串，返回它能表示的所有可能的字母组合。<br>
-  一个数字到字母的映射（就像手机按键）基于下面。
-  注意 1 没有映射到任何字母。
+tags: LeetCode Medium Hash-Table String Backtracking
 ---
-> ## 17. Letter Combinations of a Phone Number
+> 给定一个包含数字 `2-9` 范围内的字符串，返回该数字能表示的所有可能的字母组合。
+> 按**任意顺序**返回答案。
 > 
-> Given a string containing digits from `2-9` inclusive, return all possible
-> letter combinations that the number could represent.
+> 下面给出了数字到字母的映射（就像手机按键上的一样）。
+> 注意 1 没有映射到任何字母。
 > 
-> A mapping of digit to letters (just like on the telephone buttons) is given
-> below. Note that 1 does not map to any letters.
+> <img style="width: 200px;" src="https://assets.leetcode-cn.com/aliyun-lc-upload/original_images/17_telephone_keypad.png">
 > 
-> <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Telephone-keypad2.svg/200px-Telephone-keypad2.svg.png" style="width: 200px; height: 162px;">
+> **限制条件：**
 > 
-> **Example:**
-> 
-> <pre>
-> <strong>Input:</strong> "23"
-> <strong>Output:</strong> ["ad", "ae", "af", "bd", "be", "bf", "cd", "ce", "cf"].
-> </pre>
-> 
-> **Note:**
-> 
-> Although the above answer is in lexicographical order, your answer could be in
-> any order you want.
+> * `0 <= digits.length <= 4`
+> * `digits[i]` 是一个在范围 `['2', '9']` 里的数字。
 
 ## 解决方案
 
