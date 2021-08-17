@@ -114,4 +114,4 @@ excerpt: Here are my favorite quotes from someones that inspire me or make me la
 > * 流されていくのは簡単だけれど、変わらないでいることっていうのは一番難しい。
 
 > 宮崎駿「終わらない人 宮崎駿」：
-> * オレ、いまの世の中に合わせて生きる気ないから。
+> * まあ、もうオレいま世の中に合わせて生きる気ないから。
