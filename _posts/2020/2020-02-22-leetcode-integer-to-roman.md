@@ -5,15 +5,11 @@ date:   2020-02-22 20:23:04 +0800
 author: Coshin
 comments: true
 category: 力扣题解
-tags: LeetCode Medium Math String
-excerpt: 把给定的整数转换为罗马数字（包含七种字符：`I`，`V`，`X`，`L`，`C`，`D` 和 `M`）。
+tags: LeetCode Medium Hash-Table Math String
 ---
-> ## 12. Integer to Roman
+> 罗马数字由七种不同的符号表示：`I`、`V`、`X`、`L`、`C`、`D` 和 `M`。
 > 
-> Roman numerals are represented by seven different symbols: `I`, `V`, `X`, `L`,
-> `C`, `D` and `M`.
-> 
-> ```
+> <pre>
 > Symbol       Value
 > I             1
 > V             5
@@ -22,61 +18,28 @@ excerpt: 把给定的整数转换为罗马数字（包含七种字符：`I`，`V
 > C             100
 > D             500
 > M             1000
-> ```
-> 
-> For example, two is written as `II` in Roman numeral, just two one's added
-> together. Twelve is written as, `XII`, which is simply `X` + `II`. The number
-> twenty seven is written as `XXVII`, which is `XX` + `V` + `II`.
-> 
-> Roman numerals are usually written largest to smallest from left to right.
-> However, the numeral for four is not `IIII`. Instead, the number four is
-> written as `IV`. Because the one is before the five we subtract it making
-> four. The same principle applies to the number nine, which is written as
-> `IX`. There are six instances where subtraction is used:
-> 
-> * `I` can be placed before `V` (5) and `X` (10) to make 4 and 9. 
-> * `X` can be placed before `L` (50) and `C` (100) to make 40 and 90. 
-> * `C` can be placed before `D` (500) and `M` (1000) to make 400 and 900.
-> 
-> Given an integer, convert it to a roman numeral. Input is guaranteed to be
-> within the range from 1 to 3999.
-> 
-> **Example 1:**
-> 
-> <pre>
-> <strong>Input:</strong> 3
-> <strong>Output:</strong> "III"
 > </pre>
 > 
-> **Example 2:**
+> 例如，`2` 用罗马数字写作 `II`，就是两个 1 加在一起。
+> `12` 写作 `XII`，就是简单的 `X + II`。
+> 数字 `27` 写作 `XXVII`，就是 `XX + V + II`。
 > 
-> <pre>
-> <strong>Input:</strong> 4
-> <strong>Output:</strong> "IV"
-> </pre>
+> 罗马数字通常是从左到右从大到小写的。
+> 然而，数字 4 不是 `IIII`。
+> 取而代之的是，数字 4 写作 `IV`。
+> 因为 1 在 5 的前面，我们减去它就等于 4。
+> 同样的原则也适用于数字 9，即写作 `IX`。
+> 使用减法的情况有 6 种：
 > 
-> **Example 3:**
+> * `I` 可以放在 `V`（5）和 `X`（10）前变成 4 和 9。
+> * `X` 可以放在 `L`（50）和 `C`（100）前变成 40 和 90。 
+> * `C` 可以放在 `D`（500）和 `M`（1000）前变成 400 和 900。
 > 
-> <pre>
-> <strong>Input:</strong> 9
-> <strong>Output:</strong> "IX"
-> </pre>
+> 给定一个整数，把它转换为一个罗马数字。
 > 
-> **Example 4:**
+> **限制条件：**
 > 
-> <pre>
-> <strong>Input:</strong> 58
-> <strong>Output:</strong> "LVIII"
-> <strong>Explanation:</strong> L = 50, V = 5, III = 3.
-> </pre>
-> 
-> **Example 5:**
-> 
-> <pre>
-> <strong>Input:</strong> 1994
-> <strong>Output:</strong> "MCMXCIV"
-> <strong>Explanation:</strong> M = 1000, CM = 900, XC = 90 and IV = 4.
-> </pre>
+> * `1 <= num <= 3999`
 
 ## 解决方案
 

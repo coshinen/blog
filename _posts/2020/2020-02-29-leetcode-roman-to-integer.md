@@ -5,13 +5,9 @@ date:   2020-02-29 19:48:34 +0800
 author: Coshin
 comments: true
 category: 力扣题解
-tags: LeetCode Easy Math String
-excerpt: 把给定的罗马数字（包含七种字符：`I`，`V`，`X`，`L`，`C`，`D` 和 `M`）转换为整数。
+tags: LeetCode Easy Hash-Table Math String
 ---
-> ## 13. Roman to Integer
-> 
-> Roman numerals are represented by seven different symbols: `I`, `V`, `X`, `L`,
-> `C`, `D` and `M`.
+> 罗马数字由七种不同的符号表示：`I`、`V`、`X`、`L`、`C`、`D` 和 `M`。
 > 
 > <pre>
 > Symbol       Value
@@ -24,77 +20,32 @@ excerpt: 把给定的罗马数字（包含七种字符：`I`，`V`，`X`，`L`�
 > M             1000
 > </pre>
 > 
-> For example, two is written as `II` in Roman numeral, just two one's added
-> together. Twelve is written as, `XII`, which is simply `X` + `II`. The number
-> twenty seven is written as `XXVII`, which is `XX` + `V` + `II`.
+> 例如，`2` 用罗马数字写作 `II`，就是两个 1 加在一起。
+> `12` 写作 `XII`，就是简单的 `X + II`。
+> 数字 `27` 写作 `XXVII`，就是 `XX + V + II`。
 > 
-> Roman numerals are usually written largest to smallest from left to right.
-> However, the numeral for four is not `IIII`. Instead, the number four is
-> written as `IV`. Because the one is before the five we subtract it making
-> four. The same principle applies to the number nine, which is written as `IX`.
-> There are six instances where subtraction is used:
+> 罗马数字通常是从左到右从大到小写的。
+> 然而，数字 4 不是 `IIII`。
+> 取而代之的是，数字 4 写作 `IV`。
+> 因为 1 在 5 的前面，我们减去它就等于 4。
+> 同样的原则也适用于数字 9，即写作 `IX`。
+> 使用减法的情况有 6 种：
 > 
-> * `I` can be placed before `V` (5) and `X` (10) to make 4 and 9. 
-> * `X` can be placed before `L` (50) and `C` (100) to make 40 and 90. 
-> * `C` can be placed before `D` (500) and `M` (1000) to make 400 and 900.
+> * `I` 可以放在 `V`（5）和 `X`（10）前变成 4 和 9。
+> * `X` 可以放在 `L`（50）和 `C`（100）前变成 40 和 90。 
+> * `C` 可以放在 `D`（500）和 `M`（1000）前变成 400 和 900。
 > 
-> Given a roman numeral, convert it to an integer. Input is guaranteed to be
-> within the range from 1 to 3999.
+> 给定一个罗马数字，把它转换为一个整数。
 > 
-> **Example 1:**
+> **限制条件：**
 > 
-> <pre>
-> <strong>Input:</strong> "III"
-> <strong>Output:</strong> 3
-> </pre>
-> 
-> **Example 2:**
-> 
-> <pre>
-> <strong>Input:</strong> "IV"
-> <strong>Output:</strong> 4
-> </pre>
-> 
-> **Example 3:**
-> 
-> <pre>
-> <strong>Input:</strong> "IX"
-> <strong>Output:</strong> 9
-> </pre>
-> 
-> **Example 4:**
-> 
-> <pre>
-> <strong>Input:</strong> "LVIII"
-> <strong>Output:</strong> 58
-> <strong>Explanation:</strong> L = 50, V= 5, III = 3.
-> </pre>
-> 
-> **Example 5:**
-> 
-> <pre>
-> <strong>Input:</strong> "MCMXCIV"
-> <strong>Output:</strong> 1994
-> <strong>Explanation:</strong> M = 1000, CM = 900, XC = 90 and IV = 4.
-> </pre>
+> * `1 <= s.length <= 15`
+> * `s` 仅包含字符（`I`、`V`、`X`、`L`、`C`、`D`、`M`）。
+> * 已**确保** `s` 是一个有效的罗马数字在范围 `[1, 3999]` 里。
 > 
 > <details>
-> <summary>Hint 1</summary>
-> I - 1<br>
-> V - 5<br>
-> X - 10<br>
-> L - 50<br>
-> C - 100<br>
-> D - 500<br>
-> M - 1000
-> </details>
-> 
-> <details>
-> <summary>Hint 2</summary>
-> <b>Rules:</b><br>
-> * If I comes before V or X, subtract 1 eg: IV = 4 and IX = 9<br>
-> * If X comes before L or C, subtract 10 eg: XL = 40 and XC = 90<br>
-> * If C comes before D or M, subtract 100 eg: CD = 400 and CM = 900
+> <summary>提示 1</summary>
+> 通过从后往前处理字符串并使用映射，问题更容易解决。
 > </details>
 
 ## 解决方案

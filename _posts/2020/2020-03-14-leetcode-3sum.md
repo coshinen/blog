@@ -5,57 +5,39 @@ date:   2020-03-14 20:05:49 +0800
 author: Coshin
 comments: true
 category: 力扣题解
-tags: LeetCode Medium Array Two-Pointers
-excerpt:
-  给定一个含 n 个整数的数组 `nums`，数组 `nums` 是否存在元素 a，b，c 使得 a + b + c = 0？
-  找出给定数组中和为零的所有不重复的三元组。<br>
-  **注：**解决方案必须不含重复的三元组。
+tags: LeetCode Medium Array Two-Pointers Sorting
 ---
-> ## 15. 3Sum
+> 给定一个整数数组 `nums`，返回所有 `i != j`、`i != k`、`j != k` 且 `nums[i] + nums[j] + nums[k] == 0` 这样的三元组 `[nums[i], nums[j], nums[k]]`。
 > 
-> Given an array `nums` of n integers, are there elements a, b, c in `nums` such
-> that a + b + c = 0? Find all unique triplets in the array which gives the sum
-> of zero.
+> 注意该解决方案不能包含重复的三元组。
 > 
-> **Note:**
+> **限制条件：**
 > 
-> The solution set must not contain duplicate triplets.
-> 
-> **Example:**
-> 
-> <pre>
-> Given array nums = [-1, 0, 1, 2, -1, -4],
-> 
-> A solution set is:
-> [
->   [-1, 0, 1],
->   [-1, -1, 2]
-> ]
-> </pre>
+> * `0 <= nums.length <= 3000`
+> * <code>-10<sup>5</sup> <= nums[i] <= 10<sup>5</sup></code>
 > 
 > <details>
-> <summary>Hint 1</summary>
-> So, we essentially need to find three numbers x, y, and z such that they add
-> up to the given value. If we fix one of the numbers say x, we are left with
-> the two-sum problem at hand!
+> <summary>提示 1</summary>
+> 所以，我们基本上需要找到三个加起来等于给定的值的数 x、y 和 z。
+> 如果我们固定其中一个数，如 x，那么我们就剩下两数之和的问题了！
 > </details>
 > 
 > <details>
-> <summary>Hint 2</summary>
-> For the two-sum problem, if we fix one of the numbers, say
+> <summary>提示 2</summary>
+> 对于两数之和问题，如果我们固定其中一个数，如
 > <pre>x</pre>
-> , we have to scan the entire array to find the next number
+> ，那么我们就必须扫描整个数组才能找到下一个数
 > <pre>y</pre>
-> which is
+> 等于
 > <pre>value - x</pre>
-> where value is the input parameter. Can we change our array somehow so that
-> this search becomes faster?
+> 其中值为输入参数。
+> 我们能否可以通过某种方式更改数组，使搜索速度更快？
 > </details>
 > 
 > <details>
-> <summary>Hint 3</summary>
-> The second train of thought for two-sum is, without changing the array, can we
-> use additional space somehow? Like maybe a hash map to speed up the search?
+> <summary>提示 3</summary>
+> 两数之和的第二个思路是，在不改变数组的情况下，我们能否以某种方式使用额外的空间？
+> 比如用哈希映射来加速搜索？
 > </details>
 
 ## 解决方案

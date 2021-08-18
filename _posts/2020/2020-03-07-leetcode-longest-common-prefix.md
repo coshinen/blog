@@ -6,35 +6,16 @@ author: Coshin
 comments: true
 category: 力扣题解
 tags: LeetCode Easy String
-excerpt:
-  写一个函数来查找字符串数组的最长公共前缀。<br>
-  如果没有公共前缀，则返回一个空字符串 `""`。
 ---
-> ## 14. Longest Common Prefix
+> 写一个函数来查找字符串数组的最长公共前缀字符串。
 > 
-> Write a function to find the longest common prefix string amongst an array of
-> strings.
+> 如果没有公共前缀，则返回一个空字符串 `""`。
 > 
-> If there is no common prefix, return an empty string `""`.
+> **限制条件：**
 > 
-> **Example 1:**
-> 
-> <pre>
-> <strong>Input:</strong> ["flower","flow","flight"]
-> <strong>Output:</strong> "fl"
-> </pre>
-> 
-> **Example 2:**
-> 
-> <pre>
-> <strong>Input:</strong> ["dog","racecar","car"]
-> <strong>Output:</strong> ""
-> <strong>Explanation:</strong> There is no common prefix among the input strings.
-> </pre>
-> 
-> **Note:**
-> 
-> All given inputs are in lowercase letters `a-z`.
+> * `1 <= strs.length <= 200`
+> * `0 <= strs[i].length <= 200`
+> * `strs[i]` 仅由小写英文字母组成。
 
 ## 解决方案
 
