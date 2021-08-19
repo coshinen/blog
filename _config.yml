@@ -20,7 +20,7 @@ hostname: encoshin.github.io
 description: >- # this means to ignore newlines until "quote:"
   Welcome to the parallel universe! Hosted from GitHub. Powered by Jekyll.
 quote: 流されていくのは簡単だけれど、変わらないでいることっていうのは一番難しい。
-bquote: オレ、いまの世の中に合わせて生きる気ないから。
+bquote: 無理は一番の”退屈しのぎ”だ。
 
 # Page urls
 about:    "/about.html"
