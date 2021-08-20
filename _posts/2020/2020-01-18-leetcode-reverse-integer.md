@@ -6,38 +6,15 @@ author: Coshin
 comments: true
 category: 力扣题解
 tags: LeetCode Easy Math
-excerpt: 给定一个 32 位的有符号整数，反转该整数每个位上的数字。
 ---
-> ## 7. Reverse Integer
+> 给定一个有符号的 32 位整数 `x`，返回反转其数字后的 `x`。
+> 如果反转 `x` 导致值超出有符号 32 位整数的范围 <code>[-2<sup>31</sup>, 2<sup>31</sup> - 1]</code>，则返回 `0`。
 > 
-> Given a 32-bit signed integer, reverse digits of an integer.
+> **假设环境不允许存储 64 位整数（有符号或无符号）。**
 > 
-> **Example 1:**
+> **限制条件：**
 > 
-> <pre>
-> <strong>Input:</strong> 123
-> <strong>Output:</strong> 321
-> </pre>
-> 
-> **Example 2:**
-> 
-> <pre>
-> <strong>Input:</strong> -123<br>
-> <strong>Output:</strong> -321
-> </pre>
-> 
-> **Example 3:**
-> 
-> <pre>
-> <strong>Input:</strong> 120<br>
-> <strong>Output:</strong> 21
-> </pre>
-> 
-> **Note:**<br>
-> Assume we are dealing with an environment which could only store integers
-> within the 32-bit signed integer range: [-2<sup>31</sup>,  2<sup>31</sup> -
-> 1]. For the purpose of this problem, assume that your function returns 0 when
-> the reversed integer overflows.
+> * <code>-2<sup>31</sup> <= x <= 2<sup>31</sup> - 1</code>
 
 ## 解决方案
 

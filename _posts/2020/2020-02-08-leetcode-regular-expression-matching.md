@@ -5,78 +5,22 @@ date:   2020-02-08 15:52:08 +0800
 author: Coshin
 comments: true
 category: 力扣题解
-tags: LeetCode Hard String Dynamic-Programming Backtracking
-excerpt:
-  给定一个字符串（`s`）和一个模式串（`p`），实现支持 `'.'` 和 `'*'` 的正则表达式匹配。<br>
-  ……<br>
-  该匹配应该覆盖**整个**输入字符串（非部分）。
+tags: LeetCode Hard String Dynamic-Programming Recursion
 ---
-> ## 10. Regular Expression Matching
+> 给定一个输入字符串 `s` 和一个模式串 `p`，实现支持 `'.'` 和 `'*'` 的正则表达式匹配：
 > 
-> Given an input string (`s`) and a pattern (`p`), implement regular expression
-> matching with support for `'.'` and `'*'`.
+> * `'.'` 匹配任意单一字符。
+> * `'*'` 匹配前 0 个或更多的元素。
 > 
-> ```
-> '.' Matches any single character.
-> '*' Matches zero or more of the preceding element.
-> ```
+> 该匹配应覆盖**整个**输入字符串（非部分）。
 > 
-> The matching should cover the **entire** input string (not partial).
+> **限制条件：**
 > 
-> **Note:**
-> 
-> * `s` could be empty and contains only lowercase letters `a-z`.
-> * `p` could be empty and contains only lowercase letters `a-z`, and characters
-> like `.` or `*`.
-> 
-> **Example 1:**
-> 
-> <pre>
-> <strong>Input:</strong>
-> s = "aa"
-> p = "a"
-> <strong>Output:</strong> false
-> <strong>Explanation:</strong> "a" does not match the entire string "aa".
-> </pre>
-> 
-> **Example 2:**
-> 
-> <pre>
-> <strong>Input:</strong>
-> s = "aa"
-> p = "a*"
-> <strong>Output:</strong> true
-> <strong>Explanation:</strong> '*' means zero or more of the preceding element, 'a'. Therefore, by repeating 'a' once, it becomes "aa".
-> </pre>
-> 
-> **Example 3:**
-> 
-> <pre>
-> <strong>Input:</strong>
-> s = "ab"
-> p = ".*"
-> <strong>Output:</strong> true
-> <strong>Explanation:</strong> ".*" means "zero or more (*) of any character (.)".
-> </pre>
-> 
-> **Example 4:**
-> 
-> <pre>
-> <strong>Input:</strong>
-> s = "aab"
-> p = "c*a*b"
-> <strong>Output:</strong> true
-> <strong>Explanation:</strong> c can be repeated 0 times, a can be repeated 1 time. Therefore, it matches "aab".
-> </pre>
-> 
-> **Example 5:**
-> 
-> <pre>
-> <strong>Input:</strong>
-> s = "mississippi"
-> p = "mis*is*p*."
-> <strong>Output:</strong> false
-> </pre>
+> * `1 <= s.length <= 20`
+> * `1 <= p.length <= 30`
+> * `s` 仅含小写英文字母。
+> * `p` 仅含小写英文字母，`'.'` 和 `'*'`。
+> * 已确保字符 `'*'` 每次出现都会有一个之前的有效字符进行匹配。
 
 ## 解决方案
 

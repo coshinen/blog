@@ -33,7 +33,9 @@ public:
     vector<int> grayCode(int n) {
         vector<int> result;
         int pow2n = 1 << n;
-        for (int i = 0; i < pow2n; i++) result.push_back(i ^ i >> 1);
+        for (int i = 0; i < pow2n; i++) {
+            result.push_back(i ^ i >> 1);
+        }
         return result;
     }
 };

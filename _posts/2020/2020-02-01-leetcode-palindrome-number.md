@@ -6,45 +6,21 @@ author: Coshin
 comments: true
 category: 力扣题解
 tags: LeetCode Easy Math
-excerpt:
-  判断一个整数是否为回文数。
-  当一个整数正着读和反着读一样时就是回文。
 ---
-> ## 9. Palindrome Number
+> 给定一个整数 `x`，如果 `x` 为回文整数则返回 `true`。
 > 
-> Determine whether an integer is a palindrome. An integer is a palindrome when
-> it reads the same backward as forward.
+> 当一个整数正着读和反着读一样时就是**回文**。
+> 例如，`121` 是回文而 `123` 不是。
 > 
-> **Example 1:**
+> **限制条件：**
 > 
-> <pre>
-> <strong>Input:</strong> 121
-> <strong>Output:</strong> true
-> </pre>
+> * <code>-2<sup>31</sup> <= x <= 2<sup>31</sup> - 1</code>
 > 
-> **Example 2:**
-> 
-> <pre>
-> <strong>Input:</strong> -121
-> <strong>Output:</strong> false
-> <strong>Explanation:</strong> From left to right, it reads -121. From right to left, it becomes 121-. Therefore it is not a palindrome.
-> </pre>
-> 
-> **Example 3:**
-> 
-> <pre>
-> <strong>Input:</strong> 10
-> <strong>Output:</strong> false
-> <strong>Explanation:</strong> Reads 01 from right to left. Therefore it is not a palindrome.
-> </pre>
-> 
-> **Follow up:**
-> 
-> Coud you solve it without converting the integer to a string?
+> **进阶：**你能在不把整数转换成字符串的情况下解决该问题吗？
 > 
 > <details>
-> <summary>Hint 1</summary>
-> Beware of overflow when you reverse the integer.
+> <summary>提示 1</summary>
+> 反转整数时要小心溢出。
 > </details>
 
 ## 解决方案

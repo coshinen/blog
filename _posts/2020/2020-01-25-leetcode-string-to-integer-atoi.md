@@ -5,83 +5,35 @@ date:   2020-01-25 07:50:53 +0800
 author: Coshin
 comments: true
 category: 力扣题解
-tags: LeetCode Medium Math String
-excerpt:
-  实现一个 `atoi` 函数，把字符串转换为整数。<br>
-  该函数首先根据需要丢弃尽可能多的空白字符，直到找到第一个非空白字符。
-  然后，从这个字符开始，取一个可选的初始加号或减号，后跟尽可能多的数字，并将它们解释为一个数值。<br>
-  字符串可以在构成整数的字符后包含其他字符，这些字符将被忽略，并对该函数的行为没有影响。<br>
-  如果 str 中的第一个非空白字符序列不是有效的整数，或由于 str 为空或仅包含空白字符而不存在此类序列，则不执行转换。<br>
-  如果无法执行有效的转换，则返回一个 0 值。
+tags: LeetCode Medium String
 ---
-> ## 8. String to Integer (atoi)
+> 实现 `myAtoi(string s)` 函数，把字符串转换为 32 位的有符号整数（类似于 C/C++ 的 `atoi` 函数）。
 > 
-> Implement `atoi` which converts a string to an integer.
+> `myAtoi(string s)` 的算法如下：
 > 
-> The function first discards as many whitespace characters as necessary until
-> the first non-whitespace character is found. Then, starting from this
-> character, takes an optional initial plus or minus sign followed by as many
-> numerical digits as possible, and interprets them as a numerical value.
+> 1. 读入并忽略任何前导空格。
+> 2. 检查下一个字符（如果不在字符串末尾）是否为 `'-'` 或 `'+'`。
+>    读入该字符后若为两者中的任何一个。
+>    这将决定最终结果分别为负值或正值。
+>    如果两者都不存在则假定结果为正值。
+> 3. 读入下一个字符，直到到达下一个非数字字符或输入的尾部。
+>    字符串的剩余部分将被忽略。
+> 4. 把这些数字转换为整数（即 `"123" -> 123`，`"0032" -> 32`）。
+>    如果未读取任何数字，则整数为 `0`。
+>    根据需要更改符号（从步骤 2 开始）。
+> 5. 如果整数超过 32 位有符号整数范围 <code>[-2<sup>31</sup>, 2<sup>31</sup> - 1]</code>，则限制该整数，使其保持在该范围内。
+>    具体地说，小于 <code>-2<sup>31</sup></code> 的整数应限制为 <code>-2<sup>31</sup></code>，大于 <code>-2<sup>31</sup> - 1</code> 的整数应限制为 <code>-2<sup>31</sup> - 1</code>。
+> 6. 返回整数作为最终结果。
 > 
-> The string can contain additional characters after those that form the
-> integral number, which are ignored and have no effect on the behavior of this
-> function.
+> **注意：**
 > 
-> If the first sequence of non-whitespace characters in str is not a valid
-> integral number, or if no such sequence exists because either str is empty or
-> it contains only whitespace characters, no conversion is performed.
+> * 只有空格字符 `' '` 被视为空白字符。
+> * **不要忽略**除前导空格或数字后字符串的其余部分以外的任何字符。
 > 
-> If no valid conversion could be performed, a zero value is returned.
+> **限制条件：**
 > 
-> **Note:**
-> 
-> * Only the space character `' '` is considered as whitespace character.
-> * Assume we are dealing with an environment which could only store integers
-> within the 32-bit signed integer range: [-2<sup>31</sup>,  2<sup>31</sup> -
-> 1]. If the numerical value is out of the range of representable values,
-> INT_MAX (2<sup>31</sup> - 1) or INT_MIN (-2<sup>31</sup>) is returned.
-> 
-> **Example 1:**
-> 
-> <pre>
-> <strong>Input:</strong> "42"
-> <strong>Output:</strong> 42
-> </pre>
-> 
-> **Example 2:**
-> 
-> <pre>
-> <strong>Input:</strong> "   -42"
-> <strong>Output:</strong> -42
-> <strong>Explanation:</strong> The first non-whitespace character is '-', which is the minus sign.
->              Then take as many numerical digits as possible, which gets 42.
-> </pre>
-> 
-> **Example 3:**
-> 
-> <pre>
-> <strong>Input:</strong> "4193 with words"
-> <strong>Output:</strong> 4193
-> <strong>Explanation:</strong> Conversion stops at digit '3' as the next character is not a numerical digit.
-> </pre>
-> 
-> **Example 4:**
-> 
-> <pre>
-> <strong>Input:</strong> "words and 987"
-> <strong>Output:</strong> 0
-> <strong>Explanation:</strong> The first non-whitespace character is 'w', which is not a numerical 
->              digit or a +/- sign. Therefore no valid conversion could be performed.
-> </pre>
-> 
-> **Example 5:**
-> 
-> <pre>
-> <strong>Input:</strong> "-91283472332"
-> <strong>Output:</strong> -2147483648
-> <strong>Explanation:</strong> The number "-91283472332" is out of the range of a 32-bit signed integer.
->              Thefore INT_MIN (−2<sup>31</sup>) is returned.
-> </pre>
+> * `0 <= s.length <= 200`
+> * `s` 由英文字母（小写和大写）、数字（`0-9`）、`' '`、`'+'`、`'-'` 和 `'.'`。
 
 ## 解决方案
 

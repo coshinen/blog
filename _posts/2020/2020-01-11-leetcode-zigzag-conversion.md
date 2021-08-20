@@ -6,13 +6,8 @@ author: Coshin
 comments: true
 category: 力扣题解
 tags: LeetCode Medium String
-excerpt: 给定一个字符串 `"PAYPALISHIRING"`，根据给定的行数，以从上到下、从左到右的 Z 字形排列，再以从左到右、从上到下的顺序读取，产生一个新字符串并返回。
 ---
-> ## 6. ZigZag Conversion
-> 
-> The string `"PAYPALISHIRING"` is written in a zigzag pattern on a given number
-> of rows like this: (you may want to display this pattern in a fixed font for
-> better legibility)
+> 字符串 `"PAYPALISHIRING"` 以之字形模式写入给定数量的行中，如下所示：（你可能希望以固定字体显示该模式以提高可读性）
 > 
 > <pre>
 > P   A   H   N
@@ -20,33 +15,19 @@ excerpt: 给定一个字符串 `"PAYPALISHIRING"`，根据给定的行数，以�
 > Y   I   R
 > </pre>
 > 
-> And then read line by line: `"PAHNAPLSIIGYIR"`
+> 然后逐行读：`"PAHNAPLSIIGYIR"`。
 > 
-> Write the code that will take a string and make this conversion given a number
-> of rows:
+> 编写接受字符串的代码，并在给定行数的情况下进行该转换：
 > 
 > <pre>
 > string convert(string s, int numRows);
 > </pre>
 > 
-> **Example 1:**
+> **限制条件：**
 > 
-> <pre>
-> <strong>Input:</strong> s = "PAYPALISHIRING", numRows = 3
-> <strong>Output:</strong> "PAHNAPLSIIGYIR"
-> </pre>
-> 
-> **Example 2:**
-> 
-> <pre>
-> <strong>Input:</strong> s = "PAYPALISHIRING", numRows = 4
-> <strong>Output:</strong> "PINALSIGYAHRPI"
-> <strong>Explanation:</strong>
-> P     I    N
-> A   L S  I G
-> Y A   H R
-> P     I
-> </pre>
+> * `s.length <= 1000`
+> * `s` 由英文字母（小写和大写）、`','` 和 `'.'` 组成。
+> * `1 <= numRows <= 1000`
 
 ## 解决方案
 
