@@ -1,13 +1,13 @@
 ---
 layout: post
-title:  "设计模式—工厂模式"
+title:  "工厂设计模式"
 date:   2018-11-10 17:16:10 +0800
 author: Coshin
 comments: true
 category: 程序人生
 tags: Design-Patterns C++
 ---
-工厂模式是 23 种设计模式之一，属于创建型模式，用于批量实例化对象。
+工厂模式属于创建型模式，用于批量实例化对象。
 
 下面均为抽象工厂的实现。
 

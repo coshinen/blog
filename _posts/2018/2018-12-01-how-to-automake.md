@@ -20,7 +20,7 @@ excerpt: 使用 make 编译工具链构建项目的简单过程。
 
 ### 0.2. 源码
 
-下面是一个 C++ 例子，共 2 个文件：头文件 main.h 和源文件 main.cc，放在同一目录 src 下。
+下面是一个 C++ 例子，共 2 个文件：头文件 main.h 和源文件 main.cpp，放在同一目录 src 下。
 
 头文件 main.h：
 
@@ -28,7 +28,7 @@ excerpt: 使用 make 编译工具链构建项目的简单过程。
 #include <iostream>
 ```
 
-源文件 main.cc（configure.ac 默认只识别 main 关键字命名的文件）：
+源文件 main.cpp（configure.ac 默认只识别 main 关键字命名的文件）：
 
 ```cpp
 #include "main.h"
@@ -66,7 +66,7 @@ $ vim configure.ac
 AC_PREREQ([2.69])
 -AC_INIT([FULL-PACKAGE-NAME], [VERSION], [BUG-REPORT-ADDRESS])
 +AC_INIT([main], [1.0], [email address]) # 初始化包名，版本号，bug 报告邮箱
-AC_CONFIG_SRCDIR([main.cc])
+AC_CONFIG_SRCDIR([main.cpp])
 AC_CONFIG_HEADERS([config.h])
 
 +AM_INIT_AUTOMAKE # 表示使用 Automake 生成 Makefile
@@ -108,7 +108,7 @@ AUTOMAKE_OPTIONS=foreign
 
 bin_PROGRAMS=main # 指定生成的 ELF 文件名
 
-main_SOURCES=main.cc # 指定 main 函数所在的源文件
+main_SOURCES=main.cpp # 指定 main 函数所在的源文件
 ```
 
 ## 4. 生成 Makefile.in

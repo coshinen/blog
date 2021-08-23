@@ -7,7 +7,7 @@ comments: true
 category: 程序人生
 tags: GitHub CI/CD
 ---
-![@actions](https://avatars.githubusercontent.com/u/44036562)
+![@actions](https://avatars.githubusercontent.com/u/44036562){:.border}
 
 GitHub Actions 提供了灵活构建一个自动化的软件开发生命周期的工作流。
 你可以编写单独的任务、调用操作、再合并它们以创建一个自定义的工作流。

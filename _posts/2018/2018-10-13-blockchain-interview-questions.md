@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "10 个基础的区块链面试问答"
+title:  "区块链面试问答"
 date:   2018-10-13 09:23:37 +0800
 author: Coshin
 comments: true

@@ -1,13 +1,13 @@
 ---
 layout: post
-title:  "设计模式—单例模式"
+title:  "单例设计模式"
 date:   2018-11-17 21:31:55 +0800
 author: Coshin
 comments: true
 category: 程序人生
 tags: Design-Patterns C++ GC
 ---
-单例模式是 23 种设计模式之一，属于创建型模式，限制类只能实例化一个对象。
+单例模式属于创建型模式，限制类只能实例化一个对象。
 
 ## 特性
 

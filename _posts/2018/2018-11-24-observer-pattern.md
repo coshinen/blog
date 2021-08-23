@@ -1,13 +1,13 @@
 ---
 layout: post
-title:  "设计模式—观察者模式"
+title:  "观察者设计模式"
 date:   2018-11-24 21:58:44 +0800
 author: Coshin
 comments: true
 category: 程序人生
 tags: Design-Patterns C++
 ---
-观察者模式是 23 种设计模式之一，属于行为型模式，用于内容订阅的推送和拉取。
+观察者模式属于行为型模式，用于内容的发布（推送）和订阅（拉取）。
 
 ## 实现
 

@@ -8,7 +8,7 @@ category: 程序人生
 tags: GitHub CLI
 excerpt: Git 是一个免费且开源的分布式版本控制系统。
 ---
-![git-logo](https://git-scm.com/images/logo@2x.png)
+![git-logo](https://git-scm.com/images/logo@2x.png){:.border}
 
 ## 配置工具
 

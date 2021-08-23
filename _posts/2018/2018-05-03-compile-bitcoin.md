@@ -96,7 +96,7 @@ libqrencode 二维码生成库（可选）：
 $ sudo apt-get install libqrencode-dev
 ```
 
-## 4. 笔记
+## 4. 注意
 
 发行版是使用 GCC 构建然后使用 `"strip bitcoind"` 去掉调试符号，该操作可减少可执行文件大小约 90%。
 
