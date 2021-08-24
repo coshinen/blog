@@ -133,6 +133,7 @@ excerpt: Here are some books that renew my spirit or reclaim my life.
 > * 亲密关系，[美] Rowland S. Miller, Daniel Perlman
 > * 少有人走的路 心智成熟的旅程，[美] M. Scott peck
 > * 爱是一种选择 不再讨好别人，拖累自己，[美] Robert Hemfelt, Frank Minirth, Paul Meier
+> * 情感勒索，[美] Susan Forward, PH. D. Donna Frazier
 > * 执迷 如何正常地爱与被爱，[美] Susan Forward, Craig Buck
 > * 原生家庭 如何修补自己的性格缺陷，[美] Susan Forward, Craig Buck
 > * 依恋 为什么我们爱得如此卑微，[美] Susan Forward, Joan Torres
