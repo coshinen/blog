@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "私钥到公钥到比特币地址的转换"
+title:  "私钥到比特币地址的转换"
 date:   2018-05-07 20:22:21 +0800
 author: Coshin
 comments: true
@@ -33,13 +33,11 @@ KzCFcgtfrPA2uWmXn4zjVNaKYMEUHbh732XzZ4aZ737545DqZ3V4
 
 **注：该命令只适用于本地钱包数据库中的私钥。**
 
-## 1. 私钥到地址的转换流程
+## 1. 流程
 
 ![mbc2_0401](https://raw.githubusercontent.com/bitcoinbook/bitcoinbook/develop/images/mbc2_0401.png){:.border}
 
 **注：“私钥->公钥”、“公钥->地址”这两步是单向不可逆的。**
-
-## 2. 私钥到公钥地址的转换步骤
 
 1. 使用伪随机数生成器 PRNG 生成一个给定范围内的 256 位随机数作为私钥 PrivKey。
 2. 使用 OpenSSL 加密库中 secp256k1 标准的椭圆曲线相乘加密算法计算上一步生成私钥 PrivKey 得到相应的公钥 PubKey。
@@ -53,15 +51,15 @@ KzCFcgtfrPA2uWmXn4zjVNaKYMEUHbh732XzZ4aZ737545DqZ3V4
       3. 取上步结果的前 4 个字节作为校验和 Checksum 追加到 3.2.1 结果的后面，VersionPrefix + PubKeyAddress + Checksum。
       4. 对上步得到的 25bytes 进行 Base58 编码得到最终的地址，address = Base58(VersionPrefix + PubKeyAddress + Checksum)。
 
-## 3. 源码剖析
+## 2. 源码剖析
 
 椭圆曲线公钥到比特币地址转换：
 
-![PubKeyToAddr](https://en.bitcoin.it/w/images/en/9/9b/PubKeyToAddr.png)
+![PubKeyToAddr](https://en.bitcoin.it/w/images/en/9/9b/PubKeyToAddr.png){:.border}
 
 ```shell
-$ cd bitcoin/src # 进入比特币源码目录
-$ grep "getnewaddress" * -nir # 搜索 RPC 命令 getnewaddress 所出现的文件及位置
+$ cd bitcoin/src
+$ grep "getnewaddress" * -nir
 rpcserver.cpp:344:    { "wallet",             "getnewaddress",          &getnewaddress,          true  },
 rpcserver.h:199:extern UniValue getnewaddress(const UniValue& params, bool fHelp); // in rpcwallet.cpp
 test/rpc_wallet_tests.cpp:174:     * 		getnewaddress
@@ -71,9 +69,7 @@ Binary file wallet/rpcwallet.cpp matches
 wallet/wallet.h:439:    //! todo: add something to note what created it (user, getnewaddress, change)
 ```
 
-从结果中我们可以看到出现该命令的文件名以及在该文件中出现的行号。
-分别出现在“rpcserver.cpp”、“rpcserver.h”、“test/rpc_wallet_tests.cpp”、“wallet/rpcwallet.cpp”、“wallet/wallet.h”这 5 个文件中。
-打开“rpcserver.cpp”文件，找到该命令出现的位置。
+`getnewaddress` 命令初始化在文件 `rpcserver.cpp` 中。
 
 ```cpp
 /**
@@ -92,26 +88,26 @@ static const CRPCCommand vRPCCommands[] =
 };
 ```
 
-vRPCCommands[] 是一个静态常量类对象数组，在“rpcserver.h”文件中找到类 CRPCCommand 的定义如下：
+远程过程调用命令类 `CRPCCommand` 定义在文件 `rpcserver.h` 中。
 
 ```cpp
 typedef UniValue(*rpcfn_type)(const UniValue& params, bool fHelp); // 回调函数类型定义
 
-class CRPCCommand // 远程过程调用命令类
+class CRPCCommand
 {
 public:
-    std::string category; // 所属类别
-    std::string name; // 名称
-    rpcfn_type actor; // 对应的函数行为
-    bool okSafeMode; // 是否打开安全模式
+    std::string category;
+    std::string name;
+    rpcfn_type actor;
+    bool okSafeMode;
 };
 ```
 
-该类的 4 个成员变量对应注释的 4 个列名。
-rpcfn_type 是一个函数标签为 UniValue(const UniValue&, bool) 的回调函数类型，形参 params 为 RPC 命令的参数，形参 fHelp 为显示该命令帮助的标志，对应[比特币核心客户端 RPC 命令](/blog/2018/05/bitcoin-cli-commands.html)用法的第 3 条。
+`rpcfn_type` 是一个函数标签为 `UniValue(const UniValue&, bool)` 的回调函数类型。
+形参 `fHelp` 是显示命令帮助的标志，对应[比特币客户端](/blog/2018/05/bitcoin-rpc-api.html#1-帮助信息)用法的第 3 条。
 
 ```shell
-  bitcoin-cli [options] help <command>      Get help for a command # 获取一条命令的帮助信息（用法示例）
+  bitcoin-cli [options] help <command>      Get help for a command
 ```
 
 详见[比特币 RPC 命令「getnewaddress」](/blog/2018/08/bitcoin-rpc-getnewaddress.html)。

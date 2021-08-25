@@ -1,13 +1,13 @@
 ---
 layout: post
-title:  "比特币“靓号”地址"
+title:  "比特币靓号地址"
 date:   2018-05-16 18:56:51 +0800
 author: Coshin
 comments: true
 category: 区块链
 tags: Bitcoin Address
 ---
-比特币“靓号”地址是拥有个性化前缀的公钥地址。
+比特币靓号地址是拥有个性化前缀的公钥地址。
 例如以字符串 `"1kid"` 开头的地址 `1kidyp7EFY3xUdMGSTWpkEmLcfKu9yvoq`。
 
 ## 1. 思路
