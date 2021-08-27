@@ -152,4 +152,3 @@ tags: Lyrics Conan Garnet
 ## 参考链接
 
 * [GARNET CROW Misty Mystery 歌詞 - 歌ネット](https://www.uta-net.com/song/117216/){:target="_blank"}
-* [Misty Mystery : Lyrics : GARNET CROW unofficial website : ガーネットクロウ アンオフィシャルサイト](https://ganekuro.github.io/lyrics/original/Misty-Mystery.html){:target="_blank"}

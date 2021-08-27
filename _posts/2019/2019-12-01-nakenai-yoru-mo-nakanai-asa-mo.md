@@ -100,4 +100,3 @@ tags: Lyrics Garnet
 ## 参考链接
 
 * [GARNET CROW 泣けない夜も 泣かない朝も 歌詞 - 歌ネット](https://www.uta-net.com/song/17628/){:target="_blank"}
-* [泣けない夜も 泣かない朝も : Lyrics : GARNET CROW unofficial website : ガーネットクロウ アンオフィシャルサイト](https://ganekuro.github.io/lyrics/original/Nakenai-Yoru-mo-Nakanai-Asa-mo.html){:target="_blank"}

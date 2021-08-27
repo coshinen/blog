@@ -112,4 +112,3 @@ tags: Lyrics Garnet
 ## 参考链接
 
 * [GARNET CROW 千以上の言葉を並べても… 歌詞 - 歌ネット](https://www.uta-net.com/song/12650/){:target="_blank"}
-* [千以上の言葉を並べても… : Lyrics : GARNET CROW unofficial website : ガーネットクロウ アンオフィシャルサイト](https://ganekuro.github.io/lyrics/original/Sen-Ijou-no-Kotoba-wo-Narabete-mo.html){:target="_blank"}

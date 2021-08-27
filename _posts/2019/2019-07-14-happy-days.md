@@ -126,4 +126,3 @@ tags: Lyrics Garnet
 ## 参考链接
 
 * [GARNET CROW HAPPY DAYS? 歌詞 - 歌ネット](https://www.uta-net.com/song/20139/){:target="_blank"}
-* [HAPPY DAYS? : Lyrics : GARNET CROW unofficial website : ガーネットクロウ アンオフィシャルサイト](https://ganekuro.github.io/lyrics/original/HAPPY-DAYS.html){:target="_blank"}

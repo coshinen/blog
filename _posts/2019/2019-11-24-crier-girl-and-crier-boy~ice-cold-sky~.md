@@ -106,4 +106,3 @@ tags: Lyrics Garnet
 ## 参考链接
 
 * [GARNET CROW Crier Girl & Crier Boy 〜ice cold sky〜 歌詞 - 歌ネット](https://www.uta-net.com/song/20137/){:target="_blank"}
-* [Crier Girl & Crier Boy 〜ice cold sky〜 : Lyrics : GARNET CROW unofficial website : ガーネットクロウ アンオフィシャルサイト](https://ganekuro.github.io/lyrics/original/Crier-Girl-&-Crier-Boy~ice-cold-sky~.html){:target="_blank"}

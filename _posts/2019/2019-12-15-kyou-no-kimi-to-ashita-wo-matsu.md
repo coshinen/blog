@@ -102,4 +102,3 @@ tags: Lyrics Garnet
 ## 参考链接
 
 * [GARNET CROW 今日の君と明日を待つ 歌詞 - 歌ネット](https://www.uta-net.com/song/20213/){:target="_blank"}
-* [今日の君と明日を待つ : Lyrics : GARNET CROW unofficial website : ガーネットクロウ アンオフィシャルサイト](https://ganekuro.github.io/lyrics/original/Kyou-no-Kimi-to-Ashita-wo-Matsu.html){:target="_blank"}

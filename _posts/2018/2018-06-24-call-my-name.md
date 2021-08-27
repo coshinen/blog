@@ -112,4 +112,3 @@ tags: Lyrics Garnet
 ## 参考链接
 
 * [GARNET CROW call my name 歌詞 - 歌ネット](https://www.uta-net.com/song/14411/){:target="_blank"}
-* [call my name : Lyrics : GARNET CROW unofficial website : ガーネットクロウ アンオフィシャルサイト](https://ganekuro.github.io/lyrics/original/call-my-name.html){:target="_blank"}

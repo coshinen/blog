@@ -131,4 +131,3 @@ tags: Lyrics Garnet
 ## 参考链接
 
 * [GARNET CROW 君の家に着くまでずっと走ってゆく 歌詞 - 歌ネット](https://www.uta-net.com/song/20130/){:target="_blank"}
-* [君の家に着くまでずっと走ってゆく : Lyrics : GARNET CROW unofficial website : ガーネットクロウ アンオフィシャルサイト](https://ganekuro.github.io/lyrics/original/Kimi-no-Uchi-ni-Tsuku-Made-Zutto-Hashitte-Yuku.html){:target="_blank"}

@@ -152,5 +152,4 @@ tags: Lyrics Garnet
 ## 参考链接
 
 * [GARNET CROW Fall in Life 〜Hallelujah〜 歌詞 - 歌ネット](https://www.uta-net.com/song/85218/){:target="_blank"}
-* [Fall in Life 〜Hallelujah〜 : Lyrics : GARNET CROW unofficial website : ガーネットクロウ アンオフィシャルサイト](https://ganekuro.github.io/lyrics/original/Fall-in-Life~Hallelujah~.html){:target="_blank"}
 * [「おセンチ」の意味や使い方 Weblio辞書](https://www.weblio.jp/content/おセンチ){:target="_blank"}

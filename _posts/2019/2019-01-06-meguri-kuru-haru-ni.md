@@ -130,5 +130,4 @@ tags: Lyrics Garnet
 ## 参考链接
 
 * [GARNET CROW 巡り来る春に 歌詞 - 歌ネット](https://www.uta-net.com/song/20131/){:target="_blank"}
-* [巡り来る春に : Lyrics : GARNET CROW unofficial website : ガーネットクロウ アンオフィシャルサイト](https://ganekuro.github.io/lyrics/original/Meguri-Kuru-Haru-ni.html){:target="_blank"}
 * [ゐるの意味 - 古文辞書 - Weblio古語辞典](https://kobun.weblio.jp/content/ゐる){:target="_blank"}

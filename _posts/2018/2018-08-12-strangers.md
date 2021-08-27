@@ -102,4 +102,3 @@ tags: Lyrics Garnet
 ## 参考链接
 
 * [GARNET CROW strangers 歌詞 - 歌ネット](https://www.uta-net.com/song/105961/){:target="_blank"}
-* [strangers : Lyrics : GARNET CROW unofficial website : ガーネットクロウ アンオフィシャルサイト](https://ganekuro.github.io/lyrics/original/strangers.html){:target="_blank"}

@@ -116,4 +116,3 @@ tags: Lyrics Garnet
 ## 参考链接
 
 * [GARNET CROW Jewel Fish 歌詞 - 歌ネット](https://www.uta-net.com/song/20144/){:target="_blank"}
-* [Jewel Fish : Lyrics : GARNET CROW unofficial website : ガーネットクロウ アンオフィシャルサイト](https://ganekuro.github.io/lyrics/original/Jewel-Fish.html){:target="_blank"}

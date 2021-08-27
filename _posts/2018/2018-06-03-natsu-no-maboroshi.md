@@ -132,4 +132,3 @@ tags: Lyrics Conan Garnet
 ## 参考链接
 
 * [GARNET CROW 夏の幻 歌詞 - 歌ネット](https://www.uta-net.com/song/12675/){:target="_blank"}
-* [夏の幻 : Lyrics : GARNET CROW unofficial website : ガーネットクロウ アンオフィシャルサイト](https://ganekuro.github.io/lyrics/original/Natsu-no-Maboroshi.html){:target="_blank"}

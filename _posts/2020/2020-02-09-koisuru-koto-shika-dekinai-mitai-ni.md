@@ -124,4 +124,3 @@ tags: Lyrics Garnet
 ## 参考链接
 
 * [GARNET CROW 恋することしか出来ないみたいに 歌詞 - 歌ネット](https://www.uta-net.com/song/20208/){:target="_blank"}
-* [恋することしか出来ないみたいに : Lyrics : GARNET CROW unofficial website : ガーネットクロウ アンオフィシャルサイト](https://ganekuro.github.io/lyrics/original/Koisuru-Koto-Shika-Dekinai-Mitai-ni.html){:target="_blank"}

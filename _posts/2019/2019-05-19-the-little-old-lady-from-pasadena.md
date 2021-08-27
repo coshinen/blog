@@ -9,8 +9,7 @@ tags: Lyrics Garnet
 ---
 ![GZCA-5017](https://ganekuro.github.io/images/discography/other/GZCA-5017.jpg){:.border}
 
-作詞：Roger Christian, Don Altfeld & Jan Berry<br>
-作曲：Roger Christian, Don Altfeld & Jan Berry
+Songwriter: Roger Christian, Don Altfeld & Jan Berry
 
 <blockquote class="original">
   <h2>THE LITTLE OLD LADY FROM PASADENA</h2>
@@ -101,4 +100,3 @@ tags: Lyrics Garnet
 ## 参考链接
 
 * [The Beach Boys – The Little Old Lady From Pasadena Lyrics \| Genius Lyrics](https://genius.com/The-beach-boys-the-little-old-lady-from-pasadena-lyrics){:target="_blank"}
-* [THE LITTLE OLD LADY FROM PASADENA : Lyrics : GARNET CROW unofficial website : ガーネットクロウ アンオフィシャルサイト](https://ganekuro.github.io/lyrics/featuring/THE-LITTLE-OLD-LADY-FROM-PASADENA.html){:target="_blank"}

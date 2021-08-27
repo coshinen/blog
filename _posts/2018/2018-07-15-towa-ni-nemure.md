@@ -102,4 +102,3 @@ tags: Lyrics Garnet
 ## 参考链接
 
 * [GARNET CROW 永遠に葬れ 歌詞 - 歌ネット](https://www.uta-net.com/song/20129/){:target="_blank"}
-* [永遠に葬れ : Lyrics : GARNET CROW unofficial website : ガーネットクロウ アンオフィシャルサイト](https://ganekuro.github.io/lyrics/original/Towa-ni-Nemure.html){:target="_blank"}

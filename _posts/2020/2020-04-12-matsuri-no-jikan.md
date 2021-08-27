@@ -72,4 +72,3 @@ tags: Lyrics Garnet
 ## 参考链接
 
 * [GARNET CROW 祭りのじかん 歌詞 - 歌ネット](https://www.uta-net.com/song/21026/){:target="_blank"}
-* [祭りのじかん : Lyrics : GARNET CROW unofficial website : ガーネットクロウ アンオフィシャルサイト](https://ganekuro.github.io/lyrics/original/Matsuri-no-Jikan.html){:target="_blank"}

@@ -112,4 +112,3 @@ tags: Lyrics Garnet
 ## 参考链接
 
 * [GARNET CROW Cried a little 歌詞 - 歌ネット](https://www.uta-net.com/song/20136/){:target="_blank"}
-* [Cried a little : Lyrics : GARNET CROW unofficial website : ガーネットクロウ アンオフィシャルサイト](https://ganekuro.github.io/lyrics/original/Cried-a-little.html){:target="_blank"}

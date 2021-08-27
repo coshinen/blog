@@ -104,4 +104,3 @@ tags: Lyrics Garnet
 ## 参考链接
 
 * [GARNET CROW Last love song 歌詞 - 歌ネット](https://www.uta-net.com/song/20145/){:target="_blank"}
-* [Last love song : Lyrics : GARNET CROW unofficial website : ガーネットクロウ アンオフィシャルサイト](https://ganekuro.github.io/lyrics/original/Last-love-song.html){:target="_blank"}

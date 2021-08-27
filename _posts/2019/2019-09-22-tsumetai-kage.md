@@ -90,4 +90,3 @@ tags: Lyrics Garnet
 ## 参考链接
 
 * [GARNET CROW 冷たい影 歌詞 - 歌ネット](https://www.uta-net.com/song/25896/){:target="_blank"}
-* [冷たい影 : Lyrics : GARNET CROW unofficial website : ガーネットクロウ アンオフィシャルサイト](https://ganekuro.github.io/lyrics/original/Tsumetai-Kage.html){:target="_blank"}

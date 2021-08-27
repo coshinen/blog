@@ -124,4 +124,3 @@ tags: Lyrics Garnet
 ## 参考链接
 
 * [GARNET CROW トランス・トラップ 歌詞 - 歌ネット](https://www.uta-net.com/song/20128/){:target="_blank"}
-* [トランス・トラップ : Lyrics : GARNET CROW unofficial website : ガーネットクロウ アンオフィシャルサイト](https://ganekuro.github.io/lyrics/original/Trance-Trap.html){:target="_blank"}

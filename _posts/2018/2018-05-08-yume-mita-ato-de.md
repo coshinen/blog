@@ -118,4 +118,3 @@ tags: Lyrics Conan Garnet
 ## 参考链接
 
 * [GARNET CROW 夢みたあとで 歌詞 - 歌ネット](https://www.uta-net.com/song/15314/){:target="_blank"}
-* [夢みたあとで : Lyrics : GARNET CROW unofficial website : ガーネットクロウ アンオフィシャルサイト](https://ganekuro.github.io/lyrics/original/Yume-Mita-Ato-de.html){:target="_blank"}

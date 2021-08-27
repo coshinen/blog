@@ -98,4 +98,3 @@ tags: Lyrics Conan Garnet
 ## 参考链接
 
 * [GARNET CROW 世界はまわると言うけれど 歌詞 - 歌ネット](https://www.uta-net.com/song/58595/){:target="_blank"}
-* [世界はまわると言うけれど : Lyrics : GARNET CROW unofficial website : ガーネットクロウ アンオフィシャルサイト](https://ganekuro.github.io/lyrics/original/Sekai-wa-Mawaru-to-Iu-Keredo.html){:target="_blank"}

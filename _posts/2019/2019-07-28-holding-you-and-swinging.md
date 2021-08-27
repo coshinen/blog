@@ -150,5 +150,4 @@ tags: Lyrics Garnet
 ## 参考链接
 
 * [GARNET CROW Holding you, and swinging 歌詞 - 歌ネット](https://www.uta-net.com/song/20141/){:target="_blank"}
-* [Holding you, and swinging : Lyrics : GARNET CROW unofficial website : ガーネットクロウ アンオフィシャルサイト](https://ganekuro.github.io/lyrics/original/Holding-you,-and-swinging.html){:target="_blank"}
 * [ひらうの意味や使い方 Weblio辞書](https://www.weblio.jp/content/ひらう){:target="_blank"}

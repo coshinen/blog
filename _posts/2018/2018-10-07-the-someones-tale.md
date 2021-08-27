@@ -78,4 +78,3 @@ tags: Lyrics Garnet
 ## 参考链接
 
 * [GARNET CROW The Someone's Tale 歌詞 - 歌ネット](https://www.uta-net.com/song/143806/){:target="_blank"}
-* [The Someone's Tale : Lyrics : GARNET CROW unofficial website : ガーネットクロウ アンオフィシャルサイト](https://ganekuro.github.io/lyrics/original/The-Someones-Tale.html){:target="_blank"}

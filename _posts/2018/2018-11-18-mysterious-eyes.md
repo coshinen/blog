@@ -140,4 +140,3 @@ tags: Lyrics Conan Garnet
 ## 参考链接
 
 * [GARNET CROW Mysterious Eyes 歌詞 - 歌ネット](https://www.uta-net.com/song/14347/){:target="_blank"}
-* [Mysterious Eyes : Lyrics : GARNET CROW unofficial website : ガーネットクロウ アンオフィシャルサイト](https://ganekuro.github.io/lyrics/original/Mysterious-Eyes.html){:target="_blank"}

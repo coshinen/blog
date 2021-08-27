@@ -138,4 +138,3 @@ tags: Lyrics Garnet
 ## 参考链接
 
 * [GARNET CROW Please, forgive me 歌詞 - 歌ネット](https://www.uta-net.com/song/20140/){:target="_blank"}
-* [Please, forgive me : Lyrics : GARNET CROW unofficial website : ガーネットクロウ アンオフィシャルサイト](https://ganekuro.github.io/lyrics/original/Please,-forgive-me.html){:target="_blank"}

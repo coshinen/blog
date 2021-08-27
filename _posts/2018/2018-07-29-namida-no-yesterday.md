@@ -120,4 +120,3 @@ tags: Lyrics Conan Garnet
 ## 参考链接
 
 * [GARNET CROW 涙のイエスタデー 歌詞 - 歌ネット](https://www.uta-net.com/song/55020/){:target="_blank"}
-* [涙のイエスタデー : Lyrics : GARNET CROW unofficial website : ガーネットクロウ アンオフィシャルサイト](https://ganekuro.github.io/lyrics/original/Namida-no-Yesterday.html){:target="_blank"}

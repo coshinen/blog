@@ -120,4 +120,3 @@ tags: Lyrics Garnet
 ## 参考链接
 
 * [GARNET CROW wonder land 歌詞 - 歌ネット](https://www.uta-net.com/song/20126/){:target="_blank"}
-* [wonder land : Lyrics : GARNET CROW unofficial website : ガーネットクロウ アンオフィシャルサイト](https://ganekuro.github.io/lyrics/original/wonder-land.html){:target="_blank"}

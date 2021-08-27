@@ -80,4 +80,3 @@ tags: Lyrics Garnet
 ## 参考链接
 
 * [GARNET CROW 永遠を駆け抜ける一瞬の僕ら 歌詞 - 歌ネット](https://www.uta-net.com/song/20212/){:target="_blank"}
-* [永遠を駆け抜ける一瞬の僕ら : Lyrics : GARNET CROW unofficial website : ガーネットクロウ アンオフィシャルサイト](https://ganekuro.github.io/lyrics/original/Eien-wo-Kakenukeru-Isshun-no-Bokura.html){:target="_blank"}

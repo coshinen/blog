@@ -108,5 +108,4 @@ tags: Lyrics Garnet
 ## 参考链接
 
 * [GARNET CROW 夕月夜 歌詞 - 歌ネット](https://www.uta-net.com/song/25895/){:target="_blank"}
-* [夕月夜 : Lyrics : GARNET CROW unofficial website : ガーネットクロウ アンオフィシャルサイト](https://ganekuro.github.io/lyrics/original/Yuuzukiyo.html){:target="_blank"}
 * [「見ゆ(みゆ)」の意味や使い方 Weblio辞書](https://www.weblio.jp/content/見ゆ){:target="_blank"}

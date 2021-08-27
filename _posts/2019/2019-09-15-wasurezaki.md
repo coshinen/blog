@@ -86,4 +86,3 @@ tags: Lyrics Conan Garnet
 ## 参考链接
 
 * [GARNET CROW 忘れ咲き 歌詞 - 歌ネット](https://www.uta-net.com/song/21024/){:target="_blank"}
-* [忘れ咲き : Lyrics : GARNET CROW unofficial website : ガーネットクロウ アンオフィシャルサイト](https://ganekuro.github.io/lyrics/original/Wasurezaki.html){:target="_blank"}

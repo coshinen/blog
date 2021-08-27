@@ -92,4 +92,3 @@ tags: Lyrics Conan Garnet
 ## 参考链接
 
 * [GARNET CROW 君という光 歌詞 - 歌ネット](https://www.uta-net.com/song/17804/){:target="_blank"}
-* [君という光 : Lyrics : GARNET CROW unofficial website : ガーネットクロウ アンオフィシャルサイト](https://ganekuro.github.io/lyrics/original/Kimi-to-Iu-Hikari.html){:target="_blank"}

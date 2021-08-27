@@ -124,4 +124,3 @@ tags: Lyrics Garnet
 ## 参考链接
 
 * [GARNET CROW Hello Sadness 歌詞 - 歌ネット](https://www.uta-net.com/song/85223/){:target="_blank"}
-* [Hello Sadness : Lyrics : GARNET CROW unofficial website : ガーネットクロウ アンオフィシャルサイト](https://ganekuro.github.io/lyrics/original/Hello-Sadness.html){:target="_blank"}

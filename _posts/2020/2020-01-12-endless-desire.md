@@ -138,4 +138,3 @@ tags: Lyrics Garnet
 ## 参考链接
 
 * [GARNET CROW Endless Desire 歌詞 - 歌ネット](https://www.uta-net.com/song/20211/){:target="_blank"}
-* [Endless Desire : Lyrics : GARNET CROW unofficial website : ガーネットクロウ アンオフィシャルサイト](https://ganekuro.github.io/lyrics/original/Endless-Desire.html){:target="_blank"}

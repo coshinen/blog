@@ -68,4 +68,3 @@ tags: Lyrics Garnet
 ## 参考链接
 
 * [Christmas Songs – Angels We Have Heard on High Lyrics \| Genius Lyrics](https://genius.com/Christmas-songs-angels-we-have-heard-on-high-lyrics){:target="_blank"}
-* [Angels We Have Heard on High : Lyrics : GARNET CROW unofficial website : ガーネットクロウ アンオフィシャルサイト](https://ganekuro.github.io/lyrics/featuring/Angels-We-Have-Heard-On-High.html){:target="_blank"}

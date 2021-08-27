@@ -150,4 +150,3 @@ tags: Lyrics Garnet
 ## 参考链接
 
 * [GARNET CROW Marionette Fantasia 歌詞 - 歌ネット](https://www.uta-net.com/song/20214/){:target="_blank"}
-* [Marionette Fantasia : Lyrics : GARNET CROW unofficial website : ガーネットクロウ アンオフィシャルサイト](https://ganekuro.github.io/lyrics/original/Marionette-Fantasia.html){:target="_blank"}

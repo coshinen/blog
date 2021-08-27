@@ -84,4 +84,3 @@ tags: Lyrics Garnet
 ## 参考链接
 
 * [GARNET CROW やさしい雨 歌詞 - 歌ネット](https://www.uta-net.com/song/45945/){:target="_blank"}
-* [やさしい雨 : Lyrics : GARNET CROW unofficial website : ガーネットクロウ アンオフィシャルサイト](https://ganekuro.github.io/lyrics/original/Yasashii-Ame.html){:target="_blank"}

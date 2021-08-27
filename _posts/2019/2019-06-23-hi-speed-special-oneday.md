@@ -142,4 +142,3 @@ tags: Lyrics Garnet
 ## 参考链接
 
 * [GARNET CROW hi-speed スペシャル oneday 歌詞 - 歌ネット](https://www.uta-net.com/song/20133/){:target="_blank"}
-* [hi-speed スペシャル oneday : Lyrics : GARNET CROW unofficial website : ガーネットクロウ アンオフィシャルサイト](https://ganekuro.github.io/lyrics/original/hi-speed-Special-oneday.html){:target="_blank"}

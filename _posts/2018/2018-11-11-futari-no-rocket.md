@@ -140,4 +140,3 @@ tags: Lyrics Garnet
 ## 参考链接
 
 * [GARNET CROW 二人のロケット 歌詞 - 歌ネット](https://www.uta-net.com/song/20153/){:target="_blank"}
-* [二人のロケット : Lyrics : GARNET CROW unofficial website : ガーネットクロウ アンオフィシャルサイト](https://ganekuro.github.io/lyrics/original/Futari-no-Rocket.html){:target="_blank"}

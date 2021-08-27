@@ -124,4 +124,3 @@ tags: Lyrics Garnet
 ## 参考链接
 
 * [GARNET CROW クリスタル・ゲージ 歌詞 - 歌ネット](https://www.uta-net.com/song/16488/){:target="_blank"}
-* [クリスタル・ゲージ : Lyrics : GARNET CROW unofficial website : ガーネットクロウ アンオフィシャルサイト](https://ganekuro.github.io/lyrics/original/Crystal-Gauge.html){:target="_blank"}

@@ -94,4 +94,3 @@ tags: Lyrics Garnet
 ## 参考链接
 
 * [GARNET CROW 幸福なペット 歌詞 - 歌ネット](https://www.uta-net.com/song/20152/){:target="_blank"}
-* [幸福なペット : Lyrics : GARNET CROW unofficial website : ガーネットクロウ アンオフィシャルサイト](https://ganekuro.github.io/lyrics/original/Koufuku-na-Pet.html){:target="_blank"}

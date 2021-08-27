@@ -72,4 +72,3 @@ tags: Lyrics Garnet
 ## 参考链接
 
 * [GARNET CROW lose feeling 歌詞 - 歌ネット](https://www.uta-net.com/song/59993/){:target="_blank"}
-* [lose feeling : Lyrics : GARNET CROW unofficial website : ガーネットクロウ アンオフィシャルサイト](https://ganekuro.github.io/lyrics/original/lose-feeling.html){:target="_blank"}

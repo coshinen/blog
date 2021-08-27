@@ -118,4 +118,3 @@ tags: Lyrics Garnet
 ## 参考链接
 
 * [GARNET CROW 僕らだけの未来 歌詞 - 歌ネット](https://www.uta-net.com/song/18459/){:target="_blank"}
-* [僕らだけの未来 : Lyrics : GARNET CROW unofficial website : ガーネットクロウ アンオフィシャルサイト](https://ganekuro.github.io/lyrics/original/Bokura-Dake-no-Mirai.html){:target="_blank"}

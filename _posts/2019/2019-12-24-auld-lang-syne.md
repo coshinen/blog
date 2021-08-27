@@ -50,4 +50,3 @@ tags: Lyrics Garnet
 ## 参考链接
 
 * [Lea Michele – Auld Lang Syne Lyrics \| Genius Lyrics](https://genius.com/Lea-michele-auld-lang-syne-lyrics){:target="_blank"}
-* [AULD LANG SYNE : Lyrics : GARNET CROW unofficial website : ガーネットクロウ アンオフィシャルサイト](https://ganekuro.github.io/lyrics/featuring/AULD-LANG-SYNE.html){:target="_blank"}

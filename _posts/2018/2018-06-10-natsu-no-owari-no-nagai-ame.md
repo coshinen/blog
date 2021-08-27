@@ -100,4 +100,3 @@ tags: Lyrics Garnet
 ## 参考链接
 
 * [GARNET CROW 夏の終わりの長い雨 歌詞 - 歌ネット](https://www.uta-net.com/song/20150/){:target="_blank"}
-* [夏の終わりの長い雨 : Lyrics : GARNET CROW unofficial website : ガーネットクロウ アンオフィシャルサイト](https://ganekuro.github.io/lyrics/original/Natsu-no-Owari-no-Nagai-Ame.html){:target="_blank"}

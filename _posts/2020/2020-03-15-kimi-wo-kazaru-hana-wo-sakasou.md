@@ -94,4 +94,3 @@ tags: Lyrics Garnet
 ## 参考链接
 
 * [GARNET CROW 君を飾る花を咲かそう 歌詞 - 歌ネット](https://www.uta-net.com/song/19180/){:target="_blank"}
-* [君を飾る花を咲かそう : Lyrics : GARNET CROW unofficial website : ガーネットクロウ アンオフィシャルサイト](https://ganekuro.github.io/lyrics/original/Kimi-wo-Kazaru-Hana-wo-Sakasou.html){:target="_blank"}

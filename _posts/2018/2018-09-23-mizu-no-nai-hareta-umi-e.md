@@ -96,4 +96,3 @@ tags: Lyrics Garnet
 ## 参考链接
 
 * [GARNET CROW 水のない晴れた海へ 歌詞 - 歌ネット](https://www.uta-net.com/song/20148/){:target="_blank"}
-* [水のない晴れた海へ : Lyrics : GARNET CROW unofficial website : ガーネットクロウ アンオフィシャルサイト](https://ganekuro.github.io/lyrics/original/Mizu-no-Nai-Hareta-Umi-e.html){:target="_blank"}

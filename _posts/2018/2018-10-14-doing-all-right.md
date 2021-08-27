@@ -96,4 +96,3 @@ tags: Lyrics Conan Garnet
 ## 参考链接
 
 * [GARNET CROW Doing all right 歌詞 - 歌ネット](https://www.uta-net.com/song/79833/){:target="_blank"}
-* [Doing all right : Lyrics : GARNET CROW unofficial website : ガーネットクロウ アンオフィシャルサイト](https://ganekuro.github.io/lyrics/original/Doing-all-right.html){:target="_blank"}

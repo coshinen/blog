@@ -134,4 +134,3 @@ tags: Lyrics Garnet
 ## 参考链接
 
 * [GARNET CROW dreaming of love 歌詞 - 歌ネット](https://www.uta-net.com/song/20147/){:target="_blank"}
-* [dreaming of love : Lyrics : GARNET CROW unofficial website : ガーネットクロウ アンオフィシャルサイト](https://ganekuro.github.io/lyrics/original/dreaming-of-love.html){:target="_blank"}

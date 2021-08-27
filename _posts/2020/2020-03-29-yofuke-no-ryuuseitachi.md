@@ -91,10 +91,9 @@ tags: Lyrics Garnet
 
 今天是 GARNET CROW 出道 20 周年的纪念日。
 官网公告企画开始，具体内容尚未揭晓。
-古井弘人发推表示非再结成。
+前领队古井弘人发推特表示并非再结成。
 
 ## 参考链接
 
 * [GARNET CROW 夜深けの流星達 歌詞 - 歌ネット](https://www.uta-net.com/song/50834/){:target="_blank"}
-* [夜深けの流星達 : Lyrics : GARNET CROW unofficial website : ガーネットクロウ アンオフィシャルサイト](https://ganekuro.github.io/lyrics/original/Yofuke-no-Ryuuseitachi.html){:target="_blank"}
 * [◆GARNET CROW 20th Anniversary企画スタート！](http://www.garnetcrow.com/news/#info20200329){:target="_blank"}

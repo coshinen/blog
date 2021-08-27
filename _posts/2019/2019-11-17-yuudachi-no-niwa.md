@@ -106,4 +106,3 @@ tags: Lyrics Garnet
 ## 参考链接
 
 * [GARNET CROW 夕立の庭 歌詞 - 歌ネット](https://www.uta-net.com/song/20149/){:target="_blank"}
-* [夕立の庭 : Lyrics : GARNET CROW unofficial website : ガーネットクロウ アンオフィシャルサイト](https://ganekuro.github.io/lyrics/original/Yuudachi-no-Niwa.html){:target="_blank"}

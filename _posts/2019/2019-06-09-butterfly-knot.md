@@ -92,4 +92,3 @@ tags: Lyrics Garnet
 ## 参考链接
 
 * [GARNET CROW バタフライ・ノット 歌詞 - 歌ネット](https://www.uta-net.com/song/153420/){:target="_blank"}
-* [バタフライ・ノット : Lyrics : GARNET CROW unofficial website : ガーネットクロウ アンオフィシャルサイト](https://ganekuro.github.io/lyrics/original/Butterfly-Knot.html){:target="_blank"}
