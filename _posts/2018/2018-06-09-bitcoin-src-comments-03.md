@@ -7,7 +7,6 @@ comments: true
 category: 区块链
 tags: Bitcoin bitcoind
 ---
-上一篇分析了命令行参数解析以及帮助和版本信息的获取，详见[比特币源码剖析（二）](/blog/2018/06/bitcoin-src-comments-02.html)。
 本篇主要分析 GetDataDir(false) 获取数据目录函数，ReadConfigFile(mapArgs, mapMultiArgs) 读取配置文件函数，SelectParams(ChainNameFromCommandLine()) 选择链参数（含创世区块信息）函数，检测命令行参数完整性，Linux 下守护进程的后台化以及服务选项的设置。
 
 ## 源码剖析
@@ -553,9 +552,6 @@ bool SoftSetBoolArg(const std::string& strArg, bool fValue)
         return SoftSetArg(strArg, std::string("0"));
 }
 ```
-
-未完待续...<br>
-请看下一篇[比特币源码剖析（四）](/blog/2018/06/bitcoin-src-comments-04.html)。
 
 ## 参考链接
 

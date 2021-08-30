@@ -7,7 +7,6 @@ comments: true
 category: 区块链
 tags: Bitcoin bitcoind
 ---
-上一篇分析了第九步数据目录维护和第十步导入区块文件的详细过程，详见[比特币源码剖析（十五）](/blog/2018/09/bitcoin-src-comments-15.html)。
 本篇主要分析 Step 11: start node 第十一步启动节点服务的详细过程。
 
 ## 源码剖析
@@ -361,9 +360,6 @@ std::string TorController::GetPrivateKeyFile()
     return (GetDataDir() / "onion_private_key").string(); // 返回凭借的数据文件名字符串
 }
 ```
-
-未完待续...<br>
-请看下一篇[比特币源码剖析（十七）](/blog/2018/09/bitcoin-src-comments-17.html)。
 
 ## 参考链接
 

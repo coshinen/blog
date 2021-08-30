@@ -7,7 +7,6 @@ comments: true
 category: 区块链
 tags: Bitcoin bitcoind
 ---
-上一篇分析了应用程序初始化中椭圆曲线初始化的详细过程，详见[比特币源码剖析（六）](/blog/2018/06/bitcoin-src-comments-06.html)。
 本篇主要分析 Step 4: application initialization: dir lock, daemonize, pidfile, debug log 第四步应用程序初始化中 InitSanityCheck() 初始化完整性检查和数据目录上锁的详细过程。
 
 ## 源码剖析
@@ -370,9 +369,6 @@ void OpenDebugLog()
 5.2.2.获取日志文件位置并以追加只写的方式打开。<br>
 5.2.3.若消息链表非空，遍历该链表，把消息写入日志文件。<br>
 5.2.4.删除该链表，指针置空，防止出现野指针。
-
-未完待续...<br>
-请看下一篇[比特币源码剖析（八）](/blog/2018/07/bitcoin-src-comments-08.html)。
 
 ## 参考链接
 

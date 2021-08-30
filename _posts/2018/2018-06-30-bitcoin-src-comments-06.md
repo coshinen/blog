@@ -7,7 +7,6 @@ comments: true
 category: 区块链
 tags: Bitcoin bitcoind
 ---
-上一篇分析了第三步参数转化为内部标志的代码，以及第四步应用程序初始化的大体过程，详见[比特币源码剖析（五）](/blog/2018/06/bitcoin-src-comments-05.html)。
 本篇主要分析 Step 4: application initialization: dir lock, daemonize, pidfile, debug log 第四步应用程序初始化中初始化椭圆曲线代码的详细过程。
 
 ## 源码剖析
@@ -374,9 +373,6 @@ static boost::scoped_ptr<ECCVerifyHandle> globalVerifyHandle; // 该智能指针
 ```
 
 智能指针 boost::scoped_ptr 不能复制或移动，类似于 STL 的 std::unique_ptr。
-
-未完待续...<br>
-请看下一篇[比特币源码剖析（七）](/blog/2018/07/bitcoin-src-comments-07.html)。
 
 ## 参考链接
 

@@ -17,7 +17,7 @@ tags: Bitcoin RPCs
 ```shell
 $ bitcoin-cli -h # 显示帮助信息
 Bitcoin Core RPC client version v0.12.1.0-f61a24e
-比特币核心 RPC 客户端版本 v0.12.1.0-未知
+比特币核心 RPC 客户端版本 v0.12.1.0-改源码后附加的字符串
 
 Usage:
 用法：共 3 种，[] 表示可以省略，单纯的使用 Options 选项不需要 bitcoind，而 help 和 <command> 都需要 bitcoind

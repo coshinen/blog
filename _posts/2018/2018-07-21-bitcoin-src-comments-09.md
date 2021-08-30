@@ -7,7 +7,6 @@ comments: true
 category: 区块链
 tags: Bitcoin bitcoind
 ---
-上一篇分析了应用程序初始化中创建脚本验证的线程函数和创建轻量级任务调度线程函数，详见[比特币源码剖析（八）](/blog/2018/07/bitcoin-src-comments-08.html)。
 本篇主要分析 Step 4: application initialization: dir lock, daemonize, pidfile, debug log 第四步应用程序初始化中初始化服务器的详细过程。
 
 ## 源码剖析
@@ -451,9 +450,6 @@ bool StartRPC()
 ```
 
 **注：这里调用的 g_rpcSignals.Started() 信号函数在该版本中并未注册。**
-
-未完待续...<br>
-请看下一篇[比特币源码剖析（十）](/blog/2018/07/bitcoin-src-comments-10.html)。
 
 ## 参考链接
 

@@ -7,7 +7,6 @@ comments: true
 category: 区块链
 tags: Bitcoin bitcoind
 ---
-上一篇分析了第八步加载钱包的详细过程，详见[比特币源码剖析（十四）](/blog/2018/08/bitcoin-src-comments-14.html)。
 本篇主要分析 Step 9: data directory maintenance 第九步数据目录维护的详细过程。
 
 ## 源码剖析
@@ -302,9 +301,6 @@ void ThreadImport(std::vector<boost::filesystem::path> vImportFiles) // 导入�
     }
 }
 ```
-
-未完待续...<br>
-请看下一篇[比特币源码剖析（十六）](/blog/2018/09/bitcoin-src-comments-16.html)。
 
 ## 参考链接
 

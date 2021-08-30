@@ -41,6 +41,8 @@ tags: LeetCode Medium String Dynamic-Programming
 * f<sub>i</sub> = f<sub>i - 1</sub>, s[i] != 0
 * f<sub>i</sub> = f<sub>i - 2</sub>, s[i - 1] != 0 && 10 * s[i - 1] + s[i] <= 26 && i > 1
 
+边界条件：f<sub>0</sub> = 1
+
 ```cpp
 class Solution {
 public:

@@ -7,7 +7,6 @@ comments: true
 category: 区块链
 tags: Bitcoin bitcoind
 ---
-上一篇分析了第六步初始化网络的详细过程，详见[比特币源码剖析（十二）](/blog/2018/08/bitcoin-src-comments-12.html)。
 本篇主要分析 Step 7: load block chain 第七步加载区块链的详细过程。
 
 ## 源码剖析
@@ -458,9 +457,6 @@ bool InitBlockIndex(const CChainParams& chainparams)
     return true; // 成功返回 true
 }
 ```
-
-未完待续...<br>
-请看下一篇[比特币源码剖析（十四）](/blog/2018/08/bitcoin-src-comments-14.html)。
 
 ## 参考链接
 

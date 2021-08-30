@@ -7,7 +7,6 @@ comments: true
 category: 区块链
 tags: Bitcoin bitcoind
 ---
-上一篇分析了日志记录的初始化，参数交互的初始化，应用程序初始化真正入口的前两步：安装和参数交互，详见[比特币源码剖析（四）](/blog/2018/06/bitcoin-src-comments-04.html)。
 本篇主要分析 Step 3: parameter-to-internal-flags 第三步参数转化为内部标志，Step 4: application initialization: dir lock, daemonize, pidfile, debug log 第四步应用程序初始化。
 
 ## 源码剖析
@@ -290,9 +289,6 @@ bool AppInit2(boost::thread_group& threadGroup, CScheduler& scheduler) // 3.11.0
 7. [创建脚本验证线程。](/blog/2018/07/bitcoin-src-comments-08.html#ThreadScriptCheck-ref)<br>
 8. [创建轻量级任务调度线程。](/blog/2018/07/bitcoin-src-comments-08.html#serviceQueue-ref)<br>
 9. [启动 RPC 服务。](/blog/2018/07/bitcoin-src-comments-09.html#AppInitServers-ref)
-
-未完待续...<br>
-请看下一篇[比特币源码剖析（六）](/blog/2018/06/bitcoin-src-comments-06.html)。
 
 ## 参考链接
 

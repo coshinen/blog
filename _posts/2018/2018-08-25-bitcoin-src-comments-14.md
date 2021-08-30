@@ -7,7 +7,6 @@ comments: true
 category: 区块链
 tags: Bitcoin bitcoind
 ---
-上一篇分析了第七步加载区块链的详细过程，详见[比特币源码剖析（十三）](/blog/2018/08/bitcoin-src-comments-13.html)。
 本篇主要分析 Step 8: load wallet 第八步加载钱包的详细过程。
 
 ## 源码剖析
@@ -385,9 +384,6 @@ class CWallet : public CCryptoKeyStore, public CValidationInterface
     ...
 };
 ```
-
-未完待续...<br>
-请看下一篇[比特币源码剖析（十五）](/blog/2018/09/bitcoin-src-comments-15.html)。
 
 ## 参考链接
 

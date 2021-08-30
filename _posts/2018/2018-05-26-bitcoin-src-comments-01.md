@@ -7,7 +7,6 @@ comments: true
 category: 区块链
 tags: Bitcoin bitcoind
 ---
-第一篇主要列出比特币核心服务程序 bitcoind 的启动流程及其入口函数，详见[比特币源码剖析](/blog/2018/05/bitcoin-src-comments-00.html)。
 该篇主要分析 SetupEnvironment() 和 noui_connect() 函数。
 
 ## 源码剖析
@@ -293,9 +292,6 @@ int LogPrintStr(const std::string &str)
     return ret; // 返回写入调试日志文件的字符总数
 }
 ```
-
-未完待续...<br>
-请看下一篇[比特币源码剖析（二）](/blog/2018/06/bitcoin-src-comments-02.html)。
 
 ## 参考链接
 
