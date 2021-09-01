@@ -10,7 +10,7 @@ permalink: /
       <h2>
         <a class="post-link" href="{{ site.posts.first.url }}">{{ site.posts.first.title | escape }}</a>
       </h2>
-      {{ site.posts.first.excerpt | markdownify | strip_newlines }}
+      {{ site.posts.first.excerpt }}
       <span><a class="readmore" href="{{ site.posts.first.url }}">阅读全文 &raquo;</a></span>
     </li>
   </ul>

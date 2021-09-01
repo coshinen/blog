@@ -10,7 +10,7 @@ permalink: /blog/
       <h2>
         <a class="post-link" href="{{ site.posts.first.url }}">{{ site.posts.first.title | escape }}</a>
       </h2>
-      {{ site.posts.first.excerpt | markdownify | strip_newlines }}
+      {{ site.posts.first.excerpt }}
       <span><a class="readmore" href="{{ site.posts.first.url }}">阅读全文 &raquo;</a></span>
     </li>
     <h2 class="page-heading">近期文章</h2>{% for post in site.posts offset:1 limit:7 %}
@@ -20,7 +20,7 @@ permalink: /blog/
       <h2>
         <a class="post-link" href="{{ post.url }}">{{ post.title | escape }}</a>
       </h2>
-      {{ post.excerpt | markdownify | strip_newlines }}
+      {{ post.excerpt }}
       <span><a class="readmore" href="{{ post.url }}">阅读全文 &raquo;</a></span>
     </li>{% endfor %}
   </ul>
