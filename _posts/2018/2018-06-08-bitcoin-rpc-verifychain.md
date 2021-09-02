@@ -6,11 +6,8 @@ author: Coshin
 comments: true
 category: 区块链
 tags: Bitcoin RPCs
-excerpt: $ bitcoin-cli verifychain ( checklevel numblocks )
 ---
-## 1. 帮助内容
-
-```shell
+<pre>
 $ bitcoin-cli help verifychain
 verifychain ( checklevel numblocks )
 
@@ -31,9 +28,9 @@ verifychain ( checklevel numblocks )
 例子：
 > bitcoin-cli verifychain
 > curl --user myusername:userpassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "verifychain", "params": [] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
-```
+</pre>
 
-## 2. 源码剖析
+## 源码剖析
 
 `verifychain` 对应的函数在文件 `rpcserver.h` 中被引用。
 
@@ -73,9 +70,9 @@ UniValue verifychain(const UniValue& params, bool fHelp)
 }
 ```
 
-### 2.1. 帮助内容
+### 1. 帮助内容
 
-参考[比特币 RPC 命令「getbestblockhash」2.1. 帮助内容](/blog/2018/05/bitcoin-rpc-getbestblockhash.html#21-帮助内容)。
+参考[比特币 RPC 命令「getbestblockhash」1. 帮助内容](/blog/2018/05/bitcoin-rpc-getbestblockhash.html#1-帮助内容)。
 
 基本流程：
 1. 设置默认检查等级和默认检查块数。

@@ -6,11 +6,8 @@ author: Coshin
 comments: true
 category: 区块链
 tags: Bitcoin RPCs
-excerpt: $ bitcoin-cli getinfo
 ---
-##  1. 帮助内容
-
-```shell
+<pre>
 $ bitcoin-cli help getinfo
 getinfo
 
@@ -39,9 +36,9 @@ getinfo
 例子：
 > bitcoin-cli getinfo
 > curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "getinfo", "params": [] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
-```
+</pre>
 
-## 2. 源码剖析
+## 源码剖析
 
 `getinfo` 对应的函数在文件 `rpcserver.h` 中被引用。
 

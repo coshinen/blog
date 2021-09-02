@@ -6,11 +6,8 @@ author: Coshin
 comments: true
 category: 区块链
 tags: Bitcoin RPCs
-excerpt: $ bitcoin-cli listreceivedbyaccount ( minconf includeempty includeWatchonly )
 ---
-## 1. 帮助内容
-
-```shell
+<pre>
 $ bitcoin-cli help listreceivedbyaccount
 listreceivedbyaccount ( minconf includeempty includeWatchonly )
 
@@ -37,9 +34,9 @@ listreceivedbyaccount ( minconf includeempty includeWatchonly )
 > bitcoin-cli listreceivedbyaccount
 > bitcoin-cli listreceivedbyaccount 6 true
 > curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "listreceivedbyaccount", "params": [6, true, true] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
-```
+</pre>
 
-## 2. 源码剖析
+## 源码剖析
 
 `listreceivedbyaccount` 对应的函数在文件 `rpcserver.h` 中被引用。
 
@@ -88,15 +85,15 @@ UniValue listreceivedbyaccount(const UniValue& params, bool fHelp)
 }
 ```
 
-### 2.1. 确保钱包可用
+### 1. 确保钱包可用
 
-参考[比特币 RPC 命令「fundrawtransaction」2.1. 确保钱包可用](/blog/2018/07/bitcoin-rpc-fundrawtransaction.html#21-确保钱包可用)。
+参考[比特币 RPC 命令「fundrawtransaction」1. 确保钱包可用](/blog/2018/07/bitcoin-rpc-fundrawtransaction.html#1-确保钱包可用)。
 
-### 2.2. 帮助内容
+### 2. 帮助内容
 
-参考[比特币 RPC 命令「getbestblockhash」2.1. 帮助内容](/blog/2018/05/bitcoin-rpc-getbestblockhash.html#21-帮助内容)。
+参考[比特币 RPC 命令「getbestblockhash」1. 帮助内容](/blog/2018/05/bitcoin-rpc-getbestblockhash.html#1-帮助内容)。
 
-### 2.3. 列出账户余额
+### 3. 列出账户余额
 
 函数 `ListReceived(params, true)` 定义在文件 `rpcwallet.cpp` 中。
 

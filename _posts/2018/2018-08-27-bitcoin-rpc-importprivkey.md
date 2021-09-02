@@ -6,11 +6,8 @@ author: Coshin
 comments: true
 category: 区块链
 tags: Bitcoin RPCs
-excerpt: $ bitcoin-cli importprivkey "bitcoinprivkey" ( "label" rescan )
 ---
-## 1. 帮助内容
-
-```shell
+<pre>
 importprivkey "bitcoinprivkey" ( "label" rescan )
 
 添加一个私钥（由 dumpprivkey 返回）到你的钱包。
@@ -37,9 +34,9 @@ $ bitcoin-cli importprivkey "mykey" "testing" false
 
 作为一个 JSON-RPC 调用
 > curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "importprivkey", "params": ["mykey", "testing", false] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
-```
+</pre>
 
-## 2. 源码剖析
+## 源码剖析
 
 `importprivkey` 对应的函数在文件 `rpcserver.h` 中被引用。
 
@@ -129,15 +126,15 @@ UniValue importprivkey(const UniValue& params, bool fHelp)
 }
 ```
 
-### 2.1. 确保钱包可用
+### 1. 确保钱包可用
 
-参考[比特币 RPC 命令「fundrawtransaction」2.1. 确保钱包可用](/blog/2018/07/bitcoin-rpc-fundrawtransaction.html#21-确保钱包可用)。
+参考[比特币 RPC 命令「fundrawtransaction」1. 确保钱包可用](/blog/2018/07/bitcoin-rpc-fundrawtransaction.html#1-确保钱包可用)。
 
-### 2.2. 帮助内容
+### 2. 帮助内容
 
-参考[比特币 RPC 命令「getbestblockhash」2.1. 帮助内容](/blog/2018/05/bitcoin-rpc-getbestblockhash.html#21-帮助内容)。
+参考[比特币 RPC 命令「getbestblockhash」1. 帮助内容](/blog/2018/05/bitcoin-rpc-getbestblockhash.html#1-帮助内容)。
 
-### 2.4. 在导入后是否执行重新扫描
+### 4. 在导入后是否执行重新扫描
 
 添加密钥对函数 `pwalletMain->AddKeyPubKey(key, pubkey)` 定义在文件 `keystore.cpp` 中。
 

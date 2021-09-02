@@ -6,11 +6,8 @@ author: Coshin
 comments: true
 category: 区块链
 tags: Bitcoin RPCs
-excerpt: $ bitcoin-cli getnetworkhashps ( blocks height )
 ---
-## 1. 帮助内容
-
-```shell
+<pre>
 $ bitcoin-cli help getnetworkhashps
 getnetworkhashps ( blocks height )
 
@@ -28,9 +25,9 @@ x        （数字）估算的每秒的哈希数
 例子：
 > bitcoin-cli getnetworkhashps
 > curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "getnetworkhashps", "params": [] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
-```
+</pre>
 
-## 2. 源码剖析
+## 源码剖析
 
 `getnetworkhashps` 对应的函数在文件 `rpcserver.h` 中被引用。
 
@@ -64,11 +61,11 @@ UniValue getnetworkhashps(const UniValue& params, bool fHelp)
 }
 ```
 
-### 2.1. 帮助内容
+### 1. 帮助内容
 
-参考[比特币 RPC 命令「getbestblockhash」2.1. 帮助内容](/blog/2018/05/bitcoin-rpc-getbestblockhash.html#21-帮助内容)。
+参考[比特币 RPC 命令「getbestblockhash」1. 帮助内容](/blog/2018/05/bitcoin-rpc-getbestblockhash.html#1-帮助内容)。
 
-### 2.2. 获取每秒的网络哈希并返回
+### 2. 获取每秒的网络哈希并返回
 
 获取每秒的网络哈希函数 `GetNetworkHashPS(params.size() > 0 ? params[0].get_int() : 120, params.size() > 1 ? params[1].get_int() : -1)` 实现在文件 `rpcmining.cpp` 中。
 

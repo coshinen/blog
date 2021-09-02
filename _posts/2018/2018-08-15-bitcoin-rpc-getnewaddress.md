@@ -6,11 +6,8 @@ author: Coshin
 comments: true
 category: 区块链
 tags: Bitcoin RPCs
-excerpt: $ bitcoin-cli getnewaddress ( "account" )
 ---
-## 1. 帮助内容
-
-```shell
+<pre>
 $ bitcoin-cli help getnewaddress
 getnewaddress ( "account" )
 
@@ -27,9 +24,9 @@ getnewaddress ( "account" )
 例子：
 > bitcoin-cli getnewaddress
 > curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "getnewaddress", "params": [] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
-```
+</pre>
 
-## 2. 源码剖析
+## 源码剖析
 
 `getnewaddress` 对应的函数在文件 `rpcserver.h` 中被引用。
 
@@ -82,15 +79,15 @@ UniValue getnewaddress(const UniValue& params, bool fHelp)
 }
 ```
 
-### 2.1. 确保钱包可用
+### 1. 确保钱包可用
 
-参考[比特币 RPC 命令「fundrawtransaction」2.1. 确保钱包可用](/blog/2018/07/bitcoin-rpc-fundrawtransaction.html#21-确保钱包可用)。
+参考[比特币 RPC 命令「fundrawtransaction」1. 确保钱包可用](/blog/2018/07/bitcoin-rpc-fundrawtransaction.html#1-确保钱包可用)。
 
-### 2.2. 帮助内容
+### 2. 帮助内容
 
-参考[比特币 RPC 命令「getbestblockhash」2.1. 帮助内容](/blog/2018/05/bitcoin-rpc-getbestblockhash.html#21-帮助内容)。
+参考[比特币 RPC 命令「getbestblockhash」1. 帮助内容](/blog/2018/05/bitcoin-rpc-getbestblockhash.html#1-帮助内容)。
 
-### 2.3. 首先解析账户这样如果这里出错我们就不会生成密钥
+### 3. 首先解析账户这样如果这里出错我们就不会生成密钥
 
 函数 `AccountFromValue(params[0])` 实现在文件 `wallet/rpcwllet.cpp` 中。
 
@@ -104,7 +101,7 @@ string AccountFromValue(const UniValue& value)
 }
 ```
 
-### 2.4. 填充密钥池
+### 4. 填充密钥池
 
 函数 `pwalletMain->IsLocked()` 在文件 `wallet/crypter.h` 的密钥存储类 `CCryptoKeyStore` 中。
 
@@ -282,7 +279,7 @@ bool CWalletDB::WritePool(int64_t nPool, const CKeyPool& keypool)
 
 密钥池是钱包数据库中一个打了标签 `pool` 的条目。
 
-### 2.5. 生成一个新密钥并添加到钱包
+### 5. 生成一个新密钥并添加到钱包
 
 从密钥池获取公钥函数 `pwalletMain->GetKeyFromPool(newKey)` 实现在文件 `wallet/wallet.cpp` 中。
 

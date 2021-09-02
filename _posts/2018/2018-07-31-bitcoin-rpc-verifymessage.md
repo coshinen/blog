@@ -39,7 +39,7 @@ true|false（布尔型）签名是否已验证。
 > curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "verifymessage", "params": ["1D1ZrZNe3JUo7ZycKEYQQiQAWd9y54F4XZ", "signature", "my message"] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
 ```
 
-## 2. 源码剖析
+## 源码剖析
 
 `verifymessage` 对应的函数在文件 `rpcserver.h` 中被引用。
 
@@ -105,9 +105,9 @@ UniValue verifymessage(const UniValue& params, bool fHelp)
 }
 ```
 
-### 2.1. 帮助内容
+### 1. 帮助内容
 
-参考[比特币 RPC 命令「getbestblockhash」2.1. 帮助内容](/blog/2018/05/bitcoin-rpc-getbestblockhash.html#21-帮助内容)。
+参考[比特币 RPC 命令「getbestblockhash」1. 帮助内容](/blog/2018/05/bitcoin-rpc-getbestblockhash.html#1-帮助内容)。
 
 ## 参考链接
 

@@ -6,11 +6,8 @@ author: Coshin
 comments: true
 category: 区块链
 tags: Bitcoin RPCs
-excerpt: $ bitcoin-cli help ( "command" )
 ---
-## 1. 帮助内容
-
-```shell
+<pre>
 $ bitcoin-cli help help
 help ( "command" )
 
@@ -25,9 +22,9 @@ help ( "command" )
 例子：
 > bitcoin-cli help ("command")
 > curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "help", "params": [("command")] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
-```
+</pre>
 
-## 2. 源码剖析
+## 源码剖析
 
 `help` 对应的函数实现在文件 `rpcmisc.cpp` 中。
 
@@ -52,11 +49,11 @@ UniValue help(const UniValue& params, bool fHelp)
 }
 ```
 
-### 2.1. 帮助内容
+### 1. 帮助内容
 
-参考[比特币 RPC 命令「getbestblockhash」2.1. 帮助内容](/blog/2018/05/bitcoin-rpc-getbestblockhash.html#21-帮助内容)。
+参考[比特币 RPC 命令「getbestblockhash」1. 帮助内容](/blog/2018/05/bitcoin-rpc-getbestblockhash.html#1-帮助内容)。
 
-### 2.2. 返回 RPC 命令帮助
+### 2. 返回 RPC 命令帮助
 
 RPC 命令表 `tableRPC` 定义在文件 `rpcserver.cpp` 中。
 

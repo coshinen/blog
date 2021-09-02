@@ -6,11 +6,8 @@ author: Coshin
 comments: true
 category: 区块链
 tags: Bitcoin RPCs
-excerpt: $ bitcoin-cli getblock "hash" ( verbose )
 ---
-## 1. 帮助内容
-
-```shell
+<pre>
 $ bitcoin-cli help getblock
 getblock "hash" ( verbose )
 
@@ -49,9 +46,9 @@ getblock "hash" ( verbose )
 例子：
 > bitcoin-cli getblock 00000000c937983704a73af28acdec37b049d214adbda81d7e2a3dd146f6ed09
 > curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "getblock", "params": ["00000000c937983704a73af28acdec37b049d214adbda81d7e2a3dd146f6ed09"] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
-```
+</pre>
 
-## 2. 源码剖析
+## 源码剖析
 
 `getblock` 对应的函数在文件 `rpcserver.h` 中被引用。
 
@@ -133,11 +130,11 @@ UniValue getblock(const UniValue& params, bool fHelp)
 }
 ```
 
-### 2.1. 帮助内容
+### 1. 帮助内容
 
-参考[比特币 RPC 命令「getbestblockhash」2.1. 帮助内容](/blog/2018/05/bitcoin-rpc-getbestblockhash.html#21-帮助内容)。
+参考[比特币 RPC 命令「getbestblockhash」1. 帮助内容](/blog/2018/05/bitcoin-rpc-getbestblockhash.html#1-帮助内容)。
 
-### 2.2. 检查区块是否存在
+### 2. 检查区块是否存在
 
 区块索引映射对象 `mapBlockIndex` 在文件 `main.h` 中被引用。
 
@@ -158,7 +155,7 @@ extern BlockMap mapBlockIndex;
 BlockMap mapBlockIndex;
 ```
 
-### 2.3. 检查区块数据是否完整
+### 3. 检查区块数据是否完整
 
 已修剪标志 `fHavePruned` 在文件 `main.h` 中被引用。
 
@@ -202,7 +199,7 @@ public:
 };
 ```
 
-### 2.4. 从磁盘上读取区块
+### 4. 从磁盘上读取区块
 
 从磁盘上读取区块函数 `ReadBlockFromDisk(block, pblockindex, Params().GetConsensus())` 声明在文件 `main.h` 中。
 
@@ -284,7 +281,7 @@ uint256 CBlockHeader::GetHash() const
 
 这里调用模板函数 `SerializeHash(*this)` 序列化区块的哈希。
 
-### 2.5. 序列化区块并返回
+### 5. 序列化区块并返回
 
 若 `verbose` 为 `false`，则序列化区块数据，转换为 16 进制并返回。
 数据流类 `CDataStream` 定义在文件 `streams.h` 中，重载了输出运算符 `<<`。
@@ -340,7 +337,7 @@ std::string HexStr(const T itbegin, const T itend, bool fSpaces=false)
 把每个字节拆成高 4 位和低 4 位分别转换为 16 进制的字符。
 还可以在每个 16 进制字符中间加入空格，默认不加。
 
-### 2.6. 打包区块信息为 JSON 格式并返回
+### 6. 打包区块信息为 JSON 格式并返回
 
 若 verbose 为 true，则返回区块信息。
 函数 `blockToJSON(block, pblockindex)` 实现在文件 `rpcblockchain.cpp` 中。

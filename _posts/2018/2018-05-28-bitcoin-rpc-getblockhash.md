@@ -6,11 +6,8 @@ author: Coshin
 comments: true
 category: 区块链
 tags: Bitcoin RPCs
-excerpt: $ bitcoin-cli getblockhash index
 ---
-## 1. 帮助内容
-
-```shell
+<pre>
 $ bitcoin-cli help getblockhash
 getblockhash index
 
@@ -25,9 +22,9 @@ getblockhash index
 例子：
 > bitcoin-cli getblockhash 1000
 > curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "getblockhash", "params": [1000] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
-```
+</pre>
 
-## 2. 源码剖析
+## 源码剖析
 
 `getblockhash` 对应的函数在文件 `rpcserver.h` 中被引用。
 
@@ -64,11 +61,11 @@ UniValue getblockhash(const UniValue& params, bool fHelp)
 }
 ```
 
-### 2.1. 帮助内容
+### 1. 帮助内容
 
-参考[比特币 RPC 命令「getbestblockhash」2.1. 帮助内容](/blog/2018/05/bitcoin-rpc-getbestblockhash.html#21-帮助内容)。
+参考[比特币 RPC 命令「getbestblockhash」1. 帮助内容](/blog/2018/05/bitcoin-rpc-getbestblockhash.html#1-帮助内容)。
 
-### 2.2. 把索引转换为链高度并进行检测
+### 2. 把索引转换为链高度并进行检测
 
 获取活跃的链高度函数 `chainActive.Height()` 实现在文件 `chain.h` 中。
 
@@ -107,9 +104,9 @@ public:
 };
 ```
 
-### 2.3. 获取活跃的链上对应高度的区块索引的哈希转换为 16 进制并返回
+### 3. 获取活跃的链上对应高度的区块索引的哈希转换为 16 进制并返回
 
-参考[比特币 RPC 命令「getbestblockhash」2.2. 返回活跃的链尖区块哈希的 16 进制](/blog/2018/05/bitcoin-rpc-getbestblockhash.html#22-返回活跃的链尖区块哈希的-16-进制)。
+参考[比特币 RPC 命令「getbestblockhash」2. 返回活跃的链尖区块哈希的 16 进制](/blog/2018/05/bitcoin-rpc-getbestblockhash.html#2-返回活跃的链尖区块哈希的-16-进制)。
 
 ## 参考链接
 

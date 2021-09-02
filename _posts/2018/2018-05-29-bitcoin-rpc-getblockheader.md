@@ -6,11 +6,8 @@ author: Coshin
 comments: true
 category: 区块链
 tags: Bitcoin RPCs
-excerpt: $ bitcoin-cli getblockheader "hash" ( verbose )
 ---
-## 1. 帮助内容
-
-```shell
+<pre>
 $ bitcoin-cli help getblockheader
 getblockheader "hash" ( verbose )
 
@@ -44,9 +41,9 @@ getblockheader "hash" ( verbose )
 例子：
 > bitcoin-cli getblockheader 00000000c937983704a73af28acdec37b049d214adbda81d7e2a3dd146f6ed09
 > curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "getblockheader", "params": ["00000000c937983704a73af28acdec37b049d214adbda81d7e2a3dd146f6ed09"] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
-```
+</pre>
 
-## 2. 源码剖析
+## 源码剖析
 
 `getblockheader` 对应的函数在文件 `rpcserver.h` 中被引用。
 
@@ -116,17 +113,17 @@ UniValue getblockheader(const UniValue& params, bool fHelp)
 }
 ```
 
-### 2.1. 帮助内容
+### 1. 帮助内容
 
-参考[比特币 RPC 命令「getbestblockhash」2.1. 帮助内容](/blog/2018/05/bitcoin-rpc-getbestblockhash.html#21-帮助内容)。
+参考[比特币 RPC 命令「getbestblockhash」1. 帮助内容](/blog/2018/05/bitcoin-rpc-getbestblockhash.html#1-帮助内容)。
 
-### 2.2. 检查区块是否存在
+### 2. 检查区块是否存在
 
-参考[比特币 RPC 命令「getblock」2.2. 检查区块是否存在](/blog/2018/05/bitcoin-rpc-getblock.html#22-检查区块是否存在)。
+参考[比特币 RPC 命令「getblock」2. 检查区块是否存在](/blog/2018/05/bitcoin-rpc-getblock.html#2-检查区块是否存在)。
 
-### 2.3. 序列化区块头并返回
+### 3. 序列化区块头并返回
 
-参考[比特币 RPC 命令「getblock」2.5. 序列化区块并返回](/blog/2018/05/bitcoin-rpc-getblock.html#25-序列化区块并返回)。
+参考[比特币 RPC 命令「getblock」5. 序列化区块并返回](/blog/2018/05/bitcoin-rpc-getblock.html#5-序列化区块并返回)。
 
 获取区块头函数 `pblockindex->GetBlockHeader()` 实现在文件 `chain.h` 中。
 
@@ -173,7 +170,7 @@ public:
 };
 ```
 
-### 2.4. 把区块头封装为 JSON 格式并返回
+### 4. 把区块头封装为 JSON 格式并返回
 
 把区块头封装为 JSON 格式函数 `blockheaderToJSON(pblockindex)` 实现在文件 `rpcblockchain.cpp` 中。
 

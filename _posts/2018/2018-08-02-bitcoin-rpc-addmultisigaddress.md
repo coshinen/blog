@@ -6,11 +6,8 @@ author: Coshin
 comments: true
 category: 区块链
 tags: Bitcoin RPCs
-excerpt: $ bitcoin-cli addmultisigaddress urequired ["key",...] ( "account" )
 ---
-## 1. 帮助内容
-
-```shell
+<pre>
 $ bitcoin-cli help addmultisigaddress
 addmultisigaddress urequired ["key",...] ( "account" )
 
@@ -37,9 +34,9 @@ addmultisigaddress urequired ["key",...] ( "account" )
 
 作为 json rpc 调用
 > curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "addmultisigaddress", "params": [2, "[\"16sSauSf5pF2UkUwvKGq4qjNRzBZYqgEL5\",\"171sgjn4YtPu27adkKGrdDwzRTxnRkBfKV\"]"] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
-```
+</pre>
 
-## 2. 源码剖析
+## 源码剖析
 
 `addmultisigaddress` 对应的函数在文件 `rpcserver.h` 中被引用。
 
@@ -99,13 +96,13 @@ UniValue addmultisigaddress(const UniValue& params, bool fHelp)
 }
 ```
 
-### 2.1. 确保钱包可用
+### 1. 确保钱包可用
 
-参考[比特币 RPC 命令「fundrawtransaction」2.1. 确保钱包可用](/blog/2018/07/bitcoin-rpc-fundrawtransaction.html#21-确保钱包可用)。
+参考[比特币 RPC 命令「fundrawtransaction」1. 确保钱包可用](/blog/2018/07/bitcoin-rpc-fundrawtransaction.html#1-确保钱包可用)。
 
-### 2.2. 帮助内容
+### 2. 帮助内容
 
-参考[比特币 RPC 命令「getbestblockhash」2.1. 帮助内容](/blog/2018/05/bitcoin-rpc-getbestblockhash.html#21-帮助内容)。
+参考[比特币 RPC 命令「getbestblockhash」1. 帮助内容](/blog/2018/05/bitcoin-rpc-getbestblockhash.html#1-帮助内容)。
 
 ## 参考链接
 

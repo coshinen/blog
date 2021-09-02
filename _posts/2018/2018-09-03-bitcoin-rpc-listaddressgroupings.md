@@ -6,11 +6,8 @@ author: Coshin
 comments: true
 category: 区块链
 tags: Bitcoin RPCs
-excerpt: $ bitcoin-cli listaddressgroupings
 ---
-## 1. 帮助内容
-
-```shell
+<pre>
 $ bitcoin-cli help listaddressgroupings
 listaddressgroupings
 
@@ -32,9 +29,9 @@ listaddressgroupings
 例子：
 > bitcoin-cli listaddressgroupings
 > curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "listaddressgroupings", "params": [] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
-```
+</pre>
 
-## 2. 源码剖析
+## 源码剖析
 
 `listaddressgroupings` 对应的函数在文件 `rpcserver.h` 中被引用。
 
@@ -97,15 +94,15 @@ UniValue listaddressgroupings(const UniValue& params, bool fHelp)
 }
 ```
 
-### 2.1. 确保钱包可用
+### 1. 确保钱包可用
 
-参考[比特币 RPC 命令「fundrawtransaction」2.1. 确保钱包可用](/blog/2018/07/bitcoin-rpc-fundrawtransaction.html#21-确保钱包可用)。
+参考[比特币 RPC 命令「fundrawtransaction」1. 确保钱包可用](/blog/2018/07/bitcoin-rpc-fundrawtransaction.html#1-确保钱包可用)。
 
-### 2.2. 帮助内容
+### 2. 帮助内容
 
-参考[比特币 RPC 命令「getbestblockhash」2.1. 帮助内容](/blog/2018/05/bitcoin-rpc-getbestblockhash.html#21-帮助内容)。
+参考[比特币 RPC 命令「getbestblockhash」1. 帮助内容](/blog/2018/05/bitcoin-rpc-getbestblockhash.html#1-帮助内容)。
 
-### 2.3. 获取地址集合
+### 3. 获取地址集合
 
 获取地址余额函数 `pwalletMain->GetAddressBalances()` 定义在文件 `wallet.cpp` 中。
 

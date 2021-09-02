@@ -6,11 +6,8 @@ author: Coshin
 comments: true
 category: 区块链
 tags: Bitcoin RPCs
-excerpt: $ bitcoin-cli estimatesmartpriority nblocks
 ---
-## 1. 帮助内容
-
-```shell
+<pre>
 $ bitcoin-cli help estimatesmartpriority
 estimatesmartpriority nblocks
 
@@ -32,7 +29,7 @@ estimatesmartpriority nblocks
 
 例子：
 > bitcoin-cli estimatesmartpriority 6
-```
+</pre>
 
 最大钱变量 `MAX_MONEY` 定义在文件 `amount.h` 中，共 2100 万个 BTC。
 
@@ -56,7 +53,7 @@ extern const std::string CURRENCY_UNIT;
 static const CAmount MAX_MONEY = 21000000 * COIN;
 ```
 
-## 2. 源码剖析
+## 源码剖析
 
 `estimatesmartpriority` 对应的函数在文件 `rpcserver.h` 中被引用。
 
@@ -104,9 +101,9 @@ UniValue estimatesmartpriority(const UniValue& params, bool fHelp)
 }
 ```
 
-### 2.1. 帮助内容
+### 1. 帮助内容
 
-参考[比特币 RPC 命令「getbestblockhash」2.1. 帮助内容](/blog/2018/05/bitcoin-rpc-getbestblockhash.html#21-帮助内容)。
+参考[比特币 RPC 命令「getbestblockhash」1. 帮助内容](/blog/2018/05/bitcoin-rpc-getbestblockhash.html#1-帮助内容)。
 
 ## 参考链接
 

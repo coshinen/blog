@@ -6,11 +6,8 @@ author: Coshin
 comments: true
 category: 区块链
 tags: Bitcoin RPCs
-excerpt: $ bitcoin-cli gettxoutproof ["txid",...] ( blockhash )
 ---
-## 1. 帮助内容
-
-```shell
+<pre>
 $ bitcoin-cli help gettxoutproof
 gettxoutproof ["txid",...] ( blockhash )
 
@@ -31,9 +28,9 @@ gettxoutproof ["txid",...] ( blockhash )
 
 结果：
 "data"         （字符串）一个用于证明的序列化的、16 进制编码的字符串。
-```
+</pre>
 
-## 2. 源码剖析
+## 源码剖析
 
 `gettxoutproof` 对应的函数在文件 `rpcserver.h` 中被引用。
 
@@ -126,9 +123,9 @@ UniValue gettxoutproof(const UniValue& params, bool fHelp)
 }
 ```
 
-### 2.1. 帮助内容
+### 1. 帮助内容
 
-参考[比特币 RPC 命令「getbestblockhash」2.1. 帮助内容](/blog/2018/05/bitcoin-rpc-getbestblockhash.html#21-帮助内容)。
+参考[比特币 RPC 命令「getbestblockhash」1. 帮助内容](/blog/2018/05/bitcoin-rpc-getbestblockhash.html#1-帮助内容)。
 
 基本流程：
 1. 处理命令帮助和参数个数。

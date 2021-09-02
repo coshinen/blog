@@ -6,11 +6,8 @@ author: Coshin
 comments: true
 category: 区块链
 tags: Bitcoin RPCs
-excerpt: $ bitcoin-cli listbanned
 ---
-## 1. 帮助内容
-
-```shell
+<pre>
 $ bitcoin-cli help listbanned
 listbanned
 
@@ -19,9 +16,9 @@ listbanned
 例子：
 > bitcoin-cli listbanned
 > curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "listbanned", "params": [] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
-```
+</pre>
 
-## 2. 源码剖析
+## 源码剖析
 
 `listbanned` 对应的函数在文件 `rpcserver.h` 中被引用。
 
@@ -63,11 +60,11 @@ UniValue listbanned(const UniValue& params, bool fHelp)
 }
 ```
 
-### 2.1. 帮助内容
+### 1. 帮助内容
 
-参考[比特币 RPC 命令「getbestblockhash」2.1. 帮助内容](/blog/2018/05/bitcoin-rpc-getbestblockhash.html#21-帮助内容)。
+参考[比特币 RPC 命令「getbestblockhash」1. 帮助内容](/blog/2018/05/bitcoin-rpc-getbestblockhash.html#1-帮助内容)。
 
-### 2.2. 获取禁止映射列表
+### 2. 获取禁止映射列表
 
 类型 `banmap_t` 定义在文件 `net.h` 中。
 

@@ -6,11 +6,8 @@ author: Coshin
 comments: true
 category: 区块链
 tags: Bitcoin RPCs
-excerpt: $ bitcoin-cli getmempoolinfo
 ---
-## 1. 帮助内容
-
-```shell
+<pre>
 $ bitcoin-cli help getmempoolinfo
 getmempoolinfo
 
@@ -28,7 +25,7 @@ getmempoolinfo
 例子：
 > bitcoin-cli getmempoolinfo
 > curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "getmempoolinfo", "params": [] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
-```
+</pre>
 
 ## 源码剖析
 
@@ -64,11 +61,11 @@ UniValue getmempoolinfo(const UniValue& params, bool fHelp)
 }
 ```
 
-### 2.1. 帮助内容
+### 1. 帮助内容
 
-参考[比特币 RPC 命令「getbestblockhash」2.1. 帮助内容](/blog/2018/05/bitcoin-rpc-getbestblockhash.html#21-帮助内容)。
+参考[比特币 RPC 命令「getbestblockhash」1. 帮助内容](/blog/2018/05/bitcoin-rpc-getbestblockhash.html#1-帮助内容)。
 
-### 2.2. 把交易内存池信息打包为 JSON 格式并返回
+### 2. 把交易内存池信息打包为 JSON 格式并返回
 
 打包交易池信息为 JSON 格式的函数 `mempoolInfoToJSON()` 实现在文件 `rpcblockchain.cpp` 中。
 

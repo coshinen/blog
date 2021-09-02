@@ -6,11 +6,8 @@ author: Coshin
 comments: true
 category: 区块链
 tags: Bitcoin RPCs
-excerpt: $ bitcoin-cli setban "ip(/netmask)" "add|remove" (bantime) (absolute)
 ---
-## 1. 帮助内容
-
-```shell
+<pre>
 $ bitcoin-cli help setban
 setban "ip(/netmask)" "add|remove" (bantime) (absolute)
 
@@ -26,9 +23,9 @@ setban "ip(/netmask)" "add|remove" (bantime) (absolute)
 > bitcoin-cli setban "192.168.0.6" "add" 86400
 > bitcoin-cli setban "192.168.0.0/24" "add"
 > curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "setban", "params": ["192.168.0.6", "add", 86400] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
-```
+</pre>
 
-## 2. 源码剖析
+## 源码剖析
 
 `setban` 对应的函数在文件 `rpcserver.h` 中被引用。
 
@@ -107,13 +104,13 @@ UniValue setban(const UniValue& params, bool fHelp)
 }
 ```
 
-### 2.1. 帮助内容
+### 1. 帮助内容
 
-参考[比特币 RPC 命令「getbestblockhash」2.1. 帮助内容](/blog/2018/05/bitcoin-rpc-getbestblockhash.html#21-帮助内容)。
+参考[比特币 RPC 命令「getbestblockhash」1. 帮助内容](/blog/2018/05/bitcoin-rpc-getbestblockhash.html#1-帮助内容)。
 
-### 2.2. 检查指定的 ip /子网是否有效
+### 2. 检查指定的 ip /子网是否有效
 
-### 2.3. 根据命令进行 IP /子网的添加或删除
+### 3. 根据命令进行 IP /子网的添加或删除
 
 禁止函数 `CNode::Ban(subNet, BanReasonManuallyAdded, banTime, absolute)`、`CNode::Ban(netAddr, BanReasonManuallyAdded, banTime, absolute)` 和解禁函数 `CNode::Unban(subNet)`、`CNode::Unban(netAddr)` 都声明在文件 `net.h` 的节点类 `CNode` 中。
 
@@ -173,7 +170,7 @@ bool CNode::Unban(const CSubNet &subNet) {
 }
 ```
 
-### 2.4. 存储禁止列表到磁盘，并发送列表已改变的信号
+### 4. 存储禁止列表到磁盘，并发送列表已改变的信号
 
 ## 参考链接
 

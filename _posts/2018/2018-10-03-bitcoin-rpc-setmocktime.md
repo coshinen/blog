@@ -6,11 +6,8 @@ author: Coshin
 comments: true
 category: 区块链
 tags: Bitcoin RPCs
-excerpt: $ bitcoin-cli -regtest setmocktime timestamp
 ---
-## 1. 帮助内容
-
-```shell
+<pre>
 setmocktime timestamp
 
 设置本地时间为给定的时间戳（仅用于 -regtest）
@@ -18,9 +15,9 @@ setmocktime timestamp
 参数：
 1. timestamp（整型，必备）UNIX 从格林尼治时间（1970-01-01 00:00:00）开始以秒为单位的时间戳
    传递 0 以回到使用系统时间。
-```
+</pre>
 
-## 2. 源码剖析
+## 源码剖析
 
 `setmocktime` 对应的函数在文件 `rpcserver.h` 中被引用。
 
@@ -63,11 +60,11 @@ UniValue setmocktime(const UniValue& params, bool fHelp)
 }
 ```
 
-### 2.1. 帮助内容
+### 1. 帮助内容
 
-参考[比特币 RPC 命令「getbestblockhash」2.1. 帮助内容](/blog/2018/05/bitcoin-rpc-getbestblockhash.html#21-帮助内容)。
+参考[比特币 RPC 命令「getbestblockhash」1. 帮助内容](/blog/2018/05/bitcoin-rpc-getbestblockhash.html#1-帮助内容)。
 
-### 2.3. 设置 Mock 时间
+### 3. 设置 Mock 时间
 
 设置 MockTime 函数 `SetMockTime(params[0].get_int64()) ` 声明在文件 `utiltime.h` 中。
 

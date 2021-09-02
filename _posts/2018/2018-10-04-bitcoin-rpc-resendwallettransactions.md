@@ -6,18 +6,15 @@ author: Coshin
 comments: true
 category: 区块链
 tags: Bitcoin RPCs
-excerpt: $ bitcoin-cli resendwallettransactions
 ---
-## 1. 帮助内容
-
-```shell
+<pre>
 resendwallettransactions
 立刻重新广播未确认的钱包交易到所有对端。
 仅用于测试；钱包代码会定期自动重新广播。
 返回重新广播的交易索引的数组。
-```
+</pre>
 
-## 2. 源码剖析
+## 源码剖析
 
 `resendwallettransactions` 对应的函数在文件 `rpcserver.h` 中被引用。
 
@@ -54,15 +51,15 @@ UniValue resendwallettransactions(const UniValue& params, bool fHelp)
 }
 ```
 
-### 2.1. 确保钱包可用
+### 1. 确保钱包可用
 
-参考[比特币 RPC 命令「fundrawtransaction」2.1. 确保钱包可用](/blog/2018/07/bitcoin-rpc-fundrawtransaction.html#21-确保钱包可用)。
+参考[比特币 RPC 命令「fundrawtransaction」1. 确保钱包可用](/blog/2018/07/bitcoin-rpc-fundrawtransaction.html#1-确保钱包可用)。
 
-### 2.2. 帮助内容
+### 2. 帮助内容
 
-参考[比特币 RPC 命令「getbestblockhash」2.1. 帮助内容](/blog/2018/05/bitcoin-rpc-getbestblockhash.html#21-帮助内容)。
+参考[比特币 RPC 命令「getbestblockhash」1. 帮助内容](/blog/2018/05/bitcoin-rpc-getbestblockhash.html#1-帮助内容)。
 
-### 2.3. 重新发送钱包交易并返回交易索引
+### 3. 重新发送钱包交易并返回交易索引
 
 重新发送钱包交易函数 `pwalletMain->ResendWalletTransactionsBefore(GetTime()` 实现在文件 `wallet/wallet.cpp` 中。
 

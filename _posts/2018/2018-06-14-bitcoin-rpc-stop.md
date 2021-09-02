@@ -6,11 +6,8 @@ author: Coshin
 comments: true
 category: 区块链
 tags: Bitcoin RPCs
-excerpt: $ bitcoin-cli stop
 ---
-## 1. 帮助内容
-
-```shell
+<pre>
 $ bitcoin-cli help stop
 stop
 
@@ -19,9 +16,9 @@ stop
 例子：
 > bitcoin-cli stop
 > curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "stop", "params": [] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
-```
+</pre>
 
-## 2. 源码剖析
+## 源码剖析
 
 `stop` 对应的函数实现在文件 `rpcserver.cpp` 中。
 
@@ -40,11 +37,11 @@ UniValue stop(const UniValue& params, bool fHelp)
 }
 ```
 
-### 2.1. 帮助内容
+### 1. 帮助内容
 
-参考[比特币 RPC 命令「getbestblockhash」2.1. 帮助内容](/blog/2018/05/bitcoin-rpc-getbestblockhash.html#21-帮助内容)。
+参考[比特币 RPC 命令「getbestblockhash」1. 帮助内容](/blog/2018/05/bitcoin-rpc-getbestblockhash.html#1-帮助内容)。
 
-### 2.2. 开始关闭比特币核心服务
+### 2. 开始关闭比特币核心服务
 
 开始关闭函数 `StartShutdown()` 函数声明在文件 `init.h` 中。
 
@@ -63,7 +60,7 @@ void StartShutdown()
 }
 ```
 
-具体的关闭过程请参考[比特币源码剖析（零） 2. 源码剖析 比特币 v0.12.1 核心服务程序启动流程 3.xiii. Shutdown()](/blog/2018/05/bitcoin-src-comments.html#2-源码剖析)。
+具体的关闭过程请参考[比特币源码剖析（零） 源码剖析 比特币 v0.12.1 核心服务程序启动流程 3.xiii. Shutdown()](/blog/2018/05/bitcoin-src-comments.html#2-源码剖析)。
 
 ## 参考链接
 

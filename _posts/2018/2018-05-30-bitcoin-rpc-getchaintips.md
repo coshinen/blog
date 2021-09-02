@@ -6,11 +6,8 @@ author: Coshin
 comments: true
 category: 区块链
 tags: Bitcoin RPCs
-excerpt: $ bitcoin-cli getchaintips
 ---
-## 1. 帮助内容
-
-```shell
+<pre>
 $ bitcoin-cli help getchaintips
 getchaintips
 
@@ -42,9 +39,9 @@ getchaintips
 例子：
 > bitcoin-cli getchaintips
 > curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "getchaintips", "params": [] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
-```
+</pre>
 
-## 2. 源码剖析
+## 源码剖析
 
 `getchaintips` 对应的函数在文件 `rpcserver.h` 中被引用。
 
@@ -146,11 +143,11 @@ UniValue getchaintips(const UniValue& params, bool fHelp)
 }
 ```
 
-### 2.1. 帮助内容
+### 1. 帮助内容
 
-参考[比特币 RPC 命令「getbestblockhash」2.1. 帮助内容](/blog/2018/05/bitcoin-rpc-getbestblockhash.html#21-帮助内容)。
+参考[比特币 RPC 命令「getbestblockhash」1. 帮助内容](/blog/2018/05/bitcoin-rpc-getbestblockhash.html#1-帮助内容)。
 
-### 2.2. 构建一个链尖列表
+### 2. 构建一个链尖列表
 
 函数对象比较器 `CompareBlocksByHeight` 定义在文件 `rpcblockchain.cpp` 中。
 
@@ -174,11 +171,11 @@ struct CompareBlocksByHeight // 用于排序函数 getchaintips 区块头的比�
 确保高度相同的不同区块比较起来不想等。
 使用指针自身来做区分。
 
-### 2.3. 始终报告当前活跃的链尖
+### 3. 始终报告当前活跃的链尖
 
-参考[比特币 RPC 命令「getbestblockhash」2.2. 返回活跃的链尖区块哈希](/blog/2018/05/bitcoin-rpc-getbestblockhash.html#22-返回活跃的链尖区块哈希)。
+参考[比特币 RPC 命令「getbestblockhash」2. 返回活跃的链尖区块哈希](/blog/2018/05/bitcoin-rpc-getbestblockhash.html#2-返回活跃的链尖区块哈希)。
 
-### 2.4. 构建输出数组并返回
+### 4. 构建输出数组并返回
 
 计算分支长度，寻找分叉函数 `chainActive.FindFork(block)` 声明在文件 `chain.h` 的链类 `CChain` 中。
 

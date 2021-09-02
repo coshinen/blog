@@ -6,11 +6,8 @@ author: Coshin
 comments: true
 category: 区块链
 tags: Bitcoin RPCs
-excerpt: $ bitcoin-cli disconnectnode "node"
 ---
-## 1. 帮助内容
-
-```shell
+<pre>
 $ bitcoin-cli help disconnectnode
 disconnectnode "node"
 
@@ -22,9 +19,9 @@ disconnectnode "node"
 例子：
 > bitcoin-cli disconnectnode "192.168.0.6:8333"
 > curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "disconnectnode", "params": ["192.168.0.6:8333"] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
-```
+</pre>
 
-## 2. 源码剖析
+## 源码剖析
 
 `getaddednodeinfo` 对应的函数在文件 `rpcserver.h` 中被引用。
 
@@ -58,11 +55,11 @@ UniValue disconnectnode(const UniValue& params, bool fHelp)
 }
 ```
 
-### 2.1. 帮助内容
+### 1. 帮助内容
 
-参考[比特币 RPC 命令「getbestblockhash」2.1. 帮助内容](/blog/2018/05/bitcoin-rpc-getbestblockhash.html#21-帮助内容)。
+参考[比特币 RPC 命令「getbestblockhash」1. 帮助内容](/blog/2018/05/bitcoin-rpc-getbestblockhash.html#1-帮助内容)。
 
-### 2.2. 在已连接的节点中查找指定节点
+### 2. 在已连接的节点中查找指定节点
 
 查找节点函数 `FindNode(params[0].get_str())` 声明在文件 `net.h` 中。
 

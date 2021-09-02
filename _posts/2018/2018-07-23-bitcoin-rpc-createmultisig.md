@@ -6,11 +6,8 @@ author: Coshin
 comments: true
 category: 区块链
 tags: Bitcoin RPCs
-excerpt: $ bitcoin-cli createmultisig urequired ["key",...]
 ---
-## 1. 帮助内容
-
-```shell
+<pre>
 createmultisig urequired ["key",...]
 
 创建一个需要 m 个密钥的 n 个签名的多签地址。
@@ -37,9 +34,9 @@ createmultisig urequired ["key",...]
 
 作为一个 json rpc 调用
 > curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "createmultisig", "params": [2, "[\"16sSauSf5pF2UkUwvKGq4qjNRzBZYqgEL5\",\"171sgjn4YtPu27adkKGrdDwzRTxnRkBfKV\"]"] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
-```
+</pre>
 
-## 2. 源码剖析
+## 源码剖析
 
 `createmultisig` 对应的函数在文件 `rpcserver.h` 中被引用。
 
@@ -94,9 +91,9 @@ UniValue createmultisig(const UniValue& params, bool fHelp)
 }
 ```
 
-### 2.1. 帮助内容
+### 1. 帮助内容
 
-参考[比特币 RPC 命令「getbestblockhash」2.1. 帮助内容](/blog/2018/05/bitcoin-rpc-getbestblockhash.html#21-帮助内容)。
+参考[比特币 RPC 命令「getbestblockhash」1. 帮助内容](/blog/2018/05/bitcoin-rpc-getbestblockhash.html#1-帮助内容)。
 
 ## 参考链接
 

@@ -6,11 +6,8 @@ author: Coshin
 comments: true
 category: 区块链
 tags: Bitcoin RPCs
-excerpt: $ bitcoin-cli listsinceblock ( "blockhash" target-confirmations includeWatchonly )
 ---
-## 1. 帮助内容
-
-```shell
+<pre>
 $ bitcoin-cli help listsinceblock
 listsinceblock ( "blockhash" target-confirmations includeWatchonly )
 
@@ -49,9 +46,9 @@ listsinceblock ( "blockhash" target-confirmations includeWatchonly )
 > bitcoin-cli listsinceblock
 > bitcoin-cli listsinceblock "000000000000000bacf66f7497b7dc45ef753ee9a7d38571037cdb1a57f663ad" 6
 > curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "listsinceblock", "params": ["000000000000000bacf66f7497b7dc45ef753ee9a7d38571037cdb1a57f663ad", 6] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
-```
+</pre>
 
-## 2. 源码剖析
+## 源码剖析
 
 `listsinceblock` 对应的函数在文件 `rpcserver.h` 中被引用。
 
@@ -155,15 +152,15 @@ UniValue listsinceblock(const UniValue& params, bool fHelp)
 }
 ```
 
-### 2.1. 确保钱包可用
+### 1. 确保钱包可用
 
-参考[比特币 RPC 命令「fundrawtransaction」2.1. 确保钱包可用](/blog/2018/07/bitcoin-rpc-fundrawtransaction.html#21-确保钱包可用)。
+参考[比特币 RPC 命令「fundrawtransaction」1. 确保钱包可用](/blog/2018/07/bitcoin-rpc-fundrawtransaction.html#1-确保钱包可用)。
 
-### 2.2. 帮助内容
+### 2. 帮助内容
 
-参考[比特币 RPC 命令「getbestblockhash」2.1. 帮助内容](/blog/2018/05/bitcoin-rpc-getbestblockhash.html#21-帮助内容)。
+参考[比特币 RPC 命令「getbestblockhash」1. 帮助内容](/blog/2018/05/bitcoin-rpc-getbestblockhash.html#1-帮助内容)。
 
-### 2.3. 列出交易
+### 3. 列出交易
 
 函数 `ListTransactions(tx, "*", 0, true, transactions, filter)` 定义在文件 `wallet/rpcwallet.cpp` 中。
 

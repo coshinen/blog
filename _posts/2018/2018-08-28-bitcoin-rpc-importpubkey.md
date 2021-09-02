@@ -6,11 +6,8 @@ author: Coshin
 comments: true
 category: 区块链
 tags: Bitcoin RPCs
-excerpt: $ bitcoin-cli importpubkey "pubkey" ( "label" rescan )
 ---
-## 1. 帮助内容
-
-```shell
+<pre>
 $ bitcoin-cli help importpubkey
 importpubkey "pubkey" ( "label" rescan )
 
@@ -33,9 +30,9 @@ importpubkey "pubkey" ( "label" rescan )
 
 作为一个 JSON-RPC 调用
 > curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "importpubkey", "params": ["mypubkey", "testing", flase] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
-```
+</pre>
 
-## 2. 源码剖析
+## 源码剖析
 
 `importpubkey` 对应的函数在文件 `rpcserver.h` 中被引用。
 

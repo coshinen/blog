@@ -6,11 +6,8 @@ author: Coshin
 comments: true
 category: 区块链
 tags: Bitcoin RPCs
-excerpt: $ bitcoin-cli invalidateblock "hash"
 ---
-## 1. 帮助内容
-
-```shell
+<pre>
 $ bitcoin-cli help invalidateblock
 invalidateblock "hash"
 
@@ -24,9 +21,9 @@ invalidateblock "hash"
 例子：
 > bitcoin-cli invalidateblock "blockhash"
 > curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "invalidateblock", "params": ["blockhash"] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
-```
+</pre>
 
-## 2. 源码剖析
+## 源码剖析
 
 `invalidateblock` 对应的函数在文件 `rpcserver.h` 中被引用。
 
@@ -76,11 +73,11 @@ UniValue invalidateblock(const UniValue& params, bool fHelp)
 }
 ```
 
-### 2.1. 帮助内容
+### 1. 帮助内容
 
-参考[比特币 RPC 命令「getbestblockhash」2.1. 帮助内容](/blog/2018/05/bitcoin-rpc-getbestblockhash.html#21-帮助内容)。
+参考[比特币 RPC 命令「getbestblockhash」1. 帮助内容](/blog/2018/05/bitcoin-rpc-getbestblockhash.html#1-帮助内容)。
 
-### 2.2. 检查指定区块是否存在
+### 2. 检查指定区块是否存在
 
 无效化区块函数 `InvalidateBlock(state, Params().GetConsensus(), pblockindex)` 声明在文件 `main.h` 中。
 
@@ -181,7 +178,7 @@ bool InvalidateBlock(CValidationState& state, const Consensus::Params& consensus
 }
 ```
 
-### 2.3. 验证链状态是否有效
+### 3. 验证链状态是否有效
 
 ## 参考链接
 

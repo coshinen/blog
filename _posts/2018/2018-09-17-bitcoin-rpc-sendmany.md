@@ -6,11 +6,8 @@ author: Coshin
 comments: true
 category: 区块链
 tags: Bitcoin RPCs
-excerpt: $ bitcoin-cli sendmany "fromaccount" {"address":amount,...} ( minconf "comment" ["address",...] )
 ---
-## 1. 帮助内容
-
-```shell
+<pre>
 $ bitcoin-cli help sendmany
 sendmany "fromaccount" {"address":amount,...} ( minconf "comment" ["address",...] )
 
@@ -51,9 +48,9 @@ sendmany "fromaccount" {"address":amount,...} ( minconf "comment" ["address",...
 
 作为一个 json rpc 调用
 > curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "sendmany", "params": ["", "{\"1D1ZrZNe3JUo7ZycKEYQQiQAWd9y54F4XZ\":0.01,\"1353tsE8YMTA4EuV7dgUXGjNFf9KpVvKHz\":0.02}", 6, "testing"] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
-```
+</pre>
 
-## 2. 源码剖析
+## 源码剖析
 
 `sendmany` 对应的函数在文件 `rpcserver.h` 中被引用。
 
@@ -176,17 +173,17 @@ UniValue sendmany(const UniValue& params, bool fHelp)
 }
 ```
 
-### 2.1. 确保钱包可用
+### 1. 确保钱包可用
 
-参考[比特币 RPC 命令「fundrawtransaction」2.1. 确保钱包可用](/blog/2018/07/bitcoin-rpc-fundrawtransaction.html#21-确保钱包可用)。
+参考[比特币 RPC 命令「fundrawtransaction」1. 确保钱包可用](/blog/2018/07/bitcoin-rpc-fundrawtransaction.html#1-确保钱包可用)。
 
-### 2.2. 帮助内容
+### 2. 帮助内容
 
-参考[比特币 RPC 命令「getbestblockhash」2.1. 帮助内容](/blog/2018/05/bitcoin-rpc-getbestblockhash.html#21-帮助内容)。
+参考[比特币 RPC 命令「getbestblockhash」1. 帮助内容](/blog/2018/05/bitcoin-rpc-getbestblockhash.html#1-帮助内容)。
 
-### 2.5. 发送
+### 5. 发送
 
-参考[比特币 RPC 命令「sendtoaddress」2. 源码剖析](/blog/2018/09/bitcoin-rpc-sendtoaddress.html#2-源码剖析)。
+参考[比特币 RPC 命令「sendtoaddress」源码剖析](/blog/2018/09/bitcoin-rpc-sendtoaddress.html#源码剖析)。
 
 ## 参考链接
 

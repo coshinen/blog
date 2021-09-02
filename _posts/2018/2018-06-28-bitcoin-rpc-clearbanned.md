@@ -6,11 +6,8 @@ author: Coshin
 comments: true
 category: 区块链
 tags: Bitcoin RPCs
-excerpt: $ bitcoin-cli clearbanned
 ---
-## 1. 帮助内容
-
-```shell
+<pre>
 $ bitcoin-cli help clearbanned
 clearbanned
 
@@ -19,9 +16,9 @@ clearbanned
 例子：
 > bitcoin-cli clearbanned
 > curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "clearbanned", "params": [] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
-```
+</pre>
 
-## 2. 源码剖析
+## 源码剖析
 
 `listbanned` 对应的函数在文件 `rpcserver.h` 中被引用。
 
@@ -51,11 +48,11 @@ UniValue clearbanned(const UniValue& params, bool fHelp)
 }
 ```
 
-### 2.1. 帮助内容
+### 1. 帮助内容
 
-参考[比特币 RPC 命令「getbestblockhash」2.1. 帮助内容](/blog/2018/05/bitcoin-rpc-getbestblockhash.html#21-帮助内容)。
+参考[比特币 RPC 命令「getbestblockhash」1. 帮助内容](/blog/2018/05/bitcoin-rpc-getbestblockhash.html#1-帮助内容)。
 
-### 2.2. 清空已禁止的节点列表
+### 2. 清空已禁止的节点列表
 
 清空已禁止的节点列表函数 `CNode::ClearBanned()` 声明在文件 `net.h` 的节点类 `CNode` 中。
 
@@ -92,7 +89,7 @@ void CNode::ClearBanned()
 }
 ```
 
-### 2.3. 存储禁止列表到磁盘
+### 3. 存储禁止列表到磁盘
 
 导出禁止列表函数 `DumpBanlist()` 声明在文件 `net.h` 中。
 

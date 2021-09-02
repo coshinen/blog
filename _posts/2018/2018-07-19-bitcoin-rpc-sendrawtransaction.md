@@ -6,11 +6,8 @@ author: Coshin
 comments: true
 category: 区块链
 tags: Bitcoin RPCs
-excerpt: $ bitcoin-cli sendrawtransaction "hexstring" ( allowhighfees )
 ---
-## 1. 帮助内容
-
-```shell
+<pre>
 $ bitcoin-cli help sendrawtransaction
 sendrawtransaction "hexstring" ( allowhighfees )
 
@@ -38,9 +35,9 @@ sendrawtransaction "hexstring" ( allowhighfees )
 
 作为一个 json rpc 调用
 > curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "sendrawtransaction", "params": ["signedhex"] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
-```
+</pre>
 
-## 2. 源码剖析
+## 源码剖析
 
 `sendrawtransaction` 对应的函数在文件 `rpcserver.h` 中被引用。
 
@@ -114,11 +111,11 @@ UniValue sendrawtransaction(const UniValue& params, bool fHelp)
 }
 ```
 
-### 2.1. 帮助内容
+### 1. 帮助内容
 
-参考[比特币 RPC 命令「getbestblockhash」2.1. 帮助内容](/blog/2018/05/bitcoin-rpc-getbestblockhash.html#21-帮助内容)。
+参考[比特币 RPC 命令「getbestblockhash」1. 帮助内容](/blog/2018/05/bitcoin-rpc-getbestblockhash.html#1-帮助内容)。
 
-### 2.4. 推送到本地节点并同步钱包
+### 4. 推送到本地节点并同步钱包
 
 函数 `AcceptToMemoryPool(mempool, state, tx, false, &fMissingInputs, false, !fOverrideFees)` 实现在文件 `main.cpp` 中。
 
@@ -136,7 +133,7 @@ bool AcceptToMemoryPool(CTxMemPool& pool, CValidationState &state, const CTransa
 }
 ```
 
-### 2.5. 转发交易
+### 5. 转发交易
 
 函数 `RelayTransaction(tx)` 声明在文件 `net.h` 中。
 

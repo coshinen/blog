@@ -6,11 +6,8 @@ author: Coshin
 comments: true
 category: 区块链
 tags: Bitcoin RPCs
-excerpt: $ bitcoin-cli addnode "node" "add|remove|onetry"
 ---
-## 1. 帮助内容
-
-```shell
+<pre>
 $ bitcoin-cli help addnode
 addnode "node" "add|remove|onetry"
 
@@ -24,9 +21,9 @@ addnode "node" "add|remove|onetry"
 例子：
 > bitcoin-cli addnode "192.168.0.6:8333" "onetry"
 > curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "addnode", "params": ["192.168.0.6:8333", "onetry"] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
-```
+</pre>
 
-## 2. 源码剖析
+## 源码剖析
 
 `addnode` 对应的函数在文件 `rpcserver.h` 中被引用。
 
@@ -88,9 +85,9 @@ UniValue addnode(const UniValue& params, bool fHelp)
 }
 ```
 
-### 2.1. 帮助内容
+### 1. 帮助内容
 
-参考[比特币 RPC 命令「getbestblockhash」2.1. 帮助内容](/blog/2018/05/bitcoin-rpc-getbestblockhash.html#21-帮助内容)。
+参考[比特币 RPC 命令「getbestblockhash」1. 帮助内容](/blog/2018/05/bitcoin-rpc-getbestblockhash.html#1-帮助内容)。
 
 基本流程：
 1. 处理命令帮助和参数个数。

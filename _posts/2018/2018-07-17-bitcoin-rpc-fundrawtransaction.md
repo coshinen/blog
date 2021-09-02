@@ -6,11 +6,8 @@ author: Coshin
 comments: true
 category: 区块链
 tags: Bitcoin RPCs
-excerpt: $ bitcoin-cli fundrawtransaction "hexstring" includeWatching
 ---
-## 1. 帮助内容
-
-```shell
+<pre>
 $ bitcoin-cli help fundrawtransaction
 fundrawtransaction "hexstring" includeWatching
 
@@ -47,9 +44,9 @@ fundrawtransaction "hexstring" includeWatching
 
 发送该交易
 > bitcoin-cli sendrawtransaction "signedtransactionhex"
-```
+</pre>
 
-## 2. 源码剖析
+## 源码剖析
 
 `fundrawtransaction` 对应的函数在文件 `rpcserver.h` 中被引用。
 
@@ -127,7 +124,7 @@ UniValue fundrawtransaction(const UniValue& params, bool fHelp)
 }
 ```
 
-### 2.1. 确保钱包可用
+### 1. 确保钱包可用
 
 确保钱包可用函数 `EnsureWalletIsAvailable(fHelp)` 实现在文件 `rpcwallet.cpp` 中。
 
@@ -167,11 +164,11 @@ bool AppInit2(boost::thread_group& threadGroup, CScheduler& scheduler)
 }
 ```
 
-### 2.2. 帮助内容
+### 2. 帮助内容
 
-参考[比特币 RPC 命令「getbestblockhash」2.1. 帮助内容](/blog/2018/05/bitcoin-rpc-getbestblockhash.html#21-帮助内容)。
+参考[比特币 RPC 命令「getbestblockhash」1. 帮助内容](/blog/2018/05/bitcoin-rpc-getbestblockhash.html#1-帮助内容)。
 
-### 2.5. 资助交易
+### 5. 资助交易
 
 函数 `pwalletMain->FundTransaction(tx, nFee, nChangePos, strFailReason, includeWatching)` 声明在文件 `wallet/wallet.h` 的钱包类 `CWallet` 中。
 

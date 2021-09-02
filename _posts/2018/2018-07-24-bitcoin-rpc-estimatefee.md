@@ -6,11 +6,8 @@ author: Coshin
 comments: true
 category: 区块链
 tags: Bitcoin RPCs
-excerpt: $ bitcoin-cli estimatefee nblocks
 ---
-## 1. 帮助内容
-
-```shell
+<pre>
 $ bitcoin-cli help estimatefee
 estimatefee nblocks
 
@@ -26,9 +23,9 @@ n（数字）估算的每千字节的费用
 
 例子：
 > bitcoin-cli estimatefee 6
-```
+</pre>
 
-## 2. 源码剖析
+## 源码剖析
 
 `estimatefee` 对应的函数在文件 `rpcserver.h` 中被引用。
 
@@ -71,9 +68,9 @@ UniValue estimatefee(const UniValue& params, bool fHelp)
 }
 ```
 
-### 2.1. 帮助内容
+### 1. 帮助内容
 
-参考[比特币 RPC 命令「getbestblockhash」2.1. 帮助内容](/blog/2018/05/bitcoin-rpc-getbestblockhash.html#21-帮助内容)。
+参考[比特币 RPC 命令「getbestblockhash」1. 帮助内容](/blog/2018/05/bitcoin-rpc-getbestblockhash.html#1-帮助内容)。
 
 ## 参考链接
 

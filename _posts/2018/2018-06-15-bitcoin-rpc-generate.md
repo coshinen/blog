@@ -6,11 +6,8 @@ author: Coshin
 comments: true
 category: 区块链
 tags: Bitcoin RPCs
-excerpt: $ bitcoin-cli generate numblocks
 ---
-## 1. 帮助内容
-
-```shell
+<pre>
 $ bitcoin-cli help generate
 generate numblocks
 
@@ -29,9 +26,9 @@ generate numblocks
 生成 11 个区块
 
 > bitcoin-cli -regtest generate 11
-```
+</pre>
 
-## 2. 源码剖析
+## 源码剖析
 
 `generate` 对应的函数在文件 `rpcserver.h` 中被引用。
 
@@ -113,9 +110,9 @@ UniValue generate(const UniValue& params, bool fHelp)
 }
 ```
 
-### 2.1. 帮助内容
+### 1. 帮助内容
 
-参考[比特币 RPC 命令「getbestblockhash」2.1. 帮助内容](/blog/2018/05/bitcoin-rpc-getbestblockhash.html#21-帮助内容)。
+参考[比特币 RPC 命令「getbestblockhash」1. 帮助内容](/blog/2018/05/bitcoin-rpc-getbestblockhash.html#1-帮助内容)。
 
 基本流程：
 1. 处理命令帮助和参数个数。

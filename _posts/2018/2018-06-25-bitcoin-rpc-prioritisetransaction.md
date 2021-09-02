@@ -6,11 +6,8 @@ author: Coshin
 comments: true
 category: 区块链
 tags: Bitcoin RPCs
-excerpt: $ bitcoin-cli prioritisetransaction <txid> <priority delta> <fee delta>
 ---
-## 1. 帮助内容
-
-```shell
+<pre>
 $ bitcoin-cli help prioritisetransaction
 prioritisetransaction <txid> <priority delta> <fee delta>
 
@@ -30,9 +27,9 @@ true             （布尔型）返回 true
 例子：
 > bitcoin-cli prioritisetransaction "txid" 0.0 10000
 > curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "prioritisetransaction", "params": ["txid", 0.0, 10000] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
-```
+</pre>
 
-## 2. 源码剖析
+## 源码剖析
 
 `prioritisetransaction` 对应的函数在文件 `rpcserver.h` 中被引用。
 
@@ -75,11 +72,11 @@ UniValue prioritisetransaction(const UniValue& params, bool fHelp) // 注：不�
 }
 ```
 
-### 2.1. 帮助内容
+### 1. 帮助内容
 
-参考[比特币 RPC 命令「getbestblockhash」2.1. 帮助内容](/blog/2018/05/bitcoin-rpc-getbestblockhash.html#21-帮助内容)。
+参考[比特币 RPC 命令「getbestblockhash」1. 帮助内容](/blog/2018/05/bitcoin-rpc-getbestblockhash.html#1-帮助内容)。
 
-### 2.2. 调整交易优先级
+### 2. 调整交易优先级
 
 调整交易优先级函数 `mempool.PrioritiseTransaction(hash, params[0].get_str(), params[1].get_real(), nAmount)` 声明在文件 `txmempool.h` 的交易内存池类 `CTxMemPool` 中，用于影响 `CreateNewBlock` 时交易的优先级。
 

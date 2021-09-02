@@ -6,11 +6,8 @@ author: Coshin
 comments: true
 category: 区块链
 tags: Bitcoin RPCs
-excerpt: $ bitcoin-cli dumpprivkey "bitcoinaddress"
 ---
-## 1. 帮助内容
-
-```shell
+<pre>
 $ bitcoin-cli help dumpprivkey
 dumpprivkey "bitcoinaddress"
 
@@ -27,9 +24,9 @@ dumpprivkey "bitcoinaddress"
 > bitcoin-cli dumpprivkey "myaddress"
 > bitcoin-cli importprivkey "mykey"
 > curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "dumpprivkey", "params": ["myaddress"] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
-```
+</pre>
 
-## 2. 源码剖析
+## 源码剖析
 
 `dumpprivkey` 对应的函数在文件 `rpcserver.h` 中被引用。
 
@@ -78,17 +75,17 @@ UniValue dumpprivkey(const UniValue& params, bool fHelp)
 }
 ```
 
-### 2.1. 确保钱包可用
+### 1. 确保钱包可用
 
-参考[比特币 RPC 命令「fundrawtransaction」2.1. 确保钱包可用](/blog/2018/07/bitcoin-rpc-fundrawtransaction.html#21-确保钱包可用)。
+参考[比特币 RPC 命令「fundrawtransaction」1. 确保钱包可用](/blog/2018/07/bitcoin-rpc-fundrawtransaction.html#1-确保钱包可用)。
 
-### 2.2. 帮助内容
+### 2. 帮助内容
 
-参考[比特币 RPC 命令「getbestblockhash」2.1. 帮助内容](/blog/2018/05/bitcoin-rpc-getbestblockhash.html#21-帮助内容)。
+参考[比特币 RPC 命令「getbestblockhash」1. 帮助内容](/blog/2018/05/bitcoin-rpc-getbestblockhash.html#1-帮助内容)。
 
-### 2.3. 确保钱包解锁
+### 3. 确保钱包解锁
 
-### 2.4. 获取地址对应的私钥
+### 4. 获取地址对应的私钥
 
 函数 `address.SetString(strAddress)` 声明在文件 `base58.h` 的比特币地址类 `CBitcoinAddress` 中。
 

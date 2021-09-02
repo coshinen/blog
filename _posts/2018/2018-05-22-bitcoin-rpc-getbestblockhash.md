@@ -6,11 +6,8 @@ author: Coshin
 comments: true
 category: 区块链
 tags: Bitcoin RPCs
-excerpt: $ bitcoin-cli getbestblockhash
 ---
-## 1. 帮助内容
-
-```shell
+<pre>
 $ bitcoin-cli help getbestblockhash
 getbestblockhash
 
@@ -22,9 +19,9 @@ getbestblockhash
 例子
 > bitcoin-cli getbestblockhash
 > curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "getbestblockhash", "params": [] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
-```
+</pre>
 
-## 2. 源码剖析
+## 源码剖析
 
 `getbestblockhash` 对应的函数在文件 `rpcserver.h` 中被引用。
 
@@ -53,7 +50,7 @@ UniValue getbestblockhash(const UniValue& params, bool fHelp)
 }
 ```
 
-### 2.1. 帮助内容
+### 1. 帮助内容
 
 帮助例子函数 `HelpExampleCli()` 和 `HelpExampleRpc()` 均定义在文件 `rpcserver.h` 中。
 
@@ -77,7 +74,7 @@ std::string HelpExampleRpc(const std::string& methodname, const std::string& arg
 }
 ```
 
-### 2.2. 返回活跃的链尖区块哈希
+### 2. 返回活跃的链尖区块哈希
 
 对象 `chainActive` 的引用在文件 `main.h` 中。
 

@@ -6,11 +6,8 @@ author: Coshin
 comments: true
 category: 区块链
 tags: Bitcoin RPCs
-excerpt: $ bitcoin-cli encryptwallet "passphrase"
 ---
-## 1. 帮助内容
-
-```shell
+<pre>
 $ bitcoin-cli help encryptwallet
 encryptwallet "passphrase"
 
@@ -39,9 +36,9 @@ encryptwallet "passphrase"
 
 作为一个 json rpc 调用
 > curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "encryptwallet", "params": ["my pass phrase"] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
-```
+</pre>
 
-## 2. 源码剖析
+## 源码剖析
 
 `encryptwallet` 对应的函数在文件 `rpcserver.h` 中被引用。
 
@@ -110,15 +107,15 @@ UniValue encryptwallet(const UniValue& params, bool fHelp)
 }
 ```
 
-### 2.1. 确保钱包可用
+### 1. 确保钱包可用
 
-参考[比特币 RPC 命令「fundrawtransaction」2.1. 确保钱包可用](/blog/2018/07/bitcoin-rpc-fundrawtransaction.html#21-确保钱包可用)。
+参考[比特币 RPC 命令「fundrawtransaction」1. 确保钱包可用](/blog/2018/07/bitcoin-rpc-fundrawtransaction.html#1-确保钱包可用)。
 
-### 2.2. 帮助内容
+### 2. 帮助内容
 
-参考[比特币 RPC 命令「getbestblockhash」2.1. 帮助内容](/blog/2018/05/bitcoin-rpc-getbestblockhash.html#21-帮助内容)。
+参考[比特币 RPC 命令「getbestblockhash」1. 帮助内容](/blog/2018/05/bitcoin-rpc-getbestblockhash.html#1-帮助内容)。
 
-### 2.3. 检查钱包加密状态
+### 3. 检查钱包加密状态
 
 函数 `pwalletMain->IsCrypted()` 定义在文件 `crypter.h` 的密钥存储类 `CCryptoKeyStore` 中。
 
@@ -148,7 +145,7 @@ class CCryptoKeyStore : public CBasicKeyStore
 typedef std::basic_string<char, std::char_traits<char>, secure_allocator<char> > SecureString; // 这与 std::string 非常相似，但使用了一个定制的空间配置器。
 ```
 
-### 2.4. 加密钱包
+### 4. 加密钱包
 
 函数 `pwalletMain->EncryptWallet(strWalletPass)` 声明在文件 `wallet.h` 的钱包类 `CWallet` 中。
 
@@ -294,7 +291,7 @@ bool CWallet::NewKeyPool() // 标记旧密钥池密钥为已使用，并生成�
 }
 ```
 
-### 2.5. 关闭核心服务器
+### 5. 关闭核心服务器
 
 关闭比特币核心服务函数 `StartShutdown()` 声明在文件 `init.h` 中。
 

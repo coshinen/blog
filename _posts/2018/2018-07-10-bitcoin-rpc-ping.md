@@ -6,11 +6,8 @@ author: Coshin
 comments: true
 category: 区块链
 tags: Bitcoin RPCs
-excerpt: $ bitcoin-cli ping
 ---
-## 1. 帮助内容
-
-```shell
+<pre>
 $ bitcoin-cli help ping
 ping
 
@@ -21,9 +18,9 @@ ping 命令和所有其他命令一起在队列中处理，所以它测量处理
 例子：
 > bitcoin-cli ping
 > curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "ping", "params": [] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
-```
+</pre>
 
-## 2. 源码剖析
+## 源码剖析
 
 `ping` 对应的函数在文件 `rpcserver.h` 中被引用。
 
@@ -58,11 +55,11 @@ UniValue ping(const UniValue& params, bool fHelp)
 }
 ```
 
-### 2.1. 帮助内容
+### 1. 帮助内容
 
-参考[比特币 RPC 命令「getbestblockhash」2.1. 帮助内容](/blog/2018/05/bitcoin-rpc-getbestblockhash.html#21-帮助内容)。
+参考[比特币 RPC 命令「getbestblockhash」1. 帮助内容](/blog/2018/05/bitcoin-rpc-getbestblockhash.html#1-帮助内容)。
 
-### 2.2. 遍历已建立连接的节点列表，把节点的 ping 队列标志置为 true
+### 2. 遍历已建立连接的节点列表，把节点的 ping 队列标志置为 true
 
 数据成员 `pNode->fPingQueued` 定义在文件 `net.h` 的节点类 `CNode` 中。
 

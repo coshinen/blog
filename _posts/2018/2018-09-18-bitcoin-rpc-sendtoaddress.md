@@ -6,11 +6,8 @@ author: Coshin
 comments: true
 category: 区块链
 tags: Bitcoin RPCs
-excerpt: $ bitcoin-cli sendtoaddress "bitcoinaddress" amount ( "comment" "comment-to" subtractfeefromamount )
 ---
-## 1. 帮助内容
-
-```shell
+<pre>
 $ bitcoin-cli help sendtoaddress
 sendtoaddress "bitcoinaddress" amount ( "comment" "comment-to" subtractfeefromamount )
 
@@ -31,9 +28,9 @@ sendtoaddress "bitcoinaddress" amount ( "comment" "comment-to" subtractfeefromam
 > bitcoin-cli sendtoaddress "1M72Sfpbz1BPpXFHz9m3CdqATR44Jvaydd" 0.1 "donation" "seans outpost"
 > bitcoin-cli sendtoaddress "1M72Sfpbz1BPpXFHz9m3CdqATR44Jvaydd" 0.1 "" "" true
 > curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "sendtoaddress", "params": ["1M72Sfpbz1BPpXFHz9m3CdqATR44Jvaydd", 0.1, "donation", "seans outpost"] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
-```
+</pre>
 
-## 2. 源码剖析
+## 源码剖析
 
 `sendtoaddress` 对应的函数在文件 `rpcserver.h` 中被引用。
 
@@ -103,15 +100,15 @@ UniValue sendtoaddress(const UniValue& params, bool fHelp)
 }
 ```
 
-### 2.1. 确保钱包可用
+### 1. 确保钱包可用
 
-参考[比特币 RPC 命令「fundrawtransaction」2.1. 确保钱包可用](/blog/2018/07/bitcoin-rpc-fundrawtransaction.html#21-确保钱包可用)。
+参考[比特币 RPC 命令「fundrawtransaction」1. 确保钱包可用](/blog/2018/07/bitcoin-rpc-fundrawtransaction.html#1-确保钱包可用)。
 
-### 2.2. 帮助内容
+### 2. 帮助内容
 
-参考[比特币 RPC 命令「getbestblockhash」2.1. 帮助内容](/blog/2018/05/bitcoin-rpc-getbestblockhash.html#21-帮助内容)。
+参考[比特币 RPC 命令「getbestblockhash」1. 帮助内容](/blog/2018/05/bitcoin-rpc-getbestblockhash.html#1-帮助内容)。
 
-### 2.6. 发送金额
+### 6. 发送金额
 
 发送金额函数 `SendMoney(address.Get(), nAmount, fSubtractFeeFromAmount, wtx)` 定义在文件 `wallet/rpcwallet.cpp` 中。
 

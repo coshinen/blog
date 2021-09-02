@@ -6,11 +6,8 @@ author: Coshin
 comments: true
 category: 区块链
 tags: Bitcoin RPCs
-excerpt: $ bitcoin-cli getrawmempool ( verbose )
 ---
-## 1. 帮助内容
-
-```shell
+<pre>
 $ bitcoin-cli help getrawmempool
 getrawmempool ( verbose )
 
@@ -47,9 +44,9 @@ getrawmempool ( verbose )
 例子：
 > bitcoin-cli getrawmempool true
 > curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "getrawmempool", "params": [true] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
-```
+</pre>
 
-## 2. 源码剖析
+## 源码剖析
 
 `getrawmempool` 对应的函数在文件 `rpcserver.h` 中被引用。
 
@@ -106,11 +103,11 @@ UniValue getrawmempool(const UniValue& params, bool fHelp)
 }
 ```
 
-### 2.1. 帮助内容
+### 1. 帮助内容
 
-参考[比特币 RPC 命令「getbestblockhash」2.1. 帮助内容](/blog/2018/05/bitcoin-rpc-getbestblockhash.html#21-帮助内容)。
+参考[比特币 RPC 命令「getbestblockhash」1. 帮助内容](/blog/2018/05/bitcoin-rpc-getbestblockhash.html#1-帮助内容)。
 
-### 2.2. 把内存池的交易打包为 JSON 格式并返回
+### 2. 把内存池的交易打包为 JSON 格式并返回
 
 函数 `mempoolToJSON(fVerbose)` 实现在文件 `rpcblockchain.cpp` 中。
 

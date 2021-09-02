@@ -6,11 +6,8 @@ author: Coshin
 comments: true
 category: 区块链
 tags: Bitcoin RPCs
-excerpt: $ bitcoin-cli dumpwallet "filename"
 ---
-## 1. 帮助内容
-
-```shell
+<pre>
 $ bitcoin-cli help dumpwallet
 dumpwallet "filename"
 
@@ -22,9 +19,9 @@ dumpwallet "filename"
 例子：
 > bitcoin-cli backupwallet "test"
 > curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "dumpwallet", "params": ["test"] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
-```
+</pre>
 
-## 2. 源码剖析
+## 源码剖析
 
 `dumpwallet` 对应的函数在文件 `rpcserver.h` 中被引用。
 
@@ -101,15 +98,15 @@ UniValue dumpwallet(const UniValue& params, bool fHelp)
 }
 ```
 
-### 2.1. 确保钱包可用
+### 1. 确保钱包可用
 
-参考[比特币 RPC 命令「fundrawtransaction」2.1. 确保钱包可用](/blog/2018/07/bitcoin-rpc-fundrawtransaction.html#21-确保钱包可用)。
+参考[比特币 RPC 命令「fundrawtransaction」1. 确保钱包可用](/blog/2018/07/bitcoin-rpc-fundrawtransaction.html#1-确保钱包可用)。
 
-### 2.2. 帮助内容
+### 2. 帮助内容
 
-参考[比特币 RPC 命令「getbestblockhash」2.1. 帮助内容](/blog/2018/05/bitcoin-rpc-getbestblockhash.html#21-帮助内容)。
+参考[比特币 RPC 命令「getbestblockhash」1. 帮助内容](/blog/2018/05/bitcoin-rpc-getbestblockhash.html#1-帮助内容)。
 
-### 2.3. 确保钱包解锁
+### 3. 确保钱包解锁
 
 函数 `pwalletMain->GetKeyBirthTimes(mapKeyBirth)` 和 `pwalletMain->GetAllReserveKeys(setKeyPool)` 声明在文件 `wallet.h` 的钱包类 `CWallet` 中。
 
@@ -204,9 +201,9 @@ void CWallet::GetKeyBirthTimes(std::map<CKeyID, int64_t> &mapKeyBirth) const {
 }
 ```
 
-### 2.4. 排序时间/密钥对
+### 4. 排序时间/密钥对
 
-### 2.5. 产生输出
+### 5. 产生输出
 
 获取密钥函数 `pwalletMain->GetKey(keyid, key)` 声明在文件 `crypter.h` 的密钥存储类 `CCryptoKeyStore` 中。
 

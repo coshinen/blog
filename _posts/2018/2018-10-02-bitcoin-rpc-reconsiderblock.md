@@ -6,11 +6,8 @@ author: Coshin
 comments: true
 category: 区块链
 tags: Bitcoin RPCs
-excerpt: $ bitcoin-cli reconsiderblock "hash"
 ---
-## 1. 帮助内容
-
-```shell
+<pre>
 reconsiderblock "hash"
 
 移除一个区块及其后代的无效状态，重新考虑它们为活跃状态。
@@ -23,9 +20,9 @@ reconsiderblock "hash"
 例子：
 > bitcoin-cli reconsiderblock "blockhash"
 > curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "reconsiderblock", "params": ["blockhash"] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
-```
+</pre>
 
-## 2. 源码剖析
+## 源码剖析
 
 `reconsiderblock` 对应的函数在文件 `rpcserver.h` 中被引用。
 
@@ -76,11 +73,11 @@ UniValue reconsiderblock(const UniValue& params, bool fHelp)
 }
 ```
 
-### 2.1. 帮助内容
+### 1. 帮助内容
 
-参考[比特币 RPC 命令「getbestblockhash」2.1. 帮助内容](/blog/2018/05/bitcoin-rpc-getbestblockhash.html#21-帮助内容)。
+参考[比特币 RPC 命令「getbestblockhash」1. 帮助内容](/blog/2018/05/bitcoin-rpc-getbestblockhash.html#1-帮助内容)。
 
-### 2.2. 检查指定区块是否存在
+### 2. 检查指定区块是否存在
 
 重新考虑区块函数 `ReconsiderBlock(state, pblockindex)` 声明在文件 `main.h` 中。
 
@@ -126,7 +123,7 @@ bool ReconsiderBlock(CValidationState& state, CBlockIndex *pindex) {
 }
 ```
 
-### 2.3. 验证链状态是否有效
+### 3. 验证链状态是否有效
 
 ## 参考链接
 

@@ -6,11 +6,8 @@ author: Coshin
 comments: true
 category: 区块链
 tags: Bitcoin RPCs
-excerpt: $ bitcoin-cli getdifficulty
 ---
-## 1. 帮助内容
-
-```shell
+<pre>
 $ bitcoin-cli help getdifficulty
 getdifficulty
 
@@ -22,7 +19,7 @@ n.nnn（数字）工作量证明难度是最低难度（1）的倍数。
 例子：
 > bitcoin-cli getdifficulty
 > curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "getdifficulty", "params": [] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
-```
+</pre>
 
 ## 源码剖析
 
@@ -53,11 +50,11 @@ UniValue getdifficulty(const UniValue& params, bool fHelp)
 }
 ```
 
-### 2.1. 帮助内容
+### 1. 帮助内容
 
-参考[比特币 RPC 命令「getbestblockhash」2.1. 帮助内容](/blog/2018/05/bitcoin-rpc-getbestblockhash.html#21-帮助内容)。
+参考[比特币 RPC 命令「getbestblockhash」1. 帮助内容](/blog/2018/05/bitcoin-rpc-getbestblockhash.html#1-帮助内容)。
 
-### 2.2. 获取的难度值并返回
+### 2. 获取的难度值并返回
 
 函数 `GetDifficulty()` 实现在文件 `rpcblockchain.cpp` 中。
 
