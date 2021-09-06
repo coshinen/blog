@@ -169,7 +169,7 @@ excerpt: Here are some books that renew my spirit or reclaim my life.
 > * 啊哈！算法，[中] 啊哈磊
 > * 图解密码技术（第3版），[日] 結城浩
 > * C++ 数据结构与算法（第4版），[美] Adam Drozdek
-> * 数据结构（C++ 语言版 第3版），[中] [邓俊辉](https://dsa.cs.tsinghua.edu.cn/~deng/index.htm){:target="_blank"}
+> * 数据结构 C++ 语言（第3版），[中] [邓俊辉](https://dsa.cs.tsinghua.edu.cn/~deng/index.htm){:target="_blank"}
 > * 大话数据结构，[中] 程杰
 
 > ### 区块链
@@ -178,7 +178,7 @@ excerpt: Here are some books that renew my spirit or reclaim my life.
 > * 区块链启示录 中本聪文集，[美] Phil Champagne
 > * 区块链开发指南，[中] 申屠青春
 > * [区块链技术指南](https://yeasy.gitbook.io/blockchain_guide/){:target="_blank"}，[中] [杨保华](https://yeasy.github.io){:target="_blank"} 陈昌
-> * [精通比特币 第2版](https://bitcoinbook.info){:target="_blank"}，[希-英] Andreas M. Antonopoulos
+> * [精通比特币（第2版）](https://bitcoinbook.info){:target="_blank"}，[希-英] Andreas M. Antonopoulos
 > * [比特币：一种点对点的电子现金系统](/blog/2018/04/bitcoin-paper.html)，[美] Satoshi Nakamoto
 
 > ### 编程语言
@@ -189,7 +189,7 @@ excerpt: Here are some books that renew my spirit or reclaim my life.
 > * C++ 标准程序库，[德] Nicolai M.Josuttis
 > * C++ 沉思录，[美] Andrew Koenig, Barbara Moo
 > * C++ 编程规范 101条规则、准则与最佳实践，[加] Herb Sutter [罗] Andrei Alexandrescu
-> * C++ Primer 中文版（第5版），[美] Stanley B. Lippman, Josée Lajoie, Barbara E. Moo
+> * C++ Primer（第5版），[美] Stanley B. Lippman, Josée Lajoie, Barbara E. Moo
 > * [Essential C](http://cslibrary.stanford.edu/101/){:target="_blank"}，[美] [Nick Parlante](https://cs.stanford.edu/people/nick/){:target="_blank"}
 > * C 专家编程，[美] Peter van der Linden
 > * C 陷阱与缺陷，[美] Andrew Koening
@@ -214,7 +214,7 @@ excerpt: Here are some books that renew my spirit or reclaim my life.
 > * 大话设计模式，[中] 程杰
 > * 程序员健康指南，[美] Joe Kutner
 > * GitHub 入门与实践，[日] 大塚弘记
-> * [Pro Git 2nd Edition](https://git-scm.com/book/en/v2){:target="_blank"}，[美] Scott Chacon and Ben Straub
+> * [Pro Git（第2版）](https://git-scm.com/book/zh/v2){:target="_blank"}，[美] Scott Chacon and Ben Straub
 > * 重构 改善既有代码的设计，[美] Martin Fowler
 > * 代码整洁之道，[美] Robert C. Martin
 > * 你的灯亮着吗？发现问题的真正所在，[美] Donald C. Gause, Gerald M. Weinberg
