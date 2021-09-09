@@ -9,10 +9,6 @@ tags: Lyrics Conan
 ---
 ![GZCA-1030](https://www.mai-kuraki.com/jacket/sg/GZCA-1030.jpg){:.border}
 
-作詞：倉木麻衣<br>
-作曲：大野愛果<br>
-編曲：Cybersound
-
 <blockquote class="original">
   <h2>Secret of my heart</h2>
   <p>

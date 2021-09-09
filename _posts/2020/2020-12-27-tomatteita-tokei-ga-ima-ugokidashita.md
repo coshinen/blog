@@ -9,10 +9,6 @@ tags: Lyrics
 ---
 ![JBCJ-9008](https://is2-ssl.mzstatic.com/image/thumb/Music/v4/ff/11/3f/ff113f97-4a1b-16e4-95c4-8f02a1b41b9e/source/600x600bb.jpg){:.border}
 
-作詞：`坂井泉水`<br>
-作曲：中村由利<br>
-編曲：徳永暁人
-
 <blockquote class="original">
   <h2>止まっていた時計が今動き出した</h2>
   <p>

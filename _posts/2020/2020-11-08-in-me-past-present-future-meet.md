@@ -7,9 +7,7 @@ comments: true
 category: 译文集
 tags: Poem
 ---
-![](https://www.brainyquote.com/photos_tr/en/s/siegfriedsassoon/333437/siegfriedsassoon1-2x.jpg){:.border}
-
-Author: Siegfried Sassoon
+![siegfriedsassoon](https://www.brainyquote.com/photos_tr/en/s/siegfriedsassoon/333437/siegfriedsassoon1-2x.jpg){:.border}
 
 <blockquote class="original">
   <h2>In Me, Past, Present, Future Meet</h2>

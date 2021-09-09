@@ -9,10 +9,6 @@ tags: Lyrics Conan
 ---
 ![PODX-1042](https://www.generasia.com/w/images/a/a8/Tamura_Yukari_-_Kitto_Ieru.jpg){:.border}
 
-作詞：三枝翔<br>
-作曲：山口一久<br>
-編曲：山口一久
-
 <blockquote class="original">
   <h2>きっと言える</h2>
   <p>

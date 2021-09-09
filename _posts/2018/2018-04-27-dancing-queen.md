@@ -9,8 +9,6 @@ tags: Lyrics
 ---
 ![GOLD GREATEST HITS](https://is1-ssl.mzstatic.com/image/thumb/Music128/v4/88/92/4c/88924c01-6fb3-8616-f0b3-881b1ed09e03/source/600x600bb.jpg){:.border}
 
-Songwriters: Benny Andersson, Björn Ulvaeus & Stig Anderson
-
 <blockquote class="original">
   <h2>Dancing Queen</h2>
   <p>

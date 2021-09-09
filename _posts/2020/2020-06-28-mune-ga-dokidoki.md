@@ -9,10 +9,6 @@ tags: Lyrics Conan
 ---
 ![KTDR-2150](https://www.generasia.com/w/images/5/5c/KTDR-2150.jpg){:.border}
 
-作詞：甲本ヒロト・真島昌利<br>
-作曲：甲本ヒロト・真島昌利<br>
-編曲：ザ・ハイロウズ
-
 <blockquote class="original">
   <h2>胸がドキドキ</h2>
   <p>

@@ -9,10 +9,6 @@ tags: Lyrics
 ---
 ![COCC-14667](https://columbia.jp/prod-info/jacket/COCC-14667.jpg){:.border}
 
-作詞：千家和也<br>
-作曲：大野雄二<br>
-編曲：大野雄二
-
 <blockquote class="original">
   <h2>ルパン三世のテーマ</h2>
   <p>

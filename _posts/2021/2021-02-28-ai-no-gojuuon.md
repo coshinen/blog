@@ -9,10 +9,6 @@ tags: Lyrics
 ---
 ![](http://i1.hdslb.com/bfs/archive/69c6cc8c916167626dddb147febe7c37f69b69ba.jpg){:.border}
 
-作詞：柒未来<br>
-作曲：柒未来<br>
-編曲：杨金城
-
 <blockquote class="original">
   <h2>爱@五十音</h2>
   <p>

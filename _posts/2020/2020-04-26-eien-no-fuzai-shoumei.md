@@ -9,9 +9,6 @@ tags: Lyrics Conan
 ---
 ![UPCH-29360](https://is4-ssl.mzstatic.com/image/thumb/Music114/v4/8f/81/98/8f8198c6-6082-4671-46b8-c44befbdc857/source/600x600bb.jpg){:.border}
 
-作詞：椎名林檎<br>
-作曲：椎名林檎
-
 <blockquote class="original">
   <h2>永遠の不在証明</h2>
   <p>

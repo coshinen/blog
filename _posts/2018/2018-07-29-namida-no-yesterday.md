@@ -9,10 +9,6 @@ tags: Lyrics Conan Garnet
 ---
 ![GZCA-4096](https://ganekuro.github.io/images/discography/single/GZCA-4096.jpg){:.border}
 
-作詞：AZUKI 七<br>
-作曲：中村由利<br>
-編曲：古井弘人
-
 <blockquote class="original">
   <h2>涙のイエスタデー</h2>
   <p>

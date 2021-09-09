@@ -9,10 +9,6 @@ tags: Lyrics Conan
 ---
 ![GZCA-7011](https://www.mai-kuraki.com/jacket/sg/GZCA-7011.jpg){:.border}
 
-作詞：倉木麻衣<br>
-作曲：大野愛果<br>
-編曲：Cybersound
-
 <blockquote class="original">
   <h2>Time after time 〜花舞う街で〜</h2>
   <p>

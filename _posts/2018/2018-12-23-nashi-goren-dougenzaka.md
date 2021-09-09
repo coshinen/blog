@@ -9,9 +9,6 @@ tags: Lyrics
 ---
 ![ナシゴレン道玄坂](https://is4-ssl.mzstatic.com/image/thumb/Music71/v4/83/86/c2/8386c2f6-1816-b693-73cf-475890a43db7/source/600x600bb.jpg){:.border}
 
-作詞：秋元康<br>
-作曲：川浦正大
-
 <blockquote class="original">
   <h2>ナシゴレン道玄坂</h2>
   <p>

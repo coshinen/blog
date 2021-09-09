@@ -9,10 +9,6 @@ tags: Lyrics
 ---
 ![L-1600](https://www.generasia.com/w/images/d/da/Akina_Slow_Motion.jpg){:.border}
 
-作詞：来生えつこ<br>
-作曲：来生たかお<br>
-編曲：船山基紀
-
 <blockquote class="original">
   <h2>スローモーション</h2>
   <p>

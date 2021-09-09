@@ -10,10 +10,6 @@ tags: Lyrics Conan
 ![Shinichi-Conan](https://is4-ssl.mzstatic.com/image/thumb/Music/v4/b2/f7/a8/b2f7a84f-becf-fe06-1a2f-74ff6d767a30/source/600x600bb.jpg){:.border}
 ![RZCD-46901](https://www.generasia.com/w/images/a/ac/Kimi_to_Zutto.jpg){:.border}
 
-作詞：rockco.<br>
-作曲：Koma2 Kaz<br>
-編曲：Koma2 Kaz
-
 <blockquote class="original">
   <h2>君とずっと…</h2>
   <p>

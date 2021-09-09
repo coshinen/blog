@@ -9,10 +9,6 @@ tags: Lyrics Garnet
 ---
 ![GZCA-5198](https://ganekuro.github.io/images/discography/album/GZCA-5198.jpg){:.border}
 
-作詞：AZUKI 七<br>
-作曲：中村由利<br>
-編曲：古井弘人
-
 <blockquote class="original">
   <h2>Fall in Life 〜Hallelujah〜</h2>
   <p>

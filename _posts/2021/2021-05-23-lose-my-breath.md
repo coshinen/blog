@@ -9,10 +9,6 @@ tags: Lyrics
 ---
 ![GZCA-5232](https://ganekuro.github.io/images/discography/other/GZCA-5232.jpg){:.border}
 
-作詞：岡本仁志<br>
-作曲：岡本仁志<br>
-編曲：岡本仁志
-
 <blockquote class="original">
   <h2>Lose My Breath</h2>
   <p>

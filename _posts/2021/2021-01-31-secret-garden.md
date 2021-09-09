@@ -10,9 +10,6 @@ tags: Lyrics
 ![ZMCP-1457](https://images-na.ssl-images-amazon.com/images/I/81vlCOws-HL._AC_SX425_.jpg){:.border}
 ![ZMCP-1657](https://m.media-amazon.com/images/I/21DSKNYSCPL._SL240_.jpg){:.border}
 
-作詞：渡辺なつみ<br>
-作曲：宮崎慎二
-
 <blockquote class="original">
   <h2>SECRET GARDEN</h2>
   <p>

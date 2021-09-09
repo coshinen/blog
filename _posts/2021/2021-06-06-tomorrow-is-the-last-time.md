@@ -9,10 +9,6 @@ tags: Lyrics Conan
 ---
 ![VNCM-9012](https://www.mai-kuraki.com/jacket/al/VNCM-9012.jpg){:.border}
 
-作詞：倉木麻衣<br>
-作曲：大野愛果<br>
-編曲：葉山武
-
 <blockquote class="original">
   <h2>Tomorrow is the last Time</h2>
   <p>

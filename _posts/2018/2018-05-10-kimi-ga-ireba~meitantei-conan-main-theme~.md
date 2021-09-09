@@ -9,10 +9,6 @@ tags: Lyrics Conan
 ---
 ![PODX-1023](https://www.generasia.com/w/images/5/5b/IORI_KGI.jpg){:.border}
 
-作詞：高柳恋<br>
-作曲：大野克夫<br>
-編曲：大野克夫
-
 <blockquote class="original">
   <h2>
     キミがいれば<br>

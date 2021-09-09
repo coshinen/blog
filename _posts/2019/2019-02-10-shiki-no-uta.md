@@ -9,10 +9,6 @@ tags: Lyrics
 ---
 ![BEST COLLECTION](https://is1-ssl.mzstatic.com/image/thumb/Music71/v4/5b/3a/7d/5b3a7dab-c452-66d8-616e-8c3e0e1bca66/source/600x600bb.jpg){:.border}
 
-作詞：荒木とよひさ<br>
-作曲：荒木とよひさ<br>
-編曲：青木望
-
 <blockquote class="original">
   <h2>四季の歌</h2>
   <p>

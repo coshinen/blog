@@ -9,10 +9,6 @@ tags: Lyrics Conan
 ---
 ![GZCA-7022](https://www.mai-kuraki.com/jacket/sg/GZCA-7022.jpg){:.border}
 
-作詞：倉木麻衣<br>
-作曲：春畑道哉<br>
-編曲：Cybersound
-
 <blockquote class="original">
   <h2>風のららら</h2>
   <p>

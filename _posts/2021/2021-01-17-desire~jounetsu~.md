@@ -9,10 +9,6 @@ tags: Lyrics
 ---
 ![L-1750](https://is1-ssl.mzstatic.com/image/thumb/Music/v4/35/68/e5/3568e56b-0e1d-4983-ed0b-127c4e485a78/source/600x600bb.jpg){:.border}
 
-作詞：阿木燿子<br>
-作曲：鈴木キサブロー<br>
-編曲：椎名和夫
-
 <blockquote class="original">
   <h2>DESIRE -情熱-</h2>
   <p>

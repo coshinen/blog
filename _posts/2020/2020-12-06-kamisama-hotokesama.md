@@ -9,10 +9,6 @@ tags: Lyrics
 ---
 ![UPCH-89233](https://is1-ssl.mzstatic.com/image/thumb/Music128/v4/73/20/3b/73203bd6-682c-04ff-832a-b57ca674ca0d/source/600x600bb.jpg){:.border}
 
-作詞：椎名林檎・向井秀徳<br>
-作曲：椎名林檎<br>
-編曲：椎名林檎
-
 <blockquote class="original">
   <h2>神様、仏様</h2>
   <p>

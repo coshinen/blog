@@ -6,11 +6,8 @@ author: Coshin
 comments: true
 category: 区块链
 tags: Bitcoin RPCs
-excerpt: $ bitcoin-cli verifymessage "bitcoinaddress" "signature" "message"
 ---
-## 1. 帮助内容
-
-```shell
+<pre>
 $ bitcoin-cli help verifymessage
 verifymessage "bitcoinaddress" "signature" "message"
 
@@ -37,7 +34,7 @@ true|false（布尔型）签名是否已验证。
 
 作为 json rpc
 > curl --user myusername:mypassword --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "verifymessage", "params": ["1D1ZrZNe3JUo7ZycKEYQQiQAWd9y54F4XZ", "signature", "my message"] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
-```
+</pre>
 
 ## 源码剖析
 

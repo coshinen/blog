@@ -9,9 +9,6 @@ tags: Lyrics
 ---
 ![Team A 7th Stage](http://stage48.net/wiki/images/thumb/2/22/A7thPoster.jpg/423px-A7thPoster.jpg){:.border}
 
-作詞：秋元康<br>
-作曲：石井健太郎
-
 <blockquote class="original">
   <h2>月と水鏡</h2>
   <p>

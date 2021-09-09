@@ -9,9 +9,6 @@ tags: Lyrics Conan
 ---
 ![PODH-1354](https://www.generasia.com/w/images/thumb/4/4f/HB-Kyoko-F.jpg/307px-HB-Kyoko-F.jpg){:.border}
 
-作詞：スガシカオ<br>
-作曲：スガシカオ
-
 <blockquote class="original">
   <h2>Happy Birthday</h2>
   <p>

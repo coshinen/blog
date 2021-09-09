@@ -9,9 +9,6 @@ tags: Lyrics
 ---
 ![UTAHIME](https://is5-ssl.mzstatic.com/image/thumb/Music113/v4/97/56/c1/9756c131-fad6-8105-ade0-c915827a9c0b/source/600x600bb.jpg){:.border}
 
-作詞：Maki Annette Lovelace<br>
-作曲：春日博文
-
 <blockquote class="original">
   <h2>私は風</h2>
   <p>

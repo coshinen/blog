@@ -9,10 +9,6 @@ tags: Lyrics Conan
 ---
 ![VNZM-6024](https://is5-ssl.mzstatic.com/image/thumb/Music/v4/4d/06/43/4d06437b-0666-9c53-8c09-dddd700c7070/source/600x600bb.jpg){:.border}
 
-作詞：Mai Kuraki・GIORGIO 13<br>
-作曲：GIORGIO CANCEMI<br>
-編曲：GIORGIO CANCEMI
-
 <blockquote class="original">
   <h2>Your Best Friend</h2>
   <p>

@@ -9,10 +9,6 @@ tags: Lyrics Garnet
 ---
 ![GZCA-7031](https://ganekuro.github.io/images/discography/single/GZCA-7031.jpg){:.border}
 
-作詞：AZUKI 七<br>
-作曲：中村由利<br>
-編曲：古井弘人
-
 <blockquote class="original">
   <h2>泣けない夜も 泣かない朝も</h2>
   <p>

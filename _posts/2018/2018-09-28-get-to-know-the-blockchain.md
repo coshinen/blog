@@ -6,7 +6,6 @@ author: Coshin
 comments: true
 category: 区块链
 tags: Blockchain Translations
-excerpt: 通过面向非技术人员的技术手册来了解区块链。
 ---
 我认为重要的是首先要澄清区块链实际上解决了什么问题。
 目前，我们依靠一个单一实体来管理通过通信渠道（计算机网络）发生的支付，我们也依靠这些第三方来存储文件、医疗记录、或是我们想要存储的任何东西。

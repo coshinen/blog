@@ -10,10 +10,6 @@ tags: Lyrics
 ![G4ngewwE50w](https://i.ytimg.com/vi/G4ngewwE50w/maxresdefault.jpg){:.border}
 ![ESCL-3139](https://is3-ssl.mzstatic.com/image/thumb/Music124/v4/d4/36/f5/d436f5e9-07c7-a6ee-bb8e-71bb696d3dd7/source/600x600bb.jpg){:.border}
 
-作曲：水野良樹<br>
-編曲：江口亮<br>
-弦編曲：クラッシャー木村
-
 <blockquote class="original">
   <h2>気まぐれロマンティック 京都Ver.</h2>
   <p>

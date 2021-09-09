@@ -9,10 +9,6 @@ tags: Lyrics Conan
 ---
 ![PODX-1031](https://www.generasia.com/w/images/6/6f/IORI_BGI_S.jpg){:.border}
 
-作詞：及川眠子<br>
-作曲：大野克夫<br>
-編曲：大野克夫
-
 <blockquote class="original">
   <h2>やるっきゃないのさ 〜コナンの勝利〜</h2>
   <p>

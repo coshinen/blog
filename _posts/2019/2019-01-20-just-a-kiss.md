@@ -9,8 +9,6 @@ tags: Lyrics
 ---
 ![own the night](https://is2-ssl.mzstatic.com/image/thumb/Music123/v4/9b/01/10/9b01105e-4822-c47a-8c2f-f9ef49105f10/source/600x600bb.jpg){:.border}
 
-Songwriters: Hillary Scott, Charles Kelley, Dave Haywood & Dallas Davidson
-
 <blockquote class="original">
   <h2>Just A Kiss</h2>
   <p>

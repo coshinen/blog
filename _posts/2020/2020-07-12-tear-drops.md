@@ -9,10 +9,6 @@ tags: Lyrics Conan
 ---
 ![GZCA-7160](https://is1-ssl.mzstatic.com/image/thumb/Music/v4/07/05/a5/0705a58a-eda4-d5e3-51dd-7fc17df9f10c/source/600x600bb.jpg){:.border}
 
-作詞：白石乃梨<br>
-作曲：大野愛果<br>
-編曲：葉山たけし
-
 <blockquote class="original">
   <h2>tear drops</h2>
   <p>

@@ -10,10 +10,6 @@ tags: Lyrics
 ![TFCC-89632](https://is2-ssl.mzstatic.com/image/thumb/Music118/v4/0f/b0/e7/0fb0e7cc-54bc-76c5-f598-d9a489dcdecb/source/600x600bb.jpg){:.border}
 ![SRCL-9571](https://is5-ssl.mzstatic.com/image/thumb/Music118/v4/d7/02/8a/d7028a3a-bd1b-e54a-04f3-c2c459174ad1/source/600x600bb.jpg){:.border}
 
-作詞：米津玄師<br>
-作曲：米津玄師<br>
-編曲：米津玄師、田中隼人
-
 <blockquote class="original">
   <h2>打上花火</h2>
   <p>

@@ -9,9 +9,6 @@ tags: Lyrics
 ---
 ![SRCL-5120](https://is2-ssl.mzstatic.com/image/thumb/Music/v4/fe/d1/8c/fed18cbe-f573-af02-88ac-4606b772fb01/source/600x600bb.jpg){:.border}
 
-作詞：町田紀彦<br>
-作曲：町田紀彦
-
 <blockquote class="original">
   <h2>secret base 〜君がくれたもの〜</h2>
   <p>

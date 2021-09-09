@@ -9,10 +9,6 @@ tags: Lyrics
 ---
 ![VICL-37102](https://is3-ssl.mzstatic.com/image/thumb/Music3/v4/7b/64/e2/7b64e235-4196-43bd-40e8-c7d0c50e95e1/source/600x600bb.jpg){:.border}
 
-作詞：Ichiro Yamaguchi<br>
-作曲：Ichiro Yamaguchi<br>
-編曲：Ichiro Yamaguchi
-
 <blockquote class="original">
   <h2>新宝島</h2>
   <p>

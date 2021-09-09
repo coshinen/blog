@@ -6,21 +6,10 @@ author: Coshin
 comments: true
 category: 程序人生
 tags: Automake Makefile C++ Build
-excerpt: 使用 make 编译工具链构建项目的简单过程。
 ---
-## 0. 准备
+首先准备 make 编译工具链 `autoscan`、`aclocal`、`autoheader`、`autoconf` 和 `automake`。
 
-### 0.1. 工具
-
-> * autoscan
-> * aclocal
-> * autoheader
-> * autoconf
-> * automake
-
-### 0.2. 源码
-
-下面是一个 C++ 例子，共 2 个文件：头文件 main.h 和源文件 main.cpp，放在同一目录 src 下。
+然后准备源码：头文件 main.h 和源文件 main.cpp，放在同一目录 src 下。
 
 头文件 main.h：
 

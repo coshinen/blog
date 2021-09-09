@@ -9,10 +9,6 @@ tags: Lyrics Garnet
 ---
 ![GZCA-7006](https://ganekuro.github.io/images/discography/single/GZCA-7006.jpg){:.border}
 
-作詞：AZUKI 七<br>
-作曲：中村由利<br>
-編曲：古井弘人
-
 <blockquote class="original">
   <h2>クリスタル・ゲージ</h2>
   <p>

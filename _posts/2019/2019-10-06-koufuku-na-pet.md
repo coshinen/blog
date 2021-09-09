@@ -9,10 +9,6 @@ tags: Lyrics Garnet
 ---
 ![GZCA-2031](https://ganekuro.github.io/images/discography/single/GZCA-2031.jpg){:.border}
 
-作詞：AZUKI 七<br>
-作曲：中村由利<br>
-編曲：古井弘人
-
 <blockquote class="original">
   <h2>幸福なペット</h2>
   <p>

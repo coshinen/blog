@@ -9,10 +9,6 @@ tags: Lyrics
 ---
 ![GZCA-5028](https://www.generasia.com/w/images/e/e4/Secret_%26_Lies.jpg){:.border}
 
-作詞：三枝夕夏<br>
-作曲：中村由利<br>
-編曲：徳永暁人
-
 <blockquote class="original">
   <h2>Graduation</h2>
   <p>

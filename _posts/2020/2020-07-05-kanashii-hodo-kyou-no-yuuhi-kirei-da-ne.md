@@ -10,10 +10,6 @@ tags: Lyrics Conan
 ![Digital-2nd](https://is3-ssl.mzstatic.com/image/thumb/Music/v4/f6/7d/b7/f67db7d6-540f-7fec-8dd3-9a907b3f0a8a/source/600x600bb.jpg){:.border}
 ![GZCD-5001](https://is5-ssl.mzstatic.com/image/thumb/Music/v4/5b/9a/35/5b9a35b7-e01e-9670-24e9-a7a3b7a9b705/source/600x600bb.jpg){:.border}
 
-作詞：氷水千晶<br>
-作曲：徳永暁人<br>
-編曲：岡本仁志
-
 <blockquote class="original">
   <h2>悲しいほど 今日の夕陽 きれいだね</h2>
   <p>

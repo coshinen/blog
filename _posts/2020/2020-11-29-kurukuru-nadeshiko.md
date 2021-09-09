@@ -9,10 +9,6 @@ tags: Lyrics
 ---
 ![KHV-107](https://is3-ssl.mzstatic.com/image/thumb/Music49/v4/23/31/46/233146a1-7885-2b1d-6228-55790165fd5b/source/600x600bb.jpg){:.border}
 
-作詞：yucat<br>
-作曲：yucat<br>
-編曲：yucat
-
 <blockquote class="original">
   <h2>狂々撫子</h2>
   <p>

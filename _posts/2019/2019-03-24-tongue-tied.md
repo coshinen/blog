@@ -9,8 +9,6 @@ tags: Lyrics
 ---
 ![NEVER TRUST A HAPPY SONG](https://is3-ssl.mzstatic.com/image/thumb/Music/v4/a3/9e/bf/a39ebf90-5cd2-659b-b273-c318e6f14790/source/600x600bb.jpg){:.border}
 
-Songwriter: Grouplove
-
 <blockquote class="original">
   <h2>Tongue Tied</h2>
   <p>

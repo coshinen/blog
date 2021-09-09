@@ -9,10 +9,6 @@ tags: Lyrics Conan
 ---
 ![VNCM-6028](https://www.mai-kuraki.com/jacket/sg/VNCM-6028.jpg){:.border}
 
-作詞：Mai Kuraki・GIORGIO 13<br>
-作曲：GIORGIO CANCEMI<br>
-編曲：Cybersound
-
 <blockquote class="original">
   <h2>恋に恋して</h2>
   <p>

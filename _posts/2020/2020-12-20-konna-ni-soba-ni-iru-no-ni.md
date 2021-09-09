@@ -9,10 +9,6 @@ tags: Lyrics
 ---
 ![BGDH-1039](https://www.generasia.com/w/images/f/f1/Konna_ni_Soba_ni_Iru_no_ni.jpg){:.border}
 
-作詞：`坂井泉水`<br>
-作曲：栗林誠一郎<br>
-編曲：明石昌夫
-
 <blockquote class="original">
   <h2>こんなにそばに居るのに</h2>
   <p>

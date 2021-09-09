@@ -9,8 +9,6 @@ tags: Lyrics
 ---
 ![SHUT DOWN VOLUME 2](https://is1-ssl.mzstatic.com/image/thumb/Music128/v4/77/a5/89/77a589d0-282a-da0d-089e-a5a376b2ec49/source/600x600bb.jpg){:.border}
 
-Songwriters: Brian Wilson & Roger Christian
-
 <blockquote class="original">
   <h2>Don't Worry Baby</h2>
   <p>

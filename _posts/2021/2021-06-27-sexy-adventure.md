@@ -9,10 +9,6 @@ tags: Lyrics
 ---
 ![Lupin-3rd-Part3-OP](https://m.media-amazon.com/images/I/61FdN93V16L._SL240_.jpg){:.border}
 
-作詞：宮原芽映<br>
-作曲：大野雄二<br>
-編曲：大野雄二
-
 <blockquote class="original">
   <h2>セクシー・アドベンチャー</h2>
   <p>

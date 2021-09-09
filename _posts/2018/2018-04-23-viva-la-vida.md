@@ -9,8 +9,6 @@ tags: Lyrics
 ---
 ![VIVA LA VIDA](https://is4-ssl.mzstatic.com/image/thumb/Music30/v4/aa/13/0e/aa130e1a-fbb8-bf02-5014-726bbb8f81f6/source/600x600bb.jpg){:.border}
 
-Songwriters: Guy Berryman, Jonny Buckland, Will Champion & Chris Martin
-
 <blockquote class="original">
   <h2>Viva La Vida</h2>
   <p>

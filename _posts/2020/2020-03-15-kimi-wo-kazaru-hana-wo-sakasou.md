@@ -9,10 +9,6 @@ tags: Lyrics Garnet
 ---
 ![GZCA-7054](https://ganekuro.github.io/images/discography/single/GZCA-7054.jpg){:.border}
 
-作詞：AZUKI 七<br>
-作曲：中村由利<br>
-編曲：古井弘人
-
 <blockquote class="original">
   <h2>君を飾る花を咲かそう</h2>
   <p>

@@ -9,10 +9,6 @@ tags: Lyrics
 ---
 ![BUZZ](https://cdn.piapro.jp/thumb_i/53/537t75rgz7lnn9o0_20110620064505_0740_0500.jpg){:.border}
 
-作詞：青木月光<br>
-作曲：青木月光<br>
-編曲：青木月光
-
 <blockquote class="original">
   <h2>夢と葉桜</h2>
   <p>

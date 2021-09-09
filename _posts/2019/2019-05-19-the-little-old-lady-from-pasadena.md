@@ -9,8 +9,6 @@ tags: Lyrics Garnet
 ---
 ![GZCA-5017](https://ganekuro.github.io/images/discography/other/GZCA-5017.jpg){:.border}
 
-Songwriter: Roger Christian, Don Altfeld & Jan Berry
-
 <blockquote class="original">
   <h2>THE LITTLE OLD LADY FROM PASADENA</h2>
   <p>

@@ -9,10 +9,6 @@ tags: Lyrics Conan
 ---
 ![POCX-1117](https://www.generasia.com/w/images/2/28/MC_M3_OS_F.jpg){:.border}
 
-作詞：三枝翔<br>
-作曲：大野克夫<br>
-編曲：大野克夫
-
 <blockquote class="original">
   <h2>愛はいつも</h2>
   <p>

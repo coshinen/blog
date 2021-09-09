@@ -9,10 +9,6 @@ tags: Lyrics
 ---
 ![WPCL-10788](https://www.tatsuro.co.jp/discography/img/sg_046.jpg){:.border}
 
-作詞：山下達郎<br>
-作曲：山下達郎<br>
-編曲：山下達郎
-
 <blockquote class="original">
   <h2>街物語</h2>
   <p>

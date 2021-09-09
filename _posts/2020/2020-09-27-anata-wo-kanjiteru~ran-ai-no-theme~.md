@@ -9,10 +9,6 @@ tags: Lyrics Conan
 ---
 ![POCX-1081](https://www.generasia.com/w/images/5/58/IORI_BGI_A.jpg){:.border}
 
-作詞：森由里子<br>
-作曲：大野克夫<br>
-編曲：大野克夫
-
 <blockquote class="original">
   <h2>あなたを感じてる 〜蘭・愛のテーマ〜</h2>
   <p>

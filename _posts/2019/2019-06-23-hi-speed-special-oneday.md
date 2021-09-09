@@ -9,10 +9,6 @@ tags: Lyrics Garnet
 ---
 ![GZCA-1050](https://ganekuro.github.io/images/discography/single/GZCA-1050.jpg){:.border}
 
-作詞：AZUKI 七<br>
-作曲：中村由利<br>
-編曲：古井弘人
-
 <blockquote class="original">
   <h2>hi-speed スペシャル oneday</h2>
   <p>

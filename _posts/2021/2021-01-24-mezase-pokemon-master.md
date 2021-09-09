@@ -9,10 +9,6 @@ tags: Lyrics
 ---
 ![TGDS-98](https://www.generasia.com/w/images/a/a5/Matsumoto_Rica_-_Mezame_Pocket_Master.jpg){:.border}
 
-作詞：戸田昭吾<br>
-作曲：たなかひろかず<br>
-編曲：渡部チェル
-
 <blockquote class="original">
   <h2>めざせポケモンマスター</h2>
   <p>

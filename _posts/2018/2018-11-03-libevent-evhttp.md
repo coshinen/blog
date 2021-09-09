@@ -8,7 +8,7 @@ category: 程序人生
 tags: libevent-evhttp C/S
 ---
 Libevent 提供了一个非常简单的事件驱动的 HTTP 服务器，可以嵌入到你的程序中并用来为 HTTP 请求提供服务。
-要使用此功能，你需要包含 <[event2/http.h](http://www.wangafu.net/~nickm/libevent-2.1/doxygen/html/http_8h.html){:target="_blank"}> 头文件到你的程序中。了解更多信息，请查看其头文件。
+要使用此功能，你需要包含 <[event2/http.h](http://www.wangafu.net/~nickm/libevent-2.1/doxygen/html/http_8h.html){:target="_blank"}> 头文件到你的程序中。
 
 ## 1. 服务器端
 
@@ -190,15 +190,13 @@ Libevent 提供了一个异步的 DNS 解析器，应该使用这个代替标准
 ### 3.9. 事件驱动的 HTTP 服务器
 
 Libevent 提供了一个非常简单的事件驱动的 HTTP 服务器，可以嵌入到你的程序中并用来为 HTTP 请求提供服务。<br>
-要使用此功能，你需要包含 <[event2/http.h](http://www.wangafu.net/~nickm/libevent-2.1/doxygen/html/http_8h.html){:target="_blank"}> 头文件到你的程序中。了解更多信息，请查看其头文件。
+要使用此功能，你需要包含 <[event2/http.h](http://www.wangafu.net/~nickm/libevent-2.1/doxygen/html/http_8h.html){:target="_blank"}> 头文件到你的程序中。
 
 ### 3.10. RPC 服务器和客户端的框架
 
 Libevent 提供了一个用于创建 RPC 服务器和客户端的框架。它负责编组（调度）和解组全部数据结构。
 
 ### 3.11. API 参考
-
-要浏览 libevent API 的完整文档，单击以下任意链接。
 
 [event2/event.h](http://www.wangafu.net/~nickm/libevent-2.1/doxygen/html/event_8h.html){:target="_blank"} libevent 主要的头文件
 

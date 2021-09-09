@@ -9,9 +9,6 @@ tags: Lyrics
 ---
 ![QWCE-245](https://is4-ssl.mzstatic.com/image/thumb/Music5/v4/51/27/5b/51275b66-8ad1-b788-c8e6-4f1f5faf5bee/source/600x600bb.jpg){:.border}
 
-作詞：みきとP<br>
-作曲：みきとP
-
 <blockquote class="original">
   <h2>サリシノハラ</h2>
   <p>

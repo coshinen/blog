@@ -9,10 +9,6 @@ tags: Lyrics Conan
 ---
 ![GZCA-4054](https://www.mai-kuraki.com/jacket/sg/GZCA-4054.jpg){:.border}
 
-作詞：倉木麻衣<br>
-作曲：大野愛果<br>
-編曲：葉山武
-
 <blockquote class="original">
   <h2>Growing of my heart</h2>
   <p>

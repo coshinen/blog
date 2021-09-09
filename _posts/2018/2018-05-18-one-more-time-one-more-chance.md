@@ -9,10 +9,6 @@ tags: Lyrics
 ---
 ![UPCH-80013](https://is1-ssl.mzstatic.com/image/thumb/Music128/v4/99/fd/91/99fd91c1-2ccc-636f-029c-2078b3f41037/source/600x600bb.jpg){:.border}
 
-作詞：山崎将義<br>
-作曲：山崎将義<br>
-編曲：森俊之
-
 <blockquote class="original">
   <h2>One more time, One more chance</h2>
   <p>

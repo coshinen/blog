@@ -6,8 +6,9 @@ author: Coshin
 comments: true
 category: 程序人生
 tags: Bash CLI
-excerpt: 一些常用的 Bash 命令行和快捷键。
 ---
+一些常用的 Bash 命令和快捷键。
+
 ## 列出文件（list）
 
 ```shell

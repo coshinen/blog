@@ -9,9 +9,6 @@ tags: Lyrics
 ---
 ![bLsZnoGbin8](https://i.ytimg.com/vi/bLsZnoGbin8/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLB0_1rAMZXPZuODGARJlH5e6spk3g){:.border}
 
-作詞：桐崎栄二<br>
-作曲：takai
-
 <blockquote class="original">
   <h2>果敢ない壁</h2>
   <p>

@@ -40,8 +40,6 @@ tags: Lyrics Conan
 
 ![UPCH-1239](https://www.generasia.com/w/images/5/5f/MC_M7_OS_F.jpg){:.border}
 
-歌手：遠山和葉
-
 <blockquote class="original">
   <h2>通り数え歌（東西編）〜コナンのテーマ〜</h2>
   <p>
