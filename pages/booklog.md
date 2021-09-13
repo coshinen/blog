@@ -126,6 +126,7 @@ excerpt: Here are some books that renew my spirit or reclaim my life.
 > * 解读“疯狂”——热点话题人物的心理分析，[中] 武志红
 > * 理解人性，[奥地利] Alfred Adler
 > * 自卑与超越，[奥地利] Alfred Adler
+> * 幸福的勇气 “自我启发之父”阿德勒的哲学课2，[日] 岸見一郎 古賀史健
 > * 被讨厌的勇气 “自我启发之父”阿德勒的哲学课，[日] 岸見一郎 古賀史健
 > * 非暴力沟通，[美] Marshall B.Rosenberg
 > * 人性的弱点，[美] Dale Carnegie
