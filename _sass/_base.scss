@@ -80,7 +80,7 @@ img {
 }
 
 @include media-query($on-palm) {
-  .post .border {
+  .border {
     width: calc(100% - 6px);
   }
 }
