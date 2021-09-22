@@ -42,9 +42,6 @@ excerpt: Here are my favorite quotes from someones that inspire me or make me la
 > * It's very attractive to the libertarian viewpoint if we can explain it
 > properly. I'm better with code than with words though.
 
-> Negan, The Walking Dead, Season 9 Episode 16:
-> * It's just that no one ever thinks that they're the evil one.
-
 > Raymond Fowler, The Thin Blue Line, Series 1 Episode 4, Rag Week:
 > * When I was at college I suffered from the curious delusion, that I was there
 > to study.
