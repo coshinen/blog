@@ -187,6 +187,7 @@ excerpt: Here are some books that renew my spirit or reclaim my life.
 > 
 > * Linux/UNIX 系统编程手册（上、下册），[德] [Michael Kerrisk](https://man7.org){:target="_blank"}
 > * STL 源码剖析，[中] 侯捷
+> * More Effective C++ 35个改善编程与设计的有效方法，[美] Scott Meyers
 > * Effective C++ 改善程序与设计的55个具体做法（第3版），[美] [Scott Meyers](https://www.aristeia.com){:target="_blank"}
 > * C++ 标准程序库，[德] Nicolai M.Josuttis
 > * C++ 沉思录，[美] Andrew Koenig, Barbara Moo
