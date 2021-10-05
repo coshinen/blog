@@ -37,7 +37,6 @@ excerpt: Here are some books that renew my spirit or reclaim my life.
 > * [未来世界的幸存者](https://www.ruanyifeng.com/survivor/){:target="_blank"}，[中] 阮一峰
 > * 如何变得有思想 阮一峰博客文集，[中] [阮一峰](https://www.ruanyifeng.com/blog/){:target="_blank"}
 > * [新生 七年就是一辈子](https://b.xinshengdaxue.com){:target="_blank"}，[中] 李笑来
-> * 80,0 AZUKI NANA photo & anthology，[日] AZUKI 七
 
 > ### 纪实
 > 
