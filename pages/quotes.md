@@ -89,8 +89,5 @@ excerpt: Here are my favorite quotes from someones that inspire me or make me la
 > * 大切なのは、どんな選択をするかじゃない！
 > 自分が選択した人生を強く生きるかどうか！ただそれだけだ！
 
-> 中村由利「GARNET CROW "le 5 ème anniversaire" L'Histoire de 2000 à 2005」：
-> * 流されていくのは簡単だけれど、変わらないでいることっていうのは一番難しい。
-
 > 宮崎駿「終わらない人 宮崎駿」：
 > * まあ、もうオレいま世の中に合わせて生きる気ないから。
