@@ -5,11 +5,6 @@ permalink: /quotes.html
 excerpt: Here are my favorite quotes from someones that inspire me or make me laugh.
 ---
 > Paul Graham, [What You'll Wish You'd Known](http://www.paulgraham.com/hs.html){:target="_blank"}:
-> * The best protection is always to be working on hard problems. Writing novels
-> is hard. Reading novels isn't. Hard means worry: if you're not worrying that
-> something you're making will come out badly, or that you won't be able to
-> understand something you're studying, then it isn't hard enough. There has to
-> be suspense.
 > * Fouls happen. The thing to do when you get fouled is not to lose your cool.
 > Just keep playing.
 > * Your life doesn't have to be shaped by admissions officers. It could be
