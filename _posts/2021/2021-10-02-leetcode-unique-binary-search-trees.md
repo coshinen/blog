@@ -19,7 +19,7 @@ tags: LeetCode Medium Math Dynamic-Programming Tree Binary-Search-Tree Binary-Tr
 
 ### 方法一：数学
 
-卡塔兰数：C<sub>0</sub> = 1, C<sub>n + 1</sub> = C<sub>n</sub> * 2 * (2 * n + 1) / n + 2
+卡塔兰数：C<sub>0</sub> = 1, C<sub>n + 1</sub> = C<sub>n</sub> * 2 * (2 * n + 1) / (n + 2)
 
 ```cpp
 class Solution {

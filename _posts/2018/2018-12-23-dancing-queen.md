@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "ABBA「Dancing Queen」歌词"
-date:   2018-04-27 20:16:08 +0800
+date:   2018-12-23 20:16:08 +0800
 author: Coshin
 comments: true
 category: 译文集
