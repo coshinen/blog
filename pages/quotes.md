@@ -7,12 +7,9 @@ excerpt: Here are my favorite quotes from someones that inspire me or make me la
 > Paul Graham, [What You'll Wish You'd Known](http://www.paulgraham.com/hs.html){:target="_blank"}:
 > * Fouls happen. The thing to do when you get fouled is not to lose your cool.
 > Just keep playing.
-> * Your life doesn't have to be shaped by admissions officers. It could be
-> shaped by your own curiosity. It is for all ambitious adults. And you don't
-> have to wait to start. In fact, you don't have to wait to be an adult. There's
-> no switch inside you that magically flips when you turn a certain age or
-> graduate from some institution. You start being an adult when you decide to
-> take responsibility for your life. You can do that at any age.
+> * There's no switch inside you that magically flips when you turn a certain
+> age or graduate from some institution. You start being an adult when you
+> decide to take responsibility for your life. You can do that at any age.
 
 > Steve Jobs, [Text of Steve Jobs' Commencement address (2005)](https://news.stanford.edu/2005/06/14/jobs-061505){:target="_blank"}:
 > * Your time is limited, so don't waste it living someone else's life. Don't be
