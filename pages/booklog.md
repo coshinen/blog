@@ -36,7 +36,7 @@ excerpt: Here are some books that renew my spirit or reclaim my life.
 > * [前方的路](https://www.ruanyifeng.com/road/){:target="_blank"}，[中] 阮一峰
 > * [未来世界的幸存者](https://www.ruanyifeng.com/survivor/){:target="_blank"}，[中] 阮一峰
 > * 如何变得有思想：阮一峰博客文集，[中] [阮一峰](https://www.ruanyifeng.com/blog/){:target="_blank"}
-> * [新生 七年就是一辈子](https://b.xinshengdaxue.com){:target="_blank"}，[中] 李笑来
+> * [新生——七年就是一辈子](https://b.xinshengdaxue.com){:target="_blank"}，[中] 李笑来
 
 > ### 纪实
 > 
@@ -170,7 +170,7 @@ excerpt: Here are some books that renew my spirit or reclaim my life.
 > * 啊哈！算法，[中] 啊哈磊
 > * 图解密码技术（第3版），[日] 結城浩
 > * C++ 数据结构与算法（第4版），[美] Adam Drozdek
-> * 数据结构 C++ 语言（第3版），[中] [邓俊辉](https://dsa.cs.tsinghua.edu.cn/~deng/index.htm){:target="_blank"}
+> * 数据结构（C++ 语言 第3版），[中] [邓俊辉](https://dsa.cs.tsinghua.edu.cn/~deng/index.htm){:target="_blank"}
 > * 大话数据结构，[中] 程杰
 
 > ### 区块链
@@ -204,7 +204,7 @@ excerpt: Here are some books that renew my spirit or reclaim my life.
 > 
 > * 图解 HTTP，[日] 上野宣
 > * 图解 TCP/IP（第5版），[日] 竹下隆史 村山公保 荒井透 苅田幸雄
-> * TCP/IP 详解 卷1：协议，[美] [W. Richard Stevens](http://www.kohala.com/start){:target="_blank"}
+> * TCP/IP 详解 卷 1：协议，[美] [W. Richard Stevens](http://www.kohala.com/start){:target="_blank"}
 
 > ### 操作系统
 > 
