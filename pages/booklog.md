@@ -198,13 +198,13 @@ excerpt: Here are some books that renew my spirit or reclaim my life.
 > * C 陷阱与缺陷，[美] Andrew Koening
 > * C 和指针，[美] Kenneth A. Reek
 > * C 语言程序设计：现代方法（第2版），[美] [K. N. King](http://www.knking.com){:target="_blank"}
-> * C 程序设计语言（第2版），[加] [Brian W. Kernighan](https://www.cs.princeton.edu/~bwk){:target="_blank"} [美] [Dennis M. Ritchie](https://www.bell-labs.com/usr/dmr/www){:target="_blank"}
+> * C 程序设计语言（第2版），[加] [Brian W. Kernighan](https://www.cs.princeton.edu/~bwk/){:target="_blank"} [美] [Dennis M. Ritchie](https://www.bell-labs.com/usr/dmr/www/){:target="_blank"}
 
 > ### 网络编程
 > 
 > * 图解 HTTP，[日] 上野宣
 > * 图解 TCP/IP（第5版），[日] 竹下隆史 村山公保 荒井透 苅田幸雄
-> * TCP/IP 详解 卷 1：协议，[美] [W. Richard Stevens](http://www.kohala.com/start){:target="_blank"}
+> * TCP/IP 详解 卷 1：协议，[美] [W. Richard Stevens](http://www.kohala.com/start/){:target="_blank"}
 
 > ### 操作系统
 > 
