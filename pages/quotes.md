@@ -37,6 +37,11 @@ excerpt: Here are my favorite quotes from someones that inspire me or make me la
 > Carl Jung, [C.G. Jung Letters, Vol. 1: 1906-1950, Page 33](https://carljungdepthpsychologysite.blog/2020/02/08/carl-jung-i-am-afraid-that-the-mere-fact-of-my-presence-takes-you-away-from-yourself/){:target="_blank"}:
 > * Who looks outside dreams; who looks inside awakes.
 
+> Siegfried Sassoon, [In Me, Past, Present, Future Meet](https://internetpoem.com/siegfried-sassoon/in-me-past-present-future-meet-poem/){:target="_blank"}:
+> * In me the tiger sniffs the rose.
+> Look in my heart, kind friends, and tremble,
+> Since there your elements assemble.
+
 > Benjamin Franklin, The Autobiography of Benjamin Franklin, PART THREE:
 > * This is another instance of the truth of an old maxim I had learned, which
 > says, "He that has once done you a kindness will be more ready to do you
