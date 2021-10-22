@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "GARNET CROW「夢みたあとで」歌词"
-date:   2018-05-08 20:02:03 +0800
+date:   2018-04-25 20:02:03 +0800
 author: Coshin
 comments: true
 category: 译文集

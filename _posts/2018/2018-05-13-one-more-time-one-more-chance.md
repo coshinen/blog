@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "山崎まさよし「One more time, One more chance」歌词"
-date:   2018-05-18 20:37:01 +0800
+date:   2018-05-13 20:37:01 +0800
 author: Coshin
 comments: true
 category: 译文集

@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "GARNET CROW「Over Drive」歌词"
-date:   2018-05-02 20:10:04 +0800
+date:   2018-04-23 20:10:04 +0800
 author: Coshin
 comments: true
 category: 译文集

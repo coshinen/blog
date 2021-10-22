@@ -7,8 +7,6 @@ comments: true
 category: 译文集
 tags: Lyrics
 ---
-![bLsZnoGbin8](https://i.ytimg.com/vi/bLsZnoGbin8/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLB0_1rAMZXPZuODGARJlH5e6spk3g){:.border}
-
 <blockquote class="original">
   <h2>果敢ない壁</h2>
   <p>
@@ -45,9 +43,9 @@ tags: Lyrics
     到了明天的话就会改变吧 只有虚幻的日子<br>
     <br>
     不会回到褪色的那个时间吧<br>
-    取回迷失的内心 Vain Wall<br>
+    取回迷失的内心 虚幻的墙壁<br>
     即使碰到虚幻的墙壁无论多少次都会站起来<br>
-    荣华的前方一定充满着希望的光芒 Lost Heart<br>
+    荣华的前方一定充满着希望的光芒 迷失的内心<br>
     <br>
     即使碰到虚幻的墙壁朝着相信的道路前进就好了<br>
     即使泪水溢出 也不要放弃可能性<br>
@@ -59,9 +57,6 @@ tags: Lyrics
   </p>
 </div>
 
-这首歌是油管上的一位 UP 主为自己的视频制作的主题曲。
-
 ## 参考链接
 
-* [桐崎栄二の歌／はかない壁 - YouTube](https://youtu.be/bLsZnoGbin8){:target="_blank"}
 * [果敢ない壁　歌詞【桐崎英二】 \| 歌詞検索UtaTen（うたてん）](https://utaten.com/lyric/桐崎英二/果敢ない壁){:target="_blank"}

@@ -87,4 +87,3 @@ tags: Lyrics
 
 * [カルメン・マキ 私は風 歌詞 - 歌ネット](https://www.uta-net.com/song/221765/){:target="_blank"}
 * [カルメン・マキ 私は風 & OZ 歌詞 - 歌ネット](https://www.uta-net.com/song/38844/){:target="_blank"}
-* [私は風 : Lyrics : GARNET CROW unofficial website : ガーネットクロウ アンオフィシャルサイト](https://ganekuro.github.io/lyrics/featuring/Watashi-wa-Kaze.html){:target="_blank"}

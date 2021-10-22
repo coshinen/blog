@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "GARNET CROW「Hello Sadness」歌词"
-date:   2018-05-06 20:09:09 +0800
+date:   2018-04-26 20:09:09 +0800
 author: Coshin
 comments: true
 category: 译文集

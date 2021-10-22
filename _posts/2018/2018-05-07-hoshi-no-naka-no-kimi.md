@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Uru「星の中の君」歌词"
-date:   2020-11-01 20:16:06 +0800
+date:   2018-05-07 20:16:06 +0800
 author: Coshin
 comments: true
 category: 译文集

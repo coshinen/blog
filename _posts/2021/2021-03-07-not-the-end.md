@@ -168,4 +168,3 @@ tags: Lyrics
 ## 参考链接
 
 * [安田レイ Not the End 歌詞 - 歌ネット](https://www.uta-net.com/song/297560/){:target="_blank"}
-* [安田レイ 『Not the End』Music Video (日本テレビ×Hulu共同製作ドラマ「君と世界が終わる日に」挿入歌) - YouTube](https://youtu.be/TZ8BcxhvIE0){:target="_blank"}

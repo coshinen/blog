@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "伊織「キミがいれば 〜名探偵コナン メイン・テーマ〜」歌词"
-date:   2018-05-10 20:37:04 +0800
+date:   2020-11-08 20:37:04 +0800
 author: Coshin
 comments: true
 category: 译文集
@@ -84,8 +84,6 @@ tags: Lyrics Conan
     就会架起美丽的彩虹
   </p>
 </div>
-
-这首歌的曲子有十多个版本，是名侦探柯南动画的主旋律。
 
 ## 参考链接
 

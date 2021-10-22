@@ -83,5 +83,4 @@ tags: Lyrics Conan
 
 ## 参考链接
 
-* [ｽﾜｯﾁのｱﾆﾒ日記](http://i.ytv.co.jp/bangumi/suwadairy/back1158166.html){:target="_blank"}
 * [「キミがいれば」「まっすぐ行く」歌詞 訂正あり \| みっこのコナンブログ](https://ameblo.jp/spdcmk1412/entry-12021952617.html){:target="_blank"}

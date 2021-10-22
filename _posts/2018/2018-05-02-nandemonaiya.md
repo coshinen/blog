@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "RADWIMPS「なんでもないや」歌词"
-date:   2018-05-21 20:16:08 +0800
+date:   2018-05-02 20:16:08 +0800
 author: Coshin
 comments: true
 category: 译文集

@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "GARNET CROW「Holy ground」歌词"
-date:   2018-04-28 20:02:04 +0800
+date:   2018-04-24 20:02:04 +0800
 author: Coshin
 comments: true
 category: 译文集

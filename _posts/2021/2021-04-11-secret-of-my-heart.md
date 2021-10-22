@@ -98,4 +98,3 @@ tags: Lyrics Conan
 ## 参考链接
 
 * [倉木麻衣 Secret of my heart 歌詞 - 歌ネット](https://www.uta-net.com/song/12340/){:target="_blank"}
-* [倉木麻衣 「Secret of my heart」 - YouTube](https://youtu.be/u0-iM590YYA){:target="_blank"}

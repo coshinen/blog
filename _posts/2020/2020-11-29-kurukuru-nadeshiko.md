@@ -71,4 +71,4 @@ tags: Lyrics
 
 ## 参考链接
 
-* [狂々撫子 Full PV / yucat](https://www.youtube.com/watch?v=4GMdCVFFjYs){:target="_blank"}
+* [狂々撫子 Full PV / yucat](https://youtu.be/4GMdCVFFjYs){:target="_blank"}

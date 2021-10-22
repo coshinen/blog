@@ -136,4 +136,3 @@ tags: Lyrics Conan
 ## 参考链接
 
 * [倉木麻衣 Your Best Friend 歌詞 - 歌ネット](https://www.uta-net.com/song/120572/){:target="_blank"}
-* [倉木麻衣 「Your Best Friend」 - YouTube](https://youtu.be/jiH9c-EGBsI){:target="_blank"}

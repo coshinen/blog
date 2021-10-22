@@ -105,6 +105,4 @@ tags: Lyrics
 
 ## 参考链接
 
-* [Abba - Dancing Queen - YouTube](https://youtu.be/xFrGuyw1V8s){:target="_blank"}
 * [ABBA – Dancing Queen Lyrics \| Genius Lyrics](https://genius.com/Abba-dancing-queen-lyrics){:target="_blank"}
-* [Dancing Queen : Lyrics : GARNET CROW unofficial website : ガーネットクロウ アンオフィシャルサイト](https://ganekuro.github.io/lyrics/featuring/Dancing-Queen.html){:target="_blank"}

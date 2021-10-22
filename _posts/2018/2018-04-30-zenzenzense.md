@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "RADWIMPS「前前前世」歌词"
-date:   2018-05-01 20:16:08 +0800
+date:   2018-04-30 20:16:08 +0800
 author: Coshin
 comments: true
 category: 译文集

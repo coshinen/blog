@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "伊織「ぼくがいる 〜コナンのテーマ〜」歌词"
-date:   2018-05-11 20:37:09 +0800
+date:   2020-11-01 20:37:09 +0800
 author: Coshin
 comments: true
 category: 译文集
@@ -70,8 +70,6 @@ tags: Lyrics Conan
     LA LA LA...... 柯南
   </p>
 </div>
-
-名侦探柯南第 425 话开场出现过，对应主题曲「キミがいれば（如果有你在）」。
 
 ## 参考链接
 

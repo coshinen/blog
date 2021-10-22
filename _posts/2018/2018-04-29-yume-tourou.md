@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "RADWIMPS「夢灯籠」歌词"
-date:   2018-04-24 20:16:08 +0800
+date:   2018-04-29 20:16:08 +0800
 author: Coshin
 comments: true
 category: 译文集
