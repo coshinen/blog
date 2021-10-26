@@ -188,6 +188,7 @@ excerpt: Here are some books that renew my spirit or reclaim my life.
 > * STL 源码剖析，[中] 侯捷
 > * Effective STL：50 个改善标准模版库使用的具体方法，[美] Scott Meyers
 > * More Effective C++：35 个改善程序与设计的新方法，[美] Scott Meyers
+> * Effective Modern C++：42 个改善 C++11 和 C++14 使用的具体方法，[美] Scott Meyers
 > * Effective C++：55 个改善程序与设计的具体方法（第3版），[美] [Scott Meyers](https://www.aristeia.com){:target="_blank"}
 > * C++ 标准程序库，[德] Nicolai M.Josuttis
 > * C++ 沉思录，[美] Andrew Koenig, Barbara Moo
