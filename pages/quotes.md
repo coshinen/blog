@@ -20,9 +20,6 @@ excerpt: Here are my favorite quotes from someones that inspire me or make me la
 > else is secondary.
 > * Stay Hungry. Stay Foolish.
 
-> Linus Torvalds, [Re: log-buf-len dynamic](https://lkml.org/lkml/2003/9/23/215){:target="_blank"}, [Reference](https://shlomif.livejournal.com/39215.html){:target="_blank"}:
-> * Those that can, do. Those that can't, complain.
-
 > Linus Torvalds, [Re: SCO: "thread creation is about a thousand times faster than on native Linux"](https://lkml.org/lkml/2000/8/25/132){:target="_blank"}:
 > * Talk is cheap. Show me the code.
 
