@@ -35,9 +35,8 @@ excerpt: Here are my favorite quotes from someones that inspire me or make me la
 > * Who looks outside dreams; who looks inside awakes.
 
 > Siegfried Sassoon, [In Me, Past, Present, Future Meet](https://internetpoem.com/siegfried-sassoon/in-me-past-present-future-meet-poem/){:target="_blank"}:
-> * In me the tiger sniffs the rose.
-> Look in my heart, kind friends, and tremble,
-> Since there your elements assemble.
+> * In me the tiger sniffs the rose. Look in my heart, kind friends, and
+> tremble, since there your elements assemble.
 
 > Benjamin Franklin, The Autobiography of Benjamin Franklin, PART THREE:
 > * This is another instance of the truth of an old maxim I had learned, which
