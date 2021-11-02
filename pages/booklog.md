@@ -214,6 +214,7 @@ excerpt: Here are some books that renew my spirit or reclaim my life.
 
 > ### 程序人生
 > 
+> * 密码朋克：自由与互联网的未来，[澳] Julian Assange
 > * Vim 实用技巧，[英] Drew Neil
 > * 图解设计模式，[日] 結城浩
 > * 大话设计模式，[中] 程杰
