@@ -152,6 +152,7 @@ excerpt: Here are some books that renew my spirit or reclaim my life.
 
 > ### 方法论
 > 
+> * 睡眠革命：如何让你的睡眠更高效，[英] Nick Littlehales
 > * [把时间当作朋友](http://lixiaolai.com/#/befriending-time/){:target="_blank"}，[中] 李笑来
 > * [人人都能用英语](http://lixiaolai.com/#/everyone-can-use-english/){:target="_blank"}，[中] [李笑来](http://lixiaolai.com/#/){:target="_blank"}
 > * [英语进阶指南](https://byoungd.gitbook.io/english-level-up-tips/){:target="_blank"}，[中] byoungd
