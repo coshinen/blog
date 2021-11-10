@@ -56,11 +56,11 @@ tags: Lyrics Garnet
     <br>
     等待没有 醒来的明天<br>
     连赎罪的力气<br>
-    都不留地献上祈祷的是‘knavish’<br>
+    都不留地献上祈祷的是‘诡计’<br>
     <br>
-    (oh-hell or heaven?)<br>
+    （哦-地狱还是天堂？）<br>
     <br>
-    Jesus(耶稣) 呐 罪孽深重的羔羊<br>
+    耶稣 呐 罪孽深重的羔羊<br>
     能宽恕我吗？<br>
     充满约束的世界引起<br>
     失望了吗？<br>
@@ -70,16 +70,16 @@ tags: Lyrics Garnet
     <br>
     知道没有 污秽的罪恶<br>
     正直也是 多种多样的<br>
-    无限的爱 救济理由多么‘mazy’<br>
+    无限的爱 救济理由多么‘迷惑’<br>
     <br>
-    (oh-hell or heaven?)<br>
+    （哦-地狱还是天堂？）<br>
     <br>
-    Jesus(耶稣) 呐 罪孽深重的羔羊<br>
+    耶稣 呐 罪孽深重的羔羊<br>
     能宽恕我吗？<br>
     边盼望着 一切的终结<br>
     边继续寻求着<br>
     <br>
-    Jesus(耶稣) 呐 罪孽深重的羔羊<br>
+    耶稣 呐 罪孽深重的羔羊<br>
     能宽恕我吗？<br>
     隐藏的欲望 来吧<br>
     深深的畏惧<br>

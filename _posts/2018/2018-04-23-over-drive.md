@@ -71,37 +71,37 @@ tags: Lyrics Conan Garnet
   <p>
     只有风的声音<br>
     包裹着全身<br>
-    无声的·Kiss<br>
+    无声的·吻<br>
     如梦似的气息<br>
     <br>
     心中变得忐忑不安<br>
     和你在一起的季节<br>
-    天高的·Blue<br>
+    高·又蓝的天<br>
     远离<br>
     <br>
-    碰巧的 Happy End<br>
+    碰巧的 美好结局<br>
     即使寻求也无法治愈<br>
     内心自由的话就飞给你看<br>
     <br>
-    上空 与飞舞的它们 Over Drive<br>
+    上空 与飞舞的它们 凌空驾驭<br>
     想要待在无尽的蓝色世界<br>
     像纸屑一样的鸟儿飞舞<br>
     好漂亮啊<br>
     乘风而上的紧张感也<br>
     想像尚未看见的前路<br>
     才能逐渐化为珍贵的期待<br>
-    raise up<br>
+    升华<br>
     <br>
     波光粼粼的样子<br>
     仿佛被吸入其中<br>
-    星光的·Night<br>
+    星光的·夜<br>
     天空好高<br>
     <br>
-    临近了的 last scene<br>
+    临近了的 最后一幕<br>
     现在还是无法抓住<br>
     连不确定的未来都如此惬意<br>
     <br>
-    上升 恋情摇摆不定 Over Drive<br>
+    上升 恋情摇摆不定 凌空驾驭<br>
     看着眼睛天真地笑给你看<br>
     好像风儿拂过<br>
     心啊<br>
@@ -110,14 +110,14 @@ tags: Lyrics Conan Garnet
     遇到真正的你的日子<br>
     等待着<br>
     <br>
-    上空 与飞舞的它们 Over Drive<br>
+    上空 与飞舞的它们 凌空驾驭<br>
     想要待在无尽的蓝色世界<br>
     像纸屑一样的鸟儿飞舞<br>
     好漂亮啊<br>
     乘风而上的紧张感也<br>
     想像尚未看见的前路<br>
     才能逐渐化为珍贵的期待<br>
-    raise up<br>
+    升华<br>
     遇到真正的你的日子<br>
     等待着
   </p>
