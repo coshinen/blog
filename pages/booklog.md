@@ -126,6 +126,7 @@ excerpt: Here are some books that renew my spirit or reclaim my life.
 > * 为何家会伤人——揭示家庭中的心理真相，[中] [武志红](http://blog.sina.com.cn/wuzii){:target="_blank"}
 > * 解读“疯狂”——热点话题人物的心理分析，[中] 武志红
 > * 蛤蟆先生去看心理医生，[英] Robert de Board
+> * 我与你，[德] Martin Buber
 > * 理解人性，[奥地利] Alfred Adler
 > * 自卑与超越，[奥地利] Alfred Adler
 > * 幸福的勇气：“自我启发之父”阿德勒的哲学课2，[日] 岸見一郎 古賀史健
