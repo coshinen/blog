@@ -76,10 +76,10 @@ tags: Lyrics Garnet
     这儿好像是永远的夏天 熊熊燃烧的热情<br>
     来来回回悄悄地尝试过来<br>
     突然视线缠绕 内心变得动荡不安<br>
-    什么在内心深处妨碍因而 tonight...<br>
-    Hello Sadness... and I need you<br>
-    I'll walk alone with you<br>
-    in silence<br>
+    什么在内心深处妨碍因而 今晚…<br>
+    你好悲伤… 我需要你<br>
+    我将独自与你默默<br>
+    同行<br>
     <br>
     炙热的阳光 委身闭上眼睛睡觉的午后<br>
     融入地球<br>
@@ -90,28 +90,28 @@ tags: Lyrics Garnet
     流逝的时光只是消逝 孤独不过是自由<br>
     过去未来都一直不会消失因而<br>
     对机缘不知所措 内心动摇地牵著手<br>
-    像波浪一样不久必定会破碎 tonight...<br>
-    Hello Sadness... and I need you<br>
-    I'll walk alone with you<br>
-    In silence<br>
+    像波浪一样不久必定会破碎 今晚…<br>
+    你好悲伤… 我需要你<br>
+    我将独自与你默默<br>
+    同行<br>
     <br>
     只有放出色彩的罪孽不动摇地照耀著现在<br>
     <br>
     流逝的时光只是消逝 孤独不过是自由<br>
     过去未来都一直不会消失因而<br>
     对机缘不知所措 内心动摇地牵著手<br>
-    像波浪一样不久必定会破碎 tonight...<br>
-    Hello Sadness... and I need you<br>
-    I'll walk alone with you<br>
-    in silence<br>
+    像波浪一样不久必定会破碎 今晚…<br>
+    你好悲伤… 我需要你<br>
+    我将独自与你默默<br>
+    同行<br>
     <br>
     这儿好像是永远的夏天 熊熊燃烧的热情<br>
     来来回回悄悄地尝试过来<br>
     突然视线缠绕 内心变得动荡不安<br>
-    什么在内心深处妨碍因而 tonight...<br>
-    Hello Sadness... and I need you<br>
-    I'll walk alone with you<br>
-    in silence
+    什么在内心深处妨碍因而 今晚…<br>
+    你好悲伤… 我需要你<br>
+    我将独自与你默默<br>
+    同行
   </p>
 </div>
 

@@ -121,7 +121,7 @@ tags: Lyrics Conan Garnet
     和你并排在一起<br>
     夏末的阳光在摇曳着<br>
     像海底一样的手掌中的街道<br>
-    I like a dream. I'm calling out to you
+    我喜欢出神。我正在打给你
   </p>
 </div>
 

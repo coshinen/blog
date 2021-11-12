@@ -106,8 +106,8 @@ tags: Lyrics Conan Garnet
     你依然遥不可及<br>
     只是感觉过于徒劳<br>
     在逐渐破碎的漫长的 梦醒之后<br>
-    and yet...<br>
-    There will still be love in this world.
+    但是…<br>
+    这世上仍有爱。
   </p>
 </div>
 

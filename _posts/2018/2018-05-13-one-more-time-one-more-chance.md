@@ -68,17 +68,17 @@ tags: Lyrics
 </blockquote>
 
 <div class="translation">
-  <h2>多一次，多一个机会</h2>
+  <h2>再来一次，多一种可能</h2>
   <p>
     要再失去什么 内心才能被原谅<br>
     要怎样的痛苦 才能再一次和你相遇<br>
-    One more time 季节啊 请不要变迁<br>
-    One more time 相互开玩笑的 时间<br>
+    再一次 季节啊 请不要变迁<br>
+    再一次 相互开玩笑的 时间<br>
     <br>
     有分歧的时候总是 我先让步<br>
     任性的性格 使你更加可爱了<br>
-    One more time 被记忆绊住脚步<br>
-    One more time 无法选择下一个场所<br>
+    再一次 被记忆绊住脚步<br>
+    再一次 无法选择下一个场所<br>
     <br>
     总是在寻找哦 在某处的你的身影<br>
     对面的月台 小巷里的窗户<br>
@@ -89,8 +89,8 @@ tags: Lyrics
     <br>
     如果只是排遣寂寞的话 谁都应该可以<br>
     所以星星快要落下的夜晚 无法欺骗自己<br>
-    One more time 季节啊 请不要变迁<br>
-    One more time 相互开玩笑的 时间<br>
+    再一次 季节啊 请不要变迁<br>
+    再一次 相互开玩笑的 时间<br>
     <br>
     总是在寻找哦 在某处的你的身影<br>
     在十字路口 在梦中<br>

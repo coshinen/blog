@@ -7,7 +7,6 @@ comments: true
 category: 译文集
 tags: Lyrics
 ---
-![G4ngewwE50w](https://i.ytimg.com/vi/G4ngewwE50w/maxresdefault.jpg){:.border}
 ![ESCL-3139](https://is3-ssl.mzstatic.com/image/thumb/Music124/v4/d4/36/f5/d436f5e9-07c7-a6ee-bb8e-71bb696d3dd7/source/600x600bb.jpg){:.border}
 
 <blockquote class="original">
@@ -54,12 +53,12 @@ tags: Lyrics
     在雍容华贵的祇园我也是舞妓<br>
     吃豆寿司 走过花街<br>
     宴会游戏 在这条街上享受<br>
-    现在就欢迎光临 My Sweet Sweet 京都<br>
+    现在就欢迎光临 我甜甜的 京都<br>
     <br>
     乘上岚电 太秦 岚山<br>
     从渡月桥上看桂川<br>
     从京都塔上眺望整条街<br>
-    几次都欢迎来到 My Home Town 京都<br>
+    几次都欢迎来到 我的家乡 京都<br>
     <br>
     有好东西啊作为礼物的优雅的化妆品<br>
     柚子味的唇膏<br>

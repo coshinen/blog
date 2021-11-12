@@ -64,7 +64,7 @@ tags: Lyrics Conan
     苏醒的 回忆之歌<br>
     在我心中 现在依然温柔<br>
     <br>
-    Time after time<br>
+    一次又一次<br>
     与你相遇的奇迹<br>
     在缓缓的风吹过的街道上<br>
     轻轻地牵着手 走过的坡道<br>
@@ -77,7 +77,7 @@ tags: Lyrics Conan
     相逢吧 在淡红色的<br>
     季节来临的日子中 用笑容<br>
     <br>
-    Time after time<br>
+    一次又一次<br>
     一个人 在花舞的街道上<br>
     虽然散落的时刻不会回来<br>
     和那一天一样的 不变的景色<br>
@@ -91,7 +91,7 @@ tags: Lyrics Conan
     只是些虚幻又容易毁坏的东西<br>
     追求着<br>
     <br>
-    Time after time<br>
+    一次又一次<br>
     在与你一同染上颜色的街道上<br>
     相遇的话 已经不需要约定了<br>
     比谁都更 容易受伤的你的<br>

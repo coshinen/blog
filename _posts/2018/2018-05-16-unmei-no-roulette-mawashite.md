@@ -54,7 +54,7 @@ tags: Lyrics Conan
     远远地看着 那个时候的自己 那种感觉<br>
     <br>
     转动命运之轮<br>
-    深深地考虑种种的是 Mystery<br>
+    深深全面思考的 是推理<br>
     看呐 命运之人就在那里<br>
     一直 注视着你<br>
     <br>
@@ -69,7 +69,7 @@ tags: Lyrics Conan
     现在也 进化下去<br>
     <br>
     转动命运之轮<br>
-    启程时的翅膀 bravely<br>
+    启程时的翅膀 是勇敢<br>
     看呐 无论什么时候 幸运都在等着你<br>
     一直 注视着你<br>
     <br>
