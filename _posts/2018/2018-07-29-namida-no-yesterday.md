@@ -74,7 +74,7 @@ tags: Lyrics Conan Garnet
     如果注意到笨拙的温柔<br>
     两个人会更接近吗<br>
     <br>
-    泪水的昨天 摇曳的 Summer breeze<br>
+    泪水的昨天 摇曳的 夏日微风<br>
     用手拉近消失的夏天<br>
     多么自由 只是思念<br>
     呐海鸟飞走了哦<br>
@@ -89,7 +89,7 @@ tags: Lyrics Conan Garnet
     如果和你在一起就更好了<br>
     连痛楚都 渐渐衰老<br>
     <br>
-    泪水的昨天 湿润的 Summer wind<br>
+    泪水的昨天 湿润的 夏日寒风<br>
     好棒啊 让我看看吧<br>
     如此被充满 又被冲走<br>
     不断变化哦 随心所欲<br>
@@ -102,7 +102,7 @@ tags: Lyrics Conan Garnet
     无论到哪里都容易毁坏的 脆弱的东西啊 永远地<br>
     在心中回响<br>
     <br>
-    泪水的昨天 摇曳的 Summer breeze<br>
+    泪水的昨天 摇曳的 夏日微风<br>
     用手拉近消失的夏天<br>
     多么自由 只是思念<br>
     呐海鸟飞走了哦<br>

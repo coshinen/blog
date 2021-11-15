@@ -65,20 +65,20 @@ tags: Lyrics Garnet
     悄悄地打开的门的另一侧<br>
     眩目的 耀眼的<br>
     <br>
-    I need care me<br>
+    我需要你关注我<br>
     只注视着你的明天已经<br>
-    my days my dream<br>
+    我的日子我的梦想<br>
     朝着两个人一起看到的未来<br>
     <br>
     虽然没有留在这里的理由 止步<br>
     好像还忘记了什么<br>
     微微地摇曳的风吹拂着<br>
-    你的气味儿 make me happiness<br>
+    你的气味儿 使我开心<br>
     必须放下<br>
     <br>
-    I believe I still<br>
+    我相信我仍会<br>
     和你在一起的日子逐渐变得坚强<br>
-    I believe You know<br>
+    我相信你知道<br>
     现在 在你入睡的瞬间……<br>
     <br>
     对着先一步启程的你<br>
@@ -89,7 +89,7 @@ tags: Lyrics Garnet
     再也见不到你<br>
     心里充满爱意<br>
     终于 能说再见了<br>
-    I loved you all my life for a long time<br>
+    我这一生都爱你很久了<br>
     <br>
     永远地埋葬
   </p>

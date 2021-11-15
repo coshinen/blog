@@ -80,7 +80,7 @@ tags: Lyrics Conan Garnet
 <div class="translation">
   <h2>朦胧的神秘</h2>
   <p>
-    why 朝着看不见的明天<br>
+    为何 朝着看不见的明天<br>
     充满期待地走着呢<br>
     还想着你<br>
     像中途一样吵闹<br>
@@ -92,17 +92,17 @@ tags: Lyrics Conan Garnet
     <br>
     那是遥远街道的残像<br>
     周围循环的甜蜜的回忆<br>
-    宛如夏天的暴风雨般的 scene<br>
+    宛如夏天的暴风雨般的 场景<br>
     只给你看<br>
     <br>
     悲哀是自然现象<br>
     安稳只是种印象<br>
-    说明内心模样的 keyword<br>
+    说明内心模样的 关键词<br>
     啊寻找着<br>
     草原的光 仿佛消失在风中<br>
-    Misty Mystery<br>
+    朦胧的神秘<br>
     <br>
-    why 爱的强大<br>
+    为何 爱的强大<br>
     试验般的每一天<br>
     现在温柔什么的<br>
     如同远方吹拂的风<br>
@@ -114,32 +114,32 @@ tags: Lyrics Conan Garnet
     <br>
     做着同样的梦的想像<br>
     痛苦有时是必须的<br>
-    强烈的阳光眩目般的 shade<br>
+    强烈的阳光眩目般的 背阴处<br>
     只是看着<br>
     <br>
     如果痛苦只是种反应<br>
     热情是过度的心象<br>
-    动摇内心模样的 take it<br>
+    动摇内心模样地 把握它<br>
     啊寻求着<br>
     在黄昏中悄悄地被吞没<br>
-    Misty Mystery<br>
+    朦胧的神秘<br>
     <br>
     爱像爱一样 不断变化着形状<br>
     如果还不知道有什么的话<br>
-    I'll keep to stay<br>
+    我会留下来<br>
     <br>
     那是遥远街道的残像<br>
     周围循环的甜蜜的回忆<br>
-    宛如夏天的暴风雨般的 scene<br>
+    宛如夏天的暴风雨般的 场景<br>
     只给你看<br>
     <br>
     悲哀是自然现象<br>
     安稳只是种印象<br>
-    说明内心模样的 keyword<br>
+    说明内心模样的 关键词<br>
     反复摇曳的幻想<br>
     超越夜晚的长久的感伤<br>
     啊 草原的光 仿佛消失在风中<br>
-    Misty Mystery<br>
+    朦胧的神秘<br>
     <br>
     解放无谋的冲动
   </p>

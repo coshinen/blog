@@ -54,11 +54,11 @@ tags: Lyrics Garnet
     跳上首班车<br>
     <br>
     在陶醉的朝雾中 微微发光<br>
-    天空过于虚幻地 fade away<br>
+    天空过于虚幻地 逐渐消失<br>
     勉强寻求着未来情不自禁地笑了<br>
     <br>
-    Timeless Sleep<br>
-    不会再想起你的温暖 ah-<br>
+    永眠<br>
+    不会再想起你的温暖 啊-<br>
     即使身体无力依靠<br>
     人还是能够活下去<br>
     <br>
@@ -67,17 +67,17 @@ tags: Lyrics Garnet
     <br>
     如果存在连接他人之间的东西<br>
     就像甜甜的希望一样<br>
-    fade out 丑陋的伤口<br>
-    缠绕着爱 die away<br>
+    逐渐淡出 丑陋的伤口<br>
+    缠绕着爱 逐渐死去<br>
     <br>
-    Timeless Sleep<br>
+    永眠<br>
     被温柔的睡衣包围什么都不期望<br>
     总有一天你悲伤的时候<br>
     一定紧紧地拥抱你哦<br>
-    Timeless Sleep<br>
+    永眠<br>
     在我创造的这个地方给你治愈吧<br>
     无法忘记的快乐的记忆<br>
-    注入生命吧 out live
+    注入生命吧 跳出生活
   </p>
 </div>
 

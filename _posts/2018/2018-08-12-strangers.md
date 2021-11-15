@@ -61,12 +61,12 @@ tags: Lyrics Garnet
     客船停泊下来<br>
     <br>
     住惯了的这个城市总是<br>
-    因 stranger 而热闹<br>
+    因 异乡人 而热闹<br>
     100 年以前未变的地方<br>
     <br>
-    I'm a traveler<br>
+    我是个旅行者<br>
     在这个气喘吁吁跑过的道路上<br>
-    You're a stranger<br>
+    你是个异乡人<br>
     从即将消失的遥远的记忆中<br>
     像是被弹开了<br>
     <br>
@@ -76,22 +76,22 @@ tags: Lyrics Garnet
     只要有就很棒<br>
     <br>
     虽然记得那份怀念<br>
-    我也是 stranger 而已<br>
+    我也是 陌生人 而已<br>
     100 年以后也不会改变的地方<br>
     <br>
-    You're a traveler<br>
+    你是个旅行者<br>
     人们用人受伤来安慰<br>
-    I'm a stranger<br>
+    我是个异乡人<br>
     祈祷想要回到哪里<br>
     即使没有那样的地方<br>
     柔和的阳光啊<br>
     <br>
     偶然触碰到难过在傍晚风平浪静<br>
-    strangers<br>
+    异乡人们<br>
     想着要回到哪里<br>
     在不会停止的时间里<br>
     一切都在不断流逝<br>
-    夕阳很美…sky...
+    夕阳很美…天空…
   </p>
 </div>
 
