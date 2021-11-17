@@ -53,9 +53,9 @@ tags: Lyrics Garnet
   <h2>前往无水的晴朗海洋</h2>
   <p>
     前往无水的晴朗海洋<br>
-    挣扎着抵达的 white mermaid<br>
+    挣扎着抵达的 白色美人鱼<br>
     直到在梦中看到的<br>
-    人间的天堂是 silence×3<br>
+    人间的天堂是 寂静×3<br>
     <br>
     前往映照天空的沉睡海洋<br>
     直到天亮才归来<br>
@@ -67,9 +67,9 @@ tags: Lyrics Garnet
     与你随行的可怜的天使们<br>
     <br>
     前往什么都没有的晴朗天空<br>
-    渐渐升起的叹息的 mermaid<br>
+    渐渐升起的叹息的 美人鱼<br>
     为了送别风儿<br>
-    伸出双手 silence×3<br>
+    伸出双手 寂静×3<br>
     <br>
     呐 现在也是比谁都要爱你哟<br>
     縂有一天会想起吧<br>
@@ -78,14 +78,14 @@ tags: Lyrics Garnet
     因为我会再次靠近你<br>
     <br>
     前往无水的晴朗海洋<br>
-    挣扎着抵达的 white mermaid<br>
+    挣扎着抵达的 白色美人鱼<br>
     唯一的愿望<br>
-    只为实现的 trading×3<br>
+    只为实现的 交易×3<br>
     <br>
     前往无水的晴朗海洋<br>
-    挣扎着抵达的 white mermaid<br>
+    挣扎着抵达的 白色美人鱼<br>
     直到在梦中看到的<br>
-    人间的天堂是 silence×3
+    人间的天堂是 寂静×3
   </p>
 </div>
 

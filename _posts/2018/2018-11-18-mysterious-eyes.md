@@ -92,7 +92,7 @@ tags: Lyrics Conan Garnet
     <br>
     只是一直 在寻找答案<br>
     在迷失的 时空中<br>
-    到下一个地方 you take your way<br>
+    到下一个地方 你按你的方式<br>
     <br>
     映入眼帘的东西<br>
     用手触摸 感受到的东西<br>
@@ -100,14 +100,14 @@ tags: Lyrics Conan Garnet
     不管梦境如何<br>
     <br>
     年幼的日子的<br>
-    在双手中溢出的小小的 a pebble<br>
+    在双手中溢出的小小的 卵石<br>
     谁也看不到<br>
     在像宝石般闪耀的时间里<br>
     <br>
     注意到的话 寻求着<br>
     不同的 爱 擦肩而过<br>
     渴望无形的东西<br>
-    true heart for mystery eyes<br>
+    真心面对神秘的眼睛<br>
     <br>
     去能看到海的街道吧<br>
     只有你能看到的那天<br>
@@ -115,10 +115,10 @@ tags: Lyrics Conan Garnet
     <br>
     无边无际的天空的<br>
     一切 虽然已经 看不见了<br>
-    到下一个地方 you take your way<br>
+    到下一个地方 你按你的方式<br>
     <br>
     紧紧拥抱<br>
-    I'd like to be in your love<br>
+    我想成为你的爱<br>
     <br>
     为了不再迷惑<br>
     不要放开 你的手<br>
@@ -126,10 +126,10 @@ tags: Lyrics Conan Garnet
     <br>
     只是一直 在寻找答案<br>
     在迷失的 时空中<br>
-    到下一个地方 you take your way<br>
+    到下一个地方 你按你的方式<br>
     <br>
     悄悄地 重复着 迷惑之中<br>
-    I feel so all in secret life
+    我在隐秘的生活中感受到了一切
   </p>
 </div>
 

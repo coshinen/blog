@@ -73,7 +73,7 @@ tags: Lyrics Garnet
     换上新的外套<br>
     改变心情飞奔而出<br>
     分开后流逝的时间马上<br>
-    被 blue 的心情替代<br>
+    被忧郁 的心情替代<br>
     <br>
     连活下去的意义都没有<br>
     好像没有什么东西是值得的<br>
@@ -83,44 +83,44 @@ tags: Lyrics Garnet
     打算一直奔跑到你的家<br>
     那样滚动下去像狗一样玩耍吧<br>
     今天和明天都一直注视着我<br>
-    如果肚子饿了就打电话一起订披萨吃 wow~<br>
+    如果肚子饿了 就打电话一起订披萨吃 喔～<br>
     <br>
-    时而像迷宫一样的 mind<br>
+    时而像迷宫一样的 思维<br>
     心情变得非常愚蠢 草率的感觉<br>
     尽管如此作为孤独寂寞的生物<br>
     想要马上见到你<br>
     <br>
     只要和你的笑容相遇不知为何都会变得幸福<br>
-    如此容易理解的东西 每天简单地 happy・・・?<br>
+    如此容易理解的东西 每天简单地 快乐···？<br>
     在过去的时间中的不知所措 到底是怎么了<br>
-    如果又快要忘记时 就唱那首歌 wow~<br>
+    如果又快要忘记时 就唱那首歌 喔～<br>
     <br>
-    Don't worry everyone<br>
-    We lived for we come home, everything, any way<br>
+    不要担心各位<br>
+    我们为了回家而活，一切，无论如何<br>
     怀念地想着 无论在哪里都会开始<br>
-    starting up brand new day yeah~<br>
+    开始全新的一天 耶～<br>
     和你一起分享<br>
-    follow you now...... through<br>
+    现在跟着你…… 度过<br>
     <br>
-    (indies ver.)<br>
+    （地下专版）<br>
     只要和你的笑容相遇不知为何都会变得幸福<br>
-    如此容易理解的东西 每天简单地 happy・・・?<br>
+    如此容易理解的东西 每天简单地 快乐···？<br>
     在过去的时间中的不知所措 到底是怎么了<br>
-    如果又快要忘记时 就唱那首歌 wow~<br>
+    如果又快要忘记时 就唱那首歌 喔～<br>
     <br>
-    wow~<br>
-    da-la-la stay...... yeah~<br>
+    喔～<br>
+    哒-啦-啦 待着…… 耶～<br>
     <br>
-    (single ver.)<br>
-    maybe someday woo baby<br>
-    and we'll be sleeping<br>
-    with the TV on.<br>
-    good night good night for you<br>
+    （单曲版）<br>
+    也许有一天 喔 宝贝<br>
+    我们会开着电视<br>
+    睡觉。<br>
+    对你说晚安晚安<br>
     <br>
-    I wanna stay together woo darling<br>
-    to lovin' that all last forever.<br>
-    good night good night for you<br>
-    ......
+    我想在一起 喔 亲爱的<br>
+    爱这一切直到永远。<br>
+    对你说晚安晚安<br>
+    ……
   </p>
 </div>
 

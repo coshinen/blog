@@ -70,34 +70,34 @@ tags: Lyrics Garnet
     绿色的树荫<br>
     闭上眼的话<br>
     能感受到全部的联系吗？<br>
-    宛如遗传因子般的 cosmic world<br>
-    tu ta la ta...wave<br>
+    宛如遗传因子般的 宇宙世界<br>
+    tu ta la ta...波动<br>
     <br>
-    You-la 轻飘飘地 内心在动摇<br>
+    你-啦 轻飘飘地 内心在动摇<br>
     孤独地挣扎着<br>
-    你买走了我的心 um-<br>
-    消失掉了 it's cry<br>
+    你买走了我的心 嗯-<br>
+    消失掉了 我哭了<br>
     <br>
-    浩瀚的宇宙的 side 感受着…<br>
-    I 重新考虑一下吧…keep on heart<br>
+    浩瀚的宇宙的 一面 感受着…<br>
+    我 重新考虑一下吧…牢记在心<br>
     凭着安逸地充满的破坏力<br>
-    打开那扇门(door)<br>
-    深深地潜入 stay<br>
+    打开那扇门<br>
+    深深地潜入 待着<br>
     tu ta la...<br>
     寻找无尽的溢出的源泉<br>
     <br>
     如果停下来 走过来的足迹<br>
     如果回头看 可见的的足迹<br>
     只能走一望无际的路<br>
-    tu ta la ta ta tu la la ti-la stun<br>
+    tu ta la ta ta tu la la ti-la 晕眩<br>
     <br>
-    尽可能想像的 mind 收集起来<br>
+    尽可能想像的 思维 收集起来<br>
     想要挣扎着到达的不是某处的 「场所」<br>
-    不管生在何处都不会动摇 ideology<br>
+    不管生在何处都不会动摇的 意识形态<br>
     善恶的标准并不是对每个人都一样<br>
-    false image?<br>
-    enigmatic smile?<br>
-    缓慢地消失 leave me<br>
+    虚假的印象？<br>
+    令人困惑的微笑？<br>
+    缓慢地消失 离开我<br>
     <br>
     明天见哦…没有可靠的东西<br>
     让我们相爱吧…只是相互分享<br>
@@ -107,12 +107,12 @@ tags: Lyrics Garnet
     tu ta la ta ta tu la ta ti la la<br>
     La La tu lu rah ta<br>
     <br>
-    forever love will remain<br>
+    爱将永存<br>
     La La tu lu rah ta<br>
-    just like a gentle breeze<br>
+    就像一阵微风<br>
     La La tu lu la ta<br>
-    cleanup time for my soul<br>
-    God, will you lead me...<br>
+    洗礼我灵魂的时间<br>
+    上帝，你将指引我…<br>
     tu ta la ta ta ta ti la la ti la-La
   </p>
 </div>

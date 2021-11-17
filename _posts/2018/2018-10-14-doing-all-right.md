@@ -52,16 +52,16 @@ tags: Lyrics Conan Garnet
 <div class="translation">
   <h2>做好一切</h2>
   <p>
-    Doing all right!<br>
+    做好一切！<br>
     <br>
     仔细回忆的你的记忆 透过树叶的阳光的气味<br>
     放下的什么虽然已经 不在这里了<br>
     <br>
     循环往复得思念 一下子 穿越过往人的眷恋<br>
     <br>
-    Doing all right!<br>
+    做好一切！<br>
     内心被动摇 不回头就无法活下去<br>
-    Doing all right!<br>
+    做好一切！<br>
     摸索着 常常做梦不是很好吗<br>
     <br>
     风停的午后 少许的自由 没有答案的提问<br>
@@ -72,20 +72,20 @@ tags: Lyrics Conan Garnet
     <br>
     改变主意的本领 哭了？ 生气了？ 还是一笑了之了呢？<br>
     <br>
-    Doing all right!<br>
+    做好一切！<br>
     走过的 不回去时没关系<br>
-    Doing all right!<br>
+    做好一切！<br>
     无法消失的地方 遥远的未来还未知晓<br>
     <br>
     被释放的生命只是 想感受当下<br>
     穿透 兴奋的天空吧<br>
     <br>
-    Doing all right!<br>
+    做好一切！<br>
     心连心 不可思议的命运<br>
-    Doing all right!<br>
+    做好一切！<br>
     重叠的时候 想要收集美好的预感<br>
     <br>
-    Doing all right!
+    做好一切！
   </p>
 </div>
 

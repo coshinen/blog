@@ -96,18 +96,18 @@ tags: Lyrics Garnet
     看冒着烟飞了出去<br>
     两个人的火箭在空中飞舞<br>
     进入轨道为止是关键<br>
-    在大气层中摇晃着 for we<br>
-    I can't read<br>
-    I can't read<br>
+    在大气层中摇晃着 对于我们<br>
+    我读不懂<br>
+    我读不懂<br>
     <br>
-    so we call it paradise<br>
-    we go on paradise<br>
-    we go on paradise<br>
-    we go on paradise<br>
-    we go on paradise<br>
-    we go on paradise<br>
-    we go on paradise<br>
-    just live a day<br>
+    所以我们称之为天堂<br>
+    我们去天堂<br>
+    我们去天堂<br>
+    我们去天堂<br>
+    我们去天堂<br>
+    我们去天堂<br>
+    我们去天堂<br>
+    只生活一天<br>
     <br>
     一点点的感动 只要和你一起感受到<br>
     重要的东西 看 好像又增加了一个<br>
@@ -126,10 +126,10 @@ tags: Lyrics Garnet
     冒着烟飞了出去<br>
     两个人的火箭在空中飞舞<br>
     悲伤什么的留在地上<br>
-    摇摇晃晃地徬徨着 for we<br>
-    I can't read<br>
-    I can't read<br>
-    I can't read
+    摇摇晃晃地徬徨着 对于我们<br>
+    我读不懂<br>
+    我读不懂<br>
+    我读不懂
   </p>
 </div>
 
