@@ -125,6 +125,7 @@ excerpt: Here are some books that renew my spirit or reclaim my life.
 > * 七个心理寓言，[中] 武志红
 > * 为何家会伤人——揭示家庭中的心理真相，[中] [武志红](http://blog.sina.com.cn/wuzii){:target="_blank"}
 > * 解读“疯狂”——热点话题人物的心理分析，[中] 武志红
+> * 我的情绪为何总被他人左右，[美] Albert Ellis, Arthur Lange
 > * 蛤蟆先生去看心理医生，[英] Robert de Board
 > * 我与你，[德] Martin Buber
 > * 理解人性，[奥地利] Alfred Adler
