@@ -73,7 +73,7 @@ tags: Lyrics Garnet
     <br>
     不知不觉时光飞逝<br>
     为了治愈破裂的两人回忆着<br>
-    难受的 in little time<br>
+    难受的 一点时间里<br>
     <br>
     为了不迷惑地爱<br>
     呐 要变得多强大才好？<br>
@@ -81,8 +81,8 @@ tags: Lyrics Garnet
     绝对不会枯萎的<br>
     想要坚强地活下去<br>
     注入虚幻的愿望<br>
-    知晓孤独的意义 ah~<br>
-    um- I have so little time<br>
+    知晓孤独的意义 啊～<br>
+    嗯- 我没有太多时间<br>
     <br>
     转动地球仪<br>
     想起了从未见过的国度<br>
@@ -94,7 +94,7 @@ tags: Lyrics Garnet
     在投身的河中<br>
     永远地活着<br>
     一定会在某一天终结<br>
-    in little time<br>
+    在短时间内<br>
     <br>
     站在无人的街角<br>
     沉浸在寻找你的梦中<br>
@@ -102,8 +102,8 @@ tags: Lyrics Garnet
     活下去的十字架又增加了一个<br>
     <br>
     绝对不会枯萎的样子<br>
-    想要坚强地活下去 ah~<br>
-    um- I have so little time×3
+    想要坚强地活下去 啊～<br>
+    嗯- 我没有太多时间×3
   </p>
 </div>
 

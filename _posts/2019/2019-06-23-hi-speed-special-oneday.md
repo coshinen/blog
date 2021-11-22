@@ -88,15 +88,15 @@ tags: Lyrics Garnet
     即使万一犯了罪<br>
     对人来说是有原因的<br>
     <br>
-    hi-speed 特别的 oneday<br>
+    高速 特别的 一天<br>
     想再品尝一下啊<br>
-    sweet time 回到现实<br>
+    甜蜜时光 回到现实<br>
     虽然瞬间难以忍受<br>
-    hi-speed 特别的 anyway<br>
+    高速 特别的 无论如何<br>
     总有一天会忘记吧？<br>
-    slow time 不要弄脏<br>
+    缓慢时光 不要弄脏<br>
     像融化一样 沉睡的早晨<br>
-    He is not trusted darling.<br>
+    他不值得信任亲爱的。<br>
     <br>
     快点搞错<br>
     反复失败也很可爱<br>
@@ -111,27 +111,27 @@ tags: Lyrics Garnet
     装作没有什么的样子<br>
     这些日子 也累了<br>
     <br>
-    hi-speed 特别的 oneday<br>
+    高速 特别的 一天<br>
     是玩笑啊 很抱歉哦<br>
-    sweet time 魔法解除<br>
+    甜蜜时光 魔法解除<br>
     到那时让展现温柔<br>
-    hi-speed 特别的 anyway<br>
+    高速 特别的 无论如何<br>
     希望感受更多<br>
-    slow time 不要犯傻<br>
+    缓慢时光 不要犯傻<br>
     我 不是普通的机器<br>
     <br>
     和吵架次数相同的和好次数<br>
-    变成环状正闪闪发光 yha-<br>
+    变成环状正闪闪发光 耶-<br>
     <br>
-    hi-speed 特别的 oneday<br>
+    高速 特别的 一天<br>
     想再品尝一下啊<br>
-    sweet time 回到现实<br>
+    甜蜜时光 回到现实<br>
     虽然瞬间难以忍受<br>
-    hi-speed 特别的 anyway<br>
+    高速 特别的 无论如何<br>
     总有一天会忘记吧？<br>
-    slow time 不要弄脏<br>
+    缓慢时光 不要弄脏<br>
     像融化一样 沉睡的早晨<br>
-    He is not trusted darling.
+    他不值得信任亲爱的。
   </p>
 </div>
 

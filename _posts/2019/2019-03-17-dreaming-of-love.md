@@ -86,44 +86,44 @@ tags: Lyrics Garnet
     那个瞬间 你<br>
     看到了什么呢？ 祈祷他的未来……<br>
     <br>
-    ah 其实已经 知道了吧<br>
+    啊 其实已经 知道了吧<br>
     逐渐终结的 一切 永远的存在<br>
-    in your die<br>
+    在你的死亡中<br>
     <br>
-    I'm dreaming of rain<br>
+    我正梦到下雨<br>
     过去和未来都 完全消失的你<br>
-    I'm dreaming of rose<br>
-    全部 被看到的 那一天 please please<br>
-    I'm dreaming of night<br>
+    我正梦到玫瑰<br>
+    全部 被看到的 那一天 拜托拜托<br>
+    我正梦到夜晚<br>
     未来不再醒来满怀祈祷<br>
-    I'm dreaming of love<br>
-    甜蜜 闪耀的印象 please please yhe-<br>
+    我正梦到爱情<br>
+    甜蜜 闪耀的印象 拜托拜托 唉-<br>
     <br>
     窗户对面进行的派对和<br>
-    被关闭的 door<br>
+    被关上的 门<br>
     在对着背后的你的轨迹中 低声私语<br>
     <br>
     呐 总有一天要启程的人<br>
     残存者的心情<br>
-    不知不觉中振翅高飞 in your game<br>
+    不知不觉中振翅高飞 在你的游戏里<br>
     <br>
-    I'm dreaming of wake<br>
+    我正梦到醒来<br>
     总有一天会给予平静 飞翔的样子<br>
-    I'm dreaming of pain<br>
-    留下爱的碎片 freeze freeze<br>
-    I'm dreaming of rail<br>
+    我正梦到痛苦<br>
+    留下爱的碎片 冻结冻结<br>
+    我正梦到铁轨<br>
     谁也不曾交错的世界的意义<br>
-    I'm dreaming of love<br>
-    强烈 放纵的印象 freeze freeze<br>
+    我正梦到爱情<br>
+    强烈 放纵的印象 冻结冻结<br>
     <br>
-    I'm dreaming of rain<br>
+    我正梦到下雨<br>
     过去和未来都 完全消失的你<br>
-    I'm dreaming of rose<br>
-    全部 被看到的 那一天 please please<br>
-    I'm dreaming of night<br>
+    我正梦到玫瑰<br>
+    全部 被看到的 那一天 拜托拜托<br>
+    我正梦到夜晚<br>
     未来不再醒来满怀祈祷<br>
-    I'm dreaming of love<br>
-    甜蜜 闪耀的印象 please please yhe-
+    我正梦到爱情<br>
+    甜蜜 闪耀的印象 拜托拜托 唉-
   </p>
 </div>
 
