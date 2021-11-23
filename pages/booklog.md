@@ -190,6 +190,7 @@ excerpt: Here are some books that renew my spirit or reclaim my life.
 > ### 编程语言
 > 
 > * Linux/UNIX 系统编程手册（上、下册），[德] [Michael Kerrisk](https://man7.org){:target="_blank"}
+> * UNIX 环境高级编程（第3版），[美] W. Richard Stevens, Stephen A. Rago
 > * STL 源码剖析，[中] 侯捷
 > * Effective STL：50 个改善标准模版库使用的具体方法，[美] Scott Meyers
 > * More Effective C++：35 个改善程序与设计的新方法，[美] Scott Meyers
