@@ -54,7 +54,7 @@ tags: Lyrics Garnet
 </blockquote>
 
 <div class="translation">
-  <h2>最后的恋歌</h2>
+  <h2>最后的情歌</h2>
   <p>
     到了下午阳光照射<br>
     房间角落的沙发<br>
@@ -71,7 +71,7 @@ tags: Lyrics Garnet
     没有惩罚的恋爱<br>
     悲喜交集<br>
     <br>
-    这是最后的 love song 的开始…<br>
+    这是最后的 情歌 的开始…<br>
     顺着祈祷<br>
     边靠着单人沙发现在<br>
     边看着漫长的故事<br>
@@ -91,9 +91,9 @@ tags: Lyrics Garnet
     那么喜悦只是在那里<br>
     又会变成离去的东西吧<br>
     <br>
-    停下时间的 last love song<br>
-    持续流逝的 last love song<br>
-    持续转动的 old player
+    停下时间的 最后的情歌<br>
+    持续流逝的 最后的情歌<br>
+    持续转动的 老播放机
   </p>
 </div>
 

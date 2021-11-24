@@ -52,38 +52,38 @@ tags: Lyrics Garnet
   <h2>幸福的宠物</h2>
   <p>
     一起玩耍的周日下午<br>
-    (oh- yeah Why do I love you ~)<br>
+    （哦- 耶 为什么我要爱你～）<br>
     还困吗？ 开始搭话<br>
-    (Let's step on out today)<br>
+    （我们今天就出去吧）<br>
     <br>
     打开上周也看了的旅游指南<br>
     「去这样的地方吧」只是经常说着<br>
     早起什么的不行 1・2・3<br>
-    Look! go back a sheet.<br>
+    看！回到床上。<br>
     <br>
     到下周还能再见<br>
-    (so that I do not have to cry)<br>
+    （这样我就不用哭了）<br>
     做过的 充电对吧<br>
-    (I don't want to be alone)<br>
+    （我不想一个人呆着）<br>
     <br>
-    用Special的语言和温柔的手臂<br>
+    用特别的语言和温柔的手臂<br>
     让我也看看全部盖上的笑颜吧<br>
     烦恼也会消失哦 1・2・3<br>
-    We all fall in love.<br>
+    我们都会坠入爱河。<br>
     <br>
     感情这种东西<br>
     不好好保养 就动弹不了<br>
     因为是身体的引擎…<br>
     <br>
-    你是我的 Dear Keeper<br>
+    你是我的 亲爱的守门员<br>
     常不在家的人<br>
     边焦虑不安 边摇着尾巴<br>
-    我是 Happy Dog 幸福的宠物<br>
+    我是 幸福的小狗 幸福的宠物<br>
     <br>
-    I think of you I want to know.<br>
-    I like you and you like me.<br>
+    我会想我想要了解的你。<br>
+    我喜欢你并且你也喜欢我。<br>
     1・2・3<br>
-    Just try to remember!
+    只要试着记住！
   </p>
 </div>
 

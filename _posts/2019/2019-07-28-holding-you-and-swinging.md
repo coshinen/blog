@@ -81,17 +81,17 @@ tags: Lyrics Garnet
     街道的声音 人的声音 嘈杂<br>
     特别是现在 身体捡起声音<br>
     你一个人改变世界什么的<br>
-    ah- 多么 单纯的 feel & brain<br>
+    啊- 多么 单纯的 感性和理性<br>
     <br>
     轻快的节奏也没有意义<br>
     如果相视而笑是幸福的话<br>
     黑暗中也是孤身一人<br>
     只能梦想着奇迹<br>
     <br>
-    Holding you, and swinging<br>
+    抱着你，摇摆<br>
     太过强烈地 过于追求了吗？<br>
-    ah- 彷徨<br>
-    不被爱的 Jane Doe<br>
+    啊- 彷徨<br>
+    过于喜爱的 某个女人<br>
     拉过来<br>
     拥抱着思念<br>
     <br>
@@ -105,10 +105,10 @@ tags: Lyrics Garnet
     只是怀疑 无法保护自身<br>
     那样的日子也有哦<br>
     <br>
-    Holding you, and swinging<br>
+    抱着你，摇摆<br>
     变的温柔 在你所在的地方<br>
-    ah- 想活下去<br>
-    过于喜爱的 John Doe<br>
+    啊- 想活下去<br>
+    不被爱的 某个女人<br>
     去哪里呢…<br>
     高傲地消失了<br>
     <br>
@@ -116,26 +116,26 @@ tags: Lyrics Garnet
     注意到的话正站在不同的位置上所以<br>
     比起忘记的方式请告诉我爱的方式<br>
     <br>
-    Holding you, and swinging<br>
-    I've been solitary<br>
-    When I awoke and felt you<br>
-    Holding... hold inside<br>
-    Holding you, and swinging<br>
-    nm- What a dream I had<br>
-    so I'll continue to<br>
-    continue to tell a lie. baby<br>
+    抱着你，摇摆<br>
+    我一直很孤独<br>
+    当我醒来后感受到你<br>
+    抱着… 抱在怀中<br>
+    抱着你，摇摆<br>
+    嗯- 我做了多好的一个梦啊<br>
+    所以我会继续<br>
+    继续说谎。宝贝<br>
     <br>
-    Holding you, and swinging<br>
+    抱着你，摇摆<br>
     太过强烈地 过于追求了吗？<br>
-    ah- 彷徨<br>
-    不被爱的 Jane Doe<br>
+    啊- 彷徨<br>
+    不被爱的 某个女人<br>
     拉过来<br>
     拥抱着思念<br>
     <br>
-    Holding you, and swinging<br>
+    抱着你，摇摆<br>
     变的温柔 在你所在的地方<br>
-    ah- 想活下去<br>
-    过于喜爱的 John Doe<br>
+    啊- 想活下去<br>
+    过于喜爱的 某个女人<br>
     去哪里呢…<br>
     想要高傲地消失
   </p>

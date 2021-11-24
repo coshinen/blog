@@ -67,7 +67,7 @@ tags: Lyrics Garnet
 <div class="translation">
   <h2>快乐的日子？</h2>
   <p>
-    close island<br>
+    邻接的岛屿<br>
     在快速变黑天空中<br>
     内心也没有意义地变得难受<br>
     那样的季节<br>
@@ -77,8 +77,8 @@ tags: Lyrics Garnet
     有人只注视着我<br>
     在心中疯了似地渴望着<br>
     <br>
-    In the morning, how to start<br>
-    where do you go from it<br>
+    早上，如何开始<br>
+    你从哪里开始<br>
     比起寻找幽默的言语<br>
     总之先紧紧地抱住你<br>
     想感受 反复无常的爱<br>
@@ -86,13 +86,13 @@ tags: Lyrics Garnet
     放松你温暖的心<br>
     睡着了哦 虽然还早<br>
     如果明天醒来能见到你的话<br>
-    开始又是 making happy days<br>
+    开始又是 创造快乐的日子<br>
     <br>
     你不在的时候 只想着你的时间<br>
     只是一点点奢侈的生活方式<br>
     <br>
-    In the morning, how to start<br>
-    where do you go from it<br>
+    早上，如何开始<br>
+    你从哪里开始<br>
     如果你在寻求某人的话<br>
     我在这里一直不变<br>
     什么时候能再次相逢呢<br>
@@ -101,13 +101,13 @@ tags: Lyrics Garnet
     消失在夜里<br>
     就像小小的幻影一样<br>
     <br>
-    In the morning, how to start<br>
-    when I awoke and felt you warm<br>
-    the pursuit of happiness<br>
-    please keep um- close to me<br>
+    早上，如何开始<br>
+    当我醒来后感受到你的温暖<br>
+    对幸福的追求<br>
+    请继续 嗯- 接近我<br>
     <br>
-    In the morning, how to start<br>
-    where do you go from it<br>
+    早上，如何开始<br>
+    你从哪里开始<br>
     比起寻找幽默的言语<br>
     总之先紧紧地抱住你<br>
     想感受 反复无常的爱<br>
@@ -115,7 +115,7 @@ tags: Lyrics Garnet
     完全无法理解的故事<br>
     能成为重要的人就好了<br>
     在能互相接触的距离里静静地注视着<br>
-    总之现在一定是 Happy days?
+    总之现在一定是 快乐的日子？
   </p>
 </div>
 

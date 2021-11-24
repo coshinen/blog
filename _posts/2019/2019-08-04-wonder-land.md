@@ -72,12 +72,12 @@ tags: Lyrics Garnet
     眼睛看不到的强大羁绊什么的<br>
     因竭力寻找 一定 会变得很辛苦吧？<br>
     爱是无法被别人守护的<br>
-    纵使能够破坏 Can I fell now<br>
+    纵使能够破坏 现在我能跌倒吗<br>
     <br>
     在不断变化的幸福中<br>
     有你在的话<br>
-    什么样的形式都好 ah-<br>
-    We live on wonder land<br>
+    什么样的形式都好 啊-<br>
+    我们生活在仙境中<br>
     <br>
     无论是非常高兴时<br>
     还是被谎言扭曲的爱<br>
@@ -86,11 +86,11 @@ tags: Lyrics Garnet
     什么时候在宇宙自由旅行的日子<br>
     同样的事果然 会遭遇挫折吧<br>
     时而内心变得痛苦不安<br>
-    时而过于怀念过去 Can you fell it me<br>
+    时而过于怀念过去 你能放下它我吗<br>
     <br>
     想要比任何人都直率地注视<br>
     现在确实感受到的只有你哦<br>
-    小小的 wonder land<br>
+    小小的 仙境<br>
     <br>
     不管是出现裂痕的心情<br>
     还是变得模糊的明天的去向<br>
@@ -98,13 +98,13 @@ tags: Lyrics Garnet
     <br>
     能够相信想要相信的东西<br>
     寻求那样的坚强<br>
-    摇曳着哦 ah-<br>
-    walking on wonder land<br>
+    摇曳着哦 啊-<br>
+    在仙境中行走<br>
     <br>
     在不断变化的幸福中<br>
     有你在的话<br>
-    什么样的形式都好 ah-<br>
-    I have little wonder land<br>
+    什么样的形式都好 啊-<br>
+    我有小小的仙境<br>
     <br>
     无论是非常高兴时<br>
     还是被谎言扭曲的爱<br>

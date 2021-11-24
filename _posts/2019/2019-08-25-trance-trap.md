@@ -105,7 +105,7 @@ tags: Lyrics Garnet
     我会阻止你<br>
     直到我毁灭<br>
     拿出你的全部<br>
-    fell the chill 爱着你<br>
+    打倒寒意 爱着你<br>
     <br>
     在你的手中 昏睡<br>
     偶然假装的 陷阱<br>
