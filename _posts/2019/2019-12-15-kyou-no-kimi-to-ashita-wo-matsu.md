@@ -55,7 +55,7 @@ tags: Lyrics Garnet
 <div class="translation">
   <h2>和今天的你等待明天</h2>
   <p>
-    街上冷起来了 again, new fallen snow<br>
+    街上冷起来了 又一次，新的降雪<br>
     你的体温沁入我的内心<br>
     什么都没有的话就不会注意到 那样的每一天<br>
     <br>
@@ -66,7 +66,7 @@ tags: Lyrics Garnet
     因为有和今天的你等待明天的想法<br>
     只是闭上眼睛 一切都会消失<br>
     想和你在一起永远不变 再一次 试着好好地感受<br>
-    and sing for me<br>
+    并为我歌唱<br>
     <br>
     要怎样去爱才能满足你？<br>
     拥抱到精神 想要相互映射<br>
@@ -75,18 +75,18 @@ tags: Lyrics Garnet
     依偎着走下去平凡之中<br>
     究竟有多少真实？<br>
     映在你眼中的东西对我来说也能看到同样的颜色吗？<br>
-    Are you still there?<br>
+    你仍在那儿吗？<br>
     <br>
     和今天的你等待明天 一边困惑着<br>
     残酷的 时间的流逝 付出 继续描绘下去<br>
-    舒适的寒冷中 Winter Night<br>
-    会重生哦 a thing of the past<br>
+    舒适的寒冷中 冬天的夜晚<br>
+    会重生哦 一件过去的事<br>
     <br>
     不知何时散去的旅途中<br>
     所以才会这样地爱上某人<br>
     在短暂的一瞬间 寄宿着永恒<br>
     腾空了的内心再次…<br>
-    Can you hear me?<br>
+    你能听到我吗？<br>
     <br>
     因为有和今天的你等待明天的想法<br>
     只是闭上眼睛 一切都会消失<br>

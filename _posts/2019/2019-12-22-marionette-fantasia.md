@@ -95,13 +95,13 @@ tags: Lyrics Garnet
     回想起 循环吧<br>
     追求剑 徬徨<br>
     <br>
-    深夜 din don din dan<br>
-    knock 的影子<br>
+    深夜里 叮咚叮当<br>
+    碰上 的影子<br>
     期望的声音 撕裂了胸口<br>
-    月光下 fourteen eyes were bright<br>
-    轻轻 摇动 he's abuse selfish<br>
+    月光下 十四双眼睛是明亮的<br>
+    轻轻 摇动 他滥用的自私<br>
     <br>
-    看啊 ti ta ta ta<br>
+    看啊 嘀嗒嗒嗒<br>
     玻璃针<br>
     敲十二次钟的话<br>
     神圣夜晚的 七头影子<br>
@@ -111,35 +111,35 @@ tags: Lyrics Garnet
     看啊 温暖 苏醒<br>
     预言的时刻来临<br>
     <br>
-    前往森林 ri ra ra ra<br>
-    敲 door<br>
+    前往森林 哩啦啦啦<br>
+    敲 门<br>
     飞散的风 悲痛的叫声<br>
     边祈祷着 不要听到<br>
     晃晃 悠悠 跑过去<br>
     <br>
-    ah- din da da da<br>
+    啊- 叮哒哒哒<br>
     计时装置<br>
-    when a young owl hooted 穿过了黑暗<br>
-    宣告结束的 bell声 为何<br>
+    当一只小猫头鹰鸣叫着 穿过了黑暗<br>
+    宣告结束的 钟声 为何<br>
     带来 难受的 心情<br>
     <br>
-    la- la- la- la- la<br>
+    啦- 啦- 啦- 啦- 啦<br>
     向与我相似的 那个人<br>
     伸出手 想着你<br>
-    在交叉的世界中 ah-<br>
+    在交叉的世界中 啊-<br>
     <br>
     温柔的音色<br>
     耀眼的光芒<br>
     在心中 被隐藏的<br>
     可爱的人 在眼前笑<br>
-    确实的 marionett fantasia<br>
+    确定的 木偶幻想曲<br>
     <br>
-    la la la- la- la-<br>
+    啦 啦 啦- 啦- 啦-<br>
     我们的世界<br>
     梦 空洞的 乌托邦<br>
     硬壳的 核桃裂开的话<br>
     现实 在不经意间 流出<br>
-    la- la- la- la- Marionette Fantasia
+    啦- 啦- 啦- 啦- 木偶幻想曲
   </p>
 </div>
 

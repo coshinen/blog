@@ -79,9 +79,9 @@ tags: Lyrics Garnet
   <h2>坠入生活 ～赞美上帝～</h2>
   <p>
     暮色渐浓的天空有点伤感的心情<br>
-    海边的Dirve<br>
+    海边的兜风<br>
     前往未曾见过的地方<br>
-    载着我们 be high yeah<br>
+    载着我们 去嗨耶<br>
     静悄悄地前进的道路<br>
     <br>
     ‘想要改变，什么的 ‘无法改变，之类的<br>
@@ -97,14 +97,14 @@ tags: Lyrics Garnet
     一下子跳出<br>
     现在和你在这个世界畅游吧<br>
     让奔跑的心感受着<br>
-    Hallelujah<br>
+    哈利路亚<br>
     还能再见 笑着再次相见<br>
     那一天一定 已经正在等着<br>
     <br>
     被安排的事全部<br>
     变得开心了<br>
-    Fall in Life, and so,<br>
-    Hallelijah!<br>
+    坠入生活，因此，<br>
+    哈利路亚！<br>
     <br>
     全部舍弃的 去拥抱什么的<br>
     没有太大差别的问题 还在纠结的话<br>
@@ -119,25 +119,25 @@ tags: Lyrics Garnet
     夜里的吵闹<br>
     想就这样更多地感受现在<br>
     <br>
-    Hallelujah<br>
+    哈利路亚<br>
     还能再见 笑着再次相见<br>
     那一天一定 已经正在等着<br>
     <br>
     被安排的事全部<br>
     变得开心了<br>
-    Fall in Life, and so,<br>
-    Hallelijah!<br>
+    坠入生活，因此，<br>
+    哈利路亚！<br>
     <br>
     现在和你在这个世界畅游吧<br>
     让奔跑的心感受着<br>
-    Hallelujah<br>
+    哈利路亚<br>
     还能再见 笑着再次相见<br>
     那一天一定 已经正在等着<br>
     <br>
     被安排的事全部<br>
     变得开心了<br>
-    Fall in Life, and so,<br>
-    Hallelijah!
+    坠入生活，因此，<br>
+    哈利路亚！
   </p>
 </div>
 

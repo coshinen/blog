@@ -79,7 +79,7 @@ tags: Lyrics Garnet
     让我们活着感受着<br>
     <br>
     看啊过去的日子 不知不觉温柔地…<br>
-    be wander<br>
+    徘徊<br>
     <br>
     既不能哭泣的夜晚又不哭泣的早晨<br>
     如果能看到幻影并无意识地做梦<br>

@@ -60,10 +60,10 @@ tags: Lyrics Garnet
 <div class="translation">
   <h2>赤裸裸的故事</h2>
   <p>
-    Naked story yeah-<br>
+    赤裸裸的故事 耶-<br>
     就算没有防备也想冲出去<br>
-    就这样感受着 stay yeah-<br>
-    We're born in this way.<br>
+    就这样感受着 呆着 耶-<br>
+    我们以这种方式诞生。<br>
     <br>
     比起任何生物<br>
     人类都是不安定的物种<br>
@@ -80,7 +80,7 @@ tags: Lyrics Garnet
     只要跑过去就好了<br>
     所谓幸福！？<br>
     <br>
-    Naked story yeah-<br>
+    赤裸裸的故事 耶-<br>
     不断减少的章节<br>
     想象中无限的故事<br>
     宏大的浪漫<br>
@@ -95,9 +95,9 @@ tags: Lyrics Garnet
     相互原谅 那是深深地坚强地<br>
     接近爱…<br>
     <br>
-    Naked story lai-la...<br>
-    直到下次遭遇 steer la-<br>
-    目标地点 steer la-<br>
+    赤裸裸的故事 啦-啦…<br>
+    行驶 到下次遭遇 啦-<br>
+    驶 过目标地点 啦-<br>
     因为想要感受同一个宇宙<br>
     睁开眼睛<br>
     只能看到的明天<br>

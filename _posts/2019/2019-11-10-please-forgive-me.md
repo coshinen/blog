@@ -87,13 +87,13 @@ tags: Lyrics Garnet
     但是 一定会重演吧<br>
     <br>
     怎样偿还才好呢？<br>
-    I sayl love you & that's forever<br>
+    我说爱你并且是永远<br>
     沉默也好谎言也罢都是一样的<br>
-    although this is a life I can lose.<br>
+    尽管是我可以失去的生活。<br>
     <br>
-    Please...forgive me 不要再离开我了<br>
+    请…原谅我 不要再离开我了<br>
     为了填补空白的过去<br>
-    只是 仅仅注视着你…Cause I am free<br>
+    只是 仅仅注视着你…因为我是自由的<br>
     描绘的梦想的全部现在也<br>
     扰乱了内心<br>
     无止境的时间不断流逝<br>
@@ -104,23 +104,23 @@ tags: Lyrics Garnet
     手握着面对你的坚强啊<br>
     <br>
     为了连伤痕也能守护你<br>
-    Haven't had a dream in a long time<br>
-    也能认为是存在的<br>
-    If there's a chance of resurrecting a love<br>
+    好久没有做梦了<br>
+    能够认为是存在的<br>
+    如果有机会让爱复活<br>
     <br>
-    Please...forgive me 祈祷是募集<br>
+    请…原谅我 祈祷是募集<br>
     不知不觉在那一天来临的时候<br>
     用更深更大的力量…<br>
-    so Lovin' that'll last forever<br>
+    所以爱是永恒的<br>
     解放的相连的心<br>
     到处奔跑的鲜明的视野 感觉<br>
     想永远保持寂静<br>
     <br>
-    Please...forgive me 永远不要离开我<br>
+    请…原谅我 永远不要离开我<br>
     为了填补空白的过去<br>
     只是仅仅注视着你<br>
     描绘的梦想的全部现在也<br>
-    ah- 扰乱了内心<br>
+    啊- 扰乱了内心<br>
     无止境的时间不断流逝<br>
     <br>
     使内心迷惑的热情幻想<br>
@@ -128,8 +128,6 @@ tags: Lyrics Garnet
     一定…现在也是…
   </p>
 </div>
-
-「質(タチ)」表示品质，性质。
 
 ## 参考链接
 

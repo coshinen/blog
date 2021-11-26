@@ -63,9 +63,9 @@ tags: Lyrics Garnet
     一直注视着无法实现的愿望<br>
     突然 坠入那样的无力感中<br>
     <br>
-    Crier Girl, Crier Boy<br>
-    growin' night<br>
-    不变的爱<br>
+    哭泣的女孩，哭泣的男孩<br>
+    成长之夜<br>
+    不变的爱等等<br>
     如果没有的话现在 感受到的一切<br>
     变成唯一的事实<br>
     不久就要靠近<br>
@@ -76,7 +76,7 @@ tags: Lyrics Garnet
     不知不觉地动摇了<br>
     强迫的漂亮的事凝固的日子<br>
     <br>
-    Winter night, Ice cold sky<br>
+    冬天的夜晚，冰冷的天空<br>
     星空 严冬的烟花<br>
     像绽放的银幕一样<br>
     现在也快要消失了<br>
@@ -85,14 +85,14 @@ tags: Lyrics Garnet
     我们到底有多少<br>
     守护重要东西的力量呢？<br>
     <br>
-    Crier Girl, Crier Boy<br>
+    哭泣的女孩，哭泣的男孩<br>
     即使是现在<br>
     那一天的我们是美好的<br>
     闪耀可见<br>
     感觉好像能做的很好<br>
     <br>
-    Winter night, Ice cold sky<br>
-    around the clook<br>
+    冬天的夜晚，冰冷的天空<br>
+    夜以继日地<br>
     想见你<br>
     让我感受到这双手毫不怀疑的体温<br>
     连接着不断消失的东西
