@@ -84,16 +84,16 @@ tags: Lyrics Garnet
     只为自己活着就好<br>
     有确切的温柔和思念的话<br>
     <br>
-    Mistery...awake night<br>
+    神秘…醒着的夜晚<br>
     想要去爱<br>
     无法逃脱的悲哀般地缠绕的<br>
-    Endless Desire<br>
+    无尽的欲望<br>
     <br>
-    History...over again<br>
+    历史…重演<br>
     饲养冲动的是<br>
-    destiny...? or personal...?<br>
-    渴望的 out of blue<br>
-    现在还是 endless way<br>
+    命运…？还是个人的…？<br>
+    渴望的 很突然<br>
+    现在还是 没完没了<br>
     <br>
     逐渐分散的时候谁都<br>
     只是一瞬间的事情<br>
@@ -107,27 +107,27 @@ tags: Lyrics Garnet
     什么是可以交换的<br>
     仍然不明白<br>
     <br>
-    Mistery...awake night<br>
+    神秘…醒着的夜晚<br>
     想要被爱<br>
     被囚禁的悲哀般地缠绕的<br>
-    Endless Desire<br>
+    无尽的欲望<br>
     <br>
-    History...over again<br>
+    历史…重演<br>
     最终 逐渐充满谜团<br>
-    destiny...? or personal...?<br>
-    渴望的 out of blue<br>
-    现在还是 endless way<br>
+    命运…？还是个人的…？<br>
+    渴望的 很突然<br>
+    现在还是 没完没了<br>
     <br>
-    Mistery...awake night<br>
+    神秘…醒着的夜晚<br>
     想要去爱<br>
     无法逃脱的悲哀般地缠绕的<br>
-    Endless Desire<br>
+    无尽的欲望<br>
     <br>
-    History...over again<br>
+    历史…重演<br>
     饲养冲动的是<br>
-    destiny...? or personal...?<br>
-    渴望的 out of blue<br>
-    现在还是 endless way
+    命运…？还是个人的…？<br>
+    渴望的 很突然<br>
+    现在还是 没完没了
   </p>
 </div>
 

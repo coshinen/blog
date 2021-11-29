@@ -81,7 +81,7 @@ tags: Lyrics Garnet
     比回忆更充实<br>
     被明天激起<br>
     现在想摇摆<br>
-    never end<br>
+    永不结束<br>
     <br>
     无法用言语表达 像会话一样<br>
     就在闪耀的你的身边<br>
@@ -99,7 +99,7 @@ tags: Lyrics Garnet
     就这样<br>
     假装能看到前方<br>
     明天无法知道<br>
-    never end<br>
+    永无尽头<br>
     <br>
     无论到哪里都 不会停止<br>
     如果在心里描绘 就会蔓延<br>
@@ -107,7 +107,7 @@ tags: Lyrics Garnet
     想和你一起奔跑<br>
     包含了思念<br>
     喜欢的心情是没办法的<br>
-    never end
+    永无止境
   </p>
 </div>
 

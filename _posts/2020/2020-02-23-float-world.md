@@ -50,7 +50,7 @@ tags: Lyrics Garnet
 </blockquote>
 
 <div class="translation">
-  <h2>浮动世界</h2>
+  <h2>漂浮的世界</h2>
   <p>
     没有任由冲动想全部结束的时候？<br>
     充满爱的时间不会永远持续<br>
@@ -62,7 +62,7 @@ tags: Lyrics Garnet
     明明是暧昧的印象<br>
     这里不好吗<br>
     如果迎击即将到来的明天<br>
-    足已…Float World<br>
+    足已…漂浮的世界<br>
     <br>
     想比只追求真相而受伤更愚蠢<br>
     爱是无底地给予就好…是这样的吧？<br>
@@ -84,8 +84,8 @@ tags: Lyrics Garnet
     是不是在期待着在徬徨不同的地方有什么呢？<br>
     这里不好吗<br>
     如果迎击即将到来的明天<br>
-    surround myself...<br>
-    Float World
+    包围我自己…<br>
+    漂浮的世界
   </p>
 </div>
 

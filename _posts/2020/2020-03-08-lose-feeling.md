@@ -54,14 +54,14 @@ tags: Lyrics Garnet
     <br>
     如此深深地受伤<br>
     原谅我的心 深爱 之后 能去哪里<br>
-    but everybody's got to live their life......<br>
+    而且每个人都要过他们的生活……<br>
     <br>
     漂亮话也可以 劝说着<br>
     嘟囔着那是命运…<br>
     <br>
     只是 接受这样的事 在平静中<br>
     倾泻下来的光 像月亮一样…<br>
-    um-
+    嗯-
   </p>
 </div>
 
