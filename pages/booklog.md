@@ -175,7 +175,7 @@ excerpt: Here are some books that renew my spirit or reclaim my life.
 > * 啊哈！算法，[中] 啊哈磊
 > * 图解密码技术（第3版），[日] 結城浩
 > * C++ 数据结构与算法（第4版），[美] Adam Drozdek
-> * 数据结构（C++ 语言 第3版），[中] [邓俊辉](https://dsa.cs.tsinghua.edu.cn/~deng/index.htm){:target="_blank"}
+> * 数据结构（C++ 语言版 第3版），[中] [邓俊辉](https://dsa.cs.tsinghua.edu.cn/~deng/index.htm){:target="_blank"}
 > * 大话数据结构，[中] 程杰
 
 > ### 区块链
@@ -211,7 +211,7 @@ excerpt: Here are some books that renew my spirit or reclaim my life.
 > 
 > * 图解 HTTP，[日] 上野宣
 > * 图解 TCP/IP（第5版），[日] 竹下隆史 村山公保 荒井透 苅田幸雄
-> * UNIX 网络编程 卷 1：套接口 API，[美] W. Richard Stevens, Bill Fenner, Andrew M. Rudoff
+> * UNIX 网络编程 卷 1：套接口 API（第3版），[美] W. Richard Stevens, Bill Fenner, Andrew M. Rudoff
 > * TCP/IP 详解 卷 1：协议，[美] [W. Richard Stevens](http://www.kohala.com/start/){:target="_blank"}
 
 > ### 操作系统
