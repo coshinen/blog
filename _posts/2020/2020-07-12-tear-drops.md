@@ -65,53 +65,53 @@ tags: Lyrics Conan
 <div class="translation">
   <h2>眼泪落下</h2>
   <p>
-    tear drops 是那样吧 注意到了不是吗？<br>
-    tear drops 是那样吧 在哭不是吗<br>
-    tear drops 是那样吧 一直忘不了的爱<br>
-    tear drops tear drops 解开这个谜tear drops<br>
+    眼泪落下 是那样吧 注意到了不是吗？<br>
+    眼泪落下 是那样吧 在哭不是吗<br>
+    眼泪落下 是那样吧 一直忘不了的爱<br>
+    眼泪落下 眼泪落下 解开这个谜后眼泪落下<br>
     <br>
-    I'm saving all my love tonight My love is forever, for your love...<br>
-    My heart is crying for you Oh yeah<br>
+    今晚我要保留我所有的爱 我的爱是永恒的，对你的爱…<br>
+    我的心在为你哭泣 哦耶<br>
     <br>
     那个时候看到的天空、闪过的 偶然的瞬间感受到了你<br>
     心中的快门明明已经落下 夕阳中浮现的你的脸<br>
     <br>
-    Why why why 明明知道 却没能说出来<br>
-    Lie lie 想要待在你身边 I want your love<br>
+    为何 为何 为何 明明知道 却没能说出来<br>
+    躺平 躺平 想在你身边 我想要你的爱<br>
     <br>
-    tear drops 是那样吧 注意到了不是吗？<br>
-    tear drops 是那样吧 在哭不是吗<br>
-    tear drops 是那样吧 一直忘不了的爱<br>
-    tear drops tear drops 解开这个谜tear drops<br>
+    眼泪落下 是那样吧 注意到了不是吗？<br>
+    眼泪落下 是那样吧 在哭不是吗<br>
+    眼泪落下 是那样吧 一直忘不了的爱<br>
+    眼泪落下 眼泪落下 解开这个谜后眼泪落下<br>
     <br>
-    I'm saving all my love tonight My love is forever, for your love...<br>
-    My heart is crying for you oh yeah<br>
+    今晚我要保留我所有的爱 我的爱是永恒的，对你的爱…<br>
+    我的心在为你哭泣 哦耶<br>
     <br>
-    肌肤感受着 确切的温暖 等待着 不响的来电的my heart<br>
+    肌肤感受着 确切的温暖 等待着 不响的来电的我的心<br>
     只有你的声音留在我的耳朵里 内心和身体都无法满足<br>
     <br>
-    Why why why 明明想忘记 却哭了出来<br>
-    Lie lie 依然是最喜欢的 I want your love<br>
+    为何 为何 为何 明明想忘记 却哭了出来<br>
+    躺平 躺平 依然是最喜欢的 我想要你的爱<br>
     <br>
-    tear drops 是那样吧 注意到了不是吗？<br>
-    tear drops 是那样吧 在哭不是吗<br>
-    tear drops 是那样吧 一直忘不了的爱<br>
-    tear drops tear drops 解开这个谜tear drops<br>
+    眼泪落下 是那样吧 注意到了不是吗？<br>
+    眼泪落下 是那样吧 在哭不是吗<br>
+    眼泪落下 是那样吧 一直忘不了的爱<br>
+    眼泪落下 眼泪落下 解开这个谜后眼泪落下<br>
     <br>
     眼泪溢出来 能稍微坦率点吗<br>
-    对星空 I believe, forever my dream<br>
-    偷偷地tear drops<br>
+    对星空 我永远相信，我的梦<br>
+    偷偷地落下眼泪<br>
     <br>
-    tear drops 是那样吧 注意到了不是吗？<br>
-    tear drops 是那样吧 在哭不是吗<br>
-    tear drops 是那样吧 一直忘不了的爱<br>
-    tear drops tear drops 解开这个谜tear drops<br>
+    眼泪落下 是那样吧 注意到了不是吗？<br>
+    眼泪落下 是那样吧 在哭不是吗<br>
+    眼泪落下 是那样吧 一直忘不了的爱<br>
+    眼泪落下 眼泪落下 解开这个谜后眼泪落下<br>
     <br>
-    tear drops 是那样吧 注意到了不是吗？<br>
-    tear drops 是那样吧 在哭不是吗<br>
-    tear drops 是那样吧 这是最后的恋爱<br>
-    tear drops tear drops 解开这个谜tear drops<br>
-    tear drops tear drops 只是对着你tear drops
+    眼泪落下 是那样吧 注意到了不是吗？<br>
+    眼泪落下 是那样吧 在哭不是吗<br>
+    眼泪落下 是那样吧 这是最后的恋爱<br>
+    眼泪落下 眼泪落下 解开这个谜后眼泪落下<br>
+    眼泪落下 眼泪落下 仅仅是对对你落下眼泪
   </p>
 </div>
 

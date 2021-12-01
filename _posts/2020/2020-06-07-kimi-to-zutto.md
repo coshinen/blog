@@ -92,7 +92,7 @@ tags: Lyrics Conan
     虽然忘记了笑的方法 眼泪都干涸了<br>
     逝去了 才懂得<br>
     留在那里的是 数不清的<br>
-    oh glory days, oh glory days<br>
+    哦灿烂的日子，哦灿烂的日子<br>
     <br>
     「谢谢你 像闪耀的星星一样<br>
     永远 在我身旁」<br>

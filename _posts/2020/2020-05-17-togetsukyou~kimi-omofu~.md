@@ -68,7 +68,7 @@ tags: Lyrics Conan
     你重叠 于相互依偎的两个人<br>
     对无色的风 驰骋思念<br>
     触摸过的手的温暖 现在也…<br>
-    Stop 请让时间停止<br>
+    停止 请让时间停止<br>
     <br>
     是的 不管什么时候<br>
     不会忘记 你的话语<br>
@@ -79,14 +79,14 @@ tags: Lyrics Conan
     染成唐红色的渡月桥<br>
     期待 被引导的日子<br>
     对河流注入祈祷<br>
-    I've been thinking about you<br>
-    I've been thinking about you<br>
+    我一直在想你<br>
+    我一直在想你<br>
     我的心 永远 在你的身边<br>
     <br>
     古时的景色 没有改变<br>
     现在 就映在这双眼睛<br>
     越过 不断变化的季节<br>
-    Stock 还记得吗？<br>
+    老一套 还记得吗？<br>
     <br>
     你说 什么时候<br>
     才能再次 相见呢<br>
@@ -97,8 +97,8 @@ tags: Lyrics Conan
     唐红把水包围的时候<br>
     和你的想法 相连<br>
     在河流中注入祈祷<br>
-    I've been thinking about you<br>
-    I've been thinking about you<br>
+    我一直在想你<br>
+    我一直在想你<br>
     总是 在寻找着 你<br>
     <br>
     和你一起的话 连不安<br>
@@ -109,8 +109,8 @@ tags: Lyrics Conan
     连唐红色的枫叶们<br>
     都倾诉 炽热的思念<br>
     轻轻摇曳歌唱着<br>
-    I've been thinking about you<br>
-    I've been thinking about you<br>
+    我一直在想你<br>
+    我一直在想你<br>
     总是 总是 想念 你
   </p>
 </div>
