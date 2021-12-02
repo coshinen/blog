@@ -44,6 +44,7 @@ excerpt: Here are some books that renew my spirit or reclaim my life.
 > * 血殇：埃博拉的过去、现在和未来，[美] Richard Preston
 > * 血疫：埃博拉的故事，[美] Richard Preston
 > * 最后的熊猫，[美] George B. Schaller
+> * 知晓我姓名，[美] Chanel Miller
 > * 黑箱：日本之耻，[日] 伊藤詩織
 > * 谁“害”了北大学生，[中] 群言
 
