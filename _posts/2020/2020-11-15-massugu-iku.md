@@ -72,10 +72,10 @@ tags: Lyrics Conan
     猛然地笔直越过<br>
     <br>
     两人的视线相对<br>
-    目标是银河的 own mystery<br>
+    目标是银河的 自身的神秘<br>
     <br>
     两人的视线相对<br>
-    抓住的是宇宙的 own mystery
+    抓住的是宇宙的 自身的神秘
   </p>
 </div>
 

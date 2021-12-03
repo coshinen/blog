@@ -57,8 +57,8 @@ tags: Lyrics
 <div class="translation">
   <h2>明明就在你身边</h2>
   <p>
-    Summer night 目送好几辆车后<br>
-    在间断的空隙 Good night kiss<br>
+    夏日夜晚 目送好几辆车后<br>
+    在间断的空隙 晚安吻<br>
     总觉得偶然宛如 命运的那个时候<br>
     玻璃杯里的冰 咔啦咔啦地 晃着<br>
     在往常的餐厅<br>
@@ -68,14 +68,14 @@ tags: Lyrics
     就不会绕远路<br>
     <br>
     明明就在你身边<br>
-    不沉默地 Lovin' you<br>
+    不沉默地 爱着你<br>
     像相遇时那样 热情激烈<br>
     感受着 你的汗水<br>
-    像盛夏一样 Hold me tight<br>
+    像盛夏一样 抱紧我<br>
     请不要放开 这双手<br>
     请抓住 这份爱<br>
     <br>
-    Summer love 虽然梦想不同<br>
+    夏日爱情 虽然梦不同<br>
     但喜欢的话 未来也会改变<br>
     无论多么伤心的谣言 都会烟消云散<br>
     相信一心一意的眼睛<br>
@@ -83,17 +83,17 @@ tags: Lyrics
     两个人寻找着 出口<br>
     <br>
     明明就在你身边<br>
-    不睡觉地 Lovin' you<br>
+    不睡觉地 爱着你<br>
     感觉比朋友还遥远啊<br>
-    在渐渐分离的心里 强烈加速 Ride away<br>
+    在渐渐分离的心里 强烈加速 驶离<br>
     注视到 颤抖<br>
     想再一次 试着开始…<br>
     <br>
     明明就在你身边<br>
-    不沉默地 Lovin' you<br>
+    不沉默地 爱着你<br>
     像相遇时那样 热情激烈<br>
     感受着 你的汗水<br>
-    像盛夏一样 Hold me tight<br>
+    像盛夏一样 抱紧我<br>
     请不要放开 这双手<br>
     请抓住 这份爱
   </p>

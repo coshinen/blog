@@ -84,8 +84,8 @@ tags: Lyrics
 <div class="translation">
   <h2>欲望 -热情-</h2>
   <p>
-    Get up, Get up, Get up, Get up<br>
-    Burning love<br>
+    起来，起来，起来，起来<br>
+    燃烧的爱<br>
     <br>
     也会有受不了的<br>
     无聊的时候啊<br>
@@ -102,15 +102,15 @@ tags: Lyrics
     看不见爱的时代的<br>
     恋人们啊<br>
     <br>
-    头向前地猛然坠落 desire<br>
-    如火焰般燃烧 desire<br>
+    渴望 头向前地猛然坠落<br>
+    渴望 如火焰般燃烧<br>
     <br>
-    恋爱也像 dance, dance, dance, dance 那样<br>
+    恋爱也像 跳舞，跳舞，跳舞，跳舞 那样<br>
     竟然不能投入啊<br>
     好寂寞<br>
     <br>
-    Get up, Get up, Get up, Get up<br>
-    Burning heart<br>
+    起来，起来，起来，起来<br>
+    燃烧的爱<br>
     <br>
     撒手啊<br>
     很抱歉 不想被你亲<br>
@@ -127,29 +127,29 @@ tags: Lyrics
     连丑闻<br>
     都是时代的狂热啊<br>
     <br>
-    相互碰撞后轮回的 desire<br>
-    抓住星星碎片的 desire<br>
+    相互碰撞后轮回的 欲望<br>
+    抓住星星碎片的 欲望<br>
     <br>
     梦就是这样啊<br>
     在梦见前醒来的话<br>
     便什么也不成<br>
     <br>
-    Get up, Get up, Get up, Get up<br>
-    burning love<br>
+    起来，起来，起来，起来<br>
+    燃烧的爱<br>
     <br>
-    头向前地猛然坠落 desire<br>
-    如火焰般燃烧 desire<br>
+    渴望 头向前地猛然坠落<br>
+    渴望 如火焰般燃烧<br>
     <br>
-    恋爱也像 dance, dance, dance, dance 那样<br>
+    恋爱也像 跳舞，跳舞，跳舞，跳舞 那样<br>
     竟然不能投入啊<br>
     好寂寞<br>
     <br>
-    Get up, Get up, Get up, Get up<br>
-    Burning heart<br>
+    起来，起来，起来，起来<br>
+    燃烧的爱<br>
     <br>
-    Get up, Get up, Get up, Get up<br>
-    Get up, Get up, Get up, Get up<br>
-    Burning love
+    起来，起来，起来，起来<br>
+    起来，起来，起来，起来<br>
+    燃烧的爱
   </p>
 </div>
 

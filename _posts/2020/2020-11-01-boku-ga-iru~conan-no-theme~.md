@@ -67,7 +67,7 @@ tags: Lyrics Conan
     我就在你身边<br>
     柯南<br>
     <br>
-    LA LA LA...... 柯南
+    啦啦啦…… 柯南
   </p>
 </div>
 

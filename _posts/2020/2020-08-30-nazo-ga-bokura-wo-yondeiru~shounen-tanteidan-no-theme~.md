@@ -71,7 +71,7 @@ tags: Lyrics Conan
     稍微 提示一下！就<br>
     不会有 意外的事？<br>
     <br>
-    So So So 果然主意就<br>
+    对对对 果然主意就<br>
     以这个少年侦探团<br>
     决定啦！<br>
     <br>
@@ -82,7 +82,7 @@ tags: Lyrics Conan
     小小的 大人 已经<br>
     能看到 看不到的真相哟<br>
     <br>
-    So So So 果然很灵活<br>
+    对对对 果然很灵活<br>
     请交给我们吧<br>
     太好啦吧！<br>
     <br>
