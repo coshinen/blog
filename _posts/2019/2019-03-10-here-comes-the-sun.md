@@ -91,8 +91,6 @@ tags: Lyrics
   </p>
 </div>
 
-最早听到这首歌是动画电影「Bee Movie」中的主题曲，Sheryl Crow 的翻唱版。
-
 ## 参考链接
 
 * [The Beatles – Here Comes the Sun Lyrics \| Genius Lyrics](https://genius.com/The-beatles-here-comes-the-sun-lyrics){:target="_blank"}

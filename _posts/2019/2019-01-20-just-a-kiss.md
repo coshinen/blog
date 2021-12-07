@@ -113,8 +113,6 @@ tags: Lyrics
   </p>
 </div>
 
-MV 是一个小故事，很有意思。
-
 ## 参考链接
 
 * [Lady Antebellum – Just a Kiss Lyrics \| Genius Lyrics](https://genius.com/Lady-antebellum-just-a-kiss-lyrics){:target="_blank"}

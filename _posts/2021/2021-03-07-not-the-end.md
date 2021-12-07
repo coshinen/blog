@@ -90,19 +90,19 @@ tags: Lyrics
 <div class="translation">
   <h2>不是结局</h2>
   <p>
-    Tell me this is Not the End<br>
-    This world is chained<br>
+    告诉我这不是结局<br>
+    这世界被困住了<br>
     也不发出声响<br>
     就把我夺走<br>
     就算世界一点一点地 崩坏<br>
     那一天的约定 也不会改变就在这里<br>
     <br>
-    When the sky is falling down<br>
-    My heart just starts to drown<br>
+    当天空开始坠落<br>
+    我的心便开始溺死<br>
     请告诉我这个梦的结局<br>
     <br>
-    With my eyes tightly closed<br>
-    Praying with my fears exposed<br>
+    随着我的双眼紧闭<br>
+    带着我露出的恐惧祈祷<br>
     这个城市让我感到孤独<br>
     <br>
     没有月亮的夜晚 消去冬天的声音<br>
@@ -110,24 +110,24 @@ tags: Lyrics
     直到昨天还存在的 温暖的气息<br>
     虚幻地不断消散 时间却无法停止<br>
     <br>
-    Tell me this is Not the End<br>
-    This world is chained<br>
+    告诉我这不是结局<br>
+    这世界被困住了<br>
     也不发出声响<br>
     就把我夺走<br>
     只有一个愿望 会实现的话<br>
     就算害怕也想守护 你和温柔的明天<br>
     <br>
-    Is everything a lie lie lie 谎言一样<br>
-    and I cry cry cry 喊出来<br>
-    Don't say bye bye bye 这双手<br>
+    一切都是谎言 谎言 谎言 像谎言一样<br>
+    我哭喊 哭喊 哭喊 喊出来<br>
+    不要说再见 再见 再见 这双手<br>
     为了连接在一起<br>
-    Is everything a lie lie lie 谎言一样<br>
-    and I cry cry cry 喊出来<br>
-    Don't say bye bye bye 两个人<br>
+    一切都是谎言 谎言 谎言 像谎言一样<br>
+    我哭喊 哭喊 哭喊 喊出来<br>
+    不要说再见 再见 再见 两个人<br>
     迷失在这条路上<br>
     <br>
-    Is there something wrong with me?<br>
-    Or is it the world loosing the key?<br>
+    是我有什么毛病吗？<br>
+    还是这世界正在失去焦点？<br>
     好想见你 一个人的夜晚很长<br>
     <br>
     晃动两个小小的 火焰<br>
@@ -135,8 +135,8 @@ tags: Lyrics
     昨天的对不起 和明天的谢谢<br>
     总有一天在燃烧殆尽 消失之前<br>
     <br>
-    Tell me this is Not the End<br>
-    This world is chained<br>
+    告诉我这不是结局<br>
+    这世界被困住了<br>
     也不发出声响<br>
     就把我夺走<br>
     只有一个愿望 会实现的话<br>
@@ -146,21 +146,21 @@ tags: Lyrics
     相信吧 和那一天 相同味道的<br>
     风儿吹拂 回响<br>
     <br>
-    Tell me this is Not the End<br>
-    This world is chained<br>
+    告诉我这不是结局<br>
+    这世界被困住了<br>
     也不发出声响<br>
     就把我夺走<br>
     每次流眼泪 都注意到了<br>
     就算这个世界 改变了<br>
     还是有不变的东西<br>
     <br>
-    Is everything a lie lie lie 谎言一样<br>
-    and I cry cry cry 喊出来<br>
-    Don't say bye bye bye 这双手<br>
+    一切都是谎言 谎言 谎言 像谎言一样<br>
+    我哭喊 哭喊 哭喊 喊出来<br>
+    不要说再见 再见 再见 这双手<br>
     为了连接在一起<br>
-    Is everything a lie lie lie 谎言一样<br>
-    and I cry cry cry 喊出来<br>
-    Don't say bye bye bye 两个人<br>
+    一切都是谎言 谎言 谎言 像谎言一样<br>
+    我哭喊 哭喊 哭喊 喊出来<br>
+    不要说再见 再见 再见 两个人<br>
     迷失在这条路上
   </p>
 </div>
