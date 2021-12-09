@@ -43,8 +43,6 @@ tags: Lyrics Garnet
   </p>
 </div>
 
-这首诗歌是由苏格兰诗人「Robert Burns」根据当地民歌记录下的，原文是古苏格兰方言。
-
 「Auld Lang Syne」直译为「old long since」或「days gone by」，大意为逝去已久的日子，多译为“友谊地久天长”，经常在平安夜演唱。
 
 ## 参考链接

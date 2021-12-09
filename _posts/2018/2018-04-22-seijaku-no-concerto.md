@@ -69,10 +69,6 @@ tags: Lyrics Garnet
   </p>
 </div>
 
-阿兰胡埃斯（Aranjuez）是西班牙一个地方。
-
-阿兰胡埃斯协奏曲（Concierto de Aranjuez）是西班牙盲人作曲家「Joaquin Rodrigo」创作的吉他曲。
-
 ## 参考链接
 
 * [GARNET CROW 静寂のconcerto 歌詞 - 歌ネット](https://www.uta-net.com/song/122963/){:target="_blank"}

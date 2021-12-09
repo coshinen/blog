@@ -61,7 +61,7 @@ tags: Lyrics
     哦，你可以舞动，你可以摇摆<br>
     享受你生命的时光<br>
     哦，看那女孩，看那一幕<br>
-    欣赏这舞后<br>
+    欣赏(appreciating)这舞后<br>
     <br>
     周五晚上灯光昏暗<br>
     寻找要去的地方<br>
@@ -100,8 +100,6 @@ tags: Lyrics
     欣赏这舞后
   </p>
 </div>
-
-「digging」是欣赏（appreciating）的意思，而「dig in」没有意义。
 
 ## 参考链接
 

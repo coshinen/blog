@@ -83,8 +83,6 @@ tags: Lyrics Garnet
   </p>
 </div>
 
-这首是 GARNET CROW 留下的最后一曲，包含了对大家 ~~15~~ 13 年间的感谢之情，为 ~~15~~ 13 年的音乐活动划上了完美的句号。
-
 ## 参考链接
 
 * [GARNET CROW バタフライ・ノット 歌詞 - 歌ネット](https://www.uta-net.com/song/153420/){:target="_blank"}

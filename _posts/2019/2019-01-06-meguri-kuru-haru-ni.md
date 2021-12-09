@@ -119,10 +119,6 @@ tags: Lyrics Garnet
   </p>
 </div>
 
-平假名「ゐ」是古语假名，位于日语五十音图「わ」行「い」段，在现代假名中已弃用。
-
-「ゐる」对应现代语的「居る」。
-
 ## 参考链接
 
 * [GARNET CROW 巡り来る春に 歌詞 - 歌ネット](https://www.uta-net.com/song/20131/){:target="_blank"}

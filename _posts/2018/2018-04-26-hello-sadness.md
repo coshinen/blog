@@ -115,8 +115,6 @@ tags: Lyrics Garnet
   </p>
 </div>
 
-莎岗指的是法国女作家「Françoise Sagan（弗兰西丝·莎岗）」，代表作「Bonjour tristesse（日安忧郁）」。
-
 ## 参考链接
 
 * [GARNET CROW Hello Sadness 歌詞 - 歌ネット](https://www.uta-net.com/song/85223/){:target="_blank"}

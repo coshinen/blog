@@ -99,8 +99,6 @@ tags: Lyrics Conan
   </p>
 </div>
 
-花御堂是用花装饰的小佛堂。
-
 ## 参考链接
 
 * [倉木麻衣 Time after time 〜花舞う街で〜 歌詞 - 歌ネット](https://www.uta-net.com/song/16899/){:target="_blank"}

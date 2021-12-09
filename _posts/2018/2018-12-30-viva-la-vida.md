@@ -117,8 +117,6 @@ tags: Lyrics
   </p>
 </div>
 
-封面是法国画家欧仁·德拉克罗瓦为纪念 1830 年法国七月革命创作的一幅名为「La Liberté guidant le peuple（自由引导人民）」的油画。
-
 ## 参考链接
 
 * [Coldplay – Viva la Vida Lyrics \| Genius Lyrics](https://genius.com/Coldplay-viva-la-vida-lyrics){:target="_blank"}

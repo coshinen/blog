@@ -103,8 +103,6 @@ tags: Lyrics Garnet
   </p>
 </div>
 
-伦勃朗（Rembrandt）是 17 世纪荷兰黄金时代的画家，代表作有《夜巡》、《月亮与狩猎女神》等。
-
 ## 参考链接
 
 * [GARNET CROW call my name 歌詞 - 歌ネット](https://www.uta-net.com/song/14411/){:target="_blank"}
