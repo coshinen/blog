@@ -219,6 +219,7 @@ excerpt: Here are some books that renew my spirit or reclaim my life.
 > ### 操作系统
 > 
 > * [Linux: a Portable Operating System](https://www.cs.helsinki.fi/u/kutvonen/index_files/linus.pdf){:target="_blank"}，[芬] [Linus Torvalds](https://www.cs.helsinki.fi/u/torvalds/){:target="_blank"}
+> * [The UNIX Time-Sharing System](https://pdos.csail.mit.edu/6.828/2004/readings/ritchie74unix.pdf){:target="_blank"}，[美] Dennis M. Ritchie and Ken Thompson
 
 > ### 程序人生
 > 
