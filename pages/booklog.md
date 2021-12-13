@@ -138,6 +138,7 @@ excerpt: Here are some books that renew my spirit or reclaim my life.
 > * 人性的弱点，[美] Dale Carnegie
 > * 乌合之众：大众心理研究，[法] Gustave Le Bon
 > * 亲密关系，[美] Rowland S. Miller, Daniel Perlman
+> * 爱的艺术，[美] Erich Fromm
 > * 少有人走的路：心智成熟的旅程，[美] M. Scott peck
 > * 爱是一种选择：不再讨好别人，拖累自己，[美] Robert Hemfelt, Frank Minirth, Paul Meier
 > * 情感勒索，[美] Susan Forward, PH. D. Donna Frazier
