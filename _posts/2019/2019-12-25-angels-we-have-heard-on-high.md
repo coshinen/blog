@@ -61,10 +61,6 @@ tags: Lyrics Garnet
   </p>
 </div>
 
-「Gloria in excelsis Deo」是拉丁语，意思是荣耀归于至高的上帝（Glory to God in the highest）。
-
-伯利恒（Bethlehem），又叫白冷是巴勒斯坦南部的一个小城市，希伯来语原意为面包之家，是耶稣的出生地。
-
 ## 参考链接
 
 * [Christmas Songs – Angels We Have Heard on High Lyrics \| Genius Lyrics](https://genius.com/Christmas-songs-angels-we-have-heard-on-high-lyrics){:target="_blank"}

@@ -43,8 +43,6 @@ tags: Lyrics Garnet
   </p>
 </div>
 
-「Auld Lang Syne」直译为「old long since」或「days gone by」，大意为逝去已久的日子，多译为“友谊地久天长”，经常在平安夜演唱。
-
 ## 参考链接
 
 * [Lea Michele – Auld Lang Syne Lyrics \| Genius Lyrics](https://genius.com/Lea-michele-auld-lang-syne-lyrics){:target="_blank"}

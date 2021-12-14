@@ -62,7 +62,7 @@ tags: Lyrics Garnet
 <div class="translation">
   <h2>爱是一只鸟儿</h2>
   <p>
-    黄昏和这个街道的气味<br>
+    黄昏和这个街道的气息<br>
     沾染了放弃和希望<br>
     在雨中低着头<br>
     少年的脚步<br>

@@ -141,8 +141,6 @@ tags: Lyrics Garnet
   </p>
 </div>
 
-「ひらう」是大阪方言，对应标准语的「拾(ひろ)う」。
-
 ## 参考链接
 
 * [GARNET CROW Holding you, and swinging 歌詞 - 歌ネット](https://www.uta-net.com/song/20141/){:target="_blank"}

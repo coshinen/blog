@@ -141,10 +141,6 @@ tags: Lyrics Garnet
   </p>
 </div>
 
-「おセンチ」表示稍微有点伤感的表现。
-
-「Hallelujah」是希伯来语，意思是赞美你，耶和华（Praise you, Jehovah）。
-
 ## 参考链接
 
 * [GARNET CROW Fall in Life 〜Hallelujah〜 歌詞 - 歌ネット](https://www.uta-net.com/song/85218/){:target="_blank"}

@@ -99,8 +99,6 @@ tags: Lyrics Garnet
   </p>
 </div>
 
-「見ゆる」同「見える」，表示能看见。
-
 ## 参考链接
 
 * [GARNET CROW 夕月夜 歌詞 - 歌ネット](https://www.uta-net.com/song/25895/){:target="_blank"}
