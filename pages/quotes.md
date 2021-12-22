@@ -27,9 +27,6 @@ excerpt: Here are my favorite quotes from someones that inspire me or make me la
 > * It's very attractive to the libertarian viewpoint if we can explain it
 > properly. I'm better with code than with words though.
 
-> Carl Jung, [C.G. Jung Letters, Vol. 1: 1906-1950, Page 33](https://carljungdepthpsychologysite.blog/2020/02/08/carl-jung-i-am-afraid-that-the-mere-fact-of-my-presence-takes-you-away-from-yourself/){:target="_blank"}:
-> * Who looks outside dreams; who looks inside awakes.
-
 > Benjamin Franklin, The Autobiography of Benjamin Franklin, PART THREE:
 > * This is another instance of the truth of an old maxim I had learned, which
 > says, "He that has once done you a kindness will be more ready to do you
