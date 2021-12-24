@@ -1,6 +1,6 @@
-# parallel universe
+# Paraverse
 
-Parauni is a one-size-fits-all Jekyll theme for my blog.
+Paraverse is a one-size-fits-all Jekyll theme for posts.
 It's based on Jekyll's default (and first) theme minima.
 
 ## Licenses
