@@ -28,7 +28,7 @@ permalink: /blog/
     <a href="{{ site.tag }}#{{ tag[0] }}" style="font-size:{{ size }}pt;color:#{{ color }}{{ color }}{{ color }}">{{ tag[0] }}</a>{% endfor %}
   </div>
   <div id="archive">
-    <h2 title="{{ site.posts.size }}">归档</h2>
+    <h2>归档</h2>
     <ul>{% assign count = 1 %}{% for post in site.posts %}{% assign yearmonth = post.date | date: '%Y年%m月' %}{% assign prevyearmonth = post.previous.date | date: '%Y年%m月' %}{% if yearmonth == prevyearmonth %}{% assign count = count | plus: 1 %}{% else %}
       <li><a href="{{ site.archive }}#{{ yearmonth }}">{{ yearmonth }}</a>（{{ count }}）</li>{% assign count = 1 %}{% endif %}{% endfor %}
     </ul>
