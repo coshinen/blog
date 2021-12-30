@@ -130,6 +130,7 @@ excerpt: Here are some books that renew my spirit or reclaim my life.
 > * 自我边界：告别“糨糊”逻辑，科学地坚持自己，[澳] George Dieter
 > * 我的情绪为何总被他人左右，[美] Albert Ellis, Arthur Lange
 > * 蛤蟆先生去看心理医生，[英] Robert de Board
+> * 正午之魔，[英] Andrew Solomon
 > * 我与你，[德] Martin Buber
 > * 理解人性，[奥地利] Alfred Adler
 > * 自卑与超越，[奥地利] Alfred Adler
