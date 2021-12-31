@@ -1,60 +1,10 @@
     <footer class="site-footer">
       <div class="wrapper">
-        <h2 class="footer-heading">
-          <a href="https://ganekuro.github.io" title="深紅の鴉非公式サイト" target="_blank">
-            <svg width="20" height="16" viewBox="0 0 640 512" fill="darkred">
-              <use xlink:href="/assets/icons/misc.svg#crow"></use>
-            </svg>
-          </a>
-          <a href="{{ site.quotes }}">{% unless page.url contains site.blog %}{{ site.quote }}{% else %}{{ site.bquote }}{% endunless %}</a>
-        </h2>
-        <div class="footer-col-wrapper">
-          <div class="footer-col footer-col-1">
-            <ul class="contact-list">
-              <li>
-                <a href="https://github.com/{{ site.author.github }}" target="_blank">
-                  <svg class="icon">
-                    <use xlink:href="/assets/icons/misc.svg#github"></use>
-                  </svg>
-                  <span>{{ site.author.github }}</span>
-                </a>
-              </li>
-              <li>
-                <a href="mailto:{{ site.author.e-mail }}">
-                  <svg class="icon" viewBox="0 0 512 512">
-                    <use xlink:href="/assets/icons/misc.svg#envelope"></use>
-                  </svg>
-                  <span>{{ site.author.e-mail }}</span>
-                </a>
-              </li>
-            </ul>
-          </div>
-          <div class="footer-col footer-col-2">
-            <ul class="social-media-list">
-              <li>
-                <a href="/pubkey.asc" title="Fingerprint: DC05599C94889C12A66FD64C794E47B4762431BA">
-                  <svg class="icon" viewBox="0 0 448 512">
-                    <use xlink:href="/assets/icons/misc.svg#lock"></use>
-                  </svg>
-                  <span>PGPPKH</span>
-                </a>
-              </li>
-              <li>
-                <a href="{{ site.booklog }}">
-                  <svg class="icon" viewBox="0 0 448 512">
-                    <use xlink:href="/assets/icons/misc.svg#book"></use>
-                  </svg>
-                  <span>Booklog</span>
-                </a>
-              </li>
-            </ul>
-          </div>
-          <div class="footer-col footer-col-3">
-            <p>
-              {% unless page.url contains site.blog %}{{ site.description }}{% else %}{{ site.description | replace_first: site.title, site.subtitle }}{% endunless %}
-              &copy;{{ site.time | date: " %Y " }}{{ site.author.bname }}.
-            </p>
-          </div>
+        <div class="site-copyright">
+          &copy;{{ site.time | date: " %Y " }}{{ site.author.bname }}.
+        </div>
+        <div class="site-description">
+          {{ site.description }}
         </div>
       </div>
     </footer>

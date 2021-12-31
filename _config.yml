@@ -13,12 +13,11 @@ author:
   e-mail: encoshin@mailo.com
 name: 平行宇宙
 title: parallel universe
-subtitle: blog of Coshin
 blogtitle: Coshin's Blog
 blogname: 袁子晨的网络日志
 hostname: encoshin.github.io
 description: >- # this means to ignore newlines until "quote:"
-  Welcome to the parallel universe! Hosted from GitHub. Powered by Jekyll.
+  Hosted from GitHub. Powered by Jekyll.
 quote: 流されていくのは簡単だけれど、変わらないでいることっていうのは一番難しい。
 bquote: 無理は一番の”退屈しのぎ”だ。
 
