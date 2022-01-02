@@ -8,18 +8,17 @@
 # Site settings
 author:
   name: 袁子晨
-  bname: Coshin En
+  nickname: Coshin
   github: encoshin
   e-mail: encoshin@mailo.com
 name: 平行宇宙
-title: parallel universe
+title: Paraverse
 blogtitle: Coshin's Blog
 blogname: 袁子晨的网络日志
 hostname: encoshin.github.io
 description: >- # this means to ignore newlines until "quote:"
   Hosted from GitHub. Powered by Jekyll.
 quote: 流されていくのは簡単だけれど、変わらないでいることっていうのは一番難しい。
-bquote: 無理は一番の”退屈しのぎ”だ。
 
 # Page urls
 booklog:  "/booklog.html"
