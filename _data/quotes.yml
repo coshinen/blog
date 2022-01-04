@@ -1,0 +1,68 @@
+# Here are my favorite quotes from someones that inspire me or make me laugh.
+- name: Paul Graham
+  from: What You'll Wish You'd Known
+  link: http://www.paulgraham.com/hs.html
+  quote: Fouls happen. The thing to do when you get fouled is not to lose your cool. Just keep playing.
+
+- name: Steve Jobs
+  from: Text of Steve Jobs' Commencement address (2005)
+  link: https://news.stanford.edu/2005/06/14/jobs-061505
+  quote: Stay Hungry. Stay Foolish.
+
+- name: Linus Torvalds
+  from: Re SCO, "thread creation is about a thousand times faster than on native Linux"
+  link: https://lkml.org/lkml/2000/8/25/132
+  quote: Talk is cheap. Show me the code.
+
+- name: Satoshi Nakamoto
+  from: Bitcoin P2P e-cash paper
+  link: https://www.metzdowd.com/pipermail/cryptography/2008-November/014853.html
+  quote: It's very attractive to the libertarian viewpoint if we can explain it properly. I'm better with code than with words though.
+
+- name: Benjamin Franklin
+  from: The Autobiography of Benjamin Franklin, PART THREE
+  quote: "He that has once done you a kindness will be more ready to do you another, than he whom you yourself have obliged."
+
+- name: George Orwell
+  from: As I Please 1943-1945, Benefit of Clergy, Some Notes on Salvador Dali
+  link: https://www.orwell.ru/library/reviews/dali/english/e_dali
+  quote: Autobiography is only to be trusted when it reveals something disgraceful. A man who gives a good account of himself is probably lying, since any life when viewed from the inside is simply a series of defeats.
+
+- name: Egaeus
+  from: Short Fiction, Berenice
+  link: https://standardebooks.org/ebooks/edgar-allan-poe/short-fiction/text/berenice
+  quote: But as, in ethics, evil is a consequence of good, so, in fact, out of joy is sorrow born. Either the memory of past bliss is the anguish of today, or the agonies which are, have their origin in the ecstasies which might have been.
+
+- name: 加賀恭一郎
+  from: 新参者 第2話 料亭の小僧
+  quote: 嘘には三種類ある。一、自分を守る嘘。二、他人を欺く嘘。三、他人を庇う嘘だ。
+
+- name: 倉沢さつき(和辻摩子)
+  from: Wの悲劇 第二幕 資産2000億の女帝
+  quote: 人は、見たいものしか見ないし、信じたいものしか…信じないですから。
+
+- name: 橘カラ(十和田幸)
+  from: サイレーン 刑事×彼女×完全悪女 第1話 完全悪女が僕の彼女を獲物にした
+  quote: 信頼を得るにはふたつ。役に立つと思われること。それと弱みをさらすこと。
+
+- name: 怨み屋
+  from: 怨み屋本舗 第八回 ハートキャッチャー
+  quote: 嘘をつかない人間なんて、どこにもいないわ。嘘をどう利用するか、それが問題なんだけよ。
+
+- name: 竜ヶ崎桃子
+  from: 下妻物語
+  quote: 人間は、大きな幸せを前にすると、急に臆病になる。幸せを勝ち取ることは、不幸に耐えることより勇気が要るの。
+
+- name: 宇佐美博人
+  from: サバイバル ウェディング 最終話 結婚か？仕事か？幸せはどっちだ！？
+  quote: 大切なのは、どんな選択をするかじゃない！自分が選択した人生を強く生きるかどうか！ただそれだけだ！
+
+- name: 宮崎駿
+  from: 終わらない人 宮崎駿
+  quote: まあ、もうオレいま世の中に合わせて生きる気ないから。
+
+- name: ソルト
+  quote: 無理は一番の”退屈しのぎ”だ。
+
+- name: 中村由利
+  quote: 流されていくのは簡単だけれど、変わらないでいることっていうのは一番難しい。

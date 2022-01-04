@@ -8,8 +8,8 @@ permalink: /
 <div class="home-right">
   <div id="profile">
     <h2>关于</h2>
-    <img src="https://avatars0.githubusercontent.com/u/29818825" alt="@{{ site.author.github }}" height="128" width="128">
-    <div id="onequote"><a href="{{ site.quotes }}">{{ site.quote }}</a></div>
+    <img src="https://avatars0.githubusercontent.com/u/29818825" alt="@{{ site.author.github }}" height="128" width="128">{% assign sum = site.data.quotes | size %}{% assign second = site.time | date: "%S" %}{% assign seed = second | modulo: sum %}
+    <div id="onequote">“{{ site.data.quotes[seed].quote }}”<br>——{{ site.data.quotes[seed].name }}</div>
     <a href="https://ganekuro.github.io" title="深紅の鴉非公式サイト" target="_blank">
       <svg width="20" height="16" viewBox="0 0 640 512" fill="darkred">
         <use xlink:href="/assets/icons/misc.svg#crow"></use>

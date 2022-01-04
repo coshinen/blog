@@ -16,13 +16,11 @@ title: Paraverse
 blogtitle: Coshin's Blog
 blogname: 袁子晨的网络日志
 hostname: encoshin.github.io
-description: >- # this means to ignore newlines until "quote:"
+description: >- # this means to ignore newlines until "booklog:"
   Hosted from GitHub. Powered by Jekyll.
-quote: 流されていくのは簡単だけれど、変わらないでいることっていうのは一番難しい。
 
 # Page urls
 booklog:  "/booklog.html"
-quotes:   "/quotes.html"
 blog:     "/blog/"
 archive:  "/blog/archive.html"
 category: "/blog/category.html"
