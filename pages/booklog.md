@@ -33,9 +33,7 @@ excerpt: Here are some books that renew my spirit or reclaim my life.
 > * 王小波作品集，[中] 王小波
 > * 暗时间，[中] [刘未鹏](https://mindhacks.cn){:target="_blank"}
 > * 黑客与画家：硅谷创业之父 Paul Graham 文集，[美] [Paul Graham](http://www.paulgraham.com){:target="_blank"}
-> * [前方的路](https://www.ruanyifeng.com/road/){:target="_blank"}，[中] 阮一峰
-> * [未来世界的幸存者](https://www.ruanyifeng.com/survivor/){:target="_blank"}，[中] 阮一峰
-> * 如何变得有思想：阮一峰博客文集，[中] [阮一峰](https://www.ruanyifeng.com/blog/){:target="_blank"}
+> * [阮一峰博客文集](https://www.ruanyifeng.com/blog/){:target="_blank"}，[中] [阮一峰](https://www.ruanyifeng.com){:target="_blank"}
 > * [新生——七年就是一辈子](https://b.xinshengdaxue.com){:target="_blank"}，[中] 李笑来
 
 > ### 纪实
