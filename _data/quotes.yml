@@ -1,22 +1,22 @@
 # Here are my favorite quotes from someones that inspire me or make me laugh.
 - name: Paul Graham
   from: What You'll Wish You'd Known
-  link: http://www.paulgraham.com/hs.html
+  href: http://www.paulgraham.com/hs.html
   quote: Fouls happen. The thing to do when you get fouled is not to lose your cool. Just keep playing.
 
 - name: Steve Jobs
   from: Text of Steve Jobs' Commencement address (2005)
-  link: https://news.stanford.edu/2005/06/14/jobs-061505
+  href: https://news.stanford.edu/2005/06/14/jobs-061505
   quote: Stay Hungry. Stay Foolish.
 
 - name: Linus Torvalds
   from: Re SCO, "thread creation is about a thousand times faster than on native Linux"
-  link: https://lkml.org/lkml/2000/8/25/132
+  href: https://lkml.org/lkml/2000/8/25/132
   quote: Talk is cheap. Show me the code.
 
 - name: Satoshi Nakamoto
   from: Bitcoin P2P e-cash paper
-  link: https://www.metzdowd.com/pipermail/cryptography/2008-November/014853.html
+  href: https://www.metzdowd.com/pipermail/cryptography/2008-November/014853.html
   quote: It's very attractive to the libertarian viewpoint if we can explain it properly. I'm better with code than with words though.
 
 - name: Benjamin Franklin
@@ -25,12 +25,12 @@
 
 - name: George Orwell
   from: As I Please 1943-1945, Benefit of Clergy, Some Notes on Salvador Dali
-  link: https://www.orwell.ru/library/reviews/dali/english/e_dali
+  href: https://www.orwell.ru/library/reviews/dali/english/e_dali
   quote: Autobiography is only to be trusted when it reveals something disgraceful. A man who gives a good account of himself is probably lying, since any life when viewed from the inside is simply a series of defeats.
 
 - name: Egaeus
   from: Short Fiction, Berenice
-  link: https://standardebooks.org/ebooks/edgar-allan-poe/short-fiction/text/berenice
+  href: https://standardebooks.org/ebooks/edgar-allan-poe/short-fiction/text/berenice
   quote: But as, in ethics, evil is a consequence of good, so, in fact, out of joy is sorrow born. Either the memory of past bliss is the anguish of today, or the agonies which are, have their origin in the ecstasies which might have been.
 
 - name: 加賀恭一郎
@@ -62,7 +62,9 @@
   quote: まあ、もうオレいま世の中に合わせて生きる気ないから。
 
 - name: ソルト
+  from: マジすか学園5
   quote: 無理は一番の”退屈しのぎ”だ。
 
 - name: 中村由利
+  from: GARNET CROW "le 5 ème anniversaire" L'Histoire de 2000 à 2005
   quote: 流されていくのは簡単だけれど、変わらないでいることっていうのは一番難しい。

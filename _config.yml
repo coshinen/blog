@@ -29,6 +29,7 @@ tag:      "/blog/tags.html"
 # Where things are
 source      : .
 destination : ./_site
+data_dir    : _data
 layouts_dir : _layouts
 includes_dir: _includes
 sass:
