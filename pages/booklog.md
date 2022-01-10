@@ -124,6 +124,7 @@ excerpt: Here are some books that renew my spirit or reclaim my life.
 > * 七个心理寓言，[中] 武志红
 > * 为何家会伤人——揭示家庭中的心理真相，[中] [武志红](http://blog.sina.com.cn/wuzii){:target="_blank"}
 > * 解读“疯狂”——热点话题人物的心理分析，[中] 武志红
+> * 心灵的面具：101 种心理防御，[美] Jerome S. Blackman
 > * 煤气灯效应：如何认清并摆脱别人对你生活的隐性控制，[美] Robin Stern
 > * 自我边界：告别“糨糊”逻辑，科学地坚持自己，[澳] George Dieter
 > * 我的情绪为何总被他人左右，[美] Albert Ellis, Arthur Lange
