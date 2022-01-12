@@ -13,7 +13,7 @@ permalink: /
       “{{ site.data.quotes[seed].quote }}”<br>
       <div id="author">——{{ site.data.quotes[seed].name }}</div>{% if site.data.quotes[seed].href %}
       <a href="{{ site.data.quotes[seed].href }}" target="_blank">
-        <svg class="icon" viewBox="0 0 512 512">
+        <svg class="icon" viewBox="0 0 16 16">
           <use xlink:href="/assets/icons/misc.svg#link"></use>
         </svg>
       </a>{% endif %}
@@ -28,7 +28,7 @@ permalink: /
       <li>
         <a href="mailto:{{ site.author.e-mail }}">Email</a>
         <a href="/pubkey.asc" title="PGP public key fingerprint: DC05599C94889C12A66FD64C794E47B4762431BA">
-          <svg class="icon" viewBox="0 0 512 512">
+          <svg class="icon" viewBox="0 0 16 16">
             <use xlink:href="/assets/icons/misc.svg#pubkey"></use>
           </svg>
         </a>
