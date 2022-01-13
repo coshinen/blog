@@ -1,53 +1,62 @@
 # Here are my favorite quotes from someones that inspire me or make me laugh.
 - name: Paul Graham
   from: What You'll Wish You'd Known
-  href: http://www.paulgraham.com/hs.html
+  link: http://www.paulgraham.com/hs.html
   quote: Fouls happen. The thing to do when you get fouled is not to lose your cool. Just keep playing.
 
 - name: Steve Jobs
   from: Text of Steve Jobs' Commencement address (2005)
-  href: https://news.stanford.edu/2005/06/14/jobs-061505
+  link: https://news.stanford.edu/2005/06/14/jobs-061505
   quote: Stay Hungry. Stay Foolish.
 
 - name: Linus Torvalds
-  from: Re SCO, "thread creation is about a thousand times faster than on native Linux"
-  href: https://lkml.org/lkml/2000/8/25/132
+  from: thread creation is about a thousand times faster than on native Linux
+  link: https://lkml.org/lkml/2000/8/25/132
   quote: Talk is cheap. Show me the code.
 
 - name: Satoshi Nakamoto
   from: Bitcoin P2P e-cash paper
-  href: https://www.metzdowd.com/pipermail/cryptography/2008-November/014853.html
+  link: https://www.metzdowd.com/pipermail/cryptography/2008-November/014853.html
   quote: It's very attractive to the libertarian viewpoint if we can explain it properly. I'm better with code than with words though.
-
-- name: Benjamin Franklin
-  from: The Autobiography of Benjamin Franklin, PART THREE
-  quote: "He that has once done you a kindness will be more ready to do you another, than he whom you yourself have obliged."
 
 - name: George Orwell
   from: As I Please 1943-1945, Benefit of Clergy, Some Notes on Salvador Dali
-  href: https://www.orwell.ru/library/reviews/dali/english/e_dali
-  quote: Autobiography is only to be trusted when it reveals something disgraceful. A man who gives a good account of himself is probably lying, since any life when viewed from the inside is simply a series of defeats.
+  link: https://www.orwell.ru/library/reviews/dali/english/e_dali
+  quote: A man who gives a good account of himself is probably lying, since any life when viewed from the inside is simply a series of defeats.
 
-- name: Egaeus
-  from: Short Fiction, Berenice
-  href: https://standardebooks.org/ebooks/edgar-allan-poe/short-fiction/text/berenice
-  quote: But as, in ethics, evil is a consequence of good, so, in fact, out of joy is sorrow born. Either the memory of past bliss is the anguish of today, or the agonies which are, have their origin in the ecstasies which might have been.
+- name: Tyrion Lannister (The Imp)
+  from: Game of Thrones, Season 1 Episode 1, Winter Is Coming
+  link: https://awoiaf.westeros.org/index.php/Feature_quote
+  quote: Never forget what you are. The rest of the world will not. Wear it like armor, and it can never be used to hurt you.
+
+- name: Albus Dumbledore
+  from: Harry Potter and the Prisoner of Azkaban
+  link: https://www.wizardingworld.com
+  quote: A child’s voice, however honest and true is meaningless to those who have forgotten how to listen.
+
+- name: Master Oogway
+  from: Kung Fu Panda
+  quote: One often meets his destiny on the road he takes to avoid it.
 
 - name: 加賀恭一郎
   from: 新参者 第2話 料亭の小僧
   quote: 嘘には三種類ある。一、自分を守る嘘。二、他人を欺く嘘。三、他人を庇う嘘だ。
 
-- name: 倉沢さつき(和辻摩子)
+- name: 倉沢さつき (和辻摩子)
   from: Wの悲劇 第二幕 資産2000億の女帝
   quote: 人は、見たいものしか見ないし、信じたいものしか…信じないですから。
 
-- name: 橘カラ(十和田幸)
+- name: 橘カラ (十和田幸)
   from: サイレーン 刑事×彼女×完全悪女 第1話 完全悪女が僕の彼女を獲物にした
   quote: 信頼を得るにはふたつ。役に立つと思われること。それと弱みをさらすこと。
 
 - name: 怨み屋
   from: 怨み屋本舗 第八回 ハートキャッチャー
   quote: 嘘をつかない人間なんて、どこにもいないわ。嘘をどう利用するか、それが問題なんだけよ。
+
+- name: ダー子
+  from: コンフィデンスマンJP 第1話 ゴッドファーザー編
+  quote: 目に見えるものが真実とは限らない。
 
 - name: 竜ヶ崎桃子
   from: 下妻物語
@@ -58,7 +67,7 @@
   quote: 大切なのは、どんな選択をするかじゃない！自分が選択した人生を強く生きるかどうか！ただそれだけだ！
 
 - name: ソルト
-  from: マジすか学園5
+  from: マジすか学園5 第1話
   quote: 無理は一番の”退屈しのぎ”だ。
 
 - name: ルパン三世
@@ -70,5 +79,5 @@
   quote: まあ、もうオレいま世の中に合わせて生きる気ないから。
 
 - name: 中村由利
-  from: GARNET CROW "le 5 ème anniversaire" L'Histoire de 2000 à 2005
+  from: GARNET CROW ''le 5 ème anniversaire'' L'Histoire de 2000 à 2005
   quote: 流されていくのは簡単だけれど、変わらないでいることっていうのは一番難しい。
