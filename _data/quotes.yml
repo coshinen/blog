@@ -24,15 +24,18 @@
   link: https://www.orwell.ru/library/reviews/dali/english/e_dali
   quote: A man who gives a good account of himself is probably lying, since any life when viewed from the inside is simply a series of defeats.
 
-- name: Tyrion Lannister (The Imp)
+- name: Tyrion Lannister
   from: Game of Thrones, Season 1 Episode 1, Winter Is Coming
   link: https://awoiaf.westeros.org/index.php/Feature_quote
   quote: Never forget what you are. The rest of the world will not. Wear it like armor, and it can never be used to hurt you.
 
 - name: Albus Dumbledore
-  from: Harry Potter and the Prisoner of Azkaban
-  link: https://www.wizardingworld.com
-  quote: A child’s voice, however honest and true is meaningless to those who have forgotten how to listen.
+  from: Harry Potter and the Philosopher's Stone
+  quote: It does not do to dwell on dreams, and forget to live.
+
+- name: Severus Snape
+  from: Harry Potter and the Philosopher's Stone
+  quote: Clearly, fame isn't everything...
 
 - name: Master Oogway
   from: Kung Fu Panda
@@ -42,11 +45,11 @@
   from: 新参者 第2話 料亭の小僧
   quote: 嘘には三種類ある。一、自分を守る嘘。二、他人を欺く嘘。三、他人を庇う嘘だ。
 
-- name: 倉沢さつき (和辻摩子)
+- name: 倉沢さつき
   from: Wの悲劇 第二幕 資産2000億の女帝
   quote: 人は、見たいものしか見ないし、信じたいものしか…信じないですから。
 
-- name: 橘カラ (十和田幸)
+- name: 橘カラ
   from: サイレーン 刑事×彼女×完全悪女 第1話 完全悪女が僕の彼女を獲物にした
   quote: 信頼を得るにはふたつ。役に立つと思われること。それと弱みをさらすこと。
 
@@ -56,15 +59,15 @@
 
 - name: ダー子
   from: コンフィデンスマンJP 第1話 ゴッドファーザー編
-  quote: 目に見えるものが真実とは限らない。
+  quote: 目に見えるものが真実とは限らない。何が本当で、何が嘘か？
 
 - name: 竜ヶ崎桃子
   from: 下妻物語
   quote: 人間は、大きな幸せを前にすると、急に臆病になる。幸せを勝ち取ることは、不幸に耐えることより勇気が要るの。
 
-- name: 宇佐美博人
-  from: サバイバル ウェディング 最終話 結婚か？仕事か？幸せはどっちだ！？
-  quote: 大切なのは、どんな選択をするかじゃない！自分が選択した人生を強く生きるかどうか！ただそれだけだ！
+- name: 新堂頼子
+  from: はんなりギロリの頼子さん 第一話
+  quote: 大切なのは、どの道を選ぶかより、選んだ道をどういきるかじゃないの？
 
 - name: ソルト
   from: マジすか学園5 第1話
