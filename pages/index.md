@@ -18,11 +18,6 @@ permalink: /
         </svg>
       </a>{% endif %}
     </div>
-    <a href="https://ganekuro.github.io" title="深紅の鴉非公式サイト" target="_blank">
-      <svg width="20" height="16" fill="darkred">
-        <use xlink:href="/assets/icons/oct.svg#crow"></use>
-      </svg>
-    </a>
     <ul>
       <li><a href="{{ site.blog }}" title="{{ site.posts.size }}">Blog</a></li>
       <li>
@@ -34,6 +29,7 @@ permalink: /
         </a>
       </li>
       <li><a href="https://github.com/{{ site.author.github }}" target="_blank">GitHub</a></li>
+      <li><a href="https://ganekuro.github.io" title="深紅の鴉非公式サイト" target="_blank">Garnet</a></li>
       <li><a href="{{ site.booklog }}">Booklog</a></li>
     </ul>
   </div>
