@@ -28,7 +28,6 @@ permalink: /
           </svg>
         </a>
       </li>
-      <li><a href="https://github.com/{{ site.author.github }}" target="_blank">GitHub</a></li>
       <li><a href="https://ganekuro.github.io" title="深紅の鴉非公式サイト" target="_blank">Garnet</a></li>
       <li><a href="{{ site.booklog }}">Booklog</a></li>
     </ul>
