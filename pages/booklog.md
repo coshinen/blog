@@ -228,6 +228,7 @@ excerpt: Here are some books that renew my spirit or reclaim my life.
 
 > ### 程序人生
 > 
+> * 软件随想录：程序员部落酋长 Joel 谈软件，[美] Joel Spolsky
 > * 密码朋克：自由与互联网的未来，[澳] Julian Assange
 > * Vim 实用技巧，[英] Drew Neil
 > * 图解设计模式，[日] 結城浩
