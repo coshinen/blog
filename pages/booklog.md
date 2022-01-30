@@ -30,6 +30,7 @@ excerpt: Here are some books that renew my spirit or reclaim my life.
 
 > ### 文集
 > 
+> * 孤独六讲，[中] 蒋勋
 > * 王小波作品集，[中] 王小波
 > * 暗时间，[中] [刘未鹏](https://mindhacks.cn){:target="_blank"}
 > * 黑客与画家：硅谷创业之父 Paul Graham 文集，[美] [Paul Graham](http://www.paulgraham.com){:target="_blank"}
