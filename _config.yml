@@ -7,14 +7,11 @@
 
 # Site settings
 author:
-  name: 袁子晨
-  nickname: Coshin
+  name: Coshin
   github: encoshin
   e-mail: encoshin@mailo.com
-name: 平行宇宙
 title: Paraverse
-blogtitle: Coshin's Blog
-blogname: 袁子晨的网络日志
+subtitle: Coshin's Blog
 hostname: encoshin.github.io
 description: >- # this means to ignore newlines until "booklog:"
   Welcome to Coshin's parallel universe!
