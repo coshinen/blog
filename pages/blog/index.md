@@ -1,6 +1,7 @@
 ---
 layout: default
 permalink: /blog/
+excerpt: Welcome to my weblog.
 ---
 <div class="home-left">
   <ul class="post-list">{% for post in site.posts limit:8 %}

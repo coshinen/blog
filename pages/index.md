@@ -1,6 +1,7 @@
 ---
 layout: default
 permalink: /
+excerpt: Here is my paraverse.
 ---
 <div class="home-left">
 </div>

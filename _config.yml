@@ -13,8 +13,6 @@ author:
 title: Paraverse
 subtitle: Coshin's Blog
 hostname: encoshin.github.io
-description: >- # this means to ignore newlines until "booklog:"
-  Welcome to Coshin's parallel universe!
 
 # Page urls
 booklog:  "/booklog.html"
