@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "如何使用 Automake 生成 Makefile"
+title:  "Automake 使用帮助"
 date:   2018-12-01 15:10:52 +0800
 author: Coshin
 comments: true

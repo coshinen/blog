@@ -125,13 +125,6 @@ tags: Translations
 
 ## A Game of Shadows
 
-> You've paid me several compliments. Let me pay you one in return when I say
-> that if I were assured of the former eventuality I would cheerfully accept the
-> latter.
-
-你给了我一些问候。
-让我也还你一个吧，我要说，当我确认了前一种可能出现的结果时，我将欣然接受后者。
-
 > Come at once if convenient, if inconvenient come all the same.
 
 如果方便立刻回来。
@@ -220,15 +213,6 @@ tags: Translations
 > the truth.
 
 一旦你排除了所有的不可能，剩下的便是真相。
-
-## BBC SHERLOCK, Series 3 Episode 3, His Last Vow
-
-> Oh, do your research. I'm not a hero, I'm a high-functioning sociopath. Merry
-> Christmas!
-
-哦，做好你的调查。
-我不是英雄，我是高功能反社会主义者。
-圣诞快乐！
 
 ## BBC SHERLOCK, Series 4 Episode 1, The Six Thatchers
 

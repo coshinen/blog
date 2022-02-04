@@ -10,11 +10,11 @@ tags: Bitcoin bitcoind
 原始可用的比特币程序有两个版本：
 一个带有图形化用户界面，另一个是无图形化界面的 `bitcoind`。
 它们完全相互兼容，并使用相同的命令行参数，读取相同的配置文件并读写相同的数据文件。
-你一次可以在系统上运行一个比特币或 `bitcoind` 的副本（如果你不小心又启动了另一个，该副本会告诉你：比特币或 bitcoind 已经启动并且该程序将退出）。
+你一次可以在系统上运行一个比特币或 `bitcoind` 的副本（如果你不小心又启动了另一个，该副本会告诉你：比特币或 `bitcoind` 已经启动并且该程序将退出）。
 
 ## 1. Linux 快速启动
 
-使用命令行客户端启动，自动同步区块链并创建一个钱包的最简单的方法，只需从包含 bitcoind 二进制程序的目录运行这条（不带参数）命令：
+使用命令行客户端启动：
 
 ```shell
 $ ./bitcoind
@@ -647,22 +647,20 @@ RPC 服务选项：
 
 ## 3. 比特币配置文件
 
-所有的命令行选项（除 -conf）都可以在配置文件中指定，所有的配置文件设置也可以在命令行中指定。
+所有的命令行选项（除 `-conf`）都可以在配置文件中指定，所有的配置文件设置也可以在命令行中指定。
 命令行选项覆盖配置文件中设置的值。
 
-配置文件是一个键值对“设置=值”的列表，每行一个，注释以字符‘#’开头。
+配置文件是一个键值对“设置=值”的列表，每行一个，注释以字符 `‘#’` 开头。
 
 配置文件不是自动创建的，你可以使用最爱的纯文本编辑器创建它。
 [这里](https://jlopp.github.io/bitcoin-core-config-generator){:target="_blank"}是一个用户友好的配置文件生成器。
-默认情况下，比特币（bitcoind）将在比特币数据目录中查找名为“bitcoin.conf”的文件，但数据目录和配置文件路径都可以使用 -datedir 和 -conf 命令行参数改变。
+默认情况下，比特币（bitcoind）将在比特币数据目录中查找名为 `bitcoin.conf` 的文件，但数据目录和配置文件路径都可以使用 `-datedir` 和 `-conf` 命令行参数改变。
 
-> Windows: C:\Users\username\AppData\Roaming\Bitcoin\bitcoin.conf
->
-> Linux: /home/username/.bitcoin/bitcoin.conf
->
-> Mac OSX: /Users/username/Library/Application Support/Bitcoin/bitcoin.conf
+* Windows: `C:\Users\username\AppData\Roaming\Bitcoin\bitcoin.conf`
+* Linux: `/home/username/.bitcoin/bitcoin.conf`
+* Mac OSX: `/Users/username/Library/Application Support/Bitcoin/bitcoin.conf`
 
-注意：如果运行比特币测试网（testnet）模式，则子目录“testnet”将被自动追加到数据目录。
+注意：如果运行比特币测试网（testnet）模式，则子目录 `testnet` 将被自动追加到数据目录。
 
 ## 4. 比特币配置文件样例
 

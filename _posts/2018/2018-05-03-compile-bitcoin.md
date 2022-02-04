@@ -16,7 +16,7 @@ tags: Bitcoin Build
 ```shell
 $ git clone https://github.com/bitcoin/bitcoin.git
 $ cd bitcoin
-$ git checkout v0.12.1 # 切换到 v0.12.1
+$ git checkout v0.12.1
 $ git status
 HEAD detached at v0.12.1
 nothing to commit, working directory clean
@@ -42,7 +42,6 @@ Homebrew 默认安装指定库的最新版本。
 可以从 [bitcoin/depends/packages/boost.mk](https://github.com/bitcoin/bitcoin/blob/v0.12.1/depends/packages/boost.mk) 中获取当前版本比特币对应的 boost 库的版本。
 
 ### 3.2. Ubuntu 16.04.\*
-
 构建必备：
 
 ```shell
@@ -98,7 +97,7 @@ $ sudo apt-get install libqrencode-dev
 
 ## 4. 注意
 
-发行版是使用 GCC 构建然后使用 `"strip bitcoind"` 去掉调试符号，该操作可减少可执行文件大小约 90%。
+发行版是使用 GCC 构建然后使用 `$ strip bitcoind` 去掉调试符号，该操作可减少可执行文件大小约 90%。
 
 ## 5. 额外的配置选项
 
@@ -115,7 +114,7 @@ $ ./configure --help
 ```shell
 $ ./autogen.sh # 生成 configure
 $ ./configure # 配置生成 Makefile，例：关闭钱包功能，使用静态库链接得到移植后不依赖库文件的可执行文件，指定 boost 库路径等
-$ make # 使用 Makefile 进行比特币源码的编译，编译完成后会生成 4 至 6 个 ELF，分别为 bitcoind、bitcoin-cli、bitcoin-tx、test_bitcoin，若安装了 Qt 图形库，则会增加 bitcoin-qt、test_bitcoin-qt
+$ make # 编译完成后会生成至少 4 个 ELF，分别为 bitcoind、bitcoin-cli、bitcoin-tx、test_bitcoin，若安装了 Qt 图形库，则会增加 bitcoin-qt、test_bitcoin-qt
 $ make install # 该项可选，把编译好的比特币程序拷贝到系统默认的可执行程序目录 /usr/local/bin 下
 ```
 
