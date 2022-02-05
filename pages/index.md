@@ -20,7 +20,7 @@ excerpt: Here is my paraverse.
       </a>{% endif %}
     </div>
     <ul>
-      <li><a href="{{ site.blog }}" title="{{ site.posts.size }}">Blog</a></li>
+      <li><a href="/blog/" title="{{ site.posts.size }}">Blog</a></li>
       <li>
         <a href="mailto:{{ site.author.e-mail }}">Email</a>
         <a href="/pubkey.asc" title="PGP public key fingerprint: DC05599C94889C12A66FD64C794E47B4762431BA">
@@ -30,7 +30,7 @@ excerpt: Here is my paraverse.
         </a>
       </li>
       <li><a href="https://ganekuro.github.io" title="深紅の鴉非公式サイト" target="_blank">Garnet</a></li>
-      <li><a href="{{ site.booklog }}">Booklog</a></li>
+      <li><a href="/booklog.html">Booklog</a></li>
     </ul>
   </div>
 </div>

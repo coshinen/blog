@@ -14,13 +14,6 @@ title: Paraverse
 subtitle: Coshin's Blog
 hostname: encoshin.github.io
 
-# Page urls
-booklog:  "/booklog.html"
-blog:     "/blog/"
-archive:  "/blog/archive.html"
-category: "/blog/category.html"
-tag:      "/blog/tags.html"
-
 # Where things are
 source      : .
 destination : ./_site
