@@ -51,6 +51,7 @@ excerpt: Here are some books that renew my spirit or reclaim my life.
 > 
 > * 阿桑奇自传：不能不说的秘密，[澳] Julian Assange
 > * 荣格自传：回忆·梦·思考，[瑞士] Carl Gustav Jung
+> * 弗洛伊德自传，[奥] Sigmund Freud
 > * 歌舞伎町案内人，[中] 李小牧
 > * 成龙：还没长大就老了，[中] 成龙 朱墨
 > * 天生有罪：特雷弗·诺亚的变色人生，[南非] Trevor Noah
