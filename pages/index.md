@@ -1,5 +1,6 @@
 ---
 layout: default
+title: "Paraverse"
 permalink: /
 excerpt: Here is my paraverse.
 ---

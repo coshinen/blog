@@ -25,7 +25,7 @@ function setClipboardData(event) {
     if (clipboardData) {
         event.preventDefault();
         var textData = "“" + window.getSelection().toString() + "”\n\n"
-            + "Excerpt From: {{ site.subtitle }}, " + window.location.href + ".";
+            + "Excerpt From: {{ site.title }}, " + window.location.href + ".";
         clipboardData.setData('text/plain', textData);
     }
 };

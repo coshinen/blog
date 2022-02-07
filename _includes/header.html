@@ -1,6 +1,6 @@
     <header class="site-header">
       <div class="wrapper">
-        <a class="site-title" href="{% if page.url contains "/blog/" %}/blog/">{{ site.subtitle }}{% else %}/">{{ site.title }}{% endif %}</a>
+        <a class="site-title" href="/blog/">{{ site.title }}</a>
         <a href="{{ "/blog/atom.xml" | absolute_url }}" title="Feed">
           <svg width="24" height="24" fill="orange">
             <use xlink:href="/assets/icons/oct.svg#rss"></use>

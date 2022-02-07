@@ -4,7 +4,7 @@ permalink: /blog/atom.xml
 ---
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>{{ site.subtitle }}</title>
+  <title>{{ site.title }}</title>
   <subtitle>{{ site.title }}</subtitle>
   <updated>{{ site.time | date_to_xmlschema }}</updated>
   <id>tag:{{ site.hostname }},/blog/</id>
