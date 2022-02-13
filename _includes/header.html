@@ -3,18 +3,18 @@
         <a class="site-title" href="/blog/">{{ site.title }}</a>
         <a href="{{ "/blog/atom.xml" | absolute_url }}" title="Feed">
           <svg width="24" height="24" fill="orange">
-            <use xlink:href="/assets/icons/oct.svg#rss"></use>
+            <use xlink:href="{{ "/assets/icons/oct.svg#rss" | relative_url }}"></use>
           </svg>
         </a>
         <nav class="site-search">
           <a href="#" class="search-icon">
             <svg>
-              <use xlink:href="/assets/icons/oct.svg#search"></use>
+              <use xlink:href="{{ "/assets/icons/oct.svg#search" | relative_url }}"></use>
             </svg>
           </a>
           <form class="cse-search-box" action="https://bing.com/search" method="get" target="_blank" onsubmit="this.q.value=this.origin.value+' site:{{ site.author.github }}.github.io'">
             <svg id="search-icon">
-              <use xlink:href="/assets/icons/oct.svg#search"></use>
+              <use xlink:href="{{ "/assets/icons/oct.svg#search" | relative_url }}"></use>
             </svg>
             <input id="search-input" type="text" name="origin" title="To search, start typing a word or phrase" placeholder="Now, what?" size="16" value>
             <input type="hidden" name="q" value>

@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "类别"
-permalink: /blog/category.html
+permalink: /category.html
 excerpt: Here is the category of my posts.
 ---
 <div id="category">
@@ -18,7 +18,7 @@ excerpt: Here is the category of my posts.
     <a href="#category" class="right">🔝</a>
   </h2>
   <ul>{% for post in category[1] %}
-    <li><abbr title="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%Y-%m-%d-" }}</abbr><a href="{{ post.url }}">{{ post.title }}</a></li>{% endfor %}
+    <li><abbr title="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%Y-%m-%d-" }}</abbr><a href="{{ post.url | relative_url }}">{{ post.title }}</a></li>{% endfor %}
   </ul>
 </div>
 {% endfor %}

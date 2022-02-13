@@ -7,13 +7,13 @@ layout: default
             <p class="post-meta">
               <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
                 <svg class="icon">
-                  <use xlink:href="/assets/icons/oct.svg#calendar"></use>
+                  <use xlink:href="{{ "/assets/icons/oct.svg#calendar" | relative_url }}"></use>
                 </svg>
                 <abbr title="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%b %d, %Y" }}</abbr>
               </time>
               <span itemprop="author" itemscope itemtype="http://schema.org/Person">|
                 <svg class="icon">
-                  <use xlink:href="/assets/icons/oct.svg#person"></use>
+                  <use xlink:href="{{ "/assets/icons/oct.svg#person" | relative_url }}"></use>
                 </svg>
                 <span itemprop="name">
                   <a href="/">{% if page.author %}{{ page.author }}{% else %}{{ site.author.name }}{% endif %}</a>
@@ -22,11 +22,11 @@ layout: default
               <span>|
                 &copy;
                 <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh" title="知识共享 署名-非商业性使用-禁止演绎 4.0 国际 许可协议" target="_blank">CC BY-NC-ND 4.0</a>
-                <script src="/assets/js/copyright.js"></script>
+                <script src="{{ "/assets/js/copyright.js" | relative_url }}"></script>
               </span>
               <span>|
                 <svg class="icon">
-                  <use xlink:href="/assets/icons/oct.svg#tag"></use>
+                  <use xlink:href="{{ "/assets/icons/oct.svg#tag" | relative_url }}"></use>
                 </svg>{% for tag in page.tags %}
                 <a href="/blog/tags.html#{{ tag }}">{{ tag }}</a>{% endfor %}
               </span>

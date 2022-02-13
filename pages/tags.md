@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "标签"
-permalink: /blog/tags.html
+permalink: /tags.html
 excerpt: Here are some tags of my posts.
 ---
 <div id="tagcloud">
@@ -16,7 +16,7 @@ excerpt: Here are some tags of my posts.
     <a href="#tagcloud" class="right">🔝</a>
   </h2>
   <ul>{% for post in tag[1] %}
-    <li><abbr title="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%Y-%m-%d-" }}</abbr><a href="{{ post.url }}">{{ post.title }}</a></li>{% endfor %}
+    <li><abbr title="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%Y-%m-%d-" }}</abbr><a href="{{ post.url | relative_url }}">{{ post.title }}</a></li>{% endfor %}
   </ul>
 </div>
 {% endfor %}

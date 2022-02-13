@@ -39,8 +39,8 @@ incremental      : false
 # Serving
 port   : 4000
 host   : 127.0.0.1
-baseurl: "" # does not include hostname
+baseurl: "/blog" # does not include hostname
 
 # Outputting
-permalink: /blog/:year/:month/:title.html
+permalink: /:year/:month/:title.html
 timezone : Asia/Shanghai

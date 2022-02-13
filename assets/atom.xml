@@ -1,37 +1,37 @@
 ---
 layout: none
-permalink: /blog/atom.xml
+permalink: /atom.xml
 ---
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>{{ site.title }}</title>
-  <subtitle>{{ site.author.github }}.github.io</subtitle>
+  <subtitle>{{ "/" | absolute_url }}</subtitle>
   <updated>{{ site.time | date_to_xmlschema }}</updated>
-  <id>tag:{{ site.author.github }}.github.io,/blog/</id>
-  <link rel="alternate" type="text/html" href="{{ "/blog/" | absolute_url }}"/>
-  <link rel="self" type="application/atom+xml" href="{{ "/blog/atom.xml" | absolute_url }}"/>
+  <id>tag:{{ site.author.github }}.github.io,{{ "/" | relative_url }}</id>
+  <link rel="alternate" type="text/html" href="{{ "/" | absolute_url }}"/>
+  <link rel="self" type="application/atom+xml" href="{{ "/atom.xml" | absolute_url }}"/>
   <icon>{{ "/assets/icons/favicon.ico" | absolute_url }}</icon>
   <rights>Copyright (c) {{ site.time | date: "%Y" }}, {{ site.author.name }}</rights>
   <generator uri="https://jekyllrb.com" version="{{ jekyll.version }}">Jekyll v{{ jekyll.version }}</generator>{% for post in site.posts limit:8 %}
   <entry>
     <title>{{ post.title | xml_escape }}</title>
     <link rel="alternate" type="text/html" href="{{ post.url | absolute_url }}"/>
-    <id>tag:{{ site.author.github }}.github.io,{{ post.id }}</id>
+    <id>tag:{{ site.author.github }}.github.io,{{ post.id | relative_url }}</id>
     <updated>{{ post.date | date_to_xmlschema }}</updated>
     <published>{{ post.date | date_to_xmlschema }}</published>
     <summary>{{ post.excerpt | strip_html | xml_escape }}</summary>
     <author>
       <name>{{ site.author.name }}</name>
-      <uri>{{ "/blog/" | absolute_url }}</uri>
+      <uri>{{ "/" | absolute_url }}</uri>
       <email>{{ site.author.e-mail }}</email>
     </author>
-    <content type="html" xml:lang="zh" xml:base="{{ "/blog/" | absolute_url }}">
+    <content type="html" xml:lang="zh" xml:base="{{ "/" | absolute_url }}">
 {{ post.content | xml_escape }}
 &lt;h2&gt;文档信息&lt;/h2&gt;
 
 &lt;ul&gt;
   &lt;li&gt;版权声明：&lt;a href=&quot;http://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh&quot;&gt;知识共享 署名-非商业性使用-禁止演绎 4.0 国际 许可协议&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;更多内容：&lt;a href=&quot;{{ "/blog/category.html" | absolute_url }}#{{ post.category }}&quot;&gt;{{ post.category }}&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;更多内容：&lt;a href=&quot;{{ "/category.html" | absolute_url }}#{{ post.category }}&quot;&gt;{{ post.category }}&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
     </content>
   </entry>{% endfor %}

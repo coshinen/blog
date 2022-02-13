@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "档案"
-permalink: /blog/archive.html
+permalink: /archive.html
 excerpt: Here is the archive of my posts.
 ---
 <div id="archive">
@@ -21,6 +21,6 @@ excerpt: Here is the archive of my posts.
     <a href="#archive" class="right">🔝</a>
   </h2>
   <ul>{% assign idx = idx | plus: 1 %}{% endif %}
-    <li><abbr title="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%Y-%m-%d-" }}</abbr><a href="{{ post.url }}">{{ post.title }}</a></li>{% endfor %}
+    <li><abbr title="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%Y-%m-%d-" }}</abbr><a href="{{ post.url | relative_url }}">{{ post.title }}</a></li>{% endfor %}
   </ul>
 </div>
