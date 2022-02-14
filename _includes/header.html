@@ -1,7 +1,7 @@
     <header class="site-header">
       <div class="wrapper">
-        <a class="site-title" href="/blog/">{{ site.title }}</a>
-        <a href="{{ "/blog/atom.xml" | absolute_url }}" title="Feed">
+        <a class="site-title" href="{{ "/" | relative_url }}">{{ site.title }}</a>
+        <a href="{{ "/atom.xml" | relative_url }}" title="Feed">
           <svg width="24" height="24" fill="orange">
             <use xlink:href="{{ "/assets/icons/oct.svg#rss" | relative_url }}"></use>
           </svg>
@@ -26,7 +26,7 @@
           SimpleJekyllSearch({
             searchInput: document.getElementById('search-input'),
             resultsContainer: document.getElementById('search-results'),
-            json: '/blog/search.json',
+            json: '{{ "/search.json" | relative_url }}',
             searchResultTemplate: '<a href="{url}">{title}</a><br>',
             noResultsText: 'Oops, no relevant article.',
             limit: 8,

@@ -7,7 +7,7 @@ excerpt: Welcome to my weblog.
   <ul class="post-list">{% for post in site.posts limit:8 %}
     <li>
       <span class="post-meta"><abbr title="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%Y年%m月%d日" }}</abbr></span>
-      <span class="right">分类：<a class="category" href="/blog/category.html#{{ post.category }}">{{ post.category }}</a></span>
+      <span class="right">分类：<a class="category" href="{{ "/category.html" | relative_url }}#{{ post.category }}">{{ post.category }}</a></span>
       <h2><a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></h2>
       {{ post.excerpt }}
       <span><a class="readmore" href="{{ post.url | relative_url }}">阅读全文 &raquo;</a></span>

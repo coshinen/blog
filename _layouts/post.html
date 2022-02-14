@@ -28,7 +28,7 @@ layout: default
                 <svg class="icon">
                   <use xlink:href="{{ "/assets/icons/oct.svg#tag" | relative_url }}"></use>
                 </svg>{% for tag in page.tags %}
-                <a href="/blog/tags.html#{{ tag }}">{{ tag }}</a>{% endfor %}
+                <a href="{{ "/tags.html" | relative_url }}#{{ tag }}">{{ tag }}</a>{% endfor %}
               </span>
             </p>
           </header>
@@ -38,7 +38,7 @@ layout: default
           <div id="cusdis_thread"
             data-host="https://cusdis.com"
             data-app-id="0438ee71-26cb-4ec2-b2b2-9ff7b8334e50"
-            data-page-id="{{ page.id }}"
+            data-page-id="{{ page.id | relative_url }}"
             data-page-url="{{ page.url | absolute_url }}"
             data-page-title="{{ page.title | escape }}"
           ></div>
