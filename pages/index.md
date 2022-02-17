@@ -30,12 +30,8 @@ excerpt: Welcome to my weblog.
     </div>
     <ul>
       <li>
-        <a href="mailto:{{ site.author.e-mail }}">Email</a>
-        <a href="{{ "/pubkey.asc" | relative_url }}" title="PGP public key fingerprint: DC05599C94889C12A66FD64C794E47B4762431BA">
-          <svg class="icon">
-            <use xlink:href="{{ "/assets/icons/oct.svg#key" | relative_url }}"></use>
-          </svg>
-        </a>
+        <a href="mailto:{{ site.author.e-mail }}">Email</a> •
+        <a href="{{ "/pubkey.asc" | relative_url }}" title="Fingerprint: 794E47B4762431BA">GPG</a>
       </li>
       <li><a href="https://ganekuro.github.io" title="深紅の鴉非公式サイト" target="_blank">Garnet</a></li>
       <li><a href="{{ "/booklog.html" | relative_url }}">Booklog</a></li>
