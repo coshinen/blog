@@ -64,6 +64,7 @@ excerpt: Here are some books that renew my spirit or reclaim my life.
 
 > ### 小说
 > 
+> * 人世间，[中] 梁晓声
 > * 再袭面包店，[日] 村上春樹
 > * 鼠疫，[法] Albert Camus
 > * 局外人，[法] Albert Camus
