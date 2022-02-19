@@ -29,12 +29,12 @@ excerpt: Welcome to my weblog.
       </a>{% endif %}
     </div>
     <ul>
+      <li><a href="https://ganekuro.github.io" title="深紅の鴉非公式サイト" target="_blank">Garnet</a></li>
+      <li><a href="{{ "/booklog.html" | relative_url }}">Booklog</a></li>
       <li>
         <a href="mailto:{{ site.author.e-mail }}">Email</a> •
         <a href="{{ "/pubkey.asc" | relative_url }}" title="Fingerprint: 794E47B4762431BA">GPG</a>
       </li>
-      <li><a href="https://ganekuro.github.io" title="深紅の鴉非公式サイト" target="_blank">Garnet</a></li>
-      <li><a href="{{ "/booklog.html" | relative_url }}">Booklog</a></li>
     </ul>
   </div>
   <div id="category">
