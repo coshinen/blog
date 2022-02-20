@@ -16,7 +16,7 @@ layout: default
                   <use xlink:href="{{ "/assets/icons/oct.svg#person" | relative_url }}"></use>
                 </svg>
                 <span itemprop="name">
-                  <a href="/">{% if page.author %}{{ page.author }}{% else %}{{ site.author.name }}{% endif %}</a>
+                  {% if page.author %}{{ page.author }}{% else %}{{ site.author.name }}{% endif %}
                 </span>
               </span>
               <span>|
@@ -28,7 +28,7 @@ layout: default
                 <svg class="icon">
                   <use xlink:href="{{ "/assets/icons/oct.svg#tag" | relative_url }}"></use>
                 </svg>{% for tag in page.tags %}
-                <a href="{{ "/tags.html" | relative_url }}#{{ tag }}">{{ tag }}</a>{% endfor %}
+                <a href="{{ "/tags.html" | relative_url }}#{{ tag }}">{{ tag }}</a>{% if forloop.last == false %},{% endif %}{% endfor %}
               </span>
             </p>
           </header>
