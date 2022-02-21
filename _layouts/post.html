@@ -28,7 +28,7 @@ layout: default
                 <svg class="icon">
                   <use xlink:href="{{ "/assets/icons/oct.svg#tag" | relative_url }}"></use>
                 </svg>{% for tag in page.tags %}
-                <a href="{{ "/tags.html" | relative_url }}#{{ tag }}">{{ tag }}</a>{% if forloop.last == false %},{% endif %}{% endfor %}
+                <a href="{{ "/tags.html" | relative_url }}#{{ tag }}">{{ tag }}</a>{% unless forloop.last %},{% endunless %}{% endfor %}
               </span>
             </p>
           </header>
