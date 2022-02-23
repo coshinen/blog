@@ -49,6 +49,7 @@ excerpt: Here are some books that renew my spirit or reclaim my life.
 
 > ### 传记
 > 
+> * 贝多芬传，[法] Romain Rolland
 > * 阿桑奇自传：不能不说的秘密，[澳] Julian Assange
 > * 荣格自传：回忆·梦·思考，[瑞士] Carl Gustav Jung
 > * 弗洛伊德自传，[奥] Sigmund Freud
