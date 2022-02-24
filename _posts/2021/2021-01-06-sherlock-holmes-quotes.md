@@ -5,7 +5,7 @@ date:   2021-01-06 18:54:16 +0800
 author: Coshin
 comments: true
 category: 译文集
-tags: Translations
+tags: Translations Quotes
 ---
 ![the-valley-of-fear](https://standardebooks.org/images/covers/arthur-conan-doyle_the-valley-of-fear-798b05a6-hero@2x.jpg){:.border}
 
@@ -123,7 +123,7 @@ tags: Translations
 构造一系列推论并不困难，每个推论都依赖它的前身并且每个推论本身都很简单。
 如果，这样做之后，一个人只要推敲出所有的中心推论，并把出发点和结论呈现给他的听众，他就可能产生一种令人吃惊的效果，尽管可能留下一种华而不实的，印象。
 
-## A Game of Shadows
+## The Case Book of Sherlock Holmes, The Adventure of the Creeping Man
 
 > Come at once if convenient, if inconvenient come all the same.
 
@@ -137,15 +137,6 @@ tags: Translations
 
 麦考夫·福尔摩斯：
 勇敢显然是愚蠢的最佳代名词，你不觉得吗？
-
-> Come at once if convenient. If inconvenient come anyway.
-
-如果方便立刻回来。
-如果不方便无论如何也要回来。
-
-> You lower the IQ of the whole street.
-
-你拉低了整条街的智商。
 
 ## BBC SHERLOCK, Series 1 Episode 2, The Blind Banker
 

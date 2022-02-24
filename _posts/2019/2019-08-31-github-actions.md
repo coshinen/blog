@@ -115,7 +115,29 @@ GitHub 托管 Linux、macOS 和 Windows 虚拟环境来运行你的工作流。
 你需要使用 YAML 语法配置工作流，并把它们保存为你仓库中的工作流文件。
 一旦成功创建了一个 YAML 工作流文件并触发了该工作流，你将会看到工作流每个步骤的构建日志、测试结果、工作和状态。
 
-下面以 C/C++ 项目为例，对其 GitHub Actions 工作流进行基本的设置。
+下面是一个 C/C++ 项目的工作流模版。
+
+```yaml
+name: C/C++ CI
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: configure
+      run: ./configure
+    - name: make
+      run: make
+    - name: make check
+      run: make check
+    - name: make distcheck
+      run: make distcheck
+```
 
 ### 2.1. 定义工作流的名称（name）
 
@@ -191,15 +213,15 @@ jobs:
 要使用标准的签出操作无需进一步说明，包含下面的步骤：
 
 ```yaml
-- uses: actions/checkout@v1
+- uses: actions/checkout@v2
 ```
 
-在本例中使用 v1 可以确保你使用的是签出操作的一个稳定版本。
+在本例中使用 v2 可以确保你使用的是签出操作的一个稳定版本。
 
 要浅层克隆你的仓库或只复制你仓库的最新版本，使用下面的语法设置提取深度（fetch-depth）：
 
 ```yaml
-- uses: actions/checkout@v1
+- uses: actions/checkout@v2
   with:
     fetch-depth: 1
 ```
@@ -218,38 +240,14 @@ jobs:
   build:
     
     steps:
-    - uses: actions/checkout@v1
+    - uses: actions/checkout@v2
     - name: make # 定义命令的名称
       run: make # 使用 Makefile 来构建项目
     - name: ...
       run: ...
 ```
 
-### 2.6. 一个 C/C++ 项目的工作流模版
-
-```yaml
-name: C/C++ CI
-
-on: [push]
-
-jobs:
-  build:
-
-    runs-on: ubuntu-latest
-    
-    steps:
-    - uses: actions/checkout@v1
-    - name: configure
-      run: ./configure
-    - name: make
-      run: make
-    - name: make check
-      run: make check
-    - name: make distcheck
-      run: make distcheck
-```
-
-### 2.7. 工作流配置文件的默认路径
+### 2.6. 配置文件的默认路径
 
 每个工作流必须使用 YAML 写入一个扩展名为 .yml 的文件中。
 文件名一般定义为项目主要使用的语言名称。
@@ -257,7 +255,7 @@ jobs:
 
 > .github/workflows/c-cpp.yml
 
-### 2.8. 添加一个工作流状态标志到你仓库的 README.md 文件
+### 2.7. 添加一个状态标志
 
 状态标志显示工作流当前是失败（failing）还是通过（passing）。
 通常是在你仓库的 README.md 文件中添加一个状态标志，但是你可以把它添加到任何你想要添加的网页中。
@@ -279,4 +277,3 @@ https://github.com/<OWNER>/<REPOSITORY>/workflows/<WORKFLOW_FILE_PATH>/badge.svg
 ## 参考链接
 
 * [Features • GitHub Actions](https://github.com/features/actions){:target="_blank"}
-* [actions/starter-workflows: Accelerating new GitHub Actions workflows](https://github.com/actions/starter-workflows){:target="_blank"}

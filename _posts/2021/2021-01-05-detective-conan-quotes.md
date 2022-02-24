@@ -5,7 +5,7 @@ date:   2021-01-05 20:21:27 +0800
 author: Coshin
 comments: true
 category: 译文集
-tags: Translations Conan
+tags: Translations Conan Quotes
 ---
 ![conan](https://www.conan-portal.com/img/bg.jpg){:.border}
 

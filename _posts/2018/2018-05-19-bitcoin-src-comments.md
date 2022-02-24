@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "比特币源码剖析（零）"
+title:  "比特币源码剖析"
 date:   2018-05-19 14:52:16 +0800
 author: Coshin
 comments: true

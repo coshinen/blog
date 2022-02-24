@@ -74,35 +74,35 @@ boost::filesystem::path GetDefaultDataDir()
 
 ## 3. 数据文件
 
-> * banlist.dat: 存储禁用节点的 IPs/子网
-> * bitcoin.conf: 包含用于 bitcoind 或 bitcoin-qt 的[配置选项](/blog/2018/05/running-bitcoin.html)
-> * bitcoind.pid: 存储 bitcoind 运行时的进程号
-> * blocks/blk000??.dat: 区块数据（定制，每个文件 128 MiB）；从 0.8.0 开始（格式从 pre-0.8 改变）
-> * blocks/rev000??.dat: 区块回滚数据（定制）；从 0.8.0 开始
-> * blocks/index/*: 区块索引（LevelDB）；从 0.8.0 开始
-> * chainstate/*: 区块链状态数据库（LevelDB）；从 0.8.0 开始
-> * database/*: BDB 数据库环境；从 0.8.0 开始仅用于钱包
-> * db.log: 钱包数据库日志文件
-> * debug.log: 包含通过 bitcoind 或 bitcoin-qt 生成的调试信息和常规日志
-> * fee_estimates.dat: 存储用于估计确认数所需的最小交易费和优先级的统计数据；从 0.10.0 开始
-> * peers.dat: 对端 IP 地址数据库；从 0.7.0 开始仅用于钱包
-> * wallet.dat: 包含密钥和交易的个人钱包（BDB）
-> * .cookie: 会话 RPC 验证 cookie（开始使用 cookie 验证时写入，关闭时删除）；从 0.12.0 开始仅用于钱包
-> * onion_private_key: 使用 `-listenonion` 缓存的洋葱路由隐藏服务私钥；从 0.12.0 开始仅用于钱包
+* `banlist.dat`：存储禁用节点的 IPs/子网
+* `bitcoin.conf`：包含用于 `bitcoind` 或 `bitcoin-qt` 的[配置选项](/blog/2018/05/running-bitcoin.html)
+* `bitcoind.pid`：存储 `bitcoind` 运行时的进程号
+* `blocks/blk000??.dat`：区块数据（定制，每个文件 128 MiB）；从 0.8.0 开始（格式从 pre-0.8 改变）
+* `blocks/rev000??.dat`：区块回滚数据（定制）；从 0.8.0 开始
+* `blocks/index/*`：区块索引（LevelDB）；从 0.8.0 开始
+* `chainstate/*`：区块链状态数据库（LevelDB）；从 0.8.0 开始
+* `database/*`：BDB 数据库环境；从 0.8.0 开始仅用于钱包
+* `db.log`：钱包数据库日志文件
+* `debug.log`：包含通过 `bitcoind` 或 `bitcoin-qt` 生成的调试信息和常规日志
+* `fee_estimates.dat`：存储用于估计确认数所需的最小交易费和优先级的统计数据；从 0.10.0 开始
+* `peers.dat`：对端 IP 地址数据库；从 0.7.0 开始仅用于钱包
+* `wallet.dat`：包含密钥和交易的个人钱包（BDB）
+* `.cookie`：会话 RPC 验证 cookie（开始使用 cookie 验证时写入，关闭时删除）；从 0.12.0 开始仅用于钱包
+* `onion_private_key`：使用 `-listenonion` 缓存的洋葱路由隐藏服务私钥；从 0.12.0 开始仅用于钱包
 
 #### 仅用于 pre-0.8.0
 
-> * blktree/: 区块链索引（LevelDB）；从 pre-0.8 开始，0.8.0 中用 block/index/ 替代
-> * coins/: 未花费的交易输出数据库（LevelDB）；从 pre-0.8 开始，0.8.0 中用 chainstate/ 替代
+* `blktree/`：区块链索引（LevelDB）；从 pre-0.8 开始，0.8.0 中用 `block/index/` 替代
+* `coins/`：未花费的交易输出数据库（LevelDB）；从 pre-0.8 开始，0.8.0 中用 `chainstate/` 替代
 
 #### 仅用于 0.8.0 之前
 
-> * blkindex.dat: 区块链索引数据库（BDB）；0.8.0 中用 {chainstate/, blocks/index/, blocks/rev000??.dat} 替代
-> * blk000?.dat: 区块数据（定制，每个文件 2 GiB）；0.8.0 中用 blocks/blk000??.dat 替代
+* `blkindex.dat`：区块链索引数据库（BDB）；0.8.0 中用 {`chainstate/`, `blocks/index/`, `blocks/rev000??.dat`} 替代
+* `blk000?.dat`：区块数据（定制，每个文件 2 GiB）；0.8.0 中用 `blocks/blk000??.dat` 替代
 
 #### 仅用于 0.7.0 之前
 
-> * addr.dat: 对端 IP 地址数据库（BDB）；0.7.0 中用 peers.dat 替代
+* `addr.dat`：对端 IP 地址数据库（BDB）；0.7.0 中用 `peers.dat` 替代
 
 ## 4. 可转移性
 
