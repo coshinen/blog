@@ -206,6 +206,12 @@
   }
 }
 
+#profile img {
+  width: 128px;
+  height: 128px;
+  border-radius: 50% !important;
+}
+
 #onequote {
   border: 2px solid $border-color;
   border-radius: 16px;
