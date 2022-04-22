@@ -29,9 +29,18 @@ excerpt: Welcome to my weblog.
       </a>{% endif %}
     </div>
     <ul>
-      <li><a href="{{ "/pubkey.asc" | relative_url }}" title="Fingerprint: EDD222E8860891F6">PGP</a></li>
-      <li><a href="mailto:{{ site.author.e-mail }}" title="{{ site.author.e-mail }}">Email</a></li>
-      <li><a href="https://ganekuro.github.io" title="深紅の鴉非公式サイト" target="_blank">Garnet</a></li>
+      <li>
+        <svg class="icon">
+          <use xlink:href="{{ "/assets/icons/oct.svg#mail" | relative_url }}"></use>
+        </svg>
+        <a href="mailto:{{ site.author.e-mail }}">{{ site.author.e-mail }}</a>
+      </li>
+      <li>
+        <svg class="icon">
+          <use xlink:href="{{ "/assets/icons/oct.svg#key" | relative_url }}"></use>
+        </svg>
+        <a href="{{ "/pubkey.asc" | relative_url }}" title="PGP fingerprint">EDD222E8860891F6</a>
+      </li>
     </ul>
   </div>
   <div id="category">
