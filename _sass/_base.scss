@@ -79,6 +79,13 @@ img {
   margin: auto;
 }
 
+#profile img {
+  width: 60%;
+  height: auto;
+  border: 2px solid $border-color;
+  border-radius: 50% !important;
+}
+
 @include media-query($on-palm) {
   .border {
     width: calc(100% - 6px);

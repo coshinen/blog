@@ -206,18 +206,12 @@
   }
 }
 
-#profile img {
-  width: 64%;
-  height: 64%;
-  border-radius: 50% !important;
-}
-
 #onequote {
   border: 2px solid $border-color;
   border-radius: 16px;
   float: right;
   padding: 10px;
-  width: calc(32% - 14px);
+  width: calc(40% - 34px);
 
   #author {
     float: right;
