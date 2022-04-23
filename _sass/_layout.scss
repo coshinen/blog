@@ -190,6 +190,7 @@
   }
 }
 
+#quotes,
 #profile,
 #archive,
 #category,
@@ -203,18 +204,6 @@
 
   > :last-child {
     margin-bottom: 0;
-  }
-}
-
-#onequote {
-  border: 2px solid $border-color;
-  border-radius: 16px;
-  float: right;
-  padding: 10px;
-  width: calc(40% - 34px);
-
-  #author {
-    float: right;
   }
 }
 

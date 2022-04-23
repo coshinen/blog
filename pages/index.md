@@ -18,16 +18,7 @@ excerpt: Welcome to my weblog.
 <div class="home-right">
   <div id="profile">
     <h2>关于</h2>
-    <img src="https://avatars0.githubusercontent.com/u/29818825" alt="@{{ site.author.github }}">{% assign sum = site.data.quotes | size %}{% assign second = site.time | date: "%S" %}{% assign seed = second | modulo: sum %}
-    <div id="onequote" title="{{ site.data.quotes[seed].from }}">
-      <div>“{{ site.data.quotes[seed].quote }}”</div>
-      <div id="author">——{{ site.data.quotes[seed].name }}</div>{% if site.data.quotes[seed].link %}
-      <a href="{{ site.data.quotes[seed].link }}" target="_blank">
-        <svg class="icon">
-          <use xlink:href="{{ "/assets/icons/oct.svg#link" | relative_url }}"></use>
-        </svg>
-      </a>{% endif %}
-    </div>
+    <img src="https://avatars0.githubusercontent.com/u/29818825" alt="@{{ site.author.github }}">
     <ul>
       <li>
         <svg class="icon">
@@ -57,6 +48,17 @@ excerpt: Welcome to my weblog.
     <h2 title="{{ site.posts.size }}">归档</h2>
     <ul>{% assign count = 1 %}{% for post in site.posts %}{% assign yearmonth = post.date | date: '%Y年%m月' %}{% assign prevyearmonth = post.previous.date | date: '%Y年%m月' %}{% if yearmonth == prevyearmonth %}{% assign count = count | plus: 1 %}{% else %}
       <li><a href="{{ "/archive.html" | relative_url }}#{{ yearmonth }}">{{ yearmonth }}</a>（{{ count }}）</li>{% assign count = 1 %}{% endif %}{% endfor %}
+    </ul>
+  </div>
+  <div id="quotes">
+    <h2 title="Here are my favorite quotes from someones that inspire me or make me laugh.">引言</h2>
+    <ul>
+      <li title="Why Facts Don't Change Our Minds"><a href="https://jamesclear.com/why-facts-dont-change-minds" target="_blank">“Spend as little time as possible talking about how other people are wrong.”<br><span>——Tyler Cowen</span></a></li>
+      <li title="What You'll Wish You'd Known"><a href="http://www.paulgraham.com/hs.html" target="_blank">“Fouls happen. The thing to do when you get fouled is not to lose your cool. Just keep playing.”<br><span>——Paul Graham</span></a></li>
+      <li title="thread creation is about a thousand times faster than on native Linux"><a href="https://lkml.org/lkml/2000/8/25/132" target="_blank">“Talk is cheap. Show me the code.”<br><span>——Linus Torvalds</span></a></li>
+      <li title="Bitcoin P2P e-cash paper"><a href="https://www.metzdowd.com/pipermail/cryptography/2008-November/014853.html" target="_blank">“It's very attractive to the libertarian viewpoint if we can explain it properly. I'm better with code than with words though.”<br><span>——Satoshi Nakamoto</span></a></li>
+      <li title="As I Please 1943-1945, Benefit of Clergy, Some Notes on Salvador Dali"><a href="https://www.orwell.ru/library/reviews/dali/english/e_dali" target="_blank">“A man who gives a good account of himself is probably lying, since any life when viewed from the inside is simply a series of defeats.”<br><span>——George Orwell</span></a></li>
+      <li title="GARNET CROW “le 5 ème anniversaire” L'Histoire de 2000 à 2005">“流されていくのは簡単だけれど、変わらないでいることっていうのは一番難しい。”<br><span>——中村由利</span></li>
     </ul>
   </div>
 </div>

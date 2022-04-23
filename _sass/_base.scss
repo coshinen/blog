@@ -129,9 +129,31 @@ li {
   }
 }
 
-#profile ul {
+#quotes ul,
+#profile ul,
+#archive ul,
+#category ul {
   list-style: none;
   margin-left: 0;
+
+  > :last-child {
+    border-bottom: 0;
+  }
+}
+
+#quotes ul li,
+#archive ul li,
+#category ul li {
+  border-bottom: 1px solid $border-color;
+  padding: 5px 10px;
+}
+
+#quotes ul li {
+  padding: 10px 10px 30px;
+
+  span {
+    float: right;
+  }
 }
 
 
@@ -149,7 +171,7 @@ h1, h2, h3, h4, h5, h6 {
  * Links
  */
 a {
-  color: $brand-color-dark;
+  color: $garnet-color;
   text-decoration: none;
 
   &:hover {
@@ -159,35 +181,18 @@ a {
 }
 
 .post-link,
+.readmore,
+#quotes a,
+#profile a,
+#archive a,
+#category a,
+#tagcloud a,
+.post-content a,
 .site-footer a {
   color: $text-color;
 
   &:hover {
     color: $garnet-color;
-  }
-}
-
-.category,
-.readmore,
-.post-meta a {
-  color: $garnet-color;
-
-  &:hover {
-    color: $grey-color-dark;
-  }
-}
-
-#profile a,
-#archive a,
-#category a,
-#tagcloud a,
-.post .post-content a {
-  color: $text-color;
-  text-decoration: underline;
-
-  &:hover {
-    color: $garnet-color;
-    text-decoration: underline;
   }
 }
 
