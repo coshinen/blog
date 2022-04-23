@@ -4,7 +4,7 @@ permalink: /
 excerpt: Welcome to my weblog.
 ---
 <div class="home-left">
-  <ul class="post-list">{% for post in site.posts limit:8 %}
+  <ul class="post-list">{% for post in site.posts limit:7 %}
     <li>
       <span class="post-meta"><abbr title="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%Y年%m月%d日" }}</abbr></span>
       <span class="right">分类：<a class="category" href="{{ "/category.html" | relative_url }}#{{ post.category }}">{{ post.category }}</a></span>
@@ -32,6 +32,12 @@ excerpt: Welcome to my weblog.
         </svg>
         <a href="{{ "/pubkey.asc" | relative_url }}" title="PGP fingerprint">EDD222E8860891F6</a>
       </li>
+    </ul>
+  </div>
+  <div id="latest">
+    <h2>最新文章</h2>
+    <ul>{% for post in site.posts limit:10 %}
+      <li><a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></li>{% endfor %}
     </ul>
   </div>
   <div id="category">
