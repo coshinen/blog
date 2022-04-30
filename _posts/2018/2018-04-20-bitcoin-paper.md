@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "比特币白皮书"
+title:  "比特币：一种点对点的电子现金系统"
 date:   2018-04-20 20:08:10 +0800
 author: Coshin
 comments: true
@@ -10,34 +10,11 @@ excerpt:
   比特币是一个创新的支付网络，一种新型的试验性的数字货币，能够让世界上任何地方的任何人进行即时支付。<br>
   它使用点对点的技术，在没有中央权力的情况下运作：管理交易和发行货币通过网络共同完成。
 ---
-> <h2 align="center">Bitcoin: A Peer-to-Peer Electronic Cash System</h2>
-> 
-> <p align="center">
-> Satoshi Nakamoto<br>
-> satoshin@gmx.com<br>
-> www.bitcoin.org
-> </p>
-> 
-> **Abstract.**
-> A purely peer-to-peer version of electronic cash would allow online payments
-> to be sent directly from one party to another without going through a
-> financial institution. Digital signatures provide part of the solution, but
-> the main benefits are lost if a trusted third party is still required to
-> prevent double-spending. We propose a solution to the double-spending problem
-> using a peer-to-peer network. The network timestamps transactions by hashing
-> them into an ongoing chain of hash-based proof-of-work, forming a record that
-> cannot be changed without redoing the proof-of-work. The longest chain not
-> only serves as proof of the sequence of events witnessed, but proof that it
-> came from the largest pool of CPU power. As long as a majority of CPU power is
-> controlled by nodes that are not cooperating to attack the network, they'll
-> generate the longest chain and outpace attackers. The network itself requires
-> minimal structure. Messages are broadcast on a best effort basis, and nodes
-> can leave and rejoin the network at will, accepting the longest proof-of-work
-> chain as proof of what happened while they were gone.
-
-<h2 align="center">比特币：一种点对点的电子现金系统</h2>
-
-<p align="center">中本聪</p>
+<p align="center">
+中本聪<br>
+satoshin@gmx.com<br>
+www.bitcoin.org
+</p>
 
 **概要。**
 一个电子现金的纯点对点版本允许在线支付从一方直接发送到另一方，而不通过一个金融机构。
@@ -48,24 +25,6 @@ excerpt:
 只要多数的 CPU 算力被不攻击该网络的节点控制，它们将生成最长的链并超过攻击者。
 该网络本身只需最小的结构。
 消息被尽力广播，节点可以随意离开和重新加入该网络，只要接受最长的工作量证明链作为它们离开时发生事件的证明。
-
-> ## 1. Introduction
-> 
-> Commerce on the Internet has come to rely almost exclusively on financial
-> institutions serving as trusted third parties to process electronic payments.
-> While the system works well enough for most transactions, it still suffers
-> from the inherent weaknesses of the trust based model. Completely
-> non-reversible transactions are not really possible, since financial
-> institutions cannot avoid mediating disputes. The cost of mediation increases
-> transaction costs, limiting the minimum practical transaction size and cutting
-> off the possibility for small casual transactions, and there is a broader cost
-> in the loss of ability to make non-reversible payments for non-reversible
-> services. With the possibility of reversal, the need for trust spreads.
-> Merchants must be wary of their customers, hassling them for more information
-> than they would otherwise need. A certain percentage of fraud is accepted as
-> unavoidable. These costs and payment uncertainties can be avoided in person by
-> using physical currency, but no mechanism exists to make payments over a
-> communications channel without a trusted party.
 
 ## 1. 介绍
 
@@ -78,29 +37,10 @@ excerpt:
 一定比例的欺诈被认为是不可避免要接受的。
 这些成本和支付的不确定性可以通过亲自使用纸币来避免，但是没有机制可以在无可信方的情况下通过通信渠道进行支付。
 
-> What is needed is an electronic payment system based on cryptographic proof
-> instead of trust, allowing any two willing parties to transact directly with
-> each other without the need for a trusted third party. Transactions that are
-> computationally impractical to reverse would protect sellers from fraud, and
-> routine escrow mechanisms could easily be implemented to protect buyers. In
-> this paper, we propose a solution to the double-spending problem using a
-> peer-to-peer distributed timestamp server to generate computational proof of
-> the chronological order of transactions. The system is secure as long as
-> honest nodes collectively control more CPU power than any cooperating group of
-> attacker nodes.
-
 所需要的是一种基于密码学证明而非信任的电子支付系统，允许任何两个有意愿的当事方直接与对方交易，而不需要一个可信任的第三方。
 在计算上不可逆转的交易将保护卖家免受欺诈，而且用于保护买家的常规托管机制可以很容易实现。
 在这篇论文中，我们提出了双重花费问题的解决方案，使用一个点对点的分布式时间戳服务器来生成时间顺序交易的计算量证明。
 只要诚实节点共同控制比任何攻击者节点协作群体更多的 CPU 算力，该系统就是安全的。
-
-> ## 2. Transactions
-> 
-> We define an electronic coin as a chain of digital signatures. Each owner
-> transfers the coin to the next by digitally signing a hash of the previous
-> transaction and the public key of the next owner and adding these to the end
-> of the coin. A payee can verify the signatures to verify the chain of
-> ownership.
 
 ## 2. 交易
 
@@ -110,52 +50,22 @@ excerpt:
 
 ![transactions](https://git.dhimmel.com/bitcoin-whitepaper/images/transactions.svg){:.border.center}
 
-> The problem of course is the payee can't verify that one of the owners did not
-> double-spend the coin. A common solution is to introduce a trusted central
-> authority, or mint, that checks every transaction for double spending. After
-> each transaction, the coin must be returned to the mint to issue a new coin,
-> and only coins issued directly from the mint are trusted not to be
-> double-spent. The problem with this solution is that the fate of the entire
-> money system depends on the company running the mint, with every transaction
-> having to go through them, just like a bank.
-
 当然问题是收款人无法核实其中一位所有者没有双重花费货币。
 一种常见的解决方案是引入一个可信的中央权威机构，或铸币厂，来检查每笔交易是否存在双重花费。
 在每笔交易之后，这枚货币必须退回到铸币厂以发行一枚新货币，并且只有从铸币厂直接发行的货币才可信任没被双重花费。
 该解决方案的问题在于整个货币系统的命运取决于运营铸币厂的公司，每笔交易都必须经过它们，就像一个银行。
 
-> We need a way for the payee to know that the previous owners did not sign any
-> earlier transactions. For our purposes, the earliest transaction is the one
-> that counts, so we don't care about later attempts to double-spend. The only
-> way to confirm the absence of a transaction is to be aware of all
-> transactions. In the mint based model, the mint was aware of all transactions
-> and decided which arrived first. To accomplish this without a trusted party,
-> transactions must be publicly announced [[1]](#references), and we need a
-> system for participants to agree on a single history of the order in which
-> they were received. The payee needs proof that at the time of each
-> transaction, the majority of nodes agreed it was the first received.
-
 我们需要一种方式让收款人知道前一个所有者没有对任何更早的交易签名。
 就我们的目的而言，最早的交易是唯一算数的，所以我们不关心之后尝试的双重花费。
 确认一笔交易不存在的唯一方法是知道所有的交易。
 在基于铸币厂的模型中，铸币厂知道所有的交易并决定哪笔交易最先到达。
-要在没有可信方的情况下实现这一目的，交易必须公开通知，并且我们需要一个让参与者与对他们收到交易顺序的单一历史达成一致的系统。
+要在没有可信方的情况下实现这一目的，交易必须公开通知 [[1]](#references)，并且我们需要一个让参与者与对他们收到交易顺序的单一历史达成一致的系统。
 收款人需要每笔交易时，大多数节点都同意该交易是第一个被收到的证明。
-
-> ## 3. Timestamp Server
-> 
-> The solution we propose begins with a timestamp server. A timestamp server
-> works by taking a hash of a block of items to be timestamped and widely
-> publishing the hash, such as in a newspaper or Usenet post [[2-5]](#references).
-> The timestamp proves that the data must have existed at the time, obviously,
-> in order to get into the hash. Each timestamp includes the previous timestamp
-> in its hash, forming a chain, with each additional timestamp reinforcing the
-> ones before it.
 
 ## 3. 时间戳服务器
 
 我们提出的解决方案是从一个时间戳服务器开始。
-时间戳服务器的工作原理是对一个要加时间戳的区块进行散列并广泛发布其散列值，例如报纸或 Usenet 文章。
+时间戳服务器的工作原理是对一个要加时间戳的区块进行散列并广泛发布其散列值，例如报纸或 Usenet 文章 [[2-5]](#references)。
 时间戳证明数据必须在当时存在，显然是为了进入散列。
 每个时间戳在其散列中都包含前一个时间戳，形成一个链，每个附加的时间戳都会加强它前面的时间戳。
 
@@ -172,7 +82,7 @@ excerpt:
 
 ## 4. 工作量证明
 
-为了在点对点的基础上实现分布式时间戳服务器，我们需要使用与 Adam Back 的 Hashcash 类似的工作量证明系统，而不是报纸或 Usenet 文章。
+为了在点对点的基础上实现分布式时间戳服务器，我们需要使用与 Adam Back 的 Hashcash 类似的工作量证明系统 [[6]](#references)，而不是报纸或 Usenet 文章。
 工作量证明涉及扫描散列时的值，例如 SHA-256，从一个 0 位数字开始散列。
 所需的平均工作量是指数所需的 0 位数，且能通过执行一个单一散列来验证。
 

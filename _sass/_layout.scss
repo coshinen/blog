@@ -285,34 +285,3 @@
     }
   }
 }
-
-// Lyrics, Poem
-.original {
-  float: left;
-  border: 0;
-  border-right: 3px solid $border-color;
-  padding: 0 $spacing-unit / 2 0 0;
-  width: calc(50% - (#{$spacing-unit} / 2) - 3px);
-}
-
-.translation {
-  float: right;
-  padding: 0 0 0 $spacing-unit / 2;
-  width: calc(50% - (#{$spacing-unit} / 2));
-}
-
-@include media-query($on-palm) {
-  .original {
-    float: none;
-    border: 0;
-    border-left: 3px solid $border-color;
-    padding: 0 $spacing-unit / 2;
-    width: calc(100% - (#{$spacing-unit}) - 3px);
-  }
-
-  .translation {
-    float: none;
-    padding: 0;
-    width: 100%;
-  }
-}
