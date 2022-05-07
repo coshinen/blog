@@ -580,4 +580,3 @@ q=0.45   z=340
 ## 参考链接
 
 * [Bitcoin P2P e-cash paper](https://www.metzdowd.com/pipermail/cryptography/2008-October/014810.html){:target="_blank"}
-* [Bitcoin: A Peer-to-Peer Electronic Cash System](https://bitcoin.org/bitcoin.pdf){:target="_blank"}
