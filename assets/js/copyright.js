@@ -1,7 +1,3 @@
----
-layout: none
-permalink: /assets/js/copyright.js
----
 document.body.addEventListener("copy", function (ev) {
     if (window.getSelection().toString() && window.getSelection().toString().length > 40) {
         setClipboardData(ev);
@@ -25,7 +21,7 @@ function setClipboardData(event) {
     if (clipboardData) {
         event.preventDefault();
         var textData = "“" + window.getSelection().toString() + "”\n\n"
-            + "Excerpt From: {{ site.title }}, " + window.location.href + ".";
+            + "Excerpt From: " + document.title + ", " + window.location.href + ".";
         clipboardData.setData('text/plain', textData);
     }
 };
