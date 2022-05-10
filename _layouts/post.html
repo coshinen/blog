@@ -30,6 +30,13 @@ layout: default
         </svg>{% for tag in page.tags %}
         <a href="{{ "/tags.html" | relative_url }}#{{ tag }}">{{ tag }}</a>{% unless forloop.last %},{% endunless %}{% endfor %}
       </span>
+      <span>|
+        <svg class="icon">
+          <use xlink:href="{{ "/assets/icons/oct.svg#comment" | relative_url }}"></use>
+        </svg>
+        <span data-cusdis-count-page-id="{{ page.id | relative_url }}">0</span>
+        <script defer data-host="https://cusdis.com" data-app-id="7c35500b-319e-4c84-9ff3-f2cfacf6c67d" src="https://cusdis.com/js/cusdis-count.umd.js"></script>
+      </span>
     </p>
   </header>
   <div class="post-content" itemprop="articleBody">
@@ -37,7 +44,7 @@ layout: default
   </div>{% if page.comments %}
   <div id="cusdis_thread"
     data-host="https://cusdis.com"
-    data-app-id="0438ee71-26cb-4ec2-b2b2-9ff7b8334e50"
+    data-app-id="7c35500b-319e-4c84-9ff3-f2cfacf6c67d"
     data-page-id="{{ page.id | relative_url }}"
     data-page-url="{{ page.url | absolute_url }}"
     data-page-title="{{ page.title | escape }}"
