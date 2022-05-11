@@ -21,7 +21,10 @@ function setClipboardData(event) {
     if (clipboardData) {
         event.preventDefault();
         var textData = "“" + window.getSelection().toString() + "”\n\n"
-            + "Excerpt From: " + document.title + ", " + window.location.href + ".";
+            + "Excerpt From\n"
+            + document.title + "\n"
+            + window.location.href + "\n"
+            + "This material may be protected by copyright.";
         clipboardData.setData('text/plain', textData);
     }
 };
