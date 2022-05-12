@@ -29,14 +29,14 @@ layout: default
           <use xlink:href="{{ "/assets/icons/oct.svg#tag" | relative_url }}"></use>
         </svg>{% for tag in page.tags %}
         <a href="{{ "/tags.html" | relative_url }}#{{ tag }}">{{ tag }}</a>{% unless forloop.last %},{% endunless %}{% endfor %}
-      </span>
+      </span>{% if page.comments %}
       <span>|
         <svg class="icon">
           <use xlink:href="{{ "/assets/icons/oct.svg#comment" | relative_url }}"></use>
         </svg>
-        <span data-cusdis-count-page-id="{{ page.id | relative_url }}">0</span>
-        <script defer data-host="https://cusdis.com" data-app-id="7c35500b-319e-4c84-9ff3-f2cfacf6c67d" src="https://cusdis.com/js/cusdis-count.umd.js"></script>
-      </span>
+        <a href="#cusdis_thread" data-cusdis-count-page-id="{{ page.id | relative_url }}">0</a>
+        <script defer data-host="https://cusdis.com" data-app-id="84bdabca-4e1c-40c4-84b3-d5c92074c842" src="https://cusdis.com/js/cusdis-count.umd.js"></script>
+      </span>{% endif %}
     </p>
   </header>
   <div class="post-content" itemprop="articleBody">
@@ -44,7 +44,7 @@ layout: default
   </div>{% if page.comments %}
   <div id="cusdis_thread"
     data-host="https://cusdis.com"
-    data-app-id="7c35500b-319e-4c84-9ff3-f2cfacf6c67d"
+    data-app-id="84bdabca-4e1c-40c4-84b3-d5c92074c842"
     data-page-id="{{ page.id | relative_url }}"
     data-page-url="{{ page.url | absolute_url }}"
     data-page-title="{{ page.title | escape }}"
