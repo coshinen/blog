@@ -34,7 +34,6 @@ excerpt: Welcome to my weblog.
         <a href="{{ "/pubkey.asc" | relative_url }}" title="PGP fingerprint">EDD222E8860891F6</a>
       </li>
     </ul>
-    <iframe src="https://ip.skk.moe/simple" style="width: 100%; border: 0"></iframe>
   </div>
   <div id="category">
     <h2 title="{{ site.categories.size }}">分类</h2>
