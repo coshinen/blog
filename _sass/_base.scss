@@ -129,7 +129,6 @@ li {
   }
 }
 
-#quotes ul,
 #profile ul,
 #archive ul,
 #category ul {
@@ -141,19 +140,11 @@ li {
   }
 }
 
-#quotes ul li,
+#aquote,
 #archive ul li,
 #category ul li {
   border-bottom: 1px solid $border-color;
   padding: 5px 10px;
-}
-
-#quotes ul li {
-  padding: 10px 10px 30px;
-
-  span {
-    float: right;
-  }
 }
 
 
@@ -182,7 +173,6 @@ a {
 
 .post-link,
 .readmore,
-#quotes a,
 #profile a,
 #archive a,
 #category a,
