@@ -18,6 +18,15 @@ quotes.push("Talk is cheap. Show me the code.");
 fromal.push("thread creation is about a thousand times faster than on native Linux -Linus Torvalds\nhttps://lkml.org/lkml/2000/8/25/132");
 quotes.push("It's very attractive to the libertarian viewpoint if we can explain it properly. I'm better with code than with words though.");
 fromal.push("Bitcoin P2P e-cash paper -Satoshi Nakamoto\nhttps://www.metzdowd.com/pipermail/cryptography/2008-November/014853.html");
+// 鲁迅
+quotes.push("凡事总须研究，才会明白。古来时常吃人，我也还记得，可是不甚清楚。我翻开历史一查，这历史没有年代，歪歪斜斜的每叶上都写着“仁义道德”几个字。我横竖睡不着，仔细看了半夜，才从字缝里看出字来，满本都写着两个字是“吃人”！");
+fromal.push("鲁迅文集 小说集 呐喊 狂人日记 三 -狂人昆仲");
+quotes.push("从来如此，便对么？");
+fromal.push("鲁迅文集 小说集 呐喊 狂人日记 八 -狂人昆仲");
+quotes.push("……读书人的事，能算偷么？");
+fromal.push("鲁迅文集 小说集 呐喊 孔乙己 -孔乙己");
+quotes.push("人的悲欢并不相通，我只觉得他们吵闹。");
+fromal.push("鲁迅文集 杂文集 而已集 小杂感 -鲁迅");
 // Misc
 quotes.push("In our monogamous part of the world, to marry means to halve one's rights and double one's duties.");
 fromal.push("On Women -Arthur Schopenhauer\nhttp://heretical.com/miscella/onwomen.html");
