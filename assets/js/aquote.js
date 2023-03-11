@@ -41,6 +41,12 @@ fromal.push("As I Please 1943-1945, Benefit of Clergy, Some Notes on Salvador Da
 quotes.push("But as, in ethics, evil is a consequence of good, so, in fact, out of joy is sorrow born. Either the memory of past bliss is the anguish of today, or the agonies which are, have their origin in the ecstasies which might have been.");
 fromal.push("Edgar Allan Poe Short Fiction, Berenice -Egaeus\nhttps://standardebooks.org/ebooks/edgar-allan-poe/short-fiction/text/berenice");
 // ドラマ、映画、番組
+quotes.push("嘘には三種類ある。一、自分を守る嘘。二、他人を欺く嘘。三、他人を庇う嘘だ。");
+fromal.push("新参者 第2話 料亭の小僧 -加賀恭一郎");
+quotes.push("人はどんなことも慣れると当たり前になってくる。それがたとえ孤独という習慣だったとしても、一度身についてしまったものを手放すのは難しい。");
+fromal.push("家族ノカタチ 第1話 結婚しない息子と娘vs超破天荒な父と母 -永里大介");
+quotes.push("人は、見たいものしか見ないし、信じたいものしか…信じないですから。");
+fromal.push("Wの悲劇 第二幕 資産2000億の女帝 -倉沢さつき");
 quotes.push("信頼を得るにはふたつ。役に立つと思われること。それと弱みをさらすこと。");
 fromal.push("サイレーン 刑事×彼女×完全悪女 第1話 完全悪女が僕の彼女を獲物にした -橘カラ(十和田幸)");
 quotes.push("嘘をつかない人間なんて、どこにもいないわ。嘘をどう利用するか、それが問題なんだけよ。");
@@ -91,7 +97,7 @@ quotes.push("ブドウの花はブドウの味がする。バナナの花はバ�
 fromal.push("いつかこの恋を思い出してきっと泣いてしまう 第1回 失くした手紙が繋いだ奇跡…二人は出逢った -音の母から音への手紙");
 quotes.push("今あなたが価値がないと切り捨てたものは、この先あなたが向かっていく未来でもあるのよ。自分がバカにしていたものに自分がなる、それってつらいんじゃないかな？私達の周りにはね、たくさんの呪いがあるの。あなたが感じているのはその一つ。自分に呪いをかけないで、そんな恐ろしい呪いからは、さっさと逃げてしまいなさい。");
 fromal.push("逃げるは恥だが役に立つ 最終話 夫婦を超えてゆけ -土屋百合");
-quotes.push("つまり、ハゲるくらい死に物狂いで己を鍛えこむのだ。それが強くなる唯一の方法だ…自分で変われるのが人間の強さだ！");
+quotes.push("変化に気づいたのは一年半後だった。俺はハゲていた。そして、強くなっていた。つまり、ハゲるくらい死に物狂いで己を鍛えこむのだ。それが強くなる唯一の方法だ…自分で変われるのが人間の強さだ！");
 fromal.push("ワンパンマン 第3話 執念の科学者 -サイタマ");
 quotes.push("分からねぇか？その甘え、そろそろ卒業しなくちゃな。自分で決めなきゃ、明日は開かれねぇんだぜ！");
 fromal.push("ルパン三世 SP 第23作 東方見聞録 ～アナザーページ～ -ルパン三世");
