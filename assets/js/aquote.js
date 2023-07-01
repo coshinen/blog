@@ -43,6 +43,8 @@ fromal.push("As I Please 1943-1945, Benefit of Clergy, Some Notes on Salvador Da
 quotes.push("But as, in ethics, evil is a consequence of good, so, in fact, out of joy is sorrow born. Either the memory of past bliss is the anguish of today, or the agonies which are, have their origin in the ecstasies which might have been.");
 fromal.push("Edgar Allan Poe Short Fiction, Berenice -Egaeus\nhttps://standardebooks.org/ebooks/edgar-allan-poe/short-fiction/text/berenice");
 // ドラマ、映画、番組
+quotes.push("人事を尽くして天命を待つ。");
+fromal.push("離婚しようよ 第8話 -東海林大志");
 quotes.push("嘘には三種類ある。一、自分を守る嘘。二、他人を欺く嘘。三、他人を庇う嘘だ。");
 fromal.push("新参者 第2話 料亭の小僧 -加賀恭一郎");
 quotes.push("人はどんなことも慣れると当たり前になってくる。それがたとえ孤独という習慣だったとしても、一度身についてしまったものを手放すのは難しい。");
