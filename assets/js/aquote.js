@@ -2,6 +2,8 @@ function aQuote(){
 var quotes = new Array();
 var fromal = new Array();
 // Tech.
+quotes.push("So in fact, for the vast majority of human interactions, logic, rigor, and debate are unless. At work, dealing with computers, I find logic useful, but when dealing with humans, it is the rare case where such an approach is useful.");
+fromal.push("Is it possible to use logic, rigor, and debate to understand people, or to make them understand you? -Lawrence Krubner\nhttps://demodexio.substack.com/p/is-it-possible-to-use-logic-rigor");
 quotes.push("Dont keep making the same mistakes; try to make new mistakes.");
 fromal.push("103 Bits of Advice I Wish I Had Known -Kevin Kelly\nhttps://kk.org/thetechnium/103-bits-of-advice-i-wish-i-had-known/");
 quotes.push("Your life doesn't have to be shaped by admissions officers. It could be shaped by your own curiosity. It is for all ambitious adults. And you don't have to wait to start. In fact, you don't have to wait to be an adult. There's no switch inside you that magically flips when you turn a certain age or graduate from some institution. You start being an adult when you decide to take responsibility for your life. You can do that at any age.");
